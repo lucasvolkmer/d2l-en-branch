@@ -1,7 +1,6 @@
-# Prefaceácio
+# Prefácio
 
-Just a few years ago, there were no legions of deep learning scientists
-developing intelligent products and services at major companies and startups.
+Apenas alguns anos atrás, não havia legiões de cientistas de *deep learning*  desenvolvendo produtos e serviços inteligentes em grandes empresas e *startups*.
 When the youngest among us (the authors) entered the field,
 machine learning did not command headlines in daily newspapers.
 Our parents had no idea what machine learning was,
@@ -460,5 +459,5 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDM0NTI0MDZdfQ==
+eyJoaXN0b3J5IjpbLTc4NDExMDk4MF19
 -->
