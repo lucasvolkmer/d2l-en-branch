@@ -45,7 +45,7 @@ Apesar de um grande número de empresas, como a Amazon,
 desenvolver aplicativos da web baseados em banco de dados de sucesso na década de 1990,
 o potencial desta tecnologia para auxiliar empreendedores criativos
 foi percebido em um grau muito maior nos últimos dez anos,
-devido em parte ao desenvolvimento de *frameworks* poderos e bem documentadas.
+devido em parte ao desenvolvimento de *frameworks* poderosos e bem documentados.
 
 
 Testing the potential of deep learning presents unique challenges
@@ -453,6 +453,6 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MDA0NjM0MiwxODAyMTM1MjY3LDE1ND
+eyJoaXN0b3J5IjpbMTQzMzgxNTk5MiwxODAyMTM1MjY3LDE1ND
 U3NDI3OThdfQ==
 -->
