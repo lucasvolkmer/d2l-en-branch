@@ -135,33 +135,34 @@ usando um *workflow* integrado.
 
 ### Aprendendo Fazendo
 
-Many textbooks teach a series of topics, each in exhaustive detail.
-For example, Chris Bishop's excellent textbook :cite:`Bishop.2006`,
-teaches each topic so thoroughly, that getting to the chapter
-on linear regression requires a non-trivial amount of work.
-While experts love this book precisely for its thoroughness,
-for beginners, this property limits its usefulness as an introductory text.
 
-In this book, we will teach most concepts *just in time*.
-In other words, you will learn concepts at the very moment
-that they are needed to accomplish some practical end.
-While we take some time at the outset to teach
-fundamental preliminaries, like linear algebra and probability,
-we want you to taste the satisfaction of training your first model
-before worrying about more esoteric probability distributions.
+Muitos livros ensinam uma série de tópicos, cada um com detalhes exaustivos.
+Por exemplo, o excelente livro de Chris Bishop: cite: `Bishop.2006`,
+ensina cada tópico tão completamente, que chegar ao capítulo
+na regressão linear requer uma quantidade não trivial de trabalho.
+Embora os especialistas amem este livro precisamente por sua eficácia,
+para iniciantes, essa propriedade limita sua utilidade como um texto introdutório.
 
-Aside from a few preliminary notebooks that provide a crash course
-in the basic mathematical background,
-each subsequent chapter introduces both a reasonable number of new concepts
-and provides single self-contained working examples---using real datasets.
-This presents an organizational challenge.
-Some models might logically be grouped together in a single notebook.
-And some ideas might be best taught by executing several models in succession.
-On the other hand, there is a big advantage to adhering
-to a policy of *one working example, one notebook*:
-This makes it as easy as possible for you to
-start your own research projects by leveraging our code.
-Just copy a notebook and start modifying it.
+Neste livro, ensinaremos a maioria dos conceitos *just in time*.
+Em outras palavras, você aprenderá conceitos no exato momento
+que eles são necessários para realizar algum fim prático.
+Enquanto levamos algum tempo no início para ensinar
+preliminares fundamentais, como álgebra linear e probabilidade,
+queremos que você experimente a satisfação de treinar seu primeiro modelo
+antes de se preocupar com distribuições de probabilidade mais esotéricas.
+
+Além de alguns cadernos preliminares que fornecem um curso intensivo
+no *background* matemático básico,
+cada capítulo subsequente apresenta um número razoável de novos conceitos
+e fornece exemplos de trabalho auto-contidos únicos --- usando *datasets* reais.
+Isso representa um desafio organizacional.
+Alguns modelos podem ser agrupados logicamente em um único *notebook*.
+E algumas idéias podem ser melhor ensinadas executando vários modelos em sucessão.
+Por outro lado, há uma grande vantagem em aderir
+a uma política de *um exemplo funcional, um notebook*:
+Isso torna o mais fácil possível para você
+comece seus próprios projetos de pesquisa aproveitando nosso código.
+Basta copiar um *notebook* e começar a modificá-lo.
 
 We will interleave the runnable code with background material as needed.
 In general, we will often err on the side of making tools
@@ -463,8 +464,8 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUwMTUyODk1LDI0MDUxOTY0NiwtMTQ0Nz
-k3NzYyOSwtNjY2NjIzODcwLC0xNjM2OTI4MTA4LDE1MjkzMTIz
-MDMsMTQzMzgxNTk5MiwxODAyMTM1MjY3LDE1NDU3NDI3OThdfQ
-==
+eyJoaXN0b3J5IjpbMTE4MDgzODQzMCw2NTAxNTI4OTUsMjQwNT
+E5NjQ2LC0xNDQ3OTc3NjI5LC02NjY2MjM4NzAsLTE2MzY5Mjgx
+MDgsMTUyOTMxMjMwMywxNDMzODE1OTkyLDE4MDIxMzUyNjcsMT
+U0NTc0Mjc5OF19
 -->
