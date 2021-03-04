@@ -30,6 +30,8 @@ Esse livro representa nossa tentativa de tornar o *deep learning* acessível, lh
 
 ### One Medium Combining Code, Math, and HTML
 
+### Um Meio (?) Combinando Código, Matemática e HTML
+
 For any computing technology to reach its full impact,
 it must be well-understood, well-documented, and supported by
 mature, well-maintained tools.
@@ -451,6 +453,6 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1OTE3NDQ0MCwxODAyMTM1MjY3LDE1ND
-U3NDI3OThdfQ==
+eyJoaXN0b3J5IjpbLTEwMzM0NjI4MDgsMTgwMjEzNTI2NywxNT
+Q1NzQyNzk4XX0=
 -->
