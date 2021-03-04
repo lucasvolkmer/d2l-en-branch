@@ -32,20 +32,20 @@ Esse livro representa nossa tentativa de tornar o *deep learning* acessível, lh
 
 ### Um Meio (?) Combinando Código, Matemática e HTML
 
-For any computing technology to reach its full impact,
-it must be well-understood, well-documented, and supported by
-mature, well-maintained tools.
-The key ideas should be clearly distilled,
-minimizing the onboarding time needing to bring new practitioners up to date.
-Mature libraries should automate common tasks,
-and exemplar code should make it easy for practitioners
-to modify, apply, and extend common applications to suit their needs.
-Take dynamic web applications as an example.
-Despite a large number of companies, like Amazon,
-developing successful database-driven web applications in the 1990s,
-the potential of this technology to aid creative entrepreneurs
-has been realized to a far greater degree in the past ten years,
-owing in part to the development of powerful, well-documented frameworks.
+Para que qualquer tecnologia de computação alcance seu impacto total,
+deve ser bem compreendido, bem documentado e apoiado por
+ferramentas maduras e bem conservadas.
+As ideias-chave devem ser claramente destiladas,
+minimizando o tempo de integração necessário para atualizar os novos praticantes.
+Bibliotecas maduras devem automatizar tarefas comuns,
+e o código exemplar deve tornar mais fácil para os profissionais
+para modificar, aplicar e estender aplicativos comuns para atender às suas necessidades.
+Considere os aplicativos da Web dinâmicos como exemplo.
+Apesar de um grande número de empresas, como a Amazon,
+desenvolver aplicativos da web baseados em banco de dados de sucesso na década de 1990,
+o potencial desta tecnologia para auxiliar empreendedores criativos
+foi percebido em um grau muito maior nos últimos dez anos,
+devido em parte ao desenvolvimento de *frameworks* poderos e bem documentadas.
 
 
 Testing the potential of deep learning presents unique challenges
@@ -453,6 +453,6 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzM0NjI4MDgsMTgwMjEzNTI2NywxNT
-Q1NzQyNzk4XX0=
+eyJoaXN0b3J5IjpbMTQ1MDA0NjM0MiwxODAyMTM1MjY3LDE1ND
+U3NDI3OThdfQ==
 -->
