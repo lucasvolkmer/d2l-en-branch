@@ -26,9 +26,7 @@ e desempenhando um papel crescente nas ciências básicas --- da astrofísica à
 
 
 ## Sobre este livro
-Esse livro representa nossa tentativa de tornar o *deep learning* acessível, lhes ensinando os *conceitos*, o *contexto
-This book represents our attempt to make deep learning approachable,
-teaching you the *concepts*, the *context*, and the *code*.
+Esse livro representa nossa tentativa de tornar o *deep learning* acessível, lhes ensinando os *conceitos*, o *contexto* e o *código*.
 
 ### One Medium Combining Code, Math, and HTML
 
@@ -453,6 +451,6 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNDIxMjQ3MiwxODAyMTM1MjY3LDE1ND
+eyJoaXN0b3J5IjpbMTQxMTU5NDIwMCwxODAyMTM1MjY3LDE1ND
 U3NDI3OThdfQ==
 -->
