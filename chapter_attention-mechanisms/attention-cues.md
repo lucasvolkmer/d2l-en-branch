@@ -236,3 +236,6 @@ we will often invoke this function to visualize attention weights.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTg0Nzk5MjAwN119
+-->
