@@ -133,7 +133,7 @@ Acreditamos que este seja o primeiro livro publicado
 usando um *workflow* integrado.
 
 
-### Learning by Doing
+### Aprendendo Fazendo
 
 Many textbooks teach a series of topics, each in exhaustive detail.
 For example, Chris Bishop's excellent textbook :cite:`Bishop.2006`,
@@ -463,7 +463,8 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQwNTE5NjQ2LC0xNDQ3OTc3NjI5LC02Nj
-Y2MjM4NzAsLTE2MzY5MjgxMDgsMTUyOTMxMjMwMywxNDMzODE1
-OTkyLDE4MDIxMzUyNjcsMTU0NTc0Mjc5OF19
+eyJoaXN0b3J5IjpbNjUwMTUyODk1LDI0MDUxOTY0NiwtMTQ0Nz
+k3NzYyOSwtNjY2NjIzODcwLC0xNjM2OTI4MTA4LDE1MjkzMTIz
+MDMsMTQzMzgxNTk5MiwxODAyMTM1MjY3LDE1NDU3NDI3OThdfQ
+==
 -->
