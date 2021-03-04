@@ -130,7 +130,7 @@ e *Discourse* para o fórum.
 Embora nosso sistema ainda não seja perfeito,
 essas escolhas fornecem um bom compromisso entre as preocupações concorrentes.
 Acreditamos que este seja o primeiro livro publicado
-usando um fluxo de trabalho integrado.
+usando um *workflow* integrado.
 
 
 ### Learning by Doing
@@ -463,7 +463,7 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDc5Nzc2MjksLTY2NjYyMzg3MCwtMT
-YzNjkyODEwOCwxNTI5MzEyMzAzLDE0MzM4MTU5OTIsMTgwMjEz
-NTI2NywxNTQ1NzQyNzk4XX0=
+eyJoaXN0b3J5IjpbMjQwNTE5NjQ2LC0xNDQ3OTc3NjI5LC02Nj
+Y2MjM4NzAsLTE2MzY5MjgxMDgsMTUyOTMxMjMwMywxNDMzODE1
+OTkyLDE4MDIxMzUyNjcsMTU0NTc0Mjc5OF19
 -->
