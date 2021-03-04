@@ -63,36 +63,35 @@ soluções em um só lugar apresentam desafios formidáveis.
 Nosso objetivo neste livro é apresentar um recurso unificado
 para trazer os praticantes em potencial.
 
-At the time we started this book project,
-there were no resources that simultaneously
-(i) were up to date; (ii) covered the full breadth
-of modern machine learning with substantial technical depth;
-and (iii) interleaved exposition of the quality one expects
-from an engaging textbook with the clean runnable code
-that one expects to find in hands-on tutorials.
-We found plenty of code examples for
-how to use a given deep learning framework
-(e.g., how to do basic numerical computing with matrices in TensorFlow)
-or for implementing particular techniques
-(e.g., code snippets for LeNet, AlexNet, ResNets, etc)
-scattered across various blog posts and GitHub repositories.
-However, these examples typically focused on
-*how* to implement a given approach,
-but left out the discussion of *why* certain algorithmic decisions are made.
-While some interactive resources have popped up sporadically
-to address a particular topic, e.g., the engaging blog posts
-published on the website [Distill](http://distill.pub), or personal blogs,
-they only covered selected topics in deep learning,
-and often lacked associated code.
-On the other hand, while several textbooks have emerged,
-most notably :cite:`Goodfellow.Bengio.Courville.2016`,
-which offers a comprehensive survey of the concepts behind deep learning,
-these resources do not marry the descriptions
-to realizations of the concepts in code,
-sometimes leaving readers clueless as to how to implement them.
-Moreover, too many resources are hidden behind the paywalls
-of commercial course providers.
-
+Na época em que começamos o projeto deste livro,
+não havia recursos que simultaneamente
+(i) estavam em dia; (ii) cobriam toda a largura
+de *machine learning* moderno com profundidade técnica substancial;
+e (iii) intercalassem exposição da qualidade que se espera
+de um livro envolvente com o código limpo executável
+que se espera encontrar em tutoriais práticos.
+Encontramos muitos exemplos de código para
+como usar um determinado *framework* de aprendizado profundo
+(por exemplo, como fazer computação numérica básica com matrizes no *TensorFlow*)
+ou para a implementação de técnicas particulares
+(por exemplo, *snippets* de código para LeNet, AlexNet, ResNets, etc)
+espalhados por vários posts de blog e repositórios GitHub.
+No entanto, esses exemplos normalmente se concentram em
+*como* implementar uma determinada abordagem,
+mas deixou de fora a discussão de *por que* certas decisões algorítmicas são feitas.
+Embora alguns recursos interativos tenham surgido esporadicamente
+para abordar um tópico específico, por exemplo, as postagens de blog envolventes
+publicado no site [Distill] (http://distill.pub), ou blogs pessoais,
+eles cobriram apenas tópicos selecionados no aprendizado profundo,
+e muitas vezes não tinham código associado.
+Por outro lado, embora vários livros tenham surgido,
+mais notavelmente: cite: `Goodfellow.Bengio.Courville.2016`,
+que oferece uma pesquisa abrangente dos conceitos por trás do aprendizado profundo,
+esses recursos não combinam com as descrições
+às realizações dos conceitos no código,
+às vezes deixando os leitores sem noção de como implementá-los.
+Além disso, muitos recursos estão escondidos atrás dos *paywalls*
+de fornecedores de cursos comerciais.
 We set out to create a resource that could
 (i) be freely available for everyone;
 (ii) offer sufficient technical depth to provide a starting point on the path
@@ -453,6 +452,6 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyOTMxMjMwMywxNDMzODE1OTkyLDE4MD
-IxMzUyNjcsMTU0NTc0Mjc5OF19
+eyJoaXN0b3J5IjpbLTE2MzY5MjgxMDgsMTUyOTMxMjMwMywxND
+MzODE1OTkyLDE4MDIxMzUyNjcsMTU0NTc0Mjc5OF19
 -->
