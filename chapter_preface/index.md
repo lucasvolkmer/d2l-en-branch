@@ -103,24 +103,34 @@ and also by the community at large;
 and (v) be complemented by a [forum](http://discuss.d2l.ai)
 for interactive discussion of technical details and to answer questions.
 
-These goals were often in conflict.
-Equations, theorems, and citations are best managed and laid out in LaTeX.
-Code is best described in Python.
-And webpages are native in HTML and JavaScript.
-Furthermore, we want the content to be
-accessible both as executable code, as a physical book,
-as a downloadable PDF, and on the Internet as a website.
-At present there exist no tools and no workflow
-perfectly suited to these demands, so we had to assemble our own.
-We describe our approach in detail in :numref:`sec_how_to_contribute`.
-We settled on GitHub to share the source and to allow for edits,
-Jupyter notebooks for mixing code, equations and text,
-Sphinx as a rendering engine to generate multiple outputs,
-and Discourse for the forum.
-While our system is not yet perfect,
-these choices provide a good compromise among the competing concerns.
-We believe that this might be the first book published
-using such an integrated workflow.
+Propusemo-nos a criar um recurso que pudesse
+(i) estar disponível gratuitamente para todos;
+(ii) oferecer profundidade técnica suficiente para fornecer um ponto de partida no caminho
+para realmente se tornar um cientista de *machine learning* aplicado;
+(iii) incluir código executável, mostrando aos leitores *como* resolver problemas na prática;
+(iv) permitir atualizações rápidas, tanto por nós
+e também pela comunidade em geral;
+e (v) ser complementado por um [fórum] (http://discuss.d2l.ai)
+para uma discussão interativa de detalhes técnicos e para responder a perguntas.
+
+Esses objetivos costumavam estar em conflito.
+Equações, teoremas e citações são melhor gerenciados e apresentados em LaTeX.
+O código é melhor descrito em Python.
+E as páginas da web são nativas em HTML e JavaScript.
+Além disso, queremos que o conteúdo seja
+acessível tanto como código executável, como livro físico,
+como um PDF para *download* e na Internet como um site.
+No momento não existem ferramentas e nenhum *workflow*
+perfeitamente adequado a essas demandas, então tivemos que montar o nosso próprio.
+Descrevemos nossa abordagem em detalhes em: numref: `sec_how_to_contribute`.
+Decidimos usar o GitHub para compartilhar a fonte e permitir edições,
+*Notebooks* Jupyter para misturar código, equações e texto,
+Sphinx como um mecanismo de renderização para gerar várias saídas,
+e *Discourse* para o fórum.
+Embora nosso sistema ainda não seja perfeito,
+essas escolhas fornecem um bom compromisso entre as preocupações concorrentes.
+Acreditamos que este seja o primeiro livro publicado
+usando um fluxo de trabalho integrado.
 
 
 ### Learning by Doing
@@ -453,7 +463,7 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NjYyMzg3MCwtMTYzNjkyODEwOCwxNT
-I5MzEyMzAzLDE0MzM4MTU5OTIsMTgwMjEzNTI2NywxNTQ1NzQy
-Nzk4XX0=
+eyJoaXN0b3J5IjpbLTE0NDc5Nzc2MjksLTY2NjYyMzg3MCwtMT
+YzNjkyODEwOCwxNTI5MzEyMzAzLDE0MzM4MTU5OTIsMTgwMjEz
+NTI2NywxNTQ1NzQyNzk4XX0=
 -->
