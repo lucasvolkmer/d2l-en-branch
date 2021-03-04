@@ -58,7 +58,7 @@ e (iv) a engenharia necessária para treinar modelos de forma eficiente,
 navegando nas armadilhas da computação numérica
 e obter o máximo do *hardware* disponível.
 Ensinar as habilidades de pensamento crítico necessárias para formular problemas,
-a matemática para resolvê-los e as ferramentas de software para implementar tais
+a matemática para resolvê-los e as ferramentas de *software* para implementar tais
 soluções em um só lugar apresentam desafios formidáveis.
 Nosso objetivo neste livro é apresentar um recurso unificado
 para trazer os praticantes em potencial.
@@ -453,6 +453,6 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0Mjc1NjMxNywxNDMzODE1OTkyLDE4MD
+eyJoaXN0b3J5IjpbMTUyOTMxMjMwMywxNDMzODE1OTkyLDE4MD
 IxMzUyNjcsMTU0NTc0Mjc5OF19
 -->
