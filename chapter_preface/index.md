@@ -8,20 +8,20 @@ E essas aplicações, por exemplo, reconhecimento de voz e visão computacional,
 Redes neurais, então, os antecedentes dos modelos de aprendizagem profunda  nos quais nos concentramos neste livro, eram considerados ferramentas obsoletas.
 
 
-In just the past five years, deep learning has taken the world by surprise,
-driving rapid progress in fields as diverse as computer vision,
-natural language processing, automatic speech recognition,
-reinforcement learning, and statistical modeling.
-With these advances in hand, we can now build cars that drive themselves
-with more autonomy than ever before (and less autonomy
-than some companies might have you believe),
-smart reply systems that automatically draft the most mundane emails,
-helping people dig out from oppressively large inboxes,
-and software agents that dominate the world's best humans
-at board games like Go, a feat once thought to be decades away.
-Already, these tools exert ever-wider impacts on industry and society,
-changing the way movies are made, diseases are diagnosed,
-and playing a growing role in basic sciences---from astrophysics to biology.
+Apenas nos últimos cinco anos, o *deep learning* pegou o mundo de surpresa,
+impulsionando o rápido progresso em campos tão diversos como a visão computacional,
+processamento de linguagem natural, reconhecimento automático de fala,
+aprendizagem por reforço e modelagem estatística.
+Com esses avanços em mãos, agora podemos construir carros que se dirigem sozinhos
+com mais autonomia do que nunca (e menos autonomia
+do que algumas empresas podem fazer você acreditar),
+sistemas de resposta inteligente que redigem automaticamente os e-mails mais comuns,
+ajudando as pessoas a se livrarem de caixas de entrada opressivamente grandes,
+e agentes de *software* que dominam os melhores humanos do mundo
+em jogos de tabuleiro como Go, um feito que se pensava estar a décadas de distância.
+Essas ferramentas já exercem impactos cada vez maiores na indústria e na sociedade,
+mudando a forma como os filmes são feitos, as doenças são diagnosticadas,
+e desempenhando um papel crescente nas ciências básicas --- da astrofísica à biologia.
 
 
 
@@ -453,5 +453,5 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NTc0Mjc5OF19
+eyJoaXN0b3J5IjpbMTgwMjEzNTI2NywxNTQ1NzQyNzk4XX0=
 -->
