@@ -92,6 +92,7 @@ esses recursos não combinam com as descrições
 às vezes deixando os leitores sem noção de como implementá-los.
 Além disso, muitos recursos estão escondidos atrás dos *paywalls*
 de fornecedores de cursos comerciais.
+
 We set out to create a resource that could
 (i) be freely available for everyone;
 (ii) offer sufficient technical depth to provide a starting point on the path
@@ -452,6 +453,7 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzY5MjgxMDgsMTUyOTMxMjMwMywxND
-MzODE1OTkyLDE4MDIxMzUyNjcsMTU0NTc0Mjc5OF19
+eyJoaXN0b3J5IjpbLTY2NjYyMzg3MCwtMTYzNjkyODEwOCwxNT
+I5MzEyMzAzLDE0MzM4MTU5OTIsMTgwMjEzNTI2NywxNTQ1NzQy
+Nzk4XX0=
 -->
