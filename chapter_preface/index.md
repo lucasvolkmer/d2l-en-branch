@@ -1,4 +1,4 @@
-# Preface
+# Prefaceácio
 
 Just a few years ago, there were no legions of deep learning scientists
 developing intelligent products and services at major companies and startups.
@@ -459,3 +459,6 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE0NDM0NTI0MDZdfQ==
+-->
