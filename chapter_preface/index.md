@@ -1,12 +1,9 @@
 # Prefácio
 
 Apenas alguns anos atrás, não havia legiões de cientistas de *deep learning*  desenvolvendo produtos e serviços inteligentes em grandes empresas e *startups*.
-When the youngest among us (the authors) entered the field,
-machine learning did not command headlines in daily newspapers.
-Our parents had no idea what machine learning was,
-let alone why we might prefer it to a career in medicine or law.
-Machine learning was a forward-looking academic discipline
-with a narrow set of real-world applications.
+Quando o mais jovem entre nós (os autores) entrou no campo,  o *machine learning* não comandava as manchetes dos jornais diários.
+Nossos pais não faziam ideia do que era *machine learning*,  muito menos por que podemos preferir isso a uma carreira em medicina ou direito.
+Machine learning era uma disciplina acadêmica voltada para o futuro  com um conjunto restrito de aplicações do mundo real.
 And those applications, e.g., speech recognition and computer vision,
 required so much domain knowledge that they were often regarded
 as separate areas entirely for which machine learning was one small component.
@@ -459,5 +456,5 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NDExMDk4MF19
+eyJoaXN0b3J5IjpbMTU5MzExMDM1M119
 -->
