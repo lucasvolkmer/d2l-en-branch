@@ -1,4 +1,4 @@
-# Installation
+# Instalação
 :label:`chap_installation`
 
 Para prepara-lo a ter uma experiência prática de aprendizado,
@@ -6,7 +6,7 @@ precisamos configurar o ambiente para executar Python,
 Jupyter notebooks, as bibliotecas relevantes,
 e o código necessário para executar o livro em si.
 
-## Installing Miniconda
+## Instalando Miniconda
 
 A maneira mais simples de começar será instalar
 [Miniconda](https://conda.io/en/latest/miniconda.html). A versão Python 3.x
@@ -27,22 +27,21 @@ Para os usuários de Linux:
 sh Miniconda3-latest-Linux-x86_64.sh -b
 ```
 
-A seguir, inicialize o shell para que possamos executar `conda` diretamente.
+A seguir, inicialize o *shell* para que possamos executar `conda` diretamente.
 
 ```bash
 ~/miniconda3/bin/conda init
 ```
 
 
-Agora feche e reabra seu shell atual. Você deve ser capaz de criar um novo
-ambiente da seguinte forma:
+Agora feche e reabra seu *shell* atual. Você deve ser capaz de criar um novo ambiente da seguinte forma:
 
 ```bash
 conda create --name d2l python=3.8 -y
 ```
 
 
-## Downloading the D2L Notebooks
+## Baixando os *Notebooks D2L *
 
 Next, we need to download the code of this book. You can click the "All
 Notebooks" tab on the top of any HTML page to download and unzip the code.
@@ -188,5 +187,5 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NDQwNjIzNl19
+eyJoaXN0b3J5IjpbLTcwNjQ4ODA3NF19
 -->
