@@ -244,29 +244,30 @@ para tarefas de processamento de linguagem natural.
 ### Códigos
 :label:`sec_code`
 
-Most sections of this book feature executable code because of our belief
-in the importance of an interactive learning experience in deep learning.
-At present, certain intuitions can only be developed through trial and error,
-tweaking the code in small ways and observing the results.
-Ideally, an elegant mathematical theory might tell us
-precisely how to tweak our code to achieve a desired result.
-Unfortunately, at present, such elegant theories elude us.
-Despite our best attempts, formal explanations for various techniques
-are still lacking, both because the mathematics to characterize these models
-can be so difficult and also because serious inquiry on these topics
-has only just recently kicked into high gear.
-We are hopeful that as the theory of deep learning progresses,
-future editions of this book will be able to provide insights
-in places the present edition cannot.
 
-At times, to avoid unnecessary repetition, we encapsulate
-the frequently-imported and referred-to functions, classes, etc.
-in this book in the `d2l` package.
-For any block such as a function, a class, or multiple imports
-to be saved in the package, we will mark it with
-`#@save`. We offer a detailed overview of these functions and classes in :numref:`sec_d2l`.
-The `d2l` package is light-weight and only requires
-the following packages and modules as dependencies:
+A maioria das seções deste livro apresenta código executável devido a acreditarmos
+na importância de uma experiência de aprendizagem interativa em *deep learning*.
+No momento, certas intuições só podem ser desenvolvidas por tentativa e erro,
+ajustando o código em pequenas formas e observando os resultados.
+Idealmente, uma elegante teoria matemática pode nos dizer
+precisamente como ajustar nosso código para alcançar o resultado desejado.
+Infelizmente, no momento, essas teorias elegantes nos escapam.
+Apesar de nossas melhores tentativas, explicações formais para várias técnicas
+ainda faltam, tanto porque a matemática para caracterizar esses modelos
+pode ser tão difícil e também porque uma investigação séria sobre esses tópicos
+só recentemente entrou em foco.
+Temos esperança de que, à medida que a teoria do *deep learning* avança,
+futuras edições deste livro serão capazes de fornecer *insights*
+em lugares em que a presente edição não pode.
+
+Às vezes, para evitar repetição desnecessária, encapsulamos
+as funções, classes, etc. importadas e mencionadas com frequência
+neste livro no *package* `d2l`.
+Para qualquer bloco, como uma função, uma classe ou vários *imports*
+ser salvo no pacote, vamos marcá-lo com
+`# @ save`. Oferecemos uma visão geral detalhada dessas funções e classes em: numref: `sec_d2l`.
+O *package* `d2l` é leve e requer apenas
+os seguintes *packages* e módulos como dependências:
 
 ```{.python .input}
 #@tab all
@@ -463,8 +464,9 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MTkxOTMzNyw3NjYwOTMyNDIsMTE4MD
-gzODQzMCw2NTAxNTI4OTUsMjQwNTE5NjQ2LC0xNDQ3OTc3NjI5
-LC02NjY2MjM4NzAsLTE2MzY5MjgxMDgsMTUyOTMxMjMwMywxND
-MzODE1OTkyLDE4MDIxMzUyNjcsMTU0NTc0Mjc5OF19
+eyJoaXN0b3J5IjpbLTI5NjIwODQyNSwxMjkxOTE5MzM3LDc2Nj
+A5MzI0MiwxMTgwODM4NDMwLDY1MDE1Mjg5NSwyNDA1MTk2NDYs
+LTE0NDc5Nzc2MjksLTY2NjYyMzg3MCwtMTYzNjkyODEwOCwxNT
+I5MzEyMzAzLDE0MzM4MTU5OTIsMTgwMjEzNTI2NywxNTQ1NzQy
+Nzk4XX0=
 -->
