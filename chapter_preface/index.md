@@ -228,19 +228,18 @@ que recentemente começaram a deslocar RNNs no processamento de linguagem natura
 Estas seções irão ajudá-lo a aprender sobre as ferramentas básicas
 por trás da maioria das aplicações modernas de *deep learning*.
 
-* Part three discusses scalability, efficiency, and applications.
-First, in :numref:`chap_optimization`,
-we discuss several common optimization algorithms
-used to train deep learning models.
-The next chapter, :numref:`chap_performance` examines several key factors
-that influence the computational performance of your deep learning code.
-In :numref:`chap_cv`,
-we illustrate
-major applications of deep learning in computer vision.
-In :numref:`chap_nlp_pretrain` and :numref:`chap_nlp_app`,
-we show how to pretrain language representation models and apply
-them to natural language processing tasks.
-
+* A parte três discute escalabilidade, eficiência e aplicações.
+Primeiro, em: numref: `chap_optimization`,
+discutimos vários algoritmos de otimização comuns
+usado para treinar modelos de *deep learning*.
+O próximo capítulo,: numref: `chap_performance` examina vários fatores-chave
+que influenciam o desempenho computacional de seu código de *deep learning*.
+Em: numref: `chap_cv`,
+nós ilustramos as
+principais aplicações de *deep learning* em visão computacional.
+Em: numref: `chap_nlp_pretrain` e: numref:` chap_nlp_app`,
+mostramos como pré-treinar modelos de representação de linguagem e aplicar
+para tarefas de processamento de linguagem natural.
 
 ### Code
 :label:`sec_code`
@@ -464,8 +463,8 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI4MTQxNzIxLDc2NjA5MzI0MiwxMTgwOD
-M4NDMwLDY1MDE1Mjg5NSwyNDA1MTk2NDYsLTE0NDc5Nzc2Mjks
-LTY2NjYyMzg3MCwtMTYzNjkyODEwOCwxNTI5MzEyMzAzLDE0Mz
-M4MTU5OTIsMTgwMjEzNTI2NywxNTQ1NzQyNzk4XX0=
+eyJoaXN0b3J5IjpbLTEyNDExNzMyNzYsNzY2MDkzMjQyLDExOD
+A4Mzg0MzAsNjUwMTUyODk1LDI0MDUxOTY0NiwtMTQ0Nzk3NzYy
+OSwtNjY2NjIzODcwLC0xNjM2OTI4MTA4LDE1MjkzMTIzMDMsMT
+QzMzgxNTk5MiwxODAyMTM1MjY3LDE1NDU3NDI3OThdfQ==
 -->
