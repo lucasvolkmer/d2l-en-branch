@@ -122,10 +122,10 @@ Após realizadas as instalações podemos abrir os *notebooks Jupyter* através 
 jupyter notebook
 ```
 
-At this point, you can open http://localhost:8888 (it usually opens automatically) in your Web browser. Then we can run the code for each section of the book.
-Please always execute `conda activate d2l` to activate the runtime environment
-before running the code of the book or updating the deep learning framework or the `d2l` package.
-To exit the environment, run `conda deactivate`.
+Nesse ponto, você pode abrir http://localhost:8888 (geralmente abre automaticamente) no navegador da web. Em seguida, podemos executar o código para cada seção do livro.
+Sempre execute `conda activate d2l` para ativar o ambiente de execução
+antes de executar o código do livro ou atualizar o *framework* de  *Deep Learning* ou o pacote `d2l`.
+Para sair do ambiente, execute `conda deactivate`.
 
 
 ## GPU Support
@@ -186,6 +186,6 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTkxNzM4NzYsLTk1NjM1MTEzMSwtMT
-c1NTIwNTkzOV19
+eyJoaXN0b3J5IjpbLTg1MTIyODM3MiwtOTU2MzUxMTMxLC0xNz
+U1MjA1OTM5XX0=
 -->
