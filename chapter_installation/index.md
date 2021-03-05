@@ -140,6 +140,14 @@ then you should install a GPU-enabled version.
 If you have installed the CPU-only version,
 you may need to remove it first by running:
 
+Por padrão, MXNet é instalado sem suporte a GPU
+para garantir que será executado em qualquer computador (incluindo a maioria dos laptops).
+Parte deste livro requer ou recomenda a execução com GPU.
+Se o seu computador tiver placas gráficas NVIDIA e tiver instalado [CUDA] (https://developer.nvidia.com/cuda-downloads),
+então você deve instalar uma versão habilitada para GPU.
+Se você instalou a versão apenas para CPU,
+pode ser necessário removê-lo primeiro executando:
+
 ```bash
 pip uninstall mxnet
 ```
@@ -186,6 +194,6 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ3MTc5NzUxLC05NTYzNTExMzEsLTE3NT
-UyMDU5MzldfQ==
+eyJoaXN0b3J5IjpbMTk3MzM1NTc2MiwtOTU2MzUxMTMxLC0xNz
+U1MjA1OTM5XX0=
 -->
