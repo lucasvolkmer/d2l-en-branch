@@ -439,11 +439,11 @@ Raju Gulabani, Charlie Bell e Andrew Jassy por seu generoso apoio ao escrever es
 
 ## Summary
 
-* Deep learning has revolutionized pattern recognition, introducing technology that now powers a wide range of  technologies, including computer vision, natural language processing, automatic speech recognition.
-* To successfully apply deep learning, you must understand how to cast a problem, the mathematics of modeling, the algorithms for fitting your models to data, and the engineering techniques to implement it all.
-* This book presents a comprehensive resource, including prose, figures, mathematics, and code, all in one place.
-* To answer questions related to this book, visit our forum at https://discuss.d2l.ai/.
-* All notebooks are available for download on GitHub.
+* O *deep learning* revolucionou o reconhecimento de padrões, introduzindo tecnologia que agora capacita uma ampla gama de tecnologias, incluindo visão computacional, processamento de linguagem natural e reconhecimento automático de fala.
+* Para aplicar com sucesso o *deep learning*, você deve entender como lançar um problema, a matemática da modelagem, os algoritmos para ajustar seus modelos aos dados e as técnicas de engenharia para implementar tudo isso.
+* Este livro apresenta um recurso abrangente, incluindo prosa, figuras, matemática e código, tudo em um só lugar.
+* Para responder a perguntas relacionadas a este livro, visite nosso fórum em https://discuss.d2l.ai/.
+* Todos os *notebooks* estão disponíveis para *download* no GitHub.
 
 
 ## Exercises
@@ -464,10 +464,10 @@ Raju Gulabani, Charlie Bell e Andrew Jassy por seu generoso apoio ao escrever es
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDk3NTc2MTYsLTE1MTYzMTg4NDYsMT
-g0MzQxMTk5MSw3OTAwNjg3NzIsMTkxMDIwMjk5MiwtMjk2MjA4
-NDI1LDEyOTE5MTkzMzcsNzY2MDkzMjQyLDExODA4Mzg0MzAsNj
-UwMTUyODk1LDI0MDUxOTY0NiwtMTQ0Nzk3NzYyOSwtNjY2NjIz
-ODcwLC0xNjM2OTI4MTA4LDE1MjkzMTIzMDMsMTQzMzgxNTk5Mi
-wxODAyMTM1MjY3LDE1NDU3NDI3OThdfQ==
+eyJoaXN0b3J5IjpbOTA2MzQyNzc2LC0xODQ5NzU3NjE2LC0xNT
+E2MzE4ODQ2LDE4NDM0MTE5OTEsNzkwMDY4NzcyLDE5MTAyMDI5
+OTIsLTI5NjIwODQyNSwxMjkxOTE5MzM3LDc2NjA5MzI0MiwxMT
+gwODM4NDMwLDY1MDE1Mjg5NSwyNDA1MTk2NDYsLTE0NDc5Nzc2
+MjksLTY2NjYyMzg3MCwtMTYzNjkyODEwOCwxNTI5MzEyMzAzLD
+E0MzM4MTU5OTIsMTgwMjEzNTI2NywxNTQ1NzQyNzk4XX0=
 -->
