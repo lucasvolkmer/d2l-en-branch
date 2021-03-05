@@ -151,18 +151,15 @@ pode ser necessário removê-lo primeiro executando:
 ```bash
 pip uninstall mxnet
 ```
-
-
-Then we need to find the CUDA version you installed.
-You may check it through `nvcc --version` or `cat /usr/local/cuda/version.txt`.
-Assume that you have installed CUDA 10.1,
-then you can install with the following command:
-
+Em seguida, precisamos encontrar a versão CUDA que você instalou.
+Você pode verificar em `nvcc --version` ou` cat / usr / local / cuda / version.txt`.
+Suponha que você tenha instalado o CUDA 10.1,
+então você pode instalar com o seguinte comando:
 ```bash
-# For Windows users
+# Para usuários de Windows
 pip install mxnet-cu101==1.7.0 -f https://dist.mxnet.io/python
 
-# For Linux and macOS users
+# Para usuários de Linux e MacOS
 pip install mxnet-cu101==1.7.0
 ```
 
@@ -194,6 +191,6 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MzM1NTc2MiwtOTU2MzUxMTMxLC0xNz
-U1MjA1OTM5XX0=
+eyJoaXN0b3J5IjpbNzk4Njk3NjgxLC05NTYzNTExMzEsLTE3NT
+UyMDU5MzldfQ==
 -->
