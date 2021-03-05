@@ -201,33 +201,32 @@ que são apresentados por cores diferentes em: numref: `fig_book_org`:
 :label:`fig_book_org`
 
 
-* The first part covers basics and preliminaries.
-:numref:`chap_introduction` offers an introduction to deep learning.
-Then, in :numref:`chap_preliminaries`,
-we quickly bring you up to speed on the prerequisites required
-for hands-on deep learning, such as how to store and manipulate data,
-and how to apply various numerical operations based on basic concepts
-from linear algebra, calculus, and probability.
-:numref:`chap_linear` and :numref:`chap_perceptrons`
-cover the most basic concepts and techniques of deep learning,
-such as linear regression, multilayer perceptrons and regularization.
+* A primeira parte cobre os princípios básicos e preliminares.
+: numref: `chap_introduction` oferece uma introdução ao *deep learning*.
+Então, em: numref: `chap_preliminaries`,
+nós o informamos rapidamente sobre os pré-requisitos exigidos
+para *deep learning* prático, como armazenar e manipular dados,
+e como aplicar várias operações numéricas com base em conceitos básicos
+da álgebra linear, cálculo e probabilidade.
+: numref: `chap_linear` e: numref:` chap_perceptrons`
+cobrem os conceitos e técnicas mais básicos de aprendizagem profunda,
+como regressão linear, *multilayer perceptrons* e regularização.
 
-* The next five chapters focus on modern deep learning techniques.
-:numref:`chap_computation` describes the various key components of deep
-learning calculations and lays the groundwork
-for us to subsequently implement more complex models.
-Next, in :numref:`chap_cnn` and :numref:`chap_modern_cnn`,
-we introduce convolutional neural networks (CNNs), powerful tools
-that form the backbone of most modern computer vision systems.
-Subsequently, in :numref:`chap_rnn` and :numref:`chap_modern_rnn`, we introduce
-recurrent neural networks (RNNs), models that exploit
-temporal or sequential structure in data, and are commonly used
-for natural language processing and time series prediction.
-In :numref:`chap_attention`, we introduce a new class of models
-that employ a technique called attention mechanisms
-and they have recently begun to displace RNNs in natural language processing.
-These sections will get you up to speed on the basic tools
-behind most modern applications of deep learning.
+* Os próximos cinco capítulos enfocam as técnicas modernas de *deep learning*.
+: numref: `chap_computation` descreve os vários componentes-chave dos cálculos do *deep learning* e estabelece as bases
+para que possamos posteriormente implementar modelos mais complexos.
+A seguir, em: numref: `chap_cnn` e: numref:` chap_modern_cnn`,
+apresentamos redes neurais convolucionais (CNNs, do inglês *convolutional neural networks*), ferramentas poderosas
+que formam a espinha dorsal da maioria dos sistemas modernos de visão computacional.
+Posteriormente, em: numref: `chap_rnn` e: numref:` chap_modern_rnn`, apresentamos
+redes neurais recorrentes (RNNs, do inglês *recurrent neural networks*), modelos que exploram
+estrutura temporal ou sequencial em dados, e são comumente usados
+para processamento de linguagem natural e previsão de séries temporais.
+Em: numref: `chap_attention`, apresentamos uma nova classe de modelos
+que empregam uma técnica chamada mecanismos de atenção,
+que recentemente começaram a deslocar RNNs no processamento de linguagem natural.
+Estas seções irão ajudá-lo a aprender sobre as ferramentas básicas
+por trás da maioria das aplicações modernas de *deep learning*.
 
 * Part three discusses scalability, efficiency, and applications.
 First, in :numref:`chap_optimization`,
@@ -465,8 +464,8 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY2MDkzMjQyLDExODA4Mzg0MzAsNjUwMT
-UyODk1LDI0MDUxOTY0NiwtMTQ0Nzk3NzYyOSwtNjY2NjIzODcw
-LC0xNjM2OTI4MTA4LDE1MjkzMTIzMDMsMTQzMzgxNTk5MiwxOD
-AyMTM1MjY3LDE1NDU3NDI3OThdfQ==
+eyJoaXN0b3J5IjpbMjI4MTQxNzIxLDc2NjA5MzI0MiwxMTgwOD
+M4NDMwLDY1MDE1Mjg5NSwyNDA1MTk2NDYsLTE0NDc5Nzc2Mjks
+LTY2NjYyMzg3MCwtMTYzNjkyODEwOCwxNTI5MzEyMzAzLDE0Mz
+M4MTU5OTIsMTgwMjEzNTI2NywxNTQ1NzQyNzk4XX0=
 -->
