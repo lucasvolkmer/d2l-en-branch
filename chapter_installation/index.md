@@ -11,9 +11,9 @@ e o código necessário para executar o livro em si.
 A maneira mais simples de começar será instalar
 [Miniconda](https://conda.io/en/latest/miniconda.html). A versão Python 3.x
 é necessária. Você pode pular as etapas a seguir se o conda já tiver sido instalado.
-Download the corresponding Miniconda sh file from the website
-and then execute the installation from the command line
-using `sh <FILENAME> -b`. For macOS users:
+Baixe o arquivo Miniconda sh correspondente do site
+e então execute a instalação a partir da linha de comando
+usando  `sh <FILENAME> -b`. For macOS users:
 A maneira mais simples de começar será instalar
 [Miniconda] (https://conda.io/en/latest/miniconda.html). A versão Python 3.x
 é necessário. Você pode pular as etapas a seguir se o conda já tiver sido instalado.
@@ -195,5 +195,5 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3OTA3MTA0Ml19
+eyJoaXN0b3J5IjpbLTQ2OTU2MjM4N119
 -->
