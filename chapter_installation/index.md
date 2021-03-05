@@ -64,7 +64,7 @@ conda activate d2l
 ```
 
 
-## Instalando o Framework and the `d2l` Package
+## Instalando o *Framework* e o pacote `d2l` 
 
 Before installing the deep learning framework, please first check
 whether or not you have proper GPUs on your machine
@@ -190,5 +190,5 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQyMzYxNjY1XX0=
+eyJoaXN0b3J5IjpbLTE3NTUyMDU5MzldfQ==
 -->
