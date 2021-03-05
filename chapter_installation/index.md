@@ -1,10 +1,6 @@
 # Installation
 :label:`chap_installation`
 
-In order to get you up and running for hands-on learning experience,
-we need to set you up with an environment for running Python,
-Jupyter notebooks, the relevant libraries,
-and the code needed to run the book itself.
 Para prepara-lo a ter uma experiência prática de aprendizado,
 precisamos configurar o ambiente para executar Python,
 Jupyter notebooks, as bibliotecas relevantes,
@@ -12,13 +8,18 @@ e o código necessário para executar o livro em si.
 
 ## Installing Miniconda
 
-The simplest way to get going will be to install
-[Miniconda](https://conda.io/en/latest/miniconda.html). The Python 3.x version
-is required. You can skip the following steps if conda has already been installed.
+A maneira mais simples de começar será instalar
+[Miniconda](https://conda.io/en/latest/miniconda.html). A versão Python 3.x
+é necessária. Você pode pular as etapas a seguir se o conda já tiver sido instalado.
 Download the corresponding Miniconda sh file from the website
 and then execute the installation from the command line
 using `sh <FILENAME> -b`. For macOS users:
-
+A maneira mais simples de começar será instalar
+[Miniconda] (https://conda.io/en/latest/miniconda.html). A versão Python 3.x
+é necessário. Você pode pular as etapas a seguir se o conda já tiver sido instalado.
+Baixe o arquivo sh Miniconda correspondente do site
+e então execute a instalação a partir da linha de comando
+usando `sh <FILENAME> -b`. Para usuários do macOS:
 ```bash
 # The file name is subject to changes
 sh Miniconda3-latest-MacOSX-x86_64.sh -b
@@ -194,5 +195,5 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTA5MjIyMTNdfQ==
+eyJoaXN0b3J5IjpbMTM3OTA3MTA0Ml19
 -->
