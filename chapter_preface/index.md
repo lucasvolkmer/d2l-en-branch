@@ -241,7 +241,7 @@ Em: numref: `chap_nlp_pretrain` e: numref:` chap_nlp_app`,
 mostramos como pré-treinar modelos de representação de linguagem e aplicar
 para tarefas de processamento de linguagem natural.
 
-### Code
+### Códigos
 :label:`sec_code`
 
 Most sections of this book feature executable code because of our belief
@@ -463,8 +463,8 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDExNzMyNzYsNzY2MDkzMjQyLDExOD
-A4Mzg0MzAsNjUwMTUyODk1LDI0MDUxOTY0NiwtMTQ0Nzk3NzYy
-OSwtNjY2NjIzODcwLC0xNjM2OTI4MTA4LDE1MjkzMTIzMDMsMT
-QzMzgxNTk5MiwxODAyMTM1MjY3LDE1NDU3NDI3OThdfQ==
+eyJoaXN0b3J5IjpbMTI5MTkxOTMzNyw3NjYwOTMyNDIsMTE4MD
+gzODQzMCw2NTAxNTI4OTUsMjQwNTE5NjQ2LC0xNDQ3OTc3NjI5
+LC02NjY2MjM4NzAsLTE2MzY5MjgxMDgsMTUyOTMxMjMwMywxND
+MzODE1OTkyLDE4MDIxMzUyNjcsMTU0NTc0Mjc5OF19
 -->
