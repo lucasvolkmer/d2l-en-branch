@@ -365,27 +365,26 @@ import tensorflow as tf
 
 ### Público-alvo
 
-This book is for students (undergraduate or graduate),
-engineers, and researchers, who seek a solid grasp
-of the practical techniques of deep learning.
-Because we explain every concept from scratch,
-no previous background in deep learning or machine learning is required.
-Fully explaining the methods of deep learning
-requires some mathematics and programming,
-but we will only assume that you come in with some basics,
-including (the very basics of) linear algebra, calculus, probability,
-and Python programming.
-Moreover, in the Appendix, we provide a refresher
-on most of the mathematics covered in this book.
-Most of the time, we will prioritize intuition and ideas
-over mathematical rigor.
-There are many terrific books which can lead the interested reader further.
-For instance, Linear Analysis by Bela Bollobas :cite:`Bollobas.1999`
-covers linear algebra and functional analysis in great depth.
-All of Statistics :cite:`Wasserman.2013` is a terrific guide to statistics.
-And if you have not used Python before,
-you may want to peruse this [Python tutorial](http://learnpython.org/).
-
+Este livro é para estudantes (graduação ou pós-graduação),
+engenheiros e pesquisadores que buscam uma compreensão sólida
+das técnicas práticas de *deep learning*.
+Porque explicamos cada conceito do zero,
+nenhuma experiência anterior em *deep learning* ou *machine learning* é necessária.
+Explicando totalmente os métodos de *deep learning*
+requer matemática e programação,
+mas vamos apenas supor que você veio com algumas noções básicas,
+incluindo (o básico de) álgebra linear, cálculo, probabilidade,
+e programação Python.
+Além disso, no Apêndice, fornecemos uma atualização
+na maior parte da matemática abordada neste livro.
+Na maioria das vezes, priorizaremos intuição e ideias
+sobre o rigor matemático.
+Existem muitos livros fantásticos que podem levar o leitor interessado ainda mais longe.
+Por exemplo, *Linear Analysis* de Bela Bollobas: cite: `Bollobas.1999`
+cobre álgebra linear e análise funcional em grande profundidade.
+*All of Statistics*: cite: `Wasserman.2013` é um excelente guia para estatísticas.
+E se você nunca usou Python antes,
+você pode querer dar uma olhada neste [tutorial de Python] (http://learnpython.org/).
 
 ### Forum
 
@@ -464,10 +463,10 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MzQxMTk5MSw3OTAwNjg3NzIsMTkxMD
-IwMjk5MiwtMjk2MjA4NDI1LDEyOTE5MTkzMzcsNzY2MDkzMjQy
-LDExODA4Mzg0MzAsNjUwMTUyODk1LDI0MDUxOTY0NiwtMTQ0Nz
-k3NzYyOSwtNjY2NjIzODcwLC0xNjM2OTI4MTA4LDE1MjkzMTIz
-MDMsMTQzMzgxNTk5MiwxODAyMTM1MjY3LDE1NDU3NDI3OThdfQ
-==
+eyJoaXN0b3J5IjpbLTExOTMwMjI2MzgsMTg0MzQxMTk5MSw3OT
+AwNjg3NzIsMTkxMDIwMjk5MiwtMjk2MjA4NDI1LDEyOTE5MTkz
+MzcsNzY2MDkzMjQyLDExODA4Mzg0MzAsNjUwMTUyODk1LDI0MD
+UxOTY0NiwtMTQ0Nzk3NzYyOSwtNjY2NjIzODcwLC0xNjM2OTI4
+MTA4LDE1MjkzMTIzMDMsMTQzMzgxNTk5MiwxODAyMTM1MjY3LD
+E1NDU3NDI3OThdfQ==
 -->
