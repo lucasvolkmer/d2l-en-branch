@@ -173,12 +173,12 @@ By default, the deep learning framework is installed with GPU support.
 If your computer has NVIDIA GPUs and has installed [CUDA]
 Por padrão, o Framework de Deep Learning é instalada com suporte para GPU.
 Se o seu computador tem GPUs NVIDIA e instalou [CUDA](https://developer.nvidia.com/cuda-downloads),
-então es
+então está tudo pronto.
 :end_tab:
 
-## Exercises
+## Exercícios
 
-1. Download the code for the book and install the runtime environment.
+1. Baixe o código do livro e instale o ambiente de execução.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/23)
@@ -192,6 +192,6 @@ então es
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNjQyNTIzLDc5ODY5NzY4MSwtOTU2Mz
-UxMTMxLC0xNzU1MjA1OTM5XX0=
+eyJoaXN0b3J5IjpbLTEyMjYzODc2NDMsNzk4Njk3NjgxLC05NT
+YzNTExMzEsLTE3NTUyMDU5MzldfQ==
 -->
