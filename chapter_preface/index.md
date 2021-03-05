@@ -164,37 +164,38 @@ Isso torna o mais fácil possível para você
 comece seus próprios projetos de pesquisa aproveitando nosso código.
 Basta copiar um *notebook* e começar a modificá-lo.
 
-We will interleave the runnable code with background material as needed.
-In general, we will often err on the side of making tools
-available before explaining them fully (and we will follow up by
-explaining the background later).
-For instance, we might use *stochastic gradient descent*
-before fully explaining why it is useful or why it works.
-This helps to give practitioners the necessary
-ammunition to solve problems quickly,
-at the expense of requiring the reader
-to trust us with some curatorial decisions.
 
-This book will teach deep learning concepts from scratch.
-Sometimes, we want to delve into fine details about the models
-that would typically be hidden from the user
-by deep learning frameworks' advanced abstractions.
-This comes up especially in the basic tutorials,
-where we want you to understand everything
-that happens in a given layer or optimizer.
-In these cases, we will often present two versions of the example:
-one where we implement everything from scratch,
-relying only on the NumPy interface and automatic differentiation,
-and another, more practical example,
-where we write succinct code using high-level APIs of deep learning frameworks.
-Once we have taught you how some component works,
-we can just use the high-level APIs in subsequent tutorials.
+Vamos intercalar o código executável com o *background* de  material, conforme necessário.
+Em geral, muitas vezes erramos por fazer ferramentas
+disponíveis antes de explicá-los totalmente (e vamos acompanhar por
+explicando o *background* mais tarde).
+Por exemplo, podemos usar *gradiente descendente estocástico*
+antes de explicar completamente porque é útil ou porque funciona.
+Isso ajuda a dar aos profissionais a
+munição necessária para resolver problemas rapidamente,
+às custas de exigir do leitor
+que nos confie algumas decisões curatoriais.
+
+Este livro vai ensinar conceitos de *deep learning* do zero.
+Às vezes, queremos nos aprofundar em detalhes sobre os modelos
+que normalmente ficaria oculto do usuário
+pelas abstrações avançadas dos *frameworks* de *deep learning*.
+Isso surge especialmente nos tutoriais básicos,
+onde queremos que você entenda tudo
+que acontece em uma determinada camada ou otimizador.
+Nesses casos, apresentaremos frequentemente duas versões do exemplo:
+onde implementamos tudo do zero,
+contando apenas com a interface NumPy e diferenciação automática,
+e outro exemplo mais prático,
+onde escrevemos código sucinto usando APIs de alto nível de *frameworks* de *deep learning*.
+Depois de ensinar a você como alguns componentes funcionam,
+podemos apenas usar as APIs de alto nível em tutoriais subsequentes.
 
 
-### Content and Structure
+### Conteúdo e Estrutura
 
-The book can be roughly divided into three parts,
-which are presented by different colors in :numref:`fig_book_org`:
+O livro pode ser dividido em três partes,
+que são apresentados por cores diferentes em: numref: `fig_book_org`:
 
 ![Book structure](../img/book-org.svg)
 :label:`fig_book_org`
@@ -464,8 +465,8 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MDgzODQzMCw2NTAxNTI4OTUsMjQwNT
-E5NjQ2LC0xNDQ3OTc3NjI5LC02NjY2MjM4NzAsLTE2MzY5Mjgx
-MDgsMTUyOTMxMjMwMywxNDMzODE1OTkyLDE4MDIxMzUyNjcsMT
-U0NTc0Mjc5OF19
+eyJoaXN0b3J5IjpbNzY2MDkzMjQyLDExODA4Mzg0MzAsNjUwMT
+UyODk1LDI0MDUxOTY0NiwtMTQ0Nzk3NzYyOSwtNjY2NjIzODcw
+LC0xNjM2OTI4MTA4LDE1MjkzMTIzMDMsMTQzMzgxNTk5MiwxOD
+AyMTM1MjY3LDE1NDU3NDI3OThdfQ==
 -->
