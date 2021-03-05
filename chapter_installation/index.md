@@ -103,9 +103,6 @@ pip install tensorflow tensorflow-probability
 
 :end_tab:
 
-
-We also install the `d2l` package that encapsulates frequently used
-functions and classes in this book.
 Nós também instalamos o pacote `d2l` que encapsula  funções e classes frequentemente usadas neste livro.
 ```bash
 # -U: Atualiza todos os pacotes para as versões mais atuais disponíveis
@@ -128,13 +125,6 @@ Para sair do ambiente, execute `conda deactivate`.
 :label:`subsec_gpu`
 
 :begin_tab:`mxnet`
-By default, MXNet is installed without GPU support
-to ensure that it will run on any computer (including most laptops).
-Part of this book requires or recommends running with GPU.
-If your computer has NVIDIA graphics cards and has installed [CUDA](https://developer.nvidia.com/cuda-downloads),
-then you should install a GPU-enabled version.
-If you have installed the CPU-only version,
-you may need to remove it first by running:
 
 Por padrão, MXNet é instalado sem suporte a GPU
 para garantir que será executado em qualquer computador (incluindo a maioria dos laptops).
@@ -165,8 +155,7 @@ Você pode alterar os últimos dígitos de acordo com sua versão CUDA, e.g., `c
 
 
 :begin_tab:`pytorch,tensorflow`
-By default, the deep learning framework is installed with GPU support.
-If your computer has NVIDIA GPUs and has installed [CUDA]
+
 Por padrão, o Framework de Deep Learning é instalada com suporte para GPU.
 Se o seu computador tem GPUs NVIDIA e instalou [CUDA](https://developer.nvidia.com/cuda-downloads),
 então está tudo pronto.
@@ -188,6 +177,6 @@ então está tudo pronto.
 [Discussão](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNDM0NjI5NCw3OTg2OTc2ODEsLTk1Nj
+eyJoaXN0b3J5IjpbMjEwMDA3Mjg4Nyw3OTg2OTc2ODEsLTk1Nj
 M1MTEzMSwtMTc1NTIwNTkzOV19
 -->
