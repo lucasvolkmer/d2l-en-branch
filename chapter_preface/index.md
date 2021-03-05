@@ -396,14 +396,15 @@ você pode encontrar o link da página de discussão associada no final de cada 
 
 ## Agradecimentos
 
-We are indebted to the hundreds of contributors for both
-the English and the Chinese drafts.
-They helped improve the content and offered valuable feedback.
-Specifically, we thank every contributor of this English draft
-for making it better for everyone.
-Their GitHub IDs or names are (in no particular order):
+
+Estamos em dívida com as centenas de contribuintes de ambos
+os esboços ingleses e chineses (**e brasileiros**).
+Eles ajudaram a melhorar o conteúdo e ofereceram feedback valioso.
+Especificamente, agradecemos a todos os contribuintes deste rascunho em inglês
+para torná-lo melhor para todos.
+Seus IDs ou nomes do GitHub são (sem nenhuma ordem específica):
 alxnorden, avinashingit, bowen0701, brettkoonce, Chaitanya Prakash Bapat,
-cryptonaut, Davide Fiocco, edgarroman, gkutiel, John Mitro, Liang Pu,
+criptonauta, Davide Fiocco, edgarroman, gkutiel, John Mitro, Liang Pu,
 Rahul Agarwal, Mohamed Ali Jamaoui, Michael (Stu) Stewart, Mike Müller,
 NRauschmayr, Prakhar Srivastav, sad-, sfermigier, Sheng Zha, sundeepteki,
 topecongiro, tpdi, vermicelli, Vishaal Kapoor, Vishwesh Ravi Shrimali, YaYaB, Yuhong Chen,
@@ -419,7 +420,7 @@ ati-ozgur, qbaza, dchoi77, Adam Gerson, Phuc Le, Mark Atwood, christabella, vn09
 Haibin Lin, jjangga0214, RichyChen, noelo, hansent, Giel Dops, dvincent1337, WhiteD3vil,
 Peter Kulits, codypenta, joseppinilla, ahmaurya, karolszk, heytitle, Peter Goetz, rigtorp,
 Tiep Vu, sfilip, mlxd, Kale-ab Tessera, Sanjar Adilov, MatteoFerrara, hsneto,
-Katarzyna Biesialska, Gregory Bruss, Duy–Thanh Doan, paulaurel, graytowne, Duc Pham,
+Katarzyna Biesialska, Gregory Bruss, Duy – Thanh Doan, paulaurel, graytowne, Duc Pham,
 sl7423, Jaedong Hwang, Yida Wang, cys4, clhm, Jean Kaddour, austinmw, trebeljahr, tbaums,
 Cuong V. Nguyen, pavelkomarov, vzlamal, NotAnotherSystem, J-Arun-Mani, jancio, eldarkurtic,
 the-great-shazbot, doctorcolossus, gducharme, cclauss, Daniel-Mietchen, hoonose, biagiom,
@@ -432,8 +433,8 @@ steinsag, charleybeller, Andrew Lumsdaine, Jiekui Zhang, Deepak Pathak, Florian 
 Adriaan Tijsseling, Ron Medina, Gaurav Saha, Murat Semerci, Lei Mao, Levi McClenny, Joshua Broyde,
 jake221, jonbally, zyhazwraith, Brian Pulfer, Nick Tomasino.
 
-We thank Amazon Web Services, especially Swami Sivasubramanian,
-Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writing this book. Without the available time, resources, discussions with colleagues, and continuous encouragement this book would not have happened.
+Agradecemos à Amazon Web Services, especialmente a Swami Sivasubramanian,
+Raju Gulabani, Charlie Bell e Andrew Jassy por seu generoso apoio ao escrever este livro. Sem o tempo disponível, recursos, discussões com colegas e incentivo contínuo, este livro não teria acontecido.
 
 
 ## Summary
@@ -463,10 +464,10 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTYzMTg4NDYsMTg0MzQxMTk5MSw3OT
-AwNjg3NzIsMTkxMDIwMjk5MiwtMjk2MjA4NDI1LDEyOTE5MTkz
-MzcsNzY2MDkzMjQyLDExODA4Mzg0MzAsNjUwMTUyODk1LDI0MD
-UxOTY0NiwtMTQ0Nzk3NzYyOSwtNjY2NjIzODcwLC0xNjM2OTI4
-MTA4LDE1MjkzMTIzMDMsMTQzMzgxNTk5MiwxODAyMTM1MjY3LD
-E1NDU3NDI3OThdfQ==
+eyJoaXN0b3J5IjpbLTE4NDk3NTc2MTYsLTE1MTYzMTg4NDYsMT
+g0MzQxMTk5MSw3OTAwNjg3NzIsMTkxMDIwMjk5MiwtMjk2MjA4
+NDI1LDEyOTE5MTkzMzcsNzY2MDkzMjQyLDExODA4Mzg0MzAsNj
+UwMTUyODk1LDI0MDUxOTY0NiwtMTQ0Nzk3NzYyOSwtNjY2NjIz
+ODcwLC0xNjM2OTI4MTA4LDE1MjkzMTIzMDMsMTQzMzgxNTk5Mi
+wxODAyMTM1MjY3LDE1NDU3NDI3OThdfQ==
 -->
