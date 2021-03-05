@@ -164,7 +164,7 @@ pip install mxnet-cu101==1.7.0
 ```
 
 
-You may change the last digits according to your CUDA version, e.g., `cu100` for
+Você pode alterar os últimos dígitos de acordo com sua versão CUDA, e.g., `cu100` for
 CUDA 10.0 and `cu90` for CUDA 9.0.
 :end_tab:
 
@@ -191,6 +191,6 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk4Njk3NjgxLC05NTYzNTExMzEsLTE3NT
-UyMDU5MzldfQ==
+eyJoaXN0b3J5IjpbMTk1NDAwODkyOSw3OTg2OTc2ODEsLTk1Nj
+M1MTEzMSwtMTc1NTIwNTkzOV19
 -->
