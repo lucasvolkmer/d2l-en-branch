@@ -386,15 +386,15 @@ cobre álgebra linear e análise funcional em grande profundidade.
 E se você nunca usou Python antes,
 você pode querer dar uma olhada neste [tutorial de Python] (http://learnpython.org/).
 
-### Forum
+### Fórum
 
-Associated with this book, we have launched a discussion forum,
-located at [discuss.d2l.ai](https://discuss.d2l.ai/).
-When you have questions on any section of the book,
-you can find the associated discussion page link at the end of each chapter.
+Associado a este livro, lançamos um fórum de discussão,
+localizado em [discuss.d2l.ai] (https://discuss.d2l.ai/).
+Quando você tiver dúvidas sobre qualquer seção do livro,
+você pode encontrar o link da página de discussão associada no final de cada capítulo.
 
 
-## Acknowledgments
+## Agradecimentos
 
 We are indebted to the hundreds of contributors for both
 the English and the Chinese drafts.
@@ -463,7 +463,7 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTMwMjI2MzgsMTg0MzQxMTk5MSw3OT
+eyJoaXN0b3J5IjpbLTE1MTYzMTg4NDYsMTg0MzQxMTk5MSw3OT
 AwNjg3NzIsMTkxMDIwMjk5MiwtMjk2MjA4NDI1LDEyOTE5MTkz
 MzcsNzY2MDkzMjQyLDExODA4Mzg0MzAsNjUwMTUyODk1LDI0MD
 UxOTY0NiwtMTQ0Nzk3NzYyOSwtNjY2NjIzODcwLC0xNjM2OTI4
