@@ -290,51 +290,52 @@ import hashlib
 d2l = sys.modules[__name__]
 ```
 
-:begin_tab:`mxnet`
-Most of the code in this book is based on Apache MXNet.
-MXNet is an open-source framework for deep learning
-and the preferred choice of AWS (Amazon Web Services),
-as well as many colleges and companies.
-All of the code in this book has passed tests under the newest MXNet version.
-However, due to the rapid development of deep learning, some code
-*in the print edition* may not work properly in future versions of MXNet.
-However, we plan to keep the online version up-to-date.
-In case you encounter any such problems,
-please consult :ref:`chap_installation`
-to update your code and runtime environment.
 
-Here is how we import modules from MXNet.
-:end_tab:
+: begin_tab: `mxnet`
+A maior parte do código neste livro é baseada no Apache MXNet.
+MXNet é um *framework* de código aberto (*oper-source*) para *deep learning*
+e a escolha preferida de AWS (*Amazon Web Services*),
+bem como muitas faculdades e empresas.
+Todo o código neste livro passou nos testes da versão mais recente do MXNet.
+No entanto, devido ao rápido desenvolvimento do *deep learning*, alguns códigos
+*na edição impressa* podem não funcionar corretamente em versões futuras do MXNet.
+No entanto, planejamos manter a versão *online* atualizada.
+Caso você encontre algum desses problemas,
+consulte: ref: `chap_installation`
+para atualizar seu código e ambiente de execução.
 
-:begin_tab:`pytorch`
-Most of the code in this book is based on PyTorch.
-PyTorch is an open-source framework for deep learning, which is extremely
-popular in the research community.
-All of the code in this book has passed tests under the newest PyTorch.
-However, due to the rapid development of deep learning, some code
-*in the print edition* may not work properly in future versions of PyTorch.
-However, we plan to keep the online version up-to-date.
-In case you encounter any such problems,
-please consult :ref:`chap_installation`
-to update your code and runtime environment.
+Aqui está como importamos módulos do MXNet.
+: end_tab:
 
-Here is how we import modules from PyTorch.
-:end_tab:
+: begin_tab: `pytorch`
+A maior parte do código neste livro é baseada no PyTorch.
+PyTorch é uma estrutura de código aberto para *deep learning*, que é extremamente
+popular na comunidade de pesquisa.
+Todo o código neste livro passou nos testes do mais novo PyTorch.
+No entanto, devido ao rápido desenvolvimento do *deep learning*, alguns códigos
+*na edição impressa* podem não funcionar corretamente em versões futuras do PyTorch.
+No entanto, planejamos manter a versão *online* atualizada.
+Caso você encontre algum desses problemas,
+consulte: ref: `chap_installation`
+para atualizar seu código e ambiente de execução.
 
-:begin_tab:`tensorflow`
-Most of the code in this book is based on TensorFlow.
-TensorFlow is an open-source framework for deep learning, which is extremely
-popular in both the research community and industry.
-All of the code in this book has passed tests under the newest TensorFlow.
-However, due to the rapid development of deep learning, some code
-*in the print edition* may not work properly in future versions of TensorFlow.
-However, we plan to keep the online version up-to-date.
-In case you encounter any such problems,
-please consult :ref:`chap_installation`
-to update your code and runtime environment.
+Aqui está como importamos módulos do PyTorch.
+: end_tab:
 
-Here is how we import modules from TensorFlow.
-:end_tab:
+: begin_tab: `tensorflow`
+A maior parte do código deste livro é baseada no TensorFlow.
+TensorFlow é uma estrutura de código aberto para *deep learning*, que é extremamente
+popular na comunidade de pesquisa e na indústria.
+Todo o código deste livro passou nos testes do TensorFlow mais recente.
+No entanto, devido ao rápido desenvolvimento do *deep learning*, alguns códigos
+*na edição impressa* podem não funcionar corretamente em versões futuras do TensorFlow.
+No entanto, planejamos manter a versão online atualizada.
+Caso você encontre algum desses problemas,
+consulte: ref: `chap_installation`
+para atualizar seu código e ambiente de execução.
+
+Aqui está como importamos módulos do TensorFlow.
+: end_tab:
 
 ```{.python .input}
 #@save
@@ -463,9 +464,9 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMDIwMjk5MiwtMjk2MjA4NDI1LDEyOT
-E5MTkzMzcsNzY2MDkzMjQyLDExODA4Mzg0MzAsNjUwMTUyODk1
-LDI0MDUxOTY0NiwtMTQ0Nzk3NzYyOSwtNjY2NjIzODcwLC0xNj
-M2OTI4MTA4LDE1MjkzMTIzMDMsMTQzMzgxNTk5MiwxODAyMTM1
-MjY3LDE1NDU3NDI3OThdfQ==
+eyJoaXN0b3J5IjpbNzkwMDY4NzcyLDE5MTAyMDI5OTIsLTI5Nj
+IwODQyNSwxMjkxOTE5MzM3LDc2NjA5MzI0MiwxMTgwODM4NDMw
+LDY1MDE1Mjg5NSwyNDA1MTk2NDYsLTE0NDc5Nzc2MjksLTY2Nj
+YyMzg3MCwtMTYzNjkyODEwOCwxNTI5MzEyMzAzLDE0MzM4MTU5
+OTIsMTgwMjEzNTI2NywxNTQ1NzQyNzk4XX0=
 -->
