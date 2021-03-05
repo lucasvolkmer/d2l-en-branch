@@ -363,7 +363,7 @@ import numpy as np
 import tensorflow as tf
 ```
 
-### Target Audience
+### Público-alvo
 
 This book is for students (undergraduate or graduate),
 engineers, and researchers, who seek a solid grasp
@@ -464,9 +464,10 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkwMDY4NzcyLDE5MTAyMDI5OTIsLTI5Nj
-IwODQyNSwxMjkxOTE5MzM3LDc2NjA5MzI0MiwxMTgwODM4NDMw
-LDY1MDE1Mjg5NSwyNDA1MTk2NDYsLTE0NDc5Nzc2MjksLTY2Nj
-YyMzg3MCwtMTYzNjkyODEwOCwxNTI5MzEyMzAzLDE0MzM4MTU5
-OTIsMTgwMjEzNTI2NywxNTQ1NzQyNzk4XX0=
+eyJoaXN0b3J5IjpbMTg0MzQxMTk5MSw3OTAwNjg3NzIsMTkxMD
+IwMjk5MiwtMjk2MjA4NDI1LDEyOTE5MTkzMzcsNzY2MDkzMjQy
+LDExODA4Mzg0MzAsNjUwMTUyODk1LDI0MDUxOTY0NiwtMTQ0Nz
+k3NzYyOSwtNjY2NjIzODcwLC0xNjM2OTI4MTA4LDE1MjkzMTIz
+MDMsMTQzMzgxNTk5MiwxODAyMTM1MjY3LDE1NDU3NDI3OThdfQ
+==
 -->
