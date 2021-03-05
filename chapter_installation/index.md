@@ -110,13 +110,13 @@ pip install tensorflow tensorflow-probability
 
 We also install the `d2l` package that encapsulates frequently used
 functions and classes in this book.
-
+Nós também instalamos o pacote `d2l` que encapsula  funções e classes frequentemente usadas neste livro.
 ```bash
-# -U: Upgrade all packages to the newest available version
+# -U: Atualiza todos os pacotes para as versões mais atuais disponíveis
 pip install -U d2l
 ```
 
-
+Aós 
 Once they are installed, we now open the Jupyter notebook by running:
 
 ```bash
@@ -188,5 +188,6 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NjM1MTEzMSwtMTc1NTIwNTkzOV19
+eyJoaXN0b3J5IjpbLTM4NjgyOTk3NiwtOTU2MzUxMTMxLC0xNz
+U1MjA1OTM5XX0=
 -->
