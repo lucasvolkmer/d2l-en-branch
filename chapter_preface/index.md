@@ -28,7 +28,6 @@ e desempenhando um papel crescente nas ciências básicas --- da astrofísica à
 ## Sobre Este Livro
 Esse livro representa nossa tentativa de tornar o *deep learning* acessível, lhes ensinando os *conceitos*, o *contexto* e o *código*.
 
-### One Medium Combining Code, Math, and HTML
 
 ### Um Meio (?) Combinando Código, Matemática e HTML
 
@@ -464,9 +463,9 @@ Raju Gulabani, Charlie Bell, and Andrew Jassy for their generous support in writ
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NjIwODQyNSwxMjkxOTE5MzM3LDc2Nj
-A5MzI0MiwxMTgwODM4NDMwLDY1MDE1Mjg5NSwyNDA1MTk2NDYs
-LTE0NDc5Nzc2MjksLTY2NjYyMzg3MCwtMTYzNjkyODEwOCwxNT
-I5MzEyMzAzLDE0MzM4MTU5OTIsMTgwMjEzNTI2NywxNTQ1NzQy
-Nzk4XX0=
+eyJoaXN0b3J5IjpbMTkxMDIwMjk5MiwtMjk2MjA4NDI1LDEyOT
+E5MTkzMzcsNzY2MDkzMjQyLDExODA4Mzg0MzAsNjUwMTUyODk1
+LDI0MDUxOTY0NiwtMTQ0Nzk3NzYyOSwtNjY2NjIzODcwLC0xNj
+M2OTI4MTA4LDE1MjkzMTIzMDMsMTQzMzgxNTk5MiwxODAyMTM1
+MjY3LDE1NDU3NDI3OThdfQ==
 -->
