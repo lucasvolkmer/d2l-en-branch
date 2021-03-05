@@ -448,9 +448,9 @@ Raju Gulabani, Charlie Bell e Andrew Jassy por seu generoso apoio ao escrever es
 
 ## Exercícios
 
-1. Register an account on the discussion forum of this book [discuss.d2l.ai](https://discuss.d2l.ai/).
-1. Install Python on your computer.
-1. Follow the links at the bottom of the section to the forum, where you will be able to seek out help and discuss the book and find answers to your questions by engaging the authors and broader community.
+1. Registre uma conta no fórum de discussão deste livro [discuss.d2l.ai] (https://discuss.d2l.ai/).
+1. Instale Python em seu computador.
+1. Siga os links na parte inferior da seção para o fórum, onde você poderá buscar ajuda e discutir o livro e encontrar respostas para suas perguntas envolvendo os autores e a comunidade em geral.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/18)
@@ -464,10 +464,10 @@ Raju Gulabani, Charlie Bell e Andrew Jassy por seu generoso apoio ao escrever es
 [Discussions](https://discuss.d2l.ai/t/186)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMjIzMDMyMCwtMTg0OTc1NzYxNiwtMT
-UxNjMxODg0NiwxODQzNDExOTkxLDc5MDA2ODc3MiwxOTEwMjAy
-OTkyLC0yOTYyMDg0MjUsMTI5MTkxOTMzNyw3NjYwOTMyNDIsMT
-E4MDgzODQzMCw2NTAxNTI4OTUsMjQwNTE5NjQ2LC0xNDQ3OTc3
-NjI5LC02NjY2MjM4NzAsLTE2MzY5MjgxMDgsMTUyOTMxMjMwMy
-wxNDMzODE1OTkyLDE4MDIxMzUyNjcsMTU0NTc0Mjc5OF19
+eyJoaXN0b3J5IjpbNjM2NDUwMzk3LC0xODQ5NzU3NjE2LC0xNT
+E2MzE4ODQ2LDE4NDM0MTE5OTEsNzkwMDY4NzcyLDE5MTAyMDI5
+OTIsLTI5NjIwODQyNSwxMjkxOTE5MzM3LDc2NjA5MzI0MiwxMT
+gwODM4NDMwLDY1MDE1Mjg5NSwyNDA1MTk2NDYsLTE0NDc5Nzc2
+MjksLTY2NjYyMzg3MCwtMTYzNjkyODEwOCwxNTI5MzEyMzAzLD
+E0MzM4MTU5OTIsMTgwMjEzNTI2NywxNTQ1NzQyNzk4XX0=
 -->
