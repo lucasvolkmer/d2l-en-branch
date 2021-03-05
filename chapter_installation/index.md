@@ -128,7 +128,7 @@ antes de executar o código do livro ou atualizar o *framework* de  *Deep Learni
 Para sair do ambiente, execute `conda deactivate`.
 
 
-## GPU Support
+## Compatibilidade com GPU
 :label:`subsec_gpu`
 
 :begin_tab:`mxnet`
@@ -186,6 +186,6 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MTIyODM3MiwtOTU2MzUxMTMxLC0xNz
-U1MjA1OTM5XX0=
+eyJoaXN0b3J5IjpbNDQ3MTc5NzUxLC05NTYzNTExMzEsLTE3NT
+UyMDU5MzldfQ==
 -->
