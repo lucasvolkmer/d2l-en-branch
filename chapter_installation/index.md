@@ -5,6 +5,10 @@ In order to get you up and running for hands-on learning experience,
 we need to set you up with an environment for running Python,
 Jupyter notebooks, the relevant libraries,
 and the code needed to run the book itself.
+Para prepara-lo a ter uma experiência prática de aprendizado,
+precisamos configurá-lo com um ambiente para executar Python,
+Cadernos Jupyter, as bibliotecas relevantes,
+e o código necessário para executar o livro em si.
 
 ## Installing Miniconda
 
@@ -189,3 +193,6 @@ then you are all set.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjExNDQ0OTkxNF19
+-->
