@@ -79,6 +79,18 @@ That will be more than enough horsepower to get you
 through the first few chapters but you will want
 to access GPUs before running larger models.
 
+Antes de instalar o *Framework* de *Deep Learning*, primeiro verifique
+se você tem ou não GPUs adequadas em sua máquina
+(as GPUs que alimentam a tela em um laptop padrão
+não contam para nossos propósitos).
+Se você estiver instalando em um servidor GPU,
+proceda para: ref: `subsec_gpu` para instruções
+para instalar uma versão compatível com GPU.
+
+Caso contrário, você pode instalar a versão da CPU da seguinte maneira.
+Isso será mais do que potência suficiente para você
+pelos primeiros capítulos, mas você vai querer
+para acessar GPUs antes de executar modelos maiores.
 
 :begin_tab:`mxnet`
 
@@ -190,5 +202,5 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTUyMDU5MzldfQ==
+eyJoaXN0b3J5IjpbMTYwMDgwOTMzNCwtMTc1NTIwNTkzOV19
 -->
