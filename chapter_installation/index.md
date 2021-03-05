@@ -47,9 +47,9 @@ Next, we need to download the code of this book. You can click the "All
 Notebooks" tab on the top of any HTML page to download and unzip the code.
 Alternatively, if you have `unzip` (otherwise run `sudo apt install unzip`) available:
 
-Em seguida, precisamos baixar o código deste livro. Você pode clicar no botão "Todos
-Notebooks "na parte superior de qualquer página HTML para baixar e descompactar o código.
+Em seguida, precisamos baixar o código deste livro. Você pode clicar no botão "All Notebooks" na parte superior de qualquer página HTML para baixar e descompactar o código.
 Alternativamente, se você tiver `unzip` (caso contrário, execute` sudo apt install unzip`) disponível:
+
 ```bash
 mkdir d2l-en && cd d2l-en
 curl https://d2l.ai/d2l-en.zip -o d2l-en.zip
@@ -57,14 +57,14 @@ unzip d2l-en.zip && rm d2l-en.zip
 ```
 
 
-Now we will want to activate the `d2l` environment.
+Agora precisamos ativar o ambiente `d2l`.
 
 ```bash
 conda activate d2l
 ```
 
 
-## Installing the Framework and the `d2l` Package
+## Instalando o Framework and the `d2l` Package
 
 Before installing the deep learning framework, please first check
 whether or not you have proper GPUs on your machine
@@ -190,5 +190,5 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMwMzUyMzkyXX0=
+eyJoaXN0b3J5IjpbOTQyMzYxNjY1XX0=
 -->
