@@ -1,4 +1,4 @@
-# Notation
+# Notação
 :label:`chap_notation`
 
 The notation used throughout this book is summarized below.
@@ -85,5 +85,5 @@ The notation used throughout this book is summarized below.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDU5Njg4MjZdfQ==
+eyJoaXN0b3J5IjpbLTY4MjE1NzIyM119
 -->
