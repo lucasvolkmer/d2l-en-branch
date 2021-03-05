@@ -13,20 +13,14 @@ A maneira mais simples de começar será instalar
 é necessária. Você pode pular as etapas a seguir se o conda já tiver sido instalado.
 Baixe o arquivo Miniconda sh correspondente do site
 e então execute a instalação a partir da linha de comando
-usando  `sh <FILENAME> -b`. For macOS users:
-A maneira mais simples de começar será instalar
-[Miniconda] (https://conda.io/en/latest/miniconda.html). A versão Python 3.x
-é necessário. Você pode pular as etapas a seguir se o conda já tiver sido instalado.
-Baixe o arquivo sh Miniconda correspondente do site
-e então execute a instalação a partir da linha de comando
-usando `sh <FILENAME> -b`. Para usuários do macOS:
+usando  `sh <FILENAME> -b`. Para usuários do macOS:
 ```bash
-# The file name is subject to changes
+# O nome do arquivo pode estar diferente
 sh Miniconda3-latest-MacOSX-x86_64.sh -b
 ```
 
 
-For Linux users:
+Para os usuários de Linux:
 
 ```bash
 # The file name is subject to changes
@@ -195,5 +189,5 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2OTU2MjM4N119
+eyJoaXN0b3J5IjpbLTE2ODI5NjE1NzRdfQ==
 -->
