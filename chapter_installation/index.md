@@ -170,8 +170,10 @@ Você pode alterar os últimos dígitos de acordo com sua versão CUDA, e.g., `c
 
 :begin_tab:`pytorch,tensorflow`
 By default, the deep learning framework is installed with GPU support.
-If your computer has NVIDIA GPUs and has installed [CUDA](https://developer.nvidia.com/cuda-downloads),
-then you are all set.
+If your computer has NVIDIA GPUs and has installed [CUDA]
+Por padrão, o Framework de Deep Learning é instalada com suporte para GPU.
+Se o seu computador tem GPUs NVIDIA e instalou [CUDA](https://developer.nvidia.com/cuda-downloads),
+então es
 :end_tab:
 
 ## Exercises
@@ -190,6 +192,6 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEwOTEzOTUzLDc5ODY5NzY4MSwtOTU2Mz
+eyJoaXN0b3J5IjpbLTUzNjQyNTIzLDc5ODY5NzY4MSwtOTU2Mz
 UxMTMxLC0xNzU1MjA1OTM5XX0=
 -->
