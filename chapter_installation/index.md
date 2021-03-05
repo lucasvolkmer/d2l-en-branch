@@ -66,19 +66,6 @@ conda activate d2l
 
 ## Instalando o *Framework* e o pacote `d2l` 
 
-Before installing the deep learning framework, please first check
-whether or not you have proper GPUs on your machine
-(the GPUs that power the display on a standard laptop
-do not count for our purposes).
-If you are installing on a GPU server,
-proceed to :ref:`subsec_gpu` for instructions
-to install a GPU-supported version.
-
-Otherwise, you can install the CPU version as follows.
-That will be more than enough horsepower to get you
-through the first few chapters but you will want
-to access GPUs before running larger models.
-
 Antes de instalar o *Framework* de *Deep Learning*, primeiro verifique
 se você tem ou não GPUs adequadas em sua máquina
 (as GPUs que alimentam a tela em um laptop padrão
@@ -87,10 +74,8 @@ Se você estiver instalando em um servidor GPU,
 proceda para: ref: `subsec_gpu` para instruções
 para instalar uma versão compatível com GPU.
 
-Caso contrário, você pode instalar a versão da CPU da seguinte maneira.
-Isso será mais do que potência suficiente para você
-pelos primeiros capítulos, mas você vai querer
-para acessar GPUs antes de executar modelos maiores.
+Caso contrário, você pode instalar a versão da CPU da seguinte maneira. Isso será mais do que potência suficiente para você
+pelos primeiros capítulos, mas você precisará acessar GPUs para executar modelos maiores.
 
 :begin_tab:`mxnet`
 
@@ -112,7 +97,8 @@ pip install torch torchvision -f https://download.pytorch.org/whl/torch_stable.h
 :end_tab:
 
 :begin_tab:`tensorflow`
-You can install TensorFlow with both CPU and GPU support via the following:
+
+Você pode instalar o TensorFlow com suporte para CPU e GPU da seguinte maneira:
 
 ```bash
 pip install tensorflow tensorflow-probability
@@ -202,5 +188,5 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMDgwOTMzNCwtMTc1NTIwNTkzOV19
+eyJoaXN0b3J5IjpbLTk1NjM1MTEzMSwtMTc1NTIwNTkzOV19
 -->
