@@ -23,20 +23,19 @@ sh Miniconda3-latest-MacOSX-x86_64.sh -b
 Para os usuários de Linux:
 
 ```bash
-# The file name is subject to changes
+# O nome do arquivo pode estar diferente
 sh Miniconda3-latest-Linux-x86_64.sh -b
 ```
 
-
-Next, initialize the shell so we can run `conda` directly.
+A seguir, inicialize o shell para que possamos executar `conda` diretamente.
 
 ```bash
 ~/miniconda3/bin/conda init
 ```
 
 
-Now close and re-open your current shell. You should be able to create a new
-environment as following:
+Agora feche e reabra seu shell atual. Você deve ser capaz de criar um novo
+ambiente da seguinte forma:
 
 ```bash
 conda create --name d2l python=3.8 -y
@@ -189,5 +188,5 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODI5NjE1NzRdfQ==
+eyJoaXN0b3J5IjpbMTY5NDQwNjIzNl19
 -->
