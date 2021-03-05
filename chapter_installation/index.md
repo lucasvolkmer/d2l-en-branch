@@ -116,13 +116,11 @@ Nós também instalamos o pacote `d2l` que encapsula  funções e classes freque
 pip install -U d2l
 ```
 
-Aós 
-Once they are installed, we now open the Jupyter notebook by running:
+Após realizadas as instalações podemos abrir os *notebooks Jupyter* através do seguinte comando:
 
 ```bash
 jupyter notebook
 ```
-
 
 At this point, you can open http://localhost:8888 (it usually opens automatically) in your Web browser. Then we can run the code for each section of the book.
 Please always execute `conda activate d2l` to activate the runtime environment
@@ -188,6 +186,6 @@ then you are all set.
 [Discussions](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NjgyOTk3NiwtOTU2MzUxMTMxLC0xNz
-U1MjA1OTM5XX0=
+eyJoaXN0b3J5IjpbLTEwOTkxNzM4NzYsLTk1NjM1MTEzMSwtMT
+c1NTIwNTkzOV19
 -->
