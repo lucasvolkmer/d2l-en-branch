@@ -181,17 +181,17 @@ então está tudo pronto.
 1. Baixe o código do livro e instale o ambiente de execução.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/23)
+[Discussão](https://discuss.d2l.ai/t/23)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/24)
+[Discussão](https://discuss.d2l.ai/t/24)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/436)
+[Discussão](https://discuss.d2l.ai/t/436)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjYzODc2NDMsNzk4Njk3NjgxLC05NT
-YzNTExMzEsLTE3NTUyMDU5MzldfQ==
+eyJoaXN0b3J5IjpbMTc2ODYzMjgzNiw3OTg2OTc2ODEsLTk1Nj
+M1MTEzMSwtMTc1NTIwNTkzOV19
 -->
