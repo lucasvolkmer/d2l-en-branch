@@ -46,6 +46,19 @@ Note that a gradient of a scalar-valued function
 with respect to a vector $\mathbf{x}$
 is itself vector-valued and has the same shape as $\mathbf{x}$.
 
+
+[**Antes de calcularmos o gradiente de$y$ em relação a $\mathbf{x}$,
+precisamos armazena-lo.**]
+É importante que não aloquemos nova memória
+cada vez que tomamos uma derivada em relação a um parâmetro
+porque costumamos atualizar os mesmos parâmetros
+milhares ou milhões de vezes
+e pode rapidamente ficar sem memória.
+Observe que um gradiente de uma função com valor escalar
+com respeito a um vetor $\mathbf{x}$
+tem valor vetorial e tem a mesma forma de $\mathbf{x}$
+
+
 ```{.python .input}
 # We allocate memory for a tensor's gradient by invoking `attach_grad`
 x.attach_grad()
@@ -397,6 +410,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY4MTk4ODQ1LDEyNDgwNzQ1MjIsMTQwNj
+eyJoaXN0b3J5IjpbOTQwNzExMTA1LDEyNDgwNzQ1MjIsMTQwNj
 QzOTM0MV19
 -->
