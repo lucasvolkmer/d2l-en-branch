@@ -34,8 +34,8 @@ A notação usada ao longo deste livro é resumida a seguir.
 ## Funções e operadores
 
 
-* $ f (\ cdot) $: uma função
-* $ \ log (\ cdot) $: O logaritmo natural
+* $f(\cdot)$: uma função
+* $\log (\cdot)$: O logaritmo natural
 * $ \ exp (\ cdot) $: A função exponencial
 * $ \ mathbf {1} _ \ mathcal {X} $: a função do indicador
 * $ \ mathbf {(\ cdot)} ^ \ top $: Transposta de uma matriz ou vetor
@@ -84,6 +84,6 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMTYxNDg4LDQ2NDMxNDM1NCwtNjgyMT
-U3MjIzXX0=
+eyJoaXN0b3J5IjpbMTc5NzI0NDc5Miw0NjQzMTQzNTQsLTY4Mj
+E1NzIyM119
 -->
