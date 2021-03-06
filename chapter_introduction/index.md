@@ -597,55 +597,55 @@ que nossos dados foram corrompidos pelo ruído gaussiano.
 
 #### Classificação
 
-While regression models are great for addressing *how many?* questions,
-lots of problems do not bend comfortably to this template.
-For example,
-a bank wants to add check scanning to its mobile app.
-This would involve the customer snapping a photo of a check
-with their smart phone's camera
-and the app would need to be able
-to automatically understand text seen in the image.
-Specifically,
-it would also need to understand handwritten text to be even more robust,
-such as mapping a handwritten character
-to one of the known characters.
-This kind of *which one?* problem is called *classification*.
-It is treated with a different set of algorithms
-than those used for regression although many techniques will carry over.
 
-In *classification*, we want our model to look at features,
-e.g., the pixel values in an image,
-and then predict which *category* (formally called *class*),
-among some discrete set of options, an example belongs.
-For handwritten digits, we might have ten classes,
-corresponding to the digits 0 through 9.
-The simplest form of classification is when there are only two classes,
-a problem which we call *binary classification*.
-For example, our dataset could consist of images of animals
-and our labels  might be the classes $\mathrm{\{cat, dog\}}$.
-While in regression, we sought a regressor to output a numerical value,
-in classification, we seek a classifier, whose output is the predicted class assignment.
+Embora os modelos de regressão sejam ótimos para responder às questões *quantos?*,
+muitos problemas não se adaptam confortavelmente a este modelo.
+Por exemplo,
+um banco deseja adicionar a digitalização de cheques ao seu aplicativo móvel.
+Isso envolveria o cliente tirando uma foto de um cheque
+com a câmera do smartphone deles
+e o aplicativo precisaria ser capaz
+de entender automaticamente o texto visto na imagem.
+Especificamente,
+também precisaria entender o texto manuscrito para ser ainda mais robusto,
+como mapear um caractere escrito à mão
+a um dos personagens conhecidos.
+Este tipo de problema de *qual?* É chamado de *classificação*.
+É tratado com um conjunto diferente de algoritmos
+do que aqueles usados ​​para regressão, embora muitas técnicas sejam transportadas.
 
-For reasons that we will get into as the book gets more technical,
-it can be hard to optimize a model that can only output
-a hard categorical assignment, 
-e.g., either "cat" or "dog".
-In these cases, it is usually much easier to instead express
-our model in the language of probabilities.
-Given features of an example, 
-our model assigns a probability
-to each possible class. 
-Returning to our animal classification example
-where the classes are $\mathrm{\{cat, dog\}}$,
-a classifier might see an image and output the probability
-that the image is a cat as 0.9.
-We can interpret this number by saying that the classifier
-is 90\% sure that the image depicts a cat.
-The magnitude of the probability for the predicted class
-conveys one notion of uncertainty.
-It is not the only notion of uncertainty
-and we will discuss others in more advanced chapters.
+Na *classificação*, queremos que nosso modelo analise os recursos,
+por exemplo, os valores de pixel em uma imagem,
+e, em seguida, prever qual *categoria* (formalmente chamada de *classe*),
+entre alguns conjuntos discretos de opções, um exemplo pertence.
+Para dígitos manuscritos, podemos ter dez classes,
+correspondendo aos dígitos de 0 a 9.
+A forma mais simples de classificação é quando existem apenas duas classes,
+um problema que chamamos de *classificação binária*.
+Por exemplo, nosso conjunto de dados pode consistir em imagens de animais
+e nossos rótulos podem ser as classes $\mathrm{\{cat, dog\}}$.
+Durante a regressão, buscamos um regressor para produzir um valor numérico,
+na classificação, buscamos um classificador, cuja saída é a atribuição de classe prevista.
 
+Por razões que abordaremos à medida que o livro se torna mais técnico,
+pode ser difícil otimizar um modelo que só pode produzir
+uma tarefa categórica difícil,
+por exemplo, "gato" ou "cachorro".
+Nesses casos, geralmente é muito mais fácil expressar
+nosso modelo na linguagem das probabilidades.
+Dados os recursos de um exemplo,
+nosso modelo atribui uma probabilidade
+para cada classe possível.
+Voltando ao nosso exemplo de classificação animal
+onde as classes são $\mathrm{\{gato, cachorro\}}$,
+um classificador pode ver uma imagem e gerar a probabilidade
+que a imagem é um gato como 0,9.
+Podemos interpretar esse número dizendo que o classificador
+tem 90\% de certeza de que a imagem representa um gato.
+A magnitude da probabilidade para a classe prevista
+transmite uma noção de incerteza.
+Esta não é a única noção de incerteza
+e discutiremos outros em capítulos mais avançados.
 When we have more than two possible classes,
 we call the problem *multiclass classification*.
 Common examples include hand-written character recognition
@@ -1642,11 +1642,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMD
-c4NTg0NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4NzI3
-Mzg2OCwtMTg2NzM2NTQ5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLD
-gyNjcwMjkyNywtMjE0MTA5NjA0NywxMTEzNDAwNTM3LC0xNzYw
-NzM0NzU5LDE5MjgyOTYwNDEsMTY2Mzc5MjA0NCwtNzYyNTA4MD
-Q1LDYzMTkwMjkxNywxOTE5NTYxNDA5LDE0NjE2NTI5OTcsLTEy
-MzM0NjE5ODNdfQ==
+eyJoaXN0b3J5IjpbNTQxMDkyMzc2LC05NDE2NjEzMjAsLTIyOD
+gzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0MTgxNjE1LDE5NTEzNDU2
+MjEsLTE2ODcyNzM4NjgsLTE4NjczNjU0OTQsNDk2MTI3NDM4LD
+E3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYwNDcsMTExMzQw
+MDUzNywtMTc2MDczNDc1OSwxOTI4Mjk2MDQxLDE2NjM3OTIwND
+QsLTc2MjUwODA0NSw2MzE5MDI5MTcsMTkxOTU2MTQwOSwxNDYx
+NjUyOTk3XX0=
 -->
