@@ -176,13 +176,13 @@ Para `y` e` x` de ordem superior e dimensão superior,
 o resultado da diferenciação pode ser um tensor de ordem alta.
 
 No entanto, embora esses objetos mais exóticos apareçam
-em aprendizado de máquina avançado (incluindo [**em Dee**]),
-com mais frequência (** quando estamos chamando para trás em um vetor, **)
+em aprendizado de máquina avançado (incluindo [**em *Deep Learning***]),
+com mais frequência (** quando estamos retrocedendo um vetor, **)
 estamos tentando calcular as derivadas das funções de perda
-para cada constituinte de um * lote * de exemplos de treinamento.
+para cada constituinte de um *lote* de exemplos de treinamento.
 Aqui, (** nossa intenção é **) não calcular a matriz de diferenciação
-mas sim (** a soma das derivadas parciais
-calculado individualmente para cada exemplo **) no lote.
+mas sim (**a soma das derivadas parciais
+calculado individualmente para cada exemplo**) no lote.
 
 ```{.python .input}
 # When we invoke `backward` on a vector-valued variable `y` (function of `x`),
@@ -407,6 +407,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE4Mjc2MzIzLC0yMDIwMzQ5NjY1LDEyND
+eyJoaXN0b3J5IjpbMTU2MTg5NTI0LC0yMDIwMzQ5NjY1LDEyND
 gwNzQ1MjIsMTQwNjQzOTM0MV19
 -->
