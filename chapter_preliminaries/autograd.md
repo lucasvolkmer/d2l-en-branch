@@ -90,6 +90,13 @@ Next, [**we can automatically calculate the gradient of `y`
 with respect to each component of `x`**]
 by calling the function for backpropagation and printing the gradient.
 
+Uma vez que `x` é um vetor de comprimento 4,
+um produto interno de `x` e` x` é realizado,
+produzindo a saída escalar que atribuímos a `y`.
+Em seguida, [** podemos calcular automaticamente o gradiente de `y`
+com relação a cada componente de `x` **]
+chamando a função de retropropagação e imprimindo o gradiente.
+
 ```{.python .input}
 y.backward()
 x.grad
@@ -391,6 +398,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MjAwMDg1NywxMjQ4MDc0NTIyLDE0MD
+eyJoaXN0b3J5IjpbMTk2MDg2NTcxMiwxMjQ4MDc0NTIyLDE0MD
 Y0MzkzNDFdfQ==
 -->
