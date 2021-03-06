@@ -83,13 +83,6 @@ with tf.GradientTape() as t:
 y
 ```
 
-Since `x` is a vector of length 4,
-an inner product of `x` and `x` is performed,
-yielding the scalar output that we assign to `y`.
-Next, [**we can automatically calculate the gradient of `y`
-with respect to each component of `x`**]
-by calling the function for backpropagation and printing the gradient.
-
 Uma vez que `x` é um vetor de comprimento 4,
 um produto interno de `x` e` x` é realizado,
 produzindo a saída escalar que atribuímos a `y`.
@@ -118,6 +111,10 @@ x_grad
 with respect to $\mathbf{x}$ should be $4\mathbf{x}$.**)
 Let us quickly verify that our desired gradient was calculated correctly.
 
+(** O gradiente da função y = 2\mathbf{x}^{\top}\mathbf{x}$
+em relação a $\mathbf{x}$ should be $4\mathbf{x}$.**)
+Vamos verificar rapidamente se nosso gradiente desejado foi calculado corretamente.
+
 ```{.python .input}
 x.grad == 4 * x
 ```
@@ -132,7 +129,7 @@ x.grad == 4 * x
 x_grad == 4 * x
 ```
 
-[**Now let us calculate another function of `x`.**]
+[**A`x`.**]
 
 ```{.python .input}
 with autograd.record():
@@ -398,6 +395,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MDg2NTcxMiwxMjQ4MDc0NTIyLDE0MD
-Y0MzkzNDFdfQ==
+eyJoaXN0b3J5IjpbMTYzMjc3Nzg3LDEyNDgwNzQ1MjIsMTQwNj
+QzOTM0MV19
 -->
