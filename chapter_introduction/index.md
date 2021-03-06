@@ -1,38 +1,39 @@
 # Introdução
 :label:`chap_introduction`
 
-Until recently, nearly every computer program that we interact with daily
-was coded by software developers from first principles.
-Say that we wanted to write an application to manage an e-commerce platform.
-After huddling around a whiteboard for a few hours to ponder the problem,
-we would come up with the broad strokes of a working solution that might probably look something like this:
-(i) users interact with the application through an interface
-running in a web browser or mobile application;
-(ii) our application interacts with a commercial-grade database engine
-to keep track of each user's state and maintain records
-of historical transactions; 
-and (iii) at the heart of our application,
-the *business logic* (you might say, the *brains*) of our application
-spells out in methodical detail the appropriate action
-that our program should take in every conceivable circumstance.
 
-To build the brains of our application,
-we would have to step through every possible corner case
-that we anticipate encountering, devising appropriate rules.
-Each time a customer clicks to add an item to their shopping cart,
-we add an entry to the shopping cart database table,
-associating that user's ID with the requested product's ID.
-While few developers ever get it completely right the first time
-(it might take some test runs to work out the kinks),
-for the most part, we could write such a program from first principles
-and confidently launch it 
-*before* ever seeing a real customer.
-Our ability to design automated systems from first principles
-that drive functioning products and systems, 
-often in novel situations,
-is a remarkable cognitive feat.
-And when you are able to devise solutions that work $100\%$ of the time,
-you should not be using machine learning.
+Até recentemente, quase todos os programas de computador com os quais interagimos diariamente
+eram codificados por desenvolvedores de software desde os primeiros princípios.
+Digamos que quiséssemos escrever um aplicativo para gerenciar uma plataforma de *e-commerce*.
+Depois de se amontoar em um quadro branco por algumas horas para refletir sobre o problema,
+iríamos apresentar os traços gerais de uma solução de trabalho que provavelmente se pareceria com isto:
+(i) os usuários interagem com o aplicativo por meio de uma interface
+executando em um navegador da *web* ou aplicativo móvel;
+(ii) nosso aplicativo interage com um mecanismo de banco de dados de nível comercial
+para acompanhar o estado de cada usuário e manter registros
+de histórico de transações;
+e (iii) no cerne de nossa aplicação,
+a * lógica de negócios * (você pode dizer, os * cérebros *) de nosso aplicativo
+descreve em detalhes metódicos a ação apropriada
+que nosso programa deve levar em todas as circunstâncias concebíveis.
+
+Para construir o cérebro de nosso aplicativo,
+teríamos que percorrer todos os casos esquivos possíveis
+que antecipamos encontrar, criando regras apropriadas.
+Cada vez que um cliente clica para adicionar um item ao carrinho de compras,
+adicionamos uma entrada à tabela de banco de dados do carrinho de compras,
+associando o ID desse usuário ao ID do produto solicitado.
+Embora poucos desenvolvedores acertem completamente na primeira vez
+(podem ser necessários alguns testes para resolver os problemas),
+na maior parte, poderíamos escrever esse programa a partir dos primeiros princípios
+e lançá-lo com confiança
+*antes* de ver um cliente real.
+Nossa capacidade de projetar sistemas automatizados a partir dos primeiros princípios
+que impulsionam o funcionamento de produtos e sistemas,
+frequentemente em novas situações,
+é um feito cognitivo notável.
+E quando você é capaz de conceber soluções que funcionam $100\%$ do tempo,
+você não deveria usar o *machine learning*.
 
 Fortunately for the growing community of machine learning scientists,
 many tasks that we would like to automate
@@ -1630,5 +1631,5 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzM0NjE5ODNdfQ==
+eyJoaXN0b3J5IjpbLTQ2ODgzMTczOSwtMTIzMzQ2MTk4M119
 -->
