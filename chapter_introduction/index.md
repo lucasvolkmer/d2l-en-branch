@@ -433,18 +433,18 @@ o parâmetro na direção que pode reduzir a perda.
 
 ## Tipos de Problemas de *Machine Learning*
 
-The wake word problem in our motivating example
-is just one among
-many problems that machine learning can tackle.
-To motivate the reader further
-and provide us with some common language when we talk about more problems throughout the book,
-in the following we 
-list a sampling of machine learning problems.
-We will constantly refer to
-our aforementioned concepts 
-such as data, models, and training techniques.
+O problema da palavra de ativação em nosso exemplo motivador
+é apenas um entre
+muitos problemas que o *machine learning* pode resolver.
+Para motivar ainda mais o leitor
+e nos fornecer uma linguagem comum quando falarmos sobre mais problemas ao longo do livro,
+a seguir nós
+listamos uma amostra dos problemas de *machine learning*.
+Estaremos constantemente nos referindo a
+nossos conceitos acima mencionados
+como dados, modelos e técnicas de treinamento.
 
-### Supervised Learning
+### Aprendizagem Supervisionada
 
 Supervised learning addresses the task of
 predicting labels given input features.
@@ -1639,9 +1639,9 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjczNjU0OTQsNDk2MTI3NDM4LDE3Nj
-I2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYwNDcsMTExMzQwMDUz
-NywtMTc2MDczNDc1OSwxOTI4Mjk2MDQxLDE2NjM3OTIwNDQsLT
-c2MjUwODA0NSw2MzE5MDI5MTcsMTkxOTU2MTQwOSwxNDYxNjUy
-OTk3LC0xMjMzNDYxOTgzXX0=
+eyJoaXN0b3J5IjpbLTE2ODcyNzM4NjgsLTE4NjczNjU0OTQsND
+k2MTI3NDM4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYw
+NDcsMTExMzQwMDUzNywtMTc2MDczNDc1OSwxOTI4Mjk2MDQxLD
+E2NjM3OTIwNDQsLTc2MjUwODA0NSw2MzE5MDI5MTcsMTkxOTU2
+MTQwOSwxNDYxNjUyOTk3LC0xMjMzNDYxOTgzXX0=
 -->
