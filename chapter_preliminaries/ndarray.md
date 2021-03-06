@@ -10,9 +10,8 @@ $n$-dimensional array, which is also called the *tensor*.
 Para fazer qualquer coisa, precisamos de alguma forma de armazenar e manipular dados.
 Geralmente, há duas coisas importantes que precisamos fazer com os dados: (i) adquirir
 eles; e (ii) processá-los assim que estiverem dentro do computador. Não há
-sentido em adquirir dados sem alguma forma de armazená-los, então vamos colocar as mãos
-sujo primeiro ao brincar com dados sintéticos. Para começar, apresentamos o
-array $n$-dimensional, também chamado de *tensor*.
+sentido em adquirir dados sem alguma forma de armazená-los, então vamos  brincar com dados sintéticos. Para começar, apresentamos o
+*array* $n$-dimensional, também chamado de *tensor*.
 
 If you have worked with NumPy, the most widely-used
 scientific computing package in Python,
@@ -715,5 +714,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMDA0ODE5NywtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbLTE3MTg3NTE1MDAsLTEzMDQ3MTU0ODBdfQ
+==
 -->
