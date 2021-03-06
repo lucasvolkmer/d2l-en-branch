@@ -55,8 +55,7 @@ isso é para compatibilidade de processamento de tensor por outros componentes d
 :end_tab:
 
 :begin_tab:`tensorflow`
-Importamos `tensorflow`. As the name is a little long, we often import
-it with a short alias `tf`.
+Importamos `tensorflow`. Como o nome é longo, importamos abreviando `tf`.
 :end_tab:
 
 ```{.python .input}
@@ -74,11 +73,11 @@ import torch
 import tensorflow as tf
 ```
 
-[**A tensor represents a (possibly multi-dimensional) array of numerical values.**]
-With one axis, a tensor corresponds (in math) to a *vector*.
-With two axes, a tensor corresponds to a *matrix*.
-Tensors with more than two axes do not have special
-mathematical names.
+[**Um tensor representa uma matriz (possivelmente multidimensional) de valores numéricos.**]
+Com uma dimensão, um tensor corresponde (em matemática) a um *vetor*.
+Com duas dimensç, um tensor corresponde a uma * matriz *.
+Tensores com mais de dois eixos não possuem
+nomes matemáticos.
 
 To start, we can use `arange` to create a row vector `x`
 containing the first 12 integers starting with 0,
@@ -713,5 +712,5 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NTM4Mjc2MSwtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbNDU0NzMzMDI4LC0xMzA0NzE1NDgwXX0=
 -->
