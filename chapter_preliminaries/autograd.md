@@ -390,10 +390,10 @@ d_grad == d / a
 
 1. Por que a segunda derivada é muito mais computacionalmente cara de se calcular do que a primeira derivada?
 2. Depois de executar a função de retropropagação, execute-a imediatamente novamente e veja o que acontece.
-3. No exemplo de fluxo de controle onde calculamos a derivada de `d` com respeito a` a`, o que aconteceria se mudássemos a variável `a` para um vetor ou matriz aleatória. Neste ponto, o resultado do cálculo `f (a)` não é mais um escalar. O que acontece com o resultado? Como analisamos isso?
-4. Redesenhe um exemplo de localização do gradiente do fluxo de controle. Execute e analise o resultado.
+3. No exemplo de fluxo de controle onde calculamos a derivada de `d` com respeito a `a`, o que aconteceria se mudássemos a variável `a` para um vetor ou matriz aleatória. Neste ponto, o resultado do cálculo `f (a)` não é mais um escalar. O que acontece com o resultado? Como analisamos isso?
+4. Redesenhe um exemplo para encontrar o gradiente do *Control Flow*. Execute e analise o resultado.
 5. Seja $ f (x) = \ sin (x) $. Plote $ f (x) $ e $ \ frac {df (x)} {dx} $, onde o último é calculado sem explorar que $ f '(x) = \ cos (x) $.
-6. 
+
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/34)
@@ -407,7 +407,7 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc5MjI2MTU4LC04NjIyMjAyMTksLTE4Nz
-AyNDUwNDYsLTIwMjAzNDk2NjUsMTI0ODA3NDUyMiwxNDA2NDM5
-MzQxXX0=
+eyJoaXN0b3J5IjpbLTIwMTUyMjAyMjEsLTg2MjIyMDIxOSwtMT
+g3MDI0NTA0NiwtMjAyMDM0OTY2NSwxMjQ4MDc0NTIyLDE0MDY0
+MzkzNDFdfQ==
 -->
