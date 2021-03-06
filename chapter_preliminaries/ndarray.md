@@ -117,7 +117,7 @@ Se quisermos apenas saber o número total de elementos em um tensor,
 ou seja, o produto de todos os *shapes*,
 podemos inspecionar seu tamanho.
 Porque estamos lidando com um vetor aqui,
-o único elemento de seu `s` é idêntico ao seu tamanho.
+o único elemento de seu `shape` é idêntico ao seu tamanho.
 
 ```{.python .input}
 x.size
@@ -133,8 +133,8 @@ x.numel()
 tf.size(x)
 ```
 
-To [**change the shape of a tensor without altering
-either the number of elements or their values**],
+Para [**mudar o *shape* de um tensor sem alterar
+o número de elementos ou seus valores**],
 we can invoke the `reshape` function.
 For example, we can transform our tensor, `x`,
 from a row vector with shape (12,) to a matrix with shape (3, 4).
@@ -143,6 +143,14 @@ but views them as a matrix organized as 3 rows and 4 columns.
 To reiterate, although the shape has changed,
 the elements have not.
 Note that the size is unaltered by reshaping.
+podemos invocar a função `reshape`.
+Por exemplo, podemos transformar nosso tensor, `x`,
+de um vetor linha com forma (12,) para uma matriz com forma (3, 4).
+Este novo tensor contém exatamente os mesmos valores,
+mas os vê como uma matriz organizada em 3 linhas e 4 colunas.
+Para reiterar, embora a forma tenha mudado,
+os elementos não.
+Observe que o tamanho não é alterado pela remodelagem.
 
 
 ```{.python .input}
@@ -712,5 +720,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMTUyMjY4NCwtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbLTE1NDIyNDc3OTcsLTEzMDQ3MTU0ODBdfQ
+==
 -->
