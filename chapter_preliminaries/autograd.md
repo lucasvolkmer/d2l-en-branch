@@ -197,12 +197,12 @@ x.grad  # Igual a y = sum(x * x)
 ```{.python .input}
 #@tab pytorch
 # Invocar `backward` em um não escalar requer passar um argumento `gradient`
-# which specifies the gradient of the differentiated function w.r.t `self`.
-# In our case, we simply want to sum the partial derivatives, so passing
-# in a gradient of ones is appropriate
+# que especifica o gradiente da função diferenciada w.r.t `self`.
+# Em nosso caso, simplesmente queremos somar as derivadas parciais, assim passando
+# em um gradiente de uns é apropriado
 x.grad.zero_()
 y = x * x
-# y.backward(torch.ones(len(x))) equivalent to the below
+# y.backward(torch.ones(len(x))) equva
 y.sum().backward()
 x.grad
 ```
@@ -407,6 +407,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MjU4ODE3NCwtMjAyMDM0OTY2NSwxMj
-Q4MDc0NTIyLDE0MDY0MzkzNDFdfQ==
+eyJoaXN0b3J5IjpbLTE3MzA3MDUwMjQsLTIwMjAzNDk2NjUsMT
+I0ODA3NDUyMiwxNDA2NDM5MzQxXX0=
 -->
