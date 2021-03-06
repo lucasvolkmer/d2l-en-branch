@@ -582,20 +582,20 @@ você já pode identificar a estrutura de preços do contratante:
 Se você acompanhou esse exemplo, então você já entendeu
 a ideia de alto nível por trás da regressão linear.
 
-In this case, we could produce the parameters
-that exactly matched the contractor's prices.
-Sometimes this is not possible, 
-e.g., if some of
-the variance owes to a few factors 
-besides your two features.
-In these cases, we will try to learn models
-that minimize the distance between our predictions and the observed values.
-In most of our chapters, we will focus on 
-minimizing the squared error loss function.
-As we will see later, this loss corresponds to the assumption
-that our data were corrupted by Gaussian noise.
+Neste caso, poderíamos produzir os parâmetros
+que correspondem exatamente aos preços do contratante.
+Às vezes isso não é possível,
+por exemplo, se alguma variação se deve a algum fator
+além dos dois citados.
+Nestes casos, tentaremos aprender modelos
+que minimizam a distância entre nossas previsões e os valores observados.
+Na maioria de nossos capítulos, vamos nos concentrar em
+minimizar a função de perda de erro quadrático.
+Como veremos mais adiante, essa perda corresponde ao pressuposto
+que nossos dados foram corrompidos pelo ruído gaussiano.
 
-#### Classification
+
+#### Classificação
 
 While regression models are great for addressing *how many?* questions,
 lots of problems do not bend comfortably to this template.
@@ -1642,11 +1642,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNT
-M0MTgxNjE1LDE5NTEzNDU2MjEsLTE2ODcyNzM4NjgsLTE4Njcz
-NjU0OTQsNDk2MTI3NDM4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLT
-IxNDEwOTYwNDcsMTExMzQwMDUzNywtMTc2MDczNDc1OSwxOTI4
-Mjk2MDQxLDE2NjM3OTIwNDQsLTc2MjUwODA0NSw2MzE5MDI5MT
-csMTkxOTU2MTQwOSwxNDYxNjUyOTk3LC0xMjMzNDYxOTgzXX0=
-
+eyJoaXN0b3J5IjpbLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMD
+c4NTg0NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4NzI3
+Mzg2OCwtMTg2NzM2NTQ5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLD
+gyNjcwMjkyNywtMjE0MTA5NjA0NywxMTEzNDAwNTM3LC0xNzYw
+NzM0NzU5LDE5MjgyOTYwNDEsMTY2Mzc5MjA0NCwtNzYyNTA4MD
+Q1LDYzMTkwMjkxNywxOTE5NTYxNDA5LDE0NjE2NTI5OTcsLTEy
+MzM0NjE5ODNdfQ==
 -->
