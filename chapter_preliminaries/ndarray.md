@@ -135,14 +135,6 @@ tf.size(x)
 
 Para [**mudar o *shape* de um tensor sem alterar
 o número de elementos ou seus valores**],
-we can invoke the `reshape` function.
-For example, we can transform our tensor, `x`,
-from a row vector with shape (12,) to a matrix with shape (3, 4).
-This new tensor contains the exact same values,
-but views them as a matrix organized as 3 rows and 4 columns.
-To reiterate, although the shape has changed,
-the elements have not.
-Note that the size is unaltered by reshaping.
 podemos invocar a função `reshape`.
 Por exemplo, podemos transformar nosso tensor, `x`,
 de um vetor linha com forma (12,) para uma matriz com forma (3, 4).
@@ -176,6 +168,17 @@ We invoke this capability by placing `-1` for the dimension
 that we would like tensors to automatically infer.
 In our case, instead of calling `x.reshape(3, 4)`,
 we could have equivalently called `x.reshape(-1, 4)` or `x.reshape(3, -1)`.
+A remodelação especificando manualmente todas as dimensões é desnecessária.
+Se nossa forma de destino for uma matriz com forma (altura, largura),
+então, depois de sabermos a largura, a altura é dada implicitamente.
+Por que devemos realizar a divisão nós mesmos?
+No exemplo acima, para obter uma matriz com 3 linhas,
+especificamos que deve ter 3 linhas e 4 colunas.
+Felizmente, os tensores podem calcular automaticamente uma dimensão considerando o resto.
+Invocamos esse recurso colocando `-1` para a dimensão
+que gostaríamos que os tensores inferissem automaticamente.
+No nosso caso, em vez de chamar `x.reshape (3, 4)`,
+poderíamos ter chamado equivalentemente `x.reshape (-1, 4)` ou `x.reshape (3, -1)`.
 
 Typically, we will want our matrices initialized
 either with zeros, ones, some other constants,
@@ -720,6 +723,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDIyNDc3OTcsLTEzMDQ3MTU0ODBdfQ
+eyJoaXN0b3J5IjpbLTIxMjM4MDYxMDgsLTEzMDQ3MTU0ODBdfQ
 ==
 -->
