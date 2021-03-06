@@ -204,12 +204,12 @@ torch.ones((2, 3, 4))
 #@tab tensorflow
 tf.ones((2, 3, 4))
 ```
-Freqüentemente, queremos [** amostrar aleatoriamente os valores
-para cada elemento em um tensor **]
+Frequentemente, queremos [**amostrar aleatoriamente os valores
+para cada elemento em um tensor**]
 de alguma distribuição de probabilidade.
 Por exemplo, quando construímos matrizes para servir
 como parâmetros em uma rede neural, vamos
-normalmente inicializam seus valores aleatoriamente.
+normalmente inicializar seus valores aleatoriamente.
 O fragmento a seguir cria um tensor com forma (3, 4).
 Cada um de seus elementos é amostrado aleatoriamente
 de uma distribuição gaussiana (normal) padrão
@@ -229,10 +229,9 @@ torch.randn(3, 4)
 #@tab tensorflow
 tf.random.normal(shape=[3, 4])
 ```
-
-We can also [**specify the exact values for each element**] in the desired tensor
-by supplying a Python list (or list of lists) containing the numerical values.
-Here, the outermost list corresponds to axis 0, and the inner list to axis 1.
+Podemos também [**especificar os valores exatos para cada elemento**] no tensor desejado
+fornecendo uma lista Python (ou lista de listas) contendo os valores numéricos.
+Aqui, a lista externa corresponde ao eixo 0 e a lista interna ao eixo 1.
 
 
 ```{.python .input}
@@ -249,7 +248,7 @@ torch.tensor([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
 tf.constant([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
 ```
 
-## Operations
+## Operações
 
 This book is not about software engineering.
 Our interests are not limited to simply
@@ -709,6 +708,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTAyNTYwODAsLTEzMDQ3MTU0ODBdfQ
+eyJoaXN0b3J5IjpbLTE0MjcwNDQ2MzUsLTEzMDQ3MTU0ODBdfQ
 ==
 -->
