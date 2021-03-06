@@ -24,10 +24,10 @@ A notação usada ao longo deste livro é resumida a seguir.
 * $\mathbb{Z}^+$: O conjunto dos inteiros positivos
 * $\mathbb{R}$: O conjunto dos números reais
 * $\mathbb{R}^n$: O conjunto dos vetores $n$-dimensionais de números reais
-* $\mathbb{R}^{a\times b}$: O conjunto de matrizes de números reais com $ a $ linhas e $b$ colunas
-* $ | \ mathcal {X} | $: Cardinalidade (número de elementos) do conjunto $ \ mathcal {X} $
-* $ \ mathcal {A} \ cup \ mathcal {B} $: União dos conjuntos $ \ mathcal {A} $ e $ \ mathcal {B} $
-* $ \ mathcal {A} \ cap \ mathcal {B} $: Interseção dos conjuntos $ \ mathcal {A} $ e $ \ mathcal {B} $
+* $\mathbb{R}^{a\times b}$: O conjunto de matrizes de números reais com $a$ linhas e $b$ colunas
+* $|\mathcal{X}|$: Cardinalidade (número de elementos) do conjunto $\mathcal {X}$
+* $\mathcal{A}\cup \mathcal{B}$: União dos conjuntos $\mathcal{A}$ e $\mathcal{B}$
+* $\mathcal{A}\cap\mathcal{B}$: Interseção dos conjuntos $ \ mathcal {A} $ e $ \ mathcal {B} $
 * $ \ mathcal {A} \ setminus \ mathcal {B} $: Subtração do conjunto $ \ mathcal {B} $ do conjunto $ \ mathcal {A} $
 
 
@@ -84,6 +84,6 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTc2MTY0MjgsNDY0MzE0MzU0LC02OD
-IxNTcyMjNdfQ==
+eyJoaXN0b3J5IjpbMjExMjQxNTc1OCw0NjQzMTQzNTQsLTY4Mj
+E1NzIyM119
 -->
