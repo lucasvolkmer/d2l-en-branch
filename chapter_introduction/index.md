@@ -110,7 +110,8 @@ sobre se o trecho de áudio contém a palavra de ativação?
 Se você estiver travado, não se preocupe.
 Também não sabemos escrever tal programa do zero.
 É por isso que usamos o *machine learning*.
-![Identify a wake word.](../img/wake-word.svg)
+
+![Identificar uma palavra de ativação.](../img/wake-word.svg)
 :label:`fig_wake_word`
 
 
@@ -1632,6 +1633,6 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNjMwNDgwMyw2MzE5MDI5MTcsMTkxOT
+eyJoaXN0b3J5IjpbLTc2MjUwODA0NSw2MzE5MDI5MTcsMTkxOT
 U2MTQwOSwxNDYxNjUyOTk3LC0xMjMzNDYxOTgzXX0=
 -->
