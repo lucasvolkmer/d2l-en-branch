@@ -210,7 +210,7 @@ que iremos explicar em maiores detalhes posteriormente,
 é apenas um entre muitos métodos populares
 para resolver problemas de *machine learning*.
 
-## Key Components
+## Componentes chave
 
 In our wake word example, we described a dataset
 consisting of audio snippets and binary labels, 
@@ -1635,7 +1635,8 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU0NTE4NzYsLTE3NjA3MzQ3NTksMTkyOD
-I5NjA0MSwxNjYzNzkyMDQ0LC03NjI1MDgwNDUsNjMxOTAyOTE3
-LDE5MTk1NjE0MDksMTQ2MTY1Mjk5NywtMTIzMzQ2MTk4M119
+eyJoaXN0b3J5IjpbMTExMzQwMDUzNywtMTc2MDczNDc1OSwxOT
+I4Mjk2MDQxLDE2NjM3OTIwNDQsLTc2MjUwODA0NSw2MzE5MDI5
+MTcsMTkxOTU2MTQwOSwxNDYxNjUyOTk3LC0xMjMzNDYxOTgzXX
+0=
 -->
