@@ -667,6 +667,7 @@ como mostrado em: numref: `fig_death_cap`.
 :width:`200px`
 :label:`fig_death_cap`
 
+[^-1]: O cogumelo *Amanita phalloides*, cujo nome popular em inglês é *Death cap*, foi traduzido para o nome popular em português, Cicuta verde.
 
 Agora, suponha que você construiu um classificador e o treinou
 para prever se um cogumelo é venenoso com base em uma fotografia.
@@ -1645,7 +1646,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzA2MzExNDMsNzIxNTI4MDkwLC05ND
+eyJoaXN0b3J5IjpbLTEwNjQyOTAxOTksNzIxNTI4MDkwLC05ND
 E2NjEzMjAsLTIyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0MTgx
 NjE1LDE5NTEzNDU2MjEsLTE2ODcyNzM4NjgsLTE4NjczNjU0OT
 QsNDk2MTI3NDM4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEw
