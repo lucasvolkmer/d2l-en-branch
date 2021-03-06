@@ -298,7 +298,7 @@ and the evaluation of the `if` statement
 both depend on the value of the input `a`.
 Uma vantagem de usar a diferenciação automática
 é que [**mesmo se**] construir o gráfo computacional de (** uma função
-necessária a passagem por um labirinto de fluxo de controle Python**)
+requer passar por muitas  de fluxo de controle Python**)
 (por exemplo, condicionais, loops e chamadas de função arbitrárias),
 (** ainda podemos calcular o gradiente da variável resultante. **)
 No trecho a seguir, observe que
@@ -414,7 +414,7 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4OTQ1NjgyNywtODYyMjIwMjE5LC0xOD
+eyJoaXN0b3J5IjpbLTIzMDkyNTE3NiwtODYyMjIwMjE5LC0xOD
 cwMjQ1MDQ2LC0yMDIwMzQ5NjY1LDEyNDgwNzQ1MjIsMTQwNjQz
 OTM0MV19
 -->
