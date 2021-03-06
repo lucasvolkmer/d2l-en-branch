@@ -1,14 +1,11 @@
 # Automatic Differentiation
 :label:`sec_autograd`
 
-As we have explained inComo já explicado em :numref:`sec_calculus`,
-differentiation is a crucial step in nearly all deep learning optimization algorithms.
-While the calculations for taking these derivatives are straightforward,
-requiring only some basic calculus,
-for complex models, working out the updates by hand
-can be a pain (and often error-prone).
-
-Deep learning frameworks expedite this work
+Como já explicado em :numref:`sec_calculus`, a diferenciação é uma etapa crucial em quase todos os algoritmos de otimização de *Deep Learning*.
+Embora os cálculos para obter esses derivados sejam diretos,
+exigindo apenas alguns cálculos básicos,
+para modelos complexos, trabalhando as atualizações manualmente pode ser uma tarefa difícil (e muitas vezes sujeita a erros).
+FrameworksDeep learning  expedite this work
 by automatically calculating derivatives, i.e., *automatic differentiation*.
 In practice,
 based on our designed model
@@ -415,5 +412,5 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTA4ODMzNzZdfQ==
+eyJoaXN0b3J5IjpbOTgxMzkwMDkxXX0=
 -->
