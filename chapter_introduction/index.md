@@ -186,12 +186,12 @@ Em outras palavras,
 nós *treinamos* nosso modelo com dados.
 Conforme mostrado em: numref:`fig_ml_loop`, o processo de treinamento geralmente se parece com o seguinte:
 
-1. Start off with a randomly initialized model that cannot do anything useful.
-1. Grab some of your data (e.g., audio snippets and corresponding $\{\text{yes}, \text{no}\}$ labels).
-1. Tweak the knobs so the model sucks less with respect to those examples.
-1. Repeat Step 2 and 3 until the model is awesome.
+1. Comece com um modelo inicializado aleatoriamente que não pode fazer nada útil.
+2. Pegue alguns de seus dados (por exemplo, trechos de áudio e *labels* $\{\text{yes},\text{no}\}$ correspondentes).
+3. Ajuste os botões para que o modelo seja menos ruim em relação a esses exemplos.
+4. Repita as etapas 2 e 3 até que o modelo esteja incrível.
 
-![A typical training process.](../img/ml-loop.svg)
+![Um processo de treinamento típico.](../img/ml-loop.svg)
 :label:`fig_ml_loop`
 
 To summarize, rather than code up a wake word recognizer,
@@ -1635,7 +1635,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyODI5NjA0MSwxNjYzNzkyMDQ0LC03Nj
-I1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MDksMTQ2MTY1Mjk5
-NywtMTIzMzQ2MTk4M119
+eyJoaXN0b3J5IjpbLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNj
+YzNzkyMDQ0LC03NjI1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0
+MDksMTQ2MTY1Mjk5NywtMTIzMzQ2MTk4M119
 -->
