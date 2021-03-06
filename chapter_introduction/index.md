@@ -704,15 +704,15 @@ classificar incorretamente para uma classe parecida em vez de uma classe distant
 Normalmente, isso é conhecido como *classificação hierárquica*.
 Um exemplo inicial é devido a [Linnaeus] (https://en.wikipedia.org/wiki/Carl_Linnaeus), que organizou os animais em uma hierarquia.
 
-In the case of animal classification,
-it might not be so bad to mistake a poodle (a dog breed) for a schnauzer (another dog breed),
-but our model would pay a huge penalty
-if it confused a poodle for a dinosaur.
-Which hierarchy is relevant might depend
-on how you plan to use the model.
-For example, rattle snakes and garter snakes
-might be close on the phylogenetic tree,
-but mistaking a rattler for a garter could be deadly.
+No caso da classificação animal,
+pode não ser tão ruim confundir um poodle (uma raça de cachorro) com um schnauzer (outra raça de cachorro),
+mas nosso modelo pagaria uma grande penalidade
+se confundisse um poodle com um dinossauro.
+Qual hierarquia é relevante pode depender
+sobre como você planeja usar o modelo.
+Por exemplo, cascavéis e cobras-liga
+podem estar perto da árvore filogenética,
+mas confundir uma cascavel com uma cobra-liga pode ser mortal.
 
 #### Tagging
 
@@ -1646,11 +1646,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjQyOTAxOTksNzIxNTI4MDkwLC05ND
-E2NjEzMjAsLTIyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0MTgx
-NjE1LDE5NTEzNDU2MjEsLTE2ODcyNzM4NjgsLTE4NjczNjU0OT
-QsNDk2MTI3NDM4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEw
-OTYwNDcsMTExMzQwMDUzNywtMTc2MDczNDc1OSwxOTI4Mjk2MD
-QxLDE2NjM3OTIwNDQsLTc2MjUwODA0NSw2MzE5MDI5MTcsMTkx
-OTU2MTQwOV19
+eyJoaXN0b3J5IjpbMTI5MjcyOTIxMSwtMTA2NDI5MDE5OSw3Mj
+E1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMDc4NTg0
+NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4NzI3Mzg2OC
+wtMTg2NzM2NTQ5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLDgyNjcw
+MjkyNywtMjE0MTA5NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0Nz
+U5LDE5MjgyOTYwNDEsMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LDYz
+MTkwMjkxN119
 -->
