@@ -27,8 +27,8 @@ A notação usada ao longo deste livro é resumida a seguir.
 * $\mathbb{R}^{a\times b}$: O conjunto de matrizes de números reais com $a$ linhas e $b$ colunas
 * $|\mathcal{X}|$: Cardinalidade (número de elementos) do conjunto $\mathcal {X}$
 * $\mathcal{A}\cup \mathcal{B}$: União dos conjuntos $\mathcal{A}$ e $\mathcal{B}$
-* $\mathcal{A}\cap\mathcal{B}$: Interseção dos conjuntos $ \ mathcal {A} $ e $ \ mathcal {B} $
-* $ \ mathcal {A} \ setminus \ mathcal {B} $: Subtração do conjunto $ \ mathcal {B} $ do conjunto $ \ mathcal {A} $
+* $\mathcal{A}\cap\mathcal{B}$: Interseção dos conjuntos $\mathcal{A}$ e $\mathcal{B}$
+* $\mathcal{A}\setminus \mathcal{B}$: Subtração do conjunto $\mathcal{B}$ do conjunto $\mathcal{A}$
 
 
 ## Funções e operadores
@@ -84,6 +84,6 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMjQxNTc1OCw0NjQzMTQzNTQsLTY4Mj
-E1NzIyM119
+eyJoaXN0b3J5IjpbMTUzMTYxNDg4LDQ2NDMxNDM1NCwtNjgyMT
+U3MjIzXX0=
 -->
