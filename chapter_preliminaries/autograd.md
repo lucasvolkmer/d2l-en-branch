@@ -1,7 +1,7 @@
 # Automatic Differentiation
 :label:`sec_autograd`
 
-As we have explained in :numref:`sec_calculus`,
+As we have explained inComo já explicado em :numref:`sec_calculus`,
 differentiation is a crucial step in nearly all deep learning optimization algorithms.
 While the calculations for taking these derivatives are straightforward,
 requiring only some basic calculus,
@@ -414,3 +414,6 @@ d_grad == d / a
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE4NTA4ODMzNzZdfQ==
+-->
