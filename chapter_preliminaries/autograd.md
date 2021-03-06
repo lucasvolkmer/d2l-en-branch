@@ -388,16 +388,12 @@ d_grad == d / a
 
 ## Exercícios
 
-1. Why is the second derivative much more expensive to compute than the first derivative?
-2. After running the function for backpropagation, immediately run it again and see what happens.
-3. In the control flow example where we calculate the derivative of `d` with respect to `a`, what would happen if we changed the variable `a` to a random vector or matrix. At this point, the result of the calculation `f(a)` is no longer a scalar. What happens to the result? How do we analyze this?
-4. Redesign an example of finding the gradient of the control flow. Run and analyze the result.
-5. Let $f(x) = \sin(x)$. Plot $f(x)$ and $\frac{df(x)}{dx}$, where the latter is computed without exploiting that $f'(x) = \cos(x)$.
-6. Por que a segunda derivada é muito mais cara de calcular do que a primeira derivada?
-1. Depois de executar a função de retropropagação, execute-a imediatamente novamente e veja o que acontece.
-1. No exemplo de fluxo de controle onde calculamos a derivada de `d` com respeito a` a`, o que aconteceria se mudássemos a variável `a` para um vetor ou matriz aleatória. Neste ponto, o resultado do cálculo `f (a)` não é mais um escalar. O que acontece com o resultado? Como analisamos isso?
-1. Redesenhe um exemplo de localização do gradiente do fluxo de controle. Execute e analise o resultado.
-1. Seja $ f (x) = \ sin (x) $. Plote $ f (x) $ e $ \ frac {df (x)} {dx} $, onde o último é calculado sem explorar que $ f '(x) = \ cos (x) $.
+1. Por que a segunda derivada é muito mais computacionalmente cara de se calcular do que a primeira derivada?
+2. Depois de executar a função de retropropagação, execute-a imediatamente novamente e veja o que acontece.
+3. No exemplo de fluxo de controle onde calculamos a derivada de `d` com respeito a` a`, o que aconteceria se mudássemos a variável `a` para um vetor ou matriz aleatória. Neste ponto, o resultado do cálculo `f (a)` não é mais um escalar. O que acontece com o resultado? Como analisamos isso?
+4. Redesenhe um exemplo de localização do gradiente do fluxo de controle. Execute e analise o resultado.
+5. Seja $ f (x) = \ sin (x) $. Plote $ f (x) $ e $ \ frac {df (x)} {dx} $, onde o último é calculado sem explorar que $ f '(x) = \ cos (x) $.
+6. 
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/34)
@@ -411,7 +407,7 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NjExODUzNSwtODYyMjIwMjE5LC0xOD
-cwMjQ1MDQ2LC0yMDIwMzQ5NjY1LDEyNDgwNzQ1MjIsMTQwNjQz
-OTM0MV19
+eyJoaXN0b3J5IjpbNjc5MjI2MTU4LC04NjIyMjAyMTksLTE4Nz
+AyNDUwNDYsLTIwMjAzNDk2NjUsMTI0ODA3NDUyMiwxNDA2NDM5
+MzQxXX0=
 -->
