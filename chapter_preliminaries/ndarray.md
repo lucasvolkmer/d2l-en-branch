@@ -75,7 +75,7 @@ import tensorflow as tf
 
 [**Um tensor representa uma matriz (possivelmente multidimensional) de valores numéricos.**]
 Com uma dimensão, um tensor corresponde (em matemática) a um *vetor*.
-Com duas dimensç, um tensor corresponde a uma * matriz *.
+Com duas dimensões, um tensor corresponde a uma * matriz *.
 Tensores com mais de dois eixos não possuem
 nomes matemáticos.
 
@@ -86,6 +86,14 @@ Each of the values in a tensor is called an *element* of the tensor.
 For instance, there are 12 elements in the tensor `x`.
 Unless otherwise specified, a new tensor
 will be stored in main memory and designated for CPU-based computation.
+
+Para começar, podemos usar `arange` para criar um vetor linha `x`
+contendo os primeiros 12 inteiros começando com 0,
+embora eles sejam criados como *float* por padrão.
+Cada um dos valores em um tensor é chamado de * elemento * do tensor.
+Por exemplo, existem 12 elementos no tensor `x`.
+A menos que especificado de outra forma, um novo tensor
+será armazenado na memória principal e designado para computação baseada em CPU.
 
 
 ```{.python .input}
@@ -712,5 +720,5 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU0NzMzMDI4LC0xMzA0NzE1NDgwXX0=
+eyJoaXN0b3J5IjpbMTc2NTgxOTkxNywtMTMwNDcxNTQ4MF19
 -->
