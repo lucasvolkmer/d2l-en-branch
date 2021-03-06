@@ -216,17 +216,8 @@ t.gradient(y, x)  # Same as `y = tf.reduce_sum(x * x)`
 
 ## Detaching Computation
 
-Sometimes, we wish to [**move some calculations
-outside of the recorded computational graph.**]
-For example, say that `y` was calculated as a function of `x`,
-and that subsequently `z` was calculated as a function of both `y` and `x`.
-Now, imagine that we wanted to calculate
-the gradient of `z` with respect to `x`,
-but wanted for some reason to treat `y` as a constant,
-and only take into account the role
-that `x` played after `y` was calculated.
-Às vezes, desejamos [** mover alguns cálculos
-fora do gráfico computacional registrado. **]
+Às vezes, desejamos [**mover alguns cálculos
+fora do gráfico computacional registrado.**]
 Por exemplo, digamos que `y` foi calculado como uma função de` x`,
 e que subsequentemente `z` foi calculado como uma função de` y` e `x`.
 Agora, imagine que quiséssemos calcular
@@ -241,6 +232,13 @@ In other words, the gradient will not flow backwards through `u` to `x`.
 Thus, the following backpropagation function computes
 the partial derivative of `z = u * x` with respect to `x` while treating `u` as a constant,
 instead of the partial derivative of `z = x * x * x` with respect to `x`.
+Aqui, podemos desanexar `y` para retornar uma nova variável `u`
+que tem o mesmo valor que `y`, mas descarta qualquer informação
+sobre como `y` foi calculado no grafo computacional.
+Em outras palavras, o gradiente não fluirá de volta de `u` para` x`.
+Assim, a seguinte função de retropropagação calcula
+a derivada parcial de `z = u * x` com respeito a` x` enquanto trata `u` como uma constante,
+em vez da derivada parcial de `z = x * x * x` em relação a` x`.
 
 ```{.python .input}
 with autograd.record():
@@ -415,6 +413,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NTg1NTAzOSwtMTg3MDI0NTA0NiwtMj
+eyJoaXN0b3J5IjpbLTE3MTAyMjkwNywtMTg3MDI0NTA0NiwtMj
 AyMDM0OTY2NSwxMjQ4MDc0NTIyLDE0MDY0MzkzNDFdfQ==
 -->
