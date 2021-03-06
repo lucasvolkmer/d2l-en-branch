@@ -107,11 +107,7 @@ x_grad = t.gradient(y, x)
 x_grad
 ```
 
-(**The gradient of the function $y = 2\mathbf{x}^{\top}\mathbf{x}$
-with respect to $\mathbf{x}$ should be $4\mathbf{x}$.**)
-Let us quickly verify that our desired gradient was calculated correctly.
-
-(** O gradiente da função y = 2\mathbf{x}^{\top}\mathbf{x}$
+(**O gradiente da função y = 2\mathbf{x}^{\top}\mathbf{x}$
 em relação a $\mathbf{x}$ should be $4\mathbf{x}$.**)
 Vamos verificar rapidamente se nosso gradiente desejado foi calculado corretamente.
 
@@ -156,7 +152,7 @@ with tf.GradientTape() as t:
 t.gradient(y, x)  # Overwritten by the newly calculated gradient
 ```
 
-## Backward for Non-Scalar Variables
+## Retroceder para variáveis não escalares
 
 Technically, when `y` is not a scalar,
 the most natural interpretation of the differentiation of a vector `y`
@@ -396,6 +392,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjAzNDk2NjUsMTI0ODA3NDUyMiwxND
-A2NDM5MzQxXX0=
+eyJoaXN0b3J5IjpbLTc1NzIxNjU3NSwtMjAyMDM0OTY2NSwxMj
+Q4MDc0NTIyLDE0MDY0MzkzNDFdfQ==
 -->
