@@ -716,19 +716,19 @@ mas confundir uma cascavel com uma cobra-liga pode ser mortal.
 
 #### Tagging
 
-Some classification problems fit neatly
-into the binary or multiclass classification setups.
-For example, we could train a normal binary classifier
-to distinguish cats from dogs.
-Given the current state of computer vision,
-we can do this easily, with off-the-shelf tools.
-Nonetheless, no matter how accurate our model gets,
-we might find ourselves in trouble when the classifier
-encounters an image of the *Town Musicians of Bremen*,
-a popular German fairy tale featuring four animals
-in :numref:`fig_stackedanimals`.
+Alguns problemas de classificação se encaixam perfeitamente
+nas configurações de classificação binária ou multiclasse.
+Por exemplo, podemos treinar um classificador binário normal
+para distinguir gatos de cães.
+Dado o estado atual da visão computacional,
+podemos fazer isso facilmente, com ferramentas disponíveis no mercado.
+No entanto, não importa o quão preciso seja o nosso modelo,
+podemos ter problemas quando o classificador
+encontra uma imagem dos *Músicos da Cidade de Bremen*,
+um conto de fadas alemão popular com quatro animais
+in: numref: `fig_stackedanimals`.
 
-![A donkey, a dog, a cat, and a rooster.](../img/stackedanimals.png)
+![Um burro, um cachorro, um gato e um galo.](../img/stackedanimals.png)
 :width:`300px`
 :label:`fig_stackedanimals`
 
@@ -1646,7 +1646,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MjcyOTIxMSwtMTA2NDI5MDE5OSw3Mj
+eyJoaXN0b3J5IjpbMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OSw3Mj
 E1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMDc4NTg0
 NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4NzI3Mzg2OC
 wtMTg2NzM2NTQ5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLDgyNjcw
