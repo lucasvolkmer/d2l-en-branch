@@ -53,27 +53,27 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 ## Cálculo
 
-* $ \ frac {dy} {dx} $: Derivada de $ y $ em relação a $ x $
-* $ \ frac {\ partial y} {\ partial x} $: Derivada parcial de $ y $ em relação a $ x $
-* $ \ nabla _ {\ mathbf {x}} y $: Gradiente de $ y $ em relação a $ \ mathbf {x} $
-* $ \ int_a ^ b f (x) \; dx $: Integral definida de $ f $ de $ a $ a $ b $ em relação a $ x $
-* $ \ int f (x) \; dx $: Integral indefinida de $ f $ em relação a $ x $
+* $ \frac{dy}{dx} $: Derivada de $ y $ em relação a $ x $
+* $ \frac{\ partial y}{\ partial x} $: Derivada parcial de $ y $ em relação a $ x $
+* $ \nabla_{\ mathbf {x}} y $: Gradiente de $ y $ em relação a $ \ mathbf {x} $
+* $ \int_a ^ b f (x) \; dx $: Integral definida de $ f $ de $ a $ a $ b $ em relação a $ x $
+* $ \int f (x) \; dx $: Integral indefinida de $ f $ em relação a $ x $
 
 ## Probabilidade e Teoria da Informação
 
 * $ P (\ cdot) $: distribuição de probabilidade
-* $ z \ sim P $: Variável aleatória $ z $ que tem distribuição de probabilidade $ P $
-* $ P (X \ mid Y) $: probabilidade condicional de $ X \ mid Y $
+* $ z \sim P $: Variável aleatória $ z $ que tem distribuição de probabilidade $ P $
+* $ P (X \mid Y) $: probabilidade condicional de $ X \mid Y $
 * $ p (x) $: função de densidade de probabilidade
 * $ {E} _ {x} [f (x)] $: Esperança de $ f $ em relação a $ x $
-* $ X \ perp Y $: Variáveis aleatórias $ X $ e $ Y $ são independentes
-* $ X \ perp Y \ mid Z $: Variáveis aleatórias $ X $ e $ Y $ são condicionalmente independentes, dada a variável aleatória $ Z $
-* $ \ mathrm {Var} (X) $: Variância da variável aleatória $ X $
-* $ \ sigma_X $: Desvio padrão da variável aleatória $ X $
-* $ \ mathrm {Cov} (X, Y) $: Covariância das variáveis aleatórias $ X $ e $ Y $
-* $ \ rho (X, Y) $: Correlação de variáveis aleatórias $ X $ e $ Y $
+* $ X \perp Y $: Variáveis aleatórias $ X $ e $ Y $ são independentes
+* $ X \perp Y \mid Z $: Variáveis aleatórias $ X $ e $ Y $ são condicionalmente independentes, dada a variável aleatória $ Z $
+* $ \mathrm {Var} (X) $: Variância da variável aleatória $ X $
+* $ \sigma_X $: Desvio padrão da variável aleatória $ X $
+* $ \mathrm {Cov} (X, Y) $: Covariância das variáveis aleatórias $ X $ e $ Y $
+* $ \rho (X, Y) $: Correlação de variáveis aleatórias $ X $ e $ Y $
 * $ H (X) $: Entropia da variável aleatória $ X $
-* $ D _ {\ mathrm {KL}} (P \ | Q) $: KL-divergência das distribuições $ P $ e $ Q $
+* $ D _ {\mathrm {KL}} (P \ | Q) $: KL-divergência das distribuições $ P $ e $ Q $
 
 
 
@@ -84,5 +84,5 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTkwNzQzMzIsLTY4MjE1NzIyM119
+eyJoaXN0b3J5IjpbNDY0MzE0MzU0LC02ODIxNTcyMjNdfQ==
 -->
