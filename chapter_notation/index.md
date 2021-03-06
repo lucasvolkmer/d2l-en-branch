@@ -31,7 +31,7 @@ A notação usada ao longo deste livro é resumida a seguir.
 * $ \ mathcal {A} \ setminus \ mathcal {B} $: Subtração do conjunto $ \ mathcal {B} $ do conjunto $ \ mathcal {A} $
 
 
-## Functions and Operators
+## Funções e operadores
 
 
 * $f(\cdot)$: A function
@@ -84,5 +84,5 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzI3NTQwMiwtNjgyMTU3MjIzXX0=
+eyJoaXN0b3J5IjpbNTIxOTM3NzI1LC02ODIxNTcyMjNdfQ==
 -->
