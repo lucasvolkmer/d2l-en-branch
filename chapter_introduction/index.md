@@ -332,28 +332,29 @@ conspirar ativamente, ou mesmo estar ciente.
 
 ### Modelos
 
-Most machine learning involves transforming the data in some sense.
-We might want to build a system that ingests photos and predicts smiley-ness.
-Alternatively,
-we might want to ingest a set of sensor readings
-and predict how normal vs. anomalous the readings are.
-By *model*, we denote the computational machinery for ingesting data
-of one type, 
-and spitting out predictions of a possibly different type.
-In particular, we are interested in statistical models
-that can be estimated from data.
-While simple models are perfectly capable of addressing
-appropriately simple problems,
-the problems
-that we focus on in this book stretch the limits of classical methods.
-Deep learning is differentiated from classical approaches
-principally by the set of powerful models that it focuses on.
-These models consist of many successive transformations of the data
-that are chained together top to bottom, thus the name *deep learning*.
-On our way to discussing deep models,
-we will also discuss some more traditional methods.
+A maior parte do *machine learning* envolve transformar os dados de alguma forma.
+Talvez queiramos construir um sistema que ingere fotos e preveja sorrisos.
+Alternativamente,
+podemos querer ingerir um conjunto de leituras de sensor
+e prever quão normais ou anômalas são as leituras.
+Por *modelo*, denotamos a maquinaria computacional para ingestão de dados
+de um tipo,
+e cuspir previsões de um tipo possivelmente diferente.
+Em particular, estamos interessados ​​em modelos estatísticos
+que podem ser estimados a partir de dados.
+Embora os modelos simples sejam perfeitamente capazes de abordar
+problemas apropriadamente simples,
+os problemas
+nos quais nos concentramos neste livro, ampliam os limites dos métodos clássicos.
+O *deep learning* é diferenciado das abordagens clássicas
+principalmente pelo conjunto de modelos poderosos em que se concentra.
+Esses modelos consistem em muitas transformações sucessivas dos dados
+que são encadeados de cima para baixo, daí o nome *deep learning*.
+No caminho para discutir modelos profundos,
+também discutiremos alguns métodos mais tradicionais.
 
-### Objective Functions
+
+### Fun
 
 Earlier, we introduced machine learning as learning from experience.
 By *learning* here,
@@ -1638,8 +1639,9 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MjYzMDIyLDgyNjcwMjkyNywtMjE0MT
-A5NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0NzU5LDE5MjgyOTYw
-NDEsMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LDYzMTkwMjkxNywxOT
-E5NTYxNDA5LDE0NjE2NTI5OTcsLTEyMzM0NjE5ODNdfQ==
+eyJoaXN0b3J5IjpbMjA4MTU0MTU5MCwxNzYyNjMwMjIsODI2Nz
+AyOTI3LC0yMTQxMDk2MDQ3LDExMTM0MDA1MzcsLTE3NjA3MzQ3
+NTksMTkyODI5NjA0MSwxNjYzNzkyMDQ0LC03NjI1MDgwNDUsNj
+MxOTAyOTE3LDE5MTk1NjE0MDksMTQ2MTY1Mjk5NywtMTIzMzQ2
+MTk4M119
 -->
