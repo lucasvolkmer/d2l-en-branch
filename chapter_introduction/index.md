@@ -647,22 +647,23 @@ transmite uma noção de incerteza.
 Esta não é a única noção de incerteza
 e discutiremos outros em capítulos mais avançados.
 
-When we have more than two possible classes,
-we call the problem *multiclass classification*.
-Common examples include hand-written character recognition
+
+Quando temos mais de duas classes possíveis,
+chamamos o problema de *classificação multiclasse*.
+Exemplos comuns incluem reconhecimento de caracteres escritos à mão
 $\mathrm{\{0, 1, 2, ... 9, a, b, c, ...\}}$.
-While we attacked regression problems by trying
-to minimize the squared error loss function,
-the common loss function for classification problems is called *cross-entropy*,
-whose name can be demystified 
-via an introduction to information theory in subsequent chapters.
+Enquanto atacamos problemas de regressão tentando
+minimizar a função de perda de erro quadrático,
+a função de perda comum para problemas de classificação é chamada de *entropia cruzada* (*cross-entropy*),
+cujo nome pode ser desmistificado
+por meio de uma introdução à teoria da informação nos capítulos subsequentes.
 
-Note that the most likely class is not necessarily
-the one that you are going to use for your decision.
-Assume that you find a beautiful mushroom in your backyard
-as shown in :numref:`fig_death_cap`.
+Observe que a classe mais provável não é necessariamente
+aquela que você usará para sua decisão.
+Suponha que você encontre um lindo cogumelo em seu quintal
+como mostrado em: numref: `fig_death_cap`.
 
-![Death cap---do not eat!](../img/death-cap.jpg)
+![Cicuta verde --- não coma!](../img/death-cap.jpg)
 :width:`200px`
 :label:`fig_death_cap`
 
@@ -1643,11 +1644,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NTAyMDUzOCwtOTQxNjYxMzIwLC0yMj
-g4MzIzMzEsLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOTUxMzQ1
-NjIxLC0xNjg3MjczODY4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOC
-wxNzYyNjMwMjIsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMTM0
-MDA1MzcsLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYzNzkyMD
-Q0LC03NjI1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MDksMTQ2
-MTY1Mjk5N119
+eyJoaXN0b3J5IjpbNzIxNTI4MDkwLC05NDE2NjEzMjAsLTIyOD
+gzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0MTgxNjE1LDE5NTEzNDU2
+MjEsLTE2ODcyNzM4NjgsLTE4NjczNjU0OTQsNDk2MTI3NDM4LD
+E3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYwNDcsMTExMzQw
+MDUzNywtMTc2MDczNDc1OSwxOTI4Mjk2MDQxLDE2NjM3OTIwND
+QsLTc2MjUwODA0NSw2MzE5MDI5MTcsMTkxOTU2MTQwOSwxNDYx
+NjUyOTk3XX0=
 -->
