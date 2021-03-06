@@ -212,28 +212,29 @@ para resolver problemas de *machine learning*.
 
 ## Componentes chave
 
-In our wake word example, we described a dataset
-consisting of audio snippets and binary labels, 
-and we
-gave a hand-wavy sense of how we might train
-a model to approximate a mapping from snippets to classifications.
-This sort of problem, 
-where we try to predict a designated unknown label
-based on known inputs
-given a dataset consisting of examples
-for which the labels are known, 
-is called *supervised learning*.
-This is just one among many kinds of machine learning problems.
-Later we will take a deep dive into different machine learning problems.
-First, we would like to shed more light on some core components
-that will follow us around, no matter what kind of machine learning problem we take on:
 
-1. The *data* that we can learn from.
-1. A *model* of how to transform the data.
-1. An *objective function* that quantifies how well (or badly) the model is doing.
-1. An *algorithm* to adjust the model's parameters to optimize the objective function.
+Em nosso exemplo de palavra de ativação, descrevemos um *dataset*
+consistindo em trechos de áudio e *labels* binários,
+e nós
+demos uma sensação ondulante de como podemos treinar
+um modelo para aproximar um mapeamento de áudios para classificações.
+Esse tipo de problema,
+onde tentamos prever um *label* desconhecido designado
+com base em entradas conhecidas
+dado um conjunto de dados que consiste em exemplos
+para os quais os rótulos são conhecidos,
+é chamado de *aprendizagem supervisionada*.
+Esse é apenas um entre muitos tipos de problemas de *machine learning*.
+Posteriormente, mergulharemos profundamente em diferentes problemas de *machine learning*.
+Primeiro, gostaríamos de lançar mais luz sobre alguns componentes principais
+que nos acompanharão, independentemente do tipo de problema de *machine learning* que enfrentarmos:
 
-### Data
+1. Os *dados* com os quais podemos aprender.
+1. Um *modelo* de como transformar os dados.
+1. Uma *função objetivo* que quantifica o quão bem (ou mal) o modelo está indo.
+1. Um *algoritmo* para ajustar os parâmetros do modelo para otimizar a função objetivo.
+
+### Dados
 
 It might go without saying that you cannot do data science without data.
 We could lose hundreds of pages pondering what precisely constitutes data,
@@ -1635,8 +1636,8 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzQwMDUzNywtMTc2MDczNDc1OSwxOT
-I4Mjk2MDQxLDE2NjM3OTIwNDQsLTc2MjUwODA0NSw2MzE5MDI5
-MTcsMTkxOTU2MTQwOSwxNDYxNjUyOTk3LC0xMjMzNDYxOTgzXX
-0=
+eyJoaXN0b3J5IjpbLTIxNDEwOTYwNDcsMTExMzQwMDUzNywtMT
+c2MDczNDc1OSwxOTI4Mjk2MDQxLDE2NjM3OTIwNDQsLTc2MjUw
+ODA0NSw2MzE5MDI5MTcsMTkxOTU2MTQwOSwxNDYxNjUyOTk3LC
+0xMjMzNDYxOTgzXX0=
 -->
