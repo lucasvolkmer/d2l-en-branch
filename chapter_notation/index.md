@@ -6,12 +6,12 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 ## Numbers
 
-* $ x $: um escalar
-* $ \ mathbf {x} $: um vetor
-* $ \ mathbf {X} $: uma matriz
-* $ \ mathsf {X} $: um tensor
-* $ \ mathbf {I} $: Uma matriz identidade
-* $ x_i $, $ [\ mathbf {x}] _ i $: O elemento $ i ^ \ mathrm {th} $ do vetor $ \ mathbf {x} $
+* $x$: um escalar
+* $\mathbf{x}$: um vetor
+* $\mathbf{X}$: uma matriz
+* $\mathsf{X}$: um tensor
+* $\mathbf{I}$: Uma matriz identidade
+* $x_i$,$[\ mathbf {x}] _ i$: O elemento $i^\mathrm{th}$ do vetor $\mathbf{x}$
 * $ x_ {ij} $, $ x_ {i, j} $, $ [\ mathbf {X}] _ {ij} $, $ [\ mathbf {X}] _ {i, j} $: O elemento da matriz $ \ mathbf {X} $ na linha $ i $ e coluna $ j $
 
 
@@ -84,5 +84,6 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY0MzE0MzU0LC02ODIxNTcyMjNdfQ==
+eyJoaXN0b3J5IjpbNjMxMTUxNDI0LDQ2NDMxNDM1NCwtNjgyMT
+U3MjIzXX0=
 -->
