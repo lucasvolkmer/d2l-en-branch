@@ -186,17 +186,17 @@ calculado individualmente para cada exemplo**) no lote.
 
 ```{.python .input}
 # Quando invocamos `backward` em uma variável de vetor valorado `y` (em função de `x`),
-# uma nova variável escalar é criada somando os elementos em `y`. e
-# gradient of that scalar variable with respect to `x` is computed
+# uma nova variável escalar é criada somando os elementos em `y`. Então o
+# gradiente daquela variável escalar em respeito a `x` é computada
 with autograd.record():
     y = x * x  # `y` is a vector
 y.backward()
-x.grad  # Equals to y = sum(x * x)
+x.grad  # Igual a y = sum(x * x)
 ```
 
 ```{.python .input}
 #@tab pytorch
-# Invoking `backward` on a non-scalar requires passing in a `gradient` argument
+# Invocar `backward` em um não escalar requer passar um argumento `gradient`
 # which specifies the gradient of the differentiated function w.r.t `self`.
 # In our case, we simply want to sum the partial derivatives, so passing
 # in a gradient of ones is appropriate
@@ -407,6 +407,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMwMzQyNjc4LC0yMDIwMzQ5NjY1LDEyND
-gwNzQ1MjIsMTQwNjQzOTM0MV19
+eyJoaXN0b3J5IjpbMTA2MjU4ODE3NCwtMjAyMDM0OTY2NSwxMj
+Q4MDc0NTIyLDE0MDY0MzkzNDFdfQ==
 -->
