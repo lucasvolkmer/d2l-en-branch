@@ -7,8 +7,7 @@ Como já explicado em :numref:`sec_calculus`, a diferenciação é uma etapa cru
 
 ## Um exemplo simples
 
-As a toy example, say that we are interested
-in (**differentiating the function $y = 2\mathbf{x}^{\top}\mathbf{x}$ with respect to the column vector $\mathbf{x}$.**)
+Como exemplo, digamos que estamos interessados em (**derivar a função $y = 2\mathbf{x}^{\top}\mathbf{x}$ com respeito ao vetor coluna $\mathbf{x}$.**)
 Inicialmente criamos a variável `x` e atribuimos a ela um valor inicial.
 
 ```{.python .input}
@@ -398,5 +397,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0ODA3NDUyMiwxNDA2NDM5MzQxXX0=
+eyJoaXN0b3J5IjpbODY4MTk4ODQ1LDEyNDgwNzQ1MjIsMTQwNj
+QzOTM0MV19
 -->
