@@ -43,15 +43,15 @@ Observe que um gradiente de uma função com valor escalar com respeito a um vet
 ```{.python .input}
 # Alocamos memória do gradiente do vetor invocando `attach_grad`
 x.attach_grad()
-# After we calculate a gradient taken with respect to `x`, we will be able to
-# access it via the `grad` attribute, whose values are initialized with 0s
+# Após calcularmos o gradiente como respeito a `x`, será possível
+# acessa-lo vai atributo `grad`, cujo valor inicializará com 0s
 x.grad
 ```
 
 ```{.python .input}
 #@tab pytorch
 x.requires_grad_(True)  # Same as `x = torch.arange(4.0, requires_grad=True)`
-x.grad  # The default value is None
+x.grad  # O valor padr None
 ```
 
 ```{.python .input}
@@ -391,6 +391,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MDA5MzU3MSwxMjQ4MDc0NTIyLDE0MD
-Y0MzkzNDFdfQ==
+eyJoaXN0b3J5IjpbLTEzNzAxNDg4NTgsMTI0ODA3NDUyMiwxND
+A2NDM5MzQxXX0=
 -->
