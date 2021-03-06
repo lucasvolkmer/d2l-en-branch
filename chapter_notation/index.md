@@ -39,7 +39,7 @@ A notação usada ao longo deste livro é resumida a seguir.
 * $\exp(\cdot)$: A função exponencial
 * $\mathbf {1} _ \mathcal {X}$: a função do indicador
 * $\mathbf {(\cdot)} ^ \top$: Transposta de uma matriz ou vetor
-* $\mathbf {X} ^ {- 1}$: Inversa da matriz $\ mathbf {X}$
+* $\mathbf {X} ^ {- 1}$: Inversa da matriz $\mathbf {X}$
 * $\odot$: produto Hadamard (elemento a elemento)
 * $[\cdot, \cdot]$: Concatenação
 * $\lvert \mathcal {X} \rvert $: Cardinalidade do conjunto $\mathcal {X}$
@@ -84,6 +84,6 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MzE2ODc5Niw1NTYyNjU0MjQsLTIwNj
+eyJoaXN0b3J5IjpbMTg2OTU1MDkwOCw1NTYyNjU0MjQsLTIwNj
 U4MzA4NDAsNDY0MzE0MzU0LC02ODIxNTcyMjNdfQ==
 -->
