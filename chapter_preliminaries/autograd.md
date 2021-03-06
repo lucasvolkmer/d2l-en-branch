@@ -202,7 +202,7 @@ x.grad  # Igual a y = sum(x * x)
 # em um gradiente de uns é apropriado
 x.grad.zero_()
 y = x * x
-# y.backward(torch.ones(len(x))) equva
+# y.backward(torch.ones(len(x))) equivalente a:
 y.sum().backward()
 x.grad
 ```
@@ -407,6 +407,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzA3MDUwMjQsLTIwMjAzNDk2NjUsMT
+eyJoaXN0b3J5IjpbLTE4NzAyNDUwNDYsLTIwMjAzNDk2NjUsMT
 I0ODA3NDUyMiwxNDA2NDM5MzQxXX0=
 -->
