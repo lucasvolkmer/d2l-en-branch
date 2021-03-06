@@ -173,11 +173,7 @@ seja com zeros, uns, algumas outras constantes,
 ou números amostrados aleatoriamente de uma distribuição específica.
 [**Podemos criar um tensor representando um tensor com todos os elementos
 definido como 0**] (~~ou 1~~)
-and a shape of (2, 3, 4) as follows:
-[** Podemos criar um tensor representando um tensor com todos os elementos
-definido como 0 **] (~~ ou 1 ~~)
-e uma forma de (2, 3, 4) como segue:
-
+e uma forma de (2, 3, 4) como a seguir:
 
 ```{.python .input}
 np.zeros((2, 3, 4))
@@ -193,7 +189,7 @@ torch.zeros((2, 3, 4))
 tf.zeros((2, 3, 4))
 ```
 
-Similarly, we can create tensors with each element set to 1 as follows:
+Da mesma forma, podemos criar tensores com cada elemento definido como 1 da seguinte maneira:
 
 ```{.python .input}
 np.ones((2, 3, 4))
@@ -714,5 +710,5 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNzAyMDM2MywtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbLTQ0NjY0MzczMSwtMTMwNDcxNTQ4MF19
 -->
