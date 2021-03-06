@@ -156,18 +156,6 @@ X
 X = tf.reshape(x, (3, 4))
 X
 ```
-
-Reshaping by manually specifying every dimension is unnecessary.
-If our target shape is a matrix with shape (height, width),
-then after we know the width, the height is given implicitly.
-Why should we have to perform the division ourselves?
-In the example above, to get a matrix with 3 rows,
-we specified both that it should have 3 rows and 4 columns.
-Fortunately, tensors can automatically work out one dimension given the rest.
-We invoke this capability by placing `-1` for the dimension
-that we would like tensors to automatically infer.
-In our case, instead of calling `x.reshape(3, 4)`,
-we could have equivalently called `x.reshape(-1, 4)` or `x.reshape(3, -1)`.
 A remodelação especificando manualmente todas as dimensões é desnecessária.
 Se nossa forma de destino for uma matriz com forma (altura, largura),
 então, depois de sabermos a largura, a altura é dada implicitamente.
@@ -180,12 +168,15 @@ que gostaríamos que os tensores inferissem automaticamente.
 No nosso caso, em vez de chamar `x.reshape (3, 4)`,
 poderíamos ter chamado equivalentemente `x.reshape (-1, 4)` ou `x.reshape (3, -1)`.
 
-Typically, we will want our matrices initialized
-either with zeros, ones, some other constants,
-or numbers randomly sampled from a specific distribution.
-[**We can create a tensor representing a tensor with all elements
-set to 0**] (~~or 1~~)
+Normalmente, queremos que nossas matrizes sejam inicializadas
+seja com zeros, uns, algumas outras constantes,
+ou números amostrados aleatoriamente de uma distribuição específica.
+[**Podemos criar um tensor representando um tensor com todos os elementos
+definido como 0**] (~~ou 1~~)
 and a shape of (2, 3, 4) as follows:
+[** Podemos criar um tensor representando um tensor com todos os elementos
+definido como 0 **] (~~ ou 1 ~~)
+e uma forma de (2, 3, 4) como segue:
 
 
 ```{.python .input}
@@ -723,6 +714,5 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjM4MDYxMDgsLTEzMDQ3MTU0ODBdfQ
-==
+eyJoaXN0b3J5IjpbMTgwNzAyMDM2MywtMTMwNDcxNTQ4MF19
 -->
