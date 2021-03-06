@@ -285,7 +285,7 @@ x.grad == 2 * x
 t.gradient(y, x) == 2 * x
 ```
 
-## Computando o Gradiente de Python Control Flow
+## Computando o Gradiente de Controle de Fluxo do Python 
 
 One benefit of using automatic differentiation
 is that [**even if**] building the computational graph of (**a function
@@ -296,7 +296,15 @@ In the following snippet, note that
 the number of iterations of the `while` loop
 and the evaluation of the `if` statement
 both depend on the value of the input `a`.
-
+Uma vantagem de usar a diferenciação automática
+é que [**mesmo se**] construir o gráfo computacional de (** uma função
+necessária a passagem por um labirinto de fluxo de controle Python**)
+(por exemplo, condicionais, loops e chamadas de função arbitrárias),
+(** ainda podemos calcular o gradiente da variável resultante. **)
+No trecho a seguir, observe que
+o número de iterações do loop `while`
+e a avaliação da instrução `if`
+ambos dependem do valor da entrada `a`.
 ```{.python .input}
 def f(a):
     b = a * 2
@@ -406,6 +414,7 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MjIyMDIxOSwtMTg3MDI0NTA0NiwtMj
-AyMDM0OTY2NSwxMjQ4MDc0NTIyLDE0MDY0MzkzNDFdfQ==
+eyJoaXN0b3J5IjpbLTQ4OTQ1NjgyNywtODYyMjIwMjE5LC0xOD
+cwMjQ1MDQ2LC0yMDIwMzQ5NjY1LDEyNDgwNzQ1MjIsMTQwNjQz
+OTM0MV19
 -->
