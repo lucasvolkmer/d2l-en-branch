@@ -1,4 +1,4 @@
-# Data Manipulation
+# Data Manipulationção de Dados
 :label:`sec_ndarray`
 
 In order to get anything done, we need some way to store and manipulate data.
@@ -708,3 +708,6 @@ a, a.item(), float(a), int(a)
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2OTA2MjUwNjhdfQ==
+-->
