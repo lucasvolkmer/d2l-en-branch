@@ -770,7 +770,7 @@ até que cada artigo possa ter uma revisão manual adequada.
 Na verdade, por vários anos, a organização BioASQ
 tem [sediado concursos] (http://bioasq.org/) para fazer exatamente isso.
 
-#### Search 
+#### Busca
 
 Sometimes we do not just want to assign each example to a bucket
 or to a real value. In the field of information retrieval,
@@ -1647,11 +1647,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMD
-Y0MjkwMTk5LDcyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIz
-MzEsLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOTUxMzQ1NjIxLC
-0xNjg3MjczODY4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOCwxNzYy
-NjMwMjIsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMTM0MDA1Mz
-csLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYzNzkyMDQ0LC03
-NjI1MDgwNDVdfQ==
+eyJoaXN0b3J5IjpbOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEwNz
+A2Mjk5NiwtMTA2NDI5MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMy
+MCwtMjI4ODMyMzMxLC0xMDc4NTg0NDcxLC01MzQxODE2MTUsMT
+k1MTM0NTYyMSwtMTY4NzI3Mzg2OCwtMTg2NzM2NTQ5NCw0OTYx
+Mjc0MzgsMTc2MjYzMDIyLDgyNjcwMjkyNywtMjE0MTA5NjA0Ny
+wxMTEzNDAwNTM3LC0xNzYwNzM0NzU5LDE5MjgyOTYwNDEsMTY2
+Mzc5MjA0NF19
 -->
