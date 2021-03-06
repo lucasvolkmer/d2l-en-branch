@@ -145,45 +145,46 @@ que podemos produzir apenas manipulando os parâmetros
 E o meta-programa que usa nosso conjunto de dados
 para escolher os parâmetros é chamado de *algoritmo de aprendizagem*.
 
-Before we can go ahead and engage the learning algorithm,
-we have to define the problem precisely,
-pinning down the exact nature of the inputs and outputs,
-and choosing an appropriate model family.
-In this case, 
-our model receives a snippet of audio as *input*,
-and the model 
-generates a selection among 
-$\{\text{yes}, \text{no}\}$ as *output*.
-If all goes according to plan 
-the model's guesses will
-typically be correct as to 
-whether the snippet contains the wake word.
 
-If we choose the right family of models,
-there should exist one setting of the knobs
-such that the model fires "yes" every time it hears the word "Alexa".
-Because the exact choice of the wake word is arbitrary,
-we will probably need a model family sufficiently rich that,
-via another setting of the knobs, it could fire "yes"
-only upon hearing the word "Apricot".
-We expect that the same model family should be suitable
-for "Alexa" recognition and "Apricot" recognition
-because they seem, intuitively, to be similar tasks.
-However, we might need a different family of models entirely
-if we want to deal with fundamentally different inputs or outputs,
-say if we wanted to map from images to captions,
-or from English sentences to Chinese sentences.
+Antes de prosseguirmos e envolvermos o algoritmo de aprendizagem,
+temos que definir o problema com precisão,
+identificando a natureza exata das entradas e saídas,
+e escolher uma família modelo apropriada.
+Nesse caso,
+nosso modelo recebe um trecho de áudio como *entrada*,
+e o modelo
+gera uma seleção entre
+$\{\text{yes},\text{no}\}$ como *saída*.
+Se tudo correr de acordo com o plano
+as suposições da modelo vão
+normalmente estar corretas quanto a
+se o áudio contém a palavra de ativação.
 
-As you might guess, if we just set all of the knobs randomly,
-it is unlikely that our model will recognize "Alexa",
-"Apricot", or any other English word.
-In machine learning, 
-the *learning* is the process
-by which we discover the right setting of the knobs
-coercing the desired behavior from our model.
-In other words,
-we *train* our model with data.
-As shown in :numref:`fig_ml_loop`, the training process usually looks like the following:
+Se escolhermos a família certa de modelos,
+deve haver uma configuração dos botões
+de forma que o modelo dispara "sim" toda vez que ouve a palavra "Alexa".
+Como a escolha exata da palavra de ativação é arbitrária,
+provavelmente precisaremos de uma família modelo suficientemente rica que,
+por meio de outra configuração dos botões, ele poderia disparar "sim"
+somente ao ouvir a palavra "Damasco".
+Esperamos que a mesma família de modelo seja adequada
+para reconhecimento "Alexa" e reconhecimento "Damasco"
+porque parecem, intuitivamente, tarefas semelhantes.
+No entanto, podemos precisar de uma família totalmente diferente de modelos
+se quisermos lidar com entradas ou saídas fundamentalmente diferentes,
+digamos que se quiséssemos mapear de imagens para legendas,
+ou de frases em inglês para frases em chinês.
+
+Como você pode imaginar, se apenas definirmos todos os botões aleatoriamente,
+é improvável que nosso modelo reconheça "Alexa",
+"Apricot", ou qualquer outra palavra em inglês.
+No *machine learning*,
+o *aprendizado* (*learning*) é o processo
+pelo qual descobrimos a configuração certa dos botões
+coagindo o comportamento desejado de nosso modelo.
+Em outras palavras,
+nós *treinamos* nosso modelo com dados.
+Conforme mostrado em: numref:`fig_ml_loop`, o processo de treinamento geralmente se parece com o seguinte:
 
 1. Start off with a randomly initialized model that cannot do anything useful.
 1. Grab some of your data (e.g., audio snippets and corresponding $\{\text{yes}, \text{no}\}$ labels).
@@ -1634,7 +1635,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LDYzMT
-kwMjkxNywxOTE5NTYxNDA5LDE0NjE2NTI5OTcsLTEyMzM0NjE5
-ODNdfQ==
+eyJoaXN0b3J5IjpbMTkyODI5NjA0MSwxNjYzNzkyMDQ0LC03Nj
+I1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MDksMTQ2MTY1Mjk5
+NywtMTIzMzQ2MTk4M119
 -->
