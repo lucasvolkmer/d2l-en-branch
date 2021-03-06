@@ -354,7 +354,7 @@ No caminho para discutir modelos profundos,
 também discutiremos alguns métodos mais tradicionais.
 
 
-### Fun
+### Funções Objetivas
 
 Earlier, we introduced machine learning as learning from experience.
 By *learning* here,
@@ -1639,9 +1639,9 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MTU0MTU5MCwxNzYyNjMwMjIsODI2Nz
-AyOTI3LC0yMTQxMDk2MDQ3LDExMTM0MDA1MzcsLTE3NjA3MzQ3
-NTksMTkyODI5NjA0MSwxNjYzNzkyMDQ0LC03NjI1MDgwNDUsNj
-MxOTAyOTE3LDE5MTk1NjE0MDksMTQ2MTY1Mjk5NywtMTIzMzQ2
-MTk4M119
+eyJoaXN0b3J5IjpbLTE4NzI0NDE5NjMsMTc2MjYzMDIyLDgyNj
+cwMjkyNywtMjE0MTA5NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0
+NzU5LDE5MjgyOTYwNDEsMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LD
+YzMTkwMjkxNywxOTE5NTYxNDA5LDE0NjE2NTI5OTcsLTEyMzM0
+NjE5ODNdfQ==
 -->
