@@ -51,7 +51,7 @@ x.grad
 ```{.python .input}
 #@tab pytorch
 x.requires_grad_(True)  # Same as `x = torch.arange(4.0, requires_grad=True)`
-x.grad  # O valor padr None
+x.grad  # O valor padrão é None
 ```
 
 ```{.python .input}
@@ -59,11 +59,11 @@ x.grad  # O valor padr None
 x = tf.Variable(x)
 ```
 
-(**Now let us calculate $y$.**)
+(**Então calcularemos $y$.**)
 
 ```{.python .input}
-# Place our code inside an `autograd.record` scope to build the computational
-# graph
+# Colocaremos o código dentro do escopo `autograd.record` para contruir
+# o grafo computacional
 with autograd.record():
     y = 2 * np.dot(x, x)
 y
@@ -391,6 +391,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzAxNDg4NTgsMTI0ODA3NDUyMiwxND
-A2NDM5MzQxXX0=
+eyJoaXN0b3J5IjpbMTEzMTgyMzk3LDEyNDgwNzQ1MjIsMTQwNj
+QzOTM0MV19
 -->
