@@ -79,14 +79,6 @@ Com duas dimensões, um tensor corresponde a uma * matriz *.
 Tensores com mais de dois eixos não possuem
 nomes matemáticos.
 
-To start, we can use `arange` to create a row vector `x`
-containing the first 12 integers starting with 0,
-though they are created as floats by default.
-Each of the values in a tensor is called an *element* of the tensor.
-For instance, there are 12 elements in the tensor `x`.
-Unless otherwise specified, a new tensor
-will be stored in main memory and designated for CPU-based computation.
-
 Para começar, podemos usar `arange` para criar um vetor linha `x`
 contendo os primeiros 12 inteiros começando com 0,
 embora eles sejam criados como *float* por padrão.
@@ -113,7 +105,7 @@ x = tf.range(12)
 x
 ```
 
-(**We can access a tensor's *shape***) (~~and the total number of elements~~) (the length along each axis)
+(**Podemos acessar o formato do tensor **) (~~e o número total de elementos~~) (o comprimento em cada )
 by inspecting its `shape` property.
 
 ```{.python .input}
@@ -720,5 +712,5 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NTgxOTkxNywtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbMTI1MjQ5MzE2NCwtMTMwNDcxNTQ4MF19
 -->
