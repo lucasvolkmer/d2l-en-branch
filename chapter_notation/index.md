@@ -84,6 +84,6 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjU4MzA4NDAsNDY0MzE0MzU0LC02OD
-IxNTcyMjNdfQ==
+eyJoaXN0b3J5IjpbNTU2MjY1NDI0LC0yMDY1ODMwODQwLDQ2ND
+MxNDM1NCwtNjgyMTU3MjIzXX0=
 -->
