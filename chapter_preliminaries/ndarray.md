@@ -264,6 +264,20 @@ on each pair of corresponding elements from the two arrays.
 We can create an elementwise function from any function
 that maps from a scalar to a scalar.
 
+Este livro não é sobre engenharia de software.
+Nossos interesses não se limitam a simplesmente
+leitura e gravação de dados de/para matrizes.
+Queremos realizar operações matemáticas nessas matrizes.
+Algumas das operações mais simples e úteis
+são as operações *elementwise *.
+Estes aplicam uma operação escalar padrão
+para cada elemento de uma matriz.
+Para funções que usam dois arrays como entradas,
+as operações elementwise aplicam algum operador binário padrão
+em cada par de elementos correspondentes das duas matrizes.
+Podemos criar uma função elementwise a partir de qualquer função
+que mapeia de um escalar para um escalar.
+
 In mathematical notation, we would denote such
 a *unary* scalar operator (taking one input)
 by the signature $f: \mathbb{R} \rightarrow \mathbb{R}$.
@@ -708,6 +722,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjcwNDQ2MzUsLTEzMDQ3MTU0ODBdfQ
+eyJoaXN0b3J5IjpbLTE5OTA2NjAxOTUsLTEzMDQ3MTU0ODBdfQ
 ==
 -->
