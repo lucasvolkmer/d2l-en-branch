@@ -482,37 +482,38 @@ de algo desconhecido dado um determinado *dataset* disponível:
 * Prever a tradução correta em francês, dada uma frase em inglês.
 * Prever o preço de uma ação no próximo mês com base nos dados de relatórios financeiros deste mês.
 
-Even with the simple description
-"predicting labels given input features"
-supervised learning can take a great many forms
-and require a great many modeling decisions,
-depending on (among other considerations) the type, size,
-and the number of inputs and outputs.
-For example, we use different models to process sequences of arbitrary lengths
-and for processing fixed-length vector representations.
-We will visit many of these problems in depth
-throughout this book.
 
-Informally, the learning process looks something like the following.
-First, grab a big collection of examples for which the features are known
-and select from them a random subset,
-acquiring the ground-truth labels for each.
-Sometimes these labels might be available data that have already been collected
-(e.g., did a patient die within the following year?)
-and other times we might need to employ human annotators to label the data,
-(e.g., assigning images to categories).
-Together, these inputs and corresponding labels comprise the training set.
-We feed the training dataset into a supervised learning algorithm,
-a function that takes as input a dataset
-and outputs another function: the learned model.
-Finally, we can feed previously unseen inputs to the learned model,
-using its outputs as predictions of the corresponding label.
-The full process is drawn in :numref:`fig_supervised_learning`.
+Mesmo com a descrição simples
+"previsão de *labels* com recursos de entrada"
+a aprendizagem supervisionada pode assumir muitas formas
+e exigem muitas decisões de modelagem,
+dependendo (entre outras considerações) do tipo, tamanho,
+e o número de entradas e saídas.
+Por exemplo, usamos diferentes modelos para processar sequências de comprimentos arbitrários
+e para processar representações de vetores de comprimento fixo.
+Visitaremos muitos desses problemas em profundidade
+ao longo deste livro.
 
-![Supervised learning.](../img/supervised-learning.svg)
+Informalmente, o processo de aprendizagem se parece com o seguinte.
+Primeiro, pegue uma grande coleção de exemplos para os quais os recursos são conhecidos
+e selecione deles um subconjunto aleatório,
+adquirindo os *labels* da verdade fundamental para cada um.
+Às vezes, esses *labels* podem ser dados disponíveis que já foram coletados
+(por exemplo, um paciente morreu no ano seguinte?)
+e outras vezes, podemos precisar empregar anotadores humanos para rotular os dados,
+(por exemplo, atribuição de imagens a categorias).
+Juntas, essas entradas e os *labels* correspondentes constituem o conjunto de treinamento.
+Alimentamos o *dataset* de treinamento em um algoritmo de aprendizado supervisionado,
+uma função que recebe como entrada um conjunto de dados
+e produz outra função: o modelo aprendido.
+Finalmente, podemos alimentar entradas não vistas anteriormente para o modelo aprendido,
+usando suas saídas como previsões do rótulo correspondente.
+O processo completo é desenhado em: numref: `fig_supervised_learning`.
+
+![Aprendizagem supervisionada.](../img/supervised-learning.svg)
 :label:`fig_supervised_learning`
 
-#### Regression
+#### Regressão
 
 Perhaps the simplest supervised learning task
 to wrap your head around is *regression*.
@@ -1639,10 +1640,10 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MTM0NTYyMSwtMTY4NzI3Mzg2OCwtMT
-g2NzM2NTQ5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLDgyNjcwMjky
-NywtMjE0MTA5NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0NzU5LD
-E5MjgyOTYwNDEsMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LDYzMTkw
-MjkxNywxOTE5NTYxNDA5LDE0NjE2NTI5OTcsLTEyMzM0NjE5OD
-NdfQ==
+eyJoaXN0b3J5IjpbLTUzNDE4MTYxNSwxOTUxMzQ1NjIxLC0xNj
+g3MjczODY4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOCwxNzYyNjMw
+MjIsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMTM0MDA1MzcsLT
+E3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYzNzkyMDQ0LC03NjI1
+MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MDksMTQ2MTY1Mjk5Ny
+wtMTIzMzQ2MTk4M119
 -->
