@@ -77,7 +77,7 @@ y
 
 ```{.python .input}
 #@tab tensorflow
-# Record all computations onto a tape
+# Gravando todos os calculos em um *tape*
 with tf.GradientTape() as t:
     y = 2 * tf.tensordot(x, x, axes=1)
 y
@@ -391,6 +391,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMTgyMzk3LDEyNDgwNzQ1MjIsMTQwNj
-QzOTM0MV19
+eyJoaXN0b3J5IjpbMTg5MjAwMDg1NywxMjQ4MDc0NTIyLDE0MD
+Y0MzkzNDFdfQ==
 -->
