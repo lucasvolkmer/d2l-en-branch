@@ -35,42 +35,43 @@ frequentemente em novas situações,
 E quando você é capaz de conceber soluções que funcionam $100\%$ do tempo,
 você não deveria usar o *machine learning*.
 
-Fortunately for the growing community of machine learning scientists,
-many tasks that we would like to automate
-do not bend so easily to human ingenuity.
-Imagine huddling around the whiteboard with the smartest minds you know,
-but this time you are tackling one of the following problems:
 
-* Write a program that predicts tomorrow's weather given geographic information, satellite images, and a trailing window of past weather.
-* Write a program that takes in a question, expressed in free-form text, and  answers it correctly.
-* Write a program that given an image can identify all the people it contains,  drawing outlines around each.
-* Write a program that presents users with products that they are likely to   enjoy but unlikely, in the natural course of browsing, to encounter.
+Felizmente para a crescente comunidade de cientistas de *machine learning*,
+muitas tarefas que gostaríamos de automatizar
+não se curvam tão facilmente à habilidade humana.
+Imagine se amontoar em volta do quadro branco com as mentes mais inteligentes que você conhece,
+mas desta vez você está lidando com um dos seguintes problemas:
 
-In each of these cases, even elite programmers
-are incapable of coding up solutions from scratch.
-The reasons for this can vary. Sometimes the program
-that we are looking for follows a pattern that changes over time,
-and we need our programs to adapt.
-In other cases, the relationship (say between pixels,
-and abstract categories) may be too complicated,
-requiring thousands or millions of computations
-that are beyond our conscious understanding
-even if our eyes manage the task effortlessly.
-*Machine learning* is the study of powerful
-techniques that can learn from experience.
-As an machine learning algorithm accumulates more experience,
-typically in the form of observational data or
-interactions with an environment, its performance improves.
-Contrast this with our deterministic e-commerce platform,
-which performs according to the same business logic,
-no matter how much experience accrues,
-until the developers themselves learn and decide
-that it is time to update the software.
-In this book, we will teach you the fundamentals of machine learning,
-and focus in particular on *deep learning*, 
-a powerful set of techniques
-driving innovations in areas as diverse as computer vision,
-natural language processing, healthcare, and genomics.
+* Escreva um programa que preveja o clima de amanhã com base em informações geográficas, imagens de satélite e uma janela de rastreamento do tempo passado.
+* Escreva um programa que aceite uma pergunta, expressa em texto de forma livre, e a responda corretamente.
+* Escreva um programa que, dada uma imagem, possa identificar todas as pessoas que ela contém, desenhando contornos em torno de cada uma.
+* Escreva um programa que apresente aos usuários produtos que eles provavelmente irão gostar, mas que provavelmente não encontrarão no curso natural da navegação.
+
+Em cada um desses casos, mesmo programadores de elite
+são incapazes de codificar soluções do zero.
+As razões para isso podem variar. Às vezes, o programa
+que procuramos segue um padrão que muda com o tempo,
+e precisamos que nossos programas se adaptem.
+Em outros casos, a relação (digamos, entre pixels,
+e categorias abstratas) podem ser muito complicadas,
+exigindo milhares ou milhões de cálculos
+que estão além da nossa compreensão consciente
+mesmo que nossos olhos administrem a tarefa sem esforço.
+*Machine learning* é o estudo de poderosas
+técnicas que podem aprender com a experiência.
+À medida que um algoritmo de *machine learning* acumula mais experiência,
+normalmente na forma de dados observacionais ou
+interações com um ambiente, seu desempenho melhora.
+Compare isso com nossa plataforma de comércio eletrônico determinística,
+que funciona de acordo com a mesma lógica de negócios,
+não importa quanta experiência acumule,
+até que os próprios desenvolvedores aprendam e decidam
+que é hora de atualizar o *software*.
+Neste livro, ensinaremos os fundamentos do *machine learning*,
+e foco em particular no *deep learning *,
+um poderoso conjunto de técnicas
+impulsionando inovações em áreas tão diversas como a visão computacional,
+processamento de linguagem natural, saúde e genômica.
 
 ## A Motivating Example
 
@@ -1631,5 +1632,6 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MTY1Mjk5NywtMTIzMzQ2MTk4M119
+eyJoaXN0b3J5IjpbMTkxOTU2MTQwOSwxNDYxNjUyOTk3LC0xMj
+MzNDYxOTgzXX0=
 -->
