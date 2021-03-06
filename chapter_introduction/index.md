@@ -646,6 +646,7 @@ A magnitude da probabilidade para a classe prevista
 transmite uma noção de incerteza.
 Esta não é a única noção de incerteza
 e discutiremos outros em capítulos mais avançados.
+
 When we have more than two possible classes,
 we call the problem *multiclass classification*.
 Common examples include hand-written character recognition
@@ -1642,11 +1643,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQxMDkyMzc2LC05NDE2NjEzMjAsLTIyOD
-gzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0MTgxNjE1LDE5NTEzNDU2
-MjEsLTE2ODcyNzM4NjgsLTE4NjczNjU0OTQsNDk2MTI3NDM4LD
-E3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYwNDcsMTExMzQw
-MDUzNywtMTc2MDczNDc1OSwxOTI4Mjk2MDQxLDE2NjM3OTIwND
-QsLTc2MjUwODA0NSw2MzE5MDI5MTcsMTkxOTU2MTQwOSwxNDYx
-NjUyOTk3XX0=
+eyJoaXN0b3J5IjpbLTk5NTAyMDUzOCwtOTQxNjYxMzIwLC0yMj
+g4MzIzMzEsLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOTUxMzQ1
+NjIxLC0xNjg3MjczODY4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOC
+wxNzYyNjMwMjIsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMTM0
+MDA1MzcsLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYzNzkyMD
+Q0LC03NjI1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MDksMTQ2
+MTY1Mjk5N119
 -->
