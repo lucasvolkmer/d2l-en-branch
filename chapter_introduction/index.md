@@ -236,36 +236,36 @@ que nos acompanharão, independentemente do tipo de problema de *machine learnin
 
 ### Dados
 
-It might go without saying that you cannot do data science without data.
-We could lose hundreds of pages pondering what precisely constitutes data,
-but for now, we will err on the practical side
-and focus on the key properties to be concerned with.
-Generally, we are concerned with a collection of examples.
-In order to work with data usefully, 
-we typically
-need to come up with a suitable numerical representation.
-Each *example* (or *data point*, *data instance*, *sample*) typically consists of a set
-of attributes called *features* (or *covariates*),
-from which the model must make its predictions.
-In the supervised learning problems above,
-the thing to predict
-is a special attribute 
-that is designated as
-the *label* (or *target*).
+
+Nem é preciso dizer que você não pode fazer ciência de dados sem dados.
+Podemos perder centenas de páginas pensando no que exatamente constitui os dados,
+mas por agora, vamos errar no lado prático
+e focar nas principais propriedades com as quais se preocupar.
+Geralmente, estamos preocupados com uma coleção de exemplos.
+Para trabalhar com dados de maneira útil,
+nós tipicamente
+precisamos chegar a uma representação numérica adequada.
+Cada *exemplo* (ou *ponto de dados*, *instância de dados*, *amostra*) normalmente consiste em um conjunto
+de atributos chamados *recursos* (ou *covariáveis ​*),
+a partir do qual o modelo deve fazer suas previsões.
+Nos problemas de aprendizagem supervisionada acima,
+a coisa a prever
+é um atributo especial
+que é designado como
+o *rótulo* (*label*) (ou *alvo*).
 
 
-If we were working with image data,
-each individual photograph might constitute an example,
-each represented by an ordered list of numerical values
-corresponding to the brightness of each pixel.
-A $200\times 200$ color photograph would consist of $200\times200\times3=120000$
-numerical values, corresponding to the brightness
-of the red, green, and blue channels for each spatial location.
-In another traditional task, we might try to predict
-whether or not a patient will survive,
-given a standard set of features such as
-age, vital signs, and diagnoses.
-
+Se estivéssemos trabalhando com dados de imagem,
+cada fotografia individual pode constituir um exemplo,
+cada um representado por uma lista ordenada de valores numéricos
+correspondendo ao brilho de cada pixel.
+Uma fotografia colorida de $200\times 200$ consistiria em $200\times200 \times3=120000$
+valores numéricos, correspondentes ao brilho
+dos canais vermelho, verde e azul para cada pixel.
+Em outra tarefa tradicional, podemos tentar prever
+se um paciente vai sobreviver ou não,
+dado um conjunto padrão de recursos, como
+idade, sinais vitais e diagnósticos.
 When every example is characterized by the same number of numerical values,
 we say that the data consist of fixed-length vectors
 and we describe the constant length of the vectors
@@ -1636,8 +1636,8 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDEwOTYwNDcsMTExMzQwMDUzNywtMT
-c2MDczNDc1OSwxOTI4Mjk2MDQxLDE2NjM3OTIwNDQsLTc2MjUw
-ODA0NSw2MzE5MDI5MTcsMTkxOTU2MTQwOSwxNDYxNjUyOTk3LC
-0xMjMzNDYxOTgzXX0=
+eyJoaXN0b3J5IjpbLTUwODU4NzY1MSwtMjE0MTA5NjA0NywxMT
+EzNDAwNTM3LC0xNzYwNzM0NzU5LDE5MjgyOTYwNDEsMTY2Mzc5
+MjA0NCwtNzYyNTA4MDQ1LDYzMTkwMjkxNywxOTE5NTYxNDA5LD
+E0NjE2NTI5OTcsLTEyMzM0NjE5ODNdfQ==
 -->
