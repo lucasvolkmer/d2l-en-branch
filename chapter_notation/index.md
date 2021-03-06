@@ -1,23 +1,22 @@
 # Notação
 :label:`chap_notation`
 
-The notation used throughout this book is summarized below.
+A notação usada ao longo deste livro é resumida a seguir.
 
 
 ## Numbers
 
-* $x$: A scalar
-* $\mathbf{x}$: A vector
-* $\mathbf{X}$: A matrix
-* $\mathsf{X}$: A tensor
-* $\mathbf{I}$: An identity matrix
-* $x_i$, $[\mathbf{x}]_i$: The $i^\mathrm{th}$ element of vector $\mathbf{x}$
-* $x_{ij}$, $x_{i,j}$,$[\mathbf{X}]_{ij}$, $[\mathbf{X}]_{i,j}$: The element of matrix $\mathbf{X}$ at row $i$ and column $j$
+* $ x $: um escalar
+* $ \ mathbf {x} $: um vetor
+* $ \ mathbf {X} $: uma matriz
+* $ \ mathsf {X} $: um tensor
+* $ \ mathbf {I} $: Uma matriz identidade
+* $ x_i $, $ [\ mathbf {x}] _ i $: O elemento $ i ^ \ mathrm {th} $ do vetor $ \ mathbf {x} $
+* $ x_ {ij} $, $ x_ {i, j} $, $ [\ mathbf {X}] _ {ij} $, $ [\ mathbf {X}] _ {i, j} $: O elemento da matriz $ \ mathbf {X} $ na linha $ i $ e coluna $ j $
 
 
 
-
-## Set Theory
+## Teoria de conjuntos
 
 
 * $\mathcal{X}$: A set
@@ -85,5 +84,5 @@ The notation used throughout this book is summarized below.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MjE1NzIyM119
+eyJoaXN0b3J5IjpbLTIxMzE2NjYxNzYsLTY4MjE1NzIyM119
 -->
