@@ -20,7 +20,7 @@ aceleram este trabalho
 calculando automaticamente as derivadas, ou seja, * diferenciação automática *.
 Na prática,
 com base em nosso modelo projetado
-o sistema constrói um * gráfico computacional *,
+o sistema constrói um * grafo computacional *,
 rastreando quais dados combinados por meio de
 quais operações produzir a saída.
 A diferenciação automática permite que o sistema propague gradientes posteriormente.
@@ -423,5 +423,5 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwMTY4NjAwOV19
+eyJoaXN0b3J5IjpbMTQwNjQzOTM0MV19
 -->
