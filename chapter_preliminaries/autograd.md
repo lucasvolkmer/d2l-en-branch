@@ -265,9 +265,6 @@ x_grad = t.gradient(z, x)
 x_grad == u
 ```
 
-Since the computation of `y` was recorded,
-we can subsequently invoke backpropagation on `y` to get the derivative of `y = x * x` with respect to `x`, which is `2 * x`.
-
 Uma vez que o cálculo de `y` foi registrado,
 podemos subsequentemente invocar a retropropagação em `y` para obter a derivada de` y = x * x` com respeito a `x`, que é` 2 * x`.
 
@@ -288,7 +285,7 @@ x.grad == 2 * x
 t.gradient(y, x) == 2 * x
 ```
 
-## Computing the Gradient of Python Control Flow
+## Computando o Gradiente de Python Control Flow
 
 One benefit of using automatic differentiation
 is that [**even if**] building the computational graph of (**a function
@@ -409,6 +406,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzA2MTk5ODIsLTE4NzAyNDUwNDYsLT
-IwMjAzNDk2NjUsMTI0ODA3NDUyMiwxNDA2NDM5MzQxXX0=
+eyJoaXN0b3J5IjpbLTg2MjIyMDIxOSwtMTg3MDI0NTA0NiwtMj
+AyMDM0OTY2NSwxMjQ4MDc0NTIyLDE0MDY0MzkzNDFdfQ==
 -->
