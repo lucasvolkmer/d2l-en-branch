@@ -5,7 +5,7 @@ Como já explicado em :numref:`sec_calculus`, a diferenciação é uma etapa cru
 Embora os cálculos para obter esses derivados sejam diretos,
 exigindo apenas alguns cálculos básicos,
 para modelos complexos, trabalhando as atualizações manualmente pode ser uma tarefa difícil (e muitas vezes sujeita a erros).
-FrameworksDeep learning  expedite this work
+*Frameworks* de *Deep learning*  expedite this work
 by automatically calculating derivatives, i.e., *automatic differentiation*.
 In practice,
 based on our designed model
@@ -15,6 +15,17 @@ which operations to produce the output.
 Automatic differentiation enables the system to subsequently backpropagate gradients.
 Here, *backpropagate* simply means to trace through the computational graph,
 filling in the partial derivatives with respect to each parameter.
+
+acelerar este trabalho
+calculando automaticamente as derivadas, ou seja, * diferenciação automática *.
+Na prática,
+com base em nosso modelo projetado
+o sistema constrói um * gráfico computacional *,
+rastreando quais dados combinados por meio de
+quais operações produzir a saída.
+A diferenciação automática permite que o sistema propague gradientes posteriormente.
+Aqui, * backpropagate * significa simplesmente traçar o gráfico computacional,
+preencher as derivadas parciais em relação a cada parâmetro.
 
 
 ## A Simple Example
@@ -412,5 +423,5 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgxMzkwMDkxXX0=
+eyJoaXN0b3J5IjpbNjk1MjA5ODA0XX0=
 -->
