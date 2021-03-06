@@ -185,8 +185,8 @@ mas sim (**a soma das derivadas parciais
 calculado individualmente para cada exemplo**) no lote.
 
 ```{.python .input}
-# When we invoke `backward` on a vector-valued variable `y` (function of `x`),
-# a new scalar variable is created by summing the elements in `y`. Then the
+# Quando invocamos `backward` em uma variável de vetor valorado `y` (em função de `x`),
+# uma nova variável escalar é criada somando os elementos em `y`. e
 # gradient of that scalar variable with respect to `x` is computed
 with autograd.record():
     y = x * x  # `y` is a vector
@@ -407,6 +407,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MTg5NTI0LC0yMDIwMzQ5NjY1LDEyND
+eyJoaXN0b3J5IjpbNDMwMzQyNjc4LC0yMDIwMzQ5NjY1LDEyND
 gwNzQ1MjIsMTQwNjQzOTM0MV19
 -->
