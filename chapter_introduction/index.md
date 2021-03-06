@@ -115,34 +115,35 @@ Também não sabemos escrever tal programa do zero.
 :label:`fig_wake_word`
 
 
-Here is the trick.
-Often, even when we do not know how to tell a computer
-explicitly how to map from inputs to outputs,
-we are nonetheless capable of performing the cognitive feat ourselves.
-In other words, even if you do not know
-how to program a computer to recognize the word "Alexa",
-you yourself are able to recognize it.
-Armed with this ability, we can collect a huge *dataset*
-containing examples of audio 
-and label those that do
-and that do not contain the wake word.
-In the machine learning approach, 
-we do not attempt to design a system
-*explicitly* to recognize wake words.
-Instead, we define a flexible program
-whose behavior is determined by a number of *parameters*.
-Then we use the dataset to determine the best possible set of parameters, 
-those that improve the performance of our program
-with respect to some measure of performance on the task of interest.
 
-You can think of the parameters as knobs that we can turn,
-manipulating the behavior of the program.
-Fixing the parameters, we call the program a *model*.
-The set of all distinct programs (input-output mappings)
-that we can produce just by manipulating the parameters
-is called a *family* of models.
-And the meta-program that uses our dataset
-to choose the parameters is called a *learning algorithm*.
+Aqui está o truque.
+Muitas vezes, mesmo quando não sabemos como dizer a um computador
+explicitamente como mapear de entradas para saídas,
+ainda assim, somos capazes de realizar a façanha cognitiva por nós mesmos.
+Em outras palavras, mesmo que você não saiba
+como programar um computador para reconhecer a palavra "Alexa",
+você mesmo é capaz de reconhecê-lo.
+Armados com essa habilidade, podemos coletar um enorme *dataset*
+contendo exemplos de áudio
+e rotular aqueles que contêm
+e que não contêm a palavra de ativação.
+Na abordagem de *machine learning*,
+não tentamos projetar um sistema
+*explicitamente* para reconhecer palavras de ativação.
+Em vez disso, definimos um programa flexível
+cujo comportamento é determinado por vários *parâmetros*.
+Em seguida, usamos o conjunto de dados para determinar o melhor conjunto possível de parâmetros,
+aqueles que melhoram o desempenho do nosso programa
+com respeito a alguma medida de desempenho na tarefa de interesse.
+
+Você pode pensar nos parâmetros como botões que podemos girar,
+manipulando o comportamento do programa.
+Fixando os parâmetros, chamamos o programa de *modelo*.
+O conjunto de todos os programas distintos (mapeamentos de entrada-saída)
+que podemos produzir apenas manipulando os parâmetros
+é chamada de *família* de modelos.
+E o meta-programa que usa nosso conjunto de dados
+para escolher os parâmetros é chamado de *algoritmo de aprendizagem*.
 
 Before we can go ahead and engage the learning algorithm,
 we have to define the problem precisely,
@@ -1633,6 +1634,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MjUwODA0NSw2MzE5MDI5MTcsMTkxOT
-U2MTQwOSwxNDYxNjUyOTk3LC0xMjMzNDYxOTgzXX0=
+eyJoaXN0b3J5IjpbMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LDYzMT
+kwMjkxNywxOTE5NTYxNDA5LDE0NjE2NTI5OTcsLTEyMzM0NjE5
+ODNdfQ==
 -->
