@@ -204,17 +204,16 @@ torch.ones((2, 3, 4))
 #@tab tensorflow
 tf.ones((2, 3, 4))
 ```
-
-Often, we want to [**randomly sample the values
-for each element in a tensor**]
-from some probability distribution.
-For example, when we construct arrays to serve
-as parameters in a neural network, we will
-typically initialize their values randomly.
-The following snippet creates a tensor with shape (3, 4).
-Each of its elements is randomly sampled
-from a standard Gaussian (normal) distribution
-with a mean of 0 and a standard deviation of 1.
+Freqüentemente, queremos [** amostrar aleatoriamente os valores
+para cada elemento em um tensor **]
+de alguma distribuição de probabilidade.
+Por exemplo, quando construímos matrizes para servir
+como parâmetros em uma rede neural, vamos
+normalmente inicializam seus valores aleatoriamente.
+O fragmento a seguir cria um tensor com forma (3, 4).
+Cada um de seus elementos é amostrado aleatoriamente
+de uma distribuição gaussiana (normal) padrão
+com uma média de 0 e um desvio padrão de 1.
 
 
 ```{.python .input}
@@ -710,5 +709,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NjY0MzczMSwtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbLTExNTAyNTYwODAsLTEzMDQ3MTU0ODBdfQ
+==
 -->
