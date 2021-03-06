@@ -1,4 +1,4 @@
-# Introduction
+# Introdução
 :label:`chap_introduction`
 
 Until recently, nearly every computer program that we interact with daily
@@ -1630,5 +1630,5 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAxNzU2NzMzXX0=
+eyJoaXN0b3J5IjpbLTEyMzM0NjE5ODNdfQ==
 -->
