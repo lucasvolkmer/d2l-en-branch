@@ -356,67 +356,67 @@ também discutiremos alguns métodos mais tradicionais.
 
 ### Funções Objetivo
 
-Earlier, we introduced machine learning as learning from experience.
-By *learning* here,
-we mean improving at some task over time.
-But who is to say what constitutes an improvement?
-You might imagine that we could propose to update our model,
-and some people might disagree on whether the proposed update
-constituted an improvement or a decline.
 
-In order to develop a formal mathematical system of learning machines,
-we need to have formal measures of how good (or bad) our models are.
-In machine learning, and optimization more generally,
-we call these *objective functions*.
-By convention, we usually define objective functions
-so that lower is better.
-This is merely a convention. 
-You can take any function
-for which higher is better, and turn it into a new function
-that is qualitatively identical but for which lower is better
-by flipping the sign.
-Because lower is better, these functions are sometimes called
-*loss functions*.
+Anteriormente, apresentamos o *machine learning* como aprendizado com a experiência.
+Por *aprender* aqui,
+queremos dizer melhorar em alguma tarefa ao longo do tempo.
+Mas quem pode dizer o que constitui uma melhoria?
+Você pode imaginar que poderíamos propor a atualização do nosso modelo,
+e algumas pessoas podem discordar sobre se a atualização proposta
+constituiu uma melhoria ou um declínio.
 
-When trying to predict numerical values,
-the most common loss function is *squared error*,
-i.e., the square of the difference between the prediction and the ground-truth.
-For classification, the most common objective is to minimize error rate,
-i.e., the fraction of examples on which
-our predictions disagree with the ground truth.
-Some objectives (e.g., squared error) are easy to optimize.
-Others (e.g., error rate) are difficult to optimize directly,
-owing to non-differentiability or other complications.
-In these cases, it is common to optimize a *surrogate objective*.
+A fim de desenvolver um sistema matemático formal de máquinas de aprendizagem,
+precisamos ter medidas formais de quão bons (ou ruins) nossos modelos são.
+No *machine learning*, e na otimização em geral,
+chamamos elas de *funções objetivo*.
+Por convenção, geralmente definimos funções objetivo
+de modo que quanto menor, melhor.
+Esta é apenas uma convenção.
+Você pode assumir qualquer função
+para a qual mais alto é melhor, e transformá-la em uma nova função
+que é qualitativamente idêntica, mas para a qual menor é melhor,
+invertendo o sinal.
+Porque quanto menor é melhor, essas funções às vezes são chamadas
+*funções de perda* (*loss functions*).
 
-Typically, the loss function is defined
-with respect to the model's parameters
-and depends upon the dataset.
-We learn
-the best values of our model's parameters
-by minimizing the loss incurred on a set
-consisting of some number of examples collected for training.
-However, doing well on the training data
-does not guarantee that we will do well on unseen data.
-So we will typically want to split the available data into two partitions:
-the *training dataset* (or *training set*, for fitting model parameters)
-and the *test dataset* (or *test set*, which is held out for evaluation),
-reporting how the model performs on both of them.
-You could think of training performance as being like
-a student's scores on practice exams
-used to prepare for some real final exam.
-Even if the results are encouraging,
-that does not guarantee success on the final exam.
-In other words,
-the test performance can deviate significantly from the training performance. 
-When a model performs well on the training set
-but fails to generalize to unseen data,
-we say that it is *overfitting*.
-In real-life terms, this is like flunking the real exam
-despite doing well on practice exams.
+Ao tentar prever valores numéricos,
+a função de perda mais comum é *erro quadrático*,
+ou seja, o quadrado da diferença entre a previsão e a verdade fundamental.
+Para classificação, o objetivo mais comum é minimizar a taxa de erro,
+ou seja, a fração de exemplos em que
+nossas previsões discordam da verdade fundamental.
+Alguns objetivos (por exemplo, erro quadrático) são fáceis de otimizar.
+Outros (por exemplo, taxa de erro) são difíceis de otimizar diretamente,
+devido à indiferenciabilidade ou outras complicações.
+Nesses casos, é comum otimizar um *objetivo substituto*.
 
+Normalmente, a função de perda é definida
+no que diz respeito aos parâmetros do modelo
+e depende do conjunto de dados.
+Nós aprendemos
+os melhores valores dos parâmetros do nosso modelo
+minimizando a perda incorrida em um conjunto
+consistindo em alguns exemplos coletados para treinamento.
+No entanto, indo bem nos dados de treinamento
+não garante que teremos um bom desempenho com dados não vistos.
+Portanto, normalmente queremos dividir os dados disponíveis em duas partições:
+o *dataset de treinamento* (ou *conjunto de treinamento*, para ajustar os parâmetros do modelo)
+e o *dataset de teste* (ou *conjunto de teste*, que é apresentado para avaliação),
+relatando o desempenho do modelo em ambos.
+Você pode pensar no desempenho do treinamento como sendo
+as pontuações de um aluno em exames práticos
+usado para se preparar para algum exame final real.
+Mesmo que os resultados sejam encorajadores,
+isso não garante sucesso no exame final.
+Em outras palavras,
+o desempenho do teste pode divergir significativamente do desempenho do treinamento.
+Quando um modelo tem um bom desempenho no conjunto de treinamento
+mas falha em generalizar para dados invisíveis,
+dizemos que está fazendo *overfitting*.
+Em termos da vida real, é como ser reprovado no exame real
+apesar de ir bem nos exames práticos.
 
-### Optimization Algorithms
+### Algoritmos de Otimização
 
 Once we have got some data source and representation,
 a model, and a well-defined objective function,
@@ -1639,9 +1639,9 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk2MTI3NDM4LDE3NjI2MzAyMiw4MjY3MD
-I5MjcsLTIxNDEwOTYwNDcsMTExMzQwMDUzNywtMTc2MDczNDc1
-OSwxOTI4Mjk2MDQxLDE2NjM3OTIwNDQsLTc2MjUwODA0NSw2Mz
-E5MDI5MTcsMTkxOTU2MTQwOSwxNDYxNjUyOTk3LC0xMjMzNDYx
-OTgzXX0=
+eyJoaXN0b3J5IjpbLTEyOTQ2NDcyODIsNDk2MTI3NDM4LDE3Nj
+I2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYwNDcsMTExMzQwMDUz
+NywtMTc2MDczNDc1OSwxOTI4Mjk2MDQxLDE2NjM3OTIwNDQsLT
+c2MjUwODA0NSw2MzE5MDI5MTcsMTkxOTU2MTQwOSwxNDYxNjUy
+OTk3LC0xMjMzNDYxOTgzXX0=
 -->
