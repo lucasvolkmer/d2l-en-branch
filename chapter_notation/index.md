@@ -36,7 +36,7 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 * $f(\cdot)$: uma função
 * $\log (\cdot)$: O logaritmo natural
-* $ \ exp (\ cdot) $: A função exponencial
+* $\exp(\cdot) $: A função exponencial
 * $ \ mathbf {1} _ \ mathcal {X} $: a função do indicador
 * $ \ mathbf {(\ cdot)} ^ \ top $: Transposta de uma matriz ou vetor
 * $ \ mathbf {X} ^ {- 1} $: Inversa da matriz $ \ mathbf {X} $
@@ -84,6 +84,6 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NzI0NDc5Miw0NjQzMTQzNTQsLTY4Mj
-E1NzIyM119
+eyJoaXN0b3J5IjpbLTIwNjU4MzA4NDAsNDY0MzE0MzU0LC02OD
+IxNTcyMjNdfQ==
 -->
