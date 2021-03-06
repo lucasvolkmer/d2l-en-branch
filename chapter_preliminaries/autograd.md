@@ -140,9 +140,9 @@ x.grad  # Sobrescrito pelo novo gradiente calculado
 
 ```{.python .input}
 #@tab pytorch
-# O PyTorch acumula os gradientes por padrão, precisamos limpa
-# PyTorch accumulates the gradient in default, we need to clear the previous
-# valores
+# O PyTorch acumula os gradientes por padrão, precisamos
+# apagar os valores anteriores
+
 x.grad.zero_()
 y = x.sum()
 y.backward()
@@ -396,6 +396,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NzMzNjgwNiwxMjQ4MDc0NTIyLDE0MD
-Y0MzkzNDFdfQ==
+eyJoaXN0b3J5IjpbLTIwMjAzNDk2NjUsMTI0ODA3NDUyMiwxND
+A2NDM5MzQxXX0=
 -->
