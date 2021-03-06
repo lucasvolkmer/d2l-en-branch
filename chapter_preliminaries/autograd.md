@@ -1,18 +1,8 @@
-# Automatic Differentiation
+# Diferenciacç
 :label:`sec_autograd`
 
-Como já explicado em :numref:`sec_calculus`, a diferenciação é uma etapa crucial em quase todos os algoritmos de otimização de *Deep Learning*.
-Embora os cálculos para obter esses derivados sejam diretos,
-exigindo apenas alguns cálculos básicos,
-para modelos complexos, trabalhando as atualizações manualmente pode ser uma tarefa difícil (e muitas vezes sujeita a erros).
-*Frameworks* de *Deep learning* aceleram este trabalho
-calculando automaticamente as derivadas, ou seja, *diferenciação automática*.
-Na prática, com base em nosso modelo projetado
-o sistema constrói um * grafo computacional *,
-rastreando quais dados combinados por meio de
-quais operações produzem a saída.
-A diferenciação automática permite que o sistema propague gradientes posteriormente.
-Aqui, propagar(do Inglês *backpropagate*) significa simplesmente traçar o gráfico computacional, preencher as derivadas parciais em relação a cada parâmetro.
+Como já explicado em :numref:`sec_calculus`, a diferenciação é uma etapa crucial em quase todos os algoritmos de otimização de *Deep Learning*. Embora os cálculos para obter esses derivados sejam diretos, exigindo apenas alguns cálculos básicos, para modelos complexos, trabalhando as atualizações manualmente pode ser uma tarefa difícil (e muitas vezes sujeita a erros).
+*Frameworks* de *Deep learning* aceleram este trabalho calculando automaticamente as derivadas, ou seja, *diferenciação automática*. Na prática, com base em nosso modelo projetado o sistema constrói um *grafo computacional*, rastreando quais dados combinados por meio de quais operações produzem a saída. A diferenciação automática permite que o sistema propague gradientes posteriormente. Aqui, propagar(do Inglês *backpropagate*) significa simplesmente traçar o gráfico computacional, preencher as derivadas parciais em relação a cada parâmetro.
 
 
 ## A Simple Example
@@ -410,5 +400,5 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMDkzNTM4OCwxNDA2NDM5MzQxXX0=
+eyJoaXN0b3J5IjpbLTYzMTcwMzI5OCwxNDA2NDM5MzQxXX0=
 -->
