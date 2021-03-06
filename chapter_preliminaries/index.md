@@ -1,14 +1,7 @@
 #  Preliminaries
 :label:`chap_preliminaries`
 
-To get started with deep learning,
-we will need to develop a few basic skills.
-All machine learning is concerned
-with extracting information from data.
-So we will begin by learning the practical skills
-for storing, manipulating, and preprocessing data.
-
-Para iniciarmos o nosso aprendizado d,
+Para iniciarmos o nosso aprendizado de *Deep Learning*,
 precisaremos desenvolver algumas habilidades básicas.
 Todo aprendizado de máquina está relacionado
 com a extração de informações dos dados.
@@ -23,6 +16,14 @@ Linear algebra gives us a powerful set of techniques
 for working with tabular data.
 We will not go too far into the weeds but rather focus on the basic
 of matrix operations and their implementation.
+Além disso, o aprendizado de máquina normalmente requer
+trabalhar com grandes conjuntos de dados, que podemos considerar como tabelas,
+onde as linhas correspondem a exemplos
+e as colunas correspondem aos atributos.
+A álgebra linear nos dá um poderoso conjunto de técnicas
+para trabalhar com dados tabulares.
+Não iremos muito longe nas ervas daninhas, mas sim nos concentraremos no básico
+das operações matriciais e sua implementação.
 
 Additionally, deep learning is all about optimization.
 We have a model with some parameters and
@@ -66,5 +67,5 @@ lookup-api
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyNzA0NjAyXX0=
+eyJoaXN0b3J5IjpbLTEyODM5NDkwNF19
 -->
