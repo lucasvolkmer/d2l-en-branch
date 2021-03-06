@@ -515,34 +515,35 @@ O processo completo é desenhado em: numref: `fig_supervised_learning`.
 
 #### Regressão
 
-Perhaps the simplest supervised learning task
-to wrap your head around is *regression*.
-Consider, for example, a set of data harvested
-from a database of home sales.
-We might construct a table, 
-where each row corresponds to a different house,
-and each column corresponds to some relevant attribute,
-such as the square footage of a house, 
-the number of bedrooms, the number of bathrooms, and the number of minutes (walking) to the center of town.
-In this dataset, each example would be a specific house,
-and the corresponding feature vector would be one row in the table.
-If you live in New York or San Francisco,
-and you are not the CEO of Amazon, Google, Microsoft, or Facebook,
-the (sq. footage, no. of bedrooms, no. of bathrooms, walking distance)
-feature vector for your home might look something like: $[600, 1, 1, 60]$.
-However, if you live in Pittsburgh, it might look more like $[3000, 4, 3, 10]$.
-Feature vectors like this are essential
-for most classic machine learning algorithms.
 
-What makes a problem a regression is actually the output.
-Say that you are in the market for a new home.
-You might want to estimate the fair market value of a house,
-given some features like above.
-The label, the price of sale, is a numerical value.
-When labels take on arbitrary numerical values,
-we call this a *regression* problem.
-Our goal is to produce a model whose predictions
-closely approximate the actual label values.
+Talvez a tarefa de aprendizagem supervisionada mais simples
+para entender é *regressão*.
+Considere, por exemplo, um conjunto de dados coletados
+de um banco de dados de vendas de casas.
+Podemos construir uma mesa,
+onde cada linha corresponde a uma casa diferente,
+e cada coluna corresponde a algum atributo relevante,
+como a metragem quadrada de uma casa,
+o número de quartos, o número de banheiros e o número de minutos (caminhando) até o centro da cidade.
+Neste conjunto de dados, cada exemplo seria uma casa específica,
+e o vetor de recurso correspondente seria uma linha na tabela.
+Se você mora em Nova York ou São Francisco,
+e você não é o CEO da Amazon, Google, Microsoft ou Facebook,
+o vetor de recursos (metragem quadrada, nº de quartos, nº de banheiros, distância a pé)
+para sua casa pode ser algo como: $ [56, 1, 1, 60] $.
+No entanto, se você mora em Pittsburgh, pode ser parecido com $ [279, 4, 3, 10] $.
+Vetores de recursos como este são essenciais
+para a maioria dos algoritmos clássicos de *machine learning*.
+
+O que torna um problema uma regressão é, na verdade, o resultado.
+Digamos que você esteja em busca de uma nova casa.
+Você pode querer estimar o valor justo de mercado de uma casa,
+dados alguns recursos como acima.
+O *label*, o preço de venda, é um valor numérico.
+Quando os *labels* assumem valores numéricos arbitrários,
+chamamos isso de problema de *regressão*.
+Nosso objetivo é produzir um modelo cujas previsões
+aproximar os valores reais do *label*.
 
 
 Lots of practical problems are well-described regression problems.
@@ -1640,10 +1641,10 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNDE4MTYxNSwxOTUxMzQ1NjIxLC0xNj
-g3MjczODY4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOCwxNzYyNjMw
-MjIsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMTM0MDA1MzcsLT
-E3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYzNzkyMDQ0LC03NjI1
-MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MDksMTQ2MTY1Mjk5Ny
-wtMTIzMzQ2MTk4M119
+eyJoaXN0b3J5IjpbLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOT
+UxMzQ1NjIxLC0xNjg3MjczODY4LC0xODY3MzY1NDk0LDQ5NjEy
+NzQzOCwxNzYyNjMwMjIsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LD
+ExMTM0MDA1MzcsLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYz
+NzkyMDQ0LC03NjI1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MD
+ksMTQ2MTY1Mjk5NywtMTIzMzQ2MTk4M119
 -->
