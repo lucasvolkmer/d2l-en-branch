@@ -19,16 +19,16 @@ A notação usada ao longo deste livro é resumida a seguir.
 ## Teoria de conjuntos
 
 
-* $\mathcal{X}$: A set
-* $\mathbb{Z}$: The set of integers
-* $\mathbb{Z}^+$: The set of positive integers
-* $\mathbb{R}$: The set of real numbers
-* $\mathbb{R}^n$: The set of $n$-dimensional vectors of real numbers
-* $\mathbb{R}^{a\times b}$: The set of matrices of real numbers with $a$ rows and $b$ columns
-* $|\mathcal{X}|$: Cardinality (number of elements) of set $\mathcal{X}$
-* $\mathcal{A}\cup\mathcal{B}$: Union of sets $\mathcal{A}$ and $\mathcal{B}$
-* $\mathcal{A}\cap\mathcal{B}$: Intersection of sets $\mathcal{A}$ and $\mathcal{B}$
-* $\mathcal{A}\setminus\mathcal{B}$: Subtraction of set $\mathcal{B}$ from set $\mathcal{A}$
+* $ \ mathcal {X} $: um conjunto
+* $ \ mathbb {Z} $: O conjunto dos inteiros
+* $ \ mathbb {Z} ^ + $: O conjunto dos inteiros positivos
+* $ \ mathbb {R} $: O conjunto dos números reais
+* $ \ mathbb {R} ^ n $: O conjunto dos vetores $n$-dimensionais de números reais
+* $ \ mathbb {R} ^ {a \ times b} $: O conjunto de matrizes de números reais com $ a $ linhas e $ b $ colunas
+* $ | \ mathcal {X} | $: Cardinalidade (número de elementos) do conjunto $ \ mathcal {X} $
+* $ \ mathcal {A} \ cup \ mathcal {B} $: União dos conjuntos $ \ mathcal {A} $ e $ \ mathcal {B} $
+* $ \ mathcal {A} \ cap \ mathcal {B} $: Interseção dos conjuntos $ \ mathcal {A} $ e $ \ mathcal {B} $
+* $ \ mathcal {A} \ setminus \ mathcal {B} $: Subtração do conjunto $ \ mathcal {B} $ do conjunto $ \ mathcal {A} $
 
 
 ## Functions and Operators
@@ -84,5 +84,5 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzE2NjYxNzYsLTY4MjE1NzIyM119
+eyJoaXN0b3J5IjpbLTE4NzI3NTQwMiwtNjgyMTU3MjIzXX0=
 -->
