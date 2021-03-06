@@ -73,7 +73,7 @@ um poderoso conjunto de técnicas
 impulsionando inovações em áreas tão diversas como a visão computacional,
 processamento de linguagem natural, saúde e genômica.
 
-## A Motivating Example
+## Um exemplo motivador
 
 Before beginning writing, the authors of this book,
 like much of the work force, had to become caffeinated.
@@ -1632,6 +1632,6 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxOTU2MTQwOSwxNDYxNjUyOTk3LC0xMj
-MzNDYxOTgzXX0=
+eyJoaXN0b3J5IjpbNjMxOTAyOTE3LDE5MTk1NjE0MDksMTQ2MT
+Y1Mjk5NywtMTIzMzQ2MTk4M119
 -->
