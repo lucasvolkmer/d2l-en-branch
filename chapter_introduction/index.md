@@ -75,41 +75,41 @@ processamento de linguagem natural, saúde e genômica.
 
 ## Um exemplo motivador
 
-Before beginning writing, the authors of this book,
-like much of the work force, had to become caffeinated.
-We hopped in the car and started driving.
-Using an iPhone, Alex called out "Hey Siri",
-awakening the phone's voice recognition system.
-Then Mu commanded "directions to Blue Bottle coffee shop".
-The phone quickly displayed the transcription of his command.
-It also recognized that we were asking for directions
-and launched the Maps application (app)
-to fulfill our request.
-Once launched, the Maps app identified a number of routes.
-Next to each route, the phone displayed a predicted transit time.
-While we fabricated this story for pedagogical convenience,
-it demonstrates that in the span of just a few seconds,
-our everyday interactions with a smart phone
-can engage several machine learning models.
+
+Antes de começar a escrever, os autores deste livro,
+como grande parte da força de trabalho, tiveram que se tornar cafeinados.
+Entramos no carro e começamos a dirigir.
+Usando um iPhone, Alex gritou "Ei, Siri",
+despertando o sistema de reconhecimento de voz do telefone.
+Então Mu comandou "rota para a cafeteria *Blue Bottle*".
+O telefone rapidamente exibiu a transcrição de seu comando.
+Ele também reconheceu que estávamos pedindo direções
+e abriu o aplicativo *Maps* (app)
+para cumprir nosso pedido.
+Depois de laberto, o aplicativo *Maps* identificou várias rotas.
+Ao lado de cada rota, o telefone exibia um tempo de trânsito previsto.
+Enquanto fabricamos esta história por conveniência pedagógica,
+isso demonstra que no intervalo de apenas alguns segundos,
+nossas interações diárias com um telefone inteligente
+podem envolver vários modelos de *machine learning*.
 
 
-Imagine just writing a program to respond to a *wake word*
-such as "Alexa", "OK Google", and "Hey Siri".
-Try coding it up in a room by yourself
-with nothing but a computer and a code editor,
-as illustrated in :numref:`fig_wake_word`.
-How would you write such a program from first principles?
-Think about it... the problem is hard.
-Every second, the microphone will collect roughly 
-44000 samples.
-Each sample is a measurement of the amplitude of the sound wave.
-What rule could map reliably from a snippet of raw audio to confident predictions 
-$\{\text{yes}, \text{no}\}$
-on whether the snippet contains the wake word?
-If you are stuck, do not worry.
-We do not know how to write such a program from scratch either.
-That is why we use machine learning.
-
+Imagine apenas escrever um programa para responder a uma *palavra de alerta*
+como "Alexa", "OK Google" e "Hey Siri".
+Tente codificar em uma sala sozinho
+com nada além de um computador e um editor de código,
+conforme ilustrado em: numref: `fig_wake_word`.
+Como você escreveria tal programa a partir dos primeiros princípios?
+Pense nisso ... o problema é difícil.
+A cada segundo, o microfone irá coletar aproximadamente
+44.000 amostras.
+Cada amostra é uma medida da amplitude da onda sonora.
+Que regra poderia mapear de forma confiável, de um trecho de áudio bruto a previsões confiáveis
+$\{\text{yes},\text{no}\}$
+sobre se o trecho de áudio contém a palavra de ativação?
+Se você estiver travado, não se preocupe.
+Também não sabemos escrever tal programa do zero.
+É por isso que usamos o *machine learning*.
 ![Identify a wake word.](../img/wake-word.svg)
 :label:`fig_wake_word`
 
@@ -1632,6 +1632,6 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMxOTAyOTE3LDE5MTk1NjE0MDksMTQ2MT
-Y1Mjk5NywtMTIzMzQ2MTk4M119
+eyJoaXN0b3J5IjpbMjEzNjMwNDgwMyw2MzE5MDI5MTcsMTkxOT
+U2MTQwOSwxNDYxNjUyOTk3LC0xMjMzNDYxOTgzXX0=
 -->
