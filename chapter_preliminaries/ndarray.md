@@ -13,20 +13,6 @@ eles; e (ii) processá-los assim que estiverem dentro do computador. Não há
 sentido em adquirir dados sem alguma forma de armazená-los, então vamos  brincar com dados sintéticos. Para começar, apresentamos o
 *array* $n$-dimensional, também chamado de *tensor*.
 
-If you have worked with NumPy, the most widely-used
-scientific computing package in Python,
-then you will find this section familiar.
-No matter which framework you use,
-its *tensor class* (`ndarray` in MXNet,
-`Tensor` in both PyTorch and TensorFlow) is similar to NumPy's `ndarray` with
-a few killer features.
-First, GPU is well-supported to accelerate the computation
-whereas NumPy only supports CPU computation.
-Second, the tensor class
-supports automatic differentiation.
-These properties make the tensor class suitable for deep learning.
-Throughout the book, when we say tensors,
-we are referring to instances of the tensor class unless otherwise stated.
 Se você trabalhou com NumPy, o mais amplamente utilizado
 pacote de computação científica em Python,
 então você achará esta seção familiar.
@@ -42,17 +28,17 @@ Essas propriedades tornam a classe tensor adequada para aprendizado profundo.
 Ao longo do livro, quando dizemos tensores,
 estamos nos referindo a instâncias da classe tensorial, a menos que seja declarado de outra forma.
 
-## Getting Started
+## Iniciando
 
-In this section, we aim to get you up and running,
-equipping you with the basic math and numerical computing tools
-that you will build on as you progress through the book.
-Do not worry if you struggle to grok some of
-the mathematical concepts or library functions.
-The following sections will revisit this material
-in the context of practical examples and it will sink.
-On the other hand, if you already have some background
-and want to go deeper into the mathematical content, just skip this section.
+Nesta seção, nosso objetivo é colocá-lo em funcionamento,
+equipando você com as ferramentas básicas de matemática e computação numérica
+que você desenvolverá conforme progride no livro.
+Não se preocupe se você lutar para grocar alguns dos
+os conceitos matemáticos ou funções de biblioteca.
+As seções a seguir revisitarão este material
+no contexto de exemplos práticos e irá afundar.
+Por outro lado, se você já tem alguma experiência
+e quiser se aprofundar no conteúdo matemático, basta pular esta seção.
 
 :begin_tab:`mxnet`
 To start, we import the `np` (`numpy`) and
@@ -728,5 +714,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUzODY0NjQwLC0xMzA0NzE1NDgwXX0=
+eyJoaXN0b3J5IjpbLTIxMzA3MzY4NTQsLTEzMDQ3MTU0ODBdfQ
+==
 -->
