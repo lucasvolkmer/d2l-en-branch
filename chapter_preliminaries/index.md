@@ -44,7 +44,7 @@ Assim, este capítulo fornece uma introdução rápida a
 matemática básica e frequentemente usada para permitir que qualquer pessoa entenda
 pelo menos *a maior parte* do conteúdo matemático do livro.
 Se você deseja entender *todo* o conteúdo matemático,
-uma revisão adicional do [apêndice online sobre matemática] (https://d2l.ai/chapter_apencha-mathematics-for-deep-learning/index.html) deve ser suficiente.
+uma revisão adicional do [apêndice online sobre matemática] [(https://d2l.ai/chapter_apencha-mathematics-for-deep-learning/index.html) deve ser suficiente.
 
 ```toc
 :maxdepth: 2
@@ -59,5 +59,5 @@ lookup-api
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NDIyMzE2NV19
+eyJoaXN0b3J5IjpbLTI2ODU3NzA5Nl19
 -->
