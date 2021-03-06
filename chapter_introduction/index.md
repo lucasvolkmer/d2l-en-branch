@@ -418,20 +418,20 @@ apesar de ir bem nos exames práticos.
 
 ### Algoritmos de Otimização
 
-Once we have got some data source and representation,
-a model, and a well-defined objective function,
-we need an algorithm capable of searching
-for the best possible parameters for minimizing the loss function.
-Popular optimization algorithms for deep learning
-are based on an approach called *gradient descent*.
-In short, at each step, this method 
-checks to see, for each parameter,
-which way the training set loss would move
-if you perturbed that parameter just a small amount.
-It then updates
-the parameter in the direction that may reduce the loss.
+Assim que tivermos alguma fonte de dados e representação,
+um modelo e uma função objetivo bem definida,
+precisamos de um algoritmo capaz de pesquisar
+para obter os melhores parâmetros possíveis para minimizar a função de perda.
+Algoritmos de otimização populares para aprendizagem profunda
+baseiam-se em uma abordagem chamada *gradiente descendente*.
+Em suma, em cada etapa, este método
+verifica, para cada parâmetro,
+para que lado a perda do conjunto de treinamento se moveria
+se você perturbou esse parâmetro apenas um pouco.
+Em seguida, atualiza
+o parâmetro na direção que pode reduzir a perda.
 
-## Kinds of Machine Learning Problems
+## Tipos de Problemas de *Machine Learning*
 
 The wake word problem in our motivating example
 is just one among
@@ -1639,7 +1639,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTQ2NDcyODIsNDk2MTI3NDM4LDE3Nj
+eyJoaXN0b3J5IjpbLTE4NjczNjU0OTQsNDk2MTI3NDM4LDE3Nj
 I2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYwNDcsMTExMzQwMDUz
 NywtMTc2MDczNDc1OSwxOTI4Mjk2MDQxLDE2NjM3OTIwNDQsLT
 c2MjUwODA0NSw2MzE5MDI5MTcsMTkxOTU2MTQwOSwxNDYxNjUy
