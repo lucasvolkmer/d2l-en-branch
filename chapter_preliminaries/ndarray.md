@@ -105,19 +105,19 @@ x = tf.range(12)
 x
 ```
 
-(**Podemos acessar o formato do tensor **) (~~e o número total de elementos~~) (o comprimento em cada )
-by inspecting its `shape` property.
+(**Podemos acessar o formato do tensor **) (~~e o número total de elementos~~) (o comprimento em cada coordenada)
+inspecionando sua propriedade `shape` .
 
 ```{.python .input}
 #@tab all
 x.shape
 ```
 
-If we just want to know the total number of elements in a tensor,
-i.e., the product of all of the shape elements,
-we can inspect its size.
-Because we are dealing with a vector here,
-the single element of its `shape` is identical to its size.
+Se quisermos apenas saber o número total de elementos em um tensor,
+ou seja, o produto de todos os *shapes*,
+podemos inspecionar seu tamanho.
+Porque estamos lidando com um vetor aqui,
+o único elemento de seu `s` é idêntico ao seu tamanho.
 
 ```{.python .input}
 x.size
@@ -712,5 +712,5 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MjQ5MzE2NCwtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbLTQwMTUyMjY4NCwtMTMwNDcxNTQ4MF19
 -->
