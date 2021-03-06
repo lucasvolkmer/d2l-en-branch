@@ -13,7 +13,7 @@ executando em um navegador da *web* ou aplicativo móvel;
 para acompanhar o estado de cada usuário e manter registros
 de histórico de transações;
 e (iii) no cerne de nossa aplicação,
-a * lógica de negócios * (você pode dizer, os * cérebros *) de nosso aplicativo
+a *lógica de negócios* (você pode dizer, os *cérebros*) de nosso aplicativo
 descreve em detalhes metódicos a ação apropriada
 que nosso programa deve levar em todas as circunstâncias concebíveis.
 
@@ -1631,5 +1631,5 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2ODgzMTczOSwtMTIzMzQ2MTk4M119
+eyJoaXN0b3J5IjpbMTQ2MTY1Mjk5NywtMTIzMzQ2MTk4M119
 -->
