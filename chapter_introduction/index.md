@@ -1629,3 +1629,6 @@ It is in this spirit that the notebooks forming this book are freely available f
 1. Where else can you apply the end-to-end training approach, such as in :numref:`fig_ml_loop`, physics, engineering, and econometrics?
 
 [Discussions](https://discuss.d2l.ai/t/22)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDAxNzU2NzMzXX0=
+-->
