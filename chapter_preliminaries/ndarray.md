@@ -27,6 +27,20 @@ supports automatic differentiation.
 These properties make the tensor class suitable for deep learning.
 Throughout the book, when we say tensors,
 we are referring to instances of the tensor class unless otherwise stated.
+Se você trabalhou com NumPy, o mais amplamente utilizado
+pacote de computação científica em Python,
+então você achará esta seção familiar.
+Não importa qual estrutura você usa,
+sua *classe de tensor* (`ndarray` em MXNet,
+`Tensor` em PyTorch e TensorFlow) é semelhante ao` ndarray` do NumPy com
+alguns recursos interessantes.
+Primeiro, a GPU é bem suportada para acelerar a computação
+enquanto o NumPy suporta apenas computação de CPU.
+Em segundo lugar, a classe tensor
+suporta diferenciação automática.
+Essas propriedades tornam a classe tensor adequada para aprendizado profundo.
+Ao longo do livro, quando dizemos tensores,
+estamos nos referindo a instâncias da classe tensorial, a menos que seja declarado de outra forma.
 
 ## Getting Started
 
@@ -714,6 +728,5 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTg3NTE1MDAsLTEzMDQ3MTU0ODBdfQ
-==
+eyJoaXN0b3J5IjpbNzUzODY0NjQwLC0xMzA0NzE1NDgwXX0=
 -->
