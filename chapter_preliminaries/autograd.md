@@ -16,7 +16,7 @@ Automatic differentiation enables the system to subsequently backpropagate gradi
 Here, *backpropagate* simply means to trace through the computational graph,
 filling in the partial derivatives with respect to each parameter.
 
-acelerar este trabalho
+aceleram este trabalho
 calculando automaticamente as derivadas, ou seja, * diferenciação automática *.
 Na prática,
 com base em nosso modelo projetado
@@ -423,5 +423,5 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk1MjA5ODA0XX0=
+eyJoaXN0b3J5IjpbLTcwMTY4NjAwOV19
 -->
