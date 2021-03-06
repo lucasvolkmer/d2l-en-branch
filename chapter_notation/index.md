@@ -11,8 +11,8 @@ A notação usada ao longo deste livro é resumida a seguir.
 * $\mathbf{X}$: uma matriz
 * $\mathsf{X}$: um tensor
 * $\mathbf{I}$: Uma matriz identidade
-* $x_i$,$[\ mathbf {x}] _ i$: O elemento $i^\mathrm{th}$ do vetor $\mathbf{x}$
-* $ x_ {ij} $, $ x_ {i, j} $, $ [\ mathbf {X}] _ {ij} $, $ [\ mathbf {X}] _ {i, j} $: O elemento da matriz $ \ mathbf {X} $ na linha $ i $ e coluna $ j $
+* $x_i$,$[\mathbf{x}]_i$: O elemento $i^\mathrm{th}$ do vetor $\mathbf{x}$
+* $x_{ij}$,$x_{i, j}$,$[\mathbf {X}]_{ij}$,$[\mathbf {X}]_{i, j}$: O elemento da matriz $\mathbf{X}$ na linha $i$ e coluna $j$
 
 
 
@@ -84,6 +84,6 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMxMTUxNDI0LDQ2NDMxNDM1NCwtNjgyMT
+eyJoaXN0b3J5IjpbMTkzNDM2NzYwLDQ2NDMxNDM1NCwtNjgyMT
 U3MjIzXX0=
 -->
