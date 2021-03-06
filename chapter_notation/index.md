@@ -34,32 +34,32 @@ A notação usada ao longo deste livro é resumida a seguir.
 ## Funções e operadores
 
 
-* $f(\cdot)$: A function
-* $\log(\cdot)$: The natural logarithm
-* $\exp(\cdot)$: The exponential function
-* $\mathbf{1}_\mathcal{X}$: The indicator function
-* $\mathbf{(\cdot)}^\top$: Transpose of a vector or a matrix
-* $\mathbf{X}^{-1}$: Inverse of matrix $\mathbf{X}$
-* $\odot$: Hadamard (elementwise) product
-* $[\cdot, \cdot]$: Concatenation
-* $\lvert \mathcal{X} \rvert$: Cardinality of set $\mathcal{X}$
-* $\|\cdot\|_p$: $L_p$ norm
-* $\|\cdot\|$: $L_2$ norm
-* $\langle \mathbf{x}, \mathbf{y} \rangle$: Dot product of vectors $\mathbf{x}$ and $\mathbf{y}$
-* $\sum$: Series addition
-* $\prod$: Series multiplication
-* $\stackrel{\mathrm{def}}{=}$: Definition
+* $ f (\ cdot) $: uma função
+* $ \ log (\ cdot) $: O logaritmo natural
+* $ \ exp (\ cdot) $: A função exponencial
+* $ \ mathbf {1} _ \ mathcal {X} $: a função do indicador
+* $ \ mathbf {(\ cdot)} ^ \ top $: Transposta de uma matriz ou vetor
+* $ \ mathbf {X} ^ {- 1} $: Inversa da matriz $ \ mathbf {X} $
+* $ \ odot $: produto Hadamard (elemento a elemento)
+* $ [\ cdot, \ cdot] $: Concatenação
+* $ \ lvert \ mathcal {X} \ rvert $: Cardinalidade do conjunto $ \ mathcal {X} $
+* $ \ | \ cdot \ | _p $: $ L_p $ norma
+* $ \ | \ cdot \ | $: $ L_2 $ norma
+* $ \ langle \ mathbf {x}, \ mathbf {y} \ rangle $: Produto escalar dos vetores $ \ mathbf {x} $ e $ \ mathbf {y} $
+* $ \ sum $: adição de séries
+* $ \ prod $: multiplicação de séries
+* $ \ stackrel {\ mathrm {def}} {=} $: Definição
 
 
-## Calculus
+## Cálculo
 
-* $\frac{dy}{dx}$: Derivative of $y$ with respect to $x$
-* $\frac{\partial y}{\partial x}$: Partial derivative of $y$ with respect to $x$
-* $\nabla_{\mathbf{x}} y$: Gradient of $y$ with respect to $\mathbf{x}$
-* $\int_a^b f(x) \;dx$: Definite integral of $f$ from $a$ to $b$ with respect to $x$
-* $\int f(x) \;dx$: Indefinite integral of $f$ with respect to $x$
+* $ \ frac {dy} {dx} $: Derivada de $ y $ em relação a $ x $
+* $ \ frac {\ partial y} {\ partial x} $: Derivada parcial de $ y $ em relação a $ x $
+* $ \ nabla _ {\ mathbf {x}} y $: Gradiente de $ y $ em relação a $ \ mathbf {x} $
+* $ \ int_a ^ b f (x) \; dx $: Integral definida de $ f $ de $ a $ a $ b $ em relação a $ x $
+* $ \ int f (x) \; dx $: Integral indefinida de $ f $ em relação a $ x $
 
-## Probability and Information Theory
+## Probabilidade e Teoria da Informação
 
 * $P(\cdot)$: Probability distribution
 * $z \sim P$: Random variable $z$ has probability distribution $P$
@@ -84,5 +84,5 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIxOTM3NzI1LC02ODIxNTcyMjNdfQ==
+eyJoaXN0b3J5IjpbMTUxMDgwNDQ2MywtNjgyMTU3MjIzXX0=
 -->
