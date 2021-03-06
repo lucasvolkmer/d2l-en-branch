@@ -266,6 +266,7 @@ Em outra tarefa tradicional, podemos tentar prever
 se um paciente vai sobreviver ou não,
 dado um conjunto padrão de recursos, como
 idade, sinais vitais e diagnósticos.
+
 When every example is characterized by the same number of numerical values,
 we say that the data consist of fixed-length vectors
 and we describe the constant length of the vectors
@@ -1636,8 +1637,8 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwODU4NzY1MSwtMjE0MTA5NjA0NywxMT
-EzNDAwNTM3LC0xNzYwNzM0NzU5LDE5MjgyOTYwNDEsMTY2Mzc5
-MjA0NCwtNzYyNTA4MDQ1LDYzMTkwMjkxNywxOTE5NTYxNDA5LD
-E0NjE2NTI5OTcsLTEyMzM0NjE5ODNdfQ==
+eyJoaXN0b3J5IjpbODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMT
+M0MDA1MzcsLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYzNzky
+MDQ0LC03NjI1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MDksMT
+Q2MTY1Mjk5NywtMTIzMzQ2MTk4M119
 -->
