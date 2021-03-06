@@ -287,15 +287,6 @@ t.gradient(y, x) == 2 * x
 
 ## Computando o Gradiente do *Python Control Flow*
 
-One benefit of using automatic differentiation
-is that [**even if**] building the computational graph of (**a function
-required passing through a maze of Python control flow**)
-(e.g., conditionals, loops, and arbitrary function calls),
-(**we can still calculate the gradient of the resulting variable.**)
-In the following snippet, note that
-the number of iterations of the `while` loop
-and the evaluation of the `if` statement
-both depend on the value of the input `a`.
 Uma vantagem de usar a diferenciação automática
 é que [**mesmo se**] construir o gráfo computacional de (**uma função
 requer muito trabalho com o uso do  *Python Control Flow***)
@@ -305,6 +296,7 @@ No trecho a seguir, observe que
 o número de iterações do loop `while`
 e a avaliação da instrução `if`
 ambos dependem do valor da entrada `a`.
+
 ```{.python .input}
 def f(a):
     b = a * 2
@@ -343,7 +335,7 @@ def f(a):
     return c
 ```
 
-Let us compute the gradient.
+Vamos computar o gradiente:
 
 ```{.python .input}
 a = np.random.normal()
@@ -369,11 +361,11 @@ d_grad = t.gradient(d, a)
 d_grad
 ```
 
-We can now analyze the `f` function defined above.
-Note that it is piecewise linear in its input `a`.
-In other words, for any `a` there exists some constant scalar `k`
-such that `f(a) = k * a`, where the value of `k` depends on the input `a`.
-Consequently `d / a` allows us to verify that the gradient is correct.
+Agora podemos analisar a função `f` definida acima.
+Observe que é linear por partes em sua entrada `a`.
+Em outras palavras, para qualquer `a` existe algum escalar constante` k`
+tal que `f (a) = k * a`, onde o valor de` k` depende da entrada `a`.
+Consequentemente, `d / a` nos permite verificar se o gradiente está correto.
 
 ```{.python .input}
 a.grad == d / a
@@ -389,7 +381,7 @@ a.grad == d / a
 d_grad == d / a
 ```
 
-## Summary
+## Sumário
 
 * Deep learning frameworks can automate the calculation of derivatives. To use it, we first attach gradients to those variables with respect to which we desire partial derivatives. We then record the computation of our target value, execute its function for backpropagation, and access the resulting gradient.
 
@@ -414,7 +406,7 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM3ODIyMzg1LC04NjIyMjAyMTksLTE4Nz
-AyNDUwNDYsLTIwMjAzNDk2NjUsMTI0ODA3NDUyMiwxNDA2NDM5
-MzQxXX0=
+eyJoaXN0b3J5IjpbMTYzNjAzMzE5NCwtODYyMjIwMjE5LC0xOD
+cwMjQ1MDQ2LC0yMDIwMzQ5NjY1LDEyNDgwNzQ1MjIsMTQwNjQz
+OTM0MV19
 -->
