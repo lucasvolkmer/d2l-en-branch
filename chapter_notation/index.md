@@ -61,28 +61,28 @@ A notação usada ao longo deste livro é resumida a seguir.
 
 ## Probabilidade e Teoria da Informação
 
-* $P(\cdot)$: Probability distribution
-* $z \sim P$: Random variable $z$ has probability distribution $P$
-* $P(X \mid Y)$: Conditional probability of $X \mid Y$
-* $p(x)$: Probability density function
-* ${E}_{x} [f(x)]$: Expectation of $f$ with respect to $x$
-* $X \perp Y$: Random variables $X$ and $Y$ are independent
-* $X \perp Y \mid Z$: Random variables  $X$  and  $Y$  are conditionally independent given random variable $Z$
-* $\mathrm{Var}(X)$: Variance of random variable $X$
-* $\sigma_X$: Standard deviation of random variable $X$
-* $\mathrm{Cov}(X, Y)$: Covariance of random variables $X$ and $Y$
-* $\rho(X, Y)$: Correlation of random variables $X$ and $Y$
-* $H(X)$: Entropy of random variable $X$
-* $D_{\mathrm{KL}}(P\|Q)$: KL-divergence of distributions $P$ and $Q$
+* $ P (\ cdot) $: distribuição de probabilidade
+* $ z \ sim P $: Variável aleatória $ z $ que tem distribuição de probabilidade $ P $
+* $ P (X \ mid Y) $: probabilidade condicional de $ X \ mid Y $
+* $ p (x) $: função de densidade de probabilidade
+* $ {E} _ {x} [f (x)] $: Esperança de $ f $ em relação a $ x $
+* $ X \ perp Y $: Variáveis aleatórias $ X $ e $ Y $ são independentes
+* $ X \ perp Y \ mid Z $: Variáveis aleatórias $ X $ e $ Y $ são condicionalmente independentes, dada a variável aleatória $ Z $
+* $ \ mathrm {Var} (X) $: Variância da variável aleatória $ X $
+* $ \ sigma_X $: Desvio padrão da variável aleatória $ X $
+* $ \ mathrm {Cov} (X, Y) $: Covariância das variáveis aleatórias $ X $ e $ Y $
+* $ \ rho (X, Y) $: Correlação de variáveis aleatórias $ X $ e $ Y $
+* $ H (X) $: Entropia da variável aleatória $ X $
+* $ D _ {\ mathrm {KL}} (P \ | Q) $: KL-divergência das distribuições $ P $ e $ Q $
 
 
 
-## Complexity
+## Complexidade
 
-* $\mathcal{O}$: Big O notation
+* $\mathcal{O}$: notação *Big O* 
 
 
 [Discussions](https://discuss.d2l.ai/t/25)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMDgwNDQ2MywtNjgyMTU3MjIzXX0=
+eyJoaXN0b3J5IjpbLTE0NTkwNzQzMzIsLTY4MjE1NzIyM119
 -->
