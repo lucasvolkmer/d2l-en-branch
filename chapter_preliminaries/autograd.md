@@ -107,7 +107,7 @@ x_grad = t.gradient(y, x)
 x_grad
 ```
 
-(**O gradiente da função y = 2\mathbf{x}^{\top}\mathbf{x}$
+(**O gradiente da função $y = 2\mathbf{x}^{\top}\mathbf{x}$
 em relação a $\mathbf{x}$ should be $4\mathbf{x}$.**)
 Vamos verificar rapidamente se nosso gradiente desejado foi calculado corretamente.
 
@@ -177,10 +177,10 @@ o resultado da diferenciação pode ser um tensor de ordem alta.
 
 No entanto, embora esses objetos mais exóticos apareçam
 em aprendizado de máquina avançado (incluindo [**em *Deep Learning***]),
-com mais frequência (** quando estamos retrocedendo um vetor, **)
+com mais frequência (**quando estamos retrocedendo um vetor,**)
 estamos tentando calcular as derivadas das funções de perda
 para cada constituinte de um *lote* de exemplos de treinamento.
-Aqui, (** nossa intenção é **) não calcular a matriz de diferenciação
+Aqui, (**nossa intenção é**) não calcular a matriz de diferenciação
 mas sim (**a soma das derivadas parciais
 calculado individualmente para cada exemplo**) no lote.
 
@@ -392,7 +392,7 @@ d_grad == d / a
 2. Depois de executar a função de retropropagação, execute-a imediatamente novamente e veja o que acontece.
 3. No exemplo de fluxo de controle onde calculamos a derivada de `d` com respeito a `a`, o que aconteceria se mudássemos a variável `a` para um vetor ou matriz aleatória. Neste ponto, o resultado do cálculo `f (a)` não é mais um escalar. O que acontece com o resultado? Como analisamos isso?
 4. Redesenhe um exemplo para encontrar o gradiente do *Control Flow*. Execute e analise o resultado.
-5. Seja $ f (x) = \ sin (x) $. Plote $ f (x) $ e $ \ frac {df (x)} {dx} $, onde o último é calculado sem explorar que $ f '(x) = \ cos (x) $.
+5. Seja $f (x) = \ sin (x)$. Plote $f (x)$ e $\ frac {df (x)} {dx}$, onde o último é calculado sem explorar que $f '(x) = \ cos (x)$.
 
 
 :begin_tab:`mxnet`
@@ -407,7 +407,7 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTUyMjAyMjEsLTg2MjIyMDIxOSwtMT
-g3MDI0NTA0NiwtMjAyMDM0OTY2NSwxMjQ4MDc0NTIyLDE0MDY0
-MzkzNDFdfQ==
+eyJoaXN0b3J5IjpbODg0MDMyMTU5LC04NjIyMjAyMTksLTE4Nz
+AyNDUwNDYsLTIwMjAzNDk2NjUsMTI0ODA3NDUyMiwxNDA2NDM5
+MzQxXX0=
 -->
