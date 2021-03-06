@@ -546,40 +546,41 @@ Nosso objetivo é produzir um modelo cujas previsões
 aproximar os valores reais do *label*.
 
 
-Lots of practical problems are well-described regression problems.
-Predicting the rating that a user will assign to a movie
-can be thought of as a regression problem
-and if you designed a great algorithm to accomplish this feat in 2009,
-you might have won the [1-million-dollar Netflix prize](https://en.wikipedia.org/wiki/Netflix_Prize).
-Predicting the length of stay for patients in the hospital
-is also a regression problem.
-A good rule of thumb is that any *how much?* or *how many?* problem
-should suggest regression,
-such as:
 
-* How many hours will this surgery take?
-* How much rainfall will this town have in the next six hours?
+Muitos problemas práticos são problemas de regressão bem descritos.
+Prever a avaliação que um usuário atribuirá a um filme
+pode ser pensado como um problema de regressão
+e se você projetou um ótimo algoritmo para realizar essa façanha em 2009,
+você pode ter ganho o [prêmio de 1 milhão de dólares da Netflix] (https://en.wikipedia.org/wiki/Netflix_Prize).
+Previsão do tempo de permanência de pacientes no hospital
+também é um problema de regressão.
+Uma boa regra é: qualquer problema de *quanto?* Ou *quantos?*
+deve sugerir regressão,
+tal como:
+
+* Quantas horas durará esta cirurgia?
+* Quanta chuva esta cidade terá nas próximas seis horas?
 
 
-Even if you have never worked with machine learning before,
-you have probably worked through a regression problem informally.
-Imagine, for example, that you had your drains repaired
-and that your contractor spent 3 hours
-removing gunk from your sewage pipes.
-Then he sent you a bill of 350 dollars.
-Now imagine that your friend hired the same contractor for 2 hours
-and that he received a bill of 250 dollars.
-If someone then asked you how much to expect
-on their upcoming gunk-removal invoice
-you might make some reasonable assumptions,
-such as more hours worked costs more dollars.
-You might also assume that there is some base charge
-and that the contractor then charges per hour.
-If these assumptions held true, then given these two data examples,
-you could already identify the contractor's pricing structure:
-100 dollars per hour plus 50 dollars to show up at your house.
-If you followed that much then you already understand
-the high-level idea behind linear regression.
+Mesmo que você nunca tenha trabalhado com *machine learning* antes,
+você provavelmente já trabalhou em um problema de regressão informalmente.
+Imagine, por exemplo, que você mandou consertar seus ralos
+e que seu contratante gastou 3 horas
+removendo sujeira de seus canos de esgoto.
+Então ele lhe enviou uma conta de 350 dólares.
+Agora imagine que seu amigo contratou o mesmo empreiteiro por 2 horas
+e que ele recebeu uma nota de 250 dólares.
+Se alguém lhe perguntasse quanto esperar
+em sua próxima fatura de remoção de sujeira
+você pode fazer algumas suposições razoáveis,
+como mais horas trabalhadas custam mais dólares.
+Você também pode presumir que há alguma carga básica
+e que o contratante cobra por hora.
+Se essas suposições forem verdadeiras, dados esses dois exemplos de dados,
+você já pode identificar a estrutura de preços do contratante:
+100 dólares por hora mais 50 dólares para aparecer em sua casa.
+Se você acompanhou esse exemplo, então você já entendeu
+a ideia de alto nível por trás da regressão linear.
 
 In this case, we could produce the parameters
 that exactly matched the contractor's prices.
@@ -1641,10 +1642,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOT
-UxMzQ1NjIxLC0xNjg3MjczODY4LC0xODY3MzY1NDk0LDQ5NjEy
-NzQzOCwxNzYyNjMwMjIsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LD
-ExMTM0MDA1MzcsLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYz
-NzkyMDQ0LC03NjI1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MD
-ksMTQ2MTY1Mjk5NywtMTIzMzQ2MTk4M119
+eyJoaXN0b3J5IjpbLTIyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNT
+M0MTgxNjE1LDE5NTEzNDU2MjEsLTE2ODcyNzM4NjgsLTE4Njcz
+NjU0OTQsNDk2MTI3NDM4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLT
+IxNDEwOTYwNDcsMTExMzQwMDUzNywtMTc2MDczNDc1OSwxOTI4
+Mjk2MDQxLDE2NjM3OTIwNDQsLTc2MjUwODA0NSw2MzE5MDI5MT
+csMTkxOTU2MTQwOSwxNDYxNjUyOTk3LC0xMjMzNDYxOTgzXX0=
+
 -->
