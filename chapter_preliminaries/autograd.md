@@ -34,33 +34,14 @@ x = tf.range(4, dtype=tf.float32)
 x
 ```
 
-[**Before we even calculate the gradient
-of $y$ with respect to $\mathbf{x}$,
-we will need a place to store it.**]
-It is important that we do not allocate new memory
-every time we take a derivative with respect to a parameter
-because we will often update the same parameters
-thousands or millions of times
-and could quickly run out of memory.
-Note that a gradient of a scalar-valued function
-with respect to a vector $\mathbf{x}$
-is itself vector-valued and has the same shape as $\mathbf{x}$.
-
-
 [**Antes de calcularmos o gradiente de$y$ em relação a $\mathbf{x}$,
 precisamos armazena-lo.**]
-É importante que não aloquemos nova memória
-cada vez que tomamos uma derivada em relação a um parâmetro
-porque costumamos atualizar os mesmos parâmetros
-milhares ou milhões de vezes
-e pode rapidamente ficar sem memória.
-Observe que um gradiente de uma função com valor escalar
-com respeito a um vetor $\mathbf{x}$
-tem valor vetorial e tem a mesma forma de $\mathbf{x}$
+É importante que não aloquemos nova memória cada vez que tomamos uma derivada em relação a um parâmetro porque costumamos atualizar os mesmos parâmetros milhares ou milhões de vezes e podemos rapidamente ficar sem memória.
+Observe que um gradiente de uma função com valor escalar com respeito a um vetor $\mathbf{x}$ tem valor vetorial e tem a mesma forma de $\mathbf{x}$.
 
 
 ```{.python .input}
-# We allocate memory for a tensor's gradient by invoking `attach_grad`
+# Alocamos memória do gradiente do vetor invocando `attach_grad`
 x.attach_grad()
 # After we calculate a gradient taken with respect to `x`, we will be able to
 # access it via the `grad` attribute, whose values are initialized with 0s
@@ -410,6 +391,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQwNzExMTA1LDEyNDgwNzQ1MjIsMTQwNj
-QzOTM0MV19
+eyJoaXN0b3J5IjpbLTQ5MDA5MzU3MSwxMjQ4MDc0NTIyLDE0MD
+Y0MzkzNDFdfQ==
 -->
