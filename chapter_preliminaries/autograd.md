@@ -169,6 +169,21 @@ Here, (**our intent is**) not to calculate the differentiation matrix
 but rather (**the sum of the partial derivatives
 computed individually for each example**) in the batch.
 
+Tecnicamente, quando `y` não é um escalar,
+a interpretação mais natural da diferenciação de um vetor `y`
+em relação a um vetor, `x` é uma matriz.
+Para `y` e` x` de ordem superior e dimensão superior,
+o resultado da diferenciação pode ser um tensor de ordem alta.
+
+No entanto, embora esses objetos mais exóticos apareçam
+em aprendizado de máquina avançado (incluindo [**em Dee**]),
+com mais frequência (** quando estamos chamando para trás em um vetor, **)
+estamos tentando calcular as derivadas das funções de perda
+para cada constituinte de um * lote * de exemplos de treinamento.
+Aqui, (** nossa intenção é **) não calcular a matriz de diferenciação
+mas sim (** a soma das derivadas parciais
+calculado individualmente para cada exemplo **) no lote.
+
 ```{.python .input}
 # When we invoke `backward` on a vector-valued variable `y` (function of `x`),
 # a new scalar variable is created by summing the elements in `y`. Then the
@@ -392,6 +407,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NzIxNjU3NSwtMjAyMDM0OTY2NSwxMj
-Q4MDc0NTIyLDE0MDY0MzkzNDFdfQ==
+eyJoaXN0b3J5IjpbNTE4Mjc2MzIzLC0yMDIwMzQ5NjY1LDEyND
+gwNzQ1MjIsMTQwNjQzOTM0MV19
 -->
