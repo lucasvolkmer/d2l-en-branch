@@ -267,69 +267,70 @@ se um paciente vai sobreviver ou não,
 dado um conjunto padrão de recursos, como
 idade, sinais vitais e diagnósticos.
 
-When every example is characterized by the same number of numerical values,
-we say that the data consist of fixed-length vectors
-and we describe the constant length of the vectors
-as the *dimensionality* of the data.
-As you might imagine, fixed-length can be a convenient property.
-If we wanted to train a model to recognize cancer in microscopy images,
-fixed-length inputs mean we have one less thing to worry about.
 
-However, not all data can easily be represented as 
-*fixed-length* vectors.
-While we might expect microscope images to come from standard equipment,
-we cannot expect images mined from the Internet
-to all show up with the same resolution or shape.
-For images, we might consider cropping them all to a standard size,
-but that strategy only gets us so far.
-We risk losing information in the cropped out portions.
-Moreover, text data resist fixed-length representations even more stubbornly.
-Consider the customer reviews left on e-commerce sites
-such as Amazon, IMDB, and TripAdvisor.
-Some are short: "it stinks!". 
-Others ramble for pages.
-One major advantage of deep learning over traditional methods
-is the comparative grace with which modern models
-can handle *varying-length* data.
+Quando cada exemplo é caracterizado pelo mesmo número de valores numéricos,
+dizemos que os dados consistem em vetores de comprimento fixo
+e descrevemos o comprimento constante dos vetores
+como a *dimensionalidade* dos dados.
+Como você pode imaginar, o comprimento fixo pode ser uma propriedade conveniente.
+Se quiséssemos treinar um modelo para reconhecer o câncer em imagens microscópicas,
+entradas de comprimento fixo significam que temos uma coisa a menos com que nos preocupar.
 
-Generally, the more data we have, the easier our job becomes.
-When we have more data, we can train more powerful models
-and rely less heavily on pre-conceived assumptions.
-The regime change from (comparatively) small to big data
-is a major contributor to the success of modern deep learning.
-To drive the point home, many of the most exciting models in deep learning do not work without large datasets.
-Some others work in the small data regime,
-but are no better than traditional approaches.
+No entanto, nem todos os dados podem ser facilmente representados como
+vetores de *comprimento fixo*.
+Embora possamos esperar que as imagens do microscópio venham de equipamentos padrão,
+não podemos esperar imagens extraídas da Internet
+aparecerem todas com a mesma resolução ou formato.
+Para imagens, podemos considerar cortá-los todas em um tamanho padrão,
+mas essa estratégia só nos leva até certo ponto.
+Corremos o risco de perder informações nas partes cortadas.
+Além disso, os dados de texto resistem a representações de comprimento fixo ainda mais obstinadamente.
+Considere os comentários de clientes deixados em sites de comércio eletrônico
+como Amazon, IMDB e TripAdvisor.
+Alguns são curtos: "é uma porcaria!".
+Outros vagam por páginas.
+Uma das principais vantagens do *deep learning* sobre os métodos tradicionais
+é a graça comparativa com a qual os modelos modernos
+podem lidar com dados de *comprimento variável*.
 
-Finally, it is not enough to have lots of data and to process it cleverly.
-We need the *right* data. 
-If the data are full of mistakes,
-or if the chosen features are not predictive
-of the target quantity of interest, 
-learning is going to fail.
-The situation is captured well by the cliché:
-*garbage in, garbage out*.
-Moreover, poor predictive performance is not the only potential consequence.
-In sensitive applications of machine learning,
-like predictive policing, resume screening, and risk models used for lending,
-we must be especially alert to the consequences of garbage data.
-One common failure mode occurs in datasets where some groups of people
-are unrepresented in the training data.
-Imagine applying a skin cancer recognition system in the wild
-that had never seen black skin before.
-Failure can also occur when the data
-do not merely under-represent some groups
-but reflect societal prejudices.
-For example, 
-if past hiring decisions are used to train a predictive model
-that will be used to screen resumes,
-then machine learning models could inadvertently
-capture and automate historical injustices.
-Note that this can all happen without the data scientist
-actively conspiring, or even being aware.
+Geralmente, quanto mais dados temos, mais fácil se torna nosso trabalho.
+Quando temos mais dados, podemos treinar modelos mais poderosos
+e dependem menos de suposições pré-concebidas.
+A mudança de regime de (comparativamente) pequeno para *big data*
+é um dos principais contribuintes para o sucesso do *deep learning* moderno.
+Para esclarecer, muitos dos modelos mais interessantes de *deep learning* não funcionam sem grandes *datasets*.
+Alguns outros trabalham no regime de pequenos dados,
+mas não são melhores do que as abordagens tradicionais.
+
+Por fim, não basta ter muitos dados e processá-los com inteligência.
+Precisamos dos dados *certos*.
+Se os dados estiverem cheios de erros,
+ou se os recursos escolhidos não são preditivos
+da quantidade alvo de interesse,
+o aprendizado vai falhar.
+A situação é bem capturada pelo clichê:
+*entra lixo, sai lixo*.
+Além disso, o desempenho preditivo ruim não é a única consequência potencial.
+Em aplicativos sensíveis de *machine learning*,
+como policiamento preditivo, triagem de currículo e modelos de risco usados ​​para empréstimos,
+devemos estar especialmente alertas para as consequências de dados inúteis.
+Um modo de falha comum ocorre em conjuntos de dados onde alguns grupos de pessoas
+não são representados nos dados de treinamento.
+Imagine aplicar um sistema de reconhecimento de câncer de pele na natureza
+que nunca tinha visto pele negra antes.
+A falha também pode ocorrer quando os dados
+não apenas sub-representem alguns grupos
+mas refletem preconceitos sociais.
+Por exemplo,
+se as decisões de contratação anteriores forem usadas para treinar um modelo preditivo
+que será usado para selecionar currículos,
+então os modelos de aprendizado de máquina poderiam inadvertidamente
+capturar e automatizar injustiças históricas.
+Observe que tudo isso pode acontecer sem o cientista de dados
+conspirar ativamente, ou mesmo estar ciente.
 
 
-### Models
+### Modelos
 
 Most machine learning involves transforming the data in some sense.
 We might want to build a system that ingests photos and predicts smiley-ness.
@@ -1637,8 +1638,8 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMT
-M0MDA1MzcsLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYzNzky
-MDQ0LC03NjI1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0MDksMT
-Q2MTY1Mjk5NywtMTIzMzQ2MTk4M119
+eyJoaXN0b3J5IjpbMTc2MjYzMDIyLDgyNjcwMjkyNywtMjE0MT
+A5NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0NzU5LDE5MjgyOTYw
+NDEsMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LDYzMTkwMjkxNywxOT
+E5NTYxNDA5LDE0NjE2NTI5OTcsLTEyMzM0NjE5ODNdfQ==
 -->
