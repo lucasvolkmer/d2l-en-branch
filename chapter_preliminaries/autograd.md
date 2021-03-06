@@ -22,7 +22,7 @@ Na prática,
 com base em nosso modelo projetado
 o sistema constrói um * grafo computacional *,
 rastreando quais dados combinados por meio de
-quais operações produzir a saída.
+quais operações produzem a saída.
 A diferenciação automática permite que o sistema propague gradientes posteriormente.
 Aqui, * backpropagate * significa simplesmente traçar o gráfico computacional,
 preencher as derivadas parciais em relação a cada parâmetro.
@@ -423,5 +423,5 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNjQzOTM0MV19
+eyJoaXN0b3J5IjpbMTUwNzY0ODcxOCwxNDA2NDM5MzQxXX0=
 -->
