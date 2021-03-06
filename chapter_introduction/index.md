@@ -667,40 +667,41 @@ como mostrado em: numref: `fig_death_cap`.
 :width:`200px`
 :label:`fig_death_cap`
 
-Now, assume that you built a classifier and trained it
-to predict if a mushroom is poisonous based on a photograph.
-Say our poison-detection classifier outputs
-that the probability that
-:numref:`fig_death_cap` contains a death cap is 0.2.
-In other words, the classifier is 80\% sure
-that our mushroom is not a death cap.
-Still, you would have to be a fool to eat it.
-That is because the certain benefit of a delicious dinner
-is not worth a 20\% risk of dying from it.
-In other words, the effect of the uncertain risk
-outweighs the benefit by far.
-Thus, we need to compute the expected risk that we incur as the loss function,
-i.e., we need to multiply the probability of the outcome
-with the benefit (or harm) associated with it.
-In this case,
-the loss incurred by eating the mushroom
-can be $0.2 \times \infty + 0.8 \times 0 = \infty$,
-whereas the loss of discarding it is
-$0.2 \times 0 + 0.8 \times 1 = 0.8$.
-Our caution was justified:
-as any mycologist would tell us,
-the mushroom in :numref:`fig_death_cap` actually
-is a death cap.
 
-Classification can get much more complicated than just
-binary, multiclass, or even multi-label classification.
-For instance, there are some variants of classification
-for addressing hierarchies.
-Hierarchies assume that there exist some relationships among the many classes.
-So not all errors are equal---if we must err, we would prefer
-to misclassify to a related class rather than to a distant class.
-Usually, this is referred to as *hierarchical classification*.
-One early example is due to [Linnaeus](https://en.wikipedia.org/wiki/Carl_Linnaeus), who organized the animals in a hierarchy.
+Agora, suponha que você construiu um classificador e o treinou
+para prever se um cogumelo é venenoso com base em uma fotografia.
+Digamos que nossos resultados do classificador de detecção de veneno
+que a probabilidade de que
+: numref: `fig_death_cap` contém um Cicuta verde de 0,2.
+Em outras palavras, o classificador tem 80\% de certeza
+que nosso cogumelo não é um Cicuta verde.
+Ainda assim, você teria que ser um tolo para comê-lo.
+Isso porque o certo benefício de um jantar delicioso
+não vale a pena um risco de 20\% de morrer por causa disso.
+Em outras palavras, o efeito do risco incerto
+supera o benefício de longe.
+Assim, precisamos calcular o risco esperado que incorremos como a função de perda,
+ou seja, precisamos multiplicar a probabilidade do resultado
+com o benefício (ou dano) associado a ele.
+Nesse caso,
+a perda incorrida ao comer o cogumelo
+pode ser $0,2\times\infty + 0,8 \times 0 = \infty$,
+Considerando que a perda de descarte é
+$0,2\times 0 + 0,8 \times 1 = 0,8$.
+Nossa cautela foi justificada:
+como qualquer micologista nos diria,
+o cogumelo em: numref: `fig_death_cap` na verdade
+é um Cicuta verde.
+
+A classificação pode ser muito mais complicada do que apenas
+classificação binária, multi-classe ou mesmo com vários rótulos.
+Por exemplo, existem algumas variantes de classificação
+para abordar hierarquias.
+As hierarquias assumem que existem alguns relacionamentos entre as muitas classes.
+Portanto, nem todos os erros são iguais --- se devemos errar, preferiríamos
+classificar incorretamente para uma classe parecida em vez de uma classe distante.
+Normalmente, isso é conhecido como *classificação hierárquica*.
+Um exemplo inicial é devido a [Linnaeus] (https://en.wikipedia.org/wiki/Carl_Linnaeus), que organizou os animais em uma hierarquia.
 
 In the case of animal classification,
 it might not be so bad to mistake a poodle (a dog breed) for a schnauzer (another dog breed),
@@ -1644,11 +1645,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIxNTI4MDkwLC05NDE2NjEzMjAsLTIyOD
-gzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0MTgxNjE1LDE5NTEzNDU2
-MjEsLTE2ODcyNzM4NjgsLTE4NjczNjU0OTQsNDk2MTI3NDM4LD
-E3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYwNDcsMTExMzQw
-MDUzNywtMTc2MDczNDc1OSwxOTI4Mjk2MDQxLDE2NjM3OTIwND
-QsLTc2MjUwODA0NSw2MzE5MDI5MTcsMTkxOTU2MTQwOSwxNDYx
-NjUyOTk3XX0=
+eyJoaXN0b3J5IjpbMTYzNjA4NTQ4Nyw3MjE1MjgwOTAsLTk0MT
+Y2MTMyMCwtMjI4ODMyMzMxLC0xMDc4NTg0NDcxLC01MzQxODE2
+MTUsMTk1MTM0NTYyMSwtMTY4NzI3Mzg2OCwtMTg2NzM2NTQ5NC
+w0OTYxMjc0MzgsMTc2MjYzMDIyLDgyNjcwMjkyNywtMjE0MTA5
+NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0NzU5LDE5MjgyOTYwND
+EsMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LDYzMTkwMjkxNywxOTE5
+NTYxNDA5XX0=
 -->
