@@ -194,21 +194,21 @@ Conforme mostrado em: numref:`fig_ml_loop`, o processo de treinamento geralmente
 ![Um processo de treinamento típico.](../img/ml-loop.svg)
 :label:`fig_ml_loop`
 
-To summarize, rather than code up a wake word recognizer,
-we code up a program that can *learn* to recognize wake words,
-if we present it with a large labeled dataset.
-You can think of this act of determining a program's behavior
-by presenting it with a dataset as *programming with data*.
-That is to say,
-we can "program" a cat detector by providing our machine learning system
-with many examples of cats and dogs.
-This way the detector will eventually learn to emit a very large positive number if it is a cat, a very large negative number if it is a dog,
-and something closer to zero if it is not sure,
-and this barely scratches the surface of what machine learning can do.
-Deep learning,
-which we will explain in greater detail later,
-is just one among many popular methods
-for solving machine learning problems.
+Para resumir, em vez de codificar um reconhecedor de palavra de acionamento,
+nós codificamos um programa que pode *aprender* a reconhecê-las
+se o apresentarmos com um grande *dataset* rotulado.
+Você pode pensar neste ato de determinar o comportamento de um programa
+apresentando-o com um *dataset* como *programação com dados*.
+Quer dizer,
+podemos "programar" um detector de gatos, fornecendo nosso sistema de aprendizado de máquina
+com muitos exemplos de cães e gatos.
+Dessa forma, o detector aprenderá a emitir um número positivo muito grande se for um gato, um número negativo muito grande se for um cachorro,
+e algo mais próximo de zero se não houver certeza,
+e isso é apenas a ponta do *iceberg* do que o *machine learning*  pode fazer.
+*Deep learning*,
+que iremos explicar em maiores detalhes posteriormente,
+é apenas um entre muitos métodos populares
+para resolver problemas de *machine learning*.
 
 ## Key Components
 
@@ -1635,7 +1635,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNj
-YzNzkyMDQ0LC03NjI1MDgwNDUsNjMxOTAyOTE3LDE5MTk1NjE0
-MDksMTQ2MTY1Mjk5NywtMTIzMzQ2MTk4M119
+eyJoaXN0b3J5IjpbNzU0NTE4NzYsLTE3NjA3MzQ3NTksMTkyOD
+I5NjA0MSwxNjYzNzkyMDQ0LC03NjI1MDgwNDUsNjMxOTAyOTE3
+LDE5MTk1NjE0MDksMTQ2MTY1Mjk5NywtMTIzMzQ2MTk4M119
 -->
