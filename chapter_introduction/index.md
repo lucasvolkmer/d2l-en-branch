@@ -714,7 +714,7 @@ Por exemplo, cascavéis e cobras-liga
 podem estar perto da árvore filogenética,
 mas confundir uma cascavel com uma cobra-liga pode ser mortal.
 
-#### Tagging
+#### *Tags*
 
 Alguns problemas de classificação se encaixam perfeitamente
 nas configurações de classificação binária ou multiclasse.
@@ -732,28 +732,29 @@ in: numref: `fig_stackedanimals`.
 :width:`300px`
 :label:`fig_stackedanimals`
 
-As you can see, there is a cat in :numref:`fig_stackedanimals`,
-and a rooster, a dog, and a donkey,
-with some trees in the background.
-Depending on what we want to do with our model
-ultimately, treating this as a binary classification problem
-might not make a lot of sense.
-Instead, we might want to give the model the option of
-saying the image depicts a cat, a dog, a donkey,
-*and* a rooster.
 
-The problem of learning to predict classes that are
-not mutually exclusive is called *multi-label classification*.
-Auto-tagging problems are typically best described
-as multi-label classification problems.
-Think of the tags people might apply to posts on a technical blog,
-e.g., "machine learning", "technology", "gadgets",
-"programming languages", "Linux", "cloud computing", "AWS".
-A typical article might have 5--10 tags applied
-because these concepts are correlated.
-Posts about "cloud computing" are likely to mention "AWS"
-and posts about "machine learning" could also deal
-with "programming languages".
+Como você pode ver, há um gato em: numref: `fig_stackedanimals`,
+e um galo, um cachorro e um burro,
+com algumas árvores ao fundo.
+Dependendo do que queremos fazer com nosso modelo
+em última análise, tratando isso como um problema de classificação binária
+pode não fazer muito sentido.
+Em vez disso, podemos dar ao modelo a opção de
+dizer que a imagem retrata um gato, um cachorro, um burro,
+*e* um galo.
+
+O problema de aprender a prever classes que são
+não mutuamente exclusivas é chamado de *classificação multi-rótulo*.
+Os problemas de etiquetagem automática são geralmente mais bem descritos
+como problemas de classificação multi-rótulo.
+Pense nas *tags* que as pessoas podem aplicar a postagens em um blog técnico,
+por exemplo, "*machine learning*", "tecnologia", "*gadgets*",
+"linguagens de programação", "Linux", "computação em nuvem", "AWS".
+Um artigo típico pode ter de 5 a 10 *tags* aplicadas
+porque esses conceitos estão correlacionados.
+Postagens sobre "computação em nuvem" provavelmente mencionarão "AWS"
+e postagens sobre "*machine learning*" também podem tratar
+de "linguagens de programação".
 
 We also have to deal with this kind of problem when dealing
 with the biomedical literature, where correctly tagging articles is important
@@ -1646,11 +1647,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OSw3Mj
-E1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMDc4NTg0
-NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4NzI3Mzg2OC
-wtMTg2NzM2NTQ5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLDgyNjcw
-MjkyNywtMjE0MTA5NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0Nz
-U5LDE5MjgyOTYwNDEsMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LDYz
-MTkwMjkxN119
+eyJoaXN0b3J5IjpbLTQ3Mzg0Mzk1MiwyMTA3MDYyOTk2LC0xMD
+Y0MjkwMTk5LDcyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIz
+MzEsLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOTUxMzQ1NjIxLC
+0xNjg3MjczODY4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOCwxNzYy
+NjMwMjIsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMTM0MDA1Mz
+csLTE3NjA3MzQ3NTksMTkyODI5NjA0MSwxNjYzNzkyMDQ0LC03
+NjI1MDgwNDVdfQ==
 -->
