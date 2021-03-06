@@ -225,7 +225,15 @@ the gradient of `z` with respect to `x`,
 but wanted for some reason to treat `y` as a constant,
 and only take into account the role
 that `x` played after `y` was calculated.
-
+Às vezes, desejamos [** mover alguns cálculos
+fora do gráfico computacional registrado. **]
+Por exemplo, digamos que `y` foi calculado como uma função de` x`,
+e que subsequentemente `z` foi calculado como uma função de` y` e `x`.
+Agora, imagine que quiséssemos calcular
+o gradiente de `z` em relação a` x`,
+mas queria, por algum motivo, tratar `y` como uma constante,
+e apenas leve em consideração a função
+que `x` jogou após` y` foi calculado.
 Here, we can detach `y` to return a new variable `u`
 that has the same value as `y` but discards any information
 about how `y` was computed in the computational graph.
@@ -407,6 +415,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzAyNDUwNDYsLTIwMjAzNDk2NjUsMT
-I0ODA3NDUyMiwxNDA2NDM5MzQxXX0=
+eyJoaXN0b3J5IjpbMTY0NTg1NTAzOSwtMTg3MDI0NTA0NiwtMj
+AyMDM0OTY2NSwxMjQ4MDc0NTIyLDE0MDY0MzkzNDFdfQ==
 -->
