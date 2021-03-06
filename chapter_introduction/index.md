@@ -745,7 +745,7 @@ dizer que a imagem retrata um gato, um cachorro, um burro,
 
 O problema de aprender a prever classes que são
 não mutuamente exclusivas é chamado de *classificação multi-rótulo*.
-Os problemas de etiquetagem automática são geralmente mais bem descritos
+Os problemas de *tags* automáticas são geralmente mais bem descritos
 como problemas de classificação multi-rótulo.
 Pense nas *tags* que as pessoas podem aplicar a postagens em um blog técnico,
 por exemplo, "*machine learning*", "tecnologia", "*gadgets*",
@@ -756,19 +756,19 @@ Postagens sobre "computação em nuvem" provavelmente mencionarão "AWS"
 e postagens sobre "*machine learning*" também podem tratar
 de "linguagens de programação".
 
-We also have to deal with this kind of problem when dealing
-with the biomedical literature, where correctly tagging articles is important
-because it allows researchers to do exhaustive reviews of the literature.
-At the National Library of Medicine, a number of professional annotators
-go over each article that gets indexed in PubMed
-to associate it with the relevant terms from MeSH,
-a collection of roughly 28000 tags.
-This is a time-consuming process and the
-annotators typically have a one-year lag between archiving and tagging.
-Machine learning can be used here to provide provisional tags
-until each article can have a proper manual review.
-Indeed, for several years, the BioASQ organization
-has [hosted competitions](http://bioasq.org/) to do precisely this.
+Também temos que lidar com esse tipo de problema ao lidar
+com a literatura biomédica, onde etiquetar corretamente os artigos é importante
+porque permite que os pesquisadores façam revisões exaustivas da literatura.
+Na *National Library of Medicine*, vários anotadores profissionais
+revisam cada artigo que é indexado no *PubMed*
+para associá-lo aos termos relevantes do MeSH,
+uma coleção de aproximadamente 28000 *tags*.
+Este é um processo demorado e o
+os anotadores normalmente têm um atraso de um ano entre o arquivamento e a definição das *tags*.
+O *machine learning* pode ser usado aqui para fornecer *tags* provisórias
+até que cada artigo possa ter uma revisão manual adequada.
+Na verdade, por vários anos, a organização BioASQ
+tem [sediado concursos] (http://bioasq.org/) para fazer exatamente isso.
 
 #### Search 
 
@@ -1647,7 +1647,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3Mzg0Mzk1MiwyMTA3MDYyOTk2LC0xMD
+eyJoaXN0b3J5IjpbMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMD
 Y0MjkwMTk5LDcyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIz
 MzEsLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOTUxMzQ1NjIxLC
 0xNjg3MjczODY4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOCwxNzYy
