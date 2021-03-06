@@ -1,17 +1,15 @@
-# Diferenciacç
+# Diferenciação automática
 :label:`sec_autograd`
 
 Como já explicado em :numref:`sec_calculus`, a diferenciação é uma etapa crucial em quase todos os algoritmos de otimização de *Deep Learning*. Embora os cálculos para obter esses derivados sejam diretos, exigindo apenas alguns cálculos básicos, para modelos complexos, trabalhando as atualizações manualmente pode ser uma tarefa difícil (e muitas vezes sujeita a erros).
 *Frameworks* de *Deep learning* aceleram este trabalho calculando automaticamente as derivadas, ou seja, *diferenciação automática*. Na prática, com base em nosso modelo projetado o sistema constrói um *grafo computacional*, rastreando quais dados combinados por meio de quais operações produzem a saída. A diferenciação automática permite que o sistema propague gradientes posteriormente. Aqui, propagar(do Inglês *backpropagate*) significa simplesmente traçar o gráfico computacional, preencher as derivadas parciais em relação a cada parâmetro.
 
 
-## A Simple Example
+## Um exemplo simples
 
 As a toy example, say that we are interested
-in (**differentiating the function
-$y = 2\mathbf{x}^{\top}\mathbf{x}$
-with respect to the column vector $\mathbf{x}$.**)
-To start, let us create the variable `x` and assign it an initial value.
+in (**differentiating the function $y = 2\mathbf{x}^{\top}\mathbf{x}$ with respect to the column vector $\mathbf{x}$.**)
+Inicialmente criamos a variável `x` e atribuimos a ela um valor inicial.
 
 ```{.python .input}
 from mxnet import autograd, np, npx
@@ -400,5 +398,5 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMTcwMzI5OCwxNDA2NDM5MzQxXX0=
+eyJoaXN0b3J5IjpbMTI0ODA3NDUyMiwxNDA2NDM5MzQxXX0=
 -->
