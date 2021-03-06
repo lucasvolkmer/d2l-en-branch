@@ -25,12 +25,6 @@ requer um pouco de cálculo, que será brevemente apresentado.
 Felizmente, o pacote `autograd` calcula automaticamente a diferenciação para nós,
 e vamos cobrir isso a seguir.
 
-Next, machine learning is concerned with making predictions:
-what is the likely value of some unknown attribute,
-given the information that we observe?
-To reason rigorously under uncertainty
-we will need to invoke the language of probability.
-
 Em seguida, o aprendizado de máquina se preocupa em fazer previsões:
 qual é o valor provável de algum atributo desconhecido,
 dada a informação que observamos?
@@ -42,24 +36,14 @@ muitas descrições e exemplos que vão além deste livro.
 Para concluir o capítulo, mostraremos como procurar documentação para
 as informações necessárias.
 
-This book has kept the mathematical content to the minimum necessary
-to get a proper understanding of deep learning.
-However, it does not mean that
-this book is mathematics free.
-Thus, this chapter provides a rapid introduction to
-basic and frequently-used mathematics to allow anyone to understand
-at least *most* of the mathematical content of the book.
-If you wish to understand *all* of the mathematical content,
-further reviewing the [online appendix on mathematics](https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/index.html) should be sufficient.
-
 Este livro manteve o conteúdo matemático no mínimo necessário
-para obter uma compreensão adequada do aprendizado profundo.
+para obter uma compreensão adequada de *Deep Learning*
 No entanto, isso não significa que
 este livro é livre de matemática.
 Assim, este capítulo fornece uma introdução rápida a
 matemática básica e frequentemente usada para permitir que qualquer pessoa entenda
-pelo menos * a maior parte * do conteúdo matemático do livro.
-Se você deseja entender * todo * o conteúdo matemático,
+pelo menos *a maior parte* do conteúdo matemático do livro.
+Se você deseja entender *todo* o conteúdo matemático,
 uma revisão adicional do [apêndice online sobre matemática] (https://d2l.ai/chapter_apencha-mathematics-for-deep-learning/index.html) deve ser suficiente.
 
 ```toc
@@ -75,5 +59,5 @@ lookup-api
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNjI0MjA2M119
+eyJoaXN0b3J5IjpbMTc0NDIyMzE2NV19
 -->
