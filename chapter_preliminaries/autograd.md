@@ -129,19 +129,20 @@ x.grad == 4 * x
 x_grad == 4 * x
 ```
 
-[**A`x`.**]
+[**Agora calculamos outra função de `x`.**]
 
 ```{.python .input}
 with autograd.record():
     y = x.sum()
 y.backward()
-x.grad  # Overwritten by the newly calculated gradient
+x.grad  # Sobrescrito pelo novo gradiente calculado
 ```
 
 ```{.python .input}
 #@tab pytorch
+# O PyTorch acumula os gradientes por padrão, precisamos limpa
 # PyTorch accumulates the gradient in default, we need to clear the previous
-# values
+# valores
 x.grad.zero_()
 y = x.sum()
 y.backward()
@@ -395,6 +396,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMjc3Nzg3LDEyNDgwNzQ1MjIsMTQwNj
-QzOTM0MV19
+eyJoaXN0b3J5IjpbMTc3NzMzNjgwNiwxMjQ4MDc0NTIyLDE0MD
+Y0MzkzNDFdfQ==
 -->
