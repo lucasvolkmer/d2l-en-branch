@@ -225,17 +225,10 @@ o gradiente de `z` em relação a` x`,
 mas queria, por algum motivo, tratar `y` como uma constante,
 e apenas leve em consideração a função
 que `x` jogou após` y` foi calculado.
-Here, we can detach `y` to return a new variable `u`
-that has the same value as `y` but discards any information
-about how `y` was computed in the computational graph.
-In other words, the gradient will not flow backwards through `u` to `x`.
-Thus, the following backpropagation function computes
-the partial derivative of `z = u * x` with respect to `x` while treating `u` as a constant,
-instead of the partial derivative of `z = x * x * x` with respect to `x`.
 Aqui, podemos desanexar `y` para retornar uma nova variável `u`
 que tem o mesmo valor que `y`, mas descarta qualquer informação
 sobre como `y` foi calculado no grafo computacional.
-Em outras palavras, o gradiente não fluirá de volta de `u` para` x`.
+Em outras palavras, o gradiente não fluirá de volta de `u` para `x`.
 Assim, a seguinte função de retropropagação calcula
 a derivada parcial de `z = u * x` com respeito a` x` enquanto trata `u` como uma constante,
 em vez da derivada parcial de `z = x * x * x` em relação a` x`.
@@ -262,7 +255,7 @@ x.grad == u
 
 ```{.python .input}
 #@tab tensorflow
-# Set `persistent=True` to run `t.gradient` more than once
+# Defina `persistent=True` para executar `t.gradient` mais de uma vez
 with tf.GradientTape(persistent=True) as t:
     y = x * x
     u = tf.stop_gradient(y)
@@ -274,6 +267,9 @@ x_grad == u
 
 Since the computation of `y` was recorded,
 we can subsequently invoke backpropagation on `y` to get the derivative of `y = x * x` with respect to `x`, which is `2 * x`.
+
+Uma vez que o cálculo de `y` foi registrado,
+podemos subsequentemente invocar a retropropagação em `y` para obter a derivada de` y = x * x` com respeito a `x`, que é` 2 * x`.
 
 ```{.python .input}
 y.backward()
@@ -413,6 +409,6 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTAyMjkwNywtMTg3MDI0NTA0NiwtMj
-AyMDM0OTY2NSwxMjQ4MDc0NTIyLDE0MDY0MzkzNDFdfQ==
+eyJoaXN0b3J5IjpbLTE5MzA2MTk5ODIsLTE4NzAyNDUwNDYsLT
+IwMjAzNDk2NjUsMTI0ODA3NDUyMiwxNDA2NDM5MzQxXX0=
 -->
