@@ -8,6 +8,13 @@ with extracting information from data.
 So we will begin by learning the practical skills
 for storing, manipulating, and preprocessing data.
 
+Para iniciarmos o nosso aprendizado d,
+precisaremos desenvolver algumas habilidades básicas.
+Todo aprendizado de máquina está relacionado
+com a extração de informações dos dados.
+Portanto, começaremos aprendendo as habilidades práticas
+para armazenar, manipular e pré-processar dados.
+
 Moreover, machine learning typically requires
 working with large datasets, which we can think of as tables,
 where the rows correspond to examples
@@ -58,3 +65,6 @@ probability
 lookup-api
 ```
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDgyNzA0NjAyXX0=
+-->
