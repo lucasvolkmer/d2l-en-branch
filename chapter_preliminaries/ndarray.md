@@ -7,6 +7,12 @@ them; and (ii) process them once they are inside the computer.  There is no
 point in acquiring data without some way to store it, so let us get our hands
 dirty first by playing with synthetic data.  To start, we introduce the
 $n$-dimensional array, which is also called the *tensor*.
+Para fazer qualquer coisa, precisamos de alguma forma de armazenar e manipular dados.
+Geralmente, há duas coisas importantes que precisamos fazer com os dados: (i) adquirir
+eles; e (ii) processá-los assim que estiverem dentro do computador. Não há
+sentido em adquirir dados sem alguma forma de armazená-los, então vamos colocar as mãos
+sujo primeiro ao brincar com dados sintéticos. Para começar, apresentamos o
+array $n$-dimensional, também chamado de *tensor*.
 
 If you have worked with NumPy, the most widely-used
 scientific computing package in Python,
@@ -709,5 +715,5 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDQ3MTU0ODBdfQ==
+eyJoaXN0b3J5IjpbLTcxMDA0ODE5NywtMTMwNDcxNTQ4MF19
 -->
