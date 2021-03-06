@@ -772,39 +772,39 @@ tem [sediado concursos] (http://bioasq.org/) para fazer exatamente isso.
 
 #### Busca
 
-Sometimes we do not just want to assign each example to a bucket
-or to a real value. In the field of information retrieval,
-we want to impose a ranking on a set of items.
-Take web search for an example. 
-The goal is less to determine whether
-a particular page is relevant for a query, but rather,
-which one of the plethora of search results is
-most relevant
-for a particular user.
-We really care about the ordering of the relevant search results
-and our learning algorithm needs to produce ordered subsets
-of elements from a larger set.
-In other words, if we are asked to produce the first 5 letters from the alphabet, there is a difference
-between returning "A B C D E" and "C A B E D".
-Even if the result set is the same,
-the ordering within the set matters.
 
-One possible solution to this problem is to first assign
-to every element in the set a corresponding relevance score
-and then to retrieve the top-rated elements.
-[PageRank](https://en.wikipedia.org/wiki/PageRank),
-the original secret sauce behind the Google search engine
-was an early example of such a scoring system but it was
-peculiar in that it did not depend on the actual query.
-Here they relied on a simple relevance filter
-to identify the set of relevant items
-and then on PageRank to order those results
-that contained the query term.
-Nowadays, search engines use machine learning and behavioral models
-to obtain query-dependent relevance scores.
-There are entire academic conferences devoted to this subject.
+Às vezes, não queremos apenas atribuir cada exemplo a um valor real. No campo da recuperação de informações,
+queremos impor uma classificação a um conjunto de itens.
+Tome como exemplo a pesquisa na web.
+O objetivo é menos determinar se
+uma página específica é relevante para uma consulta, mas, em vez disso,
+qual dentre a infinidade de resultados de pesquisa é
+mais relevante
+para um determinado usuário.
+Nós realmente nos preocupamos com a ordem dos resultados de pesquisa relevantes
+e nosso algoritmo de aprendizagem precisa produzir subconjuntos ordenados
+de elementos de um conjunto maior.
+Em outras palavras, se formos solicitados a produzir as primeiras 5 letras do alfabeto, há uma diferença
+entre retornar "A B C D E" e "C A B E D".
+Mesmo que o conjunto de resultados seja o mesmo,
+a ordenação dentro do conjunto importa.
 
-#### Recommender Systems
+Uma possível solução para este problema é primeiro atribuir
+para cada elemento no conjunto uma pontuação de relevância correspondente
+e, em seguida, para recuperar os elementos com melhor classificação.
+[PageRank] (https://en.wikipedia.org/wiki/PageRank),
+o molho secreto original por trás do mecanismo de pesquisa do Google
+foi um dos primeiros exemplos de tal sistema de pontuação, mas foi
+peculiar por não depender da consulta real.
+Aqui, eles contaram com um filtro de relevância simples
+para identificar o conjunto de itens relevantes
+e, em seguida, no PageRank para ordenar esses resultados
+que continham o termo de consulta.
+Hoje em dia, os mecanismos de pesquisa usam *machine learning* e modelos comportamentais
+para obter pontuações de relevância dependentes de consulta.
+Existem conferências acadêmicas inteiras dedicadas a este assunto.
+
+#### Sistemas de Recomendação
 :label:`subsec_recommender_systems`
 
 Recommender systems are another problem setting
@@ -1647,11 +1647,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEwNz
-A2Mjk5NiwtMTA2NDI5MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMy
-MCwtMjI4ODMyMzMxLC0xMDc4NTg0NDcxLC01MzQxODE2MTUsMT
-k1MTM0NTYyMSwtMTY4NzI3Mzg2OCwtMTg2NzM2NTQ5NCw0OTYx
-Mjc0MzgsMTc2MjYzMDIyLDgyNjcwMjkyNywtMjE0MTA5NjA0Ny
-wxMTEzNDAwNTM3LC0xNzYwNzM0NzU5LDE5MjgyOTYwNDEsMTY2
-Mzc5MjA0NF19
+eyJoaXN0b3J5IjpbLTExNjQzMjQ4ODEsOTg3NDIxMDcxLDE1Nj
+QwNzg3MDksMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OSw3MjE1Mjgw
+OTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMDc4NTg0NDcxLC
+01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4NzI3Mzg2OCwtMTg2
+NzM2NTQ5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLDgyNjcwMjkyNy
+wtMjE0MTA5NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0NzU5LDE5
+MjgyOTYwNDFdfQ==
 -->
