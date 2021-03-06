@@ -663,7 +663,7 @@ aquela que você usará para sua decisão.
 Suponha que você encontre um lindo cogumelo em seu quintal
 como mostrado em: numref: `fig_death_cap`.
 
-![Cicuta verde --- não coma!](../img/death-cap.jpg)
+![Cicuta verde [^-1] --- não coma!](../img/death-cap.jpg)
 :width:`200px`
 :label:`fig_death_cap`
 
@@ -1645,11 +1645,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNjA4NTQ4Nyw3MjE1MjgwOTAsLTk0MT
-Y2MTMyMCwtMjI4ODMyMzMxLC0xMDc4NTg0NDcxLC01MzQxODE2
-MTUsMTk1MTM0NTYyMSwtMTY4NzI3Mzg2OCwtMTg2NzM2NTQ5NC
-w0OTYxMjc0MzgsMTc2MjYzMDIyLDgyNjcwMjkyNywtMjE0MTA5
-NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0NzU5LDE5MjgyOTYwND
-EsMTY2Mzc5MjA0NCwtNzYyNTA4MDQ1LDYzMTkwMjkxNywxOTE5
-NTYxNDA5XX0=
+eyJoaXN0b3J5IjpbLTE4NzA2MzExNDMsNzIxNTI4MDkwLC05ND
+E2NjEzMjAsLTIyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0MTgx
+NjE1LDE5NTEzNDU2MjEsLTE2ODcyNzM4NjgsLTE4NjczNjU0OT
+QsNDk2MTI3NDM4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEw
+OTYwNDcsMTExMzQwMDUzNywtMTc2MDczNDc1OSwxOTI4Mjk2MD
+QxLDE2NjM3OTIwNDQsLTc2MjUwODA0NSw2MzE5MDI5MTcsMTkx
+OTU2MTQwOV19
 -->
