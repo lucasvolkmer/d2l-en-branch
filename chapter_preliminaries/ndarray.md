@@ -41,22 +41,21 @@ Por outro lado, se você já tem alguma experiência
 e quiser se aprofundar no conteúdo matemático, basta pular esta seção.
 
 :begin_tab:`mxnet`
-To start, we import the `np` (`numpy`) and
-`npx` (`numpy_extension`) modules from MXNet.
-Here, the `np` module includes functions supported by NumPy,
-while the `npx` module contains a set of extensions
-developed to empower deep learning within a NumPy-like environment.
-When using tensors, we almost always invoke the `set_np` function:
-this is for compatibility of tensor processing by other components of MXNet.
+Para começar, importamos o `np` (` numpy`) e
+Módulos `npx` (` numpy_extension`) da MXNet.
+Aqui, o módulo `np` inclui funções suportadas por NumPy,
+enquanto o módulo `npx` contém um conjunto de extensões
+desenvolvido para capacitar o *Deep Learning* em um ambiente semelhante ao NumPy.
+Ao usar tensores, quase sempre invocamos a função `set_np`:
+isso é para compatibilidade de processamento de tensor por outros componentes do MXNet.
 :end_tab:
 
 :begin_tab:`pytorch`
-(**To start, we import `torch`. Note that though it's called PyTorch, we should
-import `torch` instead of `pytorch`.**)
+(**Para começar, importamos `torch`. Note que apesar de ser chamado PyTorch, devemos importar `torch` ao invés de `pytorch`.**)
 :end_tab:
 
 :begin_tab:`tensorflow`
-To start, we import `tensorflow`. As the name is a little long, we often import
+Importamos `tensorflow`. As the name is a little long, we often import
 it with a short alias `tf`.
 :end_tab:
 
@@ -714,6 +713,5 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzA3MzY4NTQsLTEzMDQ3MTU0ODBdfQ
-==
+eyJoaXN0b3J5IjpbMTI2NTM4Mjc2MSwtMTMwNDcxNTQ4MF19
 -->
