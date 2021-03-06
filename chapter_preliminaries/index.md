@@ -8,21 +8,13 @@ com a extração de informações dos dados.
 Portanto, começaremos aprendendo as habilidades práticas
 para armazenar, manipular e pré-processar dados.
 
-Moreover, machine learning typically requires
-working with large datasets, which we can think of as tables,
-where the rows correspond to examples
-and the columns correspond to attributes.
-Linear algebra gives us a powerful set of techniques
-for working with tabular data.
-We will not go too far into the weeds but rather focus on the basic
-of matrix operations and their implementation.
 Além disso, o aprendizado de máquina normalmente requer
 trabalhar com grandes conjuntos de dados, que podemos considerar como tabelas,
 onde as linhas correspondem a exemplos
 e as colunas correspondem aos atributos.
 A álgebra linear nos dá um poderoso conjunto de técnicas
 para trabalhar com dados tabulares.
-Não iremos muito longe nas ervas daninhas, mas sim nos concentraremos no básico
+Não iremos muito longe nas teoria, mas sim nos concentraremos no básico
 das operações matriciais e sua implementação.
 
 Additionally, deep learning is all about optimization.
@@ -32,6 +24,13 @@ Determining which way to move each parameter at each step of an algorithm
 requires a little bit of calculus, which will be briefly introduced.
 Fortunately, the `autograd` package automatically computes differentiation for us,
 and we will cover it next.
+Além disso, o *Deep Learning* tem tudo a ver com otimização.
+Temos um modelo com alguns parâmetros e
+queremos encontrar aqueles que melhor se ajustam aos nossos dados.
+Determinar como mover cada parâmetro em cada etapa de um algoritmo
+requer um pouco de cálculo, que será brevemente apresentado.
+Felizmente, o pacote `autograd` calcula automaticamente a diferenciação para nós,
+e vamos cobrir isso a seguir.
 
 Next, machine learning is concerned with making predictions:
 what is the likely value of some unknown attribute,
@@ -67,5 +66,5 @@ lookup-api
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODM5NDkwNF19
+eyJoaXN0b3J5IjpbMTg3NzQ3MjczM119
 -->
