@@ -1059,44 +1059,45 @@ o processo considerando a coleta de dados de um ambiente se parece com: numref: 
 ![Collecting data for supervised learning from an environment.](../img/data-collection.svg)
 :label:`fig_data_collection`
 
-This simplicity of offline learning has its charms.
-The upside is that
-we can worry about pattern recognition
-in isolation, without any distraction from these other problems.
-But the downside is that the problem formulation is quite limiting.
-If you are more ambitious, or if you grew up reading Asimov's Robot series,
-then you might imagine artificially intelligent bots capable
-not only of making predictions, but also 
-of taking actions in the world.
-We want to think about intelligent *agents*, not just predictive models.
-This means that
-we need to think about choosing *actions*,
-not just making predictions.
-Moreover, unlike predictions,
-actions actually impact the environment.
-If we want to train an intelligent agent,
-we must account for the way its actions might
-impact the future observations of the agent.
 
-Considering the interaction with an environment
-opens a whole set of new modeling questions.
-The following are just a few examples.
+Esta simplicidade de aprendizagem offline tem seus encantos.
+A vantagem é que
+podemos nos preocupar com o reconhecimento de padrões
+isoladamente, sem qualquer distração desses outros problemas.
+Mas a desvantagem é que a formulação do problema é bastante limitadora.
+Se você é mais ambicioso, ou se cresceu lendo a série Robot de Asimov,
+então você pode imaginar *bots* com inteligência artificial, capazes
+não só de fazer previsões, mas também
+de realizar ações no mundo.
+Queremos pensar em *agentes* inteligentes, não apenas em modelos preditivos.
+Isso significa que
+precisamos pensar sobre como escolher *ações*,
+não apenas fazendo previsões.
+Além disso, ao contrário das previsões,
+ações realmente impactam o meio ambiente.
+Se quisermos treinar um agente inteligente,
+devemos levar em conta a maneira como suas ações podem
+impactar as observações futuras do agente.
 
-* Does the environment remember what we did previously?
-* Does the environment want to help us, e.g., a user reading text into a speech recognizer?
-* Does the environment want to beat us, i.e., an adversarial setting like spam filtering (against spammers) or playing a game (vs. an opponent)?
-* Does the environment not care?
-* Does the environment have shifting dynamics? For example, does future data always resemble the past or do the patterns change over time, either naturally or in response to our automated tools?
+Considerando a interação com um ambiente
+abre todo um conjunto de novas questões de modelagem.
+A seguir estão apenas alguns exemplos.
 
-This last question raises the problem of *distribution shift*,
-when training and test data are different.
-It is a problem that most of us have experienced
-when taking exams written by a lecturer,
-while the homework was composed by his teaching assistants.
-Next, we will briefly describe reinforcement learning,
-a setting that explicitly considers interactions with an environment.
+* O ambiente lembra o que fizemos anteriormente?
+* O ambiente quer nos ajudar, por exemplo, um usuário lendo texto em um reconhecedor de fala?
+* O ambiente quer nos derrotar, ou seja, um ambiente adversário, como filtragem de spam (contra spammers) ou um jogo (contra um oponente)?
+* O ambiente não se preocupa?
+* O ambiente tem mudanças dinâmicas? Por exemplo, os dados futuros sempre se parecem com o passado ou os padrões mudam com o tempo, naturalmente ou em resposta às nossas ferramentas automatizadas?
 
-### Reinforcement Learning
+Esta última questão levanta o problema de *mudança de distribuição*,
+quando os dados de treinamento e teste são diferentes.
+É um problema que a maioria de nós já experimentou
+ao fazer exames escritos por um professor,
+enquanto a lição de casa foi composta por seus assistentes de ensino.
+A seguir, descreveremos brevemente o aprendizado por reforço,
+uma configuração que considera explicitamente as interações com um ambiente.
+
+### Aprendizado por Reforço
 
 If you are interested in using machine learning
 to develop an agent that interacts with an environment
@@ -1650,11 +1651,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0Nj
-M0MzU5MSwtNDc1MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1Mjc2
-NywtMTE2NDMyNDg4MSw5ODc0MjEwNzEsMTU2NDA3ODcwOSwyMT
-A3MDYyOTk2LC0xMDY0MjkwMTk5LDcyMTUyODA5MCwtOTQxNjYx
-MzIwLC0yMjg4MzIzMzEsLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNS
-wxOTUxMzQ1NjIxLC0xNjg3MjczODY4LC0xODY3MzY1NDk0LDQ5
-NjEyNzQzOF19
+eyJoaXN0b3J5IjpbMTYwMjk1MzM4OCwyMDIyMDg3MzM1LDgxNz
+g5NzUwNiwtMjQ2MzQzNTkxLC00NzUwMjg1ODEsMTcyNTI4MDk5
+NCwxODg5MjUyNzY3LC0xMTY0MzI0ODgxLDk4NzQyMTA3MSwxNT
+Y0MDc4NzA5LDIxMDcwNjI5OTYsLTEwNjQyOTAxOTksNzIxNTI4
+MDkwLC05NDE2NjEzMjAsLTIyODgzMjMzMSwtMTA3ODU4NDQ3MS
+wtNTM0MTgxNjE1LDE5NTEzNDU2MjEsLTE2ODcyNzM4NjgsLTE4
+NjczNjU0OTRdfQ==
 -->
