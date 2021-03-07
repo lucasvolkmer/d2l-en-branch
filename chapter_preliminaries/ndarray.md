@@ -264,15 +264,6 @@ em cada par de elementos correspondentes das duas matrizes.
 Podemos criar uma função *elementwise* a partir de qualquer função
 que mapeia de um escalar para um escalar.
 
-In mathematical notation, we would denote such
-a *unary* scalar operator (taking one input)
-by the signature $f: \mathbb{R} \rightarrow \mathbb{R}$.
-This just means that the function is mapping
-from any real number ($\mathbb{R}$) onto another.
-Likewise, we denote a *binary* scalar operator
-(taking two real inputs, and yielding one output)
-by the signature $f: \mathbb{R}, \mathbb{R} \rightarrow \mathbb{R}$.
-Given any two vectors $\mathbf{u}$ and $\mathbf{v}$ *of the same shape*,
 Em notação matemática, denotaríamos tal
 um operador escalar * unário * (tomando uma entrada)
 pela assinatura $f: \mathbb{R} \rightarrow \mathbb{R}$.
@@ -283,10 +274,10 @@ Da mesma forma, denotamos um operador escalar *binário*
 pela assinatura $f: \mathbb{R}, \mathbb{R} \rightarrow \mathbb{R}$.
 Dados quaisquer dois vetores $\mathbf{u}$ e $\mathbf{v}$ de mesmo *shape*, 
 e um operador binário $f$, podemos produzir um vetor
-$ \ mathbf {c} = F (\ mathbf {u}, \ mathbf {v}) $
-definindo $ c_i \ gets f (u_i, v_i) $ para todos $ i $,
-onde $ c_i, u_i $ e $ v_i $ são os elementos $ i ^ \ mathrm {th} $
-dos vetores $ \ mathbf {c}, \ mathbf {u} $ e $ \ mathbf {v} $.
+$\mathbf{c} = F(\mathbf{u},\mathbf{v})$
+definindo $c_i \gets f(u_i, v_i)$ para todos $i$,
+onde $c_i, u_i$ e $v_i$ são os elementos $i^\mathrm{th}$
+dos vetores $\mathbf{c}, \mathbf{u}$, e $\mathbf{v}$.
 Aqui, nós produzimos o valor vetorial
 $ F: \ mathbb {R} ^ d, \ mathbb {R} ^ d \ rightarrow \ mathbb {R} ^ d $
 * levantando * a função escalar para uma operação de vetor elemento a elemento.
@@ -725,6 +716,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MjIxNTc5MCwtMTY5NjI4MTQxNSwtMT
-MwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbMjQ4ODk5OTIzLC0xNjk2MjgxNDE1LC0xMz
+A0NzE1NDgwXX0=
 -->
