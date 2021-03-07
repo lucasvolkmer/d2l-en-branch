@@ -844,8 +844,7 @@ atividade detalhada do usuário e características do item em consideração
 ao computar essas pontuações. : numref: `fig_deeplearning_amazon` é um exemplo
 de livros de *deep learning* recomendados pela Amazon com base em algoritmos de personalização ajustados para capturar as preferências de alguém.
 
-![Livros de *deep learning* recomendados pela Amazon.]
-(../img/deeplearning-amazon.jpg)
+![Livros de *deep learning* recomendados pela Amazon.](../img/deeplearning-amazon.jpg)
 :label:`fig_deeplearning_amazon`
 
 Apesar de seu enorme valor econômico,
@@ -1650,11 +1649,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjMwMDQ5NjUsLTQ3NTAyODU4MSwxNz
-I1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQzMjQ4ODEsOTg3NDIx
-MDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OS
-w3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMDc4
-NTg0NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4NzI3Mz
-g2OCwtMTg2NzM2NTQ5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLDgy
-NjcwMjkyN119
+eyJoaXN0b3J5IjpbLTE1MzIzODI2MywtNDc1MDI4NTgxLDE3Mj
+UyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEw
+NzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LD
+cyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLTEwNzg1
+ODQ0NzEsLTUzNDE4MTYxNSwxOTUxMzQ1NjIxLC0xNjg3MjczOD
+Y4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOCwxNzYyNjMwMjIsODI2
+NzAyOTI3XX0=
 -->
