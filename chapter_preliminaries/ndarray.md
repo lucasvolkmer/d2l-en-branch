@@ -601,16 +601,11 @@ Porque os `Tensors`do TensorFlow são imutáveis e gradientes não fluem atravé
 atribuições de `Variable`, o TensorFlow não fornece uma maneira explícita de executar
 uma operação individual no local.
 
-However, TensorFlow provides the `tf.function` decorator to wrap computation
-inside of a TensorFlow graph that gets compiled and optimized before running.
-This allows TensorFlow to prune unused values, and to re-use
-prior allocations that are no longer needed. This minimizes the memory
-overhead of TensorFlow computations.
 No entanto, o TensorFlow fornece o decorador `tf.function` para encerrar a computação
 dentro de um gráfico do TensorFlow que é compilado e otimizado antes da execução.
 Isso permite que o TensorFlow remova valores não utilizados e reutilize
-alocações anteriores que não são mais necessárias. Isso minimiza a memória
-sobrecarga de cálculos do TensorFlow.
+alocações anteriores que não são mais necessárias. Isso minimiza a sobrecarga de memória
+ de cálculos do TensorFlow.
 :end_tab:
 
 ```{.python .input}
@@ -624,8 +619,8 @@ id(X) == before
 #@tab tensorflow
 @tf.function
 def computation(X, Y):
-    Z = tf.zeros_like(Y)  # This unused value will be pruned out
-    A = X + Y  # Allocations will be re-used when no longer needed
+    Z = tf.zeros_like(Y)  # Este valor não utilizado será 
+    A = X + Y  # Alocações serão reutilizadas quando não mais necessárias
     B = A + Y
     C = B + Y
     return C + Y
@@ -708,8 +703,8 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODM1Nzk1MDAsMTgyMTQyMjQyMCwtNj
-Y1MjU5NDc2LDc5MDkyMDg3NywtMTM5NjA5NTU3MSwtNzU5ODMz
-NzMsMTE2OTI4NTU4LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX
-0=
+eyJoaXN0b3J5IjpbMTk3NTIzMDEzMiwxODIxNDIyNDIwLC02Nj
+UyNTk0NzYsNzkwOTIwODc3LC0xMzk2MDk1NTcxLC03NTk4MzM3
+MywxMTY5Mjg1NTgsLTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ
+==
 -->
