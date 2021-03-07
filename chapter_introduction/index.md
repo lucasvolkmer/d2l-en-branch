@@ -1172,32 +1172,33 @@ em um dos muitos armários idênticos em uma casa.
 Inferindo a localização precisa (e, portanto, o estado) do robô
 pode exigir a consideração de suas observações anteriores antes de entrar no armário.
 
-Finally, at any given point, reinforcement learners
-might know of one good policy,
-but there might be many other better policies
-that the agent has never tried.
-The reinforcement learner must constantly choose
-whether to *exploit* the best currently-known strategy as a policy,
-or to *explore* the space of strategies,
-potentially giving up some short-run reward in exchange for knowledge.
 
-The general reinforcement learning problem
-is a very general setting.
-Actions affect subsequent observations.
-Rewards are only observed corresponding to the chosen actions.
-The environment may be either fully or partially observed.
-Accounting for all this complexity at once may ask too much of researchers.
-Moreover, not every practical problem exhibits all this complexity.
-As a result, researchers have studied a number of
-special cases of reinforcement learning problems.
+Finalmente, em qualquer ponto, os agentes de reforço
+podem saber de uma boa política,
+mas pode haver muitas outras políticas melhores
+que o agente nunca tentou.
+O agente de reforço deve escolher constantemente
+se deve *explorar* (*exploit*)  a melhor estratégia atualmente conhecida como uma política,
+ou para *explorar* (*explore*) o espaço das estratégias,
+potencialmente desistindo de alguma recompensa de curto prazo em troca de conhecimento.
 
-When the environment is fully observed,
-we call the reinforcement learning problem a *Markov decision process*.
-When the state does not depend on the previous actions,
-we call the problem a *contextual bandit problem*.
-When there is no state, just a set of available actions
-with initially unknown rewards, this problem
-is the classic *multi-armed bandit problem*.
+O problema geral de aprendizagem por reforço
+é uma configuração muito geral.
+As ações afetam as observações subsequentes.
+As recompensas só são observadas correspondendo às ações escolhidas.
+O ambiente pode ser total ou parcialmente observado.
+Levar em conta toda essa complexidade de uma vez pode exigir muito dos pesquisadores.
+Além disso, nem todo problema prático exibe toda essa complexidade.
+Como resultado, os pesquisadores estudaram uma série de
+casos especiais de problemas de aprendizagem por reforço.
+
+Quando o ambiente é totalmente observado,
+chamamos o problema de aprendizagem por reforço de *processo de decisão Markov*.
+Quando o estado não depende das ações anteriores,
+chamamos o problema de *problema de bandido contextual*.
+Quando não há estado, apenas um conjunto de ações disponíveis
+com recompensas inicialmente desconhecidas, este problema
+é o clássico *problema de bandidos multi-armados*.
 
 ## Roots
 
@@ -1653,11 +1654,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyODEwNTI3MCwxMDE2NjgzMDY4LDE2MD
-I5NTMzODgsMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0NjM0MzU5
-MSwtNDc1MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1Mjc2NywtMT
-E2NDMyNDg4MSw5ODc0MjEwNzEsMTU2NDA3ODcwOSwyMTA3MDYy
-OTk2LC0xMDY0MjkwMTk5LDcyMTUyODA5MCwtOTQxNjYxMzIwLC
-0yMjg4MzIzMzEsLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOTUx
-MzQ1NjIxXX0=
+eyJoaXN0b3J5IjpbMTEwMTc4MTcyNiwyMDI4MTA1MjcwLDEwMT
+Y2ODMwNjgsMTYwMjk1MzM4OCwyMDIyMDg3MzM1LDgxNzg5NzUw
+NiwtMjQ2MzQzNTkxLC00NzUwMjg1ODEsMTcyNTI4MDk5NCwxOD
+g5MjUyNzY3LC0xMTY0MzI0ODgxLDk4NzQyMTA3MSwxNTY0MDc4
+NzA5LDIxMDcwNjI5OTYsLTEwNjQyOTAxOTksNzIxNTI4MDkwLC
+05NDE2NjEzMjAsLTIyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0
+MTgxNjE1XX0=
 -->
