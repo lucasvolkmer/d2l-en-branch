@@ -807,66 +807,68 @@ Existem conferências acadêmicas inteiras dedicadas a este assunto.
 #### Sistemas de Recomendação
 :label:`subsec_recommender_systems`
 
-Recommender systems are another problem setting
-that is related to search and ranking.
-The problems are similar insofar as the goal
-is to display a set of relevant items to the user.
-The main difference is the emphasis on
-*personalization*
-to specific users in the context of recommender systems.
-For instance, for movie recommendations,
-the results page for a science fiction fan
-and the results page
-for a connoisseur of Peter Sellers comedies might differ significantly.
-Similar problems pop up in other recommendation settings,
-e.g., for retail products, music, and news recommendation.
 
-In some cases, customers provide explicit feedback communicating
-how much they liked a particular product
-(e.g., the product ratings and reviews on Amazon, IMDb, and GoodReads).
-In some other cases, they provide implicit feedback,
-e.g., by skipping titles on a playlist,
-which might indicate dissatisfaction but might just indicate
-that the song was inappropriate in context.
-In the simplest formulations, these systems are trained
-to estimate some score,
-such as an estimated rating
-or the probability of purchase,
-given a user and an item.
+Os sistemas de recomendação são outra configuração de problema
+que está relacionado à pesquisa e classificação.
+Os problemas são semelhantes na medida em que o objetivo
+é exibir um conjunto de itens relevantes para o usuário.
+A principal diferença é a ênfase em
+*personalização*
+para usuários específicos no contexto de sistemas de recomendação.
+Por exemplo, para recomendações de filmes,
+a página de resultados para um fã de ficção científica
+e a página de resultados
+para um conhecedor das comédias de Peter Sellers podem diferir significativamente.
+Problemas semelhantes surgem em outras configurações de recomendação,
+por exemplo, para produtos de varejo, música e recomendação de notícias.
 
-Given such a model, 
-for any given user,
-we could retrieve the set of objects with the largest scores,
-which could then be recommended to the user.
-Production systems are considerably more advanced and take
-detailed user activity and item characteristics into account
-when computing such scores. :numref:`fig_deeplearning_amazon` is an example
-of deep learning books recommended by Amazon based on personalization algorithms tuned to capture one's preferences.
+Em alguns casos, os clientes fornecem *feedback* explícito comunicando
+o quanto eles gostaram de um determinado produto
+(por exemplo, as avaliações e resenhas de produtos na Amazon, IMDb e GoodReads).
+Em alguns outros casos, eles fornecem *feedback* implícito,
+por exemplo, pulando títulos em uma lista de reprodução,
+o que pode indicar insatisfação, mas pode apenas indicar
+que a música era inadequada no contexto.
+Nas formulações mais simples, esses sistemas são treinados
+para estimar alguma pontuação,
+como uma avaliação estimada
+ou a probabilidade de compra,
+dado um usuário e um item.
 
-![Deep learning books recommended by Amazon.](../img/deeplearning-amazon.jpg)
+Dado esse modelo,
+para qualquer usuário,
+poderíamos recuperar o conjunto de objetos com as maiores pontuações,
+que pode então ser recomendado ao usuário.
+Os sistemas de produção são consideravelmente mais avançados e levam a 
+atividade detalhada do usuário e características do item em consideração
+ao computar essas pontuações. : numref: `fig_deeplearning_amazon` é um exemplo
+de livros de *deep learning* recomendados pela Amazon com base em algoritmos de personalização ajustados para capturar as preferências de alguém.
+
+![Livros de *deep learning* recomendados pela Amazon.]
+(../img/deeplearning-amazon.jpg)
 :label:`fig_deeplearning_amazon`
 
-Despite their tremendous economic value,
-recommendation systems
-naively built on top of predictive models
-suffer some serious conceptual flaws.
-To start, we only observe *censored feedback*:
-users preferentially rate movies that they feel strongly about.
-For example, 
-on a five-point scale,
-you might notice that items receive many five and one star ratings
-but that there are conspicuously few three-star ratings.
-Moreover, current purchase habits are often a result
-of the recommendation algorithm currently in place,
-but learning algorithms do not always take this detail into account.
-Thus it is possible for feedback loops to form
-where a recommender system preferentially pushes an item
-that is then taken to be better (due to greater purchases)
-and in turn is recommended even more frequently.
-Many of these problems about how to deal with censoring,
-incentives, and feedback loops, are important open research questions.
+Apesar de seu enorme valor econômico,
+sistemas de recomendação
+ingenuamente construídos em cima de modelos preditivos
+sofrem algumas falhas conceituais graves.
+Para começar, observamos apenas *feedback censurado*:
+os usuários avaliam preferencialmente os filmes que os consideram fortes.
+Por exemplo,
+em uma escala de cinco pontos,
+você pode notar que os itens recebem muitas classificações de cinco e uma estrela
+mas que existem visivelmente poucas avaliações de três estrelas.
+Além disso, os hábitos de compra atuais são muitas vezes um resultado
+do algoritmo de recomendação atualmente em vigor,
+mas os algoritmos de aprendizagem nem sempre levam esse detalhe em consideração.
+Assim, é possível que se formem ciclos de feedback
+onde um sistema de recomendação preferencialmente empurra um item
+que então é considerado melhor (devido a maiores compras)
+e, por sua vez, é recomendado com ainda mais frequência.
+Muitos desses problemas sobre como lidar com a censura,
+incentivos e ciclos de *feedback* são importantes questões abertas de pesquisa.
 
-#### Sequence Learning
+#### Aprendizagem sequencial
 
 So far, we have looked at problems where we have
 some fixed number of inputs and produce a fixed number of outputs.
@@ -1647,11 +1649,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjQzMjQ4ODEsOTg3NDIxMDcxLDE1Nj
-QwNzg3MDksMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OSw3MjE1Mjgw
-OTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMDc4NTg0NDcxLC
-01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4NzI3Mzg2OCwtMTg2
-NzM2NTQ5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLDgyNjcwMjkyNy
-wtMjE0MTA5NjA0NywxMTEzNDAwNTM3LC0xNzYwNzM0NzU5LDE5
-MjgyOTYwNDFdfQ==
+eyJoaXN0b3J5IjpbMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5OD
+c0MjEwNzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0Mjkw
+MTk5LDcyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLT
+EwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOTUxMzQ1NjIxLC0xNjg3
+MjczODY4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOCwxNzYyNjMwMj
+IsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMTM0MDA1MzcsLTE3
+NjA3MzQ3NTldfQ==
 -->
