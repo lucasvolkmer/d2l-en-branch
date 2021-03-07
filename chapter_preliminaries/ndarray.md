@@ -1,12 +1,6 @@
 # Manipulação de Dados
 :label:`sec_ndarray`
 
-In order to get anything done, we need some way to store and manipulate data.
-Generally, there are two important things we need to do with data: (i) acquire
-them; and (ii) process them once they are inside the computer.  There is no
-point in acquiring data without some way to store it, so let us get our hands
-dirty first by playing with synthetic data.  To start, we introduce the
-$n$-dimensional array, which is also called the *tensor*.
 Para fazer qualquer coisa, precisamos de alguma forma de armazenar e manipular dados.
 Geralmente, há duas coisas importantes que precisamos fazer com os dados: (i) adquirir
 eles; e (ii) processá-los assim que estiverem dentro do computador. Não há
@@ -105,7 +99,7 @@ x = tf.range(12)
 x
 ```
 
-(**Podemos acessar o formato do tensor **) (~~e o número total de elementos~~) (o comprimento em cada coordenada)
+(**Podemos acessar o formato do tensor**) (~~e o número total de elementos~~) (o comprimento em cada coordenada)
 inspecionando sua propriedade `shape` .
 
 ```{.python .input}
@@ -282,13 +276,6 @@ Aqui, nós produzimos o valor vetorial
 $F: \mathbb{R}^d, \mathbb{R}^d \rightarrow \mathbb{R}^d$
 *transformando* a função escalar para uma operação de vetor elemento a elemento.
 
-The common standard arithmetic operators
-(`+`, `-`, `*`, `/`, and `**`)
-have all been *lifted* to elementwise operations
-for any identically-shaped tensors of arbitrary shape.
-We can call elementwise operations on any two tensors of the same shape.
-In the following example, we use commas to formulate a 5-element tuple,
-where each element is the result of an elementwise operation.
 Os operadores aritméticos padrão comuns
 (`+`, `-`,` * `,` / `e` ** `)
 foram todos transformados em operações elemento a elemento
@@ -344,7 +331,7 @@ Além de cálculos *elementwise*,
 também podemos realizar operações de álgebra linear,
 incluindo produtos escalar de vetor e multiplicação de matrizes.
 Explicaremos as partes cruciais da álgebra linear
-(sem nenhum conhecimento prévio assumido) in :numref:`sec_linear-algebra`.
+(sem nenhum conhecimento prévio assumido) em :numref:`sec_linear-algebra`.
 
 
 
@@ -386,6 +373,13 @@ For each position, if `X` and `Y` are equal at that position,
 the corresponding entry in the new tensor takes a value of 1,
 meaning that the logical statement `X == Y` is true at that position;
 otherwise that position takes 0.
+
+Às vezes, queremos [** construir um tensor binário por meio de * declarações lógicas *. **]
+Tome `X == Y` como exemplo.
+Para cada posição, se `X` e` Y` forem iguais nessa posição,
+a entrada correspondente no novo tensor assume o valor 1,
+o que significa que a declaração lógica `X == Y` é verdadeira nessa posição;
+caso contrário, essa posição assume 0.
 
 ```{.python .input}
 #@tab all
@@ -716,6 +710,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDEwOTczNywtMTY5NjI4MTQxNSwtMT
+eyJoaXN0b3J5IjpbMTYyMzY4NTc0NiwtMTY5NjI4MTQxNSwtMT
 MwNDcxNTQ4MF19
 -->
