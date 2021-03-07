@@ -403,7 +403,7 @@ so that after this transformation,
 the two tensors have the same shape.
 Second, carry out the elementwise operations
 on the resulting arrays.
-Na seção acima, vimos como realizar operações elementwise
+Na seção acima, vimos como realizar operações elemento a elemento
 em dois tensores da mesma forma. Sob certas condições,
 mesmo quando as formas são diferentes, ainda podemos [** realizar operações elementar
 invocando o * mecanismo de transmissão *. **]
@@ -712,6 +712,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2OTI4NTU4LC0xNjk2MjgxNDE1LC0xMz
-A0NzE1NDgwXX0=
+eyJoaXN0b3J5IjpbMzU0NDg5NzUsMTE2OTI4NTU4LC0xNjk2Mj
+gxNDE1LC0xMzA0NzE1NDgwXX0=
 -->
