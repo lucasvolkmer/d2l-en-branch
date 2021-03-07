@@ -273,12 +273,23 @@ Likewise, we denote a *binary* scalar operator
 (taking two real inputs, and yielding one output)
 by the signature $f: \mathbb{R}, \mathbb{R} \rightarrow \mathbb{R}$.
 Given any two vectors $\mathbf{u}$ and $\mathbf{v}$ *of the same shape*,
-  
-900  / 5000
-
-## Resultados de tradução
-
-Em notação matemática, denotaríamos tal  um operador escalar * unário * (tomando uma entrada)  pela assinatura $ f: \ mathbb {R} \ rightarrow \ mathbb {R} $.  Isso significa apenas que a função está mapeando  de qualquer número real ($ \ mathbb {R} $) para outro.  Da mesma forma, denotamos um operador escalar * binário *  (pegando duas entradas reais e produzindo uma saída)  pela assinatura $ f: \ mathbb {R}, \ mathbb {R} \ rightarrow \ mathbb {R} $.  Dados quaisquer dois vetores $ \ mathbf {u} $ e $ \ mathbf {v} $ * da mesma forma *,
+Em notação matemática, denotaríamos tal
+um operador escalar * unário * (tomando uma entrada)
+pela assinatura $f: \mathbb{R} \rightarrow \mathbb{R}$.
+Isso significa apenas que a função está mapeando
+de qualquer número real ($\mathbb{R}$) para outro.
+Da mesma forma, denotamos um operador escalar *binário*
+(pegando duas entradas reais e produzindo uma saída)
+pela assinatura $f: \mathbb{R}, \mathbb{R} \rightarrow \mathbb{R}$.
+Dados quaisquer dois vetores $ \ mathbf {u} $ e $ \ mathbf {v} $ * da mesma forma *,
+e um operador binário $ f $, podemos produzir um vetor
+$ \ mathbf {c} = F (\ mathbf {u}, \ mathbf {v}) $
+definindo $ c_i \ gets f (u_i, v_i) $ para todos $ i $,
+onde $ c_i, u_i $ e $ v_i $ são os elementos $ i ^ \ mathrm {th} $
+dos vetores $ \ mathbf {c}, \ mathbf {u} $ e $ \ mathbf {v} $.
+Aqui, nós produzimos o valor vetorial
+$ F: \ mathbb {R} ^ d, \ mathbb {R} ^ d \ rightarrow \ mathbb {R} ^ d $
+* levantando * a função escalar para uma operação de vetor elemento a elemento.
 and a binary operator $f$, we can produce a vector
 $\mathbf{c} = F(\mathbf{u},\mathbf{v})$
 by setting $c_i \gets f(u_i, v_i)$ for all $i$,
@@ -714,6 +725,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MDMyMjg5NCwtMTY5NjI4MTQxNSwtMT
+eyJoaXN0b3J5IjpbLTQ1MzMyODE2MiwtMTY5NjI4MTQxNSwtMT
 MwNDcxNTQ4MF19
 -->
