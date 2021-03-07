@@ -593,26 +593,24 @@ para reduzir a sobrecarga de memória da operação.**]
 :end_tab:
 
 :begin_tab:`tensorflow`
-Even once you store state persistently in a `Variable`, you
-may want to reduce your memory usage further by avoiding excess
-allocations for tensors that are not your model parameters.
-
-Because TensorFlow `Tensors` are immutable and gradients do not flow through
-`Variable` assignments, TensorFlow does not provide an explicit way to run
-an individual operation in-place.
-
 Mesmo depois de armazenar o estado persistentemente em uma `Variável`, você
-pode querer reduzir ainda mais o uso de memória, evitando o excesso
+pode querer reduzir ainda mais o uso de memória, evitando o excesso de
 alocações para tensores que não são os parâmetros do seu modelo.
 
-Porque TensorFlow `Tensors` são imutáveis e gradientes não fluem através
-Atribuições de `Variable`, o TensorFlow não fornece uma maneira explícita de executar
+Porque os `Tensors`do TensorFlow são imutáveis e gradientes não fluem através de
+atribuições de `Variable`, o TensorFlow não fornece uma maneira explícita de executar
 uma operação individual no local.
+
 However, TensorFlow provides the `tf.function` decorator to wrap computation
 inside of a TensorFlow graph that gets compiled and optimized before running.
 This allows TensorFlow to prune unused values, and to re-use
 prior allocations that are no longer needed. This minimizes the memory
 overhead of TensorFlow computations.
+No entanto, o TensorFlow fornece o decorador `tf.function` para encerrar a computação
+dentro de um gráfico do TensorFlow que é compilado e otimizado antes da execução.
+Isso permite que o TensorFlow remova valores não utilizados e reutilize
+alocações anteriores que não são mais necessárias. Isso minimiza a memória
+sobrecarga de cálculos do TensorFlow.
 :end_tab:
 
 ```{.python .input}
@@ -710,7 +708,8 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMTQyMjQyMCwtNjY1MjU5NDc2LDc5MD
-kyMDg3NywtMTM5NjA5NTU3MSwtNzU5ODMzNzMsMTE2OTI4NTU4
-LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX0=
+eyJoaXN0b3J5IjpbLTE3ODM1Nzk1MDAsMTgyMTQyMjQyMCwtNj
+Y1MjU5NDc2LDc5MDkyMDg3NywtMTM5NjA5NTU3MSwtNzU5ODMz
+NzMsMTE2OTI4NTU4LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX
+0=
 -->
