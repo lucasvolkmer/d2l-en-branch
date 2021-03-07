@@ -1042,19 +1042,19 @@ para verificar se os dados reais e falsos são iguais.
 
 ### Interagindo com um Ambiente
 
-So far, we have not discussed where data actually
-come from,
-or what actually happens when a machine learning model generates an output.
-That is because supervised learning and unsupervised learning
-do not address these issues in a very sophisticated way.
-In either case, we grab a big pile of data upfront,
-then set our pattern recognition machines in motion
-without ever interacting with the environment again.
-Because all of the learning takes place
-after the algorithm is disconnected from the environment,
-this is sometimes called *offline learning*.
-For supervised learning,
-the process by considering data collection from an environment looks like :numref:`fig_data_collection`.
+Até agora, não discutimos de onde os dados realmente
+vêm,
+ou o que realmente acontece quando um modelo de *machine learning* gera uma saída.
+Isso ocorre porque o aprendizado supervisionado e o aprendizado não supervisionado
+não tratam dessas questões de uma forma muito sofisticada.
+Em qualquer caso, pegamos uma grande pilha de dados antecipadamente,
+em seguida, colocamos nossas máquinas de reconhecimento de padrões em movimento
+sem nunca mais interagir com o ambiente novamente.
+Porque todo o aprendizado ocorre
+depois que o algoritmo é desconectado do ambiente,
+isso às vezes é chamado de *aprendizagem offline*.
+Para aprendizagem supervisionada,
+o processo considerando a coleta de dados de um ambiente se parece com: numref: `fig_data_collection`.
 
 ![Collecting data for supervised learning from an environment.](../img/data-collection.svg)
 :label:`fig_data_collection`
@@ -1650,11 +1650,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE3ODk3NTA2LC0yNDYzNDM1OTEsLTQ3NT
-AyODU4MSwxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQzMjQ4
-ODEsOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5NiwtMT
-A2NDI5MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMy
-MzMxLC0xMDc4NTg0NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMS
-wtMTY4NzI3Mzg2OCwtMTg2NzM2NTQ5NCw0OTYxMjc0MzgsMTc2
-MjYzMDIyXX0=
+eyJoaXN0b3J5IjpbMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0Nj
+M0MzU5MSwtNDc1MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1Mjc2
+NywtMTE2NDMyNDg4MSw5ODc0MjEwNzEsMTU2NDA3ODcwOSwyMT
+A3MDYyOTk2LC0xMDY0MjkwMTk5LDcyMTUyODA5MCwtOTQxNjYx
+MzIwLC0yMjg4MzIzMzEsLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNS
+wxOTUxMzQ1NjIxLC0xNjg3MjczODY4LC0xODY3MzY1NDk0LDQ5
+NjEyNzQzOF19
 -->
