@@ -524,6 +524,18 @@ That is because Python first evaluates `Y + X`,
 allocating new memory for the result and then makes `Y`
 point to this new location in memory.
 
+[**As operações em execução podem fazer com que uma nova memória seja
+alocado aos resultados do host.**]
+Por exemplo, se escrevermos `Y = X + Y`,
+vamos desreferenciar o tensor que `Y` costumava apontar para
+e, em vez disso, aponte `Y` para a memória recém-alocada.
+No exemplo a seguir, demonstramos isso com a função `id ()` do Python,
+que nos dá o endereço exato do objeto referenciado na memória.
+Depois de executar `Y = Y + X`, descobriremos que` id (Y) `aponta para um local diferente.
+Isso ocorre porque o Python primeiro avalia `Y + X`,
+alocar nova memória para o resultado e, em seguida, torna `Y`
+aponte para este novo local na memória.
+
 ```{.python .input}
 #@tab all
 before = id(Y)
@@ -703,7 +715,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTI1OTQ3Niw3OTA5MjA4NzcsLTEzOT
-YwOTU1NzEsLTc1OTgzMzczLDExNjkyODU1OCwtMTY5NjI4MTQx
-NSwtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbOTEzNzc4Njk0LC02NjUyNTk0NzYsNzkwOT
+IwODc3LC0xMzk2MDk1NTcxLC03NTk4MzM3MywxMTY5Mjg1NTgs
+LTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ==
 -->
