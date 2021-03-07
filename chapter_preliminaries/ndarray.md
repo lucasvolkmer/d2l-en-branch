@@ -472,8 +472,8 @@ por meio de atribuições `Variable`.
 
 Beyond assigning a value to the entire `Variable`, we can write elements of a
 `Variable` by specifying indices.
-Além de atribuir um valor a toda a `Variável`, podemos escrever elementos de um
-`Variável` especificando índices.
+Além de atribuir um valor a toda a `Variable`, podemos escrever elementos de um
+`Variable` especificando índices.
 :end_tab:
 
 ```{.python .input}
@@ -704,7 +704,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTYzMjc4NCw3OTA5MjA4NzcsLTEzOT
+eyJoaXN0b3J5IjpbMTMxNzg1Njg4NCw3OTA5MjA4NzcsLTEzOT
 YwOTU1NzEsLTc1OTgzMzczLDExNjkyODU1OCwtMTY5NjI4MTQx
 NSwtMTMwNDcxNTQ4MF19
 -->
