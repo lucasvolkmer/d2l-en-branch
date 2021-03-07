@@ -949,15 +949,15 @@ Nesse caso, a saída é muito mais longa do que a entrada.
 Embora seja fácil para os humanos reconhecerem um arquivo de áudio ruim,
 isso não é tão trivial para computadores.
 
-**Machine Translation**. Unlike the case of speech recognition, where corresponding
-inputs and outputs occur in the same order (after alignment),
-in machine translation, order inversion can be vital.
-In other words, while we are still converting one sequence into another,
-neither the number of inputs and outputs nor the order
-of corresponding data examples are assumed to be the same.
-Consider the following illustrative example
-of the peculiar tendency of Germans
-to place the verbs at the end of sentences.
+**Tradução por máquina**. Ao contrário do caso do reconhecimento de voz, onde correspondente
+entradas e saídas ocorrem na mesma ordem (após o alinhamento),
+na tradução automática, a inversão da ordem pode ser vital.
+Em outras palavras, enquanto ainda estamos convertendo uma sequência em outra,
+nem o número de entradas e saídas, nem o pedido
+de exemplos de dados correspondentes são considerados iguais.
+Considere o seguinte exemplo ilustrativo
+da tendência peculiar dos alemães
+para colocar os verbos no final das frases.
 
 ```text
 German:           Haben Sie sich schon dieses grossartige Lehrwerk angeschaut?
@@ -1649,7 +1649,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4Mzc5MzI3MSwtNDc1MDI4NTgxLDE3Mj
+eyJoaXN0b3J5IjpbLTY1NjM2Mjg5MCwtNDc1MDI4NTgxLDE3Mj
 UyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEw
 NzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LD
 cyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLTEwNzg1
