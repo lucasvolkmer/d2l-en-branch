@@ -1178,8 +1178,8 @@ podem saber de uma boa política,
 mas pode haver muitas outras políticas melhores
 que o agente nunca tentou.
 O agente de reforço deve escolher constantemente
-se deve *explorar* (*exploit*)  a melhor estratégia atualmente conhecida como uma política,
-ou para *explorar* (*explore*) o espaço das estratégias,
+se deve fazer um *exploit* com  a melhor estratégia atualmente conhecida como uma política,
+ou um *explore* o espaço das estratégias,
 potencialmente desistindo de alguma recompensa de curto prazo em troca de conhecimento.
 
 O problema geral de aprendizagem por reforço
@@ -1655,11 +1655,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcxMjY5OTUxLDEwMzU5NTA0MjMsMjAyOD
-EwNTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMzODgsMjAyMjA4NzMz
-NSw4MTc4OTc1MDYsLTI0NjM0MzU5MSwtNDc1MDI4NTgxLDE3Mj
-UyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEw
-NzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LD
-cyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLTEwNzg1
-ODQ0NzFdfQ==
+eyJoaXN0b3J5IjpbLTMzMjY5NDM1NCwxMDM1OTUwNDIzLDIwMj
+gxMDUyNzAsMTAxNjY4MzA2OCwxNjAyOTUzMzg4LDIwMjIwODcz
+MzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLTQ3NTAyODU4MSwxNz
+I1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQzMjQ4ODEsOTg3NDIx
+MDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OS
+w3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMDc4
+NTg0NDcxXX0=
 -->
