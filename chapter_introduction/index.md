@@ -1285,36 +1285,37 @@ que sustentam o *deep learning* hoje: reforçar o comportamento desejável
 e diminuir o comportamento indesejável para obter boas configurações
 dos parâmetros em uma rede neural.
 
-Biological inspiration is what gave *neural networks* their name.
-For over a century (dating back to the models of Alexander Bain, 1873
-and James Sherrington, 1890), researchers have tried to assemble
-computational circuits that resemble networks of interacting neurons.
-Over time, the interpretation of biology has become less literal
-but the name stuck. At its heart, lie a few key principles
-that can be found in most networks today:
 
-* The alternation of linear and nonlinear processing units, often referred to as *layers*.
-* The use of the chain rule (also known as *backpropagation*) for adjusting parameters in the entire network at once.
+Inspiração biológica é o que deu às *redes neurais* seu nome.
+Por mais de um século (que remonta aos modelos de Alexander Bain, 1873
+e James Sherrington, 1890), os pesquisadores tentaram reunir
+circuitos computacionais que se assemelham a redes de neurônios em interação.
+Com o tempo, a interpretação da biologia tornou-se menos literal
+mas o nome pegou. Em sua essência, encontram-se alguns princípios-chave
+que podem ser encontrados na maioria das redes hoje:
 
-After initial rapid progress, research in neural networks
-languished from around 1995 until 2005.
-This was mainly due to two reasons.
-First, training a network is computationally very expensive.
-While random-access memory was plentiful at the end of the past century,
-computational power was scarce.
-Second, datasets were relatively small.
-In fact, Fisher's Iris dataset from 1932
-was a popular tool for testing the efficacy of algorithms.
-The MNIST dataset with its 60000 handwritten digits was considered huge.
+* A alternância de unidades de processamento linear e não linear, geralmente chamadas de *camadas*.
+* O uso da regra da cadeia (também conhecida como *retropropagação*) para ajustar parâmetros em toda a rede de uma só vez.
 
-Given the scarcity of data and computation,
-strong statistical tools such as kernel methods,
-decision trees and graphical models proved empirically superior.
-Unlike neural networks, they did not require weeks to train
-and provided predictable results with strong theoretical guarantees.
+Após o rápido progresso inicial, pesquisa em redes neurais
+definhou de cerca de 1995 até 2005.
+Isso se deveu principalmente a dois motivos.
+Primeiro, treinar uma rede é muito caro do ponto de vista computacional.
+Embora a memória de acesso aleatório fosse abundante no final do século passado,
+o poder computacional era escasso.
+Em segundo lugar, os conjuntos de dados eram relativamente pequenos.
+Na verdade, o conjunto de dados Iris de Fisher de 1932
+foi uma ferramenta popular para testar a eficácia de algoritmos.
+O conjunto de dados MNIST com seus 60.000 dígitos manuscritos foi considerado enorme.
+
+Dada a escassez de dados e computação,
+ferramentas estatísticas fortes, como métodos de *kernel*,
+árvores de decisão e modelos gráficos mostraram-se empiricamente superiores.
+Ao contrário das redes neurais, eles não levaram semanas para treinar
+e forneceu resultados previsíveis com fortes garantias teóricas.
 
 
-## The Road to Deep Learning
+## O Caminho Para o *Deep Learning*
 
 Much of this changed with 
 the ready availability of large amounts of data,
@@ -1656,7 +1657,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzk5MTEyMCwtMzMyNjk0MzU0LDEwMz
+eyJoaXN0b3J5IjpbLTQ4ODYwNzE2NiwtMzMyNjk0MzU0LDEwMz
 U5NTA0MjMsMjAyODEwNTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMz
 ODgsMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0NjM0MzU5MSwtND
 c1MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMy
