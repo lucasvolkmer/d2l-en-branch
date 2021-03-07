@@ -457,7 +457,7 @@ X[-1], X[1:3]
 ```
 
 :begin_tab:`mxnet, pytorch`
-Beyond reading, (**we can also write elements of a matrix by specifying indices.**)
+Além da leitura, (**também podemos escrever elementos de uma matriz especificando índices.**)
 :end_tab:
 
 :begin_tab:`tensorflow`
@@ -698,7 +698,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzOTg0MjE3MiwtMTM5NjA5NTU3MSwtNz
-U5ODMzNzMsMTE2OTI4NTU4LC0xNjk2MjgxNDE1LC0xMzA0NzE1
-NDgwXX0=
+eyJoaXN0b3J5IjpbNzkwOTIwODc3LC0xMzk2MDk1NTcxLC03NT
+k4MzM3MywxMTY5Mjg1NTgsLTE2OTYyODE0MTUsLTEzMDQ3MTU0
+ODBdfQ==
 -->
