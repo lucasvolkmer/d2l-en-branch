@@ -281,8 +281,8 @@ de qualquer número real ($\mathbb{R}$) para outro.
 Da mesma forma, denotamos um operador escalar *binário*
 (pegando duas entradas reais e produzindo uma saída)
 pela assinatura $f: \mathbb{R}, \mathbb{R} \rightarrow \mathbb{R}$.
-Dados quaisquer dois vetores $ \ mathbf {u} $ e $ \ mathbf {v} $ * da mesma forma *,
-e um operador binário $ f $, podemos produzir um vetor
+Dados quaisquer dois vetores $\mathbf{u}$ e $\mathbf{v}$ de mesmo *shape*, 
+e um operador binário $f$, podemos produzir um vetor
 $ \ mathbf {c} = F (\ mathbf {u}, \ mathbf {v}) $
 definindo $ c_i \ gets f (u_i, v_i) $ para todos $ i $,
 onde $ c_i, u_i $ e $ v_i $ são os elementos $ i ^ \ mathrm {th} $
@@ -725,6 +725,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MzMyODE2MiwtMTY5NjI4MTQxNSwtMT
+eyJoaXN0b3J5IjpbLTU5MjIxNTc5MCwtMTY5NjI4MTQxNSwtMT
 MwNDcxNTQ4MF19
 -->
