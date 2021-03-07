@@ -249,13 +249,13 @@ Nossos interesses não se limitam a simplesmente
 leitura e gravação de dados de/para matrizes.
 Queremos realizar operações matemáticas nessas matrizes.
 Algumas das operações mais simples e úteis
-são as operações *elementwise*.
+são as operações elemento a elemento.
 Estes aplicam uma operação escalar padrão
 para cada elemento de uma matriz.
 Para funções que usam dois arrays como entradas,
-as operações elementwise aplicam algum operador binário padrão
+as operações elemento a elemento aplicam algum operador binário padrão
 em cada par de elementos correspondentes das duas matrizes.
-Podemos criar uma função *elementwise* a partir de qualquer função
+Podemos criar uma função elemento a elemento a partir de qualquer função
 que mapeia de um escalar para um escalar.
 
 Em notação matemática, denotaríamos tal
@@ -282,7 +282,7 @@ foram todos transformados em operações elemento a elemento
 para quaisquer tensores de formato idêntico de forma arbitrária.
 Podemos chamar operações elemento a elemento em quaisquer dois tensores da mesma forma.
 No exemplo a seguir, usamos vírgulas para formular uma tupla de 5 elementos,
-onde cada elemento é o resultado de uma operação *elementwise*.
+onde cada elemento é o resultado de uma operação elemento a elemento.
 
 ### Operações
 
@@ -327,7 +327,7 @@ torch.exp(x)
 tf.exp(x)
 ```
 
-Além de cálculos *elementwise*,
+Além de cálculos elemento a elemento,
 também podemos realizar operações de álgebra linear,
 incluindo produtos escalar de vetor e multiplicação de matrizes.
 Explicaremos as partes cruciais da álgebra linear
@@ -712,6 +712,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU0NDg5NzUsMTE2OTI4NTU4LC0xNjk2Mj
+eyJoaXN0b3J5IjpbNjI5NDE3MTAsMTE2OTI4NTU4LC0xNjk2Mj
 gxNDE1LC0xMzA0NzE1NDgwXX0=
 -->
