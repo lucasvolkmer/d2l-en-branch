@@ -1200,7 +1200,7 @@ Quando não há estado, apenas um conjunto de ações disponíveis
 com recompensas inicialmente desconhecidas, este problema
 é o clássico *problema de bandidos multi-armados*.
 
-## Roots
+## Raízes
 
 We have just reviewed
 a small subset of problems that machine learning 
@@ -1654,7 +1654,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMTc4MTcyNiwyMDI4MTA1MjcwLDEwMT
+eyJoaXN0b3J5IjpbMTAzNTk1MDQyMywyMDI4MTA1MjcwLDEwMT
 Y2ODMwNjgsMTYwMjk1MzM4OCwyMDIyMDg3MzM1LDgxNzg5NzUw
 NiwtMjQ2MzQzNTkxLC00NzUwMjg1ODEsMTcyNTI4MDk5NCwxOD
 g5MjUyNzY3LC0xMTY0MzI0ODgxLDk4NzQyMTA3MSwxNTY0MDc4
