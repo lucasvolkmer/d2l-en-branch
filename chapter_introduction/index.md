@@ -1339,7 +1339,7 @@ Isso é melhor ilustrado em: numref:`tab_intro_decade`.
 |1990|10 K (reconhecimento óptico de caracteres)|10 MB|10 MF (Intel 80486)|
 |2000|10 M (páginas *web*)|100 MB|1 GF (Intel Core)|
 |2010|10 G (anúncios)|1 GB|1 TF (Nvidia C2050)|
-|2020|1 T (social network)|100 GB|1 PF (Nvidia DGX-2)|
+|2020|1 T (redes sociais)|100 GB|1 PF (Nvidia DGX-2)|
 :label:`tab_intro_decade`
 
 It is evident that random-access memory has not kept pace with the growth in data.
@@ -1658,11 +1658,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTE3NzgzMzgsLTMzMjY5NDM1NCwxMD
-M1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4MzA2OCwxNjAyOTUz
-Mzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLT
-Q3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQz
-MjQ4ODEsOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5Ni
-wtMTA2NDI5MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4
-ODMyMzMxXX0=
+eyJoaXN0b3J5IjpbLTgyMjMyMDQzLC0zMzI2OTQzNTQsMTAzNT
+k1MDQyMywyMDI4MTA1MjcwLDEwMTY2ODMwNjgsMTYwMjk1MzM4
+OCwyMDIyMDg3MzM1LDgxNzg5NzUwNiwtMjQ2MzQzNTkxLC00Nz
+UwMjg1ODEsMTcyNTI4MDk5NCwxODg5MjUyNzY3LC0xMTY0MzI0
+ODgxLDk4NzQyMTA3MSwxNTY0MDc4NzA5LDIxMDcwNjI5OTYsLT
+EwNjQyOTAxOTksNzIxNTI4MDkwLC05NDE2NjEzMjAsLTIyODgz
+MjMzMV19
 -->
