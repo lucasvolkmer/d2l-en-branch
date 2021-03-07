@@ -554,13 +554,13 @@ usando `zeros_like` para alocar um bloco de $0$ entradas.
 : end_tab:
 
 :begin_tab:`tensorflow`
-`Variables` are mutable containers of state in TensorFlow. They provide
-a way to store your model parameters.
-We can assign the result of an operation
-to a `Variable` with `assign`.
-To illustrate this concept, we create a `Variable` `Z`
-with the same shape as another tensor `Y`,
-using `zeros_like` to allocate a block of $0$ entries.
+`Variables` são contêineres mutáveis de estado no TensorFlow. Eles providenciam
+uma maneira de armazenar os parâmetros do seu modelo.
+Podemos atribuir o resultado de uma operação
+para uma `Variable` com` assign`.
+Para ilustrar este conceito, criamos uma `Variable`` Z`
+com a mesma forma de outro tensor `Y`,
+usando `zeros_like` para alocar um bloco de $0$ entradas.
 :end_tab:
 
 ```{.python .input}
@@ -703,7 +703,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk2NTkzMDQ3LC02NjUyNTk0NzYsNzkwOT
-IwODc3LC0xMzk2MDk1NTcxLC03NTk4MzM3MywxMTY5Mjg1NTgs
-LTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ==
+eyJoaXN0b3J5IjpbLTc5NDgzMzE3OSwtNjY1MjU5NDc2LDc5MD
+kyMDg3NywtMTM5NjA5NTU3MSwtNzU5ODMzNzMsMTE2OTI4NTU4
+LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX0=
 -->
