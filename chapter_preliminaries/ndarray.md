@@ -392,17 +392,6 @@ tf.reduce_sum(X)
 ## Mecanismo de *Broadcasting* 
 :label:`subsec_broadcasting`
 
-In the above section, we saw how to perform elementwise operations
-on two tensors of the same shape. Under certain conditions,
-even when shapes differ, we can still [**perform elementwise operations
-by invoking the *broadcasting mechanism*.**]
-This mechanism works in the following way:
-First, expand one or both arrays
-by copying elements appropriately
-so that after this transformation,
-the two tensors have the same shape.
-Second, carry out the elementwise operations
-on the resulting arrays.
 Na seção acima, vimos como realizar operações elemento a elemento
 em dois tensores da mesma forma. Sob certas condições,
 mesmo quando as formas são diferentes, ainda podemos [**realizar operações elementar
@@ -412,7 +401,7 @@ Primeiro, expanda um ou ambos os arrays
 copiando elementos de forma adequada
 de modo que após esta transformação,
 os dois tensores têm a mesma forma.
-Em segundo lugar, execute as operações elementwise
+Em segundo lugar, execute as operações elemento a elemento
 nas matrizes resultantes.
 
 In most cases, we broadcast along an axis where an array
@@ -712,6 +701,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NDk2ODMyMSwxMTY5Mjg1NTgsLTE2OT
-YyODE0MTUsLTEzMDQ3MTU0ODBdfQ==
+eyJoaXN0b3J5IjpbLTc1OTgzMzczLDExNjkyODU1OCwtMTY5Nj
+I4MTQxNSwtMTMwNDcxNTQ4MF19
 -->
