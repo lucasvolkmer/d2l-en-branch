@@ -1317,21 +1317,22 @@ e forneceu resultados previsíveis com fortes garantias teóricas.
 
 ## O Caminho Para o *Deep Learning*
 
-Much of this changed with 
-the ready availability of large amounts of data,
-due to the World Wide Web, 
-the advent of companies serving
-hundreds of millions of users online, 
-a dissemination of cheap, high-quality sensors, 
-cheap data storage (Kryder's law),
-and cheap computation (Moore's law), in particular in the form of GPUs, originally engineered for computer gaming.
-Suddenly algorithms and models that seemed computationally infeasible
-became relevant (and vice versa).
-This is best illustrated in :numref:`tab_intro_decade`.
 
-:Dataset vs. computer memory and computational power
+Muito disso mudou com
+a pronta disponibilidade de grandes quantidades de dados,
+devido à World Wide Web,
+o advento das empresas servindo
+centenas de milhões de usuários online,
+uma disseminação de sensores baratos e de alta qualidade,
+armazenamento de dados barato (lei de Kryder),
+e computação barata (lei de Moore), em particular na forma de GPUs, originalmente projetadas para jogos de computador.
+De repente, algoritmos e modelos que pareciam inviáveis computacionalmente
+tornaram-se relevante (e vice-versa).
+Isso é melhor ilustrado em: numref:`tab_intro_decade`.
 
-|Decade|Dataset|Memory|Floating point calculations per second|
+:*Dataset* vs. memória do computador e poder computacional
+
+|Década|Dataset|Memória|Floating point calculations per second|
 |:--|:-|:-|:-|
 |1970|100 (Iris)|1 KB|100 KF (Intel 8080)|
 |1980|1 K (House prices in Boston)|100 KB|1 MF (Intel 80186)|
@@ -1657,11 +1658,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4ODYwNzE2NiwtMzMyNjk0MzU0LDEwMz
-U5NTA0MjMsMjAyODEwNTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMz
-ODgsMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0NjM0MzU5MSwtND
-c1MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMy
-NDg4MSw5ODc0MjEwNzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC
-0xMDY0MjkwMTk5LDcyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4
-MzIzMzFdfQ==
+eyJoaXN0b3J5IjpbLTEyNjMzMjI2MDgsLTMzMjY5NDM1NCwxMD
+M1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4MzA2OCwxNjAyOTUz
+Mzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLT
+Q3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQz
+MjQ4ODEsOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5Ni
+wtMTA2NDI5MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4
+ODMyMzMxXX0=
 -->
