@@ -939,7 +939,7 @@ já que milhares de amostras podem
 correspondem a uma única palavra falada.
 Estes são problemas de aprendizagem de sequência a sequência em que a saída é muito mais curta do que a entrada.
 
-![`-D-e-e-p- L-ea-r-ni-ng-` in an audio recording.](../img/speech.png)
+![-D-e-e-p- L-ea-r-ni-ng-` in an audio recording.](../img/speech.png)
 :width:`700px`
 :label:`fig_speech`
 
@@ -1650,11 +1650,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjMwMDQ5NjUsMTcyNTI4MDk5NCwxOD
-g5MjUyNzY3LC0xMTY0MzI0ODgxLDk4NzQyMTA3MSwxNTY0MDc4
-NzA5LDIxMDcwNjI5OTYsLTEwNjQyOTAxOTksNzIxNTI4MDkwLC
-05NDE2NjEzMjAsLTIyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0
-MTgxNjE1LDE5NTEzNDU2MjEsLTE2ODcyNzM4NjgsLTE4NjczNj
-U0OTQsNDk2MTI3NDM4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLTIx
-NDEwOTYwNDddfQ==
+eyJoaXN0b3J5IjpbMTY0NjAxNzU3OSwxNzI1MjgwOTk0LDE4OD
+kyNTI3NjcsLTExNjQzMjQ4ODEsOTg3NDIxMDcxLDE1NjQwNzg3
+MDksMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OSw3MjE1MjgwOTAsLT
+k0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMDc4NTg0NDcxLC01MzQx
+ODE2MTUsMTk1MTM0NTYyMSwtMTY4NzI3Mzg2OCwtMTg2NzM2NT
+Q5NCw0OTYxMjc0MzgsMTc2MjYzMDIyLDgyNjcwMjkyNywtMjE0
+MTA5NjA0N119
 -->
