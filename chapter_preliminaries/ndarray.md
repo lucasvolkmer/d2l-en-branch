@@ -404,8 +404,6 @@ os dois tensores têm a mesma forma.
 Em segundo lugar, execute as operações elemento a elemento
 nas matrizes resultantes.
 
-In most cases, we broadcast along an axis where an array
-initially only has length 1, such as in the following example:
 Na maioria dos casos, nós transmitimos ao longo de um eixo onde uma matriz
 inicialmente tem apenas o comprimento 1, como no exemplo a seguir:
 
@@ -429,13 +427,12 @@ b = tf.reshape(tf.range(2), (1, 2))
 a, b
 ```
 
-Since `a` and `b` are $3\times1$ and $1\times2$ matrices respectively,
-their shapes do not match up if we want to add them.
-We *broadcast* the entries of both matrices into a larger $3\times2$ matrix as follows:
-for matrix `a` it replicates the columns
-and for matrix `b` it replicates the rows
-before adding up both elementwise.
-
+Uma vez que `a` e` b` são matrizes $3\times1$ e $1\times2$  respectivamente,
+suas formas não correspondem se quisermos adicioná-los.
+Nós transmitimos as entradas de ambas as matrizes em uma matriz $3\times2$ maior da seguinte maneira:
+para a matriz `a` ele replica as colunas
+e para a matriz `b` ele replica as linhas
+antes de adicionar ambos os elementos.
 
 ```{.python .input}
 #@tab all
@@ -702,6 +699,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4OTc0MTUzMCwtNzU5ODMzNzMsMTE2OT
-I4NTU4LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX0=
+eyJoaXN0b3J5IjpbLTEzOTYwOTU1NzEsLTc1OTgzMzczLDExNj
+kyODU1OCwtMTY5NjI4MTQxNSwtMTMwNDcxNTQ4MF19
 -->
