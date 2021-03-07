@@ -681,15 +681,17 @@ a = tf.constant([3.5]).numpy()
 a, a.item(), float(a), int(a)
 ```
 
-## Summa
+## Sumário
 
-* The main interface to store and manipulate data for deep learning is the tensor ($n$-dimensional array). It provides a variety of functionalities including basic mathematics operations, broadcasting, indexing, slicing, memory saving, and conversion to other Python objects.
+* A principal interface para armazenar e manipular dados para *Deep Learning* é o tensor (array $n$ -dimensional). Ele fornece uma variedade de funcionalidades, incluindo operações matemáticas básicas, transmissão, indexação, divisão, economia de memória e conversão para outros objetos Python.
 
 
-## Exercises
+## Exercícios
 
 1. Run the code in this section. Change the conditional statement `X == Y` in this section to `X < Y` or `X > Y`, and then see what kind of tensor you can get.
-1. Replace the two tensors that operate by element in the broadcasting mechanism with other shapes, e.g., 3-dimensional tensors. Is the result the same as expected?
+2. Replace the two tensors that operate by element in the broadcasting mechanism with other shapes, e.g., 3-dimensional tensors. Is the result the same as expected?
+1. Execute o código nesta seção. Altere a declaração condicional `X == Y` nesta seção para` X < Y` ou `X > Y`, e então veja que tipo de tensor você pode obter.
+1. Substitua os dois tensores que operam por elemento no mecanismo de transmissão por outras formas, por exemplo, tensores tridimensionais. O resultado é o mesmo que o esperado?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/26)
@@ -703,8 +705,8 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDcxMDE3MDIsMTgyMTQyMjQyMCwtNj
-Y1MjU5NDc2LDc5MDkyMDg3NywtMTM5NjA5NTU3MSwtNzU5ODMz
-NzMsMTE2OTI4NTU4LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX
-0=
+eyJoaXN0b3J5IjpbMTMxMDk5NzE0OCwxODIxNDIyNDIwLC02Nj
+UyNTk0NzYsNzkwOTIwODc3LC0xMzk2MDk1NTcxLC03NTk4MzM3
+MywxMTY5Mjg1NTgsLTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ
+==
 -->
