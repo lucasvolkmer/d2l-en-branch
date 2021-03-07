@@ -1202,33 +1202,33 @@ com recompensas inicialmente desconhecidas, este problema
 
 ## Raízes
 
-We have just reviewed
-a small subset of problems that machine learning 
-can address.
-For a diverse set of machine learning problems,
-deep learning provides powerful tools for solving them.
-Although many deep learning methods
-are recent inventions,
-the core idea of programming with data and neural networks (names of many deep learning models)
-has been studied for centuries.
-In fact,
-humans have held the desire to analyze data
-and to predict future outcomes for long
-and much of natural science has its roots in this.
-For instance, the Bernoulli distribution is named after
-[Jacob Bernoulli (1655--1705)](https://en.wikipedia.org/wiki/Jacob_Bernoulli), and the Gaussian distribution was discovered
-by [Carl Friedrich Gauss (1777--1855)](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss).
-He invented, for instance, the least mean squares algorithm,
-which is still used today for countless problems
-from insurance calculations to medical diagnostics.
-These tools gave rise to an experimental approach
-in the natural sciences---for instance, Ohm's law
-relating current and voltage in a resistor
-is perfectly described by a linear model.
+Acabamos de revisar
+um pequeno subconjunto de problemas que o *machine learning*
+pode abordar.
+Para um conjunto diversificado de problemas de *machine learning*,
+o *deep learning* fornece ferramentas poderosas para resolvê-los.
+Embora muitos métodos de *deep learning*
+são invenções recentes,
+a ideia central da programação com dados e redes neurais (nomes de muitos modelos de *deep learning*)
+tem sido estudado há séculos.
+Na verdade,
+os humanos mantiveram o desejo de analisar dados
+e para prever resultados futuros por muito tempo
+e muito da ciência natural tem suas raízes nisso.
+Por exemplo, a distribuição Bernoulli é nomeada após
+[Jacob Bernoulli (1655--1705)] (https://en.wikipedia.org/wiki/Jacob_Bernoulli), e a distribuição gaussiana foi descoberta
+por [Carl Friedrich Gauss (1777--1855)] (https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss).
+Ele inventou, por exemplo, o algoritmo de mínimos quadrados médios,
+que ainda é usado hoje para inúmeros problemas
+de cálculos de seguros a diagnósticos médicos.
+Essas ferramentas deram origem a uma abordagem experimental
+nas ciências naturais --- por exemplo, a lei de Ohm
+relacionar corrente e tensão em um resistor
+é perfeitamente descrito por um modelo linear.,
 
-Even in the middle ages, mathematicians had a keen intuition of estimates.
-For instance, the geometry book of [Jacob Köbel (1460--1533)](https://www.maa.org/press/periodicals/convergence/mathematical-treasures-jacob-kobels-geometry) illustrates
-averaging the length of 16 adult men's feet to obtain the average foot length.
+Mesmo na Idade Média, os matemáticos tinham uma aguçada intuição de estimativas.
+Por exemplo, o livro de geometria de [Jacob Köbel (1460--1533)] (https://www.maa.org/press/periodicals/convergence/mathematical-treasures-jacob-kobels-geometry) ilustra
+calculando a média do comprimento de 16 pés de homens adultos para obter o comprimento médio do pé.
 
 ![Estimating the length of a foot.](../img/koebel.jpg)
 :width:`500px`
@@ -1654,11 +1654,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNTk1MDQyMywyMDI4MTA1MjcwLDEwMT
-Y2ODMwNjgsMTYwMjk1MzM4OCwyMDIyMDg3MzM1LDgxNzg5NzUw
-NiwtMjQ2MzQzNTkxLC00NzUwMjg1ODEsMTcyNTI4MDk5NCwxOD
-g5MjUyNzY3LC0xMTY0MzI0ODgxLDk4NzQyMTA3MSwxNTY0MDc4
-NzA5LDIxMDcwNjI5OTYsLTEwNjQyOTAxOTksNzIxNTI4MDkwLC
-05NDE2NjEzMjAsLTIyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0
-MTgxNjE1XX0=
+eyJoaXN0b3J5IjpbODc5NzU1NTA4LDEwMzU5NTA0MjMsMjAyOD
+EwNTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMzODgsMjAyMjA4NzMz
+NSw4MTc4OTc1MDYsLTI0NjM0MzU5MSwtNDc1MDI4NTgxLDE3Mj
+UyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEw
+NzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LD
+cyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLTEwNzg1
+ODQ0NzFdfQ==
 -->
