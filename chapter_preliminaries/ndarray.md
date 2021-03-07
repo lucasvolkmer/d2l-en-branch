@@ -279,16 +279,8 @@ definindo $c_i \gets f(u_i, v_i)$ para todos $i$,
 onde $c_i, u_i$ e $v_i$ são os elementos $i^\mathrm{th}$
 dos vetores $\mathbf{c}, \mathbf{u}$, e $\mathbf{v}$.
 Aqui, nós produzimos o valor vetorial
-$ F: \ mathbb {R} ^ d, \ mathbb {R} ^ d \ rightarrow \ mathbb {R} ^ d $
-* levantando * a função escalar para uma operação de vetor elemento a elemento.
-and a binary operator $f$, we can produce a vector
-$\mathbf{c} = F(\mathbf{u},\mathbf{v})$
-by setting $c_i \gets f(u_i, v_i)$ for all $i$,
-where $c_i, u_i$, and $v_i$ are the $i^\mathrm{th}$ elements
-of vectors $\mathbf{c}, \mathbf{u}$, and $\mathbf{v}$.
-Here, we produced the vector-valued
 $F: \mathbb{R}^d, \mathbb{R}^d \rightarrow \mathbb{R}^d$
-by *lifting* the scalar function to an elementwise vector operation.
+*transformando* a função escalar para uma operação de vetor elemento a elemento.
 
 The common standard arithmetic operators
 (`+`, `-`, `*`, `/`, and `**`)
@@ -297,6 +289,13 @@ for any identically-shaped tensors of arbitrary shape.
 We can call elementwise operations on any two tensors of the same shape.
 In the following example, we use commas to formulate a 5-element tuple,
 where each element is the result of an elementwise operation.
+Os operadores aritméticos padrão comuns
+(`+`, `-`,` * `,` / `e` ** `)
+foram todos * elevados * para operações elementwise
+para quaisquer tensores de formato idêntico de forma arbitrária.
+Podemos chamar operações elemento a elemento em quaisquer dois tensores da mesma forma.
+No exemplo a seguir, usamos vírgulas para formular uma tupla de 5 elementos,
+onde cada elemento é o resultado de uma operação elementwise.
 
 ### Operações
 
@@ -716,6 +715,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ4ODk5OTIzLC0xNjk2MjgxNDE1LC0xMz
+eyJoaXN0b3J5IjpbMzY3Mjg2MjU2LC0xNjk2MjgxNDE1LC0xMz
 A0NzE1NDgwXX0=
 -->
