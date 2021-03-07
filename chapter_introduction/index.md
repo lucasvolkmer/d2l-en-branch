@@ -1342,32 +1342,33 @@ Isso é melhor ilustrado em: numref:`tab_intro_decade`.
 |2020|1 T (redes sociais)|100 GB|1 PF (Nvidia DGX-2)|
 :label:`tab_intro_decade`
 
-It is evident that random-access memory has not kept pace with the growth in data.
-At the same time, the increase in computational power
-has outpaced that of the data available.
-This means that statistical models need to become more memory efficient
-(this is typically achieved by adding nonlinearities)
-while simultaneously being able to spend more time
-on optimizing these parameters, due to an increased computational budget.
-Consequently, the sweet spot in machine learning and statistics
-moved from (generalized) linear models and kernel methods to deep neural networks.
-This is also one of the reasons why many of the mainstays
-of deep learning, such as multilayer perceptrons
-:cite:`McCulloch.Pitts.1943`, convolutional neural networks
-:cite:`LeCun.Bottou.Bengio.ea.1998`, long short-term memory
-:cite:`Hochreiter.Schmidhuber.1997`,
-and Q-Learning :cite:`Watkins.Dayan.1992`,
-were essentially "rediscovered" in the past decade,
-after laying comparatively dormant for considerable time.
 
-The recent progress in statistical models, applications, and algorithms
-has sometimes been likened to the Cambrian explosion:
-a moment of rapid progress in the evolution of species.
-Indeed, the state of the art is not just a mere consequence
-of available resources, applied to decades old algorithms.
-Note that the list below barely scratches the surface
-of the ideas that have helped researchers achieve tremendous progress
-over the past decade.
+É evidente que a memória RAM não acompanhou o crescimento dos dados.
+Ao mesmo tempo, o aumento do poder computacional
+ultrapassou o dos dados disponíveis.
+Isso significa que os modelos estatísticos precisam se tornar mais eficientes em termos de memória
+(isso normalmente é obtido adicionando não linearidades)
+ao mesmo tempo em que pode passar mais tempo
+na otimização desses parâmetros, devido ao aumento do orçamento computacional.
+Consequentemente, o ponto ideal em *machine learning* e estatísticas
+mudou de modelos lineares (generalizados) e métodos de *kernel* para redes neurais profundas.
+Esta é também uma das razões pelas quais muitos dos pilares
+de *deep learning*, como *perceptrons* multicamadas
+:cite:`McCulloch.Pitts.1943`, redes neurais convolucionais
+:cite:`LeCun.Bottou.Bengio.ea.1998`, memória longa de curto prazo
+:cite:`Hochreiter.Schmidhuber.1997`,
+e Q-Learning :cite:`Watkins.Dayan.1992`,
+foram essencialmente "redescobertos" na última década,
+depois de ficarem relativamente dormentes por um tempo considerável.
+
+O progresso recente em modelos estatísticos, aplicativos e algoritmos
+às vezes é comparado à explosão cambriana:
+um momento de rápido progresso na evolução das espécies.
+Na verdade, o estado da arte não é apenas uma mera consequência
+de recursos disponíveis, aplicados a algoritmos de décadas.
+Observe que a lista abaixo mal arranha a superfície
+das ideias que ajudaram os pesquisadores a alcançar um progresso tremendo
+na última década.
 
 
 * Novel methods for capacity control, such as *dropout*
@@ -1658,11 +1659,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMjMyMDQzLC0zMzI2OTQzNTQsMTAzNT
-k1MDQyMywyMDI4MTA1MjcwLDEwMTY2ODMwNjgsMTYwMjk1MzM4
-OCwyMDIyMDg3MzM1LDgxNzg5NzUwNiwtMjQ2MzQzNTkxLC00Nz
-UwMjg1ODEsMTcyNTI4MDk5NCwxODg5MjUyNzY3LC0xMTY0MzI0
-ODgxLDk4NzQyMTA3MSwxNTY0MDc4NzA5LDIxMDcwNjI5OTYsLT
-EwNjQyOTAxOTksNzIxNTI4MDkwLC05NDE2NjEzMjAsLTIyODgz
-MjMzMV19
+eyJoaXN0b3J5IjpbLTE0ODM3OTgxNzcsLTMzMjY5NDM1NCwxMD
+M1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4MzA2OCwxNjAyOTUz
+Mzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLT
+Q3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQz
+MjQ4ODEsOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5Ni
+wtMTA2NDI5MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4
+ODMyMzMxXX0=
 -->
