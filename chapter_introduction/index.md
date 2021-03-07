@@ -1099,35 +1099,36 @@ uma configuração que considera explicitamente as interações com um ambiente.
 
 ### Aprendizado por Reforço
 
-If you are interested in using machine learning
-to develop an agent that interacts with an environment
-and takes actions, then you are probably going to wind up
-focusing on *reinforcement learning*.
-This might include applications to robotics,
-to dialogue systems, 
-and even to developing artificial intelligence (AI)
-for video games.
-*Deep reinforcement learning*, which applies
-deep learning to reinforcement learning problems,
-has surged in popularity.
-The breakthrough deep Q-network that beat humans at Atari games using only the visual input,
-and the AlphaGo program that dethroned the world champion at the board game Go are two prominent examples.
 
-Reinforcement learning gives a very general statement of a problem,
-in which an agent interacts with an environment over a series of time steps.
-At each time step, 
-the agent receives some *observation* 
-from the environment and must choose an *action*
-that is subsequently transmitted back to the environment
-via some mechanism (sometimes called an actuator).
-Finally, the agent receives a reward from the environment.
-This process is illustrated in :numref:`fig_rl-environment`.
-The agent then receives a subsequent observation,
-and chooses a subsequent action, and so on.
-The behavior of an reinforcement learning agent is governed by a policy.
-In short, a *policy* is just a function that maps
-from observations of the environment to actions.
-The goal of reinforcement learning is to produce a good policy.
+Se você estiver interessado em usar o *machine learning* para
+desenvolver um agente que interaja com um ambiente
+e tome medidas, então você provavelmente vai acabar
+com foco na *aprendizagem por reforço*.
+Isso pode incluir aplicações para robótica,
+para sistemas de diálogo,
+e até mesmo para desenvolver inteligência artificial (IA)
+para videogames.
+*Aprendizagem por reforço profundo*, que se aplica
+*deep learning* para problemas de aprendizagem de reforço,
+aumentou em popularidade.
+A revolucionária *deep Q-netfowk* que derrotou os humanos nos jogos da Atari usando apenas a entrada visual,
+e o programa AlphaGo que destronou o campeão mundial no jogo de tabuleiro Go são dois exemplos proeminentes.
+
+A aprendizagem por reforço fornece uma declaração muito geral de um problema,
+em que um agente interage com um ambiente ao longo de uma série de etapas de tempo.
+Em cada etapa de tempo,
+o agente recebe alguma *observação*
+do ambiente e deve escolher uma *ação*
+que é posteriormente transmitido de volta para o ambiente
+por meio de algum mecanismo (às vezes chamado de atuador).
+Por fim, o agente recebe uma recompensa do meio ambiente.
+Este processo é ilustrado em: numref: `fig_rl-environment`.
+O agente então recebe uma observação subsequente,
+e escolhe uma ação subsequente e assim por diante.
+O comportamento de um agente de aprendizagem por reforço é governado por uma política.
+Em suma, uma *política* é apenas uma função que mapeia
+das observações do ambiente às ações.
+O objetivo da aprendizagem por reforço é produzir uma boa política.
 
 ![The interaction between reinforcement learning and an environment.](../img/rl-environment.svg)
 :label:`fig_rl-environment`
@@ -1651,11 +1652,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMjk1MzM4OCwyMDIyMDg3MzM1LDgxNz
-g5NzUwNiwtMjQ2MzQzNTkxLC00NzUwMjg1ODEsMTcyNTI4MDk5
-NCwxODg5MjUyNzY3LC0xMTY0MzI0ODgxLDk4NzQyMTA3MSwxNT
-Y0MDc4NzA5LDIxMDcwNjI5OTYsLTEwNjQyOTAxOTksNzIxNTI4
-MDkwLC05NDE2NjEzMjAsLTIyODgzMjMzMSwtMTA3ODU4NDQ3MS
-wtNTM0MTgxNjE1LDE5NTEzNDU2MjEsLTE2ODcyNzM4NjgsLTE4
-NjczNjU0OTRdfQ==
+eyJoaXN0b3J5IjpbMTAxNjY4MzA2OCwxNjAyOTUzMzg4LDIwMj
+IwODczMzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLTQ3NTAyODU4
+MSwxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQzMjQ4ODEsOT
+g3NDIxMDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5NiwtMTA2NDI5
+MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC
+0xMDc4NTg0NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4
+NzI3Mzg2OF19
 -->
