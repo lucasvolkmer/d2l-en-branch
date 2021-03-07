@@ -340,17 +340,11 @@ torch.exp(x)
 tf.exp(x)
 ```
 
-In addition to elementwise computations,
-we can also perform linear algebra operations,
-including vector dot products and matrix multiplication.
-We will explain the crucial bits of linear algebra
-(with no assumed prior knowledge) in :numref:`sec_linear-algebra`.
-
 Além de cálculos *elementwise*,
 também podemos realizar operações de álgebra linear,
-incluindo produtos de ponto de vetor e multiplicação de matrizes.
+incluindo produtos escalar de vetor e multiplicação de matrizes.
 Explicaremos as partes cruciais da álgebra linear
-(sem nenhum conhecimento prévio assumido) in: numref: `sec_linear-algebra`.
+(sem nenhum conhecimento prévio assumido) in :numref:`sec_linear-algebra`.
 
 We can also [***concatenate* multiple tensors together,**]
 stacking them end-to-end to form a larger tensor.
@@ -363,7 +357,17 @@ We can see that the first output tensor's axis-0 length ($6$)
 is the sum of the two input tensors' axis-0 lengths ($3 + 3$);
 while the second output tensor's axis-1 length ($8$)
 is the sum of the two input tensors' axis-1 lengths ($4 + 4$).
-
+Também podemos [*** concatenar * vários tensores juntos, **]
+empilhando-os ponta a ponta para formar um tensor maior.
+Só precisamos fornecer uma lista de tensores
+e informar ao sistema ao longo de qual eixo concatenar.
+O exemplo abaixo mostra o que acontece quando concatenamos
+duas matrizes ao longo das linhas (eixo 0, o primeiro elemento da forma)
+vs. colunas (eixo 1, o segundo elemento da forma).
+Podemos ver que o comprimento do eixo 0 do primeiro tensor de saída ($ 6 $)
+é a soma dos comprimentos do eixo 0 dos dois tensores de entrada ($ 3 + 3 $);
+enquanto o comprimento do eixo 1 do segundo tensor de saída ($ 8 $)
+é a soma dos comprimentos do eixo 1 dos dois tensores de entrada ($ 4 + 4 $).
 ```{.python .input}
 X = np.arange(12).reshape(3, 4)
 Y = np.array([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
@@ -721,6 +725,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMTM2OTg4NiwtMTY5NjI4MTQxNSwtMT
+eyJoaXN0b3J5IjpbLTgwNDc2Nzg1MCwtMTY5NjI4MTQxNSwtMT
 MwNDcxNTQ4MF19
 -->
