@@ -465,9 +465,15 @@ Além da leitura, (**também podemos escrever elementos de uma matriz especifica
 `Variables` in TensorFlow are mutable containers of state that support
 assignments. Keep in mind that gradients in TensorFlow do not flow backwards
 through `Variable` assignments.
+Os `Tensors` no TensorFlow são imutáveis e não podem ser atribuídos a eles.
+`Variables` no TensorFlow são contêineres mutáveis de estado que suportam
+atribuições. Lembre-se de que gradientes no TensorFlow não fluem para trás
+por meio de atribuições `Variable`.
 
 Beyond assigning a value to the entire `Variable`, we can write elements of a
 `Variable` by specifying indices.
+Além de atribuir um valor a toda a `Variável`, podemos escrever elementos de um
+`Variável` especificando índices.
 :end_tab:
 
 ```{.python .input}
@@ -698,7 +704,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkwOTIwODc3LC0xMzk2MDk1NTcxLC03NT
-k4MzM3MywxMTY5Mjg1NTgsLTE2OTYyODE0MTUsLTEzMDQ3MTU0
-ODBdfQ==
+eyJoaXN0b3J5IjpbLTIwNTYzMjc4NCw3OTA5MjA4NzcsLTEzOT
+YwOTU1NzEsLTc1OTgzMzczLDExNjkyODU1OCwtMTY5NjI4MTQx
+NSwtMTMwNDcxNTQ4MF19
 -->
