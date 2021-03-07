@@ -291,11 +291,11 @@ In the following example, we use commas to formulate a 5-element tuple,
 where each element is the result of an elementwise operation.
 Os operadores aritméticos padrão comuns
 (`+`, `-`,` * `,` / `e` ** `)
-foram todos * elevados * para operações elementwise
+foram todos transformados em operações elemento a elemento
 para quaisquer tensores de formato idêntico de forma arbitrária.
 Podemos chamar operações elemento a elemento em quaisquer dois tensores da mesma forma.
 No exemplo a seguir, usamos vírgulas para formular uma tupla de 5 elementos,
-onde cada elemento é o resultado de uma operação elementwise.
+onde cada elemento é o resultado de uma operação *elementwise*.
 
 ### Operações
 
@@ -715,6 +715,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY3Mjg2MjU2LC0xNjk2MjgxNDE1LC0xMz
-A0NzE1NDgwXX0=
+eyJoaXN0b3J5IjpbMTczMTkxMjk0NywtMTY5NjI4MTQxNSwtMT
+MwNDcxNTQ4MF19
 -->
