@@ -273,6 +273,12 @@ Likewise, we denote a *binary* scalar operator
 (taking two real inputs, and yielding one output)
 by the signature $f: \mathbb{R}, \mathbb{R} \rightarrow \mathbb{R}$.
 Given any two vectors $\mathbf{u}$ and $\mathbf{v}$ *of the same shape*,
+  
+900  / 5000
+
+## Resultados de tradução
+
+Em notação matemática, denotaríamos tal  um operador escalar * unário * (tomando uma entrada)  pela assinatura $ f: \ mathbb {R} \ rightarrow \ mathbb {R} $.  Isso significa apenas que a função está mapeando  de qualquer número real ($ \ mathbb {R} $) para outro.  Da mesma forma, denotamos um operador escalar * binário *  (pegando duas entradas reais e produzindo uma saída)  pela assinatura $ f: \ mathbb {R}, \ mathbb {R} \ rightarrow \ mathbb {R} $.  Dados quaisquer dois vetores $ \ mathbf {u} $ e $ \ mathbf {v} $ * da mesma forma *,
 and a binary operator $f$, we can produce a vector
 $\mathbf{c} = F(\mathbf{u},\mathbf{v})$
 by setting $c_i \gets f(u_i, v_i)$ for all $i$,
@@ -708,6 +714,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ
-==
+eyJoaXN0b3J5IjpbLTU4MDMyMjg5NCwtMTY5NjI4MTQxNSwtMT
+MwNDcxNTQ4MF19
 -->
