@@ -299,32 +299,32 @@ onde cada elemento é o resultado de uma operação *elementwise*.
 
 ### Operações
 
-[**The common standard arithmetic operators
-(`+`, `-`, `*`, `/`, and `**`)
-have all been *lifted* to elementwise operations.**]
+[**Os operadores aritméticos padrão comuns
+(`+`, `-`,` * `,` / `e` ** `)
+foram todos transformados em operações elemento a elemento.**]
 
 ```{.python .input}
 x = np.array([1, 2, 4, 8])
 y = np.array([2, 2, 2, 2])
-x + y, x - y, x * y, x / y, x ** y  # The ** operator is exponentiation
+x + y, x - y, x * y, x / y, x ** y  # O ** é o operador exponenciação
 ```
 
 ```{.python .input}
 #@tab pytorch
 x = torch.tensor([1.0, 2, 4, 8])
 y = torch.tensor([2, 2, 2, 2])
-x + y, x - y, x * y, x / y, x ** y  # The ** operator is exponentiation
+x + y, x - y, x * y, x / y, x ** y  #  O ** é o operador exponenciação
 ```
 
 ```{.python .input}
 #@tab tensorflow
 x = tf.constant([1.0, 2, 4, 8])
 y = tf.constant([2.0, 2, 2, 2])
-x + y, x - y, x * y, x / y, x ** y  # The ** operator is exponentiation
+x + y, x - y, x * y, x / y, x ** y  #  O ** é o operador exponenciação
 ```
 
-Many (**more operations can be applied elementwise**),
-including unary operators like exponentiation.
+Muitos (**mais operações podem ser aplicadas elemento a elemento**),
+incluindo operadores unários como exponenciação.
 
 ```{.python .input}
 np.exp(x)
@@ -715,6 +715,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMTkxMjk0NywtMTY5NjI4MTQxNSwtMT
-MwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbLTEwOTMxOTkyNjAsLTE2OTYyODE0MTUsLT
+EzMDQ3MTU0ODBdfQ==
 -->
