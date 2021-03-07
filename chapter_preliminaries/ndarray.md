@@ -76,7 +76,7 @@ nomes matemáticos.
 Para começar, podemos usar `arange` para criar um vetor linha `x`
 contendo os primeiros 12 inteiros começando com 0,
 embora eles sejam criados como *float* por padrão.
-Cada um dos valores em um tensor é chamado de * elemento * do tensor.
+Cada um dos valores em um tensor é chamado de *elemento* do tensor.
 Por exemplo, existem 12 elementos no tensor `x`.
 A menos que especificado de outra forma, um novo tensor
 será armazenado na memória principal e designado para computação baseada em CPU.
@@ -259,7 +259,7 @@ Podemos criar uma função elemento a elemento a partir de qualquer função
 que mapeia de um escalar para um escalar.
 
 Em notação matemática, denotaríamos tal
-um operador escalar * unário * (tomando uma entrada)
+um operador escalar *unário* (tomando uma entrada)
 pela assinatura $f: \mathbb{R} \rightarrow \mathbb{R}$.
 Isso significa apenas que a função está mapeando
 de qualquer número real ($\mathbb{R}$) para outro.
@@ -688,8 +688,7 @@ a, a.item(), float(a), int(a)
 
 ## Exercícios
 
-1. Run the code in this section. Change the conditional statement `X == Y` in this section to `X < Y` or `X > Y`, and then see what kind of tensor you can get.
-2. Replace the two tensors that operate by element in the broadcasting mechanism with other shapes, e.g., 3-dimensional tensors. Is the result the same as expected?
+
 1. Execute o código nesta seção. Altere a declaração condicional `X == Y` nesta seção para` X < Y` ou `X > Y`, e então veja que tipo de tensor você pode obter.
 1. Substitua os dois tensores que operam por elemento no mecanismo de transmissão por outras formas, por exemplo, tensores tridimensionais. O resultado é o mesmo que o esperado?
 
@@ -705,7 +704,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMDk5NzE0OCwxODIxNDIyNDIwLC02Nj
+eyJoaXN0b3J5IjpbMTA4ODAyODc4NywxODIxNDIyNDIwLC02Nj
 UyNTk0NzYsNzkwOTIwODc3LC0xMzk2MDk1NTcxLC03NTk4MzM3
 MywxMTY5Mjg1NTgsLTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ
 ==
