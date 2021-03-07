@@ -512,18 +512,6 @@ X_var
 
 ## Saving Memory
 
-[**Running operations can cause new memory to be
-allocated to host results.**]
-For example, if we write `Y = X + Y`,
-we will dereference the tensor that `Y` used to point to
-and instead point `Y` at the newly allocated memory.
-In the following example, we demonstrate this with Python's `id()` function,
-which gives us the exact address of the referenced object in memory.
-After running `Y = Y + X`, we will find that `id(Y)` points to a different location.
-That is because Python first evaluates `Y + X`,
-allocating new memory for the result and then makes `Y`
-point to this new location in memory.
-
 [**As operações em execução podem fazer com que uma nova memória seja
 alocado aos resultados do host.**]
 Por exemplo, se escrevermos `Y = X + Y`,
@@ -543,17 +531,17 @@ Y = Y + X
 id(Y) == before
 ```
 
-This might be undesirable for two reasons.
-First, we do not want to run around
-allocating memory unnecessarily all the time.
-In machine learning, we might have
-hundreds of megabytes of parameters
-and update all of them multiple times per second.
-Typically, we will want to perform these updates *in place*.
-Second, we might point at the same parameters from multiple variables.
-If we do not update in place, other references will still point to
-the old memory location, making it possible for parts of our code
-to inadvertently reference stale parameters.
+Isso pode ser indesejável por dois motivos.
+Em primeiro lugar, não queremos
+alocar memória desnecessariamente o tempo todo.
+No aprendizado de máquina, podemos ter
+centenas de megabytes de parâmetros
+e atualizar todos eles várias vezes por segundo.
+Normalmente, queremos realizar essas atualizações no local.
+Em segundo lugar, podemos apontar os mesmos parâmetros de várias variáveis.
+Se não atualizarmos no local, outras referências ainda apontarão para
+a localização da memória antiga, tornando possível para partes do nosso código
+para referenciar inadvertidamente parâmetros obsoletos.
 
 :begin_tab:`mxnet, pytorch`
 Fortunately, (**performing in-place operations**) is easy.
@@ -715,7 +703,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTEzNzc4Njk0LC02NjUyNTk0NzYsNzkwOT
-IwODc3LC0xMzk2MDk1NTcxLC03NTk4MzM3MywxMTY5Mjg1NTgs
-LTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ==
+eyJoaXN0b3J5IjpbLTIzOTU4NjMyOCwtNjY1MjU5NDc2LDc5MD
+kyMDg3NywtMTM5NjA5NTU3MSwtNzU5ODMzNzMsMTE2OTI4NTU4
+LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX0=
 -->
