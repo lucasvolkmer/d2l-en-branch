@@ -346,6 +346,12 @@ including vector dot products and matrix multiplication.
 We will explain the crucial bits of linear algebra
 (with no assumed prior knowledge) in :numref:`sec_linear-algebra`.
 
+Além de cálculos *elementwise*,
+também podemos realizar operações de álgebra linear,
+incluindo produtos de ponto de vetor e multiplicação de matrizes.
+Explicaremos as partes cruciais da álgebra linear
+(sem nenhum conhecimento prévio assumido) in: numref: `sec_linear-algebra`.
+
 We can also [***concatenate* multiple tensors together,**]
 stacking them end-to-end to form a larger tensor.
 We just need to provide a list of tensors
@@ -715,6 +721,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTMxOTkyNjAsLTE2OTYyODE0MTUsLT
-EzMDQ3MTU0ODBdfQ==
+eyJoaXN0b3J5IjpbMTIyMTM2OTg4NiwtMTY5NjI4MTQxNSwtMT
+MwNDcxNTQ4MF19
 -->
