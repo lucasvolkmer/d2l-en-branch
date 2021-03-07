@@ -290,7 +290,7 @@ We can call elementwise operations on any two tensors of the same shape.
 In the following example, we use commas to formulate a 5-element tuple,
 where each element is the result of an elementwise operation.
 
-### Operations
+### Operações
 
 [**The common standard arithmetic operators
 (`+`, `-`, `*`, `/`, and `**`)
@@ -708,5 +708,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyOTg3MzA1OCwtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbLTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ
+==
 -->
