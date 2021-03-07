@@ -870,57 +870,58 @@ incentivos e ciclos de *feedback* são importantes questões abertas de pesquisa
 
 #### Aprendizagem sequencial
 
-So far, we have looked at problems where we have
-some fixed number of inputs and produce a fixed number of outputs.
-For example,
-we considered predicting house prices from a fixed set of features: square footage, number of bedrooms,
-number of bathrooms, walking time to downtown.
-We also discussed mapping from an image (of fixed dimension)
-to the predicted probabilities that it belongs to each
-of a fixed number of classes, or taking a user ID and a product ID,
-and predicting a star rating. In these cases,
-once we feed our fixed-length input
-into the model to generate an output,
-the model immediately forgets what it just saw.
 
-This might be fine if our inputs truly all have the same dimensions
-and if successive inputs truly have nothing to do with each other.
-But how would we deal with video snippets?
-In this case, each snippet might consist of a different number of frames.
-And our guess of what is going on in each frame might be much stronger
-if we take into account the previous or succeeding frames.
-Same goes for language. One popular deep learning problem
-is machine translation: the task of ingesting sentences
-in some source language and predicting their translation in another language.
+Até agora, vimos problemas em que temos
+algum número fixo de entradas a partir dos quais produzimos um número fixo de saídas.
+Por exemplo,
+consideramos prever os preços das casas a partir de um conjunto fixo de recursos: metragem quadrada, número de quartos,
+número de banheiros, tempo de caminhada até o centro.
+Também discutimos o mapeamento de uma imagem (de dimensão fixa)
+às probabilidades previstas de que pertence a cada
+de um número fixo de classes, ou pegando um ID de usuário e um ID de produto,
+e prever uma classificação por estrelas. Nesses casos,
+uma vez que alimentamos nossa entrada de comprimento fixo
+no modelo para gerar uma saída,
+o modelo esquece imediatamente o que acabou de ver.
 
-These problems also occur in medicine.
-We might want a model to monitor patients in the intensive care unit
-and to fire off alerts if their risk of death
-in the next 24 hours exceeds some threshold.
-We definitely would not want this model to throw away
-everything it knows about the patient history each hour
-and just make its predictions based on the most recent measurements.
+Isso pode ser bom se todas as nossas entradas realmente tiverem as mesmas dimensões
+e se as entradas sucessivas realmente não têm nada a ver umas com as outras.
+Mas como lidaríamos com trechos de vídeo?
+Nesse caso, cada fragmento pode consistir em um número diferente de quadros.
+E nosso palpite sobre o que está acontecendo em cada quadro pode ser muito mais forte
+se levarmos em consideração os quadros anteriores ou posteriores.
+O mesmo vale para a linguagem. Um problema popular de *deep learning*
+é tradução automática: a tarefa de ingerir frases
+em algum idioma de origem e prevendo sua tradução em outro idioma.
 
-These problems are among the most exciting applications of machine learning
-and they are instances of *sequence learning*.
-They require a model to either ingest sequences of inputs
-or to emit sequences of outputs (or both).
-Specifically,
-*sequence to sequence learning* considers problems
-where input and output are both variable-length sequences,
-such as machine translation and transcribing text from the spoken speech.
-While it is impossible to consider all types of sequence transformations,
-the following special cases are worth mentioning.
+Esses problemas também ocorrem na medicina.
+Podemos querer um modelo para monitorar pacientes na unidade de terapia intensiva
+e disparar alertas se seus riscos de morte
+nas próximas 24 horas excederem algum limite.
+Definitivamente, não queremos que este modelo jogue fora
+tudo o que sabe sobre o histórico do paciente a cada hora
+e apenas fazer suas previsões com base nas medições mais recentes.
 
-**Tagging and Parsing**. This involves annotating a text sequence with attributes.
-In other words, the number of inputs and outputs is essentially the same.
-For instance, we might want to know where the verbs and subjects are.
-Alternatively, we might want to know which words are the named entities.
-In general, the goal is to decompose and annotate text based on structural
-and grammatical assumptions to get some annotation.
-This sounds more complex than it actually is.
-Below is a very simple example of annotating a sentence
-with tags indicating which words refer to named entities (tagged as "Ent").
+Esses problemas estão entre as aplicações mais interessantes de *machine learning*
+e são instâncias de *aprendizagem sequencial*.
+Eles exigem um modelo para ingerir sequências de entradas
+ou para emitir sequências de saídas (ou ambos).
+Especificamente,
+*sequência para aprendizagem de sequencial* considera os problemas
+onde entrada e saída são sequências de comprimento variável,
+como tradução automática e transcrição de texto da fala falada.
+Embora seja impossível considerar todos os tipos de transformações de sequência,
+vale a pena mencionar os seguintes casos especiais.
+
+**Marcação e análise**. Isso envolve anotar uma sequência de texto com atributos.
+Em outras palavras, o número de entradas e saídas é essencialmente o mesmo.
+Por exemplo, podemos querer saber onde estão os verbos e os sujeitos.
+Como alternativa, podemos querer saber quais palavras são as entidades nomeadas.
+Em geral, o objetivo é decompor e anotar o texto com base na estrutura
+e suposições gramaticais para obter algumas anotações.
+Isso parece mais complexo do que realmente é.
+Abaixo está um exemplo muito simples de uma frase anotada
+com marcas que indicam quais palavras se referem a entidades nomeadas (marcadas como "Ent").
 
 ```text
 Tom has dinner in Washington with Sally
@@ -1649,11 +1650,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5OD
-c0MjEwNzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0Mjkw
-MTk5LDcyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLT
-EwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOTUxMzQ1NjIxLC0xNjg3
-MjczODY4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOCwxNzYyNjMwMj
-IsODI2NzAyOTI3LC0yMTQxMDk2MDQ3LDExMTM0MDA1MzcsLTE3
-NjA3MzQ3NTldfQ==
+eyJoaXN0b3J5IjpbMTcyNTI4MDk5NCwxODg5MjUyNzY3LC0xMT
+Y0MzI0ODgxLDk4NzQyMTA3MSwxNTY0MDc4NzA5LDIxMDcwNjI5
+OTYsLTEwNjQyOTAxOTksNzIxNTI4MDkwLC05NDE2NjEzMjAsLT
+IyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0MTgxNjE1LDE5NTEz
+NDU2MjEsLTE2ODcyNzM4NjgsLTE4NjczNjU0OTQsNDk2MTI3ND
+M4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYwNDcsMTEx
+MzQwMDUzN119
 -->
