@@ -978,68 +978,69 @@ Estas são áreas ativas de pesquisa.
 
 ### Aprendizagem não-supervisionada
 
-All the examples so far were related to supervised learning,
-i.e., situations where we feed the model a giant dataset
-containing both the features and corresponding label values.
-You could think of the supervised learner as having
-an extremely specialized job and an extremely banal boss.
-The boss stands over your shoulder and tells you exactly what to do
-in every situation until you learn to map from situations to actions.
-Working for such a boss sounds pretty lame.
-On the other hand, it is easy to please this boss.
-You just recognize the pattern as quickly as possible
-and imitate their actions.
 
-In a completely opposite way, it could be frustrating
-to work for a boss who has no idea what they want you to do.
-However, if you plan to be a data scientist, you had better get used to it.
-The boss might just hand you a giant dump of data and tell you to *do some data science with it!* 
-This sounds vague because it is.
-We call this class of problems *unsupervised learning*,
-and the type and number of questions we could ask
-is limited only by our creativity.
-We will address unsupervised learning techniques
-in later chapters. 
-To whet your appetite for now,
-we describe a few of the following questions you might ask.
+Todos os exemplos até agora foram relacionados à aprendizagem supervisionada,
+ou seja, situações em que alimentamos o modelo com um conjunto de dados gigante
+contendo os recursos e os valores de rótulo correspondentes.
+Você pode pensar no aluno supervisionado como tendo
+um trabalho extremamente especializado e um chefe extremamente banal.
+O chefe fica por cima do seu ombro e lhe diz exatamente o que fazer
+em todas as situações até que você aprenda a mapear as de situações para ações.
+Trabalhar para um chefe assim parece muito chato.
+Por outro lado, é fácil agradar a esse chefe.
+Você apenas reconhece o padrão o mais rápido possível
+e imita suas ações.
 
-* Can we find a small number of prototypes
-that accurately summarize the data?
-Given a set of photos, can we group them into landscape photos,
-pictures of dogs, babies, cats, and mountain peaks?
-Likewise, given a collection of users' browsing activities,
-can we group them into users with similar behavior?
-This problem is typically known as *clustering*.
-* Can we find a small number of parameters
-that accurately capture the relevant properties of the data?
-The trajectories of a ball are quite well described
-by velocity, diameter, and mass of the ball.
-Tailors have developed a small number of parameters
-that describe human body shape fairly accurately
-for the purpose of fitting clothes.
-These problems are referred to as *subspace estimation*.
-If the dependence is linear, it is called *principal component analysis*.
-* Is there a representation of (arbitrarily structured) objects
-in Euclidean space 
-such that symbolic properties can be well matched?
-This can be used to describe entities and their relations,
-such as "Rome" $-$ "Italy" $+$ "France" $=$ "Paris".
-* Is there a description of the root causes
-of much of the data that we observe?
-For instance, if we have demographic data
-about house prices, pollution, crime, location,
-education, and salaries, can we discover
-how they are related simply based on empirical data?
-The fields concerned with *causality* and
-*probabilistic graphical models* address this problem.
-* Another important and exciting recent development in unsupervised learning
-is the advent of *generative adversarial networks*.
-These give us a procedural way to synthesize data,
-even complicated structured data like images and audio.
-The underlying statistical mechanisms are tests
-to check whether real and fake data are the same.
+De uma forma completamente oposta, pode ser frustrante
+trabalhar para um chefe que não tem ideia do que eles querem que você faça.
+No entanto, se você planeja ser um cientista de dados, é melhor se acostumar com isso.
+O chefe pode simplesmente entregar a você uma pilha gigante de dados e dizer para *fazer ciência de dados com eles!*
+Isso parece vago porque é.
+Chamamos essa classe de problemas de *aprendizagem não supervisionada*,
+e o tipo e número de perguntas que podemos fazer
+é limitado apenas pela nossa criatividade.
+Abordaremos técnicas de aprendizado não supervisionado
+nos capítulos posteriores.
+Para abrir seu apetite por enquanto,
+descrevemos algumas das seguintes perguntas que você pode fazer.
 
-### Interacting with an Environment
+* Podemos encontrar um pequeno número de protótipos
+que resumem os dados com precisão?
+Dado um conjunto de fotos, podemos agrupá-las em fotos de paisagens,
+fotos de cachorros, bebês, gatos e picos de montanhas?
+Da mesma forma, dada uma coleção de atividades de navegação dos usuários,
+podemos agrupá-los em usuários com comportamento semelhante?
+Esse problema é normalmente conhecido como *clusterização*.
+* Podemos encontrar um pequeno número de parâmetros
+que capturam com precisão as propriedades relevantes dos dados?
+As trajetórias de uma bola são muito bem descritas
+pela velocidade, diâmetro e massa da bola.
+Os alfaiates desenvolveram um pequeno número de parâmetros
+que descrevem a forma do corpo humano com bastante precisão
+com o propósito de ajustar roupas.
+Esses problemas são chamados de *estimativa de subespaço*.
+Se a dependência for linear, é chamada de *análise de componentes principais (principal component analysis --- PCA)*.
+* Existe uma representação de objetos (estruturados arbitrariamente)
+no espaço euclidiano
+de modo que as propriedades simbólicas podem ser bem combinadas?
+Isso pode ser usado para descrever entidades e suas relações,
+como "Roma" $-$ "Itália" $+$ "França" $=$ "Paris".
+* Existe uma descrição das causas comuns
+de muitos dos dados que observamos?
+Por exemplo, se tivermos dados demográficos
+sobre preços de casas, poluição, crime, localização,
+educação e salários, podemos descobrir
+como eles estão relacionados simplesmente com base em dados empíricos?
+Os campos relacionados com *causalidade* e
+*modelos gráficos probabilísticos* resolvem este problema.
+* Outro importante e empolgante desenvolvimento recente na aprendizagem não supervisionada
+é o advento de *redes adversárias geradoras*.
+Isso nos dá uma maneira processual de sintetizar dados,
+até mesmo dados estruturados complicados, como imagens e áudio.
+Os mecanismos estatísticos subjacentes são testes
+para verificar se os dados reais e falsos são iguais.
+
+### Interagindo com um Ambiente
 
 So far, we have not discussed where data actually
 come from,
@@ -1649,11 +1650,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NjM0MzU5MSwtNDc1MDI4NTgxLDE3Mj
-UyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEw
-NzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LD
-cyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLTEwNzg1
-ODQ0NzEsLTUzNDE4MTYxNSwxOTUxMzQ1NjIxLC0xNjg3MjczOD
-Y4LC0xODY3MzY1NDk0LDQ5NjEyNzQzOCwxNzYyNjMwMjIsODI2
-NzAyOTI3XX0=
+eyJoaXN0b3J5IjpbODE3ODk3NTA2LC0yNDYzNDM1OTEsLTQ3NT
+AyODU4MSwxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQzMjQ4
+ODEsOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5NiwtMT
+A2NDI5MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMy
+MzMxLC0xMDc4NTg0NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMS
+wtMTY4NzI3Mzg2OCwtMTg2NzM2NTQ5NCw0OTYxMjc0MzgsMTc2
+MjYzMDIyXX0=
 -->
