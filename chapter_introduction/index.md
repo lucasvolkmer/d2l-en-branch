@@ -966,14 +966,14 @@ Wrong alignment:  Did you yourself already this excellent tutorial looked-at?
 ```
 
 
-Many related problems pop up in other learning tasks.
-For instance, determining the order in which a user
-reads a webpage is a two-dimensional layout analysis problem.
-Dialogue problems exhibit all kinds of additional complications,
-where determining what to say next requires taking into account
-real-world knowledge and the prior state of the conversation
-across long temporal distances.
-These are active areas of research.
+Muitos problemas relacionados surgem em outras tarefas de aprendizagem.
+Por exemplo, determinar a ordem em que um usuário
+lê uma página da web é um problema de análise de *layout* bidimensional.
+Problemas de diálogo apresentam todos os tipos de complicações adicionais,
+onde determinar o que dizer a seguir requer levar em consideração
+conhecimento do mundo real e o estado anterior da conversa
+através de longas distâncias temporais.
+Estas são áreas ativas de pesquisa.
 
 
 ### Unsupervised learning
@@ -1649,7 +1649,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NjM2Mjg5MCwtNDc1MDI4NTgxLDE3Mj
+eyJoaXN0b3J5IjpbLTkwMzg5NDI1NywtNDc1MDI4NTgxLDE3Mj
 UyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEw
 NzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LD
 cyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLTEwNzg1
