@@ -1235,7 +1235,7 @@ calculando a média do comprimento de 16 pés de homens adultos para obter o com
 :label:`fig_koebel`
 
 
-: numref: `fig_koebel` ilustra como este estimador funciona.
+:numref: `fig_koebel` ilustra como este estimador funciona.
 Os 16 homens adultos foram convidados a fazer fila em uma fila, ao deixar a igreja.
 Seu comprimento agregado foi então dividido por 16
 para obter uma estimativa do que agora equivale a 1 pé.
@@ -1260,29 +1260,30 @@ o que deve nos lembrar que o uso moralmente duvidoso da ciência de dados
 tem uma história tão longa e duradoura quanto seu uso produtivo
 na indústria e nas ciências naturais.
 
-A second influence for machine learning came from information theory by
-[Claude Shannon (1916--2001)](https://en.wikipedia.org/wiki/Claude_Shannon) and the theory of computation via [Alan Turing (1912--1954)](https://en.wikipedia.org/wiki/Alan_Turing).
-Turing posed the question "can machines think?”
-in his famous paper *Computing Machinery and Intelligence* :cite:`Turing.1950`.
-In what he described as the Turing test, a machine
-can be considered *intelligent* if it is difficult
-for a human evaluator to distinguish between the replies
-from a machine and a human based on textual interactions.
 
-Another influence can be found in neuroscience and psychology.
-After all, humans clearly exhibit intelligent behavior.
-It is thus only reasonable to ask whether one could explain
-and possibly reverse engineer this capacity.
-One of the oldest algorithms inspired in this fashion
-was formulated by [Donald Hebb (1904--1985)](https://en.wikipedia.org/wiki/Donald_O._Hebb).
-In his groundbreaking book *The Organization of Behavior* :cite:`Hebb.Hebb.1949`,
-he posited that neurons learn by positive reinforcement.
-This became known as the Hebbian learning rule.
-It is the prototype of Rosenblatt's perceptron learning algorithm
-and it laid the foundations of many stochastic gradient descent algorithms
-that underpin deep learning today: reinforce desirable behavior
-and diminish undesirable behavior to obtain good settings
-of the parameters in a neural network.
+Uma segunda influência para o *machine learning* veio da teoria da informação por
+[Claude Shannon (1916--2001)] (https://en.wikipedia.org/wiki/Claude_Shannon) e a teoria da computação via [Alan Turing (1912--1954)] (https://en.wikipedia. org / wiki / Alan_Turing).
+Turing colocou a questão "podem as máquinas pensar?"
+em seu famoso artigo *Computing Machinery and Intelligence* :cite: `Turing.1950`.
+No que ele descreveu como o teste de Turing, uma máquina
+pode ser considerada *inteligente* se for difícil
+para um avaliador humano distinguir entre as respostas
+de uma máquina e um humano com base em interações textuais.
+
+Outra influência pode ser encontrada na neurociência e na psicologia.
+Afinal, os humanos exibem claramente um comportamento inteligente.
+Portanto, é razoável perguntar se alguém poderia explicar
+e possivelmente fazer engenharia reversa dessa capacidade.
+Um dos algoritmos mais antigos inspirados nesta moda
+foi formulado por [Donald Hebb (1904--1985)] (https://en.wikipedia.org/wiki/Donald_O._Hebb).
+Em seu livro inovador *The Organization of Behavior* :cite: `Hebb.Hebb.1949`,
+ele postulou que os neurônios aprendem por reforço positivo.
+Isso ficou conhecido como a regra de aprendizado Hebbian.
+É o protótipo do algoritmo de aprendizagem perceptron de Rosenblatt
+e lançou as bases de muitos algoritmos de gradiente descendente estocástico
+que sustentam o *deep learning* hoje: reforçar o comportamento desejável
+e diminuir o comportamento indesejável para obter boas configurações
+dos parâmetros em uma rede neural.
 
 Biological inspiration is what gave *neural networks* their name.
 For over a century (dating back to the models of Alexander Bain, 1873
@@ -1655,11 +1656,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMjY5NDM1NCwxMDM1OTUwNDIzLDIwMj
-gxMDUyNzAsMTAxNjY4MzA2OCwxNjAyOTUzMzg4LDIwMjIwODcz
-MzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLTQ3NTAyODU4MSwxNz
-I1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQzMjQ4ODEsOTg3NDIx
-MDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OS
-w3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC0xMDc4
-NTg0NDcxXX0=
+eyJoaXN0b3J5IjpbMjAyMzk5MTEyMCwtMzMyNjk0MzU0LDEwMz
+U5NTA0MjMsMjAyODEwNTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMz
+ODgsMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0NjM0MzU5MSwtND
+c1MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMy
+NDg4MSw5ODc0MjEwNzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC
+0xMDY0MjkwMTk5LDcyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4
+MzIzMzFdfQ==
 -->
