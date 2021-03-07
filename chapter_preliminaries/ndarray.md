@@ -544,14 +544,14 @@ a localização da memória antiga, tornando possível para partes do nosso cód
 para referenciar inadvertidamente parâmetros obsoletos.
 
 :begin_tab:`mxnet, pytorch`
-Fortunately, (**performing in-place operations**) is easy.
-We can assign the result of an operation
-to a previously allocated array with slice notation,
-e.g., `Y[:] = <expression>`.
-To illustrate this concept, we first create a new matrix `Z`
-with the same shape as another `Y`,
-using `zeros_like` to allocate a block of $0$ entries.
-:end_tab:
+Felizmente, (**executar operações no local**) é fácil.
+Podemos atribuir o resultado de uma operação
+para uma matriz previamente alocada com notação de fatia,
+por exemplo, `Y [:] = <expressão>`.
+Para ilustrar este conceito, primeiro criamos uma nova matriz `Z`
+com a mesma forma de outro `Y`,
+usando `zeros_like` para alocar um bloco de $0$ entradas.
+: end_tab:
 
 :begin_tab:`tensorflow`
 `Variables` are mutable containers of state in TensorFlow. They provide
@@ -703,7 +703,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzOTU4NjMyOCwtNjY1MjU5NDc2LDc5MD
-kyMDg3NywtMTM5NjA5NTU3MSwtNzU5ODMzNzMsMTE2OTI4NTU4
-LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX0=
+eyJoaXN0b3J5IjpbNTk2NTkzMDQ3LC02NjUyNTk0NzYsNzkwOT
+IwODc3LC0xMzk2MDk1NTcxLC03NTk4MzM3MywxMTY5Mjg1NTgs
+LTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ==
 -->
