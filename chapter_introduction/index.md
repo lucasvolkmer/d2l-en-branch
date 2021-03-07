@@ -976,7 +976,7 @@ através de longas distâncias temporais.
 Estas são áreas ativas de pesquisa.
 
 
-### Unsupervised learning
+### Aprendizagem não-supervisionada
 
 All the examples so far were related to supervised learning,
 i.e., situations where we feed the model a giant dataset
@@ -1649,7 +1649,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMzg5NDI1NywtNDc1MDI4NTgxLDE3Mj
+eyJoaXN0b3J5IjpbLTI0NjM0MzU5MSwtNDc1MDI4NTgxLDE3Mj
 UyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEw
 NzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LD
 cyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLTEwNzg1
