@@ -406,7 +406,8 @@ nas matrizes resultantes.
 
 In most cases, we broadcast along an axis where an array
 initially only has length 1, such as in the following example:
-
+Na maioria dos casos, nós transmitimos ao longo de um eixo onde uma matriz
+inicialmente tem apenas o comprimento 1, como no exemplo a seguir:
 
 ```{.python .input}
 a = np.arange(3).reshape(3, 1)
@@ -701,6 +702,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1OTgzMzczLDExNjkyODU1OCwtMTY5Nj
-I4MTQxNSwtMTMwNDcxNTQ4MF19
+eyJoaXN0b3J5IjpbLTM4OTc0MTUzMCwtNzU5ODMzNzMsMTE2OT
+I4NTU4LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX0=
 -->
