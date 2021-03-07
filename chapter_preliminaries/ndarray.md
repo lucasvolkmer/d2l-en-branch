@@ -366,15 +366,7 @@ Y = tf.constant([[2.0, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
 tf.concat([X, Y], axis=0), tf.concat([X, Y], axis=1)
 ```
 
-
-Sometimes, we want to [**construct a binary tensor via *logical statements*.**]
-Take `X == Y` as an example.
-For each position, if `X` and `Y` are equal at that position,
-the corresponding entry in the new tensor takes a value of 1,
-meaning that the logical statement `X == Y` is true at that position;
-otherwise that position takes 0.
-
-Às vezes, queremos [** construir um tensor binário por meio de * declarações lógicas *. **]
+Às vezes, queremos [**construir um tensor binário por meio de *declarações lógicas*.**]
 Tome `X == Y` como exemplo.
 Para cada posição, se `X` e` Y` forem iguais nessa posição,
 a entrada correspondente no novo tensor assume o valor 1,
@@ -385,8 +377,7 @@ caso contrário, essa posição assume 0.
 #@tab all
 X == Y
 ```
-
-[**Summing all the elements in the tensor**] yields a tensor with only one element.
+[**Somando todos os elementos no tensor**] resulta em um tensor com apenas um elemento.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -398,7 +389,7 @@ X.sum()
 tf.reduce_sum(X)
 ```
 
-## Broadcasting Mechanism
+## Mecanismo de *Broadcasting* 
 :label:`subsec_broadcasting`
 
 In the above section, we saw how to perform elementwise operations
@@ -710,6 +701,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMzY4NTc0NiwtMTY5NjI4MTQxNSwtMT
+eyJoaXN0b3J5IjpbLTQ2MTM1MjYxNiwtMTY5NjI4MTQxNSwtMT
 MwNDcxNTQ4MF19
 -->
