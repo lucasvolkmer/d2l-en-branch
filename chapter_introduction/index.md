@@ -929,15 +929,15 @@ Ent  -    -    -     Ent      -    Ent
 ```
 
 
-**Automatic Speech Recognition**. With speech recognition, the input sequence
-is an audio recording of a speaker (shown in :numref:`fig_speech`), and the output 
-is the textual transcript of what the speaker said.
-The challenge is that there are many more audio frames
-(sound is typically sampled at 8kHz or 16kHz)
-than text, i.e., there is no 1:1 correspondence between audio and text,
-since thousands of samples may
-correspond to a single spoken word.
-These are sequence to sequence learning problems where the output is much shorter than the input.
+**Reconhecimento automático de fala **. Com o reconhecimento de fala, a sequência de entrada
+é uma gravação de áudio de um alto-falante (mostrado em: numref: `fig_speech`), e a saída
+é a transcrição textual do que o locutor disse.
+O desafio é que existem muito mais quadros de áudio
+(o som é normalmente amostrado em 8kHz ou 16kHz)
+do que texto, ou seja, não há correspondência 1: 1 entre áudio e texto,
+já que milhares de amostras podem
+correspondem a uma única palavra falada.
+Estes são problemas de aprendizagem de sequência a sequência em que a saída é muito mais curta do que a entrada.
 
 ![`-D-e-e-p- L-ea-r-ni-ng-` in an audio recording.](../img/speech.png)
 :width:`700px`
@@ -1650,11 +1650,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNTI4MDk5NCwxODg5MjUyNzY3LC0xMT
-Y0MzI0ODgxLDk4NzQyMTA3MSwxNTY0MDc4NzA5LDIxMDcwNjI5
-OTYsLTEwNjQyOTAxOTksNzIxNTI4MDkwLC05NDE2NjEzMjAsLT
-IyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0MTgxNjE1LDE5NTEz
-NDU2MjEsLTE2ODcyNzM4NjgsLTE4NjczNjU0OTQsNDk2MTI3ND
-M4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLTIxNDEwOTYwNDcsMTEx
-MzQwMDUzN119
+eyJoaXN0b3J5IjpbLTExNjMwMDQ5NjUsMTcyNTI4MDk5NCwxOD
+g5MjUyNzY3LC0xMTY0MzI0ODgxLDk4NzQyMTA3MSwxNTY0MDc4
+NzA5LDIxMDcwNjI5OTYsLTEwNjQyOTAxOTksNzIxNTI4MDkwLC
+05NDE2NjEzMjAsLTIyODgzMjMzMSwtMTA3ODU4NDQ3MSwtNTM0
+MTgxNjE1LDE5NTEzNDU2MjEsLTE2ODcyNzM4NjgsLTE4NjczNj
+U0OTQsNDk2MTI3NDM4LDE3NjI2MzAyMiw4MjY3MDI5MjcsLTIx
+NDEwOTYwNDddfQ==
 -->
