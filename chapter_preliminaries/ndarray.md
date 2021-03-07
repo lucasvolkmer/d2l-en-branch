@@ -619,7 +619,7 @@ id(X) == before
 #@tab tensorflow
 @tf.function
 def computation(X, Y):
-    Z = tf.zeros_like(Y)  # Este valor não utilizado será 
+    Z = tf.zeros_like(Y)  # Este valor não utilizado será esvaziado
     A = X + Y  # Alocações serão reutilizadas quando não mais necessárias
     B = A + Y
     C = B + Y
@@ -629,15 +629,15 @@ computation(X, Y)
 ```
 
 
-## Conversion to Other Python Objects
+## Conversão para outros objetos Python
 
-[**Converting to a NumPy tensor**], or vice versa, is easy.
-The converted result does not share memory.
-This minor inconvenience is actually quite important:
-when you perform operations on the CPU or on GPUs,
-you do not want to halt computation, waiting to see
-whether the NumPy package of Python might want to be doing something else
-with the same chunk of memory.
+[**Converter para um tensor NumPy**], ou vice-versa, é fácil.
+O resultado convertido não compartilha memória.
+Este pequeno inconveniente é muito importante:
+quando você executa operações na CPU ou GPUs,
+você não quer interromper a computação, esperando para ver
+se o pacote NumPy do Python deseja fazer outra coisa
+com o mesmo pedaço de memória.
 
 
 ```{.python .input}
@@ -660,8 +660,8 @@ B = tf.constant(A)
 type(A), type(B)
 ```
 
-To (**convert a size-1 tensor to a Python scalar**),
-we can invoke the `item` function or Python's built-in functions.
+Para (**converter um tensor de tamanho 1 em um escalar Python**),
+podemos invocar a função `item` ou as funções integradas do Python.
 
 
 ```{.python .input}
@@ -681,7 +681,7 @@ a = tf.constant([3.5]).numpy()
 a, a.item(), float(a), int(a)
 ```
 
-## Summary
+## Summa
 
 * The main interface to store and manipulate data for deep learning is the tensor ($n$-dimensional array). It provides a variety of functionalities including basic mathematics operations, broadcasting, indexing, slicing, memory saving, and conversion to other Python objects.
 
@@ -703,8 +703,8 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NTIzMDEzMiwxODIxNDIyNDIwLC02Nj
-UyNTk0NzYsNzkwOTIwODc3LC0xMzk2MDk1NTcxLC03NTk4MzM3
-MywxMTY5Mjg1NTgsLTE2OTYyODE0MTUsLTEzMDQ3MTU0ODBdfQ
-==
+eyJoaXN0b3J5IjpbLTEwMDcxMDE3MDIsMTgyMTQyMjQyMCwtNj
+Y1MjU5NDc2LDc5MDkyMDg3NywtMTM5NjA5NTU3MSwtNzU5ODMz
+NzMsMTE2OTI4NTU4LC0xNjk2MjgxNDE1LC0xMzA0NzE1NDgwXX
+0=
 -->
