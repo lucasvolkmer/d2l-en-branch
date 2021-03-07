@@ -440,12 +440,6 @@ a + b
 ```
 
 ## Indexação e Fatiamento
-Just as in any other Python array, elements in a tensor can be accessed by index.
-As in any Python array, the first element has index 0
-and ranges are specified to include the first but *before* the last element.
-As in standard Python lists, we can access elements
-according to their relative position to the end of the list
-by using negative indices.
 
 Assim como em qualquer outro array Python, os elementos em um tensor podem ser acessados por índice.
 Como em qualquer matriz Python, o primeiro elemento tem índice 0
@@ -454,9 +448,8 @@ Como nas listas padrão do Python, podemos acessar os elementos
 de acordo com sua posição relativa ao final da lista
 usando índices negativos.
 
-Thus, [**`[-1]` selects the last element and `[1:3]`
-selects the second and the third elements**] as follows:
-
+Assim, [**`[-1]` seleciona o último elemento e `[1: 3]`
+seleciona o segundo e o terceiro elementos**] da seguinte forma:
 
 ```{.python .input}
 #@tab all
@@ -705,7 +698,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MTA1NzU5NywtMTM5NjA5NTU3MSwtNz
+eyJoaXN0b3J5IjpbMTYzOTg0MjE3MiwtMTM5NjA5NTU3MSwtNz
 U5ODMzNzMsMTE2OTI4NTU4LC0xNjk2MjgxNDE1LC0xMzA0NzE1
 NDgwXX0=
 -->
