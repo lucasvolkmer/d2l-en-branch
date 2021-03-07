@@ -489,14 +489,13 @@ X_var[1, 2].assign(9)
 X_var
 ```
 
-
-If we want [**to assign multiple elements the same value,
-we simply index all of them and then assign them the value.**]
-For instance, `[0:2, :]` accesses the first and second rows,
-where `:` takes all the elements along axis 1 (column).
-While we discussed indexing for matrices,
-this obviously also works for vectors
-and for tensors of more than 2 dimensions.
+Se quisermos [**para atribuir a vários elementos o mesmo valor,
+simplesmente indexamos todos eles e, em seguida, atribuímos o valor a eles.**]
+Por exemplo, `[0: 2,:]` acessa a primeira e a segunda linhas,
+onde `:` leva todos os elementos ao longo do eixo 1 (coluna).
+Enquanto discutimos a indexação de matrizes,
+isso obviamente também funciona para vetores
+e para tensores de mais de 2 dimensões.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -704,7 +703,7 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNzg1Njg4NCw3OTA5MjA4NzcsLTEzOT
+eyJoaXN0b3J5IjpbLTY2NTI1OTQ3Niw3OTA5MjA4NzcsLTEzOT
 YwOTU1NzEsLTc1OTgzMzczLDExNjkyODU1OCwtMTY5NjI4MTQx
 NSwtMTMwNDcxNTQ4MF19
 -->
