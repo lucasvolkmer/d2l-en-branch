@@ -942,12 +942,12 @@ Estes são problemas de aprendizagem de sequência a sequência em que a saída 
 :width:`700px`
 :label:`fig_speech`
 
-**Text to Speech**. This is the inverse of automatic speech recognition.
-In other words, the input is text
-and the output is an audio file.
-In this case, the output is much longer than the input.
-While it is easy for humans to recognize a bad audio file,
-this is not quite so trivial for computers.
+***Text to Speech* (Texto para fala)**. Este é o inverso do reconhecimento automático de fala.
+Em outras palavras, a entrada é um texto
+e a saída é um arquivo de áudio.
+Nesse caso, a saída é muito mais longa do que a entrada.
+Embora seja fácil para os humanos reconhecerem um arquivo de áudio ruim,
+isso não é tão trivial para computadores.
 
 **Machine Translation**. Unlike the case of speech recognition, where corresponding
 inputs and outputs occur in the same order (after alignment),
@@ -1649,7 +1649,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzIzODI2MywtNDc1MDI4NTgxLDE3Mj
+eyJoaXN0b3J5IjpbMTQ4Mzc5MzI3MSwtNDc1MDI4NTgxLDE3Mj
 UyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEw
 NzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LD
 cyMTUyODA5MCwtOTQxNjYxMzIwLC0yMjg4MzIzMzEsLTEwNzg1
