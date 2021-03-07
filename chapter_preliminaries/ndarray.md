@@ -405,8 +405,8 @@ Second, carry out the elementwise operations
 on the resulting arrays.
 Na seção acima, vimos como realizar operações elemento a elemento
 em dois tensores da mesma forma. Sob certas condições,
-mesmo quando as formas são diferentes, ainda podemos [** realizar operações elementar
-invocando o * mecanismo de transmissão *. **]
+mesmo quando as formas são diferentes, ainda podemos [**realizar operações elementar
+invocando o mecanismo de *Broadcasting*.**]
 Esse mecanismo funciona da seguinte maneira:
 Primeiro, expanda um ou ambos os arrays
 copiando elementos de forma adequada
@@ -712,6 +712,6 @@ a, a.item(), float(a), int(a)
 [Discussions](https://discuss.d2l.ai/t/187)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI5NDE3MTAsMTE2OTI4NTU4LC0xNjk2Mj
-gxNDE1LC0xMzA0NzE1NDgwXX0=
+eyJoaXN0b3J5IjpbMTU5NDk2ODMyMSwxMTY5Mjg1NTgsLTE2OT
+YyODE0MTUsLTEzMDQ3MTU0ODBdfQ==
 -->
