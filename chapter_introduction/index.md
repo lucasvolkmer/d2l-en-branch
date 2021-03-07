@@ -1234,30 +1234,31 @@ calculando a média do comprimento de 16 pés de homens adultos para obter o com
 :width:`500px`
 :label:`fig_koebel`
 
-:numref:`fig_koebel` illustrates how this estimator works.
-The 16 adult men were asked to line up in a row, when leaving the church.
-Their aggregate length was then divided by 16
-to obtain an estimate for what now amounts to 1 foot.
-This "algorithm" was later improved to deal with misshapen feet---the
-2 men with the shortest and longest feet respectively were sent away,
-averaging only over the remainder.
-This is one of the earliest examples of the trimmed mean estimate.
 
-Statistics really took off with the collection and availability of data.
-One of its titans, [Ronald Fisher (1890--1962)](https://en.wikipedia.org/wiki/Ronald_Fisher),
-contributed significantly to its theory
-and also its applications in genetics.
-Many of his algorithms (such as linear discriminant analysis)
-and formula (such as the Fisher information matrix)
-are still in frequent use today. 
-In fact,
-even the Iris dataset
-that Fisher released in 1936 is still used sometimes
-to illustrate machine learning algorithms.
-He was also a proponent of eugenics,
-which should remind us that the morally dubious use of data science
-has as long and enduring a history as its productive use
-in industry and the natural sciences.
+: numref: `fig_koebel` ilustra como este estimador funciona.
+Os 16 homens adultos foram convidados a fazer fila em uma fila, ao deixar a igreja.
+Seu comprimento agregado foi então dividido por 16
+para obter uma estimativa do que agora equivale a 1 pé.
+Este "algoritmo" foi melhorado mais tarde para lidar com pés deformados --- os
+2 homens com os pés mais curtos e os mais longos, respectivamente, foram mandados embora,
+calculando a média apenas sobre o restante.
+Este é um dos primeiros exemplos da estimativa média aparada.
+
+As estatísticas realmente decolaram com a coleta e disponibilização de dados.
+Um de seus titãs, [Ronald Fisher (1890--1962)] (https://en.wikipedia.org/wiki/Ronald_Fisher),
+contribuiu significativamente para sua teoria
+e também suas aplicações em genética.
+Muitos de seus algoritmos (como a análise discriminante linear)
+e fórmula (como a matriz de informações de Fisher)
+ainda estão em uso frequente hoje.
+Na verdade,
+até mesmo o conjunto de dados Iris
+que Fisher lançou em 1936 ainda é usado às vezes
+para ilustrar algoritmos de aprendizado de máquina.
+Ele também era um defensor da eugenia,
+o que deve nos lembrar que o uso moralmente duvidoso da ciência de dados
+tem uma história tão longa e duradoura quanto seu uso produtivo
+na indústria e nas ciências naturais.
 
 A second influence for machine learning came from information theory by
 [Claude Shannon (1916--2001)](https://en.wikipedia.org/wiki/Claude_Shannon) and the theory of computation via [Alan Turing (1912--1954)](https://en.wikipedia.org/wiki/Alan_Turing).
@@ -1654,7 +1655,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc5NzU1NTA4LDEwMzU5NTA0MjMsMjAyOD
+eyJoaXN0b3J5IjpbOTcxMjY5OTUxLDEwMzU5NTA0MjMsMjAyOD
 EwNTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMzODgsMjAyMjA4NzMz
 NSw4MTc4OTc1MDYsLTI0NjM0MzU5MSwtNDc1MDI4NTgxLDE3Mj
 UyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEw
