@@ -1133,43 +1133,44 @@ O objetivo da aprendizagem por reforço é produzir uma boa política.
 ![The interaction between reinforcement learning and an environment.](../img/rl-environment.svg)
 :label:`fig_rl-environment`
 
-It is hard to overstate the generality of the reinforcement learning framework.
-For example, we can cast any supervised learning problem as a reinforcement learning problem.
-Say we had a classification problem.
-We could create a reinforcement learning agent with one action corresponding to each class.
-We could then create an environment which gave a reward
-that was exactly equal to the loss function
-from the original supervised learning problem.
 
-That being said, reinforcement learning can also address many problems
-that supervised learning cannot.
-For example, in supervised learning we always expect
-that the training input comes associated with the correct label.
-But in reinforcement learning, we do not assume that for each observation 
-the environment tells us the optimal action.
-In general, we just get some reward.
-Moreover, the environment may not even tell us which actions led to the reward.
+É difícil exagerar a generalidade da estrutura de aprendizagem por reforço.
+Por exemplo, podemos lançar qualquer problema de aprendizado supervisionado como um problema de aprendizado por reforço.
+Digamos que tenhamos um problema de classificação.
+Poderíamos criar um agente de aprendizagem por reforço com uma ação correspondente a cada classe.
+Poderíamos então criar um ambiente que oferecesse uma recompensa
+que era exatamente igual à função de perda
+do problema original de aprendizagem supervisionada.
 
-Consider for example the game of chess.
-The only real reward signal comes at the end of the game
-when we either win, which we might assign a reward of 1,
-or when we lose, which we could assign a reward of -1.
-So reinforcement learners must deal with the *credit assignment* problem:
-determining which actions to credit or blame for an outcome.
-The same goes for an employee who gets a promotion on October 11.
-That promotion likely reflects a large number
-of well-chosen actions over the previous year.
-Getting more promotions in the future requires figuring out
-what actions along the way led to the promotion.
+Dito isso, o aprendizado por reforço também pode resolver muitos problemas
+que a aprendizagem supervisionada não pode.
+Por exemplo, na aprendizagem supervisionada, sempre esperamos
+se a entrada de treinamento venha associada ao *label* correto.
+Mas na aprendizagem por reforço, não assumimos que para cada observação
+o ambiente nos diz a ação ideal.
+Em geral, apenas recebemos alguma recompensa.
+Além disso, o ambiente pode nem mesmo nos dizer quais ações levaram à recompensa.
 
-Reinforcement learners may also have to deal
-with the problem of partial observability.
-That is, the current observation might not
-tell you everything about your current state.
-Say a cleaning robot found itself trapped
-in one of many identical closets in a house.
-Inferring the precise location (and thus state) of the robot
-might require considering its previous observations before entering the closet.
+Considere, por exemplo, o jogo de xadrez.
+O único sinal de recompensa real vem no final do jogo
+quando ganhamos, o que podemos atribuir a uma recompensa de 1,
+ou quando perdemos, o que podemos atribuir uma recompensa de -1.
+Assim, os agentes de reforço devem lidar com o problema de *atribuição de crédito*:
+determinar quais ações devem ser creditadas ou culpadas por um resultado.
+O mesmo vale para o funcionário que for promovido no dia 11 de outubro.
+Essa promoção provavelmente reflete um grande número
+de ações bem escolhidas em relação ao ano anterior.
+Para obter mais promoções no futuro, é preciso descobrir
+quais ações ao longo do caminho levaram à promoção.
+
+Agentes de aprendizado por reforço também podem ter que lidar
+com o problema da observabilidade parcial.
+Ou seja, a observação atual pode não
+dizer-lhe tudo sobre o seu estado atual.
+Digamos que um robô de limpeza ficou preso
+em um dos muitos armários idênticos em uma casa.
+Inferindo a localização precisa (e, portanto, o estado) do robô
+pode exigir a consideração de suas observações anteriores antes de entrar no armário.
 
 Finally, at any given point, reinforcement learners
 might know of one good policy,
@@ -1652,11 +1653,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNjY4MzA2OCwxNjAyOTUzMzg4LDIwMj
-IwODczMzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLTQ3NTAyODU4
-MSwxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQzMjQ4ODEsOT
-g3NDIxMDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5NiwtMTA2NDI5
-MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4ODMyMzMxLC
-0xMDc4NTg0NDcxLC01MzQxODE2MTUsMTk1MTM0NTYyMSwtMTY4
-NzI3Mzg2OF19
+eyJoaXN0b3J5IjpbMjAyODEwNTI3MCwxMDE2NjgzMDY4LDE2MD
+I5NTMzODgsMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0NjM0MzU5
+MSwtNDc1MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1Mjc2NywtMT
+E2NDMyNDg4MSw5ODc0MjEwNzEsMTU2NDA3ODcwOSwyMTA3MDYy
+OTk2LC0xMDY0MjkwMTk5LDcyMTUyODA5MCwtOTQxNjYxMzIwLC
+0yMjg4MzIzMzEsLTEwNzg1ODQ0NzEsLTUzNDE4MTYxNSwxOTUx
+MzQ1NjIxXX0=
 -->
