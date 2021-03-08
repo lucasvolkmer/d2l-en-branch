@@ -1443,12 +1443,10 @@ na última década.
 * *Frameworks* de *deep learning* têm desempenhado um papel crucial
   na disseminação de ideias. A primeira geração de *frameworks*
   permitindo fácil modelagem englobava
-  [Caffe](https://github.com/BVLC/caffe),
-  [Torch](https://github.com/torch), e
-  [Theano](https://github.com/Theano/Theano).
+  [Caffe](https://github.com/BVLC/caffe),  [Torch](https://github.com/torch), e  [Theano](https://github.com/Theano/Theano).
   Muitos artigos seminais foram escritos usando essas ferramentas.
   Até agora, eles foram substituídos por
-  [TensorFlow](https://github.com/tensorflow/tensorflow) (frequentemente usado por meio de sua API de alto nível [Keras] (https://github.com/keras-team/keras)), [CNTK](https: //github.com/Microsoft/CNTK), [Caffe 2](https://github.com/caffe2/caffe2) e [Apache MXNet](https://github.com/apache/incubator-mxnet). A terceira geração de ferramentas, ou seja, ferramentas imperativas para *deep learning*,
+  [TensorFlow](https://github.com/tensorflow/tensorflow) (frequentemente usado por meio de sua API de alto nível [Keras] (https://github.com/keras-team/keras)), [CNTK](https://github.com/Microsoft/CNTK), [Caffe 2](https://github.com/caffe2/caffe2) e [Apache MXNet](https://github.com/apache/incubator-mxnet). A terceira geração de ferramentas, ou seja, ferramentas imperativas para *deep learning*,
   foi provavelmente liderada por [Chainer](https://github.com/chainer/chainer),
   que usava uma sintaxe semelhante a Python NumPy para descrever modelos.
   Esta ideia foi adotada por ambos [PyTorch](https://github.com/pytorch/pytorch),
@@ -1659,7 +1657,7 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTY0MDc4NzksMTExNTMyMTM0NSwtMT
+eyJoaXN0b3J5IjpbLTEwMTYwMDQ3OTMsMTExNTMyMTM0NSwtMT
 UxNzYwODcyMCwtMTQ4Mzc5ODE3NywtMzMyNjk0MzU0LDEwMzU5
 NTA0MjMsMjAyODEwNTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMzOD
 gsMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0NjM0MzU5MSwtNDc1
