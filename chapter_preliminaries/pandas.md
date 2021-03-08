@@ -82,8 +82,6 @@ print(inputs)
 
 ## Convertendo para o Formato Tensor
 
-Now that [**all the entries in `inputs` and `outputs` are numerical, they can be converted to the tensor format.**]
-Once data are in this format, they can be further manipulated with those tensor functionalities that we have introduced in :numref:`sec_ndarray`.
 Agora que [**todas as entradas em `entradas` e `saídas` são numéricas, elas podem ser convertidas para o formato tensor.**]
 Uma vez que os dados estão neste formato, eles podem ser manipulados posteriormente com as funcionalidades de tensor que introduzimos em :numref:`sec_ndarray`.
 
@@ -110,13 +108,12 @@ X, y = tf.constant(inputs.values), tf.constant(outputs.values)
 X, y
 ```
 
-## Summary
+## Sumário
 
-* Like many other extension packages in the vast ecosystem of Python, `pandas` can work together with tensors.
-* Imputation and deletion can be used to handle missing data.
+* Como muitos outros pacotes de extensão no vasto ecossistema do Python, `pandas` pode trabalhar junto com tensores.
+* Imputação e exclusão podem ser usadas para lidar com dados perdidos.
 
-
-## Exercises
+## Exercícios
 
 Create a raw dataset with more rows and columns.
 
@@ -135,6 +132,7 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MTUzMDE0MywyMTE0NzM2NjkxLC04MT
-U5NDc1NiwtMTQ2NTE2MDYxNiwtNTM1NTU4MjUwXX0=
+eyJoaXN0b3J5IjpbLTEzMjUwNDcxMDUsMTM5MTUzMDE0MywyMT
+E0NzM2NjkxLC04MTU5NDc1NiwtMTQ2NTE2MDYxNiwtNTM1NTU4
+MjUwXX0=
 -->
