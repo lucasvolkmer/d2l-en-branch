@@ -19,7 +19,7 @@ In subsequent sections, we will introduce classification problems,
 where the goal is to predict membership among a set of categories.
 
 
-## Basic Elements of Linear Regression
+## Basic Elementos of Linear RegressionBásicos de Regressão Linear
 
 *Linear regression* may be both the simplest
 and most popular among the standard tools to regression.
@@ -665,3 +665,6 @@ statistics, and computer science.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3OTg3OTA0MjRdfQ==
+-->
