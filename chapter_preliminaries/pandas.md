@@ -10,6 +10,15 @@ Like many other extension packages in the vast ecosystem of Python,
 So, we will briefly walk through steps for preprocessing raw data with `pandas`
 and converting them into the tensor format.
 We will cover more data preprocessing techniques in later chapters.
+Até agora, introduzimos uma variedade de técnicas para manipular dados que já estão armazenados em tensores.
+Para aplicar o *Deep Learning* na solução de problemas do mundo real,
+frequentemente começamos com o pré-processamento de dados brutos, em vez daqueles dados bem preparados no formato tensor.
+Entre as ferramentas analíticas de dados populares em Python, o pacote `pandas` é comumente usado.
+Como muitos outros pacotes de extensão no vasto ecossistema do Python,
+`pandas` podem trabalhar em conjunto com tensores.
+Então, vamos percorrer brevemente as etapas de pré-processamento de dados brutos com `pandas`
+e convertendo-os no formato tensor.
+Abordaremos mais técnicas de pré-processamento de dados em capítulos posteriores.
 
 ## Reading the Dataset
 
@@ -133,5 +142,5 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODMyNzI4NDhdfQ==
+eyJoaXN0b3J5IjpbLTUzNTU1ODI1MF19
 -->
