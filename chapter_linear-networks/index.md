@@ -1,15 +1,15 @@
 # Linear Neural NetworkRedes Neurais Lineares
 :label:`chap_linear`
 
-Before we get into the details of deep neural networks,
-we need to cover the basics of neural network training.
-In this chapter, we will cover the entire training process,
-including defining simple neural network architectures, handling data, specifying a loss function, and training the model. 
-In order to make things easier to grasp, we begin with the simplest concepts.
-Fortunately, classic statistical learning techniques such as linear and softmax regression
-can be cast as *linear* neural networks.
-Starting from these classic algorithms, we will introduce you to the basics,
-providing the basis for more complex techniques in the rest of the book.
+Antes de entrarmos nos detalhes das redes neurais profundas,
+precisamos cobrir os fundamentos do treinamento de redes neurais.
+Neste capítulo, cobriremos todo o processo de treinamento,
+incluindo a definição de arquiteturas de redes neurais simples, manipulação de dados, especificação de uma função de perda e treinamento do modelo.
+Para tornar as coisas mais fáceis de entender, começamos com os conceitos mais simples.
+Felizmente, técnicas clássicas de aprendizagem estatística, como regressão linear e *softmax*
+podem ser lançadas como redes neurais *lineares*.
+Partindo desses algoritmos clássicos, apresentaremos o básico,
+fornecendo a base para técnicas mais complexas no restante do livro.
 
 ```toc
 :maxdepth: 2
@@ -24,5 +24,5 @@ softmax-regression-concise
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODYzOTY0ODJdfQ==
+eyJoaXN0b3J5IjpbNDI4MTkyMzM4XX0=
 -->
