@@ -115,10 +115,10 @@ X, y
 
 ## Exercícios
 
-Create a raw dataset with more rows and columns.
+Crie um conjunto de dados bruto com mais linhas e colunas.
 
-1. Delete the column with the most missing values.
-2. Convert the preprocessed dataset to the tensor format.
+3. Exclua a coluna com a maioria dos valores ausentes.
+4. Converta o conjunto de dados pré-processado para o formato tensor.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/28)
@@ -132,7 +132,7 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjUwNDcxMDUsMTM5MTUzMDE0MywyMT
-E0NzM2NjkxLC04MTU5NDc1NiwtMTQ2NTE2MDYxNiwtNTM1NTU4
-MjUwXX0=
+eyJoaXN0b3J5IjpbMTExMTAxNjcyNywxMzkxNTMwMTQzLDIxMT
+Q3MzY2OTEsLTgxNTk0NzU2LC0xNDY1MTYwNjE2LC01MzU1NTgy
+NTBdfQ==
 -->
