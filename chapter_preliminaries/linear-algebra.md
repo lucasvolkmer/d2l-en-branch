@@ -1,4 +1,4 @@
-# Linear Algebra Linear
+# Linear Algebra
 :label:`sec_linear-algebra`
 
 
@@ -13,7 +13,7 @@ and the corresponding implementation in code.
 
 Agora que você pode armazenar e manipular dados,
 vamos revisar brevemente o subconjunto da álgebra linear básica
-que você precisa entender e implementar
+que você precisa para entender e implementar
 a maioria dos modelos cobertos neste livro.
 Abaixo, apresentamos os objetos matemáticos básicos, aritmética,
 e operações em álgebra linear,
@@ -867,7 +867,7 @@ $$
 
 [**We can think of the matrix-matrix multiplication $\mathbf{AB}$ as simply performing $m$ matrix-vector products and stitching the results together to form an $n \times m$ matrix.**]
 In the following snippet, we perform matrix multiplication on `A` and `B`.
-Here,  `A` is a matrix with 5 rows and 4 columns,
+Here,  `A` is a matrix with 5 rows and 4 columns,
 and `B` is a matrix with 4 rows and 3 columns.
 After multiplication, we obtain a matrix with 5 rows and 3 columns.
 
@@ -1101,5 +1101,5 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDk0MTQxNDhdfQ==
+eyJoaXN0b3J5IjpbMTQzMDI2NTYzOV19
 -->
