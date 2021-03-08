@@ -1648,18 +1648,18 @@ No final, a comunidade de aprendizagem profunda se orgulha de compartilhar ferra
 
 ## Exercícios
 
-1. Which parts of code that you are currently writing could be "learned", i.e., improved by learning and automatically determining design choices that are made in your code? Does your code include heuristic design choices?
-1. Which problems that you encounter have many examples for how to solve them, yet no specific way to automate them? These may be prime candidates for using deep learning.
-1. Viewing the development of AI as a new industrial revolution, what is the relationship between algorithms and data? Is it similar to steam engines and coal? What is the fundamental difference?
-1. Where else can you apply the end-to-end training approach, such as in :numref:`fig_ml_loop`, physics, engineering, and econometrics?
+1. Quais partes do código que você está escrevendo atualmente podem ser "aprendidas", ou seja, aprimoradas ao aprender e determinando automaticamente as opções de design feitas em seu código? Seu código inclui opções de design heurístico?
+1. Quais problemas você encontra têm muitos exemplos de como resolvê-los, mas nenhuma maneira específica de automatizá-los? Esses podem ser os principais candidatos para usar o *deep learning*.
+1. Vendo o desenvolvimento da IA como uma nova revolução industrial, qual é a relação entre algoritmos e dados? É semelhante a motores a vapor e carvão? Qual é a diferença fundamental?
+1. Onde mais você pode aplicar a abordagem de treinamento de ponta a ponta, como em :numref:`fig_ml_loop`, física, engenharia e econometria?
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MzYzMTY0NSwzMTE5OTU0ODgsLTY5Nz
-M2MjQ2LDIxOTExOTc2NiwxODczMTU2ODI0LC0xMDE2MDA0Nzkz
-LDExMTUzMjEzNDUsLTE1MTc2MDg3MjAsLTE0ODM3OTgxNzcsLT
-MzMjY5NDM1NCwxMDM1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4
-MzA2OCwxNjAyOTUzMzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC
-0yNDYzNDM1OTEsLTQ3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODky
-NTI3NjddfQ==
+eyJoaXN0b3J5IjpbMjg4NjQzMzIwLDMxMTk5NTQ4OCwtNjk3Mz
+YyNDYsMjE5MTE5NzY2LDE4NzMxNTY4MjQsLTEwMTYwMDQ3OTMs
+MTExNTMyMTM0NSwtMTUxNzYwODcyMCwtMTQ4Mzc5ODE3NywtMz
+MyNjk0MzU0LDEwMzU5NTA0MjMsMjAyODEwNTI3MCwxMDE2Njgz
+MDY4LDE2MDI5NTMzODgsMjAyMjA4NzMzNSw4MTc4OTc1MDYsLT
+I0NjM0MzU5MSwtNDc1MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1
+Mjc2N119
 -->
