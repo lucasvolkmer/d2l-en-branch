@@ -111,17 +111,17 @@ podemos expressar nosso modelo compactamente usando um produto escalar:
 $$\hat{y} = \mathbf{w}^\top \mathbf{x} + b.$$
 :eqlabel:`eq_linreg-y`
 
-In :eqref:`eq_linreg-y`, the vector $\mathbf{x}$ corresponds to features of a single data example.
-We will often find it convenient
-to refer to features of our entire dataset of $n$ examples
-via the *design matrix* $\mathbf{X} \in \mathbb{R}^{n \times d}$.
-Here, $\mathbf{X}$ contains one row for every example
-and one column for every feature.
 
-For a collection of features $\mathbf{X}$,
-the predictions $\hat{\mathbf{y}} \in \mathbb{R}^n$
-can be expressed via the matrix-vector product:
+Em :eqref:`eq_linreg-y`, o vetor $\mathbf{x}$ corresponde às *features* de um único exemplo de dados.
+Frequentemente acharemos conveniente
+para se referir a recursos de todo o nosso *dataset* de $n$ exemplos
+através da *matriz de design* $\mathbf{X}\in\mathbb{R}^{n\times d}$.
+Aqui, $\mathbf{X}$ contém uma linha para cada exemplo
+e uma coluna para cada *feature*.
 
+Para uma coleção de *features* $\mathbf{X}$,
+as previsões $\hat{\mathbf{y}}\in\mathbb{R}^n$
+pode ser expresso por meio do produto matriz-vetor:
 $${\hat{\mathbf{y}}} = \mathbf{X} \mathbf{w} + b,$$
 
 where broadcasting (see :numref:`subsec_broadcasting`) is applied during the summation.
@@ -667,6 +667,6 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2Nz
-U4MDA1NywtMTc5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbODM2MjY4MzA4LDE5MTQ2NjU3MDIsMzgwNj
+QzODA1LC0xNjc1ODAwNTcsLTE3OTg3OTA0MjRdfQ==
 -->
