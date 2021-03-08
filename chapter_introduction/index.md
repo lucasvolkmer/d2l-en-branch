@@ -1431,28 +1431,28 @@ na última década.
   e :cite:`Jia.Song.He.ea.2018` aumentaram o tamanho para 64.000 observações,
   reduzindo o tempo de treinamento do modelo ResNet-50 no *dataset* ImageNet para menos de 7 minutos.
   Para comparação --- inicialmente os tempos de treinamento foram medidos na ordem de dias.
-* The ability to parallelize computation has also contributed quite crucially
-  to progress in reinforcement learning, at least whenever simulation is an
-  option. This has led to significant progress in computers achieving
-  superhuman performance in Go, Atari games, Starcraft, and in physics
-  simulations (e.g., using MuJoCo). See e.g.,
-  :cite:`Silver.Huang.Maddison.ea.2016` for a description
-  of how to achieve this in AlphaGo. In a nutshell,
-  reinforcement learning works best if plenty of (state, action, reward) triples are available, i.e., whenever it is possible to try out lots of things to learn how they relate to each
-  other. Simulation provides such an avenue.
-* Deep learning frameworks have played a crucial role
-  in disseminating ideas. The first generation of frameworks
-  allowing for easy modeling encompassed
+* A capacidade de paralelizar a computação também contribuiu de maneira crucial
+  para progredir na aprendizagem por reforço, pelo menos sempre que a simulação é uma
+  opção. Isso levou a um progresso significativo na obtenção de
+  desempenho sobre-humano em Go, jogos Atari, Starcraft e em física
+  simulações (por exemplo, usando MuJoCo). Veja, por exemplo,
+  :cite:`Silver.Huang.Maddison.ea.2016` para uma descrição
+  de como conseguir isso no AlphaGo. Em poucas palavras,
+  o aprendizado por reforço funciona melhor se muitas tuplas (estado, ação, recompensa) estiverem disponíveis, ou seja, sempre que for possível experimentar muitas coisas para aprender como elas se relacionam com cada
+  outra. A simulação fornece esse caminho.
+* *Frameworks* de *deep learning* têm desempenhado um papel crucial
+  na disseminação de ideias. A primeira geração de *frameworks*
+  permitindo fácil modelagem englobava
   [Caffe](https://github.com/BVLC/caffe),
-  [Torch](https://github.com/torch), and
+  [Torch](https://github.com/torch), e
   [Theano](https://github.com/Theano/Theano).
-  Many seminal papers were written using these tools.
-  By now, they have been superseded by
-  [TensorFlow](https://github.com/tensorflow/tensorflow) (often used via its high level API [Keras](https://github.com/keras-team/keras)), [CNTK](https://github.com/Microsoft/CNTK), [Caffe 2](https://github.com/caffe2/caffe2), and [Apache MXNet](https://github.com/apache/incubator-mxnet). The third generation of tools, namely imperative tools for deep learning,
-  was arguably spearheaded by [Chainer](https://github.com/chainer/chainer),
-  which used a syntax similar to Python NumPy to describe models.
-  This idea was adopted by both [PyTorch](https://github.com/pytorch/pytorch),
-  the [Gluon API](https://github.com/apache/incubator-mxnet) of MXNet, and [Jax](https://github.com/google/jax).
+  Muitos artigos seminais foram escritos usando essas ferramentas.
+  Até agora, eles foram substituídos por
+  [TensorFlow](https://github.com/tensorflow/tensorflow) (frequentemente usado por meio de sua API de alto nível [Keras] (https://github.com/keras-team/keras)), [CNTK](https: //github.com/Microsoft/CNTK), [Caffe 2](https://github.com/caffe2/caffe2) e [Apache MXNet](https://github.com/apache/incubator-mxnet). A terceira geração de ferramentas, ou seja, ferramentas imperativas para *deep learning*,
+  foi provavelmente liderada por [Chainer](https://github.com/chainer/chainer),
+  que usava uma sintaxe semelhante a Python NumPy para descrever modelos.
+  Esta ideia foi adotada por ambos [PyTorch](https://github.com/pytorch/pytorch),
+  a [Gluon API](https://github.com/apache/incubator-mxnet) da MXNet e [Jax](https://github.com/google/jax).
 
 
 The division of labor between system researchers building better tools
@@ -1659,11 +1659,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNTMyMTM0NSwtMTUxNzYwODcyMCwtMT
-Q4Mzc5ODE3NywtMzMyNjk0MzU0LDEwMzU5NTA0MjMsMjAyODEw
-NTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMzODgsMjAyMjA4NzMzNS
-w4MTc4OTc1MDYsLTI0NjM0MzU5MSwtNDc1MDI4NTgxLDE3MjUy
-ODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEwNz
-EsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LDcy
-MTUyODA5MF19
+eyJoaXN0b3J5IjpbLTEwOTY0MDc4NzksMTExNTMyMTM0NSwtMT
+UxNzYwODcyMCwtMTQ4Mzc5ODE3NywtMzMyNjk0MzU0LDEwMzU5
+NTA0MjMsMjAyODEwNTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMzOD
+gsMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0NjM0MzU5MSwtNDc1
+MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyND
+g4MSw5ODc0MjEwNzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0x
+MDY0MjkwMTk5XX0=
 -->
