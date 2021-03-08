@@ -1616,28 +1616,29 @@ Infelizmente, há muito pouco que os humanos possam realizar com engenhosidade e
 Quando o *deep learning* surgiu,
 esses extratores de recursos foram substituídos por filtros ajustados automaticamente, produzindo uma precisão superior.
 
-Thus,
-one key advantage of deep learning is that it replaces not
-only the shallow models at the end of traditional learning pipelines,
-but also the labor-intensive process of 
-feature engineering.
-Moreover, by replacing much of the domain-specific preprocessing,
-deep learning has eliminated many of the boundaries
-that previously separated computer vision, speech recognition,
-natural language processing, medical informatics, and other application areas,
-offering a unified set of tools for tackling diverse problems.
 
-Beyond end-to-end training, 
-we are experiencing a transition from parametric statistical descriptions to fully nonparametric models. When data are scarce, one needs to rely on simplifying assumptions about reality in order to obtain useful models. When data are abundant, this can be replaced by nonparametric models that fit reality more accurately. To some extent, this mirrors the progress that physics experienced in the middle of the previous century with the availability of computers. Rather than solving parametric approximations of how electrons behave by hand, one can now resort to numerical simulations of the associated partial differential equations. This has led to much more accurate models, albeit often at the expense of explainability.
+Por isso,
+uma das principais vantagens do *deep learning* é que ele não substitui
+apenas os modelos rasos no final dos canais de aprendizagem tradicionais,
+mas também o processo intensivo de mão-de-obra de
+engenharia de recursos.
+Além disso, ao substituir grande parte do pré-processamento específico do domínio,
+o *deep learning* eliminou muitos dos limites
+que antes separavam a visão computacional, o reconhecimento de fala,
+processamento de linguagem natural, informática médica e outras áreas de aplicação,
+oferecendo um conjunto unificado de ferramentas para lidar com diversos problemas.
 
-Another difference to previous work is the acceptance of suboptimal solutions, dealing with nonconvex nonlinear optimization problems, and the willingness to try things before proving them. This newfound empiricism in dealing with statistical problems, combined with a rapid influx of talent has led to rapid progress of practical algorithms, albeit in many cases at the expense of modifying and re-inventing tools that existed for decades.
+Além do treinamento de ponta a ponta,
+estamos experimentando uma transição de descrições estatísticas paramétricas para modelos totalmente não paramétricos. Quando os dados são escassos, é necessário confiar na simplificação de suposições sobre a realidade para obter modelos úteis. Quando os dados são abundantes, eles podem ser substituídos por modelos não paramétricos que se ajustam à realidade com mais precisão. Até certo ponto, isso reflete o progresso que a física experimentou em meados do século anterior com a disponibilidade de computadores. Em vez de resolver aproximações paramétricas de como os elétrons se comportam manualmente, pode-se agora recorrer a simulações numéricas das equações diferenciais parciais associadas. Isso levou a modelos muito mais precisos, embora muitas vezes às custas da explicabilidade.
 
-In the end, the deep learning community prides itself of sharing tools across academic and corporate boundaries, releasing many excellent libraries, statistical models, and trained networks as open source.
-It is in this spirit that the notebooks forming this book are freely available for distribution and use. We have worked hard to lower the barriers of access for everyone to learn about deep learning and we hope that our readers will benefit from this.
+Outra diferença em relação ao trabalho anterior é a aceitação de soluções sub-ótimas, lidar com problemas de otimização não-linear não convexa e a disposição de tentar coisas antes de prová-las. Esse empirismo recém-descoberto ao lidar com problemas estatísticos, combinado com um rápido influxo de talentos, levou a um rápido progresso de algoritmos práticos, embora em muitos casos às custas de modificar e reinventar ferramentas que existiram por décadas.
+
+No final, a comunidade de aprendizagem profunda se orgulha de compartilhar ferramentas além das fronteiras acadêmicas e corporativas, lançando muitas bibliotecas excelentes, modelos estatísticos e redes treinadas como código aberto.
+É com esse espírito que os *notebooks* que compõem este livro estão disponíveis gratuitamente para distribuição e uso. Trabalhamos muito para reduzir as barreiras de acesso para que todos aprendam sobre o *deep learning* e esperamos que nossos leitores se beneficiem com isso.
 
 
 
-## Summary
+## Resumo
 
 * Machine learning studies how computer systems can leverage experience (often data) to improve performance at specific tasks. It combines ideas from statistics, data mining, and optimization. Often, it is used as a means of implementing AI solutions.
 * As a class of machine learning, representational learning focuses on how to automatically find the appropriate way to represent data. Deep learning is multi-level representation learning through learning many layers of transformations.
@@ -1654,11 +1655,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzExOTk1NDg4LC02OTczNjI0NiwyMTkxMT
-k3NjYsMTg3MzE1NjgyNCwtMTAxNjAwNDc5MywxMTE1MzIxMzQ1
-LC0xNTE3NjA4NzIwLC0xNDgzNzk4MTc3LC0zMzI2OTQzNTQsMT
-AzNTk1MDQyMywyMDI4MTA1MjcwLDEwMTY2ODMwNjgsMTYwMjk1
-MzM4OCwyMDIyMDg3MzM1LDgxNzg5NzUwNiwtMjQ2MzQzNTkxLC
-00NzUwMjg1ODEsMTcyNTI4MDk5NCwxODg5MjUyNzY3LC0xMTY0
-MzI0ODgxXX0=
+eyJoaXN0b3J5IjpbLTk2MTY3MDQ0MCwzMTE5OTU0ODgsLTY5Nz
+M2MjQ2LDIxOTExOTc2NiwxODczMTU2ODI0LC0xMDE2MDA0Nzkz
+LDExMTUzMjEzNDUsLTE1MTc2MDg3MjAsLTE0ODM3OTgxNzcsLT
+MzMjY5NDM1NCwxMDM1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4
+MzA2OCwxNjAyOTUzMzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC
+0yNDYzNDM1OTEsLTQ3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODky
+NTI3NjddfQ==
 -->
