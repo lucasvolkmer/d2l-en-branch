@@ -74,10 +74,10 @@ Since the "Alley" column only takes two types of categorical values "Pave" and "
 A row whose alley type is "Pave" will set values of "Alley_Pave" and "Alley_nan" to 1 and 0.
 A row with a missing alley type will set their values to 0 and 1.
 
-[**Para valores categóricos ou discretos em `entradas`, consideramos" NaN "como uma categoria.**]
-Como a coluna "Beco" aceita apenas dois tipos de valores categóricos "Pavimentar" e "NaN",
-O `pandas` pode converter automaticamente esta coluna em duas colunas" Alley_Pave "e" Alley_nan ".
-Uma linha cujo tipo de beco é "Pavimentar" definirá os valores de "Alley_Pave" e "Alley_nan" como 1 e 0.
+[**Para valores categóricos ou discretos em `entradas`, consideramos "NaN" como uma categoria.**]
+Como a coluna "Alley" aceita apenas dois tipos de valores categóricos "Pave" e "NaN",
+O `pandas` pode converter automaticamente esta coluna em duas colunas "Alley_Pave" e "Alley_nan".
+Uma linha cujo tipo de beco é "Pave" definirá os valores de "Alley_Pave" e "Alley_nan" como 1 e 0.
 Uma linha com um tipo de beco ausente definirá seus valores para 0 e 1
 
 ```{.python .input}
@@ -139,6 +139,6 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MTU4NTgyOSwyMTE0NzM2NjkxLC04MT
+eyJoaXN0b3J5IjpbLTkzNjY0NzUwMSwyMTE0NzM2NjkxLC04MT
 U5NDc1NiwtMTQ2NTE2MDYxNiwtNTM1NTU4MjUwXX0=
 -->
