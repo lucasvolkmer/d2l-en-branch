@@ -51,24 +51,15 @@ print(data)
 
 ## Lidando com Dados Faltantes
 
-Note that "NaN" entries are missing values.
-To handle missing data, typical methods include *imputation* and *deletion*,
-where imputation replaces missing values with substituted ones,
-while deletion ignores missing values. Here we will consider imputation.
-
 Observe que as entradas "NaN" têm valores ausentes.
-Para lidar com dados perdidos, os métodos típicos incluem * imputação* e * exclusão *,
+Para lidar com dados perdidos, os métodos típicos incluem *imputação* e *exclusão*,
 onde a imputação substitui os valores ausentes por outros substituídos,
 enquanto a exclusão ignora os valores ausentes. Aqui, consideraremos a imputação.
 
-Por indexação baseada em localização de inteiros (`iloc`), dividimos os` dados` em `entradas` e` saídas`,
+Por indexação baseada em localização de inteiros (`iloc`), dividimos os `dados` em `entradas` e `saídas`,
 onde o primeiro leva as duas primeiras colunas, enquanto o último mantém apenas a última coluna.
 Para valores numéricos em `entradas` que estão faltando,
-nós [** substituímos as entradas "NaN" pelo valor médio da mesma coluna. **]
-By integer-location based indexing (`iloc`), we split `data` into `inputs` and `outputs`,
-where the former takes the first two columns while the latter only keeps the last column.
-For numerical values in `inputs` that are missing,
-we [**replace the "NaN" entries with the mean value of the same column.**]
+nós [**substituímos as entradas "NaN" pelo valor médio da mesma coluna.**]
 
 ```{.python .input}
 #@tab all
@@ -82,6 +73,12 @@ Since the "Alley" column only takes two types of categorical values "Pave" and "
 `pandas` can automatically convert this column to two columns "Alley_Pave" and "Alley_nan".
 A row whose alley type is "Pave" will set values of "Alley_Pave" and "Alley_nan" to 1 and 0.
 A row with a missing alley type will set their values to 0 and 1.
+
+[**Para valores categóricos ou discretos em `entradas`, consideramos" NaN "como uma categoria.**]
+Como a coluna "Beco" aceita apenas dois tipos de valores categóricos "Pavimentar" e "NaN",
+O `pandas` pode converter automaticamente esta coluna em duas colunas" Alley_Pave "e" Alley_nan ".
+Uma linha cujo tipo de beco é "Pavimentar" definirá os valores de "Alley_Pave" e "Alley_nan" como 1 e 0.
+Uma linha com um tipo de beco ausente definirá seus valores para 0 e 1
 
 ```{.python .input}
 #@tab all
@@ -142,6 +139,6 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ2ODE3MjQ1LDIxMTQ3MzY2OTEsLTgxNT
-k0NzU2LC0xNDY1MTYwNjE2LC01MzU1NTgyNTBdfQ==
+eyJoaXN0b3J5IjpbMTE3MTU4NTgyOSwyMTE0NzM2NjkxLC04MT
+U5NDc1NiwtMTQ2NTE2MDYxNiwtNTM1NTU4MjUwXX0=
 -->
