@@ -1371,31 +1371,31 @@ das ideias que ajudaram os pesquisadores a alcançar um progresso tremendo
 na última década.
 
 
-* Novel methods for capacity control, such as *dropout*
+* Novos métodos de controle de capacidade, como *dropout* 
   :cite:`Srivastava.Hinton.Krizhevsky.ea.2014`,
-  have helped to mitigate the danger of overfitting.
-  This was achieved by applying noise injection :cite:`Bishop.1995`
-  throughout the neural network, replacing weights by random variables
-  for training purposes.
-* Attention mechanisms solved a second problem
-  that had plagued statistics for over a century:
-  how to increase the memory and complexity of a system without
-  increasing the number of learnable parameters.
-  Researchers found an elegant solution
-  by using what can only be viewed as a learnable pointer structure :cite:`Bahdanau.Cho.Bengio.2014`.
-  Rather than having to remember an entire text sequence, e.g.,
-  for machine translation in a fixed-dimensional representation,
-  all that needed to be stored was a pointer to the intermediate state
-  of the translation process. This allowed for significantly
-  increased accuracy for long sequences, since the model
-  no longer needed to remember the entire sequence before
-  commencing the generation of a new sequence.
-* Multi-stage designs, e.g., via the memory networks 
-  :cite:`Sukhbaatar.Weston.Fergus.ea.2015` and the neural programmer-interpreter :cite:`Reed.De-Freitas.2015`
-  allowed statistical modelers to describe iterative approaches to reasoning. These tools allow for an internal state of the deep neural network
-  to be modified repeatedly, thus carrying out subsequent steps
-  in a chain of reasoning, similar to how a processor
-  can modify memory for a computation.
+  ajudaram a mitigar o perigo de *overfitting*.
+  Isso foi conseguido aplicando injeção de ruído :cite:`Bishop.1995`
+  em toda a rede neural, substituindo pesos por variáveis ​​aleatórias
+  para fins de treinamento.
+* Mecanismos de atenção resolveram um segundo problema
+  que atormentou as estatísticas por mais de um século:
+  como aumentar a memória e a complexidade de um sistema sem
+  aumentar o número de parâmetros aprendíveis.
+  Os pesquisadores encontraram uma solução elegante
+  usando o que só pode ser visto como uma estrutura de ponteiro aprendível :cite:`Bahdanau.Cho.Bengio.2014`.
+  Em vez de ter que lembrar uma sequência de texto inteira, por exemplo,
+  para tradução automática em uma representação de dimensão fixa,
+  tudo o que precisava ser armazenado era um ponteiro para o estado intermediário
+  do processo de tradução. Isso permitiu significativamente
+  maior precisão para sequências longas, uma vez que o modelo
+  não precisa mais lembrar de toda a sequência antes de
+  começar a geração de uma nova sequência.
+* Projetos de vários estágios, por exemplo, por meio das redes de memória
+  :cite:`Sukhbaatar.Weston.Fergus.ea.2015` e o programador-intérprete neural:cite:`Reed.De-Freitas.2015`
+  permitiram modeladores estatísticos para descrever abordagens iterativas de raciocínio. Essas ferramentas permitem um estado interno da rede neural profunda
+  a ser modificado repetidamente, realizando assim as etapas subsequentes
+  em uma cadeia de raciocínio, semelhante a como um processador
+  pode modificar a memória para um cálculo.
 * Another key development was the invention of generative adversarial networks
   :cite:`Goodfellow.Pouget-Abadie.Mirza.ea.2014`.
   Traditionally, statistical methods for density estimation
@@ -1659,11 +1659,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODM3OTgxNzcsLTMzMjY5NDM1NCwxMD
-M1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4MzA2OCwxNjAyOTUz
-Mzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLT
-Q3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQz
-MjQ4ODEsOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEwNzA2Mjk5Ni
-wtMTA2NDI5MDE5OSw3MjE1MjgwOTAsLTk0MTY2MTMyMCwtMjI4
-ODMyMzMxXX0=
+eyJoaXN0b3J5IjpbLTE1MTc2MDg3MjAsLTE0ODM3OTgxNzcsLT
+MzMjY5NDM1NCwxMDM1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4
+MzA2OCwxNjAyOTUzMzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC
+0yNDYzNDM1OTEsLTQ3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODky
+NTI3NjcsLTExNjQzMjQ4ODEsOTg3NDIxMDcxLDE1NjQwNzg3MD
+ksMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OSw3MjE1MjgwOTAsLTk0
+MTY2MTMyMF19
 -->
