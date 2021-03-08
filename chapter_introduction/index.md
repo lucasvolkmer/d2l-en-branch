@@ -1396,41 +1396,41 @@ na última década.
   a ser modificado repetidamente, realizando assim as etapas subsequentes
   em uma cadeia de raciocínio, semelhante a como um processador
   pode modificar a memória para um cálculo.
-* Another key development was the invention of generative adversarial networks
+* Outro desenvolvimento importante foi a invenção de redes adversárias geradoras
   :cite:`Goodfellow.Pouget-Abadie.Mirza.ea.2014`.
-  Traditionally, statistical methods for density estimation
-  and generative models focused on finding proper probability distributions
-  and (often approximate) algorithms for sampling from them.
-  As a result, these algorithms were largely limited by the lack of
-  flexibility inherent in the statistical models.
-  The crucial innovation in generative adversarial networks was to replace the sampler
-  by an arbitrary algorithm with differentiable parameters.
-  These are then adjusted in such a way that the discriminator
-  (effectively a two-sample test) cannot distinguish fake from real data.
-  Through the ability to use arbitrary algorithms to generate data,
-  it opened up density estimation to a wide variety of techniques.
-  Examples of galloping Zebras :cite:`Zhu.Park.Isola.ea.2017`
-  and of fake celebrity faces :cite:`Karras.Aila.Laine.ea.2017`
-  are both testimony to this progress.
-  Even amateur doodlers can produce
-  photorealistic images based on just sketches that describe
-  how the layout of a scene looks like :cite:`Park.Liu.Wang.ea.2019`.
-* In many cases, a single GPU is insufficient to process
-  the large amounts of data available for training.
-  Over the past decade the ability to build parallel and
-  distributed training algorithms has improved significantly.
-  One of the key challenges in designing scalable algorithms
-  is that the workhorse of deep learning optimization,
-  stochastic gradient descent, relies on relatively
-  small minibatches of data to be processed.
-  At the same time, small batches limit the efficiency of GPUs.
-  Hence, training on 1024 GPUs with a minibatch size of,
-  say 32 images per batch amounts to an aggregate minibatch
-  of about 32000 images. Recent work, first by Li :cite:`Li.2017`,
-  and subsequently by :cite:`You.Gitman.Ginsburg.2017`
-  and :cite:`Jia.Song.He.ea.2018` pushed the size up to 64000 observations,
-  reducing training time for the ResNet-50 model on the ImageNet dataset to less than 7 minutes.
-  For comparison---initially training times were measured in the order of days.
+  Tradicionalmente, os métodos estatísticos para estimativa de densidade
+  e modelos generativos focados em encontrar distribuições de probabilidade adequadas
+  e algoritmos (geralmente aproximados) para amostragem deles.
+  Como resultado, esses algoritmos foram amplamente limitados pela falta de
+  flexibilidade inerente aos modelos estatísticos.
+  A inovação crucial nas redes adversárias geradoras foi substituir o amostrador
+  por um algoritmo arbitrário com parâmetros diferenciáveis.
+  Estes são ajustados de tal forma que o discriminador
+  (efetivamente um teste de duas amostras) não consegue distinguir dados falsos de dados reais.
+  Através da capacidade de usar algoritmos arbitrários para gerar dados,
+  abriu-se a estimativa de densidade para uma ampla variedade de técnicas.
+  Exemplos de Zebras galopando :cite:`Zhu.Park.Isola.ea.2017`
+  e de rostos falsos de celebridades :cite:`Karras.Aila.Laine.ea.2017`
+  são ambos testemunhos desse progresso.
+  Até mesmo *doodlers* amadores podem produzir
+  imagens fotorrealísticas baseadas apenas em esboços que descrevem
+  como o *layout* de uma cena se parece :cite:`Park.Liu.Wang.ea.2019`.
+* Em muitos casos, uma única GPU é insuficiente para processar
+  a grande quantidade de dados disponíveis para treinamento.
+  Na última década, a capacidade de construir paralelos e
+  algoritmos de treinamento distribuído melhoraram significativamente.
+  Um dos principais desafios no projeto de algoritmos escalonáveis
+  é a força motriz da otimização de *deep learning*,
+  o gradiente descendente estocástico, depende de
+  pequenos *minibatches* de dados a serem processados.
+  Ao mesmo tempo, pequenos *batches* limitam a eficiência das GPUs.
+  Portanto, o treinamento em 1024 GPUs com um tamanho de *minibatch* de,
+  digamos que 32 imagens por *batch* equivale a um *minibatch* agregado
+  de cerca de 32.000 imagens. Trabalhos recentes, primeiro de Li :cite:`Li.2017`,
+  e posteriormente por :cite:`You.Gitman.Ginsburg.2017`
+  e :cite:`Jia.Song.He.ea.2018` aumentaram o tamanho para 64.000 observações,
+  reduzindo o tempo de treinamento do modelo ResNet-50 no *dataset* ImageNet para menos de 7 minutos.
+  Para comparação --- inicialmente os tempos de treinamento foram medidos na ordem de dias.
 * The ability to parallelize computation has also contributed quite crucially
   to progress in reinforcement learning, at least whenever simulation is an
   option. This has led to significant progress in computers achieving
@@ -1659,11 +1659,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTc2MDg3MjAsLTE0ODM3OTgxNzcsLT
-MzMjY5NDM1NCwxMDM1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4
-MzA2OCwxNjAyOTUzMzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC
-0yNDYzNDM1OTEsLTQ3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODky
-NTI3NjcsLTExNjQzMjQ4ODEsOTg3NDIxMDcxLDE1NjQwNzg3MD
-ksMjEwNzA2Mjk5NiwtMTA2NDI5MDE5OSw3MjE1MjgwOTAsLTk0
-MTY2MTMyMF19
+eyJoaXN0b3J5IjpbMTExNTMyMTM0NSwtMTUxNzYwODcyMCwtMT
+Q4Mzc5ODE3NywtMzMyNjk0MzU0LDEwMzU5NTA0MjMsMjAyODEw
+NTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMzODgsMjAyMjA4NzMzNS
+w4MTc4OTc1MDYsLTI0NjM0MzU5MSwtNDc1MDI4NTgxLDE3MjUy
+ODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEwNz
+EsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0xMDY0MjkwMTk5LDcy
+MTUyODA5MF19
 -->
