@@ -104,9 +104,9 @@ expressamos nossa previsão $\hat{y}$ (em geral, o símbolo "chapéu" ou  "acent
 
 $$\hat{y} = w_1  x_1 + ... + w_d  x_d + b.$$
 
-Collecting all features into a vector $\mathbf{x} \in \mathbb{R}^d$
-and all weights into a vector $\mathbf{w} \in \mathbb{R}^d$,
-we can express our model compactly using a dot product:
+Coletando todas as *features* em um vetor $\mathbf{x}\in\mathbb{R}^d$
+e todos os pesos em um vetor $\mathbf{w}\in\mathbb{R}^d$,
+podemos expressar nosso modelo compactamente usando um produto escalar:
 
 $$\hat{y} = \mathbf{w}^\top \mathbf{x} + b.$$
 :eqlabel:`eq_linreg-y`
@@ -667,6 +667,6 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OT
-g3OTA0MjRdfQ==
+eyJoaXN0b3J5IjpbMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2Nz
+U4MDA1NywtMTc5ODc5MDQyNF19
 -->
