@@ -19,7 +19,7 @@ In subsequent sections, we will introduce classification problems,
 where the goal is to predict membership among a set of categories.
 
 
-## Basic Elementos of Linear RegressionBásicos de Regressão Linear
+## Elementos Básicos de Regressão Linear
 
 
 *Regressão linear* pode ser a mais simples
@@ -58,7 +58,7 @@ como $\mathbf{x}^{(i)} = [x_1^{(i)}, x_2^{(i)}]^\top$
 e o *label* correspondente como $y^{(i)}$.
 
 
-### Linear Model
+### Modelo Linear
 :label:`subsec_linear_model`
 
 The linearity assumption just says that the target (price)
@@ -667,5 +667,5 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MDAwMDA5LC0xNzk4NzkwNDI0XX0=
+eyJoaXN0b3J5IjpbLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
 -->
