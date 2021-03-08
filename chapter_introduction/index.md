@@ -1460,9 +1460,9 @@ treinar um modelo de regressão linear logística
 costumava ser um problema de lição de casa não trivial,
 digno de dar aos novos alunos de Ph.D. em *machine learning* da *Carnegie Mellon University* em 2014.
 Agora, esta tarefa pode ser realizada com menos de 10 linhas de código,
-colocando-o firmemente nas mãos dos programadores.
+colocando-a firmemente nas mãos dos programadores.
 
-## Success Stories
+## Histórias de Sucesso
 
 AI has a long history of delivering results
 that would be difficult to accomplish otherwise.
@@ -1656,11 +1656,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjM3ODgwLC0xMDE2MDA0NzkzLDExMT
-UzMjEzNDUsLTE1MTc2MDg3MjAsLTE0ODM3OTgxNzcsLTMzMjY5
-NDM1NCwxMDM1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4MzA2OC
-wxNjAyOTUzMzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC0yNDYz
-NDM1OTEsLTQ3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODkyNTI3Nj
-csLTExNjQzMjQ4ODEsOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEw
-NzA2Mjk5Nl19
+eyJoaXN0b3J5IjpbMTg3MzE1NjgyNCwtMTAxNjAwNDc5MywxMT
+E1MzIxMzQ1LC0xNTE3NjA4NzIwLC0xNDgzNzk4MTc3LC0zMzI2
+OTQzNTQsMTAzNTk1MDQyMywyMDI4MTA1MjcwLDEwMTY2ODMwNj
+gsMTYwMjk1MzM4OCwyMDIyMDg3MzM1LDgxNzg5NzUwNiwtMjQ2
+MzQzNTkxLC00NzUwMjg1ODEsMTcyNTI4MDk5NCwxODg5MjUyNz
+Y3LC0xMTY0MzI0ODgxLDk4NzQyMTA3MSwxNTY0MDc4NzA5LDIx
+MDcwNjI5OTZdfQ==
 -->
