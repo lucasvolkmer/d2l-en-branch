@@ -13,8 +13,7 @@ Abordaremos mais técnicas de pré-processamento de dados em capítulos posterio
 
 ## Lendo o  *Dataset*
 
-As an example,
-we begin by (**creating an artificial dataset that is stored in a
+As an example, we begin by (**creating an artificial dataset that is stored in a
 csv (comma-separated values) file**)
 `../data/house_tiny.csv`. Data stored in other
 formats may be processed in similar ways.
@@ -141,5 +140,6 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjUxNjA2MTYsLTUzNTU1ODI1MF19
+eyJoaXN0b3J5IjpbLTgxNTk0NzU2LC0xNDY1MTYwNjE2LC01Mz
+U1NTgyNTBdfQ==
 -->
