@@ -1,15 +1,6 @@
 # Data Preéprocessingamento de Dados
 :label:`sec_pandas`
 
-So far we have introduced a variety of techniques for manipulating data that are already stored in tensors.
-To apply deep learning to solving real-world problems,
-we often begin with preprocessing raw data, rather than those nicely prepared data in the tensor format.
-Among popular data analytic tools in Python, the `pandas` package is commonly used.
-Like many other extension packages in the vast ecosystem of Python,
-`pandas` can work together with tensors.
-So, we will briefly walk through steps for preprocessing raw data with `pandas`
-and converting them into the tensor format.
-We will cover more data preprocessing techniques in later chapters.
 Até agora, introduzimos uma variedade de técnicas para manipular dados que já estão armazenados em tensores.
 Para aplicar o *Deep Learning* na solução de problemas do mundo real,
 frequentemente começamos com o pré-processamento de dados brutos, em vez daqueles dados bem preparados no formato tensor.
@@ -20,7 +11,7 @@ Então, vamos percorrer brevemente as etapas de pré-processamento de dados brut
 e convertendo-os no formato tensor.
 Abordaremos mais técnicas de pré-processamento de dados em capítulos posteriores.
 
-## Reading the Dataset
+## Lendo o  *Dataset*
 
 As an example,
 we begin by (**creating an artificial dataset that is stored in a
@@ -29,6 +20,14 @@ csv (comma-separated values) file**)
 formats may be processed in similar ways.
 
 Below we write the dataset row by row into a csv file.
+
+Como um exemplo,
+começamos (**criando um conjunto de dados artificial que é armazenado em um
+arquivo csv (valores separados por vírgula)**)
+`../ data / house_tiny.csv`. Dados armazenados em outro
+formatos podem ser processados de maneiras semelhantes.
+
+Abaixo, escrevemos o conjunto de dados linha por linha em um arquivo csv.
 
 ```{.python .input}
 #@tab all
@@ -142,5 +141,5 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNTU1ODI1MF19
+eyJoaXN0b3J5IjpbLTE0NjUxNjA2MTYsLTUzNTU1ODI1MF19
 -->
