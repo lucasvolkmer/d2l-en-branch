@@ -1453,15 +1453,14 @@ na última década.
   a [Gluon API](https://github.com/apache/incubator-mxnet) da MXNet e [Jax](https://github.com/google/jax).
 
 
-The division of labor between system researchers building better tools
-and statistical modelers building better neural networks
-has greatly simplified things. For instance,
-training a linear logistic regression model
-used to be a nontrivial homework problem,
-worthy to give to new machine learning
-Ph.D. students at Carnegie Mellon University in 2014.
-By now, this task can be accomplished with less than 10 lines of code,
-putting it firmly into the grasp of programmers.
+A divisão de trabalho entre os pesquisadores do sistema construindo melhores ferramentas
+e modeladores estatísticos construindo melhores redes neurais
+simplificou muito as coisas. Por exemplo,
+treinar um modelo de regressão linear logística
+costumava ser um problema de lição de casa não trivial,
+digno de dar aos novos alunos de Ph.D. em *machine learning* da *Carnegie Mellon University* em 2014.
+Agora, esta tarefa pode ser realizada com menos de 10 linhas de código,
+colocando-o firmemente nas mãos dos programadores.
 
 ## Success Stories
 
@@ -1657,11 +1656,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTYwMDQ3OTMsMTExNTMyMTM0NSwtMT
-UxNzYwODcyMCwtMTQ4Mzc5ODE3NywtMzMyNjk0MzU0LDEwMzU5
-NTA0MjMsMjAyODEwNTI3MCwxMDE2NjgzMDY4LDE2MDI5NTMzOD
-gsMjAyMjA4NzMzNSw4MTc4OTc1MDYsLTI0NjM0MzU5MSwtNDc1
-MDI4NTgxLDE3MjUyODA5OTQsMTg4OTI1Mjc2NywtMTE2NDMyND
-g4MSw5ODc0MjEwNzEsMTU2NDA3ODcwOSwyMTA3MDYyOTk2LC0x
-MDY0MjkwMTk5XX0=
+eyJoaXN0b3J5IjpbLTIzNjM3ODgwLC0xMDE2MDA0NzkzLDExMT
+UzMjEzNDUsLTE1MTc2MDg3MjAsLTE0ODM3OTgxNzcsLTMzMjY5
+NDM1NCwxMDM1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4MzA2OC
+wxNjAyOTUzMzg4LDIwMjIwODczMzUsODE3ODk3NTA2LC0yNDYz
+NDM1OTEsLTQ3NTAyODU4MSwxNzI1MjgwOTk0LDE4ODkyNTI3Nj
+csLTExNjQzMjQ4ODEsOTg3NDIxMDcxLDE1NjQwNzg3MDksMjEw
+NzA2Mjk5Nl19
 -->
