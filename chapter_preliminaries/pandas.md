@@ -1,4 +1,4 @@
-# Data Preprocessing
+# Data Preéprocessingamento de Dados
 :label:`sec_pandas`
 
 So far we have introduced a variety of techniques for manipulating data that are already stored in tensors.
@@ -132,3 +132,6 @@ Create a raw dataset with more rows and columns.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwODMyNzI4NDhdfQ==
+-->
