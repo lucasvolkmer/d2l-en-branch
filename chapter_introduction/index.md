@@ -1570,51 +1570,51 @@ do que o potencial da superinteligência malévola para destruir a humanidade.
 
 ## Características
 
-Thus far, we have talked about machine learning broadly, which is both a branch of AI and an approach to AI.
-Though deep learning is a subset of machine learning,
-the dizzying set of algorithms and applications makes it difficult to assess what specifically the ingredients for deep learning might be. 
-This is as difficult as trying to pin down required ingredients for pizza since almost every component is substitutable.
 
-As we have described, machine learning can
-use data to learn transformations between inputs and outputs,
-such as transforming audio into text in speech recognition.
-In doing so, it is often necessary to represent data in a way suitable for algorithms to transform such representations into the output.
-*Deep learning* is *deep* in precisely the sense
-that its models
-learn many *layers* of transformations,
-where each layer offers the representation
-at one level.
-For example,
-layers near the input may represent 
-low-level details of the data,
-while layers closer to the classification output
-may represent more abstract concepts used for discrimination.
-Since *representation learning* aims at
-finding the representation itself,
-deep learning can be referred to as multi-level
-representation learning.
+Até agora, falamos sobre *machine learning* de maneira ampla, que é tanto um ramo da IA ​​quanto uma abordagem da IA.
+Embora o *deep learning* seja um subconjunto do *machine learning*,
+o conjunto estonteante de algoritmos e aplicativos torna difícil avaliar quais podem ser os ingredientes específicos para o *deep learning*.
+Isso é tão difícil quanto tentar definir os ingredientes necessários para a pizza, uma vez que quase todos os componentes são substituíveis.
 
-The problems that we have discussed so far, such as learning
-from the raw audio signal, 
-the raw pixel values of images,
-or mapping between sentences of arbitrary lengths and
-their counterparts in foreign languages,
-are those
-where deep learning excels and where traditional 
-machine learning
-methods falter.
-It turns out that these many-layered models
-are capable of addressing low-level perceptual data
-in a way that previous tools could not.
-Arguably the most significant commonality in deep learning methods is the use of *end-to-end training*. 
-That is, rather than assembling a system based on components that are individually tuned, one builds the system and then tunes their performance jointly.
-For instance, in computer vision scientists used to separate the process of *feature engineering* from the process of building machine learning models. The Canny edge detector :cite:`Canny.1987` and Lowe's SIFT feature extractor :cite:`Lowe.2004` reigned supreme for over a decade as algorithms for mapping images into feature vectors.
-In bygone days, the crucial part of applying machine learning to these problems
-consisted of coming up with manually-engineered ways
-of transforming the data into some form amenable to shallow models.
-Unfortunately, there is only so little that humans can accomplish by ingenuity in comparison with a consistent evaluation over millions of choices carried out automatically by an algorithm.
-When deep learning took over,
-these feature extractors were replaced by automatically tuned filters, yielding superior accuracy.
+Como descrevemos, o *machine learning* pode
+usar dados para aprender as transformações entre entradas e saídas,
+como a transformação de áudio em texto no reconhecimento de fala.
+Ao fazer isso, muitas vezes é necessário representar os dados de uma forma adequada para que os algoritmos transformem essas representações na saída.
+*Deep learning* é *profundo* exatamente no sentido
+que seus modelos
+aprendem muitas *camadas* de transformações,
+onde cada camada oferece a representação
+em um nível.
+Por exemplo,
+camadas perto da entrada podem representar
+detalhes de baixo nível dos dados,
+enquanto as camadas mais próximas da saída de classificação
+pode representar conceitos mais abstratos usados ​​para discriminação.
+Uma vez que *aprendizagem de representação* visa
+encontrar a própria representação,
+o *deep learning* pode ser referido como
+aprendizagem de representação multinível.
+
+Os problemas que discutimos até agora, como aprendizagem
+do sinal de áudio bruto,
+os valores de pixel brutos das imagens,
+ou mapeamento entre sentenças de comprimentos arbitrários e
+suas contrapartes em línguas estrangeiras,
+são aqueles
+onde o *deep learning* se destaca e onde os métodos tradicionais de
+*machine learning* vacilam.
+Acontece que esses modelos de várias camadas
+são capazes de abordar dados perceptivos de baixo nível
+de uma forma que as ferramentas anteriores não conseguiam.
+Indiscutivelmente, a semelhança mais significativa em métodos de *deep learning* é o uso de *treinamento ponta a ponta*.
+Ou seja, ao invés de montar um sistema baseado em componentes que são ajustados individualmente, constrói-se o sistema e então ajusta seu desempenho em conjunto.
+Por exemplo, em visão computacional, os cientistas costumavam separar o processo de *engenharia de recursos* do processo de construção de modelos de aprendizado de máquina. O detector de bordas Canny :cite:`Canny.1987` e o extrator de recursos SIFT de Lowe :cite:`Lowe.2004` reinou supremo por mais de uma década como algoritmo para mapear imagens em vetores de recursos.
+No passado, a parte crucial de aplicar o *machine learning* a esses problemas
+consistia em criar métodos de engenharia manual
+para transformar os dados em alguma forma receptiva a modelos superficiais.
+Infelizmente, há muito pouco que os humanos possam realizar com engenhosidade em comparação com uma avaliação consistente de milhões de escolhas realizadas automaticamente por um algoritmo.
+Quando o *deep learning* surgiu,
+esses extratores de recursos foram substituídos por filtros ajustados automaticamente, produzindo uma precisão superior.
 
 Thus,
 one key advantage of deep learning is that it replaces not
@@ -1654,11 +1654,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NzM2MjQ2LDIxOTExOTc2NiwxODczMT
-U2ODI0LC0xMDE2MDA0NzkzLDExMTUzMjEzNDUsLTE1MTc2MDg3
-MjAsLTE0ODM3OTgxNzcsLTMzMjY5NDM1NCwxMDM1OTUwNDIzLD
-IwMjgxMDUyNzAsMTAxNjY4MzA2OCwxNjAyOTUzMzg4LDIwMjIw
-ODczMzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLTQ3NTAyODU4MS
-wxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQzMjQ4ODEsOTg3
-NDIxMDcxXX0=
+eyJoaXN0b3J5IjpbMzExOTk1NDg4LC02OTczNjI0NiwyMTkxMT
+k3NjYsMTg3MzE1NjgyNCwtMTAxNjAwNDc5MywxMTE1MzIxMzQ1
+LC0xNTE3NjA4NzIwLC0xNDgzNzk4MTc3LC0zMzI2OTQzNTQsMT
+AzNTk1MDQyMywyMDI4MTA1MjcwLDEwMTY2ODMwNjgsMTYwMjk1
+MzM4OCwyMDIyMDg3MzM1LDgxNzg5NzUwNiwtMjQ2MzQzNTkxLC
+00NzUwMjg1ODEsMTcyNTI4MDk5NCwxODg5MjUyNzY3LC0xMTY0
+MzI0ODgxXX0=
 -->
