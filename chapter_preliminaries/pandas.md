@@ -41,7 +41,7 @@ Este conjunto de dados tem quatro linhas e três colunas, onde cada linha descre
 
 ```{.python .input}
 #@tab all
-# If pandas is not installed, just uncomment the following line:
+# Se o pandas ainda não estiver instalado descomente a linha abaixo:
 # !pip install pandas
 import pandas as pd
 
@@ -49,13 +49,22 @@ data = pd.read_csv(data_file)
 print(data)
 ```
 
-## Handling Missing Data
+## Lidando com Dados Faltantes
 
 Note that "NaN" entries are missing values.
 To handle missing data, typical methods include *imputation* and *deletion*,
 where imputation replaces missing values with substituted ones,
 while deletion ignores missing values. Here we will consider imputation.
 
+Observe que as entradas "NaN" têm valores ausentes.
+Para lidar com dados perdidos, os métodos típicos incluem * imputação* e * exclusão *,
+onde a imputação substitui os valores ausentes por outros substituídos,
+enquanto a exclusão ignora os valores ausentes. Aqui, consideraremos a imputação.
+
+Por indexação baseada em localização de inteiros (`iloc`), dividimos os` dados` em `entradas` e` saídas`,
+onde o primeiro leva as duas primeiras colunas, enquanto o último mantém apenas a última coluna.
+Para valores numéricos em `entradas` que estão faltando,
+nós [** substituímos as entradas "NaN" pelo valor médio da mesma coluna. **]
 By integer-location based indexing (`iloc`), we split `data` into `inputs` and `outputs`,
 where the former takes the first two columns while the latter only keeps the last column.
 For numerical values in `inputs` that are missing,
@@ -133,6 +142,6 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNDQyNDg2NCwyMTE0NzM2NjkxLC04MT
-U5NDc1NiwtMTQ2NTE2MDYxNiwtNTM1NTU4MjUwXX0=
+eyJoaXN0b3J5IjpbNzQ2ODE3MjQ1LDIxMTQ3MzY2OTEsLTgxNT
+k0NzU2LC0xNDY1MTYwNjE2LC01MzU1NTgyNTBdfQ==
 -->
