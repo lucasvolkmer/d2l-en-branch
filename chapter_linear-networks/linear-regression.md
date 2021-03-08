@@ -133,25 +133,26 @@ que dadas as *features* de um novo exemplo de dados
 amostrado da mesma distribuição de $\mathbf{X}$,
 o *label* do novo exemplo será (na expectativa) previsto com o menor erro.
 
-Even if we believe that the best model for
-predicting $y$ given $\mathbf{x}$ is linear,
-we would not expect to find a real-world dataset of $n$ examples where
-$y^{(i)}$ exactly equals $\mathbf{w}^\top \mathbf{x}^{(i)}+b$
-for all $1 \leq i \leq n$.
-For example, whatever instruments we use to observe
-the features $\mathbf{X}$ and labels $\mathbf{y}$
-might suffer small amount of measurement error.
-Thus, even when we are confident
-that the underlying relationship is linear,
-we will incorporate a noise term to account for such errors.
 
-Before we can go about searching for the best *parameters* (or *model parameters*) $\mathbf{w}$ and $b$,
-we will need two more things:
-(i) a quality measure for some given model;
-and (ii) a procedure for updating the model to improve its quality.
+Mesmo se acreditarmos que o melhor modelo para
+predizer $y$ dado $\mathbf{x}$ é linear,
+não esperaríamos encontrar um *dataset* do mundo real de $n$ exemplos onde
+$y^{(i)}$ é exatamente igual a $\mathbf{w}^\top\mathbf{x}^{(i)} + b$
+para todos $1\leq i \leq n$.
+Por exemplo, quaisquer instrumentos que usarmos para observar
+as *features* $\mathbf{X}$ e os *labels* $\mathbf{y}$
+podem sofrer uma pequena quantidade de erro de medição.
+Assim, mesmo quando estamos confiantes
+que a relação subjacente é linear,
+vamos incorporar um termo de ruído para contabilizar esses erros.
+
+Antes de começarmos a pesquisar os melhores *parâmetros* (ou *parâmetros do modelo*) $\mathbf{w}$ e $b$,
+precisaremos de mais duas coisas:
+(i) uma medida de qualidade para algum modelo dado;
+e (ii) um procedimento de atualização do modelo para melhorar sua qualidade.
 
 
-### Loss Function
+### Função de Perda
 
 Before we start thinking about how to *fit* data with our model,
 we need to determine a measure of *fitness*.
@@ -666,6 +667,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDc1Nzc1MjAsMTkxNDY2NTcwMiwzOD
-A2NDM4MDUsLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbMjI3MjM3NjM4LC0xNDQ3NTc3NTIwLDE5MT
+Q2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OTg3OTA0
+MjRdfQ==
 -->
