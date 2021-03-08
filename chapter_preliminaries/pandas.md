@@ -68,12 +68,6 @@ inputs = inputs.fillna(inputs.mean())
 print(inputs)
 ```
 
-[**For categorical or discrete values in `inputs`, we consider "NaN" as a category.**]
-Since the "Alley" column only takes two types of categorical values "Pave" and "NaN",
-`pandas` can automatically convert this column to two columns "Alley_Pave" and "Alley_nan".
-A row whose alley type is "Pave" will set values of "Alley_Pave" and "Alley_nan" to 1 and 0.
-A row with a missing alley type will set their values to 0 and 1.
-
 [**Para valores categóricos ou discretos em `entradas`, consideramos "NaN" como uma categoria.**]
 Como a coluna "Alley" aceita apenas dois tipos de valores categóricos "Pave" e "NaN",
 O `pandas` pode converter automaticamente esta coluna em duas colunas "Alley_Pave" e "Alley_nan".
@@ -86,10 +80,12 @@ inputs = pd.get_dummies(inputs, dummy_na=True)
 print(inputs)
 ```
 
-## Conversion to the Tensor Format
+## Convertendo para o Formato Tensor
 
 Now that [**all the entries in `inputs` and `outputs` are numerical, they can be converted to the tensor format.**]
 Once data are in this format, they can be further manipulated with those tensor functionalities that we have introduced in :numref:`sec_ndarray`.
+Agora que [**todas as entradas em `entradas` e `saídas` são numéricas, elas podem ser convertidas para o formato tensor.**]
+Uma vez que os dados estão neste formato, eles podem ser manipulados posteriormente com as funcionalidades de tensor que introduzimos em :numref:`sec_ndarray`.
 
 ```{.python .input}
 from mxnet import np
@@ -139,6 +135,6 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNjY0NzUwMSwyMTE0NzM2NjkxLC04MT
+eyJoaXN0b3J5IjpbMTM5MTUzMDE0MywyMTE0NzM2NjkxLC04MT
 U5NDc1NiwtMTQ2NTE2MDYxNiwtNTM1NTU4MjUwXX0=
 -->
