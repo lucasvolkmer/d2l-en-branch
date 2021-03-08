@@ -1640,13 +1640,13 @@ No final, a comunidade de aprendizagem profunda se orgulha de compartilhar ferra
 
 ## Resumo
 
-* Machine learning studies how computer systems can leverage experience (often data) to improve performance at specific tasks. It combines ideas from statistics, data mining, and optimization. Often, it is used as a means of implementing AI solutions.
-* As a class of machine learning, representational learning focuses on how to automatically find the appropriate way to represent data. Deep learning is multi-level representation learning through learning many layers of transformations.
-* Deep learning replaces not only the shallow models at the end of traditional machine learning pipelines, but also the labor-intensive process of feature engineering. 
-* Much of the recent progress in deep learning has been triggered by an abundance of data arising from cheap sensors and Internet-scale applications, and by significant progress in computation, mostly through GPUs.
-* Whole system optimization is a key component in obtaining high performance. The availability of efficient deep learning frameworks has made design and implementation of this significantly easier.
+* O *machine learning* estuda como os sistemas de computador podem aproveitar a experiência (geralmente dados) para melhorar o desempenho em tarefas específicas. Ele combina ideias de estatísticas, mineração de dados e otimização. Frequentemente, é usado como meio de implementação de soluções de IA.
+* Como uma classe de *machine learning*, o aprendizado representacional se concentra em como encontrar automaticamente a maneira apropriada de representar os dados. *Deep learning* é a aprendizagem de representação em vários níveis através do aprendizado de muitas camadas de transformações.
+* O *deep learning* substitui não apenas os modelos superficiais no final dos canais de *machine learning* tradicionais, mas também o processo trabalhoso de engenharia de recursos.
+* Muito do progresso recente no *deep learning* foi desencadeado por uma abundância de dados provenientes de sensores baratos e aplicativos em escala da Internet e por um progresso significativo na computação, principalmente por meio de GPUs.
+* A otimização de todo o sistema é um componente chave para a obtenção de alto desempenho. A disponibilidade de estruturas eficientes de *deep learning* tornou o projeto e a implementação disso significativamente mais fáceis.
 
-## Exercises
+## Exercícios
 
 1. Which parts of code that you are currently writing could be "learned", i.e., improved by learning and automatically determining design choices that are made in your code? Does your code include heuristic design choices?
 1. Which problems that you encounter have many examples for how to solve them, yet no specific way to automate them? These may be prime candidates for using deep learning.
@@ -1655,7 +1655,7 @@ No final, a comunidade de aprendizagem profunda se orgulha de compartilhar ferra
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MTY3MDQ0MCwzMTE5OTU0ODgsLTY5Nz
+eyJoaXN0b3J5IjpbLTM4MzYzMTY0NSwzMTE5OTU0ODgsLTY5Nz
 M2MjQ2LDIxOTExOTc2NiwxODczMTU2ODI0LC0xMDE2MDA0Nzkz
 LDExMTUzMjEzNDUsLTE1MTc2MDg3MjAsLTE0ODM3OTgxNzcsLT
 MzMjY5NDM1NCwxMDM1OTUwNDIzLDIwMjgxMDUyNzAsMTAxNjY4
