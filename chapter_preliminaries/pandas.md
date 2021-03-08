@@ -41,7 +41,8 @@ This dataset has four rows and three columns, where each row describes the numbe
 
 Para [**carregar o conjunto de dados bruto do arquivo csv criado**],
 importamos o pacote `pandas` e chamamos a função` read_csv`.
-Este conjunto de dados tem quatro linhas e três colunas, onde cada linha descreve o número de quartos ("NumRooms"), o tipo de beco ("Alley") e o preço ("Pr") de uma casa.
+Este conjunto de dados tem quatro linhas e três colunas, onde cada linha descreve o número de quartos ("NumRooms"), o tipo de beco ("Alley") e o preço ("Price") de uma casa.
+
 ```{.python .input}
 #@tab all
 # If pandas is not installed, just uncomment the following line:
@@ -136,6 +137,6 @@ Create a raw dataset with more rows and columns.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MDcxMzMzNiwtODE1OTQ3NTYsLTE0Nj
+eyJoaXN0b3J5IjpbMjExNDczNjY5MSwtODE1OTQ3NTYsLTE0Nj
 UxNjA2MTYsLTUzNTU1ODI1MF19
 -->
