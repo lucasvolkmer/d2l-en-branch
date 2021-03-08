@@ -1523,51 +1523,52 @@ Muitos desses avanços são atribuídos ao *machine learning*.
 
 
 
-Again, the above list barely scratches the surface of where machine learning has impacted practical applications. For instance, robotics, logistics, computational biology, particle physics, and astronomy owe some of their most impressive recent advances at least in parts to machine learning. Machine learning is thus becoming a ubiquitous tool for engineers and scientists.
 
-Frequently, the question of the AI apocalypse, or the AI singularity
-has been raised in non-technical articles on AI.
-The fear is that somehow machine learning systems
-will become sentient and decide independently from their programmers
-(and masters) about things that directly affect the livelihood of humans.
-To some extent, AI already affects the livelihood of humans
-in an immediate way:
-creditworthiness is assessed automatically,
-autopilots mostly navigate vehicles, decisions about
-whether to grant bail use statistical data as input.
-More frivolously, we can ask Alexa to switch on the coffee machine.
+Novamente, a lista acima apenas arranha a superfície de onde o *machine learning* afetou os aplicativos práticos. Por exemplo, robótica, logística, biologia computacional, física de partículas e astronomia devem alguns de seus avanços recentes mais impressionantes, pelo menos em partes, ao *machine learning*. O *machine learning* está se tornando uma ferramenta onipresente para engenheiros e cientistas.
 
-Fortunately, we are far from a sentient AI system
-that is ready to manipulate its human creators (or burn their coffee).
-First, AI systems are engineered, trained and deployed in a specific,
-goal-oriented manner. While their behavior might give the illusion
-of general intelligence, it is a combination of rules, heuristics
-and statistical models that underlie the design.
-Second, at present tools for *artificial general intelligence*
-simply do not exist that are able to improve themselves,
-reason about themselves, and that are able to modify,
-extend, and improve their own architecture
-while trying to solve general tasks.
+Freqüentemente, a questão do apocalipse da IA, ou a singularidade da IA
+foi levantado em artigos não técnicos sobre IA.
+O medo é que, de alguma forma, os sistemas de *machine learning*
+se tornarão sensíveis e decidirão independentemente de seus programadores
+(e mestres) sobre coisas que afetam diretamente o sustento dos humanos.
+Até certo ponto, a IA já afeta a vida dos humanos
+de forma imediata:
+a qualidade de crédito é avaliada automaticamente,
+os pilotos automáticos navegam  veículos sozinhos, decisões sobre
+se deve conceder fiança, usam dados estatísticos como entrada.
+Mais levianamente, podemos pedir a Alexa que ligue a máquina de café.
 
-A much more pressing concern is how AI is being used in our daily lives.
-It is likely that many menial tasks fulfilled by truck drivers
-and shop assistants can and will be automated.
-Farm robots will likely reduce the cost for organic farming
-but they will also automate harvesting operations.
-This phase of the industrial revolution
-may have profound consequences on large swaths of society,
-since truck drivers and shop assistants are some
-of the most common jobs in many countries.
-Furthermore, statistical models, when applied without care
-can lead to racial, gender, or age bias and raise
-reasonable concerns about procedural fairness
-if automated to drive consequential decisions.
-It is important to ensure that these algorithms are used with care.
-With what we know today, this strikes us a much more pressing concern
-than the potential of malevolent superintelligence to destroy humanity.
+Felizmente, estamos longe de um sistema inteligente de IA
+que esteja pronto para manipular seus criadores humanos (ou queimar seu café).
+Em primeiro lugar, os sistemas de IA são projetados, treinados e implantados de uma forma específica,
+maneira orientada para o objetivo. Embora seu comportamento possa dar a ilusão
+de inteligência geral, é uma combinação de regras, heurísticas
+e modelos estatísticos que fundamentam o design.
+Em segundo lugar, dentre as ferramentas para *inteligência artificial geral* atuais,
+simplesmente não existem aquelas que são capazes de se melhorar,
+raciocinar sobre si mesmos, e que são capazes de modificar,
+estender e melhorar sua própria arquitetura
+ao tentar resolver tarefas gerais.
+
+Uma preocupação muito mais urgente é como a IA está sendo usada em nossas vidas diárias.
+É provável que muitas tarefas servis realizadas por motoristas de caminhão
+e os assistentes de loja podem e serão automatizados.
+Robôs agrícolas provavelmente reduzirão o custo da agricultura orgânica
+e também automatizarão as operações de colheita.
+Esta fase da revolução industrial
+pode ter consequências profundas em grandes segmentos da sociedade,
+já que motoristas de caminhão e assistentes de loja são alguns
+dos empregos mais comuns em muitos países.
+Além disso, os modelos estatísticos, quando aplicados sem cuidado
+pode levar a preconceitos raciais, de gênero ou idade e aumentar
+preocupações razoáveis ​​sobre justiça processual
+se automatizados para conduzir decisões consequentes.
+É importante garantir que esses algoritmos sejam usados ​​com cuidado.
+Com o que sabemos hoje, isso nos causa uma preocupação muito mais premente
+do que o potencial da superinteligência malévola para destruir a humanidade.
 
 
-## Characteristics
+## Características
 
 Thus far, we have talked about machine learning broadly, which is both a branch of AI and an approach to AI.
 Though deep learning is a subset of machine learning,
@@ -1653,11 +1654,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE5MTE5NzY2LDE4NzMxNTY4MjQsLTEwMT
-YwMDQ3OTMsMTExNTMyMTM0NSwtMTUxNzYwODcyMCwtMTQ4Mzc5
-ODE3NywtMzMyNjk0MzU0LDEwMzU5NTA0MjMsMjAyODEwNTI3MC
-wxMDE2NjgzMDY4LDE2MDI5NTMzODgsMjAyMjA4NzMzNSw4MTc4
-OTc1MDYsLTI0NjM0MzU5MSwtNDc1MDI4NTgxLDE3MjUyODA5OT
-QsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEwNzEsMTU2
-NDA3ODcwOV19
+eyJoaXN0b3J5IjpbLTY5NzM2MjQ2LDIxOTExOTc2NiwxODczMT
+U2ODI0LC0xMDE2MDA0NzkzLDExMTUzMjEzNDUsLTE1MTc2MDg3
+MjAsLTE0ODM3OTgxNzcsLTMzMjY5NDM1NCwxMDM1OTUwNDIzLD
+IwMjgxMDUyNzAsMTAxNjY4MzA2OCwxNjAyOTUzMzg4LDIwMjIw
+ODczMzUsODE3ODk3NTA2LC0yNDYzNDM1OTEsLTQ3NTAyODU4MS
+wxNzI1MjgwOTk0LDE4ODkyNTI3NjcsLTExNjQzMjQ4ODEsOTg3
+NDIxMDcxXX0=
 -->
