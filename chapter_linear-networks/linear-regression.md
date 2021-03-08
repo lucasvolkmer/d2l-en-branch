@@ -61,46 +61,46 @@ e o *label* correspondente como $y^{(i)}$.
 ### Modelo Linear
 :label:`subsec_linear_model`
 
-The linearity assumption just says that the target (price)
-can be expressed as a weighted sum of the features (area and age):
 
-$$\mathrm{price} = w_{\mathrm{area}} \cdot \mathrm{area} + w_{\mathrm{age}} \cdot \mathrm{age} + b.$$
-:eqlabel:`eq_price-area`
+A suposição de linearidade apenas diz que o alvo (preço)
+pode ser expresso como uma soma ponderada das características (área e idade):
 
-In :eqref:`eq_price-area`, $w_{\mathrm{area}}$ and $w_{\mathrm{age}}$
-are called *weights*, and $b$ is called a *bias*
-(also called an *offset* or *intercept*).
-The weights determine the influence of each feature
-on our prediction and the bias just says
-what value the predicted price should take
-when all of the features take value 0.
-Even if we will never see any homes with zero area,
-or that are precisely zero years old,
-we still need the bias or else we will
-limit the expressivity of our model.
-Strictly speaking, :eqref:`eq_price-area` is an *affine transformation*
-of input features,
-which is characterized by
-a *linear transformation* of features via weighted sum, combined with
-a *translation* via the added bias.
+$$\mathrm{preço} = w_{\mathrm{área}}\cdot\mathrm{área} + w_ \mathrm{idade}}\cdot\mathrm{idade} + b.$$:eqlabel:`eq_price-area`
 
-Given a dataset, our goal is to choose
-the weights $\mathbf{w}$ and the bias $b$ such that on average,
-the predictions made according to our model
-best fit the true prices observed in the data.
-Models whose output prediction
-is determined by the affine transformation of input features
-are *linear models*,
-where the affine transformation is specified by the chosen weights and bias.
+In :eqref:`eq_price-area`, $ w_{\mathrm{area}}$ e $w_{\mathrm{age}}$
+são chamados de *pesos* e $b$ é chamado de *bias*
+(também chamado de *deslocamento* ou *offset*).
+Os pesos determinam a influência de cada *feature*
+em nossa previsão e o *bias* apenas diz
+qual valor o preço previsto deve assumir
+quando todos os *features* assumem o valor 0.
+Mesmo que nunca vejamos nenhuma casa com área zero,
+ou que têm exatamente zero anos de idade,
+ainda precisamos do *bias* ou então vamos
+limitar a expressividade do nosso modelo.
+Estritamente falando, :eqref:`eq_price-area` é uma *transformação afim*
+de *features* de entrada,
+que é caracterizada por
+uma *transformação linear* de *features* via soma ponderada, combinada com
+uma *tradução* por meio do *bias* adicionado.
+
+Dado um *dataset*, nosso objetivo é escolher
+os pesos $\mathbf{w}$ e o *bias* $b$ de modo que, em média,
+as previsões feitas de acordo com nosso modelo
+ se ajustem o melhor possível aos preços reais observados nos dados.
+Modelos cuja previsão de saída
+é determinada pela transformação afim de *features* de entrada
+são *modelos lineares*,
+onde a transformação afim é especificada pelos pesos e *bias* escolhidos.
 
 
-In disciplines where it is common to focus
-on datasets with just a few features,
-explicitly expressing models long-form like this is common.
-In machine learning, we usually work with high-dimensional datasets,
-so it is more convenient to employ linear algebra notation.
-When our inputs consist of $d$ features,
-we express our prediction $\hat{y}$ (in general the "hat" symbol denotes estimates) as
+Em disciplinas onde é comum se concentrar
+em conjuntos de dados com apenas alguns *features*,
+expressar explicitamente modelos de formato longo como esse é comum.
+No  *machine learning*, geralmente trabalhamos com *datasets* de alta dimensão,
+portanto, é mais conveniente empregar a notação de álgebra linear.
+Quando nossas entradas consistem em $d$ *features*,
+expressamos nossa previsão $\hat{y}$ (em geral, o símbolo "chapéu" ou  "acento circunflexo" denota estimativas) como
 
 $$\hat{y} = w_1  x_1 + ... + w_d  x_d + b.$$
 
@@ -667,5 +667,6 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OT
+g3OTA0MjRdfQ==
 -->
