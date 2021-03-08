@@ -129,9 +129,10 @@ Dadas as *features* de um *dataset* de treinamento $\mathbf{X}$
 e *labels* correspondentes (conhecidos) $\mathbf{y}$,
 o objetivo da regressão linear é encontrar
 o vetor de pesos $\mathbf{w}$ e o termo de polarização $b$
-que determinadas *features* de um novo exemplo de dados
+que dadas as *features* de um novo exemplo de dados
 amostrado da mesma distribuição de $\mathbf{X}$,
 o *label* do novo exemplo será (na expectativa) previsto com o menor erro.
+
 Even if we believe that the best model for
 predicting $y$ given $\mathbf{x}$ is linear,
 we would not expect to find a real-world dataset of $n$ examples where
@@ -665,6 +666,6 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTQ4NzA3NDAsMTkxNDY2NTcwMiwzOD
+eyJoaXN0b3J5IjpbLTE0NDc1Nzc1MjAsMTkxNDY2NTcwMiwzOD
 A2NDM4MDUsLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
 -->
