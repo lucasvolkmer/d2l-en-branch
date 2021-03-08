@@ -21,40 +21,41 @@ where the goal is to predict membership among a set of categories.
 
 ## Basic Elementos of Linear RegressionBásicos de Regressão Linear
 
-*Linear regression* may be both the simplest
-and most popular among the standard tools to regression.
-Dating back to the dawn of the 19th century,
-linear regression flows from a few simple assumptions.
-First, we assume that the relationship between
-the independent variables $\mathbf{x}$ and the dependent variable $y$ is linear,
-i.e., that $y$ can be expressed as a weighted sum
-of the elements in $\mathbf{x}$,
-given some noise on the observations.
-Second, we assume that any noise is well-behaved
-(following a Gaussian distribution).
 
-To motivate the approach, let us start with a running example.
-Suppose that we wish to estimate the prices of houses (in dollars)
-based on their area (in square feet) and age (in years).
-To actually develop a model for predicting house prices,
-we would need to get our hands on a dataset
-consisting of sales for which we know
-the sale price, area, and age for each home.
-In the terminology of machine learning,
-the dataset is called a *training dataset* or *training set*,
-and each row (here the data corresponding to one sale)
-is called an *example* (or *data point*, *data instance*, *sample*).
-The thing we are trying to predict (price)
-is called a *label* (or *target*).
-The independent variables (age and area)
-upon which the predictions are based
-are called *features* (or *covariates*).
+*Regressão linear* pode ser a mais simples
+e mais popular entre as ferramentas padrão para regressão.
+Datado do início do século 19,
+A regressão linear flui a partir de algumas suposições simples.
+Primeiro, assumimos que a relação entre
+as variáveis ​​independentes $\mathbf{x}$ e a variável dependente $y$ é linear,
+ou seja, esse $y$ pode ser expresso como uma soma ponderada
+dos elementos em $\mathbf{x}$,
+dado algum ruído nas observações.
+Em segundo lugar, assumimos que qualquer ruído é bem comportado
+(seguindo uma distribuição gaussiana).
 
-Typically, we will use $n$ to denote
-the number of examples in our dataset.
-We index the data examples by $i$, denoting each input
-as $\mathbf{x}^{(i)} = [x_1^{(i)}, x_2^{(i)}]^\top$
-and the corresponding label as $y^{(i)}$.
+Para motivar a abordagem, vamos começar com um exemplo de execução.
+Suponha que desejamos estimar os preços das casas (em dólares)
+com base em sua área (em pés quadrados) e idade (em anos).
+Para realmente desenvolver um modelo para prever os preços das casas,
+precisaríamos colocar as mãos em um conjunto de dados
+consistindo em vendas para as quais sabemos
+o preço de venda, área e idade de cada casa.
+Na terminologia de *machine learning*,
+o conjunto de dados é chamado de *dataset de treinamento* ou *conjunto de treinamento*,
+e cada linha (aqui os dados correspondentes a uma venda)
+é chamado de *exemplo* (ou *tupla*, *instância de dados*, * amostra *).
+O que estamos tentando prever (preço)
+é chamado de * label* (ou *rótulo*).
+As variáveis ​​independentes (idade e área)
+em que as previsões são baseadas
+são chamadas de *features* (ou *covariáveis*).
+
+Normalmente, usaremos $n$ para denotar
+o número de exemplos em nosso conjunto de dados.
+Nós indexamos os exemplos de dados por $i$, denotando cada entrada
+como $\mathbf{x}^{(i)} = [x_1^{(i)}, x_2^{(i)}]^\top$
+e o *label* correspondente como $y^{(i)}$.
 
 
 ### Linear Model
@@ -666,5 +667,5 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTg3OTA0MjRdfQ==
+eyJoaXN0b3J5IjpbLTk1MDAwMDA5LC0xNzk4NzkwNDI0XX0=
 -->
