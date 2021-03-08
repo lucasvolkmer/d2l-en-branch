@@ -1464,65 +1464,62 @@ colocando-a firmemente nas mãos dos programadores.
 
 ## Histórias de Sucesso
 
-AI has a long history of delivering results
-that would be difficult to accomplish otherwise.
-For instance, 
-the mail sorting systems
-using optical character recognition
-have been deployed since the 1990s.
-This is, after all, the source of the famous MNIST dataset  of handwritten digits.
-The same applies to reading checks for bank deposits and scoring
-creditworthiness of applicants.
-Financial transactions are checked for fraud automatically.
-This forms the backbone of many e-commerce payment systems,
-such as PayPal, Stripe, AliPay, WeChat, Apple, Visa, and MasterCard.
-Computer programs for chess have been competitive for decades.
-Machine learning feeds search, recommendation, personalization,
-and ranking on the Internet.
-In other words, machine learning is pervasive, albeit often hidden from sight.
 
-It is only recently that AI
-has been in the limelight, mostly due to
-solutions to problems
-that were considered intractable previously
-and that are directly related to consumers.
-Many of such advances are attributed to deep learning.
+A IA tem uma longa história de entrega de resultados
+que seriam difíceis de realizar de outra forma.
+Por exemplo,
+os sistemas de classificação de correio
+usando reconhecimento óptico de caracteres
+foram implantados desde a década de 1990.
+Afinal, essa é a fonte do famoso *dataset* MNIST de dígitos manuscritos.
+O mesmo se aplica à leitura de cheques para depósitos bancários e pontuação de crédito para clientes.
+As transações financeiras são verificadas em busca de fraudes automaticamente.
+Isso forma a espinha dorsal de muitos sistemas de pagamento de comércio eletrônico,
+como PayPal, Stripe, AliPay, WeChat, Apple, Visa e MasterCard.
+Os programas de computador para xadrez são competitivos há décadas.
+O *machine learning* alimenta pesquisa, recomendação, personalização e classificação na Internet.
+Em outras palavras, o *machine learning* é difundido, embora muitas vezes oculto à vista.
 
-* Intelligent assistants, such as Apple's Siri, Amazon's Alexa, and Google's
-  assistant, are able to answer spoken questions with a reasonable degree of
-  accuracy. This includes menial tasks such as turning on light switches (a boon to the disabled) up to making barber's appointments and offering phone support dialog. This is likely the most noticeable sign that AI is affecting our lives.
-* A key ingredient in digital assistants is the ability to recognize speech
-  accurately. Gradually the accuracy of such systems has increased to the point
-  where they reach human parity for certain
-  applications :cite:`Xiong.Wu.Alleva.ea.2018`.
-* Object recognition likewise has come a long way. Estimating the object in a
-  picture was a fairly challenging task in 2010. On the ImageNet benchmark researchers from NEC Labs and University of Illinois at Urbana-Champaign achieved a top-5 error rate of 28% :cite:`Lin.Lv.Zhu.ea.2010`. By 2017,
-  this error rate was reduced to 2.25% :cite:`Hu.Shen.Sun.2018`. Similarly, stunning
-  results have been achieved for identifying birds or diagnosing skin cancer.
-* Games used to be a bastion of human intelligence.
-  Starting from TD-Gammon, a program for playing backgammon using temporal difference reinforcement learning, algorithmic and computational progress has led to algorithms
-  for a wide range of applications. Unlike backgammon,
-  chess has a much more complex state space and set of actions.
-  DeepBlue beat Garry Kasparov using massive parallelism,
-  special-purpose hardware and efficient search through the game tree :cite:`Campbell.Hoane-Jr.Hsu.2002`.
-  Go is more difficult still, due to its huge state space.
-  AlphaGo reached human parity in 2015, using deep learning combined with Monte Carlo tree sampling :cite:`Silver.Huang.Maddison.ea.2016`.
-  The challenge in Poker was that the state space is
-  large and it is not fully observed (we do not know the opponents'
-  cards). Libratus exceeded human performance in Poker using efficiently
-  structured strategies :cite:`Brown.Sandholm.2017`.
-  This illustrates the impressive progress in games
-  and the fact that advanced algorithms played a crucial part in them.
-* Another indication of progress in AI is the advent of self-driving cars
-  and trucks. While full autonomy is not quite within reach yet,
-  excellent progress has been made in this direction,
-  with companies such as Tesla, NVIDIA,
-  and Waymo shipping products that enable at least partial autonomy.
-  What makes full autonomy so challenging is that proper driving
-  requires the ability to perceive, to reason and to incorporate rules
-  into a system. At present, deep learning is used primarily
-  in the computer vision aspect of these problems.
-  The rest is heavily tuned by engineers.
+Só recentemente é que a IA
+tem estado no centro das atenções, principalmente devido a
+soluções para problemas
+que foram considerados intratáveis ​​anteriormente
+e que estão diretamente relacionados aos consumidores.
+Muitos desses avanços são atribuídos ao *machine learning*.
+
+* Assistentes inteligentes, como Siri da Apple, Alexa da Amazon e do Google
+  assistente, são capazes de responder a perguntas faladas com um grau razoável de
+  precisão. Isso inclui tarefas servis, como ligar interruptores de luz (uma bênção para os deficientes), marcar compromissos com o barbeiro e oferecer suporte por telefone. Este é provavelmente o sinal mais perceptível de que a IA está afetando nossas vidas.
+* Um ingrediente importante nos assistentes digitais é a capacidade de reconhecer a fala
+  com precisão. Gradualmente, a precisão de tais sistemas aumentou ao ponto
+  onde eles alcançam a paridade humana com certas
+  aplicações :cite:`Xiong.Wu.Alleva.ea.2018`.
+* O reconhecimento de objetos também percorreu um longo caminho. Estimando o objeto em uma imagem foi uma tarefa bastante desafiadora em 2010. No *benchmark* ImageNet, pesquisadores da NEC Labs e da Universidade de Illinois em Urbana-Champaign alcançaram uma taxa de erro de 28%, entre os 5 primeiros :cite:`Lin.Lv.Zhu.ea.2010`. Em 2017,
+  esta taxa de erro foi reduzida para 2,25% :cite:`Hu.Shen.Sun.2018`. Da mesma forma, deslumbrante
+  resultados foram alcançados para a identificação de aves ou diagnóstico de câncer de pele.
+* Os jogos costumavam ser um bastião da inteligência humana.
+  Começando com TD-Gammon, um programa para jogar gamão usando aprendizagem de reforço de diferença temporal, progresso algorítmico e computacional levou a algoritmos
+  para uma ampla gama de aplicações. Ao contrário do gamão,
+  o xadrez tem um espaço de estados e um conjunto de ações muito mais complexos.
+  *DeepBlue* venceu Garry Kasparov usando paralelismo massivo,
+  *hardware* para fins especiais e busca eficiente na árvore do jogo :cite:`Campbell.Hoane-Jr.Hsu.2002`.
+  Go é ainda mais difícil, devido ao seu enorme espaço de estados.
+  AlphaGo atingiu a paridade humana em 2015, usando *deep learning* combinado com amostragem de árvore Monte Carlo :cite:`Silver.Huang.Maddison.ea.2016`.
+  O desafio no Poker era que o espaço de estados é
+  grande e não é totalmente observado (não conhecemos as cartas dos oponentes). Libratus excedeu o desempenho humano no Poker usando de forma eficiente
+  estratégias estruturadas :cite:`Brown.Sandholm.2017`.
+  Isso ilustra o progresso impressionante nos jogos
+  e o fato de que algoritmos avançados desempenharam um papel crucial neles.
+* Outra indicação de progresso na IA é o advento dos carros autônomos
+  e caminhões. Embora a autonomia total ainda não esteja totalmente ao nosso alcance,
+  excelente progresso foi feito nesta direção,
+  com empresas como Tesla, NVIDIA,
+  e Waymo enviando produtos que permitem pelo menos uma autonomia parcial.
+  O que torna a autonomia total tão desafiadora é que a direção adequada
+  requer a habilidade de perceber, raciocinar e incorporar regras
+  em um sistema. No momento, o *deep learning* é usado principalmente
+  no aspecto de visão computacional desses problemas.
+  O resto é intensamente ajustado por engenheiros.
 
 
 
@@ -1656,11 +1653,11 @@ It is in this spirit that the notebooks forming this book are freely available f
 
 [Discussions](https://discuss.d2l.ai/t/22)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MzE1NjgyNCwtMTAxNjAwNDc5MywxMT
-E1MzIxMzQ1LC0xNTE3NjA4NzIwLC0xNDgzNzk4MTc3LC0zMzI2
-OTQzNTQsMTAzNTk1MDQyMywyMDI4MTA1MjcwLDEwMTY2ODMwNj
-gsMTYwMjk1MzM4OCwyMDIyMDg3MzM1LDgxNzg5NzUwNiwtMjQ2
-MzQzNTkxLC00NzUwMjg1ODEsMTcyNTI4MDk5NCwxODg5MjUyNz
-Y3LC0xMTY0MzI0ODgxLDk4NzQyMTA3MSwxNTY0MDc4NzA5LDIx
-MDcwNjI5OTZdfQ==
+eyJoaXN0b3J5IjpbMjE5MTE5NzY2LDE4NzMxNTY4MjQsLTEwMT
+YwMDQ3OTMsMTExNTMyMTM0NSwtMTUxNzYwODcyMCwtMTQ4Mzc5
+ODE3NywtMzMyNjk0MzU0LDEwMzU5NTA0MjMsMjAyODEwNTI3MC
+wxMDE2NjgzMDY4LDE2MDI5NTMzODgsMjAyMjA4NzMzNSw4MTc4
+OTc1MDYsLTI0NjM0MzU5MSwtNDc1MDI4NTgxLDE3MjUyODA5OT
+QsMTg4OTI1Mjc2NywtMTE2NDMyNDg4MSw5ODc0MjEwNzEsMTU2
+NDA3ODcwOV19
 -->
