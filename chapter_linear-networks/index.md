@@ -1,4 +1,4 @@
-# Linear Neural Networks
+# Linear Neural NetworkRedes Neurais Lineares
 :label:`chap_linear`
 
 Before we get into the details of deep neural networks,
@@ -23,3 +23,6 @@ softmax-regression-scratch
 softmax-regression-concise
 ```
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE5ODYzOTY0ODJdfQ==
+-->
