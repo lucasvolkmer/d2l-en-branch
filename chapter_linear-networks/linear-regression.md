@@ -507,9 +507,9 @@ de ver um determinado $y$ para um determinado $\mathbf{x}$ via
 
 $$P(y \mid \mathbf{x}) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{1}{2 \sigma^2} (y - \mathbf{w}^\top \mathbf{x} - b)^2\right).$$
 
-Now, according to the principle of maximum likelihood,
-the best values of parameters $\mathbf{w}$ and $b$ are those
-that maximize the *likelihood* of the entire dataset:
+Agora, de acordo com o princípio da máxima verossimilhança (*likelihood*),
+os melhores valores dos parâmetros $\mathbf{w}$ e $b$ são os
+que maximizam a *probabilidade* de todo o conjunto de dados:
 
 $$P(\mathbf y \mid \mathbf X) = \prod_{i=1}^{n} p(y^{(i)}|\mathbf{x}^{(i)}).$$
 
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTY4MjY5NywtMTE1MjAwMTY1MSwyMz
-EyNDQ0MjQsMTMxODE3OTg3LC0xNTEwMTAzMDcyLDIyNzIzNzYz
-OCwtMTQ0NzU3NzUyMCwxOTE0NjY1NzAyLDM4MDY0MzgwNSwtMT
-Y3NTgwMDU3LC0xNzk4NzkwNDI0XX0=
+eyJoaXN0b3J5IjpbNjM3NzIzMTc3LC0xMTUyMDAxNjUxLDIzMT
+I0NDQyNCwxMzE4MTc5ODcsLTE1MTAxMDMwNzIsMjI3MjM3NjM4
+LC0xNDQ3NTc3NTIwLDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNj
+c1ODAwNTcsLTE3OTg3OTA0MjRdfQ==
 -->
