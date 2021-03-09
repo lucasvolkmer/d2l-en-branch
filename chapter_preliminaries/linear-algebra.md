@@ -310,7 +310,7 @@ B = tf.constant([[1, 2, 3], [2, 0, 4], [3, 4, 5]])
 B
 ```
 
-Now we compare `B` with its transpose.
+Agora comparamos `B` com sua transposta.
 
 
 ```{.python .input}
@@ -341,6 +341,20 @@ this convention will enable common deep learning practices.
 For example, along the outermost axis of a tensor,
 we can access or enumerate minibatches of data examples,
 or just data examples if no minibatch exists.
+Matrizes são estruturas de dados úteis:
+eles nos permitem organizar dados que têm diferentes modalidades de variação.
+Por exemplo, as linhas em nossa matriz podem corresponder a diferentes casas (exemplos de dados),
+enquanto as colunas podem corresponder a diferentes atributos.
+Isso deve soar familiar se você já usou um software de planilha ou
+leu: numref: `sec_pandas`.
+Assim, embora a orientação padrão de um único vetor seja um vetor coluna,
+em uma matriz que representa um conjunto de dados tabular,
+é mais convencional tratar cada exemplo de dados como um vetor linha na matriz.
+E, como veremos em capítulos posteriores,
+esta convenção permitirá práticas comuns de aprendizado profundo.
+Por exemplo, ao longo do eixo mais externo de um tensor,
+podemos acessar ou enumerar minibatches de exemplos de dados,
+ou apenas exemplos de dados se não houver minibatch.
 
 
 ## Tensors
@@ -1088,7 +1102,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjMyMTMyNyw4NTc0ODg5OTksMTY4MT
+eyJoaXN0b3J5IjpbLTg4NjE0NjU5MSw4NTc0ODg5OTksMTY4MT
 A1MjQyMSwxNjM5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3
 NCwxMDE5Mjg4MDM2XX0=
 -->
