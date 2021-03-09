@@ -496,11 +496,11 @@ d2l.plot(x, [normal(x, mu, sigma) for mu, sigma in params], xlabel='x',
 Como podemos ver, mudar a média corresponde a uma mudança ao longo do eixo $x$,
 e aumentar a variância espalha a distribuição, diminuindo seu pico.
 
-One way to motivate linear regression with the mean squared error loss function (or simply squared loss)
-is to formally assume that observations arise from noisy observations,
-where the noise is normally distributed as follows:
+Uma maneira de motivar a regressão linear com a função de perda de erro quadrático médio (ou simplesmente perda quadrada)
+é assumir formalmente que as observações surgem de observações ruidosas,
+onde o ruído é normalmente distribuído da seguinte forma:
 
-$$y = \mathbf{w}^\top \mathbf{x} + b + \epsilon \text{ where } \epsilon \sim \mathcal{N}(0, \sigma^2).$$
+$$y = \mathbf{w}^\top \mathbf{x} + b + \epsilon \text{ onde } \epsilon \sim \mathcal{N}(0, \sigma^2).$$
 
 Thus, we can now write out the *likelihood*
 of seeing a particular $y$ for a given $\mathbf{x}$ via
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTIwMDE2NTEsMjMxMjQ0NDI0LDEzMT
-gxNzk4NywtMTUxMDEwMzA3MiwyMjcyMzc2MzgsLTE0NDc1Nzc1
-MjAsMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2NzU4MDA1NywtMT
-c5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbMjM3ODQ1MjIyLC0xMTUyMDAxNjUxLDIzMT
+I0NDQyNCwxMzE4MTc5ODcsLTE1MTAxMDMwNzIsMjI3MjM3NjM4
+LC0xNDQ3NTc3NTIwLDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNj
+c1ODAwNTcsLTE3OTg3OTA0MjRdfQ==
 -->
