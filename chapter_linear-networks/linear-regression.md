@@ -539,13 +539,13 @@ de um modelo linear sob a suposição de ruído gaussiano aditivo.
 
 ## Da Regressão Linear às Redes Profundas
 
-So far we only talked about linear models.
-While neural networks cover a much richer family of models,
-we can begin thinking of the linear model
-as a neural network by expressing it in the language of neural networks.
-To begin, let us start by rewriting things in a "layer" notation.
+Até agora, falamos apenas sobre modelos lineares.
+Enquanto as redes neurais cobrem uma família muito mais rica de modelos,
+podemos começar a pensar no modelo linear
+como uma rede neural, expressando-a na linguagem das redes neurais.
+Para começar, vamos começar reescrevendo as coisas em uma notação de "camada".
 
-### Neural Network Diagram
+### Diagrama de Rede Neural
 
 Deep learning practitioners like to draw diagrams
 to visualize what is happening in their models.
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc0NjA0MzI0LDYzNzcyMzE3NywtMTE1Mj
-AwMTY1MSwyMzEyNDQ0MjQsMTMxODE3OTg3LC0xNTEwMTAzMDcy
-LDIyNzIzNzYzOCwtMTQ0NzU3NzUyMCwxOTE0NjY1NzAyLDM4MD
-Y0MzgwNSwtMTY3NTgwMDU3LC0xNzk4NzkwNDI0XX0=
+eyJoaXN0b3J5IjpbMTIxNjczNjM4OSw2Mzc3MjMxNzcsLTExNT
+IwMDE2NTEsMjMxMjQ0NDI0LDEzMTgxNzk4NywtMTUxMDEwMzA3
+MiwyMjcyMzc2MzgsLTE0NDc1Nzc1MjAsMTkxNDY2NTcwMiwzOD
+A2NDM4MDUsLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
 -->
