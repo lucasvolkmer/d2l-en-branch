@@ -181,15 +181,15 @@ for X, y in data_iter(batch_size, features, labels):
     break
 ```
 
-As we run the iteration, we obtain distinct minibatches
-successively until the entire dataset has been exhausted (try this).
-While the iteration implemented above is good for didactic purposes,
-it is inefficient in ways that might get us in trouble on real problems.
-For example, it requires that we load all the data in memory
-and that we perform lots of random memory access.
-The built-in iterators implemented in a deep learning framework
-are considerably more efficient and they can deal
-with both data stored in files and data fed via data streams.
+Conforme executamos a iteração, obtemos *minibatches* distintos
+sucessivamente até que todo o conjunto de dados se esgote (tente isto).
+Embora a iteração implementada acima seja boa para fins didáticos,
+é ineficiente de maneiras que podem nos colocar em apuros em problemas reais.
+Por exemplo, requer que carreguemos todos os dados na memória
+e que realizamos muitos acessos aleatórios à memória.
+Os iteradores integrados implementados em uma estrutura de *deep learning*
+são consideravelmente mais eficientes e podem lidar
+com dados armazenados em arquivos e dados alimentados por meio de fluxos de dados.
 
 
 ## Initializing Model Parameters
@@ -460,6 +460,6 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjI4ODQxNjEsLTE5OTM1NjY5MywtOT
-g4OTY5MDE2LC0xMjI5Njc1NDk3XX0=
+eyJoaXN0b3J5IjpbMTQ5NjU5MTcwLC0xOTkzNTY2OTMsLTk4OD
+k2OTAxNiwtMTIyOTY3NTQ5N119
 -->
