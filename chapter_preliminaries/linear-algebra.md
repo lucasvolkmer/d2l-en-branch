@@ -374,19 +374,20 @@ X = tf.reshape(tf.range(24), (2, 3, 4))
 X
 ```
 
-## Propriedades Básicas de Aritmética de Ten
-Scalars, vectors, matrices, and tensors ("tensors" in this subsection refer to algebraic objects)
-of an arbitrary number of axes
-have some nice properties that often come in handy.
-For example, you might have noticed
-from the definition of an elementwise operation
-that any elementwise unary operation does not change the shape of its operand.
-Similarly,
-[**given any two tensors with the same shape,
-the result of any binary elementwise operation
-will be a tensor of that same shape.**]
-For example, adding two matrices of the same shape
-performs elementwise addition over these two matrices.
+## Propriedades Básicas de Aritmética de Tensores
+
+Escalares, vetores, matrizes e tensores ("tensores" nesta subseção referem-se a objetos algébricos)
+de um número arbitrário de eixos
+têm algumas propriedades interessantes que muitas vezes são úteis.
+Por exemplo, você deve ter notado
+da definição de uma operação elemento a elemento
+que qualquer operação unária elementar não altera a forma de seu operando.
+Similarmente,
+[**dados quaisquer dois tensores com a mesma forma,
+o resultado de qualquer operação binária elementar
+será um tensor da mesma forma.**]
+Por exemplo, adicionar duas matrizes da mesma forma
+realiza a adição elemento a elemento sobre essas duas matrizes.
 
 ```{.python .input}
 A = np.arange(20).reshape(5, 4)
@@ -1086,7 +1087,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTk4MjczODgsODU3NDg4OTk5LDE2OD
+eyJoaXN0b3J5IjpbLTExNjE5MTI5ODgsODU3NDg4OTk5LDE2OD
 EwNTI0MjEsMTYzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3
 NzQsMTAxOTI4ODAzNl19
 -->
