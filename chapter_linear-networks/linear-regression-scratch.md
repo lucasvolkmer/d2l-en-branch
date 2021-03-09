@@ -42,21 +42,21 @@ import random
 
 ## Gerando o Dataset
 
-To keep things simple, we will [**construct an artificial dataset
-according to a linear model with additive noise.**]
-Our task will be to recover this model's parameters
-using the finite set of examples contained in our dataset.
-We will keep the data low-dimensional so we can visualize it easily.
-In the following code snippet, we generate a dataset
-containing 1000 examples, each consisting of 2 features
-sampled from a standard normal distribution.
-Thus our synthetic dataset will be a matrix
-$\mathbf{X}\in \mathbb{R}^{1000 \times 2}$.
+Para manter as coisas simples, iremos [**construir um conjunto de dados artificial
+de acordo com um modelo linear com ruído aditivo.**]
+Nossa tarefa será recuperar os parâmetros deste modelo
+usando o conjunto finito de exemplos contidos em nosso conjunto de dados.
+Manteremos os dados em baixa dimensão para que possamos visualizá-los facilmente.
+No seguinte *snippet* de código, geramos um conjunto de dados
+contendo 1000 exemplos, cada um consistindo em 2 *features*
+amostrado a partir de uma distribuição normal padrão.
+Assim, nosso conjunto de dados sintético será uma matriz
+$\mathbf{X}\in\mathbb{R}^{1000\times 2}$.
 
-(**The true parameters generating our dataset will be
-$\mathbf{w} = [2, -3.4]^\top$ and $b = 4.2$,
-and**) our synthetic labels will be assigned according
-to the following linear model with the noise term $\epsilon$:
+(**Os verdadeiros parâmetros que geram nosso conjunto de dados serão
+$\mathbf{w} = [2, -3,4]^\top$ e $b = 4,2$,
+e**) nossos rótulos sintéticos serão atribuídos de acordo
+ao seguinte modelo linear com o termo de ruído $\epsilon$:
 
 (**$$\mathbf{y}= \mathbf{X} \mathbf{w} + b + \mathbf\epsilon.$$**)
 
@@ -458,5 +458,5 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5Nzk0MDQ0MCwtMTIyOTY3NTQ5N119
+eyJoaXN0b3J5IjpbMjE0NTE5NTkyMiwtMTIyOTY3NTQ5N119
 -->
