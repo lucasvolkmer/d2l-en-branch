@@ -199,28 +199,27 @@ $$\mathbf{w}^*, b^* = \operatorname*{argmin}_{\mathbf{w}, b}\  L(\mathbf{w}, b).
 
 ### Solução Analítica
 
-Linear regression happens to be an unusually simple optimization problem.
-Unlike most other models that we will encounter in this book,
-linear regression can be solved analytically by applying a simple formula.
-To start, we can subsume the bias $b$ into the parameter $\mathbf{w}$
-by appending a column to the design matrix consisting of all ones.
-Then our prediction problem is to minimize $\|\mathbf{y} - \mathbf{X}\mathbf{w}\|^2$.
-There is just one critical point on the loss surface
-and it corresponds to the minimum of the loss over the entire domain.
-Taking the derivative of the loss with respect to $\mathbf{w}$
-and setting it equal to zero yields the analytic (closed-form) solution:
+A regressão linear passa a ser um problema de otimização incomumente simples.
+Ao contrário da maioria dos outros modelos que encontraremos neste livro,
+a regressão linear pode ser resolvida analiticamente aplicando uma fórmula simples.
+Para começar, podemos incluir o *bias* $b$ no parâmetro $\mathbf{w}$
+anexando uma coluna à matriz de design que consiste em todas as unidades.
+Então nosso problema de previsão é minimizar $\|\mathbf{y} -\mathbf{X}\mathbf{w}\|^2$.
+Há apenas um ponto crítico na superfície de perda
+e corresponde ao mínimo de perda em todo o domínio.
+Tirando a derivada da perda em relação a $\mathbf{w}$
+e defini-lo igual a zero produz a solução analítica (de forma fechada):
 
 $$\mathbf{w}^* = (\mathbf X^\top \mathbf X)^{-1}\mathbf X^\top \mathbf{y}.$$
 
-While simple problems like linear regression
-may admit analytic solutions,
-you should not get used to such good fortune.
-Although analytic solutions allow for nice mathematical analysis,
-the requirement of an analytic solution is so restrictive
-that it would exclude all of deep learning.
+Embora problemas simples como regressão linear
+podem admitir soluções analíticas,
+você não deve se acostumar com essa boa sorte.
+Embora as soluções analíticas permitam uma boa análise matemática,
+o requisito de uma solução analítica é tão restritivo
+que isso excluiria todo o *deep learning*.
 
-
-### Minibatch Stochastic Gradient Descent
+### *Minibatch* Stochastic Gradient Descent
 
 Even in cases where we cannot solve the models analytically,
 it turns out that we can still train models effectively in practice.
@@ -667,7 +666,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkzMDM1MjAyLDIyNzIzNzYzOCwtMTQ0Nz
-U3NzUyMCwxOTE0NjY1NzAyLDM4MDY0MzgwNSwtMTY3NTgwMDU3
-LC0xNzk4NzkwNDI0XX0=
+eyJoaXN0b3J5IjpbMTc4NjI0NzI2OCwyMjcyMzc2MzgsLTE0ND
+c1Nzc1MjAsMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2NzU4MDA1
+NywtMTc5ODc5MDQyNF19
 -->
