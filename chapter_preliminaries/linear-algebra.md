@@ -391,14 +391,14 @@ realiza a adição elemento a elemento sobre essas duas matrizes.
 
 ```{.python .input}
 A = np.arange(20).reshape(5, 4)
-B = A.copy()  # Assign a copy of `A` to `B` by allocating new memory
+B = A.copy()  # Cria uma cópia de `A` em `B` alocando nova memória
 A, A + B
 ```
 
 ```{.python .input}
 #@tab pytorch
 A = torch.arange(20, dtype=torch.float32).reshape(5, 4)
-B = A.clone()  # Assign a copy of `A` to `B` by allocating new memory
+B = A.clone()  # Cria uma cópia de `A` em `B` alocando nova memória
 A, A + B
 ```
 
@@ -1087,7 +1087,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjE5MTI5ODgsODU3NDg4OTk5LDE2OD
-EwNTI0MjEsMTYzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3
-NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMD
+UyNDIxLDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0
+LDEwMTkyODgwMzZdfQ==
 -->
