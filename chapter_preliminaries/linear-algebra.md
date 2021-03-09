@@ -361,7 +361,7 @@ Assim como vetores generalizam escalares e matrizes generalizam vetores, podemos
 Vetores, por exemplo, são tensores de primeira ordem e matrizes são tensores de segunda ordem.
 Tensores são indicados com letras maiúsculas de uma fonte especial
 (por exemplo, $\mathsf{X}$, $\mathsf{Y}$, e $\mathsf{Z}$)
-e seu mecanismo de indexação (por exemplo, $ x_ {ijk} $ e $ [\ mathsf {X}] _ {1, 2i-1, 3} $) é semelhante ao de matrizes.
+e seu mecanismo de indexação (por exemplo, $x_{ijk}$ e $[\mathsf{X}]_{1, 2i-1, 3}$) é semelhante ao de matrizes.
 
 Tensors will become more important when we start working with images,
  which arrive as $n$-dimensional arrays with 3 axes corresponding to the height, width, and a *channel* axis for stacking the color channels (red, green, and blue). For now, we will skip over higher order tensors and focus on the basics.
@@ -1097,7 +1097,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTIyNzEwNzQsODU3NDg4OTk5LDE2OD
-EwNTI0MjEsMTYzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3
-NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbMTczMjcxMzEzMCw4NTc0ODg5OTksMTY4MT
+A1MjQyMSwxNjM5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3
+NCwxMDE5Mjg4MDM2XX0=
 -->
