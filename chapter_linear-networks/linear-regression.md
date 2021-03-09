@@ -455,19 +455,19 @@ reduzindo o potencial de erros.
 ## A Distribuição Normal e Perda Quadrada
 :label:`subsec_normal_distribution_and_squared_loss`
 
-While you can already get your hands dirty using only the information above,
-in the following we can more formally motivate the squared loss objective
-via assumptions about the distribution of noise.
 
-Linear regression was invented by Gauss in 1795,
-who also discovered the normal distribution (also called the *Gaussian*).
-It turns out that the connection between
-the normal distribution and linear regression
-runs deeper than common parentage.
-To refresh your memory, the probability density
-of a normal distribution with mean $\mu$ and variance $\sigma^2$ (standard deviation $\sigma$)
-is given as
+Embora você já possa sujar as mãos usando apenas as informações acima,
+a seguir, podemos motivar mais formalmente o objetivo de perda quadrado
+através de suposições sobre a distribuição do ruído.
 
+A regressão linear foi inventada por Gauss em 1795,
+que também descobriu a distribuição normal (também chamada de *Gaussiana*).
+Acontece que a conexão entre
+a distribuição normal e regressão linear
+é mais profunda do que o parentesco comum.
+Para refrescar sua memória, a densidade de probabilidade
+de uma distribuição normal com média $\mu$ e variância $\sigma^2 $(desvio padrão $\sigma$)
+é dada como
 $$p(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{1}{2 \sigma^2} (x - \mu)^2\right).$$
 
 Below [**we define a Python function to compute the normal distribution**].
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODk2OTY2ODQsMjMxMjQ0NDI0LDEzMT
-gxNzk4NywtMTUxMDEwMzA3MiwyMjcyMzc2MzgsLTE0NDc1Nzc1
-MjAsMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2NzU4MDA1NywtMT
-c5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbODMwMDY4MDYyLDIzMTI0NDQyNCwxMzE4MT
+c5ODcsLTE1MTAxMDMwNzIsMjI3MjM3NjM4LC0xNDQ3NTc3NTIw
+LDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OT
+g3OTA0MjRdfQ==
 -->
