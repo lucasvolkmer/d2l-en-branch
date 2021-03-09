@@ -645,18 +645,18 @@ estatísticas e ciência da computação.
 
 ## Exercises
 
-1. Assume that we have some data $x_1, \ldots, x_n \in \mathbb{R}$. Our goal is to find a constant $b$ such that $\sum_i (x_i - b)^2$ is minimized.
-    1. Find a analytic solution for the optimal value of $b$.
-    1. How does this problem and its solution relate to the normal distribution?
-1. Derive the analytic solution to the optimization problem for linear regression with squared error. To keep things simple, you can omit the bias $b$ from the problem (we can do this in principled fashion by adding one column to $\mathbf X$ consisting of all ones).
-    1. Write out the optimization problem in matrix and vector notation (treat all the data as a single matrix, and all the target values as a single vector).
-    1. Compute the gradient of the loss with respect to $w$.
-    1. Find the analytic solution by setting the gradient equal to zero and solving the matrix equation.
-    1. When might this be better than using stochastic gradient descent? When might this method break?
-1. Assume that the noise model governing the additive noise $\epsilon$ is the exponential distribution. That is, $p(\epsilon) = \frac{1}{2} \exp(-|\epsilon|)$.
-    1. Write out the negative log-likelihood of the data under the model $-\log P(\mathbf y \mid \mathbf X)$.
-    1. Can you find a closed form solution?
-    1. Suggest a stochastic gradient descent algorithm to solve this problem. What could possibly go wrong (hint: what happens near the stationary point as we keep on updating the parameters)? Can you fix this?
+1. Suponha que temos alguns dados $x_1, \ldots, x_n \in \mathbb{R}$. Nosso objetivo é encontrar uma constante $b$ tal que $ \sum_i(x_i - b)^2$ seja minimizado.
+    1. Encontre uma solução analítica para o valor ideal de $b$.
+    1. Como esse problema e sua solução se relacionam com a distribuição normal?
+1. Derive a solução analítica para o problema de otimização para regressão linear com erro quadrático. Para manter as coisas simples, você pode omitir o *bias* $b$ do problema (podemos fazer isso com base em princípios, adicionando uma coluna a $\mathbf X$ consistindo em todas as colunas).
+    1. Escreva o problema de otimização em notação de matriz e vetor (trate todos os dados como uma única matriz e todos os valores de *label* esperados como um único vetor).
+    1. Calcule o gradiente da perda em relação a $w$.
+    1. Encontre a solução analítica definindo o gradiente igual a zero e resolvendo a equação da matriz.
+    1. Quando isso pode ser melhor do que usar o gradiente descendente estocástico? Quando esse método pode falhar?
+1. Suponha que o modelo de ruído que governa o ruído aditivo $\epsilon$ é a distribuição exponencial. Ou seja, $p(\epsilon) = \frac{1}{2}\exp(-|\epsilon|)$.
+    1. Escreva a *log-likelihood* negativa dos dados no modelo $-\log P(\mathbf y\mid\mathbf X)$.
+    1. Você pode encontrar uma solução de forma fechada?
+    1. Sugira um algoritmo de gradiente descendente estocástico para resolver este problema. O que pode dar errado (dica: o que acontece perto do ponto estacionário à medida que atualizamos os parâmetros)? Você pode consertar isso?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/40)
@@ -670,9 +670,9 @@ estatísticas e ciência da computação.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjkxNTcwMjQsNTM0NzI2NTM4LDYzNz
-cyMzE3NywtMTE1MjAwMTY1MSwyMzEyNDQ0MjQsMTMxODE3OTg3
-LC0xNTEwMTAzMDcyLDIyNzIzNzYzOCwtMTQ0NzU3NzUyMCwxOT
-E0NjY1NzAyLDM4MDY0MzgwNSwtMTY3NTgwMDU3LC0xNzk4Nzkw
-NDI0XX0=
+eyJoaXN0b3J5IjpbLTE0OTYzODU2OSwtMTgyOTE1NzAyNCw1Mz
+Q3MjY1MzgsNjM3NzIzMTc3LC0xMTUyMDAxNjUxLDIzMTI0NDQy
+NCwxMzE4MTc5ODcsLTE1MTAxMDMwNzIsMjI3MjM3NjM4LC0xND
+Q3NTc3NTIwLDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAw
+NTcsLTE3OTg3OTA0MjRdfQ==
 -->
