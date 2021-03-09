@@ -221,48 +221,49 @@ que isso excluiria todo o *deep learning*.
 
 ### Gradiente Descendente Estocástico com *Minibatch* 
 
-Even in cases where we cannot solve the models analytically,
-it turns out that we can still train models effectively in practice.
-Moreover, for many tasks, those difficult-to-optimize models
-turn out to be so much better that figuring out how to train them
-ends up being well worth the trouble.
 
-The key technique for optimizing nearly any deep learning model,
-and which we will call upon throughout this book,
-consists of iteratively reducing the error
-by updating the parameters in the direction
-that incrementally lowers the loss function.
-This algorithm is called *gradient descent*.
+Mesmo nos casos em que não podemos resolver os modelos analiticamente,
+acontece que ainda podemos treinar modelos efetivamente na prática.
+Além disso, para muitas tarefas, aqueles modelos difíceis de otimizar
+acabam sendo muito melhores do que descobrir como treiná-los
+acaba valendo a pena.
 
-The most naive application of gradient descent
-consists of taking the derivative of the loss function,
-which is an average of the losses computed
-on every single example in the dataset.
-In practice, this can be extremely slow:
-we must pass over the entire dataset before making a single update.
-Thus, we will often settle for sampling a random minibatch of examples
-every time we need to compute the update,
-a variant called *minibatch stochastic gradient descent*.
+A principal técnica para otimizar quase qualquer modelo de *deep learning*,
+e que recorreremos ao longo deste livro,
+consiste em reduzir iterativamente o erro
+atualizando os parâmetros na direção
+que diminui gradativamente a função de perda.
+Este algoritmo é denominado *gradiente descendente*.
 
-In each iteration, we first randomly sample a minibatch $\mathcal{B}$
-consisting of a fixed number of training examples.
-We then compute the derivative (gradient) of the average loss
-on the minibatch with regard to the model parameters.
-Finally, we multiply the gradient by a predetermined positive value $\eta$
-and subtract the resulting term from the current parameter values.
+A aplicação mais ingênua de gradiente descendente
+consiste em obter a derivada da função de perda,
+que é uma média das perdas calculadas
+em cada exemplo no *dataset*.
+Na prática, isso pode ser extremamente lento:
+devemos passar por todo o conjunto de dados antes de fazer uma única atualização.
+Assim, frequentemente nos contentaremos em amostrar um *minibatch* aleatório de exemplos
+toda vez que precisamos calcular a atualização,
+uma variante chamada *gradiente descendente estocástico de minibatch*.
 
-We can express the update mathematically as follows
-($\partial$ denotes the partial derivative):
+Em cada iteração, primeiro amostramos aleatoriamente um *minibatch* $\mathcal{B}$
+consistindo em um número fixo de exemplos de treinamento.
+Em seguida, calculamos a derivada (gradiente) da perda média
+no *minibatch* em relação aos parâmetros do modelo.
+Finalmente, multiplicamos o gradiente por um valor positivo predeterminado $\eta$
+e subtraimos o termo resultante dos valores dos parâmetros atuais.
+
+Podemos expressar a atualização matematicamente da seguinte forma
+($\partial$ denota a derivada parcial):
 
 $$(\mathbf{w},b) \leftarrow (\mathbf{w},b) - \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \partial_{(\mathbf{w},b)} l^{(i)}(\mathbf{w},b).$$
 
 
-To summarize, steps of the algorithm are the following:
-(i) we initialize the values of the model parameters, typically at random;
-(ii) we iteratively sample random minibatches from the data,
-updating the parameters in the direction of the negative gradient.
-For quadratic losses and affine transformations,
-we can write this out explicitly as follows:
+Para resumir, as etapas do algoritmo são as seguintes:
+(i) inicializamos os valores dos parâmetros do modelo, normalmente de forma aleatória;
+(ii) amostramos iterativamente *minibatches* aleatórios dos dados,
+atualizando os parâmetros na direção do gradiente negativo.
+Para perdas quadráticas e transformações afins,
+podemos escrever isso explicitamente da seguinte maneira:
 
 $$\begin{aligned} \mathbf{w} &\leftarrow \mathbf{w} -   \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \partial_{\mathbf{w}} l^{(i)}(\mathbf{w}, b) = \mathbf{w} - \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \mathbf{x}^{(i)} \left(\mathbf{w}^\top \mathbf{x}^{(i)} + b - y^{(i)}\right),\\ b &\leftarrow b -  \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \partial_b l^{(i)}(\mathbf{w}, b)  = b - \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \left(\mathbf{w}^\top \mathbf{x}^{(i)} + b - y^{(i)}\right). \end{aligned}$$
 :eqlabel:`eq_linreg_batch_update`
@@ -666,7 +667,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTAxMDMwNzIsMjI3MjM3NjM4LC0xND
-Q3NTc3NTIwLDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAw
-NTcsLTE3OTg3OTA0MjRdfQ==
+eyJoaXN0b3J5IjpbMTMxODE3OTg3LC0xNTEwMTAzMDcyLDIyNz
+IzNzYzOCwtMTQ0NzU3NzUyMCwxOTE0NjY1NzAyLDM4MDY0Mzgw
+NSwtMTY3NTgwMDU3LC0xNzk4NzkwNDI0XX0=
 -->
