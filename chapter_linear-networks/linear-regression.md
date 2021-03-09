@@ -367,12 +367,12 @@ import numpy as np
 import time
 ```
 
-To illustrate why this matters so much,
-we can (**consider two methods for adding vectors.**)
-To start we instantiate two 10000-dimensional vectors
-containing all ones.
-In one method we will loop over the vectors with a Python for-loop.
-In the other method we will rely on a single call to `+`.
+Para ilustrar por que isso é tão importante,
+podemos (**considerer dois métodos para adicionar vetores.**)
+Para começar, instanciamos dois vetores de 10000 dimensões
+contendo todos os outros.
+Em um método, faremos um loop sobre os vetores com um *loop for* Python.
+No outro método, contaremos com uma única chamada para `+`.
 
 ```{.python .input}
 #@tab all
@@ -381,8 +381,8 @@ a = d2l.ones(n)
 b = d2l.ones(n)
 ```
 
-Since we will benchmark the running time frequently in this book,
-[**let us define a timer**].
+Uma vez que iremos comparar o tempo de execução com freqüência neste livro,
+[**vamos definir um cronômetro**].
 
 ```{.python .input}
 #@tab all
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk2MjM2OTIzLDIzMTI0NDQyNCwxMzE4MT
-c5ODcsLTE1MTAxMDMwNzIsMjI3MjM3NjM4LC0xNDQ3NTc3NTIw
-LDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OT
-g3OTA0MjRdfQ==
+eyJoaXN0b3J5IjpbLTcxODg5MTkxMiwyMzEyNDQ0MjQsMTMxOD
+E3OTg3LC0xNTEwMTAzMDcyLDIyNzIzNzYzOCwtMTQ0NzU3NzUy
+MCwxOTE0NjY1NzAyLDM4MDY0MzgwNSwtMTY3NTgwMDU3LC0xNz
+k4NzkwNDI0XX0=
 -->
