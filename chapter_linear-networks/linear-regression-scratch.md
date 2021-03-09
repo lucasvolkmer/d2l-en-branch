@@ -114,7 +114,7 @@ d2l.set_figsize()
 d2l.plt.scatter(d2l.numpy(features[:, 1]), d2l.numpy(labels), 1);
 ```
 
-## Reading the Dataset
+## Lendo o *Dataset*
 
 Recall that training models consists of
 making multiple passes over the dataset,
@@ -458,6 +458,6 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2Nzc3Nzk1LC0xOTkzNTY2OTMsLTk4OD
+eyJoaXN0b3J5IjpbOTQzMTEyMzk3LC0xOTkzNTY2OTMsLTk4OD
 k2OTAxNiwtMTIyOTY3NTQ5N119
 -->
