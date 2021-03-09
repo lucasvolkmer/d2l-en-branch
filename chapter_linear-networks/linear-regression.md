@@ -269,47 +269,48 @@ $$\begin{aligned} \mathbf{w} &\leftarrow \mathbf{w} -   \frac{\eta}{|\mathcal{B}
 :eqlabel:`eq_linreg_batch_update`
 
 
-Note that $\mathbf{w}$ and $\mathbf{x}$ are vectors in :eqref:`eq_linreg_batch_update`.
-Here, the more elegant vector notation makes the math
-much more readable than expressing things in terms of coefficients,
-say $w_1, w_2, \ldots, w_d$.
-The set cardinality
-$|\mathcal{B}|$ represents
-the number of examples in each minibatch (the *batch size*)
-and $\eta$ denotes the *learning rate*.
-We emphasize that the values of the batch size and learning rate
-are manually pre-specified and not typically learned through model training.
-These parameters that are tunable but not updated
-in the training loop are called *hyperparameters*.
-*Hyperparameter tuning* is the process by which hyperparameters are chosen,
-and typically requires that we adjust them
-based on the results of the training loop
-as assessed on a separate *validation dataset* (or *validation set*).
 
-After training for some predetermined number of iterations
-(or until some other stopping criteria are met),
-we record the estimated model parameters,
-denoted $\hat{\mathbf{w}}, \hat{b}$.
-Note that even if our function is truly linear and noiseless,
-these parameters will not be the exact minimizers of the loss
-because, although the algorithm converges slowly towards the minimizers
-it cannot achieve it exactly in a finite number of steps.
+Observe que $\mathbf{w}$ e $\mathbf{x}$ são vetores em :eqref:`eq_linreg_batch_update`.
+Aqui, a notação vetorial mais elegante torna a matemática
+muito mais legível do que expressar coisas em termos de coeficientes,
+diga $w_1, w_2, \ldots, w_d$.
+A cardinalidade definida
+$|\mathcal{B}|$ representa
+o número de exemplos em cada *minibatch* (o *tamanho do lote*)
+e $\eta$ denota a *taxa de aprendizagem*.
+Enfatizamos que os valores do tamanho do lote e da taxa de aprendizagem
+são pré-especificados manualmente e normalmente não aprendidos por meio do treinamento do modelo.
+Esses parâmetros são ajustáveis, mas não atualizados
+no loop de treinamento são chamados de *hiperparâmetros*.
+*Ajuste de hiperparâmetros* é o processo pelo qual os hiperparâmetros são escolhidos,
+e normalmente requer que os ajustemos
+com base nos resultados do ciclo de treinamento
+conforme avaliado em um *dataset de validação* separado (ou *conjunto de validação*).
 
-Linear regression happens to be a learning problem where there is only one minimum
-over the entire domain.
-However, for more complicated models, like deep networks,
-the loss surfaces contain many minima.
-Fortunately, for reasons that are not yet fully understood,
-deep learning practitioners seldom struggle to find parameters
-that minimize the loss *on training sets*.
-The more formidable task is to find parameters
-that will achieve low loss on data
-that we have not seen before,
-a challenge called *generalization*.
-We return to these topics throughout the book.
+Após o treinamento para algum número predeterminado de iterações
+(ou até que algum outro critério de parada seja atendido),
+registramos os parâmetros estimados do modelo,
+denotado $\hat{\mathbf{w}}, \hat{b}$.
+Observe que mesmo que nossa função seja verdadeiramente linear e sem ruídos,
+esses parâmetros não serão os minimizadores exatos da perda
+porque, embora o algoritmo convirja lentamente para os minimizadores,
+não pode alcançá-los exatamente em um número finito de etapas.
+
+A regressão linear passa a ser um problema de aprendizagem onde há apenas um mínimo
+em todo o domínio.
+No entanto, para modelos mais complicados, como redes profundas,
+as superfícies de perda contêm muitos mínimos.
+Felizmente, por razões que ainda não são totalmente compreendidas,
+praticantes de *deep learning* raramente se esforçam para encontrar parâmetros
+que minimizem a perda *em conjuntos de treinamento*.
+A tarefa mais formidável é encontrar parâmetros
+que irão atingir baixa perda de dados
+que não vimos antes,
+um desafio chamado *generalização*.
+Retornamos a esses tópicos ao longo do livro.
 
 
-### Making Predictions with the Learned Model
+### Fazendo Predições com o Modelo Aprendido
 
 
 Given the learned linear regression model
@@ -667,7 +668,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxODE3OTg3LC0xNTEwMTAzMDcyLDIyNz
-IzNzYzOCwtMTQ0NzU3NzUyMCwxOTE0NjY1NzAyLDM4MDY0Mzgw
-NSwtMTY3NTgwMDU3LC0xNzk4NzkwNDI0XX0=
+eyJoaXN0b3J5IjpbMjMxMjQ0NDI0LDEzMTgxNzk4NywtMTUxMD
+EwMzA3MiwyMjcyMzc2MzgsLTE0NDc1Nzc1MjAsMTkxNDY2NTcw
+MiwzODA2NDM4MDUsLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
 -->
