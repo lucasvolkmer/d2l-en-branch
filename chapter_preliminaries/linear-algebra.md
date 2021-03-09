@@ -268,10 +268,10 @@ a $n \times m$ matrix:
 Às vezes, queremos inverter os eixos.
 Quando trocamos as linhas e colunas de uma matriz,
 o resultado é chamado de *transposição* da matriz.
-Formalmente, significamos uma matriz $\mathbf {A}$ transposta por $\mathbf {A}^ \ top $
-e se $ \ mathbf {B} = \ mathbf {A} ^ \ top $, então $ b_ {ij} = a_ {ji} $ para qualquer $ i $ e $ j $.
-Assim, a transposição de $ \ mathbf {A} $ em: eqref: `eq_matrix_def` é
-uma matriz $ n \ times m $:
+Formalmente, significamos uma matriz $\mathbf {A}$ transposta por $\mathbf {A} ^ \ top$
+e se $\mathbf {B} = \mathbf {A} ^ \top$, então $b_ {ij} = a_ {ji}$ para qualquer $i$ e $j$.
+Assim, a transposição de $\mathbf {A}$ em: eqref: `eq_matrix_def` é
+uma matriz $n \times m$:
 $$
 \mathbf{A}^\top =
 \begin{bmatrix}
@@ -1098,7 +1098,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEwMTc0NDcxLDE2ODEwNTI0MjEsMTYzOT
+eyJoaXN0b3J5IjpbODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOT
 YxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAz
 Nl19
 -->
