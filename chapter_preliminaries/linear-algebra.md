@@ -405,7 +405,7 @@ A, A + B
 ```{.python .input}
 #@tab tensorflow
 A = tf.reshape(tf.range(20, dtype=tf.float32), (5, 4))
-B = A  #  No cloning of `A` to `B` by allocating new memory
+B = A  #  Não está clonando `A` para `B` para alocar nova memória
 A, A + B
 ```
 
@@ -413,6 +413,10 @@ Specifically,
 [**elementwise multiplication of two matrices is called their *Hadamard product***]
 (math notation $\odot$).
 Consider matrix $\mathbf{B} \in \mathbb{R}^{m \times n}$ whose element of row $i$ and column $j$ is $b_{ij}$. The Hadamard product of matrices $\mathbf{A}$ (defined in :eqref:`eq_matrix_def`) and $\mathbf{B}$
+Especificamente,
+[**a multiplicação elemento a elemento de duas matrizes é chamada de *produto Hadamard***]
+(notação matemática $\odot$).
+Considere a matriz $\mathbf{B} \in \mathbb{R}^{m \times n}$  cujo elemento da linha $ i $ e coluna $ j $ é $ b_ {ij} $. O produto Hadamard das matrizes $ \ mathbf {A} $ (definido em: eqref: `eq_matrix_def`) e $ \ mathbf {B} $
 
 $$
 \mathbf{A} \odot \mathbf{B} =
@@ -1087,7 +1091,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNTczNzk0OCw2MDE4ODcyMzYsODU3ND
-g4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMDM3OTY3ODY0
-LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbMTA4Njk0MjA0NiwxMTA1NzM3OTQ4LDYwMT
+g4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5
+LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
