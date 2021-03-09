@@ -1,20 +1,20 @@
 # Linear Regression Implementation from Scratch
 :label:`sec_linear_scratch`
 
-Now that you understand the key ideas behind linear regression,
-we can begin to work through a hands-on implementation in code.
-In this section, (**we will implement the entire method from scratch,
-including the data pipeline, the model,
-the loss function, and the minibatch stochastic gradient descent optimizer.**)
-While modern deep learning frameworks can automate nearly all of this work,
-implementing things from scratch is the only way
-to make sure that you really know what you are doing.
-Moreover, when it comes time to customize models,
-defining our own layers or loss functions,
-understanding how things work under the hood will prove handy.
-In this section, we will rely only on tensors and auto differentiation.
-Afterwards, we will introduce a more concise implementation,
-taking advantage of bells and whistles of deep learning frameworks.
+Agora que você entende as principais ideias por trás da regressão linear,
+podemos começar a trabalhar por meio de uma implementação prática no código.
+Nesta seção, (**vamos implementar todo o método do zero,
+incluindo o pipeline de dados, o modelo,
+a função de perda e o otimizador de descida gradiente estocástico do minibatch.**)
+Embora as estruturas modernas de *deep learning* possam automatizar quase todo esse trabalho,
+implementar coisas do zero é a única maneira
+para ter certeza de que você realmente sabe o que está fazendo.
+Além disso, quando chega a hora de personalizar modelos,
+definindo nossas próprias camadas ou funções de perda,
+entender como as coisas funcionam nos bastidores será útil.
+Nesta seção, contaremos apenas com tensores e diferenciação automática.
+Posteriormente, apresentaremos uma implementação mais concisa,
+aproveitando sinos e assobios de *frameworks* de *deep learning*.
 
 ```{.python .input}
 %matplotlib inline
@@ -40,7 +40,7 @@ import tensorflow as tf
 import random
 ```
 
-## Generating the Dataset
+## Gerando o Dataset
 
 To keep things simple, we will [**construct an artificial dataset
 according to a linear model with additive noise.**]
@@ -458,5 +458,5 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjk2NzU0OTddfQ==
+eyJoaXN0b3J5IjpbLTg5Nzk0MDQ0MCwtMTIyOTY3NTQ5N119
 -->
