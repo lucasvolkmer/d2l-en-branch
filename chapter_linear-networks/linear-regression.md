@@ -154,18 +154,18 @@ e (ii) um procedimento de atualização do modelo para melhorar sua qualidade.
 
 ### Função de Perda
 
-Before we start thinking about how to *fit* data with our model,
-we need to determine a measure of *fitness*.
-The *loss function* quantifies the distance
-between the *real* and *predicted* value of the target.
-The loss will usually be a non-negative number
-where smaller values are better
-and perfect predictions incur a loss of 0.
-The most popular loss function in regression problems
-is the squared error.
-When our prediction for an example $i$ is $\hat{y}^{(i)}$
-and the corresponding true label is $y^{(i)}$,
-the squared error is given by:
+Antes de começarmos a pensar sobre como *ajustar* os dados ao nosso modelo,
+precisamos determinar uma medida de *aptidão*.
+A *função de perda* quantifica a distância
+entre o valor *real* e *previsto* do *target*.
+A perda geralmente será um número não negativo
+onde valores menores são melhores
+e previsões perfeitas incorrem em uma perda de 0.
+A função de perda mais popular em problemas de regressão
+é o erro quadrático.
+Quando nossa previsão para um exemplo $i$ é $\hat{y}^{(i)}$
+e o *label verdadeiro correspondente é $y^{(i)}$,
+o quadrado do erro é dado por:
 
 $$l^{(i)}(\mathbf{w}, b) = \frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2.$$
 
@@ -667,7 +667,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI3MjM3NjM4LC0xNDQ3NTc3NTIwLDE5MT
-Q2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OTg3OTA0
-MjRdfQ==
+eyJoaXN0b3J5IjpbMTg4NzU4MzU1NCwyMjcyMzc2MzgsLTE0ND
+c1Nzc1MjAsMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2NzU4MDA1
+NywtMTc5ODc5MDQyNF19
 -->
