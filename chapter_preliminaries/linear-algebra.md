@@ -44,6 +44,20 @@ Analogously, we could write $x, y \in \{0, 1\}$
 to state that $x$ and $y$ are numbers
 whose value can only be $0$ or $1$.
 
+Neste livro, adotamos a notação matemática
+onde as variáveis escalares são denotadas
+por letras minúsculas comuns (por exemplo, $x$, $y$, and $z$).
+Denotamos o espaço de todos os escalares (contínuos) * com valor real * por $\mathbb{R}$.
+Por conveniência, vamos lançar mão de definições rigorosas
+do que exatamente é * espaço *,
+mas lembre-se por enquanto que a expressão $x \in \mathbb{R}$
+é uma maneira formal de dizer que $x$ é um escalar com valor real.
+O símbolo $ \ in $ pode ser pronunciado "in"
+e simplesmente denota associação em um conjunto.
+Analogamente, poderíamos escrever $ x, y \ in \ {0, 1 \} $
+para afirmar que $ x $ e $ y $ são números
+cujo valor só pode ser $ 0 $ ou $ 1 $.
+
 (**A scalar is represented by a tensor with just one element.**)
 In the next snippet, we instantiate two scalars
 and perform some familiar arithmetic operations with them,
@@ -1093,6 +1107,6 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MjA0MDM3OSwxNjM5NjEyNzk5LDIwMz
-c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbLTEyNjgzNDY2ODYsMTYzOTYxMjc5OSwyMD
+M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
 -->
