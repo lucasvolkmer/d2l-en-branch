@@ -466,11 +466,11 @@ Acontece que a conexão entre
 a distribuição normal e regressão linear
 é mais profunda do que o parentesco comum.
 Para refrescar sua memória, a densidade de probabilidade
-de uma distribuição normal com média $\mu$ e variância $\sigma^2 $(desvio padrão $\sigma$)
+de uma distribuição normal com média $\mu$ e variância $\sigma^2$ (desvio padrão $\sigma$)
 é dada como
 $$p(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{1}{2 \sigma^2} (x - \mu)^2\right).$$
 
-Below [**we define a Python function to compute the normal distribution**].
+Abaixo [**definimos uma função Python para calcular a distribuição normal**].
 
 ```{.python .input}
 #@tab all
@@ -479,7 +479,7 @@ def normal(x, mu, sigma):
     return p * np.exp(-0.5 / sigma**2 * (x - mu)**2)
 ```
 
-We can now (**visualize the normal distributions**).
+Podemos agora (**visualizar as distribuições normais**).
 
 ```{.python .input}
 #@tab all
@@ -493,8 +493,8 @@ d2l.plot(x, [normal(x, mu, sigma) for mu, sigma in params], xlabel='x',
          legend=[f'mean {mu}, std {sigma}' for mu, sigma in params])
 ```
 
-As we can see, changing the mean corresponds to a shift along the $x$-axis,
-and increasing the variance spreads the distribution out, lowering its peak.
+Como podemos ver, mudar a média corresponde a uma mudança ao longo do eixo $x$,
+e aumentar a variância espalha a distribuição, diminuindo seu pico.
 
 One way to motivate linear regression with the mean squared error loss function (or simply squared loss)
 is to formally assume that observations arise from noisy observations,
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMwMDY4MDYyLDIzMTI0NDQyNCwxMzE4MT
-c5ODcsLTE1MTAxMDMwNzIsMjI3MjM3NjM4LC0xNDQ3NTc3NTIw
-LDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OT
-g3OTA0MjRdfQ==
+eyJoaXN0b3J5IjpbLTExNTIwMDE2NTEsMjMxMjQ0NDI0LDEzMT
+gxNzk4NywtMTUxMDEwMzA3MiwyMjcyMzc2MzgsLTE0NDc1Nzc1
+MjAsMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2NzU4MDA1NywtMT
+c5ODc5MDQyNF19
 -->
