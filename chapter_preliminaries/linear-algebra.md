@@ -49,6 +49,11 @@ In the next snippet, we instantiate two scalars
 and perform some familiar arithmetic operations with them,
 namely addition, multiplication, division, and exponentiation.
 
+(**Um escalar é representado por um tensor com apenas um elemento.**)
+No próximo código, instanciamos dois escalares
+e realizar algumas operações aritméticas familiares com eles,
+a saber, adição, multiplicação, divisão e exponenciação.
+
 ```{.python .input}
 from mxnet import np, npx
 npx.set_np()
@@ -1093,6 +1098,6 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDk2MDcyMTMsMTYzOTYxMjc5OSwyMD
-M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbMTI2MDQ2NTQ2NywxNjM5NjEyNzk5LDIwMz
+c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
