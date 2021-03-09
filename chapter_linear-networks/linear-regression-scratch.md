@@ -116,20 +116,21 @@ d2l.plt.scatter(d2l.numpy(features[:, 1]), d2l.numpy(labels), 1);
 
 ## Lendo o *Dataset*
 
-Recall that training models consists of
-making multiple passes over the dataset,
-grabbing one minibatch of examples at a time,
-and using them to update our model.
-Since this process is so fundamental
-to training machine learning algorithms,
-it is worth defining a utility function
-to shuffle the dataset and access it in minibatches.
 
-In the following code, we [**define the `data_iter` function**] (~~that~~)
-to demonstrate one possible implementation of this functionality.
-The function (**takes a batch size, a matrix of features,
-and a vector of labels, yielding minibatches of the size `batch_size`.**)
-Each minibatch consists of a tuple of features and labels.
+Lembre-se de que os modelos de treinamento consistem em
+fazer várias passagens sobre o *dataset*,
+pegando um *minibatch* de exemplos por vez,
+e usando-los para atualizar nosso modelo.
+Uma vez que este processo é tão fundamental
+para treinar algoritmos de a*machine learning*,
+vale a pena definir uma função de utilidade
+para embaralhar o conjunto de dados e acessá-lo em *minibatches*.
+
+No código a seguir, nós [**definimos a função `data_iter`**] (~~que~~)
+para demonstrar uma possível implementação dessa funcionalidade.
+A função (**leva um tamanho de amostra, uma matriz de *features*,
+e um vetor de *labels*, produzindo *minibatches* do tamanho `batch_size`. **)
+Cada *minibatch* consiste em uma tupla de *features* e *labels*.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -458,6 +459,6 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzMTEyMzk3LC0xOTkzNTY2OTMsLTk4OD
+eyJoaXN0b3J5IjpbLTQzMzU4MTM5LC0xOTkzNTY2OTMsLTk4OD
 k2OTAxNiwtMTIyOTY3NTQ5N119
 -->
