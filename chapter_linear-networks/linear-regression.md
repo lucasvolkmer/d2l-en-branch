@@ -313,31 +313,31 @@ Retornamos a esses tópicos ao longo do livro.
 ### Fazendo Predições com o Modelo Aprendido
 
 
-Given the learned linear regression model
-$\hat{\mathbf{w}}^\top \mathbf{x} + \hat{b}$,
-we can now estimate the price of a new house
-(not contained in the training data)
-given its area $x_1$ and age $x_2$.
-Estimating targets given features is
-commonly called *prediction* or *inference*.
 
-We will try to stick with *prediction* because
-calling this step *inference*,
-despite emerging as standard jargon in deep learning,
-is somewhat of a misnomer.
-In statistics, *inference* more often denotes
-estimating parameters based on a dataset.
-This misuse of terminology is a common source of confusion
-when deep learning practitioners talk to statisticians.
+Dado o modelo de regressão linear aprendido
+$\hat{\mathbf{w}}^\top\mathbf{x} + \hat{b}$,
+agora podemos estimar o preço de uma nova casa
+(não contido nos dados de treinamento)
+dada sua área $x_1$ e idade $x_2$.
+Estimar *labels* dadas as características é
+comumente chamado de *predição* ou *inferência*.
 
+Tentaremos manter o termo *predição* porque
+chamando esta etapa de *inferência*,
+apesar de emergir como jargão padrão no *deep learning*,
+é um nome impróprio.
+Em estatísticas, *inferência* denota mais frequentemente
+estimar parâmetros com base em um conjunto de dados.
+Este uso indevido de terminologia é uma fonte comum de confusão
+quando os profissionais de *machine learning* conversam com os estatísticos.
 
-## Vectorization for Speed
+## Vetorização para Velocidade
 
-When training our models, we typically want to process
-whole minibatches of examples simultaneously.
-Doing this efficiently requires that (**we**) (~~should~~) (**vectorize the calculations
-and leverage fast linear algebra libraries
-rather than writing costly for-loops in Python.**)
+Ao treinar nossos modelos, normalmente queremos processar
+*minibatches* inteiros de exemplos simultaneamente.
+Fazer isso de forma eficiente requer que (**nós**) (~~devemos~~) (**vetorizar os cálculos
+e aproveitar as bibliotecas de álgebra linear rápida
+em vez de escrever *loops for* custosos em Python.**)
 
 ```{.python .input}
 %matplotlib inline
@@ -668,7 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMxMjQ0NDI0LDEzMTgxNzk4NywtMTUxMD
-EwMzA3MiwyMjcyMzc2MzgsLTE0NDc1Nzc1MjAsMTkxNDY2NTcw
-MiwzODA2NDM4MDUsLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbNjk2MjM2OTIzLDIzMTI0NDQyNCwxMzE4MT
+c5ODcsLTE1MTAxMDMwNzIsMjI3MjM3NjM4LC0xNDQ3NTc3NTIw
+LDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OT
+g3OTA0MjRdfQ==
 -->
