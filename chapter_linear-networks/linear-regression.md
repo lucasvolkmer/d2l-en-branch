@@ -219,7 +219,7 @@ Embora as soluções analíticas permitam uma boa análise matemática,
 o requisito de uma solução analítica é tão restritivo
 que isso excluiria todo o *deep learning*.
 
-### *Minibatch* Stochastic Gradient Descent
+### Gradiente Descendente Estocástico com *Minibatch* 
 
 Even in cases where we cannot solve the models analytically,
 it turns out that we can still train models effectively in practice.
@@ -666,7 +666,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NjI0NzI2OCwyMjcyMzc2MzgsLTE0ND
-c1Nzc1MjAsMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2NzU4MDA1
-NywtMTc5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbLTE1MTAxMDMwNzIsMjI3MjM3NjM4LC0xND
+Q3NTc3NTIwLDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAw
+NTcsLTE3OTg3OTA0MjRdfQ==
 -->
