@@ -207,22 +207,21 @@ será o comprimento desse eixo.
 
 ## Matrizes
 
-Just as vectors generalize scalars from order zero to order one,
-matrices generalize vectors from order one to order two.
-Matrices, which we will typically denote with bold-faced, capital letters
-(e.g., $\mathbf{X}$, $\mathbf{Y}$, and $\mathbf{Z}$),
-are represented in code as tensors with two axes.
-
 Assim como os vetores generalizam escalares de ordem zero para ordem um,
 matrizes generalizam vetores de ordem um para ordem dois.
 Matrizes, que normalmente denotamos com letras maiúsculas em negrito
-(por exemplo, $ \ mathbf {X} $, $ \ mathbf {Y} $ e $ \ mathbf {Z} $),
+(por exemplo, $\mathbf{X}$, $\mathbf{Y}$, and $\mathbf{Z}$),
 são representados no código como tensores com dois eixos.
 
 In math notation, we use $\mathbf{A} \in \mathbb{R}^{m \times n}$
 to express that the matrix $\mathbf{A}$ consists of $m$ rows and $n$ columns of real-valued scalars.
 Visually, we can illustrate any matrix $\mathbf{A} \in \mathbb{R}^{m \times n}$ as a table,
 where each element $a_{ij}$ belongs to the $i^{\mathrm{th}}$ row and $j^{\mathrm{th}}$ column:
+
+Em notação matemática, usamos $\mathbf{A} \in \mathbb{R}^{m \times n}$
+para expressar que a matriz $\mathbf {A}$ consiste em $m$ linhas e $n$ colunas de escalares com valor real.
+Visualmente, podemos ilustrar qualquer matriz $\mathbf{A} \in \mathbb{R}^{m \times n}$ como uma tabela,
+onde cada elemento $a_{ij}$ pertence à linha $i^{\mathrm{th}}$ e coluna $j^{\mathrm{th}}$:
 
 $$\mathbf{A}=\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \\ \end{bmatrix}.$$
 :eqlabel:`eq_matrix_def`
@@ -1098,7 +1097,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTI2NTMxNjIsMTY4MTA1MjQyMSwxNj
-M5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4
-MDM2XX0=
+eyJoaXN0b3J5IjpbMTQwOTcwOTIwNCwxNjgxMDUyNDIxLDE2Mz
+k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
+MzZdfQ==
 -->
