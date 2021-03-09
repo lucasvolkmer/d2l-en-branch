@@ -96,8 +96,8 @@ true_b = 4.2
 features, labels = synthetic_data(true_w, true_b, 1000)
 ```
 
-Note that [**each row in `features` consists of a 2-dimensional data example
-and that each row in `labels` consists of a 1-dimensional label value (a scalar).**]
+Observe que [**cada linha em `features` consiste em um exemplo de dados bidimensionais
+e que cada linha em `labels` consiste em um valor de rótulo unidimensional (um escalar).**]
 
 ```{.python .input}
 #@tab all
@@ -458,5 +458,6 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4ODk2OTAxNiwtMTIyOTY3NTQ5N119
+eyJoaXN0b3J5IjpbLTE5OTM1NjY5MywtOTg4OTY5MDE2LC0xMj
+I5Njc1NDk3XX0=
 -->
