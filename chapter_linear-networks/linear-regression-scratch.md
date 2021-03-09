@@ -104,8 +104,8 @@ e que cada linha em `labels` consiste em um valor de rótulo unidimensional (um 
 print('features:', features[0],'\nlabel:', labels[0])
 ```
 
-By generating a scatter plot using the second feature `features[:, 1]` and `labels`,
-we can clearly observe the linear correlation between the two.
+Ao gerar um gráfico de dispersão usando o segundo recurso `features [:, 1]` e `labels`,
+podemos observar claramente a correlação linear entre os dois.
 
 ```{.python .input}
 #@tab all
@@ -458,6 +458,6 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTM1NjY5MywtOTg4OTY5MDE2LC0xMj
-I5Njc1NDk3XX0=
+eyJoaXN0b3J5IjpbMTE2Nzc3Nzk1LC0xOTkzNTY2OTMsLTk4OD
+k2OTAxNiwtMTIyOTY3NTQ5N119
 -->
