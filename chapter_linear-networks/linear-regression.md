@@ -445,14 +445,14 @@ d = a + b
 f'{timer.stop():.5f} sec'
 ```
 
-You probably noticed that the second method
-is dramatically faster than the first.
-Vectorizing code often yields order-of-magnitude speedups.
-Moreover, we push more of the mathematics to the library
-and need not write as many calculations ourselves,
-reducing the potential for errors.
+Você provavelmente percebeu que o segundo método
+é dramaticamente mais rápido que o primeiro.
+A vetorização do código geralmente produz acelerações da ordem de magnitude.
+Além disso, colocamos mais matemática na biblioteca
+e não precisamos escrever tantos cálculos nós mesmos,
+reduzindo o potencial de erros.
 
-## The Normal Distribution and Squared Loss
+## A Distribuição Normal e Perda Quadrada
 :label:`subsec_normal_distribution_and_squared_loss`
 
 While you can already get your hands dirty using only the information above,
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MDgyMTMzMywyMzEyNDQ0MjQsMTMxOD
-E3OTg3LC0xNTEwMTAzMDcyLDIyNzIzNzYzOCwtMTQ0NzU3NzUy
-MCwxOTE0NjY1NzAyLDM4MDY0MzgwNSwtMTY3NTgwMDU3LC0xNz
-k4NzkwNDI0XX0=
+eyJoaXN0b3J5IjpbLTEyODk2OTY2ODQsMjMxMjQ0NDI0LDEzMT
+gxNzk4NywtMTUxMDEwMzA3MiwyMjcyMzc2MzgsLTE0NDc1Nzc1
+MjAsMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2NzU4MDA1NywtMT
+c5ODc5MDQyNF19
 -->
