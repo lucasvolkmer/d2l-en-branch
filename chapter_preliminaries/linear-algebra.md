@@ -409,14 +409,10 @@ B = A  #  Não está clonando `A` para `B` para alocar nova memória
 A, A + B
 ```
 
-Specifically,
-[**elementwise multiplication of two matrices is called their *Hadamard product***]
-(math notation $\odot$).
-Consider matrix $\mathbf{B} \in \mathbb{R}^{m \times n}$ whose element of row $i$ and column $j$ is $b_{ij}$. The Hadamard product of matrices $\mathbf{A}$ (defined in :eqref:`eq_matrix_def`) and $\mathbf{B}$
 Especificamente,
 [**a multiplicação elemento a elemento de duas matrizes é chamada de *produto Hadamard***]
 (notação matemática $\odot$).
-Considere a matriz $\mathbf{B} \in \mathbb{R}^{m \times n}$  cujo elemento da linha $i$ e coluna $j$ é $b_ {ij}$. O produto Hadamard das matrizes $\mathbf {A}$ (definido em: eqref: `eq_matrix_def`) e $\mathbf {B}$
+Considere a matriz $\mathbf{B} \in \mathbb{R}^{m \times n}$  cujo elemento da linha $i$ e coluna $j$ é $b_ {ij}$. O produto Hadamard das matrizes $\mathbf {A}$ (definido em :eqref:`eq_matrix_def`) e $\mathbf {B}$
 
 $$
 \mathbf{A} \odot \mathbf{B} =
@@ -442,8 +438,8 @@ A * B
 A * B
 ```
 
-[**Multiplying or adding a tensor by a scalar**] also does not change the shape of the tensor,
-where each element of the operand tensor will be added or multiplied by the scalar.
+[**Multiplicar ou adicionar um tensor por um escalar**] também não muda a forma do tensor,
+onde cada elemento do tensor operando será adicionado ou multiplicado pelo escalar.
 
 ```{.python .input}
 a = 2
@@ -465,7 +461,7 @@ X = tf.reshape(tf.range(24), (2, 3, 4))
 a + X, (a * X).shape
 ```
 
-## Reduction
+## Redução
 :label:`subseq_lin-alg-reduction`
 
 One useful operation that we can perform with arbitrary tensors
@@ -475,6 +471,14 @@ In mathematical notation, we express sums using the $\sum$ symbol.
 To express the sum of the elements in a vector $\mathbf{x}$ of length $d$,
 we write $\sum_{i=1}^d x_i$.
 In code, we can just call the function for calculating the sum.
+
+Uma operação útil que podemos realizar com tensores arbitrários
+é para
+calcule [**a soma de seus elementos.**]
+Em notação matemática, expressamos somas usando o símbolo $\sum$.
+Para expressar a soma dos elementos em um vetor $ \ mathbf {x} $ de comprimento $ d $,
+escrevemos $ \ sum_ {i = 1} ^ d x_i $.
+No código, podemos apenas chamar a função para calcular a soma.
 
 ```{.python .input}
 x = np.arange(4)
@@ -1091,7 +1095,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTI5NDgzMjYsMTEwNTczNzk0OCw2MD
-E4ODcyMzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5
-OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbLTQyMTk2MjcxLDExMDU3Mzc5NDgsNjAxOD
+g3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIxLDE2Mzk2MTI3OTks
+MjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgwMzZdfQ==
 -->
