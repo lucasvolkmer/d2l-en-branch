@@ -602,37 +602,38 @@ permitindo conexões com outros neurônios por meio de *sinapses*.
 ![The real neuron.](../img/neuron.svg)
 :label:`fig_Neuron`
 
-Information $x_i$ arriving from other neurons
-(or environmental sensors such as the retina)
-is received in the dendrites.
-In particular, that information is weighted by *synaptic weights* $w_i$
-determining the effect of the inputs
-(e.g., activation or inhibition via the product $x_i w_i$).
-The weighted inputs arriving from multiple sources
-are aggregated in the nucleus as a weighted sum $y = \sum_i x_i w_i + b$,
-and this information is then sent for further processing in the axon $y$,
-typically after some nonlinear processing via $\sigma(y)$.
-From there it either reaches its destination (e.g., a muscle)
-or is fed into another neuron via its dendrites.
 
-Certainly, the high-level idea that many such units
-could be cobbled together with the right connectivity
-and right learning algorithm,
-to produce far more interesting and complex behavior
-than any one neuron alone could express
-owes to our study of real biological neural systems.
+Informação $x_i$ vinda de outros neurônios
+(ou sensores ambientais, como a retina)
+é recebida nos dendritos.
+Em particular, essa informação é ponderada por *pesos sinápticos* $w_i$
+determinando o efeito das entradas
+(por exemplo, ativação ou inibição por meio do produto $x_i w_i$).
+As entradas ponderadas que chegam de várias fontes
+são agregadas no núcleo como uma soma ponderada $y = \sum_i x_i w_i + b$,
+e esta informação é então enviada para processamento adicional no axônio $y$,
+normalmente após algum processamento não linear via $\sigma(y)$.
+De lá, ela chega ao seu destino (por exemplo, um músculo)
+ou é alimentado em outro neurônio por meio de seus dendritos.
 
-At the same time, most research in deep learning today
-draws little direct inspiration in neuroscience.
-We invoke Stuart Russell and Peter Norvig who,
-in their classic AI text book
-*Artificial Intelligence: A Modern Approach* :cite:`Russell.Norvig.2016`,
-pointed out that although airplanes might have been *inspired* by birds,
-ornithology has not been the primary driver
-of aeronautics innovation for some centuries.
-Likewise, inspiration in deep learning these days
-comes in equal or greater measure from mathematics,
-statistics, and computer science.
+Certamente, a ideia de alto nível de que muitas dessas unidades
+poderiam ser remendadas com a conectividade certa
+e algoritmo de aprendizado correto,
+para produzir um comportamento muito mais interessante e complexo
+do que qualquer neurônio sozinho poderia expressar,
+se deve ao nosso estudo de sistemas neurais biológicos reais.
+
+Ao mesmo tempo, a maioria das pesquisas em *deep learning* hoje
+atrai pouca inspiração direta na neurociência.
+Invocamos Stuart Russell e Peter Norvig que,
+em seu livro clássico de IA
+*Inteligência Artificial: Uma Abordagem Moderna* :cite:`Russell.Norvig.2016`,
+apontoam que, embora os aviões possam ter sido *inspirados* por pássaros,
+ornitologia não tem sido o principal motivador
+de inovação aeronáutica por alguns séculos.
+Da mesma forma, a inspiração no *deep learning* nos dias de hoje
+vem em igual ou maior medida da matemática,
+estatísticas e ciência da computação.
 
 ## Summary
 
@@ -669,8 +670,9 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM0NzI2NTM4LDYzNzcyMzE3NywtMTE1Mj
-AwMTY1MSwyMzEyNDQ0MjQsMTMxODE3OTg3LC0xNTEwMTAzMDcy
-LDIyNzIzNzYzOCwtMTQ0NzU3NzUyMCwxOTE0NjY1NzAyLDM4MD
-Y0MzgwNSwtMTY3NTgwMDU3LC0xNzk4NzkwNDI0XX0=
+eyJoaXN0b3J5IjpbLTgyOTUyNjAyMCw1MzQ3MjY1MzgsNjM3Nz
+IzMTc3LC0xMTUyMDAxNjUxLDIzMTI0NDQyNCwxMzE4MTc5ODcs
+LTE1MTAxMDMwNzIsMjI3MjM3NjM4LC0xNDQ3NTc3NTIwLDE5MT
+Q2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OTg3OTA0
+MjRdfQ==
 -->
