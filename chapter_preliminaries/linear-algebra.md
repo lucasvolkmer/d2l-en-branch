@@ -327,20 +327,6 @@ B == B.T
 B == tf.transpose(B)
 ```
 
-Matrices are useful data structures:
-they allow us to organize data that have different modalities of variation.
-For example, rows in our matrix might correspond to different houses (data examples),
-while columns might correspond to different attributes.
-This should sound familiar if you have ever used spreadsheet software or
-have read :numref:`sec_pandas`.
-Thus, although the default orientation of a single vector is a column vector,
-in a matrix that represents a tabular dataset,
-it is more conventional to treat each data example as a row vector in the matrix.
-And, as we will see in later chapters,
-this convention will enable common deep learning practices.
-For example, along the outermost axis of a tensor,
-we can access or enumerate minibatches of data examples,
-or just data examples if no minibatch exists.
 Matrizes são estruturas de dados úteis:
 eles nos permitem organizar dados que têm diferentes modalidades de variação.
 Por exemplo, as linhas em nossa matriz podem corresponder a diferentes casas (exemplos de dados),
@@ -353,11 +339,11 @@ em uma matriz que representa um conjunto de dados tabular,
 E, como veremos em capítulos posteriores,
 esta convenção permitirá práticas comuns de aprendizado profundo.
 Por exemplo, ao longo do eixo mais externo de um tensor,
-podemos acessar ou enumerar minibatches de exemplos de dados,
-ou apenas exemplos de dados se não houver minibatch.
+podemos acessar ou enumerar *minibatches* de exemplos de dados,
+ou apenas exemplos de dados se não houver *minibatch*.
 
 
-## Tensors
+## Tensores
 
 Just as vectors generalize scalars, and matrices generalize vectors, we can build data structures with even more axes.
 [**Tensors**]
@@ -367,6 +353,15 @@ Vectors, for example, are first-order tensors, and matrices are second-order ten
 Tensors are denoted with capital letters of a special font face
 (e.g., $\mathsf{X}$, $\mathsf{Y}$, and $\mathsf{Z}$)
 and their indexing mechanism (e.g., $x_{ijk}$ and $[\mathsf{X}]_{1, 2i-1, 3}$) is similar to that of matrices.
+
+Assim como vetores generalizam escalares e matrizes generalizam vetores, podemos construir estruturas de dados com ainda mais eixos.
+[**Tensores**]
+("tensores" nesta subseção referem-se a objetos algébricos)
+(**nos dê uma maneira genérica de descrever matrizes $n$ -dimensionais com um número arbitrário de eixos.**)
+Vetores, por exemplo, são tensores de primeira ordem e matrizes são tensores de segunda ordem.
+Tensores são indicados com letras maiúsculas de uma fonte especial
+(por exemplo, $\mathsf{X}$, $\mathsf{Y}$, e $\mathsf{Z}$)
+e seu mecanismo de indexação (por exemplo, $ x_ {ijk} $ e $ [\ mathsf {X}] _ {1, 2i-1, 3} $) é semelhante ao de matrizes.
 
 Tensors will become more important when we start working with images,
  which arrive as $n$-dimensional arrays with 3 axes corresponding to the height, width, and a *channel* axis for stacking the color channels (red, green, and blue). For now, we will skip over higher order tensors and focus on the basics.
@@ -1102,7 +1097,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NjE0NjU5MSw4NTc0ODg5OTksMTY4MT
-A1MjQyMSwxNjM5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3
-NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbLTEzOTIyNzEwNzQsODU3NDg4OTk5LDE2OD
+EwNTI0MjEsMTYzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3
+NzQsMTAxOTI4ODAzNl19
 -->
