@@ -527,17 +527,17 @@ Trabalhando a matemática nos dá:
 
 $$-\log P(\mathbf y \mid \mathbf X) = \sum_{i=1}^n \frac{1}{2} \log(2 \pi \sigma^2) + \frac{1}{2 \sigma^2} \left(y^{(i)} - \mathbf{w}^\top \mathbf{x}^{(i)} - b\right)^2.$$
 
-Now we just need one more assumption that $\sigma$ is some fixed constant.
-Thus we can ignore the first term because
-it does not depend on $\mathbf{w}$ or $b$.
-Now the second term is identical to the squared error loss introduced earlier,
-except for the multiplicative constant $\frac{1}{\sigma^2}$.
-Fortunately, the solution does not depend on $\sigma$.
-It follows that minimizing the mean squared error
-is equivalent to maximum likelihood estimation
-of a linear model under the assumption of additive Gaussian noise.
+Agora, precisamos apenas mais uma suposição de que $\sigma$ é alguma constante fixa.
+Assim, podemos ignorar o primeiro termo porque
+não depende de $\mathbf{w}$ ou $b$.
+Agora, o segundo termo é idêntico à perda de erro quadrada introduzida anteriormente,
+exceto para a constante multiplicativa $\frac{1}{\sigma^2}$.
+Felizmente, a solução não depende de $\sigma$.
+Segue-se que minimizar o erro quadrático médio
+é equivalente a estimar a máxima verossimilhança
+de um modelo linear sob a suposição de ruído gaussiano aditivo.
 
-## From Linear Regression to Deep Networks
+## Da Regressão Linear às Redes Profundas
 
 So far we only talked about linear models.
 While neural networks cover a much richer family of models,
@@ -668,7 +668,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyNjE3NDc5LDYzNzcyMzE3NywtMTE1Mj
+eyJoaXN0b3J5IjpbNzc0NjA0MzI0LDYzNzcyMzE3NywtMTE1Mj
 AwMTY1MSwyMzEyNDQ0MjQsMTMxODE3OTg3LC0xNTEwMTAzMDcy
 LDIyNzIzNzYzOCwtMTQ0NzU3NzUyMCwxOTE0NjY1NzAyLDM4MD
 Y0MzgwNSwtMTY3NTgwMDU3LC0xNzk4NzkwNDI0XX0=
