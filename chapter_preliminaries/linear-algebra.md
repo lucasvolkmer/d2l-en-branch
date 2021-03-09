@@ -416,7 +416,7 @@ Consider matrix $\mathbf{B} \in \mathbb{R}^{m \times n}$ whose element of row $i
 Especificamente,
 [**a multiplicação elemento a elemento de duas matrizes é chamada de *produto Hadamard***]
 (notação matemática $\odot$).
-Considere a matriz $\mathbf{B} \in \mathbb{R}^{m \times n}$  cujo elemento da linha $ i $ e coluna $ j $ é $ b_ {ij} $. O produto Hadamard das matrizes $ \ mathbf {A} $ (definido em: eqref: `eq_matrix_def`) e $ \ mathbf {B} $
+Considere a matriz $\mathbf{B} \in \mathbb{R}^{m \times n}$  cujo elemento da linha $i$ e coluna $j$ é $b_ {ij}$. O produto Hadamard das matrizes $\mathbf {A}$ (definido em: eqref: `eq_matrix_def`) e $\mathbf {B}$
 
 $$
 \mathbf{A} \odot \mathbf{B} =
@@ -1091,7 +1091,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4Njk0MjA0NiwxMTA1NzM3OTQ4LDYwMT
-g4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5
-LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbLTE3OTI5NDgzMjYsMTEwNTczNzk0OCw2MD
+E4ODcyMzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5
+OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
 -->
