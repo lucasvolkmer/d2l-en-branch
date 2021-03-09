@@ -457,3 +457,6 @@ that lead to highly accurate prediction.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyMjk2NzU0OTddfQ==
+-->
