@@ -502,8 +502,8 @@ onde o ruído é normalmente distribuído da seguinte forma:
 
 $$y = \mathbf{w}^\top \mathbf{x} + b + \epsilon \text{ onde } \epsilon \sim \mathcal{N}(0, \sigma^2).$$
 
-Thus, we can now write out the *likelihood*
-of seeing a particular $y$ for a given $\mathbf{x}$ via
+Assim, podemos agora escrever a *probabilidade*
+de ver um determinado $y$ para um determinado $\mathbf{x}$ via
 
 $$P(y \mid \mathbf{x}) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp\left(-\frac{1}{2 \sigma^2} (y - \mathbf{w}^\top \mathbf{x} - b)^2\right).$$
 
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM3ODQ1MjIyLC0xMTUyMDAxNjUxLDIzMT
-I0NDQyNCwxMzE4MTc5ODcsLTE1MTAxMDMwNzIsMjI3MjM3NjM4
-LC0xNDQ3NTc3NTIwLDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNj
-c1ODAwNTcsLTE3OTg3OTA0MjRdfQ==
+eyJoaXN0b3J5IjpbLTEyMTY4MjY5NywtMTE1MjAwMTY1MSwyMz
+EyNDQ0MjQsMTMxODE3OTg3LC0xNTEwMTAzMDcyLDIyNzIzNzYz
+OCwtMTQ0NzU3NzUyMCwxOTE0NjY1NzAyLDM4MDY0MzgwNSwtMT
+Y3NTgwMDU3LC0xNzk4NzkwNDI0XX0=
 -->
