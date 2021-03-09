@@ -354,9 +354,6 @@ Tensores são indicados com letras maiúsculas de uma fonte especial
 (por exemplo, $\mathsf{X}$, $\mathsf{Y}$, e $\mathsf{Z}$)
 e seu mecanismo de indexação (por exemplo, $x_{ijk}$ e $[\mathsf{X}]_{1, 2i-1, 3}$) é semelhante ao de matrizes.
 
-Tensors will become more important when we start working with images,
- which arrive as $n$-dimensional arrays with 3 axes corresponding to the height, width, and a *channel* axis for stacking the color channels (red, green, and blue). For now, we will skip over higher order tensors and focus on the basics.
- 
 Os tensores se tornarão mais importantes quando começarmos a trabalhar com imagens,
   que chegam como matrizes $n$ -dimensionais com 3 eixos correspondentes à altura, largura e um eixo de *canal* para empilhar os canais de cores (vermelho, verde e azul). Por enquanto, vamos pular tensores de ordem superior e nos concentrar no básico.
 
@@ -377,8 +374,7 @@ X = tf.reshape(tf.range(24), (2, 3, 4))
 X
 ```
 
-## Basic Properties of Tensor Arithmetic
-
+## Propriedades Básicas de Aritmética de Ten
 Scalars, vectors, matrices, and tensors ("tensors" in this subsection refer to algebraic objects)
 of an arbitrary number of axes
 have some nice properties that often come in handy.
@@ -1090,7 +1086,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NDI5MTc0Miw4NTc0ODg5OTksMTY4MT
-A1MjQyMSwxNjM5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3
-NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbLTEyMTk4MjczODgsODU3NDg4OTk5LDE2OD
+EwNTI0MjEsMTYzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3
+NzQsMTAxOTI4ODAzNl19
 -->
