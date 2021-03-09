@@ -60,12 +60,12 @@ ao seguinte modelo linear com o termo de ruído $\epsilon$:
 
 (**$$\mathbf{y}= \mathbf{X} \mathbf{w} + b + \mathbf\epsilon.$$**)
 
-You could think of $\epsilon$ as capturing potential
-measurement errors on the features and labels.
-We will assume that the standard assumptions hold and thus
-that $\epsilon$ obeys a normal distribution with mean of 0.
-To make our problem easy, we will set its standard deviation to 0.01.
-The following code generates our synthetic dataset.
+Você pode pensar em $\epsilon$ como um potencial de captura
+erros de medição nos recursos e rótulos.
+Vamos assumir que as premissas padrão são válidas e, portanto,
+que $\epsilon$ obedece a uma distribuição normal com média 0.
+Para tornar nosso problema mais fácil, definiremos seu desvio padrão em 0,01.
+O código a seguir gera nosso conjunto de dados sintético.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -458,5 +458,5 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NTE5NTkyMiwtMTIyOTY3NTQ5N119
+eyJoaXN0b3J5IjpbLTk4ODk2OTAxNiwtMTIyOTY3NTQ5N119
 -->
