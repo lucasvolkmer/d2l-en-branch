@@ -464,20 +464,12 @@ a + X, (a * X).shape
 ## Redução
 :label:`subseq_lin-alg-reduction`
 
-One useful operation that we can perform with arbitrary tensors
-is to
-calculate [**the sum of their elements.**]
-In mathematical notation, we express sums using the $\sum$ symbol.
-To express the sum of the elements in a vector $\mathbf{x}$ of length $d$,
-we write $\sum_{i=1}^d x_i$.
-In code, we can just call the function for calculating the sum.
-
 Uma operação útil que podemos realizar com tensores arbitrários
 é para
 calcule [**a soma de seus elementos.**]
 Em notação matemática, expressamos somas usando o símbolo $\sum$.
-Para expressar a soma dos elementos em um vetor $ \ mathbf {x} $ de comprimento $ d $,
-escrevemos $ \ sum_ {i = 1} ^ d x_i $.
+Para expressar a soma dos elementos em um vetor $\mathbf {x}$ de comprimento $d$,
+escrevemos $\sum_ {i = 1} ^ d x_i$.
 No código, podemos apenas chamar a função para calcular a soma.
 
 ```{.python .input}
@@ -499,6 +491,9 @@ x, tf.reduce_sum(x)
 
 We can express [**sums over the elements of tensors of arbitrary shape.**]
 For example, the sum of the elements of an $m \times n$ matrix $\mathbf{A}$ could be written $\sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}$.
+Podemos expressar [**somas sobre os elementos de tensores de forma arbitrária.**]
+Por exemplo, a soma dos elementos de uma matriz $m \times n$
+$\mathbf{A}$ poderia ser escrita como $\sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}$.
 
 ```{.python .input}
 A.shape, A.sum()
@@ -522,6 +517,15 @@ To reduce the row dimension (axis 0) by summing up elements of all the rows,
 we specify `axis=0` when invoking the function.
 Since the input matrix reduces along axis 0 to generate the output vector,
 the dimension of axis 0 of the input is lost in the output shape.
+
+Por padrão, invocar a função para calcular a soma
+* reduz * um tensor ao longo de todos os seus eixos a um escalar.
+Também podemos [** especificar os eixos ao longo dos quais o tensor é reduzido por meio da soma. **]
+Pegue as matrizes como exemplo.
+Para reduzir a dimensão da linha (eixo 0) somando os elementos de todas as linhas,
+especificamos `axis = 0` ao invocar a função.
+Uma vez que a matriz de entrada reduz ao longo do eixo 0 para gerar o vetor de saída,
+a dimensão do eixo 0 da entrada é perdida na forma de saída.
 
 ```{.python .input}
 A_sum_axis0 = A.sum(axis=0)
@@ -1095,7 +1099,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMTk2MjcxLDExMDU3Mzc5NDgsNjAxOD
-g3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIxLDE2Mzk2MTI3OTks
-MjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgwMzZdfQ==
+eyJoaXN0b3J5IjpbLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMT
+g4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5
+LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
