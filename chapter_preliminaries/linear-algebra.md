@@ -256,15 +256,6 @@ para se referir a $[\mathbf {A}] _ {ij}$.
 Para manter a notação simples, as vírgulas são inseridas para separar os índices apenas quando necessário,
 como $a_ {2, 3j}$ e $[\mathbf {A}] _ {2i-1, 3}$.
 
-
-Sometimes, we want to flip the axes.
-When we exchange a matrix's rows and columns,
-the result is called the *transpose* of the matrix.
-Formally, we signify a matrix $\mathbf{A}$'s transpose by $\mathbf{A}^\top$
-and if $\mathbf{B} = \mathbf{A}^\top$, then $b_{ij} = a_{ji}$ for any $i$ and $j$.
-Thus, the transpose of $\mathbf{A}$ in :eqref:`eq_matrix_def` is
-a $n \times m$ matrix:
-
 Às vezes, queremos inverter os eixos.
 Quando trocamos as linhas e colunas de uma matriz,
 o resultado é chamado de *transposição* da matriz.
@@ -1098,7 +1089,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOT
-YxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAz
-Nl19
+eyJoaXN0b3J5IjpbLTIwMDgxMjk4NDksODU3NDg4OTk5LDE2OD
+EwNTI0MjEsMTYzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3
+NzQsMTAxOTI4ODAzNl19
 -->
