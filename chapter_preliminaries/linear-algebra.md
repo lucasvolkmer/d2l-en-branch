@@ -273,7 +273,7 @@ $$
 \end{bmatrix}.
 $$
 
-Now we access a (**matrix's transpose**) in code.
+Agora acessamoas a  (**matriz transposta**) via código.
 
 ```{.python .input}
 A.T
@@ -288,11 +288,10 @@ A.T
 #@tab tensorflow
 tf.transpose(A)
 ```
-
-As a special type of the square matrix,
-[**a *symmetric matrix* $\mathbf{A}$ is equal to its transpose:
+Como um tipo especial de matriz quadrada,
+[**a *matriz simétrica* $\mathbf {A}$ é igual à sua transposta:
 $\mathbf{A} = \mathbf{A}^\top$.**]
-Here we define a symmetric matrix `B`.
+Aqui definimos uma matriz simétrica `B`.
 
 ```{.python .input}
 B = np.array([[1, 2, 3], [2, 0, 4], [3, 4, 5]])
@@ -1089,7 +1088,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDgxMjk4NDksODU3NDg4OTk5LDE2OD
-EwNTI0MjEsMTYzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3
-NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbLTE4NjMyMTMyNyw4NTc0ODg5OTksMTY4MT
+A1MjQyMSwxNjM5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3
+NCwxMDE5Mjg4MDM2XX0=
 -->
