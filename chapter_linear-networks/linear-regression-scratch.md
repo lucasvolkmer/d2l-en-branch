@@ -157,19 +157,20 @@ def data_iter(batch_size, features, labels):
         yield tf.gather(features, j), tf.gather(labels, j)
 ```
 
-In general, note that we want to use reasonably sized minibatches
-to take advantage of the GPU hardware,
-which excels at parallelizing operations.
-Because each example can be fed through our models in parallel
-and the gradient of the loss function for each example can also be taken in parallel,
-GPUs allow us to process hundreds of examples in scarcely more time
-than it might take to process just a single example.
 
-To build some intuition, let us read and print
-the first small batch of data examples.
-The shape of the features in each minibatch tells us
-both the minibatch size and the number of input features.
-Likewise, our minibatch of labels will have a shape given by `batch_size`.
+Em geral, queremos usar *minibatches* de tamanhos razoáveis
+para aproveitar as vantagens do hardware da GPU,
+que se destaca em operações de paralelização.
+Porque cada exemplo pode ser alimentado por meio de nossos modelos em paralelo
+e o gradiente da função de perda para cada exemplo também pode ser tomado em paralelo,
+GPUs nos permitem processar centenas de exemplos em pouco mais tempo
+do que pode demorar para processar apenas um único exemplo.
+
+Para construir alguma intuição, vamos ler e imprimir
+o primeiro pequeno lote de exemplos de dados.
+A forma dos recursos em cada *minibatch* nos diz
+o tamanho do *minibatch* e o número de recursos de entrada.
+Da mesma forma, nosso *minibatch* de rótulos terá uma forma dada por `batch_size`.
 
 ```{.python .input}
 #@tab all
@@ -459,6 +460,6 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMzU4MTM5LC0xOTkzNTY2OTMsLTk4OD
-k2OTAxNiwtMTIyOTY3NTQ5N119
+eyJoaXN0b3J5IjpbLTE2NjI4ODQxNjEsLTE5OTM1NjY5MywtOT
+g4OTY5MDE2LC0xMjI5Njc1NDk3XX0=
 -->
