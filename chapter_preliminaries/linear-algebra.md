@@ -345,15 +345,6 @@ ou apenas exemplos de dados se não houver *minibatch*.
 
 ## Tensores
 
-Just as vectors generalize scalars, and matrices generalize vectors, we can build data structures with even more axes.
-[**Tensors**]
-("tensors" in this subsection refer to algebraic objects)
-(**give us a generic way of describing $n$-dimensional arrays with an arbitrary number of axes.**)
-Vectors, for example, are first-order tensors, and matrices are second-order tensors.
-Tensors are denoted with capital letters of a special font face
-(e.g., $\mathsf{X}$, $\mathsf{Y}$, and $\mathsf{Z}$)
-and their indexing mechanism (e.g., $x_{ijk}$ and $[\mathsf{X}]_{1, 2i-1, 3}$) is similar to that of matrices.
-
 Assim como vetores generalizam escalares e matrizes generalizam vetores, podemos construir estruturas de dados com ainda mais eixos.
 [**Tensores**]
 ("tensores" nesta subseção referem-se a objetos algébricos)
@@ -365,7 +356,9 @@ e seu mecanismo de indexação (por exemplo, $x_{ijk}$ e $[\mathsf{X}]_{1, 2i-1,
 
 Tensors will become more important when we start working with images,
  which arrive as $n$-dimensional arrays with 3 axes corresponding to the height, width, and a *channel* axis for stacking the color channels (red, green, and blue). For now, we will skip over higher order tensors and focus on the basics.
-
+ 
+Os tensores se tornarão mais importantes quando começarmos a trabalhar com imagens,
+  que chegam como matrizes $n$ -dimensionais com 3 eixos correspondentes à altura, largura e um eixo de *canal* para empilhar os canais de cores (vermelho, verde e azul). Por enquanto, vamos pular tensores de ordem superior e nos concentrar no básico.
 
 ```{.python .input}
 X = np.arange(24).reshape(2, 3, 4)
@@ -1097,7 +1090,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMjcxMzEzMCw4NTc0ODg5OTksMTY4MT
+eyJoaXN0b3J5IjpbLTU5NDI5MTc0Miw4NTc0ODg5OTksMTY4MT
 A1MjQyMSwxNjM5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3
 NCwxMDE5Mjg4MDM2XX0=
 -->
