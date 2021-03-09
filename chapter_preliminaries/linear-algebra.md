@@ -405,7 +405,7 @@ A, A + B
 ```{.python .input}
 #@tab tensorflow
 A = tf.reshape(tf.range(20, dtype=tf.float32), (5, 4))
-B = A  # No cloning of `A` to `B` by allocating new memory
+B = A  #  No cloning of `A` to `B` by allocating new memory
 A, A + B
 ```
 
@@ -1087,7 +1087,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMD
-UyNDIxLDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0
-LDEwMTkyODgwMzZdfQ==
+eyJoaXN0b3J5IjpbMTEwNTczNzk0OCw2MDE4ODcyMzYsODU3ND
+g4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMDM3OTY3ODY0
+LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
 -->
