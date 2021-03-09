@@ -97,10 +97,9 @@ níveis de colesterol, minutos de exercício por dia, etc.
 Em notação matemática, geralmente denotamos os vetores em negrito,
 letras minúsculas (por exemplo,, $\mathbf{x}$, $\mathbf{y}$, and $\mathbf{z})$.
 
-
-We work with vectors via one-dimensional tensors.
-In general tensors can have arbitrary lengths,
-subject to the memory limits of your machine.
+Trabalhamos com vetores via tensores unidimensionais.
+Em geral, os tensores podem ter comprimentos arbitrários,
+sujeito aos limites de memória de sua máquina.
 
 ```{.python .input}
 x = np.arange(4)
@@ -126,6 +125,13 @@ so we do not bold-face the font when referring to it.
 Extensive literature considers column vectors to be the default
 orientation of vectors, so does this book.
 In math, a vector $\mathbf{x}$ can be written as
+Podemos nos referir a qualquer elemento de um vetor usando um subscrito.
+Por exemplo, podemos nos referir ao elemento $i^\mathrm{th}$ element of $\mathbf{x}$  por $x_i$.
+Observe que o elemento $ x_i $ é um escalar,
+portanto, não colocamos a fonte em negrito quando nos referimos a ela.
+A literatura extensa considera os vetores de coluna como o padrão
+orientação de vetores, este livro também.
+Em matemática, um vetor $ \ mathbf {x} $ pode ser escrito como
 
 $$\mathbf{x} =\begin{bmatrix}x_{1}  \\x_{2}  \\ \vdots  \\x_{n}\end{bmatrix},$$
 :eqlabel:`eq_vec_def`
@@ -1094,7 +1100,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ2MDAxMzI1LDE2ODEwNTI0MjEsMTYzOT
-YxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAz
-Nl19
+eyJoaXN0b3J5IjpbNDU0MTM3NywxNjgxMDUyNDIxLDE2Mzk2MT
+I3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgwMzZd
+fQ==
 -->
