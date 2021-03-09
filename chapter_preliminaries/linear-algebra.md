@@ -221,20 +221,10 @@ onde cada elemento $a_{ij}$ pertence à linha $i^{\mathrm{th}}$ e coluna $j^{\ma
 $$\mathbf{A}=\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \\ \end{bmatrix}.$$
 :eqlabel:`eq_matrix_def`
 
-
-For any $\mathbf{A} \in \mathbb{R}^{m \times n}$, the shape of $\mathbf{A}$
-is ($m$, $n$) or $m \times n$.
-Specifically, when a matrix has the same number of rows and columns,
-its shape becomes a square; thus, it is called a *square matrix*.
-
 Para qualquer $\mathbf{A} \in \mathbb{R}^{m \times n}$, a forma de $\mathbf{A}$
 é ($m$, $n$) ou $m \times n$.
 Especificamente, quando uma matriz tem o mesmo número de linhas e colunas,
 sua forma se torna um quadrado; portanto, é chamada de *matriz quadrada*.
-
-We can [**create an $m \times n$ matrix**]
-by specifying a shape with two components $m$ and $n$
-when calling any of our favorite functions for instantiating a tensor.
 
 Podemos [**criar uma matriz $m \times n$**]
 especificando uma forma com dois componentes $m$ e $n$
@@ -1101,7 +1091,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NTQwMTY0NywxNjgxMDUyNDIxLDE2Mz
+eyJoaXN0b3J5IjpbLTc2ODExODQ4OSwxNjgxMDUyNDIxLDE2Mz
 k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
 MzZdfQ==
 -->
