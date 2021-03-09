@@ -21,17 +21,8 @@ então você já sabe como fazer coisas básicas
 como adicionar e multiplicar pares de números.
 Por exemplo, a temperatura em Palo Alto é de $52$ graus Fahrenheit.
 
-Formally, we call values consisting
-of just one numerical quantity *scalars*.
-If you wanted to convert this value to Celsius
-(the metric system's more sensible temperature scale),
-you would evaluate the expression $c = \frac{5}{9}(f - 32)$, setting $f$ to $52$.
-In this equation, each of the terms---$5$, $9$, and $32$---are scalar values.
-The placeholders $c$ and $f$ are called *variables*
-and they represent unknown scalar values.
-
 Formalmente, chamamos de valores que consistem
-de apenas uma quantidade numérica *escalares*.
+de apenas uma quantidade numérica *escalar*.
 Se você quiser converter este valor para Celsius
 (escala de temperatura mais sensível do sistema métrico),
 você avaliaria a expressão $c = \frac{5}{9}(f - 32)$, definindo $f$ para $52$.
@@ -1102,6 +1093,6 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzOTYxMjc5OSwyMDM3OTY3ODY0LDE4ND
-k0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbMTI3MjA0MDM3OSwxNjM5NjEyNzk5LDIwMz
+c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
