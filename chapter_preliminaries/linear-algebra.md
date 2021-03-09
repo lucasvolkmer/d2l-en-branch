@@ -118,28 +118,21 @@ x = tf.range(4)
 x
 ```
 
-We can refer to any element of a vector by using a subscript.
-For example, we can refer to the $i^\mathrm{th}$ element of $\mathbf{x}$ by $x_i$.
-Note that the element $x_i$ is a scalar,
-so we do not bold-face the font when referring to it.
-Extensive literature considers column vectors to be the default
-orientation of vectors, so does this book.
-In math, a vector $\mathbf{x}$ can be written as
 Podemos nos referir a qualquer elemento de um vetor usando um subscrito.
 Por exemplo, podemos nos referir ao elemento $i^\mathrm{th}$ element of $\mathbf{x}$  por $x_i$.
-Observe que o elemento $ x_i $ é um escalar,
+Observe que o elemento $x_i$ é um escalar,
 portanto, não colocamos a fonte em negrito quando nos referimos a ela.
 A literatura extensa considera os vetores de coluna como o padrão
 orientação de vetores, este livro também.
-Em matemática, um vetor $ \ mathbf {x} $ pode ser escrito como
+Em matemática, um vetor $\mathbf{x}$ pode ser escrito como
 
 $$\mathbf{x} =\begin{bmatrix}x_{1}  \\x_{2}  \\ \vdots  \\x_{n}\end{bmatrix},$$
 :eqlabel:`eq_vec_def`
 
 
-where $x_1, \ldots, x_n$ are elements of the vector.
-In code,
-we (**access any element by indexing into the tensor.**)
+onde $x_1, \ldots, x_n$ são elementos do vetor. 
+No código
+ (**access any element by indexing into the tensor.**)
 
 ```{.python .input}
 x[3]
@@ -1100,7 +1093,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU0MTM3NywxNjgxMDUyNDIxLDE2Mzk2MT
-I3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgwMzZd
-fQ==
+eyJoaXN0b3J5IjpbMTY4NTY3MDk5NiwxNjgxMDUyNDIxLDE2Mz
+k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
+MzZdfQ==
 -->
