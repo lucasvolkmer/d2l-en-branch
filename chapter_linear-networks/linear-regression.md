@@ -181,23 +181,23 @@ como mostrado em :numref:`fig_fit_linreg`.
 ![Fit data with a linear model.](../img/fit-linreg.svg)
 :label:`fig_fit_linreg`
 
-Note that large differences between
-estimates $\hat{y}^{(i)}$ and observations $y^{(i)}$
-lead to even larger contributions to the loss,
-due to the quadratic dependence.
-To measure the quality of a model on the entire dataset of $n$ examples,
-we simply average (or equivalently, sum)
-the losses on the training set.
+Observe que grandes diferenças entre
+estimativas $\hat{y}^{(i)}$ e observações $y^{(i)}$
+levam a contribuições ainda maiores para a perda,
+devido à dependência quadrática.
+Para medir a qualidade de um modelo em todo o conjunto de dados de $n$ exemplos,
+nós simplesmente calculamos a média (ou equivalentemente, somamos)
+as perdas no conjunto de treinamento.
 
 $$L(\mathbf{w}, b) =\frac{1}{n}\sum_{i=1}^n l^{(i)}(\mathbf{w}, b) =\frac{1}{n} \sum_{i=1}^n \frac{1}{2}\left(\mathbf{w}^\top \mathbf{x}^{(i)} + b - y^{(i)}\right)^2.$$
 
-When training the model, we want to find parameters ($\mathbf{w}^*, b^*$)
-that minimize the total loss across all training examples:
+Ao treinar o modelo, queremos encontrar os parâmetros ($\mathbf{w}^*, b^*$)
+que minimizam a perda total em todos os exemplos de treinamento:
 
 $$\mathbf{w}^*, b^* = \operatorname*{argmin}_{\mathbf{w}, b}\  L(\mathbf{w}, b).$$
 
 
-### Analytic Solution
+### Solução Analítica
 
 Linear regression happens to be an unusually simple optimization problem.
 Unlike most other models that we will encounter in this book,
@@ -667,7 +667,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MDYzMTY1NiwyMjcyMzc2MzgsLTE0ND
-c1Nzc1MjAsMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2NzU4MDA1
-NywtMTc5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbNTkzMDM1MjAyLDIyNzIzNzYzOCwtMTQ0Nz
+U3NzUyMCwxOTE0NjY1NzAyLDM4MDY0MzgwNSwtMTY3NTgwMDU3
+LC0xNzk4NzkwNDI0XX0=
 -->
