@@ -97,8 +97,8 @@ cholesterol levels, minutes of exercise per day, etc.
 In math notation, we will usually denote vectors as bold-faced,
 lower-cased letters (e.g., $\mathbf{x}$, $\mathbf{y}$, and $\mathbf{z})$.
 
-[** Você pode pensar em um vetor simplesmente como uma lista de valores escalares. **]
-Chamamos esses valores de * elementos * (* entradas * ou * componentes *) do vetor.
+[**Você pode pensar em um vetor simplesmente como uma lista de valores escalares.**]
+Chamamos esses valores de *elementos* (*entradas* ou *componentes*) do vetor.
 Quando nossos vetores representam exemplos de nosso conjunto de dados,
 seus valores têm algum significado no mundo real.
 Por exemplo, se estivéssemos treinando um modelo para prever
@@ -1110,6 +1110,6 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MDkyMjkzNSwxNjM5NjEyNzk5LDIwMz
+eyJoaXN0b3J5IjpbMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
 c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
