@@ -637,10 +637,10 @@ estatísticas e ciência da computação.
 
 ## Summary
 
-* Key ingredients in a machine learning model are training data, a loss function, an optimization algorithm, and quite obviously, the model itself.
-* Vectorizing makes everything better (mostly math) and faster (mostly code).
-* Minimizing an objective function and performing maximum likelihood estimation can mean the same thing.
-* Linear regression models are neural networks, too.
+* Os principais ingredientes em um modelo de *machine learning* são dados de treinamento, uma função de perda, um algoritmo de otimização e, obviamente, o próprio modelo.
+* A vetorização torna tudo melhor (principalmente matemática) e mais rápido (principalmente código).
+* Minimizar uma função objetivo e realizar a estimativa de máxima verossimilhança pode significar a mesma coisa.
+* Os modelos de regressão linear também são redes neurais.
 
 
 ## Exercises
@@ -670,9 +670,9 @@ estatísticas e ciência da computação.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyOTUyNjAyMCw1MzQ3MjY1MzgsNjM3Nz
-IzMTc3LC0xMTUyMDAxNjUxLDIzMTI0NDQyNCwxMzE4MTc5ODcs
-LTE1MTAxMDMwNzIsMjI3MjM3NjM4LC0xNDQ3NTc3NTIwLDE5MT
-Q2NjU3MDIsMzgwNjQzODA1LC0xNjc1ODAwNTcsLTE3OTg3OTA0
-MjRdfQ==
+eyJoaXN0b3J5IjpbLTE4MjkxNTcwMjQsNTM0NzI2NTM4LDYzNz
+cyMzE3NywtMTE1MjAwMTY1MSwyMzEyNDQ0MjQsMTMxODE3OTg3
+LC0xNTEwMTAzMDcyLDIyNzIzNzYzOCwtMTQ0NzU3NzUyMCwxOT
+E0NjY1NzAyLDM4MDY0MzgwNSwtMTY3NTgwMDU3LC0xNzk4Nzkw
+NDI0XX0=
 -->
