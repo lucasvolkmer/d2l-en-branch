@@ -1,16 +1,6 @@
 # Linear Algebra
 :label:`sec_linear-algebra`
 
-
-Now that you can store and manipulate data,
-let us briefly review the subset of basic linear algebra
-that you will need to understand and implement
-most of models covered in this book.
-Below, we introduce the basic mathematical objects, arithmetic,
-and operations in linear algebra,
-expressing each of them through mathematical notation
-and the corresponding implementation in code.
-
 Agora que você pode armazenar e manipular dados,
 vamos revisar brevemente o subconjunto da álgebra linear básica
 que você precisa para entender e implementar
@@ -19,7 +9,8 @@ Abaixo, apresentamos os objetos matemáticos básicos, aritméticos,
 e operações em álgebra linear,
 expressar cada um deles por meio de notação matemática
 e a implementação correspondente em código.
-## Scalars
+
+## Escalares
 
 If you never studied linear algebra or machine learning,
 then your past experience with math probably consisted
@@ -1101,5 +1092,5 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
