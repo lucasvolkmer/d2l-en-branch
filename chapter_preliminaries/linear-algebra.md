@@ -213,11 +213,6 @@ Matrizes, que normalmente denotamos com letras maiúsculas em negrito
 (por exemplo, $\mathbf{X}$, $\mathbf{Y}$, and $\mathbf{Z}$),
 são representados no código como tensores com dois eixos.
 
-In math notation, we use $\mathbf{A} \in \mathbb{R}^{m \times n}$
-to express that the matrix $\mathbf{A}$ consists of $m$ rows and $n$ columns of real-valued scalars.
-Visually, we can illustrate any matrix $\mathbf{A} \in \mathbb{R}^{m \times n}$ as a table,
-where each element $a_{ij}$ belongs to the $i^{\mathrm{th}}$ row and $j^{\mathrm{th}}$ column:
-
 Em notação matemática, usamos $\mathbf{A} \in \mathbb{R}^{m \times n}$
 para expressar que a matriz $\mathbf {A}$ consiste em $m$ linhas e $n$ colunas de escalares com valor real.
 Visualmente, podemos ilustrar qualquer matriz $\mathbf{A} \in \mathbb{R}^{m \times n}$ como uma tabela,
@@ -232,9 +227,18 @@ is ($m$, $n$) or $m \times n$.
 Specifically, when a matrix has the same number of rows and columns,
 its shape becomes a square; thus, it is called a *square matrix*.
 
+Para qualquer $\mathbf{A} \in \mathbb{R}^{m \times n}$, a forma de $\mathbf{A}$
+é ($m$, $n$) ou $m \times n$.
+Especificamente, quando uma matriz tem o mesmo número de linhas e colunas,
+sua forma se torna um quadrado; portanto, é chamada de *matriz quadrada*.
+
 We can [**create an $m \times n$ matrix**]
 by specifying a shape with two components $m$ and $n$
 when calling any of our favorite functions for instantiating a tensor.
+
+Podemos [**criar uma matriz $ m \ times n $**]
+especificando uma forma com dois componentes $ m$ e $ n $
+ao chamar qualquer uma de nossas funções favoritas para instanciar um tensor.
 
 ```{.python .input}
 A = np.arange(20).reshape(5, 4)
@@ -1097,7 +1101,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwOTcwOTIwNCwxNjgxMDUyNDIxLDE2Mz
+eyJoaXN0b3J5IjpbMTUyMDUzOTYxNSwxNjgxMDUyNDIxLDE2Mz
 k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
 MzZdfQ==
 -->
