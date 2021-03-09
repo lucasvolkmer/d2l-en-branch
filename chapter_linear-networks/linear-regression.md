@@ -513,17 +513,17 @@ que maximizam a *probabilidade* de todo o conjunto de dados:
 
 $$P(\mathbf y \mid \mathbf X) = \prod_{i=1}^{n} p(y^{(i)}|\mathbf{x}^{(i)}).$$
 
-Estimators chosen according to the principle of maximum likelihood
-are called *maximum likelihood estimators*.
-While, maximizing the product of many exponential functions,
-might look difficult,
-we can simplify things significantly, without changing the objective,
-by maximizing the log of the likelihood instead.
-For historical reasons, optimizations are more often expressed
-as minimization rather than maximization.
-So, without changing anything we can minimize the *negative log-likelihood*
+Estimadores escolhidos de acordo com o princípio da máxima verossimilhança
+são chamados de *estimadores de máxima verossimilhança*.
+Enquanto, maximizando o produto de muitas funções exponenciais,
+pode parecer difícil,
+podemos simplificar as coisas significativamente, sem alterar o objetivo,
+maximizando o log da probabilidade em vez disso.
+Por razões históricas, as otimizações são expressas com mais frequência
+como minimização em vez de maximização.
+Portanto, sem alterar nada, podemos minimizar a *probabilidade de log negativo*
 $-\log P(\mathbf y \mid \mathbf X)$.
-Working out the mathematics gives us:
+Trabalhando a matemática nos dá:
 
 $$-\log P(\mathbf y \mid \mathbf X) = \sum_{i=1}^n \frac{1}{2} \log(2 \pi \sigma^2) + \frac{1}{2 \sigma^2} \left(y^{(i)} - \mathbf{w}^\top \mathbf{x}^{(i)} - b\right)^2.$$
 
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM3NzIzMTc3LC0xMTUyMDAxNjUxLDIzMT
-I0NDQyNCwxMzE4MTc5ODcsLTE1MTAxMDMwNzIsMjI3MjM3NjM4
-LC0xNDQ3NTc3NTIwLDE5MTQ2NjU3MDIsMzgwNjQzODA1LC0xNj
-c1ODAwNTcsLTE3OTg3OTA0MjRdfQ==
+eyJoaXN0b3J5IjpbNDgyNjE3NDc5LDYzNzcyMzE3NywtMTE1Mj
+AwMTY1MSwyMzEyNDQ0MjQsMTMxODE3OTg3LC0xNTEwMTAzMDcy
+LDIyNzIzNzYzOCwtMTQ0NzU3NzUyMCwxOTE0NjY1NzAyLDM4MD
+Y0MzgwNSwtMTY3NTgwMDU3LC0xNzk4NzkwNDI0XX0=
 -->
