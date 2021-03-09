@@ -44,13 +44,8 @@ Analogamente, poderíamos escrever $x, y \in \{0, 1\}$
 para afirmar que $x$ e $y$ são números
 cujo valor só pode ser $0$ ou $1$.
 
-(**A scalar is represented by a tensor with just one element.**)
-In the next snippet, we instantiate two scalars
-and perform some familiar arithmetic operations with them,
-namely addition, multiplication, division, and exponentiation.
-
 (**Um escalar é representado por um tensor com apenas um elemento.**)
-No próximo código, instanciamos dois escalares
+No próximo trecho de código, instanciamos dois escalares
 e realizar algumas operações aritméticas familiares com eles,
 a saber, adição, multiplicação, divisão e exponenciação.
 
@@ -84,7 +79,7 @@ y = tf.constant([2.0])
 x + y, x * y, x / y, x**y
 ```
 
-## Vectors
+## Vetores
 
 [**You can think of a vector as simply a list of scalar values.**]
 We call these values the *elements* (*entries* or *components*) of the vector.
@@ -101,6 +96,23 @@ whose components capture their most recent vital signs,
 cholesterol levels, minutes of exercise per day, etc.
 In math notation, we will usually denote vectors as bold-faced,
 lower-cased letters (e.g., $\mathbf{x}$, $\mathbf{y}$, and $\mathbf{z})$.
+
+[** Você pode pensar em um vetor simplesmente como uma lista de valores escalares. **]
+Chamamos esses valores de * elementos * (* entradas * ou * componentes *) do vetor.
+Quando nossos vetores representam exemplos de nosso conjunto de dados,
+seus valores têm algum significado no mundo real.
+Por exemplo, se estivéssemos treinando um modelo para prever
+o risco de inadimplência de um empréstimo,
+podemos associar cada candidato a um vetor
+cujos componentes correspondem à sua receita,
+tempo de emprego, número de inadimplências anteriores e outros fatores.
+Se estivéssemos estudando o risco de ataques cardíacos que os pacientes de hospitais potencialmente enfrentam,
+podemos representar cada paciente por um vetor
+cujos componentes capturam seus sinais vitais mais recentes,
+níveis de colesterol, minutos de exercício por dia, etc.
+Em notação matemática, geralmente denotamos os vetores em negrito,
+letras minúsculas (por exemplo,, $\mathbf{x}$, $\mathbf{y}$, and $\mathbf{z})$.
+
 
 We work with vectors via one-dimensional tensors.
 In general tensors can have arbitrary lengths,
@@ -1098,6 +1110,6 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MDQ2NTQ2NywxNjM5NjEyNzk5LDIwMz
+eyJoaXN0b3J5IjpbLTk3MDkyMjkzNSwxNjM5NjEyNzk5LDIwMz
 c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
