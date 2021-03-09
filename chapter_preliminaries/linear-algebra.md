@@ -247,18 +247,9 @@ A = tf.reshape(tf.range(20), (5, 4))
 A
 ```
 
-We can access the scalar element $a_{ij}$ of a matrix $\mathbf{A}$ in :eqref:`eq_matrix_def`
-by specifying the indices for the row ($i$) and column ($j$),
-such as $[\mathbf{A}]_{ij}$.
-When the scalar elements of a matrix $\mathbf{A}$, such as in :eqref:`eq_matrix_def`, are not given,
-we may simply use the lower-case letter of the matrix $\mathbf{A}$ with the index subscript, $a_{ij}$,
-to refer to $[\mathbf{A}]_{ij}$.
-To keep notation simple, commas are inserted to separate indices only when necessary,
-such as $a_{2, 3j}$ and $[\mathbf{A}]_{2i-1, 3}$.
-
 Podemos acessar o elemento escalar $a_{ij}$ de uma matriz $\mathbf{A}$ em: eqref: `eq_matrix_def`
 especificando os índices para a linha ($i$) e coluna ($j$),
-como $[\ mathbf {A}] _ {ij}$.
+como $[\mathbf {A}] _ {ij}$.
 Quando os elementos escalares de uma matriz $\mathbf{A}$, como em: eqref: `eq_matrix_def`, não são fornecidos,
 podemos simplesmente usar a letra minúscula da matriz $\mathbf{A}$ com o subscrito do índice, $a_{ij}$,
 para se referir a $[\mathbf {A}] _ {ij}$.
@@ -274,6 +265,13 @@ and if $\mathbf{B} = \mathbf{A}^\top$, then $b_{ij} = a_{ji}$ for any $i$ and $j
 Thus, the transpose of $\mathbf{A}$ in :eqref:`eq_matrix_def` is
 a $n \times m$ matrix:
 
+Às vezes, queremos inverter os eixos.
+Quando trocamos as linhas e colunas de uma matriz,
+o resultado é chamado de *transposição* da matriz.
+Formalmente, significamos uma matriz $\mathbf {A}$ transposta por $\mathbf {A}^ \ top $
+e se $ \ mathbf {B} = \ mathbf {A} ^ \ top $, então $ b_ {ij} = a_ {ji} $ para qualquer $ i $ e $ j $.
+Assim, a transposição de $ \ mathbf {A} $ em: eqref: `eq_matrix_def` é
+uma matriz $ n \ times m $:
 $$
 \mathbf{A}^\top =
 \begin{bmatrix}
@@ -1100,7 +1098,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUzMjIwNTA0LDE2ODEwNTI0MjEsMTYzOT
+eyJoaXN0b3J5IjpbNjEwMTc0NDcxLDE2ODEwNTI0MjEsMTYzOT
 YxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAz
 Nl19
 -->
