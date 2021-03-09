@@ -195,23 +195,29 @@ x.shape
 x.shape
 ```
 
-Note that the word "dimension" tends to get overloaded
-in these contexts and this tends to confuse people.
-To clarify, we use the dimensionality of a *vector* or an *axis*
-to refer to its length, i.e., the number of elements of a vector or an axis.
-However, we use the dimensionality of a tensor
-to refer to the number of axes that a tensor has.
-In this sense, the dimensionality of some axis of a tensor
-will be the length of that axis.
+Observe que a palavra "dimensão" tende a ficar sobrecarregada
+nesses contextos e isso tende a confundir as pessoas.
+Para esclarecer, usamos a dimensionalidade de um *vetor* ou um *eixo*
+para se referir ao seu comprimento, ou seja, o número de elementos de um vetor ou eixo.
+No entanto, usamos a dimensionalidade de um tensor
+para se referir ao número de eixos que um tensor possui.
+Nesse sentido, a dimensionalidade de algum eixo de um tensor
+será o comprimento desse eixo.
 
 
-## Matrices
+## Matrizes
 
 Just as vectors generalize scalars from order zero to order one,
 matrices generalize vectors from order one to order two.
 Matrices, which we will typically denote with bold-faced, capital letters
 (e.g., $\mathbf{X}$, $\mathbf{Y}$, and $\mathbf{Z}$),
 are represented in code as tensors with two axes.
+
+Assim como os vetores generalizam escalares de ordem zero para ordem um,
+matrizes generalizam vetores de ordem um para ordem dois.
+Matrizes, que normalmente denotamos com letras maiúsculas em negrito
+(por exemplo, $ \ mathbf {X} $, $ \ mathbf {Y} $ e $ \ mathbf {Z} $),
+são representados no código como tensores com dois eixos.
 
 In math notation, we use $\mathbf{A} \in \mathbb{R}^{m \times n}$
 to express that the matrix $\mathbf{A}$ consists of $m$ rows and $n$ columns of real-valued scalars.
@@ -1092,7 +1098,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NDA0NDksMTY4MTA1MjQyMSwxNjM5Nj
-EyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2
-XX0=
+eyJoaXN0b3J5IjpbLTE2OTI2NTMxNjIsMTY4MTA1MjQyMSwxNj
+M5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4
+MDM2XX0=
 -->
