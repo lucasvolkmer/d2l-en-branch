@@ -81,22 +81,6 @@ x + y, x * y, x / y, x**y
 
 ## Vetores
 
-[**You can think of a vector as simply a list of scalar values.**]
-We call these values the *elements* (*entries* or *components*) of the vector.
-When our vectors represent examples from our dataset,
-their values hold some real-world significance.
-For example, if we were training a model to predict
-the risk that a loan defaults,
-we might associate each applicant with a vector
-whose components correspond to their income,
-length of employment, number of previous defaults, and other factors.
-If we were studying the risk of heart attacks hospital patients potentially face,
-we might represent each patient by a vector
-whose components capture their most recent vital signs,
-cholesterol levels, minutes of exercise per day, etc.
-In math notation, we will usually denote vectors as bold-faced,
-lower-cased letters (e.g., $\mathbf{x}$, $\mathbf{y}$, and $\mathbf{z})$.
-
 [**Você pode pensar em um vetor simplesmente como uma lista de valores escalares.**]
 Chamamos esses valores de *elementos* (*entradas* ou *componentes*) do vetor.
 Quando nossos vetores representam exemplos de nosso conjunto de dados,
@@ -1110,6 +1094,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
-c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbODQ2MDAxMzI1LDE2ODEwNTI0MjEsMTYzOT
+YxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAz
+Nl19
 -->
