@@ -414,9 +414,9 @@ class Timer:  #@save
         return np.array(self.times).cumsum().tolist()
 ```
 
-Now we can benchmark the workloads.
-First, [**we add them, one coordinate at a time,
-using a for-loop.**]
+Agora podemos avaliar as cargas de trabalho.
+Primeiro, [**nós os adicionamos, uma coordenada por vez,
+usando um *loop for*.**]
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -436,7 +436,7 @@ for i in range(n):
 f'{timer.stop():.5f} sec'
 ```
 
-(**Alternatively, we rely on the reloaded `+` operator to compute the elementwise sum.**)
+(**Alternativamente, contamos com o operador recarregado `+` para calcular a soma elemento a elemento.**)
 
 ```{.python .input}
 #@tab all
@@ -668,7 +668,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxODg5MTkxMiwyMzEyNDQ0MjQsMTMxOD
+eyJoaXN0b3J5IjpbMTQ2MDgyMTMzMywyMzEyNDQ0MjQsMTMxOD
 E3OTg3LC0xNTEwMTAzMDcyLDIyNzIzNzYzOCwtMTQ0NzU3NzUy
 MCwxOTE0NjY1NzAyLDM4MDY0MzgwNSwtMTY3NTgwMDU3LC0xNz
 k4NzkwNDI0XX0=
