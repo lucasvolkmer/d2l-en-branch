@@ -149,18 +149,6 @@ x[3]
 
 ### Comprimento, Dimensionalidade e Forma
 
-Let us revisit some concepts from :numref:`sec_ndarray`.
-A vector is just an array of numbers.
-And just as every array has a length, so does every vector.
-In math notation, if we want to say that a vector $\mathbf{x}$
-consists of $n$ real-valued scalars,
-we can express this as $\mathbf{x} \in \mathbb{R}^n$.
-The length of a vector is commonly called the *dimension* of the vector.
-
-As with an ordinary Python array,
-we [**can access the length of a tensor**]
-by calling Python's built-in `len()` function.
-
 Vamos revisitar alguns conceitos de: numref: `sec_ndarray`.
 Um vetor é apenas uma matriz de números.
 E assim como todo array tem um comprimento, todo vetor também.
@@ -170,7 +158,7 @@ podemos expressar isso como $\mathbf{x} \in \mathbb{R}^n$.
 O comprimento de um vetor é comumente chamado de *dimensão* do vetor.
 
 Tal como acontece com uma matriz Python comum,
-nós [** podemos acessar o comprimento de um tensor **]
+nós [**podemos acessar o comprimento de um tensor**]
 chamando a função `len ()` embutida do Python.
 
 ```{.python .input}
@@ -187,11 +175,11 @@ len(x)
 len(x)
 ```
 
-When a tensor represents a vector (with precisely one axis),
-we can also access its length via the `.shape` attribute.
-The shape is a tuple that lists the length (dimensionality)
-along each axis of the tensor.
-(**For tensors with just one axis, the shape has just one element.**)
+Quando um tensor representa um vetor (com precisamente um eixo),
+também podemos acessar seu comprimento por meio do atributo `.shape`.
+A forma é uma tupla que lista o comprimento (dimensionalidade)
+ao longo de cada eixo do tensor.
+(**Para tensores com apenas um eixo, a forma tem apenas um elemento.**)
 
 ```{.python .input}
 x.shape
@@ -1104,7 +1092,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NzMxNDk0MywxNjgxMDUyNDIxLDE2Mz
-k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
-MzZdfQ==
+eyJoaXN0b3J5IjpbLTY4NDA0NDksMTY4MTA1MjQyMSwxNjM5Nj
+EyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2
+XX0=
 -->
