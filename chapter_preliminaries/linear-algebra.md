@@ -131,8 +131,7 @@ $$\mathbf{x} =\begin{bmatrix}x_{1}  \\x_{2}  \\ \vdots  \\x_{n}\end{bmatrix},$$
 
 
 onde $x_1, \ldots, x_n$ são elementos do vetor. 
-No código
- (**access any element by indexing into the tensor.**)
+No código (**acessamos qualquer elemento indexando no tensor**)
 
 ```{.python .input}
 x[3]
@@ -148,7 +147,7 @@ x[3]
 x[3]
 ```
 
-### Length, Dimensionality, and Shape
+### Comprimento, Dimensionalidade e Forma
 
 Let us revisit some concepts from :numref:`sec_ndarray`.
 A vector is just an array of numbers.
@@ -161,6 +160,18 @@ The length of a vector is commonly called the *dimension* of the vector.
 As with an ordinary Python array,
 we [**can access the length of a tensor**]
 by calling Python's built-in `len()` function.
+
+Vamos revisitar alguns conceitos de: numref: `sec_ndarray`.
+Um vetor é apenas uma matriz de números.
+E assim como todo array tem um comprimento, todo vetor também.
+Em notação matemática, se quisermos dizer que um vetor $\mathbf{x}$
+consiste em $n$ escalares com valor real,
+podemos expressar isso como $\mathbf{x} \in \mathbb{R}^n$.
+O comprimento de um vetor é comumente chamado de *dimensão* do vetor.
+
+Tal como acontece com uma matriz Python comum,
+nós [** podemos acessar o comprimento de um tensor **]
+chamando a função `len ()` embutida do Python.
 
 ```{.python .input}
 len(x)
@@ -1093,7 +1104,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NTY3MDk5NiwxNjgxMDUyNDIxLDE2Mz
+eyJoaXN0b3J5IjpbLTI2NzMxNDk0MywxNjgxMDUyNDIxLDE2Mz
 k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
 MzZdfQ==
 -->
