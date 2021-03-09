@@ -584,20 +584,20 @@ no próximo capítulo.
 
 ### Biologia
 
-Since linear regression (invented in 1795)
-predates computational neuroscience,
-it might seem anachronistic to describe
-linear regression as a neural network.
-To see why linear models were a natural place to begin
-when the cyberneticists/neurophysiologists
-Warren McCulloch and Walter Pitts began to develop
-models of artificial neurons,
-consider the cartoonish picture
-of a biological neuron in :numref:`fig_Neuron`, consisting of
-*dendrites* (input terminals),
-the *nucleus* (CPU), the *axon* (output wire),
-and the *axon terminals* (output terminals),
-enabling connections to other neurons via *synapses*.
+Como a regressão linear (inventada em 1795)
+antecede a neurociência computacional,
+pode parecer anacrônico descrever
+regressão linear como uma rede neural.
+Para ver por que os modelos lineares eram um lugar natural para começar
+quando os ciberneticistas/neurofisiologistas
+Warren McCulloch e Walter Pitts começaram a desenvolver
+modelos de neurônios artificiais,
+considere a imagem de desenho animado
+de um neurônio biológico em :numref:`fig_Neuron`, consistindo em
+*dendritos* (terminais de entrada),
+o *núcleo* (CPU), o *axônio* (fio de saída),
+e os * terminais de axônio* (terminais de saída),
+permitindo conexões com outros neurônios por meio de *sinapses*.
 
 ![The real neuron.](../img/neuron.svg)
 :label:`fig_Neuron`
@@ -669,8 +669,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczOTkwNTQ0MSw2Mzc3MjMxNzcsLTExNT
-IwMDE2NTEsMjMxMjQ0NDI0LDEzMTgxNzk4NywtMTUxMDEwMzA3
-MiwyMjcyMzc2MzgsLTE0NDc1Nzc1MjAsMTkxNDY2NTcwMiwzOD
-A2NDM4MDUsLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbNTM0NzI2NTM4LDYzNzcyMzE3NywtMTE1Mj
+AwMTY1MSwyMzEyNDQ0MjQsMTMxODE3OTg3LC0xNTEwMTAzMDcy
+LDIyNzIzNzYzOCwtMTQ0NzU3NzUyMCwxOTE0NjY1NzAyLDM4MD
+Y0MzgwNSwtMTY3NTgwMDU3LC0xNzk4NzkwNDI0XX0=
 -->
