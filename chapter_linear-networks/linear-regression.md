@@ -169,14 +169,14 @@ o quadrado do erro é dado por:
 
 $$l^{(i)}(\mathbf{w}, b) = \frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2.$$
 
-The constant $\frac{1}{2}$ makes no real difference
-but will prove notationally convenient,
-canceling out when we take the derivative of the loss.
-Since the training dataset is given to us, and thus out of our control,
-the empirical error is only a function of the model parameters.
-To make things more concrete, consider the example below
-where we plot a regression problem for a one-dimensional case
-as shown in :numref:`fig_fit_linreg`.
+A constante $\frac{1}{2}$ não faz diferença real
+mas será notacionalmente conveniente,
+cancelando quando tomamos a derivada da perda.
+Como o conjunto de dados de treinamento é fornecido a nós e, portanto, está fora de nosso controle,
+o erro empírico é apenas função dos parâmetros do modelo.
+Para tornar as coisas mais concretas, considere o exemplo abaixo
+onde traçamos um problema de regressão para um caso unidimensional
+como mostrado em :numref:`fig_fit_linreg`.
 
 ![Fit data with a linear model.](../img/fit-linreg.svg)
 :label:`fig_fit_linreg`
@@ -667,7 +667,7 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NzU4MzU1NCwyMjcyMzc2MzgsLTE0ND
+eyJoaXN0b3J5IjpbLTM2MDYzMTY1NiwyMjcyMzc2MzgsLTE0ND
 c1Nzc1MjAsMTkxNDY2NTcwMiwzODA2NDM4MDUsLTE2NzU4MDA1
 NywtMTc5ODc5MDQyNF19
 -->
