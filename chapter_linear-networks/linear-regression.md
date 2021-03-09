@@ -547,13 +547,13 @@ Para começar, vamos começar reescrevendo as coisas em uma notação de "camada
 
 ### Diagrama de Rede Neural
 
-Deep learning practitioners like to draw diagrams
-to visualize what is happening in their models.
-In :numref:`fig_single_neuron`,
-we depict our linear regression model as a neural network.
-Note that these diagrams highlight the connectivity pattern
-such as how each input is connected to the output,
-but not the values taken by the weights or biases.
+Praticantes de *deep learning* gostam de desenhar diagramas
+para visualizar o que está acontecendo em seus modelos.
+Em :numref:`fig_single_neuron`,
+retratamos nosso modelo de regressão linear como uma rede neural.
+Observe que esses diagramas destacam o padrão de conectividade
+como cada entrada é conectada à saída,
+mas não os valores tomados pelos pesos ou *bias*.
 
 ![Linear regression is a single-layer neural network.](../img/singleneuron.svg)
 :label:`fig_single_neuron`
@@ -668,8 +668,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNjczNjM4OSw2Mzc3MjMxNzcsLTExNT
-IwMDE2NTEsMjMxMjQ0NDI0LDEzMTgxNzk4NywtMTUxMDEwMzA3
-MiwyMjcyMzc2MzgsLTE0NDc1Nzc1MjAsMTkxNDY2NTcwMiwzOD
-A2NDM4MDUsLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
+eyJoaXN0b3J5IjpbLTE3ODcxNDMzODUsNjM3NzIzMTc3LC0xMT
+UyMDAxNjUxLDIzMTI0NDQyNCwxMzE4MTc5ODcsLTE1MTAxMDMw
+NzIsMjI3MjM3NjM4LC0xNDQ3NTc3NTIwLDE5MTQ2NjU3MDIsMz
+gwNjQzODA1LC0xNjc1ODAwNTcsLTE3OTg3OTA0MjRdfQ==
 -->
