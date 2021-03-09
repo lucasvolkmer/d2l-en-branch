@@ -236,8 +236,8 @@ We can [**create an $m \times n$ matrix**]
 by specifying a shape with two components $m$ and $n$
 when calling any of our favorite functions for instantiating a tensor.
 
-Podemos [**criar uma matriz $ m \ times n $**]
-especificando uma forma com dois componentes $ m$ e $ n $
+Podemos [**criar uma matriz $m \times n$**]
+especificando uma forma com dois componentes $m$ e $n$
 ao chamar qualquer uma de nossas funções favoritas para instanciar um tensor.
 
 ```{.python .input}
@@ -1101,7 +1101,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMDUzOTYxNSwxNjgxMDUyNDIxLDE2Mz
+eyJoaXN0b3J5IjpbMTc5NTQwMTY0NywxNjgxMDUyNDIxLDE2Mz
 k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
 MzZdfQ==
 -->
