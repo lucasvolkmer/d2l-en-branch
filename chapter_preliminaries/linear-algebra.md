@@ -29,13 +29,14 @@ you would evaluate the expression $c = \frac{5}{9}(f - 32)$, setting $f$ to $52$
 In this equation, each of the terms---$5$, $9$, and $32$---are scalar values.
 The placeholders $c$ and $f$ are called *variables*
 and they represent unknown scalar values.
+
 Formalmente, chamamos de valores que consistem
-de apenas uma quantidade numérica * escalares *.
+de apenas uma quantidade numérica *escalares*.
 Se você quiser converter este valor para Celsius
 (escala de temperatura mais sensível do sistema métrico),
-você avaliaria a expressão $ c = \ frac {5} {9} (f - 32) $, definindo $ f $ para $ 52 $.
-Nesta equação, cada um dos termos --- $ 5 $, $ 9 $ e $ 32 $ --- são valores escalares.
-Os marcadores $ c $ e $ f $ são chamados de * variáveis *
+você avaliaria a expressão $c = \frac{5}{9}(f - 32)$, definindo $f$ para $52$.
+Nesta equação, cada um dos termos---$5$, $9$, e $32$---são valores escalares.
+Os marcadores $c$ e $ f $ são chamados de * variáveis *
 e eles representam valores escalares desconhecidos.
 
 In this book, we adopt the mathematical notation
@@ -1101,6 +1102,6 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4ODQ0NjQ1NywyMDM3OTY3ODY0LDE4ND
-k0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbLTEyNjUwMzY5ODksMjAzNzk2Nzg2NCwxOD
+Q5NDk0Nzc0LDEwMTkyODgwMzZdfQ==
 -->
