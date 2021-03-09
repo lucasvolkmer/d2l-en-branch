@@ -558,30 +558,31 @@ mas não os valores tomados pelos pesos ou *bias*.
 ![Linear regression is a single-layer neural network.](../img/singleneuron.svg)
 :label:`fig_single_neuron`
 
-For the neural network shown in :numref:`fig_single_neuron`,
-the inputs are $x_1, \ldots, x_d$,
-so the *number of inputs* (or *feature dimensionality*) in the input layer is $d$.
-The output of the network in :numref:`fig_single_neuron` is $o_1$,
-so the *number of outputs* in the output layer is 1.
-Note that the input values are all *given*
-and there is just a single *computed* neuron.
-Focusing on where computation takes place,
-conventionally we do not consider the input layer when counting layers.
-That is to say,
-the *number of layers* for the neural network in :numref:`fig_single_neuron` is 1.
-We can think of linear regression models as neural networks
-consisting of just a single artificial neuron,
-or as single-layer neural networks.
 
-Since for linear regression, every input is connected
-to every output (in this case there is only one output),
-we can regard this transformation (the output layer in :numref:`fig_single_neuron`)
-as a *fully-connected layer* or *dense layer*.
-We will talk a lot more about networks composed of such layers
-in the next chapter.
+Para a rede neural mostrada em :numref:`fig_single_neuron`,
+as entradas são $x_1,\ldots, x_d$,
+portanto, o *número de entradas* (ou *dimensionalidade do recurso*) na camada de entrada é $d$.
+A saída da rede em :numref:`fig_single_neuron` é $o_1$,
+portanto, o *número de saídas* na camada de saída é 1.
+Observe que os valores de entrada são todos *fornecidos*
+e há apenas um único neurônio *calculado*.
+Concentrando-se em onde a computação ocorre,
+convencionalmente, não consideramos a camada de entrada ao contar camadas.
+Quer dizer,
+o *número de camadas* para a rede neural em :numref:`fig_single_neuron` é 1.
+Podemos pensar em modelos de regressão linear como redes neurais
+consistindo em apenas um único neurônio artificial,
+ou como redes neurais de camada única.
+
+Já que para a regressão linear, cada entrada é conectada
+para cada saída (neste caso, há apenas uma saída),
+podemos considerar esta transformação (a camada de saída em :numref:`fig_single_neuron`)
+como uma *camada totalmente conectada* ou *camada densa*.
+Falaremos muito mais sobre redes compostas por tais camadas
+no próximo capítulo.
 
 
-### Biology
+### Biologia
 
 Since linear regression (invented in 1795)
 predates computational neuroscience,
@@ -668,8 +669,8 @@ statistics, and computer science.
 [Discussions](https://discuss.d2l.ai/t/259)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODcxNDMzODUsNjM3NzIzMTc3LC0xMT
-UyMDAxNjUxLDIzMTI0NDQyNCwxMzE4MTc5ODcsLTE1MTAxMDMw
-NzIsMjI3MjM3NjM4LC0xNDQ3NTc3NTIwLDE5MTQ2NjU3MDIsMz
-gwNjQzODA1LC0xNjc1ODAwNTcsLTE3OTg3OTA0MjRdfQ==
+eyJoaXN0b3J5IjpbLTczOTkwNTQ0MSw2Mzc3MjMxNzcsLTExNT
+IwMDE2NTEsMjMxMjQ0NDI0LDEzMTgxNzk4NywtMTUxMDEwMzA3
+MiwyMjcyMzc2MzgsLTE0NDc1Nzc1MjAsMTkxNDY2NTcwMiwzOD
+A2NDM4MDUsLTE2NzU4MDA1NywtMTc5ODc5MDQyNF19
 -->
