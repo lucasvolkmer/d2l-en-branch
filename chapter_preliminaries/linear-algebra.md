@@ -256,6 +256,15 @@ to refer to $[\mathbf{A}]_{ij}$.
 To keep notation simple, commas are inserted to separate indices only when necessary,
 such as $a_{2, 3j}$ and $[\mathbf{A}]_{2i-1, 3}$.
 
+Podemos acessar o elemento escalar $a_{ij}$ de uma matriz $\mathbf{A}$ em: eqref: `eq_matrix_def`
+especificando os índices para a linha ($i$) e coluna ($j$),
+como $[\ mathbf {A}] _ {ij}$.
+Quando os elementos escalares de uma matriz $\mathbf{A}$, como em: eqref: `eq_matrix_def`, não são fornecidos,
+podemos simplesmente usar a letra minúscula da matriz $\mathbf{A}$ com o subscrito do índice, $a_{ij}$,
+para se referir a $[\mathbf {A}] _ {ij}$.
+Para manter a notação simples, as vírgulas são inseridas para separar os índices apenas quando necessário,
+como $a_ {2, 3j}$ e $[\mathbf {A}] _ {2i-1, 3}$.
+
 
 Sometimes, we want to flip the axes.
 When we exchange a matrix's rows and columns,
@@ -1091,7 +1100,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2ODExODQ4OSwxNjgxMDUyNDIxLDE2Mz
-k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
-MzZdfQ==
+eyJoaXN0b3J5IjpbNzUzMjIwNTA0LDE2ODEwNTI0MjEsMTYzOT
+YxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAz
+Nl19
 -->
