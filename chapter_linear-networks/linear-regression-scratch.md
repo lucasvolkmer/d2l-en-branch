@@ -237,16 +237,16 @@ conforme apresentado em :numref:`sec_autograd`, para calcular o gradiente.
 
 ## Definindo o Modelo
 
-Next, we must [**define our model,
-relating its inputs and parameters to its outputs.**]
-Recall that to calculate the output of the linear model,
-we simply take the matrix-vector dot product
-of the input features $\mathbf{X}$ and the model weights $\mathbf{w}$,
-and add the offset $b$ to each example.
-Note that below $\mathbf{Xw}$  is a vector and $b$ is a scalar.
-Recall the broadcasting mechanism as described in :numref:`subsec_broadcasting`.
-When we add a vector and a scalar,
-the scalar is added to each component of the vector.
+Em seguida, devemos [**definir nosso modelo,
+relacionando suas entradas e parâmetros com suas saídas.**]
+Lembre-se de que, para calcular a saída do modelo linear,
+simplesmente pegamos o produto escalar vetor-matriz
+dos recursos de entrada $\mathbf{X}$ e os pesos do modelo $\mathbf{w}$,
+e adicione o *offset* $b$ a cada exemplo.
+Observe que abaixo de $\mathbf{Xw}$ está um vetor e $b$ é um escalar.
+Lembre-se do mecanismo de transmissão conforme descrito em :numref:`subsec_broadcasting`.
+Quando adicionamos um vetor e um escalar,
+o escalar é adicionado a cada componente do vetor.
 
 ```{.python .input}
 #@tab all
@@ -255,7 +255,7 @@ def linreg(X, w, b):  #@save
     return d2l.matmul(X, w) + b
 ```
 
-## Defining the Loss Function
+## Definindo a Função de Perda
 
 Since [**updating our model requires taking
 the gradient of our loss function,**]
@@ -461,7 +461,7 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MzU3Mjc4LC0xMzQ1MjY5NzA5LDE0OT
+eyJoaXN0b3J5IjpbMTYwOTI1NjAxLC0xMzQ1MjY5NzA5LDE0OT
 Y1OTE3MCwtMTk5MzU2NjkzLC05ODg5NjkwMTYsLTEyMjk2NzU0
 OTddfQ==
 -->
