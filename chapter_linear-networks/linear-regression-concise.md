@@ -205,21 +205,22 @@ net.add(tf.keras.layers.Dense(1))
 
 ## Inicializando os Parâmetros do Modelo
 
-Before using `net`, we need to (**initialize the model parameters,**)
-such as the weights and bias in the linear regression model.
-Deep learning frameworks often have a predefined way to initialize the parameters.
-Here we specify that each weight parameter
-should be randomly sampled from a normal distribution
-with mean 0 and standard deviation 0.01.
-The bias parameter will be initialized to zero.
+
+Antes de usar `net`, precisamos (**inicializar os parâmetros do modelo,**)
+como os pesos e *bias* no modelo de regressão linear.
+As estruturas de *deep learning* geralmente têm uma maneira predefinida de inicializar os parâmetros.
+Aqui especificamos que cada parâmetro de peso
+deve ser amostrado aleatoriamente a partir de uma distribuição normal
+com média 0 e desvio padrão 0,01.
+O parâmetro bias será inicializado em zero.
 
 :begin_tab:`mxnet`
-We will import the `initializer` module from MXNet.
-This module provides various methods for model parameter initialization.
-Gluon makes `init` available as a shortcut (abbreviation)
-to access the `initializer` package.
-We only specify how to initialize the weight by calling `init.Normal(sigma=0.01)`.
-Bias parameters are initialized to zero by default.
+Vamos importar o módulo *`initializer`* do MXNet.
+Este módulo fornece vários métodos para inicialização de parâmetros do modelo.
+Gluon disponibiliza `init` como um atalho (abreviatura)
+para acessar o pacote `initializer`.
+Nós apenas especificamos como inicializar o peso chamando `init.Normal (sigma = 0,01)`.
+Os parâmetros de polarização são inicializados em zero por padrão.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -227,7 +228,7 @@ As we have specified the input and output dimensions when constructing `nn.Linea
 :end_tab:
 
 :begin_tab:`tensorflow`
-The `initializers` module in TensorFlow provides various methods for model parameter initialization. The easiest way to specify the initialization method in Keras is when creating the layer by specifying `kernel_initializer`. Here we recreate `net` again.
+O módulo *`initializers`* no TensorFlow fornece vários métodos para a inicialização dos parâmetros do modelo. A maneira mais fácil de especificar o método de inicialização no Keras é ao criar a camada especificando *`kernel_initializer`*. Aqui, recriamos o `net` novamente.
 :end_tab:
 
 ```{.python .input}
@@ -511,5 +512,6 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1Mjk5MTk1OCwtMjE0NTk5NTMwN119
+eyJoaXN0b3J5IjpbMzYzNjY2MzMsLTY1Mjk5MTk1OCwtMjE0NT
+k5NTMwN119
 -->
