@@ -467,26 +467,26 @@ print('error in estimating b', true_b - b)
 ## Resumo
 
 :begin_tab:`mxnet`
-* Using Gluon, we can implement models much more concisely.
-* In Gluon, the `data` module provides tools for data processing, the `nn` module defines a large number of neural network layers, and the `loss` module defines many common loss functions.
-* MXNet's module `initializer` provides various methods for model parameter initialization.
-* Dimensionality and storage are automatically inferred, but be careful not to attempt to access parameters before they have been initialized.
+* Usando o Gluon, podemos implementar modelos de forma muito mais concisa.
+* No Gluon, o módulo `data` fornece ferramentas para processamento de dados, o módulo` nn` define um grande número de camadas de rede neural e o módulo `loss` define muitas funções de perda comuns.
+* O módulo `inicializador` do MXNet fornece vários métodos para inicialização dos parâmetros do modelo.
+* A dimensionalidade e o armazenamento são inferidos automaticamente, mas tome cuidado para não tentar acessar os parâmetros antes de eles serem inicializados.
 :end_tab:
 
 :begin_tab:`pytorch`
-* Using PyTorch's high-level APIs, we can implement models much more concisely.
-* In PyTorch, the `data` module provides tools for data processing, the `nn` module defines a large number of neural network layers and common loss functions.
-* We can initialize the parameters by replacing their values with methods ending with `_`.
+* Usando as APIs de alto nível do PyTorch, podemos implementar modelos de forma muito mais concisa.
+* No PyTorch, o módulo `data` fornece ferramentas para processamento de dados, o módulo` nn` define um grande número de camadas de rede neural e funções de perda comuns.
+* Podemos inicializar os parâmetros substituindo seus valores por métodos que terminam com `_`.
 :end_tab:
 
 :begin_tab:`tensorflow`
-* Using TensorFlow's high-level APIs, we can implement models much more concisely.
-* In TensorFlow, the `data` module provides tools for data processing, the `keras` module defines a large number of neural network layers and common loss functions.
-* TensorFlow's module `initializers` provides various methods for model parameter initialization.
-* Dimensionality and storage are automatically inferred (but be careful not to attempt to access parameters before they have been initialized).
+* Usando as APIs de alto nível do TensorFlow, podemos implementar modelos de maneira muito mais concisa.
+* No TensorFlow, o módulo `data` fornece ferramentas para processamento de dados, o módulo` keras` define um grande número de camadas de rede neural e funções de perda comuns.
+* O módulo *`initializers`* do TensorFlow fornece vários métodos para a inicialização dos parâmetros do modelo.
+* A dimensionalidade e o armazenamento são inferidos automaticamente (mas tome cuidado para não tentar acessar os parâmetros antes de serem inicializados).
 :end_tab:
 
-## Exercises
+## Exercícios
 
 :begin_tab:`mxnet`
 1. If we replace `l = loss(output, y)` with `l = loss(output, y).mean()`, we need to change `trainer.step(batch_size)` to `trainer.step(1)` for the code to behave identically. Why?
@@ -510,7 +510,7 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNjk4OTkwLDEzODE3MTgyMzEsMTUxNj
-Y3OTk4OCwtMzAwNTY5MzM1LC01NTE3Njc1NSwzNjM2NjYzMywt
-NjUyOTkxOTU4LC0yMTQ1OTk1MzA3XX0=
+eyJoaXN0b3J5IjpbMTI3MjM0MTU5NSwxMzgxNzE4MjMxLDE1MT
+Y2Nzk5ODgsLTMwMDU2OTMzNSwtNTUxNzY3NTUsMzYzNjY2MzMs
+LTY1Mjk5MTk1OCwtMjE0NTk5NTMwN119
 -->
