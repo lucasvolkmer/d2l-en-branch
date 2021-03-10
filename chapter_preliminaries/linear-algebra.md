@@ -632,9 +632,8 @@ sum_A = tf.reduce_sum(A, axis=1, keepdims=True)
 sum_A
 ```
 
-For instance,
-since `sum_A` still keeps its two axes after summing each row, we can (**divide `A` by `sum_A` with broadcasting.**)
-
+Por exemplo,
+uma vez que `sum_A` ainda mantém seus dois eixos após somar cada linha, podemos (**dividir` A` por `sum_A` com *broadcasting*.**)
 
 ```{.python .input}
 A / sum_A
@@ -652,6 +651,9 @@ A / sum_A
 
 If we want to calculate [**the cumulative sum of elements of `A` along some axis**], say `axis=0` (row by row),
 we can call the `cumsum` function. This function will not reduce the input tensor along any axis.
+
+Se quisermos calcular [** a soma cumulativa dos elementos de `A` ao longo de algum eixo **], diga` eixo = 0` (linha por linha),
+podemos chamar a função `cumsum`. Esta função não reduzirá o tensor de entrada ao longo de nenhum eixo.
 
 ```{.python .input}
 A.cumsum(axis=0)
@@ -1091,8 +1093,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjg1NzA2MDMsLTQ5MjUwMTY0MSwxMT
-A1NzM3OTQ4LDYwMTg4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQy
-MSwxNjM5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMD
-E5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbMjA3NDQzOTE5MywtNDkyNTAxNjQxLDExMD
+U3Mzc5NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIx
+LDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMT
+kyODgwMzZdfQ==
 -->
