@@ -649,10 +649,7 @@ A / sum_A
 A / sum_A
 ```
 
-If we want to calculate [**the cumulative sum of elements of `A` along some axis**], say `axis=0` (row by row),
-we can call the `cumsum` function. This function will not reduce the input tensor along any axis.
-
-Se quisermos calcular [** a soma cumulativa dos elementos de `A` ao longo de algum eixo **], diga` eixo = 0` (linha por linha),
+Se quisermos calcular [**a soma cumulativa dos elementos de `A` ao longo de algum eixo**], diga` eixo = 0` (linha por linha),
 podemos chamar a função `cumsum`. Esta função não reduzirá o tensor de entrada ao longo de nenhum eixo.
 
 ```{.python .input}
@@ -669,10 +666,13 @@ A.cumsum(axis=0)
 tf.cumsum(A, axis=0)
 ```
 
-## Dot Products
+## Produto Escalar
 
 So far, we have only performed elementwise operations, sums, and averages. And if this was all we could do, linear algebra probably would not deserve its own section. However, one of the most fundamental operations is the dot product.
 Given two vectors $\mathbf{x}, \mathbf{y} \in \mathbb{R}^d$, their *dot product* $\mathbf{x}^\top \mathbf{y}$ (or $\langle \mathbf{x}, \mathbf{y}  \rangle$) is a sum over the products of the elements at the same position: $\mathbf{x}^\top \mathbf{y} = \sum_{i=1}^{d} x_i y_i$.
+
+Até agora, realizamos apenas operações elementares, somas e médias. E se isso fosse tudo que pudéssemos fazer, a álgebra linear provavelmente não mereceria sua própria seção. No entanto, uma das operações mais fundamentais é o produto escalar.
+Dados dois vetores $ \ mathbf {x}, \ mathbf {y} \ in \ mathbb {R} ^ d $, seu * produto escalar * $ \ mathbf {x} ^ \ top \ mathbf {y} $ (ou $ \ langle \ mathbf {x}, \ mathbf {y} \ rangle $) é uma soma sobre os produtos dos elementos na mesma posição: $ \ mathbf {x} ^ \ top \ mathbf {y} = \ sum_ {i = 1} ^ {d} x_i y_i $.
 
 [~~The *dot product* of two vectors is a sum over the products of the elements at the same position~~]
 
@@ -1093,8 +1093,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NDQzOTE5MywtNDkyNTAxNjQxLDExMD
-U3Mzc5NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIx
-LDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMT
-kyODgwMzZdfQ==
+eyJoaXN0b3J5IjpbLTE3NTYyNTE1NTgsMjA3NDQzOTE5MywtND
+kyNTAxNjQxLDExMDU3Mzc5NDgsNjAxODg3MjM2LDg1NzQ4ODk5
+OSwxNjgxMDUyNDIxLDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxOD
+Q5NDk0Nzc0LDEwMTkyODgwMzZdfQ==
 -->
