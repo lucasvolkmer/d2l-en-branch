@@ -169,17 +169,17 @@ No PyTorch, a camada totalmente conectada é definida na classe `Linear`. Observ
 :end_tab:
 
 :begin_tab:`tensorflow`
-In Keras, the fully-connected layer is defined in the `Dense` class. Since we only want to generate a single scalar output, we set that number to 1.
+No Keras, a camada totalmente conectada é definida na classe `Dense`. Como queremos gerar apenas uma única saída escalar, definimos esse número como 1.
 
-It is worth noting that, for convenience,
-Keras does not require us to specify
-the input shape for each layer.
-So here, we do not need to tell Keras
-how many inputs go into this linear layer.
-When we first try to pass data through our model,
-e.g., when we execute `net(X)` later,
-Keras will automatically infer the number of inputs to each layer.
-We will describe how this works in more detail later.
+É importante notar que, por conveniência,
+Keras não exige que especifiquemos
+a forma de entrada para cada camada.
+Então, aqui, não precisamos dizer a Keras
+quantas entradas vão para esta camada linear.
+Quando tentamos primeiro passar dados por meio de nosso modelo,
+por exemplo, quando executamos `net (X)` mais tarde,
+Keras inferirá automaticamente o número de entradas para cada camada.
+Descreveremos como isso funciona com mais detalhes posteriormente.
 :end_tab:
 
 ```{.python .input}
@@ -203,7 +203,7 @@ net = tf.keras.Sequential()
 net.add(tf.keras.layers.Dense(1))
 ```
 
-## Initializing Model Parameters
+## Inicializando os Parâmetros do Modelo
 
 Before using `net`, we need to (**initialize the model parameters,**)
 such as the weights and bias in the linear regression model.
@@ -511,5 +511,5 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NTQyMjIzNCwtMjE0NTk5NTMwN119
+eyJoaXN0b3J5IjpbLTY1Mjk5MTk1OCwtMjE0NTk5NTMwN119
 -->
