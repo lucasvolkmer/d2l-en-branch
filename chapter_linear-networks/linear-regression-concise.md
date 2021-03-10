@@ -370,28 +370,29 @@ trainer = tf.keras.optimizers.SGD(learning_rate=0.03)
 
 ## Treinamento
 
-You might have noticed that expressing our model through
-high-level APIs of a deep learning framework
-requires comparatively few lines of code.
-We did not have to individually allocate parameters,
-define our loss function, or implement minibatch stochastic gradient descent.
-Once we start working with much more complex models,
-advantages of high-level APIs will grow considerably.
-However, once we have all the basic pieces in place,
-[**the training loop itself is strikingly similar
-to what we did when implementing everything from scratch.**]
 
-To refresh your memory: for some number of epochs,
-we will make a complete pass over the dataset (`train_data`),
-iteratively grabbing one minibatch of inputs
-and the corresponding ground-truth labels.
-For each minibatch, we go through the following ritual:
+Você deve ter notado que expressar nosso modelo por meio
+APIs de alto nível de uma estrutura de *deep learning*
+requer comparativamente poucas linhas de código.
+Não tivemos que alocar parâmetros individualmente,
+definir nossa função de perda ou implementar o gradiente descendente estocástico de *minibatch*.
+Assim que começarmos a trabalhar com modelos muito mais complexos,
+as vantagens das APIs de alto nível aumentarão consideravelmente.
+No entanto, uma vez que temos todas as peças básicas no lugar,
+[**o loop de treinamento em si é surpreendentemente semelhante
+ao que fizemos ao implementar tudo do zero.**]
 
-* Generate predictions by calling `net(X)` and calculate the loss `l` (the forward propagation).
-* Calculate gradients by running the backpropagation.
-* Update the model parameters by invoking our optimizer.
+Para refrescar sua memória: para anguns números de épocas,
+faremos uma passagem completa sobre o conjunto de dados (*`train_data`*),
+pegando iterativamente um *minibatch* de entradas
+e os *labels* de verdade fundamental correspondentes.
+Para cada *minibatch*, passamos pelo seguinte ritual:
 
-For good measure, we compute the loss after each epoch and print it to monitor progress.
+* Gerar previsões chamando `net (X)` e calcular a perda `l` (a propagação direta).
+* Calcular gradientes executando a retropropagação.
+* Atualizar os parâmetros do modelo invocando nosso otimizador.
+
+Para uma boa medida, calculamos a perda após cada época e a imprimimos para monitorar o progresso.
 
 ```{.python .input}
 num_epochs = 3
@@ -431,14 +432,14 @@ for epoch in range(num_epochs):
     print(f'epoch {epoch + 1}, loss {l:f}')
 ```
 
-Below, we [**compare the model parameters learned by training on finite data
-and the actual parameters**] that generated our dataset.
-To access parameters,
-we first access the layer that we need from `net`
-and then access that layer's weights and bias.
-As in our from-scratch implementation,
-note that our estimated parameters are
-close to their ground-truth counterparts.
+Abaixo, nós [**comparamos os parâmetros do modelo aprendidos pelo treinamento em dados finitos
+e os parâmetros reais**] que geraram nosso *dataset*.
+Para acessar os parâmetros,
+primeiro acessamos a camada que precisamos de `net`
+e, em seguida, acessamos os pesos e a polarização dessa camada.
+Como em nossa implementação do zero,
+observe que nossos parâmetros estimados são
+perto de suas contrapartes verdadeiras.
 
 ```{.python .input}
 w = net[0].weight.data()
@@ -463,7 +464,7 @@ b = net.get_weights()[1]
 print('error in estimating b', true_b - b)
 ```
 
-## Summary
+## Resumo
 
 :begin_tab:`mxnet`
 * Using Gluon, we can implement models much more concisely.
@@ -509,7 +510,7 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MTcxODIzMSwxNTE2Njc5OTg4LC0zMD
-A1NjkzMzUsLTU1MTc2NzU1LDM2MzY2NjMzLC02NTI5OTE5NTgs
-LTIxNDU5OTUzMDddfQ==
+eyJoaXN0b3J5IjpbMTczNjk4OTkwLDEzODE3MTgyMzEsMTUxNj
+Y3OTk4OCwtMzAwNTY5MzM1LC01NTE3Njc1NSwzNjM2NjYzMywt
+NjUyOTkxOTU4LC0yMTQ1OTk1MzA3XX0=
 -->
