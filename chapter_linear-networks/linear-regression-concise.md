@@ -489,9 +489,9 @@ print('error in estimating b', true_b - b)
 ## Exercícios
 
 :begin_tab:`mxnet`
-1. If we replace `l = loss(output, y)` with `l = loss(output, y).mean()`, we need to change `trainer.step(batch_size)` to `trainer.step(1)` for the code to behave identically. Why?
-1. Review the MXNet documentation to see what loss functions and initialization methods are provided in the modules `gluon.loss` and `init`. Replace the loss by Huber's loss.
-1. How do you access the gradient of `dense.weight`?
+1. Se substituirmos `l = loss (output, y)` por `l = loss (output, y).mean()`, precisamos alterar `trainer.step(batch_size)` para `trainer.step(1)`para que o código se comporte de forma idêntica. Por quê?
+1. Revise a documentação do MXNet para ver quais funções de perda e métodos de inicialização são fornecidos nos módulos `gluon.loss` e` init`. Substitua a perda pela perda de Huber.
+1. Como você acessa o gradiente de `dense.weight`?
 
 [Discussions](https://discuss.d2l.ai/t/44)
 :end_tab:
@@ -510,7 +510,7 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MjM0MTU5NSwxMzgxNzE4MjMxLDE1MT
+eyJoaXN0b3J5IjpbMTk5NTQ5OTI4MCwxMzgxNzE4MjMxLDE1MT
 Y2Nzk5ODgsLTMwMDU2OTMzNSwtNTUxNzY3NTUsMzYzNjY2MzMs
 LTY1Mjk5MTk1OCwtMjE0NTk5NTMwN119
 -->
