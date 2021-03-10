@@ -535,13 +535,9 @@ A_sum_axis0 = tf.reduce_sum(A, axis=0)
 A_sum_axis0, A_sum_axis0.shape
 ```
 
-Specifying
-`axis=1` will reduce the column dimension (axis 1) by summing up elements of all the columns.
-Thus, the dimension of axis 1 of the input is lost in the output shape.
-
 Especificando
 `eixo = 1` irá reduzir a dimensão da coluna (eixo 1) ao somar os elementos de todas as colunas.
-Assim, a dimensão do eixo 1 da entrada é perdida na forma de saída.
+Assim, a dimensão do eixo 1 da entrada é perdida na forma da saída.
 
 ```{.python .input}
 A_sum_axis1 = A.sum(axis=1)
@@ -560,27 +556,27 @@ A_sum_axis1 = tf.reduce_sum(A, axis=1)
 A_sum_axis1, A_sum_axis1.shape
 ```
 
-Reducing a matrix along both rows and columns via summation
-is equivalent to summing up all the elements of the matrix.
+Reduzindo uma matriz ao longo de ambas as linhas e colunas por meio da soma
+é equivalente a somar todos os elementos da matriz.
 
 ```{.python .input}
-A.sum(axis=[0, 1])  # Same as `A.sum()`
+A.sum(axis=[0, 1])  # O mesmo que `A.sum()`
 ```
 
 ```{.python .input}
 #@tab pytorch
-A.sum(axis=[0, 1])  # Same as `A.sum()`
+A.sum(axis=[0, 1])  # O mesmo que `A.sum()`
 ```
 
 ```{.python .input}
 #@tab tensorflow
-tf.reduce_sum(A, axis=[0, 1])  # Same as `tf.reduce_sum(A)`
+tf.reduce_sum(A, axis=[0, 1])  # O mesmo que `tf.reduce_sum(A)`
 ```
 
-[**A related quantity is the *mean*, which is also called the *average*.**]
-We calculate the mean by dividing the sum by the total number of elements.
-In code, we could just call the function for calculating the mean
-on tensors of arbitrary shape.
+[**Uma quantidade relacionada é a *média*, que também é chamada de *média*.**]
+Calculamos a média dividindo a soma pelo número total de elementos.
+No código, poderíamos apenas chamar a função para calcular a média
+em tensores de forma arbitrária.
 
 ```{.python .input}
 A.mean(), A.sum() / A.size
@@ -1094,7 +1090,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNTY3MTM0NCwtNDkyNTAxNjQxLDExMD
+eyJoaXN0b3J5IjpbMTMxNDAwNDc5NywtNDkyNTAxNjQxLDExMD
 U3Mzc5NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIx
 LDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMT
 kyODgwMzZdfQ==
