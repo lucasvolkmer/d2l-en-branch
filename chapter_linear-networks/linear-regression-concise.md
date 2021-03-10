@@ -1,26 +1,28 @@
 # Implementação Concisa de Regressão Linear
 :label:`sec_linear_concise`
 
-Broad and intense interest in deep learning for the past several years
-has inspired companies, academics, and hobbyists
-to develop a variety of mature open source frameworks
-for automating the repetitive work of implementing
-gradient-based learning algorithms.
-In :numref:`sec_linear_scratch`, we relied only on
-(i) tensors for data storage and linear algebra;
-and (ii) auto differentiation for calculating gradients.
-In practice, because data iterators, loss functions, optimizers,
-and neural network layers
-are so common, modern libraries implement these components for us as well.
 
-In this section, (**we will show you how to implement
-the linear regression model**) from :numref:`sec_linear_scratch`
-(**concisely by using high-level APIs**) of deep learning frameworks.
+Amplo e intenso interesse em *deep learning* nos últimos anos
+inspiraram empresas, acadêmicos e amadores
+para desenvolver uma variedade de estruturas de código aberto maduras
+para automatizar o trabalho repetitivo de implementação
+algoritmos de aprendizagem baseados em gradiente.
+Em :numref:`sec_linear_scratch`, contamos apenas com
+(i) tensores para armazenamento de dados e álgebra linear;
+e (ii) auto diferenciação para cálculo de gradientes.
+Na prática, porque iteradores de dados, funções de perda, otimizadores,
+e camadas de rede neural
+são tão comuns que as bibliotecas modernas também implementam esses componentes para nós.
+
+Nesta seção, (**mostraremos como implementar
+o modelo de regressão linear**) de:numref:`sec_linear_scratch`
+(**de forma concisa, usando APIs de alto nível**) de estruturas de *deep learning*.
 
 
-## Generating the Dataset
+## Gerando the Dataset
 
-To start, we will generate the same dataset as in :numref:`sec_linear_scratch`.
+Para começar, vamos gerar o mesmo conjunto de dados como em
+:numref:`sec_linear_scratch`.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -50,7 +52,7 @@ true_b = 4.2
 features, labels = d2l.synthetic_data(true_w, true_b, 1000)
 ```
 
-## Reading the Dataset
+## Lendo o Dataset
 
 Rather than rolling our own iterator,
 we can [**call upon the existing API in a framework to read data.**]
@@ -508,5 +510,5 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NzMyNTc3MCwtMjE0NTk5NTMwN119
+eyJoaXN0b3J5IjpbMTcwMjczNzI5NywtMjE0NTk5NTMwN119
 -->
