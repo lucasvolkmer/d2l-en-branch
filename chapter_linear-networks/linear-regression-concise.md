@@ -333,25 +333,24 @@ O gradiente descendente estocástico de *minibatch* requer apenas que definamos 
 :end_tab:
 
 :begin_tab:`pytorch`
-Minibatch stochastic gradient descent is a standard tool
-for optimizing neural networks
-and thus PyTorch supports it alongside a number of
-variations on this algorithm in the `optim` module.
-When we (**instantiate an `SGD` instance,**)
-we will specify the parameters to optimize over
-(obtainable from our net via `net.parameters()`), with a dictionary of hyperparameters
-required by our optimization algorithm.
-Minibatch stochastic gradient descent just requires that
-we set the value `lr`, which is set to 0.03 here.
+O gradiente descendente estocástico de *minibatch* é uma ferramenta padrão
+para otimizar redes neurais
+e, portanto, PyTorch o suporta ao lado de uma série de
+variações deste algoritmo no módulo `optim`.
+Quando nós (**instanciamos uma instância `SGD`,**)
+iremos especificar os parâmetros para otimizar
+(podem ser obtidos de nossa rede via `net.parameters ()`), com um dicionário de hiperparâmetros
+exigido por nosso algoritmo de otimização.
+O gradiente descendente estocástico de *minibatch* requer apenas que definamos o valor `lr`, que é definido como 0,03 aqui.
 :end_tab:
 
 :begin_tab:`tensorflow`
-Minibatch stochastic gradient descent is a standard tool
-for optimizing neural networks
-and thus Keras supports it alongside a number of
-variations on this algorithm in the `optimizers` module.
-Minibatch stochastic gradient descent just requires that
-we set the value `learning_rate`, which is set to 0.03 here.
+O gradiente descendente estocástico de *minibatch* é uma ferramenta padrão
+para otimizar redes neurais
+e, portanto, Keras oferece suporte ao lado de uma série de
+variações deste algoritmo no módulo `otimizadores`.
+O gradiente descendente estocástico de *minibatch* requer apenas que
+definamos o valor `learning_rate`, que é definido como 0,03 aqui.
 :end_tab:
 
 ```{.python .input}
@@ -369,7 +368,7 @@ trainer = torch.optim.SGD(net.parameters(), lr=0.03)
 trainer = tf.keras.optimizers.SGD(learning_rate=0.03)
 ```
 
-## Training
+## Treinamento
 
 You might have noticed that expressing our model through
 high-level APIs of a deep learning framework
@@ -510,7 +509,7 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNjY3OTk4OCwtMzAwNTY5MzM1LC01NT
-E3Njc1NSwzNjM2NjYzMywtNjUyOTkxOTU4LC0yMTQ1OTk1MzA3
-XX0=
+eyJoaXN0b3J5IjpbMTM4MTcxODIzMSwxNTE2Njc5OTg4LC0zMD
+A1NjkzMzUsLTU1MTc2NzU1LDM2MzY2NjMzLC02NTI5OTE5NTgs
+LTIxNDU5OTUzMDddfQ==
 -->
