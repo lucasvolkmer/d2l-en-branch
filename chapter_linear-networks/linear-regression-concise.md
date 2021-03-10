@@ -54,14 +54,14 @@ features, labels = d2l.synthetic_data(true_w, true_b, 1000)
 
 ## Lendo o Dataset
 
-Rather than rolling our own iterator,
-we can [**call upon the existing API in a framework to read data.**]
-We pass in `features` and `labels` as arguments and specify `batch_size`
-when instantiating a data iterator object.
-Besides, the boolean value `is_train`
-indicates whether or not
-we want the data iterator object to shuffle the data
-on each epoch (pass through the dataset).
+Em vez de usar nosso próprio iterador,
+podemos [**chamar a API existente em uma estrutura para ler os dados.**]
+Passamos *`features`* e *`labels`* como argumentos e especificamos *`batch_size`*
+ao instanciar um objeto iterador de dados.
+Além disso, o valor booleano `is_train`
+indica se ou não
+queremos que o objeto iterador de dados embaralhe os dados
+em cada época (passe pelo conjunto de dados).
 
 ```{.python .input}
 def load_array(data_arrays, batch_size, is_train=True):  #@save
@@ -107,7 +107,7 @@ here we use `iter` to construct a Python iterator and use `next` to obtain the f
 next(iter(data_iter))
 ```
 
-## Defining the Model
+## Definindo o Modelo
 
 When we implemented linear regression from scratch
 in :numref:`sec_linear_scratch`,
@@ -510,5 +510,5 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMjczNzI5NywtMjE0NTk5NTMwN119
+eyJoaXN0b3J5IjpbLTc1NjAwMDgxLC0yMTQ1OTk1MzA3XX0=
 -->
