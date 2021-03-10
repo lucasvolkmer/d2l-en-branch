@@ -1,4 +1,4 @@
-# Concise Implementation of Linear Regression
+# Implementação Concisa de Regressão Linear
 :label:`sec_linear_concise`
 
 Broad and intense interest in deep learning for the past several years
@@ -508,5 +508,5 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDU5OTUzMDddfQ==
+eyJoaXN0b3J5IjpbLTk0NzMyNTc3MCwtMjE0NTk5NTMwN119
 -->
