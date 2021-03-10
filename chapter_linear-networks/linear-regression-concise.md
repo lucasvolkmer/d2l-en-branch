@@ -288,9 +288,8 @@ não podemos acessá-los ou manipulá-los.
 ## Definindo a Função de Perda
 
 :begin_tab:`mxnet`
-In Gluon, the `loss` module defines various loss functions.
-In this example, we will use the Gluon
-implementation of squared loss (`L2Loss`).
+No Gluon, o módulo `loss` define várias funções de perda.
+Neste exemplo, usaremos a implementação de perda quadrática do  Gluon (`L2Loss`).
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -512,6 +511,6 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MTc2NzU1LDM2MzY2NjMzLC02NTI5OT
-E5NTgsLTIxNDU5OTUzMDddfQ==
+eyJoaXN0b3J5IjpbODY3MjEwMzgyLC01NTE3Njc1NSwzNjM2Nj
+YzMywtNjUyOTkxOTU4LC0yMTQ1OTk1MzA3XX0=
 -->
