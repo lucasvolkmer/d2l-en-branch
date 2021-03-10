@@ -1,4 +1,4 @@
-# Softmax RegressionRegressão *Softmax*
+# Regressão *Softmax*
 :label:`sec_softmax`
 
 In :numref:`sec_linear_regression`, we introduced linear regression,
@@ -442,5 +442,5 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMjA4NTgwM119
+eyJoaXN0b3J5IjpbMTM5NDcyMzQ2MF19
 -->
