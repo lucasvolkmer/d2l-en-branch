@@ -276,26 +276,26 @@ def squared_loss(y_hat, y):  #@save
 
 ## Definindo o Algoritmo de Otimização
 
-As we discussed in :numref:`sec_linear_regression`,
-linear regression has a closed-form solution.
-However, this is not a book about linear regression:
-it is a book about deep learning.
-Since none of the other models that this book introduces
-can be solved analytically, we will take this opportunity to introduce your first working example of
-minibatch stochastic gradient descent.
-[~~Despite linear regression has a closed-form solution, other models in this book don't. Here we introduce minibatch stochastic gradient descent.~~]
 
-At each step, using one minibatch randomly drawn from our dataset,
-we will estimate the gradient of the loss with respect to our parameters.
-Next, we will update our parameters
-in the direction that may reduce the loss.
-The following code applies the minibatch stochastic gradient descent update,
-given a set of parameters, a learning rate, and a batch size.
-The size of the update step is determined by the learning rate `lr`.
-Because our loss is calculated as a sum over the minibatch of examples,
-we normalize our step size by the batch size (`batch_size`),
-so that the magnitude of a typical step size
-does not depend heavily on our choice of the batch size.
+Como discutimos em :numref:`sec_linear_regression`,
+a regressão linear tem uma solução de forma fechada.
+No entanto, este não é um livro sobre regressão linear:
+é um livro sobre *deep learning*.
+Uma vez que nenhum dos outros modelos que este livro apresenta
+pode ser resolvido analiticamente, aproveitaremos esta oportunidade para apresentar seu primeiro exemplo de trabalho de gradiente descendente estocástico de *minibatch*.
+[~~Apesar da regressão linear ter uma solução de forma fechada, outros modelos neste livro não têm. Aqui, introduzimos o gradiente descendente estocástico de *minibatch*~~]
+
+Em cada etapa, usando um *minibatch* retirado aleatoriamente de nosso conjunto de dados,
+vamos estimar o gradiente da perda em relação aos nossos parâmetros.
+A seguir, vamos atualizar nossos parâmetros
+na direção que pode reduzir a perda.
+O código a seguir aplica a atualização da descida gradiente estocástica do *minibatch*,
+dado um conjunto de parâmetros, uma taxa de aprendizagem e um tamanho de *batch*.
+O tamanho da etapa de atualização é determinado pela taxa de aprendizagem `lr`.
+Como nossa perda é calculada como a soma do *minibatch* de exemplos,
+normalizamos o tamanho do nosso passo pelo tamanho do *batch* (`batch_size`),
+de modo que a magnitude de um tamanho de passo típico
+não depende muito de nossa escolha do tamanho do lote.
 
 ```{.python .input}
 def sgd(params, lr, batch_size):  #@save
@@ -322,7 +322,7 @@ def sgd(params, grads, lr, batch_size):  #@save
         param.assign_sub(lr*grad/batch_size)
 ```
 
-## Training
+## Treinamento
 
 Now that we have all of the parts in place,
 we are ready to [**implement the main training loop.**]
@@ -461,7 +461,7 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODExMzE1MTk0LDE2MDkyNTYwMSwtMTM0NT
-I2OTcwOSwxNDk2NTkxNzAsLTE5OTM1NjY5MywtOTg4OTY5MDE2
-LC0xMjI5Njc1NDk3XX0=
+eyJoaXN0b3J5IjpbLTE2MzU5MDAwNDMsODExMzE1MTk0LDE2MD
+kyNTYwMSwtMTM0NTI2OTcwOSwxNDk2NTkxNzAsLTE5OTM1NjY5
+MywtOTg4OTY5MDE2LC0xMjI5Njc1NDk3XX0=
 -->
