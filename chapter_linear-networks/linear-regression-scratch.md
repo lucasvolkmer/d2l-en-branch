@@ -257,15 +257,15 @@ def linreg(X, w, b):  #@save
 
 ## Definindo a Função de Perda
 
-Since [**updating our model requires taking
-the gradient of our loss function,**]
-we ought to (**define the loss function first.**)
-Here we will use the squared loss function
-as described in :numref:`sec_linear_regression`.
-In the implementation, we need to transform the true value `y`
-into the predicted value's shape `y_hat`.
-The result returned by the following function
-will also have the same shape as `y_hat`.
+Uma vez que [**atualizar nosso modelo requer tomar
+o gradiente de nossa função de perda,**]
+devemos (**definir a função de perda primeiro.**)
+Aqui vamos usar a função de perda quadrada
+conforme descrito em :numref:`sec_linear_regression`.
+Na implementação, precisamos transformar o valor verdadeiro `y`
+na forma do valor previsto `y_hat`.
+O resultado retornado pela seguinte função
+também terá a mesma forma de `y_hat`.
 
 ```{.python .input}
 #@tab all
@@ -274,7 +274,7 @@ def squared_loss(y_hat, y):  #@save
     return (y_hat - d2l.reshape(y, y_hat.shape)) ** 2 / 2
 ```
 
-## Defining the Optimization Algorithm
+## Definindo o Algoritmo de Otimização
 
 As we discussed in :numref:`sec_linear_regression`,
 linear regression has a closed-form solution.
@@ -461,7 +461,7 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwOTI1NjAxLC0xMzQ1MjY5NzA5LDE0OT
-Y1OTE3MCwtMTk5MzU2NjkzLC05ODg5NjkwMTYsLTEyMjk2NzU0
-OTddfQ==
+eyJoaXN0b3J5IjpbODExMzE1MTk0LDE2MDkyNTYwMSwtMTM0NT
+I2OTcwOSwxNDk2NTkxNzAsLTE5OTM1NjY5MywtOTg4OTY5MDE2
+LC0xMjI5Njc1NDk3XX0=
 -->
