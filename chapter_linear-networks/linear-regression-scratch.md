@@ -194,11 +194,11 @@ com dados armazenados em arquivos e dados alimentados por meio de fluxos de dado
 
 ## Initializing Model Parameters
 
-[**Before we can begin optimizing our model's parameters**] by minibatch stochastic gradient descent,
-(**we need to have some parameters in the first place.**)
-In the following code, we initialize weights by sampling
-random numbers from a normal distribution with mean 0
-and a standard deviation of 0.01, and setting the bias to 0.
+[**Antes de começarmos a otimizar os parâmetros do nosso modelo**] por gradiente descendente estocástico de *minibatch*,
+(**precisamos ter alguns parâmetros em primeiro lugar.**)
+No código a seguir, inicializamos os pesos por amostragem
+números aleatórios de uma distribuição normal com média 0
+e um desvio padrão de 0,01, e definindo a tendência para 0.
 
 ```{.python .input}
 w = np.random.normal(0, 0.01, (2, 1))
@@ -220,18 +220,19 @@ w = tf.Variable(tf.random.normal(shape=(2, 1), mean=0, stddev=0.01),
 b = tf.Variable(tf.zeros(1), trainable=True)
 ```
 
-After initializing our parameters,
-our next task is to update them until
-they fit our data sufficiently well.
-Each update requires taking the gradient
-of our loss function with respect to the parameters.
-Given this gradient, we can update each parameter
-in the direction that may reduce the loss.
 
-Since nobody wants to compute gradients explicitly
-(this is tedious and error prone),
-we use automatic differentiation,
-as introduced in :numref:`sec_autograd`, to compute the gradient.
+Depois de inicializar nossos parâmetros,
+nossa próxima tarefa é atualizá-los até
+eles se ajustam aos nossos dados suficientemente bem.
+Cada atualização requer a obtenção do gradiente
+da nossa função de perda no que diz respeito aos parâmetros.
+Dado este gradiente, podemos atualizar cada parâmetro
+na direção que pode reduzir a perda.
+
+Uma vez que ninguém quer calcular gradientes explicitamente
+(isso é entediante e sujeito a erros),
+usamos diferenciação automática,
+conforme apresentado em :numref:`sec_autograd`, para calcular o gradiente.
 
 
 ## Defining the Model
@@ -460,6 +461,6 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NjU5MTcwLC0xOTkzNTY2OTMsLTk4OD
-k2OTAxNiwtMTIyOTY3NTQ5N119
+eyJoaXN0b3J5IjpbLTEzNDUyNjk3MDksMTQ5NjU5MTcwLC0xOT
+kzNTY2OTMsLTk4ODk2OTAxNiwtMTIyOTY3NTQ5N119
 -->
