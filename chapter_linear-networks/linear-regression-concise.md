@@ -507,3 +507,6 @@ print('error in estimating b', true_b - b)
 
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIxNDU5OTUzMDddfQ==
+-->
