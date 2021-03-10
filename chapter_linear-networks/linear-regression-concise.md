@@ -109,43 +109,44 @@ next(iter(data_iter))
 
 ## Definindo o Modelo
 
-When we implemented linear regression from scratch
-in :numref:`sec_linear_scratch`,
-we defined our model parameters explicitly
-and coded up the calculations to produce output
-using basic linear algebra operations.
-You *should* know how to do this.
-But once your models get more complex,
-and once you have to do this nearly every day,
-you will be glad for the assistance.
-The situation is similar to coding up your own blog from scratch.
-Doing it once or twice is rewarding and instructive,
-but you would be a lousy web developer
-if every time you needed a blog you spent a month
-reinventing the wheel.
 
-For standard operations, we can [**use a framework's predefined layers,**]
-which allow us to focus especially
-on the layers used to construct the model
-rather than having to focus on the implementation.
-We will first define a model variable `net`,
-which will refer to an instance of the `Sequential` class.
-The `Sequential` class defines a container
-for several layers that will be chained together.
-Given input data, a `Sequential` instance passes it through
-the first layer, in turn passing the output
-as the second layer's input and so forth.
-In the following example, our model consists of only one layer,
-so we do not really need `Sequential`.
-But since nearly all of our future models
-will involve multiple layers,
-we will use it anyway just to familiarize you
-with the most standard workflow.
+Quando implementamos a regressão linear do zero
+em :numref:`sec_linear_scratch`,
+definimos nossos parâmetros de modelo explicitamente
+e codificamos os cálculos para produzir saída
+usando operações básicas de álgebra linear.
+Você *deveria* saber como fazer isso.
+Mas quando seus modelos ficam mais complexos,
+e uma vez que você tem que fazer isso quase todos os dias,
+você ficará feliz com a ajuda.
+A situação é semelhante a codificar seu próprio blog do zero.
+Fazer uma ou duas vezes é gratificante e instrutivo,
+mas você seria um péssimo desenvolvedor da web
+se toda vez que você precisava de um blog você passava um mês
+reinventando tudo.
 
-Recall the architecture of a single-layer network as shown in :numref:`fig_single_neuron`.
-The layer is said to be *fully-connected*
-because each of its inputs is connected to each of its outputs
-by means of a matrix-vector multiplication.
+Para operações padrão, podemos [**usar as camadas predefinidas de uma estrutura,**]
+o que nos permite focar especialmente
+nas camadas usadas para construir o modelo
+em vez de ter que se concentrar na implementação.
+Vamos primeiro definir uma variável de modelo `net`,
+que se refere a uma instância da classe `Sequential`.
+A classe `Sequential` define um contêiner
+para várias camadas que serão encadeadas.
+Dados dados de entrada, uma instância `Sequential` passa por
+a primeira camada, por sua vez passando a saída
+como entrada da segunda camada e assim por diante.
+No exemplo a seguir, nosso modelo consiste em apenas uma camada,
+portanto, não precisamos realmente de `Sequencial`.
+Mas como quase todos os nossos modelos futuros
+envolverão várias camadas,
+vamos usá-lo de qualquer maneira apenas para familiarizá-lo
+com o fluxo de trabalho mais padrão.
+
+Lembre-se da arquitetura de uma rede de camada única, conforme mostrado em :numref:`fig_single_neuron`.
+Diz-se que a camada está *totalmente conectada*
+porque cada uma de suas entradas está conectada a cada uma de suas saídas
+por meio de uma multiplicação de matriz-vetor.
 
 :begin_tab:`mxnet`
 In Gluon, the fully-connected layer is defined in the `Dense` class.
@@ -510,5 +511,5 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NjAwMDgxLC0yMTQ1OTk1MzA3XX0=
+eyJoaXN0b3J5IjpbLTk4MDM5ODgyNiwtMjE0NTk5NTMwN119
 -->
