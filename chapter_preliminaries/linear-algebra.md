@@ -509,18 +509,9 @@ A.shape, A.sum()
 A.shape, tf.reduce_sum(A)
 ```
 
-By default, invoking the function for calculating the sum
-*reduces* a tensor along all its axes to a scalar.
-We can also [**specify the axes along which the tensor is reduced via summation.**]
-Take matrices as an example.
-To reduce the row dimension (axis 0) by summing up elements of all the rows,
-we specify `axis=0` when invoking the function.
-Since the input matrix reduces along axis 0 to generate the output vector,
-the dimension of axis 0 of the input is lost in the output shape.
-
 Por padrão, invocar a função para calcular a soma
 *reduz* um tensor ao longo de todos os seus eixos a um escalar.
-Também podemos [**especificar os eixos ao longo dos quais o tensor é reduzido por meio da soma. **]
+Também podemos [**especificar os eixos ao longo dos quais o tensor é reduzido por meio da soma**]
 Pegue as matrizes como exemplo.
 Para reduzir a dimensão da linha (eixo 0) somando os elementos de todas as linhas,
 especificamos `axis = 0` ao invocar a função.
@@ -547,6 +538,10 @@ A_sum_axis0, A_sum_axis0.shape
 Specifying
 `axis=1` will reduce the column dimension (axis 1) by summing up elements of all the columns.
 Thus, the dimension of axis 1 of the input is lost in the output shape.
+
+Especificando
+`eixo = 1` irá reduzir a dimensão da coluna (eixo 1) ao somar os elementos de todas as colunas.
+Assim, a dimensão do eixo 1 da entrada é perdida na forma de saída.
 
 ```{.python .input}
 A_sum_axis1 = A.sum(axis=1)
@@ -1099,7 +1094,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzOTY3MjE2MywtNDkyNTAxNjQxLDExMD
+eyJoaXN0b3J5IjpbLTczNTY3MTM0NCwtNDkyNTAxNjQxLDExMD
 U3Mzc5NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIx
 LDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMT
 kyODgwMzZdfQ==
