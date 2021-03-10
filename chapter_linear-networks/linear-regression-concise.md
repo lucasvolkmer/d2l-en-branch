@@ -497,20 +497,20 @@ print('error in estimating b', true_b - b)
 :end_tab:
 
 :begin_tab:`pytorch`
-1. If we replace `nn.MSELoss(reduction='sum')` with `nn.MSELoss()`, how can we change the learning rate for the code to behave identically. Why?
-1. Review the PyTorch documentation to see what loss functions and initialization methods are provided. Replace the loss by Huber's loss.
-1. How do you access the gradient of `net[0].weight`?
+1. Se substituirmos `nn.MSELoss (*reduction* = 'sum')` por `nn.MSELoss ()`, como podemos alterar a taxa de aprendizagem para que o código se comporte de forma idêntica. Por quê?
+1. Revise a documentação do PyTorch para ver quais funções de perda e métodos de inicialização são fornecidos. Substitua a perda pela perda de Huber.
+1. Como você acessa o gradiente de `net[0].weight`?
 
 [Discussions](https://discuss.d2l.ai/t/45)
 :end_tab:
 
 :begin_tab:`tensorflow`
-1. Review the TensorFlow documentation to see what loss functions and initialization methods are provided. Replace the loss by Huber's loss.
+1. Revise a documentação do TensorFlow para ver quais funções de perda e métodos de inicialização são fornecidos. Substitua a perda pela perda de Huber.
 
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NTQ5OTI4MCwxMzgxNzE4MjMxLDE1MT
+eyJoaXN0b3J5IjpbLTUxMjc1MTc4MiwxMzgxNzE4MjMxLDE1MT
 Y2Nzk5ODgsLTMwMDU2OTMzNSwtNTUxNzY3NTUsMzYzNjY2MzMs
 LTY1Mjk5MTk1OCwtMjE0NTk5NTMwN119
 -->
