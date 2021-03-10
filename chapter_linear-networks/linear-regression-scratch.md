@@ -235,7 +235,7 @@ usamos diferenciação automática,
 conforme apresentado em :numref:`sec_autograd`, para calcular o gradiente.
 
 
-## Defining the Model
+## Definindo o Modelo
 
 Next, we must [**define our model,
 relating its inputs and parameters to its outputs.**]
@@ -461,6 +461,7 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDUyNjk3MDksMTQ5NjU5MTcwLC0xOT
-kzNTY2OTMsLTk4ODk2OTAxNiwtMTIyOTY3NTQ5N119
+eyJoaXN0b3J5IjpbMTc0MzU3Mjc4LC0xMzQ1MjY5NzA5LDE0OT
+Y1OTE3MCwtMTk5MzU2NjkzLC05ODg5NjkwMTYsLTEyMjk2NzU0
+OTddfQ==
 -->
