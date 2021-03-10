@@ -345,17 +345,17 @@ Em resumo, vamos executar o seguinte loop:
     * Computar gradiente $\mathbf{g} \leftarrow \partial_{(\mathbf{w},b)} \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} l(\mathbf{x}^{(i)}, y^{(i)}, \mathbf{w}, b)$
     * Atualizar parâmetros $(\mathbf{w}, b) \leftarrow (\mathbf{w}, b) - \eta \mathbf{g}$
 
-In each *epoch*,
-we will iterate through the entire dataset
-(using the `data_iter` function) once
-passing through every example in the training dataset
-(assuming that the number of examples is divisible by the batch size).
-The number of epochs `num_epochs` and the learning rate `lr` are both hyperparameters,
-which we set here to 3 and 0.03, respectively.
-Unfortunately, setting hyperparameters is tricky
-and requires some adjustment by trial and error.
-We elide these details for now but revise them
-later in
+Em cada *época*,
+iremos iterar por todo o conjunto de dados
+(usando a função `data_iter`) uma vez
+passando por todos os exemplos no conjunto de dados de treinamento
+(assumindo que o número de exemplos seja divisível pelo tamanho do lote).
+O número de épocas `num_epochs` e a taxa de aprendizagem` lr` são hiperparâmetros,
+que definimos aqui como 3 e 0,03, respectivamente.
+Infelizmente, definir hiperparâmetros é complicado
+e requer alguns ajustes por tentativa e erro.
+Excluímos esses detalhes por enquanto, mas os revisamos
+mais tarde em
 :numref:`chap_optimization`.
 
 ```{.python .input}
@@ -407,12 +407,12 @@ for epoch in range(num_epochs):
     print(f'epoch {epoch + 1}, loss {float(tf.reduce_mean(train_l)):f}')
 ```
 
-In this case, because we synthesized the dataset ourselves,
-we know precisely what the true parameters are.
-Thus, we can [**evaluate our success in training
-by comparing the true parameters
-with those that we learned**] through our training loop.
-Indeed they turn out to be very close to each other.
+Neste caso, porque nós mesmos sintetizamos o conjunto de dados,
+sabemos exatamente quais são os verdadeiros parâmetros.
+Assim, podemos [**avaliar nosso sucesso no treinamento
+comparando os parâmetros verdadeiros
+com aqueles que aprendemos**] através de nosso ciclo de treinamento.
+Na verdade, eles acabam sendo muito próximos um do outro.
 
 ```{.python .input}
 #@tab all
@@ -462,8 +462,7 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDIyMDA3NzEsLTE2MzU5MDAwNDMsOD
-ExMzE1MTk0LDE2MDkyNTYwMSwtMTM0NTI2OTcwOSwxNDk2NTkx
-NzAsLTE5OTM1NjY5MywtOTg4OTY5MDE2LC0xMjI5Njc1NDk3XX
-0=
+eyJoaXN0b3J5IjpbNjU0ODc1NjUwLC0xNjM1OTAwMDQzLDgxMT
+MxNTE5NCwxNjA5MjU2MDEsLTEzNDUyNjk3MDksMTQ5NjU5MTcw
+LC0xOTkzNTY2OTMsLTk4ODk2OTAxNiwtMTIyOTY3NTQ5N119
 -->
