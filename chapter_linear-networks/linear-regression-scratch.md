@@ -324,25 +324,26 @@ def sgd(params, grads, lr, batch_size):  #@save
 
 ## Treinamento
 
-Now that we have all of the parts in place,
-we are ready to [**implement the main training loop.**]
-It is crucial that you understand this code
-because you will see nearly identical training loops
-over and over again throughout your career in deep learning.
 
-In each iteration, we will grab a minibatch of training examples,
-and pass them through our model to obtain a set of predictions.
-After calculating the loss, we initiate the backwards pass through the network,
-storing the gradients with respect to each parameter.
-Finally, we will call the optimization algorithm `sgd`
-to update the model parameters.
+Agora que temos todas as peças no lugar,
+estamos prontos para [**implementar o *loop* de treinamento principal.**]
+É crucial que você entenda este código
+porque você verá loops de treinamento quase idênticos
+repetidamente ao longo de sua carreira de *deep learning*.
 
-In summary, we will execute the following loop:
+Em cada iteração, pegaremos um *minibatch* de exemplos de treinamento,
+e os passamos por nosso modelo para obter um conjunto de previsões.
+Depois de calcular a perda, iniciamos a passagem para trás pela rede,
+armazenando os gradientes em relação a cada parâmetro.
+Finalmente, chamaremos o algoritmo de otimização de `sgd`
+para atualizar os parâmetros do modelo.
 
-* Initialize parameters $(\mathbf{w}, b)$
-* Repeat until done
-    * Compute gradient $\mathbf{g} \leftarrow \partial_{(\mathbf{w},b)} \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} l(\mathbf{x}^{(i)}, y^{(i)}, \mathbf{w}, b)$
-    * Update parameters $(\mathbf{w}, b) \leftarrow (\mathbf{w}, b) - \eta \mathbf{g}$
+Em resumo, vamos executar o seguinte loop:
+
+* Inicializar parâmetros $(\mathbf{w}, b)$
+* Repetir até terminar
+    * Computar gradiente $\mathbf{g} \leftarrow \partial_{(\mathbf{w},b)} \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} l(\mathbf{x}^{(i)}, y^{(i)}, \mathbf{w}, b)$
+    * Atualizar parâmetros $(\mathbf{w}, b) \leftarrow (\mathbf{w}, b) - \eta \mathbf{g}$
 
 In each *epoch*,
 we will iterate through the entire dataset
@@ -461,7 +462,8 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzU5MDAwNDMsODExMzE1MTk0LDE2MD
-kyNTYwMSwtMTM0NTI2OTcwOSwxNDk2NTkxNzAsLTE5OTM1NjY5
-MywtOTg4OTY5MDE2LC0xMjI5Njc1NDk3XX0=
+eyJoaXN0b3J5IjpbLTExMDIyMDA3NzEsLTE2MzU5MDAwNDMsOD
+ExMzE1MTk0LDE2MDkyNTYwMSwtMTM0NTI2OTcwOSwxNDk2NTkx
+NzAsLTE5OTM1NjY5MywtOTg4OTY5MDE2LC0xMjI5Njc1NDk3XX
+0=
 -->
