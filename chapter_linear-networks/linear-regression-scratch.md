@@ -420,25 +420,25 @@ print(f'error in estimating w: {true_w - d2l.reshape(w, true_w.shape)}')
 print(f'error in estimating b: {true_b - b}')
 ```
 
-Note that we should not take it for granted
-that we are able to recover the parameters perfectly.
-However, in machine learning, we are typically less concerned
-with recovering true underlying parameters,
-and more concerned with parameters that lead to highly accurate prediction.
-Fortunately, even on difficult optimization problems,
-stochastic gradient descent can often find remarkably good solutions,
-owing partly to the fact that, for deep networks,
-there exist many configurations of the parameters
-that lead to highly accurate prediction.
+Observe que não devemos tomar isso como garantido
+que somos capazes de recuperar os parâmetros perfeitamente.
+No entanto, no *machine learning*, normalmente estamos menos preocupados
+com a recuperação de verdadeiros parâmetros subjacentes,
+e mais preocupados com parâmetros que levam a previsões altamente precisas.
+Felizmente, mesmo em problemas de otimização difíceis,
+o gradiente descendente estocástico pode muitas vezes encontrar soluções notavelmente boas,
+devido em parte ao fato de que, para redes profundas,
+existem muitas configurações dos parâmetros
+que levam a uma previsão altamente precisa.
 
 
-## Summary
+## Resumo
 
-* We saw how a deep network can be implemented and optimized from scratch, using just tensors and auto differentiation, without any need for defining layers or fancy optimizers.
-* This section only scratches the surface of what is possible. In the following sections, we will describe additional models based on the concepts that we have just introduced and learn how to implement them more concisely.
+* Vimos como uma rede profunda pode ser implementada e otimizada do zero, usando apenas tensores e diferenciação automática, sem a necessidade de definir camadas ou otimizadores sofisticados.
+* Esta seção apenas arranha a superfície do que é possível. Nas seções a seguir, descreveremos modelos adicionais com base nos conceitos que acabamos de apresentar e aprenderemos como implementá-los de forma mais concisa.
 
 
-## Exercises
+## Exercícios
 
 1. What would happen if we were to initialize the weights to zero. Would the algorithm still work?
 1. Assume that you are
@@ -462,7 +462,8 @@ that lead to highly accurate prediction.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU0ODc1NjUwLC0xNjM1OTAwMDQzLDgxMT
-MxNTE5NCwxNjA5MjU2MDEsLTEzNDUyNjk3MDksMTQ5NjU5MTcw
-LC0xOTkzNTY2OTMsLTk4ODk2OTAxNiwtMTIyOTY3NTQ5N119
+eyJoaXN0b3J5IjpbLTIwNzM1NDEwNTMsLTE2MzU5MDAwNDMsOD
+ExMzE1MTk0LDE2MDkyNTYwMSwtMTM0NTI2OTcwOSwxNDk2NTkx
+NzAsLTE5OTM1NjY5MywtOTg4OTY5MDE2LC0xMjI5Njc1NDk3XX
+0=
 -->
