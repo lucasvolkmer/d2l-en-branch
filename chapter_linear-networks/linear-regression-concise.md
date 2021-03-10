@@ -293,13 +293,13 @@ Neste exemplo, usaremos a implementação de perda quadrática do  Gluon (`L2Los
 :end_tab:
 
 :begin_tab:`pytorch`
-[**The `MSELoss` class computes the mean squared error, also known as squared $L_2$ norm.**]
-By default it returns the average loss over examples.
+[**A classe `MSELoss` calcula o erro quadrático médio, também conhecido como norma $ L_2 $ quadrada.**]
+Por padrão, ela retorna a perda média sobre os exemplos.
 :end_tab:
 
 :begin_tab:`tensorflow`
-The `MeanSquaredError` class computes the mean squared error, also known as squared $L_2$ norm.
-By default it returns the average loss over examples.
+A classe `MeanSquaredError` calcula o erro quadrático médio, também conhecido como norma $L_2$ quadrada.
+Por padrão, ela retorna a perda média sobre os exemplos.
 :end_tab:
 
 ```{.python .input}
@@ -316,7 +316,7 @@ loss = nn.MSELoss()
 loss = tf.keras.losses.MeanSquaredError()
 ```
 
-## Defining the Optimization Algorithm
+## Definindo o Algoritmo de Otimização
 
 :begin_tab:`mxnet`
 Minibatch stochastic gradient descent is a standard tool
@@ -511,6 +511,6 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY3MjEwMzgyLC01NTE3Njc1NSwzNjM2Nj
-YzMywtNjUyOTkxOTU4LC0yMTQ1OTk1MzA3XX0=
+eyJoaXN0b3J5IjpbLTMwMDU2OTMzNSwtNTUxNzY3NTUsMzYzNj
+Y2MzMsLTY1Mjk5MTk1OCwtMjE0NTk5NTMwN119
 -->
