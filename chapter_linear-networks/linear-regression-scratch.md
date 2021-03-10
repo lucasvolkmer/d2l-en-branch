@@ -440,15 +440,14 @@ que levam a uma previsão altamente precisa.
 
 ## Exercícios
 
-1. What would happen if we were to initialize the weights to zero. Would the algorithm still work?
-1. Assume that you are
-   [Georg Simon Ohm](https://en.wikipedia.org/wiki/Georg_Ohm) trying to come up
-   with a model between voltage and current. Can you use auto differentiation to learn the parameters of your model?
-1. Can you use [Planck's Law](https://en.wikipedia.org/wiki/Planck%27s_law) to determine the temperature of an object using spectral energy density?
-1. What are the problems you might encounter if you wanted to  compute the second derivatives? How would you fix them?
-1.  Why is the `reshape` function needed in the `squared_loss` function?
-1. Experiment using different learning rates to find out how fast the loss function value drops.
-1. If the number of examples cannot be divided by the batch size, what happens to the `data_iter` function's behavior?
+1. O que aconteceria se inicializássemos os pesos para zero. O algoritmo ainda funcionaria?
+1. Suponha que você seja
+    [Georg Simon Ohm](https://en.wikipedia.org/wiki/Georg_Ohm) tentando inventar um modelo entre tensão e corrente. Você poderia usar a diferenciação automática para aprender os parâmetros do seu modelo?
+1. Você pode usar a [Lei de Planck](https://en.wikipedia.org/wiki/Planck%27s_law) para determinar a temperatura de um objeto usando densidade de energia espectral?
+1. Quais são os problemas que você pode encontrar se quiser calcular as derivadas secundárias? Como você os consertaria?
+1. Por que a função `reshape` é necessária na função` squared_loss`?
+1. Experimente usar diferentes taxas de aprendizagem para descobrir a rapidez com que o valor da função de perda diminui.
+1. Se o número de exemplos não pode ser dividido pelo tamanho do lote, o que acontece com o comportamento da função `data_iter`?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/42)
@@ -462,8 +461,8 @@ que levam a uma previsão altamente precisa.
 [Discussions](https://discuss.d2l.ai/t/201)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzM1NDEwNTMsLTE2MzU5MDAwNDMsOD
-ExMzE1MTk0LDE2MDkyNTYwMSwtMTM0NTI2OTcwOSwxNDk2NTkx
-NzAsLTE5OTM1NjY5MywtOTg4OTY5MDE2LC0xMjI5Njc1NDk3XX
-0=
+eyJoaXN0b3J5IjpbLTMyODI5MzE5NSwtMTYzNTkwMDA0Myw4MT
+EzMTUxOTQsMTYwOTI1NjAxLC0xMzQ1MjY5NzA5LDE0OTY1OTE3
+MCwtMTk5MzU2NjkzLC05ODg5NjkwMTYsLTEyMjk2NzU0OTddfQ
+==
 -->
