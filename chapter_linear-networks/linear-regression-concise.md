@@ -270,22 +270,22 @@ não podemos acessá-los ou manipulá-los.
 :end_tab:
 
 :begin_tab:`tensorflow`
-The code above may look straightforward but you should note
-that something strange is happening here.
-We are initializing parameters for a network
-even though Keras does not yet know
-how many dimensions the input will have!
-It might be 2 as in our example or it might be 2000.
-Keras lets us get away with this because behind the scenes,
-the initialization is actually *deferred*.
-The real initialization will take place only
-when we for the first time attempt to pass data through the network.
-Just be careful to remember that since the parameters
-have not been initialized yet,
-we cannot access or manipulate them.
+O código acima pode parecer simples, mas você deve observar
+que algo estranho está acontecendo aqui.
+Estamos inicializando parâmetros para uma rede
+mesmo que o Keras ainda não saiba
+quantas dimensões a entrada terá!
+Pode ser 2 como em nosso exemplo ou pode ser 2.000.
+O Keras nos permite fugir do problema com isso porque, nos bastidores,
+a inicialização é, na verdade, *adiada*.
+A inicialização real ocorrerá apenas
+quando tentamos, pela primeira vez, passar dados pela rede.
+Apenas tome cuidado para lembrar que, uma vez que os parâmetros
+ainda não foram inicializados,
+não podemos acessá-los ou manipulá-los.
 :end_tab:
 
-## Defining the Loss Function
+## Definindo a Função de Perda
 
 :begin_tab:`mxnet`
 In Gluon, the `loss` module defines various loss functions.
@@ -512,6 +512,6 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NzAzMTIwMSwzNjM2NjYzMywtNjUyOT
-kxOTU4LC0yMTQ1OTk1MzA3XX0=
+eyJoaXN0b3J5IjpbLTU1MTc2NzU1LDM2MzY2NjMzLC02NTI5OT
+E5NTgsLTIxNDU5OTUzMDddfQ==
 -->
