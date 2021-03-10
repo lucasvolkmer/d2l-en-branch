@@ -319,18 +319,17 @@ loss = tf.keras.losses.MeanSquaredError()
 ## Definindo o Algoritmo de Otimização
 
 :begin_tab:`mxnet`
-Minibatch stochastic gradient descent is a standard tool
-for optimizing neural networks
-and thus Gluon supports it alongside a number of
-variations on this algorithm through its `Trainer` class.
-When we instantiate `Trainer`,
-we will specify the parameters to optimize over
-(obtainable from our model `net` via `net.collect_params()`),
-the optimization algorithm we wish to use (`sgd`),
-and a dictionary of hyperparameters
-required by our optimization algorithm.
-Minibatch stochastic gradient descent just requires that
-we set the value `learning_rate`, which is set to 0.03 here.
+O gradiente descendente estocástico de *minibatch* é uma ferramenta padrão
+para otimizar redes neurais
+e assim o Gluon o apoia ao lado de uma série de
+variações desse algoritmo por meio de sua classe *`Trainer`*.
+Quando instanciamos o *`Trainer`*,
+iremos especificar os parâmetros para otimizar
+(que pode ser obtido em nosso modelo `net` via` net.collect_params ()`),
+o algoritmo de otimização que desejamos usar (`sgd`),
+e um dicionário de hiperparâmetros
+exigido por nosso algoritmo de otimização.
+O gradiente descendente estocástico de *minibatch* requer apenas que definamos o valor *`learning_rate`*, que é definido como 0,03 aqui.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -511,6 +510,7 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMDU2OTMzNSwtNTUxNzY3NTUsMzYzNj
-Y2MzMsLTY1Mjk5MTk1OCwtMjE0NTk5NTMwN119
+eyJoaXN0b3J5IjpbMTUxNjY3OTk4OCwtMzAwNTY5MzM1LC01NT
+E3Njc1NSwzNjM2NjYzMywtNjUyOTkxOTU4LC0yMTQ1OTk1MzA3
+XX0=
 -->
