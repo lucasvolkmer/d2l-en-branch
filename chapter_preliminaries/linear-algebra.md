@@ -519,8 +519,8 @@ Since the input matrix reduces along axis 0 to generate the output vector,
 the dimension of axis 0 of the input is lost in the output shape.
 
 Por padrão, invocar a função para calcular a soma
-* reduz * um tensor ao longo de todos os seus eixos a um escalar.
-Também podemos [** especificar os eixos ao longo dos quais o tensor é reduzido por meio da soma. **]
+*reduz* um tensor ao longo de todos os seus eixos a um escalar.
+Também podemos [**especificar os eixos ao longo dos quais o tensor é reduzido por meio da soma. **]
 Pegue as matrizes como exemplo.
 Para reduzir a dimensão da linha (eixo 0) somando os elementos de todas as linhas,
 especificamos `axis = 0` ao invocar a função.
@@ -1099,7 +1099,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMT
-g4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5
-LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbMTEzOTY3MjE2MywtNDkyNTAxNjQxLDExMD
+U3Mzc5NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIx
+LDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMT
+kyODgwMzZdfQ==
 -->
