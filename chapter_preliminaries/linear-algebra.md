@@ -592,7 +592,7 @@ A.mean(), A.sum() / A.numel()
 tf.reduce_mean(A), tf.reduce_sum(A) / tf.size(A).numpy()
 ```
 
-Likewise, the function for calculating the mean can also reduce a tensor along the specified axes.
+Da mesma forma, a função de cálculo da média também pode reduzir um tensor ao longo dos eixos especificados.
 
 ```{.python .input}
 A.mean(axis=0), A.sum(axis=0) / A.shape[0]
@@ -608,12 +608,12 @@ A.mean(axis=0), A.sum(axis=0) / A.shape[0]
 tf.reduce_mean(A, axis=0), tf.reduce_sum(A, axis=0) / A.shape[0]
 ```
 
-### Non-Reduction Sum
+### Soma não reducional
 :label:`subseq_lin-alg-non-reduction`
 
-However,
-sometimes it can be useful to [**keep the number of axes unchanged**]
-when invoking the function for calculating the sum or mean.
+Contudo,
+às vezes pode ser útil [**manter o número de eixos inalterado**]
+ao invocar a função para calcular a soma ou média.
 
 ```{.python .input}
 sum_A = A.sum(axis=1, keepdims=True)
@@ -634,6 +634,7 @@ sum_A
 
 For instance,
 since `sum_A` still keeps its two axes after summing each row, we can (**divide `A` by `sum_A` with broadcasting.**)
+
 
 ```{.python .input}
 A / sum_A
@@ -1090,8 +1091,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNDAwNDc5NywtNDkyNTAxNjQxLDExMD
-U3Mzc5NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIx
-LDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMT
-kyODgwMzZdfQ==
+eyJoaXN0b3J5IjpbLTExNjg1NzA2MDMsLTQ5MjUwMTY0MSwxMT
+A1NzM3OTQ4LDYwMTg4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQy
+MSwxNjM5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMD
+E5Mjg4MDM2XX0=
 -->
