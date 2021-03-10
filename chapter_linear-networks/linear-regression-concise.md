@@ -149,23 +149,23 @@ porque cada uma de suas entradas está conectada a cada uma de suas saídas
 por meio de uma multiplicação de matriz-vetor.
 
 :begin_tab:`mxnet`
-In Gluon, the fully-connected layer is defined in the `Dense` class.
-Since we only want to generate a single scalar output,
-we set that number to 1.
+No Gluon, a camada totalmente conectada é definida na classe `Densa`.
+Uma vez que queremos apenas gerar uma única saída escalar,
+nós definimos esse número para 1.
 
-It is worth noting that, for convenience,
-Gluon does not require us to specify
-the input shape for each layer.
-So here, we do not need to tell Gluon
-how many inputs go into this linear layer.
-When we first try to pass data through our model,
-e.g., when we execute `net(X)` later,
-Gluon will automatically infer the number of inputs to each layer.
-We will describe how this works in more detail later.
+É importante notar que, por conveniência,
+Gluon não exige que especifiquemos
+a forma de entrada para cada camada.
+Então, aqui, não precisamos dizer ao Gluon
+quantas entradas vão para esta camada linear.
+Quando tentamos primeiro passar dados por meio de nosso modelo,
+por exemplo, quando executamos `net (X)` mais tarde,
+o Gluon irá inferir automaticamente o número de entradas para cada camada.
+Descreveremos como isso funciona com mais detalhes posteriormente.
 :end_tab:
 
-:begin_tab:`pytorch`
-In PyTorch, the fully-connected layer is defined in the `Linear` class. Note that we passed two arguments into `nn.Linear`. The first one specifies the input feature dimension, which is 2, and the second one is the output feature dimension, which is a single scalar and therefore 1.
+: begin_tab: `pytorch`
+No PyTorch, a camada totalmente conectada é definida na classe `Linear`. Observe que passamos dois argumentos para `nn.Linear`. O primeiro especifica a dimensão do recurso de entrada, que é 2, e o segundo é a dimensão do recurso de saída, que é um escalar único e, portanto, 1.
 :end_tab:
 
 :begin_tab:`tensorflow`
@@ -511,5 +511,5 @@ print('error in estimating b', true_b - b)
 [Discussions](https://discuss.d2l.ai/t/204)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MDM5ODgyNiwtMjE0NTk5NTMwN119
+eyJoaXN0b3J5IjpbMjA1NTQyMjIzNCwtMjE0NTk5NTMwN119
 -->
