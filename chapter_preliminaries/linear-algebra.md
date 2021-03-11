@@ -772,9 +772,9 @@ to describe the most intensive calculations
 required when computing each layer in a neural network
 given the values of the previous layer.
 
-Podemos pensar na multiplicação por uma matriz $ \ mathbf {A} \ in \ mathbb {R} ^ {m \ times n} $
+Podemos pensar na multiplicação por uma matriz $\mathbf{A}\in \mathbb{R}^{m \times n}$
 como uma transformação que projeta vetores
-de $ \ mathbb {R} ^ {n} $ a $ \ mathbb {R} ^ {m} $.
+de $\mathbb{R}^{n}$ a $\mathbb{R}^{m}$.
 Essas transformações revelaram-se extremamente úteis.
 Por exemplo, podemos representar rotações
 como multiplicações por uma matriz quadrada.
@@ -1100,8 +1100,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjczNTU0NTc4LC0xNzU2MjUxNTU4LDIwNz
-Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
-Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
-c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbMjEwODYwOTcyOCwtMTc1NjI1MTU1OCwyMD
+c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
+MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
+M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
 -->
