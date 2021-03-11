@@ -830,8 +830,6 @@ $$\mathbf{A}=
 \end{bmatrix}.
 $$
 
-
-Then the matrix product $\mathbf{C} \in \mathbb{R}^{n \times m}$ is produced as we simply compute each element $c_{ij}$ as the dot product 
 Então, o produto da matriz $\mathbf{C} \in \mathbb{R}^{n \times m}$ é produzido, pois simplesmente calculamos cada elemento $c_ {ij}$ como o produto escalar $\mathbf{a}^\top_i \mathbf{b}_j$:
 
 $$\mathbf{C} = \mathbf{AB} = \begin{bmatrix}
@@ -851,11 +849,11 @@ $$\mathbf{C} = \mathbf{AB} = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
-[**We can think of the matrix-matrix multiplication $\mathbf{AB}$ as simply performing $m$ matrix-vector products and stitching the results together to form an $n \times m$ matrix.**]
-In the following snippet, we perform matrix multiplication on `A` and `B`.
-Here,  `A` is a matrix with 5 rows and 4 columns,
-and `B` is a matrix with 4 rows and 3 columns.
-After multiplication, we obtain a matrix with 5 rows and 3 columns.
+[**Podemos pensar na multiplicação matriz-matriz $\mathbf {AB}$ simplesmente realizando $m$ produtos vetoriais de matriz e juntando os resultados para formar uma matriz $n \times m$.**]
+No trecho a seguir, realizamos a multiplicação da matriz em `A` e` B`.
+Aqui, `A` é uma matriz com 5 linhas e 4 colunas,
+e `B` é uma matriz com 4 linhas e 3 colunas.
+Após a multiplicação, obtemos uma matriz com 5 linhas e 3 colunas.
 
 ```{.python .input}
 B = np.ones(shape=(4, 3))
@@ -875,7 +873,7 @@ tf.matmul(A, B)
 ```
 
 Matrix-matrix multiplication can be simply called *matrix multiplication*, and should not be confused with the Hadamard product.
-
+A multiplicação de matriz-matriz pode ser simplesmente chamada de * multiplicação de matriz* e não deve ser confundida com o produto Hadamard.
 
 ## Norms
 :label:`subsec_lin-algebra-norms`
@@ -1087,8 +1085,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxOTQ5MTIwMSwtMTc1NjI1MTU1OCwyMD
-c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
-MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
-M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbMjU2MTIxMzQ0LC0xNzU2MjUxNTU4LDIwNz
+Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
+Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
+c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
