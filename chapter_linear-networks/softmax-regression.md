@@ -134,40 +134,41 @@ por nós para equilibrar entre o salvamento de parâmetros e a eficácia do mode
 ## Operação do *Softmax* 
 :label:`subsec_softmax_operation`
 
-The main approach that we are going to take here
-is to interpret the outputs of our model as probabilities.
-We will optimize our parameters to produce probabilities
-that maximize the likelihood of the observed data.
-Then, to generate predictions, we will set a threshold,
-for example, choosing the label with the maximum predicted probabilities.
 
-Put formally, we would like any output $\hat{y}_j$
-to be interpreted as the probability
-that a given item belongs to class $j$.
-Then we can choose the class with the largest output value
-as our prediction $\operatorname*{argmax}_j y_j$.
-For example, if $\hat{y}_1$, $\hat{y}_2$, and $\hat{y}_3$
-are 0.1, 0.8, and 0.1, respectively,
-then we predict category 2, which (in our example) represents "chicken".
+A abordagem principal que vamos adotar aqui
+é interpretar as saídas de nosso modelo como probabilidades.
+Vamos otimizar nossos parâmetros para produzir probabilidades
+que maximizam a probabilidade dos dados observados.
+Então, para gerar previsões, vamos definir um limite,
+por exemplo, escolhendo o *label* com as probabilidades máximas previstas.
 
-You might be tempted to suggest that we interpret
-the logits $o$ directly as our outputs of interest.
-However, there are some problems with directly
-interpreting the output of the linear layer as a probability.
-On one hand,
-nothing constrains these numbers to sum to 1.
-On the other hand, depending on the inputs, they can take negative values.
-These violate basic axioms of probability presented in :numref:`sec_prob`
+Colocado formalmente, gostaríamos de qualquer saída $\hat{y}_j$
+fosse interpretada como a probabilidade
+que um determinado item pertence à classe $j$.
+Então podemos escolher a classe com o maior valor de saída
+como nossa previsão $\operatorname*{argmax}_j y_j$.
+Por exemplo, se $\hat{y}_1$, $\hat{y}_2$, and $\hat{y}_3$
+são 0,1, 0,8 e 0,1, respectivamente,
+então, prevemos a categoria 2, que (em nosso exemplo) representa "frango".
 
-To interpret our outputs as probabilities,
-we must guarantee that (even on new data),
-they will be nonnegative and sum up to 1.
-Moreover, we need a training objective that encourages
-the model to estimate faithfully probabilities.
-Of all instances when a classifier outputs 0.5,
-we hope that half of those examples
-will actually belong to the predicted class.
-This is a property called *calibration*.
+Você pode ficar tentado a sugerir que interpretemos
+os *logits* $o$ diretamente como nossas saídas de interesse.
+No entanto, existem alguns problemas com 
+interpretação direta da saída da camada linear como uma probabilidade.
+Por um lado,
+nada restringe esses números a somarem 1.
+Por outro lado, dependendo das entradas, podem assumir valores negativos.
+Estes violam axiomas básicos de probabilidade apresentados em :numref:`sec_prob`
+
+Para interpretar nossos resultados como probabilidades,
+devemos garantir que (mesmo em novos dados),
+eles serão não negativos e somam 1.
+Além disso, precisamos de um objetivo de treinamento que incentive
+o modelo para estimar probabilidades com fidelidade.
+De todas as instâncias quando um classificador produz 0,5,
+esperamos que metade desses exemplos
+realmente pertenceram à classe prevista.
+Esta é uma propriedade chamada *calibração*.
 
 The *softmax function*, invented in 1959 by the social scientist
 R. Duncan Luce in the context of *choice models*,
@@ -443,6 +444,7 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyOTA2MDk4MywtMTI5MTE0NzU5NiwxMD
-Y2OTU2MDkzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF19
+eyJoaXN0b3J5IjpbLTQ2MTQzMjEzOSwxNzI5MDYwOTgzLC0xMj
+kxMTQ3NTk2LDEwNjY5NTYwOTMsMTg0MzM3NTA5NCwxMzk0NzIz
+NDYwXX0=
 -->
