@@ -911,14 +911,7 @@ por um vetor que consiste em todos os zeros.
 
 $$\forall i, [\mathbf{x}]_i = 0 \Leftrightarrow f(\mathbf{x})=0.$$
 
-You might notice that norms sound a lot like measures of distance.
-And if you remember Euclidean distances
-(think Pythagoras' theorem) from grade school,
-then the concepts of non-negativity and the triangle inequality might ring a bell.
-In fact, the Euclidean distance is a norm:
-specifically it is the $L_2$ norm.
-Suppose that the elements in the $n$-dimensional vector
-$\mathbf{x}$ are $x_1, \ldots, x_n$.
+
 
 Você pode notar que as normas se parecem muito com medidas de distância.
 E se você se lembra das distâncias euclidianas
@@ -929,15 +922,14 @@ especificamente, é a norma $L_2$.
 Suponha que os elementos no vetor $n$ -dimensional
 $\mathbf{x}$ são $x_1, \ldots, x_n$.
 
-[**The $L_2$ *norm* of $\mathbf{x}$ is the square root of the sum of the squares of the vector elements:**]
 [**A $L_2$ *norma* de $\mathbf {x}$ é a raiz quadrada da soma dos quadrados dos elementos do vetor:**]
 
 (**$$\|\mathbf{x}\|_2 = \sqrt{\sum_{i=1}^n x_i^2},$$**)
 
 
-where the subscript $2$ is often omitted in $L_2$ norms, i.e., $\|\mathbf{x}\|$ is equivalent to $\|\mathbf{x}\|_2$. In code,
-we can calculate the $L_2$ norm of a vector as follows.
 
+onde o subscrito $2$ é frequentemente omitido nas normas $L_2$, ou seja, $\|\mathbf{x}\|$ é equivalente a $\|\mathbf{x}\|_2$. Em código,
+podemos calcular a norma $L_2$ de um vetor da seguinte maneira.
 ```{.python .input}
 u = np.array([3, -4])
 np.linalg.norm(u)
@@ -1095,8 +1087,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNjczNDI1MSwtMTc1NjI1MTU1OCwyMD
-c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
-MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
-M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbMzI0MjgzMjUzLC0xNzU2MjUxNTU4LDIwNz
+Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
+Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
+c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
