@@ -35,7 +35,7 @@ porque muitas vezes, mesmo quando nos preocupamos apenas com tarefas difíceis,
 ainda usamos modelos que fazem atribuições suaves.
 
 
-## Classification Problem
+## Problema de Classificação
 :label:`subsec_classification-problem`
 
 To get our feet wet, let us start off with
@@ -443,5 +443,6 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MzM3NTA5NCwxMzk0NzIzNDYwXX0=
+eyJoaXN0b3J5IjpbMTA2Njk1NjA5MywxODQzMzc1MDk0LDEzOT
+Q3MjM0NjBdfQ==
 -->
