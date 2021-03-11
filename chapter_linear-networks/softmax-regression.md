@@ -89,11 +89,11 @@ o_3 &= x_1 w_{31} + x_2 w_{32} + x_3 w_{33} + x_4 w_{34} + b_3.
 \end{aligned}
 $$
 
-We can depict this calculation with the neural network diagram shown in :numref:`fig_softmaxreg`.
-Just as in linear regression, softmax regression is also a single-layer neural network.
-And since the calculation of each output, $o_1, o_2$, and $o_3$,
-depends on all inputs, $x_1$, $x_2$, $x_3$, and $x_4$,
-the output layer of softmax regression can also be described as fully-connected layer.
+Podemos representar esse cálculo com o diagrama da rede neural mostrado em :numref:`fig_softmaxreg`.
+Assim como na regressão linear, a regressão *softmax* também é uma rede neural de camada única.
+E desde o cálculo de cada saída, $o_1, o_2$, e $o_3$,
+depende de todas as entradas, $x_1$, $x_2$, $x_3$, e $x_4$,
+a camada de saída da regressão *softmax* também pode ser descrita como uma camada totalmente conectada.
 
 ![Softmax regression is a single-layer neural network.](../img/softmaxreg.svg)
 :label:`fig_softmaxreg`
@@ -444,6 +444,6 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Njc4Njk1MjIsLTEyOTExNDc1OTYsMT
-A2Njk1NjA5MywxODQzMzc1MDk0LDEzOTQ3MjM0NjBdfQ==
+eyJoaXN0b3J5IjpbLTg1NDM0ODQ0MSwtMTI5MTE0NzU5NiwxMD
+Y2OTU2MDkzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF19
 -->
