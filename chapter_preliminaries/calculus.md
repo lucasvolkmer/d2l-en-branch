@@ -130,7 +130,7 @@ Podemos interpretar a derivada $f '(x)$ em :eqref:`eq_derivative`
 como a taxa de variação *instantânea* de $f (x)$
 em relação a $x$.
 A chamada taxa instantânea de mudança é baseada em
-a variação $h$ em $ x $, que se aproxima de $ 0 $.
+a variação $h$ em $x$, que se aproxima de $0$.
 
 To illustrate derivatives,
 let us experiment with an example.
@@ -138,7 +138,7 @@ let us experiment with an example.
 
 Para ilustrar derivados,
 vamos experimentar com um exemplo.
-
+(**Define-se $u = f(x) = 3x^2-4x$.**)
 ```{.python .input}
 %matplotlib inline
 from d2l import mxnet as d2l
@@ -179,8 +179,8 @@ in :eqref:`eq_derivative`
 Though this experiment is not a mathematical proof,
 we will see later that the derivative $u'$ is $2$ when $x=1$.
 
-[** Definindo $ x = 1 $ e deixando $ h $ se aproximar de $ 0 $,
-o resultado numérico de $ \ frac {f (x + h) - f (x)} {h} $ **]
+[**Definindo $x = 1$ e deixando $h$ se aproximar de $0$,
+o resultado numérico de $ \ frac {f (x + h) - f (x)} {h} $**]
 in: eqref: `eq_derivative`
 (** aproxima-se de $ 2 $. **)
 Embora este experimento não seja uma prova matemática,
@@ -430,6 +430,5 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjQwMzIzMjcsLTE5NzkzMzU4MjddfQ
-==
+eyJoaXN0b3J5IjpbMTE2MTEyNDg1MCwtMTk3OTMzNTgyN119
 -->
