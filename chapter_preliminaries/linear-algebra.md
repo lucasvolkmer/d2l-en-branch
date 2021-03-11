@@ -816,7 +816,7 @@ Denotada por $\mathbf{a}^\top_{i} \in \mathbb{R}^k$
 o vetor linha representando a $i^\mathrm{th}$ linha da matriz $\mathbf{A}$,
 e $\mathbf{b}_{j} \in \mathbb{R}^k$
 seja o vetor coluna da $j^\mathrm{th}$ coluna matriz $\mathbf{B}$.
-Para produzir o produto de matrizes $\mathbf{C} = \mathbf{A}\mathbf{B}$, é mais facil pensar $\mathbf{A}$ em termos de seus vetores linha$\mathbf{B}$ in terms of its column vectors:
+Para produzir o produto de matrizes $\mathbf{C} = \mathbf{A}\mathbf{B}$, é mais facil pensar $\mathbf{A}$ em termos de seus vetores linha $\mathbf{B}$ em termos de seus vetores coluna:
 
 $$\mathbf{A}=
 \begin{bmatrix}
@@ -831,7 +831,8 @@ $$\mathbf{A}=
 $$
 
 
-Then the matrix product $\mathbf{C} \in \mathbb{R}^{n \times m}$ is produced as we simply compute each element $c_{ij}$ as the dot product $\mathbf{a}^\top_i \mathbf{b}_j$:
+Then the matrix product $\mathbf{C} \in \mathbb{R}^{n \times m}$ is produced as we simply compute each element $c_{ij}$ as the dot product 
+Então, o produto da matriz $\mathbf{C} \in \mathbb{R}^{n \times m}$ é produzido, pois simplesmente calculamos cada elemento $c_ {ij}$ como o produto escalar $\mathbf{a}^\top_i \mathbf{b}_j$:
 
 $$\mathbf{C} = \mathbf{AB} = \begin{bmatrix}
 \mathbf{a}^\top_{1} \\
@@ -1086,7 +1087,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NzY5MDA0MSwtMTc1NjI1MTU1OCwyMD
+eyJoaXN0b3J5IjpbMTQxOTQ5MTIwMSwtMTc1NjI1MTU1OCwyMD
 c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
 MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
 M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
