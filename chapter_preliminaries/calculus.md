@@ -9,6 +9,13 @@ As shown in :numref:`fig_circle_area`,
 an inscribed polygon with more sides of equal length better approximates
 the circle. This process is also known as the *method of exhaustion*.
 
+Encontrar a área de um polígono permaneceu um mistério
+até pelo menos 2.500 anos atrás, quando os gregos antigos dividiam um polígono em triângulos e somavam suas áreas.
+Para encontrar a área de formas curvas, como um círculo,
+os gregos antigos inscreviam polígonos nessas formas.
+Conforme mostrado em :numref: `fig_circle_area`,
+um polígono inscrito com mais lados de igual comprimento se aproxima melhor
+o circulo. Este processo também é conhecido como *método de exaustão*.
 
 ![Find the area of a circle with the method of exhaustion.](../img/polygon-circle.svg)
 :label:`fig_circle_area`
@@ -354,5 +361,5 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ2MzU4MDI0XX0=
+eyJoaXN0b3J5IjpbMjk3NTAzMDY1XX0=
 -->
