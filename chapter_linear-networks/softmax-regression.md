@@ -1,37 +1,38 @@
 # Regressão *Softmax*
 :label:`sec_softmax`
 
-In :numref:`sec_linear_regression`, we introduced linear regression,
-working through implementations from scratch in :numref:`sec_linear_scratch`
-and again using high-level APIs of a deep learning framework
-in :numref:`sec_linear_concise` to do the heavy lifting.
 
-Regression is the hammer we reach for when
-we want to answer *how much?* or *how many?* questions.
-If you want to predict the number of dollars (price)
-at which a house will be sold,
-or the number of wins a baseball team might have,
-or the number of days that a patient will remain hospitalized before being discharged,
-then you are probably looking for a regression model.
+Em :numref:`sec_linear_regression`, introduzimos a regressão linear,
+trabalhando através de implementações do zero em :numref:`sec_linear_scratch`
+e novamente usando APIs de alto nível de uma estrutura de *deep learning*
+em :numref:`sec_linear_concise` para fazer o trabalho pesado.
 
-In practice, we are more often interested in *classification*:
-asking not "how much" but "which one":
+A regressão é o martelo que procuramos quando
+queremos responder a perguntas*quanto?* ou *quantas?*.
+Se você deseja prever o número de dólares (preço)
+a que uma casa será vendida,
+ou o número de vitórias que um time de beisebol pode ter,
+ou o número de dias que um paciente permanecerá hospitalizado antes de receber alta,
+então provavelmente você está procurando um modelo de regressão.
 
-* Does this email belong in the spam folder or the inbox?
-* Is this customer more likely *to sign up* or *not to sign up* for a subscription service?
-* Does this image depict a donkey, a dog, a cat, or a rooster?
-* Which movie is Aston most likely to watch next?
+Na prática, estamos mais frequentemente interessados ​​na *classificação*:
+perguntando não "quanto", mas "qual":
 
-Colloquially, machine learning practitioners
-overload the word *classification*
-to describe two subtly different problems:
-(i) those where we are interested only in
-hard assignments of examples to categories (classes);
-and (ii) those where we wish to make soft assignments,
-i.e., to assess the probability that each category applies.
-The distinction tends to get blurred, in part,
-because often, even when we only care about hard assignments,
-we still use models that make soft assignments.
+* Este e-mail pertence à pasta de spam ou à caixa de entrada?
+* É mais provável que este cliente *se inscreva* ou *não se inscreva* em um serviço de assinatura?
+* Esta imagem retrata um burro, um cachorro, um gato ou um galo?
+* Qual filme Aston tem mais probabilidade de assistir a seguir?
+
+Coloquialmente, praticantes de *machine learning*
+sobrecarregam a palavra *classificação*
+para descrever dois problemas sutilmente diferentes:
+(i) aqueles em que estamos interessados ​​apenas em
+atribuições difíceis de exemplos a categorias (classes);
+e (ii) aqueles em que desejamos fazer atribuições leves,
+ou seja, para avaliar a probabilidade de que cada categoria se aplica.
+A distinção tende a ficar confusa, em parte,
+porque muitas vezes, mesmo quando nos preocupamos apenas com tarefas difíceis,
+ainda usamos modelos que fazem atribuições suaves.
 
 
 ## Classification Problem
@@ -442,5 +443,5 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NDcyMzQ2MF19
+eyJoaXN0b3J5IjpbMTg0MzM3NTA5NCwxMzk0NzIzNDYwXX0=
 -->
