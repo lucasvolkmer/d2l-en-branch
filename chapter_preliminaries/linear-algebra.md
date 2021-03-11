@@ -689,9 +689,8 @@ x, y, torch.dot(x, y)
 y = tf.ones(4, dtype=tf.float32)
 x, y, tf.tensordot(x, y, axes=1)
 ```
-
-Note that
-(**we can express the dot product of two vectors equivalently by performing an elementwise multiplication and then a sum:**)
+Observe que
+(**podemos expressar o produto escalar de dois vetores de forma equivalente, realizando uma multiplicação elemento a elemento e, em seguida, uma soma:**)
 
 ```{.python .input}
 np.sum(x * y)
@@ -720,7 +719,19 @@ the dot product expresses a *weighted average*.
 After normalizing two vectors to have the unit length,
 the dot products express the cosine of the angle between them.
 We will formally introduce this notion of *length* later in this section.
-
+Os produtos escalares são úteis em uma ampla variedade de contextos.
+Por exemplo, dado algum conjunto de valores,
+denotado por um vetor $\mathbf{x}  \in \mathbb{R}^d$
+e um conjunto de pesos denotado por $\mathbf{w} \in \mathbb{R}^d$,,
+a soma ponderada dos valores em $ \ mathbf {x} $
+de acordo com os pesos $ \ mathbf {w} $
+pode ser expresso como o produto escalar $ \ mathbf {x} ^ \ top \ mathbf {w} $.
+Quando os pesos não são negativos
+e soma a um (ou seja, $ \ left (\ sum_ {i = 1} ^ {d} {w_i} = 1 \ right) $),
+o produto escalar expressa uma * média ponderada *.
+Depois de normalizar dois vetores para ter o comprimento unitário,
+os produtos escalares expressam o cosseno do ângulo entre eles.
+Apresentaremos formalmente essa noção de * comprimento * posteriormente nesta seção.
 
 ## Matrix-Vector Products
 
@@ -1090,8 +1101,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU2NTQ3MzA1LC0xNzU2MjUxNTU4LDIwNz
-Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
-Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
-c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbMTAxNDMwOTI4MSwtMTc1NjI1MTU1OCwyMD
+c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
+MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
+M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
 -->
