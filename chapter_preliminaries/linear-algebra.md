@@ -1007,18 +1007,6 @@ tf.norm(tf.ones((4, 9)))
 ### Normas e Objetivos
 :label:`subsec_norms_and_objectives`
 
-While we do not want to get too far ahead of ourselves,
-we can plant some intuition already about why these concepts are useful.
-In deep learning, we are often trying to solve optimization problems:
-*maximize* the probability assigned to observed data;
-*minimize* the distance between predictions
-and the ground-truth observations.
-Assign vector representations to items (like words, products, or news articles)
-such that the distance between similar items is minimized,
-and the distance between dissimilar items is maximized.
-Oftentimes, the objectives, perhaps the most important components
-of deep learning algorithms (besides the data),
-are expressed as norms.
 
 Embora não queiramos nos adiantar muito,
 já podemos ter uma intuição sobre por que esses conceitos são úteis.
@@ -1035,7 +1023,7 @@ são expressos como normas.
 
 
 
-## More on Linear Algebra
+## Mais sobre Algebra Linear
 
 In just this section,
 we have taught you all the linear algebra
@@ -1057,6 +1045,26 @@ deploying useful machine learning models on real datasets.
 So while we reserve the right to introduce more mathematics much later on,
 we will wrap up this section here.
 
+Apenas nesta seção,
+nós ensinamos a vocês toda a álgebra linear
+que você precisa entender
+um pedaço notável do aprendizado profundo moderno.
+Há muito mais coisas na álgebra linear
+e muito dessa matemática é útil para o aprendizado de máquina.
+Por exemplo, as matrizes podem ser decompostas em fatores,
+e essas decomposições podem revelar
+estrutura de baixa dimensão em conjuntos de dados do mundo real.
+Existem subcampos inteiros de aprendizado de máquina
+que se concentram no uso de decomposições de matriz
+e suas generalizações para tensores de alta ordem
+para descobrir a estrutura em conjuntos de dados e resolver problemas de previsão.
+Mas este livro se concentra no aprendizado profundo.
+E acreditamos que você estará muito mais inclinado a aprender mais matemática
+depois de sujar as mãos
+implantar modelos úteis de aprendizado de máquina em conjuntos de dados reais.
+Portanto, embora nos reservemos o direito de introduzir mais matemática muito mais tarde,
+vamos encerrar esta seção aqui.
+
 If you are eager to learn more about linear algebra,
 you may refer to either the
 [online appendix on linear algebraic operations](https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.html)
@@ -1064,7 +1072,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 
 
 
-## Summary
+## Sumário
 
 * Scalars, vectors, matrices, and tensors are basic mathematical objects in linear algebra.
 * Vectors generalize scalars, and matrices generalize vectors.
@@ -1074,7 +1082,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 * In deep learning, we often work with norms such as the $L_1$ norm, the $L_2$ norm, and the Frobenius norm.
 * We can perform a variety of operations over scalars, vectors, matrices, and tensors.
 
-## Exercises
+## Exercícios
 
 1. Prove that the transpose of a matrix $\mathbf{A}$'s transpose is $\mathbf{A}$: $(\mathbf{A}^\top)^\top = \mathbf{A}$.
 1. Given two matrices $\mathbf{A}$ and $\mathbf{B}$, show that the sum of transposes is equal to the transpose of a sum: $\mathbf{A}^\top + \mathbf{B}^\top = (\mathbf{A} + \mathbf{B})^\top$.
@@ -1099,9 +1107,9 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDY3ODc3NzgsMTY2Mzk2NjA4NSwtMT
-c1NjI1MTU1OCwyMDc0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTcz
-Nzk0OCw2MDE4ODcyMzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMT
-YzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4
-ODAzNl19
+eyJoaXN0b3J5IjpbLTQ4MDk3ODcwMiwxNjYzOTY2MDg1LC0xNz
+U2MjUxNTU4LDIwNzQ0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3
+OTQ4LDYwMTg4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNj
+M5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4
+MDM2XX0=
 -->
