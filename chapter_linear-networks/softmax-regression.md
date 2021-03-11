@@ -204,14 +204,14 @@ portanto, a regressão *softmax* é um modelo linear.
 ## Vetorização para *Minibatches*
 :label:`subsec_softmax_vectorization`
 
-To improve computational efficiency and take advantage of GPUs,
-we typically carry out vector calculations for minibatches of data.
-Assume that we are given a minibatch $\mathbf{X}$ of examples
-with feature dimensionality (number of inputs) $d$ and batch size $n$.
-Moreover, assume that we have $q$ categories in the output.
-Then the minibatch features $\mathbf{X}$ are in $\mathbb{R}^{n \times d}$,
-weights $\mathbf{W} \in \mathbb{R}^{d \times q}$,
-and the bias satisfies $\mathbf{b} \in \mathbb{R}^{1\times q}$.
+Para melhorar a eficiência computacional e aproveitar as vantagens das GPUs,
+normalmente realizamos cálculos vetoriais para *minibatches* de dados.
+Suponha que recebemos um *minibatch* $\mathbf{X}$ de exemplos
+com dimensionalidade do recurso (número de entradas) $d$ e tamanho do lote $n$.
+Além disso, suponha que temos $q$ categorias na saída.
+Então os *features* de *minibatch* $\mathbf{X}$ estão em $\mathbb{R}^{n \times d}$,
+pesos $\mathbf{W} \in \mathbb{R}^{d \times q}$,
+e o *bias* satisfaz $\mathbf{b} \in \mathbb{R}^{1\times q}$.
 
 $$ \begin{aligned} \mathbf{O} &= \mathbf{X} \mathbf{W} + \mathbf{b}, \\ \hat{\mathbf{Y}} & = \mathrm{softmax}(\mathbf{O}). \end{aligned} $$
 :eqlabel:`eq_minibatch_softmax_reg`
@@ -444,7 +444,7 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg0Nzk1OTM1LDE3MjkwNjA5ODMsLTEyOT
-ExNDc1OTYsMTA2Njk1NjA5MywxODQzMzc1MDk0LDEzOTQ3MjM0
-NjBdfQ==
+eyJoaXN0b3J5IjpbLTE0MTQyMzI2OTUsMzg0Nzk1OTM1LDE3Mj
+kwNjA5ODMsLTEyOTExNDc1OTYsMTA2Njk1NjA5MywxODQzMzc1
+MDk0LDEzOTQ3MjM0NjBdfQ==
 -->
