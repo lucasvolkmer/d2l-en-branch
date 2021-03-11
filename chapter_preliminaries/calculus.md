@@ -17,7 +17,7 @@ Conforme mostrado em :numref: `fig_circle_area`,
 um polígono inscrito com mais lados de igual comprimento se aproxima melhor
 o circulo. Este processo também é conhecido como *método de exaustão*.
 
-![Find the area of a circle with the method of exhaustion.](../img/polygon-circle.svg)
+![Buscando a área de um círculo através do método de exaustão.](../img/polygon-circle.svg)
 :label:`fig_circle_area`
 
 In fact, the method of exhaustion is where *integral calculus* (will be described in :numref:`sec_integral_calculus`) originates from.
@@ -28,6 +28,15 @@ Among the most critical applications of differential calculus,
 optimization problems consider how to do something *the best*.
 As discussed in :numref:`subsec_norms_and_objectives`,
 such problems are ubiquitous in deep learning.
+
+Na verdade, o método de exaustão é de onde o *cálculo integral* (será descrito em: numref: `sec_integral_calculus`) se origina.
+Mais de 2.000 anos depois,
+o outro ramo do cálculo, * cálculo diferencial *,
+foi inventado.
+Entre as aplicações mais críticas do cálculo diferencial,
+problemas de otimização consideram como fazer algo * o melhor *.
+Conforme discutido em: numref: `subsec_norms_and_objectives`,
+tais problemas são onipresentes no aprendizado profundo.
 
 In deep learning, we *train* models, updating them successively
 so that they get better and better as they see more and more data.
@@ -361,5 +370,5 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk3NTAzMDY1XX0=
+eyJoaXN0b3J5IjpbMTg2OTI5Mjc2OV19
 -->
