@@ -1063,17 +1063,7 @@ ou outra excelente fonte :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea.200
 
 ## Exercícios
 
-1. Prove that the transpose of a matrix $\mathbf{A}$'s transpose is $\mathbf{A}$: $(\mathbf{A}^\top)^\top = \mathbf{A}$.
-1. Given two matrices $\mathbf{A}$ and $\mathbf{B}$, show that the sum of transposes is equal to the transpose of a sum: $\mathbf{A}^\top + \mathbf{B}^\top = (\mathbf{A} + \mathbf{B})^\top$.
-1. Given any square matrix $\mathbf{A}$, is $\mathbf{A} + \mathbf{A}^\top$ always symmetric? Why?
-1. We defined the tensor `X` of shape (2, 3, 4) in this section. What is the output of `len(X)`?
-1. For a tensor `X` of arbitrary shape, does `len(X)` always correspond to the length of a certain axis of `X`? What is that axis?
-1. Run `A / A.sum(axis=1)` and see what happens. Can you analyze the reason?
-1. When traveling between two points in Manhattan, what is the distance that you need to cover in terms of the coordinates, i.e., in terms of avenues and streets? Can you travel diagonally?
-1. Consider a tensor with shape (2, 3, 4). What are the shapes of the summation outputs along axis 0, 1, and 2?
-1. Feed a tensor with 3 or more axes to the `linalg.norm` function and observe its output. What does this function compute for tensors of arbitrary shape?
-
-1. Prove que a transposta de uma matriz $\mathbf {A}$ transposta é $\mathbf {A}$: $(\mathbf {A} ^ \top) ^ \top = \ mathbf {A}$.
+1. Prove que a transposta de uma matriz $\mathbf {A}$ transposta é $\mathbf {A}$: $(\mathbf {A} ^ \top) ^ \top = \mathbf {A}$.
 1. Dadas duas matrizes $\mathbf {A}$ e $\mathbf {B}$, mostre que a soma das transpostas é igual à transposta de uma soma: $\mathbf {A} ^ \top + \mathbf {B} ^ \top = (\mathbf {A} + \mathbf {B}) ^ \top$.
 1. Dada qualquer matriz quadrada $\mathbf {A}$, $\mathbf {A} + \mathbf {A} ^ \top$ é sempre simétrica? Porque?
 1. Definimos o tensor `X` de forma (2, 3, 4) nesta seção. Qual é a saída de `len (X)`?
@@ -1095,9 +1085,9 @@ ou outra excelente fonte :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea.200
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MjQxNzIzOSwxNjYzOTY2MDg1LC0xNz
-U2MjUxNTU4LDIwNzQ0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3
-OTQ4LDYwMTg4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNj
-M5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4
-MDM2XX0=
+eyJoaXN0b3J5IjpbMTkzODAzNjYzLDE2NjM5NjYwODUsLTE3NT
+YyNTE1NTgsMjA3NDQzOTE5MywtNDkyNTAxNjQxLDExMDU3Mzc5
+NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIxLDE2Mz
+k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
+MzZdfQ==
 -->
