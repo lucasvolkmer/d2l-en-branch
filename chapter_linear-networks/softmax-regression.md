@@ -71,15 +71,15 @@ $$y \in \{(1, 0, 0), (0, 1, 0), (0, 0, 1)\}.$$
 
 ## Arquitetura de Rede
 
-In order to estimate the conditional probabilities associated with all the possible classes,
-we need a model with multiple outputs, one per class.
-To address classification with linear models,
-we will need as many affine functions as we have outputs.
-Each output will correspond to its own affine function.
-In our case, since we have 4 features and 3 possible output categories,
-we will need 12 scalars to represent the weights ($w$ with subscripts),
-and 3 scalars to represent the biases ($b$ with subscripts).
-We compute these three *logits*, $o_1, o_2$, and $o_3$, for each input:
+A fim de estimar as probabilidades condicionais associadas a todas as classes possíveis,
+precisamos de um modelo com várias saídas, uma por classe.
+Para abordar a classificação com modelos lineares,
+precisaremos de tantas funções afins quantas forem as saídas.
+Cada saída corresponderá a sua própria função afim.
+No nosso caso, uma vez que temos 4 *features* e 3 categorias de saída possíveis,
+precisaremos de 12 escalares para representar os pesos ($w$ com subscritos),
+e 3 escalares para representar os *offsets* ($b$ com subscritos).
+Calculamos esses três *logits*, $o_1, o_2$, and $o_3$, para cada entrada:
 
 $$
 \begin{aligned}
@@ -444,6 +444,6 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTExNDc1OTYsMTA2Njk1NjA5MywxOD
-QzMzc1MDk0LDEzOTQ3MjM0NjBdfQ==
+eyJoaXN0b3J5IjpbLTE3Njc4Njk1MjIsLTEyOTExNDc1OTYsMT
+A2Njk1NjA5MywxODQzMzc1MDk0LDEzOTQ3MjM0NjBdfQ==
 -->
