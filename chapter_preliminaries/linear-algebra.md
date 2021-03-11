@@ -1020,9 +1020,9 @@ Oftentimes, the objectives, perhaps the most important components
 of deep learning algorithms (besides the data),
 are expressed as norms.
 
-Embora não queiramos ir muito longe de nós mesmos,
-já podemos plantar alguma intuição sobre por que esses conceitos são úteis.
-No aprendizado profundo, muitas vezes tentamos resolver problemas de otimização:
+Embora não queiramos nos adiantar muito,
+já podemos ter uma intuição sobre por que esses conceitos são úteis.
+No *Deep Learning*, muitas vezes tentamos resolver problemas de otimização:
 *maximizar* a probabilidade atribuída aos dados observados;
 *minimizar* a distância entre as previsões
 e as observações de verdade.
@@ -1030,7 +1030,7 @@ Atribuir representações vetoriais a itens (como palavras, produtos ou artigos 
 de modo que a distância entre itens semelhantes seja minimizada,
 e a distância entre itens diferentes é maximizada.
 Muitas vezes, os objetivos, talvez os componentes mais importantes
-de algoritmos de aprendizagem profunda (além dos dados),
+de algoritmos de *Deep Learning* (além dos dados),
 são expressos como normas.
 
 
@@ -1099,7 +1099,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTgyMzgyMTYsMTY2Mzk2NjA4NSwtMT
+eyJoaXN0b3J5IjpbLTIwNDY3ODc3NzgsMTY2Mzk2NjA4NSwtMT
 c1NjI1MTU1OCwyMDc0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTcz
 Nzk0OCw2MDE4ODcyMzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMT
 YzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4
