@@ -792,12 +792,11 @@ A.shape, x.shape, torch.mv(A, x)
 A.shape, x.shape, tf.linalg.matvec(A, x)
 ```
 
-## Matrix-Matrix Multiplication
+## Multiplicação Matriz Matriz
 
-If you have gotten the hang of dot products and matrix-vector products,
-then *matrix-matrix multiplication* should be straightforward.
-
-Say that we have two matrices $\mathbf{A} \in \mathbb{R}^{n \times k}$ and $\mathbf{B} \in \mathbb{R}^{k \times m}$:
+Se você já pegou o jeito dos produtos escalares e produtos matriciais,
+então a *multiplicação matriz-matriz* deve ser direta.
+Digamos que temos duas matrizes $\mathbf{A} \in \mathbb{R}^{n \times k}$ e $\mathbf{B} \in \mathbb{R}^{k \times m}$:
 
 $$\mathbf{A}=\begin{bmatrix}
  a_{11} & a_{12} & \cdots & a_{1k} \\
@@ -813,8 +812,8 @@ $$\mathbf{A}=\begin{bmatrix}
 \end{bmatrix}.$$
 
 
-Denote by $\mathbf{a}^\top_{i} \in \mathbb{R}^k$
-the row vector representing the $i^\mathrm{th}$ row of the matrix $\mathbf{A}$,
+Denotada por $\mathbf{a}^\top_{i} \in \mathbb{R}^k$
+o vetor linha  $i^\mathrm{th}$ row of the matrix $\mathbf{A}$,
 and let $\mathbf{b}_{j} \in \mathbb{R}^k$
 be the column vector from the $j^\mathrm{th}$ column of the matrix $\mathbf{B}$.
 To produce the matrix product $\mathbf{C} = \mathbf{A}\mathbf{B}$, it is easiest to think of $\mathbf{A}$ in terms of its row vectors and $\mathbf{B}$ in terms of its column vectors:
@@ -1087,8 +1086,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA1NzU5MDU0LC0xNzU2MjUxNTU4LDIwNz
-Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
-Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
-c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbLTY1MTc1MzAzOSwtMTc1NjI1MTU1OCwyMD
+c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
+MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
+M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
 -->
