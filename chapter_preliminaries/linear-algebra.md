@@ -740,11 +740,8 @@ $$\mathbf{A}=
 onde cada $\mathbf{a}^\top_{i} \in \mathbb{R}^n$
 é uma linha vetor representando a $i^\mathrm{th}$ linha da matriz $\mathbf{A}$.
 
-[**The matrix-vector product $\mathbf{A}\mathbf{x}$
-is simply a column vector of length $m$,
-whose $i^\mathrm{th}$ element is the dot product $\mathbf{a}^\top_i \mathbf{x}$:**]
 [**O produto vetor-matriz $\mathbf{A}\mathbf{x}$
-é simplesmente um vetor coluna de comprimento $ m $,
+é simplesmente um vetor coluna de comprimento $m$,
 cujo elemento $i^\mathrm{th}$ é o produto escalar $\mathbf{a}^\top_i \mathbf{x}$:**]
 
 $$
@@ -774,6 +771,18 @@ we can also use matrix-vector products
 to describe the most intensive calculations
 required when computing each layer in a neural network
 given the values of the previous layer.
+
+Podemos pensar na multiplicação por uma matriz $ \ mathbf {A} \ in \ mathbb {R} ^ {m \ times n} $
+como uma transformação que projeta vetores
+de $ \ mathbb {R} ^ {n} $ a $ \ mathbb {R} ^ {m} $.
+Essas transformações revelaram-se extremamente úteis.
+Por exemplo, podemos representar rotações
+como multiplicações por uma matriz quadrada.
+Como veremos nos capítulos subsequentes,
+também podemos usar produtos vetoriais de matriz
+para descrever os cálculos mais intensivos
+necessário ao calcular cada camada em uma rede neural
+dados os valores da camada anterior.
 
 Expressing matrix-vector products in code with tensors,
 we use the same `dot` function as for dot products.
@@ -1091,7 +1100,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMTg4NzgxLC0xNzU2MjUxNTU4LDIwNz
+eyJoaXN0b3J5IjpbNjczNTU0NTc4LC0xNzU2MjUxNTU4LDIwNz
 Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
 Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
 c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
