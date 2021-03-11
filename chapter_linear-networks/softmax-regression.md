@@ -98,17 +98,17 @@ a camada de saída da regressão *softmax* também pode ser descrita como uma ca
 ![Softmax regression is a single-layer neural network.](../img/softmaxreg.svg)
 :label:`fig_softmaxreg`
 
-To express the model more compactly, we can use linear algebra notation.
-In vector form, we arrive at
+Para expressar o modelo de forma mais compacta, podemos usar a notação de álgebra linear.
+Na forma vetorial, chegamos a
 $\mathbf{o} = \mathbf{W} \mathbf{x} + \mathbf{b}$,
-a form better suited both for mathematics, and for writing code.
-Note that we have gathered all of our weights into a $3 \times 4$ matrix
-and that for features of a given data example $\mathbf{x}$,
-our outputs are given by a matrix-vector product of our weights by our input features
-plus our biases $\mathbf{b}$.
+uma forma mais adequada tanto para matemática quanto para escrever código.
+Observe que reunimos todos os nossos pesos em uma matriz $3 \times 4$ 
+e que para características de um dado exemplo de dados $\mathbf{x}$,
+nossas saídas são dadas por um produto vetor-matriz de nossos pesos por nossos recursos de entrada
+mais nossos *offsets* $\mathbf{b}$.
 
 
-## Parameterization Cost of Fully-Connected Layers
+## Custo de Parametrização de Camadas Totalmente Conectadas
 :label:`subsec_parameterization-cost-fc-layers`
 
 As we will see in subsequent chapters,
@@ -444,6 +444,6 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NDM0ODQ0MSwtMTI5MTE0NzU5NiwxMD
-Y2OTU2MDkzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF19
+eyJoaXN0b3J5IjpbLTExMzgzNDcxNzIsLTEyOTExNDc1OTYsMT
+A2Njk1NjA5MywxODQzMzc1MDk0LDEzOTQ3MjM0NjBdfQ==
 -->
