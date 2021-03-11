@@ -872,17 +872,16 @@ B = tf.ones((4, 3), tf.float32)
 tf.matmul(A, B)
 ```
 
-Matrix-matrix multiplication can be simply called *matrix multiplication*, and should not be confused with the Hadamard product.
-A multiplicação de matriz-matriz pode ser simplesmente chamada de * multiplicação de matriz* e não deve ser confundida com o produto Hadamard.
+A multiplicação de matriz-matriz pode ser simplesmente chamada de *multiplicação de matrizes* e não deve ser confundida com o produto Hadamard.
 
-## Norms
+## Normas
 :label:`subsec_lin-algebra-norms`
 
-Some of the most useful operators in linear algebra are *norms*.
-Informally, the norm of a vector tells us how *big* a vector is.
-The notion of *size* under consideration here
-concerns not dimensionality
-but rather the magnitude of the components.
+Alguns dos operadores mais úteis em álgebra linear são *normas*.
+Informalmente, a norma de um vetor nos diz o quão *grande* é um vetor.
+A noção de *tamanho* em consideração aqui
+preocupa-se não em dimensionalidade
+,mas sim a magnitude dos componentes.
 
 In linear algebra, a vector norm is a function $f$ that maps a vector
 to a scalar, satisfying a handful of properties.
@@ -1085,7 +1084,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU2MTIxMzQ0LC0xNzU2MjUxNTU4LDIwNz
+eyJoaXN0b3J5IjpbMjg2ODIyNDExLC0xNzU2MjUxNTU4LDIwNz
 Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
 Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
 c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
