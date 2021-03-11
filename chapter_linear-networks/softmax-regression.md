@@ -216,18 +216,19 @@ e o *bias* satisfaz $\mathbf{b} \in \mathbb{R}^{1\times q}$.
 $$ \begin{aligned} \mathbf{O} &= \mathbf{X} \mathbf{W} + \mathbf{b}, \\ \hat{\mathbf{Y}} & = \mathrm{softmax}(\mathbf{O}). \end{aligned} $$
 :eqlabel:`eq_minibatch_softmax_reg`
 
-This accelerates the dominant operation into
-a matrix-matrix product $\mathbf{X} \mathbf{W}$
-vs. the matrix-vector products we would be executing
-if we processed one example at a time.
-Since each row in $\mathbf{X}$ represents a data example,
-the softmax operation itself can be computed *rowwise*:
-for each row of $\mathbf{O}$, exponentiate all entries and then normalize them by the sum.
-Triggering broadcasting during the summation $\mathbf{X} \mathbf{W} + \mathbf{b}$ in :eqref:`eq_minibatch_softmax_reg`,
-both the minibatch logits $\mathbf{O}$ and output probabilities $\hat{\mathbf{Y}}$
-are $n \times q$ matrices.
+Isso acelera a operação dominante em
+um produto matriz-matriz $\mathbf{X} \mathbf{W}$
+vs. os produtos de vetor-matriz que estaríamos executando
+se processamos um exemplo de cada vez.
+Uma vez que cada linha em $\mathbf{X}$ representa um exemplo de dados,
+a própria operação *softmax* pode ser calculada *rowwise* (através das colunas):
+para cada linha de $\mathbf{O}$, exponenciando todas as entradas e depois normalizando-as pela soma.
+Disparando a transmissão durante a soma $\mathbf{X} \mathbf{W} + \mathbf{b}$ in :eqref:`eq_minibatch_softmax_reg`,
+o *minibatch* registra $\mathbf{O}$ e as probabilidades de saída $\hat{\mathbf{Y}}$
+são matrizes $n \times q$.
 
-## Loss Function
+
+## Função de Perda
 
 Next, we need a loss function to measure
 the quality of our predicted probabilities.
@@ -444,7 +445,7 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTQyMzI2OTUsMzg0Nzk1OTM1LDE3Mj
-kwNjA5ODMsLTEyOTExNDc1OTYsMTA2Njk1NjA5MywxODQzMzc1
-MDk0LDEzOTQ3MjM0NjBdfQ==
+eyJoaXN0b3J5IjpbLTEzMDIzODAxODksLTE0MTQyMzI2OTUsMz
+g0Nzk1OTM1LDE3MjkwNjA5ODMsLTEyOTExNDc1OTYsMTA2Njk1
+NjA5MywxODQzMzc1MDk0LDEzOTQ3MjM0NjBdfQ==
 -->
