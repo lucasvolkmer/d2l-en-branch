@@ -127,10 +127,10 @@ Diz-se que $f$ é *diferenciável* em  $a$.
 Se $f$ é diferenciável a cada número de um intervalo,
 então esta função é diferenciável neste intervalo.
 Podemos interpretar a derivada $f '(x)$ em :eqref:`eq_derivative`
-como a taxa de variação * instantânea * de $ f (x) $
-em relação a $ x $.
+como a taxa de variação *instantânea* de $f (x)$
+em relação a $x$.
 A chamada taxa instantânea de mudança é baseada em
-a variação $ h $ em $ x $, que se aproxima de $ 0 $.
+a variação $h$ em $ x $, que se aproxima de $ 0 $.
 
 To illustrate derivatives,
 let us experiment with an example.
@@ -430,5 +430,6 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMxMzEyODc3LC0xOTc5MzM1ODI3XX0=
+eyJoaXN0b3J5IjpbLTE1MjQwMzIzMjcsLTE5NzkzMzU4MjddfQ
+==
 -->
