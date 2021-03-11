@@ -949,9 +949,6 @@ tf.norm(u)
 Em *Deep Learning*, trabalhamos com mais frequência
 com a norma $L_2$ ao quadrado.
 
-You will also frequently encounter [**the $L_1$ *norm***],
-which is expressed as the sum of the absolute values of the vector elements:
-
 Você também encontrará frequentemente [**a norma $L_1$**],
 que é expresso como a soma dos valores absolutos dos elementos do vetor:
 
@@ -962,6 +959,11 @@ As compared with the $L_2$ norm,
 it is less influenced by outliers.
 To calculate the $L_1$ norm, we compose
 the absolute value function with a sum over the elements.
+
+Em comparação com a norma $L_2$,
+é menos influenciado por outliers.
+Para calcular a norma $L_1$, nós compomos
+a função de valor absoluto com uma soma sobre os elementos.
 
 ```{.python .input}
 np.abs(u).sum()
@@ -1089,8 +1091,9 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2Mzk2NjA4NSwtMTc1NjI1MTU1OCwyMD
-c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
-MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
-M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbLTk5MjExNzUzLDE2NjM5NjYwODUsLTE3NT
+YyNTE1NTgsMjA3NDQzOTE5MywtNDkyNTAxNjQxLDExMDU3Mzc5
+NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIxLDE2Mz
+k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
+MzZdfQ==
 -->
