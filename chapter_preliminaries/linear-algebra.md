@@ -722,12 +722,12 @@ Apresentaremos formalmente essa noção de *comprimento* posteriormente nesta se
 
 ## Produtos Matriz-Vetor
 
-Now that we know how to calculate dot products,
-we can begin to understand *matrix-vector products*.
-Recall the matrix $\mathbf{A} \in \mathbb{R}^{m \times n}$
-and the vector $\mathbf{x} \in \mathbb{R}^n$
-defined and visualized in :eqref:`eq_matrix_def` and :eqref:`eq_vec_def` respectively.
-Let us start off by visualizing the matrix $\mathbf{A}$ in terms of its row vectors
+Agora que sabemos como calcular produtos escalares,
+podemos começar a entender *produtos vetoriais de matriz*.
+Lembre-se da matriz $\mathbf{A} \in \mathbb{R}^{m \times n}$
+e o vetor $\mathbf{x} \in \mathbb{R}^n$
+definido e visualizado em :eqref:`eq_matrix_def` e :eqref:`eq_vec_def` respectivamente.
+Vamos começar visualizando a matriz $\mathbf{A}$ em termos de seus vetores linha
 
 $$\mathbf{A}=
 \begin{bmatrix}
@@ -737,7 +737,7 @@ $$\mathbf{A}=
 \mathbf{a}^\top_m \\
 \end{bmatrix},$$
 
-where each $\mathbf{a}^\top_{i} \in \mathbb{R}^n$
+onde cada $\mathbf{a}^\top_{i} \in \mathbb{R}^n$
 is a row vector representing the $i^\mathrm{th}$ row of the matrix $\mathbf{A}$.
 
 [**The matrix-vector product $\mathbf{A}\mathbf{x}$
@@ -1088,7 +1088,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE5NTQ3MzgxLC0xNzU2MjUxNTU4LDIwNz
+eyJoaXN0b3J5IjpbLTc5NDIwMTE1LC0xNzU2MjUxNTU4LDIwNz
 Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
 Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
 c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
