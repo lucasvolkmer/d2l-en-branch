@@ -76,7 +76,7 @@ that is commonly used in deep learning.
 Para te ajudar a entender
 problemas e métodos de otimização em capítulos posteriores,
 aqui, damos uma breve introdução ao cálculo diferencial
-que é comumente usado no aprendizado profundo.
+que é comumente usado no *Deep Learning*.
 
 ## Derivadas e Diferenciação
 
@@ -90,12 +90,12 @@ were we to *increase* or *decrease* that parameter
 by an infinitesimally small amount.
 
 Começamos abordando o cálculo de derivadas,
-uma etapa crucial em quase todos os algoritmos de otimização de aprendizagem profunda.
+uma etapa crucial em quase todos os algoritmos de otimização de *Deep Learning*.
 No aprendizado profundo, normalmente escolhemos funções de perda
 que são diferenciáveis em relação aos parâmetros do nosso modelo.
 Simplificando, isso significa que para cada parâmetro,
 podemos determinar a rapidez com que a perda aumentaria ou diminuiria,
-deveríamos * aumentar * ou * diminuir * esse parâmetro
+deveríamos *aumentar* ou *diminuir* esse parâmetro
 por uma quantidade infinitesimalmente pequena.
 
 Suppose that we have a function $f: \mathbb{R} \rightarrow \mathbb{R}$,
@@ -104,7 +104,7 @@ whose input and output are both scalars.
 
 Suponha que temos uma função $ f: \ mathbb {R} \ rightarrow \ mathbb {R} $,
 cuja entrada e saída são escalares.
-[** A * derivada * de $ f $ é definida como **]
+[**A *derivada* de $f$ é definida como**]
 
 
 (**$$f'(x) = \lim_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h},$$**)
@@ -122,11 +122,11 @@ The so-called instantaneous rate of change is based on
 the variation $h$ in $x$, which approaches $0$.
 
 se este limite existe.
-Se $ f '(a) $ existe,
-Diz-se que $ f $ é * diferenciável * em $ a $.
-Se $ f $ é diferenciável a cada número de um intervalo,
+Se $f'(a)$ existe,
+Diz-se que $f$ é *diferenciável* em  $a$.
+Se $f$ é diferenciável a cada número de um intervalo,
 então esta função é diferenciável neste intervalo.
-Podemos interpretar a derivada $ f '(x) $ em: eqref: `eq_derivative`
+Podemos interpretar a derivada $f '(x)$ em :eqref:`eq_derivative`
 como a taxa de variação * instantânea * de $ f (x) $
 em relação a $ x $.
 A chamada taxa instantânea de mudança é baseada em
@@ -430,5 +430,5 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNDk0Mjc1OSwtMTk3OTMzNTgyN119
+eyJoaXN0b3J5IjpbODMxMzEyODc3LC0xOTc5MzM1ODI3XX0=
 -->
