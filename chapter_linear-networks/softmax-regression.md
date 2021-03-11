@@ -170,13 +170,13 @@ esperamos que metade desses exemplos
 realmente pertenceram à classe prevista.
 Esta é uma propriedade chamada *calibração*.
 
-The *softmax function*, invented in 1959 by the social scientist
-R. Duncan Luce in the context of *choice models*,
-does precisely this.
-To transform our logits such that they become nonnegative and sum to 1,
-while requiring that the model remains differentiable,
-we first exponentiate each logit (ensuring non-negativity)
-and then divide by their sum (ensuring that they sum to 1):
+A *função softmax*, inventada em 1959 pelo cientista social
+R. Duncan Luce no contexto de *modelos de escolha*,
+faz exatamente isso.
+Para transformar nossos *logits* de modo que eles se tornem não negativos e somem 1,
+ao mesmo tempo em que exigimos que o modelo permaneça diferenciável,
+primeiro exponenciamos cada *logit* (garantindo a não negatividade)
+e, em seguida, dividimos pela soma (garantindo que somem 1):
 
 $$\hat{\mathbf{y}} = \mathrm{softmax}(\mathbf{o})\quad \text{where}\quad \hat{y}_j = \frac{\exp(o_j)}{\sum_k \exp(o_k)}. $$
 :eqlabel:`eq_softmax_y_and_o`
@@ -444,7 +444,7 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MTQzMjEzOSwxNzI5MDYwOTgzLC0xMj
+eyJoaXN0b3J5IjpbMTEyNjk3MDEzNiwxNzI5MDYwOTgzLC0xMj
 kxMTQ3NTk2LDEwNjY5NTYwOTMsMTg0MzM3NTA5NCwxMzk0NzIz
 NDYwXX0=
 -->
