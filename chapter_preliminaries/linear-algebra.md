@@ -760,18 +760,6 @@ $$
 \end{bmatrix}.
 $$
 
-We can think of multiplication by a matrix $\mathbf{A}\in \mathbb{R}^{m \times n}$
-as a transformation that projects vectors
-from $\mathbb{R}^{n}$ to $\mathbb{R}^{m}$.
-These transformations turn out to be remarkably useful.
-For example, we can represent rotations
-as multiplications by a square matrix.
-As we will see in subsequent chapters,
-we can also use matrix-vector products
-to describe the most intensive calculations
-required when computing each layer in a neural network
-given the values of the previous layer.
-
 Podemos pensar na multiplicação por uma matriz $\mathbf{A}\in \mathbb{R}^{m \times n}$
 como uma transformação que projeta vetores
 de $\mathbb{R}^{n}$ a $\mathbb{R}^{m}$.
@@ -784,13 +772,12 @@ para descrever os cálculos mais intensivos
 necessário ao calcular cada camada em uma rede neural
 dados os valores da camada anterior.
 
-Expressing matrix-vector products in code with tensors,
-we use the same `dot` function as for dot products.
-When we call `np.dot(A, x)` with a matrix `A` and a vector `x`,
-the matrix-vector product is performed.
-Note that the column dimension of `A` (its length along axis 1)
-must be the same as the dimension of `x` (its length).
-
+Expressando produtos de vetor-matriz em código com tensores,
+usamos a mesma função `dot` que para produtos de ponto.
+Quando chamamos `np.dot (A, x)` com uma matriz `A` e um vetor` x`,
+o produto matriz-vetor é realizado.
+Observe que a dimensão da coluna de `A` (seu comprimento ao longo do eixo 1)
+deve ser igual à dimensão de `x` (seu comprimento).
 ```{.python .input}
 A.shape, x.shape, np.dot(A, x)
 ```
@@ -1100,8 +1087,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwODYwOTcyOCwtMTc1NjI1MTU1OCwyMD
-c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
-MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
-M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbODA1NzU5MDU0LC0xNzU2MjUxNTU4LDIwNz
+Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
+Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
+c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
