@@ -489,8 +489,6 @@ x = tf.range(4, dtype=tf.float32)
 x, tf.reduce_sum(x)
 ```
 
-We can express [**sums over the elements of tensors of arbitrary shape.**]
-For example, the sum of the elements of an $m \times n$ matrix $\mathbf{A}$ could be written $\sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}$.
 Podemos expressar [**somas sobre os elementos de tensores de forma arbitrária.**]
 Por exemplo, a soma dos elementos de uma matriz $m \times n$
 $\mathbf{A}$ poderia ser escrita como $\sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}$.
@@ -1085,9 +1083,9 @@ ou outra excelente fonte :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea.200
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzODAzNjYzLDE2NjM5NjYwODUsLTE3NT
-YyNTE1NTgsMjA3NDQzOTE5MywtNDkyNTAxNjQxLDExMDU3Mzc5
-NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIxLDE2Mz
-k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
-MzZdfQ==
+eyJoaXN0b3J5IjpbLTEzOTIyMzYxMzEsMTY2Mzk2NjA4NSwtMT
+c1NjI1MTU1OCwyMDc0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTcz
+Nzk0OCw2MDE4ODcyMzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMT
+YzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4
+ODAzNl19
 -->
