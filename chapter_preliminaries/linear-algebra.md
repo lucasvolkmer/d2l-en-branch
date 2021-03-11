@@ -706,34 +706,21 @@ torch.sum(x * y)
 tf.reduce_sum(x * y)
 ```
 
-Dot products are useful in a wide range of contexts.
-For example, given some set of values,
-denoted by a vector $\mathbf{x}  \in \mathbb{R}^d$
-and a set of weights denoted by $\mathbf{w} \in \mathbb{R}^d$,
-the weighted sum of the values in $\mathbf{x}$
-according to the weights $\mathbf{w}$
-could be expressed as the dot product $\mathbf{x}^\top \mathbf{w}$.
-When the weights are non-negative
-and sum to one (i.e., $\left(\sum_{i=1}^{d} {w_i} = 1\right)$),
-the dot product expresses a *weighted average*.
-After normalizing two vectors to have the unit length,
-the dot products express the cosine of the angle between them.
-We will formally introduce this notion of *length* later in this section.
 Os produtos escalares são úteis em uma ampla variedade de contextos.
 Por exemplo, dado algum conjunto de valores,
 denotado por um vetor $\mathbf{x}  \in \mathbb{R}^d$
 e um conjunto de pesos denotado por $\mathbf{w} \in \mathbb{R}^d$,,
-a soma ponderada dos valores em $ \ mathbf {x} $
-de acordo com os pesos $ \ mathbf {w} $
-pode ser expresso como o produto escalar $ \ mathbf {x} ^ \ top \ mathbf {w} $.
+a soma ponderada dos valores em $\mathbf{x}$
+de acordo com os pesos $\mathbf{w}$
+pode ser expresso como o produto escalar $\mathbf{x}^\top \mathbf{w}$.
 Quando os pesos não são negativos
-e soma a um (ou seja, $ \ left (\ sum_ {i = 1} ^ {d} {w_i} = 1 \ right) $),
-o produto escalar expressa uma * média ponderada *.
+e soma a um (ou seja, $\left(\sum_{i=1}^{d} {w_i} = 1\right)$),
+o produto escalar expressa uma *média ponderada*.
 Depois de normalizar dois vetores para ter o comprimento unitário,
 os produtos escalares expressam o cosseno do ângulo entre eles.
-Apresentaremos formalmente essa noção de * comprimento * posteriormente nesta seção.
+Apresentaremos formalmente essa noção de *comprimento* posteriormente nesta seção.
 
-## Matrix-Vector Products
+## Produtos Matriz-Vetor
 
 Now that we know how to calculate dot products,
 we can begin to understand *matrix-vector products*.
@@ -1101,8 +1088,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNDMwOTI4MSwtMTc1NjI1MTU1OCwyMD
-c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
-MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
-M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbNzE5NTQ3MzgxLC0xNzU2MjUxNTU4LDIwNz
+Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
+Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
+c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
