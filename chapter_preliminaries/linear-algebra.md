@@ -1025,26 +1025,6 @@ são expressos como normas.
 
 ## Mais sobre Algebra Linear
 
-In just this section,
-we have taught you all the linear algebra
-that you will need to understand
-a remarkable chunk of modern deep learning.
-There is a lot more to linear algebra
-and a lot of that mathematics is useful for machine learning.
-For example, matrices can be decomposed into factors,
-and these decompositions can reveal
-low-dimensional structure in real-world datasets.
-There are entire subfields of machine learning
-that focus on using matrix decompositions
-and their generalizations to high-order tensors
-to discover structure in datasets and solve prediction problems.
-But this book focuses on deep learning.
-And we believe you will be much more inclined to learn more mathematics
-once you have gotten your hands dirty
-deploying useful machine learning models on real datasets.
-So while we reserve the right to introduce more mathematics much later on,
-we will wrap up this section here.
-
 Apenas nesta seção,
 nós ensinamos a vocês toda a álgebra linear
 que você precisa entender
@@ -1065,10 +1045,9 @@ implantar modelos úteis de aprendizado de máquina em conjuntos de dados reais.
 Portanto, embora nos reservemos o direito de introduzir mais matemática muito mais tarde,
 vamos encerrar esta seção aqui.
 
-If you are eager to learn more about linear algebra,
-you may refer to either the
-[online appendix on linear algebraic operations](https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.html)
-or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea.2008`.
+Se voce gostaria de aprender mais sobre Algebra Linear, pode procurar em 
+[apêndice online sobre operações de algebra linear](https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.html)
+ou outra excelente fonte :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea.2008`.
 
 
 
@@ -1107,9 +1086,9 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mjk1OTc2NzYsMTY2Mzk2NjA4NSwtMT
-c1NjI1MTU1OCwyMDc0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTcz
-Nzk0OCw2MDE4ODcyMzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMT
-YzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4
-ODAzNl19
+eyJoaXN0b3J5IjpbNzM1MTg1NDIxLDE2NjM5NjYwODUsLTE3NT
+YyNTE1NTgsMjA3NDQzOTE5MywtNDkyNTAxNjQxLDExMDU3Mzc5
+NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIxLDE2Mz
+k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
+MzZdfQ==
 -->
