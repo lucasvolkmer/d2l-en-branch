@@ -883,14 +883,14 @@ A noção de *tamanho* em consideração aqui
 preocupa-se não em dimensionalidade
 ,mas sim a magnitude dos componentes.
 
-In linear algebra, a vector norm is a function $f$ that maps a vector
-to a scalar, satisfying a handful of properties.
-Given any vector $\mathbf{x}$,
-the first property says
-that if we scale all the elements of a vector
-by a constant factor $\alpha$,
-its norm also scales by the *absolute value*
-of the same constant factor:
+Na álgebra linear, uma norma vetorial é uma função $f$ que mapeia um vetor
+para um escalar, satisfazendo um punhado de propriedades.
+Dado qualquer vetor $\mathbf{x}$,
+a primeira propriedade diz
+que se escalarmos todos os elementos de um vetor
+por um fator constante $\alpha$,
+sua norma também escala pelo *valor absoluto*
+do mesmo fator constante:
 
 $$f(\alpha \mathbf{x}) = |\alpha| f(\mathbf{x}).$$
 
@@ -1084,8 +1084,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg2ODIyNDExLC0xNzU2MjUxNTU4LDIwNz
-Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
-Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
-c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbMTAyNzI4NzY4MiwtMTc1NjI1MTU1OCwyMD
+c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
+MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
+M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
 -->
