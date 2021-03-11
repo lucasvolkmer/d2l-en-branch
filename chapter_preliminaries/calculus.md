@@ -31,11 +31,11 @@ such problems are ubiquitous in deep learning.
 
 Na verdade, o método de exaustão é de onde o *cálculo integral* (será descrito em :numref: `sec_integral_calculus`) se origina.
 Mais de 2.000 anos depois,
-o outro ramo do cálculo, * cálculo diferencial *,
+o outro ramo do cálculo, *cálculo diferencial*,
 foi inventado.
 Entre as aplicações mais críticas do cálculo diferencial,
 problemas de otimização consideram como fazer algo * o melhor *.
-Conforme discutido em: numref: `subsec_norms_and_objectives`,
+Conforme discutido em :numref:`subsec_norms_and_objectives`,
 tais problemas são onipresentes no aprendizado profundo.
 
 In deep learning, we *train* models, updating them successively
@@ -370,5 +370,5 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzkzMzU4MjddfQ==
+eyJoaXN0b3J5IjpbODQ2ODYwNjc3LC0xOTc5MzM1ODI3XX0=
 -->
