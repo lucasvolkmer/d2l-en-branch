@@ -136,7 +136,8 @@ To illustrate derivatives,
 let us experiment with an example.
 (**Define $u = f(x) = 3x^2-4x$.**)
 
-
+Para ilustrar derivados,
+vamos experimentar com um exemplo.
 
 ```{.python .input}
 %matplotlib inline
@@ -178,6 +179,13 @@ in :eqref:`eq_derivative`
 Though this experiment is not a mathematical proof,
 we will see later that the derivative $u'$ is $2$ when $x=1$.
 
+[** Definindo $ x = 1 $ e deixando $ h $ se aproximar de $ 0 $,
+o resultado numérico de $ \ frac {f (x + h) - f (x)} {h} $ **]
+in: eqref: `eq_derivative`
+(** aproxima-se de $ 2 $. **)
+Embora este experimento não seja uma prova matemática,
+veremos mais tarde que a derivada $ u '$ é $ 2 $ quando $ x = 1 $.
+
 ```{.python .input}
 #@tab all
 def numerical_lim(f, x, h):
@@ -192,10 +200,16 @@ for i in range(5):
 Let us familiarize ourselves with a few equivalent notations for derivatives.
 Given $y = f(x)$, where $x$ and $y$ are the independent variable and the dependent variable of the function $f$, respectively. The following expressions are equivalent:
 
+Vamos nos familiarizar com algumas notações equivalentes para derivadas.
+Dado $ y = f (x) $, onde $ x $ e $ y $ são a variável independente e a variável dependente da função $ f $, respectivamente. As seguintes expressões são equivalentes:
+
 $$f'(x) = y' = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df(x) = D_x f(x),$$
 
 where symbols $\frac{d}{dx}$ and $D$ are *differentiation operators* that indicate operation of *differentiation*.
 We can use the following rules to differentiate common functions:
+
+onde os símbolos $ \ frac {d} {dx} $ e $ D $ são * operadores de diferenciação * que indicam operação de * diferenciação *.
+Podemos usar as seguintes regras para diferenciar funções comuns:
 
 * $DC = 0$ ($C$ is a constant),
 * $Dx^n = nx^{n-1}$ (the *power rule*, $n$ is any real number),
@@ -416,6 +430,5 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTMzMTM2NTcsLTE5NzkzMzU4MjddfQ
-==
+eyJoaXN0b3J5IjpbMTk1MTIyOTYxMywtMTk3OTMzNTgyN119
 -->
