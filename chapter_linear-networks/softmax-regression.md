@@ -38,37 +38,38 @@ ainda usamos modelos que fazem atribuições suaves.
 ## Problema de Classificação
 :label:`subsec_classification-problem`
 
-To get our feet wet, let us start off with
-a simple image classification problem.
-Here, each input consists of a $2\times2$ grayscale image.
-We can represent each pixel value with a single scalar,
-giving us four features $x_1, x_2, x_3, x_4$.
-Further, let us assume that each image belongs to one
-among the categories "cat", "chicken", and "dog".
 
-Next, we have to choose how to represent the labels.
-We have two obvious choices.
-Perhaps the most natural impulse would be to choose $y \in \{1, 2, 3\}$,
-where the integers represent $\{\text{dog}, \text{cat}, \text{chicken}\}$ respectively.
-This is a great way of *storing* such information on a computer.
-If the categories had some natural ordering among them,
-say if we were trying to predict $\{\text{baby}, \text{toddler}, \text{adolescent}, \text{young adult}, \text{adult}, \text{geriatric}\}$,
-then it might even make sense to cast this problem as regression
-and keep the labels in this format.
+Para molhar nossos pés, vamos começar com
+um problema simples de classificação de imagens.
+Aqui, cada entrada consiste em uma imagem em tons de cinza $2\times 2$.
+Podemos representar cada valor de pixel com um único escalar,
+dando-nos quatro características $x_1, x_2, x_3, x_4$.
+Além disso, vamos supor que cada imagem pertence a uma
+entre as categorias "gato", "frango" e "cachorro".
 
-But general classification problems do not come with natural orderings among the classes.
-Fortunately, statisticians long ago invented a simple way
-to represent categorical data: the *one-hot encoding*.
-A one-hot encoding is a vector with as many components as we have categories.
-The component corresponding to particular instance's category is set to 1
-and all other components are set to 0.
-In our case, a label $y$ would be a three-dimensional vector,
-with $(1, 0, 0)$ corresponding to "cat", $(0, 1, 0)$ to "chicken",
-and $(0, 0, 1)$ to "dog":
+A seguir, temos que escolher como representar os *labels*.
+Temos duas escolhas óbvias.
+Talvez o impulso mais natural seja escolher $y\in \{1, 2, 3 \}$,
+onde os inteiros representam $\{\text{cachorro}, \text{gato}, \text{frango}\}$ respectivamente.
+Esta é uma ótima maneira de *armazenar* essas informações em um computador.
+Se as categorias tivessem alguma ordem natural entre elas,
+digamos se estivéssemos tentando prever $\{\text {bebê}, \text{criança}, \text{adolescente}, \text{jovem adulto}, \text{adulto}, \text{idoso}\}$,
+então pode até fazer sentido lançar este problema como uma regressão
+e manter os rótulos neste formato.
+
+Mas os problemas gerais de classificação não vêm com ordenações naturais entre as classes.
+Felizmente, os estatísticos há muito tempo inventaram uma maneira simples
+para representar dados categóricos: a *codificação one-hot*.
+Uma codificação *one-hot* é um vetor com tantos componentes quantas categorias temos.
+O componente correspondente à categoria da instância em particular é definido como 1
+e todos os outros componentes são definidos como 0.
+Em nosso caso, um rótulo $y$ seria um vetor tridimensional,
+com $(1, 0, 0)$ correspondendo a "gato", $(0, 1, 0)$ a "galinha",
+e $(0, 0, 1)$ para "cachorro":
 
 $$y \in \{(1, 0, 0), (0, 1, 0), (0, 0, 1)\}.$$
 
-## Network Architecture
+## Arquitetura de Rede
 
 In order to estimate the conditional probabilities associated with all the possible classes,
 we need a model with multiple outputs, one per class.
@@ -443,6 +444,6 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2Njk1NjA5MywxODQzMzc1MDk0LDEzOT
-Q3MjM0NjBdfQ==
+eyJoaXN0b3J5IjpbLTEyOTExNDc1OTYsMTA2Njk1NjA5MywxOD
+QzMzc1MDk0LDEzOTQ3MjM0NjBdfQ==
 -->
