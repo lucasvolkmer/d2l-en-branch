@@ -813,10 +813,10 @@ $$\mathbf{A}=\begin{bmatrix}
 
 
 Denotada por $\mathbf{a}^\top_{i} \in \mathbb{R}^k$
-o vetor linha  $i^\mathrm{th}$ row of the matrix $\mathbf{A}$,
-and let $\mathbf{b}_{j} \in \mathbb{R}^k$
-be the column vector from the $j^\mathrm{th}$ column of the matrix $\mathbf{B}$.
-To produce the matrix product $\mathbf{C} = \mathbf{A}\mathbf{B}$, it is easiest to think of $\mathbf{A}$ in terms of its row vectors and $\mathbf{B}$ in terms of its column vectors:
+o vetor linha representando a $i^\mathrm{th}$ linha da matriz $\mathbf{A}$,
+e $\mathbf{b}_{j} \in \mathbb{R}^k$
+seja o vetor coluna da $j^\mathrm{th}$ coluna matriz $\mathbf{B}$.
+Para produzir o produto de matrizes $\mathbf{C} = \mathbf{A}\mathbf{B}$, é mais facil pensar $\mathbf{A}$ em termos de seus vetores linha$\mathbf{B}$ in terms of its column vectors:
 
 $$\mathbf{A}=
 \begin{bmatrix}
@@ -1086,7 +1086,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MTc1MzAzOSwtMTc1NjI1MTU1OCwyMD
+eyJoaXN0b3J5IjpbMTM1NzY5MDA0MSwtMTc1NjI1MTU1OCwyMD
 c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
 MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
 M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
