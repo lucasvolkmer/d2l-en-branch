@@ -1,4 +1,4 @@
-# Calculus
+# Caálculuso
 :label:`sec_calculus`
 
 Finding the area of a polygon had remained mysterious
@@ -8,6 +8,7 @@ ancient Greeks inscribed polygons in such shapes.
 As shown in :numref:`fig_circle_area`,
 an inscribed polygon with more sides of equal length better approximates
 the circle. This process is also known as the *method of exhaustion*.
+
 
 ![Find the area of a circle with the method of exhaustion.](../img/polygon-circle.svg)
 :label:`fig_circle_area`
@@ -352,3 +353,6 @@ for any $i = 1, 2, \ldots, n$.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjQ2MzU4MDI0XX0=
+-->
