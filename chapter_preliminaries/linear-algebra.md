@@ -1050,15 +1050,15 @@ nós ensinamos a vocês toda a álgebra linear
 que você precisa entender
 um pedaço notável do aprendizado profundo moderno.
 Há muito mais coisas na álgebra linear
-e muito dessa matemática é útil para o aprendizado de máquina.
+e muito dessa matemática é útil para o *Deep Learning*.
 Por exemplo, as matrizes podem ser decompostas em fatores,
 e essas decomposições podem revelar
 estrutura de baixa dimensão em conjuntos de dados do mundo real.
-Existem subcampos inteiros de aprendizado de máquina
+Existem subcampos inteiros de *Deep Learning*
 que se concentram no uso de decomposições de matriz
 e suas generalizações para tensores de alta ordem
 para descobrir a estrutura em conjuntos de dados e resolver problemas de previsão.
-Mas este livro se concentra no aprendizado profundo.
+Mas este livro se concentra no *Deep Learning*.
 E acreditamos que você estará muito mais inclinado a aprender mais matemática
 depois de sujar as mãos
 implantar modelos úteis de aprendizado de máquina em conjuntos de dados reais.
@@ -1107,9 +1107,9 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MDk3ODcwMiwxNjYzOTY2MDg1LC0xNz
-U2MjUxNTU4LDIwNzQ0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3
-OTQ4LDYwMTg4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNj
-M5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4
-MDM2XX0=
+eyJoaXN0b3J5IjpbLTE1Mjk1OTc2NzYsMTY2Mzk2NjA4NSwtMT
+c1NjI1MTU1OCwyMDc0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTcz
+Nzk0OCw2MDE4ODcyMzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMT
+YzOTYxMjc5OSwyMDM3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4
+ODAzNl19
 -->
