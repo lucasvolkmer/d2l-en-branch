@@ -738,11 +738,14 @@ $$\mathbf{A}=
 \end{bmatrix},$$
 
 onde cada $\mathbf{a}^\top_{i} \in \mathbb{R}^n$
-is a row vector representing the $i^\mathrm{th}$ row of the matrix $\mathbf{A}$.
+é uma linha vetor representando a $i^\mathrm{th}$ linha da matriz $\mathbf{A}$.
 
 [**The matrix-vector product $\mathbf{A}\mathbf{x}$
 is simply a column vector of length $m$,
 whose $i^\mathrm{th}$ element is the dot product $\mathbf{a}^\top_i \mathbf{x}$:**]
+[**O produto vetor-matriz $\mathbf{A}\mathbf{x}$
+é simplesmente um vetor coluna de comprimento $ m $,
+cujo elemento $i^\mathrm{th}$ é o produto escalar $\mathbf{a}^\top_i \mathbf{x}$:**]
 
 $$
 \mathbf{A}\mathbf{x}
@@ -1088,7 +1091,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NDIwMTE1LC0xNzU2MjUxNTU4LDIwNz
+eyJoaXN0b3J5IjpbMTgyMTg4NzgxLC0xNzU2MjUxNTU4LDIwNz
 Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
 Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
 c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
