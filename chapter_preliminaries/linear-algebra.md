@@ -946,12 +946,14 @@ torch.norm(u)
 u = tf.constant([3.0, -4.0])
 tf.norm(u)
 ```
-
-In deep learning, we work more often
-with the squared $L_2$ norm.
+Em *Deep Learning*, trabalhamos com mais frequência
+com a norma $L_2$ ao quadrado.
 
 You will also frequently encounter [**the $L_1$ *norm***],
 which is expressed as the sum of the absolute values of the vector elements:
+
+Você também encontrará frequentemente [**a norma $L_1$**],
+que é expresso como a soma dos valores absolutos dos elementos do vetor:
 
 (**$$\|\mathbf{x}\|_1 = \sum_{i=1}^n \left|x_i \right|.$$**)
 
@@ -1087,8 +1089,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI0MjgzMjUzLC0xNzU2MjUxNTU4LDIwNz
-Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
-Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
-c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
+eyJoaXN0b3J5IjpbMTY2Mzk2NjA4NSwtMTc1NjI1MTU1OCwyMD
+c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
+MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
+M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
 -->
