@@ -668,13 +668,10 @@ tf.cumsum(A, axis=0)
 
 ## Produto Escalar
 
-So far, we have only performed elementwise operations, sums, and averages. And if this was all we could do, linear algebra probably would not deserve its own section. However, one of the most fundamental operations is the dot product.
-Given two vectors $\mathbf{x}, \mathbf{y} \in \mathbb{R}^d$, their *dot product* $\mathbf{x}^\top \mathbf{y}$ (or $\langle \mathbf{x}, \mathbf{y}  \rangle$) is a sum over the products of the elements at the same position: $\mathbf{x}^\top \mathbf{y} = \sum_{i=1}^{d} x_i y_i$.
-
 Até agora, realizamos apenas operações elementares, somas e médias. E se isso fosse tudo que pudéssemos fazer, a álgebra linear provavelmente não mereceria sua própria seção. No entanto, uma das operações mais fundamentais é o produto escalar.
-Dados dois vetores $ \ mathbf {x}, \ mathbf {y} \ in \ mathbb {R} ^ d $, seu * produto escalar * $ \ mathbf {x} ^ \ top \ mathbf {y} $ (ou $ \ langle \ mathbf {x}, \ mathbf {y} \ rangle $) é uma soma sobre os produtos dos elementos na mesma posição: $ \ mathbf {x} ^ \ top \ mathbf {y} = \ sum_ {i = 1} ^ {d} x_i y_i $.
+Dados dois vetores $\mathbf{x}, \mathbf{y} \in \mathbb{R}^d$, seu *produto escalar* $\mathbf{x}^\top \mathbf{y}$ (ou $\langle \mathbf{x}, \mathbf{y}  \rangle$) é uma soma sobre os produtos dos elementos na mesma posição: $\mathbf{x}^\top \mathbf{y} = \sum_{i=1}^{d} x_i y_i$.
 
-[~~The *dot product* of two vectors is a sum over the products of the elements at the same position~~]
+[~~O *produto escalar* de dois vetores é uma soma sobre os produtos dos elementos na mesma posição~~]
 
 ```{.python .input}
 y = np.ones(4)
@@ -1093,8 +1090,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTYyNTE1NTgsMjA3NDQzOTE5MywtND
-kyNTAxNjQxLDExMDU3Mzc5NDgsNjAxODg3MjM2LDg1NzQ4ODk5
-OSwxNjgxMDUyNDIxLDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxOD
-Q5NDk0Nzc0LDEwMTkyODgwMzZdfQ==
+eyJoaXN0b3J5IjpbMjU2NTQ3MzA1LC0xNzU2MjUxNTU4LDIwNz
+Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
+Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
+c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
