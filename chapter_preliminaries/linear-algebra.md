@@ -1073,11 +1073,11 @@ ou outra excelente fonte :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea.200
 1. Consider a tensor with shape (2, 3, 4). What are the shapes of the summation outputs along axis 0, 1, and 2?
 1. Feed a tensor with 3 or more axes to the `linalg.norm` function and observe its output. What does this function compute for tensors of arbitrary shape?
 
-1. Prove que a transposta de uma matriz $ \ mathbf {A} $ transposta é $ \ mathbf {A} $: $ (\ mathbf {A} ^ \ top) ^ \ top = \ mathbf {A} $.
-1. Dadas duas matrizes $ \ mathbf {A} $ e $ \ mathbf {B} $, mostre que a soma das transpostas é igual à transposta de uma soma: $ \ mathbf {A} ^ \ top + \ mathbf {B } ^ \ top = (\ mathbf {A} + \ mathbf {B}) ^ \ top $.
-1. Dada qualquer matriz quadrada $ \ mathbf {A} $, $ \ mathbf {A} + \ mathbf {A} ^ \ top $ é sempre simétrica? Porque?
+1. Prove que a transposta de uma matriz $\mathbf {A}$ transposta é $\mathbf {A}$: $(\mathbf {A} ^ \top) ^ \top = \ mathbf {A}$.
+1. Dadas duas matrizes $\mathbf {A}$ e $\mathbf {B}$, mostre que a soma das transpostas é igual à transposta de uma soma: $\mathbf {A} ^ \top + \mathbf {B} ^ \top = (\mathbf {A} + \mathbf {B}) ^ \top$.
+1. Dada qualquer matriz quadrada $\mathbf {A}$, $\mathbf {A} + \mathbf {A} ^ \top$ é sempre simétrica? Porque?
 1. Definimos o tensor `X` de forma (2, 3, 4) nesta seção. Qual é a saída de `len (X)`?
-1. Para um tensor `X` de forma arbitrária,` len (X) `sempre corresponde ao comprimento de um certo eixo de` X`? Qual é esse eixo?
+1. Para um tensor `X` de forma arbitrária, `len (X) `sempre corresponde ao comprimento de um certo eixo de `X`? Qual é esse eixo?
 1. Execute `A / A.sum (eixo = 1)` e veja o que acontece. Você pode analisar o motivo?
 1. Ao viajar entre dois pontos em Manhattan, qual é a distância que você precisa percorrer em termos de coordenadas, ou seja, em termos de avenidas e ruas? Você pode viajar na diagonal?
 1. Considere um tensor com forma (2, 3, 4). Quais são as formas das saídas de soma ao longo dos eixos 0, 1 e 2?
@@ -1095,7 +1095,7 @@ ou outra excelente fonte :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea.200
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2OTIyNDk3MSwxNjYzOTY2MDg1LC0xNz
+eyJoaXN0b3J5IjpbLTc2MjQxNzIzOSwxNjYzOTY2MDg1LC0xNz
 U2MjUxNTU4LDIwNzQ0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3
 OTQ4LDYwMTg4NzIzNiw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNj
 M5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4
