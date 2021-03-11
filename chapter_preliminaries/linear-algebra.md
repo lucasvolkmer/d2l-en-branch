@@ -955,11 +955,6 @@ que é expresso como a soma dos valores absolutos dos elementos do vetor:
 (**$$\|\mathbf{x}\|_1 = \sum_{i=1}^n \left|x_i \right|.$$**)
 
 
-As compared with the $L_2$ norm,
-it is less influenced by outliers.
-To calculate the $L_1$ norm, we compose
-the absolute value function with a sum over the elements.
-
 Em comparação com a norma $L_2$,
 é menos influenciado por outliers.
 Para calcular a norma $L_1$, nós compomos
@@ -980,14 +975,14 @@ tf.reduce_sum(tf.abs(u))
 ```
 
 
-Both the $L_2$ norm and the $L_1$ norm
-are special cases of the more general $L_p$ *norm*:
+Tanto a norma $L_2$ quanto a norma $L_1$
+são casos especiais da norma mais geral $L_p$:
 
 $$\|\mathbf{x}\|_p = \left(\sum_{i=1}^n \left|x_i \right|^p \right)^{1/p}.$$
 
-Analogous to $L_2$ norms of vectors,
-[**the *Frobenius norm* of a matrix $\mathbf{X} \in \mathbb{R}^{m \times n}$**]
-is the square root of the sum of the squares of the matrix elements:
+Análogo a $L_2$ normas de vetores,
+[**a *norma de Frobenius* de uma matriz $\mathbf{X} \in \mathbb{R}^{m \times n}$**]
+é a raiz quadrada da soma dos quadrados dos elementos da matriz:
 
 [**$$\|\mathbf{X}\|_F = \sqrt{\sum_{i=1}^m \sum_{j=1}^n x_{ij}^2}.$$**]
 
@@ -1091,7 +1086,7 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MjExNzUzLDE2NjM5NjYwODUsLTE3NT
+eyJoaXN0b3J5IjpbNjA2MjEzNzkyLDE2NjM5NjYwODUsLTE3NT
 YyNTE1NTgsMjA3NDQzOTE5MywtNDkyNTAxNjQxLDExMDU3Mzc5
 NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNjgxMDUyNDIxLDE2Mz
 k2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0Nzc0LDEwMTkyODgw
