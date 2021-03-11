@@ -111,28 +111,27 @@ mais nossos *offsets* $\mathbf{b}$.
 ## Custo de Parametrização de Camadas Totalmente Conectadas
 :label:`subsec_parameterization-cost-fc-layers`
 
-As we will see in subsequent chapters,
-fully-connected layers are ubiquitous in deep learning.
-However, as the name suggests,
-fully-connected layers are *fully* connected
-with potentially many learnable parameters.
-Specifically,
-for any fully-connected layer
-with $d$ inputs and $q$ outputs,
-the parameterization cost is $\mathcal{O}(dq)$,
-which can be prohibitively high in practice.
-Fortunately,
-this cost 
-of transforming $d$ inputs into $q$ outputs
-can be reduced to $\mathcal{O}(\frac{dq}{n})$,
-where the hyperparameter $n$ can be flexibly specified
-by us to balance between parameter saving and model effectiveness in real-world applications :cite:`Zhang.Tay.Zhang.ea.2021`.
+Como veremos nos capítulos subsequentes,
+camadas totalmente conectadas são onipresentes no *deep learning*.
+No entanto, como o nome sugere,
+camadas totalmente conectadas são *totalmente* conectadas
+com muitos parâmetros potencialmente aprendíveis.
+Especificamente,
+para qualquer camada totalmente conectada
+com $d$ entradas e $q$ saídas,
+o custo de parametrização é $\mathcal{O}(dq)$,
+que pode ser proibitivamente alto na prática.
+Felizmente,
+este custo
+de transformar $d$ entradas em $q$ saídas
+pode ser reduzido a $\mathcal{O}(\frac{dq}{n})$,
+onde o hiperparâmetro $n$ pode ser especificado de maneira flexível
+por nós para equilibrar entre o salvamento de parâmetros e a eficácia do modelo em aplicações do mundo real :cite:`Zhang.Tay.Zhang.ea.2021`.
 
 
 
 
-
-## Softmax Operation
+## Operação do *Softmax* 
 :label:`subsec_softmax_operation`
 
 The main approach that we are going to take here
@@ -444,6 +443,6 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzgzNDcxNzIsLTEyOTExNDc1OTYsMT
-A2Njk1NjA5MywxODQzMzc1MDk0LDEzOTQ3MjM0NjBdfQ==
+eyJoaXN0b3J5IjpbMTcyOTA2MDk4MywtMTI5MTE0NzU5NiwxMD
+Y2OTU2MDkzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF19
 -->
