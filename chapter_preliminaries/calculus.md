@@ -1,14 +1,6 @@
 # Caálculuso
 :label:`sec_calculus`
 
-Finding the area of a polygon had remained mysterious
-until at least 2,500 years ago, when ancient Greeks divided a polygon into triangles and summed their areas.
-To find the area of curved shapes, such as a circle,
-ancient Greeks inscribed polygons in such shapes.
-As shown in :numref:`fig_circle_area`,
-an inscribed polygon with more sides of equal length better approximates
-the circle. This process is also known as the *method of exhaustion*.
-
 Encontrar a área de um polígono permaneceu um mistério
 até pelo menos 2.500 anos atrás, quando os gregos antigos dividiam um polígono em triângulos e somavam suas áreas.
 Para encontrar a área de formas curvas, como um círculo,
@@ -221,6 +213,11 @@ the following rules can be handy for us.
 Suppose that functions $f$ and $g$ are both differentiable and $C$ is a constant,
 we have the *constant multiple rule*
 
+Para diferenciar uma função que é formada de algumas funções mais simples, como as funções comuns acima,
+as regras a seguir podem ser úteis para nós.
+Suponha que as funções $f$ e $g$ sejam diferenciáveis e $C$ seja uma constante,
+temos a *regra múltipla constante*
+
 $$\frac{d}{dx} [Cf(x)] = C \frac{d}{dx} f(x),$$
 
 the *sum rule*
@@ -430,5 +427,5 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU5ODU3NTkwLC0xOTc5MzM1ODI3XX0=
+eyJoaXN0b3J5IjpbMTU4NjYwNjE1MSwtMTk3OTMzNTgyN119
 -->
