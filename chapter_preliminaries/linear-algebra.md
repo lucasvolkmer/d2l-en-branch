@@ -895,18 +895,19 @@ do mesmo fator constante:
 $$f(\alpha \mathbf{x}) = |\alpha| f(\mathbf{x}).$$
 
 
-The second property is the familiar triangle inequality:
+A segunda propriedade é a familiar desigualdade do triângulo:
 
 $$f(\mathbf{x} + \mathbf{y}) \leq f(\mathbf{x}) + f(\mathbf{y}).$$
 
 
-The third property simply says that the norm must be non-negative:
+A terceira propriedade simplesmente diz que a norma deve ser não negativa:
 
 $$f(\mathbf{x}) \geq 0.$$
 
-That makes sense, as in most contexts the smallest *size* for anything is 0.
-The final property requires that the smallest norm is achieved and only achieved
-by a vector consisting of all zeros.
+
+Isso faz sentido, pois na maioria dos contextos, o menor *tamanho* para qualquer coisa é 0.
+A propriedade final requer que a menor norma seja alcançada e somente alcançada
+por um vetor que consiste em todos os zeros.
 
 $$\forall i, [\mathbf{x}]_i = 0 \Leftrightarrow f(\mathbf{x})=0.$$
 
@@ -918,6 +919,15 @@ In fact, the Euclidean distance is a norm:
 specifically it is the $L_2$ norm.
 Suppose that the elements in the $n$-dimensional vector
 $\mathbf{x}$ are $x_1, \ldots, x_n$.
+
+Você pode notar que as normas se parecem muito com medidas de distância.
+E se você se lembra das distâncias euclidianas
+(pense no teorema de Pitágoras) da escola primária,
+então, os conceitos de não negatividade e a desigualdade do triângulo podem soar um sino.
+Na verdade, a distância euclidiana é uma norma:
+especificamente, é a norma $L_2$.
+Suponha que os elementos no vetor $n$ -dimensional
+$\mathbf{x}$ são $x_1, \ldots, x_n$.
 
 [**The $L_2$ *norm* of $\mathbf{x}$ is the square root of the sum of the squares of the vector elements:**]
 
@@ -1084,8 +1094,8 @@ or other excellent resources :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNzI4NzY4MiwtMTc1NjI1MTU1OCwyMD
-c0NDM5MTkzLC00OTI1MDE2NDEsMTEwNTczNzk0OCw2MDE4ODcy
-MzYsODU3NDg4OTk5LDE2ODEwNTI0MjEsMTYzOTYxMjc5OSwyMD
-M3OTY3ODY0LDE4NDk0OTQ3NzQsMTAxOTI4ODAzNl19
+eyJoaXN0b3J5IjpbNTQxMzg3ODY3LC0xNzU2MjUxNTU4LDIwNz
+Q0MzkxOTMsLTQ5MjUwMTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIz
+Niw4NTc0ODg5OTksMTY4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMz
+c5Njc4NjQsMTg0OTQ5NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
