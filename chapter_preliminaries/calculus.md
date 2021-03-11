@@ -53,18 +53,18 @@ ii) *generalization*: the mathematical principles and practitioners' wisdom
 that guide as to how to produce models whose validity extends
 beyond the exact set of data examples used to train them.
 
-No aprendizado profundo, nós * treinamos * modelos, atualizando-os sucessivamente
+No *Deep Learning*, nós *treinamos* modelos, atualizando-os sucessivamente
 para que fiquem cada vez melhores à medida que veem mais e mais dados.
-Normalmente, melhorar significa minimizar uma * função de perda *,
-uma pontuação que responde à pergunta "quão * ruim * é o nosso modelo?"
+Normalmente, melhorar significa minimizar uma *função de perda*,
+uma pontuação que responde à pergunta "quão *ruim* é o nosso modelo?"
 Esta pergunta é mais sutil do que parece.
 Em última análise, o que realmente nos preocupa
 está produzindo um modelo com bom desempenho em dados
 que nunca vimos antes.
 Mas só podemos ajustar o modelo aos dados que podemos realmente ver.
 Assim, podemos decompor a tarefa de ajustar os modelos em duas preocupações principais:
-i) * otimização *: processo de adequação de nossos modelos aos dados observados;
-ii) * generalização *: os princípios matemáticos e a sabedoria dos profissionais
+i) *otimização*: processo de adequação de nossos modelos aos dados observados;
+ii) *generalização*: os princípios matemáticos e a sabedoria dos profissionais
 que guia sobre como produzir modelos cuja validade se estende
 além do conjunto exato de exemplos de dados usados para treiná-los.
 
@@ -430,5 +430,5 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MTIyOTYxMywtMTk3OTMzNTgyN119
+eyJoaXN0b3J5IjpbMTUwNDk0Mjc1OSwtMTk3OTMzNTgyN119
 -->
