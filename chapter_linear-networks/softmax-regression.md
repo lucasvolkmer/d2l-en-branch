@@ -181,27 +181,27 @@ e, em seguida, dividimos pela soma (garantindo que somem 1):
 $$\hat{\mathbf{y}} = \mathrm{softmax}(\mathbf{o})\quad \text{where}\quad \hat{y}_j = \frac{\exp(o_j)}{\sum_k \exp(o_k)}. $$
 :eqlabel:`eq_softmax_y_and_o`
 
-It is easy to see $\hat{y}_1 + \hat{y}_2 + \hat{y}_3 = 1$
-with $0 \leq \hat{y}_j \leq 1$ for all $j$.
-Thus, $\hat{\mathbf{y}}$ is a proper probability distribution
-whose element values can be interpreted accordingly.
-Note that the softmax operation does not change the ordering among the logits $\mathbf{o}$,
-which are simply the pre-softmax values
-that determine the probabilities assigned to each class.
-Therefore, during prediction we can still pick out the most likely class by
+É fácil ver $\hat{y}_1 + \hat{y}_2 + \hat{y}_3 = 1$
+with $0 \leq \hat{y}_j \leq 1$ para todo $j$.
+Assim, $\hat{\mathbf{y}}$ é uma distribuição de probabilidade adequada
+cujos valores de elementos podem ser interpretados em conformidade.
+Observe que a operação *softmax* não muda a ordem entre os *logits* $\mathbf{o}$,
+que são simplesmente os valores pré-*softmax*
+que determinam as probabilidades atribuídas a cada classe.
+Portanto, durante a previsão, ainda podemos escolher a classe mais provável por
 
 $$
 \operatorname*{argmax}_j \hat y_j = \operatorname*{argmax}_j o_j.
 $$
 
-Although softmax is a nonlinear function,
-the outputs of softmax regression are still *determined* by
-an affine transformation of input features;
-thus, softmax regression is a linear model.
+Embora *softmax* seja uma função não linear,
+as saídas da regressão *softmax* ainda são *determinadas* por
+uma transformação afim de recursos de entrada;
+portanto, a regressão *softmax* é um modelo linear.
 
 
 
-## Vectorization for Minibatches
+## Vetorização para *Minibatches*
 :label:`subsec_softmax_vectorization`
 
 To improve computational efficiency and take advantage of GPUs,
@@ -444,7 +444,7 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNjk3MDEzNiwxNzI5MDYwOTgzLC0xMj
-kxMTQ3NTk2LDEwNjY5NTYwOTMsMTg0MzM3NTA5NCwxMzk0NzIz
-NDYwXX0=
+eyJoaXN0b3J5IjpbMzg0Nzk1OTM1LDE3MjkwNjA5ODMsLTEyOT
+ExNDc1OTYsMTA2Njk1NjA5MywxODQzMzc1MDk0LDEzOTQ3MjM0
+NjBdfQ==
 -->
