@@ -26,11 +26,11 @@ Mais de 2.000 anos depois,
 o outro ramo do cálculo, *cálculo diferencial*,
 foi inventado.
 Entre as aplicações mais críticas do cálculo diferencial,
-problemas de otimização consideram como fazer algo * o melhor *.
+problemas de otimização consideram como fazer algo *o melhor*.
 Conforme discutido em :numref:`subsec_norms_and_objectives`,
-tais problemas são onipresentes no aprendizado profundo.
+tais problemas são onipresentes em *Deep Learning*.
 
-In deep learning, we *train* models, updating them successively
+Em *Deep Learning*, we *train* models, updating them successively
 so that they get better and better as they see more and more data.
 Usually, getting better means minimizing a *loss function*,
 a score that answers the question "how *bad* is our model?"
@@ -45,7 +45,7 @@ ii) *generalization*: the mathematical principles and practitioners' wisdom
 that guide as to how to produce models whose validity extends
 beyond the exact set of data examples used to train them.
 
-No *Deep Learning*, nós *treinamos* modelos, atualizando-os sucessivamente
+Em *Deep Learning*, nós *treinamos* modelos, atualizando-os sucessivamente
 para que fiquem cada vez melhores à medida que veem mais e mais dados.
 Normalmente, melhorar significa minimizar uma *função de perda*,
 uma pontuação que responde à pergunta "quão *ruim* é o nosso modelo?"
@@ -427,5 +427,5 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NjYwNjE1MSwtMTk3OTMzNTgyN119
+eyJoaXN0b3J5IjpbNTY1MjYwNjQ0LC0xOTc5MzM1ODI3XX0=
 -->
