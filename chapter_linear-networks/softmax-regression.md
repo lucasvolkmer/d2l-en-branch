@@ -324,7 +324,7 @@ Em qualquer família exponencial (veja o modelo no
 os gradientes da probabilidade logarítmica são dados precisamente por esse termo.
 Esse fato torna a computação dos gradientes fáceis na prática.
 
-### Cross-Entropy Loss
+### Perda de Entropia Cruzada
 
 Now consider the case where we observe not just a single outcome
 but an entire distribution over outcomes.
@@ -444,7 +444,7 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODMyODczODUsLTg2NTE4MTkxOCwtMT
+eyJoaXN0b3J5IjpbLTEyNTI0NzYxNzcsLTg2NTE4MTkxOCwtMT
 MwMjM4MDE4OSwtMTQxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2
 MDk4MywtMTI5MTE0NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOT
 QsMTM5NDcyMzQ2MF19
