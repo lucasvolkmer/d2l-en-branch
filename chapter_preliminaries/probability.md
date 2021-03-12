@@ -115,13 +115,8 @@ multinomial.Multinomial(10, fair_probs).sample()
 tfp.distributions.Multinomial(10, fair_probs).sample()
 ```
 
-Now that we know how to sample rolls of a die, we can simulate 1000 rolls. We
-can then go through and count, after each of the 1000 rolls, how many times each
-number was rolled.
-Specifically, we calculate the relative frequency as the estimate of the true probability.
-
-Agora que sabemos como obter amostras de um dado, podemos simular 1000 execuções. Nós
-pode então passar e contar, após cada um dos 1000 lançamentos, quantas vezes cada
+Agora que sabemos como obter amostras de um dado, podemos simular 1000 execuções.
+Podemos então passar e contar, após cada um dos 1000 lançamentos, quantas vezes cada
 número foi rolado.
 Especificamente, calculamos a frequência relativa como a estimativa da probabilidade verdadeira.
 
@@ -576,7 +571,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzYzMDczNTksODE5MDMyNTM4LDE0Nj
+eyJoaXN0b3J5IjpbLTEzNDg4OTM2MjcsODE5MDMyNTM4LDE0Nj
 MwNTUxODksLTEyMzUyODcxMjcsMTg0MDQ2MjE1NywzNDA4MTQ5
 NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4XX0=
 -->
