@@ -223,11 +223,6 @@ def set_axes(axes, xlabel, ylabel, xlim, ylim, xscale, yscale, legend):
     axes.grid()
 ```
 
-With these three functions for figure configurations,
-we define the `plot` function
-to plot multiple curves succinctly
-since we will need to visualize many curves throughout the book.
-
 Com essas três funções para configurações de figura,
 nós definimos a função `plot`
 para traçar várias curvas sucintamente
@@ -268,8 +263,6 @@ def plot(X, Y=None, xlabel=None, ylabel=None, legend=None, xlim=None,
     set_axes(axes, xlabel, ylabel, xlim, ylim, xscale, yscale, legend)
 ```
 
-Now we can [**plot the function $u = f(x)$ and its tangent line $y = 2x - 3$ at $x=1$**], where the coefficient $2$ is the slope of the tangent line.
-
 Agora podemos [**plotar a função $u = f (x)$ e sua linha tangente $y = 2x - 3$ em $x = 1$**], onde o coeficiente $2$ é a inclinação da linha tangente .
 
 ```{.python .input}
@@ -278,7 +271,7 @@ x = np.arange(0, 3, 0.1)
 plot(x, [f(x), 2 * x - 3], 'x', 'f(x)', legend=['f(x)', 'Tangent line (x=1)'])
 ```
 
-## Partial Derivatives
+## Derivadas Parciais
 
 So far we have dealt with the differentiation of functions of just one variable.
 In deep learning, functions often depend on *many* variables.
@@ -410,6 +403,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNjEzMjA4OCw1NjUyNjA2NDQsLTE5Nz
-kzMzU4MjddfQ==
+eyJoaXN0b3J5IjpbOTg3MDk5NTQxLDU2NTI2MDY0NCwtMTk3OT
+MzNTgyN119
 -->
