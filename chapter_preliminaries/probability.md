@@ -276,20 +276,20 @@ That is to say, if $3$ dots faced up after rolling a die, since $3 \in \{1, 3, 5
 we can say that the event "seeing an odd number" has occurred.
 
 Ao lidar com as jogadas de um dado,
-chamamos o conjunto $\mathcal{S} = \{1, 2, 3, 4, 5, 6\}$ o * espaço de amostra * ou * espaço de resultado *, onde cada elemento é um * resultado *.
-Um * evento * é um conjunto de resultados de um determinado espaço amostral.
-Por exemplo, "ver $ 5 $" ($ \ {5 \} $) e "ver um número ímpar" ($ \ {1, 3, 5 \} $) são eventos válidos de lançar um dado.
-Observe que se o resultado de um experimento aleatório estiver no evento $ \ mathcal {A} $,
-então o evento $ \ mathcal {A} $ ocorreu.
-Ou seja, se $ 3 $ pontos virados para cima após rolar um dado, uma vez que $ 3 \ em \ {1, 3, 5 \} $,
+chamamos o conjunto $\mathcal{S} = \{1, 2, 3, 4, 5, 6\}$ o *espaço de amostra* ou *espaço de resultado*, onde cada elemento é um *resultado*.
+Um *evento* é um conjunto de resultados de um determinado espaço amostral.
+Por exemplo, "ver $5$" ($\{5 \}$) e "ver um número ímpar" ($\{1, 3, 5 \}$) são eventos válidos de lançar um dado.
+Observe que se o resultado de um experimento aleatório estiver no evento $\mathcal {A}$,
+então o evento $\mathcal {A}$ ocorreu.
+Ou seja, se $3$ pontos virados para cima após rolar um dado, uma vez que $3 \in \{1, 3, 5 \}$,
 podemos dizer que o evento "ver um número ímpar" ocorreu.
 
 Formally, *probability* can be thought of a function that maps a set to a real value.
 The probability of an event $\mathcal{A}$ in the given sample space $\mathcal{S}$,
 denoted as $P(\mathcal{A})$, satisfies the following properties:
 
-Formalmente, * probabilidade * pode ser pensada como uma função que mapeia um conjunto para um valor real.
-A probabilidade de um evento $ \ mathcal {A} $ no espaço amostral dado $ \ mathcal {S} $,
+Formalmente, *probabilidade* pode ser pensada como uma função que mapeia um conjunto para um valor real.
+A probabilidade de um evento $\mathcal {A}$ no espaço amostral dado $ \ mathcal {S} $,
 denotado como $ P (\ mathcal {A}) $, satisfaz as seguintes propriedades:
 
 * For any event $\mathcal{A}$, its probability is never negative, i.e., $P(\mathcal{A}) \geq 0$;
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MDI3NTAyOCw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbLTEwMDI3NTk0MzcsODE5OTI0MDE4XX0=
 -->
