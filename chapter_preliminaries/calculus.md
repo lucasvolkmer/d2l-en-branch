@@ -30,21 +30,6 @@ problemas de otimização consideram como fazer algo *o melhor*.
 Conforme discutido em :numref:`subsec_norms_and_objectives`,
 tais problemas são onipresentes em *Deep Learning*.
 
-Em *Deep Learning*, we *train* models, updating them successively
-so that they get better and better as they see more and more data.
-Usually, getting better means minimizing a *loss function*,
-a score that answers the question "how *bad* is our model?"
-This question is more subtle than it appears.
-Ultimately, what we really care about
-is producing a model that performs well on data
-that we have never seen before.
-But we can only fit the model to data that we can actually see.
-Thus we can decompose the task of fitting models into two key concerns:
-i) *optimization*: the process of fitting our models to observed data;
-ii) *generalization*: the mathematical principles and practitioners' wisdom
-that guide as to how to produce models whose validity extends
-beyond the exact set of data examples used to train them.
-
 Em *Deep Learning*, nós *treinamos* modelos, atualizando-os sucessivamente
 para que fiquem cada vez melhores à medida que veem mais e mais dados.
 Normalmente, melhorar significa minimizar uma *função de perda*,
@@ -59,11 +44,6 @@ i) *otimização*: processo de adequação de nossos modelos aos dados observado
 ii) *generalização*: os princípios matemáticos e a sabedoria dos profissionais
 que guia sobre como produzir modelos cuja validade se estende
 além do conjunto exato de exemplos de dados usados para treiná-los.
-
-To help you understand
-optimization problems and methods in later chapters,
-here we give a very brief primer on differential calculus
-that is commonly used in deep learning.
 
 Para te ajudar a entender
 problemas e métodos de otimização em capítulos posteriores,
@@ -427,5 +407,6 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY1MjYwNjQ0LC0xOTc5MzM1ODI3XX0=
+eyJoaXN0b3J5IjpbLTI1MjExNTE0LDU2NTI2MDY0NCwtMTk3OT
+MzNTgyN119
 -->
