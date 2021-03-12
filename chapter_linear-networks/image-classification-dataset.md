@@ -84,10 +84,10 @@ len(mnist_train), len(mnist_test)
 len(mnist_train[0]), len(mnist_test[0])
 ```
 
-The height and width of each input image are both 28 pixels.
-Note that the dataset consists of grayscale images, whose number of channels is 1.
-For brevity, throughout this book
-we store the shape of any image with height $h$ width $w$ pixels as $h \times w$ or ($h$, $w$).
+A altura e a largura de cada imagem de entrada são 28 pixels.
+Observe que o *dataset* consiste em imagens em tons de cinza, cujo número de canais é 1.
+Para resumir, ao longo deste livro
+armazenamos a forma de qualquer imagem com altura $h$ largura $w$ pixels como $h \times w$ or ($h$, $w$).
 
 ```{.python .input}
 #@tab all
@@ -320,5 +320,5 @@ We are now ready to work with the Fashion-MNIST dataset in the sections that fol
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNTY4NDEyMywyMTQ4MzY5MjFdfQ==
+eyJoaXN0b3J5IjpbLTU0MjAwNTUyNiwyMTQ4MzY5MjFdfQ==
 -->
