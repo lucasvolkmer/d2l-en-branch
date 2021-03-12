@@ -193,24 +193,25 @@ def net(X):
 
 ## Definindo a Função de Perda
 
-Next, we need to implement the cross-entropy loss function,
-as introduced in :numref:`sec_softmax`.
-This may be the most common loss function
-in all of deep learning because, at the moment,
-classification problems far outnumber regression problems.
 
-Recall that cross-entropy takes the negative log-likelihood
-of the predicted probability assigned to the true label.
-Rather than iterating over the predictions with a Python for-loop
-(which tends to be inefficient),
-we can pick all elements by a single operator.
-Below, we [**create sample data `y_hat`
-with 2 examples of predicted probabilities over 3 classes and their corresponding labels `y`.**]
-With `y` we know that in the first example the first class is the correct prediction and
-in the second example the third class is the ground-truth.
-[**Using `y` as the indices of the probabilities in `y_hat`,**]
-we pick the probability of the first class in the first example
-and the probability of the third class in the second example.
+Em seguida, precisamos implementar a função de perda de entropia cruzada,
+conforme apresentado em :numref:`sec_softmax`.
+Esta pode ser a função de perda mais comum
+em todo o *deep learning* porque, no momento,
+os problemas de classificação superam em muito os problemas de regressão.
+
+Lembre-se de que a entropia cruzada leva a *log-likelihood* negativa
+da probabilidade prevista atribuída ao rótulo verdadeiro.
+Em vez de iterar as previsões com um *loop for* Python
+(que tende a ser ineficiente),
+podemos escolher todos os elementos por um único operador.
+Abaixo, nós [**criamos dados de amostra `y_hat`
+com 2 exemplos de probabilidades previstas em 3 classes e seus rótulos correspondentes `y`.**]
+Com `y` sabemos que no primeiro exemplo a primeira classe é a previsão correta e
+no segundo exemplo, a terceira classe é a verdade fundamental.
+[**Usando `y` como os índices das probabilidades em` y_hat`,**]
+escolhemos a probabilidade da primeira classe no primeiro exemplo
+e a probabilidade da terceira classe no segundo exemplo.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -606,7 +607,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEyMDIyMzg0LDE2MDA5ODQ0NTYsNzQyNT
-E3NDg3LC0yMTMxNTA1NDkzLC05OTkwNzg3NjcsLTE5ODQxODk3
-MjVdfQ==
+eyJoaXN0b3J5IjpbMTc0Mjc0NDE0MCwxNjAwOTg0NDU2LDc0Mj
+UxNzQ4NywtMjEzMTUwNTQ5MywtOTk5MDc4NzY3LC0xOTg0MTg5
+NzI1XX0=
 -->
