@@ -550,6 +550,8 @@ $$
 
 That is, the second test allowed us to gain much higher confidence that not all is well. Despite the second test being considerably less accurate than the first one, it still significantly improved our estimate.
 
+Ou seja, o segundo teste nos permitiu ganhar uma confiança muito maior de que nem tudo está bem. Apesar do segundo teste ser consideravelmente menos preciso do que o primeiro, ele ainda melhorou significativamente nossa estimativa.
+
 
 
 ## Expectation and Variance
@@ -558,15 +560,24 @@ To summarize key characteristics of probability distributions,
 we need some measures.
 The *expectation* (or average) of the random variable $X$ is denoted as
 
+Para resumir as principais características das distribuições de probabilidade,
+precisamos de algumas medidas.
+A * expectativa * (ou média) da variável aleatória $ X $ é denotada como
+
 $$E[X] = \sum_{x} x P(X = x).$$
 
 When the input of a function $f(x)$ is a random variable drawn from the distribution $P$ with different values $x$,
 the expectation of $f(x)$ is computed as
 
+Quando a entrada de uma função $ f (x) $ é uma variável aleatória retirada da distribuição $ P $ com valores diferentes $ x $,
+a expectativa de $ f (x) $ é calculada como
+
 $$E_{x \sim P}[f(x)] = \sum_x f(x) P(x).$$
 
 
 In many cases we want to measure by how much the random variable $X$ deviates from its expectation. This can be quantified by the variance
+
+Em muitos casos, queremos medir o quanto a variável aleatória $ X $ se desvia de sua expectativa. Isso pode ser quantificado pela variação
 
 $$\mathrm{Var}[X] = E\left[(X - E[X])^2\right] =
 E[X^2] - E[X]^2.$$
@@ -575,6 +586,11 @@ Its square root is called the *standard deviation*.
 The variance of a function of a random variable measures
 by how much the function deviates from the expectation of the function,
 as different values $x$ of the random variable are sampled from its distribution:
+
+Sua raiz quadrada é chamada de * desvio padrão *.
+A variância de uma função de uma variável aleatória mede
+pelo quanto a função se desvia da expectativa da função,
+como diferentes valores $ x $ da variável aleatória são amostrados de sua distribuição:
 
 $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 
@@ -585,13 +601,20 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 * We can analyze multiple random variables using joint distribution, conditional distribution, Bayes' theorem, marginalization, and independence assumptions.
 * Expectation and variance offer useful measures to summarize key characteristics of probability distributions.
 
+* Podemos obter amostras de distribuições de probabilidade.
+* Podemos analisar múltiplas variáveis aleatórias usando distribuição conjunta, distribuição condicional, teorema de Bayes, marginalização e suposições de independência.
+* A expectativa e a variância oferecem medidas úteis para resumir as principais características das distribuições de probabilidade.
 
 ## Exercises
 
 1. We conducted $m=500$ groups of experiments where each group draws $n=10$ samples. Vary $m$ and $n$. Observe and analyze the experimental results.
-1. Given two events with probability $P(\mathcal{A})$ and $P(\mathcal{B})$, compute upper and lower bounds on $P(\mathcal{A} \cup \mathcal{B})$ and $P(\mathcal{A} \cap \mathcal{B})$. (Hint: display the situation using a [Venn Diagram](https://en.wikipedia.org/wiki/Venn_diagram).)
-1. Assume that we have a sequence of random variables, say $A$, $B$, and $C$, where $B$ only depends on $A$, and $C$ only depends on $B$, can you simplify the joint probability $P(A, B, C)$? (Hint: this is a [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain).)
-1. In :numref:`subsec_probability_hiv_app`, the first test is more accurate. Why not run the first test twice rather than run both the first and second tests?
+2. Given two events with probability $P(\mathcal{A})$ and $P(\mathcal{B})$, compute upper and lower bounds on $P(\mathcal{A} \cup \mathcal{B})$ and $P(\mathcal{A} \cap \mathcal{B})$. (Hint: display the situation using a [Venn Diagram](https://en.wikipedia.org/wiki/Venn_diagram).)
+3. Assume that we have a sequence of random variables, say $A$, $B$, and $C$, where $B$ only depends on $A$, and $C$ only depends on $B$, can you simplify the joint probability $P(A, B, C)$? (Hint: this is a [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain).)
+4. In :numref:`subsec_probability_hiv_app`, the first test is more accurate. Why not run the first test twice rather than run both the first and second tests?
+1. Conduzimos $ m = 500 $ grupos de experimentos onde cada grupo extrai $ n = 10 $ amostras. Varie $ m $ e $ n $. Observe e analise os resultados experimentais.
+1. Dados dois eventos com probabilidade $ P (\ mathcal {A}) $ e $ P (\ mathcal {B}) $, calcule os limites superior e inferior em $ P (\ mathcal {A} \ cup \ mathcal {B} ) $ e $ P (\ mathcal {A} \ cap \ mathcal {B}) $. (Dica: exiba a situação usando um [Diagrama de Venn] (https://en.wikipedia.org/wiki/Venn_diagram).)
+1. Suponha que temos uma sequência de variáveis aleatórias, digamos $ A $, $ B $ e $ C $, onde $ B $ depende apenas de $ A $ e $ C $ depende apenas de $ B $, você pode simplificar a probabilidade conjunta $ P (A, B, C) $? (Dica: esta é uma [Cadeia de Markov] (https://en.wikipedia.org/wiki/Markov_chain).)
+1. Em: numref: `subsec_probability_hiv_app`, o primeiro teste é mais preciso. Por que não executar o primeiro teste duas vezes em vez de executar o primeiro e o segundo testes?
 
 
 :begin_tab:`mxnet`
@@ -606,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMTI4NDUyNl19
+eyJoaXN0b3J5IjpbODE5OTI0MDE4XX0=
 -->
