@@ -320,35 +320,35 @@ onde o gradiente era a diferença
 entre a observação $y$ e a estimativa $\hat{y}$.
 Isso não é coincidência.
 Em qualquer família exponencial (veja o modelo no
-[apêndice online sobre distribuições] (https://d2l.ai/chapter_apencha-mathematics-for-deep-learning/distributions.html)),
+[apêndice online sobre distribuições](https://d2l.ai/chapter_apencha-mathematics-for-deep-learning/distributions.html)),
 os gradientes da probabilidade logarítmica são dados precisamente por esse termo.
 Esse fato torna a computação dos gradientes fáceis na prática.
 
 ### Perda de Entropia Cruzada
 
-Now consider the case where we observe not just a single outcome
-but an entire distribution over outcomes.
-We can use the same representation as before for the label $\mathbf{y}$.
-The only difference is that rather than a vector containing only binary entries,
-say $(0, 0, 1)$, we now have a generic probability vector, say $(0.1, 0.2, 0.7)$.
-The math that we used previously to define the loss $l$
-in :eqref:`eq_l_cross_entropy`
-still works out fine,
-just that the interpretation is slightly more general.
-It is the expected value of the loss for a distribution over labels.
-This loss is called the *cross-entropy loss* and it is
-one of the most commonly used losses for classification problems.
-We can demystify the name by introducing just the basics of information theory.
-If you wish to understand more details of information theory,
-you may further refer to the [online appendix on information theory](https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/information-theory.html).
+Agora considere o caso em que observamos não apenas um único resultado
+mas toda uma distribuição de resultados.
+Podemos usar a mesma representação de antes para o rótulo $\mathbf{y}$.
+A única diferença é que, em vez de um vetor contendo apenas entradas binárias,
+digamos $(0, 0, 1)$, agora temos um vetor de probabilidade genérico, digamos $(0.1, 0.2, 0.7)$.
+A matemática que usamos anteriormente para definir a perda $l$
+em :eqref:`eq_l_cross_entropy`
+ainda funciona bem,
+apenas que a interpretação é um pouco mais geral.
+É o valor esperado da perda de uma distribuição nos *labels*.
+Esta perda é chamada de *perda de entropia cruzada* e é
+uma das perdas mais comumente usadas para problemas de classificação.
+Podemos desmistificar o nome apresentando apenas os fundamentos da teoria da informação.
+Se você deseja entender mais detalhes da teoria da informação,
+você também pode consultar o [apêndice online sobre teoria da informação](https://d2l.ai/chapter_apencha-mathematics-for-deep-learning/information-theory.html).
 
 
 
-## Information Theory Basics
+## Fundamentos da Teoria da Informação
 :label:`subsec_info_theory_basics`
 
-*Information theory* deals with the problem of encoding, decoding, transmitting,
-and manipulating information (also known as data) in as concise form as possible.
+*Teoria da informação* lida com o problema de codificação, decodificação, transmissão,
+e manipulação informações (também conhecidas como dados) da forma mais concisa possível.
 
 
 ### Entropy
@@ -444,8 +444,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTI0NzYxNzcsLTg2NTE4MTkxOCwtMT
-MwMjM4MDE4OSwtMTQxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2
-MDk4MywtMTI5MTE0NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOT
-QsMTM5NDcyMzQ2MF19
+eyJoaXN0b3J5IjpbMTcwMjk3NzE3NSwtODY1MTgxOTE4LC0xMz
+AyMzgwMTg5LC0xNDE0MjMyNjk1LDM4NDc5NTkzNSwxNzI5MDYw
+OTgzLC0xMjkxMTQ3NTk2LDEwNjY5NTYwOTMsMTg0MzM3NTA5NC
+wxMzk0NzIzNDYwXX0=
 -->
