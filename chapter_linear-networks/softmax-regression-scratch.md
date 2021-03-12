@@ -283,24 +283,24 @@ def accuracy(y_hat, y):  #@save
     return float(d2l.reduce_sum(d2l.astype(cmp, y.dtype)))
 ```
 
-We will continue to use the variables `y_hat` and `y`
-defined before
-as the predicted probability distributions and labels, respectively.
-We can see that the first example's prediction class is 2
-(the largest element of the row is 0.6 with the index 2),
-which is inconsistent with the actual label, 0.
-The second example's prediction class is 2
-(the largest element of the row is 0.5 with the index of 2),
-which is consistent with the actual label, 2.
-Therefore, the classification accuracy rate for these two examples is 0.5.
+Continuaremos a usar as variáveis `y_hat` e` y`
+definidas antes
+como as distribuições de probabilidade e *labels* previstos, respectivamente.
+Podemos ver que a classe prevista no primeiro exemplo é 2
+(o maior elemento da linha é 0,6 com o índice 2),
+que é inconsistente com o rótulo real, 0.
+A classe prevista do segundo exemplo é 2
+(o maior elemento da linha é 0,5 com o índice de 2),
+que é consistente com o rótulo real, 2.
+Portanto, a taxa de precisão da classificação para esses dois exemplos é 0,5.
 
 ```{.python .input}
 #@tab all
 accuracy(y_hat, y) / len(y)
 ```
 
-[**Similarly, we can evaluate the accuracy for any model `net` on a dataset**]
-that is accessed via the data iterator `data_iter`.
+[**Da mesma forma, podemos avaliar a precisão da `rede` de qualquer modelo em um conjunto de dados**]
+que é acessado por meio do iterador de dados `data_iter`.
 
 ```{.python .input}
 #@tab mxnet, tensorflow
@@ -608,7 +608,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTMzMzIwMTksMTE1MzA4MTM1LDE2MD
-A5ODQ0NTYsNzQyNTE3NDg3LC0yMTMxNTA1NDkzLC05OTkwNzg3
-NjcsLTE5ODQxODk3MjVdfQ==
+eyJoaXN0b3J5IjpbLTk4MzQyMTUxNywtMTk1MzMzMjAxOSwxMT
+UzMDgxMzUsMTYwMDk4NDQ1Niw3NDI1MTc0ODcsLTIxMzE1MDU0
+OTMsLTk5OTA3ODc2NywtMTk4NDE4OTcyNV19
 -->
