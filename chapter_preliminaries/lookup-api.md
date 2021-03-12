@@ -55,9 +55,7 @@ help(torch.ones)
 help(tf.ones)
 ```
 
-From the documentation, we can see that the `ones` function creates a new tensor with the specified shape and sets all the elements to the value of 1. Whenever possible, you should (**run a quick test**) to confirm your interpretation:
-
-A partir da documentação, podemos ver que a função `uns` cria um novo tensor com a forma especificada e define todos os elementos com o valor de 1. Sempre que possível, você deve (**executar um teste rápido**) para confirmar seu interpretação:
+A partir da documentação, podemos ver que a função `ones` cria um novo tensor com a forma especificada e define todos os elementos com o valor de 1. Sempre que possível, você deve (**executar um teste rápido**) para confirmar seu interpretação:
 
 ```{.python .input}
 np.ones(4)
@@ -115,5 +113,5 @@ exibido.
 [Discussions](https://discuss.d2l.ai/t/199)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NjAzNjYxOF19
+eyJoaXN0b3J5IjpbNzQwOTk2MTYyXX0=
 -->
