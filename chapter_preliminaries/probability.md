@@ -377,17 +377,11 @@ $$\begin{aligned}
 \end{aligned}
 $$
 
-That is, the second test allowed us to gain much higher confidence that not all is well. Despite the second test being considerably less accurate than the first one, it still significantly improved our estimate.
-
 Ou seja, o segundo teste nos permitiu ganhar uma confiança muito maior de que nem tudo está bem. Apesar do segundo teste ser consideravelmente menos preciso do que o primeiro, ele ainda melhorou significativamente nossa estimativa.
 
 
 
-## Expectation and Variance
-
-To summarize key characteristics of probability distributions,
-we need some measures.
-The *expectation* (or average) of the random variable $X$ is denoted as
+## Expectativa e Variância
 
 Para resumir as principais características das distribuições de probabilidade,
 precisamos de algumas medidas.
@@ -395,26 +389,15 @@ A *expectativa* (ou média) da variável aleatória $X$ é denotada como
 
 $$E[X] = \sum_{x} x P(X = x).$$
 
-When the input of a function $f(x)$ is a random variable drawn from the distribution $P$ with different values $x$,
-the expectation of $f(x)$ is computed as
-
 Quando a entrada de uma função $f (x)$ é uma variável aleatória retirada da distribuição $P$ com valores diferentes $x$,
 a expectativa de $f (x)$ é calculada como
 
 $$E_{x \sim P}[f(x)] = \sum_x f(x) P(x).$$
 
-
-In many cases we want to measure by how much the random variable $X$ deviates from its expectation. This can be quantified by the variance
-
 Em muitos casos, queremos medir o quanto a variável aleatória $X$ se desvia de sua expectativa. Isso pode ser quantificado pela variação
 
 $$\mathrm{Var}[X] = E\left[(X - E[X])^2\right] =
 E[X^2] - E[X]^2.$$
-
-Its square root is called the *standard deviation*.
-The variance of a function of a random variable measures
-by how much the function deviates from the expectation of the function,
-as different values $x$ of the random variable are sampled from its distribution:
 
 Sua raiz quadrada é chamada de *desvio padrão*.
 A variância de uma função de uma variável aleatória mede
@@ -424,7 +407,7 @@ como diferentes valores $x$ da variável aleatória são amostrados de sua distr
 $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 
 
-## Summary
+## Sumário
 
 * We can sample from probability distributions.
 * We can analyze multiple random variables using joint distribution, conditional distribution, Bayes' theorem, marginalization, and independence assumptions.
@@ -459,8 +442,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NDI5OTIxNywxOTg4NDgyNzM0LC0yMT
-QzMTQxMzUyLDgxOTAzMjUzOCwxNDYzMDU1MTg5LC0xMjM1Mjg3
-MTI3LDE4NDA0NjIxNTcsMzQwODE0OTUsLTE2OTU4NDc0NjEsMz
-cyODg3MTU4LDgxOTkyNDAxOF19
+eyJoaXN0b3J5IjpbLTEwNDIxOTk1NDMsMTk4ODQ4MjczNCwtMj
+E0MzE0MTM1Miw4MTkwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4
+NzEyNywxODQwNDYyMTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLD
+M3Mjg4NzE1OCw4MTk5MjQwMThdfQ==
 -->
