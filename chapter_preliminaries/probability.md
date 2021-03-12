@@ -59,12 +59,21 @@ Digamos que lançamos um dado e queremos saber qual é a chance de ver um 1 em v
 
 For a real die that we receive from a factory, we might not know those proportions and we would need to check whether it is tainted. The only way to investigate the die is by casting it many times and recording the outcomes. For each cast of the die, we will observe a value in $\{1, \ldots, 6\}$. Given these outcomes, we want to investigate the probability of observing each outcome.
 
+Para um dado real que recebemos de uma fábrica, podemos não saber essas proporções e precisaríamos verificar se ele está contaminado. A única maneira de investigar o dado é lançando-o várias vezes e registrando os resultados. Para cada lançamento do dado, observaremos um valor em $ \ {1, \ ldots, 6 \} $. Dados esses resultados, queremos investigar a probabilidade de observar cada resultado.
+
 One natural approach for each value is to take the
 individual count for that value and to divide it by the total number of tosses.
 This gives us an *estimate* of the probability of a given *event*. The *law of
 large numbers* tell us that as the number of tosses grows this estimate will draw closer and closer to the true underlying probability. Before going into the details of what is going here, let us try it out.
 
+Uma abordagem natural para cada valor é pegar o
+contagem individual para aquele valor e dividi-lo pelo número total de jogadas.
+Isso nos dá uma * estimativa * da probabilidade de um determinado * evento *. A * lei de
+grandes números * nos dizem que, conforme o número de lançamentos aumenta, essa estimativa se aproxima cada vez mais da verdadeira probabilidade subjacente. Antes de entrar em detalhes sobre o que está acontecendo aqui, vamos experimentar.
+
 To start, let us import the necessary packages.
+
+Para começar, importemos os pacotes necessários.
 
 ```{.python .input}
 %matplotlib inline
@@ -99,9 +108,21 @@ that assigns probabilities to a number of discrete choices is called the
 *distribution* later, but at a high level, think of it as just an assignment of
 probabilities to events.
 
+Em seguida, queremos ser capazes de lançar o dado. Nas estatísticas, chamamos este processo
+de exemplos de desenho de distribuições de probabilidade * amostragem *.
+A distribuição
+que atribui probabilidades a uma série de escolhas discretas é chamado de
+* distribuição multinomial *. Daremos uma definição mais formal de
+* distribuição * mais tarde, mas em um alto nível, pense nisso como apenas uma atribuição de
+probabilidades para eventos.
+
 To draw a single sample, we simply pass in a vector of probabilities.
 The output is another vector of the same length:
 its value at index $i$ is the number of times the sampling outcome corresponds to $i$.
+
+Para desenhar uma única amostra, simplesmente passamos um vetor de probabilidades.
+A saída é outro vetor do mesmo comprimento:
+seu valor no índice $ i $ é o número de vezes que o resultado da amostragem corresponde a $ i $.
 
 ```{.python .input}
 fair_probs = [1.0 / 6] * 6
@@ -127,6 +148,13 @@ do this with a Python `for` loop, so the function we are using supports drawing
 multiple samples at once, returning an array of independent samples in any shape
 we might desire.
 
+Se você executar o amostrador várias vezes, descobrirá que sai aleatoriamente
+valores de cada vez. Tal como acontece com a estimativa da justiça de um dado, muitas vezes queremos
+gerar muitas amostras da mesma distribuição. Seria insuportavelmente lento para
+fazer isso com um loop Python `for`, então a função que estamos usando suporta desenho
+várias amostras de uma vez, retornando uma matriz de amostras independentes em qualquer forma
+podemos desejar.
+
 ```{.python .input}
 np.random.multinomial(10, fair_probs)
 ```
@@ -145,6 +173,11 @@ Now that we know how to sample rolls of a die, we can simulate 1000 rolls. We
 can then go through and count, after each of the 1000 rolls, how many times each
 number was rolled.
 Specifically, we calculate the relative frequency as the estimate of the true probability.
+
+Agora que sabemos como obter amostras de rolos de um dado, podemos simular 1000 rolos. Nós
+pode então passar e contar, após cada um dos 1000 lançamentos, quantas vezes cada
+número foi rolado.
+Especificamente, calculamos a frequência relativa como a estimativa da probabilidade verdadeira.
 
 ```{.python .input}
 counts = np.random.multinomial(1000, fair_probs).astype(np.float32)
@@ -165,6 +198,8 @@ counts / 1000
 ```
 
 Because we generated the data from a fair die, we know that each outcome has true probability $\frac{1}{6}$, roughly $0.167$, so the above output estimates look good.
+
+Como geramos os dados de um dado justo, sabemos que cada resultado tem probabilidade real $ \ frac {1} {6} $, cerca de $ 0,167 $, portanto, as estimativas de saída acima parecem boas.
 
 We can also visualize how these probabilities converge over time towards the true probability.
 Let us conduct 500 groups of experiments where each group draws 10 samples.
@@ -466,5 +501,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk2OTE3MzEyXX0=
+eyJoaXN0b3J5IjpbLTE0NzY4NjI1OTZdfQ==
 -->
