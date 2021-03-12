@@ -73,11 +73,7 @@ que atribui probabilidades a uma série de escolhas discretas é chamado de
 *distribuição* mais tarde, mas em um alto nível, pense nisso como apenas uma atribuição de
 probabilidades para eventos.
 
-To draw a single sample, we simply pass in a vector of probabilities.
-The output is another vector of the same length:
-its value at index $i$ is the number of times the sampling outcome corresponds to $i$.
-
-Para desenhar uma única amostra, simplesmente passamos um vetor de probabilidades.
+Para obter uma única amostra, simplesmente passamos um vetor de probabilidades.
 A saída é outro vetor do mesmo comprimento:
 seu valor no índice $i$ é o número de vezes que o resultado da amostragem corresponde a $i$.
 
@@ -587,7 +583,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE5MDMyNTM4LDE0NjMwNTUxODksLTEyMz
-UyODcxMjcsMTg0MDQ2MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2
-MSwzNzI4ODcxNTgsODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbMTU3MTg3NjgwLDgxOTAzMjUzOCwxNDYzMD
+U1MTg5LC0xMjM1Mjg3MTI3LDE4NDA0NjIxNTcsMzQwODE0OTUs
+LTE2OTU4NDc0NjEsMzcyODg3MTU4LDgxOTkyNDAxOF19
 -->
