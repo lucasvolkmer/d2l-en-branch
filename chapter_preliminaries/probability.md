@@ -387,9 +387,9 @@ This brings us to an interesting ratio: $0 \leq \frac{P(A=a, B=b)}{P(A=a)} \leq 
 and denote it by $P(B=b \mid A=a)$: it is the probability of $B=b$, provided that
 $A=a$ has occurred.
 
-Isso nos leva a uma razão interessante: $0 \leq \frac {P (A = a, B = b)} {P (A = a)} \ leq 1 $. Chamamos essa proporção de * probabilidade condicional *
-e denotá-lo por $ P (B = b \ mid A = a) $: é a probabilidade de $ B = b $, desde que
-$ A = ocorreu um $.
+Isso nos leva a uma razão interessante: $0 \leq \frac {P (A = a, B = b)} {P (A = a)} \leq 1$. Chamamos essa proporção de *probabilidade condicional*
+e denotá-lo por $P (B = b \mid A = a)$: é a probabilidade de $B = b$, desde que
+$A = a$ ocorreu.
 
 ### Bayes' theorem
 
@@ -399,13 +399,13 @@ By construction, we have the *multiplication rule* that $P(A, B) = P(B \mid A) P
 
 Usando a definição de probabilidades condicionais, podemos derivar uma das equações mais úteis e celebradas em estatística: * Teorema de Bayes *.
 É o seguinte.
-Por construção, temos a * regra de multiplicação * que $ P (A, B) = P (B \ mid A) P (A) $. Por simetria, isso também é válido para $ P (A, B) = P (A \ mid B) P (B) $. Suponha que $ P (B)> 0 $. Resolvendo para uma das variáveis condicionais, obtemos
+Por construção, temos a * regra de multiplicação * que $P(A, B) = P(B \mid A) P(A)$. Por simetria, isso também é válido para $P(A, B) = P(A \mid B) P(B)$. Suponha que $P(B)> 0$. Resolvendo para uma das variáveis condicionais, obtemos
 
 $$P(A \mid B) = \frac{P(B \mid A) P(A)}{P(B)}.$$
 
 Note that here we use the more compact notation where $P(A, B)$ is a *joint distribution* and $P(A \mid B)$ is a *conditional distribution*. Such distributions can be evaluated for particular values $A = a, B=b$.
 
-Observe que aqui usamos a notação mais compacta em que $ P (A, B) $ é uma * distribuição conjunta * e $ P (A \ mid B) $ é uma * distribuição condicional *. Essas distribuições podem ser avaliadas para valores particulares $ A = a, B = b $.
+Observe que aqui usamos a notação mais compacta em que $P(A, B)$ é uma * distribuição conjunta * e $ P (A \ mid B) $ é uma * distribuição condicional *. Essas distribuições podem ser avaliadas para valores particulares $ A = a, B = b $.
 
 ### Marginalization
 
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMDM4MTA3Myw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbMTU4OTY0OTg5Miw4MTk5MjQwMThdfQ==
 -->
