@@ -178,16 +178,6 @@ para a curva $u = f (x)$ quando $x = 1$.
 
 [**Para visualizar tal interpretação das derivadas,
 usaremos `matplotlib`,**]
-
-a popular plotting library in Python.
-To configure properties of the figures produced by `matplotlib`,
-we need to define a few functions.
-In the following,
-the `use_svg_display` function specifies the `matplotlib` package to output the svg figures for sharper images.
-Note that the comment `#@save` is a special mark where the following function,
-class, or statements are saved in the `d2l` package
-so later they can be directly invoked (e.g., `d2l.use_svg_display()`) without being redefined.
-
 uma biblioteca de plotagem popular em Python.
 Para configurar as propriedades das figuras produzidas por `matplotlib`,
 precisamos definir algumas funções.
@@ -204,8 +194,6 @@ def use_svg_display():  #@save
     display.set_matplotlib_formats('svg')
 ```
 
-We define the `set_figsize` function to specify the figure sizes. Note that here we directly use `d2l.plt` since the import statement `from matplotlib import pyplot as plt` has been marked for being saved in the `d2l` package in the preface.
-
 Definimos a função `set_figsize` para especificar o tamanho das figuras. Observe que aqui usamos diretamente `d2l.plt`, uma vez que a instrução import` from matplotlib import pyplot as plt` foi marcada para ser salva no pacote `d2l` no prefácio.
 
 ```{.python .input}
@@ -216,7 +204,6 @@ def set_figsize(figsize=(3.5, 2.5)):  #@save
     d2l.plt.rcParams['figure.figsize'] = figsize
 ```
 
-The following `set_axes` function sets properties of axes of figures produced by `matplotlib`.
 
 A seguinte função `set_axes` define as propriedades dos eixos das figuras produzidas por` matplotlib`.
 
@@ -423,6 +410,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDA2MDQ3MzcsNTY1MjYwNjQ0LC0xOT
-c5MzM1ODI3XX0=
+eyJoaXN0b3J5IjpbMTkxNjEzMjA4OCw1NjUyNjA2NDQsLTE5Nz
+kzMzU4MjddfQ==
 -->
