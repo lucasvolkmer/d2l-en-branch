@@ -338,7 +338,7 @@ podemos simplesmente escrever $P (a)$ para denotar a probabilidade de uma variá
 Uma vez que um evento na teoria da probabilidade é um conjunto de resultados do espaço amostral,
 podemos especificar um intervalo de valores para uma variável aleatória assumir.
 Por exemplo, $P(1 \leq X \leq 3)$ denota a probabilidade do evento $\{1 \leq X \leq 3\}$,
-o que significa $\{X = 1, 2, \text{or}, 3\}$. De forma equivalente, $\{X = 1, 2, \text{or}, 3\}$ representa a probabilidade de que a variável aleatória $X$ possa assumir um valor de $ \ {1, 2, 3 \} $.
+o que significa $\{X = 1, 2, \text{or}, 3\}$. De forma equivalente, $\{X = 1, 2, \text{or}, 3\}$ representa a probabilidade de que a variável aleatória $X$ possa assumir um valor de $\{1, 2, 3\}$.
 
 Note that there is a subtle difference between *discrete* random variables, like the sides of a die, and *continuous* ones, like the weight and the height of a person. There is little point in asking whether two people have exactly the same height. If we take precise enough measurements you will find that no two people on the planet have the exact same height. In fact, if we take a fine enough measurement, you will not have the same height when you wake up and when you go to sleep. So there is no purpose in asking about the probability
 that someone is 1.80139278291028719210196740527486202 meters tall. Given the world population of humans the probability is virtually 0. It makes more sense in this case to ask whether someone's height falls into a given interval, say between 1.79 and 1.81 meters. In these cases we quantify the likelihood that we see a value as a *density*. The height of exactly 1.80 meters has no probability, but nonzero density. In the interval between any two different heights we have nonzero probability.
@@ -377,9 +377,9 @@ Note that for any values $a$ and $b$, $P(A=a, B=b) \leq P(A=a)$.
 This has to be the case, since for $A=a$ and $B=b$ to happen, $A=a$ has to happen *and* $B=b$ also has to happen (and vice versa). Thus, $A=a$ and $B=b$ cannot be more likely than $A=a$ or $B=b$ individually.
 
 
-O primeiro é chamado de * probabilidade conjunta * $ P (A = a, B = b) $. Dados quaisquer valores $ a $ e $ b $, a probabilidade conjunta nos permite responder, qual é a probabilidade de que $ A = a $ e $ B = b $ simultaneamente?
-Observe que, para quaisquer valores $ a $ e $ b $, $ P (A = a, B = b) \ leq P (A = a) $.
-Tem de ser este o caso, visto que para $ A = a $ e $ B = b $ acontecer, $ A = a $ tem que acontecer * e * $ B = b $ também tem que acontecer (e vice-versa). Assim, $ A = a $ e $ B = b $ não podem ser mais prováveis do que $ A = a $ ou $ B = b $ individualmente.
+O primeiro é chamado de * probabilidade conjunta * $P(A = a, B=b)$. Dados quaisquer valores $a$ e $b$, a probabilidade conjunta nos permite responder, qual é a probabilidade de que $A = a$ e $B = b$ simultaneamente?
+Observe que, para quaisquer valores $a$ e $b$, $P (A = a, B = b) \leq P (A = a)$.
+Tem de ser este o caso, visto que para $A = a$ e $B = b$ acontecer, $A = a$ tem que acontecer *e* $B = b$ também tem que acontecer (e vice-versa). Assim, $A = a$ e $B = b$ não podem ser mais prováveis do que $A = a$ ou $B = b$ individualmente.
 
 ### Conditional Probability
 
@@ -387,7 +387,7 @@ This brings us to an interesting ratio: $0 \leq \frac{P(A=a, B=b)}{P(A=a)} \leq 
 and denote it by $P(B=b \mid A=a)$: it is the probability of $B=b$, provided that
 $A=a$ has occurred.
 
-Isso nos leva a uma razão interessante: $ 0 \ leq \ frac {P (A = a, B = b)} {P (A = a)} \ leq 1 $. Chamamos essa proporção de * probabilidade condicional *
+Isso nos leva a uma razão interessante: $0 \leq \frac {P (A = a, B = b)} {P (A = a)} \ leq 1 $. Chamamos essa proporção de * probabilidade condicional *
 e denotá-lo por $ P (B = b \ mid A = a) $: é a probabilidade de $ B = b $, desde que
 $ A = ocorreu um $.
 
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNjg0OTE5Myw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbMTAwMDM4MTA3Myw4MTk5MjQwMThdfQ==
 -->
