@@ -361,15 +361,15 @@ e é definida pela seguinte equação:
 $$H[P] = \sum_j - P(j) \log P(j).$$
 :eqlabel:`eq_softmax_reg_entropy`
 
-One of the fundamental theorems of information theory states
-that in order to encode data drawn randomly from the distribution $P$,
-we need at least $H[P]$ "nats" to encode it.
-If you wonder what a "nat" is, it is the equivalent of bit
-but when using a code with base $e$ rather than one with base 2.
-Thus, one nat is $\frac{1}{\log(2)} \approx 1.44$ bit.
+Um dos teoremas fundamentais da teoria da informação
+afirma que, a fim de codificar dados retirados aleatoriamente da distribuição $P$,
+precisamos de pelo menos $H[P]$ "*nats*" para codificá-lo.
+Se você quer saber o que é um "*nat*", é o equivalente a bit
+mas ao usar um código com base $e$ em vez de um com base 2.
+Assim, um *nat* é $\frac{1}{\log(2)} \approx 1.44$ bit.
 
 
-### Surprisal
+### Surpresa
 
 You might be wondering what compression has to do with prediction.
 Imagine that we have a stream of data that we want to compress.
@@ -444,8 +444,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI2MjgyNTIxLC04NjUxODE5MTgsLTEzMD
-IzODAxODksLTE0MTQyMzI2OTUsMzg0Nzk1OTM1LDE3MjkwNjA5
-ODMsLTEyOTExNDc1OTYsMTA2Njk1NjA5MywxODQzMzc1MDk0LD
-EzOTQ3MjM0NjBdfQ==
+eyJoaXN0b3J5IjpbLTIwNDM2Mjc4OTIsLTg2NTE4MTkxOCwtMT
+MwMjM4MDE4OSwtMTQxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2
+MDk4MywtMTI5MTE0NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOT
+QsMTM5NDcyMzQ2MF19
 -->
