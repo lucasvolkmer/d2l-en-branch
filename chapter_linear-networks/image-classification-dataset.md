@@ -110,7 +110,7 @@ def get_fashion_mnist_labels(labels):  #@save
     return [text_labels[int(i)] for i in labels]
 ```
 
-We can now create a function to visualize these examples.
+Agora podemos criar uma função para visualizar esses exemplos.
 
 ```{.python .input}
 #@tab mxnet, tensorflow
@@ -149,8 +149,8 @@ def show_images(imgs, num_rows, num_cols, titles=None, scale=1.5):  #@save
     return axes
 ```
 
-Here are [**the images and their corresponding labels**] (in text)
-for the first few examples in the training dataset.
+Aqui estão [**as imagens e seus *labels correspondentes**] (no texto)
+para os primeiros exemplos no *dataset* de treinamento.
 
 ```{.python .input}
 X, y = mnist_train[:18]
@@ -172,13 +172,13 @@ y = tf.constant(mnist_train[1][:18])
 show_images(X, 2, 9, titles=get_fashion_mnist_labels(y));
 ```
 
-## Reading a Minibatch
+## Lendo um *Minibatch*
 
-To make our life easier when reading from the training and test sets,
-we use the built-in data iterator rather than creating one from scratch.
-Recall that at each iteration, a data loader
-[**reads a minibatch of data with size `batch_size` each time.**]
-We also randomly shuffle the examples for the training data iterator.
+Para tornar nossa vida mais fácil ao ler os conjuntos de treinamento e teste,
+usamos o iterador de dados integrado em vez de criar um do zero.
+Lembre-se de que a cada iteração, um carregador de dados
+[**lê um minibatch de dados com tamanho `batch_size` cada vez.**]
+Também misturamos aleatoriamente os exemplos para o iterador de dados de treinamento.
 
 ```{.python .input}
 batch_size = 256
@@ -321,5 +321,5 @@ We are now ready to work with the Fashion-MNIST dataset in the sections that fol
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMjIwMjczNSwyMTQ4MzY5MjFdfQ==
+eyJoaXN0b3J5IjpbLTQwMzk5ODA0OSwyMTQ4MzY5MjFdfQ==
 -->
