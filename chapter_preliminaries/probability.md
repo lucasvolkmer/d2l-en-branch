@@ -235,20 +235,12 @@ podemos especificar um intervalo de valores para uma variável aleatória assumi
 Por exemplo, $P(1 \leq X \leq 3)$ denota a probabilidade do evento $\{1 \leq X \leq 3\}$,
 o que significa $\{X = 1, 2, \text{or}, 3\}$. De forma equivalente, $\{X = 1, 2, \text{or}, 3\}$ representa a probabilidade de que a variável aleatória $X$ possa assumir um valor de $\{1, 2, 3\}$.
 
-Note that there is a subtle difference between *discrete* random variables, like the sides of a die, and *continuous* ones, like the weight and the height of a person. There is little point in asking whether two people have exactly the same height. If we take precise enough measurements you will find that no two people on the planet have the exact same height. In fact, if we take a fine enough measurement, you will not have the same height when you wake up and when you go to sleep. So there is no purpose in asking about the probability
-that someone is 1.80139278291028719210196740527486202 meters tall. Given the world population of humans the probability is virtually 0. It makes more sense in this case to ask whether someone's height falls into a given interval, say between 1.79 and 1.81 meters. In these cases we quantify the likelihood that we see a value as a *density*. The height of exactly 1.80 meters has no probability, but nonzero density. In the interval between any two different heights we have nonzero probability.
-In the rest of this section, we consider probability in discrete space.
-For probability over continuous random variables, you may refer to :numref:`sec_random_variables`.
-
 Observe que há uma diferença sutil entre variáveis ​​aleatórias *discretas*, como os lados de um dado, e *contínuas*, como o peso e a altura de uma pessoa. Não adianta perguntar se duas pessoas têm exatamente a mesma altura. Se tomarmos medidas precisas o suficiente, você descobrirá que duas pessoas no planeta não têm exatamente a mesma altura. Na verdade, se fizermos uma medição suficientemente precisa, você não terá a mesma altura ao acordar e ao dormir. Portanto, não há nenhum propósito em perguntar sobre a probabilidade
 que alguém tem 1,80139278291028719210196740527486202 metros de altura. Dada a população mundial de humanos, a probabilidade é virtualmente 0. Faz mais sentido, neste caso, perguntar se a altura de alguém cai em um determinado intervalo, digamos entre 1,79 e 1,81 metros. Nesses casos, quantificamos a probabilidade de vermos um valor como uma *densidade*. A altura de exatamente 1,80 metros não tem probabilidade, mas densidade diferente de zero. No intervalo entre quaisquer duas alturas diferentes, temos probabilidade diferente de zero.
 No restante desta seção, consideramos a probabilidade no espaço discreto.
 Para probabilidade sobre variáveis ​​aleatórias contínuas, você pode consultar :numref:`sec_random_variables`.
 
-## Dealing with Multiple Random Variables
-
-Very often, we will want to consider more than one random variable at a time.
-For instance, we may want to model the relationship between diseases and symptoms. Given a disease and a symptom, say "flu" and "cough", either may or may not occur in a patient with some probability. While we hope that the probability of both would be close to zero, we may want to estimate these probabilities and their relationships to each other so that we may apply our inferences to effect better medical care.
+## Lidando com Múltiplas Variáveis Aleatórias
 
 Muitas vezes, queremos considerar mais de uma variável aleatória de cada vez.
 Por exemplo, podemos querer modelar a relação entre doenças e sintomas. Dados uma doença e um sintoma, digamos "gripe" e "tosse", podem ou não ocorrer em um paciente com alguma probabilidade. Embora esperemos que a probabilidade de ambos seja próxima de zero, podemos estimar essas probabilidades e suas relações entre si para que possamos aplicar nossas inferências para obter um melhor atendimento médico.
@@ -525,8 +517,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzU4ODE4MjksLTIxNDMxNDEzNTIsOD
-E5MDMyNTM4LDE0NjMwNTUxODksLTEyMzUyODcxMjcsMTg0MDQ2
-MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsOD
-E5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbMTk4ODQ4MjczNCwtMjE0MzE0MTM1Miw4MT
+kwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4NzEyNywxODQwNDYy
+MTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLDM3Mjg4NzE1OCw4MT
+k5MjQwMThdfQ==
 -->
