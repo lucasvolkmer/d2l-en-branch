@@ -430,23 +430,23 @@ Isso é igual à razão entre o número de previsões corretas e o número total
 
 ## Exercícios
 
-1. We can explore the connection between exponential families and the softmax in some more depth.
-    1. Compute the second derivative of the cross-entropy loss $l(\mathbf{y},\hat{\mathbf{y}})$ for the softmax.
-    1. Compute the variance of the distribution given by $\mathrm{softmax}(\mathbf{o})$ and show that it matches the second derivative computed above.
-1. Assume that we have three classes which occur with equal probability, i.e., the probability vector is $(\frac{1}{3}, \frac{1}{3}, \frac{1}{3})$.
-    1. What is the problem if we try to design a binary code for it?
-    1. Can you design a better code? Hint: what happens if we try to encode two independent observations? What if we encode $n$ observations jointly?
-1. Softmax is a misnomer for the mapping introduced above (but everyone in deep learning uses it). The real softmax is defined as $\mathrm{RealSoftMax}(a, b) = \log (\exp(a) + \exp(b))$.
-    1. Prove that $\mathrm{RealSoftMax}(a, b) > \mathrm{max}(a, b)$.
-    1. Prove that this holds for $\lambda^{-1} \mathrm{RealSoftMax}(\lambda a, \lambda b)$, provided that $\lambda > 0$.
-    1. Show that for $\lambda \to \infty$ we have $\lambda^{-1} \mathrm{RealSoftMax}(\lambda a, \lambda b) \to \mathrm{max}(a, b)$.
-    1. What does the soft-min look like?
-    1. Extend this to more than two numbers.
+1. Podemos explorar a conexão entre as famílias exponenciais e o *softmax* com um pouco mais de profundidade.
+    1. Calcule a segunda derivada da perda de entropia cruzada $l(\mathbf{y},\hat{\mathbf{y}})$ para o *softmax*.
+    1. Calcule a variância da distribuição dada por $\mathrm{softmax}(\mathbf{o})$ e mostre que ela corresponde à segunda derivada calculada acima.
+1. Suponha que temos três classes que ocorrem com probabilidade igual, ou seja, o vetor de probabilidade é $(\frac{1}{3}, \frac{1}{3}, \frac{1}{3})$.
+    1. Qual é o problema se tentarmos projetar um código binário para ele?
+    1. Você pode criar um código melhor? Dica: o que acontece se tentarmos codificar duas observações independentes? E se codificarmos $n$ observações em conjunto?
+1. *Softmax* é um nome impróprio para o mapeamento apresentado acima (mas todos no aprendizado profundo o usam). O *softmax* real é definido como $\mathrm{RealSoftMax}(a, b) = \log (\exp(a) + \exp(b))$.
+    1. Prove que $\mathrm{RealSoftMax}(a, b) > \mathrm{max}(a, b)$.
+    1. Prove que isso vale para$\lambda^{-1} \mathrm{RealSoftMax}(\lambda a, \lambda b)$, desde que $\lambda > 0$.
+    1. Mostre que para $\lambda \to \infty$ temos $\lambda^{-1} \mathrm{RealSoftMax}(\lambda a, \lambda b) \to \mathrm{max}(a, b)$.
+    1. Qual é a aparência do soft-min?
+    1. Estenda isso para mais de dois números.
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2Nzc1NjI2NCwtMjA0MzYyNzg5MiwtOD
-Y1MTgxOTE4LC0xMzAyMzgwMTg5LC0xNDE0MjMyNjk1LDM4NDc5
-NTkzNSwxNzI5MDYwOTgzLC0xMjkxMTQ3NTk2LDEwNjY5NTYwOT
-MsMTg0MzM3NTA5NCwxMzk0NzIzNDYwXX0=
+eyJoaXN0b3J5IjpbLTEyOTQ4NzMwNDEsLTIwNDM2Mjc4OTIsLT
+g2NTE4MTkxOCwtMTMwMjM4MDE4OSwtMTQxNDIzMjY5NSwzODQ3
+OTU5MzUsMTcyOTA2MDk4MywtMTI5MTE0NzU5NiwxMDY2OTU2MD
+kzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF19
 -->
