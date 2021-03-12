@@ -520,9 +520,9 @@ def train_ch3(net, train_iter, test_iter, loss, num_epochs, updater):  #@save
     assert test_acc <= 1 and test_acc > 0.7, test_acc
 ```
 
-As an implementation from scratch,
-we [**use the minibatch stochastic gradient descent**] defined in :numref:`sec_linear_scratch`
-to optimize the loss function of the model with a learning rate 0.1.
+Como uma implementação do zero,
+nós [**usamos a descida gradiente estocástica do *minibatch* **] definido em :numref:`sec_linear_scratch`
+para otimizar a função de perda do modelo com uma taxa de aprendizado de 0,1.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -608,8 +608,8 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMDcwOTU3MiwxMTA4MzA2OTAsLTE5NT
-MzMzIwMTksMTE1MzA4MTM1LDE2MDA5ODQ0NTYsNzQyNTE3NDg3
-LC0yMTMxNTA1NDkzLC05OTkwNzg3NjcsLTE5ODQxODk3MjVdfQ
-==
+eyJoaXN0b3J5IjpbNTM4NjUxNjIxLC00MTA3MDk1NzIsMTEwOD
+MwNjkwLC0xOTUzMzMyMDE5LDExNTMwODEzNSwxNjAwOTg0NDU2
+LDc0MjUxNzQ4NywtMjEzMTUwNTQ5MywtOTk5MDc4NzY3LC0xOT
+g0MTg5NzI1XX0=
 -->
