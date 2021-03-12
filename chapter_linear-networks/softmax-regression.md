@@ -413,16 +413,16 @@ necessário para comunicar os rótulos.
 
 ## Predição do Modelo e Avaliação
 
-After training the softmax regression model, given any example features,
-we can predict the probability of each output class.
-Normally, we use the class with the highest predicted probability as the output class.
-The prediction is correct if it is consistent with the actual class (label).
-In the next part of the experiment,
-we will use *accuracy* to evaluate the model's performance.
-This is equal to the ratio between the number of correct predictions and the total number of predictions.
+Depois de treinar o modelo de regressão *softmax*, dados quaisquer recursos de exemplo,
+podemos prever a probabilidade de cada classe de saída.
+Normalmente, usamos a classe com a maior probabilidade prevista como a classe de saída.
+A previsão está correta se for consistente com a classe real (*label*).
+Na próxima parte do experimento,
+usaremos *exatidão* para avaliar o desempenho do modelo.
+Isso é igual à razão entre o número de previsões corretas e o número total de previsões.
 
 
-## Summary
+## Resumo
 
 * The softmax operation takes a vector and maps it into probabilities.
 * Softmax regression applies to classification problems. It uses the probability distribution of the output class in the softmax operation.
@@ -445,8 +445,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NDkxMzQyMSwtMjA0MzYyNzg5MiwtOD
-Y1MTgxOTE4LC0xMzAyMzgwMTg5LC0xNDE0MjMyNjk1LDM4NDc5
-NTkzNSwxNzI5MDYwOTgzLC0xMjkxMTQ3NTk2LDEwNjY5NTYwOT
-MsMTg0MzM3NTA5NCwxMzk0NzIzNDYwXX0=
+eyJoaXN0b3J5IjpbLTE1NzUxNDkzMTEsLTIwNDM2Mjc4OTIsLT
+g2NTE4MTkxOCwtMTMwMjM4MDE4OSwtMTQxNDIzMjY5NSwzODQ3
+OTU5MzUsMTcyOTA2MDk4MywtMTI5MTE0NzU5NiwxMDY2OTU2MD
+kzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF19
 -->
