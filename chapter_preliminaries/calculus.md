@@ -307,31 +307,15 @@ Da mesma forma, para qualquer matriz $\mathbf {X}$, temos $\nabla_{\mathbf{X}} \
 
 ## Regra da Cadeia
 
-However, such gradients can be hard to find.
-This is because multivariate functions in deep learning are often *composite*,
-so we may not apply any of the aforementioned rules to differentiate these functions.
-Fortunately, the *chain rule* enables us to differentiate composite functions.
-
 No entanto, esses gradientes podem ser difíceis de encontrar.
-Isso ocorre porque as funções multivariadas no aprendizado profundo são frequentemente *compostas*,
+Isso ocorre porque as funções multivariadas no *deep learning* são frequentemente *compostas*,
 portanto, não podemos aplicar nenhuma das regras mencionadas acima para diferenciar essas funções.
 Felizmente, a *regra da cadeia* nos permite diferenciar funções compostas.
-
-Let us first consider functions of a single variable.
-Suppose that functions $y=f(u)$ and $u=g(x)$ are both differentiable, then the chain rule states that
 
 Vamos primeiro considerar as funções de uma única variável.
 Suponha que as funções $y = f (u)$ e $u = g (x)$ sejam diferenciáveis, então a regra da cadeia afirma que
 
 $$\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx}.$$
-
-Now let us turn our attention to a more general scenario
-where functions have an arbitrary number of variables.
-Suppose that the differentiable function $y$ has variables
-$u_1, u_2, \ldots, u_m$, where each differentiable function $u_i$
-has variables $x_1, x_2, \ldots, x_n$.
-Note that $y$ is a function of $x_1, x_2, \ldots, x_n$.
-Then the chain rule gives
 
 Agora, vamos voltar nossa atenção para um cenário mais geral
 onde as funções têm um número arbitrário de variáveis.
@@ -339,7 +323,7 @@ Suponha que a função diferenciável $y$ tenha variáveis
 $u_1, u_2, \ldots, u_m$, onde cada função diferenciável $u_i$
 tem variáveis $x_1, x_2, \ldots, x_n$.
 Observe que $y$ é uma função de $x_1, x_2, \ldots, x_n$.
-Então a regra da cadeia dá
+Então a regra da cadeia será
 
 $$\frac{dy}{dx_i} = \frac{dy}{du_1} \frac{du_1}{dx_i} + \frac{dy}{du_2} \frac{du_2}{dx_i} + \cdots + \frac{dy}{du_m} \frac{du_m}{dx_i}$$
 
@@ -355,7 +339,7 @@ para qualquer $i = 1, 2, \ldots, n$.
 * A gradient is a vector whose components are the partial derivatives of a multivariate function with respect to all its variables.
 * The chain rule enables us to differentiate composite functions.
 
-* Cálculo diferencial e cálculo integral são dois ramos do cálculo, onde o primeiro pode ser aplicado aos problemas de otimização onipresentes no aprendizado profundo.
+* Cálculo diferencial e cálculo integral são dois ramos do cálculo, onde o primeiro pode ser aplicado aos problemas de otimização onipresentes no *deep learning*.
 * Uma derivada pode ser interpretada como a taxa instantânea de mudança de uma função em relação à sua variável. É também a inclinação da linha tangente à curva da função.
 * Um gradiente é um vetor cujos componentes são as derivadas parciais de uma função multivariada com respeito a todas as suas variáveis.
 * A regra da cadeia nos permite diferenciar funções compostas.
@@ -384,6 +368,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAwNDM5MTM5LDk4NzA5OTU0MSw1NjUyNj
+eyJoaXN0b3J5IjpbMzI3OTM2NDU2LDk4NzA5OTU0MSw1NjUyNj
 A2NDQsLTE5NzkzMzU4MjddfQ==
 -->
