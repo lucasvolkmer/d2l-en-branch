@@ -294,16 +294,16 @@ for X, y in train_iter:
     break
 ```
 
-Agora estamos prontos para trabalhar com o conjunto de dados Fashion-MNIST nas seções a seguir.
+Agora estamos prontos para trabalhar com o *dataset* Fashion-MNIST nas seções a seguir.
 
-## Summary
+## Resumo
 
-* Fashion-MNIST is an apparel classification dataset consisting of images representing 10 categories. We will use this dataset in subsequent sections and chapters to evaluate various classification algorithms.
-* We store the shape of any image with height $h$ width $w$ pixels as $h \times w$ or ($h$, $w$).
-* Data iterators are a key component for efficient performance. Rely on well-implemented data iterators that exploit high-performance computing to avoid slowing down your training loop.
+* Fashion-MNIST é um *dataset* de classificação de vestuário que consiste em imagens que representam 10 categorias. Usaremos esse conjunto de dados nas seções e capítulos subsequentes para avaliar vários algoritmos de classificação.
+* Armazenamos a forma de qualquer imagem com altura $h$ largura $w$ pixels como $h \times w$ or ($h$, $w$).
+* Os iteradores de dados são um componente chave para um desempenho eficiente. Conte com iteradores de dados bem implementados que exploram a computação de alto desempenho para evitar desacelerar o ciclo de treinamento.
 
 
-## Exercises
+## Exercícios
 
 1. Does reducing the `batch_size` (for instance, to 1) affect the reading performance?
 1. The data iterator performance is important. Do you think the current implementation is fast enough? Explore various options to improve it.
@@ -321,5 +321,5 @@ Agora estamos prontos para trabalhar com o conjunto de dados Fashion-MNIST nas s
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwOTMxMzU2OCwyMTQ4MzY5MjFdfQ==
+eyJoaXN0b3J5IjpbMTcxMzQxMTg0MSwyMTQ4MzY5MjFdfQ==
 -->
