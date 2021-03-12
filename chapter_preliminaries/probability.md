@@ -34,11 +34,6 @@ Digamos que lançamos um dado e queremos saber qual é a chance de ver um 1 em v
 
 Para um dado real que recebemos de uma fábrica, podemos não saber essas proporções e precisaríamos verificar se ele está contaminado. A única maneira de investigar o dado é lançando-o várias vezes e registrando os resultados. Para cada lançamento do dado, observaremos um valor em $\{1, \ldots, 6\}$. Dados esses resultados, queremos investigar a probabilidade de observar cada resultado.
 
-One natural approach for each value is to take the
-individual count for that value and to divide it by the total number of tosses.
-This gives us an *estimate* of the probability of a given *event*. The *law of
-large numbers* tell us that as the number of tosses grows this estimate will draw closer and closer to the true underlying probability. Before going into the details of what is going here, let us try it out.
-
 Uma abordagem natural para cada valor é pegar o
 contagem individual para aquele valor e dividi-lo pelo número total de jogadas.
 Isso nos dá uma *estimativa* da probabilidade de um determinado *evento*. A *lei de
@@ -80,7 +75,7 @@ that assigns probabilities to a number of discrete choices is called the
 probabilities to events.
 
 Em seguida, queremos ser capazes de lançar o dado. Nas estatísticas, chamamos este processo
-de exemplos de desenho de distribuições de probabilidade *amostragem*.
+de exemplos de desenho *amostragem* de distribuições de probabilidade .
 A distribuição
 que atribui probabilidades a uma série de escolhas discretas é chamado de
 *distribuição multinomial*. Daremos uma definição mais formal de
@@ -601,7 +596,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzU0OTc3MzEsLTEyMzUyODcxMjcsMT
-g0MDQ2MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2MSwzNzI4ODcx
-NTgsODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbMTQ2MzA1NTE4OSwtMTIzNTI4NzEyNywxOD
+QwNDYyMTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLDM3Mjg4NzE1
+OCw4MTk5MjQwMThdfQ==
 -->
