@@ -204,6 +204,9 @@ Como geramos os dados de um dado justo, sabemos que cada resultado tem probabili
 We can also visualize how these probabilities converge over time towards the true probability.
 Let us conduct 500 groups of experiments where each group draws 10 samples.
 
+Também podemos visualizar como essas probabilidades convergem ao longo do tempo para a probabilidade verdadeira.
+Vamos conduzir 500 grupos de experimentos onde cada grupo extrai 10 amostras.
+
 ```{.python .input}
 counts = np.random.multinomial(10, fair_probs, size=500)
 cum_counts = counts.astype(np.float32).cumsum(axis=0)
@@ -256,6 +259,11 @@ The dashed black line gives the true underlying probability.
 As we get more data by conducting more experiments,
 the $6$ solid curves converge towards the true probability.
 
+Cada curva sólida corresponde a um dos seis valores do dado e dá nossa probabilidade estimada de que o dado aumente esse valor conforme avaliado após cada grupo de experimentos.
+A linha preta tracejada fornece a verdadeira probabilidade subjacente.
+À medida que obtemos mais dados conduzindo mais experimentos,
+as curvas sólidas de $ 6 $ convergem para a probabilidade verdadeira.
+
 ### Axioms of Probability Theory
 
 When dealing with the rolls of a die,
@@ -267,19 +275,40 @@ then event $\mathcal{A}$ has occurred.
 That is to say, if $3$ dots faced up after rolling a die, since $3 \in \{1, 3, 5\}$,
 we can say that the event "seeing an odd number" has occurred.
 
+Ao lidar com as jogadas de um dado,
+chamamos o conjunto $ \ mathcal {S} = \ {1, 2, 3, 4, 5, 6 \} $ o * espaço de amostra * ou * espaço de resultado *, onde cada elemento é um * resultado *.
+Um * evento * é um conjunto de resultados de um determinado espaço amostral.
+Por exemplo, "ver $ 5 $" ($ \ {5 \} $) e "ver um número ímpar" ($ \ {1, 3, 5 \} $) são eventos válidos de lançar um dado.
+Observe que se o resultado de um experimento aleatório estiver no evento $ \ mathcal {A} $,
+então o evento $ \ mathcal {A} $ ocorreu.
+Ou seja, se $ 3 $ pontos virados para cima após rolar um dado, uma vez que $ 3 \ em \ {1, 3, 5 \} $,
+podemos dizer que o evento "ver um número ímpar" ocorreu.
+
 Formally, *probability* can be thought of a function that maps a set to a real value.
 The probability of an event $\mathcal{A}$ in the given sample space $\mathcal{S}$,
 denoted as $P(\mathcal{A})$, satisfies the following properties:
 
+Formalmente, * probabilidade * pode ser pensada como uma função que mapeia um conjunto para um valor real.
+A probabilidade de um evento $ \ mathcal {A} $ no espaço amostral dado $ \ mathcal {S} $,
+denotado como $ P (\ mathcal {A}) $, satisfaz as seguintes propriedades:
+
 * For any event $\mathcal{A}$, its probability is never negative, i.e., $P(\mathcal{A}) \geq 0$;
 * Probability of the entire sample space is $1$, i.e., $P(\mathcal{S}) = 1$;
 * For any countable sequence of events $\mathcal{A}_1, \mathcal{A}_2, \ldots$ that are *mutually exclusive* ($\mathcal{A}_i \cap \mathcal{A}_j = \emptyset$ for all $i \neq j$), the probability that any happens is equal to the sum of their individual probabilities, i.e., $P(\bigcup_{i=1}^{\infty} \mathcal{A}_i) = \sum_{i=1}^{\infty} P(\mathcal{A}_i)$.
+
+* Para qualquer evento $ \ mathcal {A} $, sua probabilidade nunca é negativa, ou seja, $ P (\ mathcal {A}) \ geq 0 $;
+* A probabilidade de todo o espaço amostral é $ 1 $, ou seja, $ P (\ mathcal {S}) = 1 $;
+* Para qualquer sequência contável de eventos $ \ mathcal {A} _1, \ mathcal {A} _2, \ ldots $ que são * mutuamente exclusivos * ($ \ mathcal {A} _i \ cap \ mathcal {A} _j = \ emptyset $ para todos os $ i \ neq j $), a probabilidade de que aconteça é igual à soma de suas probabilidades individuais, ou seja, $ P (\ bigcup_ {i = 1} ^ {\ infty} \ mathcal {A} _i) = \ sum_ {i = 1} ^ {\ infty} P (\ mathcal {A} _i) $.
 
 These are also the axioms of probability theory, proposed by Kolmogorov in 1933.
 Thanks to this axiom system, we can avoid any philosophical dispute on randomness;
 instead, we can reason rigorously with a mathematical language.
 For instance, by letting event $\mathcal{A}_1$ be the entire sample space and $\mathcal{A}_i = \emptyset$ for all $i > 1$, we can prove that $P(\emptyset) = 0$, i.e., the probability of an impossible event is $0$.
 
+Esses também são os axiomas da teoria das probabilidades, propostos por Kolmogorov em 1933.
+Graças a este sistema de axiomas, podemos evitar qualquer disputa filosófica sobre aleatoriedade;
+em vez disso, podemos raciocinar rigorosamente com uma linguagem matemática.
+Por exemplo, permitindo que o evento $ \ mathcal {A} _1 $ seja todo o espaço da amostra e $ \ mathcal {A} _i = \ emptyset $ para todos $ i> 1 $, podemos provar que $ P (\ emptyset) = 0 $, ou seja, a probabilidade de um evento impossível é $ 0 $.
 
 ### Random Variables
 
@@ -297,10 +326,29 @@ we can specify a range of values for a random variable to take.
 For example, $P(1 \leq X \leq 3)$ denotes the probability of the event $\{1 \leq X \leq 3\}$,
 which means $\{X = 1, 2, \text{or}, 3\}$. Equivalently, $P(1 \leq X \leq 3)$ represents the probability that the random variable $X$ can take a value from $\{1, 2, 3\}$.
 
+Em nosso experimento aleatório de lançar um dado, introduzimos a noção de uma * variável aleatória *. Uma variável aleatória pode ser praticamente qualquer quantidade e não é determinística. Pode assumir um valor entre um conjunto de possibilidades em um experimento aleatório.
+Considere uma variável aleatória $ X $ cujo valor está no espaço amostral $ \ mathcal {S} = \ {1, 2, 3, 4, 5, 6 \} $ do lançamento de um dado. Podemos denotar o evento "vendo $ 5 $" como $ \ {X = 5 \} $ ou $ X = 5 $, e sua probabilidade como $ P (\ {X = 5 \}) $ ou $ P (X = 5) $.
+Por $ P (X = a) $, fazemos uma distinção entre a variável aleatória $ X $ e os valores (por exemplo, $ a $) que $ X $ pode assumir.
+No entanto, esse pedantismo resulta em uma notação complicada.
+Para uma notação compacta,
+por um lado, podemos apenas denotar $ P (X) $ como a * distribuição * sobre a variável aleatória $ X $:
+a distribuição nos diz a probabilidade de que $ X $ assuma qualquer valor.
+Por outro lado,
+podemos simplesmente escrever $ P (a) $ para denotar a probabilidade de uma variável aleatória assumir o valor $ a $.
+Uma vez que um evento na teoria da probabilidade é um conjunto de resultados do espaço amostral,
+podemos especificar um intervalo de valores para uma variável aleatória assumir.
+Por exemplo, $ P (1 \ leq X \ leq 3) $ denota a probabilidade do evento $ \ {1 \ leq X \ leq 3 \} $,
+o que significa $ \ {X = 1, 2, \ text {ou}, 3 \} $. De forma equivalente, $ P (1 \ leq X \ leq 3) $ representa a probabilidade de que a variável aleatória $ X $ possa assumir um valor de $ \ {1, 2, 3 \} $.
+
 Note that there is a subtle difference between *discrete* random variables, like the sides of a die, and *continuous* ones, like the weight and the height of a person. There is little point in asking whether two people have exactly the same height. If we take precise enough measurements you will find that no two people on the planet have the exact same height. In fact, if we take a fine enough measurement, you will not have the same height when you wake up and when you go to sleep. So there is no purpose in asking about the probability
 that someone is 1.80139278291028719210196740527486202 meters tall. Given the world population of humans the probability is virtually 0. It makes more sense in this case to ask whether someone's height falls into a given interval, say between 1.79 and 1.81 meters. In these cases we quantify the likelihood that we see a value as a *density*. The height of exactly 1.80 meters has no probability, but nonzero density. In the interval between any two different heights we have nonzero probability.
 In the rest of this section, we consider probability in discrete space.
 For probability over continuous random variables, you may refer to :numref:`sec_random_variables`.
+
+Observe que há uma diferença sutil entre variáveis ​​aleatórias * discretas *, como os lados de um dado, e * contínuas *, como o peso e a altura de uma pessoa. Não adianta perguntar se duas pessoas têm exatamente a mesma altura. Se tomarmos medidas precisas o suficiente, você descobrirá que duas pessoas no planeta não têm exatamente a mesma altura. Na verdade, se fizermos uma medição suficientemente precisa, você não terá a mesma altura ao acordar e ao dormir. Portanto, não há nenhum propósito em perguntar sobre a probabilidade
+que alguém tem 1,80139278291028719210196740527486202 metros de altura. Dada a população mundial de humanos, a probabilidade é virtualmente 0. Faz mais sentido, neste caso, perguntar se a altura de alguém cai em um determinado intervalo, digamos entre 1,79 e 1,81 metros. Nesses casos, quantificamos a probabilidade de vermos um valor como uma * densidade *. A altura de exatamente 1,80 metros não tem probabilidade, mas densidade diferente de zero. No intervalo entre quaisquer duas alturas diferentes, temos probabilidade diferente de zero.
+No restante desta seção, consideramos a probabilidade no espaço discreto.
+Para probabilidade sobre variáveis ​​aleatórias contínuas, você pode consultar: numref: `sec_random_variables`.
 
 ## Dealing with Multiple Random Variables
 
@@ -501,5 +549,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzY4NjI1OTZdfQ==
+eyJoaXN0b3J5IjpbLTk5MzY3MDYyN119
 -->
