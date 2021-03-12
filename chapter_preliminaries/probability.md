@@ -297,23 +297,17 @@ se e somente se $P(A, B \mid C) = P(A \mid C)P(B \mid C)$. Isso é expresso como
 ### Aplicação
 :label:`subsec_probability_hiv_app`
 
-Let us put our skills to the test. Assume that a doctor administers an HIV test to a patient. This test is fairly accurate and it fails only with 1% probability if the patient is healthy but reporting him as diseased. Moreover,
-it never fails to detect HIV if the patient actually has it. We use $D_1$ to indicate the diagnosis ($1$ if positive and $0$ if negative) and $H$ to denote the HIV status ($1$ if positive and $0$ if negative).
-:numref:`conditional_prob_D1` lists such conditional probabilities.
-
 Vamos colocar nossas habilidades à prova. Suponha que um médico administre um teste de HIV a um paciente. Este teste é bastante preciso e falha apenas com 1% de probabilidade se o paciente for saudável, mas relatá-lo como doente. Além disso,
 nunca deixa de detectar o HIV se o paciente realmente o tiver. Usamos $D_1$ para indicar o diagnóstico ($1$ se positivo e $0$ se negativo) e $H$ para denotar o estado de HIV ($1$ se positivo e $0$ se negativo).
 :numref:`conditional_prob_D1` lista tais probabilidades condicionais.
 :
 Probabilidade condicional de $P(D_1 \mid H)$.
 
-| Conditional probability | $H=1$ | $H=0$ |
+| Probabilidade Condicional | $H=1$ | $H=0$ |
 |---|---|---|
 |$P(D_1 = 1 \mid H)$|            1 |         0.01 |
 |$P(D_1 = 0 \mid H)$|            0 |         0.99 |
 :label:`conditional_prob_D1`
-
-Note that the column sums are all 1 (but the row sums are not), since the conditional probability needs to sum up to 1, just like the probability. Let us work out the probability of the patient having HIV if the test comes back positive, i.e., $P(H = 1 \mid D_1 = 1)$. Obviously this is going to depend on how common the disease is, since it affects the number of false alarms. Assume that the population is quite healthy, e.g., $P(H=1) = 0.0015$. To apply Bayes' theorem, we need to apply marginalization and the multiplication rule to determine
 
 Observe que as somas das colunas são todas 1 (mas as somas das linhas não), uma vez que a probabilidade condicional precisa somar 1, assim como a probabilidade. Vamos calcular a probabilidade de o paciente ter HIV se o teste der positivo, ou seja, $P(H = 1 \mid D_1 = 1)$. Obviamente, isso vai depender de quão comum é a doença, já que afeta o número de alarmes falsos. Suponha que a população seja bastante saudável, por exemplo, $P(H=1) = 0.0015$. Para aplicar o teorema de Bayes, precisamos aplicar a marginalização e a regra de multiplicação para determinar
 
@@ -325,7 +319,7 @@ $$\begin{aligned}
 \end{aligned}
 $$
 
-Thus, we get
+Portanto, obtemos:
 
 $$\begin{aligned}
 &P(H = 1 \mid D_1 = 1)\\ =& \frac{P(D_1=1 \mid H=1) P(H=1)}{P(D_1=1)} \\ =& 0.1306 \end{aligned}.$$
@@ -479,8 +473,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NjkwNjgwOCwxOTg4NDgyNzM0LC0yMT
-QzMTQxMzUyLDgxOTAzMjUzOCwxNDYzMDU1MTg5LC0xMjM1Mjg3
-MTI3LDE4NDA0NjIxNTcsMzQwODE0OTUsLTE2OTU4NDc0NjEsMz
-cyODg3MTU4LDgxOTkyNDAxOF19
+eyJoaXN0b3J5IjpbLTIwOTcwODcxMjUsMTk4ODQ4MjczNCwtMj
+E0MzE0MTM1Miw4MTkwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4
+NzEyNywxODQwNDYyMTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLD
+M3Mjg4NzE1OCw4MTk5MjQwMThdfQ==
 -->
