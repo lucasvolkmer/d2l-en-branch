@@ -30,11 +30,7 @@ Mas existe uma diferença fundamental entre os dois casos. Neste primeiro caso, 
 
 ## Teoria Básica de Probabilidade
 
-Say that we cast a die and want to know what the chance is of seeing a 1 rather than another digit. If the die is fair, all the six outcomes $\{1, \ldots, 6\}$ are equally likely to occur, and thus we would see a $1$ in one out of six cases. Formally we state that $1$ occurs with probability $\frac{1}{6}$.
-
 Digamos que lançamos um dado e queremos saber qual é a chance de ver um 1 em vez de outro dígito. Se o dado for justo, todos os seis resultados $\{1, \ldots, 6\}$ têm a mesma probabilidade de ocorrer e, portanto, veríamos $1$ em um dos seis casos. Formalmente afirmamos que $1$ ocorre com probabilidade $\frac{1}{6}$.
-
-For a real die that we receive from a factory, we might not know those proportions and we would need to check whether it is tainted. The only way to investigate the die is by casting it many times and recording the outcomes. For each cast of the die, we will observe a value in $\{1, \ldots, 6\}$. Given these outcomes, we want to investigate the probability of observing each outcome.
 
 Para um dado real que recebemos de uma fábrica, podemos não saber essas proporções e precisaríamos verificar se ele está contaminado. A única maneira de investigar o dado é lançando-o várias vezes e registrando os resultados. Para cada lançamento do dado, observaremos um valor em $\{1, \ldots, 6\}$. Dados esses resultados, queremos investigar a probabilidade de observar cada resultado.
 
@@ -607,7 +603,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDMyMDM2NzgsMTg0MDQ2MjE1NywzND
+eyJoaXN0b3J5IjpbLTEyMzUyODcxMjcsMTg0MDQ2MjE1NywzND
 A4MTQ5NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4
 XX0=
 -->
