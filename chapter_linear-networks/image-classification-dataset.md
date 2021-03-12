@@ -44,7 +44,7 @@ d2l.use_svg_display()
 
 ## Lendo o Dataset
 
-We can [**download and read the Fashion-MNIST dataset into memory via the build-in functions in the framework.**]
+Nós podemos [**baixar e ler o *dataset* Fashion-MNIST na memória por meio das funções integradas na estrutura.**]
 
 ```{.python .input}
 mnist_train = gluon.data.vision.FashionMNIST(train=True)
@@ -68,11 +68,11 @@ mnist_test = torchvision.datasets.FashionMNIST(
 mnist_train, mnist_test = tf.keras.datasets.fashion_mnist.load_data()
 ```
 
-Fashion-MNIST consists of images from 10 categories, each represented
-by 6000 images in the training dataset and by 1000 in the test dataset.
-A *test dataset* (or *test set*) is used for evaluating  model performance and not for training.
-Consequently the training set and the test set
-contain 60000 and 10000 images, respectively.
+O Fashion-MNIST consiste em imagens de 10 categorias, cada uma representada
+por 6.000 imagens no conjunto de dados de treinamento e por 1.000 no conjunto de dados de teste.
+Um *dataset de teste* (ou *conjunto de teste*) é usado para avaliar o desempenho do modelo e não para treinamento.
+Consequentemente, o conjunto de treinamento e o conjunto de teste
+contém 60.000 e 10.000 imagens, respectivamente.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -320,5 +320,5 @@ We are now ready to work with the Fashion-MNIST dataset in the sections that fol
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NDEwMjQyLDIxNDgzNjkyMV19
+eyJoaXN0b3J5IjpbLTMwNTY4NDEyMywyMTQ4MzY5MjFdfQ==
 -->
