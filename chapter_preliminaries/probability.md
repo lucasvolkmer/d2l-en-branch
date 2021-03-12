@@ -405,21 +405,21 @@ $$P(A \mid B) = \frac{P(B \mid A) P(A)}{P(B)}.$$
 
 Note that here we use the more compact notation where $P(A, B)$ is a *joint distribution* and $P(A \mid B)$ is a *conditional distribution*. Such distributions can be evaluated for particular values $A = a, B=b$.
 
-Observe que aqui usamos a notação mais compacta em que $P(A, B)$ é uma * distribuição conjunta * e $ P (A \ mid B) $ é uma * distribuição condicional *. Essas distribuições podem ser avaliadas para valores particulares $ A = a, B = b $.
+Observe que aqui usamos a notação mais compacta em que $P(A, B)$ é uma *distribuição conjunta* e $P(A \mid B)$ é uma *distribuição condicional*. Essas distribuições podem ser avaliadas para valores particulares $A = a, B = b$.
 
 ### Marginalization
 
 Bayes' theorem is very useful if we want to infer one thing from the other, say cause and effect, but we only know the properties in the reverse direction, as we will see later in this section. One important operation that we need, to make this work, is *marginalization*.
 It is the operation of determining $P(B)$ from $P(A, B)$. We can see that the probability of $B$ amounts to accounting for all possible choices of $A$ and aggregating the joint probabilities over all of them:
 
-O teorema de Bayes é muito útil se quisermos inferir uma coisa da outra, digamos causa e efeito, mas só conhecemos as propriedades na direção reversa, como veremos mais adiante nesta seção. Uma operação importante de que precisamos para fazer esse trabalho é a * marginalização *.
-É a operação de determinar $ P (B) $ de $ P (A, B) $. Podemos ver que a probabilidade de $ B $ equivale a contabilizar todas as escolhas possíveis de $ A $ e agregar as probabilidades conjuntas de todas elas:
+O teorema de Bayes é muito útil se quisermos inferir uma coisa da outra, digamos causa e efeito, mas só conhecemos as propriedades na direção reversa, como veremos mais adiante nesta seção. Uma operação importante de que precisamos para fazer esse trabalho é a *marginalização*.
+É a operação de determinar $P(B)$ de $P(A, B)$. Podemos ver que a probabilidade de $B$ equivale a contabilizar todas as escolhas possíveis de $A$ e agregar as probabilidades conjuntas de todas elas:
 
 $$P(B) = \sum_{A} P(A, B),$$
 
 which is also known as the *sum rule*. The probability or distribution as a result of marginalization is called a *marginal probability* or a *marginal distribution*.
 
-que também é conhecida como * regra da soma *. A probabilidade ou distribuição como resultado da marginalização é chamada de * probabilidade marginal * ou * distribuição marginal *.
+que também é conhecida como * regra da soma *. A probabilidade ou distribuição como resultado da marginalização é chamada de *probabilidade marginal* ou *distribuição marginal*.
 
 ### Independence
 
@@ -431,10 +431,10 @@ In this case $P(B \mid A) = P(B)$. Statisticians typically express this as $A \p
 In all the other cases we call $A$ and $B$ dependent. For instance, two successive rolls of a die are independent. In contrast, the position of a light switch and the brightness in the room are not (they are not perfectly deterministic, though, since we could always have a broken light bulb, power failure, or a broken switch).
 
 Outra propriedade útil para verificar é * dependência * vs. * independência *.
-Duas variáveis aleatórias $ A $ e $ B $ sendo independentes
-significa que a ocorrência de um evento de $ A $
-não revela nenhuma informação sobre a ocorrência de um evento de $ B $.
-Neste caso $ P (B \ mid A) = P (B) $. Os estatísticos normalmente expressam isso como $ A \ perp B $. Do teorema de Bayes, segue imediatamente que também $ P (A \ mid B) = P (A) $.
+Duas variáveis aleatórias $A$ e $B$ sendo independentes
+significa que a ocorrência de um evento de $A$
+não revela nenhuma informação sobre a ocorrência de um evento de $B$.
+Neste caso $P(B \mid A) = P(B)$. Os estatísticos normalmente expressam isso como $A \perp  B$. Do teorema de Bayes, segue imediatamente que também $ P (A \ mid B) = P (A) $.
 Em todos os outros casos, chamamos $ A $ e $ B $ de dependente. Por exemplo, duas jogadas sucessivas de um dado são independentes. Em contraste, a posição de um interruptor de luz e a luminosidade da sala não são (eles não são perfeitamente determinísticos, pois podemos sempre ter uma lâmpada quebrada, falha de energia ou um interruptor quebrado).
 
 Since $P(A \mid B) = \frac{P(A, B)}{P(B)} = P(A)$ is equivalent to $P(A, B) = P(A)P(B)$, two random variables are independent if and only if their joint distribution is the product of their individual distributions.
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4OTY0OTg5Miw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbLTEyNzQwNTM4MCw4MTk5MjQwMThdfQ==
 -->
