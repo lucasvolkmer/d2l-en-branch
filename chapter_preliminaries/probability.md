@@ -331,14 +331,14 @@ Considere uma variável aleatória $X$ cujo valor está no espaço amostral $\ma
 Por $P (X = a)$, fazemos uma distinção entre a variável aleatória $X$ e os valores (por exemplo, $a$) que $X$ pode assumir.
 No entanto, esse pedantismo resulta em uma notação complicada.
 Para uma notação compacta,
-por um lado, podemos apenas denotar $P (X) $ como a * distribuição * sobre a variável aleatória $ X $:
-a distribuição nos diz a probabilidade de que $ X $ assuma qualquer valor.
+por um lado, podemos apenas denotar $P (X)$ como a *distribuição* sobre a variável aleatória $X$:
+a distribuição nos diz a probabilidade de que $X$ assuma qualquer valor.
 Por outro lado,
-podemos simplesmente escrever $ P (a) $ para denotar a probabilidade de uma variável aleatória assumir o valor $ a $.
+podemos simplesmente escrever $P (a)$ para denotar a probabilidade de uma variável aleatória assumir o valor $a$.
 Uma vez que um evento na teoria da probabilidade é um conjunto de resultados do espaço amostral,
 podemos especificar um intervalo de valores para uma variável aleatória assumir.
-Por exemplo, $ P (1 \ leq X \ leq 3) $ denota a probabilidade do evento $ \ {1 \ leq X \ leq 3 \} $,
-o que significa $ \ {X = 1, 2, \ text {ou}, 3 \} $. De forma equivalente, $ P (1 \ leq X \ leq 3) $ representa a probabilidade de que a variável aleatória $ X $ possa assumir um valor de $ \ {1, 2, 3 \} $.
+Por exemplo, $P(1 \leq X \leq 3)$ denota a probabilidade do evento $\{1 \leq X \leq 3\}$,
+o que significa $\{X = 1, 2, \text{or}, 3\}$. De forma equivalente, $\{X = 1, 2, \text{or}, 3\}$ representa a probabilidade de que a variável aleatória $X$ possa assumir um valor de $ \ {1, 2, 3 \} $.
 
 Note that there is a subtle difference between *discrete* random variables, like the sides of a die, and *continuous* ones, like the weight and the height of a person. There is little point in asking whether two people have exactly the same height. If we take precise enough measurements you will find that no two people on the planet have the exact same height. In fact, if we take a fine enough measurement, you will not have the same height when you wake up and when you go to sleep. So there is no purpose in asking about the probability
 that someone is 1.80139278291028719210196740527486202 meters tall. Given the world population of humans the probability is virtually 0. It makes more sense in this case to ask whether someone's height falls into a given interval, say between 1.79 and 1.81 meters. In these cases we quantify the likelihood that we see a value as a *density*. The height of exactly 1.80 meters has no probability, but nonzero density. In the interval between any two different heights we have nonzero probability.
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NTkzOTIxOCw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbLTczNjg0OTE5Myw4MTk5MjQwMThdfQ==
 -->
