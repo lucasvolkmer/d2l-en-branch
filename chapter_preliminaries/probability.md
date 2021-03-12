@@ -7,7 +7,7 @@ Cursos inteiros, graduações, teses, carreiras e até departamentos são dedica
 
 Já invocamos as probabilidades nas seções anteriores, sem articular o que são precisamente ou dar um exemplo concreto. Vamos ser mais sérios agora, considerando o primeiro caso: distinguir cães e gatos com base em fotografias. Isso pode parecer simples, mas na verdade é um desafio formidável. Para começar, a dificuldade do problema pode depender da resolução da imagem.
 
-![Images of varying resolutions ($10 \times 10$, $20 \times 20$, $40 \times 40$, $80 \times 80$, and $160 \times 160$ pixels).](../img/cat-dog-pixels.png)
+![Imagens de diferentes resoluções ($10 \times 10$, $20 \times 20$, $40 \times 40$, $80 \times 80$, e $160 \times 160$ pixels).](../img/cat-dog-pixels.png)
 :width:`300px`
 :label:`fig_cat_dog`
 
@@ -23,7 +23,7 @@ If we had no evidence to suggest that $y =$ "cat" or that $y =$ "dog", then we m
 confident, but not sure that the image depicted a cat, we might assign a
 probability $0.5  < P(y=$ "cat"$) < 1$.
 
-Conforme mostrado em: numref: `fig_cat_dog`,
+Conforme mostrado em :numref:`fig_cat_dog`,
 embora seja fácil para os humanos reconhecerem cães e gatos na resolução de $160 \times 160$ pixels,
 torna-se um desafio em $40 \times 40$ pixels e quase impossível em $10 \times 10$ pixels. No
 Em outras palavras, nossa capacidade de distinguir cães e gatos a uma grande distância (e, portanto, em baixa resolução) pode se aproximar de uma suposição desinformada. A probabilidade nos dá um
@@ -624,6 +624,6 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTA2NDM2OTUsLTE2OTU4NDc0NjEsMz
-cyODg3MTU4LDgxOTkyNDAxOF19
+eyJoaXN0b3J5IjpbMzQwODE0OTUsLTE2OTU4NDc0NjEsMzcyOD
+g3MTU4LDgxOTkyNDAxOF19
 -->
