@@ -560,13 +560,13 @@ train_ch3(net, train_iter, test_iter, cross_entropy, num_epochs, updater)
 
 ## Predição
 
-Now that training is complete,
-our model is ready to [**classify some images.**]
-Given a series of images,
-we will compare their actual labels
-(first line of text output)
-and the predictions from the model
-(second line of text output).
+Agora que o treinamento está completo,
+nosso modelo está pronto para [**classificar algumas imagens.**]
+Dada uma série de imagens,
+vamos comparar seus *labels* reais
+(primeira linha de saída de texto)
+e as previsões do modelo
+(segunda linha de saída de texto).
 
 ```{.python .input}
 #@tab all
@@ -583,7 +583,7 @@ def predict_ch3(net, test_iter, n=6):  #@save
 predict_ch3(net, test_iter)
 ```
 
-## Summary
+## Resumo
 
 * With softmax regression, we can train models for multiclass classification.
 * The training loop of softmax regression is very similar to that in linear regression: retrieve and read data, define models and loss functions, then train models using optimization algorithms. As you will soon find out, most common deep learning models have similar training procedures.
@@ -608,7 +608,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MDI4ODAxOSwtNDEwNzA5NTcyLDExMD
+eyJoaXN0b3J5IjpbLTM5Mzc5NjE1MiwtNDEwNzA5NTcyLDExMD
 gzMDY5MCwtMTk1MzMzMjAxOSwxMTUzMDgxMzUsMTYwMDk4NDQ1
 Niw3NDI1MTc0ODcsLTIxMzE1MDU0OTMsLTk5OTA3ODc2NywtMT
 k4NDE4OTcyNV19
