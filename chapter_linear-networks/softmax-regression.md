@@ -311,18 +311,18 @@ $$
 \partial_{o_j} l(\mathbf{y}, \hat{\mathbf{y}}) = \frac{\exp(o_j)}{\sum_{k=1}^q \exp(o_k)} - y_j = \mathrm{softmax}(\mathbf{o})_j - y_j.
 $$
 
-In other words, the derivative is the difference
-between the probability assigned by our model,
-as expressed by the softmax operation,
-and what actually happened, as expressed by elements in the one-hot label vector.
-In this sense, it is very similar to what we saw in regression,
-where the gradient was the difference
-between the observation $y$ and estimate $\hat{y}$.
-This is not coincidence.
-In any exponential family (see the
-[online appendix on distributions](https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/distributions.html)) model,
-the gradients of the log-likelihood are given by precisely this term.
-This fact makes computing gradients easy in practice.
+Em outras palavras, a derivada é a diferença
+entre a probabilidade atribuída pelo nosso modelo,
+conforme expresso pela operação *softmax*,
+e o que realmente aconteceu, conforme expresso por elementos no vetor *one-hot* de *labels*.
+Nesse sentido, é muito semelhante ao que vimos na regressão,
+onde o gradiente era a diferença
+entre a observação $y$ e a estimativa $\hat{y}$.
+Isso não é coincidência.
+Em qualquer família exponencial (veja o modelo no
+[apêndice online sobre distribuições] (https://d2l.ai/chapter_apencha-mathematics-for-deep-learning/distributions.html)),
+os gradientes da probabilidade logarítmica são dados precisamente por esse termo.
+Esse fato torna a computação dos gradientes fáceis na prática.
 
 ### Cross-Entropy Loss
 
@@ -444,7 +444,7 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzg0ODk2MDcsLTg2NTE4MTkxOCwtMT
+eyJoaXN0b3J5IjpbLTExODMyODczODUsLTg2NTE4MTkxOCwtMT
 MwMjM4MDE4OSwtMTQxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2
 MDk4MywtMTI5MTE0NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOT
 QsMTM5NDcyMzQ2MF19
