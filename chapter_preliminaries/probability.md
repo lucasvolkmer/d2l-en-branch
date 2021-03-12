@@ -11,31 +11,17 @@ Já invocamos as probabilidades nas seções anteriores, sem articular o que sã
 :width:`300px`
 :label:`fig_cat_dog`
 
-As shown in :numref:`fig_cat_dog`,
-while it is easy for humans to recognize cats and dogs at the resolution of $160 \times 160$ pixels,
-it becomes challenging at $40 \times 40$ pixels and next to impossible at $10 \times 10$ pixels. In
-other words, our ability to tell cats and dogs apart at a large distance (and thus low resolution) might approach uninformed guessing. Probability gives us a
-formal way of reasoning about our level of certainty.
-If we are completely sure
-that the image depicts a cat, we say that the *probability* that the corresponding label $y$ is "cat", denoted $P(y=$ "cat"$)$ equals $1$.
-If we had no evidence to suggest that $y =$ "cat" or that $y =$ "dog", then we might say that the two possibilities were equally
-*likely* expressing this as $P(y=$ "cat"$) = P(y=$ "dog"$) = 0.5$. If we were reasonably
-confident, but not sure that the image depicted a cat, we might assign a
-probability $0.5  < P(y=$ "cat"$) < 1$.
-
 Conforme mostrado em :numref:`fig_cat_dog`,
 embora seja fácil para os humanos reconhecerem cães e gatos na resolução de $160 \times 160$ pixels,
-torna-se um desafio em $40 \times 40$ pixels e quase impossível em $10 \times 10$ pixels. No
+torna-se um desafio em $40 \times 40$ pixels e quase impossível em $10 \times 10$ pixels.
 Em outras palavras, nossa capacidade de distinguir cães e gatos a uma grande distância (e, portanto, em baixa resolução) pode se aproximar de uma suposição desinformada. A probabilidade nos dá um
 maneira formal de raciocinar sobre nosso nível de certeza.
 Se tivermos certeza absoluta
-que a imagem representa um gato, dizemos que a * probabilidade * de que o rótulo $y$ correspondente seja "cat", denotado $P(y=$ "cat"$)$ é igual a $1$.
+que a imagem representa um gato, dizemos que a *probabilidade* de que o rótulo $y$ correspondente seja "cat", denotado $P(y=$ "cat"$)$ é igual a $1$.
 Se não tivéssemos nenhuma evidência para sugerir que $y =$ "cat" ou que $y =$ "dog", então poderíamos dizer que as duas possibilidades eram igualmente
 *provavelmente* expressando isso como  $P(y=$ "cat"$) = P(y=$ "dog"$) = 0.5$. Se estivéssemos razoavelmente
 confiantes, mas não temos certeza de que a imagem representava um gato, podemos atribuir um
 probabilidade $0,5 <P (y = $"cat"$) <1$.
-
-Now consider the second case: given some weather monitoring data, we want to predict the probability that it will rain in Taipei tomorrow. If it is summertime, the rain might come with probability 0.5.
 
 Agora considere o segundo caso: dados alguns dados de monitoramento do tempo, queremos prever a probabilidade de que choverá em Taipei amanhã. Se for verão, a chuva pode vir com probabilidade 0,5.
 
@@ -624,6 +610,6 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQwODE0OTUsLTE2OTU4NDc0NjEsMzcyOD
-g3MTU4LDgxOTkyNDAxOF19
+eyJoaXN0b3J5IjpbMTg0MDQ2MjE1NywzNDA4MTQ5NSwtMTY5NT
+g0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4XX0=
 -->
