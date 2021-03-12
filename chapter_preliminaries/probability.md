@@ -138,12 +138,7 @@ counts = tfp.distributions.Multinomial(1000, fair_probs).sample()
 counts / 1000
 ```
 
-Because we generated the data from a fair die, we know that each outcome has true probability $\frac{1}{6}$, roughly $0.167$, so the above output estimates look good.
-
 Como geramos os dados de um dado justo, sabemos que cada resultado tem probabilidade real $\frac{1}{6}$, cerca de $0,167$, portanto, as estimativas de saída acima parecem boas.
-
-We can also visualize how these probabilities converge over time towards the true probability.
-Let us conduct 500 groups of experiments where each group draws 10 samples.
 
 Também podemos visualizar como essas probabilidades convergem ao longo do tempo para a probabilidade verdadeira.
 Vamos conduzir 500 grupos de experimentos onde cada grupo extrai 10 amostras.
@@ -571,7 +566,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDg4OTM2MjcsODE5MDMyNTM4LDE0Nj
-MwNTUxODksLTEyMzUyODcxMjcsMTg0MDQ2MjE1NywzNDA4MTQ5
-NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbMTQ4NTc0MzIzMyw4MTkwMzI1MzgsMTQ2Mz
+A1NTE4OSwtMTIzNTI4NzEyNywxODQwNDYyMTU3LDM0MDgxNDk1
+LC0xNjk1ODQ3NDYxLDM3Mjg4NzE1OCw4MTk5MjQwMThdfQ==
 -->
