@@ -39,24 +39,24 @@ train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 
 ## Inicializando os Parâmetros do Modelo
 
-As in our linear regression example,
-each example here will be represented by a fixed-length vector.
-Each example in the raw dataset is a $28 \times 28$ image.
-In this section, [**we will flatten each image,
-treating them as vectors of length 784.**]
-In the future, we will talk about more sophisticated strategies
-for exploiting the spatial structure in images,
-but for now we treat each pixel location as just another feature.
 
-Recall that in softmax regression,
-we have as many outputs as there are classes.
-(**Because our dataset has 10 classes,
-our network will have an output dimension of 10.**)
-Consequently, our weights will constitute a $784 \times 10$ matrix
-and the biases will constitute a $1 \times 10$ row vector.
-As with linear regression, we will initialize our weights `W`
-with Gaussian noise and our biases to take the initial value 0.
+Como em nosso exemplo de regressão linear,
+cada exemplo aqui será representado por um vetor de comprimento fixo.
+Cada exemplo no conjunto de dados bruto é uma imagem $28 \times 28$.
+Nesta seção, [**vamos nivelar cada imagem,
+tratando-os como vetores de comprimento 784.**]
+No futuro, falaremos sobre estratégias mais sofisticadas
+para explorar a estrutura espacial em imagens,
+mas, por enquanto, tratamos cada localização de pixel como apenas outro recurso.
 
+Lembre-se de que na regressão *softmax*,
+temos tantas saídas quanto classes.
+(**Como nosso conjunto de dados tem 10 classes,
+nossa rede terá uma dimensão de saída de 10.**)
+Consequentemente, nossos pesos constituirão uma matriz $784 \times 10$
+e os *bias* constituirão um vetor-linha $1 \times 10$.
+Tal como acontece com a regressão linear, vamos inicializar nossos pesos `W`
+com ruído Gaussiano e nossos *bias* com o valor inicial 0.
 ```{.python .input}
 num_inputs = 784
 num_outputs = 10
@@ -86,7 +86,7 @@ W = tf.Variable(tf.random.normal(shape=(num_inputs, num_outputs),
 b = tf.Variable(tf.zeros(num_outputs))
 ```
 
-## Defining the Softmax Operation
+## Definindo a Operação do *Softmax*
 
 Before implementing the softmax regression model,
 let us briefly review how the sum operator works
@@ -606,6 +606,6 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzE1MDU0OTMsLTk5OTA3ODc2NywtMT
-k4NDE4OTcyNV19
+eyJoaXN0b3J5IjpbNzQyNTE3NDg3LC0yMTMxNTA1NDkzLC05OT
+kwNzg3NjcsLTE5ODQxODk3MjVdfQ==
 -->
