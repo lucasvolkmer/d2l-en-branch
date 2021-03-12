@@ -171,19 +171,19 @@ X_prob = softmax(X)
 X_prob, tf.reduce_sum(X_prob, 1)
 ```
 
-Note that while this looks correct mathematically,
-we were a bit sloppy in our implementation
-because we failed to take precautions against numerical overflow or underflow
-due to large or very small elements of the matrix.
+Observe que embora pareça correto matematicamente,
+fomos um pouco desleixados em nossa implementação
+porque falhamos em tomar precauções contra estouro numérico ou estouro negativo
+devido a elementos grandes ou muito pequenos da matriz.
 
-## Defining the Model
+## Definindo o Modelo
 
-Now that we have defined the softmax operation,
-we can [**implement the softmax regression model.**]
-The below code defines how the input is mapped to the output through the network.
-Note that we flatten each original image in the batch
-into a vector using the `reshape` function
-before passing the data through our model.
+Agora que definimos a operação do *softmax*,
+podemos [**implementar o modelo de regressão softmax.**]
+O código a seguir define como a entrada é mapeada para a saída por meio da rede.
+Observe que achatamos cada imagem original no lote
+em um vetor usando a função `reshape`
+antes de passar os dados pelo nosso modelo.
 
 ```{.python .input}
 #@tab all
@@ -191,7 +191,7 @@ def net(X):
     return softmax(d2l.matmul(d2l.reshape(X, (-1, W.shape[0])), W) + b)
 ```
 
-## Defining the Loss Function
+## Definindo a Função de Perda
 
 Next, we need to implement the cross-entropy loss function,
 as introduced in :numref:`sec_softmax`.
@@ -606,7 +606,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMjIyNTE0NywxNjAwOTg0NDU2LDc0Mj
-UxNzQ4NywtMjEzMTUwNTQ5MywtOTk5MDc4NzY3LC0xOTg0MTg5
-NzI1XX0=
+eyJoaXN0b3J5IjpbNTEyMDIyMzg0LDE2MDA5ODQ0NTYsNzQyNT
+E3NDg3LC0yMTMxNTA1NDkzLC05OTkwNzg3NjcsLTE5ODQxODk3
+MjVdfQ==
 -->
