@@ -363,15 +363,15 @@ so we may not apply any of the aforementioned rules to differentiate these funct
 Fortunately, the *chain rule* enables us to differentiate composite functions.
 
 No entanto, esses gradientes podem ser difíceis de encontrar.
-Isso ocorre porque as funções multivariadas no aprendizado profundo são frequentemente * compostas *,
+Isso ocorre porque as funções multivariadas no aprendizado profundo são frequentemente *compostas*,
 portanto, não podemos aplicar nenhuma das regras mencionadas acima para diferenciar essas funções.
-Felizmente, a * regra da cadeia * nos permite diferenciar funções compostas.
+Felizmente, a *regra da cadeia* nos permite diferenciar funções compostas.
 
 Let us first consider functions of a single variable.
 Suppose that functions $y=f(u)$ and $u=g(x)$ are both differentiable, then the chain rule states that
 
 Vamos primeiro considerar as funções de uma única variável.
-Suponha que as funções $ y = f (u) $ e $ u = g (x) $ sejam diferenciáveis, então a regra da cadeia afirma que
+Suponha que as funções $y = f (u)$ e $u = g (x)$ sejam diferenciáveis, então a regra da cadeia afirma que
 
 $$\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx}.$$
 
@@ -385,10 +385,10 @@ Then the chain rule gives
 
 Agora, vamos voltar nossa atenção para um cenário mais geral
 onde as funções têm um número arbitrário de variáveis.
-Suponha que a função diferenciável $ y $ tenha variáveis
-$ u_1, u_2, \ ldots, u_m $, onde cada função diferenciável $ u_i $
-tem variáveis $ x_1, x_2, \ ldots, x_n $.
-Observe que $ y $ é uma função de $ x_1, x_2, \ ldots, x_n $.
+Suponha que a função diferenciável $y$ tenha variáveis
+$u_1, u_2, \ldots, u_m$, onde cada função diferenciável $u_i$
+tem variáveis $x_1, x_2, \ldots, x_n$.
+Observe que $y$ é uma função de $x_1, x_2, \ldots, x_n$.
 Então a regra da cadeia dá
 
 $$\frac{dy}{dx_i} = \frac{dy}{du_1} \frac{du_1}{dx_i} + \frac{dy}{du_2} \frac{du_2}{dx_i} + \cdots + \frac{dy}{du_m} \frac{du_m}{dx_i}$$
@@ -397,7 +397,7 @@ para qualquer $i = 1, 2, \ldots, n$.
 
 
 
-## Summary
+## Sumário
 
 
 * Differential calculus and integral calculus are two branches of calculus, where the former can be applied to the ubiquitous optimization problems in deep learning.
@@ -434,6 +434,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTU3NDA0MDksNTY1MjYwNjQ0LC0xOT
-c5MzM1ODI3XX0=
+eyJoaXN0b3J5IjpbMTEzNzIxNTQzOSw1NjUyNjA2NDQsLTE5Nz
+kzMzU4MjddfQ==
 -->
