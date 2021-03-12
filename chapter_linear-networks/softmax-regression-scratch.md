@@ -129,12 +129,12 @@ como isso parece, expresso como uma equação:
 $$\mathrm{softmax}(\mathbf{X})_{ij} = \frac{\exp(\mathbf{X}_{ij})}{\sum_k \exp(\mathbf{X}_{ik})}.$$
 **)
 
-The denominator, or normalization constant,
-is also sometimes called the *partition function*
-(and its logarithm is called the log-partition function).
-The origins of that name are in [statistical physics](https://en.wikipedia.org/wiki/Partition_function_(statistical_mechanics))
-where a related equation models the distribution
-over an ensemble of particles.
+O denominador, ou constante de normalização,
+às vezes também é chamada de *função de partição*
+(e seu logaritmo é chamado de função de partição de log).
+As origens desse nome estão em [física estatística](https://en.wikipedia.org/wiki/Partition_function_ (estatística_mecânica))
+onde uma equação relacionada modela a distribuição
+sobre um conjunto de partículas.
 
 ```{.python .input}
 #@tab mxnet, tensorflow
@@ -152,10 +152,10 @@ def softmax(X):
     return X_exp / partition  # The broadcasting mechanism is applied here
 ```
 
-As you can see, for any random input,
-[**we turn each element into a non-negative number.
-Moreover, each row sums up to 1,**]
-as is required for a probability.
+Como você pode ver, para qualquer entrada aleatória,
+[**transformamos cada elemento em um número não negativo.
+Além disso, cada linha soma 1,**]
+como é necessário para uma probabilidade.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -606,6 +606,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMDk4NDQ1Niw3NDI1MTc0ODcsLTIxMz
-E1MDU0OTMsLTk5OTA3ODc2NywtMTk4NDE4OTcyNV19
+eyJoaXN0b3J5IjpbMTQxMjIyNTE0NywxNjAwOTg0NDU2LDc0Mj
+UxNzQ4NywtMjEzMTUwNTQ5MywtOTk5MDc4NzY3LC0xOTg0MTg5
+NzI1XX0=
 -->
