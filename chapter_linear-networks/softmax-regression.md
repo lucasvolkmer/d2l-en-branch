@@ -241,16 +241,16 @@ para o objetivo de erro quadrático médio na regressão linear
 
 ### *Log-Likelihood*
 
-The softmax function gives us a vector $\hat{\mathbf{y}}$,
-which we can interpret as estimated conditional probabilities
-of each class given any input $\mathbf{x}$, e.g.,
+A função *softmax* nos dá um vetor $\hat{\mathbf{y}}$,
+que podemos interpretar como probabilidades condicionais estimadas
+de cada classe dada qualquer entrada $\mathbf{x}$,, por exemplo,
 $\hat{y}_1$ = $P(y=\text{cat} \mid \mathbf{x})$.
-Suppose that the entire dataset $\{\mathbf{X}, \mathbf{Y}\}$ has $n$ examples,
-where the example indexed by $i$
-consists of a feature vector $\mathbf{x}^{(i)}$ and a one-hot label vector $\mathbf{y}^{(i)}$.
-We can compare the estimates with reality
-by checking how probable the actual classes are
-according to our model, given the features:
+Suponha que todo o conjunto de dados $\{\mathbf{X}, \mathbf{Y}\}$  tenha $n$ exemplos,
+onde o exemplo indexado por $i$
+consiste em um vetor de característica $\mathbf{x}^{(i)}$ e um vetor de rótulo único $\mathbf{y}^{(i)}$.
+Podemos comparar as estimativas com a realidade
+verificando quão prováveis as classes reais são
+de acordo com nosso modelo, dadas as características:
 
 $$
 P(\mathbf{Y} \mid \mathbf{X}) = \prod_{i=1}^n P(\mathbf{y}^{(i)} \mid \mathbf{x}^{(i)}).
@@ -445,8 +445,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NTU3OTUxOSwtMTMwMjM4MDE4OSwtMT
-QxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2MDk4MywtMTI5MTE0
-NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF
-19
+eyJoaXN0b3J5IjpbNTY4ODgyOTMzLC0xMzAyMzgwMTg5LC0xND
+E0MjMyNjk1LDM4NDc5NTkzNSwxNzI5MDYwOTgzLC0xMjkxMTQ3
+NTk2LDEwNjY5NTYwOTMsMTg0MzM3NTA5NCwxMzk0NzIzNDYwXX
+0=
 -->
