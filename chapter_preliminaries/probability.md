@@ -422,19 +422,19 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/36)
+[Discussão](https://discuss.d2l.ai/t/36)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/37)
+[Discussão](https://discuss.d2l.ai/t/37)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/198)
+[Discussão](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc4MDA1NzA4LDE5ODg0ODI3MzQsLTIxND
-MxNDEzNTIsODE5MDMyNTM4LDE0NjMwNTUxODksLTEyMzUyODcx
-MjcsMTg0MDQ2MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2MSwzNz
-I4ODcxNTgsODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbLTEwMDE3OTA0NTMsMTk4ODQ4MjczNCwtMj
+E0MzE0MTM1Miw4MTkwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4
+NzEyNywxODQwNDYyMTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLD
+M3Mjg4NzE1OCw4MTk5MjQwMThdfQ==
 -->
