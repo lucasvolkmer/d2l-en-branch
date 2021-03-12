@@ -288,14 +288,14 @@ Também pode não ser possível quando os recursos de entrada
 não são suficientemente informativos
 para classificar todos os exemplos perfeitamente.
 
-### *Softmax*  e 
+### *Softmax*  e Derivadas
 :label:`subsec_softmax_and_derivatives`
 
-Since the softmax and the corresponding loss are so common,
-it is worth understanding a bit better how it is computed.
-Plugging :eqref:`eq_softmax_y_and_o` into the definition of the loss
-in :eqref:`eq_l_cross_entropy`
-and using the definition of the softmax we obtain:
+Uma vez que o *softmax* e a perda correspondente são tão comuns,
+vale a pena entender um pouco melhor como ele é calculado.
+Conectando :eqref:`eq_softmax_y_and_o` na definição da perda
+em :eqref:`eq_l_cross_entropy`
+e usando a definição do *softmax* obtemos:
 
 $$
 \begin{aligned}
@@ -305,9 +305,8 @@ l(\mathbf{y}, \hat{\mathbf{y}}) &=  - \sum_{j=1}^q y_j \log \frac{\exp(o_j)}{\su
 \end{aligned}
 $$
 
-To understand a bit better what is going on,
-consider the derivative with respect to any logit $o_j$. We get
-
+Para entender um pouco melhor o que está acontecendo,
+considere a derivada com respeito a qualquer *logit* $o_j$. Nós temos
 $$
 \partial_{o_j} l(\mathbf{y}, \hat{\mathbf{y}}) = \frac{\exp(o_j)}{\sum_{k=1}^q \exp(o_k)} - y_j = \mathrm{softmax}(\mathbf{o})_j - y_j.
 $$
@@ -445,8 +444,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4ODc5MzUyMSwtODY1MTgxOTE4LC0xMz
-AyMzgwMTg5LC0xNDE0MjMyNjk1LDM4NDc5NTkzNSwxNzI5MDYw
-OTgzLC0xMjkxMTQ3NTk2LDEwNjY5NTYwOTMsMTg0MzM3NTA5NC
-wxMzk0NzIzNDYwXX0=
+eyJoaXN0b3J5IjpbLTIwMzg0ODk2MDcsLTg2NTE4MTkxOCwtMT
+MwMjM4MDE4OSwtMTQxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2
+MDk4MywtMTI5MTE0NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOT
+QsMTM5NDcyMzQ2MF19
 -->
