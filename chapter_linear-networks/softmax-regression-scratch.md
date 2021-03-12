@@ -1,14 +1,14 @@
 # Implementação da Regressão *Softmax*  do Zero
 :label:`sec_softmax_scratch`
 
-(**Just as we implemented linear regression from scratch, we believe that**)
-softmax regression
-is similarly fundamental and
-(**you ought to know the gory details of **)
-(~~softmax regression~~)
-how to implement it yourself.
-We will work with the Fashion-MNIST dataset, just introduced in :numref:`sec_fashion_mnist`,
-setting up a data iterator with batch size 256.
+(**Assim como implementamos a regressão linear do zero, acreditamos que**)
+regressão *softmax*
+é igualmente fundamental e
+(**você deve saber os detalhes sangrentos de**)
+(~~*regressão softmax*~~)
+como implementá-lo sozinho.
+Vamos trabalhar com o *dataset* Fashion-MNIST, recém-introduzido em :numref:`sec_fashion_mnist`,
+configurando um iterador de dados com *batch size* 256.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -37,7 +37,7 @@ batch_size = 256
 train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 ```
 
-## Initializing Model Parameters
+## Inicializando os Parâmetros do Modelo
 
 As in our linear regression example,
 each example here will be represented by a fixed-length vector.
@@ -606,5 +606,6 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5OTA3ODc2NywtMTk4NDE4OTcyNV19
+eyJoaXN0b3J5IjpbLTIxMzE1MDU0OTMsLTk5OTA3ODc2NywtMT
+k4NDE4OTcyNV19
 -->
