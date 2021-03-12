@@ -355,11 +355,20 @@ Para probabilidade sobre variáveis ​​aleatórias contínuas, você pode con
 Very often, we will want to consider more than one random variable at a time.
 For instance, we may want to model the relationship between diseases and symptoms. Given a disease and a symptom, say "flu" and "cough", either may or may not occur in a patient with some probability. While we hope that the probability of both would be close to zero, we may want to estimate these probabilities and their relationships to each other so that we may apply our inferences to effect better medical care.
 
+Muitas vezes, queremos considerar mais de uma variável aleatória de cada vez.
+Por exemplo, podemos querer modelar a relação entre doenças e sintomas. Dados uma doença e um sintoma, digamos "gripe" e "tosse", podem ou não ocorrer em um paciente com alguma probabilidade. Embora esperemos que a probabilidade de ambos seja próxima de zero, podemos estimar essas probabilidades e suas relações entre si para que possamos aplicar nossas inferências para obter um melhor atendimento médico.
+
 As a more complicated example, images contain millions of pixels, thus millions of random variables. And in many cases images will come with a
 label, identifying objects in the image. We can also think of the label as a
 random variable. We can even think of all the metadata as random variables
 such as location, time, aperture, focal length, ISO, focus distance, and camera type.
 All of these are random variables that occur jointly. When we deal with multiple random variables, there are several quantities of interest.
+
+Como um exemplo mais complicado, as imagens contêm milhões de pixels, portanto, milhões de variáveis aleatórias. E, em muitos casos, as imagens vêm com um
+rótulo, identificando objetos na imagem. Também podemos pensar no rótulo como um
+variável aleatória. Podemos até pensar em todos os metadados como variáveis aleatórias
+como local, tempo, abertura, comprimento focal, ISO, distância de foco e tipo de câmera.
+Todas essas são variáveis aleatórias que ocorrem em conjunto. Quando lidamos com múltiplas variáveis aleatórias, existem várias quantidades de interesse.
 
 ### Joint Probability
 
@@ -368,11 +377,19 @@ Note that for any values $a$ and $b$, $P(A=a, B=b) \leq P(A=a)$.
 This has to be the case, since for $A=a$ and $B=b$ to happen, $A=a$ has to happen *and* $B=b$ also has to happen (and vice versa). Thus, $A=a$ and $B=b$ cannot be more likely than $A=a$ or $B=b$ individually.
 
 
+O primeiro é chamado de * probabilidade conjunta * $ P (A = a, B = b) $. Dados quaisquer valores $ a $ e $ b $, a probabilidade conjunta nos permite responder, qual é a probabilidade de que $ A = a $ e $ B = b $ simultaneamente?
+Observe que, para quaisquer valores $ a $ e $ b $, $ P (A = a, B = b) \ leq P (A = a) $.
+Tem de ser este o caso, visto que para $ A = a $ e $ B = b $ acontecer, $ A = a $ tem que acontecer * e * $ B = b $ também tem que acontecer (e vice-versa). Assim, $ A = a $ e $ B = b $ não podem ser mais prováveis do que $ A = a $ ou $ B = b $ individualmente.
+
 ### Conditional Probability
 
 This brings us to an interesting ratio: $0 \leq \frac{P(A=a, B=b)}{P(A=a)} \leq 1$. We call this ratio a *conditional probability*
 and denote it by $P(B=b \mid A=a)$: it is the probability of $B=b$, provided that
 $A=a$ has occurred.
+
+Isso nos leva a uma razão interessante: $ 0 \ leq \ frac {P (A = a, B = b)} {P (A = a)} \ leq 1 $. Chamamos essa proporção de * probabilidade condicional *
+e denotá-lo por $ P (B = b \ mid A = a) $: é a probabilidade de $ B = b $, desde que
+$ A = ocorreu um $.
 
 ### Bayes' theorem
 
@@ -380,19 +397,29 @@ Using the definition of conditional probabilities, we can derive one of the most
 It goes as follows.
 By construction, we have the *multiplication rule* that $P(A, B) = P(B \mid A) P(A)$. By symmetry, this also holds for $P(A, B) = P(A \mid B) P(B)$. Assume that $P(B) > 0$. Solving for one of the conditional variables we get
 
+Usando a definição de probabilidades condicionais, podemos derivar uma das equações mais úteis e celebradas em estatística: * Teorema de Bayes *.
+É o seguinte.
+Por construção, temos a * regra de multiplicação * que $ P (A, B) = P (B \ mid A) P (A) $. Por simetria, isso também é válido para $ P (A, B) = P (A \ mid B) P (B) $. Suponha que $ P (B)> 0 $. Resolvendo para uma das variáveis condicionais, obtemos
+
 $$P(A \mid B) = \frac{P(B \mid A) P(A)}{P(B)}.$$
 
 Note that here we use the more compact notation where $P(A, B)$ is a *joint distribution* and $P(A \mid B)$ is a *conditional distribution*. Such distributions can be evaluated for particular values $A = a, B=b$.
+
+Observe que aqui usamos a notação mais compacta em que $ P (A, B) $ é uma * distribuição conjunta * e $ P (A \ mid B) $ é uma * distribuição condicional *. Essas distribuições podem ser avaliadas para valores particulares $ A = a, B = b $.
 
 ### Marginalization
 
 Bayes' theorem is very useful if we want to infer one thing from the other, say cause and effect, but we only know the properties in the reverse direction, as we will see later in this section. One important operation that we need, to make this work, is *marginalization*.
 It is the operation of determining $P(B)$ from $P(A, B)$. We can see that the probability of $B$ amounts to accounting for all possible choices of $A$ and aggregating the joint probabilities over all of them:
 
+O teorema de Bayes é muito útil se quisermos inferir uma coisa da outra, digamos causa e efeito, mas só conhecemos as propriedades na direção reversa, como veremos mais adiante nesta seção. Uma operação importante de que precisamos para fazer esse trabalho é a * marginalização *.
+É a operação de determinar $ P (B) $ de $ P (A, B) $. Podemos ver que a probabilidade de $ B $ equivale a contabilizar todas as escolhas possíveis de $ A $ e agregar as probabilidades conjuntas de todas elas:
+
 $$P(B) = \sum_{A} P(A, B),$$
 
 which is also known as the *sum rule*. The probability or distribution as a result of marginalization is called a *marginal probability* or a *marginal distribution*.
 
+que também é conhecida como * regra da soma *. A probabilidade ou distribuição como resultado da marginalização é chamada de * probabilidade marginal * ou * distribuição marginal *.
 
 ### Independence
 
@@ -402,6 +429,8 @@ means that the occurrence of one event of $A$
 does not reveal any information about the occurrence of an event of $B$.
 In this case $P(B \mid A) = P(B)$. Statisticians typically express this as $A \perp  B$. From Bayes' theorem, it follows immediately that also $P(A \mid B) = P(A)$.
 In all the other cases we call $A$ and $B$ dependent. For instance, two successive rolls of a die are independent. In contrast, the position of a light switch and the brightness in the room are not (they are not perfectly deterministic, though, since we could always have a broken light bulb, power failure, or a broken switch).
+
+
 
 Since $P(A \mid B) = \frac{P(A, B)}{P(B)} = P(A)$ is equivalent to $P(A, B) = P(A)P(B)$, two random variables are independent if and only if their joint distribution is the product of their individual distributions.
 Likewise, two random variables $A$ and $B$ are *conditionally independent* given another random variable $C$
@@ -549,5 +578,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MzY3MDYyN119
+eyJoaXN0b3J5IjpbLTE4ODI4MzA1MDBdfQ==
 -->
