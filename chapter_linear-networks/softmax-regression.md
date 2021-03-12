@@ -256,18 +256,18 @@ $$
 P(\mathbf{Y} \mid \mathbf{X}) = \prod_{i=1}^n P(\mathbf{y}^{(i)} \mid \mathbf{x}^{(i)}).
 $$
 
-According to maximum likelihood estimation,
-we maximize $P(\mathbf{Y} \mid \mathbf{X})$,
-which is
-equivalent to minimizing the negative log-likelihood:
+De acordo com a estimativa de máxima *likelihood*,
+maximizamos $P(\mathbf{Y} \mid \mathbf{X})$,
+que é
+equivalente a minimizar a probabilidade de *log-likelihood* negativo:
 
 $$
 -\log P(\mathbf{Y} \mid \mathbf{X}) = \sum_{i=1}^n -\log P(\mathbf{y}^{(i)} \mid \mathbf{x}^{(i)})
 = \sum_{i=1}^n l(\mathbf{y}^{(i)}, \hat{\mathbf{y}}^{(i)}),
 $$
 
-where for any pair of label $\mathbf{y}$ and model prediction $\hat{\mathbf{y}}$ over $q$ classes,
-the loss function $l$ is
+onde para qualquer par de rótulo $\mathbf{y}$ e predição de modelo $\hat{\mathbf{y}}$ sobre $q$ classes,
+a função de perda $l$ é
 
 $$ l(\mathbf{y}, \hat{\mathbf{y}}) = - \sum_{j=1}^q y_j \log \hat{y}_j. $$
 :eqlabel:`eq_l_cross_entropy`
@@ -445,8 +445,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY4ODgyOTMzLC0xMzAyMzgwMTg5LC0xND
-E0MjMyNjk1LDM4NDc5NTkzNSwxNzI5MDYwOTgzLC0xMjkxMTQ3
-NTk2LDEwNjY5NTYwOTMsMTg0MzM3NTA5NCwxMzk0NzIzNDYwXX
-0=
+eyJoaXN0b3J5IjpbLTg2NTE4MTkxOCwtMTMwMjM4MDE4OSwtMT
+QxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2MDk4MywtMTI5MTE0
+NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF
+19
 -->
