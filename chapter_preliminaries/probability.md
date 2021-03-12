@@ -453,7 +453,7 @@ it never fails to detect HIV if the patient actually has it. We use $D_1$ to ind
 :numref:`conditional_prob_D1` lists such conditional probabilities.
 
 Vamos colocar nossas habilidades à prova. Suponha que um médico administre um teste de HIV a um paciente. Este teste é bastante preciso e falha apenas com 1% de probabilidade se o paciente for saudável, mas relatá-lo como doente. Além disso,
-nunca deixa de detectar o HIV se o paciente realmente o tiver. Usamos $D_1$ para indicar o diagnóstico ($1$ se positivo e $0$ se negativo) e $H$ para denotar o estado de HIV ($1$ se positivo e $0 $ se negativo).
+nunca deixa de detectar o HIV se o paciente realmente o tiver. Usamos $D_1$ para indicar o diagnóstico ($1$ se positivo e $0$ se negativo) e $H$ para denotar o estado de HIV ($1$ se positivo e $0$ se negativo).
 : numref: `conditional_prob_D1` lista tais probabilidades condicionais.
 :
 Conditional probability of $P(D_1 \mid H)$.
@@ -466,7 +466,7 @@ Conditional probability of $P(D_1 \mid H)$.
 
 Note that the column sums are all 1 (but the row sums are not), since the conditional probability needs to sum up to 1, just like the probability. Let us work out the probability of the patient having HIV if the test comes back positive, i.e., $P(H = 1 \mid D_1 = 1)$. Obviously this is going to depend on how common the disease is, since it affects the number of false alarms. Assume that the population is quite healthy, e.g., $P(H=1) = 0.0015$. To apply Bayes' theorem, we need to apply marginalization and the multiplication rule to determine
 
-Observe que as somas das colunas são todas 1 (mas as somas das linhas não), uma vez que a probabilidade condicional precisa somar 1, assim como a probabilidade. Vamos calcular a probabilidade de o paciente ter HIV se o teste der positivo, ou seja, $ P (H = 1 \ mid D_1 = 1) $. Obviamente, isso vai depender de quão comum é a doença, já que afeta o número de alarmes falsos. Suponha que a população seja bastante saudável, por exemplo, $ P (H = 1) = 0,0015 $. Para aplicar o teorema de Bayes, precisamos aplicar a marginalização e a regra de multiplicação para determinar
+Observe que as somas das colunas são todas 1 (mas as somas das linhas não), uma vez que a probabilidade condicional precisa somar 1, assim como a probabilidade. Vamos calcular a probabilidade de o paciente ter HIV se o teste der positivo, ou seja, $P(H = 1 \mid D_1 = 1)$. Obviamente, isso vai depender de quão comum é a doença, já que afeta o número de alarmes falsos. Suponha que a população seja bastante saudável, por exemplo, $P(H=1) = 0.0015$. Para aplicar o teorema de Bayes, precisamos aplicar a marginalização e a regra de multiplicação para determinar
 
 $$\begin{aligned}
 &P(D_1 = 1) \\
@@ -495,7 +495,7 @@ test has different characteristics and it is not as good as the first one, as sh
 
 O que o paciente deve fazer ao receber notícias tão terríveis? Provavelmente, o paciente
 pediria ao médico para administrar outro teste para obter clareza. O segundo
-teste tem características diferentes e não é tão bom quanto o primeiro, como mostrado em: numref: `conditional_prob_D2`.
+teste tem características diferentes e não é tão bom quanto o primeiro, como mostrado em :numref: conditional_prob_D2`.
 
 :Conditional probability of $P(D_2 \mid H)$.
 
@@ -562,22 +562,22 @@ The *expectation* (or average) of the random variable $X$ is denoted as
 
 Para resumir as principais características das distribuições de probabilidade,
 precisamos de algumas medidas.
-A * expectativa * (ou média) da variável aleatória $ X $ é denotada como
+A *expectativa* (ou média) da variável aleatória $X$ é denotada como
 
 $$E[X] = \sum_{x} x P(X = x).$$
 
 When the input of a function $f(x)$ is a random variable drawn from the distribution $P$ with different values $x$,
 the expectation of $f(x)$ is computed as
 
-Quando a entrada de uma função $ f (x) $ é uma variável aleatória retirada da distribuição $ P $ com valores diferentes $ x $,
-a expectativa de $ f (x) $ é calculada como
+Quando a entrada de uma função $f (x)$ é uma variável aleatória retirada da distribuição $P$ com valores diferentes $x$,
+a expectativa de $f (x)$ é calculada como
 
 $$E_{x \sim P}[f(x)] = \sum_x f(x) P(x).$$
 
 
 In many cases we want to measure by how much the random variable $X$ deviates from its expectation. This can be quantified by the variance
 
-Em muitos casos, queremos medir o quanto a variável aleatória $ X $ se desvia de sua expectativa. Isso pode ser quantificado pela variação
+Em muitos casos, queremos medir o quanto a variável aleatória $X$ se desvia de sua expectativa. Isso pode ser quantificado pela variação
 
 $$\mathrm{Var}[X] = E\left[(X - E[X])^2\right] =
 E[X^2] - E[X]^2.$$
@@ -587,10 +587,10 @@ The variance of a function of a random variable measures
 by how much the function deviates from the expectation of the function,
 as different values $x$ of the random variable are sampled from its distribution:
 
-Sua raiz quadrada é chamada de * desvio padrão *.
+Sua raiz quadrada é chamada de *desvio padrão*.
 A variância de uma função de uma variável aleatória mede
 pelo quanto a função se desvia da expectativa da função,
-como diferentes valores $ x $ da variável aleatória são amostrados de sua distribuição:
+como diferentes valores $x$ da variável aleatória são amostrados de sua distribuição:
 
 $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NDU3Nzg5OSw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbOTUyNTc2MzkxLDgxOTkyNDAxOF19
 -->
