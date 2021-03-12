@@ -86,9 +86,8 @@ exibido.
 
 ## Exercícios
 
-1. Look up the documentation for any function or class in the deep learning framework. Can you also find the documentation on the official website of the framework?
 
-1. Procure a documentação de qualquer função ou classe na estrutura de aprendizado profundo. Você também pode encontrar a documentação no site oficial do framework?
+1. Procure a documentação de qualquer função ou classe na estrutura de *Deep Learning*. Você também pode encontrar a documentação no site oficial do framework?
 
 
 :begin_tab:`mxnet`
@@ -103,5 +102,5 @@ exibido.
 [Discussions](https://discuss.d2l.ai/t/199)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI2OTc2NzI0XX0=
+eyJoaXN0b3J5IjpbLTIwNDEwMjUzODddfQ==
 -->
