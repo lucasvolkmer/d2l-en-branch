@@ -65,17 +65,8 @@ import tensorflow as tf
 import tensorflow_probability as tfp
 import numpy as np
 ```
-
-Next, we will want to be able to cast the die. In statistics we call this process
-of drawing examples from probability distributions *sampling*.
-The distribution
-that assigns probabilities to a number of discrete choices is called the
-*multinomial distribution*. We will give a more formal definition of
-*distribution* later, but at a high level, think of it as just an assignment of
-probabilities to events.
-
 Em seguida, queremos ser capazes de lançar o dado. Nas estatísticas, chamamos este processo
-de exemplos de desenho *amostragem* de distribuições de probabilidade .
+de colher exemplos de  *amostragem* de distribuições de probabilidade .
 A distribuição
 que atribui probabilidades a uma série de escolhas discretas é chamado de
 *distribuição multinomial*. Daremos uma definição mais formal de
@@ -596,7 +587,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MzA1NTE4OSwtMTIzNTI4NzEyNywxOD
-QwNDYyMTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLDM3Mjg4NzE1
-OCw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbODE5MDMyNTM4LDE0NjMwNTUxODksLTEyMz
+UyODcxMjcsMTg0MDQ2MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2
+MSwzNzI4ODcxNTgsODE5OTI0MDE4XX0=
 -->
