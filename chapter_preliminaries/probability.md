@@ -240,10 +240,10 @@ that someone is 1.80139278291028719210196740527486202 meters tall. Given the wor
 In the rest of this section, we consider probability in discrete space.
 For probability over continuous random variables, you may refer to :numref:`sec_random_variables`.
 
-Observe que há uma diferença sutil entre variáveis ​​aleatórias * discretas*, como os lados de um dado, e * contínuas *, como o peso e a altura de uma pessoa. Não adianta perguntar se duas pessoas têm exatamente a mesma altura. Se tomarmos medidas precisas o suficiente, você descobrirá que duas pessoas no planeta não têm exatamente a mesma altura. Na verdade, se fizermos uma medição suficientemente precisa, você não terá a mesma altura ao acordar e ao dormir. Portanto, não há nenhum propósito em perguntar sobre a probabilidade
-que alguém tem 1,80139278291028719210196740527486202 metros de altura. Dada a população mundial de humanos, a probabilidade é virtualmente 0. Faz mais sentido, neste caso, perguntar se a altura de alguém cai em um determinado intervalo, digamos entre 1,79 e 1,81 metros. Nesses casos, quantificamos a probabilidade de vermos um valor como uma * densidade *. A altura de exatamente 1,80 metros não tem probabilidade, mas densidade diferente de zero. No intervalo entre quaisquer duas alturas diferentes, temos probabilidade diferente de zero.
+Observe que há uma diferença sutil entre variáveis ​​aleatórias *discretas*, como os lados de um dado, e *contínuas*, como o peso e a altura de uma pessoa. Não adianta perguntar se duas pessoas têm exatamente a mesma altura. Se tomarmos medidas precisas o suficiente, você descobrirá que duas pessoas no planeta não têm exatamente a mesma altura. Na verdade, se fizermos uma medição suficientemente precisa, você não terá a mesma altura ao acordar e ao dormir. Portanto, não há nenhum propósito em perguntar sobre a probabilidade
+que alguém tem 1,80139278291028719210196740527486202 metros de altura. Dada a população mundial de humanos, a probabilidade é virtualmente 0. Faz mais sentido, neste caso, perguntar se a altura de alguém cai em um determinado intervalo, digamos entre 1,79 e 1,81 metros. Nesses casos, quantificamos a probabilidade de vermos um valor como uma *densidade*. A altura de exatamente 1,80 metros não tem probabilidade, mas densidade diferente de zero. No intervalo entre quaisquer duas alturas diferentes, temos probabilidade diferente de zero.
 No restante desta seção, consideramos a probabilidade no espaço discreto.
-Para probabilidade sobre variáveis ​​aleatórias contínuas, você pode consultar: numref: `sec_random_variables`.
+Para probabilidade sobre variáveis ​​aleatórias contínuas, você pode consultar :numref:`sec_random_variables`.
 
 ## Dealing with Multiple Random Variables
 
@@ -525,8 +525,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMzgxNjMxMywtMjE0MzE0MTM1Miw4MT
-kwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4NzEyNywxODQwNDYy
-MTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLDM3Mjg4NzE1OCw4MT
-k5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbLTE0NzU4ODE4MjksLTIxNDMxNDEzNTIsOD
+E5MDMyNTM4LDE0NjMwNTUxODksLTEyMzUyODcxMjcsMTg0MDQ2
+MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsOD
+E5OTI0MDE4XX0=
 -->
