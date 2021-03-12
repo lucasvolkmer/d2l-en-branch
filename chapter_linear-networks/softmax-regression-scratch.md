@@ -248,29 +248,30 @@ cross_entropy(y_hat, y)
 
 ## Exatidão da Classificação
 
-Given the predicted probability distribution `y_hat`,
-we typically choose the class with the highest predicted probability
-whenever we must output a hard prediction.
-Indeed, many applications require that we make a choice.
-Gmail must categorize an email into "Primary", "Social", "Updates", or "Forums".
-It might estimate probabilities internally,
-but at the end of the day it has to choose one among the classes.
 
-When predictions are consistent with the label class `y`, they are correct.
-The classification accuracy is the fraction of all predictions that are correct.
-Although it can be difficult to optimize accuracy directly (it is not differentiable),
-it is often the performance measure that we care most about,
-and we will nearly always report it when training classifiers.
+Dada a distribuição de probabilidade prevista `y_hat`,
+normalmente escolhemos a classe com a maior probabilidade prevista
+sempre que a previsão que devemos produzir é difícil.
+Na verdade, muitos aplicativos exigem que façamos uma escolha.
+O Gmail deve categorizar um e-mail em "Principal", "Social", "Atualizações" ou "Fóruns".
+Pode estimar probabilidades internamente,
+mas no final do dia ele tem que escolher uma das classes.
 
-To compute accuracy we do the following.
-First, if `y_hat` is a matrix,
-we assume that the second dimension stores prediction scores for each class.
-We use `argmax` to obtain the predicted class by the index for the largest entry in each row.
-Then we [**compare the predicted class with the ground-truth `y` elementwise.**]
-Since the equality operator `==` is sensitive to data types,
-we convert `y_hat`'s data type to match that of `y`.
-The result is a tensor containing entries of 0 (false) and 1 (true).
-Taking the sum yields the number of correct predictions.
+Quando as previsões são consistentes com a classe de *label* `y`, elas estão corretas.
+A precisão da classificação é a fração de todas as previsões corretas.
+Embora possa ser difícil otimizar a precisão diretamente (não é diferenciável),
+muitas vezes é a medida de desempenho que mais nos preocupa,
+e quase sempre o relataremos ao treinar classificadores.
+
+Para calcular a precisão, fazemos o seguinte.
+Primeiro, se `y_hat` é uma matriz,
+presumimos que a segunda dimensão armazena pontuações de predição para cada classe.
+Usamos `argmax` para obter a classe prevista pelo índice para a maior entrada em cada linha.
+Em seguida, [**comparamos a classe prevista com a verdade fundamental `y` elemento a elemento.**]
+Uma vez que o operador de igualdade `==` é sensível aos tipos de dados,
+convertemos o tipo de dados de `y_hat` para corresponder ao de` y`.
+O resultado é um tensor contendo entradas de 0 (falso) e 1 (verdadeiro).
+Tirar a soma resulta no número de previsões corretas.
 
 ```{.python .input}
 #@tab all
@@ -607,7 +608,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MzA4MTM1LDE2MDA5ODQ0NTYsNzQyNT
-E3NDg3LC0yMTMxNTA1NDkzLC05OTkwNzg3NjcsLTE5ODQxODk3
-MjVdfQ==
+eyJoaXN0b3J5IjpbLTE5NTMzMzIwMTksMTE1MzA4MTM1LDE2MD
+A5ODQ0NTYsNzQyNTE3NDg3LC0yMTMxNTA1NDkzLC05OTkwNzg3
+NjcsLTE5ODQxODk3MjVdfQ==
 -->
