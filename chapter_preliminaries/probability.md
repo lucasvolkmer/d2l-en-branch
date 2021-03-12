@@ -1,4 +1,4 @@
-# Probabilitydade
+# Probabilidade
 :label:`sec_prob`
 
 In some form or another, machine learning is all about making predictions.
@@ -630,5 +630,6 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcyODg3MTU4LDgxOTkyNDAxOF19
+eyJoaXN0b3J5IjpbLTE2OTU4NDc0NjEsMzcyODg3MTU4LDgxOT
+kyNDAxOF19
 -->
