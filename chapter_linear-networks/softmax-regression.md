@@ -371,29 +371,30 @@ Assim, um *nat* é $\frac{1}{\log(2)} \approx 1.44$ bit.
 
 ### Surpresa
 
-You might be wondering what compression has to do with prediction.
-Imagine that we have a stream of data that we want to compress.
-If it is always easy for us to predict the next token,
-then this data is easy to compress!
-Take the extreme example where every token in the stream always takes the same value.
-That is a very boring data stream!
-And not only it is boring, but it is also easy to predict.
-Because they are always the same, we do not have to transmit any information
-to communicate the contents of the stream.
-Easy to predict, easy to compress.
 
-However if we cannot perfectly predict every event,
-then we might sometimes be surprised.
-Our surprise is greater when we assigned an event lower probability.
-Claude Shannon settled on $\log \frac{1}{P(j)} = -\log P(j)$
-to quantify one's *surprisal* at observing an event $j$
-having assigned it a (subjective) probability $P(j)$.
-The entropy defined in :eqref:`eq_softmax_reg_entropy` is then the *expected surprisal*
-when one assigned the correct probabilities
-that truly match the data-generating process.
+Você pode estar se perguntando o que a compressão tem a ver com a predição.
+Imagine que temos um fluxo de dados que queremos compactar.
+Se sempre for fácil para nós prevermos o próximo *token*,
+então esses dados são fáceis de compactar!
+Veja o exemplo extremo em que cada token no fluxo sempre leva o mesmo valor.
+Esse é um fluxo de dados muito chato!
+E não só é chato, mas também é fácil de prever.
+Por serem sempre iguais, não precisamos transmitir nenhuma informação
+para comunicar o conteúdo do fluxo.
+Fácil de prever, fácil de compactar.
+
+No entanto, se não podemos prever perfeitamente todos os eventos,
+então às vezes podemos ficar surpresos.
+Nossa surpresa é maior quando atribuímos uma probabilidade menor a um evento.
+Claude Shannon estabeleceu $\log \frac{1}{P(j)} = -\log P(j)$
+para quantificar a *surpresa* de alguém ao observar um evento $j$
+tendo-lhe atribuído uma probabilidade (subjetiva) $P(j)$.
+A entropia definida em :eqref:`eq_softmax_reg_entropy` é então a *surpresa esperada*
+quando alguém atribuiu as probabilidades corretas
+que realmente correspondem ao processo de geração de dados.
 
 
-### Cross-Entropy Revisited
+### Entropia Cruzada Revisitada
 
 So if entropy is level of surprise experienced
 by someone who knows the true probability,
@@ -444,8 +445,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDM2Mjc4OTIsLTg2NTE4MTkxOCwtMT
-MwMjM4MDE4OSwtMTQxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2
-MDk4MywtMTI5MTE0NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOT
-QsMTM5NDcyMzQ2MF19
+eyJoaXN0b3J5IjpbMTU5MDYyNzg0MywtMjA0MzYyNzg5MiwtOD
+Y1MTgxOTE4LC0xMzAyMzgwMTg5LC0xNDE0MjMyNjk1LDM4NDc5
+NTkzNSwxNzI5MDYwOTgzLC0xMjkxMTQ3NTk2LDEwNjY5NTYwOT
+MsMTg0MzM3NTA5NCwxMzk0NzIzNDYwXX0=
 -->
