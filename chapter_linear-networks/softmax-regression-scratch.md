@@ -227,7 +227,7 @@ y = tf.constant([0, 2])
 tf.boolean_mask(y_hat, tf.one_hot(y, depth=y_hat.shape[-1]))
 ```
 
-Now we can (**implement the cross-entropy loss function**) efficiently with just one line of code.
+Agora podemos (**implementar a função de perda de entropia cruzada**) de forma eficiente com apenas uma linha de código.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -246,7 +246,7 @@ def cross_entropy(y_hat, y):
 cross_entropy(y_hat, y)
 ```
 
-## Classification Accuracy
+## Exatidão da Classificação
 
 Given the predicted probability distribution `y_hat`,
 we typically choose the class with the highest predicted probability
@@ -607,7 +607,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0Mjc0NDE0MCwxNjAwOTg0NDU2LDc0Mj
-UxNzQ4NywtMjEzMTUwNTQ5MywtOTk5MDc4NzY3LC0xOTg0MTg5
-NzI1XX0=
+eyJoaXN0b3J5IjpbMTE1MzA4MTM1LDE2MDA5ODQ0NTYsNzQyNT
+E3NDg3LC0yMTMxNTA1NDkzLC05OTkwNzg3NjcsLTE5ODQxODk3
+MjVdfQ==
 -->
