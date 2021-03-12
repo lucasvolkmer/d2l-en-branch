@@ -49,8 +49,7 @@ Generally, we can ignore functions that start and end with `__` (special objects
 
 Geralmente, podemos ignorar funções que começam e terminam com `__` (objetos especiais em Python) ou funções que começam com um único `_` (normalmente funções internas). Com base nos nomes de funções ou atributos restantes, podemos arriscar um palpite de que este módulo oferece vários métodos para gerar números aleatórios, incluindo amostragem da distribuição uniforme (`uniforme`), distribuição normal (`normal`) e distribuição multinomial (`multinomial`).
 
-## Finding the Usage of Specific Functions and Classes
-Encontrando o uso de funções e classes específicas
+## Buscando o Uso de Funções e Classes Específicas
 
 For more specific instructions on how to use a given function or class, we can invoke the  `help` function. As an example, let us [**explore the usage instructions for tensors' `ones` function**].
 
@@ -72,6 +71,8 @@ help(tf.ones)
 
 From the documentation, we can see that the `ones` function creates a new tensor with the specified shape and sets all the elements to the value of 1. Whenever possible, you should (**run a quick test**) to confirm your interpretation:
 
+A partir da documentação, podemos ver que a função `uns` cria um novo tensor com a forma especificada e define todos os elementos com o valor de 1. Sempre que possível, você deve (**executar um teste rápido**) para confirmar seu interpretação:
+
 ```{.python .input}
 np.ones(4)
 ```
@@ -92,6 +93,13 @@ identical to `help(list)`, displaying it in a new browser
 window. In addition, if we use two question marks, such as
 `list??`, the Python code implementing the function will also be
 displayed.
+
+No bloco de notas Jupyter, podemos usar `?` Para exibir o documento em outro
+janela. Por exemplo, `list?` Criará conteúdo que é quase
+idêntico a `help (list)`, exibindo-o em um novo navegador
+janela. Além disso, se usarmos dois pontos de interrogação, como
+`list ??`, o código Python implementando a função também será
+exibido.
 
 
 ## Summary
@@ -117,5 +125,5 @@ displayed.
 [Discussions](https://discuss.d2l.ai/t/199)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY4NTkzMDIxXX0=
+eyJoaXN0b3J5IjpbMTYwNjg2NjQxN119
 -->
