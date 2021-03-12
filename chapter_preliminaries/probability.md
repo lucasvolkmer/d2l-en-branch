@@ -35,9 +35,9 @@ torna-se um desafio em $40 \times 40$ pixels e quase impossível em $10 \times 1
 Em outras palavras, nossa capacidade de distinguir cães e gatos a uma grande distância (e, portanto, em baixa resolução) pode se aproximar de uma suposição desinformada. A probabilidade nos dá um
 maneira formal de raciocinar sobre nosso nível de certeza.
 Se tivermos certeza absoluta
-que a imagem representa um gato, dizemos que a * probabilidade * de que o rótulo $y$ correspondente seja "gato", denotado $ P (y = $ "gato" $) $ é igual a $ 1 $.
-Se não tivéssemos nenhuma evidência para sugerir que $ y = $ "gato" ou que $ y = $ "cachorro", então poderíamos dizer que as duas possibilidades eram igualmente
-* provavelmente * expressando isso como $ P (y = $ "gato" $) = P (y = $ "cachorro" $) = 0,5 $. Se estivéssemos razoavelmente
+que a imagem representa um gato, dizemos que a * probabilidade * de que o rótulo $y$ correspondente seja "cat", denotado $P(y=$ "cat"$)$ é igual a $1$.
+Se não tivéssemos nenhuma evidência para sugerir que $y =$ "cat" ou que $y =$ "dog", então poderíamos dizer que as duas possibilidades eram igualmente
+*provavelmente* expressando isso como  $P(y=$ "cat"$) = P(y=$ "dog"$) = 0.5$. Se estivéssemos razoavelmente
 confiantes, mas não temos certeza de que a imagem representava um gato, podemos atribuir um
 probabilidade $ 0,5 <P (y = $ "gato" $) <1 $.
 
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTIyMTY2MzksODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbNjk3MDU5NjcsODE5OTI0MDE4XX0=
 -->
