@@ -289,15 +289,15 @@ The probability of an event $\mathcal{A}$ in the given sample space $\mathcal{S}
 denoted as $P(\mathcal{A})$, satisfies the following properties:
 
 Formalmente, *probabilidade* pode ser pensada como uma função que mapeia um conjunto para um valor real.
-A probabilidade de um evento $\mathcal {A}$ no espaço amostral dado $ \ mathcal {S} $,
-denotado como $ P (\ mathcal {A}) $, satisfaz as seguintes propriedades:
+A probabilidade de um evento $\mathcal {A}$ no espaço amostral dado $\mathcal {S}$,
+denotado como $P (\mathcal {A})$, satisfaz as seguintes propriedades:
 
 * For any event $\mathcal{A}$, its probability is never negative, i.e., $P(\mathcal{A}) \geq 0$;
 * Probability of the entire sample space is $1$, i.e., $P(\mathcal{S}) = 1$;
 * For any countable sequence of events $\mathcal{A}_1, \mathcal{A}_2, \ldots$ that are *mutually exclusive* ($\mathcal{A}_i \cap \mathcal{A}_j = \emptyset$ for all $i \neq j$), the probability that any happens is equal to the sum of their individual probabilities, i.e., $P(\bigcup_{i=1}^{\infty} \mathcal{A}_i) = \sum_{i=1}^{\infty} P(\mathcal{A}_i)$.
 
-* Para qualquer evento $ \ mathcal {A} $, sua probabilidade nunca é negativa, ou seja, $ P (\ mathcal {A}) \ geq 0 $;
-* A probabilidade de todo o espaço amostral é $ 1 $, ou seja, $ P (\ mathcal {S}) = 1 $;
+* Para qualquer evento $\mathcal {A}$, sua probabilidade nunca é negativa, ou seja, $P (\mathcal {A}) \geq 0$;
+* A probabilidade de todo o espaço amostral é $ 1 $, ou seja, $P (\mathcal {S}) = 1 $;
 * Para qualquer sequência contável de eventos $ \ mathcal {A} _1, \ mathcal {A} _2, \ ldots $ que são * mutuamente exclusivos * ($ \ mathcal {A} _i \ cap \ mathcal {A} _j = \ emptyset $ para todos os $ i \ neq j $), a probabilidade de que aconteça é igual à soma de suas probabilidades individuais, ou seja, $ P (\ bigcup_ {i = 1} ^ {\ infty} \ mathcal {A} _i) = \ sum_ {i = 1} ^ {\ infty} P (\ mathcal {A} _i) $.
 
 These are also the axioms of probability theory, proposed by Kolmogorov in 1933.
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDI3NTk0MzcsODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbLTQzMjE2NDg3NSw4MTk5MjQwMThdfQ==
 -->
