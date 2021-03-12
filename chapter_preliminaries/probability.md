@@ -611,10 +611,11 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 2. Given two events with probability $P(\mathcal{A})$ and $P(\mathcal{B})$, compute upper and lower bounds on $P(\mathcal{A} \cup \mathcal{B})$ and $P(\mathcal{A} \cap \mathcal{B})$. (Hint: display the situation using a [Venn Diagram](https://en.wikipedia.org/wiki/Venn_diagram).)
 3. Assume that we have a sequence of random variables, say $A$, $B$, and $C$, where $B$ only depends on $A$, and $C$ only depends on $B$, can you simplify the joint probability $P(A, B, C)$? (Hint: this is a [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain).)
 4. In :numref:`subsec_probability_hiv_app`, the first test is more accurate. Why not run the first test twice rather than run both the first and second tests?
-1. Conduzimos $ m = 500 $ grupos de experimentos onde cada grupo extrai $ n = 10 $ amostras. Varie $ m $ e $ n $. Observe e analise os resultados experimentais.
-1. Dados dois eventos com probabilidade $ P (\ mathcal {A}) $ e $ P (\ mathcal {B}) $, calcule os limites superior e inferior em $ P (\ mathcal {A} \ cup \ mathcal {B} ) $ e $ P (\ mathcal {A} \ cap \ mathcal {B}) $. (Dica: exiba a situação usando um [Diagrama de Venn] (https://en.wikipedia.org/wiki/Venn_diagram).)
-1. Suponha que temos uma sequência de variáveis aleatórias, digamos $ A $, $ B $ e $ C $, onde $ B $ depende apenas de $ A $ e $ C $ depende apenas de $ B $, você pode simplificar a probabilidade conjunta $ P (A, B, C) $? (Dica: esta é uma [Cadeia de Markov] (https://en.wikipedia.org/wiki/Markov_chain).)
-1. Em: numref: `subsec_probability_hiv_app`, o primeiro teste é mais preciso. Por que não executar o primeiro teste duas vezes em vez de executar o primeiro e o segundo testes?
+5. 
+6. Conduzimos $m = 500$ grupos de experimentos onde cada grupo extrai $ n = 10 $ amostras. Varie $m$ e $n$. Observe e analise os resultados experimentais.
+7. Dados dois eventos com probabilidade $P(\mathcal{A})$ e $P(\mathcal{B})$, calcule os limites superior e inferior em $P(\mathcal{A} \cup \mathcal{B})$ e $P(\mathcal{A} \cap \mathcal{B})$. (Dica: exiba a situação usando um [Diagrama de Venn] (https://en.wikipedia.org/wiki/Venn_diagram).)
+8. Suponha que temos uma sequência de variáveis aleatórias, digamos $ A $, $ B $ e $ C $, onde $ B $ depende apenas de $ A $ e $ C $ depende apenas de $ B $, você pode simplificar a probabilidade conjunta $ P (A, B, C) $? (Dica: esta é uma [Cadeia de Markov] (https://en.wikipedia.org/wiki/Markov_chain).)
+9. Em: numref: `subsec_probability_hiv_app`, o primeiro teste é mais preciso. Por que não executar o primeiro teste duas vezes em vez de executar o primeiro e o segundo testes?
 
 
 :begin_tab:`mxnet`
@@ -629,5 +630,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyNTc2MzkxLDgxOTkyNDAxOF19
+eyJoaXN0b3J5IjpbODQwNzYwMzM2LDgxOTkyNDAxOF19
 -->
