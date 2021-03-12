@@ -190,11 +190,6 @@ d2l.plt.gca().set_ylabel('Estimated probability')
 d2l.plt.legend();
 ```
 
-Each solid curve corresponds to one of the six values of the die and gives our estimated probability that the die turns up that value as assessed after each group of experiments.
-The dashed black line gives the true underlying probability.
-As we get more data by conducting more experiments,
-the $6$ solid curves converge towards the true probability.
-
 Cada curva sólida corresponde a um dos seis valores do dado e dá nossa probabilidade estimada de que o dado aumente esse valor conforme avaliado após cada grupo de experimentos.
 A linha preta tracejada fornece a verdadeira probabilidade subjacente.
 À medida que obtemos mais dados conduzindo mais experimentos,
@@ -566,7 +561,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NTc0MzIzMyw4MTkwMzI1MzgsMTQ2Mz
-A1NTE4OSwtMTIzNTI4NzEyNywxODQwNDYyMTU3LDM0MDgxNDk1
-LC0xNjk1ODQ3NDYxLDM3Mjg4NzE1OCw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbLTIxNDMxNDEzNTIsODE5MDMyNTM4LDE0Nj
+MwNTUxODksLTEyMzUyODcxMjcsMTg0MDQ2MjE1NywzNDA4MTQ5
+NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4XX0=
 -->
