@@ -590,11 +590,11 @@ predict_ch3(net, test_iter)
 
 ## Exercícios
 
-1. In this section, we directly implemented the softmax function based on the mathematical definition of the softmax operation. What problems might this cause? Hint: try to calculate the size of $\exp(50)$.
-1. The function `cross_entropy` in this section was implemented according to the definition of the cross-entropy loss function.  What could be the problem with this implementation? Hint: consider the domain of the logarithm.
-1. What solutions you can think of to fix the two problems above?
-1. Is it always a good idea to return the most likely label? For example, would you do this for medical diagnosis?
-1. Assume that we want to use softmax regression to predict the next word based on some features. What are some problems that might arise from a large vocabulary?
+1. Nesta seção, implementamos diretamente a função *softmax* com base na definição matemática da operação do *softmax*. Que problemas isso pode causar? Dica: tente calcular o tamanho de $\exp(50)$.
+1. A função `cross_entropy` nesta seção foi implementada de acordo com a definição da função de perda de entropia cruzada. Qual poderia ser o problema com esta implementação? Dica: considere o domínio do logaritmo.
+1. Que soluções você pode pensar para resolver os dois problemas acima?
+1. É sempre uma boa ideia retornar o *label* mais provável? Por exemplo, você faria isso para diagnóstico médico?
+1. Suponha que quiséssemos usar a regressão *softmax* para prever a próxima palavra com base em alguns recursos. Quais são alguns problemas que podem surgir de um vocabulário extenso?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/50)
@@ -608,8 +608,8 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg0NDMyMjYxLC00MTA3MDk1NzIsMTEwOD
-MwNjkwLC0xOTUzMzMyMDE5LDExNTMwODEzNSwxNjAwOTg0NDU2
-LDc0MjUxNzQ4NywtMjEzMTUwNTQ5MywtOTk5MDc4NzY3LC0xOT
-g0MTg5NzI1XX0=
+eyJoaXN0b3J5IjpbNzUxOTk3Mzc0LDY4NDQzMjI2MSwtNDEwNz
+A5NTcyLDExMDgzMDY5MCwtMTk1MzMzMjAxOSwxMTUzMDgxMzUs
+MTYwMDk4NDQ1Niw3NDI1MTc0ODcsLTIxMzE1MDU0OTMsLTk5OT
+A3ODc2NywtMTk4NDE4OTcyNV19
 -->
