@@ -109,11 +109,11 @@ that assigns probabilities to a number of discrete choices is called the
 probabilities to events.
 
 Em seguida, queremos ser capazes de lançar o dado. Nas estatísticas, chamamos este processo
-de exemplos de desenho de distribuições de probabilidade * amostragem *.
+de exemplos de desenho de distribuições de probabilidade *amostragem*.
 A distribuição
 que atribui probabilidades a uma série de escolhas discretas é chamado de
-*distribuição multinomial *. Daremos uma definição mais formal de
-* distribuição * mais tarde, mas em um alto nível, pense nisso como apenas uma atribuição de
+*distribuição multinomial*. Daremos uma definição mais formal de
+*distribuição* mais tarde, mas em um alto nível, pense nisso como apenas uma atribuição de
 probabilidades para eventos.
 
 To draw a single sample, we simply pass in a vector of probabilities.
@@ -122,7 +122,7 @@ its value at index $i$ is the number of times the sampling outcome corresponds t
 
 Para desenhar uma única amostra, simplesmente passamos um vetor de probabilidades.
 A saída é outro vetor do mesmo comprimento:
-seu valor no índice $ i $ é o número de vezes que o resultado da amostragem corresponde a $ i $.
+seu valor no índice $i$ é o número de vezes que o resultado da amostragem corresponde a $i$.
 
 ```{.python .input}
 fair_probs = [1.0 / 6] * 6
@@ -199,7 +199,7 @@ counts / 1000
 
 Because we generated the data from a fair die, we know that each outcome has true probability $\frac{1}{6}$, roughly $0.167$, so the above output estimates look good.
 
-Como geramos os dados de um dado justo, sabemos que cada resultado tem probabilidade real $ \ frac {1} {6} $, cerca de $ 0,167 $, portanto, as estimativas de saída acima parecem boas.
+Como geramos os dados de um dado justo, sabemos que cada resultado tem probabilidade real $\frac{1}{6}$, cerca de $0,167$, portanto, as estimativas de saída acima parecem boas.
 
 We can also visualize how these probabilities converge over time towards the true probability.
 Let us conduct 500 groups of experiments where each group draws 10 samples.
@@ -262,9 +262,9 @@ the $6$ solid curves converge towards the true probability.
 Cada curva sólida corresponde a um dos seis valores do dado e dá nossa probabilidade estimada de que o dado aumente esse valor conforme avaliado após cada grupo de experimentos.
 A linha preta tracejada fornece a verdadeira probabilidade subjacente.
 À medida que obtemos mais dados conduzindo mais experimentos,
-as curvas sólidas de $ 6 $ convergem para a probabilidade verdadeira.
+as curvas sólidas de $6$ convergem para a probabilidade verdadeira.
 
-### Axioms of Probability Theory
+### Axiomas da Teoria de Probabilidade
 
 When dealing with the rolls of a die,
 we call the set $\mathcal{S} = \{1, 2, 3, 4, 5, 6\}$ the *sample space* or *outcome space*, where each element is an *outcome*.
@@ -276,7 +276,7 @@ That is to say, if $3$ dots faced up after rolling a die, since $3 \in \{1, 3, 5
 we can say that the event "seeing an odd number" has occurred.
 
 Ao lidar com as jogadas de um dado,
-chamamos o conjunto $ \ mathcal {S} = \ {1, 2, 3, 4, 5, 6 \} $ o * espaço de amostra * ou * espaço de resultado *, onde cada elemento é um * resultado *.
+chamamos o conjunto $\mathcal{S} = \{1, 2, 3, 4, 5, 6\}$ o * espaço de amostra * ou * espaço de resultado *, onde cada elemento é um * resultado *.
 Um * evento * é um conjunto de resultados de um determinado espaço amostral.
 Por exemplo, "ver $ 5 $" ($ \ {5 \} $) e "ver um número ímpar" ($ \ {1, 3, 5 \} $) são eventos válidos de lançar um dado.
 Observe que se o resultado de um experimento aleatório estiver no evento $ \ mathcal {A} $,
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MjcwMTAyNCw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbLTk0MDI3NTAyOCw4MTk5MjQwMThdfQ==
 -->
