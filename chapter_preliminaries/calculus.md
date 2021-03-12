@@ -273,23 +273,13 @@ plot(x, [f(x), 2 * x - 3], 'x', 'f(x)', legend=['f(x)', 'Tangent line (x=1)'])
 
 ## Derivadas Parciais
 
-So far we have dealt with the differentiation of functions of just one variable.
-In deep learning, functions often depend on *many* variables.
-Thus, we need to extend the ideas of differentiation to these *multivariate* functions.
-
 Até agora, lidamos com a diferenciação de funções de apenas uma variável.
-No aprendizado profundo, as funções geralmente dependem de *muitas* variáveis.
+No *Deep Learning*, as funções geralmente dependem de *muitas* variáveis.
 Portanto, precisamos estender as idéias de diferenciação para essas funções *multivariadas*.
-
-Let $y = f(x_1, x_2, \ldots, x_n)$ be a function with $n$ variables. The *partial derivative* of $y$ with respect to its $i^\mathrm{th}$  parameter $x_i$ is
 
 Seja $y = f(x_1, x_2, \ldots, x_n)$ uma função com $n$ variáveis. A *derivada parcial* de $y$ em relação ao seu $i ^ \mathrm {th}$ parâmetro $x_i$ é
 
 $$ \frac{\partial y}{\partial x_i} = \lim_{h \rightarrow 0} \frac{f(x_1, \ldots, x_{i-1}, x_i+h, x_{i+1}, \ldots, x_n) - f(x_1, \ldots, x_i, \ldots, x_n)}{h}.$$
-
-
-To calculate $\frac{\partial y}{\partial x_i}$, we can simply treat $x_1, \ldots, x_{i-1}, x_{i+1}, \ldots, x_n$ as constants and calculate the derivative of $y$ with respect to $x_i$.
-For notation of partial derivatives, the following are equivalent:
 
 Para calcular $\frac{\partial y}{\partial x_i}$, podemos simplesmente tratar $x_1, \ldots, x_{i-1}, x_{i+1}, \ldots, x_n$ como constantes e calcular a derivada de $y$ com respeito a $x_i$.
 Para notação de derivadas parciais, os seguintes são equivalentes:
@@ -297,10 +287,7 @@ Para notação de derivadas parciais, os seguintes são equivalentes:
 $$\frac{\partial y}{\partial x_i} = \frac{\partial f}{\partial x_i} = f_{x_i} = f_i = D_i f = D_{x_i} f.$$
 
 
-## Gradients
-
-We can concatenate partial derivatives of a multivariate function with respect to all its variables to obtain the *gradient* vector of the function.
-Suppose that the input of function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is an $n$-dimensional vector $\mathbf{x} = [x_1, x_2, \ldots, x_n]^\top$ and the output is a scalar. The gradient of the function $f(\mathbf{x})$ with respect to $\mathbf{x}$ is a vector of $n$ partial derivatives:
+## Gradientes
 
 Podemos concatenar derivadas parciais de uma função multivariada com respeito a todas as suas variáveis para obter o vetor *gradiente* da função.
 Suponha que a entrada da função $f: \mathbb{R}^n \rightarrow \mathbb{R}$ seja um vetor $n$ -dimensional $\mathbf{x} = [x_1, x_2, \ldots, x_n]^\top$ e a saída é um escalar. O gradiente da função $f(\mathbf{x})$ em relação a $\mathbf {x}$ é um vetor de $n$ derivadas parciais:
@@ -403,6 +390,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg3MDk5NTQxLDU2NTI2MDY0NCwtMTk3OT
-MzNTgyN119
+eyJoaXN0b3J5IjpbMTEzOTY1NDg0LDk4NzA5OTU0MSw1NjUyNj
+A2NDQsLTE5NzkzMzU4MjddfQ==
 -->
