@@ -1,4 +1,4 @@
-#  Preliminaries
+#  Preliminares
 :label:`chap_preliminaries`
 
 Para iniciarmos o nosso aprendizado de *Deep Learning*,
@@ -59,5 +59,5 @@ lookup-api
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI0OTM0NDYxXX0=
+eyJoaXN0b3J5IjpbNTkwMDAzOTU4LDUyNDkzNDQ2MV19
 -->
