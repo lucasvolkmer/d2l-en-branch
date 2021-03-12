@@ -324,11 +324,11 @@ def evaluate_accuracy(net, data_iter):  #@save
     return metric[0] / metric[1]
 ```
 
-Here `Accumulator` is a utility class to accumulate sums over multiple variables.
-In the above `evaluate_accuracy` function,
-we create 2 variables in the `Accumulator` instance for storing both
-the number of correct predictions and the number of predictions, respectively.
-Both will be accumulated over time as we iterate over the dataset.
+Aqui, `Accumulator` é uma classe utilitária para acumular somas sobre múltiplas variáveis.
+Na função `evaluate_accuracy` acima,
+criamos 2 variáveis na instância `Accumulator` para armazenar ambos
+o número de previsões corretas e o número de previsões, respectivamente.
+Ambos serão acumulados ao longo do tempo à medida que iteramos no conjunto de dados.
 
 ```{.python .input}
 #@tab all
@@ -608,7 +608,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MzQyMTUxNywtMTk1MzMzMjAxOSwxMT
+eyJoaXN0b3J5IjpbLTMxNTUwOTMzMSwtMTk1MzMzMjAxOSwxMT
 UzMDgxMzUsMTYwMDk4NDQ1Niw3NDI1MTc0ODcsLTIxMzE1MDU0
 OTMsLTk5OTA3ODc2NywtMTk4NDE4OTcyNV19
 -->
