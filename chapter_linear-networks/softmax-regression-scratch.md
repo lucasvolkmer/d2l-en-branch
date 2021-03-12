@@ -88,20 +88,20 @@ b = tf.Variable(tf.zeros(num_outputs))
 
 ## Definindo a Operação do *Softmax*
 
-Before implementing the softmax regression model,
-let us briefly review how the sum operator works
-along specific dimensions in a tensor,
-as discussed in :numref:`subseq_lin-alg-reduction` and :numref:`subseq_lin-alg-non-reduction`.
-[**Given a matrix `X` we can sum over all elements (by default) or only
-over elements in the same axis,**]
-i.e., the same column (axis 0) or the same row (axis 1).
-Note that if `X` is a tensor with shape (2, 3)
-and we sum over the columns,
-the result will be a vector with shape (3,).
-When invoking the sum operator,
-we can specify to keep the number of axes in the original tensor,
-rather than collapsing out the dimension that we summed over.
-This will result in a two-dimensional tensor with shape (1, 3).
+Antes de implementar o modelo de regressão do *softmax*,
+vamos revisar brevemente como o operador de soma funciona
+ao longo de dimensões específicas em um tensor,
+conforme discutido em: numref :numref:`subseq_lin-alg-reduction` e :numref:`subseq_lin-alg-non-reduction`.
+[**Dada uma matriz `X`, podemos somar todos os elementos (por padrão) ou apenas
+sobre elementos no mesmo eixo,**]
+ou seja, a mesma coluna (eixo 0) ou a mesma linha (eixo 1).
+Observe que se `X` é um tensor com forma (2, 3)
+e somamos as colunas,
+o resultado será um vetor com forma (3,).
+Ao invocar o operador de soma,
+podemos especificar para manter o número de eixos no tensor original,
+em vez de reduzir a dimensão que resumimos.
+Isso resultará em um tensor bidimensional com forma (1, 3).
 
 ```{.python .input}
 #@tab pytorch
@@ -115,15 +115,15 @@ X = d2l.tensor([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
 d2l.reduce_sum(X, 0, keepdims=True), d2l.reduce_sum(X, 1, keepdims=True)
 ```
 
-We are now ready to (**implement the softmax operation**).
-Recall that softmax consists of three steps:
-i) we exponentiate each term (using `exp`);
-ii) we sum over each row (we have one row per example in the batch)
-to get the normalization constant for each example;
-iii) we divide each row by its normalization constant,
-ensuring that the result sums to 1.
-Before looking at the code, let us recall
-how this looks expressed as an equation:
+Agora estamos prontos para (**implementar a operação do *softmax* **).
+Lembre-se de que o *softmax* consiste em três etapas:
+i) exponenciamos cada termo (usando `exp`);
+ii) somamos cada linha (temos uma linha por exemplo no lote)
+para obter a constante de normalização para cada exemplo;
+iii) dividimos cada linha por sua constante de normalização,
+garantindo que o resultado seja 1.
+Antes de olhar para o código, vamos lembrar
+como isso parece, expresso como uma equação:
 
 (**
 $$\mathrm{softmax}(\mathbf{X})_{ij} = \frac{\exp(\mathbf{X}_{ij})}{\sum_k \exp(\mathbf{X}_{ik})}.$$
@@ -606,6 +606,6 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQyNTE3NDg3LC0yMTMxNTA1NDkzLC05OT
-kwNzg3NjcsLTE5ODQxODk3MjVdfQ==
+eyJoaXN0b3J5IjpbMTYwMDk4NDQ1Niw3NDI1MTc0ODcsLTIxMz
+E1MDU0OTMsLTk5OTA3ODc2NywtMTk4NDE4OTcyNV19
 -->
