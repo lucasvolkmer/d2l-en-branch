@@ -1,16 +1,16 @@
 # The Image Classification Dataset
 :label:`sec_fashion_mnist`
 
-(~~The MNIST dataset is one of the widely used dataset for image classification, while it's too simple as a benchmark dataset. We will use the similar, but more complex Fashion-MNIST dataset~~)
 
-One of the widely used dataset for image classification is the  MNIST dataset :cite:`LeCun.Bottou.Bengio.ea.1998`.
-While it had a good run as a benchmark dataset,
-even simple models by today's standards achieve classification accuracy over 95%,
-making it unsuitable for distinguishing between stronger models and weaker ones.
-Today, MNIST serves as more of sanity checks than as a benchmark.
-To up the ante just a bit, we will focus our discussion in the coming sections
-on the qualitatively similar, but comparatively complex Fashion-MNIST
-dataset :cite:`Xiao.Rasul.Vollgraf.2017`, which was released in 2017.
+(~~ O dataset MNIST é um dos conjuntos de dados amplamente usados para classificação de imagens, embora seja muito simples como um conjunto de dados de referência. Usaremos o dataset Fashion-MNIST semelhante, mas mais complexo ~~)
+
+Um dos *datasets* amplamente usados para classificação de imagens é o conjunto de dados MNIST :cite:`LeCun.Bottou.Bengio.ea.1998`.
+Embora tenha tido uma boa execução como um conjunto de dados de referência,
+mesmo os modelos simples pelos padrões atuais alcançam uma precisão de classificação acima de 95%,
+tornando-o inadequado para distinguir entre modelos mais fortes e mais fracos.
+Hoje, o MNIST serve mais como verificação de sanidade do que como referência.
+Para aumentar um pouco a aposta, concentraremos nossa discussão nas próximas seções
+no *dataset* Fashion-MNIST, qualitativamente semelhante, mas comparativamente complexo :cite:`Xiao.Rasul.Vollgraf.2017`, que foi lançado em 2017.
 
 ```{.python .input}
 %matplotlib inline
@@ -42,7 +42,7 @@ import tensorflow as tf
 d2l.use_svg_display()
 ```
 
-## Reading the Dataset
+## Lendo o Dataset
 
 We can [**download and read the Fashion-MNIST dataset into memory via the build-in functions in the framework.**]
 
@@ -320,5 +320,5 @@ We are now ready to work with the Fashion-MNIST dataset in the sections that fol
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0ODM2OTIxXX0=
+eyJoaXN0b3J5IjpbLTk3NDEwMjQyLDIxNDgzNjkyMV19
 -->
