@@ -334,17 +334,17 @@ We can concatenate partial derivatives of a multivariate function with respect t
 Suppose that the input of function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is an $n$-dimensional vector $\mathbf{x} = [x_1, x_2, \ldots, x_n]^\top$ and the output is a scalar. The gradient of the function $f(\mathbf{x})$ with respect to $\mathbf{x}$ is a vector of $n$ partial derivatives:
 
 Podemos concatenar derivadas parciais de uma função multivariada com respeito a todas as suas variáveis para obter o vetor *gradiente* da função.
-Suponha que a entrada da função $ f: \ mathbb {R} ^ n \ rightarrow \ mathbb {R} $ seja um vetor $ n $ -dimensional $ \ mathbf {x} = [x_1, x_2, \ ldots, x_n] ^ \ top $ e a saída é um escalar. O gradiente da função $ f (\ mathbf {x}) $ em relação a $ \ mathbf {x} $ é um vetor de $ n $ derivadas parciais:
+Suponha que a entrada da função $f: \mathbb{R}^n \rightarrow \mathbb{R}$ seja um vetor $n$ -dimensional $\mathbf{x} = [x_1, x_2, \ldots, x_n]^\top$ e a saída é um escalar. O gradiente da função $f(\mathbf{x})$ em relação a $\mathbf {x}$ é um vetor de $n$ derivadas parciais:
 
 $$\nabla_{\mathbf{x}} f(\mathbf{x}) = \bigg[\frac{\partial f(\mathbf{x})}{\partial x_1}, \frac{\partial f(\mathbf{x})}{\partial x_2}, \ldots, \frac{\partial f(\mathbf{x})}{\partial x_n}\bigg]^\top,$$
 
 where $\nabla_{\mathbf{x}} f(\mathbf{x})$ is often replaced by $\nabla f(\mathbf{x})$ when there is no ambiguity.
 
-onde $ \ nabla _ {\ mathbf {x}} f (\ mathbf {x}) $ é freqüentemente substituído por $ \ nabla f (\ mathbf {x}) $ quando não há ambigüidade.
+onde $\nabla_{\mathbf{x}} f(\mathbf{x})$ é freqüentemente substituído por $\nabla f(\mathbf{x})$ quando não há ambigüidade.
 
 Let $\mathbf{x}$ be an $n$-dimensional vector, the following rules are often used when differentiating multivariate functions:
 
-Seja $ \ mathbf {x} $ um vetor $ n $ -dimensional, as seguintes regras são freqüentemente usadas ao diferenciar funções multivariadas:
+Seja $\mathbf {x}$ um vetor $n$ -dimensional, as seguintes regras são freqüentemente usadas ao diferenciar funções multivariadas:
 
 * For all $\mathbf{A} \in \mathbb{R}^{m \times n}$, $\nabla_{\mathbf{x}} \mathbf{A} \mathbf{x} = \mathbf{A}^\top$,
 * For all  $\mathbf{A} \in \mathbb{R}^{n \times m}$, $\nabla_{\mathbf{x}} \mathbf{x}^\top \mathbf{A}  = \mathbf{A}$,
@@ -353,7 +353,7 @@ Seja $ \ mathbf {x} $ um vetor $ n $ -dimensional, as seguintes regras são freq
 
 Similarly, for any matrix $\mathbf{X}$, we have $\nabla_{\mathbf{X}} \|\mathbf{X} \|_F^2 = 2\mathbf{X}$. As we will see later, gradients are useful for designing optimization algorithms in deep learning.
 
-Da mesma forma, para qualquer matriz $ \ mathbf {X} $, temos $ \ nabla _ {\ mathbf {X}} \ | \ mathbf {X} \ | _F ^ 2 = 2 \ mathbf {X} $. Como veremos mais tarde, os gradientes são úteis para projetar algoritmos de otimização no aprendizado profundo.
+Da mesma forma, para qualquer matriz $\mathbf {X}$, temos $\nabla_{\mathbf{X}} \|\mathbf{X} \|_F^2 = 2\mathbf{X}$. Como veremos mais tarde, os gradientes são úteis para projetar algoritmos de otimização no aprendizado profundo.
 
 ## Chain Rule
 
@@ -434,6 +434,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzY5NzExNzEsNTY1MjYwNjQ0LC0xOT
+eyJoaXN0b3J5IjpbLTEyNTU3NDA0MDksNTY1MjYwNjQ0LC0xOT
 c5MzM1ODI3XX0=
 -->
