@@ -52,29 +52,16 @@ que é comumente usado no *Deep Learning*.
 
 ## Derivadas e Diferenciação
 
-We begin by addressing the calculation of derivatives,
-a crucial step in nearly all deep learning optimization algorithms.
-In deep learning, we typically choose loss functions
-that are differentiable with respect to our model's parameters.
-Put simply, this means that for each parameter,
-we can determine how rapidly the loss would increase or decrease,
-were we to *increase* or *decrease* that parameter
-by an infinitesimally small amount.
-
 Começamos abordando o cálculo de derivadas,
 uma etapa crucial em quase todos os algoritmos de otimização de *Deep Learning*.
-No aprendizado profundo, normalmente escolhemos funções de perda
+No *Deep Learning*, normalmente escolhemos funções de perda
 que são diferenciáveis em relação aos parâmetros do nosso modelo.
 Simplificando, isso significa que para cada parâmetro,
 podemos determinar a rapidez com que a perda aumentaria ou diminuiria,
 deveríamos *aumentar* ou *diminuir* esse parâmetro
 por uma quantidade infinitesimalmente pequena.
 
-Suppose that we have a function $f: \mathbb{R} \rightarrow \mathbb{R}$,
-whose input and output are both scalars.
-[**The *derivative* of $f$ is defined as**]
-
-Suponha que temos uma função $ f: \ mathbb {R} \ rightarrow \ mathbb {R} $,
+Suponha que temos uma função $f: \mathbb{R} \rightarrow \mathbb{R}$,
 cuja entrada e saída são escalares.
 [**A *derivada* de $f$ é definida como**]
 
@@ -82,16 +69,6 @@ cuja entrada e saída são escalares.
 (**$$f'(x) = \lim_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h},$$**)
 :eqlabel:`eq_derivative`
 
-if this limit exists.
-If $f'(a)$ exists,
-$f$ is said to be *differentiable* at $a$.
-If $f$ is differentiable at every number of an interval,
-then this function is differentiable on this interval.
-We can interpret the derivative $f'(x)$ in :eqref:`eq_derivative`
-as the *instantaneous* rate of change of $f(x)$
-with respect to $x$.
-The so-called instantaneous rate of change is based on
-the variation $h$ in $x$, which approaches $0$.
 
 se este limite existe.
 Se $f'(a)$ existe,
@@ -104,11 +81,7 @@ em relação a $x$.
 A chamada taxa instantânea de mudança é baseada em
 a variação $h$ em $x$, que se aproxima de $0$.
 
-To illustrate derivatives,
-let us experiment with an example.
-(**Define $u = f(x) = 3x^2-4x$.**)
-
-Para ilustrar derivados,
+Para ilustrar derivadas,
 vamos experimentar com um exemplo.
 (**Define-se $u = f(x) = 3x^2-4x$.**)
 ```{.python .input}
@@ -407,6 +380,6 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MjExNTE0LDU2NTI2MDY0NCwtMTk3OT
-MzNTgyN119
+eyJoaXN0b3J5IjpbMTkzOTU2MDIzMSw1NjUyNjA2NDQsLTE5Nz
+kzMzU4MjddfQ==
 -->
