@@ -322,6 +322,9 @@ $$ \frac{\partial y}{\partial x_i} = \lim_{h \rightarrow 0} \frac{f(x_1, \ldots,
 To calculate $\frac{\partial y}{\partial x_i}$, we can simply treat $x_1, \ldots, x_{i-1}, x_{i+1}, \ldots, x_n$ as constants and calculate the derivative of $y$ with respect to $x_i$.
 For notation of partial derivatives, the following are equivalent:
 
+Para calcular $ \ frac {\ parcial y} {\ parcial x_i} $, podemos simplesmente tratar $ x_1, \ ldots, x_ {i-1}, x_ {i + 1}, \ ldots, x_n $ como constantes e calcular a derivada de $ y $ com respeito a $ x_i $.
+Para notação de derivadas parciais, os seguintes são equivalentes:
+
 $$\frac{\partial y}{\partial x_i} = \frac{\partial f}{\partial x_i} = f_{x_i} = f_i = D_i f = D_{x_i} f.$$
 
 
@@ -330,11 +333,18 @@ $$\frac{\partial y}{\partial x_i} = \frac{\partial f}{\partial x_i} = f_{x_i} = 
 We can concatenate partial derivatives of a multivariate function with respect to all its variables to obtain the *gradient* vector of the function.
 Suppose that the input of function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is an $n$-dimensional vector $\mathbf{x} = [x_1, x_2, \ldots, x_n]^\top$ and the output is a scalar. The gradient of the function $f(\mathbf{x})$ with respect to $\mathbf{x}$ is a vector of $n$ partial derivatives:
 
+Podemos concatenar derivadas parciais de uma função multivariada com respeito a todas as suas variáveis para obter o vetor * gradiente * da função.
+Suponha que a entrada da função $ f: \ mathbb {R} ^ n \ rightarrow \ mathbb {R} $ seja um vetor $ n $ -dimensional $ \ mathbf {x} = [x_1, x_2, \ ldots, x_n] ^ \ top $ e a saída é um escalar. O gradiente da função $ f (\ mathbf {x}) $ em relação a $ \ mathbf {x} $ é um vetor de $ n $ derivadas parciais:
+
 $$\nabla_{\mathbf{x}} f(\mathbf{x}) = \bigg[\frac{\partial f(\mathbf{x})}{\partial x_1}, \frac{\partial f(\mathbf{x})}{\partial x_2}, \ldots, \frac{\partial f(\mathbf{x})}{\partial x_n}\bigg]^\top,$$
 
 where $\nabla_{\mathbf{x}} f(\mathbf{x})$ is often replaced by $\nabla f(\mathbf{x})$ when there is no ambiguity.
 
+onde $ \ nabla _ {\ mathbf {x}} f (\ mathbf {x}) $ é freqüentemente substituído por $ \ nabla f (\ mathbf {x}) $ quando não há ambigüidade.
+
 Let $\mathbf{x}$ be an $n$-dimensional vector, the following rules are often used when differentiating multivariate functions:
+
+Seja $ \ mathbf {x} $ um vetor $ n $ -dimensional, as seguintes regras são freqüentemente usadas ao diferenciar funções multivariadas:
 
 * For all $\mathbf{A} \in \mathbb{R}^{m \times n}$, $\nabla_{\mathbf{x}} \mathbf{A} \mathbf{x} = \mathbf{A}^\top$,
 * For all  $\mathbf{A} \in \mathbb{R}^{n \times m}$, $\nabla_{\mathbf{x}} \mathbf{x}^\top \mathbf{A}  = \mathbf{A}$,
@@ -343,6 +353,7 @@ Let $\mathbf{x}$ be an $n$-dimensional vector, the following rules are often use
 
 Similarly, for any matrix $\mathbf{X}$, we have $\nabla_{\mathbf{X}} \|\mathbf{X} \|_F^2 = 2\mathbf{X}$. As we will see later, gradients are useful for designing optimization algorithms in deep learning.
 
+Da mesma forma, para qualquer matriz $ \ mathbf {X} $, temos $ \ nabla _ {\ mathbf {X}} \ | \ mathbf {X} \ | _F ^ 2 = 2 \ mathbf {X} $. Como veremos mais tarde, os gradientes são úteis para projetar algoritmos de otimização no aprendizado profundo.
 
 ## Chain Rule
 
@@ -351,8 +362,16 @@ This is because multivariate functions in deep learning are often *composite*,
 so we may not apply any of the aforementioned rules to differentiate these functions.
 Fortunately, the *chain rule* enables us to differentiate composite functions.
 
+No entanto, esses gradientes podem ser difíceis de encontrar.
+Isso ocorre porque as funções multivariadas no aprendizado profundo são frequentemente * compostas *,
+portanto, não podemos aplicar nenhuma das regras mencionadas acima para diferenciar essas funções.
+Felizmente, a * regra da cadeia * nos permite diferenciar funções compostas.
+
 Let us first consider functions of a single variable.
 Suppose that functions $y=f(u)$ and $u=g(x)$ are both differentiable, then the chain rule states that
+
+Vamos primeiro considerar as funções de uma única variável.
+Suponha que as funções $ y = f (u) $ e $ u = g (x) $ sejam diferenciáveis, então a regra da cadeia afirma que
 
 $$\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx}.$$
 
@@ -364,9 +383,17 @@ has variables $x_1, x_2, \ldots, x_n$.
 Note that $y$ is a function of $x_1, x_2, \ldots, x_n$.
 Then the chain rule gives
 
+Agora, vamos voltar nossa atenção para um cenário mais geral
+onde as funções têm um número arbitrário de variáveis.
+Suponha que a função diferenciável $ y $ tenha variáveis
+$ u_1, u_2, \ ldots, u_m $, onde cada função diferenciável $ u_i $
+tem variáveis $ x_1, x_2, \ ldots, x_n $.
+Observe que $ y $ é uma função de $ x_1, x_2, \ ldots, x_n $.
+Então a regra da cadeia dá
+
 $$\frac{dy}{dx_i} = \frac{dy}{du_1} \frac{du_1}{dx_i} + \frac{dy}{du_2} \frac{du_2}{dx_i} + \cdots + \frac{dy}{du_m} \frac{du_m}{dx_i}$$
 
-for any $i = 1, 2, \ldots, n$.
+para qualquer $i = 1, 2, \ldots, n$.
 
 
 
@@ -399,6 +426,6 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NTkyOTY1Myw1NjUyNjA2NDQsLTE5Nz
+eyJoaXN0b3J5IjpbMTc5MjUwNjkzMSw1NjUyNjA2NDQsLTE5Nz
 kzMzU4MjddfQ==
 -->
