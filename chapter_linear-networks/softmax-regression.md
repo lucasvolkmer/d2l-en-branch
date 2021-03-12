@@ -351,12 +351,12 @@ você também pode consultar o [apêndice online sobre teoria da informação](h
 e manipulação informações (também conhecidas como dados) da forma mais concisa possível.
 
 
-### Entropy
+### Entropia
 
-The central idea in information theory is to quantify the information content in data.
-This quantity places a hard limit on our ability to compress the data.
-In information theory, this quantity is called the *entropy* of a distribution $P$,
-and it is captured by the following equation:
+A ideia central na teoria da informação é quantificar o conteúdo da informação nos dados.
+Essa quantidade impõe um limite rígido à nossa capacidade de compactar os dados.
+Na teoria da informação, essa quantidade é chamada de *entropia* de uma distribuição $P$,
+e é definida pela seguinte equação:
 
 $$H[P] = \sum_j - P(j) \log P(j).$$
 :eqlabel:`eq_softmax_reg_entropy`
@@ -444,8 +444,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMjk3NzE3NSwtODY1MTgxOTE4LC0xMz
-AyMzgwMTg5LC0xNDE0MjMyNjk1LDM4NDc5NTkzNSwxNzI5MDYw
-OTgzLC0xMjkxMTQ3NTk2LDEwNjY5NTYwOTMsMTg0MzM3NTA5NC
-wxMzk0NzIzNDYwXX0=
+eyJoaXN0b3J5IjpbNDI2MjgyNTIxLC04NjUxODE5MTgsLTEzMD
+IzODAxODksLTE0MTQyMzI2OTUsMzg0Nzk1OTM1LDE3MjkwNjA5
+ODMsLTEyOTExNDc1OTYsMTA2Njk1NjA5MywxODQzMzc1MDk0LD
+EzOTQ3MjM0NjBdfQ==
 -->
