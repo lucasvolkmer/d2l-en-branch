@@ -396,22 +396,22 @@ que realmente correspondem ao processo de geração de dados.
 
 ### Entropia Cruzada Revisitada
 
-So if entropy is level of surprise experienced
-by someone who knows the true probability,
-then you might be wondering, what is cross-entropy?
-The cross-entropy *from* $P$ *to* $Q$, denoted $H(P, Q)$,
-is the expected surprisal of an observer with subjective probabilities $Q$
-upon seeing data that were actually generated according to probabilities $P$.
-The lowest possible cross-entropy is achieved when $P=Q$.
-In this case, the cross-entropy from $P$ to $Q$ is $H(P, P)= H(P)$.
 
-In short, we can think of the cross-entropy classification objective
-in two ways: (i) as maximizing the likelihood of the observed data;
-and (ii) as minimizing our surprisal (and thus the number of bits)
-required to communicate the labels.
+Então, se a entropia é o nível de surpresa experimentado
+por alguém que conhece a verdadeira probabilidade,
+então você deve estar se perguntando, o que é entropia cruzada?
+A entropia cruzada *de* $P$ *a* $Q$, denotada $H(P, Q)$,
+é a surpresa esperada de um observador com probabilidades subjetivas $Q$
+ao ver os dados que realmente foram gerados de acordo com as probabilidades $P$.
+A menor entropia cruzada possível é alcançada quando $P=Q$.
+Nesse caso, a entropia cruzada de $P$ a $Q$ é $H(P, P)= H(P)$.
 
+Em suma, podemos pensar no objetivo da classificação de entropia cruzada
+de duas maneiras: (i) maximizando a probabilidade dos dados observados;
+e (ii) minimizando nossa surpresa (e, portanto, o número de bits)
+necessário para comunicar os rótulos.
 
-## Model Prediction and Evaluation
+## Predição do Modelo e Avaliação
 
 After training the softmax regression model, given any example features,
 we can predict the probability of each output class.
@@ -445,7 +445,7 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MDYyNzg0MywtMjA0MzYyNzg5MiwtOD
+eyJoaXN0b3J5IjpbLTg5NDkxMzQyMSwtMjA0MzYyNzg5MiwtOD
 Y1MTgxOTE4LC0xMzAyMzgwMTg5LC0xNDE0MjMyNjk1LDM4NDc5
 NTkzNSwxNzI5MDYwOTgzLC0xMjkxMTQ3NTk2LDEwNjY5NTYwOT
 MsMTg0MzM3NTA5NCwxMzk0NzIzNDYwXX0=
