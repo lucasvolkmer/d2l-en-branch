@@ -102,15 +102,19 @@ janela. Além disso, se usarmos dois pontos de interrogação, como
 exibido.
 
 
-## Summary
+## Sumário
 
 * The official documentation provides plenty of descriptions and examples that are beyond this book.
 * We can look up documentation for the usage of an API by calling the `dir` and `help` functions, or `?` and `??` in Jupyter notebooks.
 
+* A documentação oficial fornece muitas descrições e exemplos que vão além deste livro.
+* Podemos consultar a documentação para o uso de uma API chamando as funções `dir` e` help`, ou `?` E `??` em blocos de notas Jupyter.
 
-## Exercises
+## Exercícios
 
 1. Look up the documentation for any function or class in the deep learning framework. Can you also find the documentation on the official website of the framework?
+
+1. Procure a documentação de qualquer função ou classe na estrutura de aprendizado profundo. Você também pode encontrar a documentação no site oficial do framework?
 
 
 :begin_tab:`mxnet`
@@ -125,5 +129,5 @@ exibido.
 [Discussions](https://discuss.d2l.ai/t/199)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNjg2NjQxN119
+eyJoaXN0b3J5IjpbLTEyNDMzMTEzNjhdfQ==
 -->
