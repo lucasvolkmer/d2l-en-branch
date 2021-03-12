@@ -274,19 +274,14 @@ Observe que aqui usamos a notação mais compacta em que $P(A, B)$ é uma *distr
 
 ### Marginalização
 
-Bayes' theorem is very useful if we want to infer one thing from the other, say cause and effect, but we only know the properties in the reverse direction, as we will see later in this section. One important operation that we need, to make this work, is *marginalization*.
-It is the operation of determining $P(B)$ from $P(A, B)$. We can see that the probability of $B$ amounts to accounting for all possible choices of $A$ and aggregating the joint probabilities over all of them:
-
 O teorema de Bayes é muito útil se quisermos inferir uma coisa da outra, digamos causa e efeito, mas só conhecemos as propriedades na direção reversa, como veremos mais adiante nesta seção. Uma operação importante de que precisamos para fazer esse trabalho é a *marginalização*.
 É a operação de determinar $P(B)$ de $P(A, B)$. Podemos ver que a probabilidade de $B$ equivale a contabilizar todas as escolhas possíveis de $A$ e agregar as probabilidades conjuntas de todas elas:
 
 $$P(B) = \sum_{A} P(A, B),$$
 
-which is also known as the *sum rule*. The probability or distribution as a result of marginalization is called a *marginal probability* or a *marginal distribution*.
+que também é conhecida como *regra da soma*. A probabilidade ou distribuição como resultado da marginalização é chamada de *probabilidade marginal* ou *distribuição marginal*.
 
-que também é conhecida como * regra da soma *. A probabilidade ou distribuição como resultado da marginalização é chamada de *probabilidade marginal* ou *distribuição marginal*.
-
-### Independence
+### Independencia
 
 Another useful property to check for is *dependence* vs. *independence*.
 Two random variables $A$ and $B$ being independent
@@ -295,7 +290,7 @@ does not reveal any information about the occurrence of an event of $B$.
 In this case $P(B \mid A) = P(B)$. Statisticians typically express this as $A \perp  B$. From Bayes' theorem, it follows immediately that also $P(A \mid B) = P(A)$.
 In all the other cases we call $A$ and $B$ dependent. For instance, two successive rolls of a die are independent. In contrast, the position of a light switch and the brightness in the room are not (they are not perfectly deterministic, though, since we could always have a broken light bulb, power failure, or a broken switch).
 
-Outra propriedade útil para verificar é * dependência * vs. * independência *.
+Outra propriedade útil para verificar é *dependência* vs. *independência*.
 Duas variáveis aleatórias $A$ e $B$ sendo independentes
 significa que a ocorrência de um evento de $A$
 não revela nenhuma informação sobre a ocorrência de um evento de $B$.
@@ -495,8 +490,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUyNTUwNjcyLDE5ODg0ODI3MzQsLTIxND
-MxNDEzNTIsODE5MDMyNTM4LDE0NjMwNTUxODksLTEyMzUyODcx
-MjcsMTg0MDQ2MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2MSwzNz
-I4ODcxNTgsODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbLTIwMTE2MTgyNDIsMTk4ODQ4MjczNCwtMj
+E0MzE0MTM1Miw4MTkwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4
+NzEyNywxODQwNDYyMTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLD
+M3Mjg4NzE1OCw4MTk5MjQwMThdfQ==
 -->
