@@ -154,21 +154,6 @@ t.gradient(y, x)  # Overwritten by the newly calculated gradient
 
 ## Retroceder para variáveis não escalares
 
-Technically, when `y` is not a scalar,
-the most natural interpretation of the differentiation of a vector `y`
-with respect to a vector `x` is a matrix.
-For higher-order and higher-dimensional `y` and `x`,
-the differentiation result could be a high-order tensor.
-
-However, while these more exotic objects do show up
-in advanced machine learning (including [**in deep learning**]),
-more often (**when we are calling backward on a vector,**)
-we are trying to calculate the derivatives of the loss functions
-for each constituent of a *batch* of training examples.
-Here, (**our intent is**) not to calculate the differentiation matrix
-but rather (**the sum of the partial derivatives
-computed individually for each example**) in the batch.
-
 Tecnicamente, quando `y` não é um escalar,
 a interpretação mais natural da diferenciação de um vetor `y`
 em relação a um vetor, `x` é uma matriz.
@@ -214,7 +199,7 @@ with tf.GradientTape() as t:
 t.gradient(y, x)  # Same as `y = tf.reduce_sum(x * x)`
 ```
 
-## Detaching Computation
+## Computação *Detaching* 
 
 Às vezes, desejamos [**mover alguns cálculos
 fora do gráfico computacional registrado.**]
@@ -407,7 +392,7 @@ d_grad == d / a
 [Discussions](https://discuss.d2l.ai/t/200)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg0MDMyMTU5LC04NjIyMjAyMTksLTE4Nz
-AyNDUwNDYsLTIwMjAzNDk2NjUsMTI0ODA3NDUyMiwxNDA2NDM5
-MzQxXX0=
+eyJoaXN0b3J5IjpbLTI4NzgwMTM5OSw4ODQwMzIxNTksLTg2Mj
+IyMDIxOSwtMTg3MDI0NTA0NiwtMjAyMDM0OTY2NSwxMjQ4MDc0
+NTIyLDE0MDY0MzkzNDFdfQ==
 -->
