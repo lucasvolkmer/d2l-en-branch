@@ -546,11 +546,11 @@ class Updater():  #@save
 updater = Updater([W, b], lr=0.1)
 ```
 
-Now we [**train the model with 10 epochs.**]
-Note that both the number of epochs (`num_epochs`),
-and learning rate (`lr`) are adjustable hyperparameters.
-By changing their values, we may be able
-to increase the classification accuracy of the model.
+Agora [**treinamos o modelo com 10 épocas.**]
+Observe que tanto o número de épocas (`num_epochs`),
+e a taxa de aprendizagem (`lr`) são hiperparâmetros ajustáveis.
+Mudando seus valores, podemos ser capazes
+de aumentar a precisão da classificação do modelo.
 
 ```{.python .input}
 #@tab all
@@ -558,7 +558,7 @@ num_epochs = 10
 train_ch3(net, train_iter, test_iter, cross_entropy, num_epochs, updater)
 ```
 
-## Prediction
+## Predição
 
 Now that training is complete,
 our model is ready to [**classify some images.**]
@@ -608,8 +608,8 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM4NjUxNjIxLC00MTA3MDk1NzIsMTEwOD
-MwNjkwLC0xOTUzMzMyMDE5LDExNTMwODEzNSwxNjAwOTg0NDU2
-LDc0MjUxNzQ4NywtMjEzMTUwNTQ5MywtOTk5MDc4NzY3LC0xOT
-g0MTg5NzI1XX0=
+eyJoaXN0b3J5IjpbMTU0MDI4ODAxOSwtNDEwNzA5NTcyLDExMD
+gzMDY5MCwtMTk1MzMzMjAxOSwxMTUzMDgxMzUsMTYwMDk4NDQ1
+Niw3NDI1MTc0ODcsLTIxMzE1MDU0OTMsLTk5OTA3ODc2NywtMT
+k4NDE4OTcyNV19
 -->
