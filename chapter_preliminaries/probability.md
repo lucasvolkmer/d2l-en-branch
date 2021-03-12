@@ -1,11 +1,17 @@
-# Probability
+# Probabilitydade
 :label:`sec_prob`
 
 In some form or another, machine learning is all about making predictions.
 We might want to predict the *probability* of a patient suffering a heart attack in the next year, given their clinical history. In anomaly detection, we might want to assess how *likely* a set of readings from an airplane's jet engine would be, were it operating normally. In reinforcement learning, we want an agent to act intelligently in an environment. This means we need to think about the probability of getting a high reward under each of the available actions. And when we build recommender systems we also need to think about probability. For example, say *hypothetically* that we worked for a large online bookseller. We might want to estimate the probability that a particular user would buy a particular book. For this we need to use the language of probability.
 Entire courses, majors, theses, careers, and even departments, are devoted to probability. So naturally, our goal in this section is not to teach the whole subject. Instead we hope to get you off the ground, to teach you just enough that you can start building your first deep learning models, and to give you enough of a flavor for the subject that you can begin to explore it on your own if you wish.
 
+De uma forma ou de outra, o aprendizado de máquina envolve fazer previsões.
+Podemos querer prever a * probabilidade * de um paciente sofrer um ataque cardíaco no próximo ano, considerando sua história clínica. Na detecção de anomalias, podemos avaliar quão * provável * seria um conjunto de leituras do motor a jato de um avião, se ele estivesse operando normalmente. Na aprendizagem por reforço, queremos que um agente aja de forma inteligente em um ambiente. Isso significa que precisamos pensar sobre a probabilidade de obter uma alta recompensa em cada uma das ações disponíveis. E quando construímos sistemas de recomendação, também precisamos pensar sobre probabilidade. Por exemplo, diga * hipoteticamente * que trabalhamos para uma grande livraria online. Podemos querer estimar a probabilidade de um determinado usuário comprar um determinado livro. Para isso, precisamos usar a linguagem da probabilidade.
+Cursos inteiros, majores, teses, carreiras e até departamentos são dedicados à probabilidade. Então, naturalmente, nosso objetivo nesta seção não é ensinar todo o assunto. Em vez disso, esperamos fazer você decolar, ensinar apenas o suficiente para que você possa começar a construir seus primeiros modelos de aprendizagem profunda e dar-lhe um sabor suficiente para o assunto que você pode começar a explorá-lo por conta própria, se desejar .
+
 We have already invoked probabilities in previous sections without articulating what precisely they are or giving a concrete example. Let us get more serious now by considering the first case: distinguishing cats and dogs based on photographs. This might sound simple but it is actually a formidable challenge. To start with, the difficulty of the problem may depend on the resolution of the image.
+
+Já invocamos as probabilidades nas seções anteriores, sem articular o que são precisamente ou dar um exemplo concreto. Vamos ser mais sérios agora, considerando o primeiro caso: distinguir cães e gatos com base em fotografias. Isso pode parecer simples, mas na verdade é um desafio formidável. Para começar, a dificuldade do problema pode depender da resolução da imagem.
 
 ![Images of varying resolutions ($10 \times 10$, $20 \times 20$, $40 \times 40$, $80 \times 80$, and $160 \times 160$ pixels).](../img/cat-dog-pixels.png)
 :width:`300px`
@@ -23,14 +29,33 @@ If we had no evidence to suggest that $y =$ "cat" or that $y =$ "dog", then we m
 confident, but not sure that the image depicted a cat, we might assign a
 probability $0.5  < P(y=$ "cat"$) < 1$.
 
+Conforme mostrado em: numref: `fig_cat_dog`,
+embora seja fácil para os humanos reconhecerem cães e gatos na resolução de $ 160 \ vezes 160 $ pixels,
+torna-se um desafio em $ 40 \ vezes 40 $ pixels e quase impossível em $ 10 \ vezes 10 $ pixels. No
+Em outras palavras, nossa capacidade de distinguir cães e gatos a uma grande distância (e, portanto, em baixa resolução) pode se aproximar de uma suposição desinformada. A probabilidade nos dá um
+maneira formal de raciocinar sobre nosso nível de certeza.
+Se tivermos certeza absoluta
+que a imagem representa um gato, dizemos que a * probabilidade * de que o rótulo $ y $ correspondente seja "gato", denotado $ P (y = $ "gato" $) $ é igual a $ 1 $.
+Se não tivéssemos nenhuma evidência para sugerir que $ y = $ "gato" ou que $ y = $ "cachorro", então poderíamos dizer que as duas possibilidades eram igualmente
+* provavelmente * expressando isso como $ P (y = $ "gato" $) = P (y = $ "cachorro" $) = 0,5 $. Se estivéssemos razoavelmente
+confiantes, mas não temos certeza de que a imagem representava um gato, podemos atribuir um
+probabilidade $ 0,5 <P (y = $ "gato" $) <1 $.
+
 Now consider the second case: given some weather monitoring data, we want to predict the probability that it will rain in Taipei tomorrow. If it is summertime, the rain might come with probability 0.5.
+
+Agora considere o segundo caso: dados alguns dados de monitoramento do tempo, queremos prever a probabilidade de que choverá em Taipei amanhã. Se for verão, a chuva pode vir com probabilidade 0,5.
 
 In both cases, we have some value of interest. And in both cases we are uncertain about the outcome.
 But there is a key difference between the two cases. In this first case, the image is in fact either a dog or a cat, and we just do not know which. In the second case, the outcome may actually be a random event, if you believe in such things (and most physicists do). So probability is a flexible language for reasoning about our level of certainty, and it can be applied effectively in a broad set of contexts.
 
+Em ambos os casos, temos algum valor de interesse. E em ambos os casos não temos certeza sobre o resultado.
+Mas existe uma diferença fundamental entre os dois casos. Neste primeiro caso, a imagem é de fato um cachorro ou um gato, e simplesmente não sabemos qual. No segundo caso, o resultado pode realmente ser um evento aleatório, se você acredita em tais coisas (e a maioria dos físicos acredita). Portanto, probabilidade é uma linguagem flexível para raciocinar sobre nosso nível de certeza e pode ser aplicada com eficácia em um amplo conjunto de contextos.
+
 ## Basic Probability Theory
 
 Say that we cast a die and want to know what the chance is of seeing a 1 rather than another digit. If the die is fair, all the six outcomes $\{1, \ldots, 6\}$ are equally likely to occur, and thus we would see a $1$ in one out of six cases. Formally we state that $1$ occurs with probability $\frac{1}{6}$.
+
+Digamos que lançamos um dado e queremos saber qual é a chance de ver um 1 em vez de outro dígito. Se o dado for justo, todos os seis resultados $ \ {1, \ ldots, 6 \} $ têm a mesma probabilidade de ocorrer e, portanto, veríamos $ 1 $ em um dos seis casos. Formalmente afirmamos que $ 1 $ ocorre com probabilidade $ \ frac {1} {6} $.
 
 For a real die that we receive from a factory, we might not know those proportions and we would need to check whether it is tainted. The only way to investigate the die is by casting it many times and recording the outcomes. For each cast of the die, we will observe a value in $\{1, \ldots, 6\}$. Given these outcomes, we want to investigate the probability of observing each outcome.
 
@@ -440,3 +465,6 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjk2OTE3MzEyXX0=
+-->
