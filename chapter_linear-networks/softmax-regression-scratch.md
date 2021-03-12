@@ -1,4 +1,4 @@
-# Implementation of Softmax Regression from Scratch
+# Implementation of Softmax Regression from Scratchção da Regressão *Softmax*  do Zero
 :label:`sec_softmax_scratch`
 
 (**Just as we implemented linear regression from scratch, we believe that**)
@@ -605,3 +605,6 @@ predict_ch3(net, test_iter)
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE5ODQxODk3MjVdfQ==
+-->
