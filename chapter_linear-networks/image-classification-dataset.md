@@ -214,7 +214,7 @@ train_iter = tf.data.Dataset.from_tensor_slices(
     mnist_train).batch(batch_size).shuffle(len(mnist_train[0]))
 ```
 
-Let us look at the time it takes to read the training data.
+Vejamos o tempo que leva para ler os dados de treinamento.
 
 ```{.python .input}
 #@tab all
@@ -224,12 +224,12 @@ for X, y in train_iter:
 f'{timer.stop():.2f} sec'
 ```
 
-## Putting All Things Together
+## Juntando Tudo
 
-Now we define [**the `load_data_fashion_mnist` function
-that obtains and reads the Fashion-MNIST dataset.**]
-It returns the data iterators for both the training set and validation set.
-In addition, it accepts an optional argument to resize images to another shape.
+Agora definimos [**a função `load_data_fashion_mnist`
+que obtém e lê o *dataset* Fashion-MNIST.**]
+Ele retorna os iteradores de dados para o conjunto de treinamento e o conjunto de validação.
+Além disso, ele aceita um argumento opcional para redimensionar imagens para outra forma.
 
 ```{.python .input}
 def load_data_fashion_mnist(batch_size, resize=None):  #@save
@@ -283,8 +283,8 @@ def load_data_fashion_mnist(batch_size, resize=None):   #@save
             batch_size).map(resize_fn))
 ```
 
-Below we test the image resizing feature of the `load_data_fashion_mnist` function
-by specifying the `resize` argument.
+Abaixo testamos o recurso de redimensionamento de imagem da função `load_data_fashion_mnist`
+especificando o argumento `resize`.
 
 ```{.python .input}
 #@tab all
@@ -294,7 +294,7 @@ for X, y in train_iter:
     break
 ```
 
-We are now ready to work with the Fashion-MNIST dataset in the sections that follow.
+Agora estamos prontos para trabalhar com o conjunto de dados Fashion-MNIST nas seções a seguir.
 
 ## Summary
 
@@ -321,5 +321,5 @@ We are now ready to work with the Fashion-MNIST dataset in the sections that fol
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMzk5ODA0OSwyMTQ4MzY5MjFdfQ==
+eyJoaXN0b3J5IjpbMjEwOTMxMzU2OCwyMTQ4MzY5MjFdfQ==
 -->
