@@ -245,26 +245,15 @@ Para probabilidade sobre variáveis ​​aleatórias contínuas, você pode con
 Muitas vezes, queremos considerar mais de uma variável aleatória de cada vez.
 Por exemplo, podemos querer modelar a relação entre doenças e sintomas. Dados uma doença e um sintoma, digamos "gripe" e "tosse", podem ou não ocorrer em um paciente com alguma probabilidade. Embora esperemos que a probabilidade de ambos seja próxima de zero, podemos estimar essas probabilidades e suas relações entre si para que possamos aplicar nossas inferências para obter um melhor atendimento médico.
 
-As a more complicated example, images contain millions of pixels, thus millions of random variables. And in many cases images will come with a
-label, identifying objects in the image. We can also think of the label as a
-random variable. We can even think of all the metadata as random variables
-such as location, time, aperture, focal length, ISO, focus distance, and camera type.
-All of these are random variables that occur jointly. When we deal with multiple random variables, there are several quantities of interest.
-
 Como um exemplo mais complicado, as imagens contêm milhões de pixels, portanto, milhões de variáveis aleatórias. E, em muitos casos, as imagens vêm com um
 rótulo, identificando objetos na imagem. Também podemos pensar no rótulo como um
 variável aleatória. Podemos até pensar em todos os metadados como variáveis aleatórias
 como local, tempo, abertura, comprimento focal, ISO, distância de foco e tipo de câmera.
 Todas essas são variáveis aleatórias que ocorrem em conjunto. Quando lidamos com múltiplas variáveis aleatórias, existem várias quantidades de interesse.
 
-### Joint Probability
+### Probabilidade Conjunta
 
-The first is called the *joint probability* $P(A = a, B=b)$. Given any values $a$ and $b$, the joint probability lets us answer, what is the probability that $A=a$ and $B=b$ simultaneously?
-Note that for any values $a$ and $b$, $P(A=a, B=b) \leq P(A=a)$.
-This has to be the case, since for $A=a$ and $B=b$ to happen, $A=a$ has to happen *and* $B=b$ also has to happen (and vice versa). Thus, $A=a$ and $B=b$ cannot be more likely than $A=a$ or $B=b$ individually.
-
-
-O primeiro é chamado de * probabilidade conjunta * $P(A = a, B=b)$. Dados quaisquer valores $a$ e $b$, a probabilidade conjunta nos permite responder, qual é a probabilidade de que $A = a$ e $B = b$ simultaneamente?
+O primeiro é chamado de *probabilidade conjunta* $P(A = a, B=b)$. Dados quaisquer valores $a$ e $b$, a probabilidade conjunta nos permite responder, qual é a probabilidade de que $A = a$ e $B = b$ simultaneamente?
 Observe que, para quaisquer valores $a$ e $b$, $P (A = a, B = b) \leq P (A = a)$.
 Tem de ser este o caso, visto que para $A = a$ e $B = b$ acontecer, $A = a$ tem que acontecer *e* $B = b$ também tem que acontecer (e vice-versa). Assim, $A = a$ e $B = b$ não podem ser mais prováveis do que $A = a$ ou $B = b$ individualmente.
 
@@ -517,8 +506,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4ODQ4MjczNCwtMjE0MzE0MTM1Miw4MT
-kwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4NzEyNywxODQwNDYy
-MTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLDM3Mjg4NzE1OCw4MT
-k5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbMTI5MDgxNDk5NSwxOTg4NDgyNzM0LC0yMT
+QzMTQxMzUyLDgxOTAzMjUzOCwxNDYzMDU1MTg5LC0xMjM1Mjg3
+MTI3LDE4NDA0NjIxNTcsMzQwODE0OTUsLTE2OTU4NDc0NjEsMz
+cyODg3MTU4LDgxOTkyNDAxOF19
 -->
