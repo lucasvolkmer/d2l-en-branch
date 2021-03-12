@@ -305,9 +305,9 @@ Agora estamos prontos para trabalhar com o *dataset* Fashion-MNIST nas seções 
 
 ## Exercícios
 
-1. Does reducing the `batch_size` (for instance, to 1) affect the reading performance?
-1. The data iterator performance is important. Do you think the current implementation is fast enough? Explore various options to improve it.
-1. Check out the framework's online API documentation. Which other datasets are available?
+1. A redução de `batch_size` (por exemplo, para 1) afeta o desempenho de leitura?
+1. O desempenho do iterador de dados é importante. Você acha que a implementação atual é rápida o suficiente? Explore várias opções para melhorá-lo.
+1. Verifique a documentação online da API do *framework*. Quais outros conjuntos de dados estão disponíveis?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/48)
@@ -321,5 +321,5 @@ Agora estamos prontos para trabalhar com o *dataset* Fashion-MNIST nas seções 
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMzQxMTg0MSwyMTQ4MzY5MjFdfQ==
+eyJoaXN0b3J5IjpbMTE2MDg5MjkzNywyMTQ4MzY5MjFdfQ==
 -->
