@@ -223,3 +223,6 @@ albeit this time with fewer lines of code than before.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2MjIxODY4MjJdfQ==
+-->
