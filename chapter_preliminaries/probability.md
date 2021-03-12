@@ -221,21 +221,7 @@ Por exemplo, permitindo que o evento $\mathcal{A}_1$ seja todo o espaço da amos
 
 ### Variáveis Aleatórias
 
-In our random experiment of casting a die, we introduced the notion of a *random variable*. A random variable can be pretty much any quantity and is not deterministic. It could take one value among a set of possibilities in a random experiment.
-Consider a random variable $X$ whose value is in the sample space $\mathcal{S} = \{1, 2, 3, 4, 5, 6\}$ of rolling a die. We can denote the event "seeing a $5$" as $\{X = 5\}$ or $X = 5$, and its probability as $P(\{X = 5\})$ or $P(X = 5)$.
-By $P(X = a)$, we make a distinction between the random variable $X$ and the values (e.g., $a$) that $X$ can take.
-However, such pedantry results in a cumbersome notation.
-For a compact notation,
-on one hand, we can just denote $P(X)$ as the *distribution* over the random variable $X$:
-the distribution tells us the probability that $X$ takes any value.
-On the other hand,
-we can simply write $P(a)$ to denote the probability that a random variable takes the value $a$.
-Since an event in probability theory is a set of outcomes from the sample space,
-we can specify a range of values for a random variable to take.
-For example, $P(1 \leq X \leq 3)$ denotes the probability of the event $\{1 \leq X \leq 3\}$,
-which means $\{X = 1, 2, \text{or}, 3\}$. Equivalently, $P(1 \leq X \leq 3)$ represents the probability that the random variable $X$ can take a value from $\{1, 2, 3\}$.
-
-Em nosso experimento aleatório de lançar um dado, introduzimos a noção de uma * variável aleatória *. Uma variável aleatória pode ser praticamente qualquer quantidade e não é determinística. Pode assumir um valor entre um conjunto de possibilidades em um experimento aleatório.
+Em nosso experimento aleatório de lançar um dado, introduzimos a noção de uma *variável aleatória*. Uma variável aleatória pode ser praticamente qualquer quantidade e não é determinística. Pode assumir um valor entre um conjunto de possibilidades em um experimento aleatório.
 Considere uma variável aleatória $X$ cujo valor está no espaço amostral $\mathcal {S} = \{1, 2, 3, 4, 5, 6 \}$ do lançamento de um dado. Podemos denotar o evento "vendo $5$" como $\{X = 5 \}$ ou $X = 5$, e sua probabilidade como $P (\{X = 5 \})$ ou $P (X = 5)$.
 Por $P (X = a)$, fazemos uma distinção entre a variável aleatória $X$ e os valores (por exemplo, $a$) que $X$ pode assumir.
 No entanto, esse pedantismo resulta em uma notação complicada.
@@ -254,7 +240,7 @@ that someone is 1.80139278291028719210196740527486202 meters tall. Given the wor
 In the rest of this section, we consider probability in discrete space.
 For probability over continuous random variables, you may refer to :numref:`sec_random_variables`.
 
-Observe que há uma diferença sutil entre variáveis ​​aleatórias * discretas *, como os lados de um dado, e * contínuas *, como o peso e a altura de uma pessoa. Não adianta perguntar se duas pessoas têm exatamente a mesma altura. Se tomarmos medidas precisas o suficiente, você descobrirá que duas pessoas no planeta não têm exatamente a mesma altura. Na verdade, se fizermos uma medição suficientemente precisa, você não terá a mesma altura ao acordar e ao dormir. Portanto, não há nenhum propósito em perguntar sobre a probabilidade
+Observe que há uma diferença sutil entre variáveis ​​aleatórias * discretas*, como os lados de um dado, e * contínuas *, como o peso e a altura de uma pessoa. Não adianta perguntar se duas pessoas têm exatamente a mesma altura. Se tomarmos medidas precisas o suficiente, você descobrirá que duas pessoas no planeta não têm exatamente a mesma altura. Na verdade, se fizermos uma medição suficientemente precisa, você não terá a mesma altura ao acordar e ao dormir. Portanto, não há nenhum propósito em perguntar sobre a probabilidade
 que alguém tem 1,80139278291028719210196740527486202 metros de altura. Dada a população mundial de humanos, a probabilidade é virtualmente 0. Faz mais sentido, neste caso, perguntar se a altura de alguém cai em um determinado intervalo, digamos entre 1,79 e 1,81 metros. Nesses casos, quantificamos a probabilidade de vermos um valor como uma * densidade *. A altura de exatamente 1,80 metros não tem probabilidade, mas densidade diferente de zero. No intervalo entre quaisquer duas alturas diferentes, temos probabilidade diferente de zero.
 No restante desta seção, consideramos a probabilidade no espaço discreto.
 Para probabilidade sobre variáveis ​​aleatórias contínuas, você pode consultar: numref: `sec_random_variables`.
@@ -539,8 +525,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDUxMDcwMzYsLTIxNDMxNDEzNTIsOD
-E5MDMyNTM4LDE0NjMwNTUxODksLTEyMzUyODcxMjcsMTg0MDQ2
-MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsOD
-E5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbMTYxMzgxNjMxMywtMjE0MzE0MTM1Miw4MT
+kwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4NzEyNywxODQwNDYy
+MTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLDM3Mjg4NzE1OCw4MT
+k5MjQwMThdfQ==
 -->
