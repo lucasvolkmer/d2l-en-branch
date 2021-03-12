@@ -424,11 +424,11 @@ Isso é igual à razão entre o número de previsões corretas e o número total
 
 ## Resumo
 
-* The softmax operation takes a vector and maps it into probabilities.
-* Softmax regression applies to classification problems. It uses the probability distribution of the output class in the softmax operation.
-* Cross-entropy is a good measure of the difference between two probability distributions. It measures the number of bits needed to encode the data given our model.
+* A operação *softmax* pega um vetor e o mapeia em probabilidades.
+* A regressão *Softmax* se aplica a problemas de classificação. Ela usa a distribuição de probabilidade da classe de saída na operação *softmax*.
+* A entropia cruzada é uma boa medida da diferença entre duas distribuições de probabilidade. Ela mede o número de bits necessários para codificar os dados de nosso modelo.
 
-## Exercises
+## Exercícios
 
 1. We can explore the connection between exponential families and the softmax in some more depth.
     1. Compute the second derivative of the cross-entropy loss $l(\mathbf{y},\hat{\mathbf{y}})$ for the softmax.
@@ -445,8 +445,8 @@ Isso é igual à razão entre o número de previsões corretas e o número total
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzUxNDkzMTEsLTIwNDM2Mjc4OTIsLT
-g2NTE4MTkxOCwtMTMwMjM4MDE4OSwtMTQxNDIzMjY5NSwzODQ3
-OTU5MzUsMTcyOTA2MDk4MywtMTI5MTE0NzU5NiwxMDY2OTU2MD
-kzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF19
+eyJoaXN0b3J5IjpbMTA2Nzc1NjI2NCwtMjA0MzYyNzg5MiwtOD
+Y1MTgxOTE4LC0xMzAyMzgwMTg5LC0xNDE0MjMyNjk1LDM4NDc5
+NTkzNSwxNzI5MDYwOTgzLC0xMjkxMTQ3NTk2LDEwNjY5NTYwOT
+MsMTg0MzM3NTA5NCwxMzk0NzIzNDYwXX0=
 -->
