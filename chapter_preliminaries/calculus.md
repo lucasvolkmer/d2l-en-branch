@@ -294,11 +294,7 @@ Suponha que a entrada da função $f: \mathbb{R}^n \rightarrow \mathbb{R}$ seja 
 
 $$\nabla_{\mathbf{x}} f(\mathbf{x}) = \bigg[\frac{\partial f(\mathbf{x})}{\partial x_1}, \frac{\partial f(\mathbf{x})}{\partial x_2}, \ldots, \frac{\partial f(\mathbf{x})}{\partial x_n}\bigg]^\top,$$
 
-where $\nabla_{\mathbf{x}} f(\mathbf{x})$ is often replaced by $\nabla f(\mathbf{x})$ when there is no ambiguity.
-
-onde $\nabla_{\mathbf{x}} f(\mathbf{x})$ é freqüentemente substituído por $\nabla f(\mathbf{x})$ quando não há ambigüidade.
-
-Let $\mathbf{x}$ be an $n$-dimensional vector, the following rules are often used when differentiating multivariate functions:
+onde $\nabla_{\mathbf{x}} f(\mathbf{x})$ é frequentemente substituído por $\nabla f(\mathbf{x})$ quando não há ambiguidade.
 
 Seja $\mathbf {x}$ um vetor $n$ -dimensional, as seguintes regras são freqüentemente usadas ao diferenciar funções multivariadas:
 
@@ -307,11 +303,9 @@ Seja $\mathbf {x}$ um vetor $n$ -dimensional, as seguintes regras são freqüent
 * For all  $\mathbf{A} \in \mathbb{R}^{n \times n}$, $\nabla_{\mathbf{x}} \mathbf{x}^\top \mathbf{A} \mathbf{x}  = (\mathbf{A} + \mathbf{A}^\top)\mathbf{x}$,
 * $\nabla_{\mathbf{x}} \|\mathbf{x} \|^2 = \nabla_{\mathbf{x}} \mathbf{x}^\top \mathbf{x} = 2\mathbf{x}$.
 
-Similarly, for any matrix $\mathbf{X}$, we have $\nabla_{\mathbf{X}} \|\mathbf{X} \|_F^2 = 2\mathbf{X}$. As we will see later, gradients are useful for designing optimization algorithms in deep learning.
+Da mesma forma, para qualquer matriz $\mathbf {X}$, temos $\nabla_{\mathbf{X}} \|\mathbf{X} \|_F^2 = 2\mathbf{X}$. Como veremos mais tarde, os gradientes são úteis para projetar algoritmos de otimização em *deep learning*.
 
-Da mesma forma, para qualquer matriz $\mathbf {X}$, temos $\nabla_{\mathbf{X}} \|\mathbf{X} \|_F^2 = 2\mathbf{X}$. Como veremos mais tarde, os gradientes são úteis para projetar algoritmos de otimização no aprendizado profundo.
-
-## Chain Rule
+## Regra da Cadeia
 
 However, such gradients can be hard to find.
 This is because multivariate functions in deep learning are often *composite*,
@@ -390,6 +384,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzOTY1NDg0LDk4NzA5OTU0MSw1NjUyNj
+eyJoaXN0b3J5IjpbOTAwNDM5MTM5LDk4NzA5OTU0MSw1NjUyNj
 A2NDQsLTE5NzkzMzU4MjddfQ==
 -->
