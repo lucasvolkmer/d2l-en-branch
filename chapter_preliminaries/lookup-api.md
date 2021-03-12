@@ -71,25 +71,15 @@ torch.ones(4)
 tf.ones(4)
 ```
 
-In the Jupyter notebook, we can use `?` to display the document in another
-window. For example, `list?` will create content that is almost
-identical to `help(list)`, displaying it in a new browser
-window. In addition, if we use two question marks, such as
-`list??`, the Python code implementing the function will also be
-displayed.
-
-No bloco de notas Jupyter, podemos usar `?` Para exibir o documento em outro
-janela. Por exemplo, `list?` Criará conteúdo que é quase
-idêntico a `help (list)`, exibindo-o em um novo navegador
+No bloco de notas Jupyter, podemos usar `?`  para exibir o documento em outra
+janela. Por exemplo, `list?` criará conteúdo que é quase
+idêntico a `help(list)`, exibindo-o em um novo navegador
 janela. Além disso, se usarmos dois pontos de interrogação, como
-`list ??`, o código Python implementando a função também será
+`list??`, o código Python que implementa a função também será
 exibido.
 
 
 ## Sumário
-
-* The official documentation provides plenty of descriptions and examples that are beyond this book.
-* We can look up documentation for the usage of an API by calling the `dir` and `help` functions, or `?` and `??` in Jupyter notebooks.
 
 * A documentação oficial fornece muitas descrições e exemplos que vão além deste livro.
 * Podemos consultar a documentação para o uso de uma API chamando as funções `dir` e` help`, ou `?` E `??` em blocos de notas Jupyter.
@@ -113,5 +103,5 @@ exibido.
 [Discussions](https://discuss.d2l.ai/t/199)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQwOTk2MTYyXX0=
+eyJoaXN0b3J5IjpbNzI2OTc2NzI0XX0=
 -->
