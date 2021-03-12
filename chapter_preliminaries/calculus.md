@@ -1,4 +1,4 @@
-# Caálculuso
+# Cálculo
 :label:`sec_calculus`
 
 Encontrar a área de um polígono permaneceu um mistério
@@ -12,14 +12,6 @@ o circulo. Este processo também é conhecido como *método de exaustão*.
 ![Buscando a área de um círculo através do método de exaustão.](../img/polygon-circle.svg)
 :label:`fig_circle_area`
 
-In fact, the method of exhaustion is where *integral calculus* (will be described in :numref:`sec_integral_calculus`) originates from.
-More than 2,000 years later,
-the other branch of calculus, *differential calculus*,
-was invented.
-Among the most critical applications of differential calculus,
-optimization problems consider how to do something *the best*.
-As discussed in :numref:`subsec_norms_and_objectives`,
-such problems are ubiquitous in deep learning.
 
 Na verdade, o método de exaustão é de onde o *cálculo integral* (será descrito em :numref: `sec_integral_calculus`) se origina.
 Mais de 2.000 anos depois,
@@ -357,6 +349,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2ODk1Njc5Myw5ODcwOTk1NDEsNTY1Mj
-YwNjQ0LC0xOTc5MzM1ODI3XX0=
+eyJoaXN0b3J5IjpbNDc2NzU1MTgzLC0zNjg5NTY3OTMsOTg3MD
+k5NTQxLDU2NTI2MDY0NCwtMTk3OTMzNTgyN119
 -->
