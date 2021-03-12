@@ -206,33 +206,20 @@ então o evento $\mathcal {A}$ ocorreu.
 Ou seja, se $3$ pontos virados para cima após rolar um dado, uma vez que $3 \in \{1, 3, 5 \}$,
 podemos dizer que o evento "ver um número ímpar" ocorreu.
 
-Formally, *probability* can be thought of a function that maps a set to a real value.
-The probability of an event $\mathcal{A}$ in the given sample space $\mathcal{S}$,
-denoted as $P(\mathcal{A})$, satisfies the following properties:
-
 Formalmente, *probabilidade* pode ser pensada como uma função que mapeia um conjunto para um valor real.
 A probabilidade de um evento $\mathcal {A}$ no espaço amostral dado $\mathcal {S}$,
 denotado como $P (\mathcal {A})$, satisfaz as seguintes propriedades:
 
-* For any event $\mathcal{A}$, its probability is never negative, i.e., $P(\mathcal{A}) \geq 0$;
-* Probability of the entire sample space is $1$, i.e., $P(\mathcal{S}) = 1$;
-* For any countable sequence of events $\mathcal{A}_1, \mathcal{A}_2, \ldots$ that are *mutually exclusive* ($\mathcal{A}_i \cap \mathcal{A}_j = \emptyset$ for all $i \neq j$), the probability that any happens is equal to the sum of their individual probabilities, i.e., $P(\bigcup_{i=1}^{\infty} \mathcal{A}_i) = \sum_{i=1}^{\infty} P(\mathcal{A}_i)$.
-
 * Para qualquer evento $\mathcal {A}$, sua probabilidade nunca é negativa, ou seja, $P (\mathcal {A}) \geq 0$;
-* A probabilidade de todo o espaço amostral é $ 1 $, ou seja, $P (\mathcal {S}) = 1$;
+* A probabilidade de todo o espaço amostral é $1$, ou seja, $P (\mathcal {S}) = 1$;
 * Para qualquer sequência contável de eventos $\mathcal {A} _1, \mathcal {A} _2, \ldots$ que são *mutuamente exclusivos* ($\mathcal{A}_i \cap \mathcal{A}_j = \emptyset$ para todo $i \neq j$), a probabilidade de que aconteça é igual à soma de suas probabilidades individuais, ou seja, $P(\bigcup_{i=1}^{\infty} \mathcal{A}_i) = \sum_{i=1}^{\infty} P(\mathcal{A}_i)$.
-
-These are also the axioms of probability theory, proposed by Kolmogorov in 1933.
-Thanks to this axiom system, we can avoid any philosophical dispute on randomness;
-instead, we can reason rigorously with a mathematical language.
-For instance, by letting event $\mathcal{A}_1$ be the entire sample space and $\mathcal{A}_i = \emptyset$ for all $i > 1$, we can prove that $P(\emptyset) = 0$, i.e., the probability of an impossible event is $0$.
 
 Esses também são os axiomas da teoria das probabilidades, propostos por Kolmogorov em 1933.
 Graças a este sistema de axiomas, podemos evitar qualquer disputa filosófica sobre aleatoriedade;
 em vez disso, podemos raciocinar rigorosamente com uma linguagem matemática.
 Por exemplo, permitindo que o evento $\mathcal{A}_1$ seja todo o espaço da amostra e $\mathcal{A}_i = \emptyset$ para todos $i> 1$, podemos provar que $P(\emptyset) = 0$, ou seja, a probabilidade de um evento impossível é $0$.
 
-### Random Variables
+### Variáveis Aleatórias
 
 In our random experiment of casting a die, we introduced the notion of a *random variable*. A random variable can be pretty much any quantity and is not deterministic. It could take one value among a set of possibilities in a random experiment.
 Consider a random variable $X$ whose value is in the sample space $\mathcal{S} = \{1, 2, 3, 4, 5, 6\}$ of rolling a die. We can denote the event "seeing a $5$" as $\{X = 5\}$ or $X = 5$, and its probability as $P(\{X = 5\})$ or $P(X = 5)$.
@@ -552,8 +539,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMjM4MjAxLC0yMTQzMTQxMzUyLDgxOT
-AzMjUzOCwxNDYzMDU1MTg5LC0xMjM1Mjg3MTI3LDE4NDA0NjIx
-NTcsMzQwODE0OTUsLTE2OTU4NDc0NjEsMzcyODg3MTU4LDgxOT
-kyNDAxOF19
+eyJoaXN0b3J5IjpbLTIxNDUxMDcwMzYsLTIxNDMxNDEzNTIsOD
+E5MDMyNTM4LDE0NjMwNTUxODksLTEyMzUyODcxMjcsMTg0MDQ2
+MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsOD
+E5OTI0MDE4XX0=
 -->
