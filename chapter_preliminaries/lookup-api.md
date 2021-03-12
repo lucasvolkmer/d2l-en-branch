@@ -1,7 +1,5 @@
 # Documentation
 :begin_tab:`mxnet`
-Due to constraints on the length of this book, we cannot possibly introduce every single MXNet function and class (and you probably would not want us to). The API documentation and additional tutorials and examples provide plenty of documentation beyond the book. In this section we provide you with some guidance to exploring the MXNet API.
-
 Devido a restrições na extensão deste livro, não podemos apresentar todas as funções e classes do MXNet (e você provavelmente não gostaria que o fizéssemos). A documentação da API e os tutoriais e exemplos adicionais fornecem muita documentação além do livro. Nesta seção, fornecemos algumas orientações para explorar a API MXNet.
 :end_tab:
 
@@ -129,5 +127,5 @@ exibido.
 [Discussions](https://discuss.d2l.ai/t/199)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDMzMTEzNjhdfQ==
+eyJoaXN0b3J5IjpbLTk2ODU4MDY3Nl19
 -->
