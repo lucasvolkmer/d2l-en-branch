@@ -272,23 +272,23 @@ a função de perda $l$ é
 $$ l(\mathbf{y}, \hat{\mathbf{y}}) = - \sum_{j=1}^q y_j \log \hat{y}_j. $$
 :eqlabel:`eq_l_cross_entropy`
 
-For reasons explained later on, the loss function in :eqref:`eq_l_cross_entropy`
-is commonly called the *cross-entropy loss*.
-Since $\mathbf{y}$ is a one-hot vector of length $q$,
-the sum over all its coordinates $j$ vanishes for all but one term.
-Since all $\hat{y}_j$ are predicted probabilities,
-their logarithm is never larger than $0$.
-Consequently, the loss function cannot be minimized any further
-if we correctly predict the actual label with *certainty*,
-i.e., if the predicted probability $P(\mathbf{y} \mid \mathbf{x}) = 1$ for the actual label $\mathbf{y}$.
-Note that this is often impossible.
-For example, there might be label noise in the dataset
-(some examples may be mislabeled).
-It may also not be possible when the input features
-are not sufficiently informative
-to classify every example perfectly.
+Por razões explicadas mais tarde, a função de perda em :eqref:`eq_l_cross_entropy`
+é comumente chamada de *perda de entropia cruzada*.
+Uma vez que $\mathbf{y}$ é um vetor *one-hot* de comprimento $q$,
+a soma de todas as suas coordenadas $j$ desaparece para todos, exceto um termo.
+Uma vez que todos os $\hat{y}_j$ são probabilidades previstas,
+seu logaritmo nunca é maior que $0$.
+Consequentemente, a função de perda não pode ser minimizada mais,
+se predizermos corretamente o rótulo real com *certeza*,
+ou seja, se a probabilidade prevista $P(\mathbf{y} \mid \mathbf{x}) = 1$  for o *label* real $\mathbf{y}$.
+Observe que isso geralmente é impossível.
+Por exemplo, pode haver ruído de *label* no *dataset*
+(alguns exemplos podem estar classificados incorretamente).
+Também pode não ser possível quando os recursos de entrada
+não são suficientemente informativos
+para classificar todos os exemplos perfeitamente.
 
-### Softmax and Derivatives
+### *Softmax*  e 
 :label:`subsec_softmax_and_derivatives`
 
 Since the softmax and the corresponding loss are so common,
@@ -445,8 +445,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NTE4MTkxOCwtMTMwMjM4MDE4OSwtMT
-QxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2MDk4MywtMTI5MTE0
-NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF
-19
+eyJoaXN0b3J5IjpbMTU4ODc5MzUyMSwtODY1MTgxOTE4LC0xMz
+AyMzgwMTg5LC0xNDE0MjMyNjk1LDM4NDc5NTkzNSwxNzI5MDYw
+OTgzLC0xMjkxMTQ3NTk2LDEwNjY5NTYwOTMsMTg0MzM3NTA5NC
+wxMzk0NzIzNDYwXX0=
 -->
