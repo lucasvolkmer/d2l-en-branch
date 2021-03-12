@@ -230,16 +230,16 @@ são matrizes $n \times q$.
 
 ## Função de Perda
 
-Next, we need a loss function to measure
-the quality of our predicted probabilities.
-We will rely on maximum likelihood estimation,
-the very same concept that we encountered
-when providing a probabilistic justification
-for the mean squared error objective in linear regression
+Em seguida, precisamos de uma função de perda para medir
+a qualidade de nossas probabilidades previstas.
+Contaremos com a estimativa de probabilidade máxima,
+o mesmo conceito que encontramos
+ao fornecer uma justificativa probabilística
+para o objetivo de erro quadrático médio na regressão linear
 (:numref:`subsec_normal_distribution_and_squared_loss`).
 
 
-### Log-Likelihood
+### *Log-Likelihood*
 
 The softmax function gives us a vector $\hat{\mathbf{y}}$,
 which we can interpret as estimated conditional probabilities
@@ -445,7 +445,8 @@ This is equal to the ratio between the number of correct predictions and the tot
 
 [Discussions](https://discuss.d2l.ai/t/46)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDIzODAxODksLTE0MTQyMzI2OTUsMz
-g0Nzk1OTM1LDE3MjkwNjA5ODMsLTEyOTExNDc1OTYsMTA2Njk1
-NjA5MywxODQzMzc1MDk0LDEzOTQ3MjM0NjBdfQ==
+eyJoaXN0b3J5IjpbLTk3NTU3OTUxOSwtMTMwMjM4MDE4OSwtMT
+QxNDIzMjY5NSwzODQ3OTU5MzUsMTcyOTA2MDk4MywtMTI5MTE0
+NzU5NiwxMDY2OTU2MDkzLDE4NDMzNzUwOTQsMTM5NDcyMzQ2MF
+19
 -->
