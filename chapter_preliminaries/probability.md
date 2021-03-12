@@ -39,7 +39,7 @@ que a imagem representa um gato, dizemos que a * probabilidade * de que o rótul
 Se não tivéssemos nenhuma evidência para sugerir que $y =$ "cat" ou que $y =$ "dog", então poderíamos dizer que as duas possibilidades eram igualmente
 *provavelmente* expressando isso como  $P(y=$ "cat"$) = P(y=$ "dog"$) = 0.5$. Se estivéssemos razoavelmente
 confiantes, mas não temos certeza de que a imagem representava um gato, podemos atribuir um
-probabilidade $ 0,5 <P (y = $ "gato" $) <1 $.
+probabilidade $0,5 <P (y = $"cat"$) <1$.
 
 Now consider the second case: given some weather monitoring data, we want to predict the probability that it will rain in Taipei tomorrow. If it is summertime, the rain might come with probability 0.5.
 
@@ -55,11 +55,11 @@ Mas existe uma diferença fundamental entre os dois casos. Neste primeiro caso, 
 
 Say that we cast a die and want to know what the chance is of seeing a 1 rather than another digit. If the die is fair, all the six outcomes $\{1, \ldots, 6\}$ are equally likely to occur, and thus we would see a $1$ in one out of six cases. Formally we state that $1$ occurs with probability $\frac{1}{6}$.
 
-Digamos que lançamos um dado e queremos saber qual é a chance de ver um 1 em vez de outro dígito. Se o dado for justo, todos os seis resultados $ \ {1, \ ldots, 6 \} $ têm a mesma probabilidade de ocorrer e, portanto, veríamos $ 1 $ em um dos seis casos. Formalmente afirmamos que $ 1 $ ocorre com probabilidade $ \ frac {1} {6} $.
+Digamos que lançamos um dado e queremos saber qual é a chance de ver um 1 em vez de outro dígito. Se o dado for justo, todos os seis resultados $\{1, \ldots, 6\}$ têm a mesma probabilidade de ocorrer e, portanto, veríamos $1$ em um dos seis casos. Formalmente afirmamos que $1$ ocorre com probabilidade $\frac{1}{6}$.
 
 For a real die that we receive from a factory, we might not know those proportions and we would need to check whether it is tainted. The only way to investigate the die is by casting it many times and recording the outcomes. For each cast of the die, we will observe a value in $\{1, \ldots, 6\}$. Given these outcomes, we want to investigate the probability of observing each outcome.
 
-Para um dado real que recebemos de uma fábrica, podemos não saber essas proporções e precisaríamos verificar se ele está contaminado. A única maneira de investigar o dado é lançando-o várias vezes e registrando os resultados. Para cada lançamento do dado, observaremos um valor em $ \ {1, \ ldots, 6 \} $. Dados esses resultados, queremos investigar a probabilidade de observar cada resultado.
+Para um dado real que recebemos de uma fábrica, podemos não saber essas proporções e precisaríamos verificar se ele está contaminado. A única maneira de investigar o dado é lançando-o várias vezes e registrando os resultados. Para cada lançamento do dado, observaremos um valor em $\{1, \ldots, 6\}$. Dados esses resultados, queremos investigar a probabilidade de observar cada resultado.
 
 One natural approach for each value is to take the
 individual count for that value and to divide it by the total number of tosses.
@@ -68,8 +68,8 @@ large numbers* tell us that as the number of tosses grows this estimate will dra
 
 Uma abordagem natural para cada valor é pegar o
 contagem individual para aquele valor e dividi-lo pelo número total de jogadas.
-Isso nos dá uma * estimativa * da probabilidade de um determinado * evento *. A * lei de
-grandes números * nos dizem que, conforme o número de lançamentos aumenta, essa estimativa se aproxima cada vez mais da verdadeira probabilidade subjacente. Antes de entrar em detalhes sobre o que está acontecendo aqui, vamos experimentar.
+Isso nos dá uma *estimativa* da probabilidade de um determinado *evento*. A *lei de
+grandes números* nos dizem que, conforme o número de lançamentos aumenta, essa estimativa se aproxima cada vez mais da verdadeira probabilidade subjacente. Antes de entrar em detalhes sobre o que está acontecendo aqui, vamos experimentar.
 
 To start, let us import the necessary packages.
 
@@ -112,7 +112,7 @@ Em seguida, queremos ser capazes de lançar o dado. Nas estatísticas, chamamos 
 de exemplos de desenho de distribuições de probabilidade * amostragem *.
 A distribuição
 que atribui probabilidades a uma série de escolhas discretas é chamado de
-* distribuição multinomial *. Daremos uma definição mais formal de
+*distribuição multinomial *. Daremos uma definição mais formal de
 * distribuição * mais tarde, mas em um alto nível, pense nisso como apenas uma atribuição de
 probabilidades para eventos.
 
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk3MDU5NjcsODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbMTI3MjcwMTAyNCw4MTk5MjQwMThdfQ==
 -->
