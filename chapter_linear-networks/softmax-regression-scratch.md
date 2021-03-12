@@ -448,9 +448,9 @@ def train_epoch_ch3(net, train_iter, loss, updater):  #@save
     return metric[0] / metric[2], metric[1] / metric[2]
 ```
 
-Before showing the implementation of the training function,
-we define [**a utility class that plot data in animation.**]
-Again, it aims to simplify code in the rest of the book.
+Antes de mostrar a implementação da função de treinamento,
+definimos [**uma classe de utilitário que plota dados em animação.**]
+Novamente, o objetivo é simplificar o código no restante do livro.
 
 ```{.python .input}
 #@tab all
@@ -608,7 +608,8 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwODMwNjkwLC0xOTUzMzMyMDE5LDExNT
-MwODEzNSwxNjAwOTg0NDU2LDc0MjUxNzQ4NywtMjEzMTUwNTQ5
-MywtOTk5MDc4NzY3LC0xOTg0MTg5NzI1XX0=
+eyJoaXN0b3J5IjpbMTUxOTM2NDczNSwxMTA4MzA2OTAsLTE5NT
+MzMzIwMTksMTE1MzA4MTM1LDE2MDA5ODQ0NTYsNzQyNTE3NDg3
+LC0yMTMxNTA1NDkzLC05OTkwNzg3NjcsLTE5ODQxODk3MjVdfQ
+==
 -->
