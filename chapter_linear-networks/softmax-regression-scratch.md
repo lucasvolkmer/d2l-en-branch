@@ -585,10 +585,10 @@ predict_ch3(net, test_iter)
 
 ## Resumo
 
-* With softmax regression, we can train models for multiclass classification.
-* The training loop of softmax regression is very similar to that in linear regression: retrieve and read data, define models and loss functions, then train models using optimization algorithms. As you will soon find out, most common deep learning models have similar training procedures.
+* Com a regressão *softmax*, podemos treinar modelos para classificação multiclasse.
+* O loop de treinamento da regressão *softmax* é muito semelhante ao da regressão linear: recuperar e ler dados, definir modelos e funções de perda e treinar modelos usando algoritmos de otimização. Como você descobrirá em breve, os modelos de *deep learning* mais comuns têm procedimentos de treinamento semelhantes.
 
-## Exercises
+## Exercícios
 
 1. In this section, we directly implemented the softmax function based on the mathematical definition of the softmax operation. What problems might this cause? Hint: try to calculate the size of $\exp(50)$.
 1. The function `cross_entropy` in this section was implemented according to the definition of the cross-entropy loss function.  What could be the problem with this implementation? Hint: consider the domain of the logarithm.
@@ -608,8 +608,8 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5Mzc5NjE1MiwtNDEwNzA5NTcyLDExMD
-gzMDY5MCwtMTk1MzMzMjAxOSwxMTUzMDgxMzUsMTYwMDk4NDQ1
-Niw3NDI1MTc0ODcsLTIxMzE1MDU0OTMsLTk5OTA3ODc2NywtMT
-k4NDE4OTcyNV19
+eyJoaXN0b3J5IjpbNjg0NDMyMjYxLC00MTA3MDk1NzIsMTEwOD
+MwNjkwLC0xOTUzMzMyMDE5LDExNTMwODEzNSwxNjAwOTg0NDU2
+LDc0MjUxNzQ4NywtMjEzMTUwNTQ5MywtOTk5MDc4NzY3LC0xOT
+g0MTg5NzI1XX0=
 -->
