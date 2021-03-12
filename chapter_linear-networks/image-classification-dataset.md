@@ -1,4 +1,4 @@
-# The Image Classification Dataset
+# O *Dataset* de Classificação de Imagens
 :label:`sec_fashion_mnist`
 
 
@@ -321,5 +321,5 @@ Agora estamos prontos para trabalhar com o *dataset* Fashion-MNIST nas seções 
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MDg5MjkzNywyMTQ4MzY5MjFdfQ==
+eyJoaXN0b3J5IjpbLTE1NDYwOTU2MDUsMjE0ODM2OTIxXX0=
 -->
