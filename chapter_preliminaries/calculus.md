@@ -333,23 +333,12 @@ para qualquer $i = 1, 2, \ldots, n$.
 
 ## Sumário
 
-
-* Differential calculus and integral calculus are two branches of calculus, where the former can be applied to the ubiquitous optimization problems in deep learning.
-* A derivative can be interpreted as the instantaneous rate of change of a function with respect to its variable. It is also the slope of the tangent line to the curve of the function.
-* A gradient is a vector whose components are the partial derivatives of a multivariate function with respect to all its variables.
-* The chain rule enables us to differentiate composite functions.
-
 * Cálculo diferencial e cálculo integral são dois ramos do cálculo, onde o primeiro pode ser aplicado aos problemas de otimização onipresentes no *deep learning*.
 * Uma derivada pode ser interpretada como a taxa instantânea de mudança de uma função em relação à sua variável. É também a inclinação da linha tangente à curva da função.
 * Um gradiente é um vetor cujos componentes são as derivadas parciais de uma função multivariada com respeito a todas as suas variáveis.
 * A regra da cadeia nos permite diferenciar funções compostas.
 
-## Exercises
-
-1. Plot the function $y = f(x) = x^3 - \frac{1}{x}$ and its tangent line when $x = 1$.
-1. Find the gradient of the function $f(\mathbf{x}) = 3x_1^2 + 5e^{x_2}$.
-1. What is the gradient of the function $f(\mathbf{x}) = \|\mathbf{x}\|_2$?
-1. Can you write out the chain rule for the case where $u = f(x, y, z)$ and $x = x(a, b)$, $y = y(a, b)$, and $z = z(a, b)$?
+## Exercícios
 
 1. Trace a função $y = f(x) = x^3 - \frac{1}{x}$ e sua linha tangente quando $x = 1$.
 1. Encontre o gradiente da função $f(\mathbf{x}) = 3x_1^2 + 5e^{x_2}$.
@@ -368,6 +357,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI3OTM2NDU2LDk4NzA5OTU0MSw1NjUyNj
-A2NDQsLTE5NzkzMzU4MjddfQ==
+eyJoaXN0b3J5IjpbLTM2ODk1Njc5Myw5ODcwOTk1NDEsNTY1Mj
+YwNjQ0LC0xOTc5MzM1ODI3XX0=
 -->
