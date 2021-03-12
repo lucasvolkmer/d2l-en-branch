@@ -1,4 +1,4 @@
-# Algebra Linear
+# Álgebra Linear
 :label:`sec_linear-algebra`
 
 Agora que você pode armazenar e manipular dados,
@@ -1083,9 +1083,9 @@ ou outra excelente fonte :cite:`Strang.1993,Kolter.2008,Petersen.Pedersen.ea.200
 [Discussions](https://discuss.d2l.ai/t/196)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk4OTYzNDA1LC0xMzkyMjM2MTMxLDE2Nj
-M5NjYwODUsLTE3NTYyNTE1NTgsMjA3NDQzOTE5MywtNDkyNTAx
-NjQxLDExMDU3Mzc5NDgsNjAxODg3MjM2LDg1NzQ4ODk5OSwxNj
-gxMDUyNDIxLDE2Mzk2MTI3OTksMjAzNzk2Nzg2NCwxODQ5NDk0
-Nzc0LDEwMTkyODgwMzZdfQ==
+eyJoaXN0b3J5IjpbMTM5NjcyMTQ4NSwtMTM5MjIzNjEzMSwxNj
+YzOTY2MDg1LC0xNzU2MjUxNTU4LDIwNzQ0MzkxOTMsLTQ5MjUw
+MTY0MSwxMTA1NzM3OTQ4LDYwMTg4NzIzNiw4NTc0ODg5OTksMT
+Y4MTA1MjQyMSwxNjM5NjEyNzk5LDIwMzc5Njc4NjQsMTg0OTQ5
+NDc3NCwxMDE5Mjg4MDM2XX0=
 -->
