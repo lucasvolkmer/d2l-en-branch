@@ -347,18 +347,18 @@ class Accumulator:  #@save
         return self.data[idx]
 ```
 
-[**Because we initialized the `net` model with random weights,
-the accuracy of this model should be close to random guessing,**]
-i.e., 0.1 for 10 classes.
+[**PComo inicializamos o modelo `net` com pesos aleatórios,
+a precisão deste modelo deve ser próxima à aleatoriedade,**]
+ou seja, 0,1 para 10 classes.
 
 ```{.python .input}
 #@tab all
 evaluate_accuracy(net, test_iter)
 ```
 
-## Training
+## Treinamento
 
-[**The training loop**]
+[**O *loop* de treinamento**]
 for softmax regression should look strikingly familiar
 if you read through our implementation
 of linear regression in :numref:`sec_linear_scratch`.
@@ -608,7 +608,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNTUwOTMzMSwtMTk1MzMzMjAxOSwxMT
-UzMDgxMzUsMTYwMDk4NDQ1Niw3NDI1MTc0ODcsLTIxMzE1MDU0
-OTMsLTk5OTA3ODc2NywtMTk4NDE4OTcyNV19
+eyJoaXN0b3J5IjpbLTE5OTgwNDY3NTQsLTE5NTMzMzIwMTksMT
+E1MzA4MTM1LDE2MDA5ODQ0NTYsNzQyNTE3NDg3LC0yMTMxNTA1
+NDkzLC05OTkwNzg3NjcsLTE5ODQxODk3MjVdfQ==
 -->
