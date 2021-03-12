@@ -257,33 +257,22 @@ O primeiro é chamado de *probabilidade conjunta* $P(A = a, B=b)$. Dados quaisqu
 Observe que, para quaisquer valores $a$ e $b$, $P (A = a, B = b) \leq P (A = a)$.
 Tem de ser este o caso, visto que para $A = a$ e $B = b$ acontecer, $A = a$ tem que acontecer *e* $B = b$ também tem que acontecer (e vice-versa). Assim, $A = a$ e $B = b$ não podem ser mais prováveis do que $A = a$ ou $B = b$ individualmente.
 
-### Conditional Probability
-
-This brings us to an interesting ratio: $0 \leq \frac{P(A=a, B=b)}{P(A=a)} \leq 1$. We call this ratio a *conditional probability*
-and denote it by $P(B=b \mid A=a)$: it is the probability of $B=b$, provided that
-$A=a$ has occurred.
+### Probabilidade Condicional
 
 Isso nos leva a uma razão interessante: $0 \leq \frac {P (A = a, B = b)} {P (A = a)} \leq 1$. Chamamos essa proporção de *probabilidade condicional*
 e denotá-lo por $P (B = b \mid A = a)$: é a probabilidade de $B = b$, desde que
 $A = a$ ocorreu.
 
-### Bayes' theorem
+### Teorema de Bayes
 
-Using the definition of conditional probabilities, we can derive one of the most useful and celebrated equations in statistics: *Bayes' theorem*.
-It goes as follows.
-By construction, we have the *multiplication rule* that $P(A, B) = P(B \mid A) P(A)$. By symmetry, this also holds for $P(A, B) = P(A \mid B) P(B)$. Assume that $P(B) > 0$. Solving for one of the conditional variables we get
-
-Usando a definição de probabilidades condicionais, podemos derivar uma das equações mais úteis e celebradas em estatística: * Teorema de Bayes *.
-É o seguinte.
-Por construção, temos a * regra de multiplicação * que $P(A, B) = P(B \mid A) P(A)$. Por simetria, isso também é válido para $P(A, B) = P(A \mid B) P(B)$. Suponha que $P(B)> 0$. Resolvendo para uma das variáveis condicionais, obtemos
+Usando a definição de probabilidades condicionais, podemos derivar uma das equações mais úteis e celebradas em estatística: *Teorema de Bayes*.
+Por construção, temos a *regra de multiplicação* que $P(A, B) = P(B \mid A) P(A)$. Por simetria, isso também é válido para $P(A, B) = P(A \mid B) P(B)$. Suponha que $P(B)> 0$. Resolvendo para uma das variáveis condicionais, obtemos
 
 $$P(A \mid B) = \frac{P(B \mid A) P(A)}{P(B)}.$$
 
-Note that here we use the more compact notation where $P(A, B)$ is a *joint distribution* and $P(A \mid B)$ is a *conditional distribution*. Such distributions can be evaluated for particular values $A = a, B=b$.
-
 Observe que aqui usamos a notação mais compacta em que $P(A, B)$ é uma *distribuição conjunta* e $P(A \mid B)$ é uma *distribuição condicional*. Essas distribuições podem ser avaliadas para valores particulares $A = a, B = b$.
 
-### Marginalization
+### Marginalização
 
 Bayes' theorem is very useful if we want to infer one thing from the other, say cause and effect, but we only know the properties in the reverse direction, as we will see later in this section. One important operation that we need, to make this work, is *marginalization*.
 It is the operation of determining $P(B)$ from $P(A, B)$. We can see that the probability of $B$ amounts to accounting for all possible choices of $A$ and aggregating the joint probabilities over all of them:
@@ -506,8 +495,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MDgxNDk5NSwxOTg4NDgyNzM0LC0yMT
-QzMTQxMzUyLDgxOTAzMjUzOCwxNDYzMDU1MTg5LC0xMjM1Mjg3
-MTI3LDE4NDA0NjIxNTcsMzQwODE0OTUsLTE2OTU4NDc0NjEsMz
-cyODg3MTU4LDgxOTkyNDAxOF19
+eyJoaXN0b3J5IjpbNDUyNTUwNjcyLDE5ODg0ODI3MzQsLTIxND
+MxNDEzNTIsODE5MDMyNTM4LDE0NjMwNTUxODksLTEyMzUyODcx
+MjcsMTg0MDQ2MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2MSwzNz
+I4ODcxNTgsODE5OTI0MDE4XX0=
 -->
