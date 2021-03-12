@@ -495,14 +495,14 @@ class Animator:  #@save
         display.clear_output(wait=True)
 ```
 
-[~~The training function~~]
-The following training function then
-trains a model `net` on a training dataset accessed via `train_iter`
-for multiple epochs, which is specified by `num_epochs`.
-At the end of each epoch,
-the model is evaluated on a testing dataset accessed via `test_iter`.
-We will leverage the `Animator` class to visualize
-the training progress.
+[~~A função de treinamento~~]
+A seguinte função de treinamento então
+treina um modelo `net` em um conjunto de dados de treinamento acessado via` train_iter`
+para várias épocas, que é especificado por `num_epochs`.
+No final de cada época,
+o modelo é avaliado em um conjunto de dados de teste acessado via `test_iter`.
+Vamos aproveitar a classe `Animator` para visualizar
+o progresso do treinamento.
 
 ```{.python .input}
 #@tab all
@@ -608,7 +608,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxOTM2NDczNSwxMTA4MzA2OTAsLTE5NT
+eyJoaXN0b3J5IjpbLTQxMDcwOTU3MiwxMTA4MzA2OTAsLTE5NT
 MzMzIwMTksMTE1MzA4MTM1LDE2MDA5ODQ0NTYsNzQyNTE3NDg3
 LC0yMTMxNTA1NDkzLC05OTkwNzg3NjcsLTE5ODQxODk3MjVdfQ
 ==
