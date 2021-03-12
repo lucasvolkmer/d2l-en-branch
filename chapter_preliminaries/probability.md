@@ -297,8 +297,8 @@ denotado como $P (\mathcal {A})$, satisfaz as seguintes propriedades:
 * For any countable sequence of events $\mathcal{A}_1, \mathcal{A}_2, \ldots$ that are *mutually exclusive* ($\mathcal{A}_i \cap \mathcal{A}_j = \emptyset$ for all $i \neq j$), the probability that any happens is equal to the sum of their individual probabilities, i.e., $P(\bigcup_{i=1}^{\infty} \mathcal{A}_i) = \sum_{i=1}^{\infty} P(\mathcal{A}_i)$.
 
 * Para qualquer evento $\mathcal {A}$, sua probabilidade nunca é negativa, ou seja, $P (\mathcal {A}) \geq 0$;
-* A probabilidade de todo o espaço amostral é $ 1 $, ou seja, $P (\mathcal {S}) = 1 $;
-* Para qualquer sequência contável de eventos $ \ mathcal {A} _1, \ mathcal {A} _2, \ ldots $ que são * mutuamente exclusivos * ($ \ mathcal {A} _i \ cap \ mathcal {A} _j = \ emptyset $ para todos os $ i \ neq j $), a probabilidade de que aconteça é igual à soma de suas probabilidades individuais, ou seja, $ P (\ bigcup_ {i = 1} ^ {\ infty} \ mathcal {A} _i) = \ sum_ {i = 1} ^ {\ infty} P (\ mathcal {A} _i) $.
+* A probabilidade de todo o espaço amostral é $ 1 $, ou seja, $P (\mathcal {S}) = 1$;
+* Para qualquer sequência contável de eventos $\mathcal {A} _1, \mathcal {A} _2, \ldots$ que são *mutuamente exclusivos* ($\mathcal{A}_i \cap \mathcal{A}_j = \emptyset$ para todo $i \neq j$), a probabilidade de que aconteça é igual à soma de suas probabilidades individuais, ou seja, $P(\bigcup_{i=1}^{\infty} \mathcal{A}_i) = \sum_{i=1}^{\infty} P(\mathcal{A}_i)$.
 
 These are also the axioms of probability theory, proposed by Kolmogorov in 1933.
 Thanks to this axiom system, we can avoid any philosophical dispute on randomness;
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMjE2NDg3NSw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbNDExNjE1NzUwLDgxOTkyNDAxOF19
 -->
