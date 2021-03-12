@@ -1,4 +1,4 @@
-# Data Preéprocessingamento de Dados
+# Pré-processamento de Dados
 :label:`sec_pandas`
 
 Até agora, introduzimos uma variedade de técnicas para manipular dados que já estão armazenados em tensores.
@@ -132,7 +132,7 @@ Crie um conjunto de dados bruto com mais linhas e colunas.
 [Discussions](https://discuss.d2l.ai/t/195)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMTAxNjcyNywxMzkxNTMwMTQzLDIxMT
+eyJoaXN0b3J5IjpbLTExMzIxNzgzOSwxMzkxNTMwMTQzLDIxMT
 Q3MzY2OTEsLTgxNTk0NzU2LC0xNDY1MTYwNjE2LC01MzU1NTgy
 NTBdfQ==
 -->
