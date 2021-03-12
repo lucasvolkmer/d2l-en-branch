@@ -14,10 +14,6 @@ Devido a restrições na extensão deste livro, não podemos apresentar todas as
 
 ## Encontrando Todas as Funções e Classes em um Módulo
 
-In order to know which functions and classes can be called in a module, we
-invoke the `dir` function. For instance, we can (**query all properties in the
-module for generating random numbers**):
-
 Para saber quais funções e classes podem ser chamadas em um módulo, nós
 invoque a função `dir`. Por exemplo, podemos (**consultar todas as propriedades no
 módulo para gerar números aleatórios**):
@@ -39,15 +35,11 @@ import tensorflow as tf
 print(dir(tf.random))
 ```
 
-Generally, we can ignore functions that start and end with `__` (special objects in Python) or functions that start with a single `_`(usually internal functions). Based on the remaining function or attribute names, we might hazard a guess that this module offers various methods for generating random numbers, including sampling from the uniform distribution (`uniform`), normal distribution (`normal`), and multinomial distribution  (`multinomial`).
-
 Geralmente, podemos ignorar funções que começam e terminam com `__` (objetos especiais em Python) ou funções que começam com um único `_` (normalmente funções internas). Com base nos nomes de funções ou atributos restantes, podemos arriscar um palpite de que este módulo oferece vários métodos para gerar números aleatórios, incluindo amostragem da distribuição uniforme (`uniforme`), distribuição normal (`normal`) e distribuição multinomial (`multinomial`).
 
 ## Buscando o Uso de Funções e Classes Específicas
 
-For more specific instructions on how to use a given function or class, we can invoke the  `help` function. As an example, let us [**explore the usage instructions for tensors' `ones` function**].
-
-Para obter instruções mais específicas sobre como usar uma determinada função ou classe, podemos invocar a função `help`. Como um exemplo, vamos [**explorar as instruções de uso para a função `uns` dos tensores**].
+Para obter instruções mais específicas sobre como usar uma determinada função ou classe, podemos invocar a função `help`. Como um exemplo, vamos [**explorar as instruções de uso para a função `ones` dos tensores**].
 
 ```{.python .input}
 help(np.ones)
@@ -123,5 +115,5 @@ exibido.
 [Discussions](https://discuss.d2l.ai/t/199)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNDgwMDgyOF19
+eyJoaXN0b3J5IjpbLTc0NjAzNjYxOF19
 -->
