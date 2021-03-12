@@ -94,17 +94,10 @@ fair_probs = tf.ones(6) / 6
 tfp.distributions.Multinomial(1, fair_probs).sample()
 ```
 
-If you run the sampler a bunch of times, you will find that you get out random
-values each time. As with estimating the fairness of a die, we often want to
-generate many samples from the same distribution. It would be unbearably slow to
-do this with a Python `for` loop, so the function we are using supports drawing
-multiple samples at once, returning an array of independent samples in any shape
-we might desire.
-
 Se você executar o amostrador várias vezes, descobrirá que sai aleatoriamente
 valores de cada vez. Tal como acontece com a estimativa da justiça de um dado, muitas vezes queremos
 gerar muitas amostras da mesma distribuição. Seria insuportavelmente lento para
-fazer isso com um loop Python `for`, então a função que estamos usando suporta desenho
+fazer isso com um loop Python `for`, então a função que estamos usando suporta gerar
 várias amostras de uma vez, retornando uma matriz de amostras independentes em qualquer forma
 podemos desejar.
 
@@ -127,7 +120,7 @@ can then go through and count, after each of the 1000 rolls, how many times each
 number was rolled.
 Specifically, we calculate the relative frequency as the estimate of the true probability.
 
-Agora que sabemos como obter amostras de rolos de um dado, podemos simular 1000 rolos. Nós
+Agora que sabemos como obter amostras de um dado, podemos simular 1000 execuções. Nós
 pode então passar e contar, após cada um dos 1000 lançamentos, quantas vezes cada
 número foi rolado.
 Especificamente, calculamos a frequência relativa como a estimativa da probabilidade verdadeira.
@@ -583,7 +576,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MTg3NjgwLDgxOTAzMjUzOCwxNDYzMD
-U1MTg5LC0xMjM1Mjg3MTI3LDE4NDA0NjIxNTcsMzQwODE0OTUs
-LTE2OTU4NDc0NjEsMzcyODg3MTU4LDgxOTkyNDAxOF19
+eyJoaXN0b3J5IjpbLTExMzYzMDczNTksODE5MDMyNTM4LDE0Nj
+MwNTUxODksLTEyMzUyODcxMjcsMTg0MDQ2MjE1NywzNDA4MTQ5
+NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4XX0=
 -->
