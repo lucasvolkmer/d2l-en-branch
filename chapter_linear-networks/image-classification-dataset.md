@@ -319,3 +319,6 @@ We are now ready to work with the Fashion-MNIST dataset in the sections that fol
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjE0ODM2OTIxXX0=
+-->
