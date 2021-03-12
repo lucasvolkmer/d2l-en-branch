@@ -177,18 +177,18 @@ This derivative is also the slope of the tangent line
 to the curve $u = f(x)$ when $x = 1$.
 
 Agora podemos aplicar algumas das regras acima para encontrar
-$ u '= f' (x) = 3 \ frac {d} {dx} x ^ 2-4 \ frac {d} {dx} x = 6x-4 $.
-Assim, definindo $ x = 1 $, temos $ u '= 2 $:
+$u' = f'(x) = 3 \frac{d}{dx} x^2-4\frac{d}{dx}x = 6x-4$.
+Assim, definindo $x = 1$, temos $u '= 2$:
 isso é apoiado por nosso experimento anterior nesta seção
-onde o resultado numérico se aproxima de $ 2 $.
+onde o resultado numérico se aproxima de $2$.
 Esta derivada também é a inclinação da linha tangente
-para a curva $ u = f (x) $ quando $ x = 1 $.
+para a curva $u = f (x)$ quando $x = 1$.
 
 [**To visualize such an interpretation of derivatives,
 we will use `matplotlib`,**]
 
-[** Para visualizar tal interpretação das derivadas,
-usaremos `matplotlib`, **]
+[**Para visualizar tal interpretação das derivadas,
+usaremos `matplotlib`,**]
 
 a popular plotting library in Python.
 To configure properties of the figures produced by `matplotlib`,
@@ -294,7 +294,7 @@ def plot(X, Y=None, xlabel=None, ylabel=None, legend=None, xlim=None,
 
 Now we can [**plot the function $u = f(x)$ and its tangent line $y = 2x - 3$ at $x=1$**], where the coefficient $2$ is the slope of the tangent line.
 
-Agora podemos [** plotar a função $ u = f (x) $ e sua linha tangente $ y = 2x - 3 $ em $ x = 1 $ **], onde o coeficiente $ 2 $ é a inclinação da linha tangente .
+Agora podemos [**plotar a função $u = f (x)$ e sua linha tangente $y = 2x - 3$ em $x = 1$**], onde o coeficiente $2$ é a inclinação da linha tangente .
 
 ```{.python .input}
 #@tab all
@@ -309,7 +309,7 @@ In deep learning, functions often depend on *many* variables.
 Thus, we need to extend the ideas of differentiation to these *multivariate* functions.
 
 Até agora, lidamos com a diferenciação de funções de apenas uma variável.
-No aprendizado profundo, as funções geralmente dependem de * muitas * variáveis.
+No aprendizado profundo, as funções geralmente dependem de * muitas* variáveis.
 Portanto, precisamos estender as idéias de diferenciação para essas funções * multivariadas *.
 
 Let $y = f(x_1, x_2, \ldots, x_n)$ be a function with $n$ variables. The *partial derivative* of $y$ with respect to its $i^\mathrm{th}$  parameter $x_i$ is
@@ -405,7 +405,10 @@ para qualquer $i = 1, 2, \ldots, n$.
 * A gradient is a vector whose components are the partial derivatives of a multivariate function with respect to all its variables.
 * The chain rule enables us to differentiate composite functions.
 
-
+* Cálculo diferencial e cálculo integral são dois ramos do cálculo, onde o primeiro pode ser aplicado aos problemas de otimização onipresentes no aprendizado profundo.
+* Uma derivada pode ser interpretada como a taxa instantânea de mudança de uma função em relação à sua variável. É também a inclinação da linha tangente à curva da função.
+* Um gradiente é um vetor cujos componentes são as derivadas parciais de uma função multivariada com respeito a todas as suas variáveis.
+* A regra da cadeia nos permite diferenciar funções compostas.
 
 ## Exercises
 
@@ -413,6 +416,11 @@ para qualquer $i = 1, 2, \ldots, n$.
 1. Find the gradient of the function $f(\mathbf{x}) = 3x_1^2 + 5e^{x_2}$.
 1. What is the gradient of the function $f(\mathbf{x}) = \|\mathbf{x}\|_2$?
 1. Can you write out the chain rule for the case where $u = f(x, y, z)$ and $x = x(a, b)$, $y = y(a, b)$, and $z = z(a, b)$?
+
+1. Trace a função $ y = f (x) = x ^ 3 - \ frac {1} {x} $ e sua linha tangente quando $ x = 1 $.
+1. Encontre o gradiente da função $ f (\ mathbf {x}) = 3x_1 ^ 2 + 5e ^ {x_2} $.
+1. Qual é o gradiente da função $ f (\ mathbf {x}) = \ | \ mathbf {x} \ | _2 $?
+1. Você pode escrever a regra da cadeia para o caso em que $ u = f (x, y, z) $ e $ x = x (a, b) $, $ y = y (a, b) $ e $ z = z (a, b) $?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/32)
@@ -426,6 +434,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MjUwNjkzMSw1NjUyNjA2NDQsLTE5Nz
-kzMzU4MjddfQ==
+eyJoaXN0b3J5IjpbLTE1ODEwNTU1NDUsNTY1MjYwNjQ0LC0xOT
+c5MzM1ODI3XX0=
 -->
