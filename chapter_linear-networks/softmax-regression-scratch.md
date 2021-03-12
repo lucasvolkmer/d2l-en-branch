@@ -359,15 +359,15 @@ evaluate_accuracy(net, test_iter)
 ## Treinamento
 
 [**O *loop* de treinamento**]
-for softmax regression should look strikingly familiar
-if you read through our implementation
-of linear regression in :numref:`sec_linear_scratch`.
-Here we refactor the implementation to make it reusable.
-First, we define a function to train for one epoch.
-Note that `updater` is a general function to update the model parameters,
-which accepts the batch size as an argument.
-It can be either a wrapper of the `d2l.sgd` function
-or a framework's built-in optimization function.
+para regressão *softmax* deve ser extremamente familiar
+se você ler nossa implementação
+de regressão linear em :numref:`sec_linear_scratch`.
+Aqui, nós refatoramos a implementação para torná-la reutilizável.
+Primeiro, definimos uma função para treinar por uma época.
+Observe que `updater` é uma função geral para atualizar os parâmetros do modelo,
+que aceita o tamanho do lote como argumento.
+Pode ser um *wrapper* da função `d2l.sgd`
+ou a função de otimização integrada de uma estrutura.
 
 ```{.python .input}
 def train_epoch_ch3(net, train_iter, loss, updater):  #@save
@@ -608,7 +608,7 @@ predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/225)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTgwNDY3NTQsLTE5NTMzMzIwMTksMT
-E1MzA4MTM1LDE2MDA5ODQ0NTYsNzQyNTE3NDg3LC0yMTMxNTA1
-NDkzLC05OTkwNzg3NjcsLTE5ODQxODk3MjVdfQ==
+eyJoaXN0b3J5IjpbMTEwODMwNjkwLC0xOTUzMzMyMDE5LDExNT
+MwODEzNSwxNjAwOTg0NDU2LDc0MjUxNzQ4NywtMjEzMTUwNTQ5
+MywtOTk5MDc4NzY3LC0xOTg0MTg5NzI1XX0=
 -->
