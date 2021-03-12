@@ -308,7 +308,7 @@ For instance, by letting event $\mathcal{A}_1$ be the entire sample space and $\
 Esses também são os axiomas da teoria das probabilidades, propostos por Kolmogorov em 1933.
 Graças a este sistema de axiomas, podemos evitar qualquer disputa filosófica sobre aleatoriedade;
 em vez disso, podemos raciocinar rigorosamente com uma linguagem matemática.
-Por exemplo, permitindo que o evento $ \ mathcal {A} _1 $ seja todo o espaço da amostra e $ \ mathcal {A} _i = \ emptyset $ para todos $ i> 1 $, podemos provar que $ P (\ emptyset) = 0 $, ou seja, a probabilidade de um evento impossível é $ 0 $.
+Por exemplo, permitindo que o evento $\mathcal{A}_1$ seja todo o espaço da amostra e $\mathcal{A}_i = \emptyset$ para todos $i> 1$, podemos provar que $P(\emptyset) = 0$, ou seja, a probabilidade de um evento impossível é $0$.
 
 ### Random Variables
 
@@ -327,11 +327,11 @@ For example, $P(1 \leq X \leq 3)$ denotes the probability of the event $\{1 \leq
 which means $\{X = 1, 2, \text{or}, 3\}$. Equivalently, $P(1 \leq X \leq 3)$ represents the probability that the random variable $X$ can take a value from $\{1, 2, 3\}$.
 
 Em nosso experimento aleatório de lançar um dado, introduzimos a noção de uma * variável aleatória *. Uma variável aleatória pode ser praticamente qualquer quantidade e não é determinística. Pode assumir um valor entre um conjunto de possibilidades em um experimento aleatório.
-Considere uma variável aleatória $ X $ cujo valor está no espaço amostral $ \ mathcal {S} = \ {1, 2, 3, 4, 5, 6 \} $ do lançamento de um dado. Podemos denotar o evento "vendo $ 5 $" como $ \ {X = 5 \} $ ou $ X = 5 $, e sua probabilidade como $ P (\ {X = 5 \}) $ ou $ P (X = 5) $.
-Por $ P (X = a) $, fazemos uma distinção entre a variável aleatória $ X $ e os valores (por exemplo, $ a $) que $ X $ pode assumir.
+Considere uma variável aleatória $X$ cujo valor está no espaço amostral $\mathcal {S} = \{1, 2, 3, 4, 5, 6 \}$ do lançamento de um dado. Podemos denotar o evento "vendo $5$" como $\{X = 5 \}$ ou $X = 5$, e sua probabilidade como $P (\{X = 5 \})$ ou $P (X = 5)$.
+Por $P (X = a)$, fazemos uma distinção entre a variável aleatória $X$ e os valores (por exemplo, $a$) que $X$ pode assumir.
 No entanto, esse pedantismo resulta em uma notação complicada.
 Para uma notação compacta,
-por um lado, podemos apenas denotar $ P (X) $ como a * distribuição * sobre a variável aleatória $ X $:
+por um lado, podemos apenas denotar $P (X) $ como a * distribuição * sobre a variável aleatória $ X $:
 a distribuição nos diz a probabilidade de que $ X $ assuma qualquer valor.
 Por outro lado,
 podemos simplesmente escrever $ P (a) $ para denotar a probabilidade de uma variável aleatória assumir o valor $ a $.
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDExNjE1NzUwLDgxOTkyNDAxOF19
+eyJoaXN0b3J5IjpbMjA5NTkzOTIxOCw4MTk5MjQwMThdfQ==
 -->
