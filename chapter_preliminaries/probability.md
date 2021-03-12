@@ -197,15 +197,6 @@ as curvas sólidas de $6$ convergem para a probabilidade verdadeira.
 
 ### Axiomas da Teoria de Probabilidade
 
-When dealing with the rolls of a die,
-we call the set $\mathcal{S} = \{1, 2, 3, 4, 5, 6\}$ the *sample space* or *outcome space*, where each element is an *outcome*.
-An *event* is a set of outcomes from a given sample space.
-For instance, "seeing a $5$" ($\{5\}$) and "seeing an odd number" ($\{1, 3, 5\}$) are both valid events of rolling a die.
-Note that if the outcome of a random experiment is in event $\mathcal{A}$,
-then event $\mathcal{A}$ has occurred.
-That is to say, if $3$ dots faced up after rolling a die, since $3 \in \{1, 3, 5\}$,
-we can say that the event "seeing an odd number" has occurred.
-
 Ao lidar com as jogadas de um dado,
 chamamos o conjunto $\mathcal{S} = \{1, 2, 3, 4, 5, 6\}$ o *espaço de amostra* ou *espaço de resultado*, onde cada elemento é um *resultado*.
 Um *evento* é um conjunto de resultados de um determinado espaço amostral.
@@ -561,7 +552,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDMxNDEzNTIsODE5MDMyNTM4LDE0Nj
-MwNTUxODksLTEyMzUyODcxMjcsMTg0MDQ2MjE1NywzNDA4MTQ5
-NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbMTMyMjM4MjAxLC0yMTQzMTQxMzUyLDgxOT
+AzMjUzOCwxNDYzMDU1MTg5LC0xMjM1Mjg3MTI3LDE4NDA0NjIx
+NTcsMzQwODE0OTUsLTE2OTU4NDc0NjEsMzcyODg3MTU4LDgxOT
+kyNDAxOF19
 -->
