@@ -94,11 +94,12 @@ armazenamos a forma de qualquer imagem com altura $h$ largura $w$ pixels como $h
 mnist_train[0][0].shape
 ```
 
-[~~Two utility functions to visualize the dataset~~]
 
-The images in Fashion-MNIST are associated with the following categories:
-t-shirt, trousers, pullover, dress, coat, sandal, shirt, sneaker, bag, and ankle boot.
-The following function converts between numeric label indices and their names in text.
+[~~Duas funções utilitárias para visualizar o conjunto de dados~~]
+
+As imagens no Fashion-MNIST estão associadas às seguintes categorias:
+t-shirt, calças, pulôver, vestido, casaco, sandália, camisa, tênis, bolsa e bota.
+A função a seguir converte entre índices de rótulos numéricos e seus nomes em texto.
 
 ```{.python .input}
 #@tab all
@@ -320,5 +321,5 @@ We are now ready to work with the Fashion-MNIST dataset in the sections that fol
 [Discussions](https://discuss.d2l.ai/t/224)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MjAwNTUyNiwyMTQ4MzY5MjFdfQ==
+eyJoaXN0b3J5IjpbLTYxMjIwMjczNSwyMTQ4MzY5MjFdfQ==
 -->
