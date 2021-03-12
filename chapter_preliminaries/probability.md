@@ -283,23 +283,12 @@ que também é conhecida como *regra da soma*. A probabilidade ou distribuição
 
 ### Independencia
 
-Another useful property to check for is *dependence* vs. *independence*.
-Two random variables $A$ and $B$ being independent
-means that the occurrence of one event of $A$
-does not reveal any information about the occurrence of an event of $B$.
-In this case $P(B \mid A) = P(B)$. Statisticians typically express this as $A \perp  B$. From Bayes' theorem, it follows immediately that also $P(A \mid B) = P(A)$.
-In all the other cases we call $A$ and $B$ dependent. For instance, two successive rolls of a die are independent. In contrast, the position of a light switch and the brightness in the room are not (they are not perfectly deterministic, though, since we could always have a broken light bulb, power failure, or a broken switch).
-
 Outra propriedade útil para verificar é *dependência* vs. *independência*.
 Duas variáveis aleatórias $A$ e $B$ sendo independentes
 significa que a ocorrência de um evento de $A$
 não revela nenhuma informação sobre a ocorrência de um evento de $B$.
 Neste caso $P(B \mid A) = P(B)$. Os estatísticos normalmente expressam isso como $A \perp  B$. Do teorema de Bayes, segue imediatamente que também $P(A \mid B) = P(A)$.
 Em todos os outros casos, chamamos $A$ e $B$ de dependente. Por exemplo, duas jogadas sucessivas de um dado são independentes. Em contraste, a posição de um interruptor de luz e a luminosidade da sala não são (eles não são perfeitamente determinísticos, pois podemos sempre ter uma lâmpada quebrada, falha de energia ou um interruptor quebrado).
-
-Since $P(A \mid B) = \frac{P(A, B)}{P(B)} = P(A)$ is equivalent to $P(A, B) = P(A)P(B)$, two random variables are independent if and only if their joint distribution is the product of their individual distributions.
-Likewise, two random variables $A$ and $B$ are *conditionally independent* given another random variable $C$
-if and only if $P(A, B \mid C) = P(A \mid C)P(B \mid C)$. This is expressed as $A \perp B \mid C$.
 
 Dado que $P(A \mid B) = \frac{P(A, B)}{P(B)} = P(A)$ é equivalente a $P(A, B) = P(A)P(B)$, duas variáveis aleatórias são independentes se e somente se sua distribuição conjunta é o produto de suas distribuições individuais.
 Da mesma forma, duas variáveis aleatórias $A$ e $B$ são *condicionalmente independentes* dada outra variável aleatória $C$
@@ -314,9 +303,9 @@ it never fails to detect HIV if the patient actually has it. We use $D_1$ to ind
 
 Vamos colocar nossas habilidades à prova. Suponha que um médico administre um teste de HIV a um paciente. Este teste é bastante preciso e falha apenas com 1% de probabilidade se o paciente for saudável, mas relatá-lo como doente. Além disso,
 nunca deixa de detectar o HIV se o paciente realmente o tiver. Usamos $D_1$ para indicar o diagnóstico ($1$ se positivo e $0$ se negativo) e $H$ para denotar o estado de HIV ($1$ se positivo e $0$ se negativo).
-: numref: `conditional_prob_D1` lista tais probabilidades condicionais.
+:numref:`conditional_prob_D1` lista tais probabilidades condicionais.
 :
-Conditional probability of $P(D_1 \mid H)$.
+Probabilidade condicional de $P(D_1 \mid H)$.
 
 | Conditional probability | $H=1$ | $H=0$ |
 |---|---|---|
@@ -490,8 +479,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTE2MTgyNDIsMTk4ODQ4MjczNCwtMj
-E0MzE0MTM1Miw4MTkwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4
-NzEyNywxODQwNDYyMTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLD
-M3Mjg4NzE1OCw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbLTk0NjkwNjgwOCwxOTg4NDgyNzM0LC0yMT
+QzMTQxMzUyLDgxOTAzMjUzOCwxNDYzMDU1MTg5LC0xMjM1Mjg3
+MTI3LDE4NDA0NjIxNTcsMzQwODE0OTUsLTE2OTU4NDc0NjEsMz
+cyODg3MTU4LDgxOTkyNDAxOF19
 -->
