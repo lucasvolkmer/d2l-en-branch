@@ -25,13 +25,10 @@ probabilidade $0,5 <P (y = $"cat"$) <1$.
 
 Agora considere o segundo caso: dados alguns dados de monitoramento do tempo, queremos prever a probabilidade de que choverá em Taipei amanhã. Se for verão, a chuva pode vir com probabilidade 0,5.
 
-In both cases, we have some value of interest. And in both cases we are uncertain about the outcome.
-But there is a key difference between the two cases. In this first case, the image is in fact either a dog or a cat, and we just do not know which. In the second case, the outcome may actually be a random event, if you believe in such things (and most physicists do). So probability is a flexible language for reasoning about our level of certainty, and it can be applied effectively in a broad set of contexts.
-
 Em ambos os casos, temos algum valor de interesse. E em ambos os casos não temos certeza sobre o resultado.
 Mas existe uma diferença fundamental entre os dois casos. Neste primeiro caso, a imagem é de fato um cachorro ou um gato, e simplesmente não sabemos qual. No segundo caso, o resultado pode realmente ser um evento aleatório, se você acredita em tais coisas (e a maioria dos físicos acredita). Portanto, probabilidade é uma linguagem flexível para raciocinar sobre nosso nível de certeza e pode ser aplicada com eficácia em um amplo conjunto de contextos.
 
-## Basic Probability Theory
+## Teoria Básica de Probabilidade
 
 Say that we cast a die and want to know what the chance is of seeing a 1 rather than another digit. If the die is fair, all the six outcomes $\{1, \ldots, 6\}$ are equally likely to occur, and thus we would see a $1$ in one out of six cases. Formally we state that $1$ occurs with probability $\frac{1}{6}$.
 
@@ -610,6 +607,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MDQ2MjE1NywzNDA4MTQ5NSwtMTY5NT
-g0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4XX0=
+eyJoaXN0b3J5IjpbLTE4MDMyMDM2NzgsMTg0MDQ2MjE1NywzND
+A4MTQ5NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4
+XX0=
 -->
