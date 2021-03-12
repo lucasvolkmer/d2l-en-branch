@@ -187,6 +187,9 @@ para a curva $ u = f (x) $ quando $ x = 1 $.
 [**To visualize such an interpretation of derivatives,
 we will use `matplotlib`,**]
 
+[** Para visualizar tal interpretação das derivadas,
+usaremos `matplotlib`, **]
+
 a popular plotting library in Python.
 To configure properties of the figures produced by `matplotlib`,
 we need to define a few functions.
@@ -195,6 +198,15 @@ the `use_svg_display` function specifies the `matplotlib` package to output the 
 Note that the comment `#@save` is a special mark where the following function,
 class, or statements are saved in the `d2l` package
 so later they can be directly invoked (e.g., `d2l.use_svg_display()`) without being redefined.
+
+uma biblioteca de plotagem popular em Python.
+Para configurar as propriedades das figuras produzidas por `matplotlib`,
+precisamos definir algumas funções.
+Na sequência,
+a função `use_svg_display` especifica o pacote` matplotlib` para produzir os números SVG para imagens mais nítidas.
+Observe que o comentário `# @ save` é uma marca especial onde a seguinte função,
+classe, ou instruções são salvas no pacote `d2l`
+então, mais tarde, eles podem ser chamados diretamente (por exemplo, `d2l.use_svg_display ()`) sem serem redefinidos.
 
 ```{.python .input}
 #@tab all
@@ -205,6 +217,8 @@ def use_svg_display():  #@save
 
 We define the `set_figsize` function to specify the figure sizes. Note that here we directly use `d2l.plt` since the import statement `from matplotlib import pyplot as plt` has been marked for being saved in the `d2l` package in the preface.
 
+Definimos a função `set_figsize` para especificar o tamanho das figuras. Observe que aqui usamos diretamente `d2l.plt`, uma vez que a instrução import` from matplotlib import pyplot as plt` foi marcada para ser salva no pacote `d2l` no prefácio.
+
 ```{.python .input}
 #@tab all
 def set_figsize(figsize=(3.5, 2.5)):  #@save
@@ -214,6 +228,8 @@ def set_figsize(figsize=(3.5, 2.5)):  #@save
 ```
 
 The following `set_axes` function sets properties of axes of figures produced by `matplotlib`.
+
+A seguinte função `set_axes` define as propriedades dos eixos das figuras produzidas por` matplotlib`.
 
 ```{.python .input}
 #@tab all
@@ -235,6 +251,11 @@ With these three functions for figure configurations,
 we define the `plot` function
 to plot multiple curves succinctly
 since we will need to visualize many curves throughout the book.
+
+Com essas três funções para configurações de figura,
+nós definimos a função `plot`
+para traçar várias curvas sucintamente
+uma vez que precisaremos visualizar muitas curvas ao longo do livro.
 
 ```{.python .input}
 #@tab all
@@ -273,6 +294,8 @@ def plot(X, Y=None, xlabel=None, ylabel=None, legend=None, xlim=None,
 
 Now we can [**plot the function $u = f(x)$ and its tangent line $y = 2x - 3$ at $x=1$**], where the coefficient $2$ is the slope of the tangent line.
 
+Agora podemos [** plotar a função $ u = f (x) $ e sua linha tangente $ y = 2x - 3 $ em $ x = 1 $ **], onde o coeficiente $ 2 $ é a inclinação da linha tangente .
+
 ```{.python .input}
 #@tab all
 x = np.arange(0, 3, 0.1)
@@ -285,8 +308,13 @@ So far we have dealt with the differentiation of functions of just one variable.
 In deep learning, functions often depend on *many* variables.
 Thus, we need to extend the ideas of differentiation to these *multivariate* functions.
 
+Até agora, lidamos com a diferenciação de funções de apenas uma variável.
+No aprendizado profundo, as funções geralmente dependem de * muitas * variáveis.
+Portanto, precisamos estender as idéias de diferenciação para essas funções * multivariadas *.
 
 Let $y = f(x_1, x_2, \ldots, x_n)$ be a function with $n$ variables. The *partial derivative* of $y$ with respect to its $i^\mathrm{th}$  parameter $x_i$ is
+
+Seja $ y = f (x_1, x_2, \ ldots, x_n) $ uma função com $ n $ variáveis. A * derivada parcial * de $ y $ em relação ao seu $ i ^ \ mathrm {th} $ parâmetro $ x_i $ é
 
 $$ \frac{\partial y}{\partial x_i} = \lim_{h \rightarrow 0} \frac{f(x_1, \ldots, x_{i-1}, x_i+h, x_{i+1}, \ldots, x_n) - f(x_1, \ldots, x_i, \ldots, x_n)}{h}.$$
 
@@ -371,6 +399,6 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NTk1MzgzNyw1NjUyNjA2NDQsLTE5Nz
+eyJoaXN0b3J5IjpbMTU4NTkyOTY1Myw1NjUyNjA2NDQsLTE5Nz
 kzMzU4MjddfQ==
 -->
