@@ -84,6 +84,7 @@ a variação $h$ em $x$, que se aproxima de $0$.
 Para ilustrar derivadas,
 vamos experimentar com um exemplo.
 (**Define-se $u = f(x) = 3x^2-4x$.**)
+
 ```{.python .input}
 %matplotlib inline
 from d2l import mxnet as d2l
@@ -117,13 +118,6 @@ def f(x):
     return 3 * x ** 2 - 4 * x
 ```
 
-[**By setting $x=1$ and letting $h$ approach $0$,
-the numerical result of $\frac{f(x+h) - f(x)}{h}$**]
-in :eqref:`eq_derivative`
-(**approaches $2$.**)
-Though this experiment is not a mathematical proof,
-we will see later that the derivative $u'$ is $2$ when $x=1$.
-
 [**Definindo $x = 1$ e deixando $h$ se aproximar de $0$,
 o resultado numérico de $\frac{f(x+h) - f(x)}{h}$**]
 in: eqref: `eq_derivative`
@@ -142,22 +136,16 @@ for i in range(5):
     h *= 0.1
 ```
 
-Let us familiarize ourselves with a few equivalent notations for derivatives.
-Given $y = f(x)$, where $x$ and $y$ are the independent variable and the dependent variable of the function $f$, respectively. The following expressions are equivalent:
-
 Vamos nos familiarizar com algumas notações equivalentes para derivadas.
 Dado $y = f (x)$, onde $x$ e $y$ são a variável independente e a variável dependente da função $f$, respectivamente. As seguintes expressões são equivalentes:
 
 $$f'(x) = y' = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df(x) = D_x f(x),$$
 
-where symbols $\frac{d}{dx}$ and $D$ are *differentiation operators* that indicate operation of *differentiation*.
-We can use the following rules to differentiate common functions:
-
 onde os símbolos $\frac{d}{dx}$ e $D$  são *operadores de diferenciação* que indicam operação de *diferenciação*.
 Podemos usar as seguintes regras para diferenciar funções comuns:
 
-* $DC = 0$ ($C$ is a constant),
-* $Dx^n = nx^{n-1}$ (the *power rule*, $n$ is any real number),
+* $DC = 0$ ($C$ é uma constante),
+* $Dx^n = nx^{n-1}$ (a uma expo, $n$ is any real number),
 * $De^x = e^x$,
 * $D\ln(x) = 1/x.$
 
@@ -380,6 +368,6 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzOTU2MDIzMSw1NjUyNjA2NDQsLTE5Nz
+eyJoaXN0b3J5IjpbMTgyNzg3OTgxMyw1NjUyNjA2NDQsLTE5Nz
 kzMzU4MjddfQ==
 -->
