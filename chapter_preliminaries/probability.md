@@ -324,33 +324,21 @@ Portanto, obtemos:
 $$\begin{aligned}
 &P(H = 1 \mid D_1 = 1)\\ =& \frac{P(D_1=1 \mid H=1) P(H=1)}{P(D_1=1)} \\ =& 0.1306 \end{aligned}.$$
 
-In other words, there is only a 13.06% chance that the patient
-actually has HIV, despite using a very accurate test.
-As we can see, probability can be counterintuitive.
-
 Em outras palavras, há apenas 13,06% de chance de que o paciente
 realmente tem HIV, apesar de usar um teste muito preciso.
 Como podemos ver, a probabilidade pode ser contra-intuitiva.
 
-What should a patient do upon receiving such terrifying news? Likely, the patient
-would ask the physician to administer another test to get clarity. The second
-test has different characteristics and it is not as good as the first one, as shown in :numref:`conditional_prob_D2`.
-
 O que o paciente deve fazer ao receber notícias tão terríveis? Provavelmente, o paciente
 pediria ao médico para administrar outro teste para obter clareza. O segundo
-teste tem características diferentes e não é tão bom quanto o primeiro, como mostrado em :numref: conditional_prob_D2`.
+teste tem características diferentes e não é tão bom quanto o primeiro, como mostrado em :numref:conditional_prob_D2`.
 
-:Conditional probability of $P(D_2 \mid H)$.
+:Probabilidade Condicional de $P(D_2 \mid H)$.
 
-| Conditional probability | $H=1$ | $H=0$ |
+| Probabilidade Condicional | $H=1$ | $H=0$ |
 |---|---|---|
 |$P(D_2 = 1 \mid H)$|            0.98 |         0.03 |
 |$P(D_2 = 0 \mid H)$|            0.02 |         0.97 |
 :label:`conditional_prob_D2`
-
-Unfortunately, the second test comes back positive, too.
-Let us work out the requisite probabilities to invoke Bayes' theorem
-by assuming the conditional independence:
 
 Infelizmente, o segundo teste também deu positivo.
 Vamos trabalhar as probabilidades necessárias para invocar o teorema de Bayes
@@ -370,8 +358,6 @@ $$\begin{aligned}
 \end{aligned}
 $$
 
-Now we can apply marginalization and the multiplication rule:
-
 Agora podemos aplicar a marginalização e a regra de multiplicação:
 
 $$\begin{aligned}
@@ -382,7 +368,7 @@ $$\begin{aligned}
 \end{aligned}
 $$
 
-In the end, the probability of the patient having HIV given both positive tests is
+No final, a probabilidade de o paciente ter HIV, dado ambos os testes positivos, é
 
 $$\begin{aligned}
 &P(H = 1 \mid D_1 = 1, D_2 = 1)\\
@@ -473,8 +459,8 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTcwODcxMjUsMTk4ODQ4MjczNCwtMj
-E0MzE0MTM1Miw4MTkwMzI1MzgsMTQ2MzA1NTE4OSwtMTIzNTI4
-NzEyNywxODQwNDYyMTU3LDM0MDgxNDk1LC0xNjk1ODQ3NDYxLD
-M3Mjg4NzE1OCw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbLTQ1NDI5OTIxNywxOTg4NDgyNzM0LC0yMT
+QzMTQxMzUyLDgxOTAzMjUzOCwxNDYzMDU1MTg5LC0xMjM1Mjg3
+MTI3LDE4NDA0NjIxNTcsMzQwODE0OTUsLTE2OTU4NDc0NjEsMz
+cyODg3MTU4LDgxOTkyNDAxOF19
 -->
