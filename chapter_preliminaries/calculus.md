@@ -168,14 +168,6 @@ e a *regra do quociente*
 
 $$\frac{d}{dx} \left[\frac{f(x)}{g(x)}\right] = \frac{g(x) \frac{d}{dx} [f(x)] - f(x) \frac{d}{dx} [g(x)]}{[g(x)]^2}.$$
 
-Now we can apply a few of the above rules to find
-$u' = f'(x) = 3 \frac{d}{dx} x^2-4\frac{d}{dx}x = 6x-4$.
-Thus, by setting $x = 1$, we have $u' = 2$:
-this is supported by our earlier experiment in this section
-where the numerical result approaches $2$.
-This derivative is also the slope of the tangent line
-to the curve $u = f(x)$ when $x = 1$.
-
 Agora podemos aplicar algumas das regras acima para encontrar
 $u' = f'(x) = 3 \frac{d}{dx} x^2-4\frac{d}{dx}x = 6x-4$.
 Assim, definindo $x = 1$, temos $u '= 2$:
@@ -183,9 +175,6 @@ isso é apoiado por nosso experimento anterior nesta seção
 onde o resultado numérico se aproxima de $2$.
 Esta derivada também é a inclinação da linha tangente
 para a curva $u = f (x)$ quando $x = 1$.
-
-[**To visualize such an interpretation of derivatives,
-we will use `matplotlib`,**]
 
 [**Para visualizar tal interpretação das derivadas,
 usaremos `matplotlib`,**]
@@ -417,10 +406,10 @@ para qualquer $i = 1, 2, \ldots, n$.
 1. What is the gradient of the function $f(\mathbf{x}) = \|\mathbf{x}\|_2$?
 1. Can you write out the chain rule for the case where $u = f(x, y, z)$ and $x = x(a, b)$, $y = y(a, b)$, and $z = z(a, b)$?
 
-1. Trace a função $ y = f (x) = x ^ 3 - \ frac {1} {x} $ e sua linha tangente quando $ x = 1 $.
-1. Encontre o gradiente da função $ f (\ mathbf {x}) = 3x_1 ^ 2 + 5e ^ {x_2} $.
-1. Qual é o gradiente da função $ f (\ mathbf {x}) = \ | \ mathbf {x} \ | _2 $?
-1. Você pode escrever a regra da cadeia para o caso em que $ u = f (x, y, z) $ e $ x = x (a, b) $, $ y = y (a, b) $ e $ z = z (a, b) $?
+1. Trace a função $y = f(x) = x^3 - \frac{1}{x}$ e sua linha tangente quando $x = 1$.
+1. Encontre o gradiente da função $f(\mathbf{x}) = 3x_1^2 + 5e^{x_2}$.
+1. Qual é o gradiente da função $f(\mathbf{x}) = \|\mathbf{x}\|_2$?
+1. Você pode escrever a regra da cadeia para o caso em que $u = f(x, y, z)$ e $x = x(a, b)$, $y = y(a, b)$, e $z = z(a, b)$?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/32)
@@ -434,6 +423,6 @@ para qualquer $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNzIxNTQzOSw1NjUyNjA2NDQsLTE5Nz
-kzMzU4MjddfQ==
+eyJoaXN0b3J5IjpbLTE3MDA2MDQ3MzcsNTY1MjYwNjQ0LC0xOT
+c5MzM1ODI3XX0=
 -->
