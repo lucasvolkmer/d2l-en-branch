@@ -434,18 +434,18 @@ Outra propriedade útil para verificar é * dependência * vs. * independência 
 Duas variáveis aleatórias $A$ e $B$ sendo independentes
 significa que a ocorrência de um evento de $A$
 não revela nenhuma informação sobre a ocorrência de um evento de $B$.
-Neste caso $P(B \mid A) = P(B)$. Os estatísticos normalmente expressam isso como $A \perp  B$. Do teorema de Bayes, segue imediatamente que também $ P (A \ mid B) = P (A) $.
-Em todos os outros casos, chamamos $ A $ e $ B $ de dependente. Por exemplo, duas jogadas sucessivas de um dado são independentes. Em contraste, a posição de um interruptor de luz e a luminosidade da sala não são (eles não são perfeitamente determinísticos, pois podemos sempre ter uma lâmpada quebrada, falha de energia ou um interruptor quebrado).
+Neste caso $P(B \mid A) = P(B)$. Os estatísticos normalmente expressam isso como $A \perp  B$. Do teorema de Bayes, segue imediatamente que também $P(A \mid B) = P(A)$.
+Em todos os outros casos, chamamos $A$ e $B$ de dependente. Por exemplo, duas jogadas sucessivas de um dado são independentes. Em contraste, a posição de um interruptor de luz e a luminosidade da sala não são (eles não são perfeitamente determinísticos, pois podemos sempre ter uma lâmpada quebrada, falha de energia ou um interruptor quebrado).
 
 Since $P(A \mid B) = \frac{P(A, B)}{P(B)} = P(A)$ is equivalent to $P(A, B) = P(A)P(B)$, two random variables are independent if and only if their joint distribution is the product of their individual distributions.
 Likewise, two random variables $A$ and $B$ are *conditionally independent* given another random variable $C$
 if and only if $P(A, B \mid C) = P(A \mid C)P(B \mid C)$. This is expressed as $A \perp B \mid C$.
 
-Dado que $ P (A \ mid B) = \ frac {P (A, B)} {P (B)} = P (A) $ é equivalente a $ P (A, B) = P (A) P (B ) $, duas variáveis aleatórias são independentes se e somente se sua distribuição conjunta é o produto de suas distribuições individuais.
-Da mesma forma, duas variáveis aleatórias $ A $ e $ B $ são * condicionalmente independentes * dada outra variável aleatória $ C $
-se e somente se $ P (A, B \ mid C) = P (A \ mid C) P (B \ mid C) $. Isso é expresso como $ A \ perp B \ mid C $.
+Dado que $P(A \mid B) = \frac{P(A, B)}{P(B)} = P(A)$ é equivalente a $P(A, B) = P(A)P(B)$, duas variáveis aleatórias são independentes se e somente se sua distribuição conjunta é o produto de suas distribuições individuais.
+Da mesma forma, duas variáveis aleatórias $A$ e $B$ são *condicionalmente independentes* dada outra variável aleatória $C$
+se e somente se $P(A, B \mid C) = P(A \mid C)P(B \mid C)$. Isso é expresso como $A \perp B \mid C$.
 
-### Application
+### Aplicação
 :label:`subsec_probability_hiv_app`
 
 Let us put our skills to the test. Assume that a doctor administers an HIV test to a patient. This test is fairly accurate and it fails only with 1% probability if the patient is healthy but reporting him as diseased. Moreover,
@@ -453,7 +453,7 @@ it never fails to detect HIV if the patient actually has it. We use $D_1$ to ind
 :numref:`conditional_prob_D1` lists such conditional probabilities.
 
 Vamos colocar nossas habilidades à prova. Suponha que um médico administre um teste de HIV a um paciente. Este teste é bastante preciso e falha apenas com 1% de probabilidade se o paciente for saudável, mas relatá-lo como doente. Além disso,
-nunca deixa de detectar o HIV se o paciente realmente o tiver. Usamos $ D_1 $ para indicar o diagnóstico ($ 1 $ se positivo e $ 0 $ se negativo) e $ H $ para denotar o estado de HIV ($ 1 $ se positivo e $ 0 $ se negativo).
+nunca deixa de detectar o HIV se o paciente realmente o tiver. Usamos $D_1$ para indicar o diagnóstico ($1$ se positivo e $0$ se negativo) e $H$ para denotar o estado de HIV ($1$ se positivo e $0 $ se negativo).
 : numref: `conditional_prob_D1` lista tais probabilidades condicionais.
 :
 Conditional probability of $P(D_1 \mid H)$.
@@ -629,5 +629,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzQwNTM4MCw4MTk5MjQwMThdfQ==
+eyJoaXN0b3J5IjpbMTM4NDU3Nzg5OSw4MTk5MjQwMThdfQ==
 -->
