@@ -44,8 +44,6 @@ contagem individual para aquele valor e dividi-lo pelo número total de jogadas.
 Isso nos dá uma *estimativa* da probabilidade de um determinado *evento*. A *lei de
 grandes números* nos dizem que, conforme o número de lançamentos aumenta, essa estimativa se aproxima cada vez mais da verdadeira probabilidade subjacente. Antes de entrar em detalhes sobre o que está acontecendo aqui, vamos experimentar.
 
-To start, let us import the necessary packages.
-
 Para começar, importemos os pacotes necessários.
 
 ```{.python .input}
@@ -603,7 +601,7 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzUyODcxMjcsMTg0MDQ2MjE1NywzND
-A4MTQ5NSwtMTY5NTg0NzQ2MSwzNzI4ODcxNTgsODE5OTI0MDE4
-XX0=
+eyJoaXN0b3J5IjpbLTExNzU0OTc3MzEsLTEyMzUyODcxMjcsMT
+g0MDQ2MjE1NywzNDA4MTQ5NSwtMTY5NTg0NzQ2MSwzNzI4ODcx
+NTgsODE5OTI0MDE4XX0=
 -->
