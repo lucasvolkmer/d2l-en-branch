@@ -430,11 +430,20 @@ does not reveal any information about the occurrence of an event of $B$.
 In this case $P(B \mid A) = P(B)$. Statisticians typically express this as $A \perp  B$. From Bayes' theorem, it follows immediately that also $P(A \mid B) = P(A)$.
 In all the other cases we call $A$ and $B$ dependent. For instance, two successive rolls of a die are independent. In contrast, the position of a light switch and the brightness in the room are not (they are not perfectly deterministic, though, since we could always have a broken light bulb, power failure, or a broken switch).
 
-
+Outra propriedade útil para verificar é * dependência * vs. * independência *.
+Duas variáveis aleatórias $ A $ e $ B $ sendo independentes
+significa que a ocorrência de um evento de $ A $
+não revela nenhuma informação sobre a ocorrência de um evento de $ B $.
+Neste caso $ P (B \ mid A) = P (B) $. Os estatísticos normalmente expressam isso como $ A \ perp B $. Do teorema de Bayes, segue imediatamente que também $ P (A \ mid B) = P (A) $.
+Em todos os outros casos, chamamos $ A $ e $ B $ de dependente. Por exemplo, duas jogadas sucessivas de um dado são independentes. Em contraste, a posição de um interruptor de luz e a luminosidade da sala não são (eles não são perfeitamente determinísticos, pois podemos sempre ter uma lâmpada quebrada, falha de energia ou um interruptor quebrado).
 
 Since $P(A \mid B) = \frac{P(A, B)}{P(B)} = P(A)$ is equivalent to $P(A, B) = P(A)P(B)$, two random variables are independent if and only if their joint distribution is the product of their individual distributions.
 Likewise, two random variables $A$ and $B$ are *conditionally independent* given another random variable $C$
 if and only if $P(A, B \mid C) = P(A \mid C)P(B \mid C)$. This is expressed as $A \perp B \mid C$.
+
+Dado que $ P (A \ mid B) = \ frac {P (A, B)} {P (B)} = P (A) $ é equivalente a $ P (A, B) = P (A) P (B ) $, duas variáveis aleatórias são independentes se e somente se sua distribuição conjunta é o produto de suas distribuições individuais.
+Da mesma forma, duas variáveis aleatórias $ A $ e $ B $ são * condicionalmente independentes * dada outra variável aleatória $ C $
+se e somente se $ P (A, B \ mid C) = P (A \ mid C) P (B \ mid C) $. Isso é expresso como $ A \ perp B \ mid C $.
 
 ### Application
 :label:`subsec_probability_hiv_app`
@@ -443,7 +452,11 @@ Let us put our skills to the test. Assume that a doctor administers an HIV test 
 it never fails to detect HIV if the patient actually has it. We use $D_1$ to indicate the diagnosis ($1$ if positive and $0$ if negative) and $H$ to denote the HIV status ($1$ if positive and $0$ if negative).
 :numref:`conditional_prob_D1` lists such conditional probabilities.
 
-:Conditional probability of $P(D_1 \mid H)$.
+Vamos colocar nossas habilidades à prova. Suponha que um médico administre um teste de HIV a um paciente. Este teste é bastante preciso e falha apenas com 1% de probabilidade se o paciente for saudável, mas relatá-lo como doente. Além disso,
+nunca deixa de detectar o HIV se o paciente realmente o tiver. Usamos $ D_1 $ para indicar o diagnóstico ($ 1 $ se positivo e $ 0 $ se negativo) e $ H $ para denotar o estado de HIV ($ 1 $ se positivo e $ 0 $ se negativo).
+: numref: `conditional_prob_D1` lista tais probabilidades condicionais.
+:
+Conditional probability of $P(D_1 \mid H)$.
 
 | Conditional probability | $H=1$ | $H=0$ |
 |---|---|---|
@@ -452,6 +465,8 @@ it never fails to detect HIV if the patient actually has it. We use $D_1$ to ind
 :label:`conditional_prob_D1`
 
 Note that the column sums are all 1 (but the row sums are not), since the conditional probability needs to sum up to 1, just like the probability. Let us work out the probability of the patient having HIV if the test comes back positive, i.e., $P(H = 1 \mid D_1 = 1)$. Obviously this is going to depend on how common the disease is, since it affects the number of false alarms. Assume that the population is quite healthy, e.g., $P(H=1) = 0.0015$. To apply Bayes' theorem, we need to apply marginalization and the multiplication rule to determine
+
+Observe que as somas das colunas são todas 1 (mas as somas das linhas não), uma vez que a probabilidade condicional precisa somar 1, assim como a probabilidade. Vamos calcular a probabilidade de o paciente ter HIV se o teste der positivo, ou seja, $ P (H = 1 \ mid D_1 = 1) $. Obviamente, isso vai depender de quão comum é a doença, já que afeta o número de alarmes falsos. Suponha que a população seja bastante saudável, por exemplo, $ P (H = 1) = 0,0015 $. Para aplicar o teorema de Bayes, precisamos aplicar a marginalização e a regra de multiplicação para determinar
 
 $$\begin{aligned}
 &P(D_1 = 1) \\
@@ -470,10 +485,17 @@ In other words, there is only a 13.06% chance that the patient
 actually has HIV, despite using a very accurate test.
 As we can see, probability can be counterintuitive.
 
+Em outras palavras, há apenas 13,06% de chance de que o paciente
+realmente tem HIV, apesar de usar um teste muito preciso.
+Como podemos ver, a probabilidade pode ser contra-intuitiva.
+
 What should a patient do upon receiving such terrifying news? Likely, the patient
 would ask the physician to administer another test to get clarity. The second
 test has different characteristics and it is not as good as the first one, as shown in :numref:`conditional_prob_D2`.
 
+O que o paciente deve fazer ao receber notícias tão terríveis? Provavelmente, o paciente
+pediria ao médico para administrar outro teste para obter clareza. O segundo
+teste tem características diferentes e não é tão bom quanto o primeiro, como mostrado em: numref: `conditional_prob_D2`.
 
 :Conditional probability of $P(D_2 \mid H)$.
 
@@ -486,6 +508,10 @@ test has different characteristics and it is not as good as the first one, as sh
 Unfortunately, the second test comes back positive, too.
 Let us work out the requisite probabilities to invoke Bayes' theorem
 by assuming the conditional independence:
+
+Infelizmente, o segundo teste também deu positivo.
+Vamos trabalhar as probabilidades necessárias para invocar o teorema de Bayes
+assumindo a independência condicional:
 
 $$\begin{aligned}
 &P(D_1 = 1, D_2 = 1 \mid H = 0) \\
@@ -502,6 +528,8 @@ $$\begin{aligned}
 $$
 
 Now we can apply marginalization and the multiplication rule:
+
+Agora podemos aplicar a marginalização e a regra de multiplicação:
 
 $$\begin{aligned}
 &P(D_1 = 1, D_2 = 1) \\
@@ -578,5 +606,5 @@ $$\mathrm{Var}[f(x)] = E\left[\left(f(x) - E[f(x)]\right)^2\right].$$
 [Discussions](https://discuss.d2l.ai/t/198)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODI4MzA1MDBdfQ==
+eyJoaXN0b3J5IjpbLTUwMTI4NDUyNl19
 -->
