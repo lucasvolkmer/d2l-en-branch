@@ -145,14 +145,9 @@ onde os símbolos $\frac{d}{dx}$ e $D$  são *operadores de diferenciação* que
 Podemos usar as seguintes regras para diferenciar funções comuns:
 
 * $DC = 0$ ($C$ é uma constante),
-* $Dx^n = nx^{n-1}$ (a uma expo, $n$ is any real number),
+* $Dx^n = nx^{n-1}$ (uma exponenciação, $n$ é qualquer valor real),
 * $De^x = e^x$,
 * $D\ln(x) = 1/x.$
-
-To differentiate a function that is formed from a few simpler functions such as the above common functions,
-the following rules can be handy for us.
-Suppose that functions $f$ and $g$ are both differentiable and $C$ is a constant,
-we have the *constant multiple rule*
 
 Para diferenciar uma função que é formada de algumas funções mais simples, como as funções comuns acima,
 as regras a seguir podem ser úteis para nós.
@@ -161,15 +156,15 @@ temos a *regra múltipla constante*
 
 $$\frac{d}{dx} [Cf(x)] = C \frac{d}{dx} f(x),$$
 
-the *sum rule*
+a *regra da soma*
 
 $$\frac{d}{dx} [f(x) + g(x)] = \frac{d}{dx} f(x) + \frac{d}{dx} g(x),$$
 
-the *product rule*
+a *regra do produto*
 
 $$\frac{d}{dx} [f(x)g(x)] = f(x) \frac{d}{dx} [g(x)] + g(x) \frac{d}{dx} [f(x)],$$
 
-and the *quotient rule*
+e a *regra do quociente*
 
 $$\frac{d}{dx} \left[\frac{f(x)}{g(x)}\right] = \frac{g(x) \frac{d}{dx} [f(x)] - f(x) \frac{d}{dx} [g(x)]}{[g(x)]^2}.$$
 
@@ -180,6 +175,14 @@ this is supported by our earlier experiment in this section
 where the numerical result approaches $2$.
 This derivative is also the slope of the tangent line
 to the curve $u = f(x)$ when $x = 1$.
+
+Agora podemos aplicar algumas das regras acima para encontrar
+$ u '= f' (x) = 3 \ frac {d} {dx} x ^ 2-4 \ frac {d} {dx} x = 6x-4 $.
+Assim, definindo $ x = 1 $, temos $ u '= 2 $:
+isso é apoiado por nosso experimento anterior nesta seção
+onde o resultado numérico se aproxima de $ 2 $.
+Esta derivada também é a inclinação da linha tangente
+para a curva $ u = f (x) $ quando $ x = 1 $.
 
 [**To visualize such an interpretation of derivatives,
 we will use `matplotlib`,**]
@@ -368,6 +371,6 @@ for any $i = 1, 2, \ldots, n$.
 [Discussions](https://discuss.d2l.ai/t/197)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNzg3OTgxMyw1NjUyNjA2NDQsLTE5Nz
+eyJoaXN0b3J5IjpbLTQ2NTk1MzgzNyw1NjUyNjA2NDQsLTE5Nz
 kzMzU4MjddfQ==
 -->
