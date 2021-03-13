@@ -170,29 +170,31 @@ $$
 
 
 
-Note that after adding the hidden layer,
-our model now requires us to track and update
-additional sets of parameters.
-So what have we gained in exchange?
-You might be surprised to find out
-that---in the model defined above---*we
-gain nothing for our troubles*!
-The reason is plain.
-The hidden units above are given by
-an affine function of the inputs,
-and the outputs (pre-softmax) are just
-an affine function of the hidden units.
-An affine function of an affine function
-is itself an affine function.
-Moreover, our linear model was already
-capable of representing any affine function.
+
+Observe que depois de adicionar a camada oculta,
+nosso modelo agora exige que rastreemos e atualizemos
+conjuntos adicionais de parâmetros.
+Então, o que ganhamos em troca?
+Você pode se surpreender ao descobrir
+que --- no modelo definido acima --- *nós
+não ganhamos nada pelos nossos problemas*!
+O motivo é claro.
+As unidades ocultas acima são fornecidas por
+uma função afim das entradas,
+e as saídas (pré-*softmax*) são apenas
+uma função afim das unidades ocultas.
+Uma função afim de uma função afim
+é em si uma função afim.
+Além disso, nosso modelo linear já era
+capaz de representar qualquer função afim.
 
 
-We can view the equivalence formally
-by proving that for any values of the weights,
-we can just collapse out the hidden layer,
-yielding an equivalent single-layer model with parameters
+Podemos ver a equivalência formalmente
+provando que para quaisquer valores dos pesos,
+podemos apenas recolher a camada oculta,
+produzindo um modelo de camada única equivalente com parâmetros
 $\mathbf{W} = \mathbf{W}^{(1)}\mathbf{W}^{(2)}$ and $\mathbf{b} = \mathbf{b}^{(1)} \mathbf{W}^{(2)} + \mathbf{b}^{(2)}$:
+
 
 $$
 \mathbf{O} = (\mathbf{X} \mathbf{W}^{(1)} + \mathbf{b}^{(1)})\mathbf{W}^{(2)} + \mathbf{b}^{(2)} = \mathbf{X} \mathbf{W}^{(1)}\mathbf{W}^{(2)} + \mathbf{b}^{(1)} \mathbf{W}^{(2)} + \mathbf{b}^{(2)} = \mathbf{X} \mathbf{W} + \mathbf{b}.
@@ -588,7 +590,7 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzgxMzU4MywtNTEzNjM2Mzc5LC0xND
-g0Mzk5ODc4LC0yMDYwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5
-NDVdfQ==
+eyJoaXN0b3J5IjpbMjA0MTA5NjAyNSwxNjM3ODEzNTgzLC01MT
+M2MzYzNzksLTE0ODQzOTk4NzgsLTIwNjAxMDE1MzQsODQ5OTk1
+NzEwLDcxMzExNTk0NV19
 -->
