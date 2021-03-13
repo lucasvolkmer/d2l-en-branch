@@ -78,7 +78,7 @@ weight_initializer = tf.keras.initializers.RandomNormal(mean=0.0, stddev=0.01)
 net.add(tf.keras.layers.Dense(10, kernel_initializer=weight_initializer))
 ```
 
-## *Softmax* Implementation Revisited
+## Implementação do *Softmax* Revisitada
 :label:`subsec_softmax-implementation-revisited`
 
 In the previous example of :numref:`sec_softmax_scratch`,
@@ -224,6 +224,6 @@ albeit this time with fewer lines of code than before.
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTQ1NzE0NzcsLTE2MjIxODY4MjJdfQ
+eyJoaXN0b3J5IjpbLTE3NDkxNTMyMjAsLTE2MjIxODY4MjJdfQ
 ==
 -->
