@@ -106,7 +106,7 @@ para aprender conjuntamente uma representação por meio de camadas ocultas
 e um preditor linear que atua sobre essa representação.
 
 
-### Incorporating Hidden Layers
+### Incorporando Camadas Ocultas
 
 We can overcome these limitations of linear models
 and handle a more general class of functions
@@ -589,6 +589,6 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjAxMDE1MzQsODQ5OTk1NzEwLDcxMz
-ExNTk0NV19
+eyJoaXN0b3J5IjpbLTE0ODQzOTk4NzgsLTIwNjAxMDE1MzQsOD
+Q5OTk1NzEwLDcxMzExNTk0NV19
 -->
