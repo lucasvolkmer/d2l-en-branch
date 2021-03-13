@@ -1,4 +1,4 @@
-# Multilayer Perceptrons*Perceptrons* Multicamada
+# *Perceptrons* Multicamada
 :label:`chap_perceptrons`
 
 Neste capítulo, apresentaremos sua primeira rede verdadeiramente *profunda*.
@@ -37,5 +37,5 @@ kaggle-house-price
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMjUyMzE4OV19
+eyJoaXN0b3J5IjpbNjAzMDE2NzhdfQ==
 -->
