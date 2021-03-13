@@ -1,25 +1,25 @@
 # Multilayer Perceptrons*Perceptrons* Multicamada
 :label:`chap_perceptrons`
 
-In this chapter, we will introduce your first truly *deep* network.
-The simplest deep networks are called multilayer perceptrons,
-and they consist of multiple layers of neurons
-each fully connected to those in the layer below
-(from which they receive input)
-and those above (which they, in turn, influence).
-When we train high-capacity models we run the risk of overfitting.
-Thus, we will need to provide your first rigorous introduction
-to the notions of overfitting, underfitting, and model selection.
-To help you combat these problems,
-we will introduce regularization techniques such as weight decay and dropout.
-We will also discuss issues relating to numerical stability and parameter initialization
-that are key to successfully training deep networks.
-Throughout, we aim to give you a firm grasp not just of the concepts
-but also of the practice of using deep networks.
-At the end of this chapter,
-we apply what we have introduced so far to a real case: house price prediction.
-We punt matters relating to the computational performance,
-scalability, and efficiency of our models to subsequent chapters.
+Neste capítulo, apresentaremos sua primeira rede verdadeiramente *profunda*.
+As redes profundas mais simples são chamadas *perceptrons* multicamada,
+e eles consistem em várias camadas de neurônios
+cada um totalmente conectado àqueles na camada abaixo
+(do qual eles recebem contribuições)
+e aqueles acima (que eles, por sua vez, influenciam).
+Quando treinamos modelos de alta capacidade, corremos o risco de fazer *overfitting*.
+Portanto, precisaremos fornecer sua primeira introdução rigorosa
+às noções de *overfitting*, *underfitting* e seleção de modelo.
+Para ajudá-lo a combater esses problemas,
+apresentaremos técnicas de regularização, como redução do peso e abandono escolar.
+Também discutiremos questões relacionadas à estabilidade numérica e inicialização de parâmetros
+que são essenciais para o treinamento bem-sucedido de redes profundas.
+Durante todo o tempo, nosso objetivo é dar a você uma compreensão firme não apenas dos conceitos
+mas também da prática de usar redes profundas.
+No final deste capítulo,
+aplicamos o que apresentamos até agora a um caso real: a previsão do preço da casa.
+Nós examinamos questões relacionadas ao desempenho computacional,
+escalabilidade e eficiência de nossos modelos para os capítulos subsequentes.
 
 ```toc
 :maxdepth: 2
@@ -37,5 +37,5 @@ kaggle-house-price
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzQ1MzUwOTVdfQ==
+eyJoaXN0b3J5IjpbLTcyMjUyMzE4OV19
 -->
