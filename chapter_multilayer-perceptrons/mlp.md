@@ -1,4 +1,4 @@
-# Multilayer Perceptrons
+# Multilayer Perceptrons*Perceptrons* Multicamada
 :label:`sec_mlp`
 
 In :numref:`chap_linear`, we introduced
@@ -588,3 +588,6 @@ thousands of lines of C and Fortran.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTg2ODQxMzM1Ml19
+-->
