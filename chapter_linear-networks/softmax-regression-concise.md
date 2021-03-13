@@ -3,13 +3,13 @@
 
 
 
-(**Just as high-level APIs**)
-of deep learning frameworks
-(**made it much easier to implement linear regression**)
-in :numref:`sec_linear_concise`,
-(**we will find it similarly**) (~~here~~) (or possibly more)
-convenient for implementing classification models. Let us stick with the Fashion-MNIST dataset
-and keep the batch size at 256 as in :numref:`sec_softmax_scratch`.
+(**APIs de alto nível tal como**)
+os *frameworks* de *deep learning*
+(**tornaram muito mais fácil de implementar a regressão linear**)
+em :numref:`sec_linear_concise`,
+(**encontraremos de forma semelhante**) (~~aqui~~) (ou possivelmente mais)
+conveniente para implementar modelos de classificação. Vamos ficar com o conjunto de dados *Fashion-MNIST*
+e manter o tamanho do lote em 256 como em :numref:`sec_softmax_scratch`.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -224,5 +224,5 @@ albeit this time with fewer lines of code than before.
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjIxODY4MjJdfQ==
+eyJoaXN0b3J5IjpbNjQ1ODY3OTg1LC0xNjIyMTg2ODIyXX0=
 -->
