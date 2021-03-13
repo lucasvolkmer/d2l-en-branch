@@ -20,21 +20,21 @@ com o qual este livro se preocupa principalmente.
 
 ## Camadas Ocultas
 
-We have described the affine transformation in
+Descrevemos a transformação afim em
 :numref:`subsec_linear_model`,
-which is a linear transformation added by a bias.
-To begin, recall the model architecture
-corresponding to our softmax regression example,
-illustrated in  :numref:`fig_softmaxreg`.
-This model mapped our inputs directly to our outputs
-via a single affine transformation,
-followed by a softmax operation.
-If our labels truly were related
-to our input data by an affine transformation,
-then this approach would be sufficient.
-But linearity in affine transformations is a *strong* assumption.
+que é uma transformação linear adicionada por um *bias.
+Para começar, relembre a arquitetura do modelo
+correspondendo ao nosso exemplo de regressão *softmax*,
+ilustrado em :numref:`fig_softmaxreg`.
+Este modelo mapeou nossas entradas diretamente para nossas saídas
+por meio de uma única transformação afim,
+seguido por uma operação *softmax*.
+Se nossos *labels* realmente estivessem relacionados
+aos nossos dados de entrada por uma transformação afim,
+então esta abordagem seria suficiente.
+Mas a linearidade nas transformações afins é uma suposição *forte*.
 
-### Linear Models May Go Wrong
+### Modelos Lineares Podem Dar Errado
 
 For example, linearity implies the *weaker*
 assumption of *monotonicity*:
@@ -588,5 +588,5 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEzMTE1OTQ1XX0=
+eyJoaXN0b3J5IjpbLTE3NDIzMjE4NzUsNzEzMTE1OTQ1XX0=
 -->
