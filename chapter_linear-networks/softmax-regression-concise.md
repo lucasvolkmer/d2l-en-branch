@@ -8,7 +8,7 @@ os *frameworks* de *deep learning*
 (**tornaram muito mais fácil de implementar a regressão linear**)
 em :numref:`sec_linear_concise`,
 (**encontraremos de forma semelhante**) (~~aqui~~) (ou possivelmente mais)
-conveniente para implementar modelos de classificação. Vamos ficar com o conjunto de dados *Fashion-MNIST*
+conveniente, implementar modelos de classificação. Vamos ficar com o conjunto de dados *Fashion-MNIST*
 e manter o tamanho do lote em 256 como em :numref:`sec_softmax_scratch`.
 
 ```{.python .input}
@@ -37,19 +37,19 @@ batch_size = 256
 train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 ```
 
-## Initializing Model Parameters
+## Inicializando os Parâmetros do Modelo
 
-As mentioned in :numref:`sec_softmax`,
-[**the output layer of softmax regression
-is a fully-connected layer.**]
-Therefore, to implement our model,
-we just need to add one fully-connected layer
-with 10 outputs to our `Sequential`.
-Again, here, the `Sequential` is not really necessary,
-but we might as well form the habit since it will be ubiquitous
-when implementing deep models.
-Again, we initialize the weights at random
-with zero mean and standard deviation 0.01.
+Conforme mencionado em: numref: `sec_softmax`,
+[**a camada de saída da regressão *softmax*
+é uma camada totalmente conectada.**]
+Portanto, para implementar nosso modelo,
+só precisamos adicionar uma camada totalmente conectada
+com 10 saídas para nosso `Sequential`.
+Novamente, aqui, o `Sequential` não é realmente necessário,
+mas podemos também criar o hábito, pois será onipresente
+ao implementar modelos profundos.
+Novamente, inicializamos os pesos aleatoriamente
+com média zero e desvio padrão 0,01.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -78,7 +78,7 @@ weight_initializer = tf.keras.initializers.RandomNormal(mean=0.0, stddev=0.01)
 net.add(tf.keras.layers.Dense(10, kernel_initializer=weight_initializer))
 ```
 
-## Softmax Implementation Revisited
+## *Softmax* Implementation Revisited
 :label:`subsec_softmax-implementation-revisited`
 
 In the previous example of :numref:`sec_softmax_scratch`,
@@ -224,5 +224,6 @@ albeit this time with fewer lines of code than before.
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ1ODY3OTg1LC0xNjIyMTg2ODIyXX0=
+eyJoaXN0b3J5IjpbLTEyNTQ1NzE0NzcsLTE2MjIxODY4MjJdfQ
+==
 -->
