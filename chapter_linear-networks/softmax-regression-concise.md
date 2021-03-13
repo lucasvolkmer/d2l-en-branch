@@ -204,14 +204,14 @@ embora desta vez com menos linhas de código do que antes.
 
 ## Resumo
 
-* Using high-level APIs, we can implement softmax regression much more concisely.
-* From a computational perspective, implementing softmax regression has intricacies. Note that in many cases, a deep learning framework takes additional precautions beyond these most well-known tricks to ensure numerical stability, saving us from even more pitfalls that we would encounter if we tried to code all of our models from scratch in practice.
+* Usando APIs de alto nível, podemos implementar a regressão *softmax* de forma muito mais concisa.
+* De uma perspectiva computacional, a implementação da regressão *softmax* tem complexidades. Observe que, em muitos casos, uma estrutura de *deep learning* toma precauções adicionais além desses truques mais conhecidos para garantir a estabilidade numérica, salvando-nos de ainda mais armadilhas que encontraríamos se tentássemos codificar todos os nossos modelos do zero na prática.
 
-## Exercises
+## Exercícios
 
-1. Try adjusting the hyperparameters, such as the batch size, number of epochs, and learning rate, to see what the results are.
-1. Increase the numper of epochs for training. Why might the test accuracy decrease after a while? How could we fix this?
-
+1. Tente ajustar os hiperparâmetros, como *batch size*, número de épocas e taxa de aprendizado, para ver quais são os resultados.
+2. Aumente o número de épocas de treinamento. Por que a precisão do teste pode diminuir depois de um tempo? Como poderíamos consertar isso?
+3. 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/52)
 :end_tab:
@@ -224,6 +224,6 @@ embora desta vez com menos linhas de código do que antes.
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NDk3ODA4MCwtMTc0OTE1MzIyMCwtMT
+eyJoaXN0b3J5IjpbLTU2NzE1MTE1MCwtMTc0OTE1MzIyMCwtMT
 YyMjE4NjgyMl19
 -->
