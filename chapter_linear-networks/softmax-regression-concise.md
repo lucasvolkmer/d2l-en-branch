@@ -144,13 +144,13 @@ $$
 \end{aligned}
 $$
 
-We will want to keep the conventional softmax function handy
-in case we ever want to evaluate the output probabilities by our model.
-But instead of passing softmax probabilities into our new loss function,
-we will just
-[**pass the logits and compute the softmax and its log
-all at once inside the cross-entropy loss function,**]
-which does smart things like the ["LogSumExp trick"](https://en.wikipedia.org/wiki/LogSumExp).
+Queremos manter a função *softmax* convencional acessível
+no caso de querermos avaliar as probabilidades de saída por nosso modelo.
+Mas em vez de passar probabilidades de *softmax* para nossa nova função de perda,
+nós vamos apenas
+[**passar os *logits* e calcular o *softmax* e seu log
+tudo de uma vez dentro da função de perda de entropia cruzada,**]
+que faz coisas inteligentes como o ["Truque LogSumExp"](https://en.wikipedia.org/wiki/LogSumExp).
 
 ```{.python .input}
 loss = gluon.loss.SoftmaxCrossEntropyLoss()
@@ -166,7 +166,7 @@ loss = nn.CrossEntropyLoss()
 loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 ```
 
-## Optimization Algorithm
+## Otimização do Algoritmo
 
 Here, we (**use minibatch stochastic gradient descent**)
 with a learning rate of 0.1 as the optimization algorithm.
@@ -224,6 +224,6 @@ albeit this time with fewer lines of code than before.
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMTc0NDM3MSwtMTc0OTE1MzIyMCwtMT
-YyMjE4NjgyMl19
+eyJoaXN0b3J5IjpbLTExMjYyMjU1NzIsLTE3NDkxNTMyMjAsLT
+E2MjIxODY4MjJdfQ==
 -->
