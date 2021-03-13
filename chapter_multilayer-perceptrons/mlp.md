@@ -148,18 +148,18 @@ compensação entre o salvamento do parâmetro e a eficácia do modelo, mesmo se
 ### De Linear Para não Linear
 
 
-As before, by the matrix $\mathbf{X} \in \mathbb{R}^{n \times d}$,
-we denote a minibatch of $n$ examples where each example has $d$ inputs (features).
-For a one-hidden-layer MLP whose hidden layer has $h$ hidden units,
-denote by $\mathbf{H} \in \mathbb{R}^{n \times h}$
-the outputs of the hidden layer, which are
-*hidden representations*.
-In mathematics or code, $\mathbf{H}$ is also known as a *hidden-layer variable* or a *hidden variable*.
-Since the hidden and output layers are both fully connected,
-we have hidden-layer weights $\mathbf{W}^{(1)} \in \mathbb{R}^{d \times h}$ and biases $\mathbf{b}^{(1)} \in \mathbb{R}^{1 \times h}$
-and output-layer weights $\mathbf{W}^{(2)} \in \mathbb{R}^{h \times q}$ and biases $\mathbf{b}^{(2)} \in \mathbb{R}^{1 \times q}$.
-Formally, we calculate the outputs $\mathbf{O} \in \mathbb{R}^{n \times q}$
-of the one-hidden-layer MLP as follows:
+Como antes, pela matriz $\mathbf{X} \in \mathbb{R}^{n \times d}$,
+denotamos um *minibatch* de $n$ exemplos em que cada exemplo tem $d$ entradas (*features*).
+Para um MLP de uma camada oculta, cuja camada oculta tem $h$ unidades ocultas,
+denotamos por $\mathbf{H} \in \mathbb{R}^{n \times h}$
+as saídas da camada oculta, que são
+*representações ocultas*.
+Em matemática ou código, $\mathbf{H}$ também é conhecido como uma *variável de camada oculta* ou uma *variável oculta*.
+Uma vez que as camadas ocultas e de saída estão totalmente conectadas,
+temos pesos de camada oculta $\mathbf{W}^{(1)} \in \mathbb{R}^{d \times h}$ e *bias* $\mathbf{b}^{(1)} \in \mathbb{R}^{1 \times h}$
+e pesos da camada de saída $\mathbf{W}^{(2)} \in \mathbb{R}^{h \times q}$ e *bias* $\mathbf{b}^{(2)} \in \mathbb{R}^{1 \times q}$.
+Formalmente, calculamos as saídas $\mathbf{O} \in \mathbb{R}^{n \times q}$
+do MLP de uma camada oculta da seguinte maneira:
 
 $$
 \begin{aligned}
@@ -588,6 +588,7 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMzYzNjM3OSwtMTQ4NDM5OTg3OCwtMj
-A2MDEwMTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX0=
+eyJoaXN0b3J5IjpbMTYzNzgxMzU4MywtNTEzNjM2Mzc5LC0xND
+g0Mzk5ODc4LC0yMDYwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5
+NDVdfQ==
 -->
