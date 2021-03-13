@@ -36,44 +36,44 @@ Mas a linearidade nas transformações afins é uma suposição *forte*.
 
 ### Modelos Lineares Podem Dar Errado
 
-For example, linearity implies the *weaker*
-assumption of *monotonicity*:
-that any increase in our feature must
-either always cause an increase in our model's output
-(if the corresponding weight is positive),
-or always cause a decrease in our model's output
-(if the corresponding weight is negative).
-Sometimes that makes sense.
-For example, if we were trying to predict
-whether an individual will repay a loan,
-we might reasonably imagine that holding all else equal,
-an applicant with a higher income
-would always be more likely to repay
-than one with a lower income.
-While monotonic, this relationship likely
-is not linearly associated with the probability of
-repayment. An increase in income from 0 to 50 thousand
-likely corresponds to a bigger increase
-in likelihood of repayment
-than an increase from 1 million to 1.05 million.
-One way to handle this might be to preprocess
-our data such that linearity becomes more plausible,
-say, by using the logarithm of income as our feature.
+
+Por exemplo, linearidade implica a *mais fraca*
+suposição de *monotonicidade*:
+que qualquer aumento em nosso recurso deve
+sempre causar um aumento na saída do nosso modelo
+(se o peso correspondente for positivo),
+ou sempre causa uma diminuição na saída do nosso modelo
+(se o peso correspondente for negativo).
+Às vezes, isso faz sentido.
+Por exemplo, se estivéssemos tentando prever
+se um indivíduo vai pagar um empréstimo,
+podemos razoavelmente imaginar que mantendo tudo o mais igual,
+um candidato com uma renda maior
+sempre estaria mais propenso a retribuir
+do que um com uma renda mais baixa.
+Embora monotônico, esse relacionamento provavelmente
+não está linearmente associado à probabilidade de
+reembolso. Um aumento na receita de 0 a 50 mil
+provavelmente corresponde a um aumento maior
+em probabilidade de reembolso
+do que um aumento de 1 milhão para 1,05 milhão.
+Uma maneira de lidar com isso pode ser pré-processar
+nossos dados de forma que a linearidade se torne mais plausível,
+digamos, usando o logaritmo da receita como nosso recurso.
 
 
-Note that we can easily come up with examples
-that violate monotonicity.
-Say for example that we want to predict probability
-of death based on body temperature.
-For individuals with a body temperature
-above 37°C (98.6°F),
-higher temperatures indicate greater risk.
-However, for individuals with body temperatures
-below 37° C, higher temperatures indicate lower risk!
-In this case too, we might resolve the problem
-with some clever preprocessing.
-Namely, we might use the distance from 37°C as our feature.
-
+Observe que podemos facilmente encontrar exemplos
+que violam a monotonicidade.
+Digamos, por exemplo, que queremos prever a probabilidade
+de morte com base na temperatura corporal.
+Para indivíduos com temperatura corporal
+acima de 37 ° C (98,6 ° F),
+temperaturas mais altas indicam maior risco.
+No entanto, para indivíduos com temperatura corporal
+abaixo de 37 ° C, temperaturas mais altas indicam risco menor!
+Também neste caso, podemos resolver o problema
+com algum pré-processamento inteligente.
+Ou seja, podemos usar a distância de 37 ° C como nossa *feature*.
 
 But what about classifying images of cats and dogs?
 Should increasing the intensity
@@ -588,5 +588,5 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDIzMjE4NzUsNzEzMTE1OTQ1XX0=
+eyJoaXN0b3J5IjpbODQ5OTk1NzEwLDcxMzExNTk0NV19
 -->
