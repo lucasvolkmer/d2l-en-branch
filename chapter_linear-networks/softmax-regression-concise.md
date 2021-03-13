@@ -1,4 +1,4 @@
-# Concise Implementation of Softmax Regression
+# Implementação Concisa da Regressão *Softmax*
 :label:`sec_softmax_concise`
 
 
@@ -224,6 +224,6 @@ embora desta vez com menos linhas de código do que antes.
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NzE1MTE1MCwtMTc0OTE1MzIyMCwtMT
-YyMjE4NjgyMl19
+eyJoaXN0b3J5IjpbODcwNTQ4NzYzLC0xNzQ5MTUzMjIwLC0xNj
+IyMTg2ODIyXX0=
 -->
