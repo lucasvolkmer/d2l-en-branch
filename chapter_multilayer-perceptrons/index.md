@@ -1,4 +1,4 @@
-# Multilayer Perceptrons
+# Multilayer Perceptrons*Perceptrons* Multicamada
 :label:`chap_perceptrons`
 
 In this chapter, we will introduce your first truly *deep* network.
@@ -36,3 +36,6 @@ environment
 kaggle-house-price
 ```
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE5MzQ1MzUwOTVdfQ==
+-->
