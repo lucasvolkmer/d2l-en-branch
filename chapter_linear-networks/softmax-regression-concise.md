@@ -168,10 +168,10 @@ loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 
 ## Otimização do Algoritmo
 
-Here, we (**use minibatch stochastic gradient descent**)
-with a learning rate of 0.1 as the optimization algorithm.
-Note that this is the same as we applied in the linear regression example
-and it illustrates the general applicability of the optimizers.
+Aqui, nós (**usamos gradiente descendente estocástico de *minibatch***)
+com uma taxa de aprendizado de 0,1 como o algoritmo de otimização.
+Observe que este é o mesmo que aplicamos no exemplo de regressão linear
+e ilustra a aplicabilidade geral dos otimizadores.
 
 ```{.python .input}
 trainer = gluon.Trainer(net.collect_params(), 'sgd', {'learning_rate': 0.1})
@@ -187,9 +187,9 @@ trainer = torch.optim.SGD(net.parameters(), lr=0.1)
 trainer = tf.keras.optimizers.SGD(learning_rate=.1)
 ```
 
-## Training
+## Trainamento
 
-Next we [**call the training function defined**] (~~earlier~~) in :numref:`sec_softmax_scratch` to train the model.
+Em seguida, [**chamamos a função de treinamento definida**] (~~anteriormente~~) em :numref:`sec_softmax_scratch` para treinar o modelo.
 
 ```{.python .input}
 #@tab all
@@ -197,12 +197,12 @@ num_epochs = 10
 d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 ```
 
-As before, this algorithm converges to a solution
-that achieves a decent accuracy,
-albeit this time with fewer lines of code than before.
+Como antes, este algoritmo converge para uma solução
+que atinge uma precisão decente,
+embora desta vez com menos linhas de código do que antes.
 
 
-## Summary
+## Resumo
 
 * Using high-level APIs, we can implement softmax regression much more concisely.
 * From a computational perspective, implementing softmax regression has intricacies. Note that in many cases, a deep learning framework takes additional precautions beyond these most well-known tricks to ensure numerical stability, saving us from even more pitfalls that we would encounter if we tried to code all of our models from scratch in practice.
@@ -224,6 +224,6 @@ albeit this time with fewer lines of code than before.
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjYyMjU1NzIsLTE3NDkxNTMyMjAsLT
-E2MjIxODY4MjJdfQ==
+eyJoaXN0b3J5IjpbMTk1NDk3ODA4MCwtMTc0OTE1MzIyMCwtMT
+YyMjE4NjgyMl19
 -->
