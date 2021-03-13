@@ -81,33 +81,32 @@ net.add(tf.keras.layers.Dense(10, kernel_initializer=weight_initializer))
 ## Implementação do *Softmax* Revisitada
 :label:`subsec_softmax-implementation-revisited`
 
-In the previous example of :numref:`sec_softmax_scratch`,
-we calculated our model's output
-and then ran this output through the cross-entropy loss.
-Mathematically, that is a perfectly reasonable thing to do.
-However, from a computational perspective,
-exponentiation can be a source of numerical stability issues.
 
-Recall that the softmax function calculates
+No exemplo anterior de :numref:`sec_softmax_scratch`,
+calculamos a saída do nosso modelo
+e então executamos esta saída através da perda de entropia cruzada.
+Matematicamente, isso é uma coisa perfeitamente razoável de se fazer.
+No entanto, de uma perspectiva computacional,
+a exponenciação pode ser uma fonte de problemas de estabilidade numérica.
+
+Lembre-se de que a função *softmax* calcula
 $\hat y_j = \frac{\exp(o_j)}{\sum_k \exp(o_k)}$,
-where $\hat y_j$ is the $j^\mathrm{th}$ element of
-the predicted probability distribution $\hat{\mathbf{y}}$
-and $o_j$ is the $j^\mathrm{th}$ element of the logits
+onde $\hat y_j$ é o elemento $j^\mathrm{th}$ da distribuição de probabilidade prevista $\hat{\mathbf{y}}$
+e $o_j$ é o elemento $j^\mathrm{th}$ dos *logits*
 $\mathbf{o}$.
-If some of the $o_k$ are very large (i.e., very positive),
-then $\exp(o_k)$ might be larger than the largest number
-we can have for certain data types (i.e., *overflow*).
-This would make the denominator (and/or numerator) `inf` (infinity)
-and we wind up encountering either 0, `inf`, or `nan` (not a number) for $\hat y_j$.
-In these situations we do not get a well-defined
-return value for cross-entropy.
+Se alguns dos $o_k$ forem muito grandes (ou seja, muito positivos),
+então $\exp(o_k)$ pode ser maior que o maior número,
+podemos ter para certos tipos de dados (ou seja, *estouro*).
+Isso tornaria o denominador (e/ou numerador) `inf` (infinito)
+e acabamos encontrando 0, `inf` ou` nan` (não um número) para $\hat y_j$.
+Nessas situações, não obtemos uma definição bem definida
+valor de retorno para entropia cruzada.
 
 
-One trick to get around this is to first subtract $\max(o_k)$
-from all $o_k$ before proceeding with the softmax calculation.
-You can see that this shifting of each $o_k$ by constant factor
-does not change the return value of softmax:
-
+Um truque para contornar isso é primeiro subtrair $\max(o_k)$
+de todos $o_k$ antes de prosseguir com o cálculo do *softmax*.
+Você pode ver que este deslocamento de cada $o_k$ por um fator constante
+não altera o valor de retorno de *softmax*:
 $$
 \begin{aligned}
 \hat y_j & =  \frac{\exp(o_j - \max(o_k))\exp(\max(o_k))}{\sum_k \exp(o_k - \max(o_k))\exp(\max(o_k))} \\
@@ -224,6 +223,6 @@ albeit this time with fewer lines of code than before.
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDkxNTMyMjAsLTE2MjIxODY4MjJdfQ
-==
+eyJoaXN0b3J5IjpbNzMzNzczNDg2LC0xNzQ5MTUzMjIwLC0xNj
+IyMTg2ODIyXX0=
 -->
