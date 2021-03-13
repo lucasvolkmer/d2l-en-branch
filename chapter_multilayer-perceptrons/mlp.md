@@ -18,7 +18,7 @@ podemos lançar nossa exploração de redes neurais profundas,
 a classe comparativamente rica de modelos
 com o qual este livro se preocupa principalmente.
 
-## Hidden Layers
+## Camadas Ocultas
 
 We have described the affine transformation in
 :numref:`subsec_linear_model`,
@@ -588,5 +588,5 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MDAxNTgxMF19
+eyJoaXN0b3J5IjpbNzEzMTE1OTQ1XX0=
 -->
