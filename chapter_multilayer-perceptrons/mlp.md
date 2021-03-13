@@ -75,34 +75,35 @@ Também neste caso, podemos resolver o problema
 com algum pré-processamento inteligente.
 Ou seja, podemos usar a distância de 37 ° C como nossa *feature*.
 
-But what about classifying images of cats and dogs?
-Should increasing the intensity
-of the pixel at location (13, 17)
-always increase (or always decrease)
-the likelihood that the image depicts a dog?
-Reliance on a linear model corresponds to the implicit
-assumption that the only requirement
-for differentiating cats vs. dogs is to assess
-the brightness of individual pixels.
-This approach is doomed to fail in a world
-where inverting an image preserves the category.
+
+Mas que tal classificar imagens de cães e gatos?
+Aumentar a intensidade
+do pixel no local (13, 17) deveria
+sempre aumentar (ou sempre diminuir)
+a probabilidade de que a imagem retrate um cachorro?
+A confiança em um modelo linear corresponde à implícita
+suposição de que o único requisito
+para diferenciar gatos vs. cães é avaliar
+o brilho de pixels individuais.
+Esta abordagem está fadada ao fracasso em um mundo
+onde inverter uma imagem preserva a categoria.
 
 
-And yet despite the apparent absurdity of linearity here,
-as compared with our previous examples,
-it is less obvious that we could address the problem
-with a simple preprocessing fix.
-That is because the significance of any pixel
-depends in complex ways on its context
-(the values of the surrounding pixels).
-While there might exist a representation of our data
-that would take into account
-the relevant interactions among our features,
-on top of which a linear model would be suitable,
-we simply do not know how to calculate it by hand.
-With deep neural networks, we used observational data
-to jointly learn both a representation via hidden layers
-and a linear predictor that acts upon that representation.
+E ainda, apesar do aparente absurdo da linearidade aqui,
+em comparação com nossos exemplos anteriores,
+é menos óbvio que poderíamos resolver o problema
+com uma correção de pré-processamento simples.
+Isso ocorre porque o significado de qualquer pixel
+depende de maneiras complexas de seu contexto
+(os valores dos pixels circundantes).
+Embora possa existir uma representação de nossos dados
+isso levaria em consideração
+as interações relevantes entre nossas características,
+no topo das quais um modelo linear seria adequado, nós
+simplesmente não sabemos como calculá-lo à mão.
+Com redes neurais profundas, usamos dados observacionais
+para aprender conjuntamente uma representação por meio de camadas ocultas
+e um preditor linear que atua sobre essa representação.
 
 
 ### Incorporating Hidden Layers
@@ -588,5 +589,6 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ5OTk1NzEwLDcxMzExNTk0NV19
+eyJoaXN0b3J5IjpbLTIwNjAxMDE1MzQsODQ5OTk1NzEwLDcxMz
+ExNTk0NV19
 -->
