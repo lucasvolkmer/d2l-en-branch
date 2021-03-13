@@ -108,42 +108,41 @@ e um preditor linear que atua sobre essa representação.
 
 ### Incorporando Camadas Ocultas
 
-We can overcome these limitations of linear models
-and handle a more general class of functions
-by incorporating one or more hidden layers.
-The easiest way to do this is to stack
-many fully-connected layers on top of each other.
-Each layer feeds into the layer above it,
-until we generate outputs.
-We can think of the first $L-1$ layers
-as our representation and the final layer
-as our linear predictor.
-This architecture is commonly called
-a *multilayer perceptron*,
-often abbreviated as *MLP*.
-Below, we depict an MLP diagrammatically (:numref:`fig_mlp`).
 
-![An MLP with a hidden layer of 5 hidden units. ](../img/mlp.svg)
-:label:`fig_mlp`
+Podemos superar essas limitações dos modelos lineares
+e lidar com uma classe mais geral de funções
+incorporando uma ou mais camadas ocultas.
+A maneira mais fácil de fazer isso é empilhar
+muitas camadas totalmente conectadas umas sobre as outras.
+Cada camada alimenta a camada acima dela,
+até gerarmos resultados.
+Podemos pensar nas primeiras $L-1$ camadas
+como nossa representação e a camada final
+como nosso preditor linear.
+Esta arquitetura é comumente chamada
+um *perceptron multicamadas*,
+frequentemente abreviado como *MLP*.
+Abaixo, representamos um MLP em diagrama (:numref:`fig_mlp`).
 
-This MLP has 4 inputs, 3 outputs,
-and its hidden layer contains 5 hidden units.
-Since the input layer does not involve any calculations,
-producing outputs with this network
-requires implementing the computations
-for both the hidden and output layers;
-thus, the number of layers in this MLP is 2.
-Note that these layers are both fully connected.
-Every input influences every neuron in the hidden layer,
-and each of these in turn influences
-every neuron in the output layer.
-However, as suggested by :numref:`subsec_parameterization-cost-fc-layers`,
-the parameterization cost of MLPs
-with fully-connected layers
-can be prohibitively high,
-which may motivate
-tradeoff between parameter saving and model effectiveness even without changing the input or output size :cite:`Zhang.Tay.Zhang.ea.2021`.
+![Um MLP com uma camada oculta de 5 unidades ocultas. ](../ img / mlp.svg) :label:`fig_mlp`
 
+Este MLP tem 4 entradas, 3 saídas,
+e sua camada oculta contém 5 unidades ocultas.
+Uma vez que a camada de entrada não envolve nenhum cálculo,
+produzindo saídas com esta rede
+requer a implementação dos cálculos
+para as camadas ocultas e de saída;
+assim, o número de camadas neste MLP é 2.
+Observe que essas camadas estão totalmente conectadas.
+Cada entrada influencia cada neurônio na camada oculta,
+e cada um deles, por sua vez, influencia
+cada neurônio na camada de saída.
+No entanto, conforme sugerido por :numref:`subsec_parameterization-cost-fc-layers`,
+o custo de parametrização de MLPs
+com camadas totalmente conectadas
+pode ser proibitivamente alto,
+o que pode motivar
+compensação entre o salvamento do parâmetro e a eficácia do modelo, mesmo sem alterar o tamanho de entrada ou saída :cite:`Zhang.Tay.Zhang.ea.2021`.
 
 
 ### From Linear to Nonlinear
@@ -589,6 +588,6 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODQzOTk4NzgsLTIwNjAxMDE1MzQsOD
-Q5OTk1NzEwLDcxMzExNTk0NV19
+eyJoaXN0b3J5IjpbODI0OTExODAyLC0xNDg0Mzk5ODc4LC0yMD
+YwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5NDVdfQ==
 -->
