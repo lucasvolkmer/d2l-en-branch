@@ -145,7 +145,7 @@ o que pode motivar
 compensação entre o salvamento do parâmetro e a eficácia do modelo, mesmo sem alterar o tamanho de entrada ou saída :cite:`Zhang.Tay.Zhang.ea.2021`.
 
 
-### From Linear to Nonlinear
+### De Linear Para não Linear
 
 
 As before, by the matrix $\mathbf{X} \in \mathbb{R}^{n \times d}$,
@@ -588,6 +588,6 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI0OTExODAyLC0xNDg0Mzk5ODc4LC0yMD
-YwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5NDVdfQ==
+eyJoaXN0b3J5IjpbLTUxMzYzNjM3OSwtMTQ4NDM5OTg3OCwtMj
+A2MDEwMTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX0=
 -->
