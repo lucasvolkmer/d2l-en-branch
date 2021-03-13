@@ -115,25 +115,26 @@ $$
 $$
 
 
-After the subtraction and normalization step,
-it might be possible that some $o_j - \max(o_k)$ have large negative values
-and thus that the corresponding $\exp(o_j - \max(o_k))$ will take values close to zero.
-These might be rounded to zero due to finite precision (i.e., *underflow*),
-making $\hat y_j$ zero and giving us `-inf` for $\log(\hat y_j)$.
-A few steps down the road in backpropagation,
-we might find ourselves faced with a screenful
-of the dreaded `nan` results.
 
-Fortunately, we are saved by the fact that
-even though we are computing exponential functions,
-we ultimately intend to take their log
-(when calculating the cross-entropy loss).
-By combining these two operators
-softmax and cross-entropy together,
-we can escape the numerical stability issues
-that might otherwise plague us during backpropagation.
-As shown in the equation below, we avoid calculating $\exp(o_j - \max(o_k))$
-and can use instead $o_j - \max(o_k)$ directly due to the canceling in $\log(\exp(\cdot))$:
+Após a etapa de subtração e normalização,
+pode ser possível que alguns  $o_j - \max(o_k)$ tenham grandes valores negativos
+e assim que o $\exp(o_j - \max(o_k))$ correspondente assumirá valores próximos a zero.
+Eles podem ser arredondados para zero devido à precisão finita (ou seja, *underflow*),
+tornando $\hat y_j$ zero e dando-nos `-inf` para $\log(\hat y_j)$.
+Alguns passos abaixo na *backpropagation*,
+podemos nos encontrar diante de uma tela cheia
+dos temidos resultados `nan`.
+
+Felizmente, somos salvos pelo fato de que
+embora estejamos computando funções exponenciais,
+em última análise, pretendemos levar seu log
+(ao calcular a perda de entropia cruzada).
+Combinando esses dois operadores
+*softmax* e entropia cruzada juntos,
+podemos escapar dos problemas de estabilidade numérica
+que poderia nos atormentar durante a *backpropagation*.
+Conforme mostrado na equação abaixo, evitamos calcular $\exp(o_j - \max(o_k))$
+e podemos usar $o_j - \max(o_k)$ diretamente devido ao cancelamento em $\log(\exp(\cdot))$:
 
 $$
 \begin{aligned}
@@ -223,6 +224,6 @@ albeit this time with fewer lines of code than before.
 [Discussions](https://discuss.d2l.ai/t/260)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMzNzczNDg2LC0xNzQ5MTUzMjIwLC0xNj
-IyMTg2ODIyXX0=
+eyJoaXN0b3J5IjpbMjEwMTc0NDM3MSwtMTc0OTE1MzIyMCwtMT
+YyMjE4NjgyMl19
 -->
