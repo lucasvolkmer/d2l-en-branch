@@ -1,23 +1,22 @@
 # Multilayer Perceptrons*Perceptrons* Multicamada
 :label:`sec_mlp`
 
-In :numref:`chap_linear`, we introduced
-softmax regression (:numref:`sec_softmax`),
-implementing the algorithm from scratch
-(:numref:`sec_softmax_scratch`) and using high-level APIs
+Em :numref:`chap_linear`,, apresentamos
+regressão *softmax* (:numref:`sec_softmax`),
+implementando o algoritmo do zero
+(:numref:`sec_softmax_scratch`) e usando APIs de alto nível
 (:numref:`sec_softmax_concise`),
-and training classifiers to recognize
-10 categories of clothing from low-resolution images.
-Along the way, we learned how to wrangle data,
-coerce our outputs into a valid probability distribution,
-apply an appropriate loss function,
-and minimize it with respect to our model's parameters.
-Now that we have mastered these mechanics
-in the context of simple linear models,
-we can launch our exploration of deep neural networks,
-the comparatively rich class of models
-with which this book is primarily concerned.
-
+e classificadores de treinamento para reconhecer
+10 categorias de roupas a partir de imagens de baixa resolução.
+Ao longo do caminho, aprendemos como organizar dados,
+coagir nossos resultados em uma distribuição de probabilidade válida,
+aplicar uma função de perda apropriada,
+e minimizá-la em relação aos parâmetros do nosso modelo.
+Agora que dominamos essa mecânica
+no contexto de modelos lineares simples,
+podemos lançar nossa exploração de redes neurais profundas,
+a classe comparativamente rica de modelos
+com o qual este livro se preocupa principalmente.
 
 ## Hidden Layers
 
@@ -589,5 +588,5 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2ODQxMzM1Ml19
+eyJoaXN0b3J5IjpbMTIwMjA3OTkwM119
 -->
