@@ -431,7 +431,7 @@ e por que o usamos em vez de apenas
 definir uma lista Python nós mesmos.
 Resumindo, a principal vantagem das `_children`
 é que durante a inicialização do parâmetro do nosso bloco,
-Gluon sabe olhar dentro das `_crianças`
+Gluon sabe olhar dentro das `_children`
 dicionário para encontrar sub-blocos cujo
 os parâmetros também precisam ser inicializados.
 :end_tab:
@@ -913,6 +913,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4OTk0NTYxNiw4Mzc5MjY4NDcsMTc3MD
+eyJoaXN0b3J5IjpbLTUwODMxNDE0MSw4Mzc5MjY4NDcsMTc3MD
 I4MDk3NCwtMTYzNzgyOTQ5MF19
 -->
