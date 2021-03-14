@@ -107,6 +107,12 @@ because the input dimension remains unknown.
 Consequently the framework has not yet initialized any parameters.
 We confirm by attempting to access the parameters below.
 
+Neste ponto, a rede não pode saber
+as dimensões dos pesos da camada de entrada
+porque a dimensão de entrada permanece desconhecida.
+Consequentemente, a estrutura ainda não inicializou nenhum parâmetro.
+Confirmamos tentando acessar os parâmetros abaixo.
+
 ```{.python .input}
 print(net.collect_params)
 print(net.collect_params())
@@ -127,12 +133,26 @@ would trigger a runtime error stating that the network
 must be initialized before the parameters can be accessed.
 Now let us see what happens when we attempt to initialize
 parameters via the `initialize` function.
+
+Observe que, embora os objetos de parâmetro existam,
+a dimensão de entrada para cada camada é listada como -1.
+MXNet usa o valor especial -1 para indicar
+que a dimensão do parâmetro permanece desconhecida.
+Neste ponto, tenta acessar `net [0] .weight.data ()`
+desencadearia um erro de tempo de execução informando que a rede
+deve ser inicializado antes que os parâmetros possam ser acessados.
+Agora vamos ver o que acontece quando tentamos inicializar
+parâmetros por meio da função `initialize`.
 :end_tab:
 
 :begin_tab:`tensorflow`
 Note that each layer objects exist but the weights are empty.
 Using `net.get_weights()` would throw an error since the weights
 have not been initialized yet.
+
+Observe que cada objeto de camada existe, mas os pesos estão vazios.
+Usar `net.get_weights ()` geraria um erro, uma vez que os pesos
+ainda não foram inicializados.
 :end_tab:
 
 ```{.python .input}
@@ -147,10 +167,20 @@ calls to initialize do not truly initialize the parameters.
 Instead, this call registers to MXNet that we wish
 (and optionally, according to which distribution)
 to initialize the parameters.
+
+Como podemos ver, nada mudou.
+Quando as dimensões de entrada são desconhecidas,
+chamadas para inicializar não inicializam verdadeiramente os parâmetros.
+Em vez disso, esta chamada se registra no MXNet que desejamos
+(e opcionalmente, de acordo com qual distribuição)
+para inicializar os parâmetros.
 :end_tab:
 
 Next let us pass data through the network
 to make the framework finally initialize parameters.
+
+Em seguida, vamos passar os dados pela rede
+para fazer o framework finalmente inicializar os parâmetros.
 
 ```{.python .input}
 X = np.random.uniform(size=(2, 20))
@@ -179,17 +209,37 @@ but the framework initializes sequentially.
 Once all parameter shapes are known,
 the framework can finally initialize the parameters.
 
+Assim que soubermos a dimensionalidade da entrada,
+20,
+a estrutura pode identificar a forma da matriz de peso da primeira camada conectando o valor de 20.
+Tendo reconhecido a forma da primeira camada, a estrutura prossegue
+para a segunda camada,
+e assim por diante através do gráfico computacional
+até que todas as formas sejam conhecidas.
+Observe que, neste caso,
+apenas a primeira camada requer inicialização adiada,
+mas a estrutura inicializa sequencialmente.
+Uma vez que todas as formas dos parâmetros são conhecidas,
+a estrutura pode finalmente inicializar os parâmetros.
+
 ## Summary
 
 * Deferred initialization can be convenient, allowing the framework to infer parameter shapes automatically, making it easy to modify architectures and eliminating one common source of errors.
 * We can pass data through the model to make the framework finally initialize parameters.
 
+* A inicialização adiada pode ser conveniente, permitindo que o framework inferir formas de parâmetros automaticamente, facilitando a modificação de arquiteturas e eliminando uma fonte comum de erros.
+* Podemos passar dados através do modelo para fazer o framework finalmente inicializar os parâmetros.
+
 
 ## Exercises
 
 1. What happens if you specify the input dimensions to the first layer but not to subsequent layers? Do you get immediate initialization?
-1. What happens if you specify mismatching dimensions?
-1. What would you need to do if you have input of varying dimensionality? Hint: look at the parameter tying.
+2. What happens if you specify mismatching dimensions?
+3. What would you need to do if you have input of varying dimensionality? Hint: look at the parameter tying.
+
+1. O que acontece se você especificar as dimensões de entrada para a primeira camada, mas não para as camadas subsequentes? Você consegue inicialização imediata?
+1. O que acontece se você especificar dimensões incompatíveis?
+1. O que você precisa fazer se tiver dados de dimensionalidade variável? Dica: observe a vinculação de parâmetros.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/280)
@@ -199,5 +249,5 @@ the framework can finally initialize the parameters.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTAwNzcyNTRdfQ==
+eyJoaXN0b3J5IjpbMTEzNTU4Njc3NF19
 -->
