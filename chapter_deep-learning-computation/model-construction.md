@@ -136,28 +136,6 @@ net(X)
 ```
 
 :begin_tab:`mxnet`
-In this example, we constructed
-our model by instantiating an `nn.Sequential`,
-assigning the returned object to the `net` variable.
-Next, we repeatedly call its `add` function,
-appending layers in the order
-that they should be executed.
-In short, `nn.Sequential` defines a special kind of `Block`,
-the class that presents a block in Gluon.
-It maintains an ordered list of constituent `Block`s.
-The `add` function simply facilitates
-the addition of each successive `Block` to the list.
-Note that each layer is an instance of the `Dense` class
-which is itself a subclass of `Block`.
-The forward propagation (`forward`) function is also remarkably simple:
-it chains each `Block` in the list together,
-passing the output of each as the input to the next.
-Note that until now, we have been invoking our models
-via the construction `net(X)` to obtain their outputs.
-This is actually just shorthand for `net.forward(X)`,
-a slick Python trick achieved via
-the `Block` class's `__call__` function.
-
 Neste exemplo, nós construímos
 nosso modelo instanciando um `nn.Sequential`,
 atribuindo o objeto retornado à variável `net`.
@@ -171,8 +149,8 @@ A função `add` simplesmente facilita
 a adição de cada `Bloco` sucessivo à lista.
 Observe que cada camada é uma instância da classe `Dense`
 que é uma subclasse de `Block`.
-A função de propagação direta (`para frente`) também é notavelmente simples:
-ele encadeia cada `Bloco` na lista,
+A função de propagação direta (`forward`) também é notavelmente simples:
+ele encadeia cada `Block` na lista,
 passando a saída de cada um como entrada para o próximo.
 Observe que, até agora, temos invocado nossos modelos
 através da construção `net (X)` para obter seus resultados.
@@ -200,9 +178,9 @@ This is actually just shorthand for `net.__call__(X)`.
 Neste exemplo, nós construímos
 nosso modelo instanciando um `nn.Sequential`, com camadas na ordem
 que eles devem ser executados passados como argumentos.
-Em suma, `nn.Sequential` define um tipo especial de` Módulo`,
+Em suma, `nn.Sequential` define um tipo especial de `Module`,
 a classe que apresenta um bloco em PyTorch.
-Ele mantém uma lista ordenada de `Módulos` constituintes.
+Ele mantém uma lista ordenada de `Modul` constituintes.
 Observe que cada uma das duas camadas totalmente conectadas é uma instância da classe `Linear`
 que é uma subclasse de `Módulo`.
 A função de propagação direta (`para frente`) também é notavelmente simples:
@@ -1043,5 +1021,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgwMzk1NTgzXX0=
+eyJoaXN0b3J5IjpbLTEzNDc5NDY3MjddfQ==
 -->
