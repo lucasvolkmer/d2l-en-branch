@@ -1,4 +1,4 @@
-# Layers and Blocks
+# Camadas e Blocos
 :label:`sec_model_construction`
 
 When we first introduced neural networks,
@@ -1173,5 +1173,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MTA1Njc1XX0=
+eyJoaXN0b3J5IjpbLTYyNzQ0MzQ5N119
 -->
