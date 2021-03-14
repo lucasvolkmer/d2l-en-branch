@@ -472,18 +472,6 @@ para a classe `Sequential`
 
 ## Execução de Código na Função de Propagação Direta
 
-The `Sequential` class makes model construction easy,
-allowing us to assemble new architectures
-without having to define our own class.
-However, not all architectures are simple daisy chains.
-When greater flexibility is required,
-we will want to define our own blocks.
-For example, we might want to execute
-Python's control flow within the forward propagation function.
-Moreover, we might want to perform
-arbitrary mathematical operations,
-not simply relying on predefined neural network layers.
-
 A classe `Sequential` facilita a construção do modelo,
 nos permitindo montar novas arquiteturas
 sem ter que definir nossa própria classe.
@@ -521,12 +509,12 @@ e seus parâmetros.
 incorporar termos
 que não são resultado de camadas anteriores
 nem parâmetros atualizáveis.
-Chamamos isso de * parâmetros constantes *.
+Chamamos isso de *parâmetros constantes*.
 Digamos, por exemplo, que queremos uma camada
 que calcula a função
 $f(\mathbf{x},\mathbf{w}) = c \cdot \mathbf{w}^\top \mathbf{x}$,
-onde $\mathbf{x}$ is the input, $\mathbf{w}$ é nosso parâmetro,
-e $ c $ é alguma constante especificada
+onde $\mathbf{x}$ é a entrada, $\mathbf{w}$ é nosso parâmetro,
+e $c$ é alguma constante especificada
 que não é atualizado durante a otimização.
 Portanto, implementamos uma classe `FixedHiddenMLP` como segue.
 
@@ -876,6 +864,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NzMzMzYwMCwzNTU2NjM4MTEsODM3OT
-I2ODQ3LDE3NzAyODA5NzQsLTE2Mzc4Mjk0OTBdfQ==
+eyJoaXN0b3J5IjpbLTExNDMwNTQ4MzcsMzU1NjYzODExLDgzNz
+kyNjg0NywxNzcwMjgwOTc0LC0xNjM3ODI5NDkwXX0=
 -->
