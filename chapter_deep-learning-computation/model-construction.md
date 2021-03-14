@@ -317,11 +317,11 @@ Nós instanciamos as camadas do MLP
 no construtor
 e posteriormente invocar essas camadas
 em cada chamada para a função de propagação direta.
-Observe alguns detalhes importantes.
+Observe alguns detalhes importantes:
 Primeiro, nossa função `__init__` personalizada
 invoca a função `__init__` da classe pai
-via `super () .__ init __ ()`
-poupando-nos da dor de reafirmar
+via `super().__ init __()`
+poupando-nos da dor de reafirmar o
 código padrão aplicável à maioria dos blocos.
 Em seguida, instanciamos nossas duas camadas totalmente conectadas,
 atribuindo-os a `self.hidden` e` self.out`.
@@ -953,6 +953,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM3OTI2ODQ3LDE3NzAyODA5NzQsLTE2Mz
-c4Mjk0OTBdfQ==
+eyJoaXN0b3J5IjpbMzcwMzY3MzQ0LDgzNzkyNjg0NywxNzcwMj
+gwOTc0LC0xNjM3ODI5NDkwXX0=
 -->
