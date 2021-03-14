@@ -628,20 +628,6 @@ print(len(net.layers) == 3)
 ```
 
 :begin_tab:`mxnet,pytorch`
-This example shows that the parameters
-of the second and third layer are tied.
-They are not just equal, they are
-represented by the same exact tensor.
-Thus, if we change one of the parameters,
-the other one changes, too.
-You might wonder,
-when parameters are tied
-what happens to the gradients?
-Since the model parameters contain gradients,
-the gradients of the second hidden layer
-and the third hidden layer are added together
-during backpropagation.
-
 Este exemplo mostra que os parâmetros
 da segunda e terceira camadas são amarrados.
 Eles não são apenas iguais, eles são
@@ -659,25 +645,23 @@ durante a retropropagação.
 
 ## Sumário
 
-* We have several ways to access, initialize, and tie model parameters.
-* We can use custom initialization.
-
 * Temos várias maneiras de acessar, inicializar e vincular os parâmetros do modelo.
 * Podemos usar inicialização personalizada.
 
 
-## Exercises
+## Exercícios
 
 1. Use the `FancyMLP` model defined in :numref:`sec_model_construction` and access the parameters of the various layers.
-1. Look at the initialization module document to explore different initializers.
-1. Construct an MLP containing a shared parameter layer and train it. During the training process, observe the model parameters and gradients of each layer.
-1. Why is sharing parameters a good idea?
+2. Look at the initialization module document to explore different initializers.
+3. Construct an MLP containing a shared parameter layer and train it. During the training process, observe the model parameters and gradients of each layer.
+4. Why is sharing parameters a good idea?
 
 
-1. Use o modelo `FancyMLP` definido em: numref:` sec_model_construction` e acesse os parâmetros das várias camadas.
-1. Observe o documento do módulo de inicialização para explorar diferentes inicializadores.
-1. Construa um MLP contendo uma camada de parâmetros compartilhados e treine-o. Durante o processo de treinamento, observe os parâmetros do modelo e gradientes de cada camada.
-1. Por que compartilhar parâmetros é uma boa ideia?
+5. Use o modelo `FancyMLP` definido em :numref:`sec_model_construction` e acesse os parâmetros das várias camadas.
+6. Observe o documento do módulo de inicialização para explorar diferentes inicializadores.
+7. Construa um MLP contendo uma camada de parâmetros compartilhados e treine-o. Durante o processo de treinamento, observe os parâmetros do modelo e gradientes de cada camada.
+8. Por que compartilhar parâmetros é uma boa ideia?
+9. 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/56)
 :end_tab:
@@ -690,5 +674,6 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTM3ODc3MjgsMTY0Mjk3ODUwMV19
+eyJoaXN0b3J5IjpbLTM0ODE4MjgyMSwtMTU5Mzc4NzcyOCwxNj
+QyOTc4NTAxXX0=
 -->
