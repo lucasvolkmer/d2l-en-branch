@@ -6,14 +6,6 @@ por ser descuidados na configuração de nossas redes.
 Especificamente, fizemos as seguintes coisas não intuitivas,
 que podem não parecer que deveriam funcionar:
 
-* We defined the network architectures
-  without specifying the input dimensionality.
-* We added layers without specifying
-  the output dimension of the previous layer.
-* We even "initialized" these parameters
-  before providing enough information to determine
-  how many parameters our models should contain.
-  
 * Definimos as arquiteturas de rede
    sem especificar a dimensionalidade de entrada.
 * Adicionamos camadas sem especificar
@@ -30,7 +22,7 @@ waiting until the first time we pass data through the model,
 to infer the sizes of each layer on the fly.
 
 Você pode se surpreender com o fato de nosso código ser executado.
-Afinal, não há como a estrutura de aprendizado profundo
+Afinal, não há como o *framework* de *Deep Learning*
 poderia dizer qual seria a dimensionalidade de entrada de uma rede.
 O truque aqui é que o framework * adia a inicialização *,
 esperando até a primeira vez que passamos os dados pelo modelo,
@@ -244,5 +236,5 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzOTM5Njg0NCwxMTM1NTg2Nzc0XX0=
+eyJoaXN0b3J5IjpbMTkyOTM1MjQ1LDExMzU1ODY3NzRdfQ==
 -->
