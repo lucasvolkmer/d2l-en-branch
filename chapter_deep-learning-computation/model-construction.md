@@ -437,12 +437,6 @@ dicionário para encontrar submódulos cujo
 os parâmetros também precisam ser inicializados.
 :end_tab:
 
-When our `MySequential`'s forward propagation function is invoked,
-each added block is executed
-in the order in which they were added.
-We can now reimplement an MLP
-using our `MySequential` class.
-
 Quando a função de propagação direta de nosso `MySequential` é invocada,
 cada bloco adicionado é executado
 na ordem em que foram adicionados.
@@ -471,18 +465,12 @@ net = MySequential(
 net(X)
 ```
 
-Note that this use of `MySequential`
-is identical to the code we previously wrote
-for the `Sequential` class
-(as described in :numref:`sec_mlp_concise`).
-
 Observe que este uso de `MySequential`
 é idêntico ao código que escrevemos anteriormente
 para a classe `Sequential`
-(conforme descrito em: numref: `sec_mlp_concise`).
+(conforme descrito em :numref:`sec_mlp_concise`).
 
-
-## Executing Code in the Forward Propagation Function
+## Execução de Código na Função de Propagação Direta
 
 The `Sequential` class makes model construction easy,
 allowing us to assemble new architectures
@@ -888,6 +876,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA2ODUxOTg1LDgzNzkyNjg0NywxNzcwMj
+eyJoaXN0b3J5IjpbMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMj
 gwOTc0LC0xNjM3ODI5NDkwXX0=
 -->
