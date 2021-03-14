@@ -595,8 +595,8 @@ print(net[1].weight.data()[0] == net[2].weight.data()[0])
 
 ```{.python .input}
 #@tab pytorch
-# We need to give the shared layer a name so that we can refer to its
-# parameters
+# Precisamos dar as camadas compartilhadas um nome 
+# para que possamos referenciar seus parâmetros 
 
 #
 shared = nn.Linear(8, 8)
@@ -605,11 +605,11 @@ net = nn.Sequential(nn.Linear(4, 8), nn.ReLU(),
                     shared, nn.ReLU(),
                     nn.Linear(8, 1))
 net(X)
-# Check whether the parameters are the same
+# Checar se são os mesmos parâmetros
 print(net[2].weight.data[0] == net[4].weight.data[0])
 net[2].weight.data[0, 0] = 100
-# Make sure that they are actually the same object rather than just having the
-# same value
+# Garantindo que são o mesmo objeto ao invés de ter 
+# apenas o mesmo valor
 print(net[2].weight.data[0] == net[4].weight.data[0])
 ```
 
@@ -626,7 +626,7 @@ net = tf.keras.models.Sequential([
 ])
 
 net(X)
-# Check whether the parameters are different
+# Checando se os parâmetros são diferentes
 print(len(net.layers) == 3)
 ```
 
@@ -660,17 +660,17 @@ durante a retropropagação.
 1. Por que compartilhar parâmetros é uma boa ideia?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/56)
+[Discussão](https://discuss.d2l.ai/t/56)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/57)
+[Discussão](https://discuss.d2l.ai/t/57)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/269)
+[Discussão](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkwOTQ5OSwtNzE5NDU4NDgxLDI1MDE4OD
-U5NywtMTU5Mzc4NzcyOCwxNjQyOTc4NTAxXX0=
+eyJoaXN0b3J5IjpbMjI3MjUyNjYwLC03MTk0NTg0ODEsMjUwMT
+g4NTk3LC0xNTkzNzg3NzI4LDE2NDI5Nzg1MDFdfQ==
 -->
