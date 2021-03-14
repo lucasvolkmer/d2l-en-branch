@@ -8,11 +8,23 @@ by a factor of 1000 every decade since 2000.
 This offers great opportunities but it also suggests
 a significant need to provide such performance.
 
+Em: numref: `tab_intro_decade`, discutimos o rápido crescimento
+de computação nas últimas duas décadas.
+Em suma, o desempenho da GPU aumentou
+por um fator de 1000 a cada década desde 2000.
+Isso oferece ótimas oportunidades, mas também sugere
+uma necessidade significativa de fornecer tal desempenho.
+
 
 In this section, we begin to discuss how to harness
 this computational performance for your research.
 First by using single GPUs and at a later point,
 how to use multiple GPUs and multiple servers (with multiple GPUs).
+
+Nesta seção, começamos a discutir como aproveitar
+este desempenho computacional para sua pesquisa.
+Primeiro usando GPUs únicas e, posteriormente,
+como usar várias GPUs e vários servidores (com várias GPUs).
 
 Specifically, we will discuss how
 to use a single NVIDIA GPU for calculations.
@@ -22,6 +34,15 @@ and follow the prompts to set the appropriate path.
 Once these preparations are complete,
 the `nvidia-smi` command can be used
 to view the graphics card information.
+
+Especificamente, discutiremos como
+para usar uma única GPU NVIDIA para cálculos.
+Primeiro, certifique-se de ter pelo menos uma GPU NVIDIA instalada.
+Em seguida, baixe o [driver NVIDIA e CUDA] (https://developer.nvidia.com/cuda-downloads)
+e siga as instruções para definir o caminho apropriado.
+Assim que esses preparativos forem concluídos,
+o comando `nvidia-smi` pode ser usado
+para ver as informações da placa gráfica.
 
 ```{.python .input}
 #@tab all
@@ -34,6 +55,12 @@ looks almost identical to a NumPy `ndarray`.
 But there are a few crucial differences.
 One of the key features that distinguishes MXNet
 from NumPy is its support for diverse hardware devices.
+
+Você deve ter notado que um tensor MXNet
+parece quase idêntico a um NumPy `ndarray`.
+Mas existem algumas diferenças cruciais.
+Um dos principais recursos que distinguem o MXNet
+da NumPy é o seu suporte para diversos dispositivos de hardware.
 
 In MXNet, every array has a context.
 So far, by default, all variables
@@ -48,6 +75,19 @@ transferring data between devices.
 For example, when training neural networks on a server with a GPU,
 we typically prefer for the model's parameters to live on the GPU.
 
+No MXNet, cada array possui um contexto.
+Até agora, por padrão, todas as variáveis
+e computação associada
+foram atribuídos à CPU.
+Normalmente, outros contextos podem ser várias GPUs.
+As coisas podem ficar ainda mais complicadas quando
+nós implantamos trabalhos em vários servidores.
+Ao atribuir matrizes a contextos de forma inteligente,
+podemos minimizar o tempo gasto
+transferência de dados entre dispositivos.
+Por exemplo, ao treinar redes neurais em um servidor com uma GPU,
+normalmente preferimos que os parâmetros do modelo residam na GPU.
+
 Next, we need to confirm that
 the GPU version of MXNet is installed.
 If a CPU version of MXNet is already installed,
@@ -58,6 +98,17 @@ according to your CUDA version.
 Assuming you have CUDA 10.0 installed,
 you can install the MXNet version
 that supports CUDA 10.0 via `pip install mxnet-cu100`.
+
+Em seguida, precisamos confirmar que
+a versão GPU do MXNet está instalada.
+Se uma versão de CPU do MXNet já estiver instalada,
+precisamos desinstalá-lo primeiro.
+Por exemplo, use o comando `pip uninstall mxnet`,
+em seguida, instale a versão MXNet correspondente
+de acordo com sua versão CUDA.
+Supondo que você tenha o CUDA 10.0 instalado,
+você pode instalar a versão MXNet
+que suporta CUDA 10.0 via `pip install mxnet-cu100`.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -74,6 +125,19 @@ transferring data between devices.
 For example, when training neural networks on a server with a GPU,
 we typically prefer for the model's parameters to live on the GPU.
 
+No PyTorch, cada array possui um dispositivo, frequentemente o referimos como um contexto.
+Até agora, por padrão, todas as variáveis
+e computação associada
+foram atribuídos à CPU.
+Normalmente, outros contextos podem ser várias GPUs.
+As coisas podem ficar ainda mais complicadas quando
+nós implantamos trabalhos em vários servidores.
+Ao atribuir matrizes a contextos de forma inteligente,
+podemos minimizar o tempo gasto
+transferência de dados entre dispositivos.
+Por exemplo, ao treinar redes neurais em um servidor com uma GPU,
+normalmente preferimos que os parâmetros do modelo residam na GPU.
+
 Next, we need to confirm that
 the GPU version of PyTorch is installed.
 If a CPU version of PyTorch is already installed,
@@ -84,6 +148,17 @@ according to your CUDA version.
 Assuming you have CUDA 10.0 installed,
 you can install the PyTorch version
 that supports CUDA 10.0 via `pip install torch-cu100`.
+
+Em seguida, precisamos confirmar que
+a versão GPU do PyTorch está instalada.
+Se uma versão CPU do PyTorch já estiver instalada,
+precisamos desinstalá-lo primeiro.
+Por exemplo, use o comando `pip uninstall torch`,
+em seguida, instale a versão correspondente do PyTorch
+de acordo com sua versão CUDA.
+Supondo que você tenha o CUDA 10.0 instalado,
+você pode instalar a versão PyTorch
+compatível com CUDA 10.0 via `pip install torch-cu100`.
 :end_tab:
 
 To run the programs in this section,
@@ -94,6 +169,15 @@ by using the AWS EC2 multi-GPU instances.
 Almost all other sections do *not* require multiple GPUs.
 Instead, this is simply to illustrate
 how data flow between different devices.
+
+Para executar os programas desta seção,
+você precisa de pelo menos duas GPUs.
+Observe que isso pode ser extravagante para a maioria dos computadores desktop
+mas está facilmente disponível na nuvem, por exemplo,
+usando as instâncias multi-GPU do AWS EC2.
+Quase todas as outras seções * não * requerem várias GPUs.
+Em vez disso, isso é simplesmente para ilustrar
+como os dados fluem entre diferentes dispositivos.
 
 ## Computing Devices
 
@@ -521,5 +605,5 @@ In short, as long as all data and parameters are on the same device, we can lear
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzYyMTU3NzZdfQ==
+eyJoaXN0b3J5IjpbMTE3OTYyOTIwN119
 -->
