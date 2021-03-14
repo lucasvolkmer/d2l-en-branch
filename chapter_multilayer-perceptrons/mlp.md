@@ -201,17 +201,16 @@ $$
 $$
 
 
-In order to realize the potential of multilayer architectures,
-we need one more key ingredient: a
-nonlinear *activation function* $\sigma$
-to be applied to each hidden unit
-following the affine transformation.
-The outputs of activation functions
-(e.g., $\sigma(\cdot)$)
-are called *activations*.
-In general, with activation functions in place,
-it is no longer possible to collapse our MLP into a linear model:
-
+Para perceber o potencial das arquiteturas multicamadas,
+precisamos de mais um ingrediente chave: a
+*função de ativação* não linear $\sigma$
+a ser aplicada a cada unidade oculta
+seguindo a transformação afim.
+As saídas das funções de ativação
+(por exemplo, $\sigma(\cdot)$)
+são chamadas de *ativações*.
+Em geral, com as funções de ativação implementadas,
+não é mais possível reduzir nosso MLP em um modelo linear:
 
 $$
 \begin{aligned}
@@ -590,7 +589,7 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MTA5NjAyNSwxNjM3ODEzNTgzLC01MT
-M2MzYzNzksLTE0ODQzOTk4NzgsLTIwNjAxMDE1MzQsODQ5OTk1
-NzEwLDcxMzExNTk0NV19
+eyJoaXN0b3J5IjpbMTM0OTIwMjY0MSwyMDQxMDk2MDI1LDE2Mz
+c4MTM1ODMsLTUxMzYzNjM3OSwtMTQ4NDM5OTg3OCwtMjA2MDEw
+MTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX0=
 -->
