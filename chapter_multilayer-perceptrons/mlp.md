@@ -570,16 +570,16 @@ milhares de linhas de C e Fortran.
 
 ## Resumo
 
-* MLP adds one or multiple fully-connected hidden layers between the output and input layers and transforms the output of the hidden layer via an activation function.
-* Commonly-used activation functions include the ReLU function, the sigmoid function, and the tanh function.
+* O MLP adiciona uma ou várias camadas ocultas totalmente conectadas entre as camadas de saída e de entrada e transforma a saída da camada oculta por meio de uma função de ativação.
+* As funções de ativação comumente usadas incluem a função ReLU, a função sigmoid e a função tanh.
 
 
-## Exercises
+## Exercícios
 
-1. Compute the derivative of the pReLU activation function.
-1. Show that an MLP using only ReLU (or pReLU) constructs a continuous piecewise linear function.
-1. Show that $\operatorname{tanh}(x) + 1 = 2 \operatorname{sigmoid}(2x)$.
-1. Assume that we have a nonlinearity that applies to one minibatch at a time. What kinds of problems do you expect this to cause?
+1. Calcule a derivada da função de ativação pReLU.
+1. Mostre que um MLP usando apenas ReLU (ou pReLU) constrói uma função linear contínua por partes.
+1. Mostre que $\operatorname{tanh}(x) + 1 = 2 \operatorname{sigmoid}(2x)$.
+1. Suponha que temos uma não linearidade que se aplica a um *minibatch* por vez. Que tipo de problemas você espera que isso cause?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/90)
@@ -593,7 +593,7 @@ milhares de linhas de C e Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NjQ1NzQ4LC0xNDQxNzc4NDA0LDEzND
+eyJoaXN0b3J5IjpbMTE3NTA1ODMwLC0xNDQxNzc4NDA0LDEzND
 kyMDI2NDEsMjA0MTA5NjAyNSwxNjM3ODEzNTgzLC01MTM2MzYz
 NzksLTE0ODQzOTk4NzgsLTIwNjAxMDE1MzQsODQ5OTk1NzEwLD
 cxMzExNTk0NV19
