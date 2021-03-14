@@ -396,15 +396,15 @@ mesmo quando o argumento é negativo:
 
 $$\operatorname{pReLU}(x) = \max(0, x) + \alpha \min(0, x).$$
 
-### Sigmoid Function
+### Função Sigmoid
 
-[**The *sigmoid function* transforms its inputs**],
-for which values lie in the domain $\mathbb{R}$,
-(**to outputs that lie on the interval (0, 1).**)
-For that reason, the sigmoid is
-often called a *squashing function*:
-it squashes any input in the range (-inf, inf)
-to some value in the range (0, 1):
+[**A *função sigmoid* transforma suas entradas**],
+para as quais os valores estão no domínio $\mathbb{R}$,
+(**para saídas que estão no intervalo (0, 1).**)
+Por esse motivo, o sigmoid é
+frequentemente chamada de *função de esmagamento*:
+ele esmaga qualquer entrada no intervalo (-inf, inf)
+para algum valor no intervalo (0, 1):
 
 $$\operatorname{sigmoid}(x) = \frac{1}{1 + \exp(-x)}.$$
 
@@ -592,8 +592,8 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MDM2OTE0MCwxMzQ5MjAyNjQxLDIwND
-EwOTYwMjUsMTYzNzgxMzU4MywtNTEzNjM2Mzc5LC0xNDg0Mzk5
-ODc4LC0yMDYwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5NDVdfQ
-==
+eyJoaXN0b3J5IjpbLTE0NDE3Nzg0MDQsMTM0OTIwMjY0MSwyMD
+QxMDk2MDI1LDE2Mzc4MTM1ODMsLTUxMzYzNjM3OSwtMTQ4NDM5
+OTg3OCwtMjA2MDEwMTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX
+0=
 -->
