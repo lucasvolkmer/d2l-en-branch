@@ -87,15 +87,6 @@ ao definir nosso próprio bloco,
 só precisamos nos preocupar com os parâmetros
 e a função de propagação direta.
 
-To begin, we revisit the code
-that we used to implement MLPs
-(:numref:`sec_mlp_concise`).
-The following code generates a network
-with one fully-connected hidden layer
-with 256 units and ReLU activation,
-followed by a fully-connected output layer
-with 10 units (no activation function).
-
 Para começar, revisitamos o código
 que usamos para implementar MLPs
 (:numref:`sec_mlp_concise`).
@@ -1052,5 +1043,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTQ4MjEwNzZdfQ==
+eyJoaXN0b3J5IjpbMTc2NjQzODEyXX0=
 -->
