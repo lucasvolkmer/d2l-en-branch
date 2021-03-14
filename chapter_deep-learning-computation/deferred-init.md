@@ -163,10 +163,6 @@ a estrutura pode finalmente inicializar os parâmetros.
 
 ## Exercícios
 
-1. What happens if you specify the input dimensions to the first layer but not to subsequent layers? Do you get immediate initialization?
-2. What happens if you specify mismatching dimensions?
-3. What would you need to do if you have input of varying dimensionality? Hint: look at the parameter tying.
-
 1. O que acontece se você especificar as dimensões de entrada para a primeira camada, mas não para as camadas subsequentes? Você consegue inicialização imediata?
 1. O que acontece se você especificar dimensões incompatíveis?
 1. O que você precisa fazer se tiver dados de dimensionalidade variável? Dica: observe a vinculação de parâmetros.
@@ -179,6 +175,6 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY2MTYyODYsNjQ1Nzg1NDQyLDExMzU1OD
-Y3NzRdfQ==
+eyJoaXN0b3J5IjpbLTM4NzQyNzg1MSw2NDU3ODU0NDIsMTEzNT
+U4Njc3NF19
 -->
