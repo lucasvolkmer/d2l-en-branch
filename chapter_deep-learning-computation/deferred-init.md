@@ -14,13 +14,6 @@ que podem não parecer que deveriam funcionar:
    antes de fornecer informações suficientes para determinar
    quantos parâmetros nossos modelos devem conter.
 
-You might be surprised that our code runs at all.
-After all, there is no way the deep learning framework
-could tell what the input dimensionality of a network would be.
-The trick here is that the framework *defers initialization*,
-waiting until the first time we pass data through the model,
-to infer the sizes of each layer on the fly.
-
 Você pode se surpreender com o fato de nosso código ser executado.
 Afinal, não há como o *framework* de *Deep Learning*
 poderia dizer qual seria a dimensionalidade de entrada de uma rede.
@@ -49,7 +42,7 @@ desde a dimensionalidade de entrada
 (ou seja, a resolução de uma imagem)
 afetará a dimensionalidade
 de cada camada subsequente.
-Conseqüentemente, a capacidade de definir parâmetros
+Consequentemente, a capacidade de definir parâmetros
 sem a necessidade de saber,
 no momento de escrever o código,
 qual é a dimensionalidade
@@ -236,5 +229,5 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NDAzNTczLDExMzU1ODY3NzRdfQ==
+eyJoaXN0b3J5IjpbNTE0Nzk3MzgyLDExMzU1ODY3NzRdfQ==
 -->
