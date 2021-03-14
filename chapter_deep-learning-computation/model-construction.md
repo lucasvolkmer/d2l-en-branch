@@ -57,7 +57,98 @@ and remains a go-to architecture for many vision tasks.
 Similar architectures in which layers are arranged
 in various repeating patterns
 are now ubiquitous in other domains,
+including natural language processing and speechQuando introduzimos as redes neurais pela primeira vez,
+focamos em modelos lineares com uma única saída.
+Aqui, todo o modelo consiste em apenas um único neurônio.
+Observe que um único neurônio
+(i) leva algum conjunto de entradas;
+(ii) gera uma saída escalar correspondente;
+e (iii) tem um conjunto de parâmetros associados que podem ser atualizados
+para otimizar alguma função objetivo de interesse.
+Então, quando começamos a pensar em redes com múltiplas saídas,
+nós alavancamos a aritmética vetorizada
+para caracterizar uma camada inteira de neurônios.
+Assim como os neurônios individuais,
+camadas (i) recebem um conjunto de entradas,
+(ii) gerar resultados correspondentes,
+e (iii) são descritos por um conjunto de parâmetros ajustáveis.
+Quando trabalhamos com a regressão softmax,
+uma única camada era ela própria o modelo.
+No entanto, mesmo quando subsequentemente
+introduziu MLPs,
+ainda podemos pensar no modelo como
+mantendo esta mesma estrutura básica.
+
+Interestingly, for MLPs,
+both the entire model and its constituent layers
+share this structure.
+The entire model takes in raw inputs (the features),
+generates outputs (the predictions),
+and possesses parameters
+(the combined parameters from all constituent layers).
+Likewise, each individual layer ingests inputs
+(supplied by the previous layer)
+generates outputs (the inputs to the subsequent layer),
+and possesses a set of tunable parameters that are updated
+according to the signal that flows backwards
+from the subsequent layer.
+
+Curiosamente, para MLPs,
+todo o modelo e suas camadas constituintes
+compartilham essa estrutura.
+Todo o modelo recebe entradas brutas (os recursos),
+gera resultados (as previsões),
+e possui parâmetros
+(os parâmetros combinados de todas as camadas constituintes).
+Da mesma forma, cada camada individual ingere entradas
+(fornecido pela camada anterior)
+gera saídas (as entradas para a camada subsequente),
+e possui um conjunto de parâmetros ajustáveis que são atualizados
+de acordo com o sinal que flui para trás
+da camada subsequente.
+
+
+While you might think that neurons, layers, and models
+give us enough abstractions to go about our business,
+it turns out that we often find it convenient
+to speak about components that are
+larger than an individual layer
+but smaller than the entire model.
+For example, the ResNet-152 architecture,
+which is wildly popular in computer vision,
+possesses hundreds of layers.
+These layers consist of repeating patterns of *groups of layers*. Implementing such a network one layer at a time can grow tedious.
+This concern is not just hypothetical---such
+design patterns are common in practice.
+The ResNet architecture mentioned above
+won the 2015 ImageNet and COCO computer vision competitions
+for both recognition and detection :cite:`He.Zhang.Ren.ea.2016`
+and remains a go-to architecture for many vision tasks.
+Similar architectures in which layers are arranged
+in various repeating patterns
+are now ubiquitous in other domains,
 including natural language processing and speech.
+
+Embora você possa pensar que neurônios, camadas e modelos
+dê-nos abstrações suficientes para cuidar de nossos negócios,
+Acontece que muitas vezes achamos conveniente
+para falar sobre componentes que são
+maior do que uma camada individual
+mas menor do que o modelo inteiro.
+Por exemplo, a arquitetura ResNet-152,
+que é muito popular na visão computacional,
+possui centenas de camadas.
+Essas camadas consistem em padrões repetidos de * grupos de camadas *. Implementar uma camada de rede por vez pode se tornar tedioso.
+Essa preocupação não é apenas hipotética --- tal
+padrões de projeto são comuns na prática.
+A arquitetura ResNet mencionada acima
+venceu as competições de visão computacional ImageNet e COCO 2015
+para reconhecimento e detecção: cite: `He.Zhang.Ren.ea.2016`
+e continua sendo uma arquitetura indispensável para muitas tarefas de visão.
+Arquiteturas semelhantes nas quais as camadas são organizadas
+em vários padrões repetidos
+agora são onipresentes em outros domínios,
+incluindo processamento de linguagem natural e fala.
 
 To implement these complex networks,
 we introduce the concept of a neural network *block*.
@@ -759,3 +850,6 @@ The best way to speed up Python is by avoiding it altogether.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzMzMTEwNzY0XX0=
+-->
