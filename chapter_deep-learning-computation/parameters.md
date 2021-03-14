@@ -202,12 +202,6 @@ net.get_weights()[1]
 
 ### Coletando Parâmetros de Blocos Aninhados
 
-Let us see how the parameter naming conventions work
-if we nest multiple blocks inside each other.
-For that we first define a function that produces blocks
-(a block factory, so to speak) and then
-combine these inside yet larger blocks.
-
 Vamos ver como funcionam as convenções de nomenclatura de parâmetros
 se aninharmos vários blocos uns dentro dos outros.
 Para isso, primeiro definimos uma função que produz blocos
@@ -273,9 +267,6 @@ rgnet.add(tf.keras.layers.Dense(1))
 rgnet(X)
 ```
 
-Now that we have designed the network,
-let us see how it is organized.
-
 Agora que projetamos a rede,
 vamos ver como está organizado.
 
@@ -293,14 +284,6 @@ print(rgnet)
 #@tab tensorflow
 print(rgnet.summary())
 ```
-
-Since the layers are hierarchically nested,
-we can also access them as though
-indexing through nested lists.
-For instance, we can access the first major block,
-within it the second sub-block,
-and within that the bias of the first layer,
-with as follows.
 
 Uma vez que as camadas são aninhadas hierarquicamente,
 também podemos acessá-los como se
@@ -324,7 +307,7 @@ rgnet[0][1][0].bias.data
 rgnet.layers[0].layers[1].layers[1].weights[1]
 ```
 
-## Parameter Initialization
+## Inicialização de Para
 
 Now that we know how to access the parameters,
 let us look at how to initialize them properly.
@@ -770,5 +753,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0Mjk3ODUwMV19
+eyJoaXN0b3J5IjpbLTI1NjU2NTYyMSwxNjQyOTc4NTAxXX0=
 -->
