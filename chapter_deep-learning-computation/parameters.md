@@ -40,7 +40,7 @@ npx.set_np()
 net = nn.Sequential()
 net.add(nn.Dense(8, activation='relu'))
 net.add(nn.Dense(1))
-net.initialize()  # Use o método
+net.initialize()  # Use o método de inicialização padrão
 
 X = np.random.uniform(size=(2, 4))
 net(X)  # Forward computation
@@ -668,6 +668,6 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMTU0MTMzNywtMTU5Mzc4NzcyOCwxNj
-QyOTc4NTAxXX0=
+eyJoaXN0b3J5IjpbMjUwMTg4NTk3LC0xNTkzNzg3NzI4LDE2ND
+I5Nzg1MDFdfQ==
 -->
