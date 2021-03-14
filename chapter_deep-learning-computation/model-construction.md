@@ -779,6 +779,18 @@ Moreover, we might want to perform
 arbitrary mathematical operations,
 not simply relying on predefined neural network layers.
 
+A classe `Sequential` facilita a construção do modelo,
+nos permitindo montar novas arquiteturas
+sem ter que definir nossa própria classe.
+No entanto, nem todas as arquiteturas são cadeias simples.
+Quando uma maior flexibilidade é necessária,
+vamos querer definir nossos próprios blocos.
+Por exemplo, podemos querer executar
+Fluxo de controle do Python dentro da função de propagação direta.
+Além disso, podemos querer realizar
+operações matemáticas arbitrárias,
+não simplesmente depender de camadas de rede neural predefinidas.
+
 You might have noticed that until now,
 all of the operations in our networks
 have acted upon our network's activations
@@ -795,6 +807,23 @@ where $\mathbf{x}$ is the input, $\mathbf{w}$ is our parameter,
 and $c$ is some specified constant
 that is not updated during optimization.
 So we implement a `FixedHiddenMLP` class as follows.
+
+Você deve ter notado que até agora,
+todas as operações em nossas redes
+agiram de acordo com as ativações de nossa rede
+e seus parâmetros.
+Às vezes, no entanto, podemos querer
+incorporar termos
+que não são resultado de camadas anteriores
+nem parâmetros atualizáveis.
+Chamamos isso de * parâmetros constantes *.
+Digamos, por exemplo, que queremos uma camada
+que calcula a função
+$f(\mathbf{x},\mathbf{w}) = c \cdot \mathbf{w}^\top \mathbf{x}$,
+onde $\mathbf{x}$ is the input, $\mathbf{w}$ é nosso parâmetro,
+e $ c $ é alguma constante especificada
+que não é atualizado durante a otimização.
+Portanto, implementamos uma classe `FixedHiddenMLP` como segue.
 
 ```{.python .input}
 class FixedHiddenMLP(nn.Block):
@@ -878,6 +907,15 @@ and thus it is never updated by backpropagation.
 The network then passes the output of this "fixed" layer
 through a fully-connected layer.
 
+Neste modelo `FixedHiddenMLP`,
+implementamos uma camada oculta cujos pesos
+(`self.rand_weight`) são inicializados aleatoriamente
+na instanciação e daí em diante constantes.
+Este peso não é um parâmetro do modelo
+e, portanto, nunca é atualizado por retropropagação.
+A rede então passa a saída desta camada "fixa"
+através de uma camada totalmente conectada.
+
 Note that before returning the output,
 our model did something unusual.
 We ran a while-loop, testing
@@ -892,6 +930,21 @@ in any real-world task.
 Our point is only to show you how to integrate
 arbitrary code into the flow of your
 neural network computations.
+
+Observe que antes de retornar a saída,
+nosso modelo fez algo incomum.
+Executamos um loop while, testando
+na condição de que sua norma $ L_1 $ seja maior que $ 1 $,
+e dividindo nosso vetor de produção por $ 2 $
+até que satisfizesse a condição.
+Finalmente, retornamos a soma das entradas em `X`.
+Até onde sabemos, nenhuma rede neural padrão
+executa esta operação.
+Observe que esta operação em particular pode não ser útil
+em qualquer tarefa do mundo real.
+Nosso objetivo é apenas mostrar como integrar
+código arbitrário no fluxo de seu
+cálculos de rede neural.
 
 ```{.python .input}
 net = FixedHiddenMLP()
@@ -909,6 +962,11 @@ We can mix and match various
 ways of assembling blocks together.
 In the following example, we nest blocks
 in some creative ways.
+
+Podemos misturar e combinar vários
+maneiras de montar blocos juntos.
+No exemplo a seguir, aninhamos blocos
+de algumas maneiras criativas.
 
 ```{.python .input}
 class NestMLP(nn.Block):
@@ -979,6 +1037,19 @@ we may worry that our extremely fast GPU(s)
 might have to wait until a puny CPU
 runs Python code before it gets another job to run.
 The best way to speed up Python is by avoiding it altogether.
+
+O leitor ávido pode começar a se preocupar
+sobre a eficiência de algumas dessas operações.
+Afinal, temos muitas pesquisas de dicionário,
+execução de código e muitas outras coisas Pythônicas
+ocorrendo no que deveria ser
+uma biblioteca de aprendizado profundo de alto desempenho.
+Os problemas do [bloqueio do interpretador global] do Python (https://wiki.python.org/moin/GlobalInterpreterLock) são bem conhecidos.
+No contexto de aprendizagem profunda,
+podemos nos preocupar que nossas GPU (s) extremamente rápidas
+pode ter que esperar até uma CPU insignificante
+executa o código Python antes de obter outro trabalho para ser executado.
+A melhor maneira de acelerar o Python é evitá-lo completamente.
 
 One way that Gluon does this is by allowing for
 *hybridization*, which will be described later.
@@ -1051,5 +1122,5 @@ The best way to speed up Python is by avoiding it altogether.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjMxNTM3MDBdfQ==
+eyJoaXN0b3J5IjpbLTEwMjY4MDc1NjZdfQ==
 -->
