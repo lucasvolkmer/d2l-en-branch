@@ -563,11 +563,6 @@ a mecânica de diferenciação automática.
 
 ## Parâmetros *Tied*
 
-Often, we want to share parameters across multiple layers.
-Let us see how to do this elegantly.
-In the following we allocate a dense layer
-and then use its parameters specifically
-to set those of another layer.
 
 Frequentemente, queremos compartilhar parâmetros em várias camadas.
 Vamos ver como fazer isso com elegância.
@@ -662,7 +657,7 @@ e a terceira camada oculta são adicionadas juntas
 durante a retropropagação.
 :end_tab:
 
-## Summary
+## Sumário
 
 * We have several ways to access, initialize, and tie model parameters.
 * We can use custom initialization.
@@ -695,5 +690,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NjY3NTg5NywxNjQyOTc4NTAxXX0=
+eyJoaXN0b3J5IjpbLTE1OTM3ODc3MjgsMTY0Mjk3ODUwMV19
 -->
