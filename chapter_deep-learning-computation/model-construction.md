@@ -58,20 +58,8 @@ em vários padrões repetidos
 agora são onipresentes em outros domínios,
 incluindo processamento de linguagem natural e fala.
 
-To implement these complex networks,
-we introduce the concept of a neural network *block*.
-A block could describe a single layer,
-a component consisting of multiple layers,
-or the entire model itself!
-One benefit of working with the block abstraction
-is that they can be combined into larger artifacts,
-often recursively. This is illustrated in :numref:`fig_blocks`. By defining code to generate blocks
-of arbitrary complexity on demand,
-we can write surprisingly compact code
-and still implement complex neural networks.
-
 Para implementar essas redes complexas,
-introduzimos o conceito de uma rede neural *bloco*.
+introduzimos o conceito de uma rede neural *block*.
 Um bloco pode descrever uma única camada,
 um componente que consiste em várias camadas,
 ou o próprio modelo inteiro!
@@ -100,7 +88,7 @@ when defining our own block,
 we only need to worry about parameters
 and the forward propagation function.
 
-Do ponto de vista da programação, um bloco é representado por uma * classe *.
+Do ponto de vista da programação, um bloco é representado por uma *classe*.
 Qualquer subclasse dele deve definir uma função de propagação direta
 que transforma sua entrada em saída
 e deve armazenar todos os parâmetros necessários.
@@ -109,7 +97,7 @@ Finalmente, um bloco deve possuir uma função de retropropagação,
 para fins de cálculo de gradientes.
 Felizmente, devido a alguma magia dos bastidores
 fornecido pela diferenciação automática
-(introduzido em: numref: `sec_autograd`)
+(introduzido em :numref:`sec_autograd`)
 ao definir nosso próprio bloco,
 só precisamos nos preocupar com os parâmetros
 e a função de propagação direta.
@@ -1079,5 +1067,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjQwMjc4MDldfQ==
+eyJoaXN0b3J5IjpbNjQ4MDA5Njc3XX0=
 -->
