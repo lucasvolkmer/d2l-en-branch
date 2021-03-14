@@ -44,7 +44,7 @@ No último capítulo,
 implementamos cada componente de um MLP do zero
 e até mostrou como aproveitar APIs de alto nível
 para lançar os mesmos modelos sem esforço.
-Para chegar tão longe tão rápido, nós * chamamos * as bibliotecas,
+Para chegar tão longe tão rápido, nós *chamamos* as bibliotecas,
 mas pulei detalhes mais avançados sobre *como eles funcionam*.
 Neste capítulo, vamos abrir a cortina,
 aprofundando os principais componentes da computação de *Deep Learning*,
@@ -70,6 +70,5 @@ use-gpu
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTkyMTg3MTIsLTE1NTEzMzc3NjddfQ
-==
+eyJoaXN0b3J5IjpbMjY3MTc3ODYyLC0xNTUxMzM3NzY3XX0=
 -->
