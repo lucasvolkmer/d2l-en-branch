@@ -104,26 +104,16 @@ net.collect_params()
 ```
 
 :begin_tab:`mxnet`
-As we can see, nothing has changed.
-When input dimensions are unknown,
-calls to initialize do not truly initialize the parameters.
-Instead, this call registers to MXNet that we wish
-(and optionally, according to which distribution)
-to initialize the parameters.
-
 Como podemos ver, nada mudou.
 Quando as dimensões de entrada são desconhecidas,
-chamadas para inicializar não inicializam verdadeiramente os parâmetros.
+chamadas para inicializar não inicializam corretamente os parâmetros.
 Em vez disso, esta chamada se registra no MXNet que desejamos
 (e opcionalmente, de acordo com qual distribuição)
 para inicializar os parâmetros.
 :end_tab:
 
-Next let us pass data through the network
-to make the framework finally initialize parameters.
-
 Em seguida, vamos passar os dados pela rede
-para fazer o framework finalmente inicializar os parâmetros.
+para fazer o *framework* finalmente inicializar os parâmetros.
 
 ```{.python .input}
 X = np.random.uniform(size=(2, 20))
@@ -192,5 +182,6 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ1Nzg1NDQyLDExMzU1ODY3NzRdfQ==
+eyJoaXN0b3J5IjpbMTkyNjczNDU3OSw2NDU3ODU0NDIsMTEzNT
+U4Njc3NF19
 -->
