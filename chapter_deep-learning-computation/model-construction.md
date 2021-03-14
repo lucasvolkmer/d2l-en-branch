@@ -166,7 +166,7 @@ anexando camadas no pedido
 que eles devem ser executados.
 Em suma, `nn.Sequential` define um tipo especial de` Block`,
 a classe que apresenta um bloco em Gluon.
-Ele mantém uma lista ordenada de `Block`s constituintes.
+Ele mantém uma lista ordenada de `Block` constituintes.
 A função `add` simplesmente facilita
 a adição de cada `Bloco` sucessivo à lista.
 Observe que cada camada é uma instância da classe `Dense`
@@ -1043,5 +1043,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NjQzODEyXX0=
+eyJoaXN0b3J5IjpbMzgwMzk1NTgzXX0=
 -->
