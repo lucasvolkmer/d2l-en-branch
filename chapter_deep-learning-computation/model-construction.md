@@ -685,19 +685,6 @@ pode ter que esperar até uma CPU insignificante
 executa o código Python antes de obter outro trabalho para ser executado.
 A melhor maneira de acelerar o Python é evitá-lo completamente.
 
-One way that Gluon does this is by allowing for
-*hybridization*, which will be described later.
-Here, the Python interpreter executes a block
-the first time it is invoked.
-The Gluon runtime records what is happening
-and the next time around it short-circuits calls to Python.
-This can accelerate things considerably in some cases
-but care needs to be taken when control flow (as above)
-leads down different branches on different passes through the net.
-We recommend that the interested reader checks out
-the hybridization section (:numref:`sec_hybridize`)
-to learn about compilation after finishing the current chapter.
-
 Uma maneira de o Gluon fazer isso é permitindo
 *hibridização*, que será descrita mais tarde.
 Aqui, o interpretador Python executa um bloco
@@ -713,27 +700,15 @@ para aprender sobre a compilação depois de terminar o capítulo atual.
 :end_tab:
 
 :begin_tab:`pytorch`
-The avid reader might start to worry
-about the efficiency of some of these operations.
-After all, we have lots of dictionary lookups,
-code execution, and lots of other Pythonic things
-taking place in what is supposed to be
-a high-performance deep learning library.
-The problems of Python's [global interpreter lock](https://wiki.python.org/moin/GlobalInterpreterLock) are well known. 
-In the context of deep learning,
-we may worry that our extremely fast GPU(s)
-might have to wait until a puny CPU
-runs Python code before it gets another job to run.
-
 O leitor ávido pode começar a se preocupar
 sobre a eficiência de algumas dessas operações.
 Afinal, temos muitas pesquisas de dicionário,
 execução de código e muitas outras coisas Pythônicas
 ocorrendo no que deveria ser
-uma biblioteca de aprendizado profundo de alto desempenho.
-Os problemas do [bloqueio do interpretador global] do Python (https://wiki.python.org/moin/GlobalInterpreterLock) são bem conhecidos.
-No contexto de aprendizagem profunda,
-podemos nos preocupar que nossas GPU (s) extremamente rápidas
+uma biblioteca de *Deep Learning* de alto desempenho.
+Os problemas do [bloqueio do interpretador global](https://wiki.python.org/moin/GlobalInterpreterLock) do Python  são bem conhecidos.
+No contexto de *Deep Learning*,
+podemos nos preocupar que nossas GPU(s) extremamente rápidas
 pode ter que esperar até uma CPU insignificante
 executa o código Python antes de obter outro trabalho para ser executado.
 :end_tab:
@@ -805,7 +780,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MzEwODE2NiwtODU2NjE0MzM3LDM1NT
+eyJoaXN0b3J5IjpbLTY5NTg4NzU1MSwtODU2NjE0MzM3LDM1NT
 Y2MzgxMSw4Mzc5MjY4NDcsMTc3MDI4MDk3NCwtMTYzNzgyOTQ5
 MF19
 -->
