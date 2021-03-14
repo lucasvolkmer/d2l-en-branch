@@ -277,12 +277,12 @@ Trataremos de argumentos mais rigorosos nos capítulos subsequentes.
 ## Funções de Ativação
 :label:`subsec_activation-functions`
 
-Activation functions decide whether a neuron should be activated or not by
-calculating the weighted sum and further adding bias with it.
-They are differentiable operators to transform input signals to outputs,
-while most of them add non-linearity.
-Because activation functions are fundamental to deep learning,
-(**let us briefly survey some common activation functions**).
+As funções de ativação decidem se um neurônio deve ser ativado ou não por
+calcular a soma ponderada e adicionar ainda o *bias* com ela.
+Eles são operadores diferenciáveis para transformar sinais de entrada em saídas,
+enquanto a maioria deles adiciona não linearidade.
+Como as funções de ativação são fundamentais para o *deep learning*,
+(**vamos examinar brevemente algumas funções de ativação comuns**).
 
 ```{.python .input}
 %matplotlib inline
@@ -305,23 +305,23 @@ from d2l import tensorflow as d2l
 import tensorflow as tf
 ```
 
-### ReLU Function
+### Função ReLU
 
-The most popular choice,
-due to both simplicity of implementation and
-its good performance on a variety of predictive tasks,
-is the *rectified linear unit* (*ReLU*).
-[**ReLU provides a very simple nonlinear transformation**].
-Given an element $x$, the function is defined
-as the maximum of that element and $0$:
+A escolha mais popular,
+devido à simplicidade de implementação e
+seu bom desempenho em uma variedade de tarefas preditivas,
+é a *unidade linear retificada* (*ReLU*).
+[**ReLU fornece uma transformação não linear muito simples**].
+Dado um elemento $x$, a função é definida
+como o máximo desse elemento e $0$:
 
 $$\operatorname{ReLU}(x) = \max(x, 0).$$
 
-Informally, the ReLU function retains only positive
-elements and discards all negative elements
-by setting the corresponding activations to 0.
-To gain some intuition, we can plot the function.
-As you can see, the activation function is piecewise linear.
+Informalmente, a função ReLU retém apenas
+elementos positivos e descarta todos os elementos negativos
+definindo as ativações correspondentes para 0.
+Para obter alguma intuição, podemos representar graficamente a função.
+Como você pode ver, a função de ativação é linear por partes.
 
 ```{.python .input}
 x = np.arange(-8.0, 8.0, 0.1)
@@ -591,8 +591,8 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5ODM1NTEzMSwxMzQ5MjAyNjQxLDIwND
-EwOTYwMjUsMTYzNzgxMzU4MywtNTEzNjM2Mzc5LC0xNDg0Mzk5
-ODc4LC0yMDYwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5NDVdfQ
-==
+eyJoaXN0b3J5IjpbLTE5MjkxNDE2MDAsMTM0OTIwMjY0MSwyMD
+QxMDk2MDI1LDE2Mzc4MTM1ODMsLTUxMzYzNjM3OSwtMTQ4NDM5
+OTg3OCwtMjA2MDEwMTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX
+0=
 -->
