@@ -95,30 +95,19 @@ print(net[2].state_dict())
 print(net.layers[2].weights)
 ```
 
-The output tells us a few important things.
-First, this fully-connected layer
-contains two parameters,
-corresponding to that layer's
-weights and biases, respectively.
-Both are stored as single precision floats (float32).
-Note that the names of the parameters
-allow us to uniquely identify
-each layer's parameters,
-even in a network containing hundreds of layers.
-
 A saída nos diz algumas coisas importantes.
 Primeiro, esta camada totalmente conectada
 contém dois parâmetros,
 correspondendo aos
 pesos e vieses, respectivamente.
-Ambos são armazenados como flutuadores de precisão simples (float32).
+Ambos são armazenados como *floats* de precisão simples (float32).
 Observe que os nomes dos parâmetros
 nos permitem identificar de forma única
 parâmetros de cada camada,
 mesmo em uma rede contendo centenas de camadas.
 
 
-### Targeted Parameters
+### Parâmetros Direcionados
 
 Note that each parameter is represented
 as an instance of the parameter class.
@@ -808,5 +797,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMjQ3MTg2NV19
+eyJoaXN0b3J5IjpbOTUyODk0MTc2XX0=
 -->
