@@ -159,14 +159,6 @@ net[2].weight.grad == None
 
 ### Todos os Parâmetros de Uma Vez
 
-When we need to perform operations on all parameters,
-accessing them one-by-one can grow tedious.
-The situation can grow especially unwieldy
-when we work with more complex blocks (e.g., nested blocks),
-since we would need to recurse
-through the entire tree to extract
-each sub-block's parameters. Below we demonstrate accessing the parameters of the first fully-connected layer vs. accessing all layers.
-
 Quando precisamos realizar operações em todos os parâmetros,
 acessá-los um por um pode se tornar tedioso.
 A situação pode ficar especialmente complicada
@@ -192,8 +184,6 @@ print(net.layers[1].weights)
 print(net.get_weights())
 ```
 
-This provides us with another way of accessing the parameters of the network as follows.
-
 Isso nos fornece outra maneira de acessar os parâmetros da rede como segue.
 
 ```{.python .input}
@@ -210,7 +200,7 @@ net.state_dict()['2.bias'].data
 net.get_weights()[1]
 ```
 
-### Collecting Parameters from Nested Blocks
+### Coletando Parâmetros de Blocos Aninhados
 
 Let us see how the parameter naming conventions work
 if we nest multiple blocks inside each other.
@@ -780,5 +770,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NzI5MjMzXX0=
+eyJoaXN0b3J5IjpbMTY0Mjk3ODUwMV19
 -->
