@@ -379,19 +379,20 @@ d2l.plot(x.numpy(), t.gradient(y, x).numpy(), 'x', 'grad of relu',
          figsize=(5, 2.5))
 ```
 
-The reason for using ReLU is that
-its derivatives are particularly well behaved:
-either they vanish or they just let the argument through.
-This makes optimization better behaved
-and it mitigated the well-documented problem
-of vanishing gradients that plagued
-previous versions of neural networks (more on this later).
 
-Note that there are many variants to the ReLU function,
-including the *parameterized ReLU* (*pReLU*) function :cite:`He.Zhang.Ren.ea.2015`.
-This variation adds a linear term to ReLU,
-so some information still gets through,
-even when the argument is negative:
+A razão para usar ReLU é que
+suas derivadas são particularmente bem comportadas:
+ou elas desaparecem ou simplesmente deixam * argumento passar.
+Isso torna a otimização melhor comportada
+e mitiga o problema bem documentado
+de gradientes de desaparecimento que atormentaram
+versões anteriores de redes neurais (mais sobre isso mais tarde).
+
+Observe que existem muitas variantes da função ReLU,
+incluindo a função *ReLU parametrizada* (*pReLU*) :cite:`He.Zhang.Ren.ea.2015`.
+Esta variação adiciona um termo linear ao ReLU,
+então algumas informações ainda são transmitidas,
+mesmo quando o argumento é negativo:
 
 $$\operatorname{pReLU}(x) = \max(0, x) + \alpha \min(0, x).$$
 
@@ -591,7 +592,7 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNjg2MjA1MywxMzQ5MjAyNjQxLDIwND
+eyJoaXN0b3J5IjpbLTM3MDM2OTE0MCwxMzQ5MjAyNjQxLDIwND
 EwOTYwMjUsMTYzNzgxMzU4MywtNTEzNjM2Mzc5LC0xNDg0Mzk5
 ODc4LC0yMDYwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5NDVdfQ
 ==
