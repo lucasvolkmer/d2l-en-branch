@@ -14,6 +14,20 @@ Thus it is time to learn how to load and store
 both individual weight vectors and entire models.
 This section addresses both issues.
 
+Até agora, discutimos como processar dados e como
+para construir, treinar e testar modelos de aprendizado profundo.
+No entanto, em algum momento, esperamos ser felizes o suficiente
+com os modelos aprendidos que queremos
+para salvar os resultados para uso posterior em vários contextos
+(talvez até mesmo para fazer previsões na implantação).
+Além disso, ao executar um longo processo de treinamento,
+a prática recomendada é salvar resultados intermediários periodicamente (pontos de verificação)
+para garantir que não perdemos vários dias de computação
+se tropeçarmos no cabo de alimentação do nosso servidor.
+Portanto, é hora de aprender como carregar e armazenar
+ambos os vetores de peso individuais e modelos inteiros.
+Esta seção aborda ambos os problemas.
+
 ## Loading and Saving Tensors
 
 For individual tensors, we can directly
@@ -21,6 +35,12 @@ invoke the `load` and `save` functions
 to read and write them respectively.
 Both functions require that we supply a name,
 and `save` requires as input the variable to be saved.
+
+Para tensores individuais, podemos diretamente
+invocar as funções `load` e` save`
+para ler e escrever respectivamente.
+Ambas as funções exigem que forneçamos um nome,
+e `save` requer como entrada a variável a ser salva.
 
 ```{.python .input}
 from mxnet import np, npx
@@ -52,6 +72,8 @@ np.save("x-file.npy", x)
 
 We can now read the data from the stored file back into memory.
 
+Agora podemos ler os dados do arquivo armazenado de volta na memória.
+
 ```{.python .input}
 x2 = npx.load('x-file')
 x2
@@ -71,6 +93,7 @@ x2
 
 We can store a list of tensors and read them back into memory.
 
+Podemos armazenar uma lista de tensores e lê-los de volta na memória.
 ```{.python .input}
 y = np.zeros(4)
 npx.save('x-files', [x, y])
@@ -98,6 +121,11 @@ We can even write and read a dictionary that maps
 from strings to tensors.
 This is convenient when we want
 to read or write all the weights in a model.
+
+Podemos até escrever e ler um dicionário que mapeia
+de cordas a tensores.
+Isso é conveniente quando queremos
+para ler ou escrever todos os pesos em um modelo.
 
 ```{.python .input}
 mydict = {'x': x, 'y': y}
@@ -276,3 +304,6 @@ Y_clone == Y
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/327)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTExMzEwMDQ2NDldfQ==
+-->
