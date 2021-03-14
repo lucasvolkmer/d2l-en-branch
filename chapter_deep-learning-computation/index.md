@@ -18,26 +18,6 @@ o comportamento de neurônios artificiais individuais
 para conceber redes em termos de camadas inteiras,
 e agora frequentemente projeta arquiteturas com *blocos* muito mais grosseiros em mente.
 
-So far, we have introduced some basic machine learning concepts,
-ramping up to fully-functional deep learning models.
-In the last chapter,
-we implemented each component of an MLP from scratch
-and even showed how to leverage high-level APIs
-to roll out the same models effortlessly.
-To get you that far that fast, we *called upon* the libraries,
-but skipped over more advanced details about *how they work*.
-In this chapter, we will peel back the curtain,
-digging deeper into the key components of deep learning computation,
-namely model construction, parameter access and initialization,
-designing custom layers and blocks, reading and writing models to disk,
-and leveraging GPUs to achieve dramatic speedups.
-These insights will move you from *end user* to *power user*,
-giving you the tools needed to reap the benefits
-of a mature deep learning library while retaining the flexibility
-to implement more complex models, including those you invent yourself!
-While this chapter does not introduce any new models or datasets,
-the advanced modeling chapters that follow rely heavily on these techniques.
-
 Até agora, apresentamos alguns conceitos básicos de aprendizado de máquina,
 evoluindo para modelos de *Deep Learning* totalmente funcionais.
 No último capítulo,
@@ -51,9 +31,9 @@ aprofundando os principais componentes da computação de *Deep Learning*,
 ou seja, construção de modelo, acesso de parâmetro e inicialização,
 projetando camadas e blocos personalizados, lendo e gravando modelos em disco,
 e aproveitando GPUs para obter acelerações dramáticas.
-Esses insights o moverão de *usuário final* para *usuário avançado*,
+Esses *insights* o moverão de *usuário final* para *usuário avançado*,
 dando a você as ferramentas necessárias para colher os benefícios
-de uma biblioteca de aprendizagem profunda madura, mantendo a flexibilidade
+de uma biblioteca de *Deep Learning* madura, mantendo a flexibilidade
 para implementar modelos mais complexos, incluindo aqueles que você mesmo inventa!
 Embora este capítulo não introduza nenhum novo modelo ou conjunto de dados,
 os capítulos de modelagem avançada que se seguem dependem muito dessas técnicas.
@@ -70,5 +50,5 @@ use-gpu
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY3MTc3ODYyLC0xNTUxMzM3NzY3XX0=
+eyJoaXN0b3J5IjpbMzIyNTI5NzI3LC0xNTUxMzM3NzY3XX0=
 -->
