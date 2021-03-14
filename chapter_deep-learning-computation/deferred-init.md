@@ -21,21 +21,6 @@ O truque aqui é que o *framework* adia a inicialização,
 esperando até a primeira vez que passamos os dados pelo modelo,
 para inferir os tamanhos de cada camada na hora.
 
-
-Later on, when working with convolutional neural networks,
-this technique will become even more convenient
-since the input dimensionality
-(i.e., the resolution of an image)
-will affect the dimensionality
-of each subsequent layer.
-Hence, the ability to set parameters
-without the need to know,
-at the time of writing the code,
-what the dimensionality is
-can greatly simplify the task of specifying
-and subsequently modifying our models.
-Next, we go deeper into the mechanics of initialization.
-
 Mais tarde, ao trabalhar com redes neurais convolucionais,
 esta técnica se tornará ainda mais conveniente
 desde a dimensionalidade de entrada
@@ -51,9 +36,7 @@ e subsequentemente modificando nossos modelos.
 A seguir, vamos nos aprofundar na mecânica da inicialização.
 
 
-## Instantiating a Network
-
-To begin, let us instantiate an MLP.
+## Instanciando a Rede
 
 Para começar, vamos instanciar um MLP.
 
@@ -229,5 +212,5 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE0Nzk3MzgyLDExMzU1ODY3NzRdfQ==
+eyJoaXN0b3J5IjpbLTE5MTY4NzIyMzIsMTEzNTU4Njc3NF19
 -->
