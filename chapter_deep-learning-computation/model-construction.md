@@ -57,7 +57,9 @@ and remains a go-to architecture for many vision tasks.
 Similar architectures in which layers are arranged
 in various repeating patterns
 are now ubiquitous in other domains,
-including natural language processing and speechQuando introduzimos as redes neurais pela primeira vez,
+including natural language processing and speech
+
+Quando introduzimos as redes neurais pela primeira vez,
 focamos em modelos lineares com uma única saída.
 Aqui, todo o modelo consiste em apenas um único neurônio.
 Observe que um único neurônio
@@ -1171,5 +1173,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMTI0ODcyMV19
+eyJoaXN0b3J5IjpbLTk5MTA1Njc1XX0=
 -->
