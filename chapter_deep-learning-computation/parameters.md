@@ -307,20 +307,12 @@ rgnet[0][1][0].bias.data
 rgnet.layers[0].layers[1].layers[1].weights[1]
 ```
 
-## Inicialização de Para
-
-Now that we know how to access the parameters,
-let us look at how to initialize them properly.
-We discussed the need for proper initialization in :numref:`sec_numerical_stability`.
-The deep learning framework provides default random initializations to its layers.
-However, we often want to initialize our weights
-according to various other protocols. The framework provides most commonly
-used protocols, and also allows to create a custom initializer.
+## Inicialização de Parâmetros
 
 Agora que sabemos como acessar os parâmetros,
 vamos ver como inicializá-los corretamente.
-Discutimos a necessidade de inicialização adequada em: numref: `sec_numerical_stability`.
-A estrutura de aprendizado profundo fornece inicializações aleatórias padrão para suas camadas.
+Discutimos a necessidade de inicialização adequada em :numref:`sec_numerical_stability`.
+A estrutura de *Deep Learning* fornece inicializações aleatórias padrão para suas camadas.
 No entanto, muitas vezes queremos inicializar nossos pesos
 de acordo com vários outros protocolos. A estrutura fornece mais comumente
 protocolos usados e também permite criar um inicializador personalizado.
@@ -753,5 +745,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NjU2NTYyMSwxNjQyOTc4NTAxXX0=
+eyJoaXN0b3J5IjpbMTk4NjE4NDA3OSwxNjQyOTc4NTAxXX0=
 -->
