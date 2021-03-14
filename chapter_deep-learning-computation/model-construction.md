@@ -199,7 +199,7 @@ nosso modelo instanciando um `keras.models.Sequential`, com camadas na ordem
 que eles devem ser executados passados como argumentos.
 Em suma, `Sequential` define um tipo especial de` keras.Model`,
 a classe que apresenta um bloco em Keras.
-Ele mantém uma lista ordenada de `Model`s constituintes.
+Ele mantém uma lista ordenada de `Model` constituintes.
 Observe que cada uma das duas camadas totalmente conectadas é uma instância da classe `Dense`
 que é uma subclasse de `Model`.
 A função de propagação direta (`call`) também é extremamente simples:
@@ -1006,5 +1006,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMTkxOTE2N119
+eyJoaXN0b3J5IjpbLTE2Mzg3OTYxNDBdfQ==
 -->
