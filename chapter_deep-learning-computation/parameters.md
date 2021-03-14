@@ -572,8 +572,8 @@ para definir os de outra camada.
 
 ```{.python .input}
 net = nn.Sequential()
-# Podemos  We need to give the shared layer a name so that we can refer to its
-# parameters
+# Precisamos dar as camadas compartilhadas um nome 
+# para que possamos referenciar seus parâmetros 
 shared = nn.Dense(8, activation='relu')
 net.add(nn.Dense(8, activation='relu'),
         shared,
@@ -584,10 +584,11 @@ net.initialize()
 X = np.random.uniform(size=(2, 20))
 net(X)
 
-# Check whether the parameters are the same
+# Checar se são os mesmos parâmetros
 print(net[1].weight.data()[0] == net[2].weight.data()[0])
 net[1].weight.data()[0, 0] = 100
-# Make sure that they are actually the same object rather than just having the
+# Garantindo que sã
+Make sure that they are actually the same object rather than just having the
 # same value
 print(net[1].weight.data()[0] == net[2].weight.data()[0])
 ```
@@ -668,6 +669,6 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMDM4Mzk5OCwtNzE5NDU4NDgxLDI1MD
+eyJoaXN0b3J5IjpbMTc2MDgxMzc0NCwtNzE5NDU4NDgxLDI1MD
 E4ODU5NywtMTU5Mzc4NzcyOCwxNjQyOTc4NTAxXX0=
 -->
