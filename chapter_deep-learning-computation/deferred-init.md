@@ -24,7 +24,7 @@ to infer the sizes of each layer on the fly.
 Você pode se surpreender com o fato de nosso código ser executado.
 Afinal, não há como o *framework* de *Deep Learning*
 poderia dizer qual seria a dimensionalidade de entrada de uma rede.
-O truque aqui é que o framework * adia a inicialização *,
+O truque aqui é que o *framework* adia a inicialização,
 esperando até a primeira vez que passamos os dados pelo modelo,
 para inferir os tamanhos de cada camada na hora.
 
@@ -236,5 +236,5 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyOTM1MjQ1LDExMzU1ODY3NzRdfQ==
+eyJoaXN0b3J5IjpbMTk2NDAzNTczLDExMzU1ODY3NzRdfQ==
 -->
