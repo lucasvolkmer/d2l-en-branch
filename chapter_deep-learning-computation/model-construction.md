@@ -211,15 +211,6 @@ que cada bloco deve fornecer:
     para executar o cálculo de propagação direta.
 1. Inicialize os parâmetros do modelo conforme necessário.
 
-In the following snippet,
-we code up a block from scratch
-corresponding to an MLP
-with one hidden layer with 256 hidden units,
-and a 10-dimensional output layer.
-Note that the `MLP` class below inherits the class that represents a block.
-We will heavily rely on the parent class's functions,
-supplying only our own constructor (the `__init__` function in Python) and the forward propagation function.
-
 No seguinte trecho de código,
 nós codificamos um bloco do zero
 correspondendo a um MLP
@@ -291,24 +282,11 @@ class MLP(tf.keras.Model):
         return self.out(self.hidden((X)))
 ```
 
-Let us first focus on the forward propagation function.
-Note that it takes `X` as the input,
-calculates the hidden representation
-with the activation function applied,
-and outputs its logits.
-In this `MLP` implementation,
-both layers are instance variables.
-To see why this is reasonable, imagine
-instantiating two MLPs, `net1` and `net2`,
-and training them on different data.
-Naturally, we would expect them
-to represent two different learned models.
-
 Vamos primeiro nos concentrar na função de propagação direta.
 Observe que leva `X` como entrada,
 calcula a representação oculta
 com a função de ativação aplicada,
-e produz seus logits.
+e produz seus *logits*.
 Nesta implementação `MLP`,
 ambas as camadas são variáveis de instância.
 Para ver por que isso é razoável, imagine
@@ -975,6 +953,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU5NDA4MDk5LDE3NzAyODA5NzQsLTE2Mz
+eyJoaXN0b3J5IjpbODM3OTI2ODQ3LDE3NzAyODA5NzQsLTE2Mz
 c4Mjk0OTBdfQ==
 -->
