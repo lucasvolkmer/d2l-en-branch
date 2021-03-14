@@ -490,8 +490,8 @@ sem ter que definir nossa própria classe.
 No entanto, nem todas as arquiteturas são cadeias simples.
 Quando uma maior flexibilidade é necessária,
 vamos querer definir nossos próprios blocos.
-Por exemplo, podemos querer executar
-Fluxo de controle do Python dentro da função de propagação direta.
+Por exemplo, podemos querer executar o
+controle de fluxo do Python dentro da função de propagação direta.
 Além disso, podemos querer realizar
 operações matemáticas arbitrárias,
 não simplesmente depender de camadas de rede neural predefinidas.
@@ -876,6 +876,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMj
-gwOTc0LC0xNjM3ODI5NDkwXX0=
+eyJoaXN0b3J5IjpbMTQ2NzMzMzYwMCwzNTU2NjM4MTEsODM3OT
+I2ODQ3LDE3NzAyODA5NzQsLTE2Mzc4Mjk0OTBdfQ==
 -->
