@@ -113,6 +113,15 @@ Each layer's parameters are conveniently
 located in its attribute.
 We can inspect the parameters of the second fully-connected layer as follows.
 
+Vamos começar explicando como acessar os parâmetros
+dos modelos que você já conhece.
+Quando um modelo é definido por meio da classe `Sequential`,
+podemos primeiro acessar qualquer camada indexando
+no modelo como se fosse uma lista.
+Os parâmetros de cada camada são convenientemente
+localizado em seu atributo.
+Podemos inspecionar os parâmetros da segunda camada totalmente conectada da seguinte maneira.
+
 ```{.python .input}
 print(net[1].params)
 ```
@@ -138,6 +147,17 @@ allow us to uniquely identify
 each layer's parameters,
 even in a network containing hundreds of layers.
 
+A saída nos diz algumas coisas importantes.
+Primeiro, esta camada totalmente conectada
+contém dois parâmetros,
+correspondendo a essa camada
+pesos e vieses, respectivamente.
+Ambos são armazenados como flutuadores de precisão simples (float32).
+Observe que os nomes dos parâmetros
+nos permitem identificar de forma única
+parâmetros de cada camada,
+mesmo em uma rede contendo centenas de camadas.
+
 
 ### Targeted Parameters
 
@@ -150,6 +170,16 @@ Some are simpler while others are more general.
 The following code extracts the bias
 from the second neural network layer, which returns a parameter class instance, and 
 further accesses that parameter's value.
+
+Observe que cada parâmetro é representado
+como uma instância da classe de parâmetro.
+Para fazer algo útil com os parâmetros,
+primeiro precisamos acessar os valores numéricos subjacentes.
+Existem várias maneiras de fazer isso.
+Alguns são mais simples, enquanto outros são mais gerais.
+O código a seguir extrai o viés
+da segunda camada de rede neural, que retorna uma instância de classe de parâmetro, e
+acessa posteriormente o valor desse parâmetro.
 
 ```{.python .input}
 print(type(net[1].bias))
@@ -178,6 +208,13 @@ and additional information.
 That's why we need to request the value explicitly.
 
 In addition to the value, each parameter also allows us to access the gradient. Because we have not invoked backpropagation for this network yet, it is in its initial state.
+
+Os parâmetros são objetos complexos,
+contendo valores, gradientes,
+e informações adicionais.
+É por isso que precisamos solicitar o valor explicitamente.
+
+Além do valor, cada parâmetro também nos permite acessar o gradiente. Como ainda não invocamos a retropropagação para esta rede, ela está em seu estado inicial.
 :end_tab:
 
 ```{.python .input}
@@ -199,6 +236,14 @@ since we would need to recurse
 through the entire tree to extract
 each sub-block's parameters. Below we demonstrate accessing the parameters of the first fully-connected layer vs. accessing all layers.
 
+Quando precisamos realizar operações em todos os parâmetros,
+acessá-los um por um pode se tornar tedioso.
+A situação pode ficar especialmente complicada
+quando trabalhamos com blocos mais complexos (por exemplo, blocos aninhados),
+uma vez que precisaríamos recurse
+através de toda a árvore para extrair
+parâmetros de cada sub-bloco. Abaixo, demonstramos como acessar os parâmetros da primeira camada totalmente conectada versus acessar todas as camadas.
+
 ```{.python .input}
 print(net[0].collect_params())
 print(net.collect_params())
@@ -217,6 +262,8 @@ print(net.get_weights())
 ```
 
 This provides us with another way of accessing the parameters of the network as follows.
+
+Isso nos fornece outra maneira de acessar os parâmetros da rede como segue.
 
 ```{.python .input}
 net.collect_params()['dense1_bias'].data()
@@ -239,6 +286,12 @@ if we nest multiple blocks inside each other.
 For that we first define a function that produces blocks
 (a block factory, so to speak) and then
 combine these inside yet larger blocks.
+
+Vamos ver como funcionam as convenções de nomenclatura de parâmetros
+se aninharmos vários blocos uns dentro dos outros.
+Para isso, primeiro definimos uma função que produz blocos
+(uma fábrica de blocos, por assim dizer) e então
+combine-os dentro de blocos ainda maiores.
 
 ```{.python .input}
 def block1():
@@ -302,6 +355,9 @@ rgnet(X)
 Now that we have designed the network,
 let us see how it is organized.
 
+Agora que projetamos a rede,
+vamos ver como está organizado.
+
 ```{.python .input}
 print(rgnet.collect_params)
 print(rgnet.collect_params())
@@ -324,6 +380,14 @@ For instance, we can access the first major block,
 within it the second sub-block,
 and within that the bias of the first layer,
 with as follows.
+
+Uma vez que as camadas são aninhadas hierarquicamente,
+também podemos acessá-los como se
+indexação por meio de listas aninhadas.
+Por exemplo, podemos acessar o primeiro bloco principal,
+dentro dele o segundo sub-bloco,
+e dentro disso o viés da primeira camada,
+com o seguinte.
 
 ```{.python .input}
 rgnet[0][1][0].bias.data()
@@ -699,5 +763,5 @@ during backpropagation.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ3MTYxOTkxXX0=
+eyJoaXN0b3J5IjpbLTM4MDMwMjQ1M119
 -->
