@@ -81,16 +81,6 @@ print(net.collect_params())
 ```
 
 :begin_tab:`mxnet`
-Note that while the parameter objects exist,
-the input dimension to each layer is listed as -1.
-MXNet uses the special value -1 to indicate
-that the parameter dimension remains unknown.
-At this point, attempts to access `net[0].weight.data()`
-would trigger a runtime error stating that the network
-must be initialized before the parameters can be accessed.
-Now let us see what happens when we attempt to initialize
-parameters via the `initialize` function.
-
 Observe que, embora os objetos de parâmetro existam,
 a dimensão de entrada para cada camada é listada como -1.
 MXNet usa o valor especial -1 para indicar
@@ -103,12 +93,8 @@ parâmetros por meio da função `initialize`.
 :end_tab:
 
 :begin_tab:`tensorflow`
-Note that each layer objects exist but the weights are empty.
-Using `net.get_weights()` would throw an error since the weights
-have not been initialized yet.
-
 Observe que cada objeto de camada existe, mas os pesos estão vazios.
-Usar `net.get_weights ()` geraria um erro, uma vez que os pesos
+Usar `net.get_weights()` geraria um erro, uma vez que os pesos
 ainda não foram inicializados.
 :end_tab:
 
@@ -206,5 +192,5 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNDI0NjAyNCwxMTM1NTg2Nzc0XX0=
+eyJoaXN0b3J5IjpbNjQ1Nzg1NDQyLDExMzU1ODY3NzRdfQ==
 -->
