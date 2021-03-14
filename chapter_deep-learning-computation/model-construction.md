@@ -37,28 +37,6 @@ e possui um conjunto de parâmetros ajustáveis que são atualizados
 de acordo com o sinal que flui para trás
 da camada subsequente.
 
-
-While you might think that neurons, layers, and models
-give us enough abstractions to go about our business,
-it turns out that we often find it convenient
-to speak about components that are
-larger than an individual layer
-but smaller than the entire model.
-For example, the ResNet-152 architecture,
-which is wildly popular in computer vision,
-possesses hundreds of layers.
-These layers consist of repeating patterns of *groups of layers*. Implementing such a network one layer at a time can grow tedious.
-This concern is not just hypothetical---such
-design patterns are common in practice.
-The ResNet architecture mentioned above
-won the 2015 ImageNet and COCO computer vision competitions
-for both recognition and detection :cite:`He.Zhang.Ren.ea.2016`
-and remains a go-to architecture for many vision tasks.
-Similar architectures in which layers are arranged
-in various repeating patterns
-are now ubiquitous in other domains,
-including natural language processing and speech.
-
 Embora você possa pensar que neurônios, camadas e modelos
 dê-nos abstrações suficientes para cuidar de nossos negócios,
 Acontece que muitas vezes achamos conveniente
@@ -93,13 +71,13 @@ we can write surprisingly compact code
 and still implement complex neural networks.
 
 Para implementar essas redes complexas,
-introduzimos o conceito de uma rede neural * bloco *.
+introduzimos o conceito de uma rede neural *bloco*.
 Um bloco pode descrever uma única camada,
 um componente que consiste em várias camadas,
 ou o próprio modelo inteiro!
 Uma vantagem de trabalhar com a abstração de bloco
 é que eles podem ser combinados em artefatos maiores,
-frequentemente recursivamente. Isso é ilustrado em: numref: `fig_blocks`. Definindo o código para gerar blocos
+frequentemente recursivamente. Isso é ilustrado em :numref:`fig_blocks`. Definindo o código para gerar blocos
 de complexidade arbitrária sob demanda,
 podemos escrever código surpreendentemente compacto
 e ainda implementar redes neurais complexas.
@@ -1101,5 +1079,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MjEzNTk2M119
+eyJoaXN0b3J5IjpbLTEyNjQwMjc4MDldfQ==
 -->
