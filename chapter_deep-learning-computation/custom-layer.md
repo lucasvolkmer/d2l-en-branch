@@ -15,6 +15,21 @@ a layer that does not exist yet in the deep learning framework.
 In these cases, you must build a custom layer.
 In this section, we show you how.
 
+Um fator por trás do sucesso do aprendizado profundo
+é a disponibilidade de uma ampla gama de camadas
+que pode ser composto de maneiras criativas
+projetar arquiteturas adequadas
+para uma ampla variedade de tarefas.
+Por exemplo, os pesquisadores inventaram camadas
+especificamente para lidar com imagens, texto,
+loop sobre dados sequenciais,
+e
+realizando programação dinâmica.
+Mais cedo ou mais tarde, você encontrará ou inventará
+uma camada que ainda não existe na estrutura de aprendizado profundo.
+Nesses casos, você deve construir uma camada personalizada.
+Nesta seção, mostramos como.
+
 ## Layers without Parameters
 
 To start, we construct a custom layer
@@ -25,6 +40,15 @@ The following `CenteredLayer` class simply
 subtracts the mean from its input.
 To build it, we simply need to inherit
 from the base layer class and implement the forward propagation function.
+
+Para começar, construímos uma camada personalizada
+que não possui parâmetros próprios.
+Isso deve parecer familiar, se você se lembra de nosso
+introdução ao bloco em: numref: `sec_model_construction`.
+A seguinte classe `CenteredLayer` simplesmente
+subtrai a média de sua entrada.
+Para construí-lo, simplesmente precisamos herdar
+da classe da camada base e implementar a função de propagação direta.
 
 ```{.python .input}
 from mxnet import np, npx
@@ -67,6 +91,8 @@ class CenteredLayer(tf.keras.Model):
 
 Let us verify that our layer works as intended by feeding some data through it.
 
+Vamos verificar se nossa camada funciona conforme o esperado, alimentando alguns dados por meio dela.
+
 ```{.python .input}
 layer = CenteredLayer()
 layer(np.array([1, 2, 3, 4, 5]))
@@ -86,6 +112,9 @@ layer(tf.constant([1, 2, 3, 4, 5]))
 
 We can now incorporate our layer as a component
 in constructing more complex models.
+
+Agora podemos incorporar nossa camada como um componente
+na construção de modelos mais complexos.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -108,6 +137,12 @@ through the network and check that the mean is in fact 0.
 Because we are dealing with floating point numbers,
 we may still see a very small nonzero number
 due to quantization.
+
+Como uma verificação extra de sanidade, podemos enviar dados aleatórios
+através da rede e verifique se a média é de fato 0.
+Porque estamos lidando com números de ponto flutuante,
+ainda podemos ver um número muito pequeno diferente de zero
+devido à quantização.
 
 ```{.python .input}
 Y = net(np.random.uniform(size=(4, 8)))
@@ -137,6 +172,16 @@ In particular, they govern access, initialization,
 sharing, saving, and loading model parameters.
 This way, among other benefits, we will not need to write
 custom serialization routines for every custom layer.
+
+Agora que sabemos como definir camadas simples,
+vamos prosseguir para a definição de camadas com parâmetros
+que pode ser ajustado por meio de treinamento.
+Podemos usar funções integradas para criar parâmetros, que
+fornecem algumas funcionalidades básicas de manutenção.
+Em particular, eles governam o acesso, inicialização,
+compartilhar, salvar e carregar parâmetros do modelo.
+Dessa forma, entre outros benefícios, não precisaremos escrever
+rotinas de serialização personalizadas para cada camada personalizada.
 
 Now let us implement our own version of the  fully-connected layer.
 Recall that this layer requires two parameters,
@@ -275,3 +320,6 @@ net(tf.random.uniform((2, 64)))
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNzYzNTM1MzldfQ==
+-->
