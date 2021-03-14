@@ -155,7 +155,7 @@ mas a estrutura inicializa sequencialmente.
 Uma vez que todas as formas dos parâmetros são conhecidas,
 a estrutura pode finalmente inicializar os parâmetros.
 
-## Summary
+## Sumário
 
 * Deferred initialization can be convenient, allowing the framework to infer parameter shapes automatically, making it easy to modify architectures and eliminating one common source of errors.
 * We can pass data through the model to make the framework finally initialize parameters.
@@ -164,7 +164,7 @@ a estrutura pode finalmente inicializar os parâmetros.
 * Podemos passar dados através do modelo para fazer o framework finalmente inicializar os parâmetros.
 
 
-## Exercises
+## Exercícios
 
 1. What happens if you specify the input dimensions to the first layer but not to subsequent layers? Do you get immediate initialization?
 2. What happens if you specify mismatching dimensions?
@@ -182,6 +182,6 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNjczNDU3OSw2NDU3ODU0NDIsMTEzNT
-U4Njc3NF19
+eyJoaXN0b3J5IjpbLTExMTE5OTk1ODYsNjQ1Nzg1NDQyLDExMz
+U1ODY3NzRdfQ==
 -->
