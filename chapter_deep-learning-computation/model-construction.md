@@ -484,23 +484,6 @@ Além disso, podemos querer realizar
 operações matemáticas arbitrárias,
 não simplesmente depender de camadas de rede neural predefinidas.
 
-You might have noticed that until now,
-all of the operations in our networks
-have acted upon our network's activations
-and its parameters.
-Sometimes, however, we might want to
-incorporate terms
-that are neither the result of previous layers
-nor updatable parameters.
-We call these *constant parameters*.
-Say for example that we want a layer
-that calculates the function
-$f(\mathbf{x},\mathbf{w}) = c \cdot \mathbf{w}^\top \mathbf{x}$,
-where $\mathbf{x}$ is the input, $\mathbf{w}$ is our parameter,
-and $c$ is some specified constant
-that is not updated during optimization.
-So we implement a `FixedHiddenMLP` class as follows.
-
 Você deve ter notado que até agora,
 todas as operações em nossas redes
 agiram de acordo com as ativações de nossa rede
@@ -516,7 +499,7 @@ $f(\mathbf{x},\mathbf{w}) = c \cdot \mathbf{w}^\top \mathbf{x}$,
 onde $\mathbf{x}$ é a entrada, $\mathbf{w}$ é nosso parâmetro,
 e $c$ é alguma constante especificada
 que não é atualizado durante a otimização.
-Portanto, implementamos uma classe `FixedHiddenMLP` como segue.
+Portanto, implementamos uma classe `FixedHiddenMLP` como a seguir.
 
 ```{.python .input}
 class FixedHiddenMLP(nn.Block):
@@ -591,21 +574,12 @@ class FixedHiddenMLP(tf.keras.Model):
         return tf.reduce_sum(X)
 ```
 
-In this `FixedHiddenMLP` model,
-we implement a hidden layer whose weights
-(`self.rand_weight`) are initialized randomly
-at instantiation and are thereafter constant.
-This weight is not a model parameter
-and thus it is never updated by backpropagation.
-The network then passes the output of this "fixed" layer
-through a fully-connected layer.
-
 Neste modelo `FixedHiddenMLP`,
 implementamos uma camada oculta cujos pesos
 (`self.rand_weight`) são inicializados aleatoriamente
 na instanciação e daí em diante constantes.
 Este peso não é um parâmetro do modelo
-e, portanto, nunca é atualizado por retropropagação.
+e, portanto, nunca é atualizado por *backpropagation*.
 A rede então passa a saída desta camada "fixa"
 através de uma camada totalmente conectada.
 
@@ -626,9 +600,9 @@ neural network computations.
 
 Observe que antes de retornar a saída,
 nosso modelo fez algo incomum.
-Executamos um loop while, testando
-na condição de que sua norma $ L_1 $ seja maior que $ 1 $,
-e dividindo nosso vetor de produção por $ 2 $
+Executamos um *loop while*, testando
+na condição de que sua norma $L_1$ seja maior que $1$,
+e dividindo nosso vetor de produção por $2$
 até que satisfizesse a condição.
 Finalmente, retornamos a soma das entradas em `X`.
 Até onde sabemos, nenhuma rede neural padrão
@@ -864,6 +838,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDMwNTQ4MzcsMzU1NjYzODExLDgzNz
-kyNjg0NywxNzcwMjgwOTc0LC0xNjM3ODI5NDkwXX0=
+eyJoaXN0b3J5IjpbOTY3MTk0MzgsMzU1NjYzODExLDgzNzkyNj
+g0NywxNzcwMjgwOTc0LC0xNjM3ODI5NDkwXX0=
 -->
