@@ -15,6 +15,21 @@ it may be executed in other software,
 or for examination in the hope of
 gaining scientific understanding.
 
+Depois de escolher uma arquitetura
+e definir nossos hiperparâmetros,
+passamos para o ciclo de treinamento,
+onde nosso objetivo é encontrar valores de parâmetro
+que minimizam nossa função de perda.
+Após o treinamento, precisaremos desses parâmetros
+para fazer previsões futuras.
+Além disso, às vezes desejamos
+para extrair os parâmetros
+seja para reutilizá-los em algum outro contexto,
+para salvar nosso modelo em disco para que
+pode ser executado em outro software,
+ou para exame na esperança de
+ganhando compreensão científica.
+
 Most of the time, we will be able
 to ignore the nitty-gritty details
 of how parameters are declared
@@ -26,11 +41,28 @@ we will sometimes need to get into the weeds
 of declaring and manipulating parameters.
 In this section, we cover the following:
 
+Na maioria das vezes, seremos capazes
+ignorar os detalhes essenciais
+de como os parâmetros são declarados
+e manipulado, contando com estruturas de aprendizado profundo
+para fazer o trabalho pesado.
+No entanto, quando nos afastamos de
+arquiteturas empilhadas com camadas padrão,
+às vezes precisaremos entrar no mato
+de declarar e manipular parâmetros.
+Nesta seção, cobrimos o seguinte:
+
 * Accessing parameters for debugging, diagnostics, and visualizations.
 * Parameter initialization.
 * Sharing parameters across different model components.
 
 We start by focusing on an MLP with one hidden layer.
+
+* Parâmetros de acesso para depuração, diagnóstico e visualizações.
+* Inicialização de parâmetros.
+* Parâmetros de compartilhamento em diferentes componentes do modelo.
+
+Começamos nos concentrando em um MLP com uma camada oculta.
 
 ```{.python .input}
 from mxnet import init, np, npx
@@ -667,5 +699,5 @@ during backpropagation.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg5NzEwODIzXX0=
+eyJoaXN0b3J5IjpbNjQ3MTYxOTkxXX0=
 -->
