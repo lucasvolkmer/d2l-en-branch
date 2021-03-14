@@ -1,20 +1,5 @@
 # Gerenciamento de Parâmetros
 
-Once we have chosen an architecture
-and set our hyperparameters,
-we proceed to the training loop,
-where our goal is to find parameter values
-that minimize our loss function.
-After training, we will need these parameters
-in order to make future predictions.
-Additionally, we will sometimes wish
-to extract the parameters
-either to reuse them in some other context,
-to save our model to disk so that
-it may be executed in other software,
-or for examination in the hope of
-gaining scientific understanding.
-
 Depois de escolher uma arquitetura
 e definir nossos hiperparâmetros,
 passamos para o ciclo de treinamento,
@@ -26,30 +11,19 @@ Além disso, às vezes desejamos
 para extrair os parâmetros
 seja para reutilizá-los em algum outro contexto,
 para salvar nosso modelo em disco para que
-pode ser executado em outro software,
+pode ser executado em outro *software*,
 ou para exame na esperança de
-ganhando compreensão científica.
+ganhar compreensão científica.
 
-Most of the time, we will be able
-to ignore the nitty-gritty details
-of how parameters are declared
-and manipulated, relying on deep learning frameworks
-to do the heavy lifting.
-However, when we move away from
-stacked architectures with standard layers,
-we will sometimes need to get into the weeds
-of declaring and manipulating parameters.
-In this section, we cover the following:
-
-Na maioria das vezes, seremos capazes
+Na maioria das vezes, seremos capazes de
 ignorar os detalhes essenciais
 de como os parâmetros são declarados
-e manipulado, contando com estruturas de aprendizado profundo
+e manipulado, contando com estruturas de *Deep Learning*
 para fazer o trabalho pesado.
 No entanto, quando nos afastamos de
 arquiteturas empilhadas com camadas padrão,
-às vezes precisaremos entrar no mato
-de declarar e manipular parâmetros.
+às vezes precisaremos 
+declarar e manipular parâmetros.
 Nesta seção, cobrimos o seguinte:
 
 * Accessing parameters for debugging, diagnostics, and visualizations.
@@ -849,5 +823,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjE4NDY5NDddfQ==
+eyJoaXN0b3J5IjpbOTcxMjg5OTM3XX0=
 -->
