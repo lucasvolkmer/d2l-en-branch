@@ -162,6 +162,18 @@ of arbitrary complexity on demand,
 we can write surprisingly compact code
 and still implement complex neural networks.
 
+Para implementar essas redes complexas,
+introduzimos o conceito de uma rede neural * bloco *.
+Um bloco pode descrever uma única camada,
+um componente que consiste em várias camadas,
+ou o próprio modelo inteiro!
+Uma vantagem de trabalhar com a abstração de bloco
+é que eles podem ser combinados em artefatos maiores,
+frequentemente recursivamente. Isso é ilustrado em: numref: `fig_blocks`. Definindo o código para gerar blocos
+de complexidade arbitrária sob demanda,
+podemos escrever código surpreendentemente compacto
+e ainda implementar redes neurais complexas.
+
 ![Multiple layers are combined into blocks, forming repeating patterns of larger models.](../img/blocks.svg)
 :label:`fig_blocks`
 
@@ -180,6 +192,20 @@ when defining our own block,
 we only need to worry about parameters
 and the forward propagation function.
 
+Do ponto de vista da programação, um bloco é representado por uma * classe *.
+Qualquer subclasse dele deve definir uma função de propagação direta
+que transforma sua entrada em saída
+e deve armazenar todos os parâmetros necessários.
+Observe que alguns blocos não requerem nenhum parâmetro.
+Finalmente, um bloco deve possuir uma função de retropropagação,
+para fins de cálculo de gradientes.
+Felizmente, devido a alguma magia dos bastidores
+fornecido pela diferenciação automática
+(introduzido em: numref: `sec_autograd`)
+ao definir nosso próprio bloco,
+só precisamos nos preocupar com os parâmetros
+e a função de propagação direta.
+
 To begin, we revisit the code
 that we used to implement MLPs
 (:numref:`sec_mlp_concise`).
@@ -188,6 +214,15 @@ with one fully-connected hidden layer
 with 256 units and ReLU activation,
 followed by a fully-connected output layer
 with 10 units (no activation function).
+
+Para começar, revisitamos o código
+que usamos para implementar MLPs
+(: numref: `sec_mlp_concise`).
+O código a seguir gera uma rede
+com uma camada oculta totalmente conectada
+com 256 unidades e ativação ReLU,
+seguido por uma camada de saída totalmente conectada
+com 10 unidades (sem função de ativação).
 
 ```{.python .input}
 from mxnet import np, npx
@@ -250,6 +285,28 @@ via the construction `net(X)` to obtain their outputs.
 This is actually just shorthand for `net.forward(X)`,
 a slick Python trick achieved via
 the `Block` class's `__call__` function.
+
+Neste exemplo, nós construímos
+nosso modelo instanciando um `nn.Sequential`,
+atribuindo o objeto retornado à variável `net`.
+Em seguida, chamamos repetidamente sua função `add`,
+anexando camadas no pedido
+que eles devem ser executados.
+Em suma, `nn.Sequential` define um tipo especial de` Block`,
+a classe que apresenta um bloco em Gluon.
+Ele mantém uma lista ordenada de `Block`s constituintes.
+A função `add` simplesmente facilita
+a adição de cada `Bloco` sucessivo à lista.
+Observe que cada camada é uma instância da classe `Dense`
+que é uma subclasse de `Block`.
+A função de propagação direta (`para frente`) também é notavelmente simples:
+ele encadeia cada `Bloco` na lista,
+passando a saída de cada um como entrada para o próximo.
+Observe que, até agora, temos invocado nossos modelos
+através da construção `net (X)` para obter seus resultados.
+Na verdade, isso é apenas um atalho para `net.forward (X)`,
+um truque Python habilidoso alcançado via
+a função `__call__` da classe` Block`.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -267,6 +324,21 @@ passing the output of each as the input to the next.
 Note that until now, we have been invoking our models
 via the construction `net(X)` to obtain their outputs.
 This is actually just shorthand for `net.__call__(X)`.
+
+Neste exemplo, nós construímos
+nosso modelo instanciando um `nn.Sequential`, com camadas na ordem
+que eles devem ser executados passados como argumentos.
+Em suma, `nn.Sequential` define um tipo especial de` Módulo`,
+a classe que apresenta um bloco em PyTorch.
+Ele mantém uma lista ordenada de `Módulos` constituintes.
+Observe que cada uma das duas camadas totalmente conectadas é uma instância da classe `Linear`
+que é uma subclasse de `Módulo`.
+A função de propagação direta (`para frente`) também é notavelmente simples:
+ele encadeia cada bloco da lista,
+passando a saída de cada um como entrada para o próximo.
+Observe que, até agora, temos invocado nossos modelos
+através da construção `net (X)` para obter seus resultados.
+Na verdade, isso é apenas um atalho para `net .__ call __ (X)`.
 :end_tab:
 
 :begin_tab:`tensorflow`
@@ -286,6 +358,23 @@ via the construction `net(X)` to obtain their outputs.
 This is actually just shorthand for `net.call(X)`,
 a slick Python trick achieved via
 the Block class's `__call__` function.
+
+Neste exemplo, nós construímos
+nosso modelo instanciando um `keras.models.Sequential`, com camadas na ordem
+que eles devem ser executados passados como argumentos.
+Em suma, `Sequential` define um tipo especial de` keras.Model`,
+a classe que apresenta um bloco em Keras.
+Ele mantém uma lista ordenada de `Model`s constituintes.
+Observe que cada uma das duas camadas totalmente conectadas é uma instância da classe `Dense`
+que é uma subclasse de `Model`.
+A função de propagação direta (`chamada`) também é extremamente simples:
+ele encadeia cada bloco da lista,
+passando a saída de cada um como entrada para o próximo.
+Observe que, até agora, temos invocado nossos modelos
+através da construção `net (X)` para obter seus resultados.
+Na verdade, isso é apenas um atalho para `net.call (X)`,
+um truque Python habilidoso alcançado via
+a função `__call__` da classe Block.
 :end_tab:
 
 ## A Custom Block
@@ -297,12 +386,26 @@ Before we implement our own custom block,
 we briefly summarize the basic functionality
 that each block must provide:
 
+Talvez a maneira mais fácil de desenvolver intuição
+sobre como funciona um bloco
+é implementar um nós mesmos.
+Antes de implementar nosso próprio bloco personalizado,
+resumimos brevemente a funcionalidade básica
+que cada bloco deve fornecer:
+
 1. Ingest input data as arguments to its forward propagation function.
-1. Generate an output by having the forward propagation function return a value. Note that the output may have a different shape from the input. For example, the first fully-connected layer in our model above ingests an      input of arbitrary dimension but returns an output of dimension 256.
-1. Calculate the gradient of its output with respect to its input, which can be accessed via its backpropagation function. Typically this happens automatically.
-1. Store and provide access to those parameters necessary
+2. Generate an output by having the forward propagation function return a value. Note that the output may have a different shape from the input. For example, the first fully-connected layer in our model above ingests an      input of arbitrary dimension but returns an output of dimension 256.
+3. Calculate the gradient of its output with respect to its input, which can be accessed via its backpropagation function. Typically this happens automatically.
+4. Store and provide access to those parameters necessary
    to execute the forward propagation computation.
-1. Initialize model parameters as needed.
+5. Initialize model parameters as needed.
+
+1. Ingerir dados de entrada como argumentos para sua função de propagação direta.
+1. Gere uma saída fazendo com que a função de propagação direta retorne um valor. Observe que a saída pode ter uma forma diferente da entrada. Por exemplo, a primeira camada totalmente conectada em nosso modelo acima ingere uma entrada de dimensão arbitrária, mas retorna uma saída de dimensão 256.
+1. Calcule o gradiente de sua saída em relação à sua entrada, que pode ser acessado por meio de sua função de retropropagação. Normalmente, isso acontece automaticamente.
+1. Armazene e forneça acesso aos parâmetros necessários
+    para executar o cálculo de propagação direta.
+1. Inicialize os parâmetros do modelo conforme necessário.
 
 In the following snippet,
 we code up a block from scratch
@@ -851,5 +954,5 @@ The best way to speed up Python is by avoiding it altogether.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMzMTEwNzY0XX0=
+eyJoaXN0b3J5IjpbMjI0NjUyNjNdfQ==
 -->
