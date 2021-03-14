@@ -526,12 +526,12 @@ A derivada da função tanh é:
 
 $$\frac{d}{dx} \operatorname{tanh}(x) = 1 - \operatorname{tanh}^2(x).$$
 
-The derivative of tanh function is plotted below.
-As the input nears 0,
-the derivative of the tanh function approaches a maximum of 1.
-And as we saw with the sigmoid function,
-as the input moves away from 0 in either direction,
-the derivative of the tanh function approaches 0.
+A derivada da função tanh é plotada abaixo.
+Conforme a entrada se aproxima de 0,
+a derivada da função tanh se aproxima de um máximo de 1.
+E como vimos com a função sigmoid,
+conforme a entrada se afasta de 0 em qualquer direção,
+a derivada da função tanh se aproxima de 0.
 
 ```{.python .input}
 y.backward()
@@ -554,21 +554,21 @@ d2l.plot(x.numpy(), t.gradient(y, x).numpy(), 'x', 'grad of tanh',
          figsize=(5, 2.5))
 ```
 
-In summary, we now know how to incorporate nonlinearities
-to build expressive multilayer neural network architectures.
-As a side note, your knowledge already
-puts you in command of a similar toolkit
-to a practitioner circa 1990.
-In some ways, you have an advantage
-over anyone working in the 1990s,
-because you can leverage powerful
-open-source deep learning frameworks
-to build models rapidly, using only a few lines of code.
-Previously, training these networks
-required researchers to code up
-thousands of lines of C and Fortran.
+Em resumo, agora sabemos como incorporar não linearidades
+para construir arquiteturas de rede neural multicamadas expressivas.
+Como uma nota lateral, o seu conhecimento já
+coloca você no comando de um kit de ferramentas semelhante
+para um praticante por volta de 1990.
+De certa forma, você tem uma vantagem
+sobre qualquer pessoa que trabalhou na década de 1990,
+porque você pode alavancar
+*frameworks* de *deep learning* de código aberto
+para construir modelos rapidamente, usando apenas algumas linhas de código.
+Anteriormente, o treinamento dessas redes
+pesquisadores obrigados a codificar
+milhares de linhas de C e Fortran.
 
-## Summary
+## Resumo
 
 * MLP adds one or multiple fully-connected hidden layers between the output and input layers and transforms the output of the hidden layer via an activation function.
 * Commonly-used activation functions include the ReLU function, the sigmoid function, and the tanh function.
@@ -593,8 +593,8 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Njc1MDI1NzIsLTE0NDE3Nzg0MDQsMT
-M0OTIwMjY0MSwyMDQxMDk2MDI1LDE2Mzc4MTM1ODMsLTUxMzYz
-NjM3OSwtMTQ4NDM5OTg3OCwtMjA2MDEwMTUzNCw4NDk5OTU3MT
-AsNzEzMTE1OTQ1XX0=
+eyJoaXN0b3J5IjpbLTY1NjQ1NzQ4LC0xNDQxNzc4NDA0LDEzND
+kyMDI2NDEsMjA0MTA5NjAyNSwxNjM3ODEzNTgzLC01MTM2MzYz
+NzksLTE0ODQzOTk4NzgsLTIwNjAxMDE1MzQsODQ5OTk1NzEwLD
+cxMzExNTk0NV19
 -->
