@@ -555,18 +555,13 @@ net.layers[1].weights[0]
 ```
 
 :begin_tab:`mxnet`
-A note for advanced users:
-if you want to adjust parameters within an `autograd` scope,
-you need to use `set_data` to avoid confusing
-the automatic differentiation mechanics.
-
 Uma observação para usuários avançados:
 se você quiser ajustar os parâmetros dentro de um escopo `autograd`,
 você precisa usar `set_data` para evitar confundir
 a mecânica de diferenciação automática.
 :end_tab:
 
-## Tied Parameters
+## Parâmetros *Tied*
 
 Often, we want to share parameters across multiple layers.
 Let us see how to do this elegantly.
@@ -574,7 +569,7 @@ In the following we allocate a dense layer
 and then use its parameters specifically
 to set those of another layer.
 
-Freqüentemente, queremos compartilhar parâmetros em várias camadas.
+Frequentemente, queremos compartilhar parâmetros em várias camadas.
 Vamos ver como fazer isso com elegância.
 A seguir, alocamos uma camada densa
 e usar seus parâmetros especificamente
@@ -700,5 +695,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NTY5MzMyLDE2NDI5Nzg1MDFdfQ==
+eyJoaXN0b3J5IjpbMTM0NjY3NTg5NywxNjQyOTc4NTAxXX0=
 -->
