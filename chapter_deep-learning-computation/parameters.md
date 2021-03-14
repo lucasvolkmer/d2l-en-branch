@@ -40,7 +40,7 @@ npx.set_np()
 net = nn.Sequential()
 net.add(nn.Dense(8, activation='relu'))
 net.add(nn.Dense(1))
-net.initialize()  # Use the default initialization method
+net.initialize()  # Use o método
 
 X = np.random.uniform(size=(2, 4))
 net(X)  # Forward computation
@@ -651,17 +651,11 @@ durante a retropropagação.
 
 ## Exercícios
 
-1. Use the `FancyMLP` model defined in :numref:`sec_model_construction` and access the parameters of the various layers.
-2. Look at the initialization module document to explore different initializers.
-3. Construct an MLP containing a shared parameter layer and train it. During the training process, observe the model parameters and gradients of each layer.
-4. Why is sharing parameters a good idea?
+1. Use o modelo `FancyMLP` definido em :numref:`sec_model_construction` e acesse os parâmetros das várias camadas.
+1. Observe o documento do módulo de inicialização para explorar diferentes inicializadores.
+1. Construa um MLP contendo uma camada de parâmetros compartilhados e treine-o. Durante o processo de treinamento, observe os parâmetros do modelo e gradientes de cada camada.
+1. Por que compartilhar parâmetros é uma boa ideia?
 
-
-5. Use o modelo `FancyMLP` definido em :numref:`sec_model_construction` e acesse os parâmetros das várias camadas.
-6. Observe o documento do módulo de inicialização para explorar diferentes inicializadores.
-7. Construa um MLP contendo uma camada de parâmetros compartilhados e treine-o. Durante o processo de treinamento, observe os parâmetros do modelo e gradientes de cada camada.
-8. Por que compartilhar parâmetros é uma boa ideia?
-9. 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/56)
 :end_tab:
@@ -674,6 +668,6 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0ODE4MjgyMSwtMTU5Mzc4NzcyOCwxNj
+eyJoaXN0b3J5IjpbLTYzMTU0MTMzNywtMTU5Mzc4NzcyOCwxNj
 QyOTc4NTAxXX0=
 -->
