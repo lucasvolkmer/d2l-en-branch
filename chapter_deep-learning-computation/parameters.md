@@ -413,11 +413,24 @@ However, we often want to initialize our weights
 according to various other protocols. The framework provides most commonly
 used protocols, and also allows to create a custom initializer.
 
+Agora que sabemos como acessar os parâmetros,
+vamos ver como inicializá-los corretamente.
+Discutimos a necessidade de inicialização adequada em: numref: `sec_numerical_stability`.
+A estrutura de aprendizado profundo fornece inicializações aleatórias padrão para suas camadas.
+No entanto, muitas vezes queremos inicializar nossos pesos
+de acordo com vários outros protocolos. A estrutura fornece mais comumente
+protocolos usados e também permite criar um inicializador personalizado.
+
 :begin_tab:`mxnet`
 By default, MXNet initializes weight parameters by randomly drawing from a uniform distribution $U(-0.07, 0.07)$,
 clearing bias parameters to zero.
 MXNet's `init` module provides a variety
 of preset initialization methods.
+
+Por padrão, MXNet inicializa os parâmetros de peso ao desenhar aleatoriamente de uma distribuição uniforme $U(-0.07, 0.07)$,
+limpar os parâmetros de polarização para zero.
+O módulo `init` do MXNet oferece uma variedade
+de métodos de inicialização predefinidos.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -425,11 +438,19 @@ By default, PyTorch initializes weight and bias matrices
 uniformly by drawing from a range that is computed according to the input and output dimension.
 PyTorch's `nn.init` module provides a variety
 of preset initialization methods.
+
+Por padrão, o PyTorch inicializa matrizes de ponderação e polarização
+uniformemente extraindo de um intervalo que é calculado de acordo com a dimensão de entrada e saída.
+O módulo `nn.init` do PyTorch oferece uma variedade
+de métodos de inicialização predefinidos.
 :end_tab:
 
 :begin_tab:`tensorflow`
 By default, Keras initializes weight matrices uniformly by drawing from a range that is computed according to the input and output dimension, and the bias parameters are all set to zero.
 TensorFlow provides a variety of initialization methods both in the root module and the `keras.initializers` module.
+
+Por padrão, Keras inicializa matrizes de ponderação uniformemente, tirando de um intervalo que é calculado de acordo com a dimensão de entrada e saída, e os parâmetros de polarização são todos definidos como zero.
+O TensorFlow oferece uma variedade de métodos de inicialização no módulo raiz e no módulo `keras.initializers`.
 :end_tab:
 
 ### Built-in Initialization
@@ -438,6 +459,11 @@ Let us begin by calling on built-in initializers.
 The code below initializes all weight parameters
 as Gaussian random variables
 with standard deviation 0.01, while bias parameters cleared to zero.
+
+Vamos começar chamando inicializadores integrados.
+O código abaixo inicializa todos os parâmetros de peso
+como variáveis aleatórias gaussianas
+com desvio padrão de 0,01, enquanto os parâmetros de polarização são zerados.
 
 ```{.python .input}
 # Here `force_reinit` ensures that parameters are freshly initialized even if
@@ -472,6 +498,9 @@ net.weights[0], net.weights[1]
 
 We can also initialize all the parameters
 to a given constant value (say, 1).
+
+Também podemos inicializar todos os parâmetros
+a um determinado valor constante (digamos, 1).
 
 ```{.python .input}
 net.initialize(init=init.Constant(1), force_reinit=True)
@@ -508,6 +537,12 @@ For example, below we initialize the first layer
 with the Xavier initializer
 and initialize the second layer
 to a constant value of 42.
+
+Também podemos aplicar inicializadores diferentes para certos blocos.
+Por exemplo, abaixo inicializamos a primeira camada
+com o inicializador Xavier
+e inicializar a segunda camada
+para um valor constante de 42.
 
 ```{.python .input}
 net[0].weight.initialize(init=init.Xavier(), force_reinit=True)
@@ -763,5 +798,5 @@ during backpropagation.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MDMwMjQ1M119
+eyJoaXN0b3J5IjpbNzExNjQ5MDQxXX0=
 -->
