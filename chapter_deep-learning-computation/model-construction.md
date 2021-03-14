@@ -1044,7 +1044,7 @@ Afinal, temos muitas pesquisas de dicionário,
 execução de código e muitas outras coisas Pythônicas
 ocorrendo no que deveria ser
 uma biblioteca de aprendizado profundo de alto desempenho.
-Os problemas do [bloqueio do interpretador global] do Python (https://wiki.python.org/moin/GlobalInterpreterLock) são bem conhecidos.
+Os problemas do Python [global interpreter lock](https://wiki.python.org/moin/GlobalInterpreterLock) são bem conhecidos.
 No contexto de aprendizagem profunda,
 podemos nos preocupar que nossas GPU (s) extremamente rápidas
 pode ter que esperar até uma CPU insignificante
@@ -1063,6 +1063,19 @@ leads down different branches on different passes through the net.
 We recommend that the interested reader checks out
 the hybridization section (:numref:`sec_hybridize`)
 to learn about compilation after finishing the current chapter.
+
+Uma maneira de o Gluon fazer isso é permitindo
+* hibridização *, que será descrita mais tarde.
+Aqui, o interpretador Python executa um bloco
+na primeira vez que é invocado.
+O tempo de execução do Gluon registra o que está acontecendo
+e, da próxima vez, provoca um curto-circuito nas chamadas para Python.
+Isso pode acelerar as coisas consideravelmente em alguns casos
+mas é preciso ter cuidado ao controlar o fluxo (como acima)
+conduz a diferentes ramos em diferentes passagens através da rede.
+Recomendamos que o leitor interessado verifique
+a seção de hibridização (: numref: `sec_hybridize`)
+para aprender sobre a compilação depois de terminar o capítulo atual.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -1077,6 +1090,18 @@ In the context of deep learning,
 we may worry that our extremely fast GPU(s)
 might have to wait until a puny CPU
 runs Python code before it gets another job to run.
+
+O leitor ávido pode começar a se preocupar
+sobre a eficiência de algumas dessas operações.
+Afinal, temos muitas pesquisas de dicionário,
+execução de código e muitas outras coisas Pythônicas
+ocorrendo no que deveria ser
+uma biblioteca de aprendizado profundo de alto desempenho.
+Os problemas do [bloqueio do interpretador global] do Python (https://wiki.python.org/moin/GlobalInterpreterLock) são bem conhecidos.
+No contexto de aprendizagem profunda,
+podemos nos preocupar que nossas GPU (s) extremamente rápidas
+pode ter que esperar até uma CPU insignificante
+executa o código Python antes de obter outro trabalho para ser executado.
 :end_tab:
 
 :begin_tab:`tensorflow`
@@ -1092,6 +1117,19 @@ we may worry that our extremely fast GPU(s)
 might have to wait until a puny CPU
 runs Python code before it gets another job to run.
 The best way to speed up Python is by avoiding it altogether.
+
+O leitor ávido pode começar a se preocupar
+sobre a eficiência de algumas dessas operações.
+Afinal, temos muitas pesquisas de dicionário,
+execução de código e muitas outras coisas Pythônicas
+ocorrendo no que deveria ser
+uma biblioteca de aprendizado profundo de alto desempenho.
+Os problemas do Python [global interpreter lock](https://wiki.python.org/moin/GlobalInterpreterLock) são bem conhecidos.
+No contexto de aprendizagem profunda,
+podemos nos preocupar que nossas GPU (s) extremamente rápidas
+pode ter que esperar até uma CPU insignificante
+executa o código Python antes de obter outro trabalho para ser executado.
+A melhor maneira de acelerar o Python é evitá-lo completamente.
 :end_tab:
 
 ## Summary
@@ -1103,12 +1141,23 @@ The best way to speed up Python is by avoiding it altogether.
 * Blocks take care of lots of housekeeping, including parameter initialization and backpropagation.
 * Sequential concatenations of layers and blocks are handled by the `Sequential` block.
 
+* Camadas são blocos.
+* Muitas camadas podem incluir um bloco.
+* Muitos blocos podem incluir um bloco.
+* Um bloco pode conter código.
+* Os blocos cuidam de muitas tarefas domésticas, incluindo inicialização de parâmetros e retropropagação.
+* As concatenações sequenciais de camadas e blocos são tratadas pelo bloco `Sequencial`.
+
 
 ## Exercises
 
 1. What kinds of problems will occur if you change `MySequential` to store blocks in a Python list?
-1. Implement a block that takes two blocks as an argument, say `net1` and `net2` and returns the concatenated output of both networks in the forward propagation. This is also called a parallel block.
-1. Assume that you want to concatenate multiple instances of the same network. Implement a factory function that generates multiple instances of the same block and build a larger network from it.
+2. Implement a block that takes two blocks as an argument, say `net1` and `net2` and returns the concatenated output of both networks in the forward propagation. This is also called a parallel block.
+3. Assume that you want to concatenate multiple instances of the same network. Implement a factory function that generates multiple instances of the same block and build a larger network from it.
+
+4. Que tipos de problemas ocorrerão se você alterar `MySequential` para armazenar blocos em uma lista Python?
+5. Implemente um bloco que tenha dois blocos como argumento, digamos `net1` e` net2` e retorne a saída concatenada de ambas as redes na propagação direta. Isso também é chamado de bloco paralelo.
+6. Suponha que você deseja concatenar várias instâncias da mesma rede. Implemente uma função de fábrica que gere várias instâncias do mesmo bloco e construa uma rede maior a partir dele.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/54)
@@ -1122,5 +1171,5 @@ The best way to speed up Python is by avoiding it altogether.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjY4MDc1NjZdfQ==
+eyJoaXN0b3J5IjpbMTUwMTI0ODcyMV19
 -->
