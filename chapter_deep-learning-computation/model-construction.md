@@ -690,9 +690,9 @@ sobre a eficiência de algumas dessas operações.
 Afinal, temos muitas pesquisas de dicionário,
 execução de código e muitas outras coisas Pythônicas
 ocorrendo no que deveria ser
-uma biblioteca de aprendizado profundo de alto desempenho.
-Os problemas do Python [global interpreter lock](https://wiki.python.org/moin/GlobalInterpreterLock) são bem conhecidos.
-No contexto de aprendizagem profunda,
+uma biblioteca de *Deep Learning* de alto desempenho.
+Os problemas do [Bloqueio do Interprete Global](https://wiki.python.org/moin/GlobalInterpreterLock) do Python são bem conhecidos.
+No contexto de *Deep Learning*,
 podemos nos preocupar que nossas GPU (s) extremamente rápidas
 pode ter que esperar até uma CPU insignificante
 executa o código Python antes de obter outro trabalho para ser executado.
@@ -818,6 +818,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMTk5NzIzNywzNTU2NjM4MTEsODM3OT
-I2ODQ3LDE3NzAyODA5NzQsLTE2Mzc4Mjk0OTBdfQ==
+eyJoaXN0b3J5IjpbOTM1MTI1MjA2LDM1NTY2MzgxMSw4Mzc5Mj
+Y4NDcsMTc3MDI4MDk3NCwtMTYzNzgyOTQ5MF19
 -->
