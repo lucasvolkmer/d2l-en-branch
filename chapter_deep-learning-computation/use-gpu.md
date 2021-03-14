@@ -520,3 +520,6 @@ In short, as long as all data and parameters are on the same device, we can lear
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2NzYyMTU3NzZdfQ==
+-->
