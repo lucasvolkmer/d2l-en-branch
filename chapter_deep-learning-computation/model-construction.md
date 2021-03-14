@@ -714,51 +714,31 @@ executa o código Python antes de obter outro trabalho para ser executado.
 :end_tab:
 
 :begin_tab:`tensorflow`
-The avid reader might start to worry
-about the efficiency of some of these operations.
-After all, we have lots of dictionary lookups,
-code execution, and lots of other Pythonic things
-taking place in what is supposed to be
-a high-performance deep learning library.
-The problems of Python's [global interpreter lock](https://wiki.python.org/moin/GlobalInterpreterLock) are well known. 
-In the context of deep learning,
-we may worry that our extremely fast GPU(s)
-might have to wait until a puny CPU
-runs Python code before it gets another job to run.
-The best way to speed up Python is by avoiding it altogether.
-
 O leitor ávido pode começar a se preocupar
 sobre a eficiência de algumas dessas operações.
 Afinal, temos muitas pesquisas de dicionário,
 execução de código e muitas outras coisas Pythônicas
 ocorrendo no que deveria ser
 uma biblioteca de aprendizado profundo de alto desempenho.
-Os problemas do Python [global interpreter lock](https://wiki.python.org/moin/GlobalInterpreterLock) são bem conhecidos.
-No contexto de aprendizagem profunda,
-podemos nos preocupar que nossas GPU (s) extremamente rápidas
+Os problemas do  [bloqueio do interpretador global](https://wiki.python.org/moin/GlobalInterpreterLock) do Python são bem conhecidos.
+No contexto de *Deep Learning*,
+podemos nos preocupar que nossas GPU(s) extremamente rápidas
 pode ter que esperar até uma CPU insignificante
 executa o código Python antes de obter outro trabalho para ser executado.
 A melhor maneira de acelerar o Python é evitá-lo completamente.
 :end_tab:
 
-## Summary
-
-* Layers are blocks.
-* Many layers can comprise a block.
-* Many blocks can comprise a block.
-* A block can contain code.
-* Blocks take care of lots of housekeeping, including parameter initialization and backpropagation.
-* Sequential concatenations of layers and blocks are handled by the `Sequential` block.
+## Sumário
 
 * Camadas são blocos.
 * Muitas camadas podem incluir um bloco.
 * Muitos blocos podem incluir um bloco.
 * Um bloco pode conter código.
-* Os blocos cuidam de muitas tarefas domésticas, incluindo inicialização de parâmetros e retropropagação.
+* Os blocos cuidam de muitas tarefas domésticas, incluindo inicialização de parâmetros e *backpropagation*.
 * As concatenações sequenciais de camadas e blocos são tratadas pelo bloco `Sequencial`.
 
 
-## Exercises
+## Exercícios
 
 1. What kinds of problems will occur if you change `MySequential` to store blocks in a Python list?
 2. Implement a block that takes two blocks as an argument, say `net1` and `net2` and returns the concatenated output of both networks in the forward propagation. This is also called a parallel block.
@@ -780,7 +760,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NTg4NzU1MSwtODU2NjE0MzM3LDM1NT
+eyJoaXN0b3J5IjpbMTg5MTQ0OTcyOSwtODU2NjE0MzM3LDM1NT
 Y2MzgxMSw4Mzc5MjY4NDcsMTc3MDI4MDk3NCwtMTYzNzgyOTQ5
 MF19
 -->
