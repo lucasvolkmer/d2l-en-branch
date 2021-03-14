@@ -411,18 +411,6 @@ class MySequential(tf.keras.Model):
 ```
 
 :begin_tab:`mxnet`
-The `add` function adds a single block
-to the ordered dictionary `_children`.
-You might wonder why every Gluon `Block`
-possesses a `_children` attribute
-and why we used it rather than just
-define a Python list ourselves.
-In short the chief advantage of `_children`
-is that during our block's parameter initialization,
-Gluon knows to look inside the `_children`
-dictionary to find sub-blocks whose
-parameters also need to be initialized.
-
 A função `add` adiciona um único bloco
 para o dicionário ordenado `_children`.
 Você deve estar se perguntando por que todo bloco de Gluon
@@ -431,27 +419,14 @@ e por que o usamos em vez de apenas
 definir uma lista Python nós mesmos.
 Resumindo, a principal vantagem das `_children`
 é que durante a inicialização do parâmetro do nosso bloco,
-Gluon sabe olhar dentro das `_children`
-dicionário para encontrar sub-blocos cujo
+Gluon sabe olhar dentro do dicionário `_children` para encontrar sub-blocos cujo
 os parâmetros também precisam ser inicializados.
 :end_tab:
 
 :begin_tab:`pytorch`
-In the `__init__` method, we add every module
-to the ordered dictionary `_modules` one by one.
-You might wonder why every `Module`
-possesses a `_modules` attribute
-and why we used it rather than just
-define a Python list ourselves.
-In short the chief advantage of `_modules`
-is that during our module's parameter initialization,
-the system knows to look inside the `_modules`
-dictionary to find sub-modules whose
-parameters also need to be initialized.
-
 No método `__init__`, adicionamos todos os módulos
 para o dicionário ordenado `_modules` um por um.
-Você pode se perguntar por que todo `Módulo`
+Você pode se perguntar por que todo `Module`
 possui um atributo `_modules`
 e por que o usamos em vez de apenas
 definir uma lista Python nós mesmos.
@@ -913,6 +888,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwODMxNDE0MSw4Mzc5MjY4NDcsMTc3MD
-I4MDk3NCwtMTYzNzgyOTQ5MF19
+eyJoaXN0b3J5IjpbNjA2ODUxOTg1LDgzNzkyNjg0NywxNzcwMj
+gwOTc0LC0xNjM3ODI5NDkwXX0=
 -->
