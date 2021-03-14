@@ -1,23 +1,6 @@
 # *Deep Learning* Computacional
 :label:`chap_computation`
 
-Alongside giant datasets and powerful hardware,
-great software tools have played an indispensable role
-in the rapid progress of deep learning.
-Starting with the pathbreaking Theano library released in 2007,
-flexible open-source tools have enabled researchers
-to rapidly prototype models, avoiding repetitive work
-when recycling standard components
-while still maintaining the ability to make low-level modifications.
-Over time, deep learning's libraries have evolved
-to offer increasingly coarse abstractions.
-Just as semiconductor designers went from specifying transistors
-to logical circuits to writing code,
-neural networks researchers have moved from thinking about
-the behavior of individual artificial neurons
-to conceiving of networks in terms of whole layers,
-and now often design architectures with far coarser *blocks* in mind.
-
 Junto com conjuntos de dados gigantes e hardware poderoso,
 ótimas ferramentas de software desempenharam um papel indispensável
 no rápido progresso do *Deep Learning*.
@@ -33,7 +16,7 @@ para circuitos lógicos para escrever código,
 pesquisadores de redes neurais deixaram de pensar sobre
 o comportamento de neurônios artificiais individuais
 para conceber redes em termos de camadas inteiras,
-e agora frequentemente projeta arquiteturas com * blocos * muito mais grosseiros em mente.
+e agora frequentemente projeta arquiteturas com *blocos* muito mais grosseiros em mente.
 
 So far, we have introduced some basic machine learning concepts,
 ramping up to fully-functional deep learning models.
@@ -62,13 +45,13 @@ implementamos cada componente de um MLP do zero
 e até mostrou como aproveitar APIs de alto nível
 para lançar os mesmos modelos sem esforço.
 Para chegar tão longe tão rápido, nós * chamamos * as bibliotecas,
-mas pulei detalhes mais avançados sobre * como eles funcionam *.
+mas pulei detalhes mais avançados sobre *como eles funcionam*.
 Neste capítulo, vamos abrir a cortina,
 aprofundando os principais componentes da computação de *Deep Learning*,
 ou seja, construção de modelo, acesso de parâmetro e inicialização,
 projetando camadas e blocos personalizados, lendo e gravando modelos em disco,
 e aproveitando GPUs para obter acelerações dramáticas.
-Esses insights o moverão de * usuário final * para * usuário avançado *,
+Esses insights o moverão de *usuário final* para *usuário avançado*,
 dando a você as ferramentas necessárias para colher os benefícios
 de uma biblioteca de aprendizagem profunda madura, mantendo a flexibilidade
 para implementar modelos mais complexos, incluindo aqueles que você mesmo inventa!
@@ -87,5 +70,6 @@ use-gpu
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDUzMTY4MywtMTU1MTMzNzc2N119
+eyJoaXN0b3J5IjpbLTIxMTkyMTg3MTIsLTE1NTEzMzc3NjddfQ
+==
 -->
