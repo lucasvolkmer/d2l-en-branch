@@ -416,6 +416,15 @@ Note that the `MLP` class below inherits the class that represents a block.
 We will heavily rely on the parent class's functions,
 supplying only our own constructor (the `__init__` function in Python) and the forward propagation function.
 
+No seguinte snippet,
+nós codificamos um bloco do zero
+correspondendo a um MLP
+com uma camada oculta com 256 unidades ocultas,
+e uma camada de saída de 10 dimensões.
+Observe que a classe `MLP` abaixo herda a classe que representa um bloco.
+Vamos contar muito com as funções da classe pai,
+fornecendo apenas nosso próprio construtor (a função `__init__` em Python) e a função de propagação direta.
+
 ```{.python .input}
 class MLP(nn.Block):
     # Declare a layer with model parameters. Here, we declare two
@@ -491,6 +500,19 @@ and training them on different data.
 Naturally, we would expect them
 to represent two different learned models.
 
+Vamos primeiro nos concentrar na função de propagação direta.
+Observe que leva `X` como entrada,
+calcula a representação oculta
+com a função de ativação aplicada,
+e produz seus logits.
+Nesta implementação `MLP`,
+ambas as camadas são variáveis de instância.
+Para ver por que isso é razoável, imagine
+instanciando dois MLPs, `net1` e` net2`,
+e treiná-los em dados diferentes.
+Naturalmente, esperaríamos que eles
+para representar dois modelos aprendidos diferentes.
+
 We instantiate the MLP's layers
 in the constructor
 and subsequently invoke these layers
@@ -508,6 +530,24 @@ we need not worry about the backpropagation function
 or parameter initialization.
 The system will generate these functions automatically.
 Let us try this out.
+
+Nós instanciamos as camadas do MLP
+no construtor
+e posteriormente invocar essas camadas
+em cada chamada para a função de propagação direta.
+Observe alguns detalhes importantes.
+Primeiro, nossa função `__init__` personalizada
+invoca a função `__init__` da classe pai
+via `super () .__ init __ ()`
+poupando-nos da dor de reafirmar
+código padrão aplicável à maioria dos blocos.
+Em seguida, instanciamos nossas duas camadas totalmente conectadas,
+atribuindo-os a `self.hidden` e` self.out`.
+Observe que, a menos que implementemos um novo operador,
+não precisamos nos preocupar com a função de retropropagação
+ou inicialização de parâmetro.
+O sistema irá gerar essas funções automaticamente.
+Vamos tentar fazer isso.
 
 ```{.python .input}
 net = MLP()
@@ -537,6 +577,16 @@ throughout the following chapters,
 such as when addressing
 convolutional neural networks.
 
+Uma virtude fundamental da abstração em bloco é sua versatilidade.
+Podemos criar uma subclasse de um bloco para criar camadas
+(como a classe de camada totalmente conectada),
+modelos inteiros (como a classe `MLP` acima),
+ou vários componentes de complexidade intermediária.
+Nós exploramos essa versatilidade
+ao longo dos capítulos seguintes,
+como ao abordar
+redes neurais convolucionais.
+
 
 ## The Sequential Block
 
@@ -551,6 +601,18 @@ we just need to define two key function:
 
 The following `MySequential` class delivers the same
 functionality of the default `Sequential` class.
+
+Agora podemos dar uma olhada mais de perto
+em como a classe `Sequential` funciona.
+Lembre-se de que `Sequential` foi projetado
+para conectar outros blocos em série.
+Para construir nosso próprio `MySequential` simplificado,
+só precisamos definir duas funções principais:
+1. Uma função para anexar blocos um a um a uma lista.
+2. Uma função de propagação direta para passar uma entrada através da cadeia de blocos, na mesma ordem em que foram acrescentados.
+
+A seguinte classe `MySequential` oferece o mesmo
+funcionalidade da classe `Sequential` padrão.
 
 ```{.python .input}
 class MySequential(nn.Block):
@@ -618,6 +680,18 @@ is that during our block's parameter initialization,
 Gluon knows to look inside the `_children`
 dictionary to find sub-blocks whose
 parameters also need to be initialized.
+
+A função `add` adiciona um único bloco
+para o dicionário ordenado `_children`.
+Você deve estar se perguntando por que todo bloco de Gluon
+possui um atributo `_children`
+e por que o usamos em vez de apenas
+definir uma lista Python nós mesmos.
+Resumindo, a principal vantagem das `_crianças`
+é que durante a inicialização do parâmetro do nosso bloco,
+Gluon sabe olhar dentro das `_crianças`
+dicionário para encontrar sub-blocos cujo
+os parâmetros também precisam ser inicializados.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -632,6 +706,18 @@ is that during our module's parameter initialization,
 the system knows to look inside the `_modules`
 dictionary to find sub-modules whose
 parameters also need to be initialized.
+
+No método `__init__`, adicionamos todos os módulos
+para o dicionário ordenado `_modules` um por um.
+Você pode se perguntar por que todo `Módulo`
+possui um atributo `_modules`
+e por que o usamos em vez de apenas
+definir uma lista Python nós mesmos.
+Em suma, a principal vantagem de `_modules`
+é que durante a inicialização do parâmetro do nosso módulo,
+o sistema sabe olhar dentro do `_modules`
+dicionário para encontrar submódulos cujo
+os parâmetros também precisam ser inicializados.
 :end_tab:
 
 When our `MySequential`'s forward propagation function is invoked,
@@ -639,6 +725,12 @@ each added block is executed
 in the order in which they were added.
 We can now reimplement an MLP
 using our `MySequential` class.
+
+Quando a função de propagação direta de nosso `MySequential` é invocada,
+cada bloco adicionado é executado
+na ordem em que foram adicionados.
+Agora podemos reimplementar um MLP
+usando nossa classe `MySequential`.
 
 ```{.python .input}
 net = MySequential()
@@ -666,6 +758,11 @@ Note that this use of `MySequential`
 is identical to the code we previously wrote
 for the `Sequential` class
 (as described in :numref:`sec_mlp_concise`).
+
+Observe que este uso de `MySequential`
+é idêntico ao código que escrevemos anteriormente
+para a classe `Sequential`
+(conforme descrito em: numref: `sec_mlp_concise`).
 
 
 ## Executing Code in the Forward Propagation Function
@@ -954,5 +1051,5 @@ The best way to speed up Python is by avoiding it altogether.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI0NjUyNjNdfQ==
+eyJoaXN0b3J5IjpbLTE0MjMxNTM3MDBdfQ==
 -->
