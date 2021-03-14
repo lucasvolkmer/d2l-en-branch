@@ -26,7 +26,7 @@ ferramentas de código aberto flexíveis têm permitido aos pesquisadores
 para prototipar modelos rapidamente, evitando trabalho repetitivo
 ao reciclar componentes padrão
 ao mesmo tempo em que mantém a capacidade de fazer modificações de baixo nível.
-Com o tempo, as bibliotecas de aprendizado profundo evoluíram
+Com o tempo, as bibliotecas de *Deep Learning* evoluíram
 para oferecer abstrações cada vez mais grosseiras.
 Assim como os designers de semicondutores passaram a especificar transistores
 para circuitos lógicos para escrever código,
@@ -56,7 +56,7 @@ While this chapter does not introduce any new models or datasets,
 the advanced modeling chapters that follow rely heavily on these techniques.
 
 Até agora, apresentamos alguns conceitos básicos de aprendizado de máquina,
-evoluindo para modelos de aprendizado profundo totalmente funcionais.
+evoluindo para modelos de *Deep Learning* totalmente funcionais.
 No último capítulo,
 implementamos cada componente de um MLP do zero
 e até mostrou como aproveitar APIs de alto nível
@@ -64,7 +64,7 @@ para lançar os mesmos modelos sem esforço.
 Para chegar tão longe tão rápido, nós * chamamos * as bibliotecas,
 mas pulei detalhes mais avançados sobre * como eles funcionam *.
 Neste capítulo, vamos abrir a cortina,
-aprofundando os principais componentes da computação de aprendizado profundo,
+aprofundando os principais componentes da computação de *Deep Learning*,
 ou seja, construção de modelo, acesso de parâmetro e inicialização,
 projetando camadas e blocos personalizados, lendo e gravando modelos em disco,
 e aproveitando GPUs para obter acelerações dramáticas.
@@ -87,5 +87,5 @@ use-gpu
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUyMjY3NTg1LC0xNTUxMzM3NzY3XX0=
+eyJoaXN0b3J5IjpbLTE2MDUzMTY4MywtMTU1MTMzNzc2N119
 -->
