@@ -204,13 +204,6 @@ Antes de implementar nosso próprio bloco personalizado,
 resumimos brevemente a funcionalidade básica
 que cada bloco deve fornecer:
 
-1. Ingest input data as arguments to its forward propagation function.
-2. Generate an output by having the forward propagation function return a value. Note that the output may have a different shape from the input. For example, the first fully-connected layer in our model above ingests an      input of arbitrary dimension but returns an output of dimension 256.
-3. Calculate the gradient of its output with respect to its input, which can be accessed via its backpropagation function. Typically this happens automatically.
-4. Store and provide access to those parameters necessary
-   to execute the forward propagation computation.
-5. Initialize model parameters as needed.
-
 1. Ingerir dados de entrada como argumentos para sua função de propagação direta.
 1. Gere uma saída fazendo com que a função de propagação direta retorne um valor. Observe que a saída pode ter uma forma diferente da entrada. Por exemplo, a primeira camada totalmente conectada em nosso modelo acima ingere uma entrada de dimensão arbitrária, mas retorna uma saída de dimensão 256.
 1. Calcule o gradiente de sua saída em relação à sua entrada, que pode ser acessado por meio de sua função de retropropagação. Normalmente, isso acontece automaticamente.
@@ -227,7 +220,7 @@ Note that the `MLP` class below inherits the class that represents a block.
 We will heavily rely on the parent class's functions,
 supplying only our own constructor (the `__init__` function in Python) and the forward propagation function.
 
-No seguinte snippet,
+No seguinte trecho de código,
 nós codificamos um bloco do zero
 correspondendo a um MLP
 com uma camada oculta com 256 unidades ocultas,
@@ -982,5 +975,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MDI4MDk3NCwtMTYzNzgyOTQ5MF19
+eyJoaXN0b3J5IjpbNjU5NDA4MDk5LDE3NzAyODA5NzQsLTE2Mz
+c4Mjk0OTBdfQ==
 -->
