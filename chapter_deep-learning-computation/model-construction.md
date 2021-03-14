@@ -1,28 +1,6 @@
 # Camadas e Blocos
 :label:`sec_model_construction`
 
-When we first introduced neural networks,
-we focused on linear models with a single output.
-Here, the entire model consists of just a single neuron.
-Note that a single neuron
-(i) takes some set of inputs;
-(ii) generates a corresponding scalar output;
-and (iii) has a set of associated parameters that can be updated
-to optimize some objective function of interest.
-Then, once we started thinking about networks with multiple outputs,
-we leveraged vectorized arithmetic
-to characterize an entire layer of neurons.
-Just like individual neurons,
-layers (i) take a set of inputs,
-(ii) generate corresponding outputs,
-and (iii) are described by a set of tunable parameters.
-When we worked through softmax regression,
-a single layer was itself the model.
-However, even when we subsequently
-introduced MLPs,
-we could still think of the model as
-retaining this same basic structure.
-
 Quando introduzimos as redes neurais pela primeira vez,
 focamos em modelos lineares com uma única saída.
 Aqui, todo o modelo consiste em apenas um único neurônio.
@@ -44,20 +22,6 @@ No entanto, mesmo quando subsequentemente
 introduziu MLPs,
 ainda podemos pensar no modelo como
 mantendo esta mesma estrutura básica.
-
-Interestingly, for MLPs,
-both the entire model and its constituent layers
-share this structure.
-The entire model takes in raw inputs (the features),
-generates outputs (the predictions),
-and possesses parameters
-(the combined parameters from all constituent layers).
-Likewise, each individual layer ingests inputs
-(supplied by the previous layer)
-generates outputs (the inputs to the subsequent layer),
-and possesses a set of tunable parameters that are updated
-according to the signal that flows backwards
-from the subsequent layer.
 
 Curiosamente, para MLPs,
 todo o modelo e suas camadas constituintes
@@ -104,12 +68,12 @@ mas menor do que o modelo inteiro.
 Por exemplo, a arquitetura ResNet-152,
 que é muito popular na visão computacional,
 possui centenas de camadas.
-Essas camadas consistem em padrões repetidos de * grupos de camadas *. Implementar uma camada de rede por vez pode se tornar tedioso.
+Essas camadas consistem em padrões repetidos de *grupos de camadas*. Implementar uma camada de rede por vez pode se tornar tedioso.
 Essa preocupação não é apenas hipotética --- tal
 padrões de projeto são comuns na prática.
 A arquitetura ResNet mencionada acima
 venceu as competições de visão computacional ImageNet e COCO 2015
-para reconhecimento e detecção: cite: `He.Zhang.Ren.ea.2016`
+para reconhecimento e detecção :cite:`He.Zhang.Ren.ea.2016`
 e continua sendo uma arquitetura indispensável para muitas tarefas de visão.
 Arquiteturas semelhantes nas quais as camadas são organizadas
 em vários padrões repetidos
@@ -1137,5 +1101,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MzI0NTk1MF19
+eyJoaXN0b3J5IjpbMTk4MjEzNTk2M119
 -->
