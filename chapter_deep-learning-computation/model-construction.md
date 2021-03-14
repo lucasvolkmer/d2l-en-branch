@@ -197,13 +197,6 @@ a função `__call__` da classe Block.
 
 ## Um Bloco Personalizado
 
-Perhaps the easiest way to develop intuition
-about how a block works
-is to implement one ourselves.
-Before we implement our own custom block,
-we briefly summarize the basic functionality
-that each block must provide:
-
 Talvez a maneira mais fácil de desenvolver intuição
 sobre como funciona um bloco
 é implementar um nós mesmos.
@@ -989,5 +982,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzc4Mjk0OTBdfQ==
+eyJoaXN0b3J5IjpbMTc3MDI4MDk3NCwtMTYzNzgyOTQ5MF19
 -->
