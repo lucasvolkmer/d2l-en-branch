@@ -26,12 +26,6 @@ arquiteturas empilhadas com camadas padrão,
 declarar e manipular parâmetros.
 Nesta seção, cobrimos o seguinte:
 
-* Accessing parameters for debugging, diagnostics, and visualizations.
-* Parameter initialization.
-* Sharing parameters across different model components.
-
-We start by focusing on an MLP with one hidden layer.
-
 * Parâmetros de acesso para depuração, diagnóstico e visualizações.
 * Inicialização de parâmetros.
 * Parâmetros de compartilhamento em diferentes componentes do modelo.
@@ -76,7 +70,7 @@ X = tf.random.uniform((2, 4))
 net(X)
 ```
 
-## Parameter Access
+## Acesso a Parâmetros
 
 Let us start with how to access parameters
 from the models that you already know.
@@ -823,5 +817,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcxMjg5OTM3XX0=
+eyJoaXN0b3J5IjpbMTcyMTM5NzQ0MF19
 -->
