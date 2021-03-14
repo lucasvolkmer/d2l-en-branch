@@ -668,12 +668,20 @@ simply since they will become somewhat more computationally intensive.
 
 When the input is a tensor on the GPU, the model will calculate the result on the same GPU.
 
+Veremos muitos mais exemplos de
+como executar modelos em GPUs nos capítulos seguintes,
+simplesmente porque eles se tornarão um pouco mais intensivos em termos de computação.
+
+Quando a entrada é um tensor na GPU, o modelo calculará o resultado na mesma GPU.
+
 ```{.python .input}
 #@tab all
 net(X)
 ```
 
 Let us confirm that the model parameters are stored on the same GPU.
+
+Vamos confirmar se os parâmetros do modelo estão armazenados na mesma GPU.
 
 ```{.python .input}
 net[0].weight.data().ctx
@@ -691,6 +699,8 @@ net.layers[0].weights[0].device, net.layers[0].weights[1].device
 
 In short, as long as all data and parameters are on the same device, we can learn models efficiently. In the following chapters we will see several such examples.
 
+Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositivo, podemos aprender modelos com eficiência. Nos próximos capítulos, veremos vários desses exemplos.
+
 ## Summary
 
 * We can specify devices for storage and calculation, such as the CPU or GPU.
@@ -706,6 +716,19 @@ In short, as long as all data and parameters are on the same device, we can lear
   will trigger a global interpreter lock which stalls all GPUs.
   It is much better to allocate memory
   for logging inside the GPU and only move larger logs.
+* Podemos especificar dispositivos para armazenamento e cálculo, como CPU ou GPU.
+   Por padrão, os dados são criados na memória principal
+   e então use a CPU para cálculos.
+* A estrutura de aprendizagem profunda requer todos os dados de entrada para cálculo
+   estar no mesmo dispositivo,
+   seja CPU ou a mesma GPU.
+* Você pode perder um desempenho significativo movendo dados sem cuidado.
+   Um erro típico é o seguinte: calcular a perda
+   para cada minibatch na GPU e relatando de volta
+   para o usuário na linha de comando (ou registrando-o em um NumPy `ndarray`)
+   irá disparar um bloqueio global do interpretador que paralisa todas as GPUs.
+   É muito melhor alocar memória
+   para registrar dentro da GPU e apenas mover registros maiores.
 
 ## Exercises
 
@@ -721,6 +744,19 @@ In short, as long as all data and parameters are on the same device, we can lear
    on two GPUs at the same time vs. in sequence
    on one GPU. Hint: you should see almost linear scaling.
 
+
+1. Tente uma tarefa de computação maior, como a multiplicação de grandes matrizes,
+    e veja a diferença de velocidade entre a CPU e a GPU.
+    Que tal uma tarefa com uma pequena quantidade de cálculos?
+1. Como devemos ler e escrever os parâmetros do modelo na GPU?
+1. Meça o tempo que leva para calcular 1000
+    multiplicações matriz-matriz de $ 100 \ vezes 100 $ matrizes
+    e registrar a norma de Frobenius da matriz de saída, um resultado de cada vez
+    vs. manter um registro na GPU e transferir apenas o resultado final.
+1. Meça quanto tempo leva para realizar duas multiplicações matriz-matriz
+    em duas GPUs ao mesmo tempo vs. em sequência
+    em uma GPU. Dica: você deve ver uma escala quase linear.
+    
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/62)
 :end_tab:
@@ -733,5 +769,5 @@ In short, as long as all data and parameters are on the same device, we can lear
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzkyMDQ1NDFdfQ==
+eyJoaXN0b3J5IjpbLTY3MjIyODU4NF19
 -->
