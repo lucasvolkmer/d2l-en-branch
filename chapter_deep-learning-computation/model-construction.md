@@ -672,19 +672,6 @@ chimera(X)
 ## Eficiência
 
 :begin_tab:`mxnet`
-The avid reader might start to worry
-about the efficiency of some of these operations.
-After all, we have lots of dictionary lookups,
-code execution, and lots of other Pythonic things
-taking place in what is supposed to be
-a high-performance deep learning library.
-The problems of Python's [global interpreter lock](https://wiki.python.org/moin/GlobalInterpreterLock) are well known. 
-In the context of deep learning,
-we may worry that our extremely fast GPU(s)
-might have to wait until a puny CPU
-runs Python code before it gets another job to run.
-The best way to speed up Python is by avoiding it altogether.
-
 O leitor ávido pode começar a se preocupar
 sobre a eficiência de algumas dessas operações.
 Afinal, temos muitas pesquisas de dicionário,
@@ -712,7 +699,7 @@ the hybridization section (:numref:`sec_hybridize`)
 to learn about compilation after finishing the current chapter.
 
 Uma maneira de o Gluon fazer isso é permitindo
-* hibridização *, que será descrita mais tarde.
+*hibridização*, que será descrita mais tarde.
 Aqui, o interpretador Python executa um bloco
 na primeira vez que é invocado.
 O tempo de execução do Gluon registra o que está acontecendo
@@ -818,6 +805,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMDk1MTcxNiwzNTU2NjM4MTEsODM3OT
+eyJoaXN0b3J5IjpbLTg1NjYxNDMzNywzNTU2NjM4MTEsODM3OT
 I2ODQ3LDE3NzAyODA5NzQsLTE2Mzc4Mjk0OTBdfQ==
 -->
