@@ -73,21 +73,6 @@ e ainda implementar redes neurais complexas.
 ![Multiple layers are combined into blocks, forming repeating patterns of larger models.](../img/blocks.svg)
 :label:`fig_blocks`
 
-
-From a programing standpoint, a block is represented by a *class*.
-Any subclass of it must define a forward propagation function
-that transforms its input into output
-and must store any necessary parameters.
-Note that some blocks do not require any parameters at all.
-Finally a block must possess a backpropagation function,
-for purposes of calculating gradients.
-Fortunately, due to some behind-the-scenes magic
-supplied by the auto differentiation
-(introduced in :numref:`sec_autograd`)
-when defining our own block,
-we only need to worry about parameters
-and the forward propagation function.
-
 Do ponto de vista da programação, um bloco é representado por uma *classe*.
 Qualquer subclasse dele deve definir uma função de propagação direta
 que transforma sua entrada em saída
@@ -113,7 +98,7 @@ with 10 units (no activation function).
 
 Para começar, revisitamos o código
 que usamos para implementar MLPs
-(: numref: `sec_mlp_concise`).
+(:numref:`sec_mlp_concise`).
 O código a seguir gera uma rede
 com uma camada oculta totalmente conectada
 com 256 unidades e ativação ReLU,
@@ -1067,5 +1052,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ4MDA5Njc3XX0=
+eyJoaXN0b3J5IjpbLTE0OTQ4MjEwNzZdfQ==
 -->
