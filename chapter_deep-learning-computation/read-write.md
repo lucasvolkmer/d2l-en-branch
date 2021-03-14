@@ -170,6 +170,24 @@ to generate the architecture in code
 and then load the parameters from disk.
 Let us start with our familiar MLP.
 
+Salvar vetores de peso individuais (ou outros tensores) é útil,
+mas fica muito tedioso se quisermos salvar
+(e depois carregue) um modelo inteiro.
+Afinal, podemos ter centenas de
+grupos de parâmetros espalhados por toda parte.
+Por esta razão, a estrutura de aprendizagem profunda fornece funcionalidades integradas
+para carregar e salvar redes inteiras.
+Um detalhe importante a notar é que este
+salva o modelo * parâmetros * e não o modelo inteiro.
+Por exemplo, se tivermos um MLP de 3 camadas,
+precisamos especificar a arquitetura separadamente.
+A razão para isso é que os próprios modelos podem conter código arbitrário,
+portanto, eles não podem ser serializados naturalmente.
+Assim, para restabelecer um modelo, precisamos
+para gerar a arquitetura em código
+e carregue os parâmetros do disco.
+Vamos começar com nosso MLP familiar.
+
 ```{.python .input}
 class MLP(nn.Block):
     def __init__(self, **kwargs):
@@ -223,6 +241,8 @@ Y = net(X)
 
 Next, we store the parameters of the model as a file with the name "mlp.params".
 
+A seguir, armazenamos os parâmetros do modelo como um arquivo com o nome "mlp.params".
+
 ```{.python .input}
 net.save_parameters('mlp.params')
 ```
@@ -241,6 +261,11 @@ To recover the model, we instantiate a clone
 of the original MLP model.
 Instead of randomly initializing the model parameters,
 we read the parameters stored in the file directly.
+
+Para recuperar o modelo, instanciamos um clone
+do modelo MLP original.
+Em vez de inicializar aleatoriamente os parâmetros do modelo,
+lemos os parâmetros armazenados no arquivo diretamente.
 
 ```{.python .input}
 clone = MLP()
@@ -263,6 +288,10 @@ clone.load_weights("mlp.params")
 Since both instances have the same model parameters,
 the computational result of the same input `X` should be the same.
 Let us verify this.
+
+Uma vez que ambas as instâncias têm os mesmos parâmetros de modelo,
+o resultado computacional da mesma entrada `X` deve ser o mesmo.
+Deixe-nos verificar isso.
 
 ```{.python .input}
 Y_clone = clone(X)
@@ -287,11 +316,18 @@ Y_clone == Y
 * We can save and load the entire sets of parameters for a network via a parameter dictionary.
 * Saving the architecture has to be done in code rather than in parameters.
 
+* As funções `save` e` load` podem ser usadas para executar E / S de arquivo para objetos tensores.
+* Podemos salvar e carregar todos os conjuntos de parâmetros de uma rede por meio de um dicionário de parâmetros.
+* Salvar a arquitetura deve ser feito em código e não em parâmetros.
 ## Exercises
 
 1. Even if there is no need to deploy trained models to a different device, what are the practical benefits of storing model parameters?
-1. Assume that we want to reuse only parts of a network to be incorporated into a network of a different architecture. How would you go about using, say the first two layers from a previous network in a new network?
-1. How would you go about saving the network architecture and parameters? What restrictions would you impose on the architecture?
+2. Assume that we want to reuse only parts of a network to be incorporated into a network of a different architecture. How would you go about using, say the first two layers from a previous network in a new network?
+3. How would you go about saving the network architecture and parameters? What restrictions would you impose on the architecture?
+
+4. Mesmo se não houver necessidade de implantar modelos treinados em um dispositivo diferente, quais são os benefícios práticos de armazenar parâmetros de modelo?
+5. Suponha que desejamos reutilizar apenas partes de uma rede para serem incorporadas a uma rede de arquitetura diferente. Como você usaria, digamos, as duas primeiras camadas de uma rede anterior em uma nova rede?
+6. Como você salvaria a arquitetura e os parâmetros da rede? Que restrições você imporia à arquitetura?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/60)
@@ -305,5 +341,5 @@ Y_clone == Y
 [Discussions](https://discuss.d2l.ai/t/327)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzEwMDQ2NDldfQ==
+eyJoaXN0b3J5IjpbMTg5ODAwMDg2OF19
 -->
