@@ -186,6 +186,11 @@ for storage and calculation.
 By default, tensors are created in the main memory
 and then use the CPU to calculate it.
 
+Podemos especificar dispositivos, como CPUs e GPUs,
+para armazenamento e cálculo.
+Por padrão, os tensores são criados na memória principal
+e, em seguida, use a CPU para calculá-lo.
+
 :begin_tab:`mxnet`
 In MXNet, the CPU and GPU can be indicated by `cpu()` and `gpu()`.
 It should be noted that `cpu()`
@@ -198,6 +203,18 @@ and the corresponding memory.
 If there are multiple GPUs, we use `gpu(i)`
 to represent the $i^\mathrm{th}$ GPU ($i$ starts from 0).
 Also, `gpu(0)` and `gpu()` are equivalent.
+
+No MXNet, a CPU e a GPU podem ser indicadas por `cpu ()` e `gpu ()`.
+Deve-se notar que `cpu ()`
+(ou qualquer número inteiro entre parênteses)
+significa todas as CPUs físicas e memória.
+Isso significa que os cálculos do MXNet
+tentará usar todos os núcleos da CPU.
+No entanto, `gpu ()` representa apenas uma carta
+e a memória correspondente.
+Se houver várias GPUs, usamos `gpu (i)`
+para representar a $ i ^ \ mathrm {th} $ GPU ($ i $ começa em 0).
+Além disso, `gpu (0)` e `gpu ()` são equivalentes.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -211,6 +228,17 @@ and the corresponding memory.
 If there are multiple GPUs, we use `torch.cuda.device(f'cuda:{i}')`
 to represent the $i^\mathrm{th}$ GPU ($i$ starts from 0).
 Also, `gpu:0` and `gpu` are equivalent.
+
+No PyTorch, a CPU e a GPU podem ser indicadas por `torch.device ('cpu')` e `torch.cuda.device ('cuda')`.
+Deve-se notar que o dispositivo `cpu`
+significa todas as CPUs físicas e memória.
+Isso significa que os cálculos de PyTorch
+tentará usar todos os núcleos da CPU.
+No entanto, um dispositivo `gpu` representa apenas uma placa
+e a memória correspondente.
+Se houver várias GPUs, usamos `torch.cuda.device (f'cuda: {i} ')`
+para representar a $ i ^ \ mathrm {th} $ GPU ($ i $ começa em 0).
+Além disso, `gpu: 0` e` gpu` são equivalentes.
 :end_tab:
 
 ```{.python .input}
@@ -238,6 +266,8 @@ tf.device('/CPU:0'), tf.device('/GPU:0'), tf.device('/GPU:1')
 
 We can query the number of available GPUs.
 
+Podemos consultar o número de GPUs disponíveis.
+
 ```{.python .input}
 npx.num_gpus()
 ```
@@ -254,6 +284,9 @@ len(tf.config.experimental.list_physical_devices('GPU'))
 
 Now we define two convenient functions that allow us
 to run code even if the requested GPUs do not exist.
+
+Agora definimos duas funções convenientes que nos permitem
+para executar o código mesmo que as GPUs solicitadas não existam.
 
 ```{.python .input}
 def try_gpu(i=0):  #@save
@@ -307,6 +340,9 @@ try_gpu(), try_gpu(10), try_all_gpus()
 By default, tensors are created on the CPU.
 We can query the device where the tensor is located.
 
+Por padrão, tensores são criados na CPU.
+Podemos consultar o dispositivo onde o tensor está localizado.
+
 ```{.python .input}
 x = np.array([1, 2, 3])
 x.ctx
@@ -333,6 +369,15 @@ live on the same device---otherwise the framework
 would not know where to store the result
 or even how to decide where to perform the computation.
 
+É importante notar que sempre que quisermos
+para operar em vários termos,
+eles precisam estar no mesmo dispositivo.
+Por exemplo, se somarmos dois tensores,
+precisamos ter certeza de que ambos os argumentos
+ao vivo no mesmo dispositivo --- caso contrário, a estrutura
+não saberia onde armazenar o resultado
+ou mesmo como decidir onde realizar o cálculo.
+
 ### Storage on the GPU
 
 There are several ways to store a tensor on the GPU.
@@ -341,6 +386,13 @@ Next, we create the tensor variable `X` on the first `gpu`.
 The tensor created on a GPU only consumes the memory of this GPU.
 We can use the `nvidia-smi` command to view GPU memory usage.
 In general, we need to make sure that we do not create data that exceed the GPU memory limit.
+
+Existem várias maneiras de armazenar um tensor na GPU.
+Por exemplo, podemos especificar um dispositivo de armazenamento ao criar um tensor.
+A seguir, criamos a variável tensorial `X` no primeiro` gpu`.
+O tensor criado em uma GPU consome apenas a memória desta GPU.
+Podemos usar o comando `nvidia-smi` para ver o uso de memória da GPU.
+Em geral, precisamos ter certeza de não criar dados que excedam o limite de memória da GPU.
 
 ```{.python .input}
 X = np.ones((2, 3), ctx=try_gpu())
@@ -361,6 +413,8 @@ X
 ```
 
 Assuming that you have at least two GPUs, the following code will create a random tensor on the second GPU.
+
+Supondo que você tenha pelo menos duas GPUs, o código a seguir criará um tensor aleatório na segunda GPU.
 
 ```{.python .input}
 Y = np.random.uniform(size=(2, 3), ctx=try_gpu(1))
@@ -605,5 +659,5 @@ In short, as long as all data and parameters are on the same device, we can lear
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3OTYyOTIwN119
+eyJoaXN0b3J5IjpbLTEyNTk0MjE1NzVdfQ==
 -->
