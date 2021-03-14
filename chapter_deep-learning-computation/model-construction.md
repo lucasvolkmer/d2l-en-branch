@@ -160,35 +160,20 @@ a função `__call__` da classe` Block`.
 :end_tab:
 
 :begin_tab:`pytorch`
-In this example, we constructed
-our model by instantiating an `nn.Sequential`, with layers in the order
-that they should be executed passed as arguments.
-In short, `nn.Sequential` defines a special kind of `Module`,
-the class that presents a block in PyTorch.
-It maintains an ordered list of constituent `Module`s.
-Note that each of the two fully-connected layers is an instance of the `Linear` class
-which is itself a subclass of `Module`.
-The forward propagation (`forward`) function is also remarkably simple:
-it chains each block in the list together,
-passing the output of each as the input to the next.
-Note that until now, we have been invoking our models
-via the construction `net(X)` to obtain their outputs.
-This is actually just shorthand for `net.__call__(X)`.
-
 Neste exemplo, nós construímos
 nosso modelo instanciando um `nn.Sequential`, com camadas na ordem
 que eles devem ser executados passados como argumentos.
 Em suma, `nn.Sequential` define um tipo especial de `Module`,
 a classe que apresenta um bloco em PyTorch.
-Ele mantém uma lista ordenada de `Modul` constituintes.
+Ele mantém uma lista ordenada de `Module` constituintes.
 Observe que cada uma das duas camadas totalmente conectadas é uma instância da classe `Linear`
-que é uma subclasse de `Módulo`.
-A função de propagação direta (`para frente`) também é notavelmente simples:
+que é uma subclasse de `Module`.
+A função de propagação direta (`forward`) também é notavelmente simples:
 ele encadeia cada bloco da lista,
 passando a saída de cada um como entrada para o próximo.
 Observe que, até agora, temos invocado nossos modelos
 através da construção `net (X)` para obter seus resultados.
-Na verdade, isso é apenas um atalho para `net .__ call __ (X)`.
+Na verdade, isso é apenas um atalho para `net.__call__(X)`.
 :end_tab:
 
 :begin_tab:`tensorflow`
@@ -217,12 +202,12 @@ a classe que apresenta um bloco em Keras.
 Ele mantém uma lista ordenada de `Model`s constituintes.
 Observe que cada uma das duas camadas totalmente conectadas é uma instância da classe `Dense`
 que é uma subclasse de `Model`.
-A função de propagação direta (`chamada`) também é extremamente simples:
+A função de propagação direta (`call`) também é extremamente simples:
 ele encadeia cada bloco da lista,
 passando a saída de cada um como entrada para o próximo.
 Observe que, até agora, temos invocado nossos modelos
 através da construção `net (X)` para obter seus resultados.
-Na verdade, isso é apenas um atalho para `net.call (X)`,
+Na verdade, isso é apenas um atalho para `net.call(X)`,
 um truque Python habilidoso alcançado via
 a função `__call__` da classe Block.
 :end_tab:
@@ -1021,5 +1006,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDc5NDY3MjddfQ==
+eyJoaXN0b3J5IjpbLTYwMTkxOTE2N119
 -->
