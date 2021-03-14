@@ -448,6 +448,18 @@ it cannot find data on the same device and it fails.
 Since `Y` lives on the second GPU,
 we need to move `X` there before we can add the two.
 
+Se quisermos calcular `X + Y`,
+precisamos decidir onde realizar esta operação.
+Por exemplo, como mostrado em: numref: `fig_copyto`,
+podemos transferir `X` para a segunda GPU
+e realizar a operação lá.
+* Não * simplesmente adicione `X` e` Y`,
+pois isso resultará em uma exceção.
+O mecanismo de tempo de execução não saberia o que fazer:
+ele não consegue encontrar dados no mesmo dispositivo e falha.
+Já que `Y` vive na segunda GPU,
+precisamos mover `X` para lá antes de podermos adicionar os dois.
+
 ![Copy data to perform an operation on the same device.](../img/copyto.svg)
 :label:`fig_copyto`
 
@@ -478,6 +490,10 @@ Now that the data are on the same GPU
 (both `Z` and `Y` are),
 we can add them up.
 
+Agora que os dados estão na mesma GPU
+(ambos são `Z` e` Y`),
+podemos somá-los.
+
 ```{.python .input}
 #@tab all
 Y + Z
@@ -497,18 +513,40 @@ If the variable already live in the specified device
 then this is a no-op.
 Unless you specifically want to make a copy,
 `as_in_ctx` is the method of choice.
+
+Imagine que sua variável `Z` já esteja em sua segunda GPU.
+O que acontece se ainda chamarmos `Z.copyto (gpu (1))`?
+Ele fará uma cópia e alocará nova memória,
+mesmo que essa variável já resida no dispositivo desejado.
+Há momentos em que, dependendo do ambiente em que nosso código está sendo executado,
+duas variáveis podem já estar no mesmo dispositivo.
+Então, queremos fazer uma cópia apenas se as variáveis
+atualmente vivem em dispositivos diferentes.
+Nestes casos, podemos chamar `as_in_ctx`.
+Se a variável já estiver viva no dispositivo especificado
+então este é um ambiente autônomo.
+A menos que você queira especificamente fazer uma cópia,
+`as_in_ctx` é o método de escolha.
 :end_tab:
 
 :begin_tab:`pytorch`
 Imagine that your variable `Z` already lives on your second GPU.
 What happens if we still call `Z.cuda(1)`?
 It will return `Z` instead of making a copy and allocating new memory.
+
+Imagine que sua variável `Z` já esteja em sua segunda GPU.
+O que acontece se ainda chamarmos `Z.cuda (1)`?
+Ele retornará `Z` em vez de fazer uma cópia e alocar nova memória.
 :end_tab:
 
 :begin_tab:`tensorflow`
 Imagine that your variable `Z` already lives on your second GPU.
 What happens if we still call `Z2 = Z` under the same device scope?
 It will return `Z` instead of making a copy and allocating new memory.
+
+Imagine que sua variável `Z` já esteja em sua segunda GPU.
+O que acontece se ainda chamarmos `Z2 = Z` no mesmo escopo de dispositivo?
+Ele retornará `Z` em vez de fazer uma cópia e alocar nova memória.
 :end_tab:
 
 ```{.python .input}
@@ -538,6 +576,15 @@ If the deep learning framework just did the copy automatically
 without crashing then you might not realize
 that you had written some slow code.
 
+As pessoas usam GPUs para fazer aprendizado de máquina
+porque eles esperam que eles sejam rápidos.
+Mas a transferência de variáveis entre dispositivos é lenta.
+Então, queremos que você tenha 100% de certeza
+que você deseja fazer algo lento antes de deixá-lo fazer.
+Se a estrutura de aprendizado profundo apenas fizesse a cópia automaticamente
+sem bater, então você pode não perceber
+que você escreveu algum código lento.
+
 Also, transferring data between devices (CPU, GPUs, and other machines)
 is something that is much slower than computation.
 It also makes parallelization a lot more difficult,
@@ -555,6 +602,23 @@ It is a bit like ordering your coffee in a queue
 rather than pre-ordering it by phone
 and finding out that it is ready when you are.
 
+Além disso, a transferência de dados entre dispositivos (CPU, GPUs e outras máquinas)
+é algo muito mais lento do que a computação.
+Também torna a paralelização muito mais difícil,
+já que temos que esperar que os dados sejam enviados (ou melhor, para serem recebidos)
+antes de prosseguirmos com mais operações.
+É por isso que as operações de cópia devem ser realizadas com muito cuidado.
+Como regra geral, muitas pequenas operações
+são muito piores do que uma grande operação.
+Além disso, várias operações ao mesmo tempo
+são muito melhores do que muitas operações simples intercaladas no código
+a menos que você saiba o que está fazendo.
+Este é o caso, uma vez que tais operações podem bloquear se um dispositivo
+tem que esperar pelo outro antes de fazer outra coisa.
+É um pouco como pedir seu café em uma fila
+em vez de pré-encomendá-lo por telefone
+e descobrir que ele está pronto quando você estiver.
+
 Last, when we print tensors or convert tensors to the NumPy format,
 if the data is not in the main memory,
 the framework will copy it to the main memory first,
@@ -562,11 +626,21 @@ resulting in additional transmission overhead.
 Even worse, it is now subject to the dreaded global interpreter lock
 that makes everything wait for Python to complete.
 
+Por último, quando imprimimos tensores ou convertemos tensores para o formato NumPy,
+se os dados não estiverem na memória principal,
+o framework irá copiá-lo para a memória principal primeiro,
+resultando em sobrecarga de transmissão adicional.
+Pior ainda, agora está sujeito ao temido bloqueio de intérprete global
+isso faz tudo esperar que o Python seja concluído.
+
 
 ## Neural Networks and GPUs
 
 Similarly, a neural network model can specify devices.
 The following code puts the model parameters on the GPU.
+
+Da mesma forma, um modelo de rede neural pode especificar dispositivos.
+O código a seguir coloca os parâmetros do modelo na GPU.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -659,5 +733,5 @@ In short, as long as all data and parameters are on the same device, we can lear
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTk0MjE1NzVdfQ==
+eyJoaXN0b3J5IjpbLTE0MzkyMDQ1NDFdfQ==
 -->
