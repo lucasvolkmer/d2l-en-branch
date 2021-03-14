@@ -318,11 +318,6 @@ de acordo com vários outros protocolos. A estrutura fornece mais comumente
 protocolos usados e também permite criar um inicializador personalizado.
 
 :begin_tab:`mxnet`
-By default, MXNet initializes weight parameters by randomly drawing from a uniform distribution $U(-0.07, 0.07)$,
-clearing bias parameters to zero.
-MXNet's `init` module provides a variety
-of preset initialization methods.
-
 Por padrão, MXNet inicializa os parâmetros de peso ao desenhar aleatoriamente de uma distribuição uniforme $U(-0.07, 0.07)$,
 limpar os parâmetros de polarização para zero.
 O módulo `init` do MXNet oferece uma variedade
@@ -330,11 +325,6 @@ de métodos de inicialização predefinidos.
 :end_tab:
 
 :begin_tab:`pytorch`
-By default, PyTorch initializes weight and bias matrices
-uniformly by drawing from a range that is computed according to the input and output dimension.
-PyTorch's `nn.init` module provides a variety
-of preset initialization methods.
-
 Por padrão, o PyTorch inicializa matrizes de ponderação e polarização
 uniformemente extraindo de um intervalo que é calculado de acordo com a dimensão de entrada e saída.
 O módulo `nn.init` do PyTorch oferece uma variedade
@@ -342,14 +332,11 @@ de métodos de inicialização predefinidos.
 :end_tab:
 
 :begin_tab:`tensorflow`
-By default, Keras initializes weight matrices uniformly by drawing from a range that is computed according to the input and output dimension, and the bias parameters are all set to zero.
-TensorFlow provides a variety of initialization methods both in the root module and the `keras.initializers` module.
-
 Por padrão, Keras inicializa matrizes de ponderação uniformemente, tirando de um intervalo que é calculado de acordo com a dimensão de entrada e saída, e os parâmetros de polarização são todos definidos como zero.
 O TensorFlow oferece uma variedade de métodos de inicialização no módulo raiz e no módulo `keras.initializers`.
 :end_tab:
 
-### Built-in Initialization
+### Inicialização Built-in 
 
 Let us begin by calling on built-in initializers.
 The code below initializes all weight parameters
@@ -745,5 +732,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NjE4NDA3OSwxNjQyOTc4NTAxXX0=
+eyJoaXN0b3J5IjpbMTAxNzYxOTg1NCwxNjQyOTc4NTAxXX0=
 -->
