@@ -345,20 +345,20 @@ y = tf.nn.relu(x)
 d2l.plot(x.numpy(), y.numpy(), 'x', 'relu(x)', figsize=(5, 2.5))
 ```
 
-When the input is negative,
-the derivative of the ReLU function is 0,
-and when the input is positive,
-the derivative of the ReLU function is 1.
-Note that the ReLU function is not differentiable
-when the input takes value precisely equal to 0.
-In these cases, we default to the left-hand-side
-derivative and say that the derivative is 0 when the input is 0.
-We can get away with this because
-the input may never actually be zero.
-There is an old adage that if subtle boundary conditions matter,
-we are probably doing (*real*) mathematics, not engineering.
-That conventional wisdom may apply here.
-We plot the derivative of the ReLU function plotted below.
+Quando a entrada é negativa,
+a derivada da função ReLU é 0,
+e quando a entrada é positiva,
+a derivada da função ReLU é 1.
+Observe que a função ReLU não é diferenciável
+quando a entrada assume um valor precisamente igual a 0.
+Nesses casos, o padrão é o lado esquerdo da
+derivada, e dizemos que a derivada é 0 quando a entrada é 0.
+Podemos escapar impunes porque
+a entrada pode nunca ser realmente zero.
+Há um velho ditado que diz que se as condições de contorno sutis são importantes,
+provavelmente estamos fazendo matemática (*real*), não engenharia.
+Essa sabedoria convencional pode se aplicar aqui.
+Plotamos a derivada da função ReLU abaixo.
 
 ```{.python .input}
 y.backward()
@@ -591,8 +591,8 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjkxNDE2MDAsMTM0OTIwMjY0MSwyMD
-QxMDk2MDI1LDE2Mzc4MTM1ODMsLTUxMzYzNjM3OSwtMTQ4NDM5
-OTg3OCwtMjA2MDEwMTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX
-0=
+eyJoaXN0b3J5IjpbMTYyNjg2MjA1MywxMzQ5MjAyNjQxLDIwND
+EwOTYwMjUsMTYzNzgxMzU4MywtNTEzNjM2Mzc5LC0xNDg0Mzk5
+ODc4LC0yMDYwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5NDVdfQ
+==
 -->
