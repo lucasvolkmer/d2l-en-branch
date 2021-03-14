@@ -454,11 +454,6 @@ print(net.layers[2].weights[0])
 
 ### Inicialização Customizada
 
-Sometimes, the initialization methods we need
-are not provided by the deep learning framework.
-In the example below, we define an initializer
-for any weight parameter $w$ using the following strange distribution:
-
 Às vezes, os métodos de inicialização de que precisamos
 não são fornecidos pela estrutura de *Deep Learning*.
 No exemplo abaixo, definimos um inicializador
@@ -475,28 +470,18 @@ $$
 $$
 
 :begin_tab:`mxnet`
-Here we define a subclass of the `Initializer` class.
-Usually, we only need to implement the `_init_weight` function
-which takes a tensor argument (`data`)
-and assigns to it the desired initialized values.
-
 Aqui definimos uma subclasse da classe `Initializer`.
 Normalmente, só precisamos implementar a função `_init_weight`
-que leva um argumento tensor (`dados`)
+que leva um argumento tensor (`data`)
 e atribui a ele os valores inicializados desejados.
 :end_tab:
 
 :begin_tab:`pytorch`
-Again, we implement a `my_init` function to apply to `net`.
-
 Novamente, implementamos uma função `my_init` para aplicar a` net`.
 :end_tab:
 
 :begin_tab:`tensorflow`
-Here we define a subclass of `Initializer` and implement the `__call__`
-function that return a desired tensor given the shape and data type.
-
-Aqui nós definimos uma subclasse de `Initializer` e implementamos o` __call__`
+Aqui nós definimos uma subclasse de `Initializer` e implementamos o`__call__`
 função que retorna um tensor desejado de acordo com a forma e o tipo de dados.
 :end_tab:
 
@@ -545,9 +530,6 @@ net = tf.keras.models.Sequential([
 net(X)
 print(net.layers[1].weights[0])
 ```
-
-Note that we always have the option
-of setting parameters directly.
 
 Observe que sempre temos a opção
 de definir parâmetros diretamente.
@@ -718,5 +700,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDAyMzgxMzMsMTY0Mjk3ODUwMV19
+eyJoaXN0b3J5IjpbMTE3NTY5MzMyLDE2NDI5Nzg1MDFdfQ==
 -->
