@@ -740,13 +740,9 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 
 ## Exercícios
 
-1. What kinds of problems will occur if you change `MySequential` to store blocks in a Python list?
-2. Implement a block that takes two blocks as an argument, say `net1` and `net2` and returns the concatenated output of both networks in the forward propagation. This is also called a parallel block.
-3. Assume that you want to concatenate multiple instances of the same network. Implement a factory function that generates multiple instances of the same block and build a larger network from it.
-
-4. Que tipos de problemas ocorrerão se você alterar `MySequential` para armazenar blocos em uma lista Python?
-5. Implemente um bloco que tenha dois blocos como argumento, digamos `net1` e` net2` e retorne a saída concatenada de ambas as redes na propagação direta. Isso também é chamado de bloco paralelo.
-6. Suponha que você deseja concatenar várias instâncias da mesma rede. Implemente uma função de fábrica que gere várias instâncias do mesmo bloco e construa uma rede maior a partir dele.
+1. Que tipos de problemas ocorrerão se você alterar `MySequential` para armazenar blocos em uma lista Python?
+1. Implemente um bloco que tenha dois blocos como argumento, digamos `net1` e `net2` e retorne a saída concatenada de ambas as redes na propagação direta. Isso também é chamado de bloco paralelo.
+1. Suponha que você deseja concatenar várias instâncias da mesma rede. Implemente uma função de fábrica que gere várias instâncias do mesmo bloco e construa uma rede maior a partir dele.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/54)
@@ -760,7 +756,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTQ0OTcyOSwtODU2NjE0MzM3LDM1NT
+eyJoaXN0b3J5IjpbMTQwNjIzOTk0NiwtODU2NjE0MzM3LDM1NT
 Y2MzgxMSw4Mzc5MjY4NDcsMTc3MDI4MDk3NCwtMTYzNzgyOTQ5
 MF19
 -->
