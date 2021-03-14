@@ -495,14 +495,14 @@ d2l.plot(x.numpy(), t.gradient(y, x).numpy(), 'x', 'grad of sigmoid',
 
 ### Função Tanh
 
-Like the sigmoid function, [**the tanh (hyperbolic tangent)
-function also squashes its inputs**],
-transforming them into elements on the interval (**between -1 and 1**):
+Como a função sigmoid, [**a tanh (tangente hiperbólica)
+função também comprime suas entradas**],
+transformando-as em elementos no intervalo (**entre -1 e 1**):
 
 $$\operatorname{tanh}(x) = \frac{1 - \exp(-2x)}{1 + \exp(-2x)}.$$
 
-We plot the tanh function below.
-Note that as the input nears 0, the tanh function approaches a linear transformation. Although the shape of the function is similar to that of the sigmoid function, the tanh function exhibits point symmetry about the origin of the coordinate system.
+Traçamos a função tanh abaixo.
+Observe que, à medida que a entrada se aproxima de 0, a função tanh se aproxima de uma transformação linear. Embora a forma da função seja semelhante à da função sigmoid, a função tanh exibe uma simetria de ponto sobre a origem do sistema de coordenadas.
 
 ```{.python .input}
 with autograd.record():
@@ -522,7 +522,7 @@ y = tf.nn.tanh(x)
 d2l.plot(x.numpy(), y.numpy(), 'x', 'tanh(x)', figsize=(5, 2.5))
 ```
 
-The derivative of the tanh function is:
+A derivada da função tanh é:
 
 $$\frac{d}{dx} \operatorname{tanh}(x) = 1 - \operatorname{tanh}^2(x).$$
 
@@ -593,8 +593,8 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTQyNTk5LC0xNDQxNzc4NDA0LDEzND
-kyMDI2NDEsMjA0MTA5NjAyNSwxNjM3ODEzNTgzLC01MTM2MzYz
-NzksLTE0ODQzOTk4NzgsLTIwNjAxMDE1MzQsODQ5OTk1NzEwLD
-cxMzExNTk0NV19
+eyJoaXN0b3J5IjpbLTE2Njc1MDI1NzIsLTE0NDE3Nzg0MDQsMT
+M0OTIwMjY0MSwyMDQxMDk2MDI1LDE2Mzc4MTM1ODMsLTUxMzYz
+NjM3OSwtMTQ4NDM5OTg3OCwtMjA2MDEwMTUzNCw4NDk5OTU3MT
+AsNzEzMTE1OTQ1XX0=
 -->
