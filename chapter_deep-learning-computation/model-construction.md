@@ -708,7 +708,7 @@ Isso pode acelerar as coisas consideravelmente em alguns casos
 mas é preciso ter cuidado ao controlar o fluxo (como acima)
 conduz a diferentes ramos em diferentes passagens através da rede.
 Recomendamos que o leitor interessado verifique
-a seção de hibridização (: numref: `sec_hybridize`)
+a seção de hibridização (:numref:`sec_hybridize`)
 para aprender sobre a compilação depois de terminar o capítulo atual.
 :end_tab:
 
@@ -805,6 +805,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NjYxNDMzNywzNTU2NjM4MTEsODM3OT
-I2ODQ3LDE3NzAyODA5NzQsLTE2Mzc4Mjk0OTBdfQ==
+eyJoaXN0b3J5IjpbLTE3NDEzMDY2MTksLTg1NjYxNDMzNywzNT
+U2NjM4MTEsODM3OTI2ODQ3LDE3NzAyODA5NzQsLTE2Mzc4Mjk0
+OTBdfQ==
 -->
