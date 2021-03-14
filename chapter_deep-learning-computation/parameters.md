@@ -336,12 +336,7 @@ Por padrão, Keras inicializa matrizes de ponderação uniformemente, tirando de
 O TensorFlow oferece uma variedade de métodos de inicialização no módulo raiz e no módulo `keras.initializers`.
 :end_tab:
 
-### Inicialização Built-in 
-
-Let us begin by calling on built-in initializers.
-The code below initializes all weight parameters
-as Gaussian random variables
-with standard deviation 0.01, while bias parameters cleared to zero.
+### Inicialização *Built-in* 
 
 Vamos começar chamando inicializadores integrados.
 O código abaixo inicializa todos os parâmetros de peso
@@ -379,9 +374,6 @@ net(X)
 net.weights[0], net.weights[1]
 ```
 
-We can also initialize all the parameters
-to a given constant value (say, 1).
-
 Também podemos inicializar todos os parâmetros
 a um determinado valor constante (digamos, 1).
 
@@ -414,12 +406,6 @@ net = tf.keras.models.Sequential([
 net(X)
 net.weights[0], net.weights[1]
 ```
-
-We can also apply different initializers for certain blocks.
-For example, below we initialize the first layer
-with the Xavier initializer
-and initialize the second layer
-to a constant value of 42.
 
 Também podemos aplicar inicializadores diferentes para certos blocos.
 Por exemplo, abaixo inicializamos a primeira camada
@@ -466,7 +452,7 @@ print(net.layers[1].weights[0])
 print(net.layers[2].weights[0])
 ```
 
-### Custom Initialization
+### Inicialização Customizada
 
 Sometimes, the initialization methods we need
 are not provided by the deep learning framework.
@@ -474,9 +460,9 @@ In the example below, we define an initializer
 for any weight parameter $w$ using the following strange distribution:
 
 Às vezes, os métodos de inicialização de que precisamos
-não são fornecidos pela estrutura de aprendizado profundo.
+não são fornecidos pela estrutura de *Deep Learning*.
 No exemplo abaixo, definimos um inicializador
-para qualquer parâmetro de peso $ w $ usando a seguinte distribuição estranha:
+para qualquer parâmetro de peso $w$ usando a seguinte distribuição estranha:
 
 $$
 \begin{aligned}
@@ -732,5 +718,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNzYxOTg1NCwxNjQyOTc4NTAxXX0=
+eyJoaXN0b3J5IjpbLTE5MDAyMzgxMzMsMTY0Mjk3ODUwMV19
 -->
