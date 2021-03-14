@@ -171,7 +171,7 @@ Quando precisamos realizar operações em todos os parâmetros,
 acessá-los um por um pode se tornar tedioso.
 A situação pode ficar especialmente complicada
 quando trabalhamos com blocos mais complexos (por exemplo, blocos aninhados),
-uma vez que precisaríamos recurse
+uma vez que precisaríamos voltar recursivamente
 através de toda a árvore para extrair
 parâmetros de cada sub-bloco. Abaixo, demonstramos como acessar os parâmetros da primeira camada totalmente conectada versus acessar todas as camadas.
 
@@ -780,5 +780,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDYyNzE2MjVdfQ==
+eyJoaXN0b3J5IjpbLTY4NzI5MjMzXX0=
 -->
