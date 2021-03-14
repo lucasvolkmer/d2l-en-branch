@@ -408,38 +408,39 @@ para algum valor no intervalo (0, 1):
 
 $$\operatorname{sigmoid}(x) = \frac{1}{1 + \exp(-x)}.$$
 
-In the earliest neural networks, scientists
-were interested in modeling biological neurons
-which either *fire* or *do not fire*.
-Thus the pioneers of this field,
-going all the way back to McCulloch and Pitts,
-the inventors of the artificial neuron,
-focused on thresholding units.
-A thresholding activation takes value 0
-when its input is below some threshold
-and value 1 when the input exceeds the threshold.
+
+Nas primeiras redes neurais, os cientistas
+estavam interessados ​​em modelar neurônios biológicos
+que *disparam* ou *não disparam*.
+Assim, os pioneiros neste campo,
+voltando para McCulloch e Pitts,
+os inventores do neurônio artificial,
+focaram em unidades de limiar.
+Uma ativação de limite assume valor 0
+quando sua entrada está abaixo de algum limite
+e valor 1 quando a entrada excede o limite.
 
 
-When attention shifted to gradient based learning,
-the sigmoid function was a natural choice
-because it is a smooth, differentiable
-approximation to a thresholding unit.
-Sigmoids are still widely used as
-activation functions on the output units,
-when we want to interpret the outputs as probabilities
-for binary classification problems
-(you can think of the sigmoid as a special case of the softmax).
-However, the sigmoid has mostly been replaced
-by the simpler and more easily trainable ReLU
-for most use in hidden layers.
-In later chapters on recurrent neural networks,
-we will describe architectures that leverage sigmoid units
-to control the flow of information across time.
+Quando a atenção mudou para o aprendizado baseado em gradiente,
+a função sigmoid foi uma escolha natural
+porque é uma boa, diferenciável
+aproximação a uma unidade de limiar.
+Sigmoids ainda são amplamente usados ​​como
+funções de ativação nas unidades de saída,
+quando queremos interpretar as saídas como probabilidades
+para problemas de classificação binária
+(você pode pensar na sigmoid como um caso especial do *softmax*).
+No entanto, a sigmoid foi quase toda substituído
+pelo ReLU, mais simples e facilmente treinável
+para mais uso em camadas ocultas.
+Em capítulos posteriores sobre redes neurais recorrentes,
+iremos descrever arquiteturas que alavancam unidades sigmoid
+para controlar o fluxo de informações ao longo do tempo.
 
-Below, we plot the sigmoid function.
-Note that when the input is close to 0,
-the sigmoid function approaches
-a linear transformation.
+Abaixo, traçamos a função sigmoid.
+Observe que quando a entrada está próxima de 0,
+a função sigmoid se aproxima
+uma transformação linear.
 
 ```{.python .input}
 with autograd.record():
@@ -459,17 +460,17 @@ y = tf.nn.sigmoid(x)
 d2l.plot(x.numpy(), y.numpy(), 'x', 'sigmoid(x)', figsize=(5, 2.5))
 ```
 
-The derivative of the sigmoid function is given by the following equation:
+A derivada da função sigmoid  é dada pela seguinte equação:
 
 $$\frac{d}{dx} \operatorname{sigmoid}(x) = \frac{\exp(-x)}{(1 + \exp(-x))^2} = \operatorname{sigmoid}(x)\left(1-\operatorname{sigmoid}(x)\right).$$
 
 
-The derivative of the sigmoid function is plotted below.
-Note that when the input is 0,
-the derivative of the sigmoid function
-reaches a maximum of 0.25.
-As the input diverges from 0 in either direction,
-the derivative approaches 0.
+A derivada da função sigmoid é plotada abaixo.
+Observe que quando a entrada é 0,
+a derivada da função sigmoid
+atinge um máximo de 0,25.
+À medida que a entrada diverge de 0 em qualquer direção,
+a derivada se aproxima de 0.
 
 ```{.python .input}
 y.backward()
@@ -492,7 +493,7 @@ d2l.plot(x.numpy(), t.gradient(y, x).numpy(), 'x', 'grad of sigmoid',
          figsize=(5, 2.5))
 ```
 
-### Tanh Function
+### Função Tanh
 
 Like the sigmoid function, [**the tanh (hyperbolic tangent)
 function also squashes its inputs**],
@@ -592,8 +593,8 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDE3Nzg0MDQsMTM0OTIwMjY0MSwyMD
-QxMDk2MDI1LDE2Mzc4MTM1ODMsLTUxMzYzNjM3OSwtMTQ4NDM5
-OTg3OCwtMjA2MDEwMTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX
-0=
+eyJoaXN0b3J5IjpbLTEzMTQyNTk5LC0xNDQxNzc4NDA0LDEzND
+kyMDI2NDEsMjA0MTA5NjAyNSwxNjM3ODEzNTgzLC01MTM2MzYz
+NzksLTE0ODQzOTk4NzgsLTIwNjAxMDE1MzQsODQ5OTk1NzEwLD
+cxMzExNTk0NV19
 -->
