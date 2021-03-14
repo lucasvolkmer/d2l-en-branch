@@ -295,24 +295,6 @@ e treiná-los em dados diferentes.
 Naturalmente, esperaríamos que eles
 para representar dois modelos aprendidos diferentes.
 
-We instantiate the MLP's layers
-in the constructor
-and subsequently invoke these layers
-on each call to the forward propagation function.
-Note a few key details.
-First, our customized `__init__` function
-invokes the parent class's `__init__` function
-via `super().__init__()`
-sparing us the pain of restating
-boilerplate code applicable to most blocks.
-We then instantiate our two fully-connected layers,
-assigning them to `self.hidden` and `self.out`.
-Note that unless we implement a new operator,
-we need not worry about the backpropagation function
-or parameter initialization.
-The system will generate these functions automatically.
-Let us try this out.
-
 Nós instanciamos as camadas do MLP
 no construtor
 e posteriormente invocar essas camadas
@@ -326,7 +308,7 @@ código padrão aplicável à maioria dos blocos.
 Em seguida, instanciamos nossas duas camadas totalmente conectadas,
 atribuindo-os a `self.hidden` e` self.out`.
 Observe que, a menos que implementemos um novo operador,
-não precisamos nos preocupar com a função de retropropagação
+não precisamos nos preocupar com a função de *backpropagation*
 ou inicialização de parâmetro.
 O sistema irá gerar essas funções automaticamente.
 Vamos tentar fazer isso.
@@ -349,16 +331,6 @@ net = MLP()
 net(X)
 ```
 
-A key virtue of the block abstraction is its versatility.
-We can subclass a block to create layers
-(such as the fully-connected layer class),
-entire models (such as the `MLP` class above),
-or various components of intermediate complexity.
-We exploit this versatility
-throughout the following chapters,
-such as when addressing
-convolutional neural networks.
-
 Uma virtude fundamental da abstração em bloco é sua versatilidade.
 Podemos criar uma subclasse de um bloco para criar camadas
 (como a classe de camada totalmente conectada),
@@ -370,7 +342,7 @@ como ao abordar
 redes neurais convolucionais.
 
 
-## The Sequential Block
+## O Bloco Sequencial
 
 We can now take a closer look
 at how the `Sequential` class works.
@@ -953,6 +925,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcwMzY3MzQ0LDgzNzkyNjg0NywxNzcwMj
-gwOTc0LC0xNjM3ODI5NDkwXX0=
+eyJoaXN0b3J5IjpbLTkwOTk3MTk2MSw4Mzc5MjY4NDcsMTc3MD
+I4MDk3NCwtMTYzNzgyOTQ5MF19
 -->
