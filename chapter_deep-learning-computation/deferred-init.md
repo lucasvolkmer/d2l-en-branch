@@ -64,12 +64,6 @@ net = tf.keras.models.Sequential([
 ])
 ```
 
-At this point, the network cannot possibly know
-the dimensions of the input layer's weights
-because the input dimension remains unknown.
-Consequently the framework has not yet initialized any parameters.
-We confirm by attempting to access the parameters below.
-
 Neste ponto, a rede não pode saber
 as dimensões dos pesos da camada de entrada
 porque a dimensão de entrada permanece desconhecida.
@@ -101,7 +95,7 @@ Observe que, embora os objetos de parâmetro existam,
 a dimensão de entrada para cada camada é listada como -1.
 MXNet usa o valor especial -1 para indicar
 que a dimensão do parâmetro permanece desconhecida.
-Neste ponto, tenta acessar `net [0] .weight.data ()`
+Neste ponto, tenta acessar `net [0].weight.data()`
 desencadearia um erro de tempo de execução informando que a rede
 deve ser inicializado antes que os parâmetros possam ser acessados.
 Agora vamos ver o que acontece quando tentamos inicializar
@@ -212,5 +206,5 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTY4NzIyMzIsMTEzNTU4Njc3NF19
+eyJoaXN0b3J5IjpbMjEzNDI0NjAyNCwxMTM1NTg2Nzc0XX0=
 -->
