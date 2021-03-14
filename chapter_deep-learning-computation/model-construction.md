@@ -583,21 +583,6 @@ e, portanto, nunca é atualizado por *backpropagation*.
 A rede então passa a saída desta camada "fixa"
 através de uma camada totalmente conectada.
 
-Note that before returning the output,
-our model did something unusual.
-We ran a while-loop, testing
-on the condition its $L_1$ norm is larger than $1$,
-and dividing our output vector by $2$
-until it satisfied the condition.
-Finally, we returned the sum of the entries in `X`.
-To our knowledge, no standard neural network
-performs this operation.
-Note that this particular operation may not be useful
-in any real-world task.
-Our point is only to show you how to integrate
-arbitrary code into the flow of your
-neural network computations.
-
 Observe que antes de retornar a saída,
 nosso modelo fez algo incomum.
 Executamos um *loop while*, testando
@@ -624,11 +609,6 @@ net(X)
 net = FixedHiddenMLP()
 net(X)
 ```
-
-We can mix and match various
-ways of assembling blocks together.
-In the following example, we nest blocks
-in some creative ways.
 
 Podemos misturar e combinar vários
 maneiras de montar blocos juntos.
@@ -689,7 +669,7 @@ chimera.add(FixedHiddenMLP())
 chimera(X)
 ```
 
-## Efficiency
+## Eficiência
 
 :begin_tab:`mxnet`
 The avid reader might start to worry
@@ -838,6 +818,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY3MTk0MzgsMzU1NjYzODExLDgzNzkyNj
-g0NywxNzcwMjgwOTc0LC0xNjM3ODI5NDkwXX0=
+eyJoaXN0b3J5IjpbLTYwMTk5NzIzNywzNTU2NjM4MTEsODM3OT
+I2ODQ3LDE3NzAyODA5NzQsLTE2Mzc4Mjk0OTBdfQ==
 -->
