@@ -190,6 +190,13 @@ In this implementation, we bake in the ReLU activation as a default.
 This layer requires to input arguments: `in_units` and `units`, which
 denote the number of inputs and outputs, respectively.
 
+Agora, vamos implementar nossa própria versão da camada totalmente conectada.
+Lembre-se de que esta camada requer dois parâmetros,
+um para representar o peso e outro para o viés.
+Nesta implementação, preparamos a ativação do ReLU como padrão.
+Esta camada requer a entrada de argumentos: `in_units` e` unidades`, que
+denotam o número de entradas e saídas, respectivamente.
+
 ```{.python .input}
 class MyDense(nn.Block):
     def __init__(self, units, in_units, **kwargs):
@@ -238,6 +245,9 @@ class MyDense(tf.keras.Model):
 Next, we instantiate the `MyDense` class
 and access its model parameters.
 
+Em seguida, instanciamos a classe `MyDense`
+e acessar seus parâmetros de modelo.
+
 ```{.python .input}
 dense = MyDense(units=3, in_units=5)
 dense.params
@@ -258,6 +268,8 @@ dense.get_weights()
 
 We can directly carry out forward propagation calculations using custom layers.
 
+Podemos realizar cálculos de propagação direta usando camadas personalizadas.
+
 ```{.python .input}
 dense.initialize()
 dense(np.random.uniform(size=(2, 5)))
@@ -275,6 +287,9 @@ dense(tf.random.uniform((2, 5)))
 
 We can also construct models using custom layers.
 Once we have that we can use it just like the built-in fully-connected layer.
+
+Também podemos construir modelos usando camadas personalizadas.
+Assim que tivermos isso, podemos usá-lo como a camada totalmente conectada integrada.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -301,13 +316,21 @@ net(tf.random.uniform((2, 64)))
 * We can design custom layers via the basic layer class. This allows us to define flexible new layers that behave differently from any existing layers in the library.
 * Once defined, custom layers can be invoked in arbitrary contexts and architectures.
 * Layers can have local parameters, which can be created through built-in functions.
+* 
+* Podemos projetar camadas personalizadas por meio da classe de camada básica. Isso nos permite definir novas camadas flexíveis que se comportam de maneira diferente de quaisquer camadas existentes na biblioteca.
+* Uma vez definidas, as camadas personalizadas podem ser chamadas em contextos e arquiteturas arbitrários.
+* As camadas podem ter parâmetros locais, que podem ser criados por meio de funções integradas.
 
 
 ## Exercises
 
 1. Design a layer that takes an input and computes a tensor reduction,
    i.e., it returns $y_k = \sum_{i, j} W_{ijk} x_i x_j$.
-1. Design a layer that returns the leading half of the Fourier coefficients of the data.
+2. Design a layer that returns the leading half of the Fourier coefficients of the data.
+
+3. Projete uma camada que recebe uma entrada e calcula uma redução de tensor,
+    ou seja, ele retorna $ y_k = \ sum_ {i, j} W_ {ijk} x_i x_j $.
+4. Projete uma camada que retorne a metade anterior dos coeficientes de Fourier dos dados.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/58)
@@ -321,5 +344,5 @@ net(tf.random.uniform((2, 64)))
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzNTM1MzldfQ==
+eyJoaXN0b3J5IjpbLTEyMjA2MTY1MTVdfQ==
 -->
