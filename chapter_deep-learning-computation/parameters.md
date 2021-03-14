@@ -344,8 +344,8 @@ como variáveis aleatórias gaussianas
 com desvio padrão de 0,01, enquanto os parâmetros de polarização são zerados.
 
 ```{.python .input}
-# Aqui `force_reinit` garante que os parâmetros ensures that parameters are freshly initialized even if
-# they were already initialized previously
+# Aqui `force_reinit` garante que os parâmetros são inciados mesmo se 
+# eles já foram iniciados anteriormente
 net.initialize(init=init.Normal(sigma=0.01), force_reinit=True)
 net[0].weight.data()[0]
 ```
@@ -668,6 +668,6 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxOTQ1ODQ4MSwyNTAxODg1OTcsLTE1OT
-M3ODc3MjgsMTY0Mjk3ODUwMV19
+eyJoaXN0b3J5IjpbLTE1Nzc0MTI2NywtNzE5NDU4NDgxLDI1MD
+E4ODU5NywtMTU5Mzc4NzcyOCwxNjQyOTc4NTAxXX0=
 -->
