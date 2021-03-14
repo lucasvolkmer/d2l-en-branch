@@ -219,26 +219,27 @@ $$
 \end{aligned}
 $$
 
-Since each row in $\mathbf{X}$ corresponds to an example in the minibatch,
-with some abuse of notation, we define the nonlinearity
-$\sigma$ to apply to its inputs in a rowwise fashion,
-i.e., one example at a time.
-Note that we used the notation for softmax
-in the same way to denote a rowwise operation in :numref:`subsec_softmax_vectorization`.
-Often, as in this section, the activation functions
-that we apply to hidden layers are not merely rowwise,
-but elementwise.
-That means that after computing the linear portion of the layer,
-we can calculate each activation
-without looking at the values taken by the other hidden units.
-This is true for most activation functions.
+
+Uma vez que cada linha em $\mathbf{X}$ corresponde a um exemplo no *minibatch*,
+com algum abuso de notação, definimos a não linearidade
+$\sigma$ para aplicar às suas entradas de uma forma em linha,
+ou seja, um exemplo de cada vez.
+Observe que usamos a notação para *softmax*
+da mesma forma para denotar uma operação nas linhas em :numref:`subsec_softmax_vectorization`.
+Frequentemente, como nesta seção, as funções de ativação
+que aplicamos a camadas ocultas não são apenas nas linhas,
+mas elemento a elemento.
+Isso significa que depois de calcular a parte linear da camada,
+podemos calcular cada ativação
+sem olhar para os valores assumidos pelas outras unidades ocultas.
+Isso é verdadeiro para a maioria das funções de ativação.
 
 
-To build more general MLPs, we can continue stacking
-such hidden layers,
-e.g., $\mathbf{H}^{(1)} = \sigma_1(\mathbf{X} \mathbf{W}^{(1)} + \mathbf{b}^{(1)})$
-and $\mathbf{H}^{(2)} = \sigma_2(\mathbf{H}^{(1)} \mathbf{W}^{(2)} + \mathbf{b}^{(2)})$,
-one atop another, yielding ever more expressive models.
+Para construir MLPs mais gerais, podemos continuar empilhando
+tais camadas escondidas,
+por exemplo, $\mathbf{H}^{(1)} = \sigma_1(\mathbf{X} \mathbf{W}^{(1)} + \mathbf{b}^{(1)})$
+e $\mathbf{H}^{(2)} = \sigma_2(\mathbf{H}^{(1)} \mathbf{W}^{(2)} + \mathbf{b}^{(2)})$,
+uma sobre a outra, rendendo modelos cada vez mais expressivos.
 
 ### Universal Approximators
 
@@ -589,7 +590,8 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0OTIwMjY0MSwyMDQxMDk2MDI1LDE2Mz
-c4MTM1ODMsLTUxMzYzNjM3OSwtMTQ4NDM5OTg3OCwtMjA2MDEw
-MTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX0=
+eyJoaXN0b3J5IjpbLTE5NDYxNDAwODAsMTM0OTIwMjY0MSwyMD
+QxMDk2MDI1LDE2Mzc4MTM1ODMsLTUxMzYzNjM3OSwtMTQ4NDM5
+OTg3OCwtMjA2MDEwMTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX
+0=
 -->
