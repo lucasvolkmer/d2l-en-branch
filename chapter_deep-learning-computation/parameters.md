@@ -587,9 +587,9 @@ net(X)
 # Checar se são os mesmos parâmetros
 print(net[1].weight.data()[0] == net[2].weight.data()[0])
 net[1].weight.data()[0, 0] = 100
-# Garantindo que sã
-Make sure that they are actually the same object rather than just having the
-# same value
+# Garantindo que são o mesmo objeto ao invés de ter 
+# apenas o mesmo valor
+
 print(net[1].weight.data()[0] == net[2].weight.data()[0])
 ```
 
@@ -597,6 +597,8 @@ print(net[1].weight.data()[0] == net[2].weight.data()[0])
 #@tab pytorch
 # We need to give the shared layer a name so that we can refer to its
 # parameters
+
+#
 shared = nn.Linear(8, 8)
 net = nn.Sequential(nn.Linear(4, 8), nn.ReLU(),
                     shared, nn.ReLU(),
@@ -669,6 +671,6 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MDgxMzc0NCwtNzE5NDU4NDgxLDI1MD
-E4ODU5NywtMTU5Mzc4NzcyOCwxNjQyOTc4NTAxXX0=
+eyJoaXN0b3J5IjpbMjkwOTQ5OSwtNzE5NDU4NDgxLDI1MDE4OD
+U5NywtMTU5Mzc4NzcyOCwxNjQyOTc4NTAxXX0=
 -->
