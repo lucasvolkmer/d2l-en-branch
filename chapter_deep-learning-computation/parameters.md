@@ -109,16 +109,6 @@ mesmo em uma rede contendo centenas de camadas.
 
 ### Parâmetros Direcionados
 
-Note that each parameter is represented
-as an instance of the parameter class.
-To do anything useful with the parameters,
-we first need to access the underlying numerical values.
-There are several ways to do this.
-Some are simpler while others are more general.
-The following code extracts the bias
-from the second neural network layer, which returns a parameter class instance, and 
-further accesses that parameter's value.
-
 Observe que cada parâmetro é representado
 como uma instância da classe de parâmetro.
 Para fazer algo útil com os parâmetros,
@@ -150,19 +140,12 @@ print(tf.convert_to_tensor(net.layers[2].weights[1]))
 ```
 
 :begin_tab:`mxnet,pytorch`
-Parameters are complex objects,
-containing values, gradients,
-and additional information.
-That's why we need to request the value explicitly.
-
-In addition to the value, each parameter also allows us to access the gradient. Because we have not invoked backpropagation for this network yet, it is in its initial state.
-
 Os parâmetros são objetos complexos,
 contendo valores, gradientes,
 e informações adicionais.
 É por isso que precisamos solicitar o valor explicitamente.
 
-Além do valor, cada parâmetro também nos permite acessar o gradiente. Como ainda não invocamos a retropropagação para esta rede, ela está em seu estado inicial.
+Além do valor, cada parâmetro também nos permite acessar o gradiente. Como ainda não invocamos a *backpropagation* para esta rede, ela está em seu estado inicial.
 :end_tab:
 
 ```{.python .input}
@@ -174,7 +157,7 @@ net[1].weight.grad()
 net[2].weight.grad == None
 ```
 
-### All Parameters at Once
+### Todos os Parâmetros de Uma Vez
 
 When we need to perform operations on all parameters,
 accessing them one-by-one can grow tedious.
@@ -797,5 +780,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyODk0MTc2XX0=
+eyJoaXN0b3J5IjpbLTE0MDYyNzE2MjVdfQ==
 -->
