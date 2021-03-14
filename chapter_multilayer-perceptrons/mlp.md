@@ -241,7 +241,7 @@ por exemplo, $\mathbf{H}^{(1)} = \sigma_1(\mathbf{X} \mathbf{W}^{(1)} + \mathbf{
 e $\mathbf{H}^{(2)} = \sigma_2(\mathbf{H}^{(1)} \mathbf{W}^{(2)} + \mathbf{b}^{(2)})$,
 uma sobre a outra, rendendo modelos cada vez mais expressivos.
 
-### Universal Approximators
+### Aproximadores Universais
 
 MLPs can capture complex interactions
 among our inputs via their hidden neurons,
@@ -590,8 +590,8 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDYxNDAwODAsMTM0OTIwMjY0MSwyMD
-QxMDk2MDI1LDE2Mzc4MTM1ODMsLTUxMzYzNjM3OSwtMTQ4NDM5
-OTg3OCwtMjA2MDEwMTUzNCw4NDk5OTU3MTAsNzEzMTE1OTQ1XX
-0=
+eyJoaXN0b3J5IjpbLTYzODU0OTM5MSwxMzQ5MjAyNjQxLDIwND
+EwOTYwMjUsMTYzNzgxMzU4MywtNTEzNjM2Mzc5LC0xNDg0Mzk5
+ODc4LC0yMDYwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5NDVdfQ
+==
 -->
