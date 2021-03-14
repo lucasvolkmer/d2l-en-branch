@@ -1,4 +1,4 @@
-# Parameter Management
+# Gerenciamento de Parâmetros
 
 Once we have chosen an architecture
 and set our hyperparameters,
@@ -849,5 +849,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MjY4MzIzMl19
+eyJoaXN0b3J5IjpbLTExMjE4NDY5NDddfQ==
 -->
