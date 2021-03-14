@@ -821,6 +821,9 @@ durante a retropropagação.
 * We have several ways to access, initialize, and tie model parameters.
 * We can use custom initialization.
 
+* Temos várias maneiras de acessar, inicializar e vincular os parâmetros do modelo.
+* Podemos usar inicialização personalizada.
+
 
 ## Exercises
 
@@ -829,6 +832,11 @@ durante a retropropagação.
 1. Construct an MLP containing a shared parameter layer and train it. During the training process, observe the model parameters and gradients of each layer.
 1. Why is sharing parameters a good idea?
 
+
+1. Use o modelo `FancyMLP` definido em: numref:` sec_model_construction` e acesse os parâmetros das várias camadas.
+1. Observe o documento do módulo de inicialização para explorar diferentes inicializadores.
+1. Construa um MLP contendo uma camada de parâmetros compartilhados e treine-o. Durante o processo de treinamento, observe os parâmetros do modelo e gradientes de cada camada.
+1. Por que compartilhar parâmetros é uma boa ideia?
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/56)
 :end_tab:
@@ -841,5 +849,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODcxMjQzNThdfQ==
+eyJoaXN0b3J5IjpbLTY3MjY4MzIzMl19
 -->
