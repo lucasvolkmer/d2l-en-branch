@@ -243,37 +243,38 @@ uma sobre a outra, rendendo modelos cada vez mais expressivos.
 
 ### Aproximadores Universais
 
-MLPs can capture complex interactions
-among our inputs via their hidden neurons,
-which depend on the values of each of the inputs.
-We can easily design hidden nodes
-to perform arbitrary computation,
-for instance, basic logic operations on a pair of inputs.
-Moreover, for certain choices of the activation function,
-it is widely known that MLPs are universal approximators.
-Even with a single-hidden-layer network,
-given enough nodes (possibly absurdly many),
-and the right set of weights,
-we can model any function,
-though actually learning that function is the hard part.
-You might think of your neural network
-as being a bit like the C programming language.
-The language, like any other modern language,
-is capable of expressing any computable program.
-But actually coming up with a program
-that meets your specifications is the hard part.
 
-Moreover, just because a single-hidden-layer network
-*can* learn any function
-does not mean that you should try
-to solve all of your problems
-with single-hidden-layer networks.
-In fact, we can approximate many functions
-much more compactly by using deeper (vs. wider) networks.
-We will touch upon more rigorous arguments in subsequent chapters.
+MLPs podem capturar interações complexas
+entre nossas entradas por meio de seus neurônios ocultos,
+que dependem dos valores de cada uma das entradas.
+Podemos projetar nós ocultos facilmente
+para realizar cálculos arbitrários,
+por exemplo, operações lógicas básicas em um par de entradas.
+Além disso, para certas escolhas da função de ativação,
+é amplamente conhecido que os MLPs são aproximadores universais.
+Mesmo com uma rede de camada única oculta,
+dados nós suficientes (possivelmente absurdamente muitos deles),
+e o conjunto certo de pesos,
+podemos modelar qualquer função,
+embora realmente aprender essa função seja a parte difícil.
+Você pode pensar em sua rede neural
+como sendo um pouco como a linguagem de programação C.
+A linguagem, como qualquer outra linguagem moderna,
+é capaz de expressar qualquer programa computável.
+Mas, na verdade, criar um programa
+que atenda às suas especificações é a parte difícil.
+
+Além disso, só porque uma rede de camada única oculta
+*pode* aprender qualquer função
+não significa que você deve tentar
+resolver todos os seus problemas
+com redes de camada única oculta.
+Na verdade, podemos aproximar muitas funções
+de forma muito mais compacta, usando redes mais profundas (em comparação com redes mais amplas).
+Trataremos de argumentos mais rigorosos nos capítulos subsequentes.
 
 
-## Activation Functions
+## Funções de Ativação
 :label:`subsec_activation-functions`
 
 Activation functions decide whether a neuron should be activated or not by
@@ -590,7 +591,7 @@ thousands of lines of C and Fortran.
 [Discussions](https://discuss.d2l.ai/t/226)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzODU0OTM5MSwxMzQ5MjAyNjQxLDIwND
+eyJoaXN0b3J5IjpbMTk5ODM1NTEzMSwxMzQ5MjAyNjQxLDIwND
 EwOTYwMjUsMTYzNzgxMzU4MywtNTEzNjM2Mzc5LC0xNDg0Mzk5
 ODc4LC0yMDYwMTAxNTM0LDg0OTk5NTcxMCw3MTMxMTU5NDVdfQ
 ==
