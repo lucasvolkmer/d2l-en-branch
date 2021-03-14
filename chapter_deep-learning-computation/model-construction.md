@@ -344,25 +344,13 @@ redes neurais convolucionais.
 
 ## O Bloco Sequencial
 
-We can now take a closer look
-at how the `Sequential` class works.
-Recall that `Sequential` was designed
-to daisy-chain other blocks together.
-To build our own simplified `MySequential`,
-we just need to define two key function:
-1. A function to append blocks one by one to a list.
-2. A forward propagation function to pass an input through the chain of blocks, in the same order as they were appended.
-
-The following `MySequential` class delivers the same
-functionality of the default `Sequential` class.
-
 Agora podemos dar uma olhada mais de perto
 em como a classe `Sequential` funciona.
 Lembre-se de que `Sequential` foi projetado
 para conectar outros blocos em série.
 Para construir nosso próprio `MySequential` simplificado,
 só precisamos definir duas funções principais:
-1. Uma função para anexar blocos um a um a uma lista.
+1. Uma função para anexar um blocos a uma lista.
 2. Uma função de propagação direta para passar uma entrada através da cadeia de blocos, na mesma ordem em que foram acrescentados.
 
 A seguinte classe `MySequential` oferece o mesmo
@@ -441,7 +429,7 @@ Você deve estar se perguntando por que todo bloco de Gluon
 possui um atributo `_children`
 e por que o usamos em vez de apenas
 definir uma lista Python nós mesmos.
-Resumindo, a principal vantagem das `_crianças`
+Resumindo, a principal vantagem das `_children`
 é que durante a inicialização do parâmetro do nosso bloco,
 Gluon sabe olhar dentro das `_crianças`
 dicionário para encontrar sub-blocos cujo
@@ -925,6 +913,6 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwOTk3MTk2MSw4Mzc5MjY4NDcsMTc3MD
+eyJoaXN0b3J5IjpbMTY4OTk0NTYxNiw4Mzc5MjY4NDcsMTc3MD
 I4MDk3NCwtMTYzNzgyOTQ5MF19
 -->
