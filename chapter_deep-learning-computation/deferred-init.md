@@ -1,13 +1,8 @@
 # Deferred Initialization
 :label:`sec_deferred_init`
 
-So far, it might seem that we got away
-with being sloppy in setting up our networks.
-Specifically, we did the following unintuitive things,
-which might not seem like they should work:
-
 Até agora, pode parecer que escapamos
-por ser descuidado na configuração de nossas redes.
+por ser descuidados na configuração de nossas redes.
 Especificamente, fizemos as seguintes coisas não intuitivas,
 que podem não parecer que deveriam funcionar:
 
@@ -249,5 +244,5 @@ a estrutura pode finalmente inicializar os parâmetros.
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNTU4Njc3NF19
+eyJoaXN0b3J5IjpbLTIzOTM5Njg0NCwxMTM1NTg2Nzc0XX0=
 -->
