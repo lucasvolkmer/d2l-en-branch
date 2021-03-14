@@ -177,23 +177,6 @@ Na verdade, isso é apenas um atalho para `net.__call__(X)`.
 :end_tab:
 
 :begin_tab:`tensorflow`
-In this example, we constructed
-our model by instantiating an `keras.models.Sequential`, with layers in the order
-that they should be executed passed as arguments.
-In short, `Sequential` defines a special kind of `keras.Model`,
-the class that presents a block in Keras.
-It maintains an ordered list of constituent `Model`s.
-Note that each of the two fully-connected layers is an instance of the `Dense` class
-which is itself a subclass of `Model`.
-The forward propagation (`call`) function is also remarkably simple:
-it chains each block in the list together,
-passing the output of each as the input to the next.
-Note that until now, we have been invoking our models
-via the construction `net(X)` to obtain their outputs.
-This is actually just shorthand for `net.call(X)`,
-a slick Python trick achieved via
-the Block class's `__call__` function.
-
 Neste exemplo, nós construímos
 nosso modelo instanciando um `keras.models.Sequential`, com camadas na ordem
 que eles devem ser executados passados como argumentos.
@@ -212,7 +195,7 @@ um truque Python habilidoso alcançado via
 a função `__call__` da classe Block.
 :end_tab:
 
-## A Custom Block
+## Um Bloco Personalizado
 
 Perhaps the easiest way to develop intuition
 about how a block works
@@ -1006,5 +989,5 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzg3OTYxNDBdfQ==
+eyJoaXN0b3J5IjpbLTE2Mzc4Mjk0OTBdfQ==
 -->
