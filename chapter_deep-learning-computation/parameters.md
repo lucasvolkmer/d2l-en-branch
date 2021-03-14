@@ -590,6 +590,11 @@ are not provided by the deep learning framework.
 In the example below, we define an initializer
 for any weight parameter $w$ using the following strange distribution:
 
+Às vezes, os métodos de inicialização de que precisamos
+não são fornecidos pela estrutura de aprendizado profundo.
+No exemplo abaixo, definimos um inicializador
+para qualquer parâmetro de peso $ w $ usando a seguinte distribuição estranha:
+
 $$
 \begin{aligned}
     w \sim \begin{cases}
@@ -605,15 +610,25 @@ Here we define a subclass of the `Initializer` class.
 Usually, we only need to implement the `_init_weight` function
 which takes a tensor argument (`data`)
 and assigns to it the desired initialized values.
+
+Aqui definimos uma subclasse da classe `Initializer`.
+Normalmente, só precisamos implementar a função `_init_weight`
+que leva um argumento tensor (`dados`)
+e atribui a ele os valores inicializados desejados.
 :end_tab:
 
 :begin_tab:`pytorch`
 Again, we implement a `my_init` function to apply to `net`.
+
+Novamente, implementamos uma função `my_init` para aplicar a` net`.
 :end_tab:
 
 :begin_tab:`tensorflow`
 Here we define a subclass of `Initializer` and implement the `__call__`
 function that return a desired tensor given the shape and data type.
+
+Aqui nós definimos uma subclasse de `Initializer` e implementamos o` __call__`
+função que retorna um tensor desejado de acordo com a forma e o tipo de dados.
 :end_tab:
 
 ```{.python .input}
@@ -665,6 +680,9 @@ print(net.layers[1].weights[0])
 Note that we always have the option
 of setting parameters directly.
 
+Observe que sempre temos a opção
+de definir parâmetros diretamente.
+
 ```{.python .input}
 net[0].weight.data()[:] += 1
 net[0].weight.data()[0, 0] = 42
@@ -690,6 +708,11 @@ A note for advanced users:
 if you want to adjust parameters within an `autograd` scope,
 you need to use `set_data` to avoid confusing
 the automatic differentiation mechanics.
+
+Uma observação para usuários avançados:
+se você quiser ajustar os parâmetros dentro de um escopo `autograd`,
+você precisa usar `set_data` para evitar confundir
+a mecânica de diferenciação automática.
 :end_tab:
 
 ## Tied Parameters
@@ -699,6 +722,12 @@ Let us see how to do this elegantly.
 In the following we allocate a dense layer
 and then use its parameters specifically
 to set those of another layer.
+
+Freqüentemente, queremos compartilhar parâmetros em várias camadas.
+Vamos ver como fazer isso com elegância.
+A seguir, alocamos uma camada densa
+e usar seus parâmetros especificamente
+para definir os de outra camada.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -771,6 +800,20 @@ Since the model parameters contain gradients,
 the gradients of the second hidden layer
 and the third hidden layer are added together
 during backpropagation.
+
+Este exemplo mostra que os parâmetros
+da segunda e terceira camadas são amarrados.
+Eles não são apenas iguais, eles são
+representado pelo mesmo tensor exato.
+Assim, se mudarmos um dos parâmetros,
+o outro também muda.
+Você pode se perguntar,
+quando os parâmetros são amarrados
+o que acontece com os gradientes?
+Uma vez que os parâmetros do modelo contêm gradientes,
+os gradientes da segunda camada oculta
+e a terceira camada oculta são adicionadas juntas
+durante a retropropagação.
 :end_tab:
 
 ## Summary
@@ -798,5 +841,5 @@ during backpropagation.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExNjQ5MDQxXX0=
+eyJoaXN0b3J5IjpbLTEwODcxMjQzNThdfQ==
 -->
