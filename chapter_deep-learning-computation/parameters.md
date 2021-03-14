@@ -572,7 +572,7 @@ para definir os de outra camada.
 
 ```{.python .input}
 net = nn.Sequential()
-# We need to give the shared layer a name so that we can refer to its
+# Podemos  We need to give the shared layer a name so that we can refer to its
 # parameters
 shared = nn.Dense(8, activation='relu')
 net.add(nn.Dense(8, activation='relu'),
@@ -668,6 +668,6 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Nzc0MTI2NywtNzE5NDU4NDgxLDI1MD
+eyJoaXN0b3J5IjpbMTgxMDM4Mzk5OCwtNzE5NDU4NDgxLDI1MD
 E4ODU5NywtMTU5Mzc4NzcyOCwxNjQyOTc4NTAxXX0=
 -->
