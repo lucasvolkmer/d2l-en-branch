@@ -1,4 +1,4 @@
-# Implementation of Multilayer Perceptrons from Scratchção de Perceptrons Multicamadas do Zero
+# Implementação de Perceptrons Multicamadas do Zero
 :label:`sec_mlp_scratch`
 
 Now that we have characterized
@@ -250,5 +250,5 @@ d2l.predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/227)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1NDk2MDYyXX0=
+eyJoaXN0b3J5IjpbMTUyOTMxNzE3NF19
 -->
