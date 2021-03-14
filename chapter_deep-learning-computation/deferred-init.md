@@ -6,6 +6,11 @@ with being sloppy in setting up our networks.
 Specifically, we did the following unintuitive things,
 which might not seem like they should work:
 
+Até agora, pode parecer que escapamos
+por ser descuidado na configuração de nossas redes.
+Especificamente, fizemos as seguintes coisas não intuitivas,
+que podem não parecer que deveriam funcionar:
+
 * We defined the network architectures
   without specifying the input dimensionality.
 * We added layers without specifying
@@ -13,6 +18,14 @@ which might not seem like they should work:
 * We even "initialized" these parameters
   before providing enough information to determine
   how many parameters our models should contain.
+  
+* Definimos as arquiteturas de rede
+   sem especificar a dimensionalidade de entrada.
+* Adicionamos camadas sem especificar
+   a dimensão de saída da camada anterior.
+* Nós até "inicializamos" esses parâmetros
+   antes de fornecer informações suficientes para determinar
+   quantos parâmetros nossos modelos devem conter.
 
 You might be surprised that our code runs at all.
 After all, there is no way the deep learning framework
@@ -20,6 +33,13 @@ could tell what the input dimensionality of a network would be.
 The trick here is that the framework *defers initialization*,
 waiting until the first time we pass data through the model,
 to infer the sizes of each layer on the fly.
+
+Você pode se surpreender com o fato de nosso código ser executado.
+Afinal, não há como a estrutura de aprendizado profundo
+poderia dizer qual seria a dimensionalidade de entrada de uma rede.
+O truque aqui é que o framework * adia a inicialização *,
+esperando até a primeira vez que passamos os dados pelo modelo,
+para inferir os tamanhos de cada camada na hora.
 
 
 Later on, when working with convolutional neural networks,
@@ -36,10 +56,26 @@ can greatly simplify the task of specifying
 and subsequently modifying our models.
 Next, we go deeper into the mechanics of initialization.
 
+Mais tarde, ao trabalhar com redes neurais convolucionais,
+esta técnica se tornará ainda mais conveniente
+desde a dimensionalidade de entrada
+(ou seja, a resolução de uma imagem)
+afetará a dimensionalidade
+de cada camada subsequente.
+Conseqüentemente, a capacidade de definir parâmetros
+sem a necessidade de saber,
+no momento de escrever o código,
+qual é a dimensionalidade
+pode simplificar muito a tarefa de especificar
+e subsequentemente modificando nossos modelos.
+A seguir, vamos nos aprofundar na mecânica da inicialização.
+
 
 ## Instantiating a Network
 
 To begin, let us instantiate an MLP.
+
+Para começar, vamos instanciar um MLP.
 
 ```{.python .input}
 from mxnet import np, npx
@@ -162,3 +198,6 @@ the framework can finally initialize the parameters.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/281)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE0NTAwNzcyNTRdfQ==
+-->
