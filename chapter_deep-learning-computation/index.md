@@ -1,4 +1,4 @@
-# Deep Learning Computation
+# *Deep Learning* Computacional
 :label:`chap_computation`
 
 Alongside giant datasets and powerful hardware,
@@ -20,7 +20,7 @@ and now often design architectures with far coarser *blocks* in mind.
 
 Junto com conjuntos de dados gigantes e hardware poderoso,
 ótimas ferramentas de software desempenharam um papel indispensável
-no rápido progresso do aprendizado profundo.
+no rápido progresso do *Deep Learning*.
 Começando com a revolucionária biblioteca Theano lançada em 2007,
 ferramentas de código aberto flexíveis têm permitido aos pesquisadores
 para prototipar modelos rapidamente, evitando trabalho repetitivo
@@ -87,5 +87,5 @@ use-gpu
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTEzMzc3NjddfQ==
+eyJoaXN0b3J5IjpbMjUyMjY3NTg1LC0xNTUxMzM3NzY3XX0=
 -->
