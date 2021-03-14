@@ -72,15 +72,6 @@ net(X)
 
 ## Acesso a Parâmetros
 
-Let us start with how to access parameters
-from the models that you already know.
-When a model is defined via the `Sequential` class,
-we can first access any layer by indexing
-into the model as though it were a list.
-Each layer's parameters are conveniently
-located in its attribute.
-We can inspect the parameters of the second fully-connected layer as follows.
-
 Vamos começar explicando como acessar os parâmetros
 dos modelos que você já conhece.
 Quando um modelo é definido por meio da classe `Sequential`,
@@ -118,7 +109,7 @@ even in a network containing hundreds of layers.
 A saída nos diz algumas coisas importantes.
 Primeiro, esta camada totalmente conectada
 contém dois parâmetros,
-correspondendo a essa camada
+correspondendo aos
 pesos e vieses, respectivamente.
 Ambos são armazenados como flutuadores de precisão simples (float32).
 Observe que os nomes dos parâmetros
@@ -817,5 +808,5 @@ durante a retropropagação.
 [Discussions](https://discuss.d2l.ai/t/269)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMTM5NzQ0MF19
+eyJoaXN0b3J5IjpbMTkyMjQ3MTg2NV19
 -->
