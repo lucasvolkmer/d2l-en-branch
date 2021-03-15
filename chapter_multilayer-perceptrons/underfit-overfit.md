@@ -228,29 +228,30 @@ para influenciar a generalização de uma classe de modelo:
 3. O número de exemplos de treinamento. É trivialmente fácil fazer *overfitting* em um conjunto de dados contendo apenas um ou dois exemplos, mesmo se seu modelo for simples. Mas ajustar um conjunto de dados com milhões de exemplos requer um modelo extremamente flexível.
 
 
-## SeleModel Selection
-
-In machine learning, we usually select our final model
-after evaluating several candidate models.
-This process is called *model selection*.
-Sometimes the models subject to comparison
-are fundamentally different in nature
-(say, decision trees vs. linear models).
-At other times, we are comparing
-members of the same class of models
-that have been trained with different hyperparameter settings.
-
-With MLPs, for example,
-we may wish to compare models with
-different numbers of hidden layers,
-different numbers of hidden units,
-and various choices of the activation functions
-applied to each hidden layer.
-In order to determine the best among our candidate models,
-we will typically employ a validation dataset.
+## Seleção do Modelo
 
 
-### Validation Dataset
+No *machine learning*, geralmente selecionamos nosso modelo final
+depois de avaliar vários modelos candidatos.
+Este processo é denominado *seleção de modelo*.
+Às vezes, os modelos que estão sujeitos a comparação
+são fundamentalmente diferentes em natureza
+(digamos, árvores de decisão vs. modelos lineares).
+Em outras ocasiões, estamos comparando
+membros da mesma classe de modelos
+que foram treinados com diferentes configurações de hiperparâmetros.
+
+Com MLPs, por exemplo,
+podemos desejar comparar modelos com
+diferentes números de camadas ocultas,
+diferentes números de unidades ocultas,
+e várias opções das funções de ativação
+aplicado a cada camada oculta.
+A fim de determinar o melhor entre nossos modelos candidatos,
+normalmente empregaremos um conjunto de dados de validação.
+
+
+### *Dataset* de Validação
 
 In principle we should not touch our test set
 until after we have chosen all our hyperparameters.
@@ -670,7 +671,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjM1NTkyOTksLTUwOTUwODc2NCw4NT
-Q4NjYzNzIsMTQ0Mzc1OTkzLDQ5Mzk5Njc3NywtMTI1MjkxNjkw
-OCwtMTA0MDk2OTkyNV19
+eyJoaXN0b3J5IjpbMTE3NTY2NDUxNiwtNTA5NTA4NzY0LDg1ND
+g2NjM3MiwxNDQzNzU5OTMsNDkzOTk2Nzc3LC0xMjUyOTE2OTA4
+LC0xMDQwOTY5OTI1XX0=
 -->
