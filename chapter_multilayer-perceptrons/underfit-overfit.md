@@ -147,31 +147,32 @@ E se estivermos classificando os tópicos dos Tweets?
 O ciclo de notícias criaria dependências temporais
 nos tópicos em discussão, violando quaisquer pressupostos de independência.
 
-Sometimes we can get away with minor violations of the i.i.d. assumption
-and our models will continue to work remarkably well.
-After all, nearly every real-world application
-involves at least some minor violation of the i.i.d. assumption,
-and yet we have many useful tools for
-various applications such as
-face recognition,
-speech recognition, and language translation.
 
-Other violations are sure to cause trouble.
-Imagine, for example, if we try to train
-a face recognition system by training it
-exclusively on university students
-and then want to deploy it as a tool
-for monitoring geriatrics in a nursing home population.
-This is unlikely to work well since college students
-tend to look considerably different from the elderly.
+Às vezes, podemos escapar impunes de violações menores da suposição i.i.d. 
+e nossos modelos continuarão a funcionar muito bem.
+Afinal, quase todos os aplicativos do mundo real
+envolvem pelo menos alguma violação menor da suposição i.i.d.,
+e ainda temos muitas ferramentas úteis para
+várias aplicações, como
+reconhecimento de rosto,
+reconhecimento de voz e tradução de idiomas.
 
-In subsequent chapters, we will discuss problems
-arising from violations of the i.i.d. assumption.
-For now, even taking the i.i.d. assumption for granted,
-understanding generalization is a formidable problem.
-Moreover, elucidating the precise theoretical foundations
-that might explain why deep neural networks generalize as well as they do
-continues to vex the greatest minds in learning theory.
+Outras violações certamente causarão problemas.
+Imagine, por exemplo, se tentarmos treinar
+um sistema de reconhecimento de rosto treinando-o
+exclusivamente em estudantes universitários
+e então tentar implantá-lo como uma ferramenta
+para monitorar a geriatria em uma população de lares de idosos.
+É improvável que funcione bem, uma vez que estudantes universitários
+tendem a parecer consideravelmente diferentes dos idosos.
+
+Nos capítulos subsequentes, discutiremos problemas
+decorrentes de violações da suposição i.i.d..
+Por enquanto, mesmo tomando a suposição i.i.d. como certa,
+compreender a generalização é um problema formidável.
+Além disso, elucidando os fundamentos teóricos precisos
+isso que podem explicar por que redes neurais profundas generalizam tão bem como o fazem,
+continua a irritar as maiores mentes da teoria do aprendizado.
 
 When we train our models, we attempt to search for a function
 that fits the training data as well as possible.
@@ -667,6 +668,6 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0Mzc1OTkzLDQ5Mzk5Njc3NywtMTI1Mj
-kxNjkwOCwtMTA0MDk2OTkyNV19
+eyJoaXN0b3J5IjpbNTEzOTMxNzczLDE0NDM3NTk5Myw0OTM5OT
+Y3NzcsLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
 -->
