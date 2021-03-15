@@ -101,10 +101,10 @@ params = [W1, b1, W2, b2]
 
 ## Função de Ativação
 
-To make sure we know how everything works,
-we will [**implement the ReLU activation**] ourselves
-using the maximum function rather than
-invoking the built-in `relu` function directly.
+Para ter certeza de que sabemos como tudo funciona,
+iremos [**implementar a ativação ReLU**] nós mesmos
+usar a função máxima em vez de
+invocar a função embutida `relu` diretamente.
 
 ```{.python .input}
 def relu(X):
@@ -124,13 +124,13 @@ def relu(X):
     return tf.math.maximum(X, 0)
 ```
 
-## Model
+## Modelo
 
-Because we are disregarding spatial structure,
-we `reshape` each two-dimensional image into
-a flat vector of length  `num_inputs`.
-Finally, we (**implement our model**)
-with just a few lines of code.
+Porque estamos desconsiderando a estrutura espacial,
+nós `remodelamos` cada imagem bidimensional em
+um vetor plano de comprimento `num_inputs`.
+Finalmente, nós (**implementamos nosso modelo**)
+com apenas algumas linhas de código.
 
 ```{.python .input}
 def net(X):
@@ -155,7 +155,7 @@ def net(X):
     return tf.matmul(H, W2) + b2
 ```
 
-## Loss Function
+## Função de Perda
 
 To ensure numerical stability,
 and because we already implemented
@@ -250,6 +250,6 @@ d2l.predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/227)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTg0NTgxNDIsLTEzOTM0NjY2NzIsMT
-UyOTMxNzE3NF19
+eyJoaXN0b3J5IjpbOTUzMzcyMDExLC0xNjk4NDU4MTQyLC0xMz
+kzNDY2NjcyLDE1MjkzMTcxNzRdfQ==
 -->
