@@ -56,20 +56,21 @@ Se você alterou a estrutura do modelo ou os hiperparâmetros durante o experime
 
 ## Erro de Treinamento e Erro de Generalização
 
-In order to discuss this phenomenon more formally,
-we need to differentiate between training error and generalization error.
-The *training error* is the error of our model
-as calculated on the training dataset,
-while *generalization error* is the expectation of our model's error
-were we to apply it to an infinite stream of additional data examples
-drawn from the same underlying data distribution as our original sample.
 
-Problematically, we can never calculate the generalization error exactly.
-That is because the stream of infinite data is an imaginary object.
-In practice, we must *estimate* the generalization error
-by applying our model to an independent test set
-constituted of a random selection of data examples
-that were withheld from our training set.
+Para discutir este fenômeno de forma mais formal,
+precisamos diferenciar entre erro de treinamento e erro de generalização.
+O *erro de treinamento* é o erro do nosso modelo
+conforme calculado no conjunto de dados de treinamento,
+enquanto *erro de generalização* é a expectativa do erro do nosso modelo
+deveríamos aplicá-lo a um fluxo infinito de exemplos de dados adicionais
+extraído da mesma distribuição de dados subjacente que nossa amostra original.
+
+De forma problemática, nunca podemos calcular o erro de generalização com exatidão.
+Isso ocorre porque o fluxo de dados infinitos é um objeto imaginário.
+Na prática, devemos *estimar* o erro de generalização
+aplicando nosso modelo a um conjunto de teste independente
+constituído de uma seleção aleatória de exemplos de dados
+que foram retirados de nosso conjunto de treinamento.
 
 The following three thought experiments
 will help illustrate this situation better.
@@ -665,5 +666,5 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MDkyOTAxMiwtMTA0MDk2OTkyNV19
+eyJoaXN0b3J5IjpbLTMyMjEzNDA3NSwtMTA0MDk2OTkyNV19
 -->
