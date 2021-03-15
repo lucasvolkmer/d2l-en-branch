@@ -72,23 +72,24 @@ aplicando nosso modelo a um conjunto de teste independente
 constituído de uma seleção aleatória de exemplos de dados
 que foram retirados de nosso conjunto de treinamento.
 
-The following three thought experiments
-will help illustrate this situation better.
-Consider a college student trying to prepare for his final exam.
-A diligent student will strive to practice well
-and test his abilities using exams from previous years.
-Nonetheless, doing well on past exams is no guarantee
-that he will excel when it matters.
-For instance, the student might try to prepare
-by rote learning the answers to the exam questions.
-This requires the student to memorize many things.
-She might even remember the answers for past exams perfectly.
-Another student might prepare by trying to understand
-the reasons for giving certain answers.
-In most cases, the latter student will do much better.
 
-Likewise, consider a model that simply uses a lookup table to answer questions. If the set of allowable inputs is discrete and reasonably small, then perhaps after viewing *many* training examples, this approach would perform well. Still this model has no ability to do better than random guessing when faced with examples that it has never seen before.
-In reality the input spaces are far too large to memorize the answers corresponding to every conceivable input. For example, consider the black and white $28\times28$ images. If each pixel can take one among $256$ grayscale values, then there are $256^{784}$ possible images. That means that there are far more low-resolution grayscale thumbnail-sized images than there are atoms in the universe. Even if we could encounter such data, we could never afford to store the lookup table.
+Os três experimentos mentais a seguir
+ajudarão a ilustrar melhor esta situação.
+Considere um estudante universitário tentando se preparar para o exame final.
+Um aluno diligente se esforçará para praticar bem
+e testar suas habilidades usando exames de anos anteriores.
+No entanto, um bom desempenho em exames anteriores não é garantia
+que ele se sobressairá quando for importante.
+Por exemplo, o aluno pode tentar se preparar
+aprendendo de cor as respostas às questões do exame.
+Isso requer que o aluno memorize muitas coisas.
+Ela pode até se lembrar das respostas de exames anteriores perfeitamente.
+Outro aluno pode se preparar tentando entender
+as razões para dar certas respostas.
+Na maioria dos casos, o último aluno se sairá muito melhor.
+
+Da mesma forma, considere um modelo que simplesmente usa uma tabela de pesquisa para responder às perguntas. Se o conjunto de entradas permitidas for discreto e razoavelmente pequeno, talvez depois de ver *muitos* exemplos de treinamento, essa abordagem teria um bom desempenho. Ainda assim, esse modelo não tem capacidade de fazer melhor do que adivinhação aleatória quando confrontado com exemplos que nunca viu antes.
+Na realidade, os espaços de entrada são muito grandes para memorizar as respostas correspondentes a cada entrada concebível. Por exemplo, considere as imagens $28\times28$ em preto e branco. Se cada pixel pode ter um entre $256$ valores de tons de cinza, então há $256^{784}$ imagens possíveis. Isso significa que há muito mais imagens em miniatura em escala de cinza de baixa resolução do que átomos no universo. Mesmo se pudéssemos encontrar esses dados, nunca poderíamos nos dar ao luxo de armazenar a tabela de pesquisa.
 
 Last, consider the problem of trying
 to classify the outcomes of coin tosses (class 0: heads, class 1: tails)
@@ -666,5 +667,6 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMjEzNDA3NSwtMTA0MDk2OTkyNV19
+eyJoaXN0b3J5IjpbLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ
+==
 -->
