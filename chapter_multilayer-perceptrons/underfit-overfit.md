@@ -186,18 +186,18 @@ visando a proteção contra *overfitting*.
 
 ### Complexidade do Modelo
 
-When we have simple models and abundant data,
-we expect the generalization error to resemble the training error.
-When we work with more complex models and fewer examples,
-we expect the training error to go down but the generalization gap to grow.
-What precisely constitutes model complexity is a complex matter.
-Many factors govern whether a model will generalize well.
-For example a model with more parameters might be considered more complex.
-A model whose parameters can take a wider range of values
-might be more complex.
-Often with neural networks, we think of a model
-that takes more training iterations as more complex,
-and one subject to *early stopping* (fewer training iterations) as less complex.
+Quando temos modelos simples e dados abundantes,
+esperamos que o erro de generalização seja semelhante ao erro de treinamento.
+Quando trabalhamos com modelos mais complexos e menos exemplos,
+esperamos que o erro de treinamento diminua, mas a lacuna de generalização cresça.
+O que constitui precisamente a complexidade do modelo é um assunto complexo.
+Muitos fatores determinam se um modelo irá generalizar bem.
+Por exemplo, um modelo com mais parâmetros pode ser considerado mais complexo.
+Um modelo cujos parâmetros podem ter uma gama mais ampla de valores
+pode ser mais complexo.
+Muitas vezes, com redes neurais, pensamos em um modelo
+que exige mais iterações de treinamento quanto mais complexas,
+e um sujeito a *parada antecipada* (menos iterações de treinamento) como menos complexo.
 
 It can be difficult to compare the complexity among members
 of substantially different model classes
@@ -668,6 +668,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OT
-Y3NzcsLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
+eyJoaXN0b3J5IjpbLTUwOTUwODc2NCw4NTQ4NjYzNzIsMTQ0Mz
+c1OTkzLDQ5Mzk5Njc3NywtMTI1MjkxNjkwOCwtMTA0MDk2OTky
+NV19
 -->
