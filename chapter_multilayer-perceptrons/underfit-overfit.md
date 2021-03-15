@@ -199,34 +199,36 @@ Muitas vezes, com redes neurais, pensamos em um modelo
 que exige mais iterações de treinamento quanto mais complexas,
 e um sujeito a *parada antecipada* (menos iterações de treinamento) como menos complexo.
 
-It can be difficult to compare the complexity among members
-of substantially different model classes
-(say, decision trees vs. neural networks).
-For now, a simple rule of thumb is quite useful:
-a model that can readily explain arbitrary facts
-is what statisticians view as complex,
-whereas one that has only a limited expressive power
-but still manages to explain the data well
-is probably closer to the truth.
-In philosophy, this is closely related to Popper's
-criterion of falsifiability
-of a scientific theory: a theory is good if it fits data
-and if there are specific tests that can be used to disprove it.
-This is important since all statistical estimation is
+
+Pode ser difícil comparar a complexidade entre os membros
+de classes de modelo substancialmente diferentes
+(digamos, árvores de decisão vs. redes neurais).
+Por enquanto, uma regra prática simples é bastante útil:
+um modelo que pode facilmente explicar fatos arbitrários
+é o que os estatísticos consideram complexo,
+ao passo que aquele que tem apenas um poder expressivo limitado
+mas ainda consegue explicar bem os dados
+provavelmente está mais perto da verdade.
+Em filosofia, isso está intimamente relacionado ao
+critério de falseabilidade de Popper
+de uma teoria científica: uma teoria é boa se ela se encaixa nos dados
+e se existem testes específicos que podem ser usados ​​para contestá-lo.
+Isso é importante, pois toda estimativa estatística é
 *post hoc*,
-i.e., we estimate after we observe the facts,
-hence vulnerable to the associated fallacy.
-For now, we will put the philosophy aside and stick to more tangible issues.
+ou seja, estimamos depois de observar os fatos,
+portanto, vulnerável à falácia associada.
+Por enquanto, deixaremos a filosofia de lado e nos limitaremos a questões mais tangíveis.
 
-In this section, to give you some intuition,
-we will focus on a few factors that tend
-to influence the generalizability of a model class:
+Nesta seção, para lhe dar alguma intuição,
+vamos nos concentrar em alguns fatores que tendem
+para influenciar a generalização de uma classe de modelo:
 
-1. The number of tunable parameters. When the number of tunable parameters, sometimes called the *degrees of freedom*, is large, models tend to be more susceptible to overfitting.
-1. The values taken by the parameters. When weights can take a wider range of values, models can be more susceptible to overfitting.
-1. The number of training examples. It is trivially easy to overfit a dataset containing only one or two examples even if your model is simple. But overfitting a dataset with millions of examples requires an extremely flexible model.
+1. O número de parâmetros ajustáveis. Quando o número de parâmetros ajustáveis, às vezes chamados de *graus de liberdade*, é grande, os modelos tendem a ser mais suscetíveis a *overfitting*.
+2. Os valores assumidos pelos parâmetros. Quando os pesos podem assumir uma faixa mais ampla de valores, os modelos podem ser mais suscetíveis a *overfitting*.
+3. O número de exemplos de treinamento. É trivialmente fácil fazer *overfitting* em um conjunto de dados contendo apenas um ou dois exemplos, mesmo se seu modelo for simples. Mas ajustar um conjunto de dados com milhões de exemplos requer um modelo extremamente flexível.
 
-## Model Selection
+
+## SeleModel Selection
 
 In machine learning, we usually select our final model
 after evaluating several candidate models.
@@ -668,7 +670,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwOTUwODc2NCw4NTQ4NjYzNzIsMTQ0Mz
-c1OTkzLDQ5Mzk5Njc3NywtMTI1MjkxNjkwOCwtMTA0MDk2OTky
-NV19
+eyJoaXN0b3J5IjpbLTE1NjM1NTkyOTksLTUwOTUwODc2NCw4NT
+Q4NjYzNzIsMTQ0Mzc1OTkzLDQ5Mzk5Njc3NywtMTI1MjkxNjkw
+OCwtMTA0MDk2OTkyNV19
 -->
