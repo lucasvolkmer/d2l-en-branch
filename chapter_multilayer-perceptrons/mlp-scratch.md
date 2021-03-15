@@ -187,13 +187,13 @@ def loss(y_hat, y):
 
 ## Trainamento
 
-Fortunately, [**the training loop for MLPs
-is exactly the same as for softmax regression.**]
-Leveraging the `d2l` package again,
-we call the `train_ch3` function
-(see :numref:`sec_softmax_scratch`),
-setting the number of epochs to 10
-and the learning rate to 0.1.
+Felizmente, [**o loop de treinamento para MLPs
+é exatamente igual à regressão *softmax*.**]
+Aproveitando o pacote `d2l` novamente,
+chamamos a função `train_ch3`
+(ver :numref:`sec_softmax_scratch`),
+definindo o número de épocas para 10
+e a taxa de aprendizagem para 0,1.
 
 ```{.python .input}
 num_epochs, lr = 10, 0.1
@@ -215,21 +215,21 @@ updater = d2l.Updater([W1, W2, b1, b2], lr)
 d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, updater)
 ```
 
-To evaluate the learned model,
-we [**apply it on some test data**].
+Para avaliar o modelo aprendido,
+nós [**aplicamos em alguns dados de teste**].
 
 ```{.python .input}
 #@tab all
 d2l.predict_ch3(net, test_iter)
 ```
 
-## Summary
+## Resumo
 
-* We saw that implementing a simple MLP is easy, even when done manually.
-* However, with a large number of layers, implementing MLPs from scratch can still get messy (e.g., naming and keeping track of our model's parameters).
+* Vimos que implementar um MLP simples é fácil, mesmo quando feito manualmente.
+* No entanto, com um grande número de camadas, implementar MLPs do zero ainda pode ser complicado (por exemplo, nomear e controlar os parâmetros do nosso modelo).
 
 
-## Exercises
+## Exercícios
 
 1. Change the value of the hyperparameter `num_hiddens` and see how this hyperparameter influences your results. Determine the best value of this hyperparameter, keeping all others constant.
 1. Try adding an additional hidden layer to see how it affects the results.
@@ -250,6 +250,6 @@ d2l.predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/227)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzODk2NjAyLC0xNjk4NDU4MTQyLC0xMz
-kzNDY2NjcyLDE1MjkzMTcxNzRdfQ==
+eyJoaXN0b3J5IjpbLTE0MTMzNTEwOTAsLTE2OTg0NTgxNDIsLT
+EzOTM0NjY2NzIsMTUyOTMxNzE3NF19
 -->
