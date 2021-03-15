@@ -157,17 +157,17 @@ def net(X):
 
 ## Função de Perda
 
-To ensure numerical stability,
-and because we already implemented
-the softmax function from scratch
+Para garantir estabilidade numérica,
+e porque já implementamos
+a função* softmax* do zero
 (:numref:`sec_softmax_scratch`),
-we leverage the integrated function from high-level APIs
-for calculating the softmax and cross-entropy loss.
-Recall our earlier discussion of these intricacies
-in :numref:`subsec_softmax-implementation-revisited`.
-We encourage the interested reader
-to examine the source code for the loss function
-to deepen their knowledge of implementation details.
+alavancamos a função integrada de APIs de alto nível
+para calcular o *softmax* e a perda de entropia cruzada.
+Lembre-se de nossa discussão anterior sobre essas complexidades
+em :numref:`subsec_softmax-implementation-revisited`.
+Nós encorajamos o leitor interessado
+a examinar o código-fonte para a função de perda
+para aprofundar seu conhecimento dos detalhes de implementação.
 
 ```{.python .input}
 loss = gluon.loss.SoftmaxCrossEntropyLoss()
@@ -185,7 +185,7 @@ def loss(y_hat, y):
         y, y_hat, from_logits=True)
 ```
 
-## Training
+## Trainamento
 
 Fortunately, [**the training loop for MLPs
 is exactly the same as for softmax regression.**]
@@ -250,6 +250,6 @@ d2l.predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/227)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUzMzcyMDExLC0xNjk4NDU4MTQyLC0xMz
+eyJoaXN0b3J5IjpbNzYzODk2NjAyLC0xNjk4NDU4MTQyLC0xMz
 kzNDY2NjcyLDE1MjkzMTcxNzRdfQ==
 -->
