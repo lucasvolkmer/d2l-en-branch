@@ -24,18 +24,18 @@ from d2l import tensorflow as d2l
 import tensorflow as tf
 ```
 
-## Model
+## Modelo
 
-As compared with our concise implementation
-of softmax regression implementation
+Em comparação com nossa implementação concisa
+de implementação de regressão *softmax*
 (:numref:`sec_softmax_concise`),
-the only difference is that we add
-*two* fully-connected layers
-(previously, we added *one*).
-The first is [**our hidden layer**],
-which (**contains 256 hidden units
-and applies the ReLU activation function**).
-The second is our output layer.
+a única diferença é que adicionamos
+*duas* camadas totalmente conectadas
+(anteriormente, adicionamos *uma*).
+A primeira é [**nossa camada oculta**],
+que (**contém 256 unidades ocultas
+e aplica a função de ativação ReLU**).
+A segunda é nossa camada de saída.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -121,5 +121,5 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/262)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MjEwNzY3Nl19
+eyJoaXN0b3J5IjpbMzc5OTY3NTQ3XX0=
 -->
