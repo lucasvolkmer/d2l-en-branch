@@ -1,4 +1,4 @@
-# Concise Implementation of Multilayer Perceptrons
+# Concise Implementation of Multilayer Perceptronção Concisa de *Perceptrons* Multicamadas
 :label:`sec_mlp_concise`
 
 As you might expect, by (**relying on the high-level APIs,
@@ -120,3 +120,6 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/262)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTU5MjEwNzY3Nl19
+-->
