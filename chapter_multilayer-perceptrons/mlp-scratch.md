@@ -231,12 +231,12 @@ d2l.predict_ch3(net, test_iter)
 
 ## Exercícios
 
-1. Change the value of the hyperparameter `num_hiddens` and see how this hyperparameter influences your results. Determine the best value of this hyperparameter, keeping all others constant.
-1. Try adding an additional hidden layer to see how it affects the results.
-1. How does changing the learning rate alter your results? Fixing the model architecture and other hyperparameters (including number of epochs), what learning rate gives you the best results?
-1. What is the best result you can get by optimizing over all the hyperparameters (learning rate, number of epochs, number of hidden layers, number of hidden units per layer) jointly?
-1. Describe why it is much more challenging to deal with multiple hyperparameters.
-1. What is the smartest strategy you can think of for structuring a search over multiple hyperparameters?
+1. Altere o valor do hiperparâmetro `num_hiddens` e veja como esse hiperparâmetro influencia seus resultados. Determine o melhor valor deste hiperparâmetro, mantendo todos os outros constantes.
+1. Experimente adicionar uma camada oculta adicional para ver como isso afeta os resultados.
+1. Como mudar a taxa de aprendizado altera seus resultados? Corrigindo a arquitetura do modelo e outros hiperparâmetros (incluindo o número de épocas), qual taxa de aprendizado oferece os melhores resultados?
+1. Qual é o melhor resultado que você pode obter otimizando todos os hiperparâmetros (taxa de aprendizagem, número de épocas, número de camadas ocultas, número de unidades ocultas por camada) em conjunto?
+1. Descreva por que é muito mais difícil lidar com vários hiperparâmetros.
+1. Qual é a estratégia mais inteligente que você pode imaginar para estruturar uma pesquisa em vários hiperparâmetros?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/92)
@@ -250,6 +250,6 @@ d2l.predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/227)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTMzNTEwOTAsLTE2OTg0NTgxNDIsLT
+eyJoaXN0b3J5IjpbLTEyMjA0MjIzOTIsLTE2OTg0NTgxNDIsLT
 EzOTM0NjY2NzIsMTUyOTMxNzE3NF19
 -->
