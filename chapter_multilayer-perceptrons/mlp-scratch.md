@@ -37,26 +37,26 @@ train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 
 ## Inicializando os Parâmetros do Modelo
 
-Recall that Fashion-MNIST contains 10 classes,
-and that each image consists of a $28 \times 28 = 784$
-grid of grayscale pixel values.
-Again, we will disregard the spatial structure
-among the pixels for now,
-so we can think of this as simply a classification dataset
-with 784 input features and 10 classes.
-To begin, we will [**implement an MLP
-with one hidden layer and 256 hidden units.**]
-Note that we can regard both of these quantities
-as hyperparameters.
-Typically, we choose layer widths in powers of 2,
-which tend to be computationally efficient because
-of how memory is allocated and addressed in hardware.
 
-Again, we will represent our parameters with several tensors.
-Note that *for every layer*, we must keep track of
-one weight matrix and one bias vector.
-As always, we allocate memory
-for the gradients of the loss with respect to these parameters.
+Lembre-se de que o Fashion-MNIST contém 10 classes,
+e que cada imagem consiste em uma graded $28 \times 28 = 784$ de valores de pixel em tons de cinza.
+Novamente, vamos desconsiderar a estrutura espacial
+entre os pixels por enquanto,
+então podemos pensar nisso simplesmente como um conjunto de dados de classificação
+com 784 características de entrada e 10 classes.
+Para começar, iremos [**implementar um MLP
+com uma camada oculta e 256 unidades ocultas.**]
+Observe que podemos considerar essas duas quantidades
+como hiperparâmetros.
+Normalmente, escolhemos larguras de camada em potências de 2,
+que tendem a ser computacionalmente eficientes porque
+de como a memória é alocada e endereçada no hardware.
+
+Novamente, iremos representar nossos parâmetros com vários tensores.
+Observe que *para cada camada*, devemos acompanhar
+uma matriz de ponderação e um vetor de polarização.
+Como sempre, alocamos memória
+para os gradientes da perda com relação a esses parâmetros.
 
 ```{.python .input}
 num_inputs, num_outputs, num_hiddens = 784, 10, 256
@@ -250,5 +250,6 @@ d2l.predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/227)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTM0NjY2NzIsMTUyOTMxNzE3NF19
+eyJoaXN0b3J5IjpbLTU4MDgwMDQzNywtMTM5MzQ2NjY3MiwxNT
+I5MzE3MTc0XX0=
 -->
