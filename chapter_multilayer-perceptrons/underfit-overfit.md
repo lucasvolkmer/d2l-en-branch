@@ -91,26 +91,25 @@ Na maioria dos casos, o último aluno se sairá muito melhor.
 Da mesma forma, considere um modelo que simplesmente usa uma tabela de pesquisa para responder às perguntas. Se o conjunto de entradas permitidas for discreto e razoavelmente pequeno, talvez depois de ver *muitos* exemplos de treinamento, essa abordagem teria um bom desempenho. Ainda assim, esse modelo não tem capacidade de fazer melhor do que adivinhação aleatória quando confrontado com exemplos que nunca viu antes.
 Na realidade, os espaços de entrada são muito grandes para memorizar as respostas correspondentes a cada entrada concebível. Por exemplo, considere as imagens $28\times28$ em preto e branco. Se cada pixel pode ter um entre $256$ valores de tons de cinza, então há $256^{784}$ imagens possíveis. Isso significa que há muito mais imagens em miniatura em escala de cinza de baixa resolução do que átomos no universo. Mesmo se pudéssemos encontrar esses dados, nunca poderíamos nos dar ao luxo de armazenar a tabela de pesquisa.
 
-Last, consider the problem of trying
-to classify the outcomes of coin tosses (class 0: heads, class 1: tails)
-based on some contextual features that might be available.
-Suppose that the coin is fair.
-No matter what algorithm we come up with,
-the generalization error will always be $\frac{1}{2}$.
-However, for most algorithms,
-we should expect our training error to be considerably lower,
-depending on the luck of the draw,
-even if we did not have any features!
-Consider the dataset {0, 1, 1, 1, 0, 1}.
-Our feature-less algorithm would have to fall back on always predicting
-the *majority class*, which appears from our limited sample to be *1*.
-In this case, the model that always predicts class 1
-will incur an error of $\frac{1}{3}$,
-considerably better than our generalization error.
-As we increase the amount of data,
-the probability that the fraction of heads
-will deviate significantly from $\frac{1}{2}$ diminishes,
-and our training error would come to match the generalization error.
+Por último, considere o problema de tentar classificar os resultados dos lançamentos de moeda (classe 0: cara, classe 1: coroa)
+com base em alguns recursos contextuais que podem estar disponíveis.
+Suponha que a moeda seja justa.
+Não importa o algoritmo que criamos,
+o erro de generalização sempre será $\frac{1}{2}$.
+No entanto, para a maioria dos algoritmos,
+devemos esperar que nosso erro de treinamento seja consideravelmente menor,
+dependendo da sorte do sorteio,
+mesmo se não tivéssemos nenhuma *feature*!
+Considere o conjunto de dados {0, 1, 1, 1, 0, 1}.
+Nosso algoritmo sem recursos teria que recorrer sempre à previsão
+da *classe majoritária*, que parece ser *1* em nossa amostra limitada.
+Neste caso, o modelo que sempre prevê a classe 1
+incorrerá em um erro de $\frac{1}{3}$,
+consideravelmente melhor do que nosso erro de generalização.
+Conforme aumentamos a quantidade de dados,
+a probabilidade de que a fração de caras
+irá se desviar significativamente de $\frac{1}{2}$ diminui,
+e nosso erro de treinamento viria a corresponder ao erro de generalização.
 
 ### Statistical Learning Theory
 
@@ -667,6 +666,6 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ
-==
+eyJoaXN0b3J5IjpbLTY5NTQyNzIzNSwtMTI1MjkxNjkwOCwtMT
+A0MDk2OTkyNV19
 -->
