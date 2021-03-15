@@ -174,17 +174,17 @@ Além disso, elucidando os fundamentos teóricos precisos
 isso que podem explicar por que redes neurais profundas generalizam tão bem como o fazem,
 continua a irritar as maiores mentes da teoria do aprendizado.
 
-When we train our models, we attempt to search for a function
-that fits the training data as well as possible.
-If the function is so flexible that it can catch on to spurious patterns
-just as easily as to true associations,
-then it might perform *too well* without producing a model
-that generalizes well to unseen data.
-This is precisely what we want to avoid or at least control.
-Many of the techniques in deep learning are heuristics and tricks
-aimed at guarding against overfitting.
+Quando treinamos nossos modelos, tentamos pesquisar uma função
+que se ajusta aos dados de treinamento da melhor maneira possível.
+Se a função é tão flexível que pode pegar padrões falsos
+tão facilmente quanto às associações verdadeiras,
+então ele pode funcionar *muito bem* sem produzir um modelo
+que generaliza bem para dados invisíveis.
+Isso é exatamente o que queremos evitar ou pelo menos controlar.
+Muitas das técnicas de aprendizado profundo são heurísticas e truques
+visando a proteção contra *overfitting*.
 
-### Model Complexity
+### Complexidade do Modelo
 
 When we have simple models and abundant data,
 we expect the generalization error to resemble the training error.
@@ -668,6 +668,6 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEzOTMxNzczLDE0NDM3NTk5Myw0OTM5OT
+eyJoaXN0b3J5IjpbODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OT
 Y3NzcsLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
 -->
