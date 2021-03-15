@@ -1,13 +1,13 @@
 # Implementação de Perceptrons Multicamadas do Zero
 :label:`sec_mlp_scratch`
 
-Now that we have characterized
-multilayer perceptrons (MLPs) mathematically,
-let us try to implement one ourselves. To compare against our previous results
-achieved with softmax regression
+Agora que caracterizamos
+perceptrons multicamadas (MLPs) matematicamente,
+vamos tentar implementar um nós mesmos. Para comparar com nossos resultados anteriores
+alcançado com regressão *softmax*
 (:numref:`sec_softmax_scratch`),
-we will continue to work with
-the Fashion-MNIST image classification dataset
+vamos continuar a trabalhar com
+o conjunto de dados de classificação de imagens Fashion-MNIST
 (:numref:`sec_fashion_mnist`).
 
 ```{.python .input}
@@ -35,7 +35,7 @@ batch_size = 256
 train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 ```
 
-## Initializing Model Parameters
+## Inicializando os Parâmetros do Modelo
 
 Recall that Fashion-MNIST contains 10 classes,
 and that each image consists of a $28 \times 28 = 784$
@@ -250,5 +250,5 @@ d2l.predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/227)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyOTMxNzE3NF19
+eyJoaXN0b3J5IjpbLTEzOTM0NjY2NzIsMTUyOTMxNzE3NF19
 -->
