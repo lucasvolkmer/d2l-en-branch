@@ -99,7 +99,7 @@ b2 = tf.Variable(tf.random.normal([num_outputs], stddev=.01))
 params = [W1, b1, W2, b2]
 ```
 
-## Activation Function
+## Função de Ativação
 
 To make sure we know how everything works,
 we will [**implement the ReLU activation**] ourselves
@@ -250,6 +250,6 @@ d2l.predict_ch3(net, test_iter)
 [Discussions](https://discuss.d2l.ai/t/227)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MDgwMDQzNywtMTM5MzQ2NjY3MiwxNT
-I5MzE3MTc0XX0=
+eyJoaXN0b3J5IjpbLTE2OTg0NTgxNDIsLTEzOTM0NjY2NzIsMT
+UyOTMxNzE3NF19
 -->
