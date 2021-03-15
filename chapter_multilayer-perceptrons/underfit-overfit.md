@@ -113,38 +113,39 @@ e nosso erro de treinamento viria a corresponder ao erro de generalização.
 
 ### Teoria de Aprendizagem Estatística
 
-Since generalization is the fundamental problem in machine learning,
-you might not be surprised to learn
-that many mathematicians and theorists have dedicated their lives
-to developing formal theories to describe this phenomenon.
-In their [eponymous theorem](https://en.wikipedia.org/wiki/Glivenko%E2%80%93Cantelli_theorem), Glivenko and Cantelli
-derived the rate at which the training error
-converges to the generalization error.
-In a series of seminal papers, [Vapnik and Chervonenkis](https://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
-extended this theory to more general classes of functions.
-This work laid the foundations of statistical learning theory.
+
+Como a generalização é o problema fundamental no *machine learning*,
+você pode não se surpreender ao aprender
+que muitos matemáticos e teóricos dedicaram suas vidas
+para desenvolver teorias formais para descrever este fenômeno.
+Em seu [teorema de mesmo nome](https://en.wikipedia.org/wiki/Glivenko%E2%80%93Cantelli_theorem), Glivenko e Cantelli
+derivaram a taxa na qual o erro de treinamento
+converge para o erro de generalização.
+Em uma série de artigos seminais, [Vapnik e Chervonenkis](https://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory)
+estenderam esta teoria a classes de funções mais gerais.
+Este trabalho lançou as bases da teoria da aprendizagem estatística.
 
 
-In the standard supervised learning setting, which we have addressed up until now and will stick with throughout most of this book,
-we assume that both the training data and the test data
-are drawn *independently* from *identical* distributions.
-This is commonly called the *i.i.d. assumption*,
-which means that the process that samples our data has no memory.
-In other words,
-the second example drawn and the third drawn
-are no more correlated than the second and the two-millionth sample drawn.
+No ambiente de aprendizagem supervisionada padrão, que abordamos até agora e manteremos ao longo da maior parte deste livro,
+presumimos que tanto os dados de treinamento quanto os dados de teste
+são desenhados *independentemente* de distribuições *idênticas*.
+Isso é comumente chamado de *suposição i.i.d.*,
+o que significa que o processo que faz a amostragem de nossos dados não tem memória.
+Em outras palavras,
+o segundo exemplo desenhado e o terceiro desenhado
+não são mais correlacionados do que a segunda e a segunda milionésima amostra extraída.
 
-Being a good machine learning scientist requires thinking critically,
-and already you should be poking holes in this assumption,
-coming up with common cases where the assumption fails.
-What if we train a mortality risk predictor
-on data collected from patients at UCSF Medical Center,
-and apply it on patients at Massachusetts General Hospital?
-These distributions are simply not identical.
-Moreover, draws might be correlated in time.
-What if we are classifying the topics of Tweets?
-The news cycle would create temporal dependencies
-in the topics being discussed, violating any assumptions of independence.
+Ser um bom cientista de *machine learning* exige pensar criticamente,
+e você já deve estar cutucando buracos nessa suposição,
+surgindo com casos comuns em que a suposição falha.
+E se treinarmos um preditor de risco de mortalidade
+em dados coletados de pacientes no UCSF Medical Center,
+e aplicá-lo em pacientes no *Massachusetts General Hospital*?
+Essas distribuições simplesmente não são idênticas.
+Além disso, os empates podem ser correlacionados no tempo.
+E se estivermos classificando os tópicos dos Tweets?
+O ciclo de notícias criaria dependências temporais
+nos tópicos em discussão, violando quaisquer pressupostos de independência.
 
 Sometimes we can get away with minor violations of the i.i.d. assumption
 and our models will continue to work remarkably well.
@@ -666,6 +667,6 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkzOTk2Nzc3LC0xMjUyOTE2OTA4LC0xMD
-QwOTY5OTI1XX0=
+eyJoaXN0b3J5IjpbMTQ0Mzc1OTkzLDQ5Mzk5Njc3NywtMTI1Mj
+kxNjkwOCwtMTA0MDk2OTkyNV19
 -->
