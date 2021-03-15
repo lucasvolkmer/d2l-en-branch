@@ -111,7 +111,7 @@ a probabilidade de que a fração de caras
 irá se desviar significativamente de $\frac{1}{2}$ diminui,
 e nosso erro de treinamento viria a corresponder ao erro de generalização.
 
-### Statistical Learning Theory
+### Teoria de Aprendizagem Estatística
 
 Since generalization is the fundamental problem in machine learning,
 you might not be surprised to learn
@@ -666,6 +666,6 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NTQyNzIzNSwtMTI1MjkxNjkwOCwtMT
-A0MDk2OTkyNV19
+eyJoaXN0b3J5IjpbNDkzOTk2Nzc3LC0xMjUyOTE2OTA4LC0xMD
+QwOTY5OTI1XX0=
 -->
