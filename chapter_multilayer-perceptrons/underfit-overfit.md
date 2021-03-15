@@ -1,59 +1,60 @@
 # Seleção do Modelo, *Underfitting*, e *Overfitting*
 :label:`sec_model_selection`
 
-As machine learning scientists,
-our goal is to discover *patterns*.
-But how can we be sure that we have
-truly discovered a *general* pattern
-and not simply memorized our data?
-For example, imagine that we wanted to hunt
-for patterns among genetic markers
-linking patients to their dementia status,
-where the labels are drawn from the set
-$\{\text{dementia}, \text{mild cognitive impairment}, \text{healthy}\}$.
-Because each person's genes identify them uniquely
-(ignoring identical siblings),
-it is possible to memorize the entire dataset.
 
-We do not want our model to say
-*"That's Bob! I remember him! He has dementia!"*
-The reason why is simple.
-When we deploy the model in the future,
-we will encounter patients
-that the model has never seen before.
-Our predictions will only be useful
-if our model has truly discovered a *general* pattern.
+Como cientistas de *machine learning*,
+nosso objetivo é descobrir *padrões*.
+Mas como podemos ter certeza de que
+realmente descobrimos um padrão *geral*
+e não simplesmente memorizamos nossos dados?
+Por exemplo, imagine que queremos caçar
+ padrões entre marcadores genéticos
+ligando os pacientes ao seu estado de demência,
+onde os rótulos são retirados do conjunto
+$\{\text{dementia}, \text{mild cognitive impairment}, \text{healthy}\}$
+Como os genes de cada pessoa os identificam de forma única
+(ignorando irmãos idênticos),
+é possível memorizar todo o conjunto de dados.
 
-To recapitulate more formally,
-our goal is to discover patterns
-that capture regularities in the underlying population
-from which our training set was drawn.
-If we are successful in this endeavor,
-then we could successfully assess risk
-even for individuals that we have never encountered before.
-This problem---how to discover patterns that *generalize*---is
-the fundamental problem of machine learning.
+Não queremos que nosso modelo diga
+*"É o Bob! Lembro-me dele! Ele tem demência!"*
+O motivo é simples.
+Quando implantamos o modelo no futuro,
+nós encontraremos pacientes
+que o modelo nunca viu antes.
+Nossas previsões só serão úteis
+se nosso modelo realmente descobriu um padrão *geral*.
 
-The danger is that when we train models,
-we access just a small sample of data.
-The largest public image datasets contain
-roughly one million images.
-More often, we must learn from only thousands
-or tens of thousands of data examples.
-In a large hospital system, we might access
-hundreds of thousands of medical records.
-When working with finite samples, we run the risk
-that we might discover apparent associations
-that turn out not to hold up when we collect more data.
+Para recapitular mais formalmente,
+nosso objetivo é descobrir padrões
+que capturam regularidades na população subjacente
+da qual nosso conjunto de treinamento foi extraído.
+Se tivermos sucesso neste empreendimento,
+então poderíamos avaliar com sucesso o risco
+mesmo para indivíduos que nunca encontramos antes.
+Este problema --- como descobrir padrões que *generalizam* --- é
+o problema fundamental do *machine learning*.
 
-The phenomenon of fitting our training data
-more closely than we fit the underlying distribution is called *overfitting*, and the techniques used to combat overfitting are called *regularization*.
-In the previous sections, you might have observed
-this effect while experimenting with the Fashion-MNIST dataset.
-If you altered the model structure or the hyperparameters during the experiment, you might have noticed that with enough neurons, layers, and training epochs, the model can eventually reach perfect accuracy on the training set, even as the accuracy on test data deteriorates.
+O perigo é que, quando treinamos modelos,
+acessamos apenas uma pequena amostra de dados.
+Os maiores conjuntos de dados de imagens públicas contêm
+cerca de um milhão de imagens.
+Mais frequentemente, devemos aprender com apenas milhares
+ou dezenas de milhares de exemplos de dados.
+Em um grande sistema hospitalar, podemos acessar
+centenas de milhares de registros médicos.
+Ao trabalhar com amostras finitas, corremos o risco
+de poder descobrir associações aparentes
+que acabam não se sustentando quando coletamos mais dados.
+
+O fenômeno de ajustar nossos dados de treinamento
+mais precisamente do que ajustamos, a distribuição subjacente é chamada de *overfitting*, e as técnicas usadas para combater o *overfitting* são chamadas de *regularização*.
+Nas seções anteriores, você deve ter observado
+esse efeito durante a experiência com o conjunto de dados *Fashion-MNIST*.
+Se você alterou a estrutura do modelo ou os hiperparâmetros durante o experimento, deve ter notado que, com neurônios, camadas e períodos de treinamento suficientes, o modelo pode eventualmente atingir uma precisão perfeita no conjunto de treinamento, mesmo quando a precisão dos dados de teste se deteriora.
 
 
-## Training Error and Generalization Error
+## Erro de Treinamento e Erro de Generalização
 
 In order to discuss this phenomenon more formally,
 we need to differentiate between training error and generalization error.
@@ -664,5 +665,5 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDA5Njk5MjVdfQ==
+eyJoaXN0b3J5IjpbMjA5MDkyOTAxMiwtMTA0MDk2OTkyNV19
 -->
