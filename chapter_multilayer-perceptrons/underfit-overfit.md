@@ -1,4 +1,4 @@
-# Model SelectionSeleção do Modelo, *Underfitting*, and e *Overfitting*
+# Seleção do Modelo, *Underfitting*, e *Overfitting*
 :label:`sec_model_selection`
 
 As machine learning scientists,
@@ -664,5 +664,5 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjYwNzc0MzVdfQ==
+eyJoaXN0b3J5IjpbLTEwNDA5Njk5MjVdfQ==
 -->
