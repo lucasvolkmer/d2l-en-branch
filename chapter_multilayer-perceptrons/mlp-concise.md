@@ -66,11 +66,11 @@ net = tf.keras.models.Sequential([
     tf.keras.layers.Dense(10)])
 ```
 
-[**The training loop**] is exactly the same
-as when we implemented softmax regression.
-This modularity enables us to separate
-matters concerning the model architecture
-from orthogonal considerations.
+[**O loop de treinamento**] é exatamente o mesmo
+como quando implementamos a regressão *softmax*.
+Essa modularidade nos permite separar
+questões relativas à arquitetura do modelo
+a partir de considerações ortogonais.
 
 ```{.python .input}
 batch_size, lr, num_epochs = 256, 0.1, 10
@@ -98,16 +98,16 @@ train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 ```
 
-## Summary
+## Resumo
 
-* Using high-level APIs, we can implement MLPs much more concisely.
-* For the same classification problem, the implementation of an MLP is the same as that of softmax regression except for additional hidden layers with activation functions.
+* Usando APIs de alto nível, podemos implementar MLPs de forma muito mais concisa.
+* Para o mesmo problema de classificação, a implementação de um MLP é a mesma da regressão *softmax*, exceto para camadas ocultas adicionais com funções de ativação.
 
-## Exercises
+## Exercícios
 
-1. Try adding different numbers of hidden layers (you may also modify the learning rate). What setting works best?
-1. Try out different activation functions. Which one works best?
-1. Try different schemes for initializing the weights. What method works best?
+1. Tente adicionar diferentes números de camadas ocultas (você também pode modificar a taxa de aprendizagem). Qual configuração funciona melhor?
+1. Experimente diferentes funções de ativação. Qual funciona melhor?
+1. Experimente diferentes esquemas para inicializar os pesos. Qual método funciona melhor?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/94)
@@ -121,5 +121,5 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/262)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc5OTY3NTQ3XX0=
+eyJoaXN0b3J5IjpbLTEwNzE1MjY4MTBdfQ==
 -->
