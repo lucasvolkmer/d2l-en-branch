@@ -103,29 +103,30 @@ que ajustamos usando dados de validação:
 
 $$L(\mathbf{w}, b) + \frac{\lambda}{2} \|\mathbf{w}\|^2,$$
 
-For $\lambda = 0$, we recover our original loss function.
-For $\lambda > 0$, we restrict the size of $\| \mathbf{w} \|$.
-We divide by $2$ by convention:
-when we take the derivative of a quadratic function,
-the $2$ and $1/2$ cancel out, ensuring that the expression
-for the update looks nice and simple.
-The astute reader might wonder why we work with the squared
-norm and not the standard norm (i.e., the Euclidean distance).
-We do this for computational convenience.
-By squaring the $L_2$ norm, we remove the square root,
-leaving the sum of squares of
-each component of the weight vector.
-This makes the derivative of the penalty easy to compute: the sum of derivatives equals the derivative of the sum.
+
+Para $\lambda = 0$, recuperamos nossa função de perda original.
+Para $\lambda > 0$, restringimos o tamanho de $\| \mathbf{w} \|$.
+Dividimos por $2$ por convenção:
+quando tomamos a derivada de uma função quadrática,
+o $2$ e $1/2$ cancelam, garantindo que a expressão
+para a atualização pareça agradável e simples.
+O leitor astuto pode se perguntar por que trabalhamos com o quadrado
+norma e não a norma padrão (ou seja, a distância euclidiana).
+Fazemos isso por conveniência computacional.
+Ao elevar a norma $L_2$ ao quadrado, removemos a raiz quadrada,
+deixando a soma dos quadrados de
+cada componente do vetor de peso.
+Isso torna a derivada da penalidade fácil de calcular: a soma das derivadas é igual à derivada da soma.
 
 
-Moreover, you might ask why we work with the $L_2$ norm
-in the first place and not, say, the $L_1$ norm.
-In fact, other choices are valid and
-popular throughout statistics.
-While $L_2$-regularized linear models constitute
-the classic *ridge regression* algorithm,
-$L_1$-regularized linear regression
-is a similarly fundamental model in statistics, which is popularly known as *lasso regression*.
+Além disso, você pode perguntar por que trabalhamos com a norma $L_2$
+em primeiro lugar e não, digamos, a norma $L_1$.
+Na verdade, outras escolhas são válidas e
+popular em todas as estatísticas.
+Enquanto modelos lineares $L_2$-regularizados constituem
+o algoritmo clássico de *regressão ridge*,
+regressão linear $L_1$-regularizada
+é um modelo igualmente fundamental em estatística, popularmente conhecido como *regressão lasso*.
 
 
 One reason to work with the $L_2$ norm
@@ -561,6 +562,7 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNTI2OTIyMCwtMTYxMjQ2Nzk2MCw3MD
-MzNDExODYsMTU4Mjg3ODIzNywtMTA2ODI0Mzk5MV19
+eyJoaXN0b3J5IjpbMzA5MDI1MzI4LDExMDUyNjkyMjAsLTE2MT
+I0Njc5NjAsNzAzMzQxMTg2LDE1ODI4NzgyMzcsLTEwNjgyNDM5
+OTFdfQ==
 -->
