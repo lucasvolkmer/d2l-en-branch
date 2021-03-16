@@ -89,17 +89,17 @@ Lá, nossa perda foi dada por
 
 $$L(\mathbf{w}, b) = \frac{1}{n}\sum_{i=1}^n \frac{1}{2}\left(\mathbf{w}^\top \mathbf{x}^{(i)} + b - y^{(i)}\right)^2.$$
 
-Recall that $\mathbf{x}^{(i)}$ are the features,
-$y^{(i)}$ are labels for all data examples $i$, and $(\mathbf{w}, b)$
-are the weight and bias parameters, respectively.
-To penalize the size of the weight vector,
-we must somehow add $\| \mathbf{w} \|^2$ to the loss function,
-but how should the model trade off the
-standard loss for this new additive penalty?
-In practice, we characterize this tradeoff
-via the *regularization constant* $\lambda$,
-a non-negative hyperparameter
-that we fit using validation data:
+Lembre-se de que $\mathbf{x}^{(i)}$ são as características,
+$y^{(i)}$ são rótulos para todos os exemplos de dados $i$ e $(\mathbf{w}, b)$
+são os parâmetros de peso e polarização, respectivamente.
+Para penalizar o tamanho do vetor de peso,
+devemos de alguma forma adicionar $\| \mathbf{w} \|^2$ para a função de perda,
+mas como o modelo deve negociar a
+perda padrão para esta nova penalidade aditiva?
+Na prática, caracterizamos essa compensação
+por meio da *constante de regularização* $\lambda$,
+um hiperparâmetro não negativo
+que ajustamos usando dados de validação:
 
 $$L(\mathbf{w}, b) + \frac{\lambda}{2} \|\mathbf{w}\|^2,$$
 
@@ -561,6 +561,6 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTI0Njc5NjAsNzAzMzQxMTg2LDE1OD
-I4NzgyMzcsLTEwNjgyNDM5OTFdfQ==
+eyJoaXN0b3J5IjpbMTEwNTI2OTIyMCwtMTYxMjQ2Nzk2MCw3MD
+MzNDExODYsMTU4Mjg3ODIzNywtMTA2ODI0Mzk5MV19
 -->
