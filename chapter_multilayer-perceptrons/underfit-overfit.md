@@ -305,30 +305,31 @@ calculando a média dos resultados dos experimentos de $K$.
 
 ## *Underfitting* ou *Overfitting*?
 
-When we compare the training and validation errors,
-we want to be mindful of two common situations.
-First, we want to watch out for cases
-when our training error and validation error are both substantial
-but there is a little gap between them.
-If the model is unable to reduce the training error,
-that could mean that our model is too simple
-(i.e., insufficiently expressive)
-to capture the pattern that we are trying to model.
-Moreover, since the *generalization gap*
-between our training and validation errors is small,
-we have reason to believe that we could get away with a more complex model.
-This phenomenon is known as *underfitting*.
 
-On the other hand, as we discussed above,
-we want to watch out for the cases
-when our training error is significantly lower
-than our validation error, indicating severe *overfitting*.
-Note that overfitting is not always a bad thing.
-With deep learning especially, it is well known
-that the best predictive models often perform
-far better on training data than on holdout data.
-Ultimately, we usually care more about the validation error
-than about the gap between the training and validation errors.
+Quando comparamos os erros de treinamento e validação,
+queremos estar atentos a duas situações comuns.
+Primeiro, queremos estar atentos aos casos
+quando nosso erro de treinamento e erro de validação são substanciais
+mas há uma pequena lacuna entre eles.
+Se o modelo não for capaz de reduzir o erro de treinamento,
+isso pode significar que nosso modelo é muito simples
+(ou seja, insuficientemente expressivo)
+para capturar o padrão que estamos tentando modelar.
+Além disso, uma vez que a *lacuna de generalização*
+entre nossos erros de treinamento e validação é pequena,
+temos motivos para acreditar que poderíamos sair impunes de um modelo mais complexo.
+Este fenômeno é conhecido como *underfitting*.
+
+Por outro lado, como discutimos acima,
+queremos estar atentos aos casos
+quando nosso erro de treinamento é significativamente menor
+do que o nosso erro de validação, indicando *overfitting* severo.
+Observe que o *overfitting* nem sempre é uma coisa ruim.
+Especialmente no aprendizado profundo, é bem conhecido
+que os melhores modelos preditivos frequentemente executam
+muito melhor em dados de treinamento do que em dados de validação.
+Em última análise, geralmente nos preocupamos mais com o erro de validação
+do que sobre a lacuna entre os erros de treinamento e validação.
 
 Whether we overfit or underfit can depend
 both on the complexity of our model
@@ -672,7 +673,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTMyNzE1NzksMTE3NTY2NDUxNiwtNT
-A5NTA4NzY0LDg1NDg2NjM3MiwxNDQzNzU5OTMsNDkzOTk2Nzc3
-LC0xMjUyOTE2OTA4LC0xMDQwOTY5OTI1XX0=
+eyJoaXN0b3J5IjpbLTUzNjIzNjcyMSwxMTc1NjY0NTE2LC01MD
+k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
+LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
 -->
