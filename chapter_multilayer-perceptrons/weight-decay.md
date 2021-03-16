@@ -86,6 +86,7 @@ Para ilustrar coisas no código,
 vamos reviver nosso exemplo anterior
 de :numref:`sec_linear_regression` para regressão linear.
 Lá, nossa perda foi dada por
+
 $$L(\mathbf{w}, b) = \frac{1}{n}\sum_{i=1}^n \frac{1}{2}\left(\mathbf{w}^\top \mathbf{x}^{(i)} + b - y^{(i)}\right)^2.$$
 
 Recall that $\mathbf{x}^{(i)}$ are the features,
@@ -560,6 +561,6 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNTg2NTczOCw3MDMzNDExODYsMTU4Mj
-g3ODIzNywtMTA2ODI0Mzk5MV19
+eyJoaXN0b3J5IjpbLTE2MTI0Njc5NjAsNzAzMzQxMTg2LDE1OD
+I4NzgyMzcsLTEwNjgyNDM5OTFdfQ==
 -->
