@@ -502,7 +502,7 @@ def evaluate_loss(net, data_iter, loss):  #@save
     return metric[0] / metric[1]
 ```
 
-Now [**define the training function**].
+Agora [**definimos a função de treinamento**].
 
 ```{.python .input}
 def train(train_features, test_features, train_labels, test_labels,
@@ -582,7 +582,7 @@ def train(train_features, test_features, train_labels, test_labels,
     print('weight:', net.get_weights()[0].T)
 ```
 
-### [**Third-Order Polynomial Function Fitting (Normal)**]
+### [**Ajuste de Função Polinomial de Terceira Ordem (Normal)**]
 
 We will begin by first using a third-order polynomial function, which is the same order as that of the data generation function.
 The results show that this model's training and test losses can be both effectively reduced.
@@ -673,7 +673,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDg0Nzk0NCwxMzYxMzM2ODgxLDExNz
+eyJoaXN0b3J5IjpbMTYwOTcyMjUxMSwxMzYxMzM2ODgxLDExNz
 U2NjQ1MTYsLTUwOTUwODc2NCw4NTQ4NjYzNzIsMTQ0Mzc1OTkz
 LDQ5Mzk5Njc3NywtMTI1MjkxNjkwOCwtMTA0MDk2OTkyNV19
 -->
