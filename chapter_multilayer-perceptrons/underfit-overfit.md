@@ -270,23 +270,24 @@ para seleção de modelo porque
 não podemos estimar o erro de generalização
 nos próprios dados que usamos para treinar o modelo.
 
-In practical applications, the picture gets muddier.
-While ideally we would only touch the test data once,
-to assess the very best model or to compare
-a small number of models to each other,
-real-world test data is seldom discarded after just one use.
-We can seldom afford a new test set for each round of experiments.
 
-The common practice to address this problem
-is to split our data three ways,
-incorporating a *validation dataset* (or *validation set*)
-in addition to the training and test datasets.
-The result is a murky practice where the boundaries
-between validation and test data are worryingly ambiguous.
-Unless explicitly stated otherwise, in the experiments in this book
-we are really working with what should rightly be called
-training data and validation data, with no true test sets.
-Therefore, the accuracy reported in each experiment of the book is really the validation accuracy and not a true test set accuracy.
+Em aplicações práticas, a imagem fica mais turva.
+Embora o ideal seja tocar nos dados de teste apenas uma vez,
+para avaliar o melhor modelo ou para comparar
+um pequeno número de modelos entre si,
+dados de teste do mundo real raramente são descartados após apenas um uso.
+Raramente podemos pagar um novo conjunto de teste para cada rodada de experimentos.
+
+A prática comum para resolver este problema
+é dividir nossos dados de três maneiras,
+incorporando um *dataset de validação* (ou *conjunto de validação*)
+além dos conjuntos de dados de treinamento e teste.
+O resultado é uma prática obscura onde os limites
+entre a validação e os dados de teste são preocupantemente ambíguos.
+A menos que seja explicitamente declarado de outra forma, nos experimentos deste livro
+estamos realmente trabalhando com o que deveria ser corretamente chamado
+dados de treinamento e dados de validação, sem conjuntos de teste verdadeiros.
+Portanto, a precisão relatada em cada experimento do livro é realmente a precisão da validação e não uma precisão do conjunto de teste verdadeiro.
 
 ### $K$-Fold Cross-Validation
 
@@ -671,7 +672,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMDM2NjIyOSwxMTc1NjY0NTE2LC01MD
+eyJoaXN0b3J5IjpbLTQwNDMxNzQ5NywxMTc1NjY0NTE2LC01MD
 k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
 LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
 -->
