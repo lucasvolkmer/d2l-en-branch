@@ -653,13 +653,13 @@ como *weight decay* e *dropout*.
 
 ## Exercícios
 
-1. Can you solve the polynomial regression problem exactly? Hint: use linear algebra.
-1. Consider model selection for polynomials:
-    1. Plot the training loss vs. model complexity (degree of the polynomial). What do you observe? What degree of polynomial do you need to reduce the training loss to 0?
-    1. Plot the test loss in this case.
-    1. Generate the same plot as a function of the amount of data.
-1. What happens if you drop the normalization ($1/i!$) of the polynomial features $x^i$? Can you fix this in some other way?
-1. Can you ever expect to see zero generalization error?
+1. Você pode resolver o problema de regressão polinomial exatamente? Dica: use álgebra linear.
+1. Considere a seleção de modelo para polinômios:
+     1. Plote a perda de treinamento vs. complexidade do modelo (grau do polinômio). O que você observa? Que grau de polinômio você precisa para reduzir a perda de treinamento para 0?
+     1. Trace a perda de teste neste caso.
+     1. Gere o mesmo gráfico em função da quantidade de dados.
+1. O que acontece se você descartar a normalização ($1/i!$) Das feições polinomiais $x^i$? Você pode consertar isso de outra maneira?
+1. Você pode esperar ver erro de generalização zero?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/96)
@@ -673,7 +673,7 @@ como *weight decay* e *dropout*.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MTI3Mjk0NSwxMzYxMzM2ODgxLDExNz
+eyJoaXN0b3J5IjpbMTY3NzA1MzA3NiwxMzYxMzM2ODgxLDExNz
 U2NjQ1MTYsLTUwOTUwODc2NCw4NTQ4NjYzNzIsMTQ0Mzc1OTkz
 LDQ5Mzk5Njc3NywtMTI1MjkxNjkwOCwtMTA0MDk2OTkyNV19
 -->
