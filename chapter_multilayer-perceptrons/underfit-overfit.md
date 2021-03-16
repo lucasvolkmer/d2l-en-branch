@@ -424,19 +424,19 @@ import math
 
 ### Gerando o *Dataset*
 
-First we need data. Given $x$, we will [**use the following cubic polynomial to generate the labels**] on training and test data:
+Primeiro, precisamos de dados. Dado $x$, iremos [**usar o seguinte polinômio cúbico para gerar os rótulos**] nos dados de treinamento e teste:
 
 (**$$y = 5 + 1.2x - 3.4\frac{x^2}{2!} + 5.6 \frac{x^3}{3!} + \epsilon \text{ where }
 \epsilon \sim \mathcal{N}(0, 0.1^2).$$**)
 
-The noise term $\epsilon$ obeys a normal distribution
-with a mean of 0 and a standard deviation of 0.1.
-For optimization, we typically want to avoid
-very large values of gradients or losses.
-This is why the *features*
-are rescaled from $x^i$ to $\frac{x^i}{i!}$.
-It allows us to avoid very large values for large exponents $i$.
-We will synthesize 100 samples each for the training set and test set.
+O termo de ruído $\epsilon$ obedece a uma distribuição normal
+com uma média de 0 e um desvio padrão de 0,1.
+Para otimização, normalmente queremos evitar
+valores muito grandes de gradientes ou perdas.
+É por isso que as *features*
+são redimensionadas de $x^i$ to $\frac{x^i}{i!}$.
+Isso nos permite evitar valores muito grandes para grandes expoentes $i$.
+Vamos sintetizar 100 amostras cada para o conjunto de treinamento e o conjunto de teste.
 
 ```{.python .input}
 #@tab all
@@ -673,7 +673,8 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNDc1MjYyMywxMzYxMzM2ODgxLDExNz
-U2NjQ1MTYsLTUwOTUwODc2NCw4NTQ4NjYzNzIsMTQ0Mzc1OTkz
-LDQ5Mzk5Njc3NywtMTI1MjkxNjkwOCwtMTA0MDk2OTkyNV19
+eyJoaXN0b3J5IjpbLTIwNTUyOTE1MDIsMTM2MTMzNjg4MSwxMT
+c1NjY0NTE2LC01MDk1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5
+Myw0OTM5OTY3NzcsLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ
+==
 -->
