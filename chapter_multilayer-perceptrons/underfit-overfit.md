@@ -618,17 +618,17 @@ train(poly_features[:n_train, :2], poly_features[n_train:, :2],
 
 ### [**Ajuste de Função Polinomial de Ordem Superior (Overfitting)**]
 
-Now let us try to train the model
-using a polynomial of too high degree.
-Here, there are insufficient data to learn that
-the higher-degree coefficients should have values close to zero.
-As a result, our overly-complex model
-is so susceptible that it is being influenced
-by noise in the training data.
-Though the training loss can be effectively reduced,
-the test loss is still much higher.
-It shows that
-the complex model overfits the data.
+Agora vamos tentar treinar o modelo
+usando um polinômio de grau muito alto.
+Aqui, não há dados suficientes para aprender que
+os coeficientes de grau superior devem ter valores próximos a zero.
+Como resultado, nosso modelo excessivamente complexo
+é tão suscetível que está sendo influenciado
+por ruído nos dados de treinamento.
+Embora a perda de treinamento possa ser efetivamente reduzida,
+a perda de teste ainda é muito maior.
+Mostra que
+o modelo complexo comete *overfitting*.
 
 ```{.python .input}
 #@tab all
@@ -637,10 +637,10 @@ train(poly_features[:n_train, :], poly_features[n_train:, :],
       labels[:n_train], labels[n_train:], num_epochs=1500)
 ```
 
-In the subsequent sections, we will continue
-to discuss overfitting problems
-and methods for dealing with them,
-such as weight decay and dropout.
+Nas seções subsequentes, continuaremos
+a discutir problemas de *overfitting*
+e métodos para lidar com eles,
+como *weight decay* e *dropout*.
 
 
 ## Summary
@@ -673,7 +673,8 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgzNjU4NzMyLDEzNjEzMzY4ODEsMTE3NT
-Y2NDUxNiwtNTA5NTA4NzY0LDg1NDg2NjM3MiwxNDQzNzU5OTMs
-NDkzOTk2Nzc3LC0xMjUyOTE2OTA4LC0xMDQwOTY5OTI1XX0=
+eyJoaXN0b3J5IjpbLTE5Mjc3NzQ3NzMsMTM2MTMzNjg4MSwxMT
+c1NjY0NTE2LC01MDk1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5
+Myw0OTM5OTY3NzcsLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ
+==
 -->
