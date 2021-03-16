@@ -291,19 +291,19 @@ Portanto, a precisão relatada em cada experimento do livro é realmente a preci
 
 ### Validação Cruzada *$K$-Fold*
 
-When training data is scarce,
-we might not even be able to afford to hold out
-enough data to constitute a proper validation set.
-One popular solution to this problem is to employ
-$K$*-fold cross-validation*.
-Here, the original training data is split into $K$ non-overlapping subsets.
-Then model training and validation are executed $K$ times,
-each time training on $K-1$ subsets and validating
-on a different subset (the one not used for training in that round).
-Finally, the training and validation errors are estimated
-by averaging over the results from the $K$ experiments.
+Quando os dados de treinamento são escassos,
+podemos nem mesmo ser capazes de resistir
+dados suficientes para constituir um conjunto de validação adequado.
+Uma solução popular para este problema é empregar
+$validação cruzada K$*-fold*.
+Aqui, os dados de treinamento originais são divididos em subconjuntos não sobrepostos de $K$.
+Então, o treinamento e a validação do modelo são executados $K$ vezes,
+cada vez treinando em subconjuntos $K-1$ e validando
+em um subconjunto diferente (aquele não usado para treinamento nessa rodada).
+Finalmente, os erros de treinamento e validação são estimados
+calculando a média dos resultados dos experimentos de $K$.
 
-## Underfitting or Overfitting?
+## *Underfitting* ou *Overfitting*?
 
 When we compare the training and validation errors,
 we want to be mindful of two common situations.
@@ -672,7 +672,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MjI0ODkwMSwxMTc1NjY0NTE2LC01MD
-k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
-LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
+eyJoaXN0b3J5IjpbLTE3NTMyNzE1NzksMTE3NTY2NDUxNiwtNT
+A5NTA4NzY0LDg1NDg2NjM3MiwxNDQzNzU5OTMsNDkzOTk2Nzc3
+LC0xMjUyOTE2OTA4LC0xMDQwOTY5OTI1XX0=
 -->
