@@ -41,7 +41,7 @@ Portanto, muitas vezes precisamos de uma ferramenta mais refinada
 para ajustar a complexidade da função.
 
 
-## Norms and Weight Decay
+## Normas e *Weight Decay*
 
 We have described
 both the $L_2$ norm and the $L_1$ norm,
@@ -560,5 +560,6 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4Mjg3ODIzNywtMTA2ODI0Mzk5MV19
+eyJoaXN0b3J5IjpbNzAzMzQxMTg2LDE1ODI4NzgyMzcsLTEwNj
+gyNDM5OTFdfQ==
 -->
