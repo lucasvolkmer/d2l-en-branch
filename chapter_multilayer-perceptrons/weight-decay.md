@@ -43,49 +43,49 @@ para ajustar a complexidade da função.
 
 ## Normas e *Weight Decay*
 
-We have described
-both the $L_2$ norm and the $L_1$ norm,
-which are special cases of the more general $L_p$ norm
-in :numref:`subsec_lin-algebra-norms`.
-(***Weight decay* (commonly called $L_2$ regularization),
-might be the most widely-used technique
-for regularizing parametric machine learning models.**)
-The technique is motivated by the basic intuition
-that among all functions $f$,
-the function $f = 0$
-(assigning the value $0$ to all inputs)
-is in some sense the *simplest*,
-and that we can measure the complexity
-of a function by its distance from zero.
-But how precisely should we measure
-the distance between a function and zero?
-There is no single right answer.
-In fact, entire branches of mathematics,
-including parts of functional analysis
-and the theory of Banach spaces,
-are devoted to answering this issue.
 
-One simple interpretation might be
-to measure the complexity of a linear function
+Nós descrevemos
+a norma $L_2$ e a norma $L_1$,
+que são casos especiais da norma $L_p$ mais geral
+em :numref: `subsec_lin-algebra-norms`.
+(***Weight Decay* (comumente chamada de regularização $L_2$),
+pode ser a técnica mais amplamente usada
+para regularizar modelos paramétricos de aprendizado de máquina.**)
+A técnica é motivada pela intuição básica
+que entre todas as funções $f$,
+a função $f = 0$
+(atribuindo o valor $0$ a todas as entradas)
+é em certo sentido a *mais simples*,
+e que podemos medir a complexidade
+de uma função por sua distância de zero.
+Mas com que precisão devemos medir
+a distância entre uma função e zero?
+Não existe uma única resposta certa.
+Na verdade, ramos inteiros da matemática,
+incluindo partes da análise funcional
+e a teoria dos espaços de Banach,
+se dedicam a responder a esta questão.
+
+Uma interpretação simples pode ser
+para medir a complexidade de uma função linear
 $f(\mathbf{x}) = \mathbf{w}^\top \mathbf{x}$
-by some norm of its weight vector, e.g., $\| \mathbf{w} \|^2$.
-The most common method for ensuring a small weight vector
-is to add its norm as a penalty term
-to the problem of minimizing the loss.
-Thus we replace our original objective,
-*minimizing the prediction loss on the training labels*,
-with new objective,
-*minimizing the sum of the prediction loss and the penalty term*.
-Now, if our weight vector grows too large,
-our learning algorithm might focus
-on minimizing the weight norm $\| \mathbf{w} \|^2$
-vs. minimizing the training error.
-That is exactly what we want.
-To illustrate things in code,
-let us revive our previous example
-from :numref:`sec_linear_regression` for linear regression.
-There, our loss was given by
-
+por alguma norma de seu vetor de peso, por exemplo, $\| \mathbf{w} \|^2$.
+O método mais comum para garantir um vetor de peso pequeno
+é adicionar sua norma como um termo de penalidade
+para o problema de minimizar a perda.
+Assim, substituímos nosso objetivo original,
+*minimizando a perda de previsão nos rótulos de treinamento*,
+com novo objetivo,
+*minimizando a soma da perda de previsão e o prazo de penalização*.
+Agora, se nosso vetor de peso ficar muito grande,
+nosso algoritmo de aprendizagem pode se concentrar
+sobre como minimizar a norma de peso $\| \mathbf{w} \|^2$
+vs. minimizar o erro de treinamento.
+Isso é exatamente o que queremos.
+Para ilustrar coisas no código,
+vamos reviver nosso exemplo anterior
+de :numref:`sec_linear_regression` para regressão linear.
+Lá, nossa perda foi dada por
 $$L(\mathbf{w}, b) = \frac{1}{n}\sum_{i=1}^n \frac{1}{2}\left(\mathbf{w}^\top \mathbf{x}^{(i)} + b - y^{(i)}\right)^2.$$
 
 Recall that $\mathbf{x}^{(i)}$ are the features,
@@ -560,6 +560,6 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAzMzQxMTg2LDE1ODI4NzgyMzcsLTEwNj
-gyNDM5OTFdfQ==
+eyJoaXN0b3J5IjpbLTMzNTg2NTczOCw3MDMzNDExODYsMTU4Mj
+g3ODIzNywtMTA2ODI0Mzk5MV19
 -->
