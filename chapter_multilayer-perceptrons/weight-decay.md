@@ -560,3 +560,6 @@ of applying weight decay on all layers of a deep network.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwNjgyNDM5OTFdfQ==
+-->
