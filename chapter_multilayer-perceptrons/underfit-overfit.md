@@ -373,7 +373,7 @@ e *underfitting* vs. *overfitting* em  :numref: `fig_capacity_vs_error`.
 ![Influence of model complexity on underfitting and overfitting](../img/capacity-vs-error.svg)
 :label:`fig_capacity_vs_error`
 
-### Dataset Size
+### Tamanho do Dataset
 
 The other big consideration to bear in mind is the dataset size.
 Fixing our model, the fewer samples we have in the training dataset,
@@ -673,7 +673,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMzAxMTg0OSwxMTc1NjY0NTE2LC01MD
+eyJoaXN0b3J5IjpbMTM2MTMzNjg4MSwxMTc1NjY0NTE2LC01MD
 k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
 LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
 -->
