@@ -584,10 +584,10 @@ def train(train_features, test_features, train_labels, test_labels,
 
 ### [**Ajuste de Função Polinomial de Terceira Ordem (Normal)**]
 
-We will begin by first using a third-order polynomial function, which is the same order as that of the data generation function.
-The results show that this model's training and test losses can be both effectively reduced.
-The learned model parameters are also close
-to the true values $w = [5, 1.2, -3.4, 5.6]$.
+Começaremos usando primeiro uma função polinomial de terceira ordem, que é a mesma ordem da função de geração de dados.
+Os resultados mostram que as perdas de treinamento e teste deste modelo podem ser reduzidas de forma eficaz.
+Os parâmetros do modelo aprendido também estão próximos
+dos valores verdadeiros $w = [5, 1.2, -3.4, 5.6]$.
 
 ```{.python .input}
 #@tab all
@@ -597,7 +597,7 @@ train(poly_features[:n_train, :4], poly_features[n_train:, :4],
       labels[:n_train], labels[n_train:])
 ```
 
-### [**Linear Function Fitting (Underfitting)**]
+### [**Ajuste de Função Linear (*Underfitting*)**]
 
 Let us take another look at linear function fitting.
 After the decline in early epochs,
@@ -673,7 +673,8 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwOTcyMjUxMSwxMzYxMzM2ODgxLDExNz
-U2NjQ1MTYsLTUwOTUwODc2NCw4NTQ4NjYzNzIsMTQ0Mzc1OTkz
-LDQ5Mzk5Njc3NywtMTI1MjkxNjkwOCwtMTA0MDk2OTkyNV19
+eyJoaXN0b3J5IjpbLTE4MTgzMTgyODUsMTM2MTMzNjg4MSwxMT
+c1NjY0NTE2LC01MDk1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5
+Myw0OTM5OTY3NzcsLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ
+==
 -->
