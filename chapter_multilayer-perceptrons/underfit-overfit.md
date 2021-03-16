@@ -289,7 +289,7 @@ estamos realmente trabalhando com o que deveria ser corretamente chamado
 dados de treinamento e dados de validação, sem conjuntos de teste verdadeiros.
 Portanto, a precisão relatada em cada experimento do livro é realmente a precisão da validação e não uma precisão do conjunto de teste verdadeiro.
 
-### $K$-Fold Cross-Validation
+### Validação Cruzada *$K$-Fold*
 
 When training data is scarce,
 we might not even be able to afford to hold out
@@ -672,7 +672,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNDMxNzQ5NywxMTc1NjY0NTE2LC01MD
+eyJoaXN0b3J5IjpbMTY1MjI0ODkwMSwxMTc1NjY0NTE2LC01MD
 k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
 LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
 -->
