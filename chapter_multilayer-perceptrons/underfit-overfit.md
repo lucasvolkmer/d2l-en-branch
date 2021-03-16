@@ -347,13 +347,13 @@ tentamos encontrar o polinômio de grau $d$
 
 $$\hat{y}= \sum_{i=0}^d x^i w_i$$
 
-to estimate the labels $y$.
-This is just a linear regression problem
-where our features are given by the powers of $x$,
-the model's weights are given by $w_i$,
-and the bias is given by $w_0$ since $x^0 = 1$ for all $x$.
-Since this is just a linear regression problem,
-we can use the squared error as our loss function.
+para estimar os rótulos $y$.
+Este é apenas um problema de regressão linear
+onde nossos recursos são dados pelos poderes de $x$,
+os pesos do modelo são dados por $w_i$,
+e o *bias* é dado por $w_0$ visto que $x^0 = 1$ para todo $x$.
+Uma vez que este é apenas um problema de regressão linear,
+podemos usar o erro quadrático como nossa função de perda.
 
 
 A higher-order polynomial function is more complex
@@ -673,7 +673,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY0NDYwMDAxLDExNzU2NjQ1MTYsLTUwOT
-UwODc2NCw4NTQ4NjYzNzIsMTQ0Mzc1OTkzLDQ5Mzk5Njc3Nywt
-MTI1MjkxNjkwOCwtMTA0MDk2OTkyNV19
+eyJoaXN0b3J5IjpbMTQ4NDMzNTE1NSwxMTc1NjY0NTE2LC01MD
+k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
+LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
 -->
