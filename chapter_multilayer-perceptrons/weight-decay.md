@@ -1,36 +1,35 @@
 # Weight Decay
 :label:`sec_weight_decay`
 
-Now that we have characterized the problem of overfitting,
-we can introduce some standard techniques for regularizing models.
-Recall that we can always mitigate overfitting
-by going out and collecting more training data.
-That can be costly, time consuming,
-or entirely out of our control,
-making it impossible in the short run.
-For now, we can assume that we already have
-as much high-quality data as our resources permit
-and focus on regularization techniques.
 
-Recall that in our
-polynomial regression example
+Agora que caracterizamos o problema de *overfitting*,
+podemos apresentar algumas técnicas padrão para regularizar modelos.
+Lembre-se de que sempre podemos mitigar o *overfitting*
+saindo e coletando mais dados de treinamento.
+Isso pode ser caro, demorado,
+ou totalmente fora de nosso controle,
+tornando-o impossível a curto prazo.
+Por enquanto, podemos assumir que já temos
+tantos dados de alta qualidade quanto nossos recursos permitem
+e focar em técnicas de regularização.
+
+Lembre-se disso em nosso
+exemplo de regressão polinomial
 (:numref:`sec_model_selection`)
-we could limit our model's capacity
-simply by tweaking the degree
-of the fitted polynomial.
-Indeed, limiting the number of features
-is a popular technique to mitigate overfitting.
-However, simply tossing aside features
-can be too blunt an instrument for the job.
-Sticking with the polynomial regression
-example, consider what might happen
-with high-dimensional inputs.
-The natural extensions of polynomials
-to multivariate data are called *monomials*,
-which are simply products of powers of variables.
-The degree of a monomial is the sum of the powers.
-For example, $x_1^2 x_2$, and $x_3 x_5^2$
-are both monomials of degree 3.
+poderíamos limitar a capacidade do nosso modelo
+simplesmente ajustando o grau
+do polinômio ajustado.
+Na verdade, limitar o número de características
+é uma técnica popular para mitigar o *overfitting*.
+No entanto, simplesmente deixando de lado as características
+pode ser um instrumento muito rude para o trabalho.
+Ficando com o exemplo da regressão polinomial, considere o que pode acontecer
+com entradas de alta dimensão.
+As extensões naturais de polinômios
+a dados multivariados são chamados de *monômios*,
+que são simplesmente produtos de potências de variáveis.
+O grau de um monômio é a soma das potências.
+Por exemplo, $x_1^2 x_2$, e $x_3 x_5^2$ são ambos monômios de grau 3.
 
 Note that the number of terms with degree $d$
 blows up rapidly as $d$ grows larger.
@@ -561,5 +560,5 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjgyNDM5OTFdfQ==
+eyJoaXN0b3J5IjpbMTQ3NjcwNzgyNywtMTA2ODI0Mzk5MV19
 -->
