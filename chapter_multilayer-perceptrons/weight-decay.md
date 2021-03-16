@@ -129,23 +129,24 @@ regressão linear $L_1$-regularizada
 é um modelo igualmente fundamental em estatística, popularmente conhecido como *regressão lasso*.
 
 
-One reason to work with the $L_2$ norm
-is that it places an outsize penalty
-on large components of the weight vector.
-This biases our learning algorithm
-towards models that distribute weight evenly
-across a larger number of features.
-In practice, this might make them more robust
-to measurement error in a single variable.
-By contrast, $L_1$ penalties lead to models
-that concentrate weights on a small set of features by clearing the other weights to zero.
-This is called *feature selection*,
-which may be desirable for other reasons.
+
+Uma razão para trabalhar com a norma $L_2$
+é que ela coloca uma penalidade descomunal
+em grandes componentes do vetor de peso.
+Isso influencia nosso algoritmo de aprendizagem
+para modelos que distribuem o peso uniformemente
+em um número maior de *features*.
+Na prática, isso pode torná-los mais robustos
+ao erro de medição em uma única variável.
+Por outro lado, penalidades de $L_1$ levam a modelos
+que concentram pesos em um pequeno conjunto de recursos, zerando os outros pesos.
+Isso é chamado de *seleção de recursos*,
+o que pode ser desejável por outras razões.
 
 
-Using the same notation in :eqref:`eq_linreg_batch_update`,
-the minibatch stochastic gradient descent updates
-for $L_2$-regularized regression follow:
+Usando a mesma notação em :eqref:`eq_linreg_batch_update`,
+as atualizações de gradiente descendente estocástico de *minibatch*
+para regressão $L_2$-regularizada seguem:
 
 $$
 \begin{aligned}
@@ -562,7 +563,7 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA5MDI1MzI4LDExMDUyNjkyMjAsLTE2MT
-I0Njc5NjAsNzAzMzQxMTg2LDE1ODI4NzgyMzcsLTEwNjgyNDM5
-OTFdfQ==
+eyJoaXN0b3J5IjpbMjA3NTI3NjE5MCwxMTA1MjY5MjIwLC0xNj
+EyNDY3OTYwLDcwMzM0MTE4NiwxNTgyODc4MjM3LC0xMDY4MjQz
+OTkxXX0=
 -->
