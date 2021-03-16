@@ -599,15 +599,15 @@ train(poly_features[:n_train, :4], poly_features[n_train:, :4],
 
 ### [**Ajuste de Função Linear (*Underfitting*)**]
 
-Let us take another look at linear function fitting.
-After the decline in early epochs,
-it becomes difficult to further decrease
-this model's training loss.
-After the last epoch iteration has been completed,
-the training loss is still high.
-When used to fit nonlinear patterns
-(like the third-order polynomial function here)
-linear models are liable to underfit.
+Vamos dar uma outra olhada no ajuste de função linear.
+Após o declínio nas primeiras épocas,
+torna-se difícil diminuir ainda mais
+perda de treinamento deste modelo.
+Depois que a última iteração de época foi concluída,
+a perda de treinamento ainda é alta.
+Quando usado para ajustar padrões não lineares
+(como a função polinomial de terceira ordem aqui)
+os modelos lineares podem ser insuficientes e cometer *undefitting*.
 
 ```{.python .input}
 #@tab all
@@ -616,7 +616,7 @@ train(poly_features[:n_train, :2], poly_features[n_train:, :2],
       labels[:n_train], labels[n_train:])
 ```
 
-### [**Higher-Order Polynomial Function Fitting  (Overfitting)**]
+### [**Ajuste de Função Polinomial de Ordem Superior (Overfitting)**]
 
 Now let us try to train the model
 using a polynomial of too high degree.
@@ -673,8 +673,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTgzMTgyODUsMTM2MTMzNjg4MSwxMT
-c1NjY0NTE2LC01MDk1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5
-Myw0OTM5OTY3NzcsLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ
-==
+eyJoaXN0b3J5IjpbNjgzNjU4NzMyLDEzNjEzMzY4ODEsMTE3NT
+Y2NDUxNiwtNTA5NTA4NzY0LDg1NDg2NjM3MiwxNDQzNzU5OTMs
+NDkzOTk2Nzc3LC0xMjUyOTE2OTA4LC0xMDQwOTY5OTI1XX0=
 -->
