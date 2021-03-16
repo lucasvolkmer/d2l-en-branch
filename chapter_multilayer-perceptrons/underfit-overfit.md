@@ -375,27 +375,27 @@ e *underfitting* vs. *overfitting* em  :numref: `fig_capacity_vs_error`.
 
 ### Tamanho do Dataset
 
-The other big consideration to bear in mind is the dataset size.
-Fixing our model, the fewer samples we have in the training dataset,
-the more likely (and more severely) we are to encounter overfitting.
-As we increase the amount of training data,
-the generalization error typically decreases.
-Moreover, in general, more data never hurt.
-For a fixed task and data distribution,
-there is typically a relationship between model complexity and dataset size.
-Given more data, we might profitably attempt to fit a more complex model.
-Absent sufficient data, simpler models may be more difficult to beat.
-For many tasks, deep learning only outperforms linear models
-when many thousands of training examples are available.
-In part, the current success of deep learning
-owes to the current abundance of massive datasets
-due to Internet companies, cheap storage, connected devices,
-and the broad digitization of the economy.
+A outra grande consideração a ter em mente é o tamanho do *dataset*.
+Corrigindo nosso modelo, menos amostras temos no *dataset* de treinamento,
+o mais provável (e mais severamente) é encontrar *overfitting*.
+À medida que aumentamos a quantidade de dados de treinamento,
+o erro de generalização geralmente diminui.
+Além disso, em geral, mais dados nunca fazem mal.
+Para uma tarefa fixa e distribuição de dados,
+normalmente existe uma relação entre a complexidade do modelo e o tamanho do *dataset*.
+Com mais dados, podemos tentar, de maneira lucrativa, ajustar um modelo mais complexo.
+Na ausência de dados suficientes, os modelos mais simples podem ser mais difíceis de superar.
+Para muitas tarefas, o aprendizado profundo supera apenas os modelos lineares
+quando muitos milhares de exemplos de treinamento estão disponíveis.
+Em parte, o sucesso atual do aprendizado profundo
+deve-se à atual abundância de enormes conjuntos de dados
+devido a empresas de Internet, armazenamento barato, dispositivos conectados,
+e a ampla digitalização da economia.
 
-## Polynomial Regression
+## Regressão Polinomial
 
-We can now (**explore these concepts interactively
-by fitting polynomials to data.**)
+Agora podemos (**explorar esses conceitos interativamente
+ajustando polinômios aos dados.**)
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -422,7 +422,7 @@ import numpy as np
 import math
 ```
 
-### Generating the Dataset
+### Gerando o *Dataset*
 
 First we need data. Given $x$, we will [**use the following cubic polynomial to generate the labels**] on training and test data:
 
@@ -673,7 +673,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MTMzNjg4MSwxMTc1NjY0NTE2LC01MD
-k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
-LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
+eyJoaXN0b3J5IjpbMTIwNDc1MjYyMywxMzYxMzM2ODgxLDExNz
+U2NjQ1MTYsLTUwOTUwODc2NCw4NTQ4NjYzNzIsMTQ0Mzc1OTkz
+LDQ5Mzk5Njc3NywtMTI1MjkxNjkwOCwtMTA0MDk2OTkyNV19
 -->
