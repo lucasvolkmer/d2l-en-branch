@@ -331,19 +331,19 @@ muito melhor em dados de treinamento do que em dados de validação.
 Em última análise, geralmente nos preocupamos mais com o erro de validação
 do que sobre a lacuna entre os erros de treinamento e validação.
 
-Whether we overfit or underfit can depend
-both on the complexity of our model
-and the size of the available training datasets,
-two topics that we discuss below.
+Se fazemos *underfitting* ou *overfitting* pode depender
+tanto na complexidade do nosso modelo
+e o tamanho dos conjuntos de dados de treinamento disponíveis,
+dois tópicos que discutiremos a seguir.
 
-### Model Complexity
+### Complexidade do Modelo
 
-To illustrate some classical intuition
-about overfitting and model complexity,
-we give an example using polynomials.
-Given training data consisting of a single feature $x$
-and a corresponding real-valued label $y$,
-we try to find the polynomial of degree $d$
+Para ilustrar alguma intuição clássica
+sobre *overfitting* e complexidade do modelo,
+damos um exemplo usando polinômios.
+Dados de treinamento dados consistindo em uma única *feature* $x$
+e um rótulo de valor real correspondente $y$,
+tentamos encontrar o polinômio de grau $d$
 
 $$\hat{y}= \sum_{i=0}^d x^i w_i$$
 
@@ -673,7 +673,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNjIzNjcyMSwxMTc1NjY0NTE2LC01MD
-k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
-LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
+eyJoaXN0b3J5IjpbMzY0NDYwMDAxLDExNzU2NjQ1MTYsLTUwOT
+UwODc2NCw4NTQ4NjYzNzIsMTQ0Mzc1OTkzLDQ5Mzk5Njc3Nywt
+MTI1MjkxNjkwOCwtMTA0MDk2OTkyNV19
 -->
