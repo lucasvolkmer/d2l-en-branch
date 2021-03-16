@@ -643,15 +643,15 @@ e métodos para lidar com eles,
 como *weight decay* e *dropout*.
 
 
-## Summary
+## Resumo
 
-* Since the generalization error cannot be estimated based on the training error, simply minimizing the training error will not necessarily mean a reduction in the generalization error. Machine learning models need to be careful to safeguard against overfitting so as to minimize the generalization error.
-* A validation set can be used for model selection, provided that it is not used too liberally.
-* Underfitting means that a model is not able to reduce the training error. When training error is much lower than validation error, there is overfitting.
-* We should choose an appropriately complex model and avoid using insufficient training samples.
+* Uma vez que o erro de generalização não pode ser estimado com base no erro de treinamento, simplesmente minimizar o erro de treinamento não significa necessariamente uma redução no erro de generalização. Os modelos de *machine learning* precisam ter cuidado para evitar *overfitting*, de modo a minimizar o erro de generalização.
+* Um conjunto de validação pode ser usado para seleção de modelo, desde que não seja usado com muita liberalidade.
+* *Underfitting* significa que um modelo não é capaz de reduzir o erro de treinamento. Quando o erro de treinamento é muito menor do que o erro de validação, há *overfitting*.
+* Devemos escolher um modelo apropriadamente complexo e evitar o uso de amostras de treinamento insuficientes.
 
 
-## Exercises
+## Exercícios
 
 1. Can you solve the polynomial regression problem exactly? Hint: use linear algebra.
 1. Consider model selection for polynomials:
@@ -673,8 +673,7 @@ como *weight decay* e *dropout*.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjc3NzQ3NzMsMTM2MTMzNjg4MSwxMT
-c1NjY0NTE2LC01MDk1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5
-Myw0OTM5OTY3NzcsLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ
-==
+eyJoaXN0b3J5IjpbLTc3MTI3Mjk0NSwxMzYxMzM2ODgxLDExNz
+U2NjQ1MTYsLTUwOTUwODc2NCw4NTQ4NjYzNzIsMTQ0Mzc1OTkz
+LDQ5Mzk5Njc3NywtMTI1MjkxNjkwOCwtMTA0MDk2OTkyNV19
 -->
