@@ -31,14 +31,14 @@ que são simplesmente produtos de potências de variáveis.
 O grau de um monômio é a soma das potências.
 Por exemplo, $x_1^2 x_2$, e $x_3 x_5^2$ são ambos monômios de grau 3.
 
-Note that the number of terms with degree $d$
-blows up rapidly as $d$ grows larger.
-Given $k$ variables, the number of monomials
-of degree $d$ (i.e., $k$ multichoose $d$) is ${k - 1 + d} \choose {k - 1}$.
-Even small changes in degree, say from $2$ to $3$,
-dramatically increase the complexity of our model.
-Thus we often need a more fine-grained tool
-for adjusting function complexity.
+Observe que o número de termos com grau $d$
+explode rapidamente à medida que $d$ fica maior.
+Dadas as variáveis $k$, o número de monômios
+de grau $d$ (ou seja, $k$ escolheu $d$) é ${k - 1 + d} \choose {k - 1}$.
+Mesmo pequenas mudanças no grau, digamos de $2$ a $3$,
+aumentam drasticamente a complexidade do nosso modelo.
+Portanto, muitas vezes precisamos de uma ferramenta mais refinada
+para ajustar a complexidade da função.
 
 
 ## Norms and Weight Decay
@@ -560,5 +560,5 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NjcwNzgyNywtMTA2ODI0Mzk5MV19
+eyJoaXN0b3J5IjpbMTU4Mjg3ODIzNywtMTA2ODI0Mzk5MV19
 -->
