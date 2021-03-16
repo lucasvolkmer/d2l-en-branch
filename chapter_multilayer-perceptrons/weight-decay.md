@@ -154,28 +154,29 @@ $$
 \end{aligned}
 $$
 
-As before, we update $\mathbf{w}$ based on the amount
-by which our estimate differs from the observation.
-However, we also shrink the size of $\mathbf{w}$ towards zero.
-That is why the method is sometimes called "weight decay":
-given the penalty term alone,
-our optimization algorithm *decays*
-the weight at each step of training.
-In contrast to feature selection,
-weight decay offers us a continuous mechanism
-for adjusting the complexity of a function.
-Smaller values of $\lambda$ correspond
-to less constrained $\mathbf{w}$,
-whereas larger values of $\lambda$
-constrain $\mathbf{w}$ more considerably.
 
-Whether we include a corresponding bias penalty $b^2$
-can vary across implementations,
-and may vary across layers of a neural network.
-Often, we do not regularize the bias term
-of a network's output layer.
+Como antes, atualizamos $\mathbf{w}$ com base no valor
+pelo qual nossa estimativa difere da observação.
+No entanto, também reduzimos o tamanho de $\mathbf{w}$ para zero.
+É por isso que o método às vezes é chamado de "queda de pesos" (*weigth decay*):
+dado o termo de pena sozinho,
+nosso algoritmo de otimização *decai*
+o peso em cada etapa do treinamento.
+Em contraste com a seleção de recursos,
+o *weight decay* nos oferece um mecanismo contínuo
+para ajustar a complexidade de uma função.
+Valores menores de $\lambda$ correspondem
+para $\mathbf{w}$, menos restritos
+enquanto valores maiores de $\lambda$
+restringem $\mathbf{w}$ mais consideravelmente.
 
-## High-Dimensional Linear Regression
+Se incluirmos uma penalidade de polarização correspondente $b^2$
+pode variar entre as implementações,
+e pode variar entre as camadas de uma rede neural.
+Muitas vezes, não regularizamos o termo de polarização
+da camada de saída de uma rede.
+
+## Regressão Linear de Alta Dimensão
 
 We can illustrate the benefits of
 weight decay
@@ -563,7 +564,7 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NTI3NjE5MCwxMTA1MjY5MjIwLC0xNj
-EyNDY3OTYwLDcwMzM0MTE4NiwxNTgyODc4MjM3LC0xMDY4MjQz
-OTkxXX0=
+eyJoaXN0b3J5IjpbMTIyMjUyNTU1MiwyMDc1Mjc2MTkwLDExMD
+UyNjkyMjAsLTE2MTI0Njc5NjAsNzAzMzQxMTg2LDE1ODI4Nzgy
+MzcsLTEwNjgyNDM5OTFdfQ==
 -->
