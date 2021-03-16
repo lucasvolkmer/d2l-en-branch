@@ -253,22 +253,22 @@ normalmente empregaremos um conjunto de dados de validação.
 
 ### *Dataset* de Validação
 
-In principle we should not touch our test set
-until after we have chosen all our hyperparameters.
-Were we to use the test data in the model selection process,
-there is a risk that we might overfit the test data.
-Then we would be in serious trouble.
-If we overfit our training data,
-there is always the evaluation on test data to keep us honest.
-But if we overfit the test data, how would we ever know?
+
+Em princípio, não devemos tocar em nosso conjunto de teste
+até depois de termos escolhido todos os nossos hiperparâmetros.
+Se usarmos os dados de teste no processo de seleção do modelo,
+existe o risco de ajustarmos demais os dados de teste (*overfitting*).
+Então, estaríamos em sérios problemas.
+Se ajustarmos demais nossos dados de treinamento,
+há sempre a avaliação dos dados de teste para nos manter honestos.
+Mas se ajustarmos demais os dados de teste, como saberemos?
 
 
-Thus, we should never rely on the test data for model selection.
-And yet we cannot rely solely on the training data
-for model selection either because
-we cannot estimate the generalization error
-on the very data that we use to train the model.
-
+Portanto, nunca devemos confiar nos dados de teste para a seleção do modelo.
+E ainda não podemos confiar apenas nos dados de treinamento
+para seleção de modelo porque
+não podemos estimar o erro de generalização
+nos próprios dados que usamos para treinar o modelo.
 
 In practical applications, the picture gets muddier.
 While ideally we would only touch the test data once,
@@ -671,7 +671,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NTY2NDUxNiwtNTA5NTA4NzY0LDg1ND
-g2NjM3MiwxNDQzNzU5OTMsNDkzOTk2Nzc3LC0xMjUyOTE2OTA4
-LC0xMDQwOTY5OTI1XX0=
+eyJoaXN0b3J5IjpbMTEyMDM2NjIyOSwxMTc1NjY0NTE2LC01MD
+k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
+LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
 -->
