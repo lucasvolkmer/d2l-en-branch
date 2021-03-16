@@ -455,12 +455,12 @@ labels = np.dot(poly_features, true_w)
 labels += np.random.normal(scale=0.1, size=labels.shape)
 ```
 
-Again, monomials stored in `poly_features`
-are rescaled by the gamma function,
-where $\Gamma(n)=(n-1)!$.
-[**Take a look at the first 2 samples**] from the generated dataset.
-The value 1 is technically a feature,
-namely the constant feature corresponding to the bias.
+Novamente, monômios armazenados em `poly_features`
+são redimensionados pela função gama,
+onde $\Gamma(n)=(n-1)!$.
+[**Dê uma olhada nas 2 primeiras amostras**] do conjunto de dados gerado.
+O valor 1 é tecnicamente uma *feature*,
+ou seja, a *feature* constante correspondente ao *bias*.
 
 ```{.python .input}
 #@tab pytorch, tensorflow
@@ -474,9 +474,9 @@ true_w, features, poly_features, labels = [d2l.tensor(x, dtype=
 features[:2], poly_features[:2, :], labels[:2]
 ```
 
-### Training and Testing the Model
+### Trainando e Testando o Modelo
 
-Let us first [**implement a function to evaluate the loss on a given dataset**].
+Vamos primeiro [**implementar uma função para avaliar a perda em um determinado conjunto de dados**].
 
 ```{.python .input}
 #@tab mxnet, tensorflow
@@ -673,8 +673,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTUyOTE1MDIsMTM2MTMzNjg4MSwxMT
-c1NjY0NTE2LC01MDk1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5
-Myw0OTM5OTY3NzcsLTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ
-==
+eyJoaXN0b3J5IjpbLTIwMDg0Nzk0NCwxMzYxMzM2ODgxLDExNz
+U2NjQ1MTYsLTUwOTUwODc2NCw4NTQ4NjYzNzIsMTQ0Mzc1OTkz
+LDQ5Mzk5Njc3NywtMTI1MjkxNjkwOCwtMTA0MDk2OTkyNV19
 -->
