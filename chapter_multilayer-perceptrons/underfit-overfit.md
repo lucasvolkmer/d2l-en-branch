@@ -356,19 +356,19 @@ Uma vez que este é apenas um problema de regressão linear,
 podemos usar o erro quadrático como nossa função de perda.
 
 
-A higher-order polynomial function is more complex
-than a lower-order polynomial function,
-since the higher-order polynomial has more parameters
-and the model function's selection range is wider.
-Fixing the training dataset,
-higher-order polynomial functions should always
-achieve lower (at worst, equal) training error
-relative to lower degree polynomials.
-In fact, whenever the data examples each have a distinct value of $x$,
-a polynomial function with degree equal to the number of data examples
-can fit the training set perfectly.
-We visualize the relationship between polynomial degree
-and underfitting vs. overfitting in :numref:`fig_capacity_vs_error`.
+Uma função polinomial de ordem superior é mais complexa
+do que uma função polinomial de ordem inferior,
+uma vez que o polinômio de ordem superior tem mais parâmetros
+e a faixa de seleção da função do modelo é mais ampla.
+Corrigindo o conjunto de dados de treinamento,
+funções polinomiais de ordem superior devem sempre
+alcançar menor (na pior das hipóteses, igual) erro de treinamento
+em relação a polinômios de grau inferior.
+Na verdade, sempre que os exemplos de dados cada um tem um valor distinto de $x$,
+uma função polinomial com grau igual ao número de exemplos de dados
+pode se encaixar perfeitamente no conjunto de treinamento.
+Nós visualizamos a relação entre o grau polinomial
+e *underfitting* vs. *overfitting* em  :numref: `fig_capacity_vs_error`.
 
 ![Influence of model complexity on underfitting and overfitting](../img/capacity-vs-error.svg)
 :label:`fig_capacity_vs_error`
@@ -673,7 +673,7 @@ such as weight decay and dropout.
 [Discussions](https://discuss.d2l.ai/t/234)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NDMzNTE1NSwxMTc1NjY0NTE2LC01MD
+eyJoaXN0b3J5IjpbLTIzMzAxMTg0OSwxMTc1NjY0NTE2LC01MD
 k1MDg3NjQsODU0ODY2MzcyLDE0NDM3NTk5Myw0OTM5OTY3Nzcs
 LTEyNTI5MTY5MDgsLTEwNDA5Njk5MjVdfQ==
 -->
