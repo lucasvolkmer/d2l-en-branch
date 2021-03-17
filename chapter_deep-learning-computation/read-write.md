@@ -91,16 +91,10 @@ np.save('xy-files.npy', [x, y])
 x2, y2 = np.load('xy-files.npy', allow_pickle=True)
 (x2, y2)
 ```
-
-We can even write and read a dictionary that maps
-from strings to tensors.
-This is convenient when we want
-to read or write all the weights in a model.
-
 Podemos até escrever e ler um dicionário que mapeia
-de cordas a tensores.
-Isso é conveniente quando queremos
-para ler ou escrever todos os pesos em um modelo.
+de *strings* a tensores.
+Isso é conveniente quando queremos 
+ler ou escrever todos os pesos em um modelo.
 
 ```{.python .input}
 mydict = {'x': x, 'y': y}
@@ -125,7 +119,7 @@ mydict2 = np.load('mydict.npy', allow_pickle=True)
 mydict2
 ```
 
-## Loading and Saving Model Parameters
+## Carregando e Salvando Parâmetros de Modelos
 
 Saving individual weight vectors (or other tensors) is useful,
 but it gets very tedious if we want to save
@@ -147,13 +141,13 @@ Let us start with our familiar MLP.
 
 Salvar vetores de peso individuais (ou outros tensores) é útil,
 mas fica muito tedioso se quisermos salvar
-(e depois carregue) um modelo inteiro.
+(e depois carregar) um modelo inteiro.
 Afinal, podemos ter centenas de
 grupos de parâmetros espalhados por toda parte.
-Por esta razão, a estrutura de aprendizagem profunda fornece funcionalidades integradas
+Por esta razão, a estrutura de *Deep Learning* fornece funcionalidades integradas
 para carregar e salvar redes inteiras.
 Um detalhe importante a notar é que este
-salva o modelo * parâmetros * e não o modelo inteiro.
+salva o modelo *parâmetros* e não o modelo inteiro.
 Por exemplo, se tivermos um MLP de 3 camadas,
 precisamos especificar a arquitetura separadamente.
 A razão para isso é que os próprios modelos podem conter código arbitrário,
@@ -316,5 +310,5 @@ Y_clone == Y
 [Discussions](https://discuss.d2l.ai/t/327)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MzM1MjM2N119
+eyJoaXN0b3J5IjpbLTMwNDgwNzBdfQ==
 -->
