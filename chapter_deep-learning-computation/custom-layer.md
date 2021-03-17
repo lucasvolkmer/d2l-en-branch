@@ -126,7 +126,7 @@ Y = net(tf.random.uniform((4, 8)))
 tf.reduce_mean(Y)
 ```
 
-## Layers with Parameters
+## Camadas com Parâmetros
 
 Now that we know how to define simple layers,
 let us move on to defining layers with parameters
@@ -309,5 +309,5 @@ net(tf.random.uniform((2, 64)))
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MTU0MzM5Nl19
+eyJoaXN0b3J5IjpbNjM3MzM5NzU2XX0=
 -->
