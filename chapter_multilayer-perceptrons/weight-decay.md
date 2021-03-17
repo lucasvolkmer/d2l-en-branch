@@ -1,4 +1,4 @@
-# Weight Decay
+# *Weight Decay*
 :label:`sec_weight_decay`
 
 
@@ -565,8 +565,8 @@ de aplicar o *weight decay* em todas as camadas de uma rede profunda.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDY3NjIxNDMsLTU0NzEzNTU3Myw4MT
-gzNzI5ODUsLTIwMjcxMjE5NDUsMTIyMjUyNTU1MiwyMDc1Mjc2
-MTkwLDExMDUyNjkyMjAsLTE2MTI0Njc5NjAsNzAzMzQxMTg2LD
-E1ODI4NzgyMzcsLTEwNjgyNDM5OTFdfQ==
+eyJoaXN0b3J5IjpbLTE2MDUxMTY3NSwtNTQ3MTM1NTczLDgxOD
+M3Mjk4NSwtMjAyNzEyMTk0NSwxMjIyNTI1NTUyLDIwNzUyNzYx
+OTAsMTEwNTI2OTIyMCwtMTYxMjQ2Nzk2MCw3MDMzNDExODYsMT
+U4Mjg3ODIzNywtMTA2ODI0Mzk5MV19
 -->
