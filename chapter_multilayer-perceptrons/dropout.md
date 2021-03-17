@@ -561,3 +561,6 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTk4MDg3NzM1N119
+-->
