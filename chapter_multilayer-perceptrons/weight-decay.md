@@ -359,20 +359,20 @@ def train(lambd):
     print('L2 norm of w:', tf.norm(w).numpy())
 ```
 
-### [**Training without Regularization**]
+### [**Treinamento sem Regularização**]
 
-We now run this code with `lambd = 0`,
-disabling weight decay.
-Note that we overfit badly,
-decreasing the training error but not the
-test error---a textbook case of overfitting.
+Agora executamos este código com `lambd = 0`,
+desabilitando o *weight decay*.
+Observe que fizemos muito *overfitting*,
+diminuindo o erro de treinamento, mas não o
+erro de teste --- um caso clássico de *overfitting*.
 
 ```{.python .input}
 #@tab all
 train(lambd=0)
 ```
 
-### [**Using Weight Decay**]
+### [**Usando *Weight Decay***]
 
 Below, we run with substantial weight decay.
 Note that the training error increases
@@ -565,7 +565,7 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MTA2MDY4MiwxMjIyNTI1NTUyLDIwNz
-UyNzYxOTAsMTEwNTI2OTIyMCwtMTYxMjQ2Nzk2MCw3MDMzNDEx
-ODYsMTU4Mjg3ODIzNywtMTA2ODI0Mzk5MV19
+eyJoaXN0b3J5IjpbLTEwMTA4NDExNDQsMTIyMjUyNTU1MiwyMD
+c1Mjc2MTkwLDExMDUyNjkyMjAsLTE2MTI0Njc5NjAsNzAzMzQx
+MTg2LDE1ODI4NzgyMzcsLTEwNjgyNDM5OTFdfQ==
 -->
