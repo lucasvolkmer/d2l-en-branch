@@ -374,18 +374,18 @@ train(lambd=0)
 
 ### [**Usando *Weight Decay***]
 
-Below, we run with substantial weight decay.
-Note that the training error increases
-but the test error decreases.
-This is precisely the effect
-we expect from regularization.
+Abaixo, executamos com *weight decay* substancial.
+Observe que o erro de treinamento aumenta
+mas o erro de teste diminui.
+Este é precisamente o efeito
+esperamos da regularização.
 
 ```{.python .input}
 #@tab all
 train(lambd=3)
 ```
 
-## [**Concise Implementation**]
+## [**Implementação Concisa**]
 
 Because weight decay is ubiquitous
 in neural network optimization,
@@ -565,7 +565,7 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTA4NDExNDQsMTIyMjUyNTU1MiwyMD
+eyJoaXN0b3J5IjpbLTIwMjcxMjE5NDUsMTIyMjUyNTU1MiwyMD
 c1Mjc2MTkwLDExMDUyNjkyMjAsLTE2MTI0Njc5NjAsNzAzMzQx
 MTg2LDE1ODI4NzgyMzcsLTEwNjgyNDM5OTFdfQ==
 -->
