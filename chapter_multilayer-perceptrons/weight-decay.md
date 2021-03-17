@@ -210,11 +210,11 @@ Primeiro, nós [**geramos alguns dados como antes**]
 (**$$y = 0.05 + \sum_{i = 1}^d 0.01 x_i + \epsilon \text{ where }
 \epsilon \sim \mathcal{N}(0, 0.01^2).$$**)
 
-We choose our label to be a linear function of our inputs,
-corrupted by Gaussian noise with zero mean and standard deviation 0.01.
-To make the effects of overfitting pronounced,
-we can increase the dimensionality of our problem to $d = 200$
-and work with a small training set containing only 20 examples.
+Escolhemos nosso rótulo para ser uma função linear de nossas entradas,
+corrompidas por ruído gaussiano com média zero e desvio padrão 0,01.
+Para tornar os efeitos do *overfitting* pronunciados,
+podemos aumentar a dimensionalidade do nosso problema para $d = 200$
+e trabalhar com um pequeno conjunto de treinamento contendo apenas 20 exemplos.
 
 ```{.python .input}
 #@tab all
@@ -226,16 +226,16 @@ test_data = d2l.synthetic_data(true_w, true_b, n_test)
 test_iter = d2l.load_array(test_data, batch_size, is_train=False)
 ```
 
-## Implementation from Scratch
+## Implementação do Zero
 
-In the following, we will implement weight decay from scratch,
-simply by adding the squared $L_2$ penalty
-to the original target function.
+A seguir, implementaremos o *weight decay* do zero,
+simplesmente adicionando a penalidade quadrada de $L_2$
+para a função de destino original.
 
-### [**Initializing Model Parameters**]
+### [**Inicializando os Parâmetros do Modelo**]
 
-First, we will define a function
-to randomly initialize our model parameters.
+Primeiro, vamos definir uma função
+para inicializar aleatoriamente os parâmetros do nosso modelo.
 
 ```{.python .input}
 def init_params():
@@ -564,7 +564,7 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzc5Njk0ODEsMTIyMjUyNTU1MiwyMD
-c1Mjc2MTkwLDExMDUyNjkyMjAsLTE2MTI0Njc5NjAsNzAzMzQx
-MTg2LDE1ODI4NzgyMzcsLTEwNjgyNDM5OTFdfQ==
+eyJoaXN0b3J5IjpbNDcwNTA0NDE0LDEyMjI1MjU1NTIsMjA3NT
+I3NjE5MCwxMTA1MjY5MjIwLC0xNjEyNDY3OTYwLDcwMzM0MTE4
+NiwxNTgyODc4MjM3LC0xMDY4MjQzOTkxXX0=
 -->
