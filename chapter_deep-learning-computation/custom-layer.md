@@ -128,16 +128,6 @@ tf.reduce_mean(Y)
 
 ## Camadas com Parâmetros
 
-Now that we know how to define simple layers,
-let us move on to defining layers with parameters
-that can be adjusted through training.
-We can use built-in functions to create parameters, which
-provide some basic housekeeping functionality.
-In particular, they govern access, initialization,
-sharing, saving, and loading model parameters.
-This way, among other benefits, we will not need to write
-custom serialization routines for every custom layer.
-
 Agora que sabemos como definir camadas simples,
 vamos prosseguir para a definição de camadas com parâmetros
 que pode ser ajustado por meio de treinamento.
@@ -159,7 +149,7 @@ Agora, vamos implementar nossa própria versão da camada totalmente conectada.
 Lembre-se de que esta camada requer dois parâmetros,
 um para representar o peso e outro para o viés.
 Nesta implementação, preparamos a ativação do ReLU como padrão.
-Esta camada requer a entrada de argumentos: `in_units` e` unidades`, que
+Esta camada requer a entrada de argumentos: `in_units` e `units`, que
 denotam o número de entradas e saídas, respectivamente.
 
 ```{.python .input}
@@ -309,5 +299,5 @@ net(tf.random.uniform((2, 64)))
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM3MzM5NzU2XX0=
+eyJoaXN0b3J5IjpbLTEwOTU5MjM5MTksNjM3MzM5NzU2XX0=
 -->
