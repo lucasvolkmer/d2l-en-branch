@@ -1,4 +1,4 @@
-# File I/O
+# Entrada e Saída de Arquivos
 
 So far we discussed how to process data and how
 to build, train, and test deep learning models.
@@ -15,7 +15,7 @@ both individual weight vectors and entire models.
 This section addresses both issues.
 
 Até agora, discutimos como processar dados e como
-para construir, treinar e testar modelos de aprendizado profundo.
+para construir, treinar e testar modelos de Deep Learning.
 No entanto, em algum momento, esperamos ser felizes o suficiente
 com os modelos aprendidos que queremos
 para salvar os resultados para uso posterior em vários contextos
@@ -341,5 +341,5 @@ Y_clone == Y
 [Discussions](https://discuss.d2l.ai/t/327)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5ODAwMDg2OF19
+eyJoaXN0b3J5IjpbNjg1NDQ2MTQyXX0=
 -->
