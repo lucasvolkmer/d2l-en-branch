@@ -1,4 +1,4 @@
-# Custom Layers
+# Camadas Personalizadas
 
 One factor behind deep learning's success
 is the availability of a wide range of layers
@@ -15,7 +15,7 @@ a layer that does not exist yet in the deep learning framework.
 In these cases, you must build a custom layer.
 In this section, we show you how.
 
-Um fator por trás do sucesso do aprendizado profundo
+Um fator por trás do sucesso do *Deep Learning*
 é a disponibilidade de uma ampla gama de camadas
 que pode ser composto de maneiras criativas
 projetar arquiteturas adequadas
@@ -344,5 +344,5 @@ net(tf.random.uniform((2, 64)))
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjA2MTY1MTVdfQ==
+eyJoaXN0b3J5IjpbLTI0NDI4Nzk5OF19
 -->
