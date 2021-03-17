@@ -422,9 +422,9 @@ o peso, para que o parâmetro de polarização $b$ não diminua.
 :end_tab:
 
 :begin_tab:`tensorflow`
-In the following code, we create an $L_2$ regularizer with
-the weight decay hyperparameter `wd` and apply it to the layer
-through the `kernel_regularizer` argument.
+No código a seguir, criamos um regularizador $L_2$ com
+o hiperparâmetro de redução de peso `wd` e aplicamos-no à camada
+através do argumento `kernel_regularizer`.
 :end_tab:
 
 ```{.python .input}
@@ -506,12 +506,12 @@ def train_concise(wd):
     print('L2 norm of w:', tf.norm(net.get_weights()[0]).numpy())
 ```
 
-[**The plots look identical to those when
-we implemented weight decay from scratch**].
-However, they run appreciably faster
-and are easier to implement,
-a benefit that will become more
-pronounced for larger problems.
+[**Os gráficos parecem idênticos aos de quando
+implementamos *weight decay* do zero**].
+No entanto, eles funcionam consideravelmente mais rápido
+e são mais fáceis de implementar,
+um benefício que se tornará mais
+pronunciado para problemas maiores.
 
 ```{.python .input}
 #@tab all
@@ -565,8 +565,8 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNjI5OTc1NCw4MTgzNzI5ODUsLTIwMj
-cxMjE5NDUsMTIyMjUyNTU1MiwyMDc1Mjc2MTkwLDExMDUyNjky
-MjAsLTE2MTI0Njc5NjAsNzAzMzQxMTg2LDE1ODI4NzgyMzcsLT
-EwNjgyNDM5OTFdfQ==
+eyJoaXN0b3J5IjpbNTc1MzUxOTA2LDgxODM3Mjk4NSwtMjAyNz
+EyMTk0NSwxMjIyNTI1NTUyLDIwNzUyNzYxOTAsMTEwNTI2OTIy
+MCwtMTYxMjQ2Nzk2MCw3MDMzNDExODYsMTU4Mjg3ODIzNywtMT
+A2ODI0Mzk5MV19
 -->
