@@ -400,25 +400,25 @@ depende apenas do valor atual de cada parâmetro,
 o otimizador deve tocar em cada parâmetro uma vez de qualquer maneira.
 
 :begin_tab:`mxnet`
-In the following code, we specify
-the weight decay hyperparameter directly
-through `wd` when instantiating our `Trainer`.
-By default, Gluon decays both
-weights and biases simultaneously.
-Note that the hyperparameter `wd`
-will be multiplied by `wd_mult`
-when updating model parameters.
-Thus, if we set `wd_mult` to zero,
-the bias parameter $b$ will not decay.
+No código a seguir, especificamos
+o hiperparâmetro do *weight decay* diretamente
+por meio de `wd` ao instanciar nosso `Trainer`.
+Por padrão, o Gluon decai ambos
+pesos e *bias* simultaneamente.
+Observe que o hiperparâmetro `wd`
+será multiplicado por `wd_mult`
+ao atualizar os parâmetros do modelo.
+Assim, se definirmos `wd_mult` para zero,
+o parâmetro de polarização $b$ não decairá.
 :end_tab:
 
 :begin_tab:`pytorch`
-In the following code, we specify
-the weight decay hyperparameter directly
-through `weight_decay` when instantiating our optimizer.
-By default, PyTorch decays both
-weights and biases simultaneously. Here we only set `weight_decay` for
-the weight, so the bias parameter $b$ will not decay.
+No código a seguir, especificamos
+o hiperparâmetro de *weight decay* diretamente
+por meio de `weight_decay` ao instanciar nosso otimizador.
+Por padrão, PyTorch decai ambos
+pesos e *bias* simultaneamente. Aqui nós apenas definimos `weight_decay` para
+o peso, para que o parâmetro de polarização $b$ não diminua.
 :end_tab:
 
 :begin_tab:`tensorflow`
@@ -565,8 +565,8 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE4MzcyOTg1LC0yMDI3MTIxOTQ1LDEyMj
-I1MjU1NTIsMjA3NTI3NjE5MCwxMTA1MjY5MjIwLC0xNjEyNDY3
-OTYwLDcwMzM0MTE4NiwxNTgyODc4MjM3LC0xMDY4MjQzOTkxXX
-0=
+eyJoaXN0b3J5IjpbMTIyNjI5OTc1NCw4MTgzNzI5ODUsLTIwMj
+cxMjE5NDUsMTIyMjUyNTU1MiwyMDc1Mjc2MTkwLDExMDUyNjky
+MjAsLTE2MTI0Njc5NjAsNzAzMzQxMTg2LDE1ODI4NzgyMzcsLT
+EwNjgyNDM5OTFdfQ==
 -->
