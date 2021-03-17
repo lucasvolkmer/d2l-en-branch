@@ -546,12 +546,12 @@ de aplicar o *weight decay* em todas as camadas de uma rede profunda.
 
 ## Exercícios
 
-1. Experiment with the value of $\lambda$ in the estimation problem in this section. Plot training and test accuracy as a function of $\lambda$. What do you observe?
-1. Use a validation set to find the optimal value of $\lambda$. Is it really the optimal value? Does this matter?
-1. What would the update equations look like if instead of $\|\mathbf{w}\|^2$ we used $\sum_i |w_i|$ as our penalty of choice ($L_1$ regularization)?
-1. We know that $\|\mathbf{w}\|^2 = \mathbf{w}^\top \mathbf{w}$. Can you find a similar equation for matrices (see the Frobenius norm in :numref:`subsec_lin-algebra-norms`)?
-1. Review the relationship between training error and generalization error. In addition to weight decay, increased training, and the use of a model of suitable complexity, what other ways can you think of to deal with overfitting?
-1. In Bayesian statistics we use the product of prior and likelihood to arrive at a posterior via $P(w \mid x) \propto P(x \mid w) P(w)$. How can you identify $P(w)$ with regularization?
+1. Experimente o valor de $\lambda$ no problema de estimação desta seção. Plote o treinamento e a precisão do teste como uma função de $\lambda$. O que você observa?
+1. Use um conjunto de validação para encontrar o valor ideal de $\lambda$. É realmente o valor ideal? Isso importa?
+1. Como seriam as equações de atualização se em vez de $\|\mathbf{w}\|^2$ usássemos $\sum_i |w_i|$ como nossa penalidade de escolha (regularização $L_1$)?
+1. Sabemos que $\|\mathbf{w}\|^2 = \mathbf{w}^\top \mathbf{w}$.  Você pode encontrar uma equação semelhante para matrizes (veja a norma Frobenius em :numref: `subsec_lin-algebra-norms`)?
+1. Revise a relação entre o erro de treinamento e o erro de generalização. Além do *weight decay*, aumento do treinamento e o uso de um modelo de complexidade adequada, de que outras maneiras você pode pensar para lidar com o *overfitting*?
+1. Na estatística bayesiana, usamos o produto anterior e a probabilidade de chegar a um posterior via $P(w \mid x) \propto P(x \mid w) P(w)$. Como você pode identificar $P(w)$ com regularização?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/98)
@@ -565,8 +565,8 @@ de aplicar o *weight decay* em todas as camadas de uma rede profunda.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NzEzNTU3Myw4MTgzNzI5ODUsLTIwMj
-cxMjE5NDUsMTIyMjUyNTU1MiwyMDc1Mjc2MTkwLDExMDUyNjky
-MjAsLTE2MTI0Njc5NjAsNzAzMzQxMTg2LDE1ODI4NzgyMzcsLT
-EwNjgyNDM5OTFdfQ==
+eyJoaXN0b3J5IjpbLTE1NDY3NjIxNDMsLTU0NzEzNTU3Myw4MT
+gzNzI5ODUsLTIwMjcxMjE5NDUsMTIyMjUyNTU1MiwyMDc1Mjc2
+MTkwLDExMDUyNjkyMjAsLTE2MTI0Njc5NjAsNzAzMzQxMTg2LD
+E1ODI4NzgyMzcsLTEwNjgyNDM5OTFdfQ==
 -->
