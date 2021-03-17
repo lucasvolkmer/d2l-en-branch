@@ -262,10 +262,10 @@ def init_params():
     return [w, b]
 ```
 
-### (**Defining $L_2$ Norm Penalty**)
+### (**Definindo Penalidade de Norma $L_2$**)
 
-Perhaps the most convenient way to implement this penalty
-is to square all terms in place and sum them up.
+Talvez a maneira mais conveniente de implementar essa penalidade
+é colocar todos os termos no lugar e resumi-los.
 
 ```{.python .input}
 def l2_penalty(w):
@@ -284,14 +284,15 @@ def l2_penalty(w):
     return tf.reduce_sum(tf.pow(w, 2)) / 2
 ```
 
-### [**Defining the Training Loop**]
+### [**Definindo o *Loop* de Treinamento**]
 
-The following code fits a model on the training set
-and evaluates it on the test set.
-The linear network and the squared loss
-have not changed since :numref:`chap_linear`,
-so we will just import them via `d2l.linreg` and `d2l.squared_loss`.
-The only change here is that our loss now includes the penalty term.
+O código a seguir se ajusta a um modelo no conjunto de treinamento
+e avalia no conjunto de teste.
+A rede linear e a perda quadrada
+não mudaram desde :numref:`chap_linear`,
+então iremos apenas importá-los via `d2l.linreg` e` d2l.squared_loss`.
+A única mudança aqui é que nossa perda agora inclui o prazo de penalidade.
+
 
 ```{.python .input}
 def train(lambd):
@@ -564,7 +565,7 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcwNTA0NDE0LDEyMjI1MjU1NTIsMjA3NT
-I3NjE5MCwxMTA1MjY5MjIwLC0xNjEyNDY3OTYwLDcwMzM0MTE4
-NiwxNTgyODc4MjM3LC0xMDY4MjQzOTkxXX0=
+eyJoaXN0b3J5IjpbMTc5MTA2MDY4MiwxMjIyNTI1NTUyLDIwNz
+UyNzYxOTAsMTEwNTI2OTIyMCwtMTYxMjQ2Nzk2MCw3MDMzNDEx
+ODYsMTU4Mjg3ODIzNywtMTA2ODI0Mzk5MV19
 -->
