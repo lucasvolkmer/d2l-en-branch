@@ -26,7 +26,7 @@ loop sobre dados sequenciais,
 e
 realizando programação dinâmica.
 Mais cedo ou mais tarde, você encontrará ou inventará
-uma camada que ainda não existe na estrutura de aprendizado profundo.
+uma camada que ainda não existe na estrutura de *Deep Learning*.
 Nesses casos, você deve construir uma camada personalizada.
 Nesta seção, mostramos como.
 
@@ -344,5 +344,5 @@ net(tf.random.uniform((2, 64)))
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NDI4Nzk5OF19
+eyJoaXN0b3J5IjpbLTExNDU2NTM3OThdfQ==
 -->
