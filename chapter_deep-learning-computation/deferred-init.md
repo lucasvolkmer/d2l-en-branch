@@ -159,9 +159,9 @@ a estrutura pode finalmente inicializar os parâmetros.
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discuss](https://discuss.d2l.ai/t/281)
+[Discussão](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NDEyNTQ2NSwtMzg3NDI3ODUxLDY0NT
-c4NTQ0MiwxMTM1NTg2Nzc0XX0=
+eyJoaXN0b3J5IjpbNzExNDA4MzAxLC0zODc0Mjc4NTEsNjQ1Nz
+g1NDQyLDExMzU1ODY3NzRdfQ==
 -->
