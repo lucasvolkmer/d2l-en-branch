@@ -1,21 +1,7 @@
 # Entrada e Saída de Arquivos
 
-So far we discussed how to process data and how
-to build, train, and test deep learning models.
-However, at some point, we will hopefully be happy enough
-with the learned models that we will want
-to save the results for later use in various contexts
-(perhaps even to make predictions in deployment).
-Additionally, when running a long training process,
-the best practice is to periodically save intermediate results (checkpointing)
-to ensure that we do not lose several days worth of computation
-if we trip over the power cord of our server.
-Thus it is time to learn how to load and store
-both individual weight vectors and entire models.
-This section addresses both issues.
-
 Até agora, discutimos como processar dados e como
-para construir, treinar e testar modelos de Deep Learning.
+para construir, treinar e testar modelos de *Deep Learning*.
 No entanto, em algum momento, esperamos ser felizes o suficiente
 com os modelos aprendidos que queremos
 para salvar os resultados para uso posterior em vários contextos
@@ -28,16 +14,10 @@ Portanto, é hora de aprender como carregar e armazenar
 ambos os vetores de peso individuais e modelos inteiros.
 Esta seção aborda ambos os problemas.
 
-## Loading and Saving Tensors
-
-For individual tensors, we can directly
-invoke the `load` and `save` functions
-to read and write them respectively.
-Both functions require that we supply a name,
-and `save` requires as input the variable to be saved.
+## Carregando e Salvando Tensores
 
 Para tensores individuais, podemos diretamente
-invocar as funções `load` e` save`
+invocar as funções `load` e `save`
 para ler e escrever respectivamente.
 Ambas as funções exigem que forneçamos um nome,
 e `save` requer como entrada a variável a ser salva.
@@ -70,8 +50,6 @@ x = tf.range(4)
 np.save("x-file.npy", x)
 ```
 
-We can now read the data from the stored file back into memory.
-
 Agora podemos ler os dados do arquivo armazenado de volta na memória.
 
 ```{.python .input}
@@ -90,9 +68,6 @@ x2
 x2 = np.load('x-file.npy', allow_pickle=True)
 x2
 ```
-
-We can store a list of tensors and read them back into memory.
-
 Podemos armazenar uma lista de tensores e lê-los de volta na memória.
 ```{.python .input}
 y = np.zeros(4)
@@ -341,5 +316,5 @@ Y_clone == Y
 [Discussions](https://discuss.d2l.ai/t/327)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg1NDQ2MTQyXX0=
+eyJoaXN0b3J5IjpbMTg3MzM1MjM2N119
 -->
