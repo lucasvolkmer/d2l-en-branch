@@ -387,17 +387,17 @@ train(lambd=3)
 
 ## [**Implementação Concisa**]
 
-Because weight decay is ubiquitous
-in neural network optimization,
-the deep learning framework makes it especially convenient,
-integrating weight decay into the optimization algorithm itself
-for easy use in combination with any loss function.
-Moreover, this integration serves a computational benefit,
-allowing implementation tricks to add weight decay to the algorithm,
-without any additional computational overhead.
-Since the weight decay portion of the update
-depends only on the current value of each parameter,
-the optimizer must touch each parameter once anyway.
+Como o *weight decay* é onipresente
+na otimização da rede neural,
+a estrutura de *deep learning* torna-o especialmente conveniente,
+integrando o *weight decay* no próprio algoritmo de otimização
+para fácil uso em combinação com qualquer função de perda.
+Além disso, essa integração tem um benefício computacional,
+permitindo truques de implementação para adicionar *weight decay* ao algoritmo,
+sem qualquer sobrecarga computacional adicional.
+Uma vez que a parte de *weight decay* da atualização
+depende apenas do valor atual de cada parâmetro,
+o otimizador deve tocar em cada parâmetro uma vez de qualquer maneira.
 
 :begin_tab:`mxnet`
 In the following code, we specify
@@ -565,7 +565,8 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjcxMjE5NDUsMTIyMjUyNTU1MiwyMD
-c1Mjc2MTkwLDExMDUyNjkyMjAsLTE2MTI0Njc5NjAsNzAzMzQx
-MTg2LDE1ODI4NzgyMzcsLTEwNjgyNDM5OTFdfQ==
+eyJoaXN0b3J5IjpbODE4MzcyOTg1LC0yMDI3MTIxOTQ1LDEyMj
+I1MjU1NTIsMjA3NTI3NjE5MCwxMTA1MjY5MjIwLC0xNjEyNDY3
+OTYwLDcwMzM0MTE4NiwxNTgyODc4MjM3LC0xMDY4MjQzOTkxXX
+0=
 -->
