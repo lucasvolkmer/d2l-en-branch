@@ -257,25 +257,21 @@ Y_clone == Y
 
 ## Exercícios
 
-1. Even if there is no need to deploy trained models to a different device, what are the practical benefits of storing model parameters?
-2. Assume that we want to reuse only parts of a network to be incorporated into a network of a different architecture. How would you go about using, say the first two layers from a previous network in a new network?
-3. How would you go about saving the network architecture and parameters? What restrictions would you impose on the architecture?
-
-4. Mesmo se não houver necessidade de implantar modelos treinados em um dispositivo diferente, quais são os benefícios práticos de armazenar parâmetros de modelo?
-5. Suponha que desejamos reutilizar apenas partes de uma rede para serem incorporadas a uma rede de arquitetura diferente. Como você usaria, digamos, as duas primeiras camadas de uma rede anterior em uma nova rede?
-6. Como você salvaria a arquitetura e os parâmetros da rede? Que restrições você imporia à arquitetura?
+1. Mesmo se não houver necessidade de implantar modelos treinados em um dispositivo diferente, quais são os benefícios práticos de armazenar parâmetros de modelo?
+1. Suponha que desejamos reutilizar apenas partes de uma rede para serem incorporadas a uma rede de arquitetura diferente. Como você usaria, digamos, as duas primeiras camadas de uma rede anterior em uma nova rede?
+1. Como você salvaria a arquitetura e os parâmetros da rede? Que restrições você imporia à arquitetura?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/60)
+[Discussão](https://discuss.d2l.ai/t/60)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/61)
+[Discussão](https://discuss.d2l.ai/t/61)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/327)
+[Discussão](https://discuss.d2l.ai/t/327)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MDYyODAwMl19
+eyJoaXN0b3J5IjpbMzc3NjU2MDM4XX0=
 -->
