@@ -121,24 +121,6 @@ mydict2
 
 ## Carregando e Salvando Parâmetros de Modelos
 
-Saving individual weight vectors (or other tensors) is useful,
-but it gets very tedious if we want to save
-(and later load) an entire model.
-After all, we might have hundreds of
-parameter groups sprinkled throughout.
-For this reason the deep learning framework provides built-in functionalities
-to load and save entire networks.
-An important detail to note is that this
-saves model *parameters* and not the entire model.
-For example, if we have a 3-layer MLP,
-we need to specify the architecture separately.
-The reason for this is that the models themselves can contain arbitrary code,
-hence they cannot be serialized as naturally.
-Thus, in order to reinstate a model, we need
-to generate the architecture in code
-and then load the parameters from disk.
-Let us start with our familiar MLP.
-
 Salvar vetores de peso individuais (ou outros tensores) é útil,
 mas fica muito tedioso se quisermos salvar
 (e depois carregar) um modelo inteiro.
@@ -207,9 +189,6 @@ net = MLP()
 X = tf.random.uniform((2, 20))
 Y = net(X)
 ```
-
-Next, we store the parameters of the model as a file with the name "mlp.params".
-
 A seguir, armazenamos os parâmetros do modelo como um arquivo com o nome "mlp.params".
 
 ```{.python .input}
@@ -225,11 +204,6 @@ torch.save(net.state_dict(), 'mlp.params')
 #@tab tensorflow
 net.save_weights('mlp.params')
 ```
-
-To recover the model, we instantiate a clone
-of the original MLP model.
-Instead of randomly initializing the model parameters,
-we read the parameters stored in the file directly.
 
 Para recuperar o modelo, instanciamos um clone
 do modelo MLP original.
@@ -254,10 +228,6 @@ clone = MLP()
 clone.load_weights("mlp.params")
 ```
 
-Since both instances have the same model parameters,
-the computational result of the same input `X` should be the same.
-Let us verify this.
-
 Uma vez que ambas as instâncias têm os mesmos parâmetros de modelo,
 o resultado computacional da mesma entrada `X` deve ser o mesmo.
 Deixe-nos verificar isso.
@@ -279,16 +249,13 @@ Y_clone = clone(X)
 Y_clone == Y
 ```
 
-## Summary
+## Sumário
 
-* The `save` and `load` functions can be used to perform file I/O for tensor objects.
-* We can save and load the entire sets of parameters for a network via a parameter dictionary.
-* Saving the architecture has to be done in code rather than in parameters.
-
-* As funções `save` e` load` podem ser usadas para executar E / S de arquivo para objetos tensores.
+* As funções `save` e `load` podem ser usadas para executar E/S de arquivo para objetos tensores.
 * Podemos salvar e carregar todos os conjuntos de parâmetros de uma rede por meio de um dicionário de parâmetros.
 * Salvar a arquitetura deve ser feito em código e não em parâmetros.
-## Exercises
+
+## Exercícios
 
 1. Even if there is no need to deploy trained models to a different device, what are the practical benefits of storing model parameters?
 2. Assume that we want to reuse only parts of a network to be incorporated into a network of a different architecture. How would you go about using, say the first two layers from a previous network in a new network?
@@ -310,5 +277,5 @@ Y_clone == Y
 [Discussions](https://discuss.d2l.ai/t/327)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNDgwNzBdfQ==
+eyJoaXN0b3J5IjpbLTU0MDYyODAwMl19
 -->
