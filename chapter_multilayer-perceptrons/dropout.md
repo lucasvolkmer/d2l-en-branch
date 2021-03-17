@@ -16,33 +16,34 @@ em um pequeno número de associações potencialmente espúrias.
 
 ## *Overfitting* Revisitado
 
-Faced with more features than examples,
-linear models tend to overfit.
-But given more examples than features,
-we can generally count on linear models not to overfit.
-Unfortunately, the reliability with which
-linear models generalize comes at a cost.
-Naively applied, linear models do not take
-into account interactions among features.
-For every feature, a linear model must assign
-either a positive or a negative weight, ignoring context.
 
-In traditional texts, this fundamental tension
-between generalizability and flexibility
-is described as the *bias-variance tradeoff*.
-Linear models have high bias: they can only represent a small class of functions.
-However, these models have low variance: they give similar results
-across different random samples of the data.
+Diante de mais características do que exemplos,
+modelos lineares tendem a fazer *overfitting*.
+Mas dados mais exemplos do que características,
+geralmente podemos contar com modelos lineares para não ajustar demais.
+Infelizmente, a confiabilidade com a qual
+os modelos lineares generalizam têm um custo.
+Aplicados ingenuamente, os modelos lineares não levam
+em conta as interações entre as características.
+Para cada recurso, um modelo linear deve atribuir
+um peso positivo ou negativo, ignorando o contexto.
 
-Deep neural networks inhabit the opposite
-end of the bias-variance spectrum.
-Unlike linear models, neural networks
-are not confined to looking at each feature individually.
-They can learn interactions among groups of features.
-For example, they might infer that
-“Nigeria” and “Western Union” appearing
-together in an email indicates spam
-but that separately they do not.
+Em textos tradicionais, esta tensão fundamental
+entre generalização e flexibilidade
+é descrito como a *compensação de variação de polarização*.
+Modelos lineares têm alta polarização: eles podem representar apenas uma pequena classe de funções.
+No entanto, esses modelos têm baixa variação: eles fornecem resultados semelhantes
+em diferentes amostras aleatórias dos dados.
+
+Redes neurais profundas habitam o oposto
+fim do espectro de polarização-variância.
+Ao contrário dos modelos lineares, as redes neurais
+não se limitam a examinar cada recurso individualmente.
+Eles podem aprender interações entre grupos de recursos.
+Por exemplo, eles podem inferir que
+“Nigéria” e “Western Union” aparecendo
+juntos em um e-mail indicam spam
+mas separadamente eles não o fazem.
 
 Even when we have far more examples than features,
 deep neural networks are capable of overfitting.
@@ -562,5 +563,6 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MDE3ODU1MCwtOTgwODc3MzU3XX0=
+eyJoaXN0b3J5IjpbLTE3MzkxMTg0MTAsMTM4MDE3ODU1MCwtOT
+gwODc3MzU3XX0=
 -->
