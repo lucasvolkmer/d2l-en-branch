@@ -253,33 +253,28 @@ net(tf.random.uniform((2, 64)))
 
 ## Sumário
 
-
 * Podemos projetar camadas personalizadas por meio da classe de camada básica. Isso nos permite definir novas camadas flexíveis que se comportam de maneira diferente de quaisquer camadas existentes na biblioteca.
 * Uma vez definidas, as camadas personalizadas podem ser chamadas em contextos e arquiteturas arbitrários.
 * As camadas podem ter parâmetros locais, que podem ser criados por meio de funções integradas.
 
 
-## Exercises
-
-1. Design a layer that takes an input and computes a tensor reduction,
-   i.e., it returns $y_k = \sum_{i, j} W_{ijk} x_i x_j$.
-2. Design a layer that returns the leading half of the Fourier coefficients of the data.
+## Exercícios
 
 3. Projete uma camada que recebe uma entrada e calcula uma redução de tensor,
-    ou seja, ele retorna $ y_k = \ sum_ {i, j} W_ {ijk} x_i x_j $.
+    ou seja, ele retorna $y_k = \sum_{i, j} W_{ijk} x_i x_j$.
 4. Projete uma camada que retorne a metade anterior dos coeficientes de Fourier dos dados.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/58)
+[Discussão](https://discuss.d2l.ai/t/58)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/59)
+[Discussão](https://discuss.d2l.ai/t/59)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/279)
+[Discussão](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMjcwMDU5OCw2MzczMzk3NTZdfQ==
+eyJoaXN0b3J5IjpbMTE0MTM0NDQ0OSw2MzczMzk3NTZdfQ==
 -->
