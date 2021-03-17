@@ -178,9 +178,9 @@ da camada de saída de uma rede.
 
 ## Regressão Linear de Alta Dimensão
 
-We can illustrate the benefits of
-weight decay
-through a simple synthetic example.
+Podemos ilustrar os benefícios do
+*weight decay*
+por meio de um exemplo sintético simples.
 
 ```{.python .input}
 %matplotlib inline
@@ -205,7 +205,7 @@ from d2l import tensorflow as d2l
 import tensorflow as tf
 ```
 
-First, we [**generate some data as before**]
+Primeiro, nós [**geramos alguns dados como antes**]
 
 (**$$y = 0.05 + \sum_{i = 1}^d 0.01 x_i + \epsilon \text{ where }
 \epsilon \sim \mathcal{N}(0, 0.01^2).$$**)
@@ -564,7 +564,7 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMjUyNTU1MiwyMDc1Mjc2MTkwLDExMD
-UyNjkyMjAsLTE2MTI0Njc5NjAsNzAzMzQxMTg2LDE1ODI4Nzgy
-MzcsLTEwNjgyNDM5OTFdfQ==
+eyJoaXN0b3J5IjpbLTE0Mzc5Njk0ODEsMTIyMjUyNTU1MiwyMD
+c1Mjc2MTkwLDExMDUyNjkyMjAsLTE2MTI0Njc5NjAsNzAzMzQx
+MTg2LDE1ODI4NzgyMzcsLTEwNjgyNDM5OTFdfQ==
 -->
