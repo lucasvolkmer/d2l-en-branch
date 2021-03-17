@@ -1,44 +1,22 @@
 # GPUs
 :label:`sec_use_gpu`
 
-In :numref:`tab_intro_decade`, we discussed the rapid growth
-of computation over the past two decades.
-In a nutshell, GPU performance has increased
-by a factor of 1000 every decade since 2000.
-This offers great opportunities but it also suggests
-a significant need to provide such performance.
-
-Em: numref: `tab_intro_decade`, discutimos o rápido crescimento
+Em :numref:`tab_intro_decade`, discutimos o rápido crescimento
 de computação nas últimas duas décadas.
 Em suma, o desempenho da GPU aumentou
 por um fator de 1000 a cada década desde 2000.
 Isso oferece ótimas oportunidades, mas também sugere
 uma necessidade significativa de fornecer tal desempenho.
 
-
-In this section, we begin to discuss how to harness
-this computational performance for your research.
-First by using single GPUs and at a later point,
-how to use multiple GPUs and multiple servers (with multiple GPUs).
-
 Nesta seção, começamos a discutir como aproveitar
 este desempenho computacional para sua pesquisa.
 Primeiro usando GPUs únicas e, posteriormente,
 como usar várias GPUs e vários servidores (com várias GPUs).
 
-Specifically, we will discuss how
-to use a single NVIDIA GPU for calculations.
-First, make sure you have at least one NVIDIA GPU installed.
-Then, download the [NVIDIA driver and CUDA](https://developer.nvidia.com/cuda-downloads)
-and follow the prompts to set the appropriate path.
-Once these preparations are complete,
-the `nvidia-smi` command can be used
-to view the graphics card information.
-
 Especificamente, discutiremos como
 para usar uma única GPU NVIDIA para cálculos.
 Primeiro, certifique-se de ter pelo menos uma GPU NVIDIA instalada.
-Em seguida, baixe o [driver NVIDIA e CUDA] (https://developer.nvidia.com/cuda-downloads)
+Em seguida, baixe o [NVIDIA driver e CUDA](https://developer.nvidia.com/cuda-downloads).
 e siga as instruções para definir o caminho apropriado.
 Assim que esses preparativos forem concluídos,
 o comando `nvidia-smi` pode ser usado
@@ -769,5 +747,5 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MjIyODU4NF19
+eyJoaXN0b3J5IjpbLTg0MTY0OTMxNSwtNjcyMjI4NTg0XX0=
 -->
