@@ -14,7 +14,7 @@ que encorajamos o modelo a espalhar seus pesos
 entre muitas características, em vez de depender demais
 em um pequeno número de associações potencialmente espúrias.
 
-## *Overfitting* Revisited
+## *Overfitting* Revisitado
 
 Faced with more features than examples,
 linear models tend to overfit.
@@ -562,5 +562,5 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMzQ2MjA2MywtOTgwODc3MzU3XX0=
+eyJoaXN0b3J5IjpbMTM4MDE3ODU1MCwtOTgwODc3MzU3XX0=
 -->
