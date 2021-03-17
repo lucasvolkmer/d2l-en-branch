@@ -138,13 +138,6 @@ compartilhar, salvar e carregar parâmetros do modelo.
 Dessa forma, entre outros benefícios, não precisaremos escrever
 rotinas de serialização personalizadas para cada camada personalizada.
 
-Now let us implement our own version of the  fully-connected layer.
-Recall that this layer requires two parameters,
-one to represent the weight and the other for the bias.
-In this implementation, we bake in the ReLU activation as a default.
-This layer requires to input arguments: `in_units` and `units`, which
-denote the number of inputs and outputs, respectively.
-
 Agora, vamos implementar nossa própria versão da camada totalmente conectada.
 Lembre-se de que esta camada requer dois parâmetros,
 um para representar o peso e outro para o viés.
@@ -299,5 +292,5 @@ net(tf.random.uniform((2, 64)))
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTU5MjM5MTksNjM3MzM5NzU2XX0=
+eyJoaXN0b3J5IjpbLTk1NDM5MTY2MSw2MzczMzk3NTZdfQ==
 -->
