@@ -65,8 +65,6 @@ class CenteredLayer(tf.keras.Model):
         return inputs - tf.reduce_mean(inputs)
 ```
 
-Let us verify that our layer works as intended by feeding some data through it.
-
 Vamos verificar se nossa camada funciona conforme o esperado, alimentando alguns dados por meio dela.
 
 ```{.python .input}
@@ -85,9 +83,6 @@ layer(torch.FloatTensor([1, 2, 3, 4, 5]))
 layer = CenteredLayer()
 layer(tf.constant([1, 2, 3, 4, 5]))
 ```
-
-We can now incorporate our layer as a component
-in constructing more complex models.
 
 Agora podemos incorporar nossa camada como um componente
 na construção de modelos mais complexos.
@@ -108,14 +103,8 @@ net = nn.Sequential(nn.Linear(8, 128), CenteredLayer())
 net = tf.keras.Sequential([tf.keras.layers.Dense(128), CenteredLayer()])
 ```
 
-As an extra sanity check, we can send random data
-through the network and check that the mean is in fact 0.
-Because we are dealing with floating point numbers,
-we may still see a very small nonzero number
-due to quantization.
-
 Como uma verificação extra de sanidade, podemos enviar dados aleatórios
-através da rede e verifique se a média é de fato 0.
+através da rede e verificar se a média é de fato 0.
 Porque estamos lidando com números de ponto flutuante,
 ainda podemos ver um número muito pequeno diferente de zero
 devido à quantização.
@@ -320,5 +309,5 @@ net(tf.random.uniform((2, 64)))
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzAyNzQ2MzZdfQ==
+eyJoaXN0b3J5IjpbLTk1MTU0MzM5Nl19
 -->
