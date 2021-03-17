@@ -190,9 +190,6 @@ class MyDense(tf.keras.Model):
         return tf.nn.relu(linear)
 ```
 
-Next, we instantiate the `MyDense` class
-and access its model parameters.
-
 Em seguida, instanciamos a classe `MyDense`
 e acessar seus parâmetros de modelo.
 
@@ -214,8 +211,6 @@ dense(tf.random.uniform((2, 5)))
 dense.get_weights()
 ```
 
-We can directly carry out forward propagation calculations using custom layers.
-
 Podemos realizar cálculos de propagação direta usando camadas personalizadas.
 
 ```{.python .input}
@@ -232,9 +227,6 @@ dense(torch.rand(2, 5))
 #@tab tensorflow
 dense(tf.random.uniform((2, 5)))
 ```
-
-We can also construct models using custom layers.
-Once we have that we can use it just like the built-in fully-connected layer.
 
 Também podemos construir modelos usando camadas personalizadas.
 Assim que tivermos isso, podemos usá-lo como a camada totalmente conectada integrada.
@@ -259,12 +251,9 @@ net = tf.keras.models.Sequential([MyDense(8), MyDense(1)])
 net(tf.random.uniform((2, 64)))
 ```
 
-## Summary
+## Sumário
 
-* We can design custom layers via the basic layer class. This allows us to define flexible new layers that behave differently from any existing layers in the library.
-* Once defined, custom layers can be invoked in arbitrary contexts and architectures.
-* Layers can have local parameters, which can be created through built-in functions.
-* 
+
 * Podemos projetar camadas personalizadas por meio da classe de camada básica. Isso nos permite definir novas camadas flexíveis que se comportam de maneira diferente de quaisquer camadas existentes na biblioteca.
 * Uma vez definidas, as camadas personalizadas podem ser chamadas em contextos e arquiteturas arbitrários.
 * As camadas podem ter parâmetros locais, que podem ser criados por meio de funções integradas.
@@ -292,5 +281,5 @@ net(tf.random.uniform((2, 64)))
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NDM5MTY2MSw2MzczMzk3NTZdfQ==
+eyJoaXN0b3J5IjpbMjAwMjcwMDU5OCw2MzczMzk3NTZdfQ==
 -->
