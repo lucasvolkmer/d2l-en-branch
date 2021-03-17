@@ -1,20 +1,20 @@
-# Dropout
+# *Dropout*
 :label:`sec_dropout`
 
-In :numref:`sec_weight_decay`,
-we introduced the classical approach
-to regularizing statistical models
-by penalizing the $L_2$ norm of the weights.
-In probabilistic terms, we could justify this technique
-by arguing that we have assumed a prior belief
-that weights take values from
-a Gaussian distribution with mean zero.
-More intuitively, we might argue
-that we encouraged the model to spread out its weights
-among many features rather than depending too much
-on a small number of potentially spurious associations.
+Em :numref:`sec_weight_decay`,
+introduzimos a abordagem clássica
+para regularizar modelos estatísticos
+penalizando a norma $L_2$ dos pesos.
+Em termos probabilísticos, poderíamos justificar esta técnica
+argumentando que assumimos uma crença anterior
+que os pesos tomam valores de
+uma distribuição gaussiana com média zero.
+Mais intuitivamente, podemos argumentar
+que encorajamos o modelo a espalhar seus pesos
+entre muitas características, em vez de depender demais
+em um pequeno número de associações potencialmente espúrias.
 
-## Overfitting Revisited
+## *Overfitting* Revisited
 
 Faced with more features than examples,
 linear models tend to overfit.
@@ -562,5 +562,5 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MDg3NzM1N119
+eyJoaXN0b3J5IjpbLTMzMzQ2MjA2MywtOTgwODc3MzU3XX0=
 -->
