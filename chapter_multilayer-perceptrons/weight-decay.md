@@ -523,19 +523,19 @@ train_concise(0)
 train_concise(3)
 ```
 
-So far, we only touched upon one notion of
-what constitutes a simple linear function.
-Moreover, what constitutes a simple nonlinear function
-can be an even more complex question.
-For instance, [reproducing kernel Hilbert space (RKHS)](https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space)
-allows one to apply tools introduced
-for linear functions in a nonlinear context.
-Unfortunately, RKHS-based algorithms
-tend to scale poorly to large, high-dimensional data.
-In this book we will default to the simple heuristic
-of applying weight decay on all layers of a deep network.
+Até agora, nós apenas tocamos em uma noção de
+o que constitui uma função linear simples.
+Além disso, o que constitui uma função não linear simples
+pode ser uma questão ainda mais complexa.
+Por exemplo, [reproduzindo o espaço de Hilbert do kernel (RKHS)](https://en.wikipedia.org/wiki/Reproducing_kernel_Hilbert_space)
+permite aplicar ferramentas introduzidas
+para funções lineares em um contexto não linear.
+Infelizmente, algoritmos baseados em RKHS
+tendem a ser mal dimensionados para dados grandes e dimensionais.
+Neste livro, usaremos a heurística simples
+de aplicar o *weight decay* em todas as camadas de uma rede profunda.
 
-## Summary
+## Resumo
 
 * Regularization is a common method for dealing with overfitting. It adds a penalty term to the loss function on the training set to reduce the complexity of the learned model.
 * One particular choice for keeping the model simple is weight decay using an $L_2$ penalty. This leads to weight decay in the update steps of the learning algorithm.
@@ -565,7 +565,7 @@ of applying weight decay on all layers of a deep network.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc1MzUxOTA2LDgxODM3Mjk4NSwtMjAyNz
+eyJoaXN0b3J5IjpbOTYzMTI5NjgyLDgxODM3Mjk4NSwtMjAyNz
 EyMTk0NSwxMjIyNTI1NTUyLDIwNzUyNzYxOTAsMTEwNTI2OTIy
 MCwtMTYxMjQ2Nzk2MCw3MDMzNDExODYsMTU4Mjg3ODIzNywtMT
 A2ODI0Mzk5MV19
