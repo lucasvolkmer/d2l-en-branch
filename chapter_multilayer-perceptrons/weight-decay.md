@@ -537,14 +537,14 @@ de aplicar o *weight decay* em todas as camadas de uma rede profunda.
 
 ## Resumo
 
-* Regularization is a common method for dealing with overfitting. It adds a penalty term to the loss function on the training set to reduce the complexity of the learned model.
-* One particular choice for keeping the model simple is weight decay using an $L_2$ penalty. This leads to weight decay in the update steps of the learning algorithm.
-* The weight decay functionality is provided in optimizers from deep learning frameworks.
-* Different sets of parameters can have different update behaviors within the same training loop.
+* A regularização é um método comum para lidar com *overfitting*. Ela adiciona um termo de penalidade à função de perda no conjunto de treinamento para reduzir a complexidade do modelo aprendido.
+* Uma escolha particular para manter o modelo simples é o *weight decay* usando uma penalidade de $L_2$. Isso leva à diminuição do peso nas etapas de atualização do algoritmo de aprendizagem.
+* A funcionalidade de *weight decay* é fornecida em otimizadores de estruturas de *deep learning*.
+* Diferentes conjuntos de parâmetros podem ter diferentes comportamentos de atualização no mesmo loop de treinamento.
 
 
 
-## Exercises
+## Exercícios
 
 1. Experiment with the value of $\lambda$ in the estimation problem in this section. Plot training and test accuracy as a function of $\lambda$. What do you observe?
 1. Use a validation set to find the optimal value of $\lambda$. Is it really the optimal value? Does this matter?
@@ -565,8 +565,8 @@ de aplicar o *weight decay* em todas as camadas de uma rede profunda.
 [Discussions](https://discuss.d2l.ai/t/236)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYzMTI5NjgyLDgxODM3Mjk4NSwtMjAyNz
-EyMTk0NSwxMjIyNTI1NTUyLDIwNzUyNzYxOTAsMTEwNTI2OTIy
-MCwtMTYxMjQ2Nzk2MCw3MDMzNDExODYsMTU4Mjg3ODIzNywtMT
-A2ODI0Mzk5MV19
+eyJoaXN0b3J5IjpbLTU0NzEzNTU3Myw4MTgzNzI5ODUsLTIwMj
+cxMjE5NDUsMTIyMjUyNTU1MiwyMDc1Mjc2MTkwLDExMDUyNjky
+MjAsLTE2MTI0Njc5NjAsNzAzMzQxMTg2LDE1ODI4NzgyMzcsLT
+EwNjgyNDM5OTFdfQ==
 -->
