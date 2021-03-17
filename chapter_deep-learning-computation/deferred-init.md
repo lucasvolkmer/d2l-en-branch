@@ -129,25 +129,12 @@ net(X)
 [w.shape for w in net.get_weights()]
 ```
 
-As soon as we know the input dimensionality,
-20,
-the framework can identify the shape of the first layer's weight matrix by plugging in the value of 20.
-Having recognized the first layer's shape, the framework proceeds
-to the second layer,
-and so on through the computational graph
-until all shapes are known.
-Note that in this case,
-only the first layer requires deferred initialization,
-but the framework initializes sequentially.
-Once all parameter shapes are known,
-the framework can finally initialize the parameters.
-
-Assim que soubermos a dimensionalidade da entrada,
+Assim que sabemos a dimensionalidade da entrada,
 20,
 a estrutura pode identificar a forma da matriz de peso da primeira camada conectando o valor de 20.
 Tendo reconhecido a forma da primeira camada, a estrutura prossegue
 para a segunda camada,
-e assim por diante através do gráfico computacional
+e assim por diante através do grafo computacional
 até que todas as formas sejam conhecidas.
 Observe que, neste caso,
 apenas a primeira camada requer inicialização adiada,
@@ -168,13 +155,13 @@ a estrutura pode finalmente inicializar os parâmetros.
 1. O que você precisa fazer se tiver dados de dimensionalidade variável? Dica: observe a vinculação de parâmetros.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/280)
+[Discussão](https://discuss.d2l.ai/t/280)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/281)
+[Discuss](https://discuss.d2l.ai/t/281)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NzQyNzg1MSw2NDU3ODU0NDIsMTEzNT
-U4Njc3NF19
+eyJoaXN0b3J5IjpbMjE0NDEyNTQ2NSwtMzg3NDI3ODUxLDY0NT
+c4NTQ0MiwxMTM1NTg2Nzc0XX0=
 -->
