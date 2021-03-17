@@ -1,20 +1,5 @@
 # Camadas Personalizadas
 
-One factor behind deep learning's success
-is the availability of a wide range of layers
-that can be composed in creative ways
-to design architectures suitable
-for a wide variety of tasks.
-For instance, researchers have invented layers
-specifically for handling images, text,
-looping over sequential data,
-and
-performing dynamic programming.
-Sooner or later, you will encounter or invent
-a layer that does not exist yet in the deep learning framework.
-In these cases, you must build a custom layer.
-In this section, we show you how.
-
 Um fator por trás do sucesso do *Deep Learning*
 é a disponibilidade de uma ampla gama de camadas
 que pode ser composto de maneiras criativas
@@ -30,21 +15,12 @@ uma camada que ainda não existe na estrutura de *Deep Learning*.
 Nesses casos, você deve construir uma camada personalizada.
 Nesta seção, mostramos como.
 
-## Layers without Parameters
-
-To start, we construct a custom layer
-that does not have any parameters of its own.
-This should look familiar if you recall our
-introduction to block in :numref:`sec_model_construction`.
-The following `CenteredLayer` class simply
-subtracts the mean from its input.
-To build it, we simply need to inherit
-from the base layer class and implement the forward propagation function.
+## Camadas Sem Parâmetros
 
 Para começar, construímos uma camada personalizada
 que não possui parâmetros próprios.
 Isso deve parecer familiar, se você se lembra de nosso
-introdução ao bloco em: numref: `sec_model_construction`.
+introdução ao bloco em :numref:`sec_model_construction`.
 A seguinte classe `CenteredLayer` simplesmente
 subtrai a média de sua entrada.
 Para construí-lo, simplesmente precisamos herdar
@@ -344,5 +320,5 @@ net(tf.random.uniform((2, 64)))
 [Discussions](https://discuss.d2l.ai/t/279)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDU2NTM3OThdfQ==
+eyJoaXN0b3J5IjpbLTIxMzAyNzQ2MzZdfQ==
 -->
