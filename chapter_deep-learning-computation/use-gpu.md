@@ -274,8 +274,6 @@ with try_gpu():
 X
 ```
 
-Assuming that you have at least two GPUs, the following code will create a random tensor on the second GPU.
-
 Supondo que você tenha pelo menos duas GPUs, o código a seguir criará um tensor aleatório na segunda GPU.
 
 ```{.python .input}
@@ -296,7 +294,7 @@ with try_gpu(1):
 Y
 ```
 
-### Copying
+### Copiando
 
 If we want to compute `X + Y`,
 we need to decide where to perform this operation.
@@ -312,7 +310,7 @@ we need to move `X` there before we can add the two.
 
 Se quisermos calcular `X + Y`,
 precisamos decidir onde realizar esta operação.
-Por exemplo, como mostrado em: numref: `fig_copyto`,
+Por exemplo, como mostrado em :numref:`fig_copyto`,
 podemos transferir `X` para a segunda GPU
 e realizar a operação lá.
 * Não * simplesmente adicione `X` e` Y`,
@@ -631,5 +629,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA3NjA0MzU5LC02NzIyMjg1ODRdfQ==
+eyJoaXN0b3J5IjpbMjAyNDA0NzcyMSw4MDc2MDQzNTksLTY3Mj
+IyODU4NF19
 -->
