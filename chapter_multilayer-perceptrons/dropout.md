@@ -200,15 +200,15 @@ um elemento de $h_1, \ldots, h_5$.
 ![MLP antes e depois do *dropout*.](../img/dropout2.svg)
 :label:`fig_dropout2`
 
-Typically, we disable dropout at test time.
-Given a trained model and a new example,
-we do not drop out any nodes
-and thus do not need to normalize.
-However, there are some exceptions:
-some researchers use dropout at test time as a heuristic
-for estimating the *uncertainty* of neural network predictions:
-if the predictions agree across many different dropout masks,
-then we might say that the network is more confident.
+Normalmente, desabilitamos o *dropout* no momento do teste.
+Dado um modelo treinado e um novo exemplo,
+nós não eliminamos nenhum nó
+e, portanto, não precisamos normalizar.
+No entanto, existem algumas exceções:
+alguns pesquisadores usam o *dropout* na hora do teste como uma heurística
+para estimar a *incerteza* das previsões da rede neural:
+se as previsões concordam em muitas máscaras de *dropout*,
+então podemos dizer que a rede está mais confiável.
 
 ## Implementation from Scratch
 
@@ -568,7 +568,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NDE0MTQzMCwxNzc0MjQ5NDQ2LC0xOD
+eyJoaXN0b3J5IjpbMTM2Mzc5OTc5NiwxNzc0MjQ5NDQ2LC0xOD
 I4NjA4ODk5LDI2MTUwNDM2OCw2ODUwOTY4MDgsLTE3MzkxMTg0
 MTAsMTM4MDE3ODU1MCwtOTgwODc3MzU3XX0=
 -->
