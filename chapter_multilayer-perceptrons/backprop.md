@@ -74,25 +74,25 @@ com um vetor de comprimento $q$:
 
 $$\mathbf{o}= \mathbf{W}^{(2)} \mathbf{h}.$$
 
-Assuming that the loss function is $l$
-and the example label is $y$,
-we can then calculate the loss term
-for a single data example,
+Supondo que a função de perda seja $l$
+e o *label* de exemplo é $y$,
+podemos então calcular o prazo de perda
+para um único exemplo de dados,
 
 $$L = l(\mathbf{o}, y).$$
 
-According to the definition of $L_2$ regularization,
-given the hyperparameter $\lambda$,
-the regularization term is
+De acordo com a definição de regularização de $L_2$
+dado o hiperparâmetro $\lambda$,
+o prazo de regularização é
 
 $$s = \frac{\lambda}{2} \left(\|\mathbf{W}^{(1)}\|_F^2 + \|\mathbf{W}^{(2)}\|_F^2\right),$$
 :eqlabel:`eq_forward-s`
 
-where the Frobenius norm of the matrix
-is simply the $L_2$ norm applied
-after flattening the matrix into a vector.
-Finally, the model's regularized loss
-on a given data example is:
+onde a norma Frobenius da matriz
+é simplesmente a norma $L_2$ aplicada
+depois de achatar a matriz em um vetor.
+Por fim, a perda regularizada do modelo
+em um dado exemplo de dados é:
 
 $$J = L + s.$$
 
@@ -297,6 +297,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MDcwNzY2Nyw4NTc0Njk4MzYsMTAxMT
+eyJoaXN0b3J5IjpbLTYzMDUzMjI2Myw4NTc0Njk4MzYsMTAxMT
 E0MzMzNywxMzU3NzIwNDI5XX0=
 -->
