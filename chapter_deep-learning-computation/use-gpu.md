@@ -238,25 +238,16 @@ x = tf.constant([1, 2, 3])
 x.device
 ```
 
-It is important to note that whenever we want
-to operate on multiple terms,
-they need to be on the same device.
-For instance, if we sum two tensors,
-we need to make sure that both arguments
-live on the same device---otherwise the framework
-would not know where to store the result
-or even how to decide where to perform the computation.
-
 É importante notar que sempre que quisermos
 para operar em vários termos,
 eles precisam estar no mesmo dispositivo.
 Por exemplo, se somarmos dois tensores,
 precisamos ter certeza de que ambos os argumentos
-ao vivo no mesmo dispositivo --- caso contrário, a estrutura
+estão no mesmo dispositivo --- caso contrário, a estrutura
 não saberia onde armazenar o resultado
 ou mesmo como decidir onde realizar o cálculo.
 
-### Storage on the GPU
+### Armazenamento na GPU
 
 There are several ways to store a tensor on the GPU.
 For example, we can specify a storage device when creating a tensor.
@@ -267,7 +258,7 @@ In general, we need to make sure that we do not create data that exceed the GPU 
 
 Existem várias maneiras de armazenar um tensor na GPU.
 Por exemplo, podemos especificar um dispositivo de armazenamento ao criar um tensor.
-A seguir, criamos a variável tensorial `X` no primeiro` gpu`.
+A seguir, criamos a variável tensorial `X` no primeiro `gpu`.
 O tensor criado em uma GPU consome apenas a memória desta GPU.
 Podemos usar o comando `nvidia-smi` para ver o uso de memória da GPU.
 Em geral, precisamos ter certeza de não criar dados que excedam o limite de memória da GPU.
@@ -647,5 +638,5 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzc5ODIwNTIsLTY3MjIyODU4NF19
+eyJoaXN0b3J5IjpbMjA1ODQ2NjMwOSwtNjcyMjI4NTg0XX0=
 -->
