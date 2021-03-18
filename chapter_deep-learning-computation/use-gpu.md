@@ -389,21 +389,12 @@ Z2 is Z
 
 ### Informações extra
 
-People use GPUs to do machine learning
-because they expect them to be fast.
-But transferring variables between devices is slow.
-So we want you to be 100% certain
-that you want to do something slow before we let you do it.
-If the deep learning framework just did the copy automatically
-without crashing then you might not realize
-that you had written some slow code.
-
 As pessoas usam GPUs para fazer aprendizado de máquina
 porque eles esperam que ela seja rápida.
 Mas a transferência de variáveis entre dispositivos é lenta.
 Então, queremos que você tenha 100% de certeza
 que você deseja fazer algo lento antes de deixá-lo fazer.
-Se a estrutura de aprendizado profundo apenas fizesse a cópia automaticamente
+Se a estrutura de *Deep Learning* apenas fizesse a cópia automaticamente
 sem bater, então você pode não perceber
 que você escreveu algum código lento.
 
@@ -591,6 +582,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNTQ1MzkxNiw4MDc2MDQzNTksLTY3Mj
-IyODU4NF19
+eyJoaXN0b3J5IjpbLTEwOTcyNzEwMzYsODA3NjA0MzU5LC02Nz
+IyMjg1ODRdfQ==
 -->
