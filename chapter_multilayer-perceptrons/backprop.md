@@ -34,7 +34,7 @@ Para começar, focamos nossa exposição em
 um MLP de uma camada oculta
 com *weight decay* (regularização$L_2$).
 
-## Forward Propagation
+## Propagação para Frente
 
 *Forward propagation* (or *forward pass*) refers to the calculation and storage
 of intermediate variables (including outputs)
@@ -296,6 +296,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MzU4NDk5OCwxMDExMTQzMzM3LDEzNT
-c3MjA0MjldfQ==
+eyJoaXN0b3J5IjpbODU3NDY5ODM2LDEwMTExNDMzMzcsMTM1Nz
+cyMDQyOV19
 -->
