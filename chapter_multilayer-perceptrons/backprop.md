@@ -1,4 +1,4 @@
-# Forward Propagation, Backward Propagation, and Computational Graphs
+# Propagação para Frente, Propagação para Trás e Gráficos Computacionais
 :label:`sec_backprop`
 
 So far, we have trained our models
@@ -295,5 +295,5 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NzcyMDQyOV19
+eyJoaXN0b3J5IjpbMTAxMTE0MzMzNywxMzU3NzIwNDI5XX0=
 -->
