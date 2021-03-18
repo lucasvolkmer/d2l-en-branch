@@ -76,46 +76,47 @@ melhorar empiricamente a generalização de redes profundas.
 
 ## Robustez por Meio de Perturbações
 
-Let us think briefly about what we
-expect from a good predictive model.
-We want it to peform well on unseen data.
-Classical generalization theory
-suggests that to close the gap between
-train and test performance,
-we should aim for a simple model.
-Simplicity can come in the form
-of a small number of dimensions.
-We explored this when discussing the
-monomial basis functions of linear models
-in :numref:`sec_model_selection`.
-Additionally, as we saw when discussing weight decay
-($L_2$ regularization) in :numref:`sec_weight_decay`,
-the (inverse) norm of the parameters also
-represents a useful measure of simplicity.
-Another useful notion of simplicity is smoothness,
-i.e., that the function should not be sensitive
-to small changes to its inputs.
-For instance, when we classify images,
-we would expect that adding some random noise
-to the pixels should be mostly harmless.
 
-In 1995, Christopher Bishop formalized
-this idea when he proved that training with input noise
-is equivalent to Tikhonov regularization :cite:`Bishop.1995`.
-This work drew a clear mathematical connection
-between the requirement that a function be smooth (and thus simple),
-and the requirement that it be resilient
-to perturbations in the input.
+Vamos pensar brevemente sobre o que nós
+esperamos de um bom modelo preditivo.
+Queremos que ele funcione bem com dados não vistos.
+A teoria da generalização clássica
+sugere que para fechar a lacuna entre
+treinar e testar o desempenho,
+devemos ter como objetivo um modelo simples.
+A simplicidade pode vir na forma
+de um pequeno número de dimensões.
+Exploramos isso ao discutir as
+funções de base monomial de modelos lineares
+em :numref:`sec_model_selection`.
+Além disso, como vimos ao discutir o *weight decay*
+(regularização $L_2$) em :numref:`sec_weight_decay`,
+a norma (inversa) dos parâmetros também
+representa uma medida útil de simplicidade.
+Outra noção útil de simplicidade é suavidade,
+ou seja, que a função não deve ser sensível
+a pequenas mudanças em suas entradas.
+Por exemplo, quando classificamos imagens,
+esperaríamos que adicionar algum ruído aleatório
+aos pixels seja inofensivo.
 
-Then, in 2014, Srivastava et al. :cite:`Srivastava.Hinton.Krizhevsky.ea.2014`
-developed a clever idea for how to apply Bishop's idea
-to the internal layers of a network, too.
-Namely, they proposed to inject noise
-into each layer of the network
-before calculating the subsequent layer during training.
-They realized that when training
-a deep network with many layers,
-injecting noise enforces smoothness just on the input-output mapping.
+Em 1995, Christopher Bishop formalizou
+essa ideia quando ele provou que o treinamento com ruído de entrada
+equivale à regularização de Tikhonov :cite:`Bishop.1995`.
+Este trabalho traçou uma conexão matemática clara
+entre o requisito de que uma função seja suave (e, portanto, simples),
+e a exigência de que seja resiliente
+a perturbações na entrada.
+
+Então, em 2014, Srivastava et al. :cite:`Srivastava.Hinton.Krizhevsky.ea.2014`
+desenvolveram uma ideia inteligente de como aplicar a ideia de Bishop
+às camadas internas de uma rede também.
+Ou seja, eles propuseram injetar ruído
+em cada camada da rede
+antes de calcular a camada subsequente durante o treinamento.
+Eles perceberam que durante o treinamento
+uma rede profunda com muitas camadas,
+injetando ruído reforça suavidade apenas no mapeamento de entrada-saída.
 
 Their idea, called *dropout*, involves
 injecting noise while computing
@@ -564,6 +565,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYxNTA0MzY4LDY4NTA5NjgwOCwtMTczOT
-ExODQxMCwxMzgwMTc4NTUwLC05ODA4NzczNTddfQ==
+eyJoaXN0b3J5IjpbLTE4Mjg2MDg4OTksMjYxNTA0MzY4LDY4NT
+A5NjgwOCwtMTczOTExODQxMCwxMzgwMTc4NTUwLC05ODA4Nzcz
+NTddfQ==
 -->
