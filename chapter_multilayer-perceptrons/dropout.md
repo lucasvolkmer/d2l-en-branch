@@ -462,16 +462,16 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 
 ## [**Implementação Concisa**]
 
-With high-level APIs, all we need to do is add a `Dropout` layer
-after each fully-connected layer,
-passing in the dropout probability
-as the only argument to its constructor.
-During training, the `Dropout` layer will randomly
-drop out outputs of the previous layer
-(or equivalently, the inputs to the subsequent layer)
-according to the specified dropout probability.
-When not in training mode,
-the `Dropout` layer simply passes the data through during testing.
+Com APIs de alto nível, tudo o que precisamos fazer é adicionar uma camada `Dropout`
+após cada camada totalmente conectada,
+passando na probabilidade de *dropout*
+como o único argumento para seu construtor.
+Durante o treinamento, a camada `Dropout` irá aleatoriamente
+eliminar as saídas da camada anterior
+(ou de forma equivalente, as entradas para a camada subsequente)
+de acordo com a probabilidade de abandono especificada.
+Quando não estiver no modo de treinamento,
+a camada `Dropout` simplesmente passa os dados durante o teste.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -519,7 +519,7 @@ net = tf.keras.models.Sequential([
 ])
 ```
 
-Next, we [**train and test the model**].
+Em seguida, [**treinamos e testamos o modelo**].
 
 ```{.python .input}
 trainer = gluon.Trainer(net.collect_params(), 'sgd', {'learning_rate': lr})
@@ -538,7 +538,7 @@ trainer = tf.keras.optimizers.SGD(learning_rate=lr)
 d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 ```
 
-## Summary
+## Resumo
 
 * Beyond controlling the number of dimensions and the size of the weight vector, dropout is yet another tool to avoid overfitting. Often they are used jointly.
 * Dropout replaces an activation $h$ with a random variable with expected value $h$.
@@ -567,8 +567,8 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjE1NjQwNTUsMTAzMTY2NjM3NywxMz
-YzNzk5Nzk2LDE3NzQyNDk0NDYsLTE4Mjg2MDg4OTksMjYxNTA0
-MzY4LDY4NTA5NjgwOCwtMTczOTExODQxMCwxMzgwMTc4NTUwLC
-05ODA4NzczNTddfQ==
+eyJoaXN0b3J5IjpbNDM3NDg1NDc1LDEwMzE2NjYzNzcsMTM2Mz
+c5OTc5NiwxNzc0MjQ5NDQ2LC0xODI4NjA4ODk5LDI2MTUwNDM2
+OCw2ODUwOTY4MDgsLTE3MzkxMTg0MTAsMTM4MDE3ODU1MCwtOT
+gwODc3MzU3XX0=
 -->
