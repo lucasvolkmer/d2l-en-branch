@@ -60,19 +60,6 @@ que suporta CUDA 10.0 via `pip install mxnet-cu100`.
 :end_tab:
 
 :begin_tab:`pytorch`
-In PyTorch, every array has a device, we often refer it as a context.
-So far, by default, all variables
-and associated computation
-have been assigned to the CPU.
-Typically, other contexts might be various GPUs.
-Things can get even hairier when
-we deploy jobs across multiple servers.
-By assigning arrays to contexts intelligently,
-we can minimize the time spent
-transferring data between devices.
-For example, when training neural networks on a server with a GPU,
-we typically prefer for the model's parameters to live on the GPU.
-
 No PyTorch, cada array possui um dispositivo, frequentemente o referimos como um contexto.
 Até agora, por padrão, todas as variáveis
 e computação associada
@@ -86,17 +73,6 @@ transferência de dados entre dispositivos.
 Por exemplo, ao treinar redes neurais em um servidor com uma GPU,
 normalmente preferimos que os parâmetros do modelo residam na GPU.
 
-Next, we need to confirm that
-the GPU version of PyTorch is installed.
-If a CPU version of PyTorch is already installed,
-we need to uninstall it first.
-For example, use the `pip uninstall torch` command,
-then install the corresponding PyTorch version
-according to your CUDA version.
-Assuming you have CUDA 10.0 installed,
-you can install the PyTorch version
-that supports CUDA 10.0 via `pip install torch-cu100`.
-
 Em seguida, precisamos confirmar que
 a versão GPU do PyTorch está instalada.
 Se uma versão CPU do PyTorch já estiver instalada,
@@ -109,15 +85,6 @@ você pode instalar a versão PyTorch
 compatível com CUDA 10.0 via `pip install torch-cu100`.
 :end_tab:
 
-To run the programs in this section,
-you need at least two GPUs.
-Note that this might be extravagant for most desktop computers
-but it is easily available in the cloud, e.g.,
-by using the AWS EC2 multi-GPU instances.
-Almost all other sections do *not* require multiple GPUs.
-Instead, this is simply to illustrate
-how data flow between different devices.
-
 Para executar os programas desta seção,
 você precisa de pelo menos duas GPUs.
 Observe que isso pode ser extravagante para a maioria dos computadores desktop
@@ -127,7 +94,7 @@ Quase todas as outras seções * não * requerem várias GPUs.
 Em vez disso, isso é simplesmente para ilustrar
 como os dados fluem entre diferentes dispositivos.
 
-## Computing Devices
+## Dispositivos Computacionais
 
 We can specify devices, such as CPUs and GPUs,
 for storage and calculation.
@@ -717,5 +684,5 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDcyNjE4MjcsLTY3MjIyODU4NF19
+eyJoaXN0b3J5IjpbNjUyODY4MzgwLC02NzIyMjg1ODRdfQ==
 -->
