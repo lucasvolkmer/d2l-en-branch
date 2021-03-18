@@ -172,8 +172,8 @@ $$
 \begin{aligned}
 h' =
 \begin{cases}
-    0 & \text{ with probability } p \\
-    \frac{h}{1-p} & \text{ otherwise}
+    0 & \text{ com probabilidade } p \\
+    \frac{h}{1-p} & \text{ caso contrário}
 \end{cases}
 \end{aligned}
 $$
@@ -568,7 +568,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMTI0NjQ5NiwtMTgyODYwODg5OSwyNj
-E1MDQzNjgsNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzODAxNzg1
-NTAsLTk4MDg3NzM1N119
+eyJoaXN0b3J5IjpbLTEyMjg4OTgyODcsLTE4Mjg2MDg4OTksMj
+YxNTA0MzY4LDY4NTA5NjgwOCwtMTczOTExODQxMCwxMzgwMTc4
+NTUwLC05ODA4NzczNTddfQ==
 -->
