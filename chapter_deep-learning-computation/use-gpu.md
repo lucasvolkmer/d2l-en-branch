@@ -493,8 +493,8 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
   for logging inside the GPU and only move larger logs.
 * Podemos especificar dispositivos para armazenamento e cálculo, como CPU ou GPU.
    Por padrão, os dados são criados na memória principal
-   e então use a CPU para cálculos.
-* A estrutura de aprendizagem profunda requer todos os dados de entrada para cálculo
+   e então usa-se a CPU para cálculos.
+* A estrutura de *Deep Learning* requer todos os dados de entrada para cálculo
    estar no mesmo dispositivo,
    seja CPU ou a mesma GPU.
 * Você pode perder um desempenho significativo movendo dados sem cuidado.
@@ -544,6 +544,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU2ODY2ODg5LC0xMDk3MjcxMDM2LDgwNz
-YwNDM1OSwtNjcyMjI4NTg0XX0=
+eyJoaXN0b3J5IjpbLTEyMDA0MzcyMDIsLTEwOTcyNzEwMzYsOD
+A3NjA0MzU5LC02NzIyMjg1ODRdfQ==
 -->
