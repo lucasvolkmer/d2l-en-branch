@@ -222,11 +222,11 @@ Uma maneira fácil de implementar isso é primeiro desenhar amostras
 da distribuição uniforme $U[0, 1]$.
 Então, podemos manter os nós para os quais a amostra correspondente é maior do que $p$, descartando o resto.
 
-In the following code, we (**implement a `dropout_layer` function
-that drops out the elements in the tensor input `X`
-with probability `dropout`**),
-rescaling the remainder as described above:
-dividing the survivors by `1.0-dropout`.
+No código a seguir, (**implementamos uma função `dropout_layer`
+que elimina os elementos na entrada do tensor `X`
+com probabilidade de `dropout`**),
+redimensionando o restante conforme descrito acima:
+dividindo os sobreviventes por `1.0-dropout`.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -567,7 +567,8 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU1OTI1MjAyLDEzNjM3OTk3OTYsMTc3ND
-I0OTQ0NiwtMTgyODYwODg5OSwyNjE1MDQzNjgsNjg1MDk2ODA4
-LC0xNzM5MTE4NDEwLDEzODAxNzg1NTAsLTk4MDg3NzM1N119
+eyJoaXN0b3J5IjpbMTAzMTY2NjM3NywxMzYzNzk5Nzk2LDE3Nz
+QyNDk0NDYsLTE4Mjg2MDg4OTksMjYxNTA0MzY4LDY4NTA5Njgw
+OCwtMTczOTExODQxMCwxMzgwMTc4NTUwLC05ODA4NzczNTddfQ
+==
 -->
