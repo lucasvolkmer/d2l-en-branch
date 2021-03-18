@@ -160,13 +160,13 @@ $\epsilon \sim \mathcal{N}(0,\sigma^2)$ à entrada $\mathbf{x}$,
 produzindo um ponto perturbado $\mathbf{x}' = \mathbf{x} + \epsilon$.
 Na expectativa, $E[\mathbf{x}'] = \mathbf{x}$.
 
-In standard dropout regularization,
-one debiases each layer by normalizing
-by the fraction of nodes that were retained (not dropped out).
-In other words,
-with *dropout probability* $p$,
-each intermediate activation $h$ is replaced by
-a random variable $h'$ as follows:
+Na regularização de *dropout*  padrão,
+um tira o *bias* de cada camada normalizando
+pela fração de nós que foram retidos (não descartados).
+Em outras palavras,
+com *probabilidade de dropout* $p$,
+cada ativação intermediária $h$ é substituída por
+uma variável aleatória $h'$ como segue:
 
 $$
 \begin{aligned}
@@ -568,7 +568,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTcwMDQ0OTksLTE4Mjg2MDg4OTksMj
-YxNTA0MzY4LDY4NTA5NjgwOCwtMTczOTExODQxMCwxMzgwMTc4
-NTUwLC05ODA4NzczNTddfQ==
+eyJoaXN0b3J5IjpbLTkzMTI0NjQ5NiwtMTgyODYwODg5OSwyNj
+E1MDQzNjgsNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzODAxNzg1
+NTAsLTk4MDg3NzM1N119
 -->
