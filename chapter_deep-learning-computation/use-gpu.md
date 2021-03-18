@@ -249,13 +249,6 @@ ou mesmo como decidir onde realizar o cálculo.
 
 ### Armazenamento na GPU
 
-There are several ways to store a tensor on the GPU.
-For example, we can specify a storage device when creating a tensor.
-Next, we create the tensor variable `X` on the first `gpu`.
-The tensor created on a GPU only consumes the memory of this GPU.
-We can use the `nvidia-smi` command to view GPU memory usage.
-In general, we need to make sure that we do not create data that exceed the GPU memory limit.
-
 Existem várias maneiras de armazenar um tensor na GPU.
 Por exemplo, podemos especificar um dispositivo de armazenamento ao criar um tensor.
 A seguir, criamos a variável tensorial `X` no primeiro `gpu`.
@@ -638,5 +631,5 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1ODQ2NjMwOSwtNjcyMjI4NTg0XX0=
+eyJoaXN0b3J5IjpbODA3NjA0MzU5LC02NzIyMjg1ODRdfQ==
 -->
