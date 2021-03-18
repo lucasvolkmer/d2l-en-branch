@@ -182,22 +182,22 @@ Por design, a esperança permanece inalterada, ou seja, $E[h'] = h$.
 
 ## *Dropout* na Prática
 
-Recall the MLP with a hidden layer and 5 hidden units
-in :numref:`fig_mlp`.
-When we apply dropout to a hidden layer,
-zeroing out each hidden unit with probability $p$,
-the result can be viewed as a network
-containing only a subset of the original neurons.
-In :numref:`fig_dropout2`, $h_2$ and $h_5$ are removed.
-Consequently, the calculation of the outputs
-no longer depends on $h_2$ or $h_5$
-and their respective gradient also vanishes
-when performing backpropagation.
-In this way, the calculation of the output layer
-cannot be overly dependent on any
-one element of $h_1, \ldots, h_5$.
+Lembre-se do MLP com uma camada oculta e 5 unidades ocultas
+em :numref:`fig_mlp`.
+Quando aplicamos o *dropout* a uma camada oculta,
+zerando cada unidade oculta com probabilidade $p$,
+o resultado pode ser visto como uma rede
+contendo apenas um subconjunto dos neurônios originais.
+Em :numref:`fig_dropout2`, $h_2$ e $h_5$ são removidos.
+Consequentemente, o cálculo das saídas
+não depende mais de $h_2$ ou $h_5$
+e seus respectivos gradientes também desaparecem
+ao executar retropropagação.
+Desta forma, o cálculo da camada de saída
+não pode ser excessivamente dependente de qualquer
+um elemento de $h_1, \ldots, h_5$.
 
-![MLP before and after dropout.](../img/dropout2.svg)
+![MLP antes e depois do *dropout*.](../img/dropout2.svg)
 :label:`fig_dropout2`
 
 Typically, we disable dropout at test time.
@@ -568,7 +568,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDI0OTQ0NiwtMTgyODYwODg5OSwyNj
-E1MDQzNjgsNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzODAxNzg1
-NTAsLTk4MDg3NzM1N119
+eyJoaXN0b3J5IjpbMTg3NDE0MTQzMCwxNzc0MjQ5NDQ2LC0xOD
+I4NjA4ODk5LDI2MTUwNDM2OCw2ODUwOTY4MDgsLTE3MzkxMTg0
+MTAsMTM4MDE3ODU1MCwtOTgwODc3MzU3XX0=
 -->
