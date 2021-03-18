@@ -344,20 +344,6 @@ Y + Z
 ```
 
 :begin_tab:`mxnet`
-Imagine that your variable `Z` already lives on your second GPU.
-What happens if we still call  `Z.copyto(gpu(1))`?
-It will make a copy and allocate new memory,
-even though that variable already lives on the desired device.
-There are times where, depending on the environment our code is running in,
-two variables may already live on the same device.
-So we want to make a copy only if the variables
-currently live in different devices.
-In these cases, we can call `as_in_ctx`.
-If the variable already live in the specified device
-then this is a no-op.
-Unless you specifically want to make a copy,
-`as_in_ctx` is the method of choice.
-
 Imagine que sua variável `Z` já esteja em sua segunda GPU.
 O que acontece se ainda chamarmos `Z.copyto(gpu(1))`?
 Ele fará uma cópia e alocará nova memória,
@@ -374,20 +360,12 @@ A menos que você queira especificamente fazer uma cópia,
 :end_tab:
 
 :begin_tab:`pytorch`
-Imagine that your variable `Z` already lives on your second GPU.
-What happens if we still call `Z.cuda(1)`?
-It will return `Z` instead of making a copy and allocating new memory.
-
 Imagine que sua variável `Z` já esteja em sua segunda GPU.
-O que acontece se ainda chamarmos `Z.cuda (1)`?
+O que acontece se ainda chamarmos `Z.cuda(1)`?
 Ele retornará `Z` em vez de fazer uma cópia e alocar nova memória.
 :end_tab:
 
 :begin_tab:`tensorflow`
-Imagine that your variable `Z` already lives on your second GPU.
-What happens if we still call `Z2 = Z` under the same device scope?
-It will return `Z` instead of making a copy and allocating new memory.
-
 Imagine que sua variável `Z` já esteja em sua segunda GPU.
 O que acontece se ainda chamarmos `Z2 = Z` no mesmo escopo de dispositivo?
 Ele retornará `Z` em vez de fazer uma cópia e alocar nova memória.
@@ -409,7 +387,7 @@ with try_gpu(1):
 Z2 is Z
 ```
 
-### Side Notes
+### Informações extra
 
 People use GPUs to do machine learning
 because they expect them to be fast.
@@ -421,7 +399,7 @@ without crashing then you might not realize
 that you had written some slow code.
 
 As pessoas usam GPUs para fazer aprendizado de máquina
-porque eles esperam que eles sejam rápidos.
+porque eles esperam que ela seja rápida.
 Mas a transferência de variáveis entre dispositivos é lenta.
 Então, queremos que você tenha 100% de certeza
 que você deseja fazer algo lento antes de deixá-lo fazer.
@@ -613,6 +591,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg0MjE1NCw4MDc2MDQzNTksLTY3MjIyOD
-U4NF19
+eyJoaXN0b3J5IjpbMTIxNTQ1MzkxNiw4MDc2MDQzNTksLTY3Mj
+IyODU4NF19
 -->
