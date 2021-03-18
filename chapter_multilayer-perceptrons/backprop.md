@@ -1,4 +1,4 @@
-# Propagação para Frente, Propagação para Trás e Gráficos Computacionais
+# Propagação Direta, Propagação Reverda e Gráficos Computacionais
 :label:`sec_backprop`
 
 
@@ -8,7 +8,7 @@ No entanto, quando implementamos o algoritmo,
 nós apenas nos preocupamos com os cálculos envolvidos
 em *propagação direta* através do modelo.
 Quando chegou a hora de calcular os gradientes,
-acabamos de invocar a função *backpropagation* (propagação para trás) fornecida pela estrutura de *deep learning*.
+acabamos de invocar a função *backpropagation* (propagação reversa) fornecida pela estrutura de *deep learning*.
 
 O cálculo automático de gradientes (diferenciação automática) simplifica profundamente
 a implementação de algoritmos de *deep learning*.
@@ -34,23 +34,24 @@ Para começar, focamos nossa exposição em
 um MLP de uma camada oculta
 com *weight decay* (regularização$L_2$).
 
-## Propagação para Frente
-
-*Forward propagation* (or *forward pass*) refers to the calculation and storage
-of intermediate variables (including outputs)
-for a neural network in order
-from the input layer to the output layer.
-We now work step-by-step through the mechanics
-of a neural network with one hidden layer.
-This may seem tedious but in the eternal words
-of funk virtuoso James Brown,
-you must "pay the cost to be the boss".
+## Propagação Direta
 
 
-For the sake of simplicity, let us assume
-that the input example is $\mathbf{x}\in \mathbb{R}^d$
-and that our hidden layer does not include a bias term.
-Here the intermediate variable is:
+*Propagação direta* (ou *passagem direta*) refere-se ao cálculo e armazenamento
+de variáveis intermediárias (incluindo saídas)
+para uma rede neural em ordem
+da camada de entrada para a camada de saída.
+Agora trabalhamos passo a passo com a mecânica
+de uma rede neural com uma camada oculta.
+Isso pode parecer tedioso, mas nas palavras eternas
+do virtuoso do funk James Brown,
+você deve "pagar o custo para ser o chefe".
+
+
+Por uma questão de simplicidade, vamos assumir
+que o exemplo de entrada é  $\mathbf{x}\in \mathbb{R}^d$
+e que nossa camada oculta não inclui um termo de *bias*.
+Aqui, a variável intermediária é:
 
 $$\mathbf{z}= \mathbf{W}^{(1)} \mathbf{x},$$
 
@@ -296,6 +297,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU3NDY5ODM2LDEwMTExNDMzMzcsMTM1Nz
-cyMDQyOV19
+eyJoaXN0b3J5IjpbLTU3NzYzODcxMyw4NTc0Njk4MzYsMTAxMT
+E0MzMzNywxMzU3NzIwNDI5XX0=
 -->
