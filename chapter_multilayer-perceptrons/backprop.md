@@ -294,3 +294,6 @@ more easily leads to *out of memory* errors.
     1. What are the advantages and disadvantages over training on a smaller minibatch?
 
 [Discussions](https://discuss.d2l.ai/t/102)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTM1NzcyMDQyOV19
+-->
