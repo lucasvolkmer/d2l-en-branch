@@ -212,16 +212,15 @@ então podemos dizer que a rede está mais confiável.
 
 ## Implementação do Zero
 
-To implement the dropout function for a single layer,
-we must draw as many samples
-from a Bernoulli (binary) random variable
-as our layer has dimensions,
-where the random variable takes value $1$ (keep)
-with probability $1-p$ and $0$ (drop) with probability $p$.
-One easy way to implement this is to first draw samples
-from the uniform distribution $U[0, 1]$.
-Then we can keep those nodes for which the corresponding
-sample is greater than $p$, dropping the rest.
+Para implementar a função *dropout* para uma única camada,
+devemos tirar tantas amostras
+de uma variável aleatória de Bernoulli (binária)
+quanto o número de dimensões de nossa camada,
+onde a variável aleatória assume o valor $1$ (*keep*)
+com probabilidade $1-p$ e $0$ (*drop*) com probabilidade $p$.
+Uma maneira fácil de implementar isso é primeiro desenhar amostras
+da distribuição uniforme $U[0, 1]$.
+Então, podemos manter os nós para os quais a amostra correspondente é maior do que $p$, descartando o resto.
 
 In the following code, we (**implement a `dropout_layer` function
 that drops out the elements in the tensor input `X`
@@ -568,8 +567,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4ODY3OTU0MCwxMzYzNzk5Nzk2LDE3Nz
-QyNDk0NDYsLTE4Mjg2MDg4OTksMjYxNTA0MzY4LDY4NTA5Njgw
-OCwtMTczOTExODQxMCwxMzgwMTc4NTUwLC05ODA4NzczNTddfQ
-==
+eyJoaXN0b3J5IjpbMjU1OTI1MjAyLDEzNjM3OTk3OTYsMTc3ND
+I0OTQ0NiwtMTgyODYwODg5OSwyNjE1MDQzNjgsNjg1MDk2ODA4
+LC0xNzM5MTE4NDEwLDEzODAxNzg1NTAsLTk4MDg3NzM1N119
 -->
