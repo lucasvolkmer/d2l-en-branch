@@ -282,10 +282,10 @@ def dropout_layer(X, dropout):
     return tf.cast(mask, dtype=tf.float32) * X / (1.0 - dropout)
 ```
 
-We can [**test out the `dropout_layer` function on a few examples**].
-In the following lines of code,
-we pass our input `X` through the dropout operation,
-with probabilities 0, 0.5, and 1, respectively.
+Podemos [**testar a função `dropout_layer` em alguns exemplos**].
+Nas seguintes linhas de código,
+passamos nossa entrada `X` através da operação de *dropout*,
+com probabilidades 0, 0,5 e 1, respectivamente.
 
 ```{.python .input}
 X = np.arange(16).reshape(2, 8)
@@ -312,12 +312,12 @@ print(dropout_layer(X, 0.5))
 print(dropout_layer(X, 1.))
 ```
 
-### Defining Model Parameters
+### Definindo os Parâmetros do Modelo
 
-Again, we work with the Fashion-MNIST dataset
-introduced in :numref:`sec_fashion_mnist`.
-We [**define an MLP with
-two hidden layers containing 256 units each.**]
+Mais uma vez, trabalhamos com o conjunto de dados Fashion-MNIST
+introduzido em :numref:`sec_fashion_mnist`.
+Nós [**definimos um MLP com
+duas camadas ocultas contendo 256 unidades cada.**]
 
 ```{.python .input}
 num_inputs, num_outputs, num_hiddens1, num_hiddens2 = 784, 10, 256, 256
@@ -344,16 +344,16 @@ num_inputs, num_outputs, num_hiddens1, num_hiddens2 = 784, 10, 256, 256
 num_outputs, num_hiddens1, num_hiddens2 = 10, 256, 256
 ```
 
-### Defining the Model
+### Definindo o Modelo
 
-The model below applies dropout to the output
-of each hidden layer (following the activation function).
-We can set dropout probabilities for each layer separately.
-A common trend is to set
-a lower dropout probability closer to the input layer.
-Below we set it to 0.2 and 0.5 for the first
-and second hidden layers, respectively.
-We ensure that dropout is only active during training.
+O modelo abaixo aplica *dropout* à saída
+de cada camada oculta (seguindo a função de ativação).
+Podemos definir probabilidades de *dropout* para cada camada separadamente.
+Uma tendência comum é definir
+uma probabilidade de *dropout* mais baixa perto da camada de entrada.
+Abaixo, nós o definimos como 0,2 e 0,5 para o primeiro
+e segundas camadas ocultas, respectivamente.
+Garantimos que o *dropout* seja ativo apenas durante o treinamento.
 
 ```{.python .input}
 dropout1, dropout2 = 0.2, 0.5
@@ -567,8 +567,8 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMTY2NjM3NywxMzYzNzk5Nzk2LDE3Nz
-QyNDk0NDYsLTE4Mjg2MDg4OTksMjYxNTA0MzY4LDY4NTA5Njgw
-OCwtMTczOTExODQxMCwxMzgwMTc4NTUwLC05ODA4NzczNTddfQ
-==
+eyJoaXN0b3J5IjpbLTI1ODY5MTQzOCwxMDMxNjY2Mzc3LDEzNj
+M3OTk3OTYsMTc3NDI0OTQ0NiwtMTgyODYwODg5OSwyNjE1MDQz
+NjgsNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzODAxNzg1NTAsLT
+k4MDg3NzM1N119
 -->
