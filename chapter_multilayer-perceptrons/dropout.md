@@ -118,36 +118,39 @@ Eles perceberam que durante o treinamento
 uma rede profunda com muitas camadas,
 injetando ruído reforça suavidade apenas no mapeamento de entrada-saída.
 
-Their idea, called *dropout*, involves
-injecting noise while computing
-each internal layer during forward propagation,
-and it has become a standard technique
-for training neural networks.
-The method is called *dropout* because we literally
-*drop out* some neurons during training.
-Throughout training, on each iteration,
-standard dropout consists of zeroing out
-some fraction of the nodes in each layer
-before calculating the subsequent layer.
 
-To be clear, we are imposing
-our own narrative with the link to Bishop.
-The original paper on dropout
-offers intuition through a surprising
-analogy to sexual reproduction.
-The authors argue that neural network overfitting
-is characterized by a state in which
-each layer relies on a specifc
-pattern of activations in the previous layer,
-calling this condition *co-adaptation*.
-Dropout, they claim, breaks up co-adaptation
-just as sexual reproduction is argued to
-break up co-adapted genes.
+A ideia deles, chamada *dropout*, envolve
+injetar ruído durante a computação de
+cada camada interna durante a propagação direta,
+e se tornou uma técnica padrão
+para treinar redes neurais.
+O método é chamado *dropout* porque nós literalmente
+*abandonamos[^1]* alguns neurônios durante o treinamento.
+Ao longo do treinamento, em cada iteração,
+*dropout* padrão consiste em zerar
+alguma fração dos nós em cada camada
+antes de calcular a camada subsequente.
 
-The key challenge then is how to inject this noise.
-One idea is to inject the noise in an *unbiased* manner
-so that the expected value of each layer---while fixing
-the others---equals to the value it would have taken absent noise.
+[^1]: A tradução do termo *drop out* do inglês pode ser interpretada, neste contexto, como abandonar, mas durante o texto, optou-se por usar o termo em inglês.
+
+Para ser claro, estamos impondo
+nossa própria narrativa com o link para Bishop.
+O artigo original em *dropout*
+oferece intuição através de uma surpreendente
+analogia com a reprodução sexual.
+Os autores argumentam que o *overfitting* da rede neural
+é caracterizado por um estado em que
+cada camada depende de um específico
+padrão de ativações na camada anterior,
+chamando essa condição de *co-adaptação*.
+A desistência, eles afirmam, acaba com a co-adaptação
+assim como a reprodução sexual é argumentada para
+quebrar genes co-adaptados.
+
+O principal desafio é como injetar esse ruído.
+Uma ideia é injetar o ruído de uma maneira *imparcial*
+de modo que o valor esperado de cada camada --- enquanto fixa
+os outros --- seja igual ao valor que teria o ruído ausente.
 
 In Bishop's work, he added Gaussian noise
 to the inputs to a linear model.
@@ -565,7 +568,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjg2MDg4OTksMjYxNTA0MzY4LDY4NT
-A5NjgwOCwtMTczOTExODQxMCwxMzgwMTc4NTUwLC05ODA4Nzcz
-NTddfQ==
+eyJoaXN0b3J5IjpbMTcxMTI5MzE1MSwtMTgyODYwODg5OSwyNj
+E1MDQzNjgsNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzODAxNzg1
+NTAsLTk4MDg3NzM1N119
 -->
