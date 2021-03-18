@@ -123,7 +123,7 @@ Isso significa que os cálculos de PyTorch
 tentará usar todos os núcleos da CPU.
 No entanto, um dispositivo `gpu` representa apenas uma placa
 e a memória correspondente.
-Se houver várias GPUs, usamos `torch.cuda.device (f'cuda: {i}')`
+Se houver várias GPUs, usamos `torch.cuda.device(f'cuda: {i}')`
 para representar a $i^\mathrm{th}$ GPU ($i$ começa em 0).
 Além disso, `gpu:0` e `gpu` são equivalentes.
 :end_tab:
@@ -151,8 +151,6 @@ import tensorflow as tf
 tf.device('/CPU:0'), tf.device('/GPU:0'), tf.device('/GPU:1')
 ```
 
-We can query the number of available GPUs.
-
 Podemos consultar o número de GPUs disponíveis.
 
 ```{.python .input}
@@ -168,10 +166,6 @@ torch.cuda.device_count()
 #@tab tensorflow
 len(tf.config.experimental.list_physical_devices('GPU'))
 ```
-
-Now we define two convenient functions that allow us
-to run code even if the requested GPUs do not exist.
-
 Agora definimos duas funções convenientes que nos permitem
 para executar o código mesmo que as GPUs solicitadas não existam.
 
@@ -222,10 +216,7 @@ def try_all_gpus():  #@save
 try_gpu(), try_gpu(10), try_all_gpus()
 ```
 
-## Tensors and GPUs
-
-By default, tensors are created on the CPU.
-We can query the device where the tensor is located.
+## Tensores e GPUs
 
 Por padrão, tensores são criados na CPU.
 Podemos consultar o dispositivo onde o tensor está localizado.
@@ -656,5 +647,5 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjE0OTc4MjQsLTY3MjIyODU4NF19
+eyJoaXN0b3J5IjpbLTEzNzc5ODIwNTIsLTY3MjIyODU4NF19
 -->
