@@ -1,37 +1,38 @@
 # Propagação para Frente, Propagação para Trás e Gráficos Computacionais
 :label:`sec_backprop`
 
-So far, we have trained our models
-with minibatch stochastic gradient descent.
-However, when we implemented the algorithm,
-we only worried about the calculations involved
-in *forward propagation* through the model.
-When it came time to calculate the gradients,
-we just invoked the backpropagation function provided by the deep learning framework.
 
-The automatic calculation of gradients (automatic differentiation) profoundly simplifies
-the implementation of deep learning algorithms.
-Before automatic differentiation,
-even small changes to complicated models required
-recalculating complicated derivatives by hand.
-Surprisingly often, academic papers had to allocate
-numerous pages to deriving update rules.
-While we must continue to rely on automatic differentiation
-so we can focus on the interesting parts,
-you ought to know how these gradients
-are calculated under the hood
-if you want to go beyond a shallow
-understanding of deep learning.
+Até agora, treinamos nossos modelos
+com gradiente descendente estocástico de *minibatch*.
+No entanto, quando implementamos o algoritmo,
+nós apenas nos preocupamos com os cálculos envolvidos
+em *propagação direta* através do modelo.
+Quando chegou a hora de calcular os gradientes,
+acabamos de invocar a função *backpropagation* (propagação para trás) fornecida pela estrutura de *deep learning*.
 
-In this section, we take a deep dive
-into the details of *backward propagation*
-(more commonly called *backpropagation*).
-To convey some insight for both the
-techniques and their implementations,
-we rely on some basic mathematics and computational graphs.
-To start, we focus our exposition on
-a one-hidden-layer MLP
-with weight decay ($L_2$ regularization).
+O cálculo automático de gradientes (diferenciação automática) simplifica profundamente
+a implementação de algoritmos de *deep learning*.
+Antes da diferenciação automática,
+mesmo pequenas mudanças em modelos complicados exigiam
+recalcular derivadas complicadas manualmente.
+Surpreendentemente, muitas vezes, os trabalhos acadêmicos tiveram que alocar
+várias páginas para derivar regras de atualização.
+Embora devamos continuar a confiar na diferenciação automática
+para que possamos nos concentrar nas partes interessantes,
+você deve saber como esses gradientes
+são calculados sob o capô
+se você quiser ir além de uma rasa
+compreensão da aprendizagem profunda.
+
+Nesta seção, fazemos um mergulho profundo
+nos detalhes de *propagação para trás*
+(mais comumente chamado de * backpropagation*).
+Para transmitir alguns *insights* para ambas as
+técnicas e suas implementações,
+contamos com alguma matemática básica e gráficos computacionais.
+Para começar, focamos nossa exposição em
+um MLP de uma camada oculta
+com *weight decay* (regularização$L_2$).
 
 ## Forward Propagation
 
@@ -295,5 +296,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMTE0MzMzNywxMzU3NzIwNDI5XX0=
+eyJoaXN0b3J5IjpbMTc2MzU4NDk5OCwxMDExMTQzMzM3LDEzNT
+c3MjA0MjldfQ==
 -->
