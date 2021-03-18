@@ -430,9 +430,9 @@ class Net(tf.keras.Model):
 net = Net(num_outputs, num_hiddens1, num_hiddens2)
 ```
 
-### [**Training and Testing**]
+### [**Treinamento e Teste**]
 
-This is similar to the training and testing of MLPs described previously.
+Isso é semelhante ao treinamento e teste de MLPs descritos anteriormente.
 
 ```{.python .input}
 num_epochs, lr, batch_size = 10, 0.5, 256
@@ -460,7 +460,7 @@ trainer = tf.keras.optimizers.SGD(learning_rate=lr)
 d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 ```
 
-## [**Concise Implementation**]
+## [**Implementação Concisa**]
 
 With high-level APIs, all we need to do is add a `Dropout` layer
 after each fully-connected layer,
@@ -567,8 +567,8 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1ODY5MTQzOCwxMDMxNjY2Mzc3LDEzNj
-M3OTk3OTYsMTc3NDI0OTQ0NiwtMTgyODYwODg5OSwyNjE1MDQz
-NjgsNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzODAxNzg1NTAsLT
-k4MDg3NzM1N119
+eyJoaXN0b3J5IjpbLTE2NjE1NjQwNTUsMTAzMTY2NjM3NywxMz
+YzNzk5Nzk2LDE3NzQyNDk0NDYsLTE4Mjg2MDg4OTksMjYxNTA0
+MzY4LDY4NTA5NjgwOCwtMTczOTExODQxMCwxMzgwMTc4NTUwLC
+05ODA4NzczNTddfQ==
 -->
