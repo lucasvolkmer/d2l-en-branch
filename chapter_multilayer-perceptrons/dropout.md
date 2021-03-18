@@ -74,7 +74,7 @@ Por enquanto, nos voltamos para a investigação de
 ferramentas práticas que tendem a
 melhorar empiricamente a generalização de redes profundas.
 
-## Robustness through Perturbations
+## Robustez por Meio de Perturbações
 
 Let us think briefly about what we
 expect from a good predictive model.
@@ -564,6 +564,6 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzOD
-AxNzg1NTAsLTk4MDg3NzM1N119
+eyJoaXN0b3J5IjpbMjYxNTA0MzY4LDY4NTA5NjgwOCwtMTczOT
+ExODQxMCwxMzgwMTc4NTUwLC05ODA4NzczNTddfQ==
 -->
