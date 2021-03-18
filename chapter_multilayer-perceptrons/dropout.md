@@ -210,7 +210,7 @@ para estimar a *incerteza* das previsões da rede neural:
 se as previsões concordam em muitas máscaras de *dropout*,
 então podemos dizer que a rede está mais confiável.
 
-## Implementation from Scratch
+## Implementação do Zero
 
 To implement the dropout function for a single layer,
 we must draw as many samples
@@ -568,7 +568,8 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2Mzc5OTc5NiwxNzc0MjQ5NDQ2LC0xOD
-I4NjA4ODk5LDI2MTUwNDM2OCw2ODUwOTY4MDgsLTE3MzkxMTg0
-MTAsMTM4MDE3ODU1MCwtOTgwODc3MzU3XX0=
+eyJoaXN0b3J5IjpbMTE4ODY3OTU0MCwxMzYzNzk5Nzk2LDE3Nz
+QyNDk0NDYsLTE4Mjg2MDg4OTksMjYxNTA0MzY4LDY4NTA5Njgw
+OCwtMTczOTExODQxMCwxMzgwMTc4NTUwLC05ODA4NzczNTddfQ
+==
 -->
