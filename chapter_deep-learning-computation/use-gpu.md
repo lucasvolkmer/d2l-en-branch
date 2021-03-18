@@ -415,13 +415,6 @@ tem que esperar pelo outro antes de fazer outra coisa.
 em vez de pré-encomendá-lo por telefone
 e descobrir que ele está pronto quando você estiver.
 
-Last, when we print tensors or convert tensors to the NumPy format,
-if the data is not in the main memory,
-the framework will copy it to the main memory first,
-resulting in additional transmission overhead.
-Even worse, it is now subject to the dreaded global interpreter lock
-that makes everything wait for Python to complete.
-
 Por último, quando imprimimos tensores ou convertemos tensores para o formato NumPy,
 se os dados não estiverem na memória principal,
 o framework irá copiá-lo para a memória principal primeiro,
@@ -430,10 +423,7 @@ Pior ainda, agora está sujeito ao temido bloqueio de intérprete global
 isso faz tudo esperar que o Python seja concluído.
 
 
-## Neural Networks and GPUs
-
-Similarly, a neural network model can specify devices.
-The following code puts the model parameters on the GPU.
+## Redes Neurais e GPUs
 
 Da mesma forma, um modelo de rede neural pode especificar dispositivos.
 O código a seguir coloca os parâmetros do modelo na GPU.
@@ -458,12 +448,6 @@ with strategy.scope():
         tf.keras.layers.Dense(1)])
 ```
 
-We will see many more examples of
-how to run models on GPUs in the following chapters,
-simply since they will become somewhat more computationally intensive.
-
-When the input is a tensor on the GPU, the model will calculate the result on the same GPU.
-
 Veremos muitos mais exemplos de
 como executar modelos em GPUs nos capítulos seguintes,
 simplesmente porque eles se tornarão um pouco mais intensivos em termos de computação.
@@ -474,9 +458,6 @@ Quando a entrada é um tensor na GPU, o modelo calculará o resultado na mesma G
 #@tab all
 net(X)
 ```
-
-Let us confirm that the model parameters are stored on the same GPU.
-
 Vamos confirmar se os parâmetros do modelo estão armazenados na mesma GPU.
 
 ```{.python .input}
@@ -493,11 +474,9 @@ net[0].weight.data.device
 net.layers[0].weights[0].device, net.layers[0].weights[1].device
 ```
 
-In short, as long as all data and parameters are on the same device, we can learn models efficiently. In the following chapters we will see several such examples.
-
 Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositivo, podemos aprender modelos com eficiência. Nos próximos capítulos, veremos vários desses exemplos.
 
-## Summary
+## Sumário
 
 * We can specify devices for storage and calculation, such as the CPU or GPU.
   By default, data are created in the main memory
@@ -565,6 +544,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyODgzMDQ5OSwtMTA5NzI3MTAzNiw4MD
-c2MDQzNTksLTY3MjIyODU4NF19
+eyJoaXN0b3J5IjpbNTU2ODY2ODg5LC0xMDk3MjcxMDM2LDgwNz
+YwNDM1OSwtNjcyMjI4NTg0XX0=
 -->
