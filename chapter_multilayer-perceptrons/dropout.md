@@ -178,7 +178,7 @@ h' =
 \end{aligned}
 $$
 
-By design, the expectation remains unchanged, i.e., $E[h'] = h$.
+Por design, a esperança permanece inalterada, ou seja, $E[h'] = h$.
 
 ## *Dropout* na Prática
 
@@ -568,7 +568,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODU5NDgxMiwtMTgyODYwODg5OSwyNj
+eyJoaXN0b3J5IjpbMTc3NDI0OTQ0NiwtMTgyODYwODg5OSwyNj
 E1MDQzNjgsNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzODAxNzg1
 NTAsLTk4MDg3NzM1N119
 -->
