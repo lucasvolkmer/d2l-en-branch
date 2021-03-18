@@ -359,7 +359,7 @@ Unless you specifically want to make a copy,
 `as_in_ctx` is the method of choice.
 
 Imagine que sua variável `Z` já esteja em sua segunda GPU.
-O que acontece se ainda chamarmos `Z.copyto (gpu (1))`?
+O que acontece se ainda chamarmos `Z.copyto(gpu(1))`?
 Ele fará uma cópia e alocará nova memória,
 mesmo que essa variável já resida no dispositivo desejado.
 Há momentos em que, dependendo do ambiente em que nosso código está sendo executado,
@@ -613,6 +613,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MTgyNzEyMiw4MDc2MDQzNTksLTY3Mj
-IyODU4NF19
+eyJoaXN0b3J5IjpbODg0MjE1NCw4MDc2MDQzNTksLTY3MjIyOD
+U4NF19
 -->
