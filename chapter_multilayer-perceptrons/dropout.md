@@ -45,33 +45,34 @@ Por exemplo, eles podem inferir que
 juntos em um e-mail indicam spam
 mas separadamente eles não o fazem.
 
-Even when we have far more examples than features,
-deep neural networks are capable of overfitting.
-In 2017, a group of researchers demonstrated
-the extreme flexibility of neural networks
-by training deep nets on randomly-labeled images.
-Despite the absence of any true pattern
-linking the inputs to the outputs,
-they found that the neural network optimized by stochastic gradient descent
-could label every image in the training set perfectly.
-Consider what this means.
-If the labels are assigned uniformly
-at random and there are 10 classes,
-then no classifier can do better
-than 10% accuracy on holdout data.
-The generalization gap here is a whopping 90%.
-If our models are so expressive that they
-can overfit this badly, then when should
-we expect them not to overfit?
 
-The mathematical foundations for
-the puzzling generalization properties
-of deep networks remain open research questions,
-and we encourage the theoretically-oriented
-reader to dig deeper into the topic.
-For now, we turn to the investigation of
-practical tools that tend to
-empirically improve the generalization of deep nets.
+Mesmo quando temos muito mais exemplos do que características,
+redes neurais profundas são capazes de fazer *overfitting*.
+Em 2017, um grupo de pesquisadores demonstrou
+a extrema flexibilidade das redes neurais
+treinando redes profundas em imagens rotuladas aleatoriamente.
+Apesar da ausência de qualquer padrão verdadeiro
+ligando as entradas às saídas,
+eles descobriram que a rede neural otimizada pelo gradiente descendente estocástico
+poderia rotular todas as imagens no conjunto de treinamento perfeitamente.
+Considere o que isso significa.
+Se os rótulos forem atribuídos uniformemente
+aleatoriamente e há 10 classes,
+então nenhum classificador pode fazer melhor
+precisão de 10% nos dados de validação.
+A lacuna de generalização aqui é de 90%.
+Se nossos modelos são tão expressivos que
+podem fazer tanto *overftitting*, então, quando deveríamos
+esperar que eles não se ajustem demais?
+
+Os fundamentos matemáticos para
+as propriedades de generalização intrigantes
+de redes profundas permanecem questões de pesquisa em aberto,
+e encorajamos os leitores orientados teoricamente
+para se aprofundar no assunto.
+Por enquanto, nos voltamos para a investigação de
+ferramentas práticas que tendem a
+melhorar empiricamente a generalização de redes profundas.
 
 ## Robustness through Perturbations
 
@@ -563,6 +564,6 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzkxMTg0MTAsMTM4MDE3ODU1MCwtOT
-gwODc3MzU3XX0=
+eyJoaXN0b3J5IjpbNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzOD
+AxNzg1NTAsLTk4MDg3NzM1N119
 -->
