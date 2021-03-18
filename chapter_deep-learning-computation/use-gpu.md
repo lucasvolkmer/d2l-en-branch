@@ -494,19 +494,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 
 ## Exercícios
 
-1. Try a larger computation task, such as the multiplication of large matrices,
-   and see the difference in speed between the CPU and GPU.
-   What about a task with a small amount of calculations?
-1. How should we read and write model parameters on the GPU?
-1. Measure the time it takes to compute 1000
-   matrix-matrix multiplications of $100 \times 100$ matrices
-   and log the Frobenius norm of the output matrix one result at a time
-   vs. keeping a log on the GPU and transferring only the final result.
-1. Measure how much time it takes to perform two matrix-matrix multiplications
-   on two GPUs at the same time vs. in sequence
-   on one GPU. Hint: you should see almost linear scaling.
-
-
 1. Tente uma tarefa de computação maior, como a multiplicação de grandes matrizes,
     e veja a diferença de velocidade entre a CPU e a GPU.
     Que tal uma tarefa com uma pequena quantidade de cálculos?
@@ -520,17 +507,17 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
     em uma GPU. Dica: você deve ver uma escala quase linear.
     
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/62)
+[Discussão](https://discuss.d2l.ai/t/62)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/63)
+[Discussão](https://discuss.d2l.ai/t/63)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/270)
+[Discussão](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MjQxOTU0OSwtMTA5NzI3MTAzNiw4MD
+eyJoaXN0b3J5IjpbMTM1NzUzMTk4OCwtMTA5NzI3MTAzNiw4MD
 c2MDQzNTksLTY3MjIyODU4NF19
 -->
