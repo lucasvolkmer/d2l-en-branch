@@ -547,13 +547,13 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 
 ## Exercícios
 
-1. What happens if you change the dropout probabilities for the first and second layers? In particular, what happens if you switch the ones for both layers? Design an experiment to answer these questions, describe your results quantitatively, and summarize the qualitative takeaways.
-1. Increase the number of epochs and compare the results obtained when using dropout with those when not using it.
-1. What is the variance of the activations in each hidden layer when dropout is and is not applied? Draw a plot to show how this quantity evolves over time for both models.
-1. Why is dropout not typically used at test time?
-1. Using the model in this section as an example, compare the effects of using dropout and weight decay. What happens when dropout and weight decay are used at the same time? Are the results additive? Are there diminished returns (or worse)? Do they cancel each other out?
-1. What happens if we apply dropout to the individual weights of the weight matrix rather than the activations?
-1. Invent another technique for injecting random noise at each layer that is different from the standard dropout technique. Can you develop a method that outperforms dropout on the Fashion-MNIST dataset (for a fixed architecture)?
+1. O que acontece se você alterar as probabilidades de *dropout* para a primeira e segunda camadas? Em particular, o que acontece se você trocar os de ambas as camadas? Projete um experimento para responder a essas perguntas, descreva seus resultados quantitativamente e resuma as conclusões qualitativas.
+1. Aumente o número de épocas e compare os resultados obtidos ao usar *dropout* com os que não o usam.
+1. Qual é a variação das ativações em cada camada oculta quando o *dropout* é e não é aplicado? Desenhe um gráfico para mostrar como essa quantidade evolui ao longo do tempo para ambos os modelos.
+1. Por que o *dropout* normalmente não é usado no momento do teste?
+1. Usando o modelo nesta seção como exemplo, compare os efeitos do uso de *dropout* e *weight decay*. O que acontece quando o *dropout* e *weight decay* são usados ​​ao mesmo tempo? Os resultados são cumulativos? Existem retornos diminuídos (ou pior)? Eles se cancelam?
+1. O que acontece se aplicarmos o *dropout* aos pesos individuais da matriz de pesos em vez das ativações?
+1. Invente outra técnica para injetar ruído aleatório em cada camada que seja diferente da técnica de *dropout* padrão. Você pode desenvolver um método que supere o *dropout* no conjunto de dados Fashion-MNIST (para uma arquitetura fixa)?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/100)
@@ -567,8 +567,8 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3MzIyMTU0LDEwMzE2NjYzNzcsMTM2Mz
-c5OTc5NiwxNzc0MjQ5NDQ2LC0xODI4NjA4ODk5LDI2MTUwNDM2
-OCw2ODUwOTY4MDgsLTE3MzkxMTg0MTAsMTM4MDE3ODU1MCwtOT
-gwODc3MzU3XX0=
+eyJoaXN0b3J5IjpbMTg3NjU5ODEyNyw5NTczMjIxNTQsMTAzMT
+Y2NjM3NywxMzYzNzk5Nzk2LDE3NzQyNDk0NDYsLTE4Mjg2MDg4
+OTksMjYxNTA0MzY4LDY4NTA5NjgwOCwtMTczOTExODQxMCwxMz
+gwMTc4NTUwLC05ODA4NzczNTddfQ==
 -->
