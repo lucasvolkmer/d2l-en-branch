@@ -180,7 +180,7 @@ $$
 
 By design, the expectation remains unchanged, i.e., $E[h'] = h$.
 
-## Dropout in Practice
+## *Dropout* na Prática
 
 Recall the MLP with a hidden layer and 5 hidden units
 in :numref:`fig_mlp`.
@@ -568,7 +568,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjg4OTgyODcsLTE4Mjg2MDg4OTksMj
-YxNTA0MzY4LDY4NTA5NjgwOCwtMTczOTExODQxMCwxMzgwMTc4
-NTUwLC05ODA4NzczNTddfQ==
+eyJoaXN0b3J5IjpbLTMxODU5NDgxMiwtMTgyODYwODg5OSwyNj
+E1MDQzNjgsNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzODAxNzg1
+NTAsLTk4MDg3NzM1N119
 -->
