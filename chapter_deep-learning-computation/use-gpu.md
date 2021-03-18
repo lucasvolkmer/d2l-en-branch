@@ -296,31 +296,19 @@ Y
 
 ### Copiando
 
-If we want to compute `X + Y`,
-we need to decide where to perform this operation.
-For instance, as shown in :numref:`fig_copyto`,
-we can transfer `X` to the second GPU
-and perform the operation there.
-*Do not* simply add `X` and `Y`,
-since this will result in an exception.
-The runtime engine would not know what to do:
-it cannot find data on the same device and it fails.
-Since `Y` lives on the second GPU,
-we need to move `X` there before we can add the two.
-
 Se quisermos calcular `X + Y`,
 precisamos decidir onde realizar esta operação.
 Por exemplo, como mostrado em :numref:`fig_copyto`,
 podemos transferir `X` para a segunda GPU
 e realizar a operação lá.
-* Não * simplesmente adicione `X` e` Y`,
+*Não* simplesmente adicione `X` e` Y`,
 pois isso resultará em uma exceção.
 O mecanismo de tempo de execução não saberia o que fazer:
 ele não consegue encontrar dados no mesmo dispositivo e falha.
 Já que `Y` vive na segunda GPU,
 precisamos mover `X` para lá antes de podermos adicionar os dois.
 
-![Copy data to perform an operation on the same device.](../img/copyto.svg)
+![Copiar dados para realizar uma operação no mesmo dispositivo.](../img/copyto.svg)
 :label:`fig_copyto`
 
 
@@ -345,10 +333,6 @@ with try_gpu(1):
 print(X)
 print(Z)
 ```
-
-Now that the data are on the same GPU
-(both `Z` and `Y` are),
-we can add them up.
 
 Agora que os dados estão na mesma GPU
 (ambos são `Z` e` Y`),
@@ -629,6 +613,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNDA0NzcyMSw4MDc2MDQzNTksLTY3Mj
+eyJoaXN0b3J5IjpbMTk2MTgyNzEyMiw4MDc2MDQzNTksLTY3Mj
 IyODU4NF19
 -->
