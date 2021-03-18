@@ -398,23 +398,6 @@ Se a estrutura de *Deep Learning* apenas fizesse a cópia automaticamente
 sem bater, então você pode não perceber
 que você escreveu algum código lento.
 
-Also, transferring data between devices (CPU, GPUs, and other machines)
-is something that is much slower than computation.
-It also makes parallelization a lot more difficult,
-since we have to wait for data to be sent (or rather to be received)
-before we can proceed with more operations.
-This is why copy operations should be taken with great care.
-As a rule of thumb, many small operations
-are much worse than one big operation.
-Moreover, several operations at a time
-are much better than many single operations interspersed in the code
-unless you know what you are doing.
-This is the case since such operations can block if one device
-has to wait for the other before it can do something else.
-It is a bit like ordering your coffee in a queue
-rather than pre-ordering it by phone
-and finding out that it is ready when you are.
-
 Além disso, a transferência de dados entre dispositivos (CPU, GPUs e outras máquinas)
 é algo muito mais lento do que a computação.
 Também torna a paralelização muito mais difícil,
@@ -582,6 +565,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTcyNzEwMzYsODA3NjA0MzU5LC02Nz
-IyMjg1ODRdfQ==
+eyJoaXN0b3J5IjpbLTQyODgzMDQ5OSwtMTA5NzI3MTAzNiw4MD
+c2MDQzNTksLTY3MjIyODU4NF19
 -->
