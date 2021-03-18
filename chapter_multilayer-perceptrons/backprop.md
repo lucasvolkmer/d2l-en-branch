@@ -64,13 +64,13 @@ obtemos nosso vetor de ativação oculto de comprimento $h$,
 
 $$\mathbf{h}= \phi (\mathbf{z}).$$
 
-The hidden variable $\mathbf{h}$
-is also an intermediate variable.
-Assuming that the parameters of the output layer
-only possess a weight of
+A variável oculta $\mathbf{h}$
+também é uma variável intermediária.
+Supondo que os parâmetros da camada de saída
+só possuem um peso de
 $\mathbf{W}^{(2)} \in \mathbb{R}^{q \times h}$,
-we can obtain an output layer variable
-with a vector of length $q$:
+podemos obter uma variável de camada de saída
+com um vetor de comprimento $q$:
 
 $$\mathbf{o}= \mathbf{W}^{(2)} \mathbf{h}.$$
 
@@ -297,6 +297,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MDYwODA0OSw4NTc0Njk4MzYsMTAxMT
+eyJoaXN0b3J5IjpbMTc3MDcwNzY2Nyw4NTc0Njk4MzYsMTAxMT
 E0MzMzNywxMzU3NzIwNDI5XX0=
 -->
