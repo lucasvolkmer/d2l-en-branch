@@ -96,64 +96,36 @@ como os dados fluem entre diferentes dispositivos.
 
 ## Dispositivos Computacionais
 
-We can specify devices, such as CPUs and GPUs,
-for storage and calculation.
-By default, tensors are created in the main memory
-and then use the CPU to calculate it.
-
 Podemos especificar dispositivos, como CPUs e GPUs,
 para armazenamento e cálculo.
 Por padrão, os tensores são criados na memória principal
 e, em seguida, use a CPU para calculá-lo.
 
 :begin_tab:`mxnet`
-In MXNet, the CPU and GPU can be indicated by `cpu()` and `gpu()`.
-It should be noted that `cpu()`
-(or any integer in the parentheses)
-means all physical CPUs and memory.
-This means that MXNet's calculations
-will try to use all CPU cores.
-However, `gpu()` only represents one card
-and the corresponding memory.
-If there are multiple GPUs, we use `gpu(i)`
-to represent the $i^\mathrm{th}$ GPU ($i$ starts from 0).
-Also, `gpu(0)` and `gpu()` are equivalent.
-
-No MXNet, a CPU e a GPU podem ser indicadas por `cpu ()` e `gpu ()`.
-Deve-se notar que `cpu ()`
+No MXNet, a CPU e a GPU podem ser indicadas por `cpu ()` e `gpu()`.
+Deve-se notar que `cpu()`
 (ou qualquer número inteiro entre parênteses)
 significa todas as CPUs físicas e memória.
 Isso significa que os cálculos do MXNet
 tentará usar todos os núcleos da CPU.
-No entanto, `gpu ()` representa apenas uma carta
+No entanto, `gpu()` representa apenas uma carta
 e a memória correspondente.
-Se houver várias GPUs, usamos `gpu (i)`
-para representar a $ i ^ \ mathrm {th} $ GPU ($ i $ começa em 0).
-Além disso, `gpu (0)` e `gpu ()` são equivalentes.
+Se houver várias GPUs, usamos `gpu(i)`
+para representar a $i^\mathrm{th}$ GPU ($i$ começa em 0).
+Além disso, `gpu(0)` e `gpu()` são equivalentes.
 :end_tab:
 
 :begin_tab:`pytorch`
-In PyTorch, the CPU and GPU can be indicated by `torch.device('cpu')` and `torch.cuda.device('cuda')`.
-It should be noted that the `cpu` device
-means all physical CPUs and memory.
-This means that PyTorch's calculations
-will try to use all CPU cores.
-However, a `gpu` device only represents one card
-and the corresponding memory.
-If there are multiple GPUs, we use `torch.cuda.device(f'cuda:{i}')`
-to represent the $i^\mathrm{th}$ GPU ($i$ starts from 0).
-Also, `gpu:0` and `gpu` are equivalent.
-
-No PyTorch, a CPU e a GPU podem ser indicadas por `torch.device ('cpu')` e `torch.cuda.device ('cuda')`.
+No PyTorch, a CPU e a GPU podem ser indicadas por `torch.device('cpu')` e `torch.cuda.device('cuda')`.
 Deve-se notar que o dispositivo `cpu`
 significa todas as CPUs físicas e memória.
 Isso significa que os cálculos de PyTorch
 tentará usar todos os núcleos da CPU.
 No entanto, um dispositivo `gpu` representa apenas uma placa
 e a memória correspondente.
-Se houver várias GPUs, usamos `torch.cuda.device (f'cuda: {i} ')`
-para representar a $ i ^ \ mathrm {th} $ GPU ($ i $ começa em 0).
-Além disso, `gpu: 0` e` gpu` são equivalentes.
+Se houver várias GPUs, usamos `torch.cuda.device (f'cuda: {i}')`
+para representar a $i^\mathrm{th}$ GPU ($i$ começa em 0).
+Além disso, `gpu:0` e `gpu` são equivalentes.
 :end_tab:
 
 ```{.python .input}
@@ -684,5 +656,5 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUyODY4MzgwLC02NzIyMjg1ODRdfQ==
+eyJoaXN0b3J5IjpbLTE2NjE0OTc4MjQsLTY3MjIyODU4NF19
 -->
