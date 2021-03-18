@@ -478,19 +478,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 
 ## Sumário
 
-* We can specify devices for storage and calculation, such as the CPU or GPU.
-  By default, data are created in the main memory
-  and then use the CPU for calculations.
-* The deep learning framework requires all input data for calculation
-  to be on the same device,
-  be it CPU or the same GPU.
-* You can lose significant performance by moving data without care.
-  A typical mistake is as follows: computing the loss
-  for every minibatch on the GPU and reporting it back
-  to the user on the command line (or logging it in a NumPy `ndarray`)
-  will trigger a global interpreter lock which stalls all GPUs.
-  It is much better to allocate memory
-  for logging inside the GPU and only move larger logs.
 * Podemos especificar dispositivos para armazenamento e cálculo, como CPU ou GPU.
    Por padrão, os dados são criados na memória principal
    e então usa-se a CPU para cálculos.
@@ -505,7 +492,7 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
    É muito melhor alocar memória
    para registrar dentro da GPU e apenas mover registros maiores.
 
-## Exercises
+## Exercícios
 
 1. Try a larger computation task, such as the multiplication of large matrices,
    and see the difference in speed between the CPU and GPU.
@@ -525,7 +512,7 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
     Que tal uma tarefa com uma pequena quantidade de cálculos?
 1. Como devemos ler e escrever os parâmetros do modelo na GPU?
 1. Meça o tempo que leva para calcular 1000
-    multiplicações matriz-matriz de $ 100 \ vezes 100 $ matrizes
+    multiplicações matriz-matriz de $100 \times 100$ matrizes
     e registrar a norma de Frobenius da matriz de saída, um resultado de cada vez
     vs. manter um registro na GPU e transferir apenas o resultado final.
 1. Meça quanto tempo leva para realizar duas multiplicações matriz-matriz
@@ -544,6 +531,6 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDA0MzcyMDIsLTEwOTcyNzEwMzYsOD
-A3NjA0MzU5LC02NzIyMjg1ODRdfQ==
+eyJoaXN0b3J5IjpbMTE1MjQxOTU0OSwtMTA5NzI3MTAzNiw4MD
+c2MDQzNTksLTY3MjIyODU4NF19
 -->
