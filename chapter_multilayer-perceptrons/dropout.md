@@ -152,13 +152,13 @@ Uma ideia é injetar o ruído de uma maneira *imparcial*
 de modo que o valor esperado de cada camada --- enquanto fixa
 os outros --- seja igual ao valor que teria o ruído ausente.
 
-In Bishop's work, he added Gaussian noise
-to the inputs to a linear model.
-At each training iteration, he added noise
-sampled from a distribution with mean zero
-$\epsilon \sim \mathcal{N}(0,\sigma^2)$ to the input $\mathbf{x}$,
-yielding a perturbed point $\mathbf{x}' = \mathbf{x} + \epsilon$.
-In expectation, $E[\mathbf{x}'] = \mathbf{x}$.
+No trabalho de Bishop, ele adicionou ruído gaussiano
+às entradas de um modelo linear.
+A cada iteração de treinamento, ele adicionava ruído
+amostrado a partir de uma distribuição com média zero
+$\epsilon \sim \mathcal{N}(0,\sigma^2)$ à entrada $\mathbf{x}$,
+produzindo um ponto perturbado $\mathbf{x}' = \mathbf{x} + \epsilon$.
+Na expectativa, $E[\mathbf{x}'] = \mathbf{x}$.
 
 In standard dropout regularization,
 one debiases each layer by normalizing
@@ -568,7 +568,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMTI5MzE1MSwtMTgyODYwODg5OSwyNj
-E1MDQzNjgsNjg1MDk2ODA4LC0xNzM5MTE4NDEwLDEzODAxNzg1
-NTAsLTk4MDg3NzM1N119
+eyJoaXN0b3J5IjpbLTEyMTcwMDQ0OTksLTE4Mjg2MDg4OTksMj
+YxNTA0MzY4LDY4NTA5NjgwOCwtMTczOTExODQxMCwxMzgwMTc4
+NTUwLC05ODA4NzczNTddfQ==
 -->
