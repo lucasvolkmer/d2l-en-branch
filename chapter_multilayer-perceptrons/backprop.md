@@ -96,8 +96,8 @@ em um dado exemplo de dados é:
 
 $$J = L + s.$$
 
-We refer to $J$ as the *objective function*
-in the following discussion.
+Referimo-nos a $J$ como a *função objetivo*
+na discussão a seguir.
 
 
 ## Computational Graph of Forward Propagation
@@ -297,6 +297,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMDUzMjI2Myw4NTc0Njk4MzYsMTAxMT
-E0MzMzNywxMzU3NzIwNDI5XX0=
+eyJoaXN0b3J5IjpbLTE5MDY0NTc4MjYsODU3NDY5ODM2LDEwMT
+ExNDMzMzcsMTM1NzcyMDQyOV19
 -->
