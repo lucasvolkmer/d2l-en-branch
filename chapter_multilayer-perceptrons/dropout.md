@@ -540,12 +540,12 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 
 ## Resumo
 
-* Beyond controlling the number of dimensions and the size of the weight vector, dropout is yet another tool to avoid overfitting. Often they are used jointly.
-* Dropout replaces an activation $h$ with a random variable with expected value $h$.
-* Dropout is only used during training.
+* Além de controlar o número de dimensões e o tamanho do vetor de peso, o *dropout* é outra ferramenta para evitar *overfitting*. Frequentemente, eles são usados em conjunto.
+* *Dropout* substitui uma ativação $h$ por uma variável aleatória com valor esperado $h$.
+* O *dropout* é usado apenas durante o treinamento.
 
 
-## Exercises
+## Exercícios
 
 1. What happens if you change the dropout probabilities for the first and second layers? In particular, what happens if you switch the ones for both layers? Design an experiment to answer these questions, describe your results quantitatively, and summarize the qualitative takeaways.
 1. Increase the number of epochs and compare the results obtained when using dropout with those when not using it.
@@ -567,7 +567,7 @@ d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)
 [Discussions](https://discuss.d2l.ai/t/261)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM3NDg1NDc1LDEwMzE2NjYzNzcsMTM2Mz
+eyJoaXN0b3J5IjpbOTU3MzIyMTU0LDEwMzE2NjYzNzcsMTM2Mz
 c5OTc5NiwxNzc0MjQ5NDQ2LC0xODI4NjA4ODk5LDI2MTUwNDM2
 OCw2ODUwOTY4MDgsLTE3MzkxMTg0MTAsMTM4MDE3ODU1MCwtOT
 gwODc3MzU3XX0=
