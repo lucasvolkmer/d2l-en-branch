@@ -28,30 +28,11 @@ para ver as informações da placa gráfica.
 ```
 
 :begin_tab:`mxnet`
-You might have noticed that a MXNet tensor
-looks almost identical to a NumPy `ndarray`.
-But there are a few crucial differences.
-One of the key features that distinguishes MXNet
-from NumPy is its support for diverse hardware devices.
-
 Você deve ter notado que um tensor MXNet
 parece quase idêntico a um NumPy `ndarray`.
 Mas existem algumas diferenças cruciais.
 Um dos principais recursos que distinguem o MXNet
 da NumPy é o seu suporte para diversos dispositivos de hardware.
-
-In MXNet, every array has a context.
-So far, by default, all variables
-and associated computation
-have been assigned to the CPU.
-Typically, other contexts might be various GPUs.
-Things can get even hairier when
-we deploy jobs across multiple servers.
-By assigning arrays to contexts intelligently,
-we can minimize the time spent
-transferring data between devices.
-For example, when training neural networks on a server with a GPU,
-we typically prefer for the model's parameters to live on the GPU.
 
 No MXNet, cada array possui um contexto.
 Até agora, por padrão, todas as variáveis
@@ -65,17 +46,6 @@ podemos minimizar o tempo gasto
 transferência de dados entre dispositivos.
 Por exemplo, ao treinar redes neurais em um servidor com uma GPU,
 normalmente preferimos que os parâmetros do modelo residam na GPU.
-
-Next, we need to confirm that
-the GPU version of MXNet is installed.
-If a CPU version of MXNet is already installed,
-we need to uninstall it first.
-For example, use the `pip uninstall mxnet` command,
-then install the corresponding MXNet version
-according to your CUDA version.
-Assuming you have CUDA 10.0 installed,
-you can install the MXNet version
-that supports CUDA 10.0 via `pip install mxnet-cu100`.
 
 Em seguida, precisamos confirmar que
 a versão GPU do MXNet está instalada.
@@ -747,5 +717,5 @@ Resumindo, contanto que todos os dados e parâmetros estejam no mesmo dispositiv
 [Discussions](https://discuss.d2l.ai/t/270)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MTY0OTMxNSwtNjcyMjI4NTg0XX0=
+eyJoaXN0b3J5IjpbLTIwMDcyNjE4MjcsLTY3MjIyODU4NF19
 -->
