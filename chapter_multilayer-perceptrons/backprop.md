@@ -1,4 +1,4 @@
-# Propagação Direta, Propagação Reverda e Gráficos Computacionais
+# Propagação Direta, Propagação Reversa e Gráficos Computacionais
 :label:`sec_backprop`
 
 
@@ -26,7 +26,7 @@ compreensão da aprendizagem profunda.
 
 Nesta seção, fazemos um mergulho profundo
 nos detalhes de *propagação para trás*
-(mais comumente chamado de * backpropagation*).
+(mais comumente chamado de *backpropagation*).
 Para transmitir alguns *insights* para ambas as
 técnicas e suas implementações,
 contamos com alguma matemática básica e gráficos computacionais.
@@ -55,12 +55,12 @@ Aqui, a variável intermediária é:
 
 $$\mathbf{z}= \mathbf{W}^{(1)} \mathbf{x},$$
 
-where $\mathbf{W}^{(1)} \in \mathbb{R}^{h \times d}$
-is the weight parameter of the hidden layer.
-After running the intermediate variable
-$\mathbf{z}\in \mathbb{R}^h$ through the
-activation function $\phi$
-we obtain our hidden activation vector of length $h$,
+onde $\mathbf{W}^{(1)} \in \mathbb{R}^{h \times d}$
+é o parâmetro de peso da camada oculta.
+Depois de executar a variável intermediária
+$\mathbf{z}\in \mathbb{R}^h$ através da
+função de ativação $\phi$
+obtemos nosso vetor de ativação oculto de comprimento $h$,
 
 $$\mathbf{h}= \phi (\mathbf{z}).$$
 
@@ -297,6 +297,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NzYzODcxMyw4NTc0Njk4MzYsMTAxMT
+eyJoaXN0b3J5IjpbMTE2MDYwODA0OSw4NTc0Njk4MzYsMTAxMT
 E0MzMzNywxMzU3NzIwNDI5XX0=
 -->
