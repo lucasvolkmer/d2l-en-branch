@@ -374,3 +374,6 @@ a clever idea and contribute an implementation to deep learning frameworks.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTYyMDMxMjM4OF19
+-->
