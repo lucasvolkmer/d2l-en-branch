@@ -34,9 +34,9 @@ nossa rede pode ser expressa como:
 
 $$\mathbf{h}^{(l)} = f_l (\mathbf{h}^{(l-1)}) \text{ e portanto } \mathbf{o} = f_L \circ \ldots \circ f_1(\mathbf{x}).$$
 
-If all the hidden variables and the input are vectors,
-we can write the gradient of $\mathbf{o}$ with respect to
-any set of parameters $\mathbf{W}^{(l)}$ as follows:
+Se todas as variáveis ocultas e a entrada forem vetores,
+podemos escrever o gradiente de $\mathbf{o}$ em relação a
+qualquer conjunto de parâmetros $\mathbf{W}^{(l)}$ da seguinte forma:
 
 $$\partial_{\mathbf{W}^{(l)}} \mathbf{o} = \underbrace{\partial_{\mathbf{h}^{(L-1)}} \mathbf{h}^{(L)}}_{ \mathbf{M}^{(L)} \stackrel{\mathrm{def}}{=}} \cdot \ldots \cdot \underbrace{\partial_{\mathbf{h}^{(l)}} \mathbf{h}^{(l+1)}}_{ \mathbf{M}^{(l+1)} \stackrel{\mathrm{def}}{=}} \underbrace{\partial_{\mathbf{W}^{(l)}} \mathbf{h}^{(l)}}_{ \mathbf{v}^{(l)} \stackrel{\mathrm{def}}{=}}.$$
 
@@ -374,5 +374,5 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTYyMTM3ODEsMTYyMDMxMjM4OF19
+eyJoaXN0b3J5IjpbMTUxMzQ4MDM4NSwxNjIwMzEyMzg4XX0=
 -->
