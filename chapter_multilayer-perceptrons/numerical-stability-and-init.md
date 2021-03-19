@@ -1,4 +1,4 @@
-# Numerical Stability and Initialization
+# Estabilidade Numérica e Inicialização
 :label:`sec_numerical_stability`
 
 
@@ -375,5 +375,5 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMDMxMjM4OF19
+eyJoaXN0b3J5IjpbLTIwMjc0NzcyODIsMTYyMDMxMjM4OF19
 -->
