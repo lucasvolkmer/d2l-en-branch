@@ -261,30 +261,29 @@ depende do valor atual da variável oculta $\mathbf{h}$,
 que é fornecido por propagação direta.
 
 
-Therefore when training neural networks, after model parameters are initialized,
-we alternate forward propagation with backpropagation,
-updating model parameters using gradients given by backpropagation.
-Note that backpropagation reuses the stored intermediate values from forward propagation to avoid duplicate calculations.
-One of the consequences is that we need to retain
-the intermediate values until backpropagation is complete.
-This is also one of the reasons why training
-requires significantly more memory than plain prediction.
-Besides, the size of such intermediate values is roughly
-proportional to the number of network layers and the batch size.
-Thus,
-training deeper networks using larger batch sizes
-more easily leads to *out of memory* errors.
+Portanto, ao treinar redes neurais, após os parâmetros do modelo serem inicializados,
+alternamos a propagação direta com a retropropagação,
+atualizando os parâmetros do modelo usando gradientes fornecidos por retropropagação.
+Observe que a retropropagação reutiliza os valores intermediários armazenados da propagação direta para evitar cálculos duplicados.
+Uma das consequências é que precisamos reter
+os valores intermediários até que a retropropagação seja concluída.
+Esta é também uma das razões pelas quais o treinamento
+requer muito mais memória do que a previsão simples.
+Além disso, o tamanho de tais valores intermediários é aproximadamente
+proporcional ao número de camadas de rede e ao tamanho do lote.
+Por isso,
+treinar redes mais profundas usando tamanhos de lote maiores
+mais facilmente leva a erros de *falta de memória*.
+
+## Resumo
+
+* A propagação direta calcula e armazena sequencialmente variáveis intermediárias no gráfico computacional definido pela rede neural. Ela prossegue da camada de entrada para a camada de saída.
+* A retropropagação calcula e armazena sequencialmente os gradientes de variáveis e parâmetros intermediários na rede neural na ordem inversa.
+* Ao treinar modelos de *deep learning*, a propagação direta e reversa são interdependentes.
+* O treinamento requer muito mais memória do que a previsão.
 
 
-## Summary
-
-* Forward propagation sequentially calculates and stores intermediate variables within the computational graph defined by the neural network. It proceeds from the input to the output layer.
-* Backpropagation sequentially calculates and stores the gradients of intermediate variables and parameters within the neural network in the reversed order.
-* When training deep learning models, forward propagation and back propagation are interdependent.
-* Training requires significantly more memory than prediction.
-
-
-## Exercises
+## Exercícios
 
 1. Assume that the inputs $\mathbf{X}$ to some scalar function $f$ are $n \times m$ matrices. What is the dimensionality of the gradient of $f$ with respect to $\mathbf{X}$?
 1. Add a bias to the hidden layer of the model described in this section (you do not need to include bias in the regularization term).
@@ -298,7 +297,7 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MzA5MzAyOSwtOTU4MDEwMzk2LC04Mz
+eyJoaXN0b3J5IjpbMTgwNDkxMzY4NiwtOTU4MDEwMzk2LC04Mz
 A3NDQzMzIsLTE5MDY0NTc4MjYsODU3NDY5ODM2LDEwMTExNDMz
 MzcsMTM1NzcyMDQyOV19
 -->
