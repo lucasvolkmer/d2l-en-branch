@@ -144,17 +144,17 @@ surgiram como a escolha padrão para os profissionais.
 
 ### [**Explosão de Gradiente**]
 
-The opposite problem, when gradients explode,
-can be similarly vexing.
-To illustrate this a bit better,
-we draw 100 Gaussian random matrices
-and multiply them with some initial matrix.
-For the scale that we picked
-(the choice of the variance $\sigma^2=1$),
-the matrix product explodes.
-When this happens due to the initialization
-of a deep network, we have no chance of getting
-a gradient descent optimizer to converge.
+O problema oposto, quando os gradientes explodem,
+pode ser igualmente irritante.
+Para ilustrar isso um pouco melhor,
+desenhamos 100 matrizes aleatórias Gaussianas
+e multiplicamos-nas com alguma matriz inicial.
+Para a escala que escolhemos
+(a escolha da variação $\sigma^2=1$),
+o produto da matriz explode.
+Quando isso acontece devido à inicialização
+de uma rede profunda, não temos chance de obter
+um otimizador de gradiente descendente capaz de convergir.
 
 ```{.python .input}
 M = np.random.normal(size=(4, 4))
@@ -185,7 +185,7 @@ for i in range(100):
 print('after multiplying 100 matrices\n', M.numpy())
 ```
 
-### Breaking the Symmetry
+### Quebrando a Simetria
 
 Another problem in neural network design
 is the symmetry inherent in their parametrization.
@@ -375,6 +375,6 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNzI3ODc4LC0xNzYyMDQ4Mjc3LDE2Mj
-AzMTIzODhdfQ==
+eyJoaXN0b3J5IjpbLTE0NjMzNzk3MDIsLTE3NjIwNDgyNzcsMT
+YyMDMxMjM4OF19
 -->
