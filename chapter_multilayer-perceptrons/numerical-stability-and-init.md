@@ -25,14 +25,14 @@ ao longo de sua carreira em *deep learning*.
 
 ## Explosão e Desaparecimento  de Gradientes 
 
-Consider a deep network with $L$ layers,
-input $\mathbf{x}$ and output $\mathbf{o}$.
-With each layer $l$ defined by a transformation $f_l$
-parameterized by weights $\mathbf{W}^{(l)}$,
-whose hidden variable is $\mathbf{h}^{(l)}$ (let $\mathbf{h}^{(0)} = \mathbf{x}$),
-our network can be expressed as:
+Considere uma rede profunda com $ L $ camadas,
+entrada $ \ mathbf {x} $ e saída $\mathbf{o}$.
+Com cada camada $l$ definida por uma transformação $f_l$
+parametrizada por pesos $\mathbf{W}^{(l)}$,
+cuja variável oculta é $\mathbf{h}^{(l)}$ (com $\mathbf{h}^{(0)} = \mathbf{x}$),
+nossa rede pode ser expressa como:
 
-$$\mathbf{h}^{(l)} = f_l (\mathbf{h}^{(l-1)}) \text{ and thus } \mathbf{o} = f_L \circ \ldots \circ f_1(\mathbf{x}).$$
+$$\mathbf{h}^{(l)} = f_l (\mathbf{h}^{(l-1)}) \text{ e portanto } \mathbf{o} = f_L \circ \ldots \circ f_1(\mathbf{x}).$$
 
 If all the hidden variables and the input are vectors,
 we can write the gradient of $\mathbf{o}$ with respect to
@@ -374,5 +374,5 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzQ5MzgxOTIsMTYyMDMxMjM4OF19
+eyJoaXN0b3J5IjpbLTE5MTYyMTM3ODEsMTYyMDMxMjM4OF19
 -->
