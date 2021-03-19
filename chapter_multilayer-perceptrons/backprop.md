@@ -183,27 +183,27 @@ $$
 \in \mathbb{R}^q.
 $$
 
-Next, we calculate the gradients
-of the regularization term
-with respect to both parameters:
+Em seguida, calculamos os gradientes
+do termo de regularização
+com respeito a ambos os parâmetros:
 
 $$\frac{\partial s}{\partial \mathbf{W}^{(1)}} = \lambda \mathbf{W}^{(1)}
 \; \text{and} \;
 \frac{\partial s}{\partial \mathbf{W}^{(2)}} = \lambda \mathbf{W}^{(2)}.$$
 
-Now we are able to calculate the gradient
+Agora podemos calcular o gradiente
 $\partial J/\partial \mathbf{W}^{(2)} \in \mathbb{R}^{q \times h}$
-of the model parameters closest to the output layer.
-Using the chain rule yields:
+dos parâmetros do modelo mais próximos da camada de saída.
+Usar a regra da cadeia produz:
 
 $$\frac{\partial J}{\partial \mathbf{W}^{(2)}}= \text{prod}\left(\frac{\partial J}{\partial \mathbf{o}}, \frac{\partial \mathbf{o}}{\partial \mathbf{W}^{(2)}}\right) + \text{prod}\left(\frac{\partial J}{\partial s}, \frac{\partial s}{\partial \mathbf{W}^{(2)}}\right)= \frac{\partial J}{\partial \mathbf{o}} \mathbf{h}^\top + \lambda \mathbf{W}^{(2)}.$$
 :eqlabel:`eq_backprop-J-h`
 
-To obtain the gradient with respect to $\mathbf{W}^{(1)}$
-we need to continue backpropagation
-along the output layer to the hidden layer.
-The gradient with respect to the hidden layer's outputs
-$\partial J/\partial \mathbf{h} \in \mathbb{R}^h$ is given by
+Para obter o gradiente em relação a $\mathbf{W}^{(1)}$
+precisamos continuar a retropropagação
+ao longo da camada de saída para a camada oculta.
+O gradiente em relação às saídas da camada oculta
+$\partial J/\partial \mathbf{h} \in \mathbb{R}^h$ é dado por
 
 
 $$
@@ -297,7 +297,7 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzMzg4NDksLTgzMDc0NDMzMiwtMTkwNj
-Q1NzgyNiw4NTc0Njk4MzYsMTAxMTE0MzMzNywxMzU3NzIwNDI5
-XX0=
+eyJoaXN0b3J5IjpbMTE3NDc2OTY5MSwtODMwNzQ0MzMyLC0xOT
+A2NDU3ODI2LDg1NzQ2OTgzNiwxMDExMTQzMzM3LDEzNTc3MjA0
+MjldfQ==
 -->
