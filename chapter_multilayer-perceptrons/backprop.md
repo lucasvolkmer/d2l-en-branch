@@ -100,7 +100,7 @@ Referimo-nos a $J$ como a *função objetivo*
 na discussão a seguir.
 
 
-## Computational Graph of Forward Propagation
+## Gráfico Computatcional Graph of Forward Propagationde propagação direta
 
 Plotting *computational graphs* helps us visualize
 the dependencies of operators
@@ -297,6 +297,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDY0NTc4MjYsODU3NDY5ODM2LDEwMT
-ExNDMzMzcsMTM1NzcyMDQyOV19
+eyJoaXN0b3J5IjpbNzkxMTA2MjE3LC0xOTA2NDU3ODI2LDg1Nz
+Q2OTgzNiwxMDExMTQzMzM3LDEzNTc3MjA0MjldfQ==
 -->
