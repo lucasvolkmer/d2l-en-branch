@@ -212,11 +212,11 @@ $$
 = {\mathbf{W}^{(2)}}^\top \frac{\partial J}{\partial \mathbf{o}}.
 $$
 
-Since the activation function $\phi$ applies elementwise,
-calculating the gradient $\partial J/\partial \mathbf{z} \in \mathbb{R}^h$
-of the intermediate variable $\mathbf{z}$
-requires that we use the elementwise multiplication operator,
-which we denote by $\odot$:
+Uma vez que a função de ativação $\phi$ se aplica aos elementos,
+calculando o gradiente $\partial J/\partial \mathbf{z} \in \mathbb{R}^h$
+da variável intermediária $\mathbf{z}$
+requer que usemos o operador de multiplicação elemento a elemento,
+que denotamos por $\odot$:
 
 $$
 \frac{\partial J}{\partial \mathbf{z}}
@@ -224,10 +224,10 @@ $$
 = \frac{\partial J}{\partial \mathbf{h}} \odot \phi'\left(\mathbf{z}\right).
 $$
 
-Finally, we can obtain the gradient
+Finalmente, podemos obter o gradiente
 $\partial J/\partial \mathbf{W}^{(1)} \in \mathbb{R}^{h \times d}$
-of the model parameters closest to the input layer.
-According to the chain rule, we get
+dos parâmetros do modelo mais próximos da camada de entrada.
+De acordo com a regra da cadeia, obtemos
 
 $$
 \frac{\partial J}{\partial \mathbf{W}^{(1)}}
@@ -237,7 +237,7 @@ $$
 
 
 
-## Training Neural Networks
+## Treinando Redes Neurais
 
 When training neural networks,
 forward and backward propagation depend on each other.
@@ -297,7 +297,7 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NDc2OTY5MSwtODMwNzQ0MzMyLC0xOT
+eyJoaXN0b3J5IjpbLTk1ODAxMDM5NiwtODMwNzQ0MzMyLC0xOT
 A2NDU3ODI2LDg1NzQ2OTgzNiwxMDExMTQzMzM3LDEzNTc3MjA0
 MjldfQ==
 -->
