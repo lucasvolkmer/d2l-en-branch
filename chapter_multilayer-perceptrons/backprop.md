@@ -100,26 +100,26 @@ Referimo-nos a $J$ como a *função objetivo*
 na discussão a seguir.
 
 
-## Gráfico Computatcional Graph of Forward Propagationde propagação direta
+## Gráfico Computatcional de Propagação Direta
 
-Plotting *computational graphs* helps us visualize
-the dependencies of operators
-and variables within the calculation.
-:numref:`fig_forward` contains the graph associated
-with the simple network described above,
-where squares denote variables and circles denote operators.
-The lower-left corner signifies the input
-and the upper-right corner is the output.
-Notice that the directions of the arrows
-(which illustrate data flow)
-are primarily rightward and upward.
+Traçar *gráficos computacionais* nos ajuda a visualizar
+as dependências dos operadores
+e variáveis dentro do cálculo.
+:numref:`fig_forward` contém o gráfico associado
+com a rede simples descrita acima,
+onde quadrados denotam variáveis e círculos denotam operadores.
+O canto inferior esquerdo significa a entrada
+e o canto superior direito é a saída.
+Observe que as direções das setas
+(que ilustram o fluxo de dados)
+são principalmente para a direita e para cima.
 
-![Computational graph of forward propagation.](../img/forward.svg)
+![Gráfico computacional de propagação direta.](../img/forward.svg)
 :label:`fig_forward`
 
-## Backpropagation
+## *Backpropagation*
 
-*Backpropagation* refers to the method of calculating
+*Por* (propagação reversa) refers to the method of calculating
 the gradient of neural network parameters.
 In short, the method traverses the network in reverse order,
 from the output to the input layer,
@@ -297,6 +297,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkxMTA2MjE3LC0xOTA2NDU3ODI2LDg1Nz
+eyJoaXN0b3J5IjpbNTA5NzA5OTQ3LC0xOTA2NDU3ODI2LDg1Nz
 Q2OTgzNiwxMDExMTQzMzM3LDEzNTc3MjA0MjldfQ==
 -->
