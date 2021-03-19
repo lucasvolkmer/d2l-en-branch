@@ -2,29 +2,28 @@
 :label:`sec_numerical_stability`
 
 
-Thus far, every model that we have implemented
-required that we initialize its parameters
-according to some pre-specified distribution.
-Until now, we took the initialization scheme for granted,
-glossing over the details of how these choices are made.
-You might have even gotten the impression that these choices
-are not especially important.
-To the contrary, the choice of initialization scheme
-plays a significant role in neural network learning,
-and it can be crucial for maintaining numerical stability.
-Moreover, these choices can be tied up in interesting ways
-with the choice of the nonlinear activation function.
-Which function we choose and how we initialize parameters
-can determine how quickly our optimization algorithm converges.
-Poor choices here can cause us to encounter
-exploding or vanishing gradients while training.
-In this section, we delve into these topics with greater detail
-and discuss some useful heuristics
-that you will find useful
-throughout your career in deep learning.
+Até agora, todos os modelos que implementamos
+exigiram que inicializássemos seus parâmetros
+de acordo com alguma distribuição pré-especificada.
+Até agora, considerávamos o esquema de inicialização garantido,
+encobrindo os detalhes de como essas escolhas são feitas.
+Você pode até ter ficado com a impressão de que essas escolhas
+não são especialmente importantes.
+Pelo contrário, a escolha do esquema de inicialização
+desempenha um papel significativo na aprendizagem da rede neural,
+e pode ser crucial para manter a estabilidade numérica.
+Além disso, essas escolhas podem ser amarradas de maneiras interessantes
+com a escolha da função de ativação não linear.
+Qual função escolhemos e como inicializamos os parâmetros
+pode determinar a rapidez com que nosso algoritmo de otimização converge.
+Escolhas ruins aqui podem nos fazer encontrar
+explosões ou desaparecimento de gradientes durante o treinamento.
+Nesta seção, nos aprofundamos nesses tópicos com mais detalhes
+e discutimos algumas heurísticas úteis
+que você achará útil
+ao longo de sua carreira em *deep learning*.
 
-
-## Vanishing and Exploding Gradients
+## Explosão e Desaparecimento  de Gradientes 
 
 Consider a deep network with $L$ layers,
 input $\mathbf{x}$ and output $\mathbf{o}$.
@@ -375,5 +374,5 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjc0NzcyODIsMTYyMDMxMjM4OF19
+eyJoaXN0b3J5IjpbLTE1MzQ5MzgxOTIsMTYyMDMxMjM4OF19
 -->
