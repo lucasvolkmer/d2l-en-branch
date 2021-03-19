@@ -139,41 +139,42 @@ de $\mathsf{Z}$ with respect to $\mathsf{X}$ via
 
 $$\frac{\partial \mathsf{Z}}{\partial \mathsf{X}} = \text{prod}\left(\frac{\partial \mathsf{Z}}{\partial \mathsf{Y}}, \frac{\partial \mathsf{Y}}{\partial \mathsf{X}}\right).$$
 
-Here we use the $\text{prod}$ operator
-to multiply its arguments
-after the necessary operations,
-such as transposition and swapping input positions,
-have been carried out.
-For vectors, this is straightforward:
-it is simply matrix-matrix multiplication.
-For higher dimensional tensors,
-we use the appropriate counterpart.
-The operator $\text{prod}$ hides all the notation overhead.
 
-Recall that
-the parameters of the simple network with one hidden layer,
-whose computational graph is in :numref:`fig_forward`,
-are $\mathbf{W}^{(1)}$ and $\mathbf{W}^{(2)}$.
-The objective of backpropagation is to
-calculate the gradients $\partial J/\partial \mathbf{W}^{(1)}$
-and $\partial J/\partial \mathbf{W}^{(2)}$.
-To accomplish this, we apply the chain rule
-and calculate, in turn, the gradient of
-each intermediate variable and parameter.
-The order of calculations are reversed
-relative to those performed in forward propagation,
-since we need to start with the outcome of the computational graph
-and work our way towards the parameters.
-The first step is to calculate the gradients
-of the objective function $J=L+s$
-with respect to the loss term $L$
-and the regularization term $s$.
+Aqui usamos o operador $\text{prod}$ para
+multiplicar seus argumentos
+depois que as operações necessárias,
+como transposição e troca de posições de entrada,
+foram realizadas.
+Para vetores, isso é simples:
+é simplesmente multiplicação matriz-matriz.
+Para tensores dimensionais superiores,
+usamos a contraparte apropriada.
+O operador $\text{prod}$ esconde todo o *overhead* de notação.
 
-$$\frac{\partial J}{\partial L} = 1 \; \text{and} \; \frac{\partial J}{\partial s} = 1.$$
+Lembre-se disso
+os parâmetros da rede simples com uma camada oculta,
+cujo gráfico computacional está em :numref:`fig_forward`,
+são $\mathbf{W}^{(1)}$ e $\mathbf{W}^{(2)}$.
+O objetivo da retropropagação é
+calcular os gradientes $\partial J/\partial \mathbf{W}^{(1)}$
+e $\partial J/\partial \mathbf{W}^{(2)}$.
+Para conseguir isso, aplicamos a regra da cadeia
+e calcular, por sua vez, o gradiente de
+cada variável e parâmetro intermediário.
+A ordem dos cálculos é invertida
+em relação àquelas realizadas na propagação direta,
+uma vez que precisamos começar com o resultado do gráfico computacional
+e trabalhar nosso caminho em direção aos parâmetros.
+O primeiro passo é calcular os gradientes
+da função objetivo $J=L+s$
+com relação ao prazo de perda $L$
+e o prazo de regularização $s$.
 
-Next, we compute the gradient of the objective function
-with respect to variable of the output layer $\mathbf{o}$
-according to the chain rule:
+$$\frac{\partial J}{\partial L} = 1 \; \text{e} \; \frac{\partial J}{\partial s} = 1.$$
+
+Em seguida, calculamos o gradiente da função objetivo
+em relação à variável da camada de saída $\mathbf{o}$
+de acordo com a regra da cadeia:
 
 $$
 \frac{\partial J}{\partial \mathbf{o}}
@@ -296,6 +297,7 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMDc0NDMzMiwtMTkwNjQ1NzgyNiw4NT
-c0Njk4MzYsMTAxMTE0MzMzNywxMzU3NzIwNDI5XX0=
+eyJoaXN0b3J5IjpbOTQzMzg4NDksLTgzMDc0NDMzMiwtMTkwNj
+Q1NzgyNiw4NTc0Njk4MzYsMTAxMTE0MzMzNywxMzU3NzIwNDI5
+XX0=
 -->
