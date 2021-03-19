@@ -239,25 +239,26 @@ $$
 
 ## Treinando Redes Neurais
 
-When training neural networks,
-forward and backward propagation depend on each other.
-In particular, for forward propagation,
-we traverse the computational graph in the direction of dependencies
-and compute all the variables on its path.
-These are then used for backpropagation
-where the compute order on the graph is reversed.
 
-Take the aforementioned simple network as an example to illustrate.
-On one hand,
-computing the regularization term :eqref:`eq_forward-s`
-during forward propagation
-depends on the current values of model parameters $\mathbf{W}^{(1)}$ and $\mathbf{W}^{(2)}$.
-They are given by the optimization algorithm according to backpropagation in the latest iteration.
-On the other hand,
-the gradient calculation for the parameter
-:eqref:`eq_backprop-J-h` during backpropagation
-depends on the current value of the hidden variable $\mathbf{h}$,
-which is given by forward propagation.
+Ao treinar redes neurais,
+a propagação direta e reversa dependem uma da outra.
+Em particular, para propagação direta,
+atravessamos o gráfico computacional na direção das dependências
+e calculamos todas as variáveis em seu caminho.
+Eles são então usadas para retropropagação
+onde a ordem de computação no gráfico é invertida.
+
+Tome a rede simples mencionada acima como um exemplo para ilustrar.
+Por um lado,
+calcular o termo de regularização :eqref:`eq_forward-s`
+durante a propagação para a frente
+depende dos valores atuais dos parâmetros do modelo $\mathbf{W}^{(1)}$ and $\mathbf{W}^{(2)}$.
+Eles são fornecidos pelo algoritmo de otimização de acordo com a retropropagação na iteração mais recente.
+Por outro lado,
+o cálculo do gradiente para o parâmetro
+:eqref:`eq_backprop-J-h` durante a retropropagação
+depende do valor atual da variável oculta $\mathbf{h}$,
+que é fornecido por propagação direta.
 
 
 Therefore when training neural networks, after model parameters are initialized,
@@ -297,7 +298,7 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1ODAxMDM5NiwtODMwNzQ0MzMyLC0xOT
-A2NDU3ODI2LDg1NzQ2OTgzNiwxMDExMTQzMzM3LDEzNTc3MjA0
-MjldfQ==
+eyJoaXN0b3J5IjpbMTU1MzA5MzAyOSwtOTU4MDEwMzk2LC04Mz
+A3NDQzMzIsLTE5MDY0NTc4MjYsODU3NDY5ODM2LDEwMTExNDMz
+MzcsMTM1NzcyMDQyOV19
 -->
