@@ -117,9 +117,9 @@ são principalmente para a direita e para cima.
 ![Gráfico computacional de propagação direta.](../img/forward.svg)
 :label:`fig_forward`
 
-## *Backpropagation*
+## Propagação Reversa
 
-*Por* (propagação reversa) refers to the method of calculating
+*Propagação reversa* (*backpropagation*) refers to the method of calculating
 the gradient of neural network parameters.
 In short, the method traverses the network in reverse order,
 from the output to the input layer,
@@ -297,6 +297,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA5NzA5OTQ3LC0xOTA2NDU3ODI2LDg1Nz
-Q2OTgzNiwxMDExMTQzMzM3LDEzNTc3MjA0MjldfQ==
+eyJoaXN0b3J5IjpbLTE1ODY1MzY5NzUsLTE5MDY0NTc4MjYsOD
+U3NDY5ODM2LDEwMTExNDMzMzcsMTM1NzcyMDQyOV19
 -->
