@@ -119,24 +119,23 @@ são principalmente para a direita e para cima.
 
 ## Propagação Reversa
 
-*Propagação reversa* (*backpropagation*) refers to the method of calculating
-the gradient of neural network parameters.
-In short, the method traverses the network in reverse order,
-from the output to the input layer,
-according to the *chain rule* from calculus.
-The algorithm stores any intermediate variables
-(partial derivatives)
-required while calculating the gradient
-with respect to some parameters.
-Assume that we have functions
+*Propagação reversa* (*retropropagação*) refere-se ao método de cálculo do gradiente dos parâmetros da rede neural.
+Em suma, o método atravessa a rede na ordem inversa,
+da saída para a camada de entrada,
+de acordo com a *regra da cadeia* do cálculo.
+O algoritmo armazena quaisquer variáveis intermediárias
+(derivadas parciais)
+necessárias ao calcular o gradiente
+com relação a alguns parâmetros.
+Suponha que temos funções
 $\mathsf{Y}=f(\mathsf{X})$
-and $\mathsf{Z}=g(\mathsf{Y})$,
-in which the input and the output
+e $\mathsf{Z}=g(\mathsf{Y})$,
+em que a entrada e a saída
 $\mathsf{X}, \mathsf{Y}, \mathsf{Z}$
-are tensors of arbitrary shapes.
-By using the chain rule,
-we can compute the derivative
-of $\mathsf{Z}$ with respect to $\mathsf{X}$ via
+são tensores de formas arbitrárias.
+Usando a regra da cadeia,
+podemos calcular a derivada
+de $\mathsf{Z}$ with respect to $\mathsf{X}$ via
 
 $$\frac{\partial \mathsf{Z}}{\partial \mathsf{X}} = \text{prod}\left(\frac{\partial \mathsf{Z}}{\partial \mathsf{Y}}, \frac{\partial \mathsf{Y}}{\partial \mathsf{X}}\right).$$
 
@@ -297,6 +296,6 @@ more easily leads to *out of memory* errors.
 
 [Discussions](https://discuss.d2l.ai/t/102)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODY1MzY5NzUsLTE5MDY0NTc4MjYsOD
-U3NDY5ODM2LDEwMTExNDMzMzcsMTM1NzcyMDQyOV19
+eyJoaXN0b3J5IjpbLTgzMDc0NDMzMiwtMTkwNjQ1NzgyNiw4NT
+c0Njk4MzYsMTAxMTE0MzMzNywxMzU3NzIwNDI5XX0=
 -->
