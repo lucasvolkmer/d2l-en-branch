@@ -187,43 +187,43 @@ print('after multiplying 100 matrices\n', M.numpy())
 
 ### Quebrando a Simetria
 
-Another problem in neural network design
-is the symmetry inherent in their parametrization.
-Assume that we have a simple MLP
-with one hidden layer and two units.
-In this case, we could permute the weights $\mathbf{W}^{(1)}$
-of the first layer and likewise permute
-the weights of the output layer
-to obtain the same function.
-There is nothing special differentiating
-the first hidden unit vs. the second hidden unit.
-In other words, we have permutation symmetry
-among the hidden units of each layer.
 
-This is more than just a theoretical nuisance.
-Consider the aforementioned one-hidden-layer MLP
-with two hidden units.
-For illustration,
-suppose that the output layer transforms the two hidden units into only one output unit.
-Imagine what would happen if we initialized
-all of the parameters of the hidden layer
-as $\mathbf{W}^{(1)} = c$ for some constant $c$.
-In this case, during forward propagation
-either hidden unit takes the same inputs and parameters,
-producing the same activation,
-which is fed to the output unit.
-During backpropagation,
-differentiating the output unit with respect to parameters $\mathbf{W}^{(1)}$ gives a gradient whose elements all take the same value.
-Thus, after gradient-based iteration (e.g., minibatch stochastic gradient descent),
-all the elements of $\mathbf{W}^{(1)}$ still take the same value.
-Such iterations would
-never *break the symmetry* on its own
-and we might never be able to realize
-the network's expressive power.
-The hidden layer would behave
-as if it had only a single unit.
-Note that while minibatch stochastic gradient descent would not break this symmetry,
-dropout regularization would!
+Outro problema no projeto de rede neural
+é a simetria inerente à sua parametrização.
+Suponha que temos um MLP simples
+com uma camada oculta e duas unidades.
+Neste caso, poderíamos permutar os pesos $\mathbf{W}^{(1)}$
+da primeira camada e da mesma forma permutar
+os pesos da camada de saída
+para obter a mesma função.
+Não há nada especial em diferenciar
+a primeira unidade oculta vs. a segunda unidade oculta.
+Em outras palavras, temos simetria de permutação
+entre as unidades ocultas de cada camada.
+
+Isso é mais do que apenas um incômodo teórico.
+Considere o já mencionado MLP de uma camada oculta
+com duas unidades ocultas.
+Para ilustração,
+suponha que a camada de saída transforme as duas unidades ocultas em apenas uma unidade de saída.
+Imagine o que aconteceria se inicializássemos
+todos os parâmetros da camada oculta
+como $\mathbf{W}^{(1)} = c$ para alguma constante $c$.
+Neste caso, durante a propagação direta
+qualquer unidade oculta leva as mesmas entradas e parâmetros
+a produzir a mesma ativação,
+que é alimentada para a unidade de saída.
+Durante a retropropagação,
+diferenciar a unidade de saída com respeito aos parâmetros $\mathbf{W}^{(1)}$ dá um gradiente cujos elementos tomam o mesmo valor.
+Assim, após a iteração baseada em gradiente (por exemplo, gradiente descendente estocástico de *minibatch*),
+todos os elementos de $\mathbf{W}^{(1)}$ ainda têm o mesmo valor.
+Essas iterações nunca iriam *quebrar a simetria* por conta própria
+e podemos nunca ser capazes de perceber
+o poder expressivo da rede.
+A camada oculta se comportaria
+como se tivesse apenas uma unidade.
+Observe que, embora o gradiente descendente estocástico de *minibatch* não quebrasse essa simetria, a
+regularização do *dropout* iria!
 
 
 ## Parameter Initialization
@@ -375,6 +375,6 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjMzNzk3MDIsLTE3NjIwNDgyNzcsMT
-YyMDMxMjM4OF19
+eyJoaXN0b3J5IjpbMTQ2NjU1ODQ2OSwtMTQ2MzM3OTcwMiwtMT
+c2MjA0ODI3NywxNjIwMzEyMzg4XX0=
 -->
