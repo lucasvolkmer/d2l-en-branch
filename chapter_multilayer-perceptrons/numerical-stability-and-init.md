@@ -127,22 +127,22 @@ d2l.plot(x.numpy(), [y.numpy(), t.gradient(y, x).numpy()],
          legend=['sigmoid', 'gradient'], figsize=(4.5, 2.5))
 ```
 
-As you can see, (**the sigmoid's gradient vanishes
-both when its inputs are large and when they are small**).
-Moreover, when backpropagating through many layers,
-unless we are in the Goldilocks zone, where
-the inputs to many of the sigmoids are close to zero,
-the gradients of the overall product may vanish.
-When our network boasts many layers,
-unless we are careful, the gradient
-will likely be cut off at some layer.
-Indeed, this problem used to plague deep network training.
-Consequently, ReLUs, which are more stable
-(but less neurally plausible),
-have emerged as the default choice for practitioners.
+Como você pode ver, (**o gradiente do sigmóide desaparece
+tanto quando suas entradas são grandes quanto quando são pequenas**).
+Além disso, ao retropropagar através de muitas camadas,
+a menos que estejamos na zona Cachinhos Dourados, onde
+as entradas para muitos dos sigmóides são próximas de zero,
+os gradientes do produto geral podem desaparecer.
+Quando nossa rede possui muitas camadas,
+a menos que tenhamos cuidado, o gradiente
+provavelmente será cortado em alguma camada.
+Na verdade, esse problema costumava atormentar o treinamento profundo da rede.
+Consequentemente, ReLUs, que são mais estáveis
+(mas menos neuralmente plausíveis),
+surgiram como a escolha padrão para os profissionais.
 
 
-### [**Exploding Gradients**]
+### [**Explosão de Gradiente**]
 
 The opposite problem, when gradients explode,
 can be similarly vexing.
@@ -375,6 +375,6 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NzcyMjAyMSwtMTc2MjA0ODI3NywxNj
-IwMzEyMzg4XX0=
+eyJoaXN0b3J5IjpbMTUyNzI3ODc4LC0xNzYyMDQ4Mjc3LDE2Mj
+AzMTIzODhdfQ==
 -->
