@@ -40,36 +40,37 @@ qualquer conjunto de parâmetros $\mathbf{W}^{(l)}$ da seguinte forma:
 
 $$\partial_{\mathbf{W}^{(l)}} \mathbf{o} = \underbrace{\partial_{\mathbf{h}^{(L-1)}} \mathbf{h}^{(L)}}_{ \mathbf{M}^{(L)} \stackrel{\mathrm{def}}{=}} \cdot \ldots \cdot \underbrace{\partial_{\mathbf{h}^{(l)}} \mathbf{h}^{(l+1)}}_{ \mathbf{M}^{(l+1)} \stackrel{\mathrm{def}}{=}} \underbrace{\partial_{\mathbf{W}^{(l)}} \mathbf{h}^{(l)}}_{ \mathbf{v}^{(l)} \stackrel{\mathrm{def}}{=}}.$$
 
-In other words, this gradient is
-the product of $L-l$ matrices
+
+Em outras palavras, este gradiente é
+o produto das matrizes $L-l$
 $\mathbf{M}^{(L)} \cdot \ldots \cdot \mathbf{M}^{(l+1)}$
-and the gradient vector $\mathbf{v}^{(l)}$.
-Thus we are susceptible to the same
-problems of numerical underflow that often crop up
-when multiplying together too many probabilities.
-When dealing with probabilities, a common trick is to
-switch into log-space, i.e., shifting
-pressure from the mantissa to the exponent
-of the numerical representation.
-Unfortunately, our problem above is more serious:
-initially the matrices $\mathbf{M}^{(l)}$ may have a wide variety of eigenvalues.
-They might be small or large, and
-their product might be *very large* or *very small*.
+e o vetor gradiente $\mathbf{v}^{(l)}$.
+Assim, somos suscetíveis aos mesmos
+problemas de *underflow* numérico que muitas vezes surgem
+ao multiplicar muitas probabilidades.
+Ao lidar com probabilidades, um truque comum é
+mudar para o espaço de registro, ou seja, mudar
+pressão da mantissa para o expoente
+da representação numérica.
+Infelizmente, nosso problema acima é mais sério:
+inicialmente as matrizes $\mathbf{M}^{(l)}$ podem ter uma grande variedade de autovalores.
+Eles podem ser pequenos ou grandes e
+seu produto pode ser *muito grande* ou *muito pequeno*.
 
-The risks posed by unstable gradients
-go beyond numerical representation.
-Gradients of unpredictable magnitude
-also threaten the stability of our optimization algorithms.
-We may be facing parameter updates that are either
-(i) excessively large, destroying our model
-(the *exploding gradient* problem);
-or (ii) excessively small
-(the *vanishing gradient* problem),
-rendering learning impossible as parameters
-hardly move on each update.
+Os riscos apresentados por gradientes instáveis
+vão além da representação numérica.
+Gradientes de magnitude imprevisível
+também ameaçam a estabilidade de nossos algoritmos de otimização.
+Podemos estar enfrentando atualizações de parâmetros que são
+(i) excessivamente grandes, destruindo nosso modelo
+(o problema da *explosão do gradiente*);
+ou (ii) excessivamente pequeno
+(o problema do *desaparecimento do gradiente*),
+tornando a aprendizagem impossível como parâmetros
+dificilmente se move a cada atualização.
 
 
-### (**Vanishing Gradients**)
+### (**Desaparecimento do Gradiente**)
 
 One frequent culprit causing the vanishing gradient problem
 is the choice of the activation function $\sigma$
@@ -374,5 +375,5 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzQ4MDM4NSwxNjIwMzEyMzg4XX0=
+eyJoaXN0b3J5IjpbLTE3NjIwNDgyNzcsMTYyMDMxMjM4OF19
 -->
