@@ -72,18 +72,18 @@ dificilmente se move a cada atualização.
 
 ### (**Desaparecimento do Gradiente**)
 
-One frequent culprit causing the vanishing gradient problem
-is the choice of the activation function $\sigma$
-that is appended following each layer's linear operations.
-Historically, the sigmoid function
-$1/(1 + \exp(-x))$ (introduced in :numref:`sec_mlp`)
-was popular because it resembles a thresholding function.
-Since early artificial neural networks were inspired
-by biological neural networks,
-the idea of neurons that fire either *fully* or *not at all*
-(like biological neurons) seemed appealing.
-Let us take a closer look at the sigmoid
-to see why it can cause vanishing gradients.
+Um culpado frequente que causa o problema do desaparecimento de gradiente 
+é a escolha da função de ativação $\sigma$
+que é anexada após as operações lineares de cada camada.
+Historicamente, a função sigmóide
+$1/(1 + \exp(-x))$ (introduzida em :numref:`sec_mlp`)
+era popular porque se assemelha a uma função de limiar.
+Como as primeiras redes neurais artificiais foram inspiradas
+por redes neurais biológicas,
+a ideia de neurônios que disparam *totalmente* ou *nem um pouco*
+(como neurônios biológicos) parecia atraente.
+Vamos dar uma olhada mais de perto no sigmóide
+para ver por que isso pode causar desaparecimento de gradientes.
 
 ```{.python .input}
 %matplotlib inline
@@ -375,5 +375,6 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjIwNDgyNzcsMTYyMDMxMjM4OF19
+eyJoaXN0b3J5IjpbMTE4NzcyMjAyMSwtMTc2MjA0ODI3NywxNj
+IwMzEyMzg4XX0=
 -->
