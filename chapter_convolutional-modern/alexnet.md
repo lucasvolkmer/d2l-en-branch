@@ -662,6 +662,8 @@ def net():
 
 We construct a single-channel data example with both height and width of 224 to observe the output shape of each layer. It matches the AlexNet architecture in :numref:`fig_alexnet`.
 
+Construímos um exemplo de dados de canal único com altura e largura de 224 para observar a forma de saída de cada camada. Ele corresponde à arquitetura AlexNet em: numref: `fig_alexnet`.
+
 ```{.python .input}
 X = np.random.uniform(size=(1, 1, 224, 224))
 net.initialize()
@@ -699,6 +701,17 @@ To make things work, we upsample them to $224 \times 224$
 but we do it here to be faithful to the AlexNet architecture).
 We perform this resizing with the `resize` argument in the `d2l.load_data_fashion_mnist` function.
 
+Embora AlexNet seja treinado em ImageNet no jornal, usamos Fashion-MNIST aqui
+já que treinar um modelo ImageNet para convergência pode levar horas ou dias
+mesmo em uma GPU moderna.
+Um dos problemas de aplicar AlexNet diretamente no Fashion-MNIST
+é que suas imagens têm resolução inferior ($ 28 \ vezes 28 $ pixels)
+do que imagens ImageNet.
+Para fazer as coisas funcionarem, aumentamos a amostra para $ 224 \ vezes 224 $
+(geralmente não é uma prática inteligente,
+mas fazemos isso aqui para sermos fiéis à arquitetura AlexNet).
+Realizamos esse redimensionamento com o argumento `resize` na função` d2l.load_data_fashion_mnist`.
+
 ```{.python .input}
 #@tab all
 batch_size = 128
@@ -713,6 +726,12 @@ the main change here is the use of a smaller learning rate
 and much slower training due to the deeper and wider network,
 the higher image resolution, and the more costly convolutions.
 
+Agora, podemos começar a treinar AlexNet.
+Comparado com LeNet em: numref: `sec_lenet`,
+a principal mudança aqui é o uso de uma taxa de aprendizado menor
+e um treinamento muito mais lento devido à rede mais ampla e profunda,
+a resolução de imagem mais alta e as convoluções mais caras.
+
 ```{.python .input}
 #@tab all
 lr, num_epochs = 0.01, 10
@@ -725,20 +744,35 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 * Today AlexNet has been surpassed by much more effective architectures but it is a key step from shallow to deep networks that are used nowadays.
 * Although it seems that there are only a few more lines in AlexNet's implementation than in LeNet, it took the academic community many years to embrace this conceptual change and take advantage of its excellent experimental results. This was also due to the lack of efficient computational tools.
 * Dropout, ReLU, and preprocessing were the other key steps in achieving excellent performance in computer vision tasks.
+* AlexNet tem uma estrutura semelhante à do LeNet, mas usa mais camadas convolucionais e um espaço de parâmetro maior para caber no conjunto de dados ImageNet em grande escala.
+* Hoje o AlexNet foi superado por arquiteturas muito mais eficazes, mas é um passo importante das redes superficiais para as profundas que são usadas hoje em dia.
+* Embora pareça que existam apenas mais algumas linhas na implementação do AlexNet do que no LeNet, a comunidade acadêmica levou muitos anos para abraçar essa mudança conceitual e tirar proveito de seus excelentes resultados experimentais. Isso também se deveu à falta de ferramentas computacionais eficientes.
+* Desistência, ReLU e pré-processamento foram as outras etapas importantes para alcançar um desempenho excelente em tarefas de visão computacional.
 
 ## Exercises
 
 1. Try increasing the number of epochs. Compared with LeNet, how are the results different? Why?
-1. AlexNet may be too complex for the Fashion-MNIST dataset.
+2. AlexNet may be too complex for the Fashion-MNIST dataset.
     1. Try simplifying the model to make the training faster, while ensuring that the accuracy does not drop significantly.
     1. Design a better model that works directly on $28 \times 28$ images.
-1. Modify the batch size, and observe the changes in accuracy and GPU memory.
-1. Analyze computational performance of AlexNet.
+3. Modify the batch size, and observe the changes in accuracy and GPU memory.
+4. Analyze computational performance of AlexNet.
     1. What is the dominant part for the memory footprint of AlexNet?
     1. What is the dominant part for computation in AlexNet?
     1. How about memory bandwidth when computing the results?
-1. Apply dropout and ReLU to LeNet-5. Does it improve? How about preprocessing?
+5. Apply dropout and ReLU to LeNet-5. Does it improve? How about preprocessing?
 
+6. Experimente aumentar o número de épocas. Comparado com o LeNet, como os resultados são diferentes? Porque?
+7. AlexNet pode ser muito complexo para o conjunto de dados Fashion-MNIST.
+     1. Tente simplificar o modelo para tornar o treinamento mais rápido, garantindo que a precisão não caia significativamente.
+     1. Projete um modelo melhor que funcione diretamente em imagens de $ 28 \ vezes 28 $.
+8. Modifique o tamanho do lote e observe as mudanças na precisão e na memória da GPU.
+9. Analise o desempenho computacional do AlexNet.
+     1. Qual é a parte dominante para a pegada de memória do AlexNet?
+     1. Qual é a parte dominante para computação no AlexNet?
+     1. E quanto à largura de banda da memória ao calcular os resultados?
+10. Aplique dropout e ReLU ao LeNet-5. Isso melhora? Que tal pré-processamento?
+ 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/75)
 :end_tab:
@@ -751,5 +785,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEwMjA3NzYyXX0=
+eyJoaXN0b3J5IjpbLTEyMTA1Mjk2NzJdfQ==
 -->
