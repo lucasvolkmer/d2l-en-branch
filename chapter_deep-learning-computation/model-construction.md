@@ -413,7 +413,9 @@ class MySequential(tf.keras.Model):
         self.modules = []
         for block in args:
             # Here, `block` is an instance of a `tf.keras.layers.Layer`
+            #
             # subclass
+            #
             self.modules.append(block)
 
     def call(self, X):
@@ -518,7 +520,9 @@ class FixedHiddenMLP(nn.Block):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         # Random weight parameters created with the `get_constant` function
+        #
         # are not updated during training (i.e., constant parameters)
+        #
         self.rand_weight = self.params.get_constant(
             'rand_weight', np.random.uniform(size=(20, 20)))
         self.dense = nn.Dense(20, activation='relu')
@@ -526,10 +530,14 @@ class FixedHiddenMLP(nn.Block):
     def forward(self, X):
         X = self.dense(X)
         # Use the created constant parameters, as well as the `relu` and `dot`
+        #
         # functions
+        #
         X = npx.relu(np.dot(X, self.rand_weight.data()) + 1)
         # Reuse the fully-connected layer. This is equivalent to sharing
+        #
         # parameters with two fully-connected layers
+        #
         X = self.dense(X)
         # Control flow
         while np.abs(X).sum() > 1:
@@ -543,19 +551,26 @@ class FixedHiddenMLP(nn.Module):
     def __init__(self):
         super().__init__()
         # Random weight parameters that will not compute gradients and
+        #
         # therefore keep constant during training
+        #
         self.rand_weight = torch.rand((20, 20), requires_grad=False)
         self.linear = nn.Linear(20, 20)
 
     def forward(self, X):
         X = self.linear(X)
         # Use the created constant parameters, as well as the `relu` and `mm`
+        #
         # functions
+        #
         X = F.relu(torch.mm(X, self.rand_weight) + 1)
         # Reuse the fully-connected layer. This is equivalent to sharing
+        #
         # parameters with two fully-connected layers
+        #
         X = self.linear(X)
         # Control flow
+        #
         while X.abs().sum() > 1:
             X /= 2
         return X.sum()
@@ -568,19 +583,26 @@ class FixedHiddenMLP(tf.keras.Model):
         super().__init__()
         self.flatten = tf.keras.layers.Flatten()
         # Random weight parameters created with `tf.constant` are not updated
+        #
         # during training (i.e., constant parameters)
+        #
         self.rand_weight = tf.constant(tf.random.uniform((20, 20)))
         self.dense = tf.keras.layers.Dense(20, activation=tf.nn.relu)
 
     def call(self, inputs):
         X = self.flatten(inputs)
         # Use the created constant parameters, as well as the `relu` and
+        #
         # `matmul` functions
+        #
         X = tf.nn.relu(tf.matmul(X, self.rand_weight) + 1)
         # Reuse the fully-connected layer. This is equivalent to sharing
+        #
         # parameters with two fully-connected layers
+        #
         X = self.dense(X)
         # Control flow
+        #
         while tf.reduce_sum(tf.math.abs(X)) > 1:
             X /= 2
         return tf.reduce_sum(X)
@@ -768,7 +790,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyOTQ2MzA4NCwxNDA2MjM5OTQ2LC04NT
-Y2MTQzMzcsMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMjgwOTc0
-LC0xNjM3ODI5NDkwXX0=
+eyJoaXN0b3J5IjpbNjcyOTg0Mjc4LDE0MDYyMzk5NDYsLTg1Nj
+YxNDMzNywzNTU2NjM4MTEsODM3OTI2ODQ3LDE3NzAyODA5NzQs
+LTE2Mzc4Mjk0OTBdfQ==
 -->
