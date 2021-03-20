@@ -124,12 +124,12 @@ No momento do teste, somos solicitados a classificar as imagens em :numref:`fig_
 ![Dados de teste para distinguir cães e gatos.](../img/cat-dog-test.svg)
 :label:`fig_cat-dog-test`
 
-The training set consists of photos,
-while the test set contains only cartoons.
-Training on a dataset with substantially different
-characteristics from the test set
-can spell trouble absent a coherent plan
-for how to adapt to the new domain.
+O conjunto de treinamento consiste em fotos,
+enquanto o conjunto de teste contém apenas desenhos animados.
+Treinamento em um conjunto de dados com
+características do conjunto de teste
+pode significar problemas na ausência de um plano coerente
+para saber como se adaptar ao novo domínio.
 
 ### Label Shift
 
@@ -697,6 +697,6 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzODIyMzk2MSwxODcwNDM1MzE2LDMzNz
-U0Nzc0OSw4NDI3NzU4MTJdfQ==
+eyJoaXN0b3J5IjpbLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NT
+Q3NzQ5LDg0Mjc3NTgxMl19
 -->
