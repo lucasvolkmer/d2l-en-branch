@@ -70,9 +70,7 @@ de complexidade arbitrária sob demanda,
 podemos escrever código surpreendentemente compacto
 e ainda implementar redes neurais complexas.
 
-![Multiple layers are combined into blocks, forming repeating patterns of larger models
-Múltiplas camadas são combinadas em blocos, formando padrões repetitivos de um
-.](../img/blocks.svg)
+![Múltiplas camadas são combinadas em blocos, formando padrões repetitivos de um modelo maior.](../img/blocks.svg)
 :label:`fig_blocks`
 
 Do ponto de vista da programação, um bloco é representado por uma *classe*.
@@ -225,6 +223,7 @@ fornecendo apenas nosso próprio construtor (a função `__init__` em Python) e 
 ```{.python .input}
 class MLP(nn.Block):
     # Declare a layer with model parameters. Here, we declare two
+    # 
     # fully-connected layers
     def __init__(self, **kwargs):
         # Call the constructor of the `MLP` parent class `Block` to perform
@@ -758,7 +757,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDIzMjk5MDMsMTQwNjIzOTk0NiwtOD
+eyJoaXN0b3J5IjpbLTEyMTQ1NzM5ODMsMTQwNjIzOTk0NiwtOD
 U2NjE0MzM3LDM1NTY2MzgxMSw4Mzc5MjY4NDcsMTc3MDI4MDk3
 NCwtMTYzNzgyOTQ5MF19
 -->
