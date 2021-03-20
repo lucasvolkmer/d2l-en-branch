@@ -301,30 +301,30 @@ $$
 \end{aligned}
 $$
 
-This is the reasoning underlying the now-standard
-and practically beneficial *Xavier initialization*,
-named after the first author of its creators :cite:`Glorot.Bengio.2010`.
-Typically, the Xavier initialization
-samples weights from a Gaussian distribution
-with zero mean and variance
+Este é o raciocínio subjacente à agora padrão
+e praticamente benéfica *inicialização de Xavier*,
+em homenagem ao primeiro autor de seus criadores :cite:`Glorot.Bengio.2010`.
+Normalmente, a inicialização de Xavier
+amostra pesos de uma distribuição gaussiana
+com média e variância zero
 $\sigma^2 = \frac{2}{n_\mathrm{in} + n_\mathrm{out}}$.
-We can also adapt Xavier's intuition to
-choose the variance when sampling weights
-from a uniform distribution.
-Note that the uniform distribution $U(-a, a)$ has variance $\frac{a^2}{3}$.
-Plugging $\frac{a^2}{3}$ into our condition on $\sigma^2$
-yields the suggestion to initialize according to
+Também podemos adaptar a intuição de Xavier para
+escolher a variância ao amostrar os pesos
+de uma distribuição uniforme.
+Observe que a distribuição uniforme $U(-a, a)$ tem variância $\frac{a^2}{3}$.
+Conectar $\frac{a^2}{3}$ em nossa condição em $\sigma^2$
+produz a sugestão de inicializar de acordo com
 
 $$U\left(-\sqrt{\frac{6}{n_\mathrm{in} + n_\mathrm{out}}}, \sqrt{\frac{6}{n_\mathrm{in} + n_\mathrm{out}}}\right).$$
 
-Though the assumption for nonexistence of nonlinearities
-in the above mathematical reasoning
-can be easily violated in neural networks,
-the Xavier initialization method
-turns out to work well in practice.
+Embora a suposição de inexistência de não linearidades
+no raciocínio matemático acima
+pode ser facilmente violada em redes neurais,
+o método de inicialização de Xavier
+acaba funcionando bem na prática.
 
 
-### Beyond
+### Além
 
 The reasoning above barely scratches the surface
 of modern approaches to parameter initialization.
@@ -375,7 +375,7 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODA1ODg1NjcsLTIwMjEyODA5MjUsMT
-Q2NjU1ODQ2OSwtMTQ2MzM3OTcwMiwtMTc2MjA0ODI3NywxNjIw
-MzEyMzg4XX0=
+eyJoaXN0b3J5IjpbNDI5MDU1NDcwLC0yMDIxMjgwOTI1LDE0Nj
+Y1NTg0NjksLTE0NjMzNzk3MDIsLTE3NjIwNDgyNzcsMTYyMDMx
+MjM4OF19
 -->
