@@ -254,22 +254,22 @@ para tamanhos moderados de problemas.
 Vejamos a distribuição da escala de
 uma saída (por exemplo, uma variável oculta) $o_{i}$ para alguma camada totalmente conectada
 *sem não linearidades*.
-Com $n_\mathrm{in}$ entradas $x_j$
+Com $n_\mathrm{in}$, entradas $x_j$
 e seus pesos associados $w_{ij}$ para esta camada,
 uma saída é dada por
 
 $$o_{i} = \sum_{j=1}^{n_\mathrm{in}} w_{ij} x_j.$$
 
-The weights $w_{ij}$ are all drawn
-independently from the same distribution.
-Furthermore, let us assume that this distribution
-has zero mean and variance $\sigma^2$.
-Note that this does not mean that the distribution has to be Gaussian,
-just that the mean and variance need to exist.
-For now, let us assume that the inputs to the layer $x_j$
-also have zero mean and variance $\gamma^2$
-and that they are independent of $w_{ij}$ and independent of each other.
-In this case, we can compute the mean and variance of $o_i$ as follows:
+Os pesos $w_{ij}$ estão todos sorteados
+independentemente da mesma distribuição.
+Além disso, vamos supor que esta distribuição
+tem média zero e variância $\sigma^2$.
+Observe que isso não significa que a distribuição deve ser gaussiana,
+apenas que a média e a variância precisam existir.
+Por enquanto, vamos supor que as entradas para a camada $x_j$
+também têm média zero e variância $\gamma^2$
+e que elas são independentes de $w_{ij}$ e independentes uma da outra.
+Nesse caso, podemos calcular a média e a variância de $o_i$ da seguinte forma:
 
 $$
 \begin{aligned}
@@ -375,7 +375,7 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0Njk4MTMxNiwtMjAyMTI4MDkyNSwxND
+eyJoaXN0b3J5IjpbMTczNDA2Mjg2NywtMjAyMTI4MDkyNSwxND
 Y2NTU4NDY5LC0xNDYzMzc5NzAyLC0xNzYyMDQ4Mjc3LDE2MjAz
 MTIzODhdfQ==
 -->
