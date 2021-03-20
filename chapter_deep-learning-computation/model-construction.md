@@ -246,10 +246,11 @@ class MLP(nn.Module):
     # camadas totalmente conectadas
     def __init__(self):
         # Call the constructor of the `MLP` parent class `Block` to perform
-        # Chame o construtor da classe pai `MLP`` Block` para realizar
-        # the necessary initialization. In this way, other function arguments
+        # Chame o construtor da classe pai `MLP` `Block` para realizar
+        # a inicialização necessária. Desta forma, outros argumentos de função
         # can also be specified during class instantiation, such as the model
-        # parameters, `params` (to be described later)
+        # também podem ser especificado durante a instanciação da classe, como 
+        # os parametros do modelo, `params` (a ser descritos posteriormente)
         super().__init__()
         self.hidden = nn.Linear(20, 256)  # Hidden layer
         self.out = nn.Linear(256, 10)  # Output layer
@@ -757,7 +758,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ3NDc5ODk3LDE0MDYyMzk5NDYsLTg1Nj
-YxNDMzNywzNTU2NjM4MTEsODM3OTI2ODQ3LDE3NzAyODA5NzQs
-LTE2Mzc4Mjk0OTBdfQ==
+eyJoaXN0b3J5IjpbLTE0Mzk5ODAxNTUsMTQwNjIzOTk0NiwtOD
+U2NjE0MzM3LDM1NTY2MzgxMSw4Mzc5MjY4NDcsMTc3MDI4MDk3
+NCwtMTYzNzgyOTQ5MF19
 -->
