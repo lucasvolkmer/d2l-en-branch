@@ -196,11 +196,25 @@ Ultimately, the final hidden state learns a compact representation
 of the image that summarizes its contents
 such that data belonging to different categories can be easily separated.
 
+As camadas superiores da rede podem se basear nessas representações
+para representar estruturas maiores, como olhos, narizes, folhas de grama e assim por diante.
+Mesmo camadas mais altas podem representar objetos inteiros
+como pessoas, aviões, cães ou frisbees.
+Em última análise, o estado oculto final aprende uma representação compacta
+da imagem que resume seu conteúdo
+de forma que os dados pertencentes a diferentes categorias possam ser facilmente separados.
+
 While the ultimate breakthrough for many-layered CNNs
 came in 2012, a core group of researchers had dedicated themselves
 to this idea, attempting to learn hierarchical representations of visual data
 for many years.
 The ultimate breakthrough in 2012 can be attributed to two key factors.
+
+Enquanto a inovação definitiva para CNNs de várias camadas
+veio em 2012, um grupo central de pesquisadores se dedicou
+a esta ideia, tentando aprender representações hierárquicas de dados visuais
+por muitos anos.
+O grande avanço em 2012 pode ser atribuído a dois fatores principais.
 
 ### Missing Ingredient: Data
 
@@ -216,6 +230,18 @@ Numerous papers addressed the UCI collection of datasets,
 many of which contained only hundreds or (a few) thousands of images
 captured in unnatural settings with low resolution.
 
+Modelos profundos com muitas camadas requerem grandes quantidades de dados
+a fim de entrar no regime
+onde superam significativamente os métodos tradicionais
+com base em otimizações convexas (por exemplo, métodos lineares e de kernel).
+No entanto, dada a capacidade limitada de armazenamento dos computadores,
+a despesa relativa de sensores,
+e os orçamentos de pesquisa comparativamente mais apertados na década de 1990,
+a maioria das pesquisas baseou-se em pequenos conjuntos de dados.
+Numerosos artigos abordaram a coleção de conjuntos de dados da UCI,
+muitos dos quais continham apenas centenas ou (alguns) milhares de imagens
+capturado em configurações não naturais com baixa resolução.
+
 In 2009, the ImageNet dataset was released,
 challenging researchers to learn models from 1 million examples,
 1000 each from 1000 distinct categories of objects.
@@ -230,6 +256,20 @@ pushed computer vision and machine learning research forward,
 challenging researchers to identify which models performed best
 at a greater scale than academics had previously considered.
 
+Em 2009, o conjunto de dados ImageNet foi lançado,
+desafiando os pesquisadores a aprender modelos a partir de 1 milhão de exemplos,
+1000 cada de 1000 categorias distintas de objetos.
+Os pesquisadores, liderados por Fei-Fei Li, que apresentou este conjunto de dados
+aproveitou a Pesquisa de imagens do Google para pré-filtrar grandes conjuntos de candidatos
+para cada categoria e empregado
+o pipeline de crowdsourcing Amazon Mechanical Turk
+para confirmar para cada imagem se pertencia à categoria associada.
+Essa escala não tinha precedentes.
+A competição associada, apelidada de Desafio ImageNet
+impulsionou a pesquisa sobre visão computacional e aprendizado de máquina,
+desafiando os pesquisadores a identificar quais modelos tiveram melhor desempenho
+em uma escala maior do que os acadêmicos haviam considerado anteriormente.
+
 ### Missing Ingredient: Hardware
 
 Deep learning models are voracious consumers of compute cycles.
@@ -239,6 +279,14 @@ linear algebra operations.
 This is one of the main reasons why in the 1990s and early 2000s,
 simple algorithms based on the more-efficiently optimized
 convex objectives were preferred.
+
+Modelos de aprendizado profundo são consumidores vorazes de ciclos de computação.
+O treinamento pode levar centenas de épocas, e cada iteração
+requer a passagem de dados por muitas camadas de alto custo computacional
+operações de álgebra linear.
+Esta é uma das principais razões pelas quais, na década de 1990 e no início de 2000,
+algoritmos simples baseados em algoritmos otimizados de forma mais eficiente
+objetivas convexas foram preferidas. 
 
 *Graphical processing units* (GPUs) proved to be a game changer
 in making deep learning feasible.
@@ -250,6 +298,17 @@ to that required to calculate convolutional layers.
 Around that time, NVIDIA and ATI had begun optimizing GPUs
 for general computing operations,
 going as far as to market them as *general-purpose GPUs* (GPGPU).
+
+* Unidades de processamento gráfico * (GPUs) provaram ser uma virada de jogo
+para tornar o aprendizado profundo viável.
+Esses chips há muito foram desenvolvidos para acelerar
+processamento gráfico para beneficiar os jogos de computador.
+Em particular, eles foram otimizados para produtos de vetor de matriz de alta capacidade $ 4 \ vezes 4 $, que são necessários para muitas tarefas de computação gráfica.
+Felizmente, essa matemática é muito semelhante
+ao necessário para calcular camadas convolucionais.
+Naquela época, a NVIDIA e a ATI começaram a otimizar GPUs
+para operações gerais de computação,
+indo tão longe a ponto de comercializá-los como * GPUs de uso geral * (GPGPU).
 
 To provide some intuition, consider the cores of a modern microprocessor
 (CPU).
@@ -268,6 +327,24 @@ and they are comparatively bad at any single task.
 Modern laptops have up to 4 cores,
 and even high-end servers rarely exceed 64 cores,
 simply because it is not cost effective.
+
+Para fornecer alguma intuição, considere os núcleos de um microprocessador moderno
+(CPU).
+Cada um dos núcleos é bastante poderoso rodando em uma alta frequência de clock
+e exibindo grandes caches (até vários megabytes de L3).
+Cada núcleo é adequado para executar uma ampla gama de instruções,
+com preditores de ramificação, um pipeline profundo e outros sinos e assobios
+que permitem executar uma grande variedade de programas.
+Essa aparente força, no entanto, é também seu calcanhar de Aquiles:
+núcleos de uso geral são muito caros para construir.
+Eles exigem muita área de chip,
+uma estrutura de suporte sofisticada
+(interfaces de memória, lógica de cache entre os núcleos,
+interconexões de alta velocidade e assim por diante),
+e são comparativamente ruins em qualquer tarefa.
+Laptops modernos têm até 4 núcleos,
+e até mesmo servidores de última geração raramente excedem 64 núcleos,
+simplesmente porque não é rentável.
 
 By comparison, GPUs consist of $100 \sim 1000$ small processing elements
 (the details differ somewhat between NVIDIA, ATI, ARM and other chip vendors),
@@ -583,5 +660,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDgwNjgwODVdfQ==
+eyJoaXN0b3J5IjpbLTQ5NDU0OTA2Nl19
 -->
