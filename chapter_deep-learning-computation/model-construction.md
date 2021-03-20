@@ -267,21 +267,19 @@ class MLP(tf.keras.Model):
     # Declare uma camada com parâmetros de modelo. Aqui, declaramos duas
     # camadas totalmente conectadas
     def __init__(self):
-        # Call the constructor of the `MLP` parent class `Block` to perform
         # Chame o construtor da classe pai `MLP` `Block` para realizar
-        # the necessary initialization. In this way, other function arguments
         # a inicialização necessária. Desta forma, outros argumentos de função
-        # can also be specified during class instantiation, such as the model
         # também podem ser especificados durante a instanciação da classe, como os 
-==
         # parâmetros do modelo, `params` (a serem descritos mais tarde)
         super().__init__()
-        # Hidden layer
+        # Camadas escondidas
         self.hidden = tf.keras.layers.Dense(units=256, activation=tf.nn.relu)
         self.out = tf.keras.layers.Dense(units=10)  # Output layer
 
     # Define the forward propagation of the model, that is, how to return the
+    # Defina a propagação direta do modelo, ou seja, como retornar o
     # required model output based on the input `X`
+    # saída do modelo necessária com base na entrada `X`
     def call(self, X):
         return self.out(self.hidden((X)))
 ```
@@ -760,7 +758,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNzA1NDQzOSwxNDA2MjM5OTQ2LC04NT
-Y2MTQzMzcsMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMjgwOTc0
-LC0xNjM3ODI5NDkwXX0=
+eyJoaXN0b3J5IjpbLTEwODI5NTA0NDksMTQwNjIzOTk0NiwtOD
+U2NjE0MzM3LDM1NTY2MzgxMSw4Mzc5MjY4NDcsMTc3MDI4MDk3
+NCwtMTYzNzgyOTQ5MF19
 -->
