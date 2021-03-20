@@ -519,9 +519,7 @@ Portanto, implementamos uma classe `FixedHiddenMLP` como a seguir.
 class FixedHiddenMLP(nn.Block):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        # Random weight parameters created with the `get_constant` function
         # Parâmetros de peso aleatórios criados com a função `get_constant`
-        # are not updated during training (i.e., constant parameters)
         # não são atualizados durante o treinamento (ou seja, parâmetros constantes)
         self.rand_weight = self.params.get_constant(
             'rand_weight', np.random.uniform(size=(20, 20)))
@@ -529,10 +527,8 @@ class FixedHiddenMLP(nn.Block):
 
     def forward(self, X):
         X = self.dense(X)
-        # Use the created constant parameters, as well as the `relu` and `dot`
         # Use os parâmetros constantes criados, bem como `relu` e` dot`
         # functions
-        #
         X = npx.relu(np.dot(X, self.rand_weight.data()) + 1)
         # Reuse the fully-connected layer. This is equivalent to sharing
         # Reutilize a camada totalmente conectada. Isso é equivalente a compartilhar
@@ -567,7 +563,7 @@ class FixedHiddenMLP(nn.Module):
         # Reuse the fully-connected layer. This is equivalent to sharing
         # Reutilize a camada totalmente conectada. Isso é equivalente a compartilhar
         # parameters with two fully-connected layers
-        #
+        # parâmetros com duas camadas totalmente conectadas
         X = self.linear(X)
         # Control flow
         #
@@ -583,23 +579,23 @@ class FixedHiddenMLP(tf.keras.Model):
         super().__init__()
         self.flatten = tf.keras.layers.Flatten()
         # Random weight parameters created with `tf.constant` are not updated
-        #
+        # Parâmetros de peso aleatório criados com `tf.constant` não são atualizados
         # during training (i.e., constant parameters)
-        #
+        # durante o treinamento (ou seja, parâmetros constantes)
         self.rand_weight = tf.constant(tf.random.uniform((20, 20)))
         self.dense = tf.keras.layers.Dense(20, activation=tf.nn.relu)
 
     def call(self, inputs):
         X = self.flatten(inputs)
         # Use the created constant parameters, as well as the `relu` and
-        #
+        # Use os parâmetros constantes criados, bem como o `relu` e
         # `matmul` functions
         #
         X = tf.nn.relu(tf.matmul(X, self.rand_weight) + 1)
         # Reuse the fully-connected layer. This is equivalent to sharing
-        #
+        # Reutilize a camada totalmente conectada. Isso é equivalente a compartilhar
         # parameters with two fully-connected layers
-        #
+        # parâmetros com duas camadas totalmente conectadas
         X = self.dense(X)
         # Control flow
         #
@@ -790,7 +786,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI4Mjg5NzMxLDE0MDYyMzk5NDYsLTg1Nj
+eyJoaXN0b3J5IjpbNDM5MTE5Mjg3LDE0MDYyMzk5NDYsLTg1Nj
 YxNDMzNywzNTU2NjM4MTEsODM3OTI2ODQ3LDE3NzAyODA5NzQs
 LTE2Mzc4Mjk0OTBdfQ==
 -->
