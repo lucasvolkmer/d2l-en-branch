@@ -360,15 +360,22 @@ funcionalidade da classe `Sequential` padrão.
 class MySequential(nn.Block):
     def add(self, block):
         # Here, `block` is an instance of a `Block` subclass, and we assume 
+        #
         # that it has a unique name. We save it in the member variable
+        #
         # `_children` of the `Block` class, and its type is OrderedDict. When
+        #
         # the `MySequential` instance calls the `initialize` function, the
+        #
         # system automatically initializes all members of `_children`
+        #
         self._children[block.name] = block
 
     def forward(self, X):
         # OrderedDict guarantees that members will be traversed in the order
+        #
         # they were added
+        #
         for block in self._children.values():
             X = block(X)
         return X
@@ -381,13 +388,18 @@ class MySequential(nn.Module):
         super().__init__()
         for idx, module in enumerate(args):
             # Here, `module` is an instance of a `Module` subclass. We save it
+            #
             # in the member variable `_modules` of the `Module` class, and its
+            #
             # type is OrderedDict
+            #
             self._modules[str(idx)] = module
 
     def forward(self, X):
         # OrderedDict guarantees that members will be traversed in the order
+        #
         # they were added
+        #
         for block in self._modules.values():
             X = block(X)
         return X
@@ -756,7 +768,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxODI4NzYwMCwxNDA2MjM5OTQ2LC04NT
+eyJoaXN0b3J5IjpbLTQyOTQ2MzA4NCwxNDA2MjM5OTQ2LC04NT
 Y2MTQzMzcsMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMjgwOTc0
 LC0xNjM3ODI5NDkwXX0=
 -->
