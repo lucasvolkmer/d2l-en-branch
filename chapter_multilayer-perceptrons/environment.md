@@ -43,22 +43,22 @@ em muitas aplicações de *machine learning*:
 introduzindo nossas decisões baseadas em modelos para o ambiente,
 podemos quebrar o modelo.
 
-While we cannot possibly give these topics
-a complete treatment in one section,
-we aim here to expose some common concerns,
-and to stimulate the critical thinking
-required to detect these situations early,
-mitigate damage, and use machine learning responsibly.
-Some of the solutions are simple
-(ask for the "right" data),
-some are technically difficult
-(implement a reinforcement learning system),
-and others require that we step outside the realm of
-statistical prediction altogether and
-grapple with difficult philosophical questions
-concerning the ethical application of algorithms.
+Embora não possamos dar a esses tópicos
+um tratamento completo em uma seção,
+pretendemos aqui expor algumas preocupações comuns,
+e estimular o pensamento crítico
+necessário para detectar essas situações precocemente,
+mitigar os danos e usar o *machine learning* com responsabilidade.
+Algumas das soluções são simples
+(peça os dados "corretos"),
+alguns são tecnicamente difíceis
+(implementar um sistema de aprendizagem por reforço),
+e outros exigem que saiamos do reino de
+previsão estatística em conjunto e
+lidemos com difíceis questões filosóficas
+relativas à aplicação ética de algoritmos.
 
-## Types of Distribution Shift
+## Tipos de Turno de Distribuição
 
 To begin, we stick with the passive prediction setting
 considering the various ways that data distributions might shift
@@ -695,5 +695,6 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbMTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNz
+c1ODEyXX0=
 -->
