@@ -367,6 +367,27 @@ which makes them more energy efficient.
 Last, many operations in deep learning require high memory bandwidth.
 Again, GPUs shine here with buses that are at least 10 times as wide as many CPUs.
 
+Em comparação, as GPUs consistem em $ 100 \ sim 1000 $ pequenos elementos de processamento
+(os detalhes diferem um pouco entre NVIDIA, ATI, ARM e outros fornecedores de chips),
+frequentemente agrupados em grupos maiores (a NVIDIA os chama de warps).
+Embora cada núcleo seja relativamente fraco,
+às vezes até rodando em frequência de clock abaixo de 1 GHz,
+é o número total de tais núcleos que torna as GPUs ordens de magnitude mais rápidas do que as CPUs.
+Por exemplo, a recente geração Volta da NVIDIA oferece até 120 TFlops por chip para instruções especializadas
+(e até 24 TFlops para aqueles de uso geral),
+enquanto o desempenho de ponto flutuante de CPUs não excedeu 1 TFlop até o momento.
+A razão pela qual isso é possível é bastante simples:
+primeiro, o consumo de energia tende a crescer * quadraticamente * com a frequência do clock.
+Portanto, para o orçamento de energia de um núcleo da CPU que funciona 4 vezes mais rápido (um número típico),
+você pode usar 16 núcleos de GPU por $ 1/4 $ a velocidade,
+que rende $ 16 \ vezes 1/4 = 4 $ vezes o desempenho.
+Além disso, os núcleos da GPU são muito mais simples
+(na verdade, por muito tempo eles nem mesmo foram * capazes *
+para executar código de uso geral),
+o que os torna mais eficientes em termos de energia.
+Por último, muitas operações de aprendizado profundo exigem alta largura de banda de memória.
+Novamente, as GPUs brilham aqui com barramentos que são pelo menos 10 vezes mais largos que muitas CPUs.
+
 Back to 2012. A major breakthrough came
 when Alex Krizhevsky and Ilya Sutskever
 implemented a deep CNN
@@ -380,6 +401,20 @@ The code [cuda-convnet](https://code.google.com/archive/p/cuda-convnet/)
 was good enough that for several years
 it was the industry standard and powered
 the first couple years of the deep learning boom.
+
+De volta a 2012. Um grande avanço veio
+quando Alex Krizhevsky e Ilya Sutskever
+implementou uma CNN profunda
+que pode ser executado em hardware GPU.
+Eles perceberam que os gargalos computacionais nas CNNs,
+convoluções e multiplicações de matrizes,
+são todas as operações que podem ser paralelizadas no hardware.
+Usando dois NVIDIA GTX 580s com 3 GB de memória,
+eles implementaram convoluções rápidas.
+O código [cuda-convnet] (https://code.google.com/archive/p/cuda-convnet/)
+foi bom o suficiente por vários anos
+era o padrão da indústria e alimentado
+os primeiros anos do boom do aprendizado profundo.
 
 ## AlexNet
 
@@ -395,6 +430,18 @@ Note that we provide a slightly streamlined version of AlexNet
 removing some of the design quirks that were needed in 2012
 to make the model fit on two small GPUs.
 
+AlexNet, que empregava uma CNN de 8 camadas,
+venceu o Desafio de Reconhecimento Visual em Grande Escala ImageNet 2012
+por uma margem fenomenalmente grande.
+Esta rede mostrou, pela primeira vez,
+que os recursos obtidos pelo aprendizado podem transcender recursos projetados manualmente, quebrando o paradigma anterior em visão computacional.
+
+As arquiteturas de AlexNet e LeNet são muito semelhantes,
+como: numref: `fig_alexnet` ilustra.
+Observe que fornecemos uma versão ligeiramente simplificada do AlexNet
+removendo algumas das peculiaridades de design que eram necessárias em 2012
+para fazer o modelo caber em duas pequenas GPUs.
+
 ![From LeNet (left) to AlexNet (right).](../img/alexnet.svg)
 :label:`fig_alexnet`
 
@@ -405,6 +452,14 @@ AlexNet consists of eight layers: five convolutional layers,
 two fully-connected hidden layers, and one fully-connected output layer. Second, AlexNet used the ReLU instead of the sigmoid
 as its activation function.
 Let us delve into the details below.
+
+As filosofias de design de AlexNet e LeNet são muito semelhantes,
+mas também existem diferenças significativas.
+Primeiro, o AlexNet é muito mais profundo do que o comparativamente pequeno LeNet5.
+AlexNet consiste em oito camadas: cinco camadas convolucionais,
+duas camadas ocultas totalmente conectadas e uma camada de saída totalmente conectada. Em segundo lugar, AlexNet usou o ReLU em vez do sigmóide
+como sua função de ativação.
+Vamos nos aprofundar nos detalhes abaixo.
 
 ### Architecture
 
@@ -420,6 +475,18 @@ the network adds maximum pooling layers
 with a window shape of $3\times3$ and a stride of 2.
 Moreover, AlexNet has ten times more convolution channels than LeNet.
 
+Na primeira camada do AlexNet, a forma da janela de convolução é $ 11 \ times11 $.
+Uma vez que a maioria das imagens no ImageNet são mais de dez vezes maiores e mais largas
+do que as imagens MNIST,
+objetos em dados ImageNet tendem a ocupar mais pixels.
+Consequentemente, uma janela de convolução maior é necessária para capturar o objeto.
+A forma da janela de convolução na segunda camada
+é reduzido para $ 5 \ times5 $, seguido por $ 3 \ times3 $.
+Além disso, após a primeira, segunda e quinta camadas convolucionais,
+a rede adiciona camadas de pooling máximas
+com um formato de janela de $ 3 \ times3 $ e uma distância de 2.
+Além disso, o AlexNet tem dez vezes mais canais de convolução do que o LeNet.
+
 After the last convolutional layer there are two fully-connected layers
 with 4096 outputs.
 These two huge fully-connected layers produce model parameters of nearly 1 GB.
@@ -432,10 +499,25 @@ so we rarely need to break up models across GPUs these days
 (our version of the AlexNet model deviates
 from the original paper in this aspect).
 
+Após a última camada convolucional, existem duas camadas totalmente conectadas
+com 4096 saídas.
+Essas duas enormes camadas totalmente conectadas produzem parâmetros de modelo de quase 1 GB.
+Devido à memória limitada nas primeiras GPUs,
+o AlexNet original usava um design de fluxo de dados duplo,
+para que cada uma de suas duas GPUs pudesse ser responsável
+para armazenar e computar apenas sua metade do modelo.
+Felizmente, a memória da GPU é comparativamente abundante agora,
+então raramente precisamos separar os modelos das GPUs hoje em dia
+(nossa versão do modelo AlexNet se desvia
+do artigo original neste aspecto).
+
 ### Activation Functions
 
 Besides, AlexNet changed the sigmoid activation function to a simpler ReLU activation function. On one hand, the computation of the ReLU activation function is simpler. For example, it does not have the exponentiation operation found in the sigmoid activation function.
  On the other hand, the ReLU activation function makes model training easier when using different parameter initialization methods. This is because, when the output of the sigmoid activation function is very close to 0 or 1, the gradient of these regions is almost 0, so that backpropagation cannot continue to update some of the model parameters. In contrast, the gradient of the ReLU activation function in the positive interval is always 1. Therefore, if the model parameters are not properly initialized, the sigmoid function may obtain a gradient of almost 0 in the positive interval, so that the model cannot be effectively trained.
+ 
+Além disso, AlexNet mudou a função de ativação sigmóide para uma função de ativação ReLU mais simples. Por um lado, o cálculo da função de ativação ReLU é mais simples. Por exemplo, ele não tem a operação de exponenciação encontrada na função de ativação sigmóide.
+  Por outro lado, a função de ativação ReLU torna o treinamento do modelo mais fácil ao usar diferentes métodos de inicialização de parâmetro. Isso ocorre porque, quando a saída da função de ativação sigmóide está muito próxima de 0 ou 1, o gradiente dessas regiões é quase 0, de modo que a retropropagação não pode continuar a atualizar alguns dos parâmetros do modelo. Em contraste, o gradiente da função de ativação ReLU no intervalo positivo é sempre 1. Portanto, se os parâmetros do modelo não forem inicializados corretamente, a função sigmóide pode obter um gradiente de quase 0 no intervalo positivo, de modo que o modelo não pode ser efetivamente treinados.
 
 ### Capacity Control and Preprocessing
 
@@ -447,6 +529,15 @@ added a great deal of image augmentation,
 such as flipping, clipping, and color changes.
 This makes the model more robust and the larger sample size effectively reduces overfitting.
 We will discuss data augmentation in greater detail in :numref:`sec_image_augmentation`.
+
+AlexNet controla a complexidade do modelo da camada totalmente conectada
+por dropout (: numref: `sec_dropout`),
+enquanto o LeNet usa apenas redução de peso.
+Para aumentar ainda mais os dados, o loop de treinamento do AlexNet
+adicionou uma grande quantidade de aumento de imagem,
+como inversão, recorte e alterações de cor.
+Isso torna o modelo mais robusto e o tamanho de amostra maior reduz efetivamente o sobreajuste.
+Discutiremos o aumento de dados em maiores detalhes em: numref: `sec_image_augmentation`.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -660,5 +751,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NDU0OTA2Nl19
+eyJoaXN0b3J5IjpbNDEwMjA3NzYyXX0=
 -->
