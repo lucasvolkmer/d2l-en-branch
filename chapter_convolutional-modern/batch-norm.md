@@ -710,3 +710,6 @@ tens of thousands of citations.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbOTc5NjE3MzE4XX0=
+-->
