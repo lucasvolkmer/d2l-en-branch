@@ -326,28 +326,29 @@ acaba funcionando bem na prática.
 
 ### Além
 
-The reasoning above barely scratches the surface
-of modern approaches to parameter initialization.
-A deep learning framework often implements over a dozen different heuristics.
-Moreover, parameter initialization continues to be
-a hot area of fundamental research in deep learning.
-Among these are heuristics specialized for
-tied (shared) parameters, super-resolution,
-sequence models, and other situations.
-For instance,
-Xiao et al. demonstrated the possibility of training
-10000-layer neural networks without architectural tricks
-by using a carefully-designed initialization method :cite:`Xiao.Bahri.Sohl-Dickstein.ea.2018`.
 
-If the topic interests you we suggest
-a deep dive into this module's offerings,
-reading the papers that proposed and analyzed each heuristic,
-and then exploring the latest publications on the topic.
-Perhaps you will stumble across or even invent
-a clever idea and contribute an implementation to deep learning frameworks.
+O raciocínio acima mal arranha a superfície
+de abordagens modernas para inicialização de parâmetros.
+Uma estrutura de *deep learning* geralmente implementa mais de uma dúzia de heurísticas diferentes.
+Além disso, a inicialização do parâmetro continua a ser
+uma área quente de pesquisa fundamental em *deep learning*.
+Entre elas estão heurísticas especializadas para
+parâmetros vinculados (compartilhados), super-resolução,
+modelos de sequência e outras situações.
+Por exemplo,
+Xiao et al. demonstraram a possibilidade de treinar
+Redes neurais de 10.000 camadas sem truques arquitetônicos
+usando um método de inicialização cuidadosamente projetado :cite:`Xiao.Bahri.Sohl-Dickstein.ea.2018`.
+
+Se o assunto interessar a você, sugerimos
+um mergulho profundo nas ofertas deste módulo,
+lendo os artigos que propuseram e analisaram cada heurística,
+e explorando as publicações mais recentes sobre o assunto.
+Talvez você tropece ou até invente
+uma ideia inteligente e contribuir com uma implementação para estruturas de *deep learning*.
 
 
-## Summary
+## Resumo
 
 * Vanishing and exploding gradients are common issues in deep networks. Great care in parameter initialization is required to ensure that gradients and parameters remain well controlled.
 * Initialization heuristics are needed to ensure that the initial gradients are neither too large nor too small.
@@ -375,7 +376,7 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI5MDU1NDcwLC0yMDIxMjgwOTI1LDE0Nj
-Y1NTg0NjksLTE0NjMzNzk3MDIsLTE3NjIwNDgyNzcsMTYyMDMx
-MjM4OF19
+eyJoaXN0b3J5IjpbMzg4NDMwNTEsLTIwMjEyODA5MjUsMTQ2Nj
+U1ODQ2OSwtMTQ2MzM3OTcwMiwtMTc2MjA0ODI3NywxNjIwMzEy
+Mzg4XX0=
 -->
