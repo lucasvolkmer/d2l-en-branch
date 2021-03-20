@@ -225,13 +225,10 @@ class MLP(nn.Block):
     # Declare uma camada com parâmetros de modelo. 
     # Aqui, nós declaramos duas camadas completamente conectadas
     def __init__(self, **kwargs):
-        # Call the constructor of the `MLP` parent class `Block` to perform
         # Chame o construtor da classe pai `MLP` `Block` para realizar
         # as inicializações necessárias. Desta forma, outros argumentos das funções
-        # can also be specified during class instantiation, such as the model
-        #também podem ser especificados durante a instalação da classe, de forma que o modelo
-        # parameters, `params` (to be described later)
-        # os parâmetr
+        # também podem ser especificados durante a instalação da classe,
+        # da mesma forma que os parâmetros do modelo, 'params' (a ser descrito posteriormente)
         super().__init__(**kwargs)
         self.hidden = nn.Dense(256, activation='relu')  # Hidden layer
         self.out = nn.Dense(10)  # Output layer
@@ -759,7 +756,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NzM5MDQ3MSwxNDA2MjM5OTQ2LC04NT
-Y2MTQzMzcsMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMjgwOTc0
-LC0xNjM3ODI5NDkwXX0=
+eyJoaXN0b3J5IjpbOTkyMDAwNzI4LDE0MDYyMzk5NDYsLTg1Nj
+YxNDMzNywzNTU2NjM4MTEsODM3OTI2ODQ3LDE3NzAyODA5NzQs
+LTE2Mzc4Mjk0OTBdfQ==
 -->
