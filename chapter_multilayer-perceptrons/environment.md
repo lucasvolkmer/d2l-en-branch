@@ -97,30 +97,31 @@ melhorando a precisão do classificador original.
 
 ### Mudança Covariável
 
-Among categories of distribution shift,
-covariate shift may be the most widely studied.
-Here, we assume that while the distribution of inputs
-may change over time, the labeling function,
-i.e., the conditional distribution
-$P(y \mid \mathbf{x})$ does not change.
-Statisticians call this *covariate shift*
-because the problem arises due to a
-shift in the distribution of the covariates (features).
-While we can sometimes reason about distribution shift
-without invoking causality, we note that covariate shift
-is the natural assumption to invoke in settings
-where we believe that $\mathbf{x}$ causes $y$.
 
-Consider the challenge of distinguishing cats and dogs.
-Our training data might consist of images of the kind in :numref:`fig_cat-dog-train`.
+Entre as categorias de mudança de distribuição,
+o deslocamento covariável pode ser o mais amplamente estudado.
+Aqui, assumimos que, embora a distribuição de entradas
+pode mudar com o tempo, a função de rotulagem,
+ou seja, a distribuição condicional
+$P(y \mid \mathbf{x})$ não muda.
+Os estatísticos chamam isso de *mudança covariável*
+porque o problema surge devido a um
+mudança na distribuição das covariáveis (*features*).
+Embora às vezes possamos raciocinar sobre a mudança de distribuição
+sem invocar causalidade, notamos que a mudança da covariável
+é a suposição natural para invocar nas configurações
+onde acreditamos que $\mathbf{x}$ causa $y$.
 
-![Training data for distinguishing cats and dogs.](../img/cat-dog-train.svg)
+Considere o desafio de distinguir cães e gatos.
+Nossos dados de treinamento podem consistir em imagens do tipo em :numref:`fig_cat-dog-train`.
+
+![Dados de treinamento para distinguir cães e gatos.](../img/cat-dog-train.svg)
 :label:`fig_cat-dog-train`
 
 
-At test time we are asked to classify the images in :numref:`fig_cat-dog-test`.
+No momento do teste, somos solicitados a classificar as imagens em :numref:`fig_cat-dog-test`.
 
-![Test data for distinguishing cats and dogs.](../img/cat-dog-test.svg)
+![Dados de teste para distinguir cães e gatos.](../img/cat-dog-test.svg)
 :label:`fig_cat-dog-test`
 
 The training set consists of photos,
@@ -696,6 +697,6 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTAxNDc1OCwxODcwNDM1MzE2LDMzNz
+eyJoaXN0b3J5IjpbLTMzODIyMzk2MSwxODcwNDM1MzE2LDMzNz
 U0Nzc0OSw4NDI3NzU4MTJdfQ==
 -->
