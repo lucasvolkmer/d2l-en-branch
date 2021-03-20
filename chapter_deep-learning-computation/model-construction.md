@@ -574,11 +574,9 @@ class FixedHiddenMLP(tf.keras.Model):
 
     def call(self, inputs):
         X = self.flatten(inputs)
-        # Use os parâmetros constantes criados, bem como o `relu` e `matmul`
+        # Use os parâmetros constantes criados, bem como as funções `relu` e `matmul`
         X = tf.nn.relu(tf.matmul(X, self.rand_weight) + 1)
-        # Reuse the fully-connected layer. This is equivalent to sharing
         # Reutilize a camada totalmente conectada. Isso é equivalente a compartilhar
-        # parameters with two fully-connected layers
         # parâmetros com duas camadas totalmente conectadas
         X = self.dense(X)
         # Control flow
@@ -770,7 +768,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjY4OTYyOSwxNDA2MjM5OTQ2LC04NT
-Y2MTQzMzcsMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMjgwOTc0
-LC0xNjM3ODI5NDkwXX0=
+eyJoaXN0b3J5IjpbLTE3MjkyMDczNzIsMTQwNjIzOTk0NiwtOD
+U2NjE0MzM3LDM1NTY2MzgxMSw4Mzc5MjY4NDcsMTc3MDI4MDk3
+NCwtMTYzNzgyOTQ5MF19
 -->
