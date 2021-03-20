@@ -1,4 +1,4 @@
-# Environment and Distribution Shift
+# Environment and Distribution ShiftMudança de Ambiente e Distribuição
 
 In the previous sections, we worked through
 a number of hands-on applications of machine learning,
@@ -693,3 +693,6 @@ that you might encounter in a career in machine learning.
 
 
 [Discussions](https://discuss.d2l.ai/t/105)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE5NDU3MzM5NzZdfQ==
+-->
