@@ -22,7 +22,51 @@ Instead, typical computer vision pipelines
 consisted of manually engineering feature extraction pipelines.
 Rather than *learn the features*, the features were *crafted*.
 Most of the progress came from having more clever ideas for features,
+and the learning algorithm was often relegated to an afterthought.Embora as CNNs fossem bem conhecidas
+nas comunidades de visão computacional e aprendizado de máquina
+após a introdução do LeNet,
+eles não dominaram imediatamente o campo.
+Embora LeNet tenha alcançado bons resultados em pequenos conjuntos de dados iniciais,
+o desempenho e a viabilidade de treinamento de CNNs
+em conjuntos de dados maiores e mais realistas ainda não foram estabelecidos.
+Na verdade, durante grande parte do tempo intermediário entre o início da década de 1990
+e os resultados do divisor de águas de 2012,
+redes neurais muitas vezes eram superadas por outros métodos de aprendizado de máquina,
+como máquinas de vetores de suporte.
+
+
+For computer vision, this comparison is perhaps not fair.
+That is although the inputs to convolutional networks
+consist of raw or lightly-processed (e.g., by centering) pixel values, practitioners would never feed raw pixels into traditional models.
+Instead, typical computer vision pipelines
+consisted of manually engineering feature extraction pipelines.
+Rather than *learn the features*, the features were *crafted*.
+Most of the progress came from having more clever ideas for features,
 and the learning algorithm was often relegated to an afterthought.
+
+Para a visão computacional, essa comparação talvez não seja justa.
+Isso embora as entradas para redes convolucionais
+consistir em valores de pixel brutos ou levemente processados (por exemplo, pela centralização), os profissionais nunca alimentariam pixels brutos em modelos tradicionais.
+Em vez disso, pipelines típicos de visão computacional
+consistia em pipelines de extração de recursos de engenharia manual.
+Em vez de * aprender os recursos *, os recursos foram * criados *.
+A maior parte do progresso veio de ter ideias mais inteligentes para recursos,
+e o algoritmo de aprendizagem foi frequentemente relegado a uma reflexão tardia.
+
+Although some neural network accelerators were available in the 1990s,
+they were not yet sufficiently powerful to make
+deep multichannel, multilayer CNNs
+with a large number of parameters.
+Moreover, datasets were still relatively small.
+Added to these obstacles, key tricks for training neural networks
+including parameter initialization heuristics,
+clever variants of stochastic gradient descent,
+non-squashing activation functions,
+and effective regularization techniques were still missing.
+
+Thus, rather than training *end-to-end* (pixel to classification) systems,
+classical pipelines looked more like this:
+
 
 Although some neural network accelerators were available in the 1990s,
 they were not yet sufficiently powerful to make
@@ -42,6 +86,10 @@ classical pipelines looked more like this:
 2. Preprocess the dataset with hand-crafted features based on some knowledge of optics, geometry, other analytic tools, and occasionally on the serendipitous discoveries of lucky graduate students.
 3. Feed the data through a standard set of feature extractors such as the SIFT (scale-invariant feature transform) :cite:`Lowe.2004`, the SURF (speeded up robust features) :cite:`Bay.Tuytelaars.Van-Gool.2006`, or any number of other hand-tuned pipelines.
 4. Dump the resulting representations into your favorite classifier, likely a linear model or kernel method, to train a classifier.
+1. Obtenha um conjunto de dados interessante. No início, esses conjuntos de dados exigiam sensores caros (na época, as imagens de 1 megapixel eram de última geração).
+2. Pré-processe o conjunto de dados com recursos feitos à mão com base em algum conhecimento de ótica, geometria, outras ferramentas analíticas e, ocasionalmente, nas descobertas fortuitas de alunos de pós-graduação sortudos.
+3. Alimente os dados por meio de um conjunto padrão de extratores de recursos, como o SIFT (transformação de recurso invariante de escala): cite: `Lowe.2004`, o SURF (recursos robustos acelerados): cite:` Bay.Tuytelaars.Van- Gool.2006`, ou qualquer outro duto ajustado manualmente.
+4. Despeje as representações resultantes em seu classificador favorito, provavelmente um modelo linear ou método de kernel, para treinar um classificador.
 
 If you spoke to machine learning researchers,
 they believed that machine learning was both important and beautiful.
@@ -488,3 +536,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/276)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTU0MDczNjYxNV19
+-->
