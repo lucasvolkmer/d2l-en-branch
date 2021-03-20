@@ -281,18 +281,18 @@ $$
 \end{aligned}
 $$
 
-One way to keep the variance fixed
-is to set $n_\mathrm{in} \sigma^2 = 1$.
-Now consider backpropagation.
-There we face a similar problem,
-albeit with gradients being propagated from the layers closer to the output.
-Using the same reasoning as for forward propagation,
-we see that the gradients' variance can blow up
-unless $n_\mathrm{out} \sigma^2 = 1$,
-where $n_\mathrm{out}$ is the number of outputs of this layer.
-This leaves us in a dilemma:
-we cannot possibly satisfy both conditions simultaneously.
-Instead, we simply try to satisfy:
+Uma maneira de manter a variância fixa
+é definir $n_\mathrm{in} \sigma^2 = 1$.
+Agora, considere a retropropagação.
+Lá nós enfrentamos um problema semelhante,
+embora com gradientes sendo propagados das camadas mais próximas da saída.
+Usando o mesmo raciocínio da propagação direta,
+vemos que a variância dos gradientes pode explodir
+a menos que $n_\mathrm{out} \sigma^2 = 1$,
+onde $n_\mathrm{out}$ é o número de saídas desta camada.
+Isso nos deixa em um dilema:
+não podemos satisfazer ambas as condições simultaneamente.
+Em vez disso, simplesmente tentamos satisfazer:
 
 $$
 \begin{aligned}
@@ -375,7 +375,7 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNDA2Mjg2NywtMjAyMTI4MDkyNSwxND
-Y2NTU4NDY5LC0xNDYzMzc5NzAyLC0xNzYyMDQ4Mjc3LDE2MjAz
-MTIzODhdfQ==
+eyJoaXN0b3J5IjpbLTE3ODA1ODg1NjcsLTIwMjEyODA5MjUsMT
+Q2NjU1ODQ2OSwtMTQ2MzM3OTcwMiwtMTc2MjA0ODI3NywxNjIw
+MzEyMzg4XX0=
 -->
