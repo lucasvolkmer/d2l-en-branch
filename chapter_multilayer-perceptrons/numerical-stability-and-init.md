@@ -251,12 +251,12 @@ para tamanhos moderados de problemas.
 ### Inicialização de Xavier
 :label:`subsec_xavier`
 
-Let us look at the scale distribution of
-an output (e.g., a hidden variable) $o_{i}$ for some fully-connected layer
-*without nonlinearities*.
-With $n_\mathrm{in}$ inputs $x_j$
-and their associated weights $w_{ij}$ for this layer,
-an output is given by
+Vejamos a distribuição da escala de
+uma saída (por exemplo, uma variável oculta) $o_{i}$ para alguma camada totalmente conectada
+*sem não linearidades*.
+Com $n_\mathrm{in}$ entradas $x_j$
+e seus pesos associados $w_{ij}$ para esta camada,
+uma saída é dada por
 
 $$o_{i} = \sum_{j=1}^{n_\mathrm{in}} w_{ij} x_j.$$
 
@@ -375,7 +375,7 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2ODk5OTk4MCwtMjAyMTI4MDkyNSwxND
+eyJoaXN0b3J5IjpbMTk0Njk4MTMxNiwtMjAyMTI4MDkyNSwxND
 Y2NTU4NDY5LC0xNDYzMzc5NzAyLC0xNzYyMDQ4Mjc3LDE2MjAz
 MTIzODhdfQ==
 -->
