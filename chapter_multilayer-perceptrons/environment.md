@@ -89,13 +89,13 @@ qualquer mudança na distribuição de entradas $p(\mathbf{x})$,
 então não podemos distinguir essa configuração
 de um em que a distribuição não mudou nada.
 
-Fortunately, under some restricted assumptions
-on the ways our data might change in the future,
-principled algorithms can detect shift
-and sometimes even adapt on the fly,
-improving on the accuracy of the original classifier.
+Felizmente, sob algumas suposições restritas
+sobre como nossos dados podem mudar no futuro,
+algoritmos de princípios podem detectar mudanças
+e às vezes até se adaptam na hora,
+melhorando a precisão do classificador original.
 
-### Covariate Shift
+### Mudança Covariável
 
 Among categories of distribution shift,
 covariate shift may be the most widely studied.
@@ -696,6 +696,6 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMTMzOTc2OCwxODcwNDM1MzE2LDMzNz
+eyJoaXN0b3J5IjpbMTc4MTAxNDc1OCwxODcwNDM1MzE2LDMzNz
 U0Nzc0OSw4NDI3NzU4MTJdfQ==
 -->
