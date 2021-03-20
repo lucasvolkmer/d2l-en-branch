@@ -236,19 +236,19 @@ e a regularização adequada pode aumentar ainda mais a estabilidade.
 
 ### Inicialização Padrão
 
-In the previous sections, e.g., in :numref:`sec_linear_concise`,
-we used a normal distribution
-to initialize the values of our weights.
-If we do not specify the initialization method, the framework will
-use a default random initialization method, which often works well in practice
-for moderate problem sizes.
+Nas seções anteriores, por exemplo, em :numref:`sec_linear_concise`,
+nós usamos uma distribuição normal
+para inicializar os valores de nossos pesos.
+Se não especificarmos o método de inicialização, o *framework* irá
+usar um método de inicialização aleatória padrão, que geralmente funciona bem na prática
+para tamanhos moderados de problemas.
 
 
 
 
 
 
-### Xavier Initialization
+### Inicialização de Xavier
 :label:`subsec_xavier`
 
 Let us look at the scale distribution of
@@ -375,6 +375,7 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjEyODA5MjUsMTQ2NjU1ODQ2OSwtMT
-Q2MzM3OTcwMiwtMTc2MjA0ODI3NywxNjIwMzEyMzg4XX0=
+eyJoaXN0b3J5IjpbMTM2ODk5OTk4MCwtMjAyMTI4MDkyNSwxND
+Y2NTU4NDY5LC0xNDYzMzc5NzAyLC0xNzYyMDQ4Mjc3LDE2MjAz
+MTIzODhdfQ==
 -->
