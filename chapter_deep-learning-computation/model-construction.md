@@ -256,7 +256,7 @@ class MLP(nn.Module):
     # Define the forward propagation of the model, that is, how to return the
     # Defina a propagação direta do modelo, ou seja, como retornar o
     # required model output based on the input `X`
-    
+    # saída do modelo necessária com base na entrada `X`
     def forward(self, X):
         # Note here we use the funtional version of ReLU defined in the
         # nn.functional module.
@@ -758,7 +758,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMwNzc3NzUwLDE0MDYyMzk5NDYsLTg1Nj
-YxNDMzNywzNTU2NjM4MTEsODM3OTI2ODQ3LDE3NzAyODA5NzQs
-LTE2Mzc4Mjk0OTBdfQ==
+eyJoaXN0b3J5IjpbMTQ3OTUzMTM3MiwxNDA2MjM5OTQ2LC04NT
+Y2MTQzMzcsMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMjgwOTc0
+LC0xNjM3ODI5NDkwXX0=
 -->
