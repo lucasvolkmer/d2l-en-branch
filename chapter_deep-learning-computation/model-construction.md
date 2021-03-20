@@ -233,7 +233,6 @@ class MLP(nn.Block):
         self.hidden = nn.Dense(256, activation='relu')  # Hidden layer
         self.out = nn.Dense(10)  # Output layer
 
-    # Define the forward propagation of the model, that is, how to return the
     # Defina a propagação direta do modelo, ou seja, como retornar 
     # a saída do modelo requirido baseado na entrada 'X'
     def forward(self, X):
@@ -243,10 +242,11 @@ class MLP(nn.Block):
 ```{.python .input}
 #@tab pytorch
 class MLP(nn.Module):
-    # Declare a layer with model parameters. Here, we declare two fully
-    # connected layers
+    # Declare uma camada com parâmetros de modelo. Aqui, declaramos duas
+    # camadas totalmente conectadas
     def __init__(self):
         # Call the constructor of the `MLP` parent class `Block` to perform
+        # Chame o construtor da classe pai `MLP`` Block` para realizar
         # the necessary initialization. In this way, other function arguments
         # can also be specified during class instantiation, such as the model
         # parameters, `params` (to be described later)
@@ -757,7 +757,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NzE2OTgzOSwxNDA2MjM5OTQ2LC04NT
-Y2MTQzMzcsMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMjgwOTc0
-LC0xNjM3ODI5NDkwXX0=
+eyJoaXN0b3J5IjpbNTQ3NDc5ODk3LDE0MDYyMzk5NDYsLTg1Nj
+YxNDMzNywzNTU2NjM4MTEsODM3OTI2ODQ3LDE3NzAyODA5NzQs
+LTE2Mzc4Mjk0OTBdfQ==
 -->
