@@ -350,18 +350,18 @@ uma ideia inteligente e contribuir com uma implementação para estruturas de *d
 
 ## Resumo
 
-* Vanishing and exploding gradients are common issues in deep networks. Great care in parameter initialization is required to ensure that gradients and parameters remain well controlled.
-* Initialization heuristics are needed to ensure that the initial gradients are neither too large nor too small.
-* ReLU activation functions mitigate the vanishing gradient problem. This can accelerate convergence.
-* Random initialization is key to ensure that symmetry is broken before optimization.
-* Xavier initialization suggests that, for each layer, variance of any output is not affected by the number of inputs, and variance of any gradient is not affected by the number of outputs.
+* Desaparecimento e explosão de gradientes são problemas comuns em redes profundas. É necessário muito cuidado na inicialização dos parâmetros para garantir que gradientes e parâmetros permaneçam bem controlados.
+* As heurísticas de inicialização são necessárias para garantir que os gradientes iniciais não sejam nem muito grandes nem muito pequenos.
+* As funções de ativação ReLU atenuam o problema do desaparecimento de gradiente. Isso pode acelerar a convergência.
+* A inicialização aleatória é a chave para garantir que a simetria seja quebrada antes da otimização.
+* A inicialização de Xavier sugere que, para cada camada, a variação de qualquer saída não é afetada pelo número de entradas e a variação de qualquer gradiente não é afetada pelo número de saídas.
 
-## Exercises
+## Exercícios
 
-1. Can you design other cases where a neural network might exhibit symmetry requiring breaking besides the permutation symmetry in an MLP's layers?
-1. Can we initialize all weight parameters in linear regression or in softmax regression to the same value?
-1. Look up analytic bounds on the eigenvalues of the product of two matrices. What does this tell you about ensuring that gradients are well conditioned?
-1. If we know that some terms diverge, can we fix this after the fact? Look at the paper on layer-wise adaptive rate scaling  for inspiration :cite:`You.Gitman.Ginsburg.2017`.
+1. Você pode projetar outros casos em que uma rede neural pode exibir simetria exigindo quebra, além da simetria de permutação nas camadas de um MLP?
+1. Podemos inicializar todos os parâmetros de peso na regressão linear ou na regressão *softmax* para o mesmo valor?
+1. Procure limites analíticos nos autovalores do produto de duas matrizes. O que isso diz a você sobre como garantir que os gradientes sejam bem condicionados?
+1. Se sabemos que alguns termos divergem, podemos consertar isso após o fato? Veja o artigo sobre escalonamento de taxa adaptável em camadas para se inspirar :cite:`You.Gitman.Ginsburg.2017`.
 
 
 :begin_tab:`mxnet`
@@ -376,7 +376,7 @@ uma ideia inteligente e contribuir com uma implementação para estruturas de *d
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg4NDMwNTEsLTIwMjEyODA5MjUsMTQ2Nj
-U1ODQ2OSwtMTQ2MzM3OTcwMiwtMTc2MjA0ODI3NywxNjIwMzEy
-Mzg4XX0=
+eyJoaXN0b3J5IjpbMTY3NjMxMjA4OCwzODg0MzA1MSwtMjAyMT
+I4MDkyNSwxNDY2NTU4NDY5LC0xNDYzMzc5NzAyLC0xNzYyMDQ4
+Mjc3LDE2MjAzMTIzODhdfQ==
 -->
