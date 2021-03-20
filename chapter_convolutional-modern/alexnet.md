@@ -86,10 +86,11 @@ classical pipelines looked more like this:
 2. Preprocess the dataset with hand-crafted features based on some knowledge of optics, geometry, other analytic tools, and occasionally on the serendipitous discoveries of lucky graduate students.
 3. Feed the data through a standard set of feature extractors such as the SIFT (scale-invariant feature transform) :cite:`Lowe.2004`, the SURF (speeded up robust features) :cite:`Bay.Tuytelaars.Van-Gool.2006`, or any number of other hand-tuned pipelines.
 4. Dump the resulting representations into your favorite classifier, likely a linear model or kernel method, to train a classifier.
-1. Obtenha um conjunto de dados interessante. No início, esses conjuntos de dados exigiam sensores caros (na época, as imagens de 1 megapixel eram de última geração).
-2. Pré-processe o conjunto de dados com recursos feitos à mão com base em algum conhecimento de ótica, geometria, outras ferramentas analíticas e, ocasionalmente, nas descobertas fortuitas de alunos de pós-graduação sortudos.
-3. Alimente os dados por meio de um conjunto padrão de extratores de recursos, como o SIFT (transformação de recurso invariante de escala): cite: `Lowe.2004`, o SURF (recursos robustos acelerados): cite:` Bay.Tuytelaars.Van- Gool.2006`, ou qualquer outro duto ajustado manualmente.
-4. Despeje as representações resultantes em seu classificador favorito, provavelmente um modelo linear ou método de kernel, para treinar um classificador.
+
+6. Obtenha um conjunto de dados interessante. No início, esses conjuntos de dados exigiam sensores caros (na época, as imagens de 1 megapixel eram de última geração).
+7. Pré-processe o conjunto de dados com recursos feitos à mão com base em algum conhecimento de ótica, geometria, outras ferramentas analíticas e, ocasionalmente, nas descobertas fortuitas de alunos de pós-graduação sortudos.
+8. Alimente os dados por meio de um conjunto padrão de extratores de recursos, como o SIFT (transformação de recurso invariante de escala): cite: `Lowe.2004`, o SURF (recursos robustos acelerados): cite:` Bay.Tuytelaars.Van- Gool.2006`, ou qualquer outro duto ajustado manualmente.
+9. Despeje as representações resultantes em seu classificador favorito, provavelmente um modelo linear ou método de kernel, para treinar um classificador.
 
 If you spoke to machine learning researchers,
 they believed that machine learning was both important and beautiful.
@@ -103,6 +104,18 @@ that a slightly bigger or cleaner dataset
 or a slightly improved feature-extraction pipeline
 mattered far more to the final accuracy than any learning algorithm.
 
+Se você conversou com pesquisadores de aprendizado de máquina,
+eles acreditavam que o aprendizado de máquina era importante e bonito.
+Teorias elegantes provaram as propriedades de vários classificadores.
+O campo do aprendizado de máquina era próspero, rigoroso e eminentemente útil. No entanto, se você falou com um pesquisador de visão computacional,
+você ouviria uma história muito diferente.
+A verdade suja do reconhecimento de imagem, eles diriam a você,
+é que os recursos, e não os algoritmos de aprendizagem, impulsionaram o progresso.
+Pesquisadores de visão computacional acreditavam com razão
+que um conjunto de dados ligeiramente maior ou mais limpo
+ou um pipeline de extração de recursos ligeiramente melhorado
+importava muito mais para a precisão final do que qualquer algoritmo de aprendizado.
+
 ## Learning Representations
 
 Another way to cast the state of affairs is that
@@ -114,6 +127,16 @@ SURF :cite:`Bay.Tuytelaars.Van-Gool.2006`,
 HOG (histograms of oriented gradient) :cite:`Dalal.Triggs.2005`,
 [bags of visual words](https://en.wikipedia.org/wiki/Bag-of-words_model_in_computer_vision)
 and similar feature extractors ruled the roost.
+
+Outra forma de definir o estado de coisas é que
+a parte mais importante do pipeline foi a representação.
+E até 2012 a representação era calculada mecanicamente.
+Na verdade, desenvolver um novo conjunto de funções de recursos, melhorar os resultados e escrever o método era um gênero de papel proeminente.
+SIFT: cite: `Lowe.2004`,
+SURF: cite: `Bay.Tuytelaars.Van-Gool.2006`,
+HOG (histogramas de gradiente orientado): cite: `Dalal.Triggs.2005`,
+[pacotes de palavras visuais] (https://en.wikipedia.org/wiki/Bag-of-words_model_in_computer_vision)
+e extratores de recursos semelhantes governaram o poleiro.
 
 Another group of researchers,
 including Yann LeCun, Geoff Hinton, Yoshua Bengio,
@@ -133,10 +156,33 @@ that achieved excellent performance in the 2012 ImageNet challenge.
 AlexNet was named after Alex Krizhevsky,
 the first author of the breakthrough ImageNet classification paper :cite:`Krizhevsky.Sutskever.Hinton.2012`.
 
+Outro grupo de pesquisadores,
+incluindo Yann LeCun, Geoff Hinton, Yoshua Bengio,
+Andrew Ng, Shun-ichi Amari e Juergen Schmidhuber,
+tinha planos diferentes.
+Eles acreditavam que as próprias características deveriam ser aprendidas.
+Além disso, eles acreditavam que era razoavelmente complexo,
+os recursos devem ser compostos hierarquicamente
+com várias camadas aprendidas em conjunto, cada uma com parâmetros aprendíveis.
+No caso de uma imagem, as camadas mais baixas podem vir
+para detectar bordas, cores e texturas.
+De fato,
+Alex Krizhevsky, Ilya Sutskever e Geoff Hinton
+propôs uma nova variante de uma CNN,
+* AlexNet *,
+que obteve excelente desempenho no desafio ImageNet de 2012.
+AlexNet foi nomeado após Alex Krizhevsky,
+o primeiro autor do inovador artigo de classificação ImageNet: cite: `Krizhevsky.Sutskever.Hinton.2012`.
+
 Interestingly in the lowest layers of the network,
 the model learned feature extractors that resembled some traditional filters.
 :numref:`fig_filters` is reproduced from the AlexNet paper :cite:`Krizhevsky.Sutskever.Hinton.2012`
 and describes lower-level image descriptors.
+
+Curiosamente, nas camadas mais baixas da rede,
+o modelo aprendeu extratores de recursos que se assemelhavam a alguns filtros tradicionais.
+: numref: `fig_filters` é reproduzido do artigo AlexNet: cite:` Krizhevsky.Sutskever.Hinton.2012`
+e descreve descritores de imagem de nível inferior.
 
 ![Image filters learned by the first layer of AlexNet.](../img/filters.png)
 :width:`400px`
@@ -537,5 +583,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MDczNjYxNV19
+eyJoaXN0b3J5IjpbLTE3MDgwNjgwODVdfQ==
 -->
