@@ -276,9 +276,7 @@ class MLP(tf.keras.Model):
         self.hidden = tf.keras.layers.Dense(units=256, activation=tf.nn.relu)
         self.out = tf.keras.layers.Dense(units=10)  # Output layer
 
-    # Define the forward propagation of the model, that is, how to return the
-    # Defina a propagação direta do modelo, ou seja, como retornar o
-    # required model output based on the input `X`
+    # Defina a propagação direta do modelo, ou seja, como retornar a
     # saída do modelo necessária com base na entrada `X`
     def call(self, X):
         return self.out(self.hidden((X)))
@@ -758,7 +756,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODI5NTA0NDksMTQwNjIzOTk0NiwtOD
-U2NjE0MzM3LDM1NTY2MzgxMSw4Mzc5MjY4NDcsMTc3MDI4MDk3
-NCwtMTYzNzgyOTQ5MF19
+eyJoaXN0b3J5IjpbMTgxODI4NzYwMCwxNDA2MjM5OTQ2LC04NT
+Y2MTQzMzcsMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMjgwOTc0
+LC0xNjM3ODI5NDkwXX0=
 -->
