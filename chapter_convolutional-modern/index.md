@@ -69,7 +69,7 @@ para que você possa formar suas próprias intuições
 sobre para onde o campo está indo
 e talvez desenvolva suas próprias arquiteturas.
 Por exemplo,
-a normalização em lote e as conexões residuais descritas neste capítulo ofereceram duas idéias populares para treinar e projetar modelos profundos.
+a normalização em lote e as conexões residuais descritas neste capítulo ofereceram duas ideias populares para treinar e projetar modelos profundos.
 
 ```toc
 :maxdepth: 2
@@ -84,5 +84,5 @@ densenet
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzMyOTQ4NTFdfQ==
+eyJoaXN0b3J5IjpbLTEwOTA3NDQ3MTFdfQ==
 -->
