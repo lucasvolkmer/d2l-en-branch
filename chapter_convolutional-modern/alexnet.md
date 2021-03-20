@@ -774,16 +774,16 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 10. Aplique dropout e ReLU ao LeNet-5. Isso melhora? Que tal pré-processamento?
  
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/75)
+[Discussão](https://discuss.d2l.ai/t/75)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/76)
+[Discussão](https://discuss.d2l.ai/t/76)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/276)
+[Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTA1Mjk2NzJdfQ==
+eyJoaXN0b3J5IjpbLTE3MDQyMDg5NjldfQ==
 -->
