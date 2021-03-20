@@ -1,46 +1,47 @@
 # Mudança de Ambiente e Distribuição
 
-In the previous sections, we worked through
-a number of hands-on applications of machine learning,
-fitting models to a variety of datasets.
-And yet, we never stopped to contemplate
-either where data come from in the first place
-or what we plan to ultimately do
-with the outputs from our models.
-Too often, machine learning developers
-in possession of data rush to develop models
-without pausing to consider these fundamental issues.
 
-Many failed machine learning deployments
-can be traced back to this pattern.
-Sometimes models appear to perform marvelously
-as measured by test set accuracy
-but fail catastrophically in deployment
-when the distribution of data suddenly shifts.
-More insidiously, sometimes the very deployment of a model
-can be the catalyst that perturbs the data distribution.
-Say, for example, that we trained a model
-to predict who will repay vs. default on a loan,
-finding that an applicant's choice of footwear
-was associated with the risk of default
-(Oxfords indicate repayment, sneakers indicate default).
-We might be inclined to thereafter grant loans
-to all applicants wearing Oxfords
-and to deny all applicants wearing sneakers.
+Nas seções anteriores, trabalhamos
+uma série de aplicações práticas de *machine learning*,
+ajustando modelos a uma variedade de conjuntos de dados.
+E, no entanto, nunca paramos para contemplar
+de onde vêm os dados em primeiro lugar
+ou o que planejamos fazer
+com as saídas de nossos modelos.
+Muitas vezes, desenvolvedores de *machine learning*
+na posse de pressa de dados para desenvolver modelos,
+não param para considerar essas questões fundamentais.
 
-In this case, our ill-considered leap from
-pattern recognition to decision-making
-and our failure to critically consider the environment
-might have disastrous consequences.
-For starters, as soon as we began
-making decisions based on footwear,
-customers would catch on and change their behavior.
-Before long, all applicants would be wearing Oxfords,
-without any coinciding improvement in credit-worthiness.
-Take a minute to digest this because similar issues abound
-in many applications of machine learning:
-by introducing our model-based decisions to the environment,
-we might break the model.
+Muitas implantações de *machine learning* com falha
+podem ser rastreadas até este padrão.
+Às vezes, os modelos parecem ter um desempenho maravilhoso
+conforme medido pela precisão do conjunto de teste
+mas falham catastroficamente na implantação
+quando a distribuição de dados muda repentinamente.
+Mais insidiosamente, às vezes a própria implantação de um modelo
+pode ser o catalisador que perturba a distribuição de dados.
+Digamos, por exemplo, que treinamos um modelo
+para prever quem vai pagar em comparação com o inadimplemento de um empréstimo,
+descobrindo que a escolha de calçado de um candidato
+foi associado ao risco de inadimplência
+(Oxfords indicam reembolso, tênis indicam inadimplência).
+Podemos estar inclinados a, a partir daí, conceder empréstimos
+a todos os candidatos vestindo Oxfords
+e negar a todos os candidatos o uso de tênis.
+
+Neste caso, nosso salto imprudente de
+reconhecimento de padrões para a tomada de decisão
+e nossa falha em considerar criticamente o ambiente
+pode ter consequências desastrosas.
+Para começar, assim que começamos
+tomar decisões com base em calçados,
+os clientes perceberiam e mudariam seu comportamento.
+Em pouco tempo, todos os candidatos estariam usando Oxfords,
+sem qualquer melhoria coincidente na capacidade de crédito.
+Dedique um minuto para digerir isso, porque há muitos problemas semelhantes
+em muitas aplicações de *machine learning*:
+introduzindo nossas decisões baseadas em modelos para o ambiente,
+podemos quebrar o modelo.
 
 While we cannot possibly give these topics
 a complete treatment in one section,
@@ -694,5 +695,5 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQyNzc1ODEyXX0=
+eyJoaXN0b3J5IjpbMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
 -->
