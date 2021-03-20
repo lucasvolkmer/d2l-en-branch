@@ -60,33 +60,34 @@ relativas à aplicação ética de algoritmos.
 
 ## Tipos de Turno de Distribuição
 
-To begin, we stick with the passive prediction setting
-considering the various ways that data distributions might shift
-and what might be done to salvage model performance.
-In one classic setup, we assume that our training data
-were sampled from some distribution $p_S(\mathbf{x},y)$
-but that our test data will consist
-of unlabeled examples drawn from
-some different distribution $p_T(\mathbf{x},y)$.
-Already, we must confront a sobering reality.
-Absent any assumptions on how $p_S$
-and $p_T$ relate to each other,
-learning a robust classifier is impossible.
 
-Consider a binary classification problem,
-where we wish to distinguish between dogs and cats.
-If the distribution can shift in arbitrary ways,
-then our setup permits the pathological case
-in which the distribution over inputs remains
-constant: $p_S(\mathbf{x}) = p_T(\mathbf{x})$,
-but the labels are all flipped:
+Para começar, ficamos com a configuração de predição passiva
+considerando as várias maneiras que as distribuições de dados podem mudar
+e o que pode ser feito para salvar o desempenho do modelo.
+Em uma configuração clássica, assumimos que nossos dados de treinamento
+foram amostrados de alguma distribuição $p_S(\mathbf{x},y)$
+mas que nossos dados de teste consistirão
+de exemplos não rotulados retirados de
+alguma distribuição diferente $p_T(\mathbf{x},y)$.
+Já, devemos enfrentar uma realidade preocupante.
+Ausentes quaisquer suposições sobre como $p_S$
+e $p_T$ se relacionam entre si,
+aprender um classificador robusto é impossível.
+
+Considere um problema de classificação binária,
+onde desejamos distinguir entre cães e gatos.
+Se a distribuição pode mudar de forma arbitrária,
+então nossa configuração permite o caso patológico
+em que a distribuição sobre os insumos permanece
+constante: $p_S(\mathbf{x}) = p_T(\mathbf{x})$,
+mas os *labels* estão todos invertidos:
 $p_S(y | \mathbf{x}) = 1 - p_T(y | \mathbf{x})$.
-In other words, if God can suddenly decide
-that in the future all "cats" are now dogs
-and what we previously called "dogs" are now cats---without
-any change in the distribution of inputs $p(\mathbf{x})$,
-then we cannot possibly distinguish this setting
-from one in which the distribution did not change at all.
+Em outras palavras, se Deus pode decidir de repente
+que no futuro todos os "gatos" agora são cachorros
+e o que anteriormente chamamos de "cães" agora são gatos --- sem
+qualquer mudança na distribuição de entradas $p(\mathbf{x})$,
+então não podemos distinguir essa configuração
+de um em que a distribuição não mudou nada.
 
 Fortunately, under some restricted assumptions
 on the ways our data might change in the future,
@@ -695,6 +696,6 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNz
-c1ODEyXX0=
+eyJoaXN0b3J5IjpbLTYyMTMzOTc2OCwxODcwNDM1MzE2LDMzNz
+U0Nzc0OSw4NDI3NzU4MTJdfQ==
 -->
