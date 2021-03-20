@@ -226,15 +226,15 @@ Observe que, embora o gradiente descendente estocástico de *minibatch* não que
 regularização do *dropout* iria!
 
 
-## Parameter Initialization
+## Inicialização de Parâmetros
 
-One way of addressing---or at least mitigating---the
-issues raised above is through careful initialization.
-Additional care during optimization
-and suitable regularization can further enhance stability.
+Uma forma de abordar --- ou pelo menos mitigar --- os
+problemas levantados acima é através de inicialização cuidadosa.
+Cuidado adicional durante a otimização
+e a regularização adequada pode aumentar ainda mais a estabilidade.
 
 
-### Default Initialization
+### Inicialização Padrão
 
 In the previous sections, e.g., in :numref:`sec_linear_concise`,
 we used a normal distribution
@@ -375,6 +375,6 @@ a clever idea and contribute an implementation to deep learning frameworks.
 [Discussions](https://discuss.d2l.ai/t/235)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NjU1ODQ2OSwtMTQ2MzM3OTcwMiwtMT
-c2MjA0ODI3NywxNjIwMzEyMzg4XX0=
+eyJoaXN0b3J5IjpbLTIwMjEyODA5MjUsMTQ2NjU1ODQ2OSwtMT
+Q2MzM3OTcwMiwtMTc2MjA0ODI3NywxNjIwMzEyMzg4XX0=
 -->
