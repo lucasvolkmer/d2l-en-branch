@@ -256,22 +256,25 @@ class MLP(nn.Module):
     # Defina a propagação direta do modelo, ou seja, como retornar a
     # saída do modelo necessária com base na entrada `X`
     def forward(self, X):
-        # Note here we use the funtional version of ReLU defined in the
-        #
-        # nn.functional module.
+        # Observe aqui que usamos a versão funcional do ReLU definida no
+        # módulo nn.functional.
         return self.out(F.relu(self.hidden(X)))
 ```
 
 ```{.python .input}
 #@tab tensorflow
 class MLP(tf.keras.Model):
-    # Declare a layer with model parameters. Here, we declare two fully
-    # connected layers
+    # Declare uma camada com parâmetros de modelo. Aqui, declaramos duas
+    # camadas totalmente conectadas
     def __init__(self):
         # Call the constructor of the `MLP` parent class `Block` to perform
+        #
         # the necessary initialization. In this way, other function arguments
+        #
         # can also be specified during class instantiation, such as the model
+        #
         # parameters, `params` (to be described later)
+        #
         super().__init__()
         # Hidden layer
         self.hidden = tf.keras.layers.Dense(units=256, activation=tf.nn.relu)
@@ -757,7 +760,7 @@ A melhor maneira de acelerar o Python é evitá-lo completamente.
 [Discussions](https://discuss.d2l.ai/t/264)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTEyMTE4NTYsMTQwNjIzOTk0NiwtODU2Nj
-E0MzM3LDM1NTY2MzgxMSw4Mzc5MjY4NDcsMTc3MDI4MDk3NCwt
-MTYzNzgyOTQ5MF19
+eyJoaXN0b3J5IjpbMTQzNTE0NzE1NSwxNDA2MjM5OTQ2LC04NT
+Y2MTQzMzcsMzU1NjYzODExLDgzNzkyNjg0NywxNzcwMjgwOTc0
+LC0xNjM3ODI5NDkwXX0=
 -->
