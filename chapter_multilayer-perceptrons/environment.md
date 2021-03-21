@@ -623,14 +623,14 @@ e melhorar a diversidade do texto gerado e a qualidade da reconstrução das ima
 
 No caso mais geral de um ambiente com memória, podemos encontrar situações em que o ambiente está tentando cooperar conosco (jogos cooperativos, em particular para jogos de soma não zero), ou outras em que o ambiente tentará vencer. Xadrez, Go, Backgammon ou StarCraft são alguns dos casos de *aprendizagem por reforço*. Da mesma forma, podemos querer construir um bom controlador para carros autônomos. Os outros carros tendem a responder ao estilo de direção do carro autônomo de maneiras não triviais, por exemplo, tentando evitá-lo, tentando causar um acidente e tentando cooperar com ele.
 
-### Considering the Environment
+### Considerando o Ambiente
 
-One key distinction between the different situations above is that the same strategy that might have worked throughout in the case of a stationary environment, might not work throughout when the environment can adapt. For instance, an arbitrage opportunity discovered by a trader is likely to disappear once he starts exploiting it. The speed and manner at which the environment changes determines to a large extent the type of algorithms that we can bring to bear. For instance, if we know that things may only change slowly, we can force any estimate to change only slowly, too. If we know that the environment might change instantaneously, but only very infrequently, we can make allowances for that. These types of knowledge are crucial for the aspiring data scientist to deal with concept shift, i.e., when the problem that he is trying to solve changes over time.
-
-
+Uma distinção importante entre as diferentes situações acima é que a mesma estratégia que pode ter funcionado no caso de um ambiente estacionário pode não funcionar quando o ambiente pode se adaptar. Por exemplo, uma oportunidade de arbitragem descoberta por um comerciante provavelmente desaparecerá assim que ele começar a explorá-la. A velocidade e a maneira como o ambiente muda determinam em grande parte o tipo de algoritmos que podemos utilizar. Por exemplo, se sabemos que as coisas só podem mudar lentamente, podemos forçar qualquer estimativa a mudar apenas lentamente também. Se soubermos que o ambiente pode mudar instantaneamente, mas muito raramente, podemos fazer concessões a isso. Esses tipos de conhecimento são cruciais para o aspirante a cientista de dados lidar com a mudança de conceito, ou seja, quando o problema que ele está tentando resolver muda ao longo do tempo.
 
 
-## Fairness, Accountability, and Transparency in Machine Learning
+
+
+## Justiça, Responsabilidade e Transparência no *Machine Learning*
 
 Finally, it is important to remember
 that when you deploy machine learning systems
@@ -705,9 +705,9 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTc5NTQ0NjEsMTQwODE5MjczNywzND
-Y2MzI0MjksMzM1MzM0MTAzLC0xNTA0NTYxMjY4LDIwOTAxNTk2
-OCwtNjA5NjEzODk5LDE5NzUxNjIyMzgsMjA2Mjk5MTk4LC0yND
-I3NDA5NCwxODcwNDM1MzE2LDMzNzU0Nzc0OSw4NDI3NzU4MTJd
-fQ==
+eyJoaXN0b3J5IjpbMTc4NTIxMDkxLDE0MDgxOTI3MzcsMzQ2Nj
+MyNDI5LDMzNTMzNDEwMywtMTUwNDU2MTI2OCwyMDkwMTU5Njgs
+LTYwOTYxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNz
+QwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
+
 -->
