@@ -161,21 +161,21 @@ que tendem a ser altamente dimensionais no *deep learning*.
 
 ### Mudança de Conceito
 
-We may also encounter the related problem of *concept shift*,
-which arises when the very definitions of labels can change.
-This sounds weird---a *cat* is a *cat*, no?
-However, other categories are subject to changes in usage over time.
-Diagnostic criteria for mental illness,
-what passes for fashionable, and job titles,
-are all subject to considerable
-amounts of concept shift.
-It turns out that if we navigate around the United States,
-shifting the source of our data by geography,
-we will find considerable concept shift regarding
-the distribution of names for *soft drinks*
-as shown in :numref:`fig_popvssoda`.
+Também podemos encontrar o problema relacionado de *mudança de conceito*,
+que surge quando as próprias definições de rótulos podem mudar.
+Isso soa estranho --- um *gato* é um *gato*, não?
+No entanto, outras categorias estão sujeitas a mudanças no uso ao longo do tempo.
+Critérios de diagnóstico para doença mental,
+o que passa por moda e cargos,
+estão todos sujeitos a consideráveis
+quantidades de mudança de conceito.
+Acontece que se navegarmos pelos Estados Unidos,
+mudando a fonte de nossos dados por geografia,
+encontraremos uma mudança considerável de conceito em relação
+a distribuição de nomes para *refrigerantes*
+como mostrado em :numref:`fig_popvssoda`.
 
-![Concept shift on soft drink names in the United States.](../img/popvssoda.png)
+![Mudança de conceito em nomes de refrigerantes nos Estados Unidos.](../img/popvssoda.png)
 :width:`400px`
 :label:`fig_popvssoda`
 
@@ -697,6 +697,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2Mjk5MTk4LC0yNDI3NDA5NCwxODcwND
-M1MzE2LDMzNzU0Nzc0OSw4NDI3NzU4MTJdfQ==
+eyJoaXN0b3J5IjpbLTIwMjE1MTY5NzMsMjA2Mjk5MTk4LC0yND
+I3NDA5NCwxODcwNDM1MzE2LDMzNzU0Nzc0OSw4NDI3NzU4MTJd
+fQ==
 -->
