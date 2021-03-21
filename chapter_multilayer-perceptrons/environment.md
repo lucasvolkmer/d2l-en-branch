@@ -295,30 +295,30 @@ Abaixo estão alguns casos típicos.
 
 ## Correção de Mudança de Distribuição
 
-As we have discussed, there are many cases
-where training and test distributions
-$P(\mathbf{x}, y)$ are different.
-In some cases, we get lucky and the models work
-despite covariate, label, or concept shift.
-In other cases, we can do better by employing
-principled strategies to cope with the shift.
-The remainder of this section grows considerably more technical.
-The impatient reader could continue on to the next section
-as this material is not prerequisite to subsequent concepts.
+Como já discutimos, existem muitos casos
+onde distribuições de treinamento e teste
+$P(\mathbf{x}, y)$ são diferentes.
+Em alguns casos, temos sorte e os modelos funcionam
+apesar da covariável, rótulo ou mudança de conceito.
+Em outros casos, podemos fazer melhor empregando
+estratégias baseadas em princípios para lidar com a mudança.
+O restante desta seção torna-se consideravelmente mais técnico.
+O leitor impaciente pode continuar na próxima seção
+já que este material não é pré-requisito para conceitos subsequentes.
 
-### Empirical Risk and  Risk
+### Risco Empírico e Risco
 :label:`subsec_empirical-risk-and-risk`
 
-Let us first reflect about what exactly
-is happening during model training:
-we iterate over features and associated labels
-of training data
+Vamos primeiro refletir sobre o que exatamente
+está acontecendo durante o treinamento do modelo:
+nós iteramos sobre recursos e rótulos associados
+de dados de treinamento
 $\{(\mathbf{x}_1, y_1), \ldots, (\mathbf{x}_n, y_n)\}$
-and update the parameters of a model $f$ after every minibatch.
-For simplicity we do not consider regularization,
-so we largely minimize the loss on the training:
+e atualizamos os parâmetros de um modelo $f$ após cada *minibatch*.
+Para simplificar, não consideramos regularização,
+portanto, minimizamos amplamente a perda no treinamento:
 
-$$\mathop{\mathrm{minimize}}_f \frac{1}{n} \sum_{i=1}^n l(f(\mathbf{x}_i), y_i),$$
+$$\mathop{\mathrm{minimizar}}_f \frac{1}{n} \sum_{i=1}^n l(f(\mathbf{x}_i), y_i),$$
 :eqlabel:`eq_empirical-risk-min`
 
 where $l$ is the loss function
@@ -699,7 +699,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1ODEyMzMzMiwxOTc1MTYyMjM4LDIwNj
-I5OTE5OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDks
-ODQyNzc1ODEyXX0=
+eyJoaXN0b3J5IjpbLTE2MTQxMjQ1NjcsMTk3NTE2MjIzOCwyMD
+YyOTkxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5
+LDg0Mjc3NTgxMl19
 -->
