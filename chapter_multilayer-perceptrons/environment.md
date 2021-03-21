@@ -131,7 +131,7 @@ características do conjunto de teste
 pode significar problemas na ausência de um plano coerente
 para saber como se adaptar ao novo domínio.
 
-### Label Shift
+### Mudança de *Label*
 
 *Label shift* describes the converse problem.
 Here, we assume that the label marginal $P(y)$
@@ -697,6 +697,6 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NT
-Q3NzQ5LDg0Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbLTExNDkwMzgxNDQsLTI0Mjc0MDk0LDE4Nz
+A0MzUzMTYsMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
 -->
