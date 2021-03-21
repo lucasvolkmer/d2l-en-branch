@@ -282,18 +282,18 @@ Abaixo estão alguns casos típicos.
 * Construímos um filtro de spam. Ele funciona bem na detecção de todos os spams que vimos até agora. Mas então os spammers se tornaram mais inteligentes e criaram novas mensagens que se parecem com tudo o que vimos antes.
 * Construímos um sistema de recomendação de produtos. Ele funciona durante todo o inverno, mas continua a recomendar chapéus de Papai Noel muito depois do Natal.
 
-### More Anecdotes
+### Mais Anedotas
 
-* We build a face detector. It works well on all benchmarks. Unfortunately it fails on test data---the offending examples are close-ups where the face fills the entire image (no such data were in the training set).
-* We build a Web search engine for the US market and want to deploy it in the UK.
-* We train an image classifier by compiling a large dataset where each among a large set of classes is equally represented in the dataset, say 1000 categories, represented by 1000 images each. Then we deploy the system in the real world, where the actual label distribution of photographs is decidedly non-uniform.
-
-
+* Construímos um detector de rosto. Funciona bem em todos os *benchmarks*. Infelizmente, ele falha nos dados de teste --- os exemplos ofensivos são closes em que o rosto preenche a imagem inteira (nenhum dado desse tipo estava no conjunto de treinamento).
+* Construímos um mecanismo de busca na Web para o mercado dos EUA e queremos implantá-lo no Reino Unido.
+* Treinamos um classificador de imagens compilando um grande conjunto de dados onde cada um entre um grande conjunto de classes é igualmente representado no conjunto de dados, digamos 1000 categorias, representadas por 1000 imagens cada. Em seguida, implantamos o sistema no mundo real, onde a distribuição real do rótulo das fotos é decididamente não uniforme.
 
 
 
 
-## Correction of Distribution Shift
+
+
+## Correção de Mudança de Distribuição
 
 As we have discussed, there are many cases
 where training and test distributions
@@ -699,7 +699,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjgwODAxNDgsMTk3NTE2MjIzOCwyMD
-YyOTkxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5
-LDg0Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbMTY1ODEyMzMzMiwxOTc1MTYyMjM4LDIwNj
+I5OTE5OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDks
+ODQyNzc1ODEyXX0=
 -->
