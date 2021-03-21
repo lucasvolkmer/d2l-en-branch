@@ -431,21 +431,22 @@ $$
 \beta_i = \frac{1/(1 + \exp(-h(\mathbf{x}_i)))}{\exp(-h(\mathbf{x}_i))/(1 + \exp(-h(\mathbf{x}_i)))} = \exp(h(\mathbf{x}_i)).
 $$
 
-As a result, we need to solve two problems:
-first one to distinguish between
-data drawn from both distributions,
-and then a weighted empirical risk minimization problem
-in :eqref:`eq_weighted-empirical-risk-min`
-where we weigh terms by $\beta_i$.
 
-Now we are ready to describe a correction algorithm.
-Suppose that we have a training set $\{(\mathbf{x}_1, y_1), \ldots, (\mathbf{x}_n, y_n)\}$ and an unlabeled test set $\{\mathbf{u}_1, \ldots, \mathbf{u}_m\}$.
-For covariate shift,
-we assume that $\mathbf{x}_i$ for all $1 \leq i \leq n$ are drawn from some source distribution
-and $\mathbf{u}_i$ for all $1 \leq i \leq m$
-are drawn from the target distribution.
-Here is a prototypical algorithm
-for correcting covariate shift:
+Como resultado, precisamos resolver dois problemas:
+primeiro a distinguir entre
+dados extraídos de ambas as distribuições,
+e, em seguida, um problema de minimização de risco empírico ponderado
+em :eqref:`eq_weighted-empirical-risk-min`
+onde pesamos os termos em $\beta_i$..
+
+Agora estamos prontos para descrever um algoritmo de correção.
+Suponha que temos um conjunto de treinamento $\{(\mathbf{x}_1, y_1), \ldots, (\mathbf{x}_n, y_n)\}$ e um conjunto de teste não rotulado $\{\mathbf{u}_1, \ldots, \mathbf{u}_m\}$.
+Para mudança de covariável,
+assumimos que $\mathbf{x}_i$ para todos os $1 \leq i \leq n$ são retirados de alguma distribuição de origem
+e $\mathbf{u}_i$ for all $1 \leq i \leq m$
+são retirados da distribuição de destino.
+Aqui está um algoritmo prototípico
+para corrigir a mudança da covariável:
 
 1. Generate a binary-classification training set: $\{(\mathbf{x}_1, -1), \ldots, (\mathbf{x}_n, -1), (\mathbf{u}_1, 1), \ldots, (\mathbf{u}_m, 1)\}$.
 1. Train a binary classifier using logistic regression to get function $h$.
@@ -700,7 +701,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMDQxMzk5NSwyMDkwMTU5NjgsLTYwOT
+eyJoaXN0b3J5IjpbLTkzNDU3MjIzNiwyMDkwMTU5NjgsLTYwOT
 YxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNzQwOTQs
 MTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
 -->
