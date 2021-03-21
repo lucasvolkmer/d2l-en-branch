@@ -394,33 +394,34 @@ para gerar o conjunto de treinamento $q$ (o último está trivialmente disponív
 Observe, entretanto, que só precisamos dos recursos $\mathbf{x} \sim p(\mathbf{x})$;
 não precisamos acessar os rótulos $y \sim p(y)$.
 
-In this case, there exists a very effective approach
-that will give almost as good results as the original: logistic regression,
-which is a special case of softmax regression (see :numref:`sec_softmax`)
-for binary classification.
-This is all that is needed to compute estimated probability ratios.
-We learn a classifier to distinguish
-between data drawn from $p(\mathbf{x})$
-and data drawn from $q(\mathbf{x})$.
-If it is impossible to distinguish
-between the two distributions
-then it means that the associated instances
-are equally likely to come from
-either one of the two distributions.
-On the other hand, any instances
-that can be well discriminated
-should be significantly overweighted
-or underweighted accordingly.
 
-For simplicity's sake assume that we have
-an equal number of instances from both distributions
+Neste caso, existe uma abordagem muito eficaz
+que dará resultados quase tão bons quanto a original: regressão logística,
+que é um caso especial de regressão *softmax* (ver :numref:`sec_softmax`)
+para classificação binária.
+Isso é tudo o que é necessário para calcular as razões de probabilidade estimadas.
+Aprendemos um classificador para distinguir
+entre os dados extraídos de $p(\mathbf{x})$
+e dados extraídos de $q(\mathbf{x})$.
+Se é impossível distinguir
+entre as duas distribuições
+então isso significa que as instâncias associadas
+são igualmente prováveis ​​de virem de
+qualquer uma das duas distribuições.
+Por outro lado, quaisquer instâncias
+que podem ser bem discriminadas
+devem ser significativamente sobreponderadas
+ou subponderadas em conformidade.
+
+Para simplificar, suponha que temos
+um número igual de instâncias de ambas as distribuições
 $p(\mathbf{x})$
-and $q(\mathbf{x})$, respectively.
-Now denote by $z$ labels that are $1$
-for data drawn from $p$ and $-1$ for data drawn from $q$.
-Then the probability in a mixed dataset is given by
+e $q(\mathbf{x})$,, respectivamente.
+Agora denote por $z$ rótulos que são $1$
+para dados extraídos de $p$ e $-1$ para dados extraídos de $q$.
+Então, a probabilidade em um conjunto de dados misto é dada por
 
-$$P(z=1 \mid \mathbf{x}) = \frac{p(\mathbf{x})}{p(\mathbf{x})+q(\mathbf{x})} \text{ and hence } \frac{P(z=1 \mid \mathbf{x})}{P(z=-1 \mid \mathbf{x})} = \frac{p(\mathbf{x})}{q(\mathbf{x})}.$$
+$$P(z=1 \mid \mathbf{x}) = \frac{p(\mathbf{x})}{p(\mathbf{x})+q(\mathbf{x})} \text{ e portanto } \frac{P(z=1 \mid \mathbf{x})}{P(z=-1 \mid \mathbf{x})} = \frac{p(\mathbf{x})}{q(\mathbf{x})}.$$
 
 Thus, if we use a logistic regression approach,
 where $P(z=1 \mid \mathbf{x})=\frac{1}{1+\exp(-h(\mathbf{x}))}$ ($h$ is a parameterized function),
@@ -699,7 +700,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MDE1OTY4LC02MDk2MTM4OTksMTk3NT
-E2MjIzOCwyMDYyOTkxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYs
-MzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbMTM1OTAxMzc2MCwyMDkwMTU5NjgsLTYwOT
+YxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNzQwOTQs
+MTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
 -->
