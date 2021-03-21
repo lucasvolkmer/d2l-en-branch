@@ -717,6 +717,10 @@ As before, we will train our network on the Fashion-MNIST dataset.
 This code is virtually identical to that when we first trained LeNet (:numref:`sec_lenet`).
 The main difference is the considerably larger learning rate.
 
+Como antes, treinaremos nossa rede no conjunto de dados Fashion-MNIST.
+Este código é virtualmente idêntico àquele quando treinamos o LeNet pela primeira vez (: numref: `sec_lenet`).
+A principal diferença é a taxa de aprendizagem consideravelmente maior.
+
 ```{.python .input}
 #@tab mxnet, pytorch
 lr, num_epochs, batch_size = 1.0, 10, 256
@@ -734,6 +738,10 @@ net = d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 Let us have a look at the scale parameter `gamma`
 and the shift parameter `beta` learned
 from the first batch normalization layer.
+
+Vamos dar uma olhada no parâmetro de escala `gamma`
+e o parâmetro shift `beta` aprendeu
+da primeira camada de normalização de lote.
 
 ```{.python .input}
 net[1].gamma.data().reshape(-1,), net[1].beta.data().reshape(-1,)
@@ -756,6 +764,12 @@ which we just defined ourselves,
 we can use the `BatchNorm` class defined in high-level APIs from the deep learning framework directly.
 The code looks virtually identical
 to the application our implementation above.
+
+Comparado com a classe `BatchNorm`,
+que acabamos de definir a nós mesmos,
+podemos usar a classe `BatchNorm` definida em APIs de alto nível diretamente do framework de aprendizado profundo.
+O código parece virtualmente idêntico
+para a aplicação nossa implementação acima.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -817,6 +831,11 @@ Note that as usual, the high-level API variant runs much faster
 because its code has been compiled to C++ or CUDA
 while our custom implementation must be interpreted by Python.
 
+Abaixo, usamos os mesmos hiperparâmetros para treinar nosso modelo.
+Observe que, como de costume, a variante de API de alto nível é executada muito mais rápido
+porque seu código foi compilado para C ++ ou CUDA
+enquanto nossa implementação customizada deve ser interpretada por Python.
+
 ```{.python .input}
 #@tab all
 d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
@@ -835,6 +854,18 @@ generalize well in the first place.
 Even with dropout and weight decay,
 they remain so flexible that their ability to generalize to unseen data
 cannot be explained via conventional learning-theoretic generalization guarantees.
+
+Intuitivamente, a normalização de lote é pensada
+para tornar o cenário de otimização mais suave.
+No entanto, devemos ter o cuidado de distinguir entre
+intuições especulativas e explicações verdadeiras
+para os fenômenos que observamos ao treinar modelos profundos.
+Lembre-se que não sabemos nem porque é mais simples
+redes neurais profundas (MLPs e CNNs convencionais)
+generalize bem em primeiro lugar.
+Mesmo com abandono e queda de peso,
+eles permanecem tão flexíveis que sua capacidade de generalizar para dados invisíveis
+não pode ser explicado por meio de garantias convencionais de generalização da teoria da aprendizagem.
 
 In the original paper proposing batch normalization,
 the authors, in addition to introducing a powerful and useful tool,
@@ -860,6 +891,30 @@ and start writing your own research papers
 you will want to be clear to delineate
 between technical claims and hunches.
 
+No artigo original, propondo a normalização do lote,
+os autores, além de apresentar uma ferramenta poderosa e útil,
+ofereceu uma explicação de por que funciona:
+reduzindo * deslocamento interno da covariável *.
+Presumivelmente por * mudança interna de covariável * os autores
+significava algo como a intuição expressa acima --- o
+noção de que a distribuição dos valores das variáveis ​​muda
+ao longo do treinamento.
+No entanto, houve dois problemas com esta explicação:
+i) Esta deriva é muito diferente de * mudança de covariável *,
+tornando o nome um nome impróprio.
+ii) A explicação oferece uma intuição subespecificada
+mas deixa a questão de * por que exatamente essa técnica funciona *
+uma questão aberta que necessita de uma explicação rigorosa.
+Ao longo deste livro, pretendemos transmitir as intuições de que os praticantes
+usar para orientar o desenvolvimento de redes neurais profundas.
+No entanto, acreditamos que é importante
+para separar essas intuições orientadoras
+a partir de fato científico estabelecido.
+Eventualmente, quando você dominar este material
+e comece a escrever seus próprios artigos de pesquisa
+você vai querer ser claro para delinear
+entre afirmações técnicas e palpites.
+
 Following the success of batch normalization,
 its explanation in terms of *internal covariate shift*
 has repeatedly surfaced in debates in the technical literature
@@ -877,6 +932,23 @@ have proposed alternative explanations for the success of batch normalization,
 some claiming that batch normalization's success comes despite exhibiting behavior
 that is in some ways opposite to those claimed in the original paper :cite:`Santurkar.Tsipras.Ilyas.ea.2018`.
 
+Após o sucesso da normalização em lote,
+sua explicação em termos de * mudança interna de covariável *
+tem aparecido repetidamente em debates na literatura técnica
+e um discurso mais amplo sobre como apresentar a pesquisa de aprendizado de máquina.
+Em um discurso memorável ao aceitar o Prêmio Teste do Tempo
+na conferência NeurIPS de 2017,
+Ali Rahimi usou * mudança de covariável interna *
+como um ponto focal em um argumento comparando
+a prática moderna de aprendizado profundo para alquimia.
+Posteriormente, o exemplo foi revisitado em detalhes
+em uma posição delineando papel
+tendências preocupantes em aprendizado de máquina: cite: `Lipton.Steinhardt.2018`.
+Outros autores
+propuseram explicações alternativas para o sucesso da normalização em lote,
+alguns alegando que o sucesso da normalização em lote vem apesar de exibir comportamento
+isso é, de certa forma, oposto ao afirmado no artigo original: cite: `Santurkar.Tsipras.Ilyas.ea.2018`.
+
 We note that the *internal covariate shift*
 is no more worthy of criticism than any of
 thousands of similarly vague claims
@@ -888,6 +960,17 @@ applied in nearly all deployed image classifiers,
 earning the paper that introduced the technique
 tens of thousands of citations.
 
+Notamos que a * mudança interna da covariável *
+não é mais digno de crítica do que qualquer um dos
+milhares de afirmações igualmente vagas
+feito todos os anos na literatura técnica de aprendizado de máquina.
+Provavelmente, sua ressonância como ponto focal desses debates
+deve-se ao seu amplo reconhecimento pelo público-alvo.
+A normalização em lote provou ser um método indispensável,
+aplicado em quase todos os classificadores de imagem implantados,
+ganhando o papel que introduziu a técnica
+dezenas de milhares de citações.
+
 
 ## Summary
 
@@ -895,6 +978,7 @@ tens of thousands of citations.
 * The batch normalization methods for fully-connected layers and convolutional layers are slightly different.
 * Like a dropout layer, batch normalization layers have different computation results in training mode and prediction mode.
 * Batch normalization has many beneficial side effects, primarily that of regularization. On the other hand, the original motivation of reducing internal covariate shift seems not to be a valid explanation.
+
 
 ## Exercises
 
@@ -920,5 +1004,5 @@ tens of thousands of citations.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1OTMwMDk4Miw5Nzk2MTczMThdfQ==
+eyJoaXN0b3J5IjpbNjYwNjM1Mzg2LDk3OTYxNzMxOF19
 -->
