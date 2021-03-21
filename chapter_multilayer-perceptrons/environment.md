@@ -333,12 +333,12 @@ $p(\mathbf{x},y)$:
 $$E_{p(\mathbf{x}, y)} [l(f(\mathbf{x}), y)] = \int\int l(f(\mathbf{x}), y) p(\mathbf{x}, y) \;d\mathbf{x}dy.$$
 :eqlabel:`eq_true-risk`
 
-However, in practice we typically cannot obtain the entire population of data.
-Thus, *empirical risk minimization*,
-which is minimizing the empirical risk in :eqref:`eq_empirical-risk-min`,
-is a practical strategy for machine learning,
-with the hope to approximate
-minimizing the risk.
+No entanto, na prática, normalmente não podemos obter toda a população de dados.
+Assim, a *minimização de risco empírico*,
+que está minimizando o risco empírico em :eqref:`eq_empirical-risk-min`,
+é uma estratégia prática para *machine learning*,
+com a esperança de aproximar
+minimizando o risco.
 
 
 
@@ -699,7 +699,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MTM4NjI0MywxOTc1MTYyMjM4LDIwNj
+eyJoaXN0b3J5IjpbLTYwOTYxMzg5OSwxOTc1MTYyMjM4LDIwNj
 I5OTE5OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDks
 ODQyNzc1ODEyXX0=
 -->
