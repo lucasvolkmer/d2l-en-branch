@@ -608,20 +608,20 @@ $$
 
 ### Controle
 
-In many cases the environment remembers what we did. Not necessarily in an adversarial manner but it will just remember and the response will depend on what happened before. For instance, a coffee boiler controller will observe different temperatures depending on whether it was heating the boiler previously. PID (proportional-integral-derivative) controller algorithms are a popular choice there.
-Likewise, a user's behavior on a news site will depend on what we showed him previously (e.g., he will read most news only once). Many such algorithms form a model of the environment in which they act such as to make their decisions appear less random.
-Recently,
-control theory (e.g., PID variants) has also been used
-to automatically tune hyperparameters
-to achive better disentangling and reconstruction quality,
-and improve the diversity of generated text and the reconstruction quality of generated images :cite:`Shao.Yao.Sun.ea.2020`.
+Em muitos casos, o ambiente lembra o que fizemos. Não necessariamente de maneira adversa, mas apenas lembrará e a resposta dependerá do que aconteceu antes. Por exemplo, um controlador de caldeira de café observará diferentes temperaturas dependendo se estava aquecendo a caldeira anteriormente. Os algoritmos do controlador PID (proporcional derivativo e integral) são uma escolha popular.
+Da mesma forma, o comportamento de um usuário em um site de notícias dependerá do que mostramos a ele anteriormente (por exemplo, ele lerá a maioria das notícias apenas uma vez). Muitos desses algoritmos formam um modelo do ambiente no qual atuam, de modo que suas decisões parecem menos aleatórias.
+Recentemente, a
+teoria de controle (por exemplo, variantes PID) também foi usada
+para ajustar hiperparâmetros automaticamente
+para obter uma melhor qualidade de desemaranhamento e reconstrução,
+e melhorar a diversidade do texto gerado e a qualidade da reconstrução das imagens geradas :cite:`Shao.Yao.Sun.ea.2020`.
 
 
 
 
-### Reinforcement Learning
+### Aprendizagem por Reforço
 
-In the more general case of an environment with memory, we may encounter situations where the environment is trying to cooperate with us (cooperative games, in particular for non-zero-sum games), or others where the environment will try to win. Chess, Go, Backgammon, or StarCraft are some of the cases in *reinforcement learning*. Likewise, we might want to build a good controller for autonomous cars. The other cars are likely to respond to the autonomous car's driving style in nontrivial ways, e.g., trying to avoid it, trying to cause an accident, and trying to cooperate with it.
+No caso mais geral de um ambiente com memória, podemos encontrar situações em que o ambiente está tentando cooperar conosco (jogos cooperativos, em particular para jogos de soma não zero), ou outras em que o ambiente tentará vencer. Xadrez, Go, Backgammon ou StarCraft são alguns dos casos de *aprendizagem por reforço*. Da mesma forma, podemos querer construir um bom controlador para carros autônomos. Os outros carros tendem a responder ao estilo de direção do carro autônomo de maneiras não triviais, por exemplo, tentando evitá-lo, tentando causar um acidente e tentando cooperar com ele.
 
 ### Considering the Environment
 
@@ -705,9 +705,9 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ3NTE5NTg4LDE0MDgxOTI3MzcsMzQ2Nj
-MyNDI5LDMzNTMzNDEwMywtMTUwNDU2MTI2OCwyMDkwMTU5Njgs
-LTYwOTYxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNz
-QwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
-
+eyJoaXN0b3J5IjpbLTEzNTc5NTQ0NjEsMTQwODE5MjczNywzND
+Y2MzI0MjksMzM1MzM0MTAzLC0xNTA0NTYxMjY4LDIwOTAxNTk2
+OCwtNjA5NjEzODk5LDE5NzUxNjIyMzgsMjA2Mjk5MTk4LC0yND
+I3NDA5NCwxODcwNDM1MzE2LDMzNzU0Nzc0OSw4NDI3NzU4MTJd
+fQ==
 -->
