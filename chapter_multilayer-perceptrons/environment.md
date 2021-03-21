@@ -321,13 +321,13 @@ portanto, minimizamos amplamente a perda no treinamento:
 $$\mathop{\mathrm{minimizar}}_f \frac{1}{n} \sum_{i=1}^n l(f(\mathbf{x}_i), y_i),$$
 :eqlabel:`eq_empirical-risk-min`
 
-where $l$ is the loss function
-measuring "how bad" the prediction $f(\mathbf{x}_i)$ is given the associated label $y_i$.
-Statisticians call the term in :eqref:`eq_empirical-risk-min` *empirical risk*.
-The *empirical risk* is an average loss over the training data
-to approximate the *risk*,
-which is the
-expectation of the loss over the entire population of data drawn from their true distribution
+onde $l$ é a função de perda
+medir "quão ruim" a previsão $f(\mathbf{x}_i)$ recebe o rótulo associado $y_i$.
+Os estatísticos chamam o termo em :eqref:`eq_empirical-risk-min` *risco empírico*.
+O *risco empírico* é uma perda média sobre os dados de treinamento
+para aproximar o *risco*,
+que é a
+expectativa de perda sobre toda a população de dados extraídos de sua verdadeira distribuição
 $p(\mathbf{x},y)$:
 
 $$E_{p(\mathbf{x}, y)} [l(f(\mathbf{x}), y)] = \int\int l(f(\mathbf{x}), y) p(\mathbf{x}, y) \;d\mathbf{x}dy.$$
@@ -699,7 +699,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTQxMjQ1NjcsMTk3NTE2MjIzOCwyMD
-YyOTkxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5
-LDg0Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbMjA2MTM4NjI0MywxOTc1MTYyMjM4LDIwNj
+I5OTE5OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDks
+ODQyNzc1ODEyXX0=
 -->
