@@ -698,15 +698,15 @@ que você pode encontrar em uma carreira em *machine learning*.
 
 ## Exercícios
 
-1. What could happen when we change the behavior of a search engine? What might the users do? What about the advertisers?
-1. Implement a covariate shift detector. Hint: build a classifier.
-1. Implement a covariate shift corrector.
-1. Besides distribution shift, what else could affect how the empirical risk approximates the risk?
+1. O que pode acontecer quando mudamos o comportamento de um mecanismo de pesquisa? O que os usuários podem fazer? E os anunciantes?
+1. Implemente um detector de deslocamento covariável. Dica: construa um classificador.
+1. Implemente um corretor de mudança covariável.
+1. Além da mudança de distribuição, o que mais poderia afetar a forma como o risco empírico se aproxima do risco?
 
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzOTQzNjgxNSwxNzg1MjEwOTEsMTQwOD
+eyJoaXN0b3J5IjpbLTUzMzA3MTE5NSwxNzg1MjEwOTEsMTQwOD
 E5MjczNywzNDY2MzI0MjksMzM1MzM0MTAzLC0xNTA0NTYxMjY4
 LDIwOTAxNTk2OCwtNjA5NjEzODk5LDE5NzUxNjIyMzgsMjA2Mj
 k5MTk4LC0yNDI3NDA5NCwxODcwNDM1MzE2LDMzNzU0Nzc0OSw4
