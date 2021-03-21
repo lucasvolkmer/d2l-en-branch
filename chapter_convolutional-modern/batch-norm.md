@@ -9,6 +9,14 @@ Together with residual blocks---covered later in :numref:`sec_resnet`---batch no
 has made it possible for practitioners
 to routinely train networks with over 100 layers.
 
+Treinar redes neurais profundas é difícil.
+E fazer com que eles convirjam em um período de tempo razoável pode ser complicado.
+Nesta seção, descrevemos a * normalização em lote *, uma técnica popular e eficaz
+que acelera consistentemente a convergência de redes profundas: cite: `Ioffe.Szegedy.2015`.
+Juntamente com os blocos residuais --- cobertos posteriormente em: numref: `sec_resnet` --- normalização em lote
+tornou possível para os praticantes
+para treinar rotineiramente redes com mais de 100 camadas.
+
 
 
 ## Training Deep Networks
@@ -24,6 +32,18 @@ was to standardize our input features
 to each have a mean of zero and variance of one.
 Intuitively, this standardization plays nicely with our optimizers
 because it puts the parameters *a priori* at a similar scale.
+
+Para motivar a normalização do lote, vamos revisar
+alguns desafios práticos que surgem
+ao treinar modelos de aprendizado de máquina e redes neurais em particular.
+
+Em primeiro lugar, as escolhas relativas ao pré-processamento de dados costumam fazer uma enorme diferença nos resultados finais.
+Lembre-se de nossa aplicação de MLPs para prever preços de casas (: numref: `sec_kaggle_house`).
+Nosso primeiro passo ao trabalhar com dados reais
+era padronizar nossos recursos de entrada
+para cada um tem uma média de zero e variância de um.
+Intuitivamente, essa padronização funciona bem com nossos otimizadores
+porque coloca os parâmetros * a priori * em uma escala semelhante.
    
 Second, for a typical MLP or CNN, as we train,
 the variables (e.g., affine transformation outputs in MLP)
@@ -40,6 +60,21 @@ this might necessitate compensatory adjustments in the learning rates.
 Third, deeper networks are complex and easily capable of overfitting.
 This means that regularization becomes more critical.
 
+Em segundo lugar, para um MLP ou CNN típico, enquanto treinamos,
+as variáveis (por exemplo, saídas de transformação afim em MLP)
+em camadas intermediárias
+pode assumir valores com magnitudes amplamente variáveis:
+tanto ao longo das camadas da entrada até a saída, através das unidades na mesma camada,
+e ao longo do tempo devido às nossas atualizações nos parâmetros do modelo.
+Os inventores da normalização de lote postularam informalmente
+que esse desvio na distribuição de tais variáveis poderia dificultar a convergência da rede.
+Intuitivamente, podemos conjeturar que se um
+camada tem valores variáveis que são 100 vezes maiores que os de outra camada,
+isso pode exigir ajustes compensatórios nas taxas de aprendizagem.
+   
+Terceiro, redes mais profundas são complexas e facilmente capazes de overfitting.
+Isso significa que a regularização se torna mais crítica.
+
 Batch normalization is applied to individual layers
 (optionally, to all of them) and works as follows:
 In each training iteration,
@@ -51,6 +86,17 @@ Next, we apply a scale coefficient and a scale offset.
 It is precisely due to this *normalization* based on *batch* statistics
 that *batch normalization* derives its name.
 
+A normalização em lote é aplicada a camadas individuais
+(opcionalmente, para todos eles) e funciona da seguinte forma:
+Em cada iteração de treinamento,
+primeiro normalizamos as entradas (de normalização em lote)
+subtraindo sua média e
+dividindo por seu desvio padrão,
+onde ambos são estimados com base nas estatísticas do minibatch atual.
+Em seguida, aplicamos um coeficiente de escala e um deslocamento de escala.
+É precisamente devido a esta * normalização * baseada em estatísticas * batch *
+que * normalização de lote * deriva seu nome.
+
 Note that if we tried to apply batch normalization with minibatches of size 1,
 we would not be able to learn anything.
 That is because after subtracting the means,
@@ -61,10 +107,25 @@ One takeaway here is that when applying batch normalization,
 the choice of batch size may be
 even more significant than without batch normalization.
 
+Observe que se tentamos aplicar a normalização de lote com minibatches de tamanho 1,
+não seríamos capazes de aprender nada.
+Isso porque depois de subtrair as médias,
+cada unidade oculta teria valor 0!
+Como você pode imaginar, uma vez que estamos dedicando uma seção inteira à normalização em lote,
+com minibatches grandes o suficiente, a abordagem se mostra eficaz e estável.
+Uma lição aqui é que, ao aplicar a normalização em lote,
+a escolha do tamanho do lote pode ser
+ainda mais significativo do que sem normalização em lote.
+
 Formally, denoting by $\mathbf{x} \in \mathcal{B}$ an input to batch normalization ($\mathrm{BN}$)
 that is from a minibatch $\mathcal{B}$,
 batch normalization transforms $\mathbf{x}$
 according to the following expression:
+
+Formalmente, denotando por $ \ mathbf {x} \ in \ mathcal {B} $ uma entrada para normalização em lote ($ \ mathrm {BN} $)
+que é de um minibatch $ \ mathcal {B} $,
+a normalização em lote transforma $ \ mathbf {x} $
+de acordo com a seguinte expressão:
 
 $$\mathrm{BN}(\mathbf{x}) = \boldsymbol{\gamma} \odot \frac{\mathbf{x} - \hat{\boldsymbol{\mu}}_\mathcal{B}}{\hat{\boldsymbol{\sigma}}_\mathcal{B}} + \boldsymbol{\beta}.$$
 :eqlabel:`eq_batchnorm`
@@ -82,6 +143,18 @@ we commonly include elementwise
 that have the same shape as $\mathbf{x}$.
 Note that $\boldsymbol{\gamma}$ and $\boldsymbol{\beta}$ are
  parameters that need to be learned jointly with the other model parameters.
+$ \ hat {\ boldsymbol {\ mu}} _ \ mathcal {B} $ é a média da amostra
+e $ \ hat {\ boldsymbol {\ sigma}} _ \ mathcal {B} $ é o desvio padrão da amostra do minibatch $ \ mathcal {B} $.
+Depois de aplicar a padronização,
+o minibatch resultante
+tem média zero e variância unitária.
+Porque a escolha da variação da unidade
+(vs. algum outro número mágico) é uma escolha arbitrária,
+normalmente incluímos elemento a elemento
+* parâmetro de escala * $ \ boldsymbol {\ gamma} $ e * parâmetro de deslocamento * $ \ boldsymbol {\ beta} $
+que tem a mesma forma de $ \ mathbf {x} $.
+Observe que $ \ boldsymbol {\ gamma} $ e $ \ boldsymbol {\ beta} $ são
+  parâmetros que precisam ser aprendidos em conjunto com os outros parâmetros do modelo.
 
 Consequently, the variable magnitudes
 for intermediate layers cannot diverge during training
@@ -711,5 +784,5 @@ tens of thousands of citations.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc5NjE3MzE4XX0=
+eyJoaXN0b3J5IjpbMjEyMTM3Mzg2OSw5Nzk2MTczMThdfQ==
 -->
