@@ -668,34 +668,35 @@ que alocam policiais de patrulha
 para áreas com alta previsão de crime.
 É fácil ver como um padrão preocupante pode surgir:
 
- 1. Neighborhoods with more crime get more patrols.
- 1. Consequently, more crimes are discovered in these neighborhoods, entering the training data available for future iterations.
- 1. Exposed to more positives, the model predicts yet more crime in these neighborhoods.
- 1. In the next iteration, the updated model targets the same neighborhood even more heavily leading to yet more crimes discovered, etc.
 
-Often, the various mechanisms by which
-a model's predictions become coupled to its training data
-are unaccounted for in the modeling process.
-This can lead to what researchers call *runaway feedback loops*.
-Additionally, we want to be careful about
-whether we are addressing the right problem in the first place.
-Predictive algorithms now play an outsize role
-in mediating the dissemination of information.
-Should the news that an individual encounters
-be determined by the set of Facebook pages they have *Liked*?
-These are just a few among the many pressing ethical dilemmas
-that you might encounter in a career in machine learning.
+1. Bairros com mais crimes recebem mais patrulhas.
+ 1. Consequentemente, mais crimes são descobertos nesses bairros, inserindo os dados de treinamento disponíveis para iterações futuras.
+ 1. Exposto a mais aspectos positivos, o modelo prevê ainda mais crimes nesses bairros.
+ 1. Na próxima iteração, o modelo atualizado visa a mesma vizinhança ainda mais fortemente, levando a ainda mais crimes descobertos, etc.
+
+Freqüentemente, os vários mecanismos pelos quais
+as previsões de um modelo são acopladas a seus dados de treinamento
+não são contabilizados no processo de modelagem.
+Isso pode levar ao que os pesquisadores chamam de *ciclos de feedback descontrolados*.
+Além disso, queremos ter cuidado com
+se estamos tratando do problema certo em primeiro lugar.
+Algoritmos preditivos agora desempenham um papel descomunal
+na mediação da disseminação de informações.
+A notícia de que um indivíduo encontra
+ser determinado pelo conjunto de páginas do Facebook de que *Gostou*?
+Estes são apenas alguns entre os muitos dilemas éticos urgentes
+que você pode encontrar em uma carreira em *machine learning*.
 
 
 
-## Summary
+## Resumo
 
-* In many cases training and test sets do not come from the same distribution. This is called distribution shift.
-* The risk is the expectation of the loss over the entire population of data drawn from their true distribution. However, this entire population is usually unavailable. Empirical risk is an average loss over the training data to approximate the risk. In practice, we perform empirical risk minimization.
-* Under the corresponding assumptions, covariate and label shift can be detected and corrected for at test time. Failure to account for this bias can become problematic at test time.
-* In some cases, the environment may remember automated actions and respond in surprising ways. We must account for this possibility when building models and continue to monitor live systems, open to the possibility that our models and the environment will become entangled in unanticipated ways.
+* Em muitos casos, os conjuntos de treinamento e teste não vêm da mesma distribuição. Isso é chamado de mudança de distribuição.
+* O risco é a expectativa de perda sobre toda a população de dados extraídos de sua distribuição real. No entanto, toda essa população geralmente não está disponível. O risco empírico é uma perda média sobre os dados de treinamento para aproximar o risco. Na prática, realizamos a minimização empírica do risco.
+* De acordo com as premissas correspondentes, a covariável e a mudança de rótulo podem ser detectadas e corrigidas no momento do teste. Deixar de levar em consideração esse *bias* pode se tornar problemático no momento do teste.
+* Em alguns casos, o ambiente pode se lembrar de ações automatizadas e responder de maneiras surpreendentes. Devemos levar em conta essa possibilidade ao construir modelos e continuar a monitorar sistemas ativos, abertos à possibilidade de que nossos modelos e o ambiente se enredem de maneiras imprevistas.
 
-## Exercises
+## Exercícios
 
 1. What could happen when we change the behavior of a search engine? What might the users do? What about the advertisers?
 1. Implement a covariate shift detector. Hint: build a classifier.
@@ -705,9 +706,9 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MjM3MjM1LDE3ODUyMTA5MSwxNDA4MT
-kyNzM3LDM0NjYzMjQyOSwzMzUzMzQxMDMsLTE1MDQ1NjEyNjgs
-MjA5MDE1OTY4LC02MDk2MTM4OTksMTk3NTE2MjIzOCwyMDYyOT
-kxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5LDg0
-Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbLTkzOTQzNjgxNSwxNzg1MjEwOTEsMTQwOD
+E5MjczNywzNDY2MzI0MjksMzM1MzM0MTAzLC0xNTA0NTYxMjY4
+LDIwOTAxNTk2OCwtNjA5NjEzODk5LDE5NzUxNjIyMzgsMjA2Mj
+k5MTk4LC0yNDI3NDA5NCwxODcwNDM1MzE2LDMzNzU0Nzc0OSw4
+NDI3NzU4MTJdfQ==
 -->
