@@ -632,41 +632,41 @@ Uma distinção importante entre as diferentes situações acima é que a mesma 
 
 ## Justiça, Responsabilidade e Transparência no *Machine Learning*
 
-Finally, it is important to remember
-that when you deploy machine learning systems
-you are not merely optimizing a predictive model---you
-are typically providing a tool that will
-be used to (partially or fully) automate decisions.
-These technical systems can impact the lives
-of individuals subject to the resulting decisions.
-The leap from considering predictions to decisions
-raises not only new technical questions,
-but also a slew of ethical questions
-that must be carefully considered.
-If we are deploying a medical diagnostic system,
-we need to know for which populations
-it may work and which it may not.
-Overlooking foreseeable risks to the welfare of
-a subpopulation could cause us to administer inferior care.
-Moreover, once we contemplate decision-making systems,
-we must step back and reconsider how we evaluate our technology.
-Among other consequences of this change of scope,
-we will find that *accuracy* is seldom the right measure.
-For instance, when translating predictions into actions,
-we will often want to take into account
-the potential cost sensitivity of erring in various ways.
-If one way of misclassifying an image
-could be perceived as a racial sleight of hand,
-while misclassification to a different category
-would be harmless, then we might want to adjust
-our thresholds accordingly, accounting for societal values
-in designing the decision-making protocol.
-We also want to be careful about
-how prediction systems can lead to feedback loops.
-For example, consider predictive policing systems,
-which allocate patrol officers
-to areas with high forecasted crime.
-It is easy to see how a worrying pattern can emerge:
+Finalmente, é importante lembrar
+que quando você implanta sistemas de *machine learning*
+você não está apenas otimizando um modelo preditivo --- você
+normalmente fornece uma ferramenta que irá
+ser usada para automatizar (parcial ou totalmente) as decisões.
+Esses sistemas técnicos podem impactar as vidas
+de indivíduos sujeitos às decisões resultantes.
+O salto da consideração das previsões para as decisões
+levanta não apenas novas questões técnicas,
+mas também uma série de questões éticas
+isso deve ser considerado cuidadosamente.
+Se estivermos implantando um sistema de diagnóstico médico,
+precisamos saber para quais populações
+pode funcionar e pode não funcionar.
+Negligenciar riscos previsíveis para o bem-estar de
+uma subpopulação pode nos levar a administrar cuidados inferiores.
+Além disso, uma vez que contemplamos os sistemas de tomada de decisão,
+devemos recuar e reconsiderar como avaliamos nossa tecnologia.
+Entre outras consequências desta mudança de escopo,
+descobriremos que a *exatidão* raramente é a medida certa.
+Por exemplo, ao traduzir previsões em ações,
+muitas vezes queremos levar em consideração
+a potencial sensibilidade ao custo de errar de várias maneiras.
+Se uma maneira de classificar erroneamente uma imagem
+pode ser percebida como um truque racial,
+enquanto a classificação incorreta para uma categoria diferente
+seria inofensiva, então podemos querer ajustar
+nossos limites de acordo, levando em consideração os valores sociais
+na concepção do protocolo de tomada de decisão.
+Também queremos ter cuidado com
+como os sistemas de previsão podem levar a ciclos de *feedback*.
+Por exemplo, considere sistemas de policiamento preditivo,
+que alocam policiais de patrulha
+para áreas com alta previsão de crime.
+É fácil ver como um padrão preocupante pode surgir:
 
  1. Neighborhoods with more crime get more patrols.
  1. Consequently, more crimes are discovered in these neighborhoods, entering the training data available for future iterations.
@@ -705,9 +705,9 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NTIxMDkxLDE0MDgxOTI3MzcsMzQ2Nj
-MyNDI5LDMzNTMzNDEwMywtMTUwNDU2MTI2OCwyMDkwMTU5Njgs
-LTYwOTYxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNz
-QwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
-
+eyJoaXN0b3J5IjpbMTE3MjM3MjM1LDE3ODUyMTA5MSwxNDA4MT
+kyNzM3LDM0NjYzMjQyOSwzMzUzMzQxMDMsLTE1MDQ1NjEyNjgs
+MjA5MDE1OTY4LC02MDk2MTM4OTksMTk3NTE2MjIzOCwyMDYyOT
+kxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5LDg0
+Mjc3NTgxMl19
 -->
