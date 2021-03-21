@@ -143,6 +143,7 @@ we commonly include elementwise
 that have the same shape as $\mathbf{x}$.
 Note that $\boldsymbol{\gamma}$ and $\boldsymbol{\beta}$ are
  parameters that need to be learned jointly with the other model parameters.
+ 
 $ \ hat {\ boldsymbol {\ mu}} _ \ mathcal {B} $ é a média da amostra
 e $ \ hat {\ boldsymbol {\ sigma}} _ \ mathcal {B} $ é o desvio padrão da amostra do minibatch $ \ mathcal {B} $.
 Depois de aplicar a padronização,
@@ -163,6 +164,12 @@ to a given mean and size (via $\hat{\boldsymbol{\mu}}_\mathcal{B}$ and ${\hat{\b
 One piece of practitioner's intuition or wisdom
 is that batch normalization seems to allow for more aggressive learning rates.
 
+Consequentemente, as magnitudes variáveis
+para camadas intermediárias não pode divergir durante o treinamento
+porque a normalização em lote centra ativamente e os redimensiona de volta
+para uma dada média e tamanho (via $ \ hat {\ boldsymbol {\ mu}} _ \ mathcal {B} $ e $ {\ hat {\ boldsymbol {\ sigma}} _ \ mathcal {B}} $).
+Um pedaço da intuição ou sabedoria do praticante
+é que a normalização em lote parece permitir taxas de aprendizagem mais agressivas.
 
 Formally, 
 we calculate $\hat{\boldsymbol{\mu}}_\mathcal{B}$ and ${\hat{\boldsymbol{\sigma}}_\mathcal{B}}$ in :eqref:`eq_batchnorm` as follows:
@@ -179,6 +186,15 @@ by using noisy estimates of mean and variance.
 You might think that this noisiness should be a problem.
 As it turns out, this is actually beneficial.
 
+Observe que adicionamos uma pequena constante $ \ epsilon> 0 $
+para a estimativa de variância
+para garantir que nunca tentemos a divisão por zero,
+mesmo nos casos em que a estimativa de variância empírica pode desaparecer.
+As estimativas $ \ hat {\ boldsymbol {\ mu}} _ \ mathcal {B} $ e $ {\ hat {\ boldsymbol {\ sigma}} _ \ mathcal {B}} $ neutralizam o problema de escala
+usando estimativas ruidosas de média e variância.
+Você pode pensar que esse barulho deve ser um problema.
+Acontece que isso é realmente benéfico.
+
 This turns out to be a recurring theme in deep learning.
 For reasons that are not yet well-characterized theoretically,
 various sources of noise in optimization
@@ -189,6 +205,17 @@ In some preliminary research,
 relate the properties of batch normalization to Bayesian priors and penalties respectively.
 In particular, this sheds some light on the puzzle
 of why batch normalization works best for moderate minibatches sizes in the $50 \sim 100$ range.
+
+Esse é um tema recorrente no aprendizado profundo.
+Por razões que ainda não são bem caracterizadas teoricamente,
+várias fontes de ruído na otimização
+muitas vezes levam a um treinamento mais rápido e menos sobreajuste:
+essa variação parece atuar como uma forma de regularização.
+Em algumas pesquisas preliminares,
+: cite: `Teye.Azizpour.Smith.2018` e: cite:` Luo.Wang.Shao.ea.2018`
+relacionar as propriedades de normalização de lote aos antecedentes e penalidades Bayesianas, respectivamente.
+Em particular, isso lança alguma luz sobre o quebra-cabeça
+de por que a normalização em lote funciona melhor para tamanhos moderados de minibatches na faixa de $ 50 \ sim 100 $.
 
 Fixing a trained model, you might think
 that we would prefer using the entire dataset
@@ -212,6 +239,27 @@ and in *prediction mode* (normalizing by dataset statistics).
 We are now ready to take a look at how batch normalization works in practice.
 
 
+Consertando um modelo treinado, você pode pensar
+que preferiríamos usar todo o conjunto de dados
+para estimar a média e a variância.
+Depois que o treinamento for concluído, por que desejaríamos
+a mesma imagem a ser classificada de forma diferente,
+dependendo do lote em que reside?
+Durante o treinamento, esse cálculo exato é inviável
+porque as variáveis intermediárias
+para todos os exemplos de dados
+mudar toda vez que atualizamos nosso modelo.
+No entanto, uma vez que o modelo é treinado,
+podemos calcular as médias e variações
+das variáveis de cada camada com base em todo o conjunto de dados.
+Na verdade, esta é uma prática padrão para
+modelos que empregam normalização em lote
+e, portanto, as camadas de normalização em lote funcionam de maneira diferente
+no * modo de treinamento * (normalizando por estatísticas de minibatch)
+e no * modo de previsão * (normalizando por estatísticas do conjunto de dados).
+
+Agora estamos prontos para dar uma olhada em como a normalização em lote funciona na prática.
+
 ## Batch Normalization Layers
 
 Batch normalization implementations for fully-connected layers
@@ -221,6 +269,14 @@ Recall that one key differences between batch normalization and other layers
 is that because batch normalization operates on a full minibatch at a time,
 we cannot just ignore the batch dimension
 as we did before when introducing other layers.
+
+Implementações de normalização em lote para camadas totalmente conectadas
+e as camadas convolucionais são ligeiramente diferentes.
+Discutimos ambos os casos abaixo.
+Lembre-se de que uma diferença fundamental entre a normalização em lote e outras camadas
+é que porque a normalização de lote opera em um minibatch completo por vez,
+não podemos simplesmente ignorar a dimensão do lote
+como fizemos antes ao introduzir outras camadas.
 
 ### Fully-Connected Layers
 
@@ -234,11 +290,25 @@ and the activation function by $\phi$,
 we can express the computation of a batch-normalization-enabled,
 fully-connected layer output $\mathbf{h}$ as follows:
 
+Ao aplicar a normalização de lote a camadas totalmente conectadas,
+o papel original insere a normalização do lote após a transformação afim
+e antes da função de ativação não linear (aplicativos posteriores podem inserir a normalização em lote logo após as funções de ativação): cite: `Ioffe.Szegedy.2015`.
+Denotando a entrada para a camada totalmente conectada por $ \ mathbf {x} $,
+a transformação afim
+por $ \ mathbf {W} \ mathbf {x} + \ mathbf {b} $ (com o parâmetro de peso $ \ mathbf {W} $ e o parâmetro de polarização $ \ mathbf {b} $),
+e a função de ativação por $ \ phi $,
+podemos expressar o cálculo de uma normalização de lote habilitada,
+saída de camada totalmente conectada $ \ mathbf {h} $ como segue:
+
 $$\mathbf{h} = \phi(\mathrm{BN}(\mathbf{W}\mathbf{x} + \mathbf{b}) ).$$
 
 Recall that mean and variance are computed
 on the *same* minibatch 
 on which the transformation is applied.
+
+Lembre-se de que a média e a variância são calculadas
+no * mesmo * minibatch
+no qual a transformação é aplicada.
 
 ### Convolutional Layers
 
@@ -784,5 +854,5 @@ tens of thousands of citations.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMTM3Mzg2OSw5Nzk2MTczMThdfQ==
+eyJoaXN0b3J5IjpbLTMyNTgyMzc2MSw5Nzk2MTczMThdfQ==
 -->
