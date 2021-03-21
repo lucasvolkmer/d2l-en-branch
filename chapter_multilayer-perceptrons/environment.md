@@ -269,17 +269,18 @@ de árvores sem sombras --- o primeiro conjunto
 de fotos foi tirado no início da manhã,
 o segundo conjunto ao meio-dia.
 
-### Distribuições ão-estacionárias
+### Distribuições Não-estacionárias
 
-A much more subtle situation arises
-when the distribution changes slowly
-(also known as *nonstationary distribution*)
-and the model is not updated adequately.
-Below are some typical cases.
 
-* We train a computational advertising model and then fail to update it frequently (e.g., we forget to incorporate that an obscure new device called an iPad was just launched).
-* We build a spam filter. It works well at detecting all spam that we have seen so far. But then the spammers wisen up and craft new messages that look unlike anything we have seen before.
-* We build a product recommendation system. It works throughout the winter but then continues to recommend Santa hats long after Christmas.
+Surge uma situação muito mais sutil
+quando a distribuição muda lentamente
+(também conhecido como *distribuição não-estacionária*)
+e o modelo não é atualizado de forma adequada.
+Abaixo estão alguns casos típicos.
+
+* Treinamos um modelo de publicidade computacional e deixamos de atualizá-lo com frequência (por exemplo, esquecemos de incorporar que um novo dispositivo obscuro chamado iPad acabou de ser lançado).
+* Construímos um filtro de spam. Ele funciona bem na detecção de todos os spams que vimos até agora. Mas então os spammers se tornaram mais inteligentes e criaram novas mensagens que se parecem com tudo o que vimos antes.
+* Construímos um sistema de recomendação de produtos. Ele funciona durante todo o inverno, mas continua a recomendar chapéus de Papai Noel muito depois do Natal.
 
 ### More Anecdotes
 
@@ -698,7 +699,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNDU3NDY4OSwxOTc1MTYyMjM4LDIwNj
-I5OTE5OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDks
-ODQyNzc1ODEyXX0=
+eyJoaXN0b3J5IjpbLTE1MjgwODAxNDgsMTk3NTE2MjIzOCwyMD
+YyOTkxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5
+LDg0Mjc3NTgxMl19
 -->
