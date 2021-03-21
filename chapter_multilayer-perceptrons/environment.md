@@ -159,7 +159,7 @@ envolver a manipulação de objetos que se parecem com rótulos (muitas vezes de
 ao contrário de objetos que parecem entradas,
 que tendem a ser altamente dimensionais no *deep learning*.
 
-### Concept Shift
+### Mudança de Conceito
 
 We may also encounter the related problem of *concept shift*,
 which arises when the very definitions of labels can change.
@@ -697,6 +697,6 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDQwNjk5OCwtMjQyNzQwOTQsMTg3MD
-QzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
+eyJoaXN0b3J5IjpbMjA2Mjk5MTk4LC0yNDI3NDA5NCwxODcwND
+M1MzE2LDMzNzU0Nzc0OSw4NDI3NzU4MTJdfQ==
 -->
