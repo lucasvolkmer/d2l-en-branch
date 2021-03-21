@@ -589,8 +589,8 @@ Na *aprendizagem em lote*, temos acesso aos recursos de treinamento e rótulos $
 
 ### Aprendizado *Online*
 
-Now imagine that the data $(\mathbf{x}_i, y_i)$ arrives one sample at a time. More specifically, assume that we first observe $\mathbf{x}_i$, then we need to come up with an estimate $f(\mathbf{x}_i)$ and only once we have done this, we observe $y_i$ and with it, we receive a reward or incur a loss, given our decision.
-Many real problems fall into this category. For example, we need to predict tomorrow's stock price, this allows us to trade based on that estimate and at the end of the day we find out whether our estimate allowed us to make a profit. In other words, in *online learning*, we have the following cycle where we are continuously improving our model given new observations.
+Agora imagine que os dados $(\mathbf{x}_i, y_i)$ chegam em uma amostra de cada vez. Mais especificamente, suponha que primeiro observamos $\mathbf{x}_i$,  então precisamos chegar a uma estimativa $f(\mathbf{x}_i)$ e somente depois de fazermos isso, observamos $y_i$ e com isso, recebemos uma recompensa ou incorremos em uma perda, dada a nossa decisão.
+Muitos problemas reais se enquadram nesta categoria. Por exemplo, precisamos prever o preço das ações de amanhã, o que nos permite negociar com base nessa estimativa e, no final do dia, descobrimos se nossa estimativa nos permitiu obter lucro. Em outras palavras, em *aprendizagem online*, temos o seguinte ciclo, onde estamos continuamente melhorando nosso modelo a partir de novas observações.
 
 $$
 \mathrm{model} ~ f_t \longrightarrow
@@ -705,9 +705,9 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NzE1NDE2NywxNDA4MTkyNzM3LDM0Nj
-YzMjQyOSwzMzUzMzQxMDMsLTE1MDQ1NjEyNjgsMjA5MDE1OTY4
-LC02MDk2MTM4OTksMTk3NTE2MjIzOCwyMDYyOTkxOTgsLTI0Mj
-c0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbNDM2Nzc0NDQ2LDE0MDgxOTI3MzcsMzQ2Nj
+MyNDI5LDMzNTMzNDEwMywtMTUwNDU2MTI2OCwyMDkwMTU5Njgs
+LTYwOTYxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNz
+QwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
 
 -->
