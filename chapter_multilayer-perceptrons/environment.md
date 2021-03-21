@@ -364,19 +364,19 @@ $$
 \end{aligned}
 $$
 
-In other words, we need to reweigh each data example
-by the ratio of the
-probability
-that it would have been drawn from the correct distribution to that from the wrong one:
+Em outras palavras, precisamos pesar novamente cada exemplo de dados
+pela proporção do
+probabilidade
+que teria sido extraída da distribuição correta para a errada:
 
 $$\beta_i \stackrel{\mathrm{def}}{=} \frac{p(\mathbf{x}_i)}{q(\mathbf{x}_i)}.$$
 
-Plugging in the weight $\beta_i$ for
-each data example $(\mathbf{x}_i, y_i)$
-we can train our model using
-*weighted empirical risk minimization*:
+Conectando o peso $\beta_i$ para
+cada exemplo de dados $(\mathbf{x}_i, y_i)$
+podemos treinar nosso modelo usando
+*minimização de risco empírico ponderado*:
 
-$$\mathop{\mathrm{minimize}}_f \frac{1}{n} \sum_{i=1}^n \beta_i l(f(\mathbf{x}_i), y_i).$$
+$$\mathop{\mathrm{minimizar}}_f \frac{1}{n} \sum_{i=1}^n \beta_i l(f(\mathbf{x}_i), y_i).$$
 :eqlabel:`eq_weighted-empirical-risk-min`
 
 
@@ -699,7 +699,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MTY0MzIwNiwtNjA5NjEzODk5LDE5Nz
+eyJoaXN0b3J5IjpbLTMwMzAwNjEwNSwtNjA5NjEzODk5LDE5Nz
 UxNjIyMzgsMjA2Mjk5MTk4LC0yNDI3NDA5NCwxODcwNDM1MzE2
 LDMzNzU0Nzc0OSw4NDI3NzU4MTJdfQ==
 -->
