@@ -345,17 +345,17 @@ minimizando o risco.
 ### Covariate Shift Correction
 :label:`subsec_covariate-shift-correction`
 
-Assume that we want to estimate
-some dependency $P(y \mid \mathbf{x})$
-for which we have labeled data $(\mathbf{x}_i, y_i)$.
-Unfortunately, the observations $\mathbf{x}_i$ are drawn
-from some *source distribution* $q(\mathbf{x})$
-rather than the *target distribution* $p(\mathbf{x})$.
-Fortunately,
-the dependency assumption means
-that the conditional distribution does not change: $p(y \mid \mathbf{x}) = q(y \mid \mathbf{x})$.
-If the source distribution $q(\mathbf{x})$ is "wrong",
-we can correct for that by using the following simple identity in the risk:
+Suponha que queremos estimar
+algumas dependências $P(y \mid \mathbf{x})$
+para as quais rotulamos os dados $(\mathbf{x}_i, y_i)$.
+Infelizmente, as observações $\mathbf{x}_i$ são desenhadas
+de alguma *distribuição de origem* q(\mathbf{x})$
+em vez da *distribuição de destino* $p(\mathbf{x})$.
+Felizmente,
+a suposição de dependência significa
+que a distribuição condicional não muda: $p(y \mid \mathbf{x}) = q(y \mid \mathbf{x})$.
+Se a distribuição de origem $q(\mathbf{x})$ está "errada",
+podemos corrigir isso usando a seguinte identidade simples no risco:
 
 $$
 \begin{aligned}
@@ -699,7 +699,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwOTYxMzg5OSwxOTc1MTYyMjM4LDIwNj
-I5OTE5OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDks
-ODQyNzc1ODEyXX0=
+eyJoaXN0b3J5IjpbMTE4MTY0MzIwNiwtNjA5NjEzODk5LDE5Nz
+UxNjIyMzgsMjA2Mjk5MTk4LC0yNDI3NDA5NCwxODcwNDM1MzE2
+LDMzNzU0Nzc0OSw4NDI3NzU4MTJdfQ==
 -->
