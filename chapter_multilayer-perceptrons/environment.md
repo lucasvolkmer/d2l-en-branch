@@ -381,18 +381,18 @@ $$\mathop{\mathrm{minimizar}}_f \frac{1}{n} \sum_{i=1}^n \beta_i l(f(\mathbf{x}_
 
 
 
-Alas, we do not know that ratio,
-so before we can do anything useful we need to estimate it.
-Many methods are available,
-including some fancy operator-theoretic approaches
-that attempt to recalibrate the expectation operator directly
-using a minimum-norm or a maximum entropy principle.
-Note that for any such approach, we need samples
-drawn from both distributions---the "true" $p$, e.g.,
-by access to test data, and the one used
-for generating the training set $q$ (the latter is trivially available).
-Note however, that we only need features $\mathbf{x} \sim p(\mathbf{x})$;
-we do not need to access labels $y \sim p(y)$.
+Infelizmente, não sabemos essa proporção,
+portanto, antes de fazermos qualquer coisa útil, precisamos estimá-la.
+Muitos métodos estão disponíveis,
+incluindo algumas abordagens teóricas de operador extravagantes
+que tentam recalibrar o operador de expectativa diretamente
+usando uma norma mínima ou um princípio de entropia máxima.
+Observe que, para qualquer abordagem desse tipo, precisamos de amostras
+extraídas de ambas as distribuições --- o "verdadeiro" $p$, por exemplo,
+por acesso aos dados de teste, e aquele usado
+para gerar o conjunto de treinamento $q$ (o último está trivialmente disponível).
+Observe, entretanto, que só precisamos dos recursos $\mathbf{x} \sim p(\mathbf{x})$;
+não precisamos acessar os rótulos $y \sim p(y)$.
 
 In this case, there exists a very effective approach
 that will give almost as good results as the original: logistic regression,
@@ -699,7 +699,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMzAwNjEwNSwtNjA5NjEzODk5LDE5Nz
-UxNjIyMzgsMjA2Mjk5MTk4LC0yNDI3NDA5NCwxODcwNDM1MzE2
-LDMzNzU0Nzc0OSw4NDI3NzU4MTJdfQ==
+eyJoaXN0b3J5IjpbMjA5MDE1OTY4LC02MDk2MTM4OTksMTk3NT
+E2MjIzOCwyMDYyOTkxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYs
+MzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
 -->
