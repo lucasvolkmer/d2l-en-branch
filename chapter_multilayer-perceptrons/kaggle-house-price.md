@@ -1,4 +1,4 @@
-# Predicting House Prices onvisão de Preços de Imóveis no Kaggle
+# Previsão de Preços de Imóveis no Kaggle
 :label:`sec_kaggle_house`
 
 Now that we have introduced some basic tools
@@ -702,5 +702,5 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NzMwNDIyNl19
+eyJoaXN0b3J5IjpbMjIxMTYzODg1XX0=
 -->
