@@ -448,24 +448,25 @@ são retirados da distribuição de destino.
 Aqui está um algoritmo prototípico
 para corrigir a mudança da covariável:
 
-1. Generate a binary-classification training set: $\{(\mathbf{x}_1, -1), \ldots, (\mathbf{x}_n, -1), (\mathbf{u}_1, 1), \ldots, (\mathbf{u}_m, 1)\}$.
-1. Train a binary classifier using logistic regression to get function $h$.
-1. Weigh training data using $\beta_i = \exp(h(\mathbf{x}_i))$ or better $\beta_i = \min(\exp(h(\mathbf{x}_i)), c)$ for some constant $c$.
-1. Use weights $\beta_i$ for training on $\{(\mathbf{x}_1, y_1), \ldots, (\mathbf{x}_n, y_n)\}$ in :eqref:`eq_weighted-empirical-risk-min`.
 
-Note that the above algorithm relies on a crucial assumption.
-For this scheme to work, we need that each data example
-in the target (e.g., test time) distribution
-had nonzero probability of occurring at training time.
-If we find a point where $p(\mathbf{x}) > 0$ but $q(\mathbf{x}) = 0$,
-then the corresponding importance weight should be infinity.
+1. Gere um conjunto de treinamento de classificação binária: $\{(\mathbf{x}_1, -1), \ldots, (\mathbf{x}_n, -1), (\mathbf{u}_1, 1), \ldots, (\mathbf{u}_m, 1)\}$.
+1. Treine um classificador binário usando regressão logística para obter a função $h$.
+1. Pese os dados de treinamento usando $\beta_i = \exp(h(\mathbf{x}_i))$ ou melhor $$\beta_i = \min(\exp(h(\mathbf{x}_i)), c)$ para alguma constante $c$.
+1. Use pesos $\beta_i$ para treinar em $\{(\mathbf{x}_1, y_1), \ldots, (\mathbf{x}_n, y_n)\}$ em :eqref:`eq_weighted-empirical-risk-min`.
 
-
-
+Observe que o algoritmo acima se baseia em uma suposição crucial.
+Para que este esquema funcione, precisamos que cada exemplo de dados
+na distribuição de destino (por exemplo, tempo de teste)
+tenha probabilidade diferente de zero de ocorrer no momento do treinamento.
+Se encontrarmos um ponto onde $p(\mathbf{x}) > 0$ mas $q(\mathbf{x}) = 0$,
+então, o peso de importância correspondente deve ser infinito.
 
 
 
-### Label Shift Correction
+
+
+
+### Correção de Mudança de *Label*
 
 Assume that we are dealing with a
 classification task with $k$ categories.
@@ -701,7 +702,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNDU3MjIzNiwyMDkwMTU5NjgsLTYwOT
-YxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNzQwOTQs
-MTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
+eyJoaXN0b3J5IjpbLTE1MDQ1NjEyNjgsMjA5MDE1OTY4LC02MD
+k2MTM4OTksMTk3NTE2MjIzOCwyMDYyOTkxOTgsLTI0Mjc0MDk0
+LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
 -->
