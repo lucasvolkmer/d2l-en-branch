@@ -585,10 +585,9 @@ Munidos do conhecimento sobre como lidar com as mudanças nas distribuições, p
 
 ### Aprendizagem em Lote
 
-In *batch learning*, we have access to training features and labels $\{(\mathbf{x}_1, y_1), \ldots, (\mathbf{x}_n, y_n)\}$, which we use to train a model $f(\mathbf{x})$. Later on, we deploy this model to score new data $(\mathbf{x}, y)$ drawn from the same distribution. This is the default assumption for any of the problems that we discuss here. For instance, we might train a cat detector based on lots of pictures of cats and dogs. Once we trained it, we ship it as part of a smart catdoor computer vision system that lets only cats in. This is then installed in a customer's home and is never updated again (barring extreme circumstances).
+Na *aprendizagem em lote*, temos acesso aos recursos de treinamento e rótulos $\{(\mathbf{x}_1, y_1), \ldots, (\mathbf{x}_n, y_n)\}$, que usamos para treinar um modelo $f(\mathbf{x})$. Posteriormente, implementamos esse modelo para pontuar novos dados $(\mathbf{x}, y)$ extraídos da mesma distribuição. Esta é a suposição padrão para qualquer um dos problemas que discutimos aqui. Por exemplo, podemos treinar um detector de gatos com base em muitas fotos de cães e gatos. Depois de treiná-lo, nós o enviamos como parte de um sistema de visão computacional de porta de gato inteligente que permite a entrada apenas de gatos. Ele é então instalado na casa do cliente e nunca mais atualizado (exceto em circunstâncias extremas).
 
-
-### Online Learning
+### Aprendizado *Online*
 
 Now imagine that the data $(\mathbf{x}_i, y_i)$ arrives one sample at a time. More specifically, assume that we first observe $\mathbf{x}_i$, then we need to come up with an estimate $f(\mathbf{x}_i)$ and only once we have done this, we observe $y_i$ and with it, we receive a reward or incur a loss, given our decision.
 Many real problems fall into this category. For example, we need to predict tomorrow's stock price, this allows us to trade based on that estimate and at the end of the day we find out whether our estimate allowed us to make a profit. In other words, in *online learning*, we have the following cycle where we are continuously improving our model given new observations.
@@ -706,7 +705,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNDMxODE0OCwxNDA4MTkyNzM3LDM0Nj
+eyJoaXN0b3J5IjpbLTg5NzE1NDE2NywxNDA4MTkyNzM3LDM0Nj
 YzMjQyOSwzMzUzMzQxMDMsLTE1MDQ1NjEyNjgsMjA5MDE1OTY4
 LC02MDk2MTM4OTksMTk3NTE2MjIzOCwyMDYyOTkxOTgsLTI0Mj
 c0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
