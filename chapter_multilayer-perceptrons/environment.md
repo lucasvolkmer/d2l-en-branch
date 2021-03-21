@@ -423,9 +423,9 @@ Então, a probabilidade em um conjunto de dados misto é dada por
 
 $$P(z=1 \mid \mathbf{x}) = \frac{p(\mathbf{x})}{p(\mathbf{x})+q(\mathbf{x})} \text{ e portanto } \frac{P(z=1 \mid \mathbf{x})}{P(z=-1 \mid \mathbf{x})} = \frac{p(\mathbf{x})}{q(\mathbf{x})}.$$
 
-Thus, if we use a logistic regression approach,
-where $P(z=1 \mid \mathbf{x})=\frac{1}{1+\exp(-h(\mathbf{x}))}$ ($h$ is a parameterized function),
-it follows that
+Assim, se usarmos uma abordagem de regressão logística,
+onde $P(z=1 \mid \mathbf{x})=\frac{1}{1+\exp(-h(\mathbf{x}))}$  ($h$ é uma função parametrizada),
+segue que
 
 $$
 \beta_i = \frac{1/(1 + \exp(-h(\mathbf{x}_i)))}{\exp(-h(\mathbf{x}_i))/(1 + \exp(-h(\mathbf{x}_i)))} = \exp(h(\mathbf{x}_i)).
@@ -700,7 +700,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1OTAxMzc2MCwyMDkwMTU5NjgsLTYwOT
+eyJoaXN0b3J5IjpbMTMzMDQxMzk5NSwyMDkwMTU5NjgsLTYwOT
 YxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNzQwOTQs
 MTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
 -->
