@@ -517,25 +517,26 @@ e cada linha corresponde à categoria prevista do nosso modelo.
 O valor de cada célula $c_{ij}$ é a fração do total de previsões no conjunto de validação
 onde o verdadeiro rótulo era $j$ e nosso modelo previu $i$.
 
-Now, we cannot calculate the confusion matrix
-on the target data directly,
-because we do not get to see the labels for the examples
-that we see in the wild,
-unless we invest in a complex real-time annotation pipeline.
-What we can do, however, is average all of our models predictions
-at test time together, yielding the mean model outputs $\mu(\hat{\mathbf{y}}) \in \mathbb{R}^k$,
-whose $i^\mathrm{th}$ element $\mu(\hat{y}_i)$
-is the fraction of total predictions on the test set
-where our model predicted $i$.
 
-It turns out that under some mild conditions---if
-our classifier was reasonably accurate in the first place,
-and if the target data contain only categories
-that we have seen before,
-and if the label shift assumption holds in the first place
-(the strongest assumption here),
-then we can estimate the test set label distribution
-by solving a simple linear system
+Agora, não podemos calcular a matriz de confusão
+nos dados de destino diretamente,
+porque não conseguimos ver os rótulos dos exemplos
+que vemos na natureza,
+a menos que invistamos em um pipeline de anotação em tempo real complexo.
+O que podemos fazer, no entanto, é calcular a média de todas as nossas previsões de modelos
+no momento do teste juntas, produzindo os resultados médios do modelo $\mu(\hat{\mathbf{y}}) \in \mathbb{R}^k$,
+cujo $i^\mathrm{th}$ elemento $\mu(\hat{y}_i)$
+é a fração das previsões totais no conjunto de teste
+onde nosso modelo previu $i$.
+
+Acontece que sob algumas condições amenas --- se
+nosso classificador era razoavelmente preciso em primeiro lugar,
+e se os dados alvo contiverem apenas categorias
+que vimos antes,
+e se a suposição de mudança de rótulo se mantém em primeiro lugar
+(a suposição mais forte aqui),
+então podemos estimar a distribuição do rótulo do conjunto de teste
+resolvendo um sistema linear simples
 
 $$\mathbf{C} p(\mathbf{y}) = \mu(\hat{\mathbf{y}}),$$
 
@@ -703,8 +704,8 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM1MzM0MTAzLC0xNTA0NTYxMjY4LDIwOT
-AxNTk2OCwtNjA5NjEzODk5LDE5NzUxNjIyMzgsMjA2Mjk5MTk4
-LC0yNDI3NDA5NCwxODcwNDM1MzE2LDMzNzU0Nzc0OSw4NDI3Nz
-U4MTJdfQ==
+eyJoaXN0b3J5IjpbMzQ2NjMyNDI5LDMzNTMzNDEwMywtMTUwND
+U2MTI2OCwyMDkwMTU5NjgsLTYwOTYxMzg5OSwxOTc1MTYyMjM4
+LDIwNjI5OTE5OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1ND
+c3NDksODQyNzc1ODEyXX0=
 -->
