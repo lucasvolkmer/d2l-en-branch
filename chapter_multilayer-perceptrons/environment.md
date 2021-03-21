@@ -240,35 +240,36 @@ Resumindo, eles desperdiçaram uma quantia significativa de dinheiro.
 
 ### Carros Autônomos
 
-Say a company wanted to leverage machine learning
-for developing self-driving cars.
-One key component here is a roadside detector.
-Since real annotated data are expensive to get,
-they had the (smart and questionable) idea
-to use synthetic data from a game rendering engine
-as additional training data.
-This worked really well on "test data"
-drawn from the rendering engine.
-Alas, inside a real car it was a disaster.
-As it turned out, the roadside had been rendered
-with a very simplistic texture.
-More importantly, *all* the roadside had been rendered
-with the *same* texture and the roadside detector
-learned about this "feature" very quickly.
 
-A similar thing happened to the US Army
-when they first tried to detect tanks in the forest.
-They took aerial photographs of the forest without tanks,
-then drove the tanks into the forest
-and took another set of pictures.
-The classifier appeared to work *perfectly*.
-Unfortunately, it had merely learned
-how to distinguish trees with shadows
-from trees without shadows---the first set
-of pictures was taken in the early morning,
-the second set at noon.
+Digamos que uma empresa queira aproveitar o *machine learning*
+para o desenvolvimento de carros autônomos.
+Um componente chave aqui é um detector de beira de estrada.
+Uma vez que dados anotados reais são caros de se obter,
+eles tiveram a ideia (inteligente e questionável)
+de usar dados sintéticos de um motor de renderização de jogo
+como dados de treinamento adicionais.
+Isso funcionou muito bem em "dados de teste"
+extraídos do mecanismo de renderização.
+Infelizmente, dentro de um carro de verdade foi um desastre.
+Como se viu, a beira da estrada havia sido renderizada
+com uma textura muito simplista.
+Mais importante, *todo* o acostamento havia sido renderizado
+com a *mesma* textura e o detector de beira de estrada
+aprendeu sobre essa "característica" muito rapidamente.
 
-### Nonstationary Distributions
+Algo semelhante aconteceu com o Exército dos EUA
+quando eles tentaram detectar tanques na floresta pela primeira vez.
+Eles tiraram fotos aéreas da floresta sem tanques,
+em seguida, dirigiram os tanques para a floresta
+e tiraram outro conjunto de fotos.
+O classificador pareceu funcionar *perfeitamente*.
+Infelizmente, ele apenas aprendeu
+como distinguir árvores com sombras
+de árvores sem sombras --- o primeiro conjunto
+de fotos foi tirado no início da manhã,
+o segundo conjunto ao meio-dia.
+
+### Distribuições ão-estacionárias
 
 A much more subtle situation arises
 when the distribution changes slowly
@@ -697,7 +698,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzY4NDg5MTIsMTk3NTE2MjIzOCwyMD
-YyOTkxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5
-LDg0Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbMTAxNDU3NDY4OSwxOTc1MTYyMjM4LDIwNj
+I5OTE5OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDks
+ODQyNzc1ODEyXX0=
 -->
