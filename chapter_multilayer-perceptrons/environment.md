@@ -179,22 +179,21 @@ como mostrado em :numref:`fig_popvssoda`.
 :width:`400px`
 :label:`fig_popvssoda`
 
-If we were to build a machine translation system,
-the distribution $P(y \mid \mathbf{x})$ might be different
-depending on our location.
-This problem can be tricky to spot.
-We might hope to exploit knowledge
-that shift only takes place gradually
-either in a temporal or geographic sense.
+Se fossemos construir um sistema de tradução automática,
+a distribuição $P(y \mid \mathbf{x})$ pode ser diferente
+dependendo de nossa localização.
+Esse problema pode ser difícil de detectar.
+Podemos ter esperança de explorar o conhecimento
+cuja mudança só ocorre gradualmente
+seja em um sentido temporal ou geográfico.
 
-## Examples of Distribution Shift
+## Exemplos de Mudança de Distribuição
 
-Before delving into formalism and algorithms,
-we can discuss some concrete situations
-where covariate or concept shift might not be obvious.
+Antes de mergulhar no formalismo e algoritmos,
+podemos discutir algumas situações concretas
+onde a covariável ou mudança de conceito pode não ser óbvia.
 
-
-### Medical Diagnostics
+### Diagnóstico Médico
 
 Imagine that you want to design an algorithm to detect cancer.
 You collect data from healthy and sick people
@@ -697,7 +696,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjE1MTY5NzMsMjA2Mjk5MTk4LC0yND
-I3NDA5NCwxODcwNDM1MzE2LDMzNzU0Nzc0OSw4NDI3NzU4MTJd
-fQ==
+eyJoaXN0b3J5IjpbMTk3NTE2MjIzOCwyMDYyOTkxOTgsLTI0Mj
+c0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
+
 -->
