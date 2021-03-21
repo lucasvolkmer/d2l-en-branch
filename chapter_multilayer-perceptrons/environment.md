@@ -578,12 +578,12 @@ produtos antigos tornam-se menos populares. Isso significa que a distribuição 
 Nesses casos, podemos usar a mesma abordagem que usamos para treinar redes para fazê-las se adaptarem à mudança nos dados. Em outras palavras, usamos os pesos de rede existentes e simplesmente executamos algumas etapas de atualização com os novos dados, em vez de treinar do zero.
 
 
-## A Taxonomy of Learning Problems
+## Uma taxonomia de Problemas de Aprendizagem
 
-Armed with knowledge about how to deal with changes in distributions, we can now consider some other aspects of machine learning problem formulation.
+Munidos do conhecimento sobre como lidar com as mudanças nas distribuições, podemos agora considerar alguns outros aspectos da formulação do problema de *machine learning*.
 
 
-### Batch Learning
+### Aprendizagem em Lote
 
 In *batch learning*, we have access to training features and labels $\{(\mathbf{x}_1, y_1), \ldots, (\mathbf{x}_n, y_n)\}$, which we use to train a model $f(\mathbf{x})$. Later on, we deploy this model to score new data $(\mathbf{x}, y)$ drawn from the same distribution. This is the default assumption for any of the problems that we discuss here. For instance, we might train a cat detector based on lots of pictures of cats and dogs. Once we trained it, we ship it as part of a smart catdoor computer vision system that lets only cats in. This is then installed in a customer's home and is never updated again (barring extreme circumstances).
 
@@ -706,8 +706,9 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwODE5MjczNywzNDY2MzI0MjksMzM1Mz
-M0MTAzLC0xNTA0NTYxMjY4LDIwOTAxNTk2OCwtNjA5NjEzODk5
-LDE5NzUxNjIyMzgsMjA2Mjk5MTk4LC0yNDI3NDA5NCwxODcwND
-M1MzE2LDMzNzU0Nzc0OSw4NDI3NzU4MTJdfQ==
+eyJoaXN0b3J5IjpbLTYwNDMxODE0OCwxNDA4MTkyNzM3LDM0Nj
+YzMjQyOSwzMzUzMzQxMDMsLTE1MDQ1NjEyNjgsMjA5MDE1OTY4
+LC02MDk2MTM4OTksMTk3NTE2MjIzOCwyMDYyOTkxOTgsLTI0Mj
+c0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
+
 -->
