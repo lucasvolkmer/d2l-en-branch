@@ -540,19 +540,20 @@ resolvendo um sistema linear simples
 
 $$\mathbf{C} p(\mathbf{y}) = \mu(\hat{\mathbf{y}}),$$
 
-because as an estimate $\sum_{j=1}^k c_{ij} p(y_j) = \mu(\hat{y}_i)$ holds for all $1 \leq i \leq k$,
-where $p(y_j)$ is the $j^\mathrm{th}$ element of the $k$-dimensional label distribution vector $p(\mathbf{y})$.
-If our classifier is sufficiently accurate to begin with,
-then the confusion matrix $\mathbf{C}$ will be invertible,
-and we get a solution $p(\mathbf{y}) = \mathbf{C}^{-1} \mu(\hat{\mathbf{y}})$.
 
-Because we observe the labels on the source data,
-it is easy to estimate the distribution $q(y)$.
-Then for any training example $i$ with label $y_i$,
-we can take the ratio of our estimated $p(y_i)/q(y_i)$
-to calculate the weight $\beta_i$,
-and plug this into weighted empirical risk minimization
-in :eqref:`eq_weighted-empirical-risk-min`.
+porque como uma estimativa $\sum_{j=1}^k c_{ij} p(y_j) = \mu(\hat{y}_i)$ vale para todos $1 \leq i \leq k$,
+onde $p(y_j)$ é o elemento $j^\mathrm{th}$ do vetor de distribuição de rótulo $k$-dimensional $p(\mathbf{y})$.
+Se nosso classificador é suficientemente preciso para começar,
+então a matriz de confusão $\mathbf{C}$ será invertível,
+e obtemos uma solução $p(\mathbf{y}) = \mathbf{C}^{-1} \mu(\hat{\mathbf{y}})$.
+
+Porque observamos os rótulos nos dados de origem,
+é fácil estimar a distribuição $q(y)$.
+Então, para qualquer exemplo de treinamento $i$ com rótulo $y_i$,
+podemos pegar a razão de nossa estimativa de $p(y_i)/q(y_i)$
+para calcular o peso $\beta_i$,
+e conecter isso à minimização de risco empírico ponderado
+em :eqref:`eq_weighted-empirical-risk-min`.
 
 
 ### Concept Shift Correction
@@ -704,8 +705,8 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ2NjMyNDI5LDMzNTMzNDEwMywtMTUwND
-U2MTI2OCwyMDkwMTU5NjgsLTYwOTYxMzg5OSwxOTc1MTYyMjM4
-LDIwNjI5OTE5OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1ND
-c3NDksODQyNzc1ODEyXX0=
+eyJoaXN0b3J5IjpbLTIxMzU0ODc2MzIsMzQ2NjMyNDI5LDMzNT
+MzNDEwMywtMTUwNDU2MTI2OCwyMDkwMTU5NjgsLTYwOTYxMzg5
+OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNzQwOTQsMTg3MD
+QzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
 -->
