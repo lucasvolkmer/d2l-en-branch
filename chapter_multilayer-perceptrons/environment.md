@@ -133,31 +133,31 @@ para saber como se adaptar ao novo domínio.
 
 ### Mudança de *Label*
 
-*Label shift* describes the converse problem.
-Here, we assume that the label marginal $P(y)$
-can change
-but the class-conditional distribution
-$P(\mathbf{x} \mid y)$ remains fixed across domains.
-Label shift is a reasonable assumption to make
-when we believe that $y$ causes $\mathbf{x}$.
-For example, we may want to predict diagnoses
-given their symptoms (or other manifestations),
-even as the relative prevalence of diagnoses
-are changing over time.
-Label shift is the appropriate assumption here
-because diseases cause symptoms.
-In some degenerate cases the label shift
-and covariate shift assumptions can hold simultaneously.
-For example, when the label is deterministic,
-the covariate shift assumption will be satisfied,
-even when $y$ causes $\mathbf{x}$.
-Interestingly, in these cases,
-it is often advantageous to work with methods
-that flow from the label shift assumption.
-That is because these methods tend
-to involve manipulating objects that look like labels (often low-dimensional),
-as opposed to objects that look like inputs,
-which tend to be high-dimensional in deep learning.
+A *Mudança de Label* descreve o problema inverso.
+Aqui, assumimos que o rótulo marginal $P(y)$
+pode mudar
+mas a distribuição condicional de classe
+$P(\mathbf{x} \mid y)$ permanece fixa nos domínios.
+A mudança de *label* é uma suposição razoável a fazer
+quando acreditamos que $y$ causa $\mathbf{x}$.
+Por exemplo, podemos querer prever diagnósticos
+dados seus sintomas (ou outras manifestações),
+mesmo enquanto a prevalência relativa de diagnósticos
+esteja mudando com o tempo.
+A mudança de rótulo é a suposição apropriada aqui
+porque as doenças causam sintomas.
+Em alguns casos degenerados, a mudança de rótulo
+e as suposições de mudança de covariável podem ser mantidas simultaneamente.
+Por exemplo, quando o rótulo é determinístico,
+a suposição de mudança da covariável será satisfeita,
+mesmo quando $y$ causa $\mathbf{x}$.
+Curiosamente, nesses casos,
+muitas vezes é vantajoso trabalhar com métodos
+que fluem da suposição de mudança de rótulo.
+Isso ocorre porque esses métodos tendem
+envolver a manipulação de objetos que se parecem com rótulos (muitas vezes de baixa dimensão),
+ao contrário de objetos que parecem entradas,
+que tendem a ser altamente dimensionais no *deep learning*.
 
 ### Concept Shift
 
@@ -697,6 +697,6 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDkwMzgxNDQsLTI0Mjc0MDk0LDE4Nz
-A0MzUzMTYsMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbMTExMDQwNjk5OCwtMjQyNzQwOTQsMTg3MD
+QzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
 -->
