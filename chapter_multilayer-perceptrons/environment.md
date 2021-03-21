@@ -496,25 +496,26 @@ taxas de probabilidade de rótulo
 
 $$\beta_i \stackrel{\mathrm{def}}{=} \frac{p(y_i)}{q(y_i)}.$$
 
-One nice thing about label shift is that
-if we have a reasonably good model
-on the source distribution,
-then we can get consistent estimates of these weights
-without ever having to deal with the ambient dimension.
-In deep learning, the inputs tend
-to be high-dimensional objects like images,
-while the labels are often simpler objects like categories.
 
-To estimate the target label distribution,
-we first take our reasonably good off-the-shelf classifier
-(typically trained on the training data)
-and compute its confusion matrix using the validation set
-(also from the training distribution).
-The *confusion matrix*, $\mathbf{C}$, is simply a $k \times k$ matrix,
-where each column corresponds to the label category (ground truth)
-and each row corresponds to our model's predicted category.
-Each cell's value $c_{ij}$ is the fraction of total predictions on the validation set
-where the true label was $j$ and our model predicted $i$.
+Uma coisa boa sobre a mudança de rótulo é que
+se tivermos um modelo razoavelmente bom
+na distribuição de origem,
+então podemos obter estimativas consistentes desses pesos
+sem nunca ter que lidar com a dimensão ambiental.
+No aprendizado profundo, as entradas tendem
+a ser objetos de alta dimensão, como imagens,
+enquanto os rótulos são frequentemente objetos mais simples, como categorias.
+
+Para estimar a distribuição de rótulos de destino,
+primeiro pegamos nosso classificador de prateleira razoavelmente bom
+(normalmente treinado nos dados de treinamento)
+e calculamos sua matriz de confusão usando o conjunto de validação
+(também da distribuição de treinamento).
+A *matriz de confusão*, $\mathbf{C}$, é simplesmente uma matriz $k \times k$,
+onde cada coluna corresponde à categoria do rótulo (informações básicas)
+e cada linha corresponde à categoria prevista do nosso modelo.
+O valor de cada célula $c_{ij}$ é a fração do total de previsões no conjunto de validação
+onde o verdadeiro rótulo era $j$ e nosso modelo previu $i$.
 
 Now, we cannot calculate the confusion matrix
 on the target data directly,
@@ -702,8 +703,8 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1Mjc2OTI0NSwtMTUwNDU2MTI2OCwyMD
-kwMTU5NjgsLTYwOTYxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5
-OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNz
-c1ODEyXX0=
+eyJoaXN0b3J5IjpbMzM1MzM0MTAzLC0xNTA0NTYxMjY4LDIwOT
+AxNTk2OCwtNjA5NjEzODk5LDE5NzUxNjIyMzgsMjA2Mjk5MTk4
+LC0yNDI3NDA5NCwxODcwNDM1MzE2LDMzNzU0Nzc0OSw4NDI3Nz
+U4MTJdfQ==
 -->
