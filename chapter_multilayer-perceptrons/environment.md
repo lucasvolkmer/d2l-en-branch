@@ -558,23 +558,24 @@ em :eqref:`eq_weighted-empirical-risk-min`.
 
 ### Correção da Mudança de Conceito
 
-Concept shift is much harder to fix in a principled manner.
-For instance, in a situation where suddenly the problem changes
-from distinguishing cats from dogs to one of
-distinguishing white from black animals,
-it will be unreasonable to assume
-that we can do much better than just collecting new labels
-and training from scratch.
-Fortunately, in practice, such extreme shifts are rare.
-Instead, what usually happens is that the task keeps on changing slowly.
-To make things more concrete, here are some examples:
 
-* In computational advertising, new products are launched,
-old products become less popular. This means that the distribution over ads and their popularity changes gradually and any click-through rate predictor needs to change gradually with it.
-* Traffic camera lenses degrade gradually due to environmental wear, affecting image quality progressively.
-* News content changes gradually (i.e., most of the news remains unchanged but new stories appear).
+A mudança de conceito é muito mais difícil de corrigir com base em princípios.
+Por exemplo, em uma situação em que de repente o problema muda
+de distinguir gatos de cães para um de
+distinguir animais brancos de negros,
+não será razoável supor
+que podemos fazer muito melhor do que apenas coletar novos rótulos
+e treinar do zero.
+Felizmente, na prática, essas mudanças extremas são raras.
+Em vez disso, o que geralmente acontece é que a tarefa continua mudando lentamente.
+Para tornar as coisas mais concretas, aqui estão alguns exemplos:
 
-In such cases, we can use the same approach that we used for training networks to make them adapt to the change in the data. In other words, we use the existing network weights and simply perform a few update steps with the new data rather than training from scratch.
+* Na publicidade computacional, novos produtos são lançados,
+produtos antigos tornam-se menos populares. Isso significa que a distribuição dos anúncios e sua popularidade mudam gradualmente e qualquer preditor de taxa de cliques precisa mudar gradualmente com isso.
+* As lentes das câmeras de trânsito degradam-se gradualmente devido ao desgaste ambiental, afetando progressivamente a qualidade da imagem.
+* O conteúdo das notícias muda gradualmente (ou seja, a maioria das notícias permanece inalterada, mas novas histórias aparecem).
+
+Nesses casos, podemos usar a mesma abordagem que usamos para treinar redes para fazê-las se adaptarem à mudança nos dados. Em outras palavras, usamos os pesos de rede existentes e simplesmente executamos algumas etapas de atualização com os novos dados, em vez de treinar do zero.
 
 
 ## A Taxonomy of Learning Problems
@@ -705,8 +706,8 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjI3NjQ4NDEsMzQ2NjMyNDI5LDMzNT
-MzNDEwMywtMTUwNDU2MTI2OCwyMDkwMTU5NjgsLTYwOTYxMzg5
-OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNzQwOTQsMTg3MD
-QzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
+eyJoaXN0b3J5IjpbMTQwODE5MjczNywzNDY2MzI0MjksMzM1Mz
+M0MTAzLC0xNTA0NTYxMjY4LDIwOTAxNTk2OCwtNjA5NjEzODk5
+LDE5NzUxNjIyMzgsMjA2Mjk5MTk4LC0yNDI3NDA5NCwxODcwND
+M1MzE2LDMzNzU0Nzc0OSw4NDI3NzU4MTJdfQ==
 -->
