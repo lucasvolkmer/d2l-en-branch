@@ -979,6 +979,10 @@ dezenas de milhares de citações.
 * Like a dropout layer, batch normalization layers have different computation results in training mode and prediction mode.
 * Batch normalization has many beneficial side effects, primarily that of regularization. On the other hand, the original motivation of reducing internal covariate shift seems not to be a valid explanation.
 
+* Durante o treinamento do modelo, a normalização em lote ajusta continuamente a saída intermediária da rede neural, utilizando a média e o desvio padrão do minibatch, de modo que os valores da saída intermediária em cada camada em toda a rede neural sejam mais estáveis.
+* Os métodos de normalização de lote para camadas totalmente conectadas e camadas convolucionais são ligeiramente diferentes.
+* Como uma camada de eliminação, as camadas de normalização em lote têm resultados de computação diferentes no modo de treinamento e no modo de previsão.
+* A normalização em lote tem muitos efeitos colaterais benéficos, principalmente o da regularização. Por outro lado, a motivação original de reduzir a mudança interna da covariável parece não ser uma explicação válida.
 
 ## Exercises
 
@@ -992,6 +996,15 @@ dezenas de milhares de citações.
 1. Review the online documentation for `BatchNorm` from the high-level APIs to see the other applications for batch normalization.
 1. Research ideas: think of other normalization transforms that you can apply? Can you apply the probability integral transform? How about a full rank covariance estimate?
 
+1. Podemos remover o parâmetro de polarização da camada totalmente conectada ou da camada convolucional antes da normalização do lote? Porque?
+1. Compare as taxas de aprendizagem para LeNet com e sem normalização de lote.
+     1. Plote o aumento na precisão do treinamento e do teste.
+     1. Quão grande você pode aumentar a taxa de aprendizado?
+1. Precisamos de normalização de lote em cada camada? Experimentar?
+1. Você pode substituir o abandono pela normalização em lote? Como o comportamento muda?
+1. Fixe os parâmetros `beta` e` gamma`, observe e analise os resultados.
+1. Revise a documentação online para `BatchNorm` das APIs de alto nível para ver os outros aplicativos para normalização de lote.
+1. Ideias de pesquisa: pense em outras transformações de normalização que você pode aplicar? Você pode aplicar a transformação integral de probabilidade? Que tal uma estimativa de covariância de classificação completa?
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/83)
 :end_tab:
@@ -1004,5 +1017,5 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYwNjM1Mzg2LDk3OTYxNzMxOF19
+eyJoaXN0b3J5IjpbLTE5NTc3OTQzMzYsOTc5NjE3MzE4XX0=
 -->
