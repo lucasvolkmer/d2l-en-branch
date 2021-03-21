@@ -468,20 +468,20 @@ então, o peso de importância correspondente deve ser infinito.
 
 ### Correção de Mudança de *Label*
 
-Assume that we are dealing with a
-classification task with $k$ categories.
-Using the same notation in :numref:`subsec_covariate-shift-correction`,
-$q$ and $p$ are the source distribution (e.g., training time) and target distribution (e.g., test time), respectively.
-Assume that the distribution of labels shifts over time:
-$q(y) \neq p(y)$, but the class-conditional distribution
-stays the same: $q(\mathbf{x} \mid y)=p(\mathbf{x} \mid y)$.
-If the source distribution $q(y)$ is "wrong",
-we can correct for that
-according to
-the following identity in the risk
-as defined in
-:eqref:`eq_true-risk`:
-
+Suponha que estamos lidando com um
+tarefa de classificação com $k$ categorias.
+Usando a mesma notação em :numref:`subsec_covariate-shift-correction`,
+$q$ e $p$ são as distribuições de origem (por exemplo, tempo de treinamento) e a distribuição de destino (por exemplo, tempo de teste), respectivamente.
+Suponha que a distribuição dos rótulos mude ao longo do tempo:
+$q(y) \neq p(y)$, mas a distribuição condicional de classe
+permanece a mesma: $q(\mathbf{x} \mid y)=p(\mathbf{x} \mid y)$.
+Se a distribuição de origem $q(y)$ estiver "errada",
+nós podemos corrigir isso
+de acordo com
+a seguinte identidade no risco
+conforme definido em
+ :eqref: `eq_true-risk`:
+ 
 $$
 \begin{aligned}
 \int\int l(f(\mathbf{x}), y) p(\mathbf{x} \mid y)p(y) \;d\mathbf{x}dy =
@@ -491,8 +491,8 @@ $$
 
 
 
-Here, our importance weights will correspond to the
-label likelihood ratios
+Aqui, nossos pesos de importância corresponderão às
+taxas de probabilidade de rótulo
 
 $$\beta_i \stackrel{\mathrm{def}}{=} \frac{p(y_i)}{q(y_i)}.$$
 
@@ -702,7 +702,8 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDQ1NjEyNjgsMjA5MDE1OTY4LC02MD
-k2MTM4OTksMTk3NTE2MjIzOCwyMDYyOTkxOTgsLTI0Mjc0MDk0
-LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
+eyJoaXN0b3J5IjpbLTQ1Mjc2OTI0NSwtMTUwNDU2MTI2OCwyMD
+kwMTU5NjgsLTYwOTYxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5
+OCwtMjQyNzQwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNz
+c1ODEyXX0=
 -->
