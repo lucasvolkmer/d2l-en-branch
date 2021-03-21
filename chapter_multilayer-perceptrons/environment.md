@@ -556,7 +556,7 @@ e conecter isso à minimização de risco empírico ponderado
 em :eqref:`eq_weighted-empirical-risk-min`.
 
 
-### Concept Shift Correction
+### Correção da Mudança de Conceito
 
 Concept shift is much harder to fix in a principled manner.
 For instance, in a situation where suddenly the problem changes
@@ -705,7 +705,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzU0ODc2MzIsMzQ2NjMyNDI5LDMzNT
+eyJoaXN0b3J5IjpbLTEwNjI3NjQ4NDEsMzQ2NjMyNDI5LDMzNT
 MzNDEwMywtMTUwNDU2MTI2OCwyMDkwMTU5NjgsLTYwOTYxMzg5
 OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNzQwOTQsMTg3MD
 QzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
