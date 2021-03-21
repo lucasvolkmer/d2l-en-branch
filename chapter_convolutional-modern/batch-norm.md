@@ -332,6 +332,26 @@ apply the same mean and variance
 within a given channel
 to normalize the value at each spatial location.
 
+Da mesma forma, com camadas convolucionais,
+podemos aplicar a normalização de lote após a convolução
+e antes da função de ativação não linear.
+Quando a convolução tem vários canais de saída,
+precisamos realizar a normalização do lote
+para * cada * uma das saídas desses canais,
+e cada canal tem sua própria escala e parâmetros de deslocamento,
+ambos são escalares.
+Suponha que nossos minibatches contenham $ m $ exemplos
+e isso para cada canal,
+a saída da convolução tem altura $ p $ e largura $ q $.
+Para camadas convolucionais, realizamos a normalização de cada lote
+nos elementos $ m \ cdot p \ cdot q $ por canal de saída simultaneamente.
+Assim, coletamos os valores de todas as localizações espaciais
+ao calcular a média e a variância
+e consequentemente
+aplique a mesma média e variância
+dentro de um determinado canal
+para normalizar o valor em cada localização espacial.
+
 
 ### Batch Normalization During Prediction
 
@@ -345,15 +365,33 @@ of computing per-batch normalization statistics.
 For example,
 we might need to apply our model to make one prediction at a time.
 
+Como mencionamos anteriormente, a normalização em lote normalmente se comporta de maneira diferente
+no modo de treinamento e no modo de previsão.
+Primeiro, o ruído na média da amostra e a variância da amostra
+decorrentes da estimativa de cada um em minibatches
+não são mais desejáveis, uma vez que treinamos o modelo.
+Em segundo lugar, podemos não ter o luxo
+de computação de estatísticas de normalização por lote.
+Por exemplo,
+podemos precisar aplicar nosso modelo para fazer uma previsão de cada vez.
+
 Typically, after training, we use the entire dataset
 to compute stable estimates of the variable statistics
 and then fix them at prediction time.
 Consequently, batch normalization behaves differently during training and at test time.
 Recall that dropout also exhibits this characteristic.
 
+Normalmente, após o treinamento, usamos todo o conjunto de dados
+para calcular estimativas estáveis das estatísticas variáveis
+e, em seguida, corrigi-los no momento da previsão.
+Conseqüentemente, a normalização do lote se comporta de maneira diferente durante o treinamento e no momento do teste.
+Lembre-se de que o abandono também exibe essa característica.
+
 ## Implementation from Scratch
 
 Below, we implement a batch normalization layer with tensors from scratch.
+
+Abaixo, implementamos uma camada de normalização em lote com tensores do zero.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -451,6 +489,14 @@ Additionally, our layer will maintain
 moving averages of the means and variances
 for subsequent use during model prediction.
 
+Agora podemos criar uma camada `BatchNorm` adequada.
+Nossa camada manterá os parâmetros adequados
+para escala `gama` e deslocamento` beta`,
+ambos serão atualizados no decorrer do treinamento.
+Além disso, nossa camada manterá
+médias móveis das médias e variâncias
+para uso subsequente durante a previsão do modelo.
+
 Putting aside the algorithmic details,
 note the design pattern underlying our implementation of the layer.
 Typically, we define the mathematics in a separate function, say `batch_norm`.
@@ -464,6 +510,20 @@ Also note that for the sake of convenience
 we did not worry about automatically inferring the input shape here,
 thus we need to specify the number of features throughout.
 Do not worry, the high-level batch normalization APIs in the deep learning framework will care of this for us and we will demonstrate that later.
+
+Deixando de lado os detalhes algorítmicos,
+observe o padrão de design subjacente à nossa implementação da camada.
+Normalmente, definimos a matemática em uma função separada, digamos `batch_norm`.
+Em seguida, integramos essa funcionalidade em uma camada personalizada,
+cujo código aborda principalmente questões de contabilidade,
+como mover dados para o contexto certo do dispositivo,
+alocar e inicializar quaisquer variáveis necessárias,
+acompanhar as médias móveis (aqui para média e variância) e assim por diante.
+Esse padrão permite uma separação clara da matemática do código clichê.
+Observe também que por uma questão de conveniência
+não nos preocupamos em inferir automaticamente a forma de entrada aqui,
+portanto, precisamos especificar o número de recursos por toda parte.
+Não se preocupe, as APIs de normalização de lote de alto nível na estrutura de aprendizado profundo cuidarão disso para nós e iremos demonstrar isso mais tarde.
 
 ```{.python .input}
 class BatchNorm(nn.Block):
@@ -588,6 +648,12 @@ below we apply it to a traditional LeNet model (:numref:`sec_lenet`).
 Recall that batch normalization is applied
 after the convolutional layers or fully-connected layers
 but before the corresponding activation functions.
+
+Para ver como aplicar `BatchNorm` no contexto,
+abaixo nós o aplicamos a um modelo LeNet tradicional (: numref: `sec_lenet`).
+Lembre-se de que a normalização de lote é aplicada
+após as camadas convolucionais ou camadas totalmente conectadas
+mas antes das funções de ativação correspondentes.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -854,5 +920,5 @@ tens of thousands of citations.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNTgyMzc2MSw5Nzk2MTczMThdfQ==
+eyJoaXN0b3J5IjpbMTg1OTMwMDk4Miw5Nzk2MTczMThdfQ==
 -->
