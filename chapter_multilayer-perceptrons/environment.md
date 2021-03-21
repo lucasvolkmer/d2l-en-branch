@@ -195,49 +195,50 @@ onde a covariável ou mudança de conceito pode não ser óbvia.
 
 ### Diagnóstico Médico
 
-Imagine that you want to design an algorithm to detect cancer.
-You collect data from healthy and sick people
-and you train your algorithm.
-It works fine, giving you high accuracy
-and you conclude that you are ready
-for a successful career in medical diagnostics.
-*Not so fast.*
 
-The distributions that gave rise to the training data
-and those you will encounter in the wild might differ considerably.
-This happened to an unfortunate startup
-that some of us (authors) worked with years ago.
-They were developing a blood test for a disease
-that predominantly affects older men
-and hoped to study it using blood samples
-that they had collected from patients.
-However, it is considerably more difficult
-to obtain blood samples from healthy men
-than sick patients already in the system.
-To compensate, the startup solicited
-blood donations from students on a university campus
-to serve as healthy controls in developing their test.
-Then they asked whether we could help them
-to build a classifier for detecting the disease.
+Imagine que você deseja criar um algoritmo para detectar o câncer.
+Você coleta dados de pessoas saudáveis ​​e doentes
+e você treina seu algoritmo.
+Funciona bem, oferecendo alta precisão
+e você conclui que está pronto
+para uma carreira de sucesso em diagnósticos médicos.
+*Não tão rápido.*
 
-As we explained to them,
-it would indeed be easy to distinguish
-between the healthy and sick cohorts
-with near-perfect accuracy.
-However, that is because the test subjects
-differed in age, hormone levels,
-physical activity, diet, alcohol consumption,
-and many more factors unrelated to the disease.
-This was unlikely to be the case with real patients.
-Due to their sampling procedure,
-we could expect to encounter extreme covariate shift.
-Moreover, this case was unlikely to be
-correctable via conventional methods.
-In short, they wasted a significant sum of money.
+As distribuições que deram origem aos dados de treinamento
+e aqueles que você encontrará na natureza podem diferir consideravelmente.
+Isso aconteceu com uma inicialização infeliz
+que alguns de nós (autores) trabalhamos anos atrás.
+Eles estavam desenvolvendo um exame de sangue para uma doença
+que afeta predominantemente homens mais velhos
+e esperava estudá-lo usando amostras de sangue
+que eles haviam coletado de pacientes.
+No entanto, é consideravelmente mais difícil
+obter amostras de sangue de homens saudáveis
+do que pacientes doentes já no sistema.
+Para compensar, a *startup* solicitou
+doações de sangue de estudantes em um campus universitário
+para servir como controles saudáveis ​​no desenvolvimento de seu teste.
+Então eles perguntaram se poderíamos ajudá-los a
+construir um classificador para detecção da doença.
+
+Como explicamos a eles,
+seria realmente fácil distinguir
+entre as coortes saudáveis ​​e doentes
+com precisão quase perfeita.
+No entanto, isso ocorre porque os assuntos de teste
+diferiam em idade, níveis hormonais,
+atividade física, dieta, consumo de álcool,
+e muitos outros fatores não relacionados à doença.
+Era improvável que fosse o caso com pacientes reais.
+Devido ao seu procedimento de amostragem,
+poderíamos esperar encontrar mudanças extremas covariadas.
+Além disso, este caso provavelmente não seria
+corrigível por meio de métodos convencionais.
+Resumindo, eles desperdiçaram uma quantia significativa de dinheiro.
 
 
 
-### Self-Driving Cars
+### Carros Autônomos
 
 Say a company wanted to leverage machine learning
 for developing self-driving cars.
@@ -696,7 +697,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NTE2MjIzOCwyMDYyOTkxOTgsLTI0Mj
-c0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5LDg0Mjc3NTgxMl19
-
+eyJoaXN0b3J5IjpbLTIwMzY4NDg5MTIsMTk3NTE2MjIzOCwyMD
+YyOTkxOTgsLTI0Mjc0MDk0LDE4NzA0MzUzMTYsMzM3NTQ3NzQ5
+LDg0Mjc3NTgxMl19
 -->
