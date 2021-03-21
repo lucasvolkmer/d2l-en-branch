@@ -603,10 +603,10 @@ $$
 
 ### Bandits
 
-*Bandits* are a special case of the problem above. While in most learning problems we have a continuously parametrized function $f$ where we want to learn its parameters (e.g., a deep network), in a *bandit* problem we only have a finite number of arms that we can pull, i.e., a finite number of actions that we can take. It is not very surprising that for this simpler problem stronger theoretical guarantees in terms of optimality can be obtained. We list it mainly since this problem is often (confusingly) treated as if it were a distinct learning setting.
+*Bandits* são um caso especial do problema acima. Enquanto na maioria dos problemas de aprendizagem temos uma função parametrizada continuamente $f$ onde queremos aprender seus parâmetros (por exemplo, uma rede profunda), em um problema *bandit* temos apenas um número finito de braços que podemos puxar, ou seja, um número finito de ações que podemos realizar. Não é muito surpreendente que, para este problema mais simples, possam ser obtidas garantias teóricas mais fortes em termos de otimização. Listamos principalmente porque esse problema é frequentemente (confusamente) tratado como se fosse um ambiente de aprendizagem distinto.
 
 
-### Control
+### Controle
 
 In many cases the environment remembers what we did. Not necessarily in an adversarial manner but it will just remember and the response will depend on what happened before. For instance, a coffee boiler controller will observe different temperatures depending on whether it was heating the boiler previously. PID (proportional-integral-derivative) controller algorithms are a popular choice there.
 Likewise, a user's behavior on a news site will depend on what we showed him previously (e.g., he will read most news only once). Many such algorithms form a model of the environment in which they act such as to make their decisions appear less random.
@@ -705,7 +705,7 @@ that you might encounter in a career in machine learning.
 
 [Discussions](https://discuss.d2l.ai/t/105)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM2Nzc0NDQ2LDE0MDgxOTI3MzcsMzQ2Nj
+eyJoaXN0b3J5IjpbNTQ3NTE5NTg4LDE0MDgxOTI3MzcsMzQ2Nj
 MyNDI5LDMzNTMzNDEwMywtMTUwNDU2MTI2OCwyMDkwMTU5Njgs
 LTYwOTYxMzg5OSwxOTc1MTYyMjM4LDIwNjI5OTE5OCwtMjQyNz
 QwOTQsMTg3MDQzNTMxNiwzMzc1NDc3NDksODQyNzc1ODEyXX0=
