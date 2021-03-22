@@ -25,17 +25,17 @@ você ganhe algumas intuições que irão guiá-lo
 em sua carreira como cientista de dados.
 
 
-## *Download* e *Cache* de *
-Throughout the book, we will train and test models
-on various downloaded datasets.
-Here, we implement several utility functions
-to facilitate data downloading.
-First, we maintain a dictionary `DATA_HUB`
-that maps a string (the *name* of the dataset)
-to a tuple containing both the URL to locate the dataset
-and the SHA-1 key that verifies the integrity of the file.
-All such datasets are hosted at the site
-whose address is `DATA_URL`.
+## *Download* e *Cache* de *datasets*
+Ao longo do livro, treinaremos e testaremos modelos
+em vários conjuntos de dados baixados.
+Aqui, implementamos várias funções utilitárias
+para facilitar o *download* de dados.
+Primeiro, mantemos um dicionário `DATA_HUB`
+que mapeia uma string (o *nome* do conjunto de dados)
+a uma tupla contendo o URL para localizar o conjunto de dados
+e a chave SHA-1 que verifica a integridade do arquivo.
+Todos esses conjuntos de dados são hospedados no site
+cujo endereço é `DATA_URL`.
 
 ```{.python .input}
 #@tab all
@@ -702,5 +702,5 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MDExNjA3OCwyMjExNjM4ODVdfQ==
+eyJoaXN0b3J5IjpbLTE5MjQwODUxMjYsMjIxMTYzODg1XX0=
 -->
