@@ -149,37 +149,38 @@ A URL está bem aqui:
 
 ## Acessando e Lendo o Conjunto de Dados
 
-Note that the competition data is separated
-into training and test sets.
-Each record includes the property value of the house
-and attributes such as street type, year of construction,
-roof type, basement condition, etc.
-The features consist of various data types.
-For example, the year of construction
-is represented by an integer,
-the roof type by discrete categorical assignments,
-and other features by floating point numbers.
-And here is where reality complicates things:
-for some examples, some data are altogether missing
-with the missing value marked simply as "na".
-The price of each house is included
-for the training set only
-(it is a competition after all).
-We will want to partition the training set
-to create a validation set,
-but we only get to evaluate our models on the official test set
-after uploading predictions to Kaggle.
-The "Data" tab on the competition tab
-in :numref:`fig_house_pricing`
-has links to download the data.
+
+Observe que os dados da competição são separados
+em conjuntos de treinamento e teste.
+Cada registro inclui o valor da propriedade da casa
+e atributos como tipo de rua, ano de construção,
+tipo de telhado, condição do porão, etc.
+Os recursos consistem em vários tipos de dados.
+Por exemplo, o ano de construção
+é representado por um número inteiro,
+o tipo de telhado por atribuições categóricas discretas,
+e outros recursos por números de ponto flutuante.
+E é aqui que a realidade complica as coisas:
+para alguns exemplos, alguns dados estão ausentes
+com o valor ausente marcado simplesmente como "na".
+O preço de cada casa está incluído
+para o conjunto de treinamento apenas
+(afinal, é uma competição).
+Queremos particionar o conjunto de treinamento
+para criar um conjunto de validação,
+mas só podemos avaliar nossos modelos no conjunto de teste oficial
+depois de enviar previsões para Kaggle.
+A guia "Dados" na guia da competição
+em :numref:`fig_house_pricing`
+tem links para baixar os dados.
 
 
-To get started, we will read in and process the data
-using `pandas`, which we have introduced in :numref:`sec_pandas`.
-So, you will want to make sure that you have `pandas` installed
-before proceeding further.
-Fortunately, if you are reading in Jupyter,
-we can install pandas without even leaving the notebook.
+Para começar, vamos ler e processar os dados
+usando `pandas`, que introduzimos em :numref:`sec_pandas`.
+Então, você vai querer ter certeza de que instalou o `pandas`
+antes de prosseguir.
+Felizmente, se você estiver no Jupyter,
+podemos instalar pandas sem nem mesmo sair do notebook.
 
 ```{.python .input}
 # If pandas is not installed, please uncomment the following line:
@@ -702,5 +703,6 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzOTc5ODY1MCwyMjExNjM4ODVdfQ==
+eyJoaXN0b3J5IjpbMjA0ODg0MTk4MiwyMTM5Nzk4NjUwLDIyMT
+E2Mzg4NV19
 -->
