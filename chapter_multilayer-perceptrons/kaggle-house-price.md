@@ -526,21 +526,21 @@ def train(net, train_features, train_labels, test_features, test_labels,
 
 ## Validação Cruzada $K$-Fold
 
-You might recall that we introduced $K$-fold cross-validation
-in the section where we discussed how to deal
-with model selection (:numref:`sec_model_selection`).
-We will put this to good use to select the model design
-and to adjust the hyperparameters.
-We first need a function that returns
-the $i^\mathrm{th}$ fold of the data
-in a $K$-fold cross-validation procedure.
-It proceeds by slicing out the $i^\mathrm{th}$ segment
-as validation data and returning the rest as training data.
-Note that this is not the most efficient way of handling data
-and we would definitely do something much smarter
-if our dataset was considerably larger.
-But this added complexity might obfuscate our code unnecessarily
-so we can safely omit it here owing to the simplicity of our problem.
+Você deve se lembrar que introduzimos validação cruzada $K$-fold
+na seção onde discutimos como lidar
+com seleção de modelo (:numref:`sec_model_selection`).
+Faremos um bom uso disso para selecionar o design do modelo
+e ajustar os hiperparâmetros.
+Primeiro precisamos de uma função que retorna
+a $i^\mathrm{th}$ dobra dos dados
+em um procedimento de validação cruzada $K$-fold.
+Ela continua cortando o segmento $i^\mathrm{th}$
+como dados de validação e retornando o resto como dados de treinamento.
+Observe que esta não é a maneira mais eficiente de lidar com dados
+e definitivamente faríamos algo muito mais inteligente
+se nosso conjunto de dados fosse consideravelmente maior.
+Mas essa complexidade adicional pode ofuscar nosso código desnecessariamente
+portanto, podemos omiti-lo com segurança devido à simplicidade do nosso problema.
 
 ```{.python .input}
 #@tab all
@@ -704,7 +704,7 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MTU1MDYzNCwxMzAzNjIzODcxLDIwMT
-c5MzgzNjUsLTU0MzEwNjE4NywyMTM5Nzk4NjUwLDIyMTE2Mzg4
-NV19
+eyJoaXN0b3J5IjpbMzMwMTQ2MTMzLDEzMDM2MjM4NzEsMjAxNz
+kzODM2NSwtNTQzMTA2MTg3LDIxMzk3OTg2NTAsMjIxMTYzODg1
+XX0=
 -->
