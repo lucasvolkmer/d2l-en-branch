@@ -272,17 +272,17 @@ antes de alimentar os dados no modelo.
 all_features = pd.concat((train_data.iloc[:, 1:-1], test_data.iloc[:, 1:]))
 ```
 
-## Data Preprocessing
+## Pré-processamento de Dados
 
-As stated above, we have a wide variety of data types.
-We will need to preprocess the data before we can start modeling.
-Let us start with the numerical features.
-First, we apply a heuristic,
-replacing all missing values
-by the corresponding feature's mean.
-Then, to put all features on a common scale,
-we *standardize* the data by
-rescaling features to zero mean and unit variance:
+Conforme declarado acima, temos uma grande variedade de tipos de dados.
+Precisaremos pré-processar os dados antes de começarmos a modelagem.
+Vamos começar com as *features* numéricas.
+Primeiro, aplicamos uma heurística,
+substituindo todos os valores ausentes
+pela média da feature correspondente.
+Então, para colocar todos os recursos em uma escala comum,
+nós *padronizamos* os dados
+redimensionando recursos para média zero e variancia unitária:
 
 $$x \leftarrow \frac{x - \mu}{\sigma},$$
 
@@ -703,6 +703,6 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMDA5NDYzNywyMTM5Nzk4NjUwLDIyMT
+eyJoaXN0b3J5IjpbLTU0MzEwNjE4NywyMTM5Nzk4NjUwLDIyMT
 E2Mzg4NV19
 -->
