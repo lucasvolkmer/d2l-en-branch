@@ -311,19 +311,19 @@ all_features[numeric_features] = all_features[numeric_features].apply(
 all_features[numeric_features] = all_features[numeric_features].fillna(0)
 ```
 
-Next we deal with discrete values.
-This includes features such as "MSZoning".
-We replace them by a one-hot encoding
-in the same way that we previously transformed
-multiclass labels into vectors (see :numref:`subsec_classification-problem`).
-For instance, "MSZoning" assumes the values "RL" and "RM".
-Dropping the "MSZoning" feature,
-two new indicator features
-"MSZoning_RL" and "MSZoning_RM" are created with values being either 0 or 1.
-According to one-hot encoding,
-if the original value of "MSZoning" is "RL",
-then "MSZoning_RL" is 1 and "MSZoning_RM" is 0.
-The `pandas` package does this automatically for us.
+Em seguida, lidamos com valores discretos.
+Isso inclui recursos como "MSZoning".
+Nós os substituímos por uma codificação one-hot
+da mesma forma que transformamos anteriormente
+rótulos multiclasse em vetores (veja :numref:`subsec_classification-problem`).
+Por exemplo, "MSZoning" assume os valores "RL" e "RM".
+Eliminando a *feature* "MSZoning",
+duas novas *features* de indicador
+"MSZoning_RL" e "MSZoning_RM" são criadas com valores 0 ou 1.
+De acordo com a codificação one-hot,
+se o valor original de "MSZoning" for "RL",
+então "MSZoning_RL" é 1 e "MSZoning_RM" é 0.
+O pacote `pandas` faz isso automaticamente para nós.
 
 ```{.python .input}
 #@tab all
@@ -333,12 +333,12 @@ all_features = pd.get_dummies(all_features, dummy_na=True)
 all_features.shape
 ```
 
-You can see that this conversion increases
-the number of features from 79 to 331.
-Finally, via the `values` attribute,
-we can extract the NumPy format from the `pandas` format
-and convert it into the tensor
-representation for training.
+Você pode ver que essa conversão aumenta
+o número de *features* de 79 a 331.
+Finalmente, por meio do atributo `values`,
+podemos extrair o formato NumPy do formato `pandas`
+e convertê-lo no tensor
+representação para treinamento.
 
 ```{.python .input}
 #@tab all
@@ -349,7 +349,7 @@ train_labels = d2l.tensor(
     train_data.SalePrice.values.reshape(-1, 1), dtype=d2l.float32)
 ```
 
-## Training
+## Treinamento
 
 To get started we train a linear model with squared loss.
 Not surprisingly, our linear model will not lead
@@ -703,6 +703,6 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMTgzMzA4LC01NDMxMDYxODcsMjEzOT
-c5ODY1MCwyMjExNjM4ODVdfQ==
+eyJoaXN0b3J5IjpbMjAxNzkzODM2NSwtNTQzMTA2MTg3LDIxMz
+k3OTg2NTAsMjIxMTYzODg1XX0=
 -->
