@@ -608,26 +608,26 @@ print(f'{k}-fold validation: avg train log rmse: {float(train_l):f}, '
       f'avg valid log rmse: {float(valid_l):f}')
 ```
 
-Notice that sometimes the number of training errors
-for a set of hyperparameters can be very low,
-even as the number of errors on $K$-fold cross-validation
-is considerably higher.
-This indicates that we are overfitting.
-Throughout training you will want to monitor both numbers.
-Less overfitting might indicate that our data can support a more powerful model.
-Massive overfitting might suggest that we can gain
-by incorporating regularization techniques.
+Observe que às vezes o número de erros de treinamento
+para um conjunto de hiperparâmetros pode ser muito baixo,
+mesmo com o número de erros na validação cruzada de $K$-fold
+consideravelmente maior.
+Isso indica que estamos com *overfitting*.
+Durante o treinamento, você desejará monitorar os dois números.
+Menos *overfitting* pode indicar que nossos dados podem suportar um modelo mais poderoso.
+O *verfitting* maciço pode sugerir que podemos ganhar
+incorporando técnicas de regularização.
 
-##  Submitting Predictions on Kaggle
+##  Enviando Previsões no Kaggle
 
-Now that we know what a good choice of hyperparameters should be,
-we might as well use all the data to train on it
-(rather than just $1-1/K$ of the data
-that are used in the cross-validation slices).
-The model that we obtain in this way
-can then be applied to the test set.
-Saving the predictions in a csv file
-will simplify uploading the results to Kaggle.
+Agora que sabemos qual deve ser uma boa escolha de hiperparâmetros,
+podemos também usar todos os dados para treinar nele
+(em vez de apenas $1-1/K$ dos dados
+que são usados nas fatias de validação cruzada).
+O modelo que obtemos desta forma
+pode então ser aplicado ao conjunto de teste.
+Salvar as previsões em um arquivo csv
+irá simplificar o upload dos resultados para o Kaggle.
 
 ```{.python .input}
 #@tab all
@@ -704,7 +704,7 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjY5NTczNTYsMTMwMzYyMzg3MSwyMD
-E3OTM4MzY1LC01NDMxMDYxODcsMjEzOTc5ODY1MCwyMjExNjM4
-ODVdfQ==
+eyJoaXN0b3J5IjpbMTA5MjE3MjUwNiwxMzAzNjIzODcxLDIwMT
+c5MzgzNjUsLTU0MzEwNjE4NywyMTM5Nzk4NjUwLDIyMTE2Mzg4
+NV19
 -->
