@@ -1,31 +1,31 @@
 # Previsão de Preços de Imóveis no Kaggle
 :label:`sec_kaggle_house`
 
-Now that we have introduced some basic tools
-for building and training deep networks
-and regularizing them with techniques including
-weight decay and dropout,
-we are ready to put all this knowledge into practice
-by participating in a Kaggle competition.
-The house price prediction competition
-is a great place to start.
-The data are fairly generic and do not exhibit exotic structure
-that might require specialized models (as audio or video might).
-This dataset, collected by Bart de Cock in 2011 :cite:`De-Cock.2011`,
-covers house prices in Ames, IA from the period of 2006--2010.
-It is considerably larger than the famous [Boston housing dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.names) of Harrison and Rubinfeld (1978),
-boasting both more examples and more features.
+
+Agora que apresentamos algumas ferramentas básicas
+para construir e treinar redes profundas
+e regularizá-las com técnicas, incluindo
+queda de peso e abandono,
+estamos prontos para colocar todo esse conhecimento em prática
+participando de uma competição *Kaggle*.
+A competição de previsão de preços de casas
+é um ótimo lugar para começar.
+Os dados são bastante genéricos e não exibem uma estrutura exótica
+que podem exigir modelos especializados (como áudio ou vídeo).
+Este conjunto de dados, coletado por Bart de Cock em 2011 :cite:`De-Cock.2011`,
+cobre os preços da habitação em Ames, IA do período de 2006-2010.
+É consideravelmente maior do que o famoso [conjunto de dados de habitação de Boston](https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.names) de Harrison e Rubinfeld (1978),
+ostentando mais exemplos e mais recursos.
 
 
-In this section, we will walk you through details of
-data preprocessing, model design, and hyperparameter selection.
-We hope that through a hands-on approach,
-you will gain some intuitions that will guide you
-in your career as a data scientist.
+Nesta seção, iremos orientá-lo nos detalhes de
+pré-processamento de dados, design de modelo e seleção de hiperparâmetros.
+Esperamos que, por meio de uma abordagem prática,
+você ganhe algumas intuições que irão guiá-lo
+em sua carreira como cientista de dados.
 
 
-## Downloading and Caching Datasets
-
+## *Download* e *Cache* de *
 Throughout the book, we will train and test models
 on various downloaded datasets.
 Here, we implement several utility functions
@@ -702,5 +702,5 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIxMTYzODg1XX0=
+eyJoaXN0b3J5IjpbMTg2MDExNjA3OCwyMjExNjM4ODVdfQ==
 -->
