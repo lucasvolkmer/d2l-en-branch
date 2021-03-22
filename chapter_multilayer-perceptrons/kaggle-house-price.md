@@ -395,28 +395,29 @@ def get_net():
     return net
 ```
 
-With house prices, as with stock prices,
-we care about relative quantities
-more than absolute quantities.
-Thus we tend to care more about
-the relative error $\frac{y - \hat{y}}{y}$
-than about the absolute error $y - \hat{y}$.
-For instance, if our prediction is off by USD 100,000
-when estimating the price of a house in Rural Ohio,
-where the value of a typical house is 125,000 USD,
-then we are probably doing a horrible job.
-On the other hand, if we err by this amount
-in Los Altos Hills, California,
-this might represent a stunningly accurate prediction
-(there, the median house price exceeds 4 million USD).
 
-One way to address this problem is to
-measure the discrepancy in the logarithm of the price estimates.
-In fact, this is also the official error measure
-used by the competition to evaluate the quality of submissions.
-After all, a small value $\delta$ for $|\log y - \log \hat{y}| \leq \delta$
-translates into $e^{-\delta} \leq \frac{\hat{y}}{y} \leq e^\delta$.
-This leads to the following root-mean-squared-error between the logarithm of the predicted price and the logarithm of the label price:
+Com os preços das casas, assim como com os preços das ações,
+nós nos preocupamos com as quantidades relativas
+mais do que quantidades absolutas.
+Assim, tendemos a nos preocupar mais com
+o erro relativo $\frac{y - \hat{y}}{y}$
+do que sobre o erro absoluto $y - \hat{y}$.
+Por exemplo, se nossa previsão estiver errada em US $ 100.000
+ao estimar o preço de uma casa na zona rural de Ohio,
+onde o valor de uma casa típica é 125.000 USD,
+então provavelmente estamos fazendo um trabalho horrível.
+Por outro lado, se errarmos neste valor
+em Los Altos Hills, Califórnia,
+isso pode representar uma previsão incrivelmente precisa
+(lá, o preço médio da casa excede 4 milhões de dólares).
+
+Uma maneira de resolver este problema é
+medir a discrepância no logaritmo das estimativas de preços.
+Na verdade, esta é também a medida de erro oficial
+usado pela competição para avaliar a qualidade dos envios.
+Afinal, um pequeno valor $\delta$ for $|\log y - \log \hat{y}| \leq \delta$
+se traduz em $e^{-\delta} \leq \frac{\hat{y}}{y} \leq e^\delta$.
+Isso leva ao seguinte erro de raiz quadrada média entre o logaritmo do preço previsto e o logaritmo do preço do rótulo:
 
 $$\sqrt{\frac{1}{n}\sum_{i=1}^n\left(\log y_i -\log \hat{y}_i\right)^2}.$$
 
@@ -449,14 +450,14 @@ def log_rmse(y_true, y_pred):
         tf.math.log(y_true), tf.math.log(clipped_preds))))
 ```
 
-Unlike in previous sections, our training functions
-will rely on the Adam optimizer
-(we will describe it in greater detail later).
-The main appeal of this optimizer is that,
-despite doing no better (and sometimes worse)
-given unlimited resources for hyperparameter optimization,
-people tend to find that it is significantly less sensitive
-to the initial learning rate.
+Ao contrário das seções anteriores, nossas funções de treinamento
+contarão com o otimizador Adam
+(iremos descrevê-lo em maiores detalhes posteriormente).
+O principal apelo deste otimizador é que,
+apesar de não melhorar (e às vezes piorar)
+dados recursos ilimitados para otimização de hiperparâmetros,
+as pessoas tendem a achar que é significativamente menos sensível
+à taxa de aprendizagem inicial.
 
 ```{.python .input}
 def train(net, train_features, train_labels, test_features, test_labels,
@@ -523,7 +524,7 @@ def train(net, train_features, train_labels, test_features, test_labels,
     return train_ls, test_ls
 ```
 
-## $K$-Fold Cross-Validation
+## Validação Cruzada $K$-Fold
 
 You might recall that we introduced $K$-fold cross-validation
 in the section where we discussed how to deal
@@ -703,6 +704,7 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMzYyMzg3MSwyMDE3OTM4MzY1LC01ND
-MxMDYxODcsMjEzOTc5ODY1MCwyMjExNjM4ODVdfQ==
+eyJoaXN0b3J5IjpbLTQ2MTU1MDYzNCwxMzAzNjIzODcxLDIwMT
+c5MzgzNjUsLTU0MzEwNjE4NywyMTM5Nzk4NjUwLDIyMTE2Mzg4
+NV19
 -->
