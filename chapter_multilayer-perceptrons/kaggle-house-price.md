@@ -647,11 +647,11 @@ def train_and_pred(train_features, test_feature, train_labels, test_data,
     submission.to_csv('submission.csv', index=False)
 ```
 
-One nice sanity check is to see
-whether the predictions on the test set
-resemble those of the $K$-fold cross-validation process.
-If they do, it is time to upload them to Kaggle.
-The following code will generate a file called `submission.csv`.
+Uma boa verificação de sanidade é ver
+se as previsões no conjunto de teste
+assemelham-se aos do processo de validação cruzada $K$-fold.
+Se o fizerem, é hora de enviá-los para o Kaggle.
+O código a seguir irá gerar um arquivo chamado `submit.csv`.
 
 ```{.python .input}
 #@tab all
@@ -659,22 +659,23 @@ train_and_pred(train_features, test_features, train_labels, test_data,
                num_epochs, lr, weight_decay, batch_size)
 ```
 
-Next, as demonstrated in :numref:`fig_kaggle_submit2`,
-we can submit our predictions on Kaggle
-and see how they compare with the actual house prices (labels)
-on the test set.
-The steps are quite simple:
 
-* Log in to the Kaggle website and visit the house price prediction competition page.
-* Click the “Submit Predictions” or “Late Submission” button (as of this writing, the button is located on the right).
-* Click the “Upload Submission File” button in the dashed box at the bottom of the page and select the prediction file you wish to upload.
-* Click the “Make Submission” button at the bottom of the page to view your results.
+A seguir, conforme demonstrado em:numref:`fig_kaggle_submit2`,
+podemos enviar nossas previsões no Kaggle
+e veja como elas se comparam aos preços reais das casas (rótulos)
+no conjunto de teste.
+As etapas são bastante simples:
 
-![Submitting data to Kaggle](../img/kaggle-submit2.png)
+* Faça login no site do Kaggle e visite a página de competição de previsão de preços de casas.
+* Clique no botão “Enviar previsões” ou “Envio tardio” (no momento da redação deste botão, o botão está localizado à direita).
+* Clique no botão “Enviar arquivo de envio” na caixa tracejada na parte inferior da página e selecione o arquivo de previsão que deseja enviar.
+* Clique no botão “Fazer envio” na parte inferior da página para ver seus resultados.
+* 
+![Enviando dados para o Kaggle](../img/kaggle-submit2.png)
 :width:`400px`
 :label:`fig_kaggle_submit2`
 
-## Summary
+## Resumo
 
 * Real data often contain a mix of different data types and need to be preprocessed.
 * Rescaling real-valued data to zero mean and unit variance is a good default. So is replacing missing values with their mean.
@@ -704,7 +705,7 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MjE3MjUwNiwxMzAzNjIzODcxLDIwMT
-c5MzgzNjUsLTU0MzEwNjE4NywyMTM5Nzk4NjUwLDIyMTE2Mzg4
-NV19
+eyJoaXN0b3J5IjpbNTMyMDkzMTE4LDEzMDM2MjM4NzEsMjAxNz
+kzODM2NSwtNTQzMTA2MTg3LDIxMzk3OTg2NTAsMjIxMTYzODg1
+XX0=
 -->
