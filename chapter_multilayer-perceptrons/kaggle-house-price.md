@@ -286,18 +286,18 @@ redimensionando recursos para média zero e variancia unitária:
 
 $$x \leftarrow \frac{x - \mu}{\sigma},$$
 
-where $\mu$ and $\sigma$ denote mean and standard deviation, respectively.
-To verify that this indeed transforms
-our feature (variable) such that it has zero mean and unit variance,
-note that $E[\frac{x-\mu}{\sigma}] = \frac{\mu - \mu}{\sigma} = 0$
-and that $E[(x-\mu)^2] = (\sigma^2 + \mu^2) - 2\mu^2+\mu^2 = \sigma^2$.
-Intuitively, we standardize the data
-for two reasons.
-First, it proves convenient for optimization.
-Second, because we do not know *a priori*
-which features will be relevant,
-we do not want to penalize coefficients
-assigned to one feature more than on any other.
+onde $\mu$ e $\sigma$ denotam média e desvio padrão, respectivamente.
+Para verificar se isso realmente transforma
+nossa *feature* (variável) de modo que tenha média zero e variância unitária,
+observe que $E[\frac{x-\mu}{\sigma}] = \frac{\mu - \mu}{\sigma} = 0$
+e que $E[(x-\mu)^2] = (\sigma^2 + \mu^2) - 2\mu^2+\mu^2 = \sigma^2$.
+Intuitivamente, padronizamos os dados
+por duas razões.
+Primeiro, se mostra conveniente para otimização.
+Em segundo lugar, porque não sabemos *a priori*
+quais *features* serão relevantes,
+não queremos penalizar coeficientes
+atribuídos a uma *feature* mais do que a qualquer outra.
 
 ```{.python .input}
 #@tab all
@@ -703,6 +703,6 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MzEwNjE4NywyMTM5Nzk4NjUwLDIyMT
-E2Mzg4NV19
+eyJoaXN0b3J5IjpbLTczMTgzMzA4LC01NDMxMDYxODcsMjEzOT
+c5ODY1MCwyMjExNjM4ODVdfQ==
 -->
