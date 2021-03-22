@@ -112,34 +112,34 @@ def download_all():  #@save
 
 ## *Kaggle*
 
-[Kaggle](https://www.kaggle.com) is a popular platform
-that hosts machine learning competitions.
-Each competition centers on a dataset and many
-are sponsored by stakeholders who offer prizes
-to the winning solutions.
-The platform helps users to interact
-via forums and shared code,
-fostering both collaboration and competition.
-While leaderboard chasing often spirals out of control,
-with researchers focusing myopically on preprocessing steps
-rather than asking fundamental questions,
-there is also tremendous value in the objectivity of a platform
-that facilitates direct quantitative comparisons
-among competing approaches as well as code sharing
-so that everyone can learn what did and did not work.
-If you want to participate in a Kaggle competition,
-you will first need to register for an account
-(see :numref:`fig_kaggle`).
+[Kaggle](https://www.kaggle.com) é uma plataforma popular
+que hospeda competições de *machine learning*.
+Cada competição se concentra em um conjunto de dados e muitos
+são patrocinados por interessados que oferecem prêmios
+para as soluções vencedoras.
+A plataforma ajuda os usuários a interagir
+por meio de fóruns e código compartilhado,
+fomentando a colaboração e a competição.
+Embora a perseguição ao placar muitas vezes saia do controle,
+com pesquisadores focando miopicamente nas etapas de pré-processamento
+em vez de fazer perguntas fundamentais,
+também há um enorme valor na objetividade de uma plataforma
+que facilita comparações quantitativas diretas
+entre abordagens concorrentes, bem como compartilhamento de código
+para que todos possam aprender o que funcionou e o que não funcionou.
+Se você quiser participar de uma competição *Kaggle*,
+primeiro você precisa se registrar para uma conta
+(veja :numref:`fig_kaggle`).
 
-![The Kaggle website.](../img/kaggle.png)
+![Site do Kaggle.](../img/kaggle.png)
 :width:`400px`
 :label:`fig_kaggle`
 
-On the house price prediction competition page, as illustrated
-in :numref:`fig_house_pricing`,
-you can find the dataset (under the "Data" tab),
-submit predictions, and see your ranking,
-The URL is right here:
+Na página de competição de previsão de preços de casas, conforme ilustrado
+em :numref:`fig_house_pricing`,
+você pode encontrar o conjunto de dados (na guia "Dados"),
+enviar previsões e ver sua classificação,
+A URL está bem aqui:
 
 > https://www.kaggle.com/c/house-prices-advanced-regression-techniques
 
@@ -702,5 +702,5 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzQ1MjE4OCwyMjExNjM4ODVdfQ==
+eyJoaXN0b3J5IjpbLTMxNTMxMDg1MSwyMjExNjM4ODVdfQ==
 -->
