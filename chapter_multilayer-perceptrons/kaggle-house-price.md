@@ -143,11 +143,11 @@ A URL está bem aqui:
 
 > https://www.kaggle.com/c/house-prices-advanced-regression-techniques
 
-![The house price prediction competition page.](../img/house-pricing.png)
+![A página da competição de previsão de preços de casas.](../img/house-pricing.png)
 :width:`400px`
 :label:`fig_house_pricing`
 
-## Accessing and Reading the Dataset
+## Acessando e Lendo o Conjunto de Dados
 
 Note that the competition data is separated
 into training and test sets.
@@ -702,5 +702,5 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNTMxMDg1MSwyMjExNjM4ODVdfQ==
+eyJoaXN0b3J5IjpbMjEzOTc5ODY1MCwyMjExNjM4ODVdfQ==
 -->
