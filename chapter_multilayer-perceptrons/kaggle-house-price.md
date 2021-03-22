@@ -561,8 +561,8 @@ def get_k_fold_data(k, i, X, y):
     return X_train, y_train, X_valid, y_valid
 ```
 
-The training and verification error averages are returned
-when we train $K$ times in the $K$-fold cross-validation.
+As médias de erro de treinamento e verificação são retornadas
+quando treinamos $K$ vezes na validação cruzada de $K$.
 
 ```{.python .input}
 #@tab all
@@ -585,19 +585,19 @@ def k_fold(k, X_train, y_train, num_epochs, learning_rate, weight_decay,
     return train_l_sum / k, valid_l_sum / k
 ```
 
-## Model Selection
+## Seleção de Modelo
 
-In this example, we pick an untuned set of hyperparameters
-and leave it up to the reader to improve the model.
-Finding a good choice can take time,
-depending on how many variables one optimizes over.
-With a large enough dataset,
-and the normal sorts of hyperparameters,
-$K$-fold cross-validation tends to be
-reasonably resilient against multiple testing.
-However, if we try an unreasonably large number of options
-we might just get lucky and find that our validation
-performance is no longer representative of the true error.
+Neste exemplo, escolhemos um conjunto desafinado de hiperparâmetros
+e deixamos para o leitor melhorar o modelo.
+Encontrar uma boa escolha pode levar tempo,
+dependendo de quantas variáveis alguém otimiza.
+Com um conjunto de dados grande o suficiente,
+e os tipos normais de hiperparâmetros,
+Validação cruzada $K$-fold tende a ser
+razoavelmente resiliente contra vários testes.
+No entanto, se tentarmos um número excessivamente grande de opções
+podemos apenas ter sorte e descobrir que nossa validação
+o desempenho não é mais representativo do verdadeiro erro.
 
 ```{.python .input}
 #@tab all
@@ -704,7 +704,7 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMwMTQ2MTMzLDEzMDM2MjM4NzEsMjAxNz
-kzODM2NSwtNTQzMTA2MTg3LDIxMzk3OTg2NTAsMjIxMTYzODg1
-XX0=
+eyJoaXN0b3J5IjpbLTExNjY5NTczNTYsMTMwMzYyMzg3MSwyMD
+E3OTM4MzY1LC01NDMxMDYxODcsMjEzOTc5ODY1MCwyMjExNjM4
+ODVdfQ==
 -->
