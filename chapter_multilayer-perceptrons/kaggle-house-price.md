@@ -50,14 +50,14 @@ DATA_HUB = dict()
 DATA_URL = 'http://d2l-data.s3-accelerate.amazonaws.com/'
 ```
 
-The following `download` function downloads a dataset,
-caching it in a local directory (`../data` by default)
-and returns the name of the downloaded file.
-If a file corresponding to this dataset
-already exists in the cache directory
-and its SHA-1 matches the one stored in `DATA_HUB`,
-our code will use the cached file to avoid
-clogging up your internet with redundant downloads.
+A seguinte função `download` baixa um conjunto de dados,
+armazenando em cache em um diretório local (`../data` por padrão)
+e retorna o nome do arquivo baixado.
+Se um arquivo correspondente a este conjunto de dados
+já existe no diretório de cache
+e seu SHA-1 corresponde ao armazenado em `DATA_HUB`,
+nosso código usará o arquivo em cache para evitar
+obstruir sua internet com *downloads* redundantes.
 
 ```{.python .input}
 #@tab all
@@ -84,9 +84,9 @@ def download(name, cache_dir=os.path.join('..', 'data')):  #@save
     return fname
 ```
 
-We also implement two additional utility functions:
-one is to download and extract a zip or tar file
-and the other to download all the datasets used in this book from `DATA_HUB` into the cache directory.
+Também implementamos duas funções utilitárias adicionais:
+uma é baixar e extrair um arquivo zip ou tar
+e o outro para baixar todos os conjuntos de dados usados neste livro de `DATA_HUB` para o diretório de cache.
 
 ```{.python .input}
 #@tab all
@@ -702,5 +702,5 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjQwODUxMjYsMjIxMTYzODg1XX0=
+eyJoaXN0b3J5IjpbLTExOTYyMzI3OTQsMjIxMTYzODg1XX0=
 -->
