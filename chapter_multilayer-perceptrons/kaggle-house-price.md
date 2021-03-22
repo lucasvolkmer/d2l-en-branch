@@ -219,9 +219,9 @@ import pandas as pd
 import numpy as np
 ```
 
-For convenience, we can download and cache
-the Kaggle housing dataset
-using the script we defined above.
+Por conveniência, podemos baixar e armazenar em cache
+o conjunto de dados de habitação *Kaggle*
+usando o *script* que definimos acima.
 
 ```{.python .input}
 #@tab all
@@ -234,7 +234,7 @@ DATA_HUB['kaggle_house_test'] = (  #@save
     'fa19780a7b011d9b009e8bff8e99922a8ee2eb90')
 ```
 
-We use `pandas` to load the two csv files containing training and test data respectively.
+Usamos `pandas` para carregar os dois arquivos csv contendo dados de treinamento e teste, respectivamente.
 
 ```{.python .input}
 #@tab all
@@ -242,9 +242,9 @@ train_data = pd.read_csv(download('kaggle_house_train'))
 test_data = pd.read_csv(download('kaggle_house_test'))
 ```
 
-The training dataset includes 1460 examples,
-80 features, and 1 label, while the test data
-contains 1459 examples and 80 features.
+O conjunto de dados de treinamento inclui 1460 exemplos,
+80 características e 1 rótulo, enquanto os dados de teste
+contém 1459 exemplos e 80 características.
 
 ```{.python .input}
 #@tab all
@@ -252,20 +252,20 @@ print(train_data.shape)
 print(test_data.shape)
 ```
 
-Let us take a look at the first four and last two features
-as well as the label (SalePrice) from the first four examples.
+Vamos dar uma olhada nos primeiros quatro e nos dois últimos recursos
+bem como o rótulo (SalePrice) dos primeiros quatro exemplos.
 
 ```{.python .input}
 #@tab all
 print(train_data.iloc[0:4, [0, 1, 2, 3, -3, -2, -1]])
 ```
 
-We can see that in each example, the first feature is the ID.
-This helps the model identify each training example.
-While this is convenient, it does not carry
-any information for prediction purposes.
-Hence, we remove it from the dataset
-before feeding the data into the model.
+Podemos ver que em cada exemplo, a primeira característica é o ID.
+Isso ajuda o modelo a identificar cada exemplo de treinamento.
+Embora seja conveniente, ele não carrega
+qualquer informação para fins de previsão.
+Portanto, nós o removemos do conjunto de dados
+antes de alimentar os dados no modelo.
 
 ```{.python .input}
 #@tab all
@@ -703,6 +703,6 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0ODg0MTk4MiwyMTM5Nzk4NjUwLDIyMT
+eyJoaXN0b3J5IjpbMTcxMDA5NDYzNywyMTM5Nzk4NjUwLDIyMT
 E2Mzg4NV19
 -->
