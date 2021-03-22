@@ -110,7 +110,7 @@ def download_all():  #@save
         download(name)
 ```
 
-## Kaggle
+## *Kaggle*
 
 [Kaggle](https://www.kaggle.com) is a popular platform
 that hosts machine learning competitions.
@@ -702,5 +702,5 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTYyMzI3OTQsMjIxMTYzODg1XX0=
+eyJoaXN0b3J5IjpbLTExNzQ1MjE4OCwyMjExNjM4ODVdfQ==
 -->
