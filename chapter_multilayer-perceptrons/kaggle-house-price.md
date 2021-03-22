@@ -677,21 +677,21 @@ As etapas são bastante simples:
 
 ## Resumo
 
-* Real data often contain a mix of different data types and need to be preprocessed.
-* Rescaling real-valued data to zero mean and unit variance is a good default. So is replacing missing values with their mean.
-* Transforming categorical features into indicator features allows us to treat them like one-hot vectors.
-* We can use $K$-fold cross-validation to select the model and adjust the hyperparameters.
-* Logarithms are useful for relative errors.
+* Os dados reais geralmente contêm uma combinação de diferentes tipos de dados e precisam ser pré-processados.
+* Redimensionar dados de valor real para média zero e variância unitária é um bom padrão. O mesmo ocorre com a substituição dos valores ausentes por sua média.
+* Transformar características categóricas em características de indicadores nos permite tratá-las como vetores únicos.
+* Podemos usar a validação cruzada de $K$ para selecionar o modelo e ajustar os hiperparâmetros.
+* Os logaritmos são úteis para erros relativos.
 
 
-## Exercises
+## Exercícios
 
-1. Submit your predictions for this section to Kaggle. How good are your predictions?
-1. Can you improve your model by minimizing the logarithm of prices directly? What happens if you try to predict the logarithm of the price rather than the price?
-1. Is it always a good idea to replace missing values by their mean? Hint: can you construct a situation where the values are not missing at random?
-1. Improve the score on Kaggle by tuning the hyperparameters through $K$-fold cross-validation.
-1. Improve the score by improving the model (e.g., layers, weight decay, and dropout).
-1. What happens if we do not standardize the continuous numerical features like what we have done in this section?
+1. Envie suas previsões para esta seção para o Kaggle. Quão boas são suas previsões?
+1. Você pode melhorar seu modelo minimizando o logaritmo dos preços diretamente? O que acontece se você tentar prever o logaritmo do preço em vez do preço?
+1. É sempre uma boa ideia substituir os valores ausentes por sua média? Dica: você pode construir uma situação em que os valores não faltem aleatoriamente?
+1. Melhore a pontuação no Kaggle ajustando os hiperparâmetros por meio da validação cruzada de $K$.
+1. Melhore a pontuação melhorando o modelo (por exemplo, camadas, *weight decay* e eliminação).
+1. O que acontece se não padronizarmos as características numéricas contínuas como fizemos nesta seção?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/106)
@@ -705,7 +705,7 @@ As etapas são bastante simples:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMyMDkzMTE4LDEzMDM2MjM4NzEsMjAxNz
-kzODM2NSwtNTQzMTA2MTg3LDIxMzk3OTg2NTAsMjIxMTYzODg1
-XX0=
+eyJoaXN0b3J5IjpbLTEyMTg4MDM1OTQsMTMwMzYyMzg3MSwyMD
+E3OTM4MzY1LC01NDMxMDYxODcsMjEzOTc5ODY1MCwyMjExNjM4
+ODVdfQ==
 -->
