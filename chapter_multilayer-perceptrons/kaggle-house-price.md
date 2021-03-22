@@ -351,18 +351,18 @@ train_labels = d2l.tensor(
 
 ## Treinamento
 
-To get started we train a linear model with squared loss.
-Not surprisingly, our linear model will not lead
-to a competition-winning submission
-but it provides a sanity check to see whether
-there is meaningful information in the data.
-If we cannot do better than random guessing here,
-then there might be a good chance
-that we have a data processing bug.
-And if things work, the linear model will serve as a baseline
-giving us some intuition about how close the simple model
-gets to the best reported models, giving us a sense
-of how much gain we should expect from fancier models.
+Para começar, treinamos um modelo linear com perda quadrática.
+Não surpreendentemente, nosso modelo linear não conduzirá
+para uma inscrição vencedora de competição
+mas fornece uma verificação de sanidade para ver se
+há informações significativas nos dados.
+Se não podemos fazer melhor do que adivinhação aleatória aqui,
+então pode haver uma boa chance
+que temos um bug de processamento de dados.
+E se as coisas funcionarem, o modelo linear servirá como base
+dando-nos alguma intuição sobre o quão próximo o modelo simples
+chega aos melhores modelos relatados, dando-nos uma ideia
+de quanto ganho devemos esperar de modelos mais sofisticados.
 
 ```{.python .input}
 loss = gluon.loss.L2Loss()
@@ -703,6 +703,6 @@ The steps are quite simple:
 [Discussions](https://discuss.d2l.ai/t/237)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNzkzODM2NSwtNTQzMTA2MTg3LDIxMz
-k3OTg2NTAsMjIxMTYzODg1XX0=
+eyJoaXN0b3J5IjpbMTMwMzYyMzg3MSwyMDE3OTM4MzY1LC01ND
+MxMDYxODcsMjEzOTc5ODY1MCwyMjExNjM4ODVdfQ==
 -->
