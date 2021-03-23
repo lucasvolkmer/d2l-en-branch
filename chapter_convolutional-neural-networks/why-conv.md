@@ -1,41 +1,42 @@
 # De Camadas Totalmente Conectadas às Convoluções
 :label:`sec_why-conv`
 
-To this day,
-the models that we have discussed so far
-remain appropriate options
-when we are dealing with tabular data.
-By tabular, we mean that the data consist
-of rows corresponding to examples
-and columns corresponding to features.
-With tabular data, we might anticipate
-that the patterns we seek could involve
-interactions among the features,
-but we do not assume any structure *a priori*
-concerning how the features interact.
 
-Sometimes, we truly lack knowledge to guide
-the construction of craftier architectures.
-In these cases, an MLP
-may be the best that we can do.
-However, for high-dimensional perceptual data,
-such structure-less networks can grow unwieldy.
+Até hoje,
+os modelos que discutimos até agora
+permanecem opções apropriadas
+quando estamos lidando com dados tabulares.
+Por tabular, queremos dizer que os dados consistem
+de linhas correspondentes a exemplos
+e colunas correspondentes a *features*.
+Com dados tabulares, podemos antecipar
+que os padrões que buscamos podem envolver
+interações entre as características,
+mas não assumimos nenhuma estrutura *a priori*
+sobre como as características interagem.
 
-For instance, let us return to our running example
-of distinguishing cats from dogs.
-Say that we do a thorough job in data collection,
-collecting an annotated dataset of one-megapixel photographs.
-This means that each input to the network has one million dimensions.
-According to our discussions of parameterization cost
-of fully-connected layers in :numref:`subsec_parameterization-cost-fc-layers`,
-even an aggressive reduction to one thousand hidden dimensions
-would require a fully-connected layer
-characterized by $10^6 \times 10^3 = 10^9$ parameters.
-Unless we have lots of GPUs, a talent
-for distributed optimization,
-and an extraordinary amount of patience,
-learning the parameters of this network
-may turn out to be infeasible.
+Às vezes, realmente não temos conhecimento para orientar
+a construção de arquiteturas mais artesanais.
+Nestes casos, um MLP
+pode ser o melhor que podemos fazer.
+No entanto, para dados perceptivos de alta dimensão,
+essas redes sem estrutura podem se tornar difíceis de manejar.
+
+Por exemplo, vamos voltar ao nosso exemplo de execução
+de distinguir gatos de cães.
+Digamos que fazemos um trabalho completo na coleta de dados,
+coletando um conjunto de dados anotado de fotografias de um megapixel.
+Isso significa que cada entrada na rede tem um milhão de dimensões.
+De acordo com nossas discussões sobre custo de parametrização
+de camadas totalmente conectadas em :numref:`subsec_parameterization-cost-fc-layers`,
+até mesmo uma redução agressiva para mil dimensões ocultas
+exigiria uma camada totalmente conectada
+caracterizada por $10^6 \times 10^3 = 10^9$ parâmetros.
+A menos que tenhamos muitas GPUs, um talento
+para otimização distribuída,
+e uma quantidade extraordinária de paciência,
+aprender os parâmetros desta rede
+pode acabar sendo inviável.
 
 A careful reader might object to this argument
 on the basis that one megapixel resolution may not be necessary.
@@ -340,5 +341,6 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MzYyNTYxMCwtMTI5OTI0MTk2NF19
+eyJoaXN0b3J5IjpbLTE2NTczNjYyNTAsMTY3MzYyNTYxMCwtMT
+I5OTI0MTk2NF19
 -->
