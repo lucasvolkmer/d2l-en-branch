@@ -1,4 +1,4 @@
-# From Fully-Connected Layers to Convolutions
+# De Camadas Totalmente Conectadas às Convoluções
 :label:`sec_why-conv`
 
 To this day,
@@ -340,5 +340,5 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTkyNDE5NjRdfQ==
+eyJoaXN0b3J5IjpbMTY3MzYyNTYxMCwtMTI5OTI0MTk2NF19
 -->
