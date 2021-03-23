@@ -38,28 +38,28 @@ e uma quantidade extraordinária de paciência,
 aprender os parâmetros desta rede
 pode acabar sendo inviável.
 
-A careful reader might object to this argument
-on the basis that one megapixel resolution may not be necessary.
-However, while we might be able
-to get away with one hundred thousand pixels,
-our hidden layer of size 1000 grossly underestimates
-the number of hidden units that it takes
-to learn good representations of images,
-so a practical system will still require billions of parameters.
-Moreover, learning a classifier by fitting so many parameters
-might require collecting an enormous dataset.
-And yet today both humans and computers are able
-to distinguish cats from dogs quite well,
-seemingly contradicting these intuitions.
-That is because images exhibit rich structure
-that can be exploited by humans
-and machine learning models alike.
-Convolutional neural networks (CNNs) are one creative way
-that machine learning has embraced for exploiting
-some of the known structure in natural images.
+Um leitor cuidadoso pode objetar a este argumento
+na base de que a resolução de um megapixel pode não ser necessária.
+No entanto, embora possamos ser capazes
+de escapar com apenas cem mil pixels,
+nossa camada oculta de tamanho 1000 subestima grosseiramente
+o número de unidades ocultas que leva
+para aprender boas representações de imagens,
+portanto, um sistema prático ainda exigirá bilhões de parâmetros.
+Além disso, aprender um classificador ajustando tantos parâmetros
+pode exigir a coleta de um enorme conjunto de dados.
+E ainda hoje tanto os humanos quanto os computadores são capazes
+de distinguir gatos de cães muito bem,
+aparentemente contradizendo essas intuições.
+Isso ocorre porque as imagens exibem uma estrutura rica
+que pode ser explorada por humanos
+e modelos de aprendizado de máquina semelhantes.
+Redes neurais convolucionais (CNNs) são uma forma criativa
+que o *machine learning* adotou para explorar
+algumas das estruturas conhecidas em imagens naturais.
 
 
-## Invariance
+## Invariância
 
 Imagine that you want to detect an object in an image.
 It seems reasonable that whatever method
@@ -341,6 +341,6 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTczNjYyNTAsMTY3MzYyNTYxMCwtMT
-I5OTI0MTk2NF19
+eyJoaXN0b3J5IjpbLTE3NDYwNTU4MzQsLTE2NTczNjYyNTAsMT
+Y3MzYyNTYxMCwtMTI5OTI0MTk2NF19
 -->
