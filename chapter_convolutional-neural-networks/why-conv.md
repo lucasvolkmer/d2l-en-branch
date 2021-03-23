@@ -94,24 +94,24 @@ com menos parâmetros.
 :label:`img_waldo`
 
 
-We can now make these intuitions more concrete
-by enumerating a few desiderata to guide our design
-of a neural network architecture suitable for computer vision:
 
-1. In the earliest layers, our network
-    should respond similarly to the same patch,
-    regardless of where it appears in the image. This principle is called *translation invariance*.
-1. The earliest layers of the network should focus on local regions,
-   without regard for the contents of the image in distant regions. This is the *locality* principle.
-   Eventually, these local representations can be aggregated
-   to make predictions at the whole image level.
+Agora podemos tornar essas intuições mais concretas
+enumerando alguns desideratos para orientar nosso design
+de uma arquitetura de rede neural adequada para visão computacional:
 
-Let us see how this translates into mathematics.
+1. Nas primeiras camadas, nossa rede
+     deve responder de forma semelhante ao mesmo *patch*,
+     independentemente de onde aparece na imagem. Este princípio é denominado *invariância da tradução*.
+1. As primeiras camadas da rede devem se concentrar nas regiões locais,
+    sem levar em conta o conteúdo da imagem em regiões distantes. Este é o princípio de *localidade*.
+    Eventualmente, essas representações locais podem ser agregadas
+    para fazer previsões em todo o nível da imagem.
+
+Vamos ver como isso se traduz em matemática.
 
 
 
-
-## Constraining the MLP
+## Restringindo o MLP
 
 To start off, we can consider an MLP
 with two-dimensional images $\mathbf{X}$ as inputs
@@ -341,6 +341,6 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjI1OTc4NjMsLTE2NTczNjYyNTAsMT
-Y3MzYyNTYxMCwtMTI5OTI0MTk2NF19
+eyJoaXN0b3J5IjpbLTE1MDY0Mzg5MjksLTExMjI1OTc4NjMsLT
+E2NTczNjYyNTAsMTY3MzYyNTYxMCwtMTI5OTI0MTk2NF19
 -->
