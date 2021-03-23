@@ -113,25 +113,26 @@ Vamos ver como isso se traduz em matemática.
 
 ## Restringindo o MLP
 
-To start off, we can consider an MLP
-with two-dimensional images $\mathbf{X}$ as inputs
-and their immediate hidden representations
-$\mathbf{H}$ similarly represented as matrices in mathematics and as two-dimensional tensors in code, where both $\mathbf{X}$ and $\mathbf{H}$ have the same shape.
-Let that sink in.
-We now conceive of not only the inputs but
-also the hidden representations as possessing spatial structure.
 
-Let $[\mathbf{X}]_{i, j}$ and $[\mathbf{H}]_{i, j}$ denote the pixel
-at location ($i$, $j$)
-in the input image and hidden representation, respectively.
-Consequently, to have each of the hidden units
-receive input from each of the input pixels,
-we would switch from using weight matrices
-(as we did previously in MLPs)
-to representing our parameters
-as fourth-order weight tensors $\mathsf{W}$.
-Suppose that $\mathbf{U}$ contains biases,
-we could formally express the fully-connected layer as
+Para começar, podemos considerar um MLP
+com imagens bidimensionais $\mathbf{X}$ como entradas
+e suas representações ocultas imediatas
+$\mathbf{H}$ similarmente representadas como matrizes em matemática e como tensores bidimensionais em código, onde $\mathbf{X}$ e $\mathbf{H}$ têm a mesma forma.
+Deixe isso penetrar.
+Agora concebemos não apenas as entradas, mas
+também as representações ocultas como possuidoras de estrutura espacial.
+
+Deixe $[\mathbf{X}]_{i, j}$ e $[\mathbf{H}]_{i, j}$ denotarem o pixel
+no local ($i$, $j$)
+na imagem de entrada e representação oculta, respectivamente.
+Consequentemente, para que cada uma das unidades ocultas
+receba entrada de cada um dos pixels de entrada,
+nós deixaríamos de usar matrizes de peso
+(como fizemos anteriormente em MLPs)
+para representar nossos parâmetros
+como tensores de peso de quarta ordem $\mathsf{W}$.
+Suponha que $\mathbf{U}$ contenha *bias*,
+poderíamos expressar formalmente a camada totalmente conectada como
 
 $$\begin{aligned} \left[\mathbf{H}\right]_{i, j} &= [\mathbf{U}]_{i, j} + \sum_k \sum_l[\mathsf{W}]_{i, j, k, l}  [\mathbf{X}]_{k, l}\\ &=  [\mathbf{U}]_{i, j} +
 \sum_a \sum_b [\mathsf{V}]_{i, j, a, b}  [\mathbf{X}]_{i+a, j+b}.\end{aligned},$$
@@ -341,6 +342,6 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDY0Mzg5MjksLTExMjI1OTc4NjMsLT
+eyJoaXN0b3J5IjpbLTE1ODQzMjg3ODAsLTExMjI1OTc4NjMsLT
 E2NTczNjYyNTAsMTY3MzYyNTYxMCwtMTI5OTI0MTk2NF19
 -->
