@@ -339,3 +339,6 @@ We turn to these issues in the remainder of the chapter.
 1. Prove that $f * g = g * f$.
 
 [Discussions](https://discuss.d2l.ai/t/64)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyOTkyNDE5NjRdfQ==
+-->
