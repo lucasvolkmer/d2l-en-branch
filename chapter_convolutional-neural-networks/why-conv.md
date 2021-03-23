@@ -61,35 +61,35 @@ algumas das estruturas conhecidas em imagens naturais.
 
 ## Invariância
 
-Imagine that you want to detect an object in an image.
-It seems reasonable that whatever method
-we use to recognize objects should not be overly concerned
-with the precise location of the object in the image.
-Ideally, our system should exploit this knowledge.
-Pigs usually do not fly and planes usually do not swim.
-Nonetheless, we should still recognize
-a pig were one to appear at the top of the image.
-We can draw some inspiration here
-from the children's game "Where's Waldo"
-(depicted in :numref:`img_waldo`).
-The game consists of a number of chaotic scenes
-bursting with activities.
-Waldo shows up somewhere in each,
-typically lurking in some unlikely location.
-The reader's goal is to locate him.
-Despite his characteristic outfit,
-this can be surprisingly difficult,
-due to the large number of distractions.
-However, *what Waldo looks like*
-does not depend upon *where Waldo is located*.
-We could sweep the image with a Waldo detector
-that could assign a score to each patch,
-indicating the likelihood that the patch contains Waldo.
-CNNs systematize this idea of *spatial invariance*,
-exploiting it to learn useful representations
-with fewer parameters.
+Imagine que você deseja detectar um objeto em uma imagem.
+Parece razoável que qualquer método
+que usamos para reconhecer objetos não deveria se preocupar demais
+com a localização precisa do objeto na imagem.
+Idealmente, nosso sistema deve explorar esse conhecimento.
+Os porcos geralmente não voam e os aviões geralmente não nadam.
+No entanto, devemos ainda reconhecer
+um porco era aquele que aparecia no topo da imagem.
+Podemos tirar alguma inspiração aqui
+do jogo infantil "Cadê o Wally"
+(representado em :numref:`img_waldo`).
+O jogo consiste em várias cenas caóticas
+repletas de atividades.
+Wally aparece em algum lugar em cada uma,
+normalmente à espreita em algum local improvável.
+O objetivo do leitor é localizá-lo.
+Apesar de sua roupa característica,
+isso pode ser surpreendentemente difícil,
+devido ao grande número de distrações.
+No entanto, *a aparência do Wally*
+não depende de *onde o Wally está localizado*.
+Poderíamos varrer a imagem com um detector Wally
+que poderia atribuir uma pontuação a cada *patch*,
+indicando a probabilidade de o *patch* conter Wally.
+CNNs sistematizam essa ideia de *invariância espacial*,
+explorando para aprender representações úteis
+com menos parâmetros.
 
-![An image of the "Where's Waldo" game.](../img/where-wally-walker-books.jpg)
+![Uma imagem do jogo "Onde está Wally".](../img/where-wally-walker-books.jpg)
 :width:`400px`
 :label:`img_waldo`
 
@@ -341,6 +341,6 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDYwNTU4MzQsLTE2NTczNjYyNTAsMT
+eyJoaXN0b3J5IjpbLTExMjI1OTc4NjMsLTE2NTczNjYyNTAsMT
 Y3MzYyNTYxMCwtMTI5OTI0MTk2NF19
 -->
