@@ -16,12 +16,31 @@ we
 omit a few ad-hoc features that were added to stabilize training
 but are unnecessary now with better training algorithms available.
 
+Em 2014, * GoogLeNet *
+venceu o ImageNet Challenge, propondo uma estrutura
+que combinou as forças de NiN e paradigmas de blocos repetidos: cite: `Szegedy.Liu.Jia.ea.2015`.
+Um dos focos do artigo foi abordar a questão
+dos quais núcleos de convolução de tamanho são os melhores.
+Afinal, as redes populares anteriores empregavam escolhas
+tão pequeno quanto $ 1 \ vezes 1 $ e tão grande quanto $ 11 \ vezes 11 $.
+Uma ideia neste artigo foi que às vezes
+pode ser vantajoso empregar uma combinação de grãos de vários tamanhos.
+Nesta seção, apresentaremos GoogLeNet,
+apresentando uma versão ligeiramente simplificada do modelo original:
+nós
+omitir alguns recursos ad-hoc que foram adicionados para estabilizar o treinamento
+mas são desnecessários agora com melhores algoritmos de treinamento disponíveis.
+
 
 ## Inception Blocks
 
 The basic convolutional block in GoogLeNet is called an *Inception block*,
 likely named due to a quote from the movie *Inception* ("We need to go deeper"),
 which launched a viral meme.
+
+O bloco convolucional básico no GoogLeNet é chamado de * bloco de iniciação *,
+provavelmente nomeado devido a uma citação do filme * Inception * ("Precisamos ir mais fundo"),
+que lançou um meme viral.
 
 ![Structure of the Inception block.](../img/inception.svg)
 :label:`fig_inception`
@@ -41,6 +60,22 @@ Finally, the outputs along each path are concatenated
 along the channel dimension and comprise the block's output.
 The commonly-tuned hyperparameters of the Inception block
 are the number of output channels per layer.
+
+Conforme descrito em: numref: `fig_inception`,
+o bloco de iniciação consiste em quatro caminhos paralelos.
+Os primeiros três caminhos usam camadas convolucionais
+com tamanhos de janela de $ 1 \ vezes 1 $, $ 3 \ vezes 3 $ e $ 5 \ vezes 5 $
+para extrair informações de diferentes tamanhos espaciais.
+Os dois caminhos intermediários realizam uma convolução $ 1 \ vezes 1 $ na entrada
+reduzir o número de canais, diminuindo a complexidade do modelo.
+O quarto caminho usa uma camada de pooling máxima de $ 3 \ vezes 3 $,
+seguido por uma camada convolucional $ 1 \ vezes 1 $
+para alterar o número de canais.
+Todos os quatro caminhos usam preenchimento apropriado para dar à entrada e saída a mesma altura e largura.
+Finalmente, as saídas ao longo de cada caminho são concatenadas
+ao longo da dimensão do canal e compreendem a saída do bloco.
+Os hiperparâmetros comumente ajustados do bloco de início
+são o número de canais de saída por camada.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -157,6 +192,14 @@ can be recognized efficiently by filters of different sizes.
 At the same time, we can allocate different amounts of parameters
 for different filters.
 
+Para ter alguma intuição de por que essa rede funciona tão bem,
+considere a combinação dos filtros.
+Eles exploram a imagem em uma variedade de tamanhos de filtro.
+Isso significa que os detalhes em diferentes extensões
+pode ser reconhecido de forma eficiente por filtros de diferentes tamanhos.
+Ao mesmo tempo, podemos alocar diferentes quantidades de parâmetros
+para filtros diferentes.
+
 
 ## GoogLeNet Model
 
@@ -168,11 +211,22 @@ The stack of blocks is inherited from VGG
 and the global average pooling avoids
 a stack of fully-connected layers at the end.
 
+Conforme mostrado em: numref: `fig_inception_full`, GoogLeNet usa uma pilha de um total de 9 blocos iniciais
+e pooling médio global para gerar suas estimativas.
+O agrupamento máximo entre os blocos de iniciação reduz a dimensionalidade.
+O primeiro módulo é semelhante ao AlexNet e LeNet.
+A pilha de blocos é herdada de VGG
+e o pool de média global evita
+uma pilha de camadas totalmente conectadas no final.
+
 ![The GoogLeNet architecture.](../img/inception-full.svg)
 :label:`fig_inception_full`
 
 We can now implement GoogLeNet piece by piece.
 The first module uses a 64-channel $7\times 7$ convolutional layer.
+
+Agora podemos implementar o GoogLeNet peça por peça.
+O primeiro módulo usa uma camada convolucional $ 7 \ vezes 7 $ de 64 canais.
 
 ```{.python .input}
 b1 = nn.Sequential()
@@ -436,3 +490,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTE4NjY1NDQ0M119
+-->
