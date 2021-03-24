@@ -185,6 +185,12 @@ the first consisting mostly of convolutional and pooling layers
 and the second consisting of fully-connected layers.
 This is depicted in :numref:`fig_vgg`.
 
+Como AlexNet e LeNet,
+a rede VGG pode ser dividida em duas partes:
+o primeiro consistindo principalmente de camadas convolucionais e de pooling
+e a segunda consistindo em camadas totalmente conectadas.
+Isso é descrito em: numref: `fig_vgg`.
+
 ![From AlexNet to VGG that is designed from building blocks.](../img/vgg.svg)
 :width:`400px`
 :label:`fig_vgg`
@@ -199,6 +205,15 @@ which are precisely the arguments required to call
 the `vgg_block` function.
 The fully-connected part of the VGG network is identical to that covered in AlexNet.
 
+A parte convolucional da rede conecta vários blocos VGG de: numref: `fig_vgg` (também definido na função` vgg_block`)
+em sucessão.
+A seguinte variável `conv_arch` consiste em uma lista de tuplas (uma por bloco),
+onde cada um contém dois valores: o número de camadas convolucionais
+e o número de canais de saída,
+quais são precisamente os argumentos necessários para chamar
+a função `vgg_block`.
+A parte totalmente conectada da rede VGG é idêntica à coberta no AlexNet.
+
 The original VGG network had 5 convolutional blocks,
 among which the first two have one convolutional layer each
 and the latter three contain two convolutional layers each.
@@ -208,12 +223,23 @@ until that number reaches 512.
 Since this network uses 8 convolutional layers
 and 3 fully-connected layers, it is often called VGG-11.
 
+A rede VGG original tinha 5 blocos convolucionais,
+entre os quais os dois primeiros têm uma camada convolucional cada
+e os três últimos contêm duas camadas convolucionais cada.
+O primeiro bloco tem 64 canais de saída
+e cada bloco subsequente dobra o número de canais de saída,
+até que esse número chegue a 512.
+Uma vez que esta rede usa 8 camadas convolucionais
+e 3 camadas totalmente conectadas, geralmente chamado de VGG-11.
+
 ```{.python .input}
 #@tab all
 conv_arch = ((1, 64), (1, 128), (2, 256), (2, 512), (2, 512))
 ```
 
 The following code implements VGG-11. This is a simple matter of executing a for-loop over `conv_arch`.
+
+O código a seguir implementa VGG-11. Esta é uma simples questão de executar um loop for sobre `conv_arch`.
 
 ```{.python .input}
 def vgg(conv_arch):
@@ -273,6 +299,9 @@ net = vgg(conv_arch)
 Next, we will construct a single-channel data example
 with a height and width of 224 to observe the output shape of each layer.
 
+A seguir, construiremos um exemplo de dados de canal único
+com altura e largura de 224 para observar a forma de saída de cada camada.
+
 ```{.python .input}
 net.initialize()
 X = np.random.uniform(size=(1, 1, 224, 224))
@@ -302,11 +331,20 @@ finally reaching a height and width of 7
 before flattening the representations
 for processing by the fully-connected part of the network.
 
+Como você pode ver, dividimos a altura e a largura em cada bloco,
+finalmente alcançando uma altura e largura de 7
+antes de achatar as representações
+para processamento pela parte totalmente conectada da rede.
+
 ## Training
 
 Since VGG-11 is more computationally-heavy than AlexNet
 we construct a network with a smaller number of channels.
 This is more than sufficient for training on Fashion-MNIST.
+
+Como o VGG-11 é mais pesado em termos computacionais do que o AlexNet
+construímos uma rede com um número menor de canais.
+Isso é mais do que suficiente para o treinamento em Fashion-MNIST.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -328,6 +366,9 @@ net = lambda: vgg(small_conv_arch)
 Apart from using a slightly larger learning rate,
 the model training process is similar to that of AlexNet in :numref:`sec_alexnet`.
 
+Além de usar uma taxa de aprendizado um pouco maior,
+o processo de treinamento do modelo é semelhante ao do AlexNet em: numref: `sec_alexnet`.
+
 ```{.python .input}
 #@tab all
 lr, num_epochs, batch_size = 0.05, 10, 128
@@ -340,6 +381,10 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 * VGG-11 constructs a network using reusable convolutional blocks. Different VGG models can be defined by the differences in the number of convolutional layers and output channels in each block.
 * The use of blocks leads to very compact representations of the network definition. It allows for efficient design of complex networks.
 * In their VGG paper, Simonyan and Ziserman experimented with various architectures. In particular, they found that several layers of deep and narrow convolutions (i.e., $3 \times 3$) were more effective than fewer layers of wider convolutions.
+
+* VGG-11 constrói uma rede usando blocos convolucionais reutilizáveis. Diferentes modelos de VGG podem ser definidos pelas diferenças no número de camadas convolucionais e canais de saída em cada bloco.
+* O uso de blocos leva a representações muito compactas da definição da rede. Ele permite um projeto eficiente de redes complexas.
+* Em seu artigo VGG, Simonyan e Ziserman experimentaram várias arquiteturas. Em particular, eles descobriram que várias camadas de convoluções profundas e estreitas (ou seja, $ 3 \ vezes 3 $) eram mais eficazes do que menos camadas de convoluções mais largas.
 
 ## Exercises
 
@@ -360,5 +405,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDQxNDY4MzRdfQ==
+eyJoaXN0b3J5IjpbMjA2OTg4NDQyN119
 -->
