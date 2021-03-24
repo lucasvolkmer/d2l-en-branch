@@ -5,6 +5,10 @@ As we design increasingly deeper networks it becomes imperative to understand ho
 Even more important is the ability to design networks where adding layers makes networks strictly more expressive rather than just different.
 To make some progress we need a bit of mathematics.
 
+À medida que projetamos redes cada vez mais profundas, torna-se imperativo entender como a adição de camadas pode aumentar a complexidade e a expressividade da rede.
+Ainda mais importante é a capacidade de projetar redes onde adicionar camadas torna as redes estritamente mais expressivas, em vez de apenas diferentes.
+Para fazer algum progresso, precisamos de um pouco de matemática.
+
 
 ## Function Classes
 
@@ -18,6 +22,16 @@ given a dataset with features $\mathbf{X}$
 and labels $\mathbf{y}$,
 we might try finding it by solving the following optimization problem:
 
+Considere $ \ mathcal {F} $, a classe de funções que uma arquitetura de rede específica (junto com as taxas de aprendizado e outras configurações de hiperparâmetros) pode alcançar.
+Ou seja, para todos os $ f \ in \ mathcal {F} $ existe algum conjunto de parâmetros (por exemplo, pesos e vieses) que podem ser obtidos através do treinamento em um conjunto de dados adequado.
+Vamos supor que $ f ^ * $ seja a função "verdade" que realmente gostaríamos de encontrar.
+Se estiver em $ \ mathcal {F} $, estamos em boa forma, mas normalmente não teremos tanta sorte.
+Em vez disso, tentaremos encontrar $ f ^ * _ \ mathcal {F} $, que é nossa melhor aposta em $ \ mathcal {F} $.
+Por exemplo,
+dado um conjunto de dados com recursos $ \ mathbf {X} $
+e rótulos $ \ mathbf {y} $,
+podemos tentar encontrá-lo resolvendo o seguinte problema de otimização:
+
 $$f^*_\mathcal{F} \stackrel{\mathrm{def}}{=} \mathop{\mathrm{argmin}}_f L(\mathbf{X}, \mathbf{y}, f) \text{ subject to } f \in \mathcal{F}.$$
 
 It is only reasonable to assume that if we design a different and more powerful architecture $\mathcal{F}'$ we should arrive at a better outcome. In other words, we would expect that $f^*_{\mathcal{F}'}$ is "better" than $f^*_{\mathcal{F}}$. However, if $\mathcal{F} \not\subseteq \mathcal{F}'$ there is no guarantee that this should even happen. In fact, $f^*_{\mathcal{F}'}$ might well be worse. 
@@ -30,6 +44,16 @@ where $\mathcal{F}_1 \subseteq \ldots \subseteq \mathcal{F}_6$
 on the right of :numref:`fig_functionclasses`,
 we can avoid the aforementioned issue from the non-nested function classes.
 
+É razoável supor que, se projetarmos uma arquitetura diferente e mais poderosa $ \ mathcal {F} '$, chegaremos a um resultado melhor. Em outras palavras, esperaríamos que $ f ^ * _ {\ mathcal {F} '} $ seja "melhor" do que $ f ^ * _ {\ mathcal {F}} $. No entanto, se $ \ mathcal {F} \ not \ subseteq \ mathcal {F} '$ não há garantia de que isso acontecerá. Na verdade, $ f ^ * _ {\ mathcal {F} '} $ pode muito bem ser pior.
+Conforme ilustrado por: numref: `fig_functionclasses`,
+para classes de função não aninhadas, uma classe de função maior nem sempre se aproxima da função "verdade" $ f ^ * $. Por exemplo,
+à esquerda de: numref: `fig_functionclasses`,
+embora $ \ mathcal {F} _3 $ esteja mais perto de $ f ^ * $ do que $ \ mathcal {F} _1 $, $ \ mathcal {F} _6 $ se afasta e não há garantia de que aumentar ainda mais a complexidade pode reduzir o distância de $ f ^ * $.
+Com classes de função aninhadas
+onde $ \ mathcal {F} _1 \ subseteq \ ldots \ subseteq \ mathcal {F} _6 $
+à direita de: numref: `fig_functionclasses`,
+podemos evitar o problema mencionado nas classes de função não aninhadas.
+
 
 ![For non-nested function classes, a larger (indicated by area) function class does not guarantee to get closer to the "truth" function ($f^*$). This does not happen in nested function classes.](../img/functionclasses.svg)
 :label:`fig_functionclasses`
@@ -40,6 +64,12 @@ For deep neural networks,
 if we can 
 train the newly-added layer into an identity function $f(\mathbf{x}) = \mathbf{x}$, the new model will be as effective as the original model. As the new model may get a better solution to fit the training dataset, the added layer might make it easier to reduce training errors.
 
+Por isso,
+somente se as classes de função maiores contiverem as menores teremos a garantia de que aumentá-las aumenta estritamente o poder expressivo da rede.
+Para redes neurais profundas,
+se pudermos
+treinar a camada recém-adicionada em uma função de identidade $ f (\ mathbf {x}) = \ mathbf {x} $, o novo modelo será tão eficaz quanto o modelo original. Como o novo modelo pode obter uma solução melhor para se ajustar ao conjunto de dados de treinamento, a camada adicionada pode facilitar a redução de erros de treinamento.
+
 This is the question that He et al. considered when working on very deep computer vision models :cite:`He.Zhang.Ren.ea.2016`. 
 At the heart of their proposed *residual network* (*ResNet*) is the idea that every additional layer should 
 more easily
@@ -48,6 +78,15 @@ These considerations are rather profound but they led to a surprisingly simple
 solution, a *residual block*.
 With it, ResNet won the ImageNet Large Scale Visual Recognition Challenge in 2015. The design had a profound influence on how to
 build deep neural networks.
+
+Essa é a pergunta que He et al. considerado quando se trabalha em modelos de visão computacional muito profundos: cite: `He.Zhang.Ren.ea.2016`.
+No cerne de sua proposta de * rede residual * (* ResNet *) está a ideia de que cada camada adicional deve
+mais facilmente
+conter a função de identidade como um de seus elementos.
+Essas considerações são bastante profundas, mas levaram a um surpreendentemente simples
+solução, um * bloco residual *.
+Com ele, a ResNet venceu o Desafio de Reconhecimento Visual em Grande Escala da ImageNet em 2015. O design teve uma profunda influência em como
+construir redes neurais profundas.
 
 
 
@@ -76,6 +115,30 @@ $\mathbf{x}$ to the addition operator
 is called a *residual connection* (or *shortcut connection*).
 With residual blocks, inputs can 
 forward propagate faster through the residual connections across layers.
+
+Vamos nos concentrar em uma parte local de uma rede neural, conforme descrito em: numref: `fig_residual_block`. Denote a entrada por $ \ mathbf {x} $.
+Assumimos que o mapeamento subjacente desejado que queremos obter aprendendo é $ f (\ mathbf {x}) $, a ser usado como entrada para a função de ativação no topo.
+À esquerda de: numref: `fig_residual_block`,
+a parte dentro da caixa de linha pontilhada
+deve aprender diretamente o mapeamento $ f (\ mathbf {x}) $.
+A direita,
+a parte dentro da caixa de linha pontilhada
+precisa de
+aprenda o * mapeamento residual * $ f (\ mathbf {x}) - \ mathbf {x} $,
+que é como o bloco residual deriva seu nome.
+Se o mapeamento de identidade $ f (\ mathbf {x}) = \ mathbf {x} $ for o mapeamento subjacente desejado,
+o mapeamento residual é mais fácil de aprender:
+nós só precisamos empurrar os pesos e preconceitos
+do
+camada de peso superior (por exemplo, camada totalmente conectada e camada convolucional)
+dentro da caixa de linha pontilhada
+a zero.
+A figura certa em: numref: `fig_residual_block` ilustra o * bloco residual * do ResNet,
+onde a linha sólida carregando a entrada da camada
+$ \ mathbf {x} $ para o operador de adição
+é chamada de * conexão residual * (ou * conexão de atalho *).
+Com blocos residuais, as entradas podem
+para a frente se propagam mais rápido através das conexões residuais entre as camadas.
 
 ![A regular block (left) and a residual block (right).](../img/residual-block.svg)
 :label:`fig_residual_block`
@@ -441,3 +504,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTEwNzk2NjM5MV19
+-->
