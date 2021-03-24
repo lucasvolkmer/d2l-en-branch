@@ -254,6 +254,11 @@ The second module uses two convolutional layers:
 first, a 64-channel $1\times 1$ convolutional layer,
 then a $3\times 3$ convolutional layer that triples the number of channels. This corresponds to the second path in the Inception block.
 
+
+O segundo módulo usa duas camadas convolucionais:
+primeiro, uma camada convolucional $ 1 \ vezes 1 $ de 64 canais,
+em seguida, uma camada convolucional $ 3 vezes 3 $ que triplica o número de canais. Isso corresponde ao segundo caminho no bloco de iniciação.
+
 ```{.python .input}
 b2 = nn.Sequential()
 b2.add(nn.Conv2D(64, kernel_size=1, activation='relu'),
@@ -291,6 +296,20 @@ is increased to $128+192+96+64=480$, and the number-of-output-channel ratio
 among the four paths is $128:192:96:64 = 4:6:3:2$.
 The second and third paths first reduce the number of input channels
 to $128/256=1/2$ and $32/256=1/8$, respectively.
+
+O terceiro módulo conecta dois blocos de iniciação completos em série.
+O número de canais de saída do primeiro bloco de iniciação é
+$ 64 + 128 + 32 + 32 = 256 $,
+e a relação número de canal de saída
+entre os quatro caminhos está $ 64: 128: 32: 32 = 2: 4: 1: 1 $.
+O segundo e o terceiro caminhos reduzem primeiro o número de canais de entrada
+para $ 96/192 = 1/2 $ e $ 16/192 = 1/12 $, respectivamente,
+e conecte a segunda camada convolucional.
+O número de canais de saída do segundo bloco de iniciação
+é aumentado para $ 128 + 192 + 96 + 64 = 480 $, e a proporção do número de canal de saída
+entre os quatro caminhos está $ 128: 192: 96: 64 = 4: 6: 3: 2 $.
+O segundo e o terceiro caminhos reduzem primeiro o número de canais de entrada
+a $ 128/256 = 1/2 $ e $ 32/256 = 1/8 $, respectivamente.
 
 ```{.python .input}
 b3 = nn.Sequential()
@@ -330,6 +349,22 @@ and the fourth path with the $3\times 3$ maximum pooling layer.
 The second and third paths will first reduce
 the number of channels according to the ratio.
 These ratios are slightly different in different Inception blocks.
+
+O quarto módulo é mais complicado.
+Ele conecta cinco blocos de iniciação em série,
+e eles têm $ 192 + 208 + 48 + 64 = 512 $, $ 160 + 224 + 64 + 64 = 512 $,
+$ 128 + 256 + 64 + 64 = 512 $, $ 112 + 288 + 64 + 64 = 528 $,
+e $ 256 + 320 + 128 + 128 = 832 $ canais de saída, respectivamente.
+O número de canais atribuídos a esses caminhos é semelhante
+para aquele no terceiro módulo:
+o segundo caminho com a camada convolucional $ 3 \ times 3 $
+produz o maior número de canais,
+seguido pelo primeiro caminho com apenas a camada convolucional $ 1 \ vezes 1 $,
+o terceiro caminho com a camada convolucional $ 5 \ times 5 $,
+e o quarto caminho com a camada de pooling máxima $ 3 \ times 3 $.
+O segundo e terceiro caminhos irão primeiro reduzir
+o número de canais de acordo com a proporção.
+Essas proporções são ligeiramente diferentes em diferentes blocos de iniciação.
 
 ```{.python .input}
 b4 = nn.Sequential()
@@ -374,6 +409,18 @@ to change the height and width of each channel to 1, just as in NiN.
 Finally, we turn the output into a two-dimensional array
 followed by a fully-connected layer
 whose number of outputs is the number of label classes.
+
+O quinto módulo tem dois blocos de iniciação com $ 256 + 320 + 128 + 128 = 832 $
+e $ 384 + 384 + 128 + 128 = 1024 $ canais de saída.
+O número de canais atribuídos a cada caminho
+é o mesmo que no terceiro e quarto módulos,
+mas difere em valores específicos.
+Deve-se notar que o quinto bloco é seguido pela camada de saída.
+Este bloco usa a camada de pooling média global
+para alterar a altura e largura de cada canal para 1, assim como em NiN.
+Por fim, transformamos a saída em uma matriz bidimensional
+seguido por uma camada totalmente conectada
+cujo número de saídas é o número de classes de rótulo.
 
 ```{.python .input}
 b5 = nn.Sequential()
@@ -420,6 +467,14 @@ This simplifies the computation.
 The changes in the shape of the output
 between the various modules are demonstrated below.
 
+O modelo GoogLeNet é computacionalmente complexo,
+portanto, não é tão fácil modificar o número de canais como no VGG.
+Para ter um tempo de treinamento razoável no Fashion-MNIST,
+reduzimos a altura e largura de entrada de 224 para 96.
+Isso simplifica o cálculo.
+As mudanças na forma da saída
+entre os vários módulos são demonstrados abaixo.
+
 ```{.python .input}
 X = np.random.uniform(size=(1, 1, 96, 96))
 net.initialize()
@@ -449,6 +504,10 @@ for layer in net().layers:
 As before, we train our model using the Fashion-MNIST dataset.
  We transform it to $96 \times 96$ pixel resolution
  before invoking the training procedure.
+ 
+Como antes, treinamos nosso modelo usando o conjunto de dados Fashion-MNIST.
+  Nós o transformamos em resolução de $ 96 \ vezes 96 $ pixels
+  antes de invocar o procedimento de treinamento.
 
 ```{.python .input}
 #@tab all
@@ -462,6 +521,10 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 * The Inception block is equivalent to a subnetwork with four paths. It extracts information in parallel through convolutional layers of different window shapes and maximum pooling layers. $1 \times 1$ convolutions reduce channel dimensionality on a per-pixel level. Maximum pooling reduces the resolution.
 * GoogLeNet connects multiple well-designed Inception blocks with other layers in series. The ratio of the number of channels assigned in the Inception block is obtained through a large number of experiments on the ImageNet dataset.
 * GoogLeNet, as well as its succeeding versions, was one of the most efficient models on ImageNet, providing similar test accuracy with lower computational complexity.
+
+* O bloco de iniciação é equivalente a uma sub-rede com quatro caminhos. Ele extrai informações em paralelo por meio de camadas convolucionais de diferentes formatos de janela e camadas de agrupamento máximo. As convoluções $ 1 \ vezes 1 $ reduzem a dimensionalidade do canal em um nível por pixel. O pool máximo reduz a resolução.
+* GoogLeNet conecta vários blocos de iniciação bem projetados com outras camadas em série. A proporção do número de canais atribuídos no bloco de iniciação é obtida por meio de um grande número de experimentos no conjunto de dados ImageNet.
+* GoogLeNet, assim como suas versões subsequentes, foi um dos modelos mais eficientes no ImageNet, fornecendo precisão de teste semelhante com menor complexidade computacional.
 
 ## Exercises
 
@@ -491,5 +554,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NjY1NDQ0M119
+eyJoaXN0b3J5IjpbNTY1OTkxMjkxXX0=
 -->
