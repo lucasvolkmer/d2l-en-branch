@@ -19,12 +19,19 @@ $$f(x) = f(0) + f'(0) x + \frac{f''(0)}{2!}  x^2 + \frac{f'''(0)}{3!}  x^3 + \ld
 
 The key point is that it decomposes a function into increasingly higher order terms. In a similar vein, ResNet decomposes functions into
 
+O ponto principal é que ele decompõe uma função em termos de ordem cada vez mais elevados. De maneira semelhante, o ResNet decompõe funções em
+
 $$f(\mathbf{x}) = \mathbf{x} + g(\mathbf{x}).$$
 
 That is, ResNet decomposes $f$ into a simple linear term and a more complex
 nonlinear one.
 What if we want to capture (not necessarily add) information beyond two terms?
 One solution was 
+
+Ou seja, o ResNet decompõe $ f $ em um termo linear simples e um termo mais complexo
+não linear.
+E se quisermos capturar (não necessariamente adicionar) informações além de dois termos?
+Uma solução foi
 DenseNet :cite:`Huang.Liu.Van-Der-Maaten.ea.2017`.
 
 ![The main difference between ResNet (left) and DenseNet (right) in cross-layer connections: use of addition and use of concatenation. ](../img/densenet-block.svg)
@@ -32,6 +39,9 @@ DenseNet :cite:`Huang.Liu.Van-Der-Maaten.ea.2017`.
 
 As shown in :numref:`fig_densenet_block`, the key difference between ResNet and DenseNet is that in the latter case outputs are *concatenated* (denoted by $[,]$) rather than added.
 As a result, we perform a mapping from $\mathbf{x}$ to its values after applying an increasingly complex sequence of functions:
+
+Conforme mostrado em: numref: `fig_densenet_block`, a principal diferença entre ResNet e DenseNet é que, no último caso, as saídas são * concatenadas * (denotadas por $ [,] $) em vez de adicionadas.
+Como resultado, realizamos um mapeamento de $ \ mathbf {x} $ para seus valores após aplicar uma sequência cada vez mais complexa de funções:
 
 $$\mathbf{x} \to \left[
 \mathbf{x},
@@ -41,18 +51,26 @@ f_2([\mathbf{x}, f_1(\mathbf{x})]), f_3([\mathbf{x}, f_1(\mathbf{x}), f_2([\math
 In the end, all these functions are combined in MLP to reduce the number of features again. In terms of implementation this is quite simple:
 rather than adding terms, we concatenate them. The name DenseNet arises from the fact that the dependency graph between variables becomes quite dense. The last layer of such a chain is densely connected to all previous layers. The dense connections are shown in :numref:`fig_densenet`.
 
+No final, todas essas funções são combinadas no MLP para reduzir o número de recursos novamente. Em termos de implementação, isso é bastante simples:
+em vez de adicionar termos, nós os concatenamos. O nome DenseNet surge do fato de o gráfico de dependência entre as variáveis se tornar bastante denso. A última camada de tal cadeia está densamente conectada a todas as camadas anteriores. As conexões densas são mostradas em: numref: `fig_densenet`.
+
 ![Dense connections in DenseNet.](../img/densenet.svg)
 :label:`fig_densenet`
 
 
 The main components that compose a DenseNet are *dense blocks* and *transition layers*. The former define how the inputs and outputs are concatenated, while the latter control the number of channels so that it is not too large.
 
+Os principais componentes que compõem uma DenseNet são * blocos densos * e * camadas de transição *. O primeiro define como as entradas e saídas são concatenadas, enquanto o último controla o número de canais para que não seja muito grande.
 
 ## Dense Blocks
 
 DenseNet uses the modified "batch normalization, activation, and convolution"
 structure of ResNet (see the exercise in :numref:`sec_resnet`).
 First, we implement this convolution block structure.
+
+A DenseNet usa a "normalização, ativação e convolução em lote" modificada
+estrutura do ResNet (veja o exercício em: numref: `sec_resnet`).
+Primeiro, implementamos essa estrutura de bloco de convolução.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -104,6 +122,8 @@ class ConvBlock(tf.keras.layers.Layer):
 ```
 
 A *dense block* consists of multiple convolution blocks, each using the same number of output channels. In the forward propagation, however, we concatenate the input and output of each convolution block on the channel dimension.
+
+Um * bloco denso * consiste em vários blocos de convolução, cada um usando o mesmo número de canais de saída. Na propagação direta, entretanto, concatenamos a entrada e a saída de cada bloco de convolução na dimensão do canal.
 
 ```{.python .input}
 class DenseBlock(nn.Block):
@@ -161,6 +181,10 @@ In the following example,
 we define a `DenseBlock` instance with 2 convolution blocks of 10 output channels.
 When using an input with 3 channels, we will get an output with  $3+2\times 10=23$ channels. The number of convolution block channels controls the growth in the number of output channels relative to the number of input channels. This is also referred to as the *growth rate*.
 
+No exemplo a seguir,
+definimos uma instância `DenseBlock` com 2 blocos de convolução de 10 canais de saída.
+Ao usar uma entrada com 3 canais, obteremos uma saída com $ 3 + 2 \ vezes 10 = 23 $ canais. O número de canais de bloco de convolução controla o crescimento do número de canais de saída em relação ao número de canais de entrada. Isso também é conhecido como * taxa de crescimento *.
+
 ```{.python .input}
 blk = DenseBlock(2, 10)
 blk.initialize()
@@ -188,6 +212,8 @@ Y.shape
 ## Transition Layers
 
 Since each dense block will increase the number of channels, adding too many of them will lead to an excessively complex model. A *transition layer* is used to control the complexity of the model. It reduces the number of channels by using the $1\times 1$ convolutional layer and halves the height and width of the average pooling layer with a stride of 2, further reducing the complexity of the model.
+
+Uma vez que cada bloco denso aumentará o número de canais, adicionar muitos deles levará a um modelo excessivamente complexo. Uma * camada de transição * é usada para controlar a complexidade do modelo. Ele reduz o número de canais usando a camada convolucional $ 1 \ vezes 1 $ e divide pela metade a altura e a largura da camada de pooling média com uma distância de 2, reduzindo ainda mais a complexidade do modelo.
 
 ```{.python .input}
 def transition_block(num_channels):
@@ -402,5 +428,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDAwNTAwNzhdfQ==
+eyJoaXN0b3J5IjpbLTE4NjM2MzY1NDNdfQ==
 -->
