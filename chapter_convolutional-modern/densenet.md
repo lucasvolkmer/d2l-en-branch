@@ -252,6 +252,8 @@ class TransitionBlock(tf.keras.layers.Layer):
 
 Apply a transition layer with 10 channels to the output of the dense block in the previous example.  This reduces the number of output channels to 10, and halves the height and width.
 
+Aplique uma camada de transição com 10 canais à saída do bloco denso no exemplo anterior. Isso reduz o número de canais de saída para 10 e divide a altura e a largura pela metade.
+
 ```{.python .input}
 blk = transition_block(10)
 blk.initialize()
@@ -273,6 +275,8 @@ blk(Y).shape
 ## DenseNet Model
 
 Next, we will construct a DenseNet model. DenseNet first uses the same single convolutional layer and maximum pooling layer as in ResNet.
+
+A seguir, construiremos um modelo DenseNet. A DenseNet usa primeiro a mesma camada convolucional única e camada máxima de pooling que no ResNet.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -304,6 +308,12 @@ DenseNet uses four dense blocks.
 Similar to ResNet, we can set the number of convolutional layers used in each dense block. Here, we set it to 4, consistent with the ResNet-18 model in :numref:`sec_resnet`. Furthermore, we set the number of channels (i.e., growth rate) for the convolutional layers in the dense block to 32, so 128 channels will be added to each dense block.
 
 In ResNet, the height and width are reduced between each module by a residual block with a stride of 2. Here, we use the transition layer to halve the height and width and halve the number of channels.
+
+Então, semelhante aos quatro módulos compostos de blocos residuais que o ResNet usa,
+A DenseNet usa quatro blocos densos.
+Semelhante ao ResNet, podemos definir o número de camadas convolucionais usadas em cada bloco denso. Aqui, nós o definimos como 4, consistente com o modelo ResNet-18 em: numref: `sec_resnet`. Além disso, definimos o número de canais (ou seja, taxa de crescimento) para as camadas convolucionais no bloco denso para 32, de modo que 128 canais serão adicionados a cada bloco denso.
+
+No ResNet, a altura e a largura são reduzidas entre cada módulo por um bloco residual com uma distância de 2. Aqui, usamos a camada de transição para reduzir pela metade a altura e a largura e pela metade o número de canais.
 
 ```{.python .input}
 # `num_channels`: the current number of channels
@@ -360,6 +370,9 @@ def block_2():
 
 Similar to ResNet, a global pooling layer and a fully-connected layer are connected at the end to produce the output.
 
+
+Semelhante ao ResNet, uma camada de pooling global e uma camada totalmente conectada são conectadas na extremidade para produzir a saída.
+
 ```{.python .input}
 net.add(nn.BatchNorm(),
         nn.Activation('relu'),
@@ -393,6 +406,8 @@ def net():
 
 Since we are using a deeper network here, in this section, we will reduce the input height and width from 224 to 96 to simplify the computation.
 
+Como estamos usando uma rede mais profunda aqui, nesta seção, reduziremos a altura e largura de entrada de 224 para 96 para simplificar o cálculo.
+
 ```{.python .input}
 #@tab all
 lr, num_epochs, batch_size = 0.1, 10, 256
@@ -406,6 +421,10 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 * The main components that compose DenseNet are dense blocks and transition layers.
 * We need to keep the dimensionality under control when composing the network by adding transition layers that shrink the number of channels again.
 
+* Em termos de conexões entre camadas, ao contrário do ResNet, onde entradas e saídas são adicionadas, o DenseNet concatena entradas e saídas na dimensão do canal.
+* Os principais componentes que compõem o DenseNet são blocos densos e camadas de transição.
+* Precisamos manter a dimensionalidade sob controle ao compor a rede, adicionando camadas de transição que reduzem o número de canais novamente.
+
 ## Exercises
 
 1. Why do we use average pooling rather than maximum pooling in the transition layer?
@@ -416,6 +435,13 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 1. Implement the various DenseNet versions presented in Table 1 of the DenseNet paper :cite:`Huang.Liu.Van-Der-Maaten.ea.2017`.
 1. Design an MLP-based model by applying the DenseNet idea. Apply it to the housing price prediction task in :numref:`sec_kaggle_house`.
 
+1. Por que usamos pooling médio em vez de pooling máximo na camada de transição?
+1. Uma das vantagens mencionadas no artigo da DenseNet é que seus parâmetros de modelo são menores que os do ResNet. Por que isso acontece?
+1. Um problema pelo qual a DenseNet foi criticada é o alto consumo de memória.
+     1. Este é realmente o caso? Tente alterar a forma de entrada para $ 224 \ vezes 224 $ para ver o consumo real de memória da GPU.
+     1. Você consegue pensar em um meio alternativo de reduzir o consumo de memória? Como você precisa mudar a estrutura?
+1. Implemente as várias versões da DenseNet apresentadas na Tabela 1 do artigo da DenseNet: cite: `Huang.Liu.Van-Der-Maaten.ea.2017`.
+1. Projete um modelo baseado em MLP aplicando a ideia DenseNet. Aplique-o à tarefa de previsão do preço da habitação em: numref: `sec_kaggle_house`.
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/87)
 :end_tab:
@@ -428,5 +454,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjM2MzY1NDNdfQ==
+eyJoaXN0b3J5IjpbLTI1OTU3OTUzNV19
 -->
