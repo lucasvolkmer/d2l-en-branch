@@ -7,6 +7,12 @@ to guide subsequent researchers in designing new networks.
 In the following sections, we will introduce several heuristic concepts
 commonly used to design deep networks.
 
+Enquanto AlexNet ofereceu evidências empíricas de que CNNs profundas
+pode alcançar bons resultados, não forneceu um modelo geral
+para orientar os pesquisadores subsequentes na concepção de novas redes.
+Nas seções a seguir, apresentaremos vários conceitos heurísticos
+comumente usado para projetar redes profundas.
+
 Progress in this field mirrors that in chip design
 where engineers went from placing transistors
 to logical elements to logic blocks.
@@ -41,7 +47,65 @@ employed convolutions with $3\times3$ kernels with padding of 1 (keeping height 
 and $2 \times 2$ max pooling with stride of 2
 (halving the resolution after each block).
 In the code below, we define a function called `vgg_block`
+to implement one VGG blockO progresso neste campo reflete aquele no design de chips
+onde os engenheiros deixaram de colocar transistores
+para elementos lógicos para blocos lógicos.
+Da mesma forma, o projeto de arquiteturas de rede neural
+tornou-se progressivamente mais abstrato,
+com pesquisadores deixando de pensar em termos de
+neurônios individuais para camadas inteiras,
+e agora para blocos, repetindo padrões de camadas.
+
+The idea of using blocks first emerged from the
+[Visual Geometry Group](http://www.robots.ox.ac.uk/~vgg/) (VGG)
+at Oxford University,
+in their eponymously-named *VGG* network.
+It is easy to implement these repeated structures in code
+with any modern deep learning framework by using loops and subroutines.
+
+A ideia de usar blocos surgiu pela primeira vez a partir do
+[Grupo de Geometria Visual] (http://www.robots.ox.ac.uk/~vgg/) (VGG)
+na Universidade de Oxford,
+em sua rede de mesmo nome * VGG *.
+É fácil implementar essas estruturas repetidas no código
+com qualquer estrutura moderna de aprendizado profundo usando loops e sub-rotinas.
+
+
+## VGG Blocks
+
+The basic building block of classic CNNs
+is a sequence of the following:
+(i) a convolutional layer
+with padding to maintain the resolution,
+(ii) a nonlinearity such as a ReLU,
+(iii) a pooling layer such
+as a max pooling layer.
+One VGG block consists of a sequence of convolutional layers,
+followed by a max pooling layer for spatial downsampling.
+In the original VGG paper :cite:`Simonyan.Zisserman.2014`,
+the authors
+employed convolutions with $3\times3$ kernels with padding of 1 (keeping height and width)
+and $2 \times 2$ max pooling with stride of 2
+(halving the resolution after each block).
+In the code below, we define a function called `vgg_block`
 to implement one VGG block.
+
+O bloco de construção básico das CNNs clássicas
+é uma sequência do seguinte:
+(i) uma camada convolucional
+com preenchimento para manter a resolução,
+(ii) uma não linearidade, como um ReLU,
+(iii) uma camada de pooling tal
+como uma camada de pooling máxima.
+Um bloco VGG consiste em uma sequência de camadas convolucionais,
+seguido por uma camada de pooling máxima para downsampling espacial.
+No artigo VGG original: cite: `Simonyan.Zisserman.2014`,
+Os autores
+convoluções empregadas com $ 3 \ times3 $ kernels com preenchimento de 1 (mantendo a altura e largura)
+e $ 2 \ vezes 2 $ pool máximo com passo de 2
+(reduzindo pela metade a resolução após cada bloco).
+No código abaixo, definimos uma função chamada `vgg_block`
+para implementar um bloco VGG.
 
 :begin_tab:`mxnet,tensorflow`
 The function takes two arguments
@@ -49,11 +113,23 @@ corresponding to the number of convolutional layers `num_convs`
 and the number of output channels `num_channels`.
 :end_tab:
 
+: begin_tab: `mxnet, tensorflow`
+A função leva dois argumentos
+correspondendo ao número de camadas convolucionais `num_convs`
+e o número de canais de saída `num_channels`.
+: end_tab:
+
 :begin_tab:`pytorch`
 The function takes three arguments corresponding to the number
 of convolutional layers `num_convs`, the number of input channels `in_channels`
 and the number of output channels `out_channels`.
 :end_tab:
+
+: begin_tab: `pytorch`
+A função leva três argumentos correspondentes ao número
+de camadas convolucionais `num_convs`, o número de canais de entrada` in_channels`
+e o número de canais de saída `out_channels`.
+: end_tab:
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -283,3 +359,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2MDQxNDY4MzRdfQ==
+-->
