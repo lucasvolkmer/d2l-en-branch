@@ -157,6 +157,15 @@ reduces the number of required model parameters.
 However, in practice, this design sometimes requires
 increased model training time.
 
+Uma diferença significativa entre NiN e AlexNet
+é que o NiN evita camadas totalmente conectadas.
+Em vez disso, NiN usa um bloco NiN com um número de canais de saída igual ao número de classes de rótulo, seguido por uma camada de pooling média * global *,
+produzindo um vetor de logits.
+Uma vantagem do design da NiN é que
+reduz o número de parâmetros de modelo necessários.
+No entanto, na prática, esse design às vezes requer
+aumento do tempo de treinamento do modelo.
+
 ```{.python .input}
 net = nn.Sequential()
 net.add(nin_block(96, kernel_size=11, strides=4, padding=0),
@@ -217,6 +226,8 @@ def net():
 
 We create a data example to see the output shape of each block.
 
+Criamos um exemplo de dados para ver a forma de saída de cada bloco.
+
 ```{.python .input}
 X = np.random.uniform(size=(1, 1, 224, 224))
 net.initialize()
@@ -246,6 +257,9 @@ for layer in net().layers:
 As before we use Fashion-MNIST to train the model.
 NiN's training is similar to that for AlexNet and VGG.
 
+Como antes, usamos o Fashion-MNIST para treinar a modelo.
+O treinamento de NiN é semelhante ao de AlexNet e VGG.
+
 ```{.python .input}
 #@tab all
 lr, num_epochs, batch_size = 0.1, 10, 128
@@ -260,6 +274,11 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 * Removing the fully-connected layers reduces overfitting. NiN has dramatically fewer parameters.
 * The NiN design influenced many subsequent CNN designs.
 
+* NiN usa blocos que consistem em uma camada convolucional e várias camadas convolucionais $ 1 \ vezes 1 $. Isso pode ser usado dentro da pilha convolucional para permitir mais não linearidade por pixel.
+* NiN remove as camadas totalmente conectadas e as substitui pelo agrupamento médio global (ou seja, somando todos os locais) depois de reduzir o número de canais para o número desejado de saídas (por exemplo, 10 para Fashion-MNIST).
+* A remoção das camadas totalmente conectadas reduz o ajuste excessivo. NiN tem muito menos parâmetros.
+* O design NiN influenciou muitos designs subsequentes da CNN.
+
 ## Exercises
 
 1. Tune the hyperparameters to improve the classification accuracy.
@@ -271,6 +290,14 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
     1. What is the amount of memory needed during prediction?
 1. What are possible problems with reducing the $384 \times 5 \times 5$ representation to a $10 \times 5 \times 5$ representation in one step?
 
+1. Ajuste os hiperparâmetros para melhorar a precisão da classificação.
+1. Por que existem duas camadas convolucionais $ 1 \ times 1 $ no bloco NiN? Remova um deles e então observe e analise os fenômenos experimentais.
+1. Calcule o uso de recursos para NiN.
+     1. Qual é o número de parâmetros?
+     1. Qual é a quantidade de computação?
+     1. Qual é a quantidade de memória necessária durante o treinamento?
+     1. Qual é a quantidade de memória necessária durante a previsão?
+1. Quais são os possíveis problemas com a redução da representação $ 384 \ vezes 5 \ vezes 5 $ para uma representação $ 10 \ vezes 5 \ vezes 5 $ em uma etapa?
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/79)
 :end_tab:
@@ -283,5 +310,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzg0Mjg3NDldfQ==
+eyJoaXN0b3J5IjpbMTExOTU1MjA0N119
 -->
