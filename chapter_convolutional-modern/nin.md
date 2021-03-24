@@ -15,6 +15,20 @@ spatial structure of the representation entirely,
 They were proposed based on a very simple insight:
 to use an MLP on the channels for each pixel separately :cite:`Lin.Chen.Yan.2013`.
 
+LeNet, AlexNet e VGG compartilham um padrão de design comum:
+extrair recursos que exploram a estrutura * espacial *
+por meio de uma sequência de camadas de convolução e agrupamento
+e, em seguida, pós-processar as representações por meio de camadas totalmente conectadas.
+As melhorias no LeNet por AlexNet e VGG residem principalmente
+em como essas redes posteriores ampliam e aprofundam esses dois módulos.
+Alternativamente, pode-se imaginar o uso de camadas totalmente conectadas
+no início do processo.
+No entanto, um uso descuidado de camadas densas pode desistir do
+estrutura espacial da representação inteiramente,
+Os blocos * rede em rede * (* NiN *) oferecem uma alternativa.
+Eles foram propostos com base em uma visão muito simples:
+para usar um MLP nos canais para cada pixel separadamente: cite: `Lin.Chen.Yan.2013`.
+
 
 ## NiN Blocks
 
@@ -39,7 +53,36 @@ The NiN block consists of one convolutional layer
 followed by two $1\times 1$ convolutional layers that act as
 per-pixel fully-connected layers with ReLU activations.
 The convolution window shape of the first layer is typically set by the user.
+The subsequent window shapes are fixed to $1 \times 1Lembre-se de que as entradas e saídas das camadas convolucionais
+consistem em tensores quadridimensionais com eixos
+correspondendo ao exemplo, canal, altura e largura.
+Lembre-se também de que as entradas e saídas de camadas totalmente conectadas
+são tipicamente tensores bidimensionais correspondentes ao exemplo e ao recurso.
+A ideia por trás do NiN é aplicar uma camada totalmente conectada
+em cada localização de pixel (para cada altura e largura).
+Se amarrarmos os pesos em cada localização espacial,
+poderíamos pensar nisso como uma camada convolucional $ 1 \ vezes 1 $
+(conforme descrito em: numref: `sec_channels`)
+ou como uma camada totalmente conectada agindo de forma independente em cada localização de pixel.
+Outra maneira de ver isso é pensar em cada elemento na dimensão espacial
+(altura e largura) como equivalente a um exemplo
+e um canal como equivalente a um recurso.
+
+:numref:`fig_nin` illustrates the main structural differences
+between VGG and NiN, and their blocks.
+The NiN block consists of one convolutional layer
+followed by two $1\times 1$ convolutional layers that act as
+per-pixel fully-connected layers with ReLU activations.
+The convolution window shape of the first layer is typically set by the user.
 The subsequent window shapes are fixed to $1 \times 1$.
+
+: numref: `fig_nin` ilustra as principais diferenças estruturais
+entre VGG e NiN, e seus blocos.
+O bloco NiN consiste em uma camada convolucional
+seguido por duas camadas convolucionais $ 1 \ vezes 1 $ que atuam como
+camadas totalmente conectadas por pixel com ativações ReLU.
+A forma da janela de convolução da primeira camada é normalmente definida pelo usuário.
+As formas de janela subsequentes são fixadas em $ 1 \ vezes 1 $.
 
 ![Comparing architectures of VGG and NiN, and their blocks.](../img/nin.svg)
 :width:`600px`
@@ -97,6 +140,13 @@ NiN uses convolutional layers with window shapes
 of $11\times 11$, $5\times 5$, and $3\times 3$,
 and the corresponding numbers of output channels are the same as in AlexNet. Each NiN block is followed by a maximum pooling layer
 with a stride of 2 and a window shape of $3\times 3$.
+
+A rede NiN original foi proposta logo após AlexNet
+e claramente tira alguma inspiração.
+NiN usa camadas convolucionais com formas de janela
+de $ 11 \ vezes 11 $, $ 5 \ vezes 5 $ e $ 3 \ vezes 3 $,
+e os números correspondentes de canais de saída são iguais aos do AlexNet. Cada bloco NiN é seguido por uma camada de pooling máxima
+com um passo de 2 e uma forma de janela de $ 3 \ vezes 3 $.
 
 One significant difference between NiN and AlexNet
 is that NiN avoids fully-connected layers altogether.
@@ -232,3 +282,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTExMzg0Mjg3NDldfQ==
+-->
