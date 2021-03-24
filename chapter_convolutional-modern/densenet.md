@@ -3,10 +3,16 @@
 ResNet significantly changed the view of how to parametrize the functions in deep networks. *DenseNet* (dense convolutional network) is to some extent the logical extension of this :cite:`Huang.Liu.Van-Der-Maaten.ea.2017`.
 To understand how to arrive at it, let us take a small detour to mathematics.
 
+A ResNet mudou significativamente a visão de como parametrizar as funções em redes profundas. * DenseNet * (rede convolucional densa) é, até certo ponto, a extensão lógica disso: cite: `Huang.Liu.Van-Der-Maaten.ea.2017`.
+Para entender como chegar a isso, façamos um pequeno desvio para a matemática.
+
 
 ## From ResNet to DenseNet
 
+## De ResNet para DenseNet
+
 Recall the Taylor expansion for functions. For the point $x = 0$ it can be written as
+Lembre-se da expansão de Taylor para funções. Para o ponto $ x = 0 $, pode ser escrito como
 
 $$f(x) = f(0) + f'(0) x + \frac{f''(0)}{2!}  x^2 + \frac{f'''(0)}{3!}  x^3 + \ldots.$$
 
@@ -395,3 +401,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2NDAwNTAwNzhdfQ==
+-->
