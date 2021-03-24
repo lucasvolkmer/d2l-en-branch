@@ -137,17 +137,17 @@ poderíamos expressar formalmente a camada totalmente conectada como
 $$\begin{aligned} \left[\mathbf{H}\right]_{i, j} &= [\mathbf{U}]_{i, j} + \sum_k \sum_l[\mathsf{W}]_{i, j, k, l}  [\mathbf{X}]_{k, l}\\ &=  [\mathbf{U}]_{i, j} +
 \sum_a \sum_b [\mathsf{V}]_{i, j, a, b}  [\mathbf{X}]_{i+a, j+b}.\end{aligned},$$
 
-where the switch from $\mathsf{W}$ to $\mathsf{V}$ is entirely cosmetic for now
-since there is a one-to-one correspondence
-between coefficients in both fourth-order tensors.
-We simply re-index the subscripts $(k, l)$
-such that $k = i+a$ and $l = j+b$.
-In other words, we set $[\mathsf{V}]_{i, j, a, b} = [\mathsf{W}]_{i, j, i+a, j+b}$.
-The indices $a$ and $b$ run over both positive and negative offsets,
-covering the entire image.
-For any given location ($i$, $j$) in the hidden representation $[\mathbf{H}]_{i, j}$,
-we compute its value by summing over pixels in $x$,
-centered around $(i, j)$ and weighted by $[\mathsf{V}]_{i, j, a, b}$.
+onde a mudança de $\mathsf{W}$ para $\mathsf{V}$ é inteiramente cosmética por enquanto
+uma vez que existe uma correspondência um-para-um
+entre coeficientes em ambos os tensores de quarta ordem.
+Nós simplesmente reindexamos os subscritos $(k, l)$
+de modo que $k = i+a$ and $l = j+b$.
+Em outras palavras, definimos $[\mathsf{V}]_{i, j, a, b} = [\mathsf{W}]_{i, j, i+a, j+b}$.
+Os índices $a$ e $b$ ultrapassam os deslocamentos positivos e negativos,
+cobrindo toda a imagem.
+Para qualquer localização dada ($i$, $j$) na representação oculta $[\mathbf{H}]_{i, j}$,
+calculamos seu valor somando os pixels em $x$,
+centralizado em torno de $(i, j)$ e ponderado por $[\mathsf{V}]_{i, j, a, b}$.
 
 ### Translation Invariance
 
@@ -342,6 +342,7 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODQzMjg3ODAsLTExMjI1OTc4NjMsLT
-E2NTczNjYyNTAsMTY3MzYyNTYxMCwtMTI5OTI0MTk2NF19
+eyJoaXN0b3J5IjpbMjQyMjkwODk3LC0xNTg0MzI4NzgwLC0xMT
+IyNTk3ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MTAsLTEyOTky
+NDE5NjRdfQ==
 -->
