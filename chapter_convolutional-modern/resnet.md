@@ -455,10 +455,15 @@ def net():
 There are 4 convolutional layers in each module (excluding the $1\times 1$ convolutional layer). Together with the first $7\times 7$ convolutional layer and the final fully-connected layer, there are 18 layers in total. Therefore, this model is commonly known as ResNet-18.
 By configuring different numbers of channels and residual blocks in the module, we can create different ResNet models, such as the deeper 152-layer ResNet-152. Although the main architecture of ResNet is similar to that of GoogLeNet, ResNet's structure is simpler and easier to modify. All these factors have resulted in the rapid and widespread use of ResNet. :numref:`fig_resnet18` depicts the full ResNet-18.
 
+Existem 4 camadas convolucionais em cada módulo (excluindo a camada convolucional $ 1 \ vezes 1 $). Junto com a primeira camada convolucional $ 7 vezes 7 $ e a camada final totalmente conectada, há 18 camadas no total. Portanto, esse modelo é comumente conhecido como ResNet-18.
+Configurando diferentes números de canais e blocos residuais no módulo, podemos criar diferentes modelos de ResNet, como o ResNet-152 de 152 camadas mais profundo. Embora a arquitetura principal do ResNet seja semelhante à do GoogLeNet, a estrutura do ResNet é mais simples e fácil de modificar. Todos esses fatores resultaram no uso rápido e generalizado da ResNet. : numref: `fig_resnet18` representa o ResNet-18 completo.
+
 ![The ResNet-18 architecture.](../img/resnet18.svg)
 :label:`fig_resnet18`
 
 Before training ResNet, let us observe how the input shape changes across different modules in ResNet. As in all the previous architectures, the resolution decreases while the number of channels increases up until the point where a global average pooling layer aggregates all features.
+
+Antes de treinar o ResNet, vamos observar como a forma da entrada muda nos diferentes módulos do ResNet. Como em todas as arquiteturas anteriores, a resolução diminui enquanto o número de canais aumenta até o ponto em que uma camada de pooling média global agrega todos os recursos.
 
 ```{.python .input}
 X = np.random.uniform(size=(1, 1, 224, 224))
@@ -488,6 +493,8 @@ for layer in net().layers:
 
 We train ResNet on the Fashion-MNIST dataset, just like before.
 
+Treinamos ResNet no conjunto de dados Fashion-MNIST, assim como antes.
+
 ```{.python .input}
 #@tab all
 lr, num_epochs, batch_size = 0.05, 10, 256
@@ -501,6 +508,11 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 * The residual mapping can learn the identity function more easily, such as pushing parameters in the weight layer to zero.
 * We can train an effective deep neural network by having residual blocks. Inputs can forward propagate faster through the residual connections across layers.
 * ResNet had a major influence on the design of subsequent deep neural networks, both for convolutional and sequential nature.
+
+* As classes de funções aninhadas são desejáveis. Aprender uma camada adicional em redes neurais profundas como uma função de identidade (embora este seja um caso extremo) deve ser facilitado.
+* O mapeamento residual pode aprender a função de identidade mais facilmente, como empurrar parâmetros na camada de peso para zero.
+* Podemos treinar uma rede neural profunda eficaz tendo blocos residuais. As entradas podem se propagar para frente mais rápido através das conexões residuais entre as camadas.
+* O ResNet teve uma grande influência no projeto de redes neurais profundas subsequentes, tanto de natureza convolucional quanto sequencial.
 
 
 ## Exercises
@@ -517,6 +529,17 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
    for details.
 1. Why can't we just increase the complexity of functions without bound, even if the function classes are nested?
 
+1. Quais são as principais diferenças entre o bloco de iniciação em: numref: `fig_inception` e o bloco residual? Depois de remover alguns caminhos no bloco de Iniciação, como eles se relacionam?
+1. Consulte a Tabela 1 no artigo ResNet: cite: `He.Zhang.Ren.ea.2016` para
+    implementar variantes diferentes.
+1. Para redes mais profundas, a ResNet apresenta uma arquitetura de "gargalo" para reduzir
+    complexidade do modelo. Tente implementá-lo.
+1. Nas versões subsequentes do ResNet, os autores alteraram a configuração "convolução, lote
+    normalização e ativação "estrutura para a" normalização em lote,
+    estrutura de ativação e convolução ". Faça esta melhoria
+    você mesmo. Veja a Figura 1 em: cite: `He.Zhang.Ren.ea.2016 * 1`
+    para detalhes.
+1. Por que não podemos simplesmente aumentar a complexidade das funções sem limites, mesmo se as classes de função estiverem aninhadas?
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/85)
 :end_tab:
@@ -529,5 +552,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODc3MzA0ODddfQ==
+eyJoaXN0b3J5IjpbLTExMTAwNDgxNDFdfQ==
 -->
