@@ -147,6 +147,9 @@ para a frente se propagam mais rápido através das conexões residuais entre as
 ResNet follows VGG's full $3\times 3$ convolutional layer design. The residual block has two $3\times 3$ convolutional layers with the same number of output channels. Each convolutional layer is followed by a batch normalization layer and a ReLU activation function. Then, we skip these two convolution operations and add the input directly before the final ReLU activation function.
 This kind of design requires that the output of the two convolutional layers has to be of the same shape as the input, so that they can be added together. If we want to change the number of channels, we need to introduce an additional $1\times 1$ convolutional layer to transform the input into the desired shape for the addition operation. Let us have a look at the code below.
 
+ResNet segue o design de camada convolucional $ 3 \ times 3 $ completo do VGG. O bloco residual tem duas camadas convolucionais $ 3 \ vezes 3 $ com o mesmo número de canais de saída. Cada camada convolucional é seguida por uma camada de normalização em lote e uma função de ativação ReLU. Em seguida, pulamos essas duas operações de convolução e adicionamos a entrada diretamente antes da função de ativação final do ReLU.
+Esse tipo de projeto requer que a saída das duas camadas convolucionais tenha o mesmo formato da entrada, para que possam ser somadas. Se quisermos mudar o número de canais, precisamos introduzir uma camada convolucional adicional $ 1 \ vezes 1 $ para transformar a entrada na forma desejada para a operação de adição. Vamos dar uma olhada no código abaixo.
+
 ```{.python .input}
 from d2l import mxnet as d2l
 from mxnet import np, npx
@@ -245,6 +248,13 @@ This code generates two types of networks: one where we add the input to the out
 
 Now let us look at a situation where the input and output are of the same shape.
 
+Este código gera dois tipos de redes: uma onde adicionamos a entrada à saída antes de aplicar a não linearidade ReLU sempre que `use_1x1conv = False`, e outra onde ajustamos os canais e a resolução por meio de uma convolução $ 1 \ vezes 1 $ antes de adicionar. : numref: `fig_resnet_block` ilustra isso:
+
+! [Bloco ResNet com e sem $ 1 \ vezes 1 $ convolução.] (../ img / resnet-block.svg)
+: label: `fig_resnet_block`
+
+Agora, vejamos uma situação em que a entrada e a saída têm a mesma forma.
+
 ```{.python .input}
 blk = Residual(3)
 blk.initialize()
@@ -270,6 +280,8 @@ Y.shape
 
 We also have the option to halve the output height and width while increasing the number of output channels.
 
+Também temos a opção de reduzir pela metade a altura e largura de saída, aumentando o número de canais de saída.
+
 ```{.python .input}
 blk = Residual(6, use_1x1conv=True, strides=2)
 blk.initialize()
@@ -291,6 +303,8 @@ blk(X).shape
 ## ResNet Model
 
 The first two layers of ResNet are the same as those of the GoogLeNet we described before: the $7\times 7$ convolutional layer with 64 output channels and a stride of 2 is followed by the $3\times 3$ maximum pooling layer with a stride of 2. The difference is the batch normalization layer added after each convolutional layer in ResNet.
+
+As duas primeiras camadas do ResNet são iguais às do GoogLeNet que descrevemos antes: a camada convolucional $ 7 \ times 7 $ com 64 canais de saída e uma passada de 2 é seguida pela camada de pooling máxima $ 3 \ times 3 $ com uma passada de 2. A diferença é a camada de normalização de lote adicionada após cada camada convolucional no ResNet.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -320,6 +334,12 @@ However, ResNet uses four modules made up of residual blocks, each of which uses
 The number of channels in the first module is the same as the number of input channels. Since a maximum pooling layer with a stride of 2 has already been used, it is not necessary to reduce the height and width. In the first residual block for each of the subsequent modules, the number of channels is doubled compared with that of the previous module, and the height and width are halved.
 
 Now, we implement this module. Note that special processing has been performed on the first module.
+
+GoogLeNet usa quatro módulos compostos de blocos de iniciação.
+No entanto, o ResNet usa quatro módulos compostos de blocos residuais, cada um dos quais usa vários blocos residuais com o mesmo número de canais de saída.
+O número de canais no primeiro módulo é igual ao número de canais de entrada. Como uma camada de pooling máxima com uma passada de 2 já foi usada, não é necessário reduzir a altura e a largura. No primeiro bloco residual para cada um dos módulos subsequentes, o número de canais é duplicado em comparação com o do módulo anterior e a altura e a largura são reduzidas à metade.
+
+Agora, implementamos este módulo. Observe que o processamento especial foi executado no primeiro módulo.
 
 ```{.python .input}
 def resnet_block(num_channels, num_residuals, first_block=False):
@@ -368,6 +388,8 @@ class ResnetBlock(tf.keras.layers.Layer):
 
 Then, we add all the modules to ResNet. Here, two residual blocks are used for each module.
 
+Em seguida, adicionamos todos os módulos ao ResNet. Aqui, dois blocos residuais são usados para cada módulo.
+
 ```{.python .input}
 net.add(resnet_block(64, 2, first_block=True),
         resnet_block(128, 2),
@@ -392,6 +414,8 @@ b5 = ResnetBlock(512, 2)
 ```
 
 Finally, just like GoogLeNet, we add a global average pooling layer, followed by the fully-connected layer output.
+
+Finalmente, assim como GoogLeNet, adicionamos uma camada de pooling global média, seguida pela saída da camada totalmente conectada.
 
 ```{.python .input}
 net.add(nn.GlobalAvgPool2D(), nn.Dense(10))
@@ -505,5 +529,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNzk2NjM5MV19
+eyJoaXN0b3J5IjpbLTE1ODc3MzA0ODddfQ==
 -->
