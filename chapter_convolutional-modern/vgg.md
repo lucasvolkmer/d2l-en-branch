@@ -393,6 +393,10 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 1. Try changing the height and width of the images in Fashion-MNIST from 224 to 96. What influence does this have on the experiments?
 1. Refer to Table 1 in the VGG paper :cite:`Simonyan.Zisserman.2014` to construct other common models, such as VGG-16 or VGG-19.
 
+1. Ao imprimir as dimensões das camadas, vimos apenas 8 resultados, em vez de 11. Para onde foram as informações das 3 camadas restantes?
+1. Comparado com o AlexNet, o VGG é muito mais lento em termos de computação e também precisa de mais memória GPU. Analise as razões disso.
+1. Tente alterar a altura e a largura das imagens no Fashion-MNIST de 224 para 96. Que influência isso tem nos experimentos?
+1. Consulte a Tabela 1 no artigo VGG: cite: `Simonyan.Zisserman.2014` para construir outros modelos comuns, como VGG-16 ou VGG-19.
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/77)
 :end_tab:
@@ -405,5 +409,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTg4NDQyN119
+eyJoaXN0b3J5IjpbMTgzMjAxMzg4OF19
 -->
