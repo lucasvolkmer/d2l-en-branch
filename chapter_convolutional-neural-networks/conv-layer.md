@@ -10,24 +10,25 @@ usamos imagens como nosso exemplo de execução.
 
 ## A Operação de Correlação Cruzada
 
-Recall that strictly speaking, convolutional layers
-are a  misnomer, since the operations they express
-are more accurately described as cross-correlations.
-Based on our descriptions of convolutional layers in :numref:`sec_why-conv`,
-in such a layer, an input tensor
-and a kernel tensor are combined
-to produce an output tensor through a cross-correlation operation.
 
-Let us ignore channels for now and see how this works
-with two-dimensional data and hidden representations.
-In :numref:`fig_correlation`,
-the input is a two-dimensional tensor
-with a height of 3 and width of 3.
-We mark the shape of the tensor as $3 \times 3$ or ($3$, $3$).
-The height and width of the kernel are both 2.
-The shape of the *kernel window* (or *convolution window*)
-is given by the height and width of the kernel
-(here it is $2 \times 2$).
+Lembre-se de que, estritamente falando, as camadas convolucionais
+são um nome impróprio, uma vez que as operações que elas expressam
+são descritos com mais precisão como correlações cruzadas.
+Com base em nossas descrições de camadas convolucionais em :numref:`sec_why-conv`,
+em tal camada, um tensor de entrada
+e um tensor de *kernel* são combinados
+para produzir um tensor de saída por meio de uma operação de correlação cruzada.
+
+Vamos ignorar os canais por enquanto e ver como isso funciona
+com dados bidimensionais e representações ocultas.
+Em :numref:`fig_correlation`,
+a entrada é um tensor bidimensional
+com altura de 3 e largura de 3.
+Marcamos a forma do tensor como $3 \times 3$ or ($3$, $3$).
+A altura e a largura do *kernel* são 2.
+A forma da *janela do kernel* (ou *janela de convolução*)
+é dada pela altura e largura do *kernel*
+(aqui é $2 \times 2$).
 
 ![Two-dimensional cross-correlation operation. The shaded portions are the first output element as well as the input and kernel tensor elements used for the output computation: $0\times0+1\times1+3\times2+4\times3=19$.](../img/correlation.svg)
 :label:`fig_correlation`
@@ -481,5 +482,6 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU5MTM1NDUwLDE5ODQ5Nzk3OTddfQ==
+eyJoaXN0b3J5IjpbLTY3NDg1MTc2OSw1NTkxMzU0NTAsMTk4ND
+k3OTc5N119
 -->
