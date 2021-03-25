@@ -184,30 +184,31 @@ Equivalentemente, podemos reescrever $[\mathbf{H}]_{i, j}$ como
 $$[\mathbf{H}]_{i, j} = u + \sum_{a = -\Delta}^{\Delta} \sum_{b = -\Delta}^{\Delta} [\mathbf{V}]_{a, b}  [\mathbf{X}]_{i+a, j+b}.$$
 :eqlabel:`eq_conv-layer`
 
-Note that :eqref:`eq_conv-layer`, in a nutshell, is a *convolutional layer*.
-*Convolutional neural networks* (CNNs)
-are a special family of neural networks that contain convolutional layers.
-In the deep learning research community,
-$\mathbf{V}$ is referred to as a *convolution kernel*,
-a *filter*, or simply the layer's *weights* that are often learnable parameters.
-When the local region is small,
-the difference as compared with a fully-connected network can be dramatic.
-While previously, we might have required billions of parameters
-to represent just a single layer in an image-processing network,
-we now typically need just a few hundred, without
-altering the dimensionality of either
-the inputs or the hidden representations.
-The price paid for this drastic reduction in parameters
-is that our features are now translation invariant
-and that our layer can only incorporate local information,
-when determining the value of each hidden activation.
-All learning depends on imposing inductive bias.
-When that bias agrees with reality,
-we get sample-efficient models
-that generalize well to unseen data.
-But of course, if those biases do not agree with reality,
-e.g., if images turned out not to be translation invariant,
-our models might struggle even to fit our training data.
+Observe que :eqref:`eq_conv-layer`, em poucas palavras, é uma *camada convolucional*.
+*Redes neurais convolucionais* (CNNs[^1])
+são uma família especial de redes neurais que contêm camadas convolucionais.
+[^1]: *Convolutional Neural Networks.*
+Na comunidade de pesquisa de *deep learning*,
+$\mathbf{V}$ é referido como um *kernel de convolução*,
+um *filtro*, ou simplesmente os *pesos* da camada que são parâmetros frequentemente aprendíveis.
+Quando a região local é pequena,
+a diferença em comparação com uma rede totalmente conectada pode ser dramática.
+Embora anteriormente, pudéssemos ter exigido bilhões de parâmetros
+para representar apenas uma única camada em uma rede de processamento de imagem,
+agora precisamos de apenas algumas centenas, sem
+alterar a dimensionalidade de qualquer
+as entradas ou as representações ocultas.
+O preço pago por esta redução drástica de parâmetros
+é que nossos recursos agora são invariantes de tradução
+e que nossa camada só pode incorporar informações locais,
+ao determinar o valor de cada ativação oculta.
+Todo aprendizado depende da imposição de *bias* indutivos.
+Quando esses *bias* concordam com a realidade,
+obtemos modelos com amostras eficientes
+que generalizam bem para dados invisíveis.
+Mas é claro, se esses *bias* não concordam com a realidade,
+por exemplo, se as imagens acabassem não sendo invariantes à tradução,
+nossos modelos podem ter dificuldade até mesmo para se ajustar aos nossos dados de treinamento.
 
 ## Convolutions
 
@@ -342,7 +343,8 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3MDI1NzA1LC0xOTIxODEzMDg4LDI0Mj
-I5MDg5NywtMTU4NDMyODc4MCwtMTEyMjU5Nzg2MywtMTY1NzM2
-NjI1MCwxNjczNjI1NjEwLC0xMjk5MjQxOTY0XX0=
+eyJoaXN0b3J5IjpbMTAzMjgyNDQ0NCw5NTcwMjU3MDUsLTE5Mj
+E4MTMwODgsMjQyMjkwODk3LC0xNTg0MzI4NzgwLC0xMTIyNTk3
+ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MTAsLTEyOTkyNDE5Nj
+RdfQ==
 -->
