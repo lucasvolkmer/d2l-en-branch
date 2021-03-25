@@ -188,13 +188,13 @@ class Conv2D(tf.keras.layers.Layer):
         return corr2d(inputs, self.weight) + self.bias
 ```
 
-In
-$h \times w$ convolution
-or a $h \times w$ convolution kernel,
-the height and width of the convolution kernel are $h$ and $w$, respectively.
-We also refer to
-a convolutional layer with a $h \times w$
-convolution kernel simply as a $h \times w$ convolutional layer. 
+Na convolução
+$h \times w$ 
+ou um *kernel* de convolução $h \times w$
+a altura e a largura do *kernel* de convolução são $h$ e $w$, respectivamente.
+Também nos referimos a
+uma camada convolucional com um kernel de convolução $h \times w$
+simplesmente como uma camada convolucional $h \times w$
 
 
 ## Object Edge Detection in Images
@@ -483,6 +483,6 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTUxMDk5MTcsLTI0MjE5ODI3NywtNj
+eyJoaXN0b3J5IjpbLTE0OTQ2MDExMTIsLTI0MjE5ODI3NywtNj
 c0ODUxNzY5LDU1OTEzNTQ1MCwxOTg0OTc5Nzk3XX0=
 -->
