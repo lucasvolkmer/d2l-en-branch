@@ -278,22 +278,22 @@ Assim, indexamos $\mathsf{X}$ como $[\mathsf{X}]_{i, j, k}$.
 O filtro convolucional deve se adaptar em conformidade.
 Em vez de $[\mathbf{V}]_{a,b}$, agora temos $[\mathsf{V}]_{a,b,c}$.
 
-Moreover, just as our input consists of a third-order tensor,
-it turns out to be a good idea to similarly formulate
-our hidden representations as third-order tensors $\mathsf{H}$.
-In other words, rather than just having a single hidden representation
-corresponding to each spatial location,
-we want an entire vector of hidden representations
-corresponding to each spatial location.
-We could think of the hidden representations as comprising
-a number of two-dimensional grids stacked on top of each other.
-As in the inputs, these are sometimes called *channels*.
-They are also sometimes called *feature maps*,
-as each provides a spatialized set
-of learned features to the subsequent layer.
-Intuitively, you might imagine that at lower layers that are closer to inputs,
-some channels could become specialized to recognize edges while
-others could recognize textures.
+Além disso, assim como nossa entrada consiste em um tensor de terceira ordem,
+é uma boa ideia formular de forma semelhante
+nossas representações ocultas como tensores de terceira ordem $\mathsf{H}$.
+Em outras palavras, em vez de apenas ter uma única representação oculta
+correspondendo a cada localização espacial,
+queremos todo um vetor de representações ocultas
+correspondente a cada localização espacial.
+Poderíamos pensar nas representações ocultas como abrangendo
+várias grades bidimensionais empilhadas umas sobre as outras.
+Como nas entradas, às vezes são chamados de *canais*.
+Eles também são chamados de *mapas de características*,
+já que cada um fornece um conjunto espacializado
+de recursos aprendidos para a camada subsequente.
+Intuitivamente, você pode imaginar que nas camadas inferiores que estão mais próximas das entradas,
+alguns canais podem se tornar especializados para reconhecer bordas enquanto
+outros podem reconhecer texturas.
 
 
 To support multiple channels in both inputs ($\mathsf{X}$) and hidden representations ($\mathsf{H}$),
@@ -343,8 +343,8 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwOTM3MTA1MCw5NTcwMjU3MDUsLTE5Mj
-E4MTMwODgsMjQyMjkwODk3LC0xNTg0MzI4NzgwLC0xMTIyNTk3
-ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MTAsLTEyOTkyNDE5Nj
-RdfQ==
+eyJoaXN0b3J5IjpbLTE3NzcyNzk3MjIsMjAwOTM3MTA1MCw5NT
+cwMjU3MDUsLTE5MjE4MTMwODgsMjQyMjkwODk3LC0xNTg0MzI4
+NzgwLC0xMTIyNTk3ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MT
+AsLTEyOTkyNDE5NjRdfQ==
 -->
