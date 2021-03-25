@@ -172,14 +172,14 @@ Fizemos um progresso significativo!
 
 ###  Localidade
 
-Now let us invoke the second principle: locality.
-As motivated above, we believe that we should not have
-to look very far away from location $(i, j)$
-in order to glean relevant information
-to assess what is going on at $[\mathbf{H}]_{i, j}$.
-This means that outside some range $|a|> \Delta$ or $|b| > \Delta$,
-we should set $[\mathbf{V}]_{a, b} = 0$.
-Equivalently, we can rewrite $[\mathbf{H}]_{i, j}$ as
+Agora, vamos invocar o segundo princípio: localidade.
+Conforme motivado acima, acreditamos que não devemos ter
+parecer muito longe do local $(i, j)$
+a fim de coletar informações relevantes
+para avaliar o que está acontecendo em $[\mathbf{H}]_{i, j}$.
+Isso significa que fora de algum intervalo $|a|> \Delta$ or $|b| > \Delta$,
+devemos definir $[\mathbf{V}]_{a, b} = 0$.
+Equivalentemente, podemos reescrever $[\mathbf{H}]_{i, j}$ como
 
 $$[\mathbf{H}]_{i, j} = u + \sum_{a = -\Delta}^{\Delta} \sum_{b = -\Delta}^{\Delta} [\mathbf{V}]_{a, b}  [\mathbf{X}]_{i+a, j+b}.$$
 :eqlabel:`eq_conv-layer`
@@ -342,7 +342,7 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjE4MTMwODgsMjQyMjkwODk3LC0xNT
-g0MzI4NzgwLC0xMTIyNTk3ODYzLC0xNjU3MzY2MjUwLDE2NzM2
-MjU2MTAsLTEyOTkyNDE5NjRdfQ==
+eyJoaXN0b3J5IjpbOTU3MDI1NzA1LC0xOTIxODEzMDg4LDI0Mj
+I5MDg5NywtMTU4NDMyODc4MCwtMTEyMjU5Nzg2MywtMTY1NzM2
+NjI1MCwxNjczNjI1NjEwLC0xMjk5MjQxOTY0XX0=
 -->
