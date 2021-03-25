@@ -132,20 +132,21 @@ corr2d(X, K)
 
 ## Camadas Convolucionais
 
-A convolutional layer cross-correlates the input and kernel
-and adds a scalar bias to produce an output.
-The two parameters of a convolutional layer
-are the kernel and the scalar bias.
-When training models based on convolutional layers,
-we typically initialize the kernels randomly,
-just as we would with a fully-connected layer.
 
-We are now ready to implement a two-dimensional convolutional layer
-based on the `corr2d` function defined above.
-In the `__init__` constructor function,
-we declare `weight` and `bias` as the two model parameters.
-The forward propagation function
-calls the `corr2d` function and adds the bias.
+Uma camada convolucional correlaciona a entrada e o *kernel*
+e adiciona um *bias* escalar para produzir uma saída.
+Os dois parâmetros de uma camada convolucional
+são o *kernel* e o *bias* escalar.
+Ao treinar modelos com base em camadas convolucionais,
+normalmente inicializamos os *kernels* aleatoriamente,
+assim como faríamos com uma camada totalmente conectada.
+
+Agora estamos prontos para implementar uma camada convolucional bidimensional
+com base na função `corr2d` definida acima.
+Na função construtora `__init__`,
+declaramos `weight` e` bias` como os dois parâmetros do modelo.
+A função de propagação direta
+chama a função `corr2d` e adiciona o viés.
 
 ```{.python .input}
 class Conv2D(nn.Block):
@@ -482,6 +483,6 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMTcwMjEzMCwtMjQyMTk4Mjc3LC02Nz
-Q4NTE3NjksNTU5MTM1NDUwLDE5ODQ5Nzk3OTddfQ==
+eyJoaXN0b3J5IjpbLTE5NTUxMDk5MTcsLTI0MjE5ODI3NywtNj
+c0ODUxNzY5LDU1OTEzNTQ1MCwxOTg0OTc5Nzk3XX0=
 -->
