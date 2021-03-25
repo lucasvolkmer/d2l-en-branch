@@ -329,22 +329,21 @@ Voltaremos a essas questões no restante do capítulo.
 
 ## Exercícios
 
-1. Assume that the size of the convolution kernel is $\Delta = 0$.
-   Show that in this case the convolution kernel
-   implements an MLP independently for each set of channels.
-1. Why might translation invariance not be a good idea after all?
-1. What problems must we deal with when deciding how
-   to treat hidden representations corresponding to pixel locations
-   at the boundary of an image?
-1. Describe an analogous convolutional layer for audio.
-1. Do you think that convolutional layers might also be applicable for text data?
-   Why or why not?
-1. Prove that $f * g = g * f$.
+1. Suponha que o tamanho do *kernel* de convolução seja $\Delta = 0$.
+    Mostre que, neste caso, o *kernel* de convolução
+    implementa um MLP independentemente para cada conjunto de canais.
+1. Por que a invariância da tradução pode não ser uma boa ideia, afinal?
+1. Com quais problemas devemos lidar ao decidir como tratar representações ocultas correspondentes a localizações de pixels
+    na fronteira de uma imagem?
+1. Descreva uma camada convolucional análoga para áudio.
+1. Você acha que as camadas convolucionais também podem ser aplicáveis para dados de texto?
+    Por que ou por que não?
+1. Prove que $f * g = g * f$.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY5NTM5MDYyLDIwMDkzNzEwNTAsOTU3MD
-I1NzA1LC0xOTIxODEzMDg4LDI0MjI5MDg5NywtMTU4NDMyODc4
-MCwtMTEyMjU5Nzg2MywtMTY1NzM2NjI1MCwxNjczNjI1NjEwLC
-0xMjk5MjQxOTY0XX0=
+eyJoaXN0b3J5IjpbLTE5NzY4MTMyNzYsMjAwOTM3MTA1MCw5NT
+cwMjU3MDUsLTE5MjE4MTMwODgsMjQyMjkwODk3LC0xNTg0MzI4
+NzgwLC0xMTIyNTk3ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MT
+AsLTEyOTkyNDE5NjRdfQ==
 -->
