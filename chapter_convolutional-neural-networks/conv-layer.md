@@ -1,11 +1,11 @@
 # Convolução para Imagens
 :label:`sec_conv_layer`
 
-Now that we understand how convolutional layers work in theory,
-we are ready to see how they work in practice.
-Building on our motivation of convolutional neural networks
-as efficient architectures for exploring structure in image data,
-we stick with images as our running example.
+Agora que entendemos como as camadas convolucionais funcionam na teoria,
+estamos prontos para ver como eles funcionam na prática.
+Com base na nossa motivação de redes neurais convolucionais
+como arquiteturas eficientes para explorar a estrutura em dados de imagem,
+usamos imagens como nosso exemplo de execução.
 
 
 ## A Operação de Correlação Cruzada
@@ -481,5 +481,5 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NDk3OTc5N119
+eyJoaXN0b3J5IjpbNTU5MTM1NDUwLDE5ODQ5Nzk3OTddfQ==
 -->
