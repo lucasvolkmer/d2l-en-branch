@@ -118,10 +118,10 @@ def corr2d(X, K):  #@save
     return Y
 ```
 
-We can construct the input tensor `X` and the kernel tensor `K`
+Podemos construir o tensor de entrada `X` e o tensor do kernel` K`
 from :numref:`fig_correlation`
-to validate the output of the above implementation
-of the two-dimensional cross-correlation operation.
+para validar o resultado da implementação acima
+da operação de correlação cruzada bidimensional.
 
 ```{.python .input}
 #@tab all
@@ -130,7 +130,7 @@ K = d2l.tensor([[0.0, 1.0], [2.0, 3.0]])
 corr2d(X, K)
 ```
 
-## Convolutional Layers
+## Camadas Convolucionais
 
 A convolutional layer cross-correlates the input and kernel
 and adds a scalar bias to produce an output.
@@ -482,6 +482,6 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNzE0NTMyLC0yNDIxOTgyNzcsLTY3ND
-g1MTc2OSw1NTkxMzU0NTAsMTk4NDk3OTc5N119
+eyJoaXN0b3J5IjpbMTAwMTcwMjEzMCwtMjQyMTk4Mjc3LC02Nz
+Q4NTE3NjksNTU5MTM1NDUwLDE5ODQ5Nzk3OTddfQ==
 -->
