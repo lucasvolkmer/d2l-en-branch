@@ -235,19 +235,19 @@ com índices $(a, b)$ para $f$ e $(i-a, j-b)$ para $g$, respectivamente:
 $$(f * g)(i, j) = \sum_a\sum_b f(a, b) g(i-a, j-b).$$
 :eqlabel:`eq_2d-conv-discrete`
 
-This looks similar to :eqref:`eq_conv-layer`, with one major difference.
-Rather than using $(i+a, j+b)$, we are using the difference instead.
-Note, though, that this distinction is mostly cosmetic
-since we can always match the notation between
-:eqref:`eq_conv-layer` and :eqref:`eq_2d-conv-discrete`.
-Our original definition in :eqref:`eq_conv-layer` more properly
-describes a *cross-correlation*.
-We will come back to this in the following section.
+Isso é semelhante a :eqref:`eq_conv-layer`, com uma grande diferença.
+Em vez de usar $(i+a, j+b)$, estamos usando a diferença.
+Observe, porém, que esta distinção é principalmente cosmética
+uma vez que sempre podemos combinar a notação entre
+:eqref:`eq_conv-layer` e :eqref:`eq_2d-conv-discrete`.
+Nossa definição original em :eqref:`eq_conv-layer` mais apropriadamente
+descreve uma *correlação cruzada*.
+Voltaremos a isso na seção seguinte.
 
 
 
 
-## "Where's Waldo" Revisited
+## "Onde está Wally" Revisitado
 
 Returning to our Waldo detector, let us see what this looks like.
 The convolutional layer picks windows of a given size
@@ -343,7 +343,7 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMDczOTI4LDk1NzAyNTcwNSwtMTkyMT
+eyJoaXN0b3J5IjpbNTgzOTcxNDI5LDk1NzAyNTcwNSwtMTkyMT
 gxMzA4OCwyNDIyOTA4OTcsLTE1ODQzMjg3ODAsLTExMjI1OTc4
 NjMsLTE2NTczNjYyNTAsMTY3MzYyNTYxMCwtMTI5OTI0MTk2NF
 19
