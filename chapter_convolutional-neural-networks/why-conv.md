@@ -217,20 +217,20 @@ nossos modelos podem ter dificuldade até mesmo para se ajustar aos nossos dados
 Antes de prosseguir, devemos revisar brevemente
 porque a operação acima é chamada de convolução.
 Em matemática, a *convolução* entre duas funções,
-digamos que $f, g: \mathbb{R}^d \to \mathbb{R}$ é definido como
+digamos que $f, g: \mathbb{R}^d \to \mathbb{R}$ é definida como
+
 $$(f * g)(\mathbf{x}) = \int f(\mathbf{z}) g(\mathbf{x}-\mathbf{z}) d\mathbf{z}.$$
 
-That is, we measure the overlap between $f$ and $g$
-when one function is "flipped" and shifted by $\mathbf{x}$.
-Whenever we have discrete objects, the integral turns into a sum.
-For instance, for vectors from
-the set of square summable infinite dimensional vectors
-with index running over $\mathbb{Z}$ we obtain the following definition:
+Ou seja, medimos a sobreposição entre $f$ e $g$
+quando uma função é "invertida" e deslocada por $\mathbf{x}$.
+Sempre que temos objetos discretos, a integral se transforma em uma soma.
+Por exemplo, para vetores do conjunto de vetores dimensionais infinitos somados ao quadrado
+com o índice acima de $\mathbb{Z}$, obtemos a seguinte definição:
 
 $$(f * g)(i) = \sum_a f(a) g(i-a).$$
 
-For two-dimensional tensors, we have a corresponding sum
-with indices $(a, b)$ for $f$ and $(i-a, j-b)$ for $g$, respectively:
+Para tensores bidimensionais, temos uma soma correspondente
+com índices $(a, b)$ para $f$ e $(i-a, j-b)$ para $g$, respectivamente:
 
 $$(f * g)(i, j) = \sum_a\sum_b f(a, b) g(i-a, j-b).$$
 :eqlabel:`eq_2d-conv-discrete`
@@ -343,8 +343,8 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NTY4MjUzMyw5NTcwMjU3MDUsLTE5Mj
-E4MTMwODgsMjQyMjkwODk3LC0xNTg0MzI4NzgwLC0xMTIyNTk3
-ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MTAsLTEyOTkyNDE5Nj
-RdfQ==
+eyJoaXN0b3J5IjpbLTMwMDczOTI4LDk1NzAyNTcwNSwtMTkyMT
+gxMzA4OCwyNDIyOTA4OTcsLTE1ODQzMjg3ODAsLTExMjI1OTc4
+NjMsLTE2NTczNjYyNTAsMTY3MzYyNTYxMCwtMTI5OTI0MTk2NF
+19
 -->
