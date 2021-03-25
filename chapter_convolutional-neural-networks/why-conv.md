@@ -151,26 +151,26 @@ centralizado em torno de $(i, j)$ e ponderado por $[\mathsf{V}]_{i, j, a, b}$.
 
 ### Invariância de Tradução
 
-Now let us invoke the first principle
-established above: translation invariance.
-This implies that a shift in the input $\mathbf{X}$
-should simply lead to a shift in the hidden representation $\mathbf{H}$.
-This is only possible if $\mathsf{V}$ and $\mathbf{U}$ do not actually depend on $(i, j)$,
-i.e., we have $[\mathsf{V}]_{i, j, a, b} = [\mathbf{V}]_{a, b}$ and $\mathbf{U}$ is a constant, say $u$.
-As a result, we can simplify the definition for $\mathbf{H}$:
+Agora vamos invocar o primeiro princípio
+estabelecido acima: invariância de tradução.
+Isso implica que uma mudança na entrada $\mathbf{X}$
+deve simplesmente levar a uma mudança na representação oculta $\mathbf{H}$.
+Isso só é possível se $\mathsf{V}$ e $\mathbf{U}$ não dependem realmente de $(i, j)$,
+ou seja, temos $[\mathsf{V}]_{i, j, a, b} = [\mathbf{V}]_{a, b}$ e $\mathbf{U}$$ é uma constante, digamos $u$.
+Como resultado, podemos simplificar a definição de $\mathbf{H}$:
 
 $$[\mathbf{H}]_{i, j} = u + \sum_a\sum_b [\mathbf{V}]_{a, b}  [\mathbf{X}]_{i+a, j+b}.$$
 
 
-This is a *convolution*!
-We are effectively weighting pixels at $(i+a, j+b)$
-in the vicinity of location $(i, j)$ with coefficients $[\mathbf{V}]_{a, b}$
-to obtain the value $[\mathbf{H}]_{i, j}$.
-Note that $[\mathbf{V}]_{a, b}$ needs many fewer coefficients than $[\mathsf{V}]_{i, j, a, b}$ since it
-no longer depends on the location within the image.
-We have made significant progress!
+Esta é uma *convolução*!
+Estamos efetivamente ponderando pixels em $(i+a, j+b)$
+nas proximidades da localização $(i, j)$ com coeficientes$[\mathbf{V}]_{a, b}$
+para obter o valor $[\mathbf{H}]_{i, j}$.
+Observe que $[\mathbf{V}]_{a, b}$ precisa de muito menos coeficientes do que $[\mathsf{V}]_{i, j, a, b}, pois ele
+não depende mais da localização na imagem.
+Fizemos um progresso significativo!
 
-###  Locality
+###  Localidade
 
 Now let us invoke the second principle: locality.
 As motivated above, we believe that we should not have
@@ -342,7 +342,7 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwOTIzNDcyMCwyNDIyOTA4OTcsLTE1OD
-QzMjg3ODAsLTExMjI1OTc4NjMsLTE2NTczNjYyNTAsMTY3MzYy
-NTYxMCwtMTI5OTI0MTk2NF19
+eyJoaXN0b3J5IjpbLTE5MjE4MTMwODgsMjQyMjkwODk3LC0xNT
+g0MzI4NzgwLC0xMTIyNTk3ODYzLC0xNjU3MzY2MjUwLDE2NzM2
+MjU2MTAsLTEyOTkyNDE5NjRdfQ==
 -->
