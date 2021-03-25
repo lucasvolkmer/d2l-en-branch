@@ -30,7 +30,7 @@ A forma da *janela do kernel* (ou *janela de convolução*)
 é dada pela altura e largura do *kernel*
 (aqui é $2 \times 2$).
 
-![Two-dimensional cross-correlation operation. The shaded portions are the first output element as well as the input and kernel tensor elements used for the output computation: $0\times0+1\times1+3\times2+4\times3=19$.](../img/correlation.svg)
+![Operação de correlação cruzada bidimensional. As partes sombreadas são o primeiro elemento de saída, bem como os elementos tensores de entrada e *kernel* usados para o cálculo de saída: $0\times0+1\times1+3\times2+4\times3=19$.](../img/correlation.svg)
 :label:`fig_correlation`
 
 In the two-dimensional cross-correlation operation,
@@ -482,6 +482,6 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NDg1MTc2OSw1NTkxMzU0NTAsMTk4ND
-k3OTc5N119
+eyJoaXN0b3J5IjpbLTI0MjE5ODI3NywtNjc0ODUxNzY5LDU1OT
+EzNTQ1MCwxOTg0OTc5Nzk3XX0=
 -->
