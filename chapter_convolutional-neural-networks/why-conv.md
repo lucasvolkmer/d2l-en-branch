@@ -149,7 +149,7 @@ Para qualquer localização dada ($i$, $j$) na representação oculta $[\mathbf{
 calculamos seu valor somando os pixels em $x$,
 centralizado em torno de $(i, j)$ e ponderado por $[\mathsf{V}]_{i, j, a, b}$.
 
-### Translation Invariance
+### Invariância de Tradução
 
 Now let us invoke the first principle
 established above: translation invariance.
@@ -342,7 +342,7 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQyMjkwODk3LC0xNTg0MzI4NzgwLC0xMT
-IyNTk3ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MTAsLTEyOTky
-NDE5NjRdfQ==
+eyJoaXN0b3J5IjpbMjAwOTIzNDcyMCwyNDIyOTA4OTcsLTE1OD
+QzMjg3ODAsLTExMjI1OTc4NjMsLTE2NTczNjYyNTAsMTY3MzYy
+NTYxMCwtMTI5OTI0MTk2NF19
 -->
