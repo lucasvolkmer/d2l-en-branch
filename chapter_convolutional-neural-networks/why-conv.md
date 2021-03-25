@@ -187,7 +187,6 @@ $$[\mathbf{H}]_{i, j} = u + \sum_{a = -\Delta}^{\Delta} \sum_{b = -\Delta}^{\Del
 Observe que :eqref:`eq_conv-layer`, em poucas palavras, é uma *camada convolucional*.
 *Redes neurais convolucionais* (CNNs[^1])
 são uma família especial de redes neurais que contêm camadas convolucionais.
-[^1]: *Convolutional Neural Networks.*
 Na comunidade de pesquisa de *deep learning*,
 $\mathbf{V}$ é referido como um *kernel de convolução*,
 um *filtro*, ou simplesmente os *pesos* da camada que são parâmetros frequentemente aprendíveis.
@@ -210,14 +209,15 @@ Mas é claro, se esses *bias* não concordam com a realidade,
 por exemplo, se as imagens acabassem não sendo invariantes à tradução,
 nossos modelos podem ter dificuldade até mesmo para se ajustar aos nossos dados de treinamento.
 
-## Convolutions
+[^1]: *Convolutional Neural Networks.*
+
+## Convoluções
 
 
-Before going further, we should briefly review
-why the above operation is called a convolution.
-In mathematics, the *convolution* between two functions,
-say $f, g: \mathbb{R}^d \to \mathbb{R}$ is defined as
-
+Antes de prosseguir, devemos revisar brevemente
+porque a operação acima é chamada de convolução.
+Em matemática, a *convolução* entre duas funções,
+digamos que $f, g: \mathbb{R}^d \to \mathbb{R}$ é definido como
 $$(f * g)(\mathbf{x}) = \int f(\mathbf{z}) g(\mathbf{x}-\mathbf{z}) d\mathbf{z}.$$
 
 That is, we measure the overlap between $f$ and $g$
@@ -343,7 +343,7 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMjgyNDQ0NCw5NTcwMjU3MDUsLTE5Mj
+eyJoaXN0b3J5IjpbMTI2NTY4MjUzMyw5NTcwMjU3MDUsLTE5Mj
 E4MTMwODgsMjQyMjkwODk3LC0xNTg0MzI4NzgwLC0xMTIyNTk3
 ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MTAsLTEyOTkyNDE5Nj
 RdfQ==
