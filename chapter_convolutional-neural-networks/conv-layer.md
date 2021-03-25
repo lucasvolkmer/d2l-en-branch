@@ -1,4 +1,4 @@
-# Convolutions for Images
+# Convolução para Imagens
 :label:`sec_conv_layer`
 
 Now that we understand how convolutional layers work in theory,
@@ -8,7 +8,7 @@ as efficient architectures for exploring structure in image data,
 we stick with images as our running example.
 
 
-## The Cross-Correlation OperationA Operação de Correlação Cruzada
+## A Operação de Correlação Cruzada
 
 Recall that strictly speaking, convolutional layers
 are a  misnomer, since the operations they express
@@ -481,5 +481,5 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA0ODY1NDY1XX0=
+eyJoaXN0b3J5IjpbMTk4NDk3OTc5N119
 -->
