@@ -321,13 +321,13 @@ Voltaremos a essas questões no restante do capítulo.
 
 ## Resumo
 
-* Translation invariance in images implies that all patches of an image will be treated in the same manner.
-* Locality means that only a small neighborhood of pixels will be used to compute the corresponding hidden representations.
-* In image processing, convolutional layers typically require many fewer parameters than fully-connected layers.
-* CNNS are a special family of neural networks that contain convolutional layers.
-* Channels on input and output allow our model to capture multiple aspects of an image  at each spatial location.
+* A invariância da tradução nas imagens implica que todas as manchas de uma imagem serão tratadas da mesma maneira.
+* Localidade significa que apenas uma pequena vizinhança de pixels será usada para calcular as representações ocultas correspondentes.
+* No processamento de imagem, as camadas convolucionais geralmente requerem muito menos parâmetros do que as camadas totalmente conectadas.
+* CNNS são uma família especial de redes neurais que contêm camadas convolucionais.
+* Os canais de entrada e saída permitem que nosso modelo capture vários aspectos de uma imagem em cada localização espacial.
 
-## Exercises
+## Exercícios
 
 1. Assume that the size of the convolution kernel is $\Delta = 0$.
    Show that in this case the convolution kernel
@@ -343,8 +343,8 @@ Voltaremos a essas questões no restante do capítulo.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzOTk1Nzk3NywyMDA5MzcxMDUwLDk1Nz
-AyNTcwNSwtMTkyMTgxMzA4OCwyNDIyOTA4OTcsLTE1ODQzMjg3
-ODAsLTExMjI1OTc4NjMsLTE2NTczNjYyNTAsMTY3MzYyNTYxMC
-wtMTI5OTI0MTk2NF19
+eyJoaXN0b3J5IjpbNTY5NTM5MDYyLDIwMDkzNzEwNTAsOTU3MD
+I1NzA1LC0xOTIxODEzMDg4LDI0MjI5MDg5NywtMTU4NDMyODc4
+MCwtMTEyMjU5Nzg2MywtMTY1NzM2NjI1MCwxNjczNjI1NjEwLC
+0xMjk5MjQxOTY0XX0=
 -->
