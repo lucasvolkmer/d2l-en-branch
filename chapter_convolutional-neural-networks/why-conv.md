@@ -264,19 +264,19 @@ devemos encontrar um pico nas representações das camadas ocultas.
 ### Canais
 :label:`subsec_why-conv-channels`
 
-There is just one problem with this approach.
-So far, we blissfully ignored that images consist
-of 3 channels: red, green, and blue.
-In reality, images are not two-dimensional objects
-but rather third-order tensors,
-characterized by a height, width, and channel,
-e.g., with shape $1024 \times 1024 \times 3$ pixels.
-While the first two of these axes concern spatial relationships,
-the third can be regarded as assigning
-a multidimensional representation to each pixel location.
-We thus index $\mathsf{X}$ as $[\mathsf{X}]_{i, j, k}$.
-The convolutional filter has to adapt accordingly.
-Instead of $[\mathbf{V}]_{a,b}$, we now have $[\mathsf{V}]_{a,b,c}$.
+Existe apenas um problema com essa abordagem.
+Até agora, felizmente ignoramos que as imagens consistem
+de 3 canais: vermelho, verde e azul.
+Na realidade, as imagens não são objetos bidimensionais
+mas sim tensores de terceira ordem,
+caracterizados por uma altura, largura e canal,
+por exemplo, com forma $1024 \times 1024 \times 3$ pixels.
+Enquanto os dois primeiros desses eixos dizem respeito às relações espaciais,
+o terceiro pode ser considerado como atribuição
+uma representação multidimensional para cada localização de pixel.
+Assim, indexamos $\mathsf{X}$ como $[\mathsf{X}]_{i, j, k}$.
+O filtro convolucional deve se adaptar em conformidade.
+Em vez de $[\mathbf{V}]_{a,b}$, agora temos $[\mathsf{V}]_{a,b,c}$.
 
 Moreover, just as our input consists of a third-order tensor,
 it turns out to be a good idea to similarly formulate
@@ -343,8 +343,8 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzYxNjk0MTQsOTU3MDI1NzA1LC0xOT
-IxODEzMDg4LDI0MjI5MDg5NywtMTU4NDMyODc4MCwtMTEyMjU5
-Nzg2MywtMTY1NzM2NjI1MCwxNjczNjI1NjEwLC0xMjk5MjQxOT
-Y0XX0=
+eyJoaXN0b3J5IjpbMjAwOTM3MTA1MCw5NTcwMjU3MDUsLTE5Mj
+E4MTMwODgsMjQyMjkwODk3LC0xNTg0MzI4NzgwLC0xMTIyNTk3
+ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MTAsLTEyOTkyNDE5Nj
+RdfQ==
 -->
