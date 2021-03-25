@@ -8,7 +8,7 @@ as efficient architectures for exploring structure in image data,
 we stick with images as our running example.
 
 
-## The Cross-Correlation Operation
+## The Cross-Correlation OperationA Operação de Correlação Cruzada
 
 Recall that strictly speaking, convolutional layers
 are a  misnomer, since the operations they express
@@ -480,3 +480,6 @@ we can build a deeper network.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzA0ODY1NDY1XX0=
+-->
