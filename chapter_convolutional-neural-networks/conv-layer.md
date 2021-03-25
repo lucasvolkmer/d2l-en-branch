@@ -33,21 +33,21 @@ A forma da *janela do kernel* (ou *janela de convolução*)
 ![Operação de correlação cruzada bidimensional. As partes sombreadas são o primeiro elemento de saída, bem como os elementos tensores de entrada e *kernel* usados para o cálculo de saída: $0\times0+1\times1+3\times2+4\times3=19$.](../img/correlation.svg)
 :label:`fig_correlation`
 
-In the two-dimensional cross-correlation operation,
-we begin with the convolution window positioned
-at the top-left corner of the input tensor
-and slide it across the input tensor,
-both from left to right and top to bottom.
-When the convolution window slides to a certain position,
-the input subtensor contained in that window
-and the kernel tensor are multiplied elementwise
-and the resulting tensor is summed up
-yielding a single scalar value.
-This result gives the value of the output tensor
-at the corresponding location.
-Here, the output tensor has a height of 2 and width of 2
-and the four elements are derived from
-the two-dimensional cross-correlation operation:
+Na operação de correlação cruzada bidimensional,
+começamos com a janela de convolução posicionada
+no canto superior esquerdo do tensor de entrada
+e o deslizamos pelo tensor de entrada,
+ambos da esquerda para a direita e de cima para baixo.
+Quando a janela de convolução desliza para uma determinada posição,
+o subtensor de entrada contido nessa janela
+e o tensor do *kernel* são multiplicados elemento a elemento
+e o tensor resultante é resumido
+produzindo um único valor escalar.
+Este resultado fornece o valor do tensor de saída
+no local correspondente.
+Aqui, o tensor de saída tem uma altura de 2 e largura de 2
+e os quatro elementos são derivados de
+a operação de correlação cruzada bidimensional:
 
 $$
 0\times0+1\times1+3\times2+4\times3=19,\\
@@ -56,25 +56,25 @@ $$
 4\times0+5\times1+7\times2+8\times3=43.
 $$
 
-Note that along each axis, the output size
-is slightly smaller than the input size.
-Because the kernel has width and height greater than one,
-we can only properly compute the cross-correlation
-for locations where the kernel fits wholly within the image,
-the output size is given by the input size $n_h \times n_w$
-minus the size of the convolution kernel $k_h \times k_w$
-via 
+Observe que ao longo de cada eixo, o tamanho da saída
+é ligeiramente menor que o tamanho de entrada.
+Como o *kernel* tem largura e altura maiores que um,
+só podemos calcular corretamente a correlação cruzada
+para locais onde o *kernel* se encaixa totalmente na imagem,
+o tamanho da saída é dado pelo tamanho da entrada $n_h \times n_w$
+menos o tamanho do *kernel* de convolução $k_h \times k_w$
+através da
 
 $$(n_h-k_h+1) \times (n_w-k_w+1).$$
 
-This is the case since we need enough space
-to "shift" the convolution kernel across the image.
-Later we will see how to keep the size unchanged
-by padding the image with zeros around its boundary
-so that there is enough space to shift the kernel.
-Next, we implement this process in the `corr2d` function,
-which accepts an input tensor `X` and a kernel tensor `K`
-and returns an output tensor `Y`.
+Este é o caso, pois precisamos de espaço suficiente
+para "deslocar" o *kernel* de convolução na imagem.
+Mais tarde, veremos como manter o tamanho inalterado
+preenchendo a imagem com zeros em torno de seu limite
+para que haja espaço suficiente para mudar o *kernel*.
+Em seguida, implementamos este processo na função `corr2d`,
+que aceita um tensor de entrada `X` e um tensor de *kernel* `K`
+e retorna um tensor de saída `Y`.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -482,6 +482,6 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MjE5ODI3NywtNjc0ODUxNzY5LDU1OT
-EzNTQ1MCwxOTg0OTc5Nzk3XX0=
+eyJoaXN0b3J5IjpbLTMzNzE0NTMyLC0yNDIxOTgyNzcsLTY3ND
+g1MTc2OSw1NTkxMzU0NTAsMTk4NDk3OTc5N119
 -->
