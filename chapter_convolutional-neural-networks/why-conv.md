@@ -249,19 +249,19 @@ Voltaremos a isso na seção seguinte.
 
 ## "Onde está Wally" Revisitado
 
-Returning to our Waldo detector, let us see what this looks like.
-The convolutional layer picks windows of a given size
-and weighs intensities according to the filter $\mathsf{V}$, as demonstrated in :numref:`fig_waldo_mask`.
-We might aim to learn a model so that
-wherever the "waldoness" is highest,
-we should find a peak in the hidden layer representations.
+Voltando ao nosso detector Wally, vamos ver como é.
+A camada convolucional escolhe janelas de um determinado tamanho
+e pesa as intensidades de acordo com o filtro $\mathsf{V}$, conforme demonstrado em :numref:`fig_waldo_mask`.
+Podemos ter como objetivo aprender um modelo para que
+onde quer que a "Wallyneza" seja mais alta,
+devemos encontrar um pico nas representações das camadas ocultas.
 
-![Detect Waldo.](../img/waldo-mask.jpg)
+![Detectar Wally.](../img/waldo-mask.jpg)
 :width:`400px`
 :label:`fig_waldo_mask`
 
 
-### Channels
+### Canais
 :label:`subsec_why-conv-channels`
 
 There is just one problem with this approach.
@@ -343,8 +343,8 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgzOTcxNDI5LDk1NzAyNTcwNSwtMTkyMT
-gxMzA4OCwyNDIyOTA4OTcsLTE1ODQzMjg3ODAsLTExMjI1OTc4
-NjMsLTE2NTczNjYyNTAsMTY3MzYyNTYxMCwtMTI5OTI0MTk2NF
-19
+eyJoaXN0b3J5IjpbLTEyNzYxNjk0MTQsOTU3MDI1NzA1LC0xOT
+IxODEzMDg4LDI0MjI5MDg5NywtMTU4NDMyODc4MCwtMTEyMjU5
+Nzg2MywtMTY1NzM2NjI1MCwxNjczNjI1NjEwLC0xMjk5MjQxOT
+Y0XX0=
 -->
