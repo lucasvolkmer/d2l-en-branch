@@ -303,23 +303,23 @@ Juntando tudo, temos:
 $$[\mathsf{H}]_{i,j,d} = \sum_{a = -\Delta}^{\Delta} \sum_{b = -\Delta}^{\Delta} \sum_c [\mathsf{V}]_{a, b, c, d} [\mathsf{X}]_{i+a, j+b, c},$$
 :eqlabel:`eq_conv-layer-channels`
 
-where $d$ indexes the output channels in the hidden representations $\mathsf{H}$. The subsequent convolutional layer will go on to take a third-order tensor, $\mathsf{H}$, as the input.
-Being more general,
-:eqref:`eq_conv-layer-channels` is
-the definition of a convolutional layer for multiple channels, where $\mathsf{V}$ is a kernel or filter of the layer.
 
-There are still many operations that we need to address.
-For instance, we need to figure out how to combine all the hidden representations
-to a single output, e.g., whether there is a Waldo *anywhere* in the image.
-We also need to decide how to compute things efficiently,
-how to combine multiple layers,
-appropriate activation functions,
-and how to make reasonable design choices
-to yield networks that are effective in practice.
-We turn to these issues in the remainder of the chapter.
+onde $d$ indexa os canais de saída nas representações ocultas $\mathsf{H}$. A camada convolucional subsequente irá tomar um tensor de terceira ordem, $\mathsf{H}$, como entrada.
+Sendo mais geral,
+:eqref:`eq_conv-layer-channels` é
+a definição de uma camada convolucional para canais múltiplos, onde $\mathsf{V}$ é um *kernel* ou filtro da camada.
 
+Ainda existem muitas operações que precisamos abordar.
+Por exemplo, precisamos descobrir como combinar todas as representações ocultas
+para uma única saída, por exemplo, se há um Wally *em qualquer lugar* da imagem.
+Também precisamos decidir como computar as coisas de forma eficiente,
+como combinar várias camadas,
+funções de ativação apropriadas,
+e como fazer escolhas de design razoáveis
+para produzir redes eficazes na prática.
+Voltaremos a essas questões no restante do capítulo.
 
-## Summary
+## Resumo
 
 * Translation invariance in images implies that all patches of an image will be treated in the same manner.
 * Locality means that only a small neighborhood of pixels will be used to compute the corresponding hidden representations.
@@ -343,7 +343,7 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNzA0MzM2NywyMDA5MzcxMDUwLDk1Nz
+eyJoaXN0b3J5IjpbLTMzOTk1Nzk3NywyMDA5MzcxMDUwLDk1Nz
 AyNTcwNSwtMTkyMTgxMzA4OCwyNDIyOTA4OTcsLTE1ODQzMjg3
 ODAsLTExMjI1OTc4NjMsLTE2NTczNjYyNTAsMTY3MzYyNTYxMC
 wtMTI5OTI0MTk2NF19
