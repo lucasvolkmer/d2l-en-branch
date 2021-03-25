@@ -296,9 +296,9 @@ alguns canais podem se tornar especializados para reconhecer bordas enquanto
 outros podem reconhecer texturas.
 
 
-To support multiple channels in both inputs ($\mathsf{X}$) and hidden representations ($\mathsf{H}$),
-we can add a fourth coordinate to $\mathsf{V}$: $[\mathsf{V}]_{a, b, c, d}$.
-Putting everything together we have:
+Para suportar canais múltiplos em ambas as entradas ($\mathsf{X}$) e representações ocultas ($\mathsf{H}$),
+podemos adicionar uma quarta coordenada a  $\mathsf{V}$: $[\mathsf{V}]_{a, b, c, d}$.
+Juntando tudo, temos:
 
 $$[\mathsf{H}]_{i,j,d} = \sum_{a = -\Delta}^{\Delta} \sum_{b = -\Delta}^{\Delta} \sum_c [\mathsf{V}]_{a, b, c, d} [\mathsf{X}]_{i+a, j+b, c},$$
 :eqlabel:`eq_conv-layer-channels`
@@ -343,8 +343,8 @@ We turn to these issues in the remainder of the chapter.
 
 [Discussions](https://discuss.d2l.ai/t/64)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzcyNzk3MjIsMjAwOTM3MTA1MCw5NT
-cwMjU3MDUsLTE5MjE4MTMwODgsMjQyMjkwODk3LC0xNTg0MzI4
-NzgwLC0xMTIyNTk3ODYzLC0xNjU3MzY2MjUwLDE2NzM2MjU2MT
-AsLTEyOTkyNDE5NjRdfQ==
+eyJoaXN0b3J5IjpbMTMwNzA0MzM2NywyMDA5MzcxMDUwLDk1Nz
+AyNTcwNSwtMTkyMTgxMzA4OCwyNDIyOTA4OTcsLTE1ODQzMjg3
+ODAsLTExMjI1OTc4NjMsLTE2NTczNjYyNTAsMTY3MzYyNTYxMC
+wtMTI5OTI0MTk2NF19
 -->
