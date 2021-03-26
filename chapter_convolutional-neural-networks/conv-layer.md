@@ -199,11 +199,11 @@ simplesmente como uma camada convolucional $h \times w$
 
 ## Detecção de Borda de Objeto em Imagens
 
-Let us take a moment to parse a simple application of a convolutional layer:
-detecting the edge of an object in an image
-by finding the location of the pixel change.
-First, we construct an "image" of $6\times 8$ pixels.
-The middle four columns are black (0) and the rest are white (1).
+Vamos analisar uma aplicação simples de uma camada convolucional:
+detectar a borda de um objeto em uma imagem
+encontrando a localização da mudança de pixel.
+Primeiro, construímos uma "imagem" de $6\times 8$ pixels.
+As quatro colunas do meio são pretas (0) e as demais são brancas (1).
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -219,21 +219,21 @@ X[:, 2:6].assign(tf.zeros(X[:, 2:6].shape))
 X
 ```
 
-Next, we construct a kernel `K` with a height of 1 and a width of 2.
-When we perform the cross-correlation operation with the input,
-if the horizontally adjacent elements are the same,
-the output is 0. Otherwise, the output is non-zero.
+Em seguida, construímos um kernel `K` com uma altura de 1 e uma largura de 2.
+Quando realizamos a operação de correlação cruzada com a entrada,
+se os elementos horizontalmente adjacentes forem iguais,
+a saída é 0. Caso contrário, a saída é diferente de zero.
 
 ```{.python .input}
 #@tab all
 K = d2l.tensor([[1.0, -1.0]])
 ```
 
-We are ready to perform the cross-correlation operation
-with arguments `X` (our input) and `K` (our kernel).
-As you can see, we detect 1 for the edge from white to black
-and -1 for the edge from black to white.
-All other outputs take value 0.
+Estamos prontos para realizar a operação de correlação cruzada
+com os argumentos `X` (nossa entrada) e` K` (nosso kernel).
+Como você pode ver, detectamos 1 para a borda do branco ao preto
+e -1 para a borda do preto ao branco.
+Todas as outras saídas assumem o valor 0.
 
 ```{.python .input}
 #@tab all
@@ -241,15 +241,15 @@ Y = corr2d(X, K)
 Y
 ```
 
-We can now apply the kernel to the transposed image.
-As expected, it vanishes. The kernel `K` only detects vertical edges.
+Agora podemos aplicar o kernel à imagem transposta.
+Como esperado, ele desaparece. O kernel `K` detecta apenas bordas verticais.
 
 ```{.python .input}
 #@tab all
 corr2d(d2l.transpose(X), K)
 ```
 
-## Learning a Kernel
+## Aprendendo um Kernel
 
 Designing an edge detector by finite differences `[1, -1]` is neat
 if we know this is precisely what we are looking for.
@@ -483,7 +483,7 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NjE3NDgzNSwtMTQ5NDYwMTExMiwtMj
-QyMTk4Mjc3LC02NzQ4NTE3NjksNTU5MTM1NDUwLDE5ODQ5Nzk3
-OTddfQ==
+eyJoaXN0b3J5IjpbLTE4MTg0NzQ3MzUsLTE0OTQ2MDExMTIsLT
+I0MjE5ODI3NywtNjc0ODUxNzY5LDU1OTEzNTQ1MCwxOTg0OTc5
+Nzk3XX0=
 -->
