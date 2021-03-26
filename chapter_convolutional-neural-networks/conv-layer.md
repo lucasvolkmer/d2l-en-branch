@@ -409,50 +409,50 @@ uma entrada (ou componente) de qualquer tensor que representa uma representaçã
 
 ## Mapa de Características e Campo Receptivo
 
-As described in :numref:`subsec_why-conv-channels`,
-the convolutional layer output in
+
+Conforme descrito em :numref:`subsec_why-conv-channels`,
+a saída da camada convolucional em
 :numref:`fig_correlation`
-is sometimes called a *feature map*,
-as it can be regarded as
-the learned representations (features)
-in the spatial dimensions (e.g., width and height)
-to the subsequent layer.
-In CNNs,
-for any element $x$ of some layer,
-its *receptive field* refers to
-all the elements (from all the previous layers)
-that may affect the calculation of $x$
-during the forward propagation.
-Note that the receptive field
-may be larger than the actual size of the input.
+às vezes é chamada de *mapa de características*,
+pois pode ser considerado como
+as representações aprendidas (características)
+nas dimensões espaciais (por exemplo, largura e altura)
+para a camada subsequente.
+Nas CNNs,
+para qualquer elemento $x$ de alguma camada,
+seu *campo receptivo* refere-se a
+todos os elementos (de todas as camadas anteriores)
+que pode afetar o cálculo de $x$
+durante a propagação direta.
+Observe que o campo receptivo
+pode ser maior do que o tamanho real da entrada.
 
-Let us continue to use :numref:`fig_correlation` to explain the receptive field.
-Given the $2 \times 2$ convolution kernel,
-the receptive field of the shaded output element (of value $19$)
-is
-the four elements in the shaded portion of the input.
-Now let us denote the $2 \times 2$
-output as $\mathbf{Y}$
-and consider a deeper CNN
-with an additional $2 \times 2$ convolutional layer that takes $\mathbf{Y}$
-as its input, outputting
-a single element $z$.
-In this case,
-the receptive field of $z$
-on $\mathbf{Y}$ includes all the four elements of $\mathbf{Y}$,
-while
-the receptive field
-on the input includes all the nine input elements.
-Thus, 
-when any element in a feature map
-needs a larger receptive field
-to detect input features over a broader area,
-we can build a deeper network.
-
-
+Vamos continuar a usar :numref:`fig_correlation` para explicar o campo receptivo.
+Dado o *kernel* de convolução $2 \times 2$
+o campo receptivo do elemento de saída sombreado (de valor $19$)
+são
+os quatro elementos na parte sombreada da entrada.
+Agora, vamos denotar a saída $2 \times 2$
+como $\mathbf{Y}$
+e considere uma CNN mais profunda
+com uma camada convolucional adicional $2 \times 2$ que leva $\mathbf{Y}$
+como sua entrada, produzindo
+um único elemento $z$.
+Nesse caso,
+o campo receptivo de $z$
+em $\mathbf{Y}$ inclui todos os quatro elementos de $\mathbf{Y}$,
+enquanto
+o campo receptivo
+na entrada inclui todos os nove elementos de entrada.
+Por isso,
+quando qualquer elemento em um mapa de recursos
+precisa de um campo receptivo maior
+para detectar recursos de entrada em uma área mais ampla,
+podemos construir uma rede mais profunda.
 
 
-## Summary
+
+## Resumo
 
 * The core computation of a two-dimensional convolutional layer is a two-dimensional cross-correlation operation. In its simplest form, this performs a cross-correlation operation on the two-dimensional input data and the kernel, and then adds a bias.
 * We can design a kernel to detect edges in images.
@@ -486,8 +486,8 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNjU1NDU1NywtMTY3NzgzMTM0NywtMT
-k4ODY0MzQ3NSwtMTgxODQ3NDczNSwtMTQ5NDYwMTExMiwtMjQy
-MTk4Mjc3LC02NzQ4NTE3NjksNTU5MTM1NDUwLDE5ODQ5Nzk3OT
-ddfQ==
+eyJoaXN0b3J5IjpbMTIxMDY1MjcwMSwxMjA2NTU0NTU3LC0xNj
+c3ODMxMzQ3LC0xOTg4NjQzNDc1LC0xODE4NDc0NzM1LC0xNDk0
+NjAxMTEyLC0yNDIxOTgyNzcsLTY3NDg1MTc2OSw1NTkxMzU0NT
+AsMTk4NDk3OTc5N119
 -->
