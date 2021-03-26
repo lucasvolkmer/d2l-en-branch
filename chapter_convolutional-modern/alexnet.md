@@ -232,30 +232,18 @@ duas camadas ocultas totalmente conectadas e uma camada de saída totalmente con
 como sua função de ativação.
 Vamos nos aprofundar nos detalhes abaixo.
 
-### Arquit
+### Arquitetura
 
-In AlexNet's first layer, the convolution window shape is $11\times11$.
-Since most images in ImageNet are more than ten times higher and wider
-than the MNIST images,
-objects in ImageNet data tend to occupy more pixels.
-Consequently, a larger convolution window is needed to capture the object.
-The convolution window shape in the second layer
-is reduced to $5\times5$, followed by $3\times3$.
-In addition, after the first, second, and fifth convolutional layers,
-the network adds maximum pooling layers
-with a window shape of $3\times3$ and a stride of 2.
-Moreover, AlexNet has ten times more convolution channels than LeNet.
-
-Na primeira camada do AlexNet, a forma da janela de convolução é $ 11 \ times11 $.
+Na primeira camada do AlexNet, a forma da janela de convolução é $11 \times 11$.
 Uma vez que a maioria das imagens no ImageNet são mais de dez vezes maiores e mais largas
 do que as imagens MNIST,
 objetos em dados ImageNet tendem a ocupar mais pixels.
 Consequentemente, uma janela de convolução maior é necessária para capturar o objeto.
 A forma da janela de convolução na segunda camada
-é reduzido para $ 5 \ times5 $, seguido por $ 3 \ times3 $.
+é reduzido para $5 \times 5$, seguido por $3 \times 3$.
 Além disso, após a primeira, segunda e quinta camadas convolucionais,
 a rede adiciona camadas de pooling máximas
-com um formato de janela de $ 3 \ times3 $ e uma distância de 2.
+com um formato de janela de $3 \times 3$ e uma distância de 2.
 Além disso, o AlexNet tem dez vezes mais canais de convolução do que o LeNet.
 
 After the last convolutional layer there are two fully-connected layers
@@ -556,6 +544,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMTk5NjUxMywtMzQ3MDEyODYxLC0xOT
-g2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbLTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMT
+k4NjUzODY0NywtMTcwNDIwODk2OV19
 -->
