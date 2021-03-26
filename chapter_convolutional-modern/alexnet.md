@@ -1,4 +1,4 @@
-# Deep Convolutional Neural Networks (AlexNet)
+# Redes Neurais Convolucionais Profundas (AlexNet)
 :label:`sec_alexnet`
 
 Embora as CNNs fossem bem conhecidas
@@ -41,18 +41,6 @@ pipelines clássicos pareciam mais com isto:
 1. Alimente os dados por meio de um conjunto padrão de extratores de recursos, como o SIFT (transformação de recurso invariante de escala) :cite:`Lowe.2004`, o SURF (recursos robustos acelerados) :cite:`Bay.Tuytelaars.Van- Gool.2006`, ou qualquer outro duto ajustado manualmente.
 1. 1.espeje as representações resultantes em seu classificador favorito, provavelmente um modelo linear ou método de kernel, para treinar um classificador.
 
-If you spoke to machine learning researchers,
-they believed that machine learning was both important and beautiful.
-Elegant theories proved the properties of various classifiers.
-The field of machine learning was thriving, rigorous, and eminently useful. However, if you spoke to a computer vision researcher,
-you would hear a very different story.
-The dirty truth of image recognition, they would tell you,
-is that features, not learning algorithms, drove progress.
-Computer vision researchers justifiably believed
-that a slightly bigger or cleaner dataset
-or a slightly improved feature-extraction pipeline
-mattered far more to the final accuracy than any learning algorithm.
-
 Se você conversasse com pesquisadores de aprendizado de máquina,
 eles acreditavam que o aprendizado de máquina era importante e bonito.
 Teorias elegantes provaram as propriedades de vários classificadores.
@@ -65,7 +53,7 @@ que um conjunto de dados ligeiramente maior ou mais limpo
 ou um pipeline de extração de recursos ligeiramente melhorado
 importava muito mais para a precisão final do que qualquer algoritmo de aprendizado.
 
-## Learning Representations
+## Representaçao do Aprendizado
 
 Another way to cast the state of affairs is that
 the most important part of the pipeline was the representation.
@@ -734,6 +722,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTEwMDA4ODcsLTE3MDQyMDg5NjldfQ
+eyJoaXN0b3J5IjpbLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ
 ==
 -->
