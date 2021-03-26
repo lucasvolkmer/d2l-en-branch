@@ -193,7 +193,7 @@ which makes them more energy efficient.
 Last, many operations in deep learning require high memory bandwidth.
 Again, GPUs shine here with buses that are at least 10 times as wide as many CPUs.
 
-Em comparação, as GPUs consistem em $100 \sim 1000 $ pequenos elementos de processamento
+Em comparação, as GPUs consistem em $100 \sim 1000$ pequenos elementos de processamento
 (os detalhes diferem um pouco entre NVIDIA, ATI, ARM e outros fornecedores de chips),
 frequentemente agrupados em grupos maiores (a NVIDIA os chama de warps).
 Embora cada núcleo seja relativamente fraco,
@@ -203,12 +203,12 @@ Por exemplo, a recente geração Volta da NVIDIA oferece até 120 TFlops por chi
 (e até 24 TFlops para aqueles de uso geral),
 enquanto o desempenho de ponto flutuante de CPUs não excedeu 1 TFlop até o momento.
 A razão pela qual isso é possível é bastante simples:
-primeiro, o consumo de energia tende a crescer * quadraticamente * com a frequência do clock.
+primeiro, o consumo de energia tende a crescer *quadraticamente* com a frequência do clock.
 Portanto, para o orçamento de energia de um núcleo da CPU que funciona 4 vezes mais rápido (um número típico),
-você pode usar 16 núcleos de GPU por $ 1/4 $ a velocidade,
-que rende $ 16 \ vezes 1/4 = 4 $ vezes o desempenho.
+você pode usar 16 núcleos de GPU por $1/4$ a velocidade,
+que rende $16 \times 1/4 = 4$ vezes o desempenho.
 Além disso, os núcleos da GPU são muito mais simples
-(na verdade, por muito tempo eles nem mesmo foram * capazes *
+(na verdade, por muito tempo eles nem mesmo foram *capazes*
 para executar código de uso geral),
 o que os torna mais eficientes em termos de energia.
 Por último, muitas operações de aprendizado profundo exigem alta largura de banda de memória.
@@ -611,6 +611,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzkyNzQyNTgsLTE5ODY1Mzg2NDcsLT
-E3MDQyMDg5NjldfQ==
+eyJoaXN0b3J5IjpbLTM0NzAxMjg2MSwtMTk4NjUzODY0NywtMT
+cwNDIwODk2OV19
 -->
