@@ -197,7 +197,7 @@ uma camada convolucional com um kernel de convolução $h \times w$
 simplesmente como uma camada convolucional $h \times w$
 
 
-## Object Edge Detection in Images
+## Detecção de Borda de Objeto em Imagens
 
 Let us take a moment to parse a simple application of a convolutional layer:
 detecting the edge of an object in an image
@@ -483,6 +483,7 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTQ2MDExMTIsLTI0MjE5ODI3NywtNj
-c0ODUxNzY5LDU1OTEzNTQ1MCwxOTg0OTc5Nzk3XX0=
+eyJoaXN0b3J5IjpbMTI1NjE3NDgzNSwtMTQ5NDYwMTExMiwtMj
+QyMTk4Mjc3LC02NzQ4NTE3NjksNTU5MTM1NDUwLDE5ODQ5Nzk3
+OTddfQ==
 -->
