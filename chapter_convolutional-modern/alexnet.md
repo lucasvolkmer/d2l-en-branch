@@ -172,27 +172,6 @@ Laptops modernos têm até 4 núcleos,
 e até mesmo servidores de última geração raramente excedem 64 núcleos,
 simplesmente porque não é rentável.
 
-By comparison, GPUs consist of $100 \sim 1000$ small processing elements
-(the details differ somewhat between NVIDIA, ATI, ARM and other chip vendors),
-often grouped into larger groups (NVIDIA calls them warps).
-While each core is relatively weak,
-sometimes even running at sub-1GHz clock frequency,
-it is the total number of such cores that makes GPUs orders of magnitude faster than CPUs.
-For instance, NVIDIA's recent Volta generation offers up to 120 TFlops per chip for specialized instructions
-(and up to 24 TFlops for more general-purpose ones),
-while floating point performance of CPUs has not exceeded 1 TFlop to date.
-The reason for why this is possible is actually quite simple:
-first, power consumption tends to grow *quadratically* with clock frequency.
-Hence, for the power budget of a CPU core that runs 4 times faster (a typical number),
-you can use 16 GPU cores at $1/4$ the speed,
-which yields $16 \times 1/4 = 4$ times the performance.
-Furthermore, GPU cores are much simpler
-(in fact, for a long time they were not even *able*
-to execute general-purpose code),
-which makes them more energy efficient.
-Last, many operations in deep learning require high memory bandwidth.
-Again, GPUs shine here with buses that are at least 10 times as wide as many CPUs.
-
 Em comparação, as GPUs consistem em $100 \sim 1000$ pequenos elementos de processamento
 (os detalhes diferem um pouco entre NVIDIA, ATI, ARM e outros fornecedores de chips),
 frequentemente agrupados em grupos maiores (a NVIDIA os chama de warps).
@@ -214,20 +193,6 @@ o que os torna mais eficientes em termos de energia.
 Por último, muitas operações de aprendizado profundo exigem alta largura de banda de memória.
 Novamente, as GPUs brilham aqui com barramentos que são pelo menos 10 vezes mais largos que muitas CPUs.
 
-Back to 2012. A major breakthrough came
-when Alex Krizhevsky and Ilya Sutskever
-implemented a deep CNN
-that could run on GPU hardware.
-They realized that the computational bottlenecks in CNNs,
-convolutions and matrix multiplications,
-are all operations that could be parallelized in hardware.
-Using two NVIDIA GTX 580s with 3GB of memory,
-they implemented fast convolutions.
-The code [cuda-convnet](https://code.google.com/archive/p/cuda-convnet/)
-was good enough that for several years
-it was the industry standard and powered
-the first couple years of the deep learning boom.
-
 De volta a 2012. Um grande avanço veio
 quando Alex Krizhevsky e Ilya Sutskever
 implementou uma CNN profunda
@@ -237,9 +202,9 @@ convoluções e multiplicações de matrizes,
 são todas as operações que podem ser paralelizadas no hardware.
 Usando dois NVIDIA GTX 580s com 3 GB de memória,
 eles implementaram convoluções rápidas.
-O código [cuda-convnet] (https://code.google.com/archive/p/cuda-convnet/)
-foi bom o suficiente por vários anos
-era o padrão da indústria e alimentado
+O código [cuda-convnet](https://code.google.com/archive/p/cuda-convnet/)
+foi bom o suficiente por vários anos,
+era o padrão da indústria e alimentou
 os primeiros anos do boom do aprendizado profundo.
 
 ## AlexNet
@@ -611,6 +576,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NzAxMjg2MSwtMTk4NjUzODY0NywtMT
-cwNDIwODk2OV19
+eyJoaXN0b3J5IjpbLTY5MTgwNTEwMywtMzQ3MDEyODYxLC0xOT
+g2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
 -->
