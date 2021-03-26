@@ -136,42 +136,23 @@ em uma escala maior do que os acadêmicos haviam considerado anteriormente.
 
 ### Ingrediente Faltante: *Hardware*
 
-Deep learning models are voracious consumers of compute cycles.
-Training can take hundreds of epochs, and each iteration
-requires passing data through many layers of computationally-expensive
-linear algebra operations.
-This is one of the main reasons why in the 1990s and early 2000s,
-simple algorithms based on the more-efficiently optimized
-convex objectives were preferred.
-
 Modelos de aprendizado profundo são consumidores vorazes de ciclos de computação.
 O treinamento pode levar centenas de épocas, e cada iteração
 requer a passagem de dados por muitas camadas de operações de álgebra linear de alto custo computacional.
 Esta é uma das principais razões pelas quais, na década de 1990 e no início de 2000,
-algoritmos simples baseados em algoritmos otimizados de forma mais eficiente
-objetivas convexas foram preferidas. 
+algoritmos simples baseados em algoritmos otimizados de objetivas convexas mais eficientes
+ foram preferidas. 
 
-*Graphical processing units* (GPUs) proved to be a game changer
-in making deep learning feasible.
-These chips had long been developed for accelerating
-graphics processing to benefit computer games.
-In particular, they were optimized for high throughput $4 \times 4$ matrix-vector products, which are needed for many computer graphics tasks.
-Fortunately, this math is strikingly similar
-to that required to calculate convolutional layers.
-Around that time, NVIDIA and ATI had begun optimizing GPUs
-for general computing operations,
-going as far as to market them as *general-purpose GPUs* (GPGPU).
-
-* Unidades de processamento gráfico * (GPUs) provaram ser uma virada de jogo
+*Unidades de processamento gráfico* (GPUs) provaram ser uma virada de jogo
 para tornar o aprendizado profundo viável.
 Esses chips há muito foram desenvolvidos para acelerar
 processamento gráfico para beneficiar os jogos de computador.
-Em particular, eles foram otimizados para produtos de vetor de matriz de alta capacidade $ 4 \ vezes 4 $, que são necessários para muitas tarefas de computação gráfica.
+Em particular, eles foram otimizados para produtos de vetor de matriz de alta capacidade $4 \times 4$, que são necessários para muitas tarefas de computação gráfica.
 Felizmente, essa matemática é muito semelhante
 ao necessário para calcular camadas convolucionais.
 Naquela época, a NVIDIA e a ATI começaram a otimizar GPUs
 para operações gerais de computação,
-indo tão longe a ponto de comercializá-los como * GPUs de uso geral * (GPGPU).
+indo tão longe a ponto de comercializá-los como *GPUs de uso geral* (GPGPU).
 
 To provide some intuition, consider the cores of a modern microprocessor
 (CPU).
@@ -648,6 +629,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMTg1ODA2NiwtMTk4NjUzODY0NywtMT
-cwNDIwODk2OV19
+eyJoaXN0b3J5IjpbLTIzODA5OTA3LC0xOTg2NTM4NjQ3LC0xNz
+A0MjA4OTY5XX0=
 -->
