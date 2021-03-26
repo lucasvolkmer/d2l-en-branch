@@ -55,16 +55,6 @@ importava muito mais para a precisão final do que qualquer algoritmo de aprendi
 
 ## Representaçao do Aprendizado
 
-Another way to cast the state of affairs is that
-the most important part of the pipeline was the representation.
-And up until 2012 the representation was calculated mechanically.
-In fact, engineering a new set of feature functions, improving results, and writing up the method was a prominent genre of paper.
-SIFT :cite:`Lowe.2004`,
-SURF :cite:`Bay.Tuytelaars.Van-Gool.2006`,
-HOG (histograms of oriented gradient) :cite:`Dalal.Triggs.2005`,
-[bags of visual words](https://en.wikipedia.org/wiki/Bag-of-words_model_in_computer_vision)
-and similar feature extractors ruled the roost.
-
 Outra forma de definir o estado de coisas é que
 a parte mais importante do pipeline foi a representação.
 E até 2012 a representação era calculada mecanicamente.
@@ -74,24 +64,6 @@ SURF :cite:`Bay.Tuytelaars.Van-Gool.2006`,
 HOG (histogramas de gradiente orientado) :cite: `Dalal.Triggs.2005`,
 [pacotes de palavras visuais](https://en.wikipedia.org/wiki/Bag-of-words_model_in_computer_vision)
 e extratores de recursos semelhantes são os mais usados.
-
-Another group of researchers,
-including Yann LeCun, Geoff Hinton, Yoshua Bengio,
-Andrew Ng, Shun-ichi Amari, and Juergen Schmidhuber,
-had different plans.
-They believed that features themselves ought to be learned.
-Moreover, they believed that to be reasonably complex,
-the features ought to be hierarchically composed
-with multiple jointly learned layers, each with learnable parameters.
-In the case of an image, the lowest layers might come
-to detect edges, colors, and textures.
-Indeed,
-Alex Krizhevsky, Ilya Sutskever, and Geoff Hinton
-proposed a new variant of a CNN,
-*AlexNet*,
-that achieved excellent performance in the 2012 ImageNet challenge.
-AlexNet was named after Alex Krizhevsky,
-the first author of the breakthrough ImageNet classification paper :cite:`Krizhevsky.Sutskever.Hinton.2012`.
 
 Outro grupo de pesquisadores,
 incluindo Yann LeCun, Geoff Hinton, Yoshua Bengio,
@@ -106,10 +78,10 @@ para detectar bordas, cores e texturas.
 De fato,
 Alex Krizhevsky, Ilya Sutskever e Geoff Hinton
 propôs uma nova variante de uma CNN,
-* AlexNet *,
+*AlexNet*,
 que obteve excelente desempenho no desafio ImageNet de 2012.
 AlexNet foi nomeado após Alex Krizhevsky,
-o primeiro autor do inovador artigo de classificação ImageNet: cite: `Krizhevsky.Sutskever.Hinton.2012`.
+o primeiro autor do inovador artigo de classificação ImageNet :cite:`Krizhevsky.Sutskever.Hinton.2012`.
 
 Interestingly in the lowest layers of the network,
 the model learned feature extractors that resembled some traditional filters.
@@ -118,7 +90,7 @@ and describes lower-level image descriptors.
 
 Curiosamente, nas camadas mais baixas da rede,
 o modelo aprendeu extratores de recursos que se assemelhavam a alguns filtros tradicionais.
-: numref: `fig_filters` é reproduzido do artigo AlexNet: cite:` Krizhevsky.Sutskever.Hinton.2012`
+:numref:`fig_filters` é reproduzido do artigo AlexNet :cite:`Krizhevsky.Sutskever.Hinton.2012`
 e descreve descritores de imagem de nível inferior.
 
 ![Image filters learned by the first layer of AlexNet.](../img/filters.png)
@@ -722,6 +694,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMzEzMzY5MCwtMTk4NjUzODY0NywtMT
-cwNDIwODk2OV19
+eyJoaXN0b3J5IjpbLTEyMDQ0MjUzMjgsLTE5ODY1Mzg2NDcsLT
+E3MDQyMDg5NjldfQ==
 -->
