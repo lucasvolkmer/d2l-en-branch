@@ -83,17 +83,12 @@ que obteve excelente desempenho no desafio ImageNet de 2012.
 AlexNet foi nomeado após Alex Krizhevsky,
 o primeiro autor do inovador artigo de classificação ImageNet :cite:`Krizhevsky.Sutskever.Hinton.2012`.
 
-Interestingly in the lowest layers of the network,
-the model learned feature extractors that resembled some traditional filters.
-:numref:`fig_filters` is reproduced from the AlexNet paper :cite:`Krizhevsky.Sutskever.Hinton.2012`
-and describes lower-level image descriptors.
-
 Curiosamente, nas camadas mais baixas da rede,
 o modelo aprendeu extratores de recursos que se assemelhavam a alguns filtros tradicionais.
 :numref:`fig_filters` é reproduzido do artigo AlexNet :cite:`Krizhevsky.Sutskever.Hinton.2012`
 e descreve descritores de imagem de nível inferior.
 
-![Image filters learned by the first layer of AlexNet.](../img/filters.png)
+![Filtros de imagem aprendidos pela primeira camada do AlexNet.](../img/filters.png)
 :width:`400px`
 :label:`fig_filters`
 
@@ -694,6 +689,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDQ0MjUzMjgsLTE5ODY1Mzg2NDcsLT
-E3MDQyMDg5NjldfQ==
+eyJoaXN0b3J5IjpbMTkxNDE5NDIwMiwtMTk4NjUzODY0NywtMT
+cwNDIwODk2OV19
 -->
