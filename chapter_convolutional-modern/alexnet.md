@@ -134,7 +134,7 @@ impulsionou a pesquisa sobre visão computacional e aprendizado de máquina,
 desafiando os pesquisadores a identificar quais modelos tiveram melhor desempenho
 em uma escala maior do que os acadêmicos haviam considerado anteriormente.
 
-### Ing: Hardware
+### Ingrediente Faltante: *Hardware*
 
 Deep learning models are voracious consumers of compute cycles.
 Training can take hundreds of epochs, and each iteration
@@ -146,8 +146,7 @@ convex objectives were preferred.
 
 Modelos de aprendizado profundo são consumidores vorazes de ciclos de computação.
 O treinamento pode levar centenas de épocas, e cada iteração
-requer a passagem de dados por muitas camadas de alto custo computacional
-operações de álgebra linear.
+requer a passagem de dados por muitas camadas de operações de álgebra linear de alto custo computacional.
 Esta é uma das principais razões pelas quais, na década de 1990 e no início de 2000,
 algoritmos simples baseados em algoritmos otimizados de forma mais eficiente
 objetivas convexas foram preferidas. 
@@ -649,6 +648,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MTMyNDkwLC0xOTg2NTM4NjQ3LC0xNz
-A0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbMTczMTg1ODA2NiwtMTk4NjUzODY0NywtMT
+cwNDIwODk2OV19
 -->
