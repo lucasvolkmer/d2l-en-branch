@@ -1,4 +1,4 @@
-# Padding and Stride
+# Padding and reenchimento e *Stride*
 :label:`sec_padding`
 
 
@@ -322,3 +322,6 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTkwNDgzNzM2XX0=
+-->
