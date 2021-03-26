@@ -36,16 +36,10 @@ e ainda faltavam técnicas de regularização eficazes.
 Assim, em vez de treinar sistemas *ponta a ponta* (pixel para classificação),
 pipelines clássicos pareciam mais com isto:
 
-
-1. Obtain an interesting dataset. In early days, these datasets required expensive sensors (at the time, 1 megapixel images were state-of-the-art).
-2. Preprocess the dataset with hand-crafted features based on some knowledge of optics, geometry, other analytic tools, and occasionally on the serendipitous discoveries of lucky graduate students.
-3. Feed the data through a standard set of feature extractors such as the SIFT (scale-invariant feature transform) :cite:`Lowe.2004`, the SURF (speeded up robust features) :cite:`Bay.Tuytelaars.Van-Gool.2006`, or any number of other hand-tuned pipelines.
-4. Dump the resulting representations into your favorite classifier, likely a linear model or kernel method, to train a classifier.
-
-5. Obtenha um conjunto de dados interessante. No início, esses conjuntos de dados exigiam sensores caros (na época, as imagens de 1 megapixel eram de última geração).
-6. Pré-processe o conjunto de dados com recursos feitos à mão com base em algum conhecimento de ótica, geometria, outras ferramentas analíticas e, ocasionalmente, nas descobertas fortuitas de alunos de pós-graduação sortudos.
-7. Alimente os dados por meio de um conjunto padrão de extratores de recursos, como o SIFT (transformação de recurso invariante de escala) :cite:`Lowe.2004`, o SURF (recursos robustos acelerados) :cite:`Bay.Tuytelaars.Van- Gool.2006`, ou qualquer outro duto ajustado manualmente.
-8. 1.espeje as representações resultantes em seu classificador favorito, provavelmente um modelo linear ou método de kernel, para treinar um classificador.
+1. Obtenha um conjunto de dados interessante. No início, esses conjuntos de dados exigiam sensores caros (na época, as imagens de 1 megapixel eram de última geração).
+1. Pré-processe o conjunto de dados com recursos feitos à mão com base em algum conhecimento de ótica, geometria, outras ferramentas analíticas e, ocasionalmente, nas descobertas fortuitas de alunos de pós-graduação sortudos.
+1. Alimente os dados por meio de um conjunto padrão de extratores de recursos, como o SIFT (transformação de recurso invariante de escala) :cite:`Lowe.2004`, o SURF (recursos robustos acelerados) :cite:`Bay.Tuytelaars.Van- Gool.2006`, ou qualquer outro duto ajustado manualmente.
+1. 1.espeje as representações resultantes em seu classificador favorito, provavelmente um modelo linear ou método de kernel, para treinar um classificador.
 
 If you spoke to machine learning researchers,
 they believed that machine learning was both important and beautiful.
@@ -59,7 +53,7 @@ that a slightly bigger or cleaner dataset
 or a slightly improved feature-extraction pipeline
 mattered far more to the final accuracy than any learning algorithm.
 
-Se você conversou com pesquisadores de aprendizado de máquina,
+Se você conversasse com pesquisadores de aprendizado de máquina,
 eles acreditavam que o aprendizado de máquina era importante e bonito.
 Teorias elegantes provaram as propriedades de vários classificadores.
 O campo do aprendizado de máquina era próspero, rigoroso e eminentemente útil. No entanto, se você falou com um pesquisador de visão computacional,
@@ -740,6 +734,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTk3ODQyOTgsLTE3MDQyMDg5NjldfQ
+eyJoaXN0b3J5IjpbLTEwMTEwMDA4ODcsLTE3MDQyMDg5NjldfQ
 ==
 -->
