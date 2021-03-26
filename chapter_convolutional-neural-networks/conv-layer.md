@@ -251,25 +251,26 @@ corr2d(d2l.transpose(X), K)
 
 ## Aprendendo um Kernel
 
-Designing an edge detector by finite differences `[1, -1]` is neat
-if we know this is precisely what we are looking for.
-However, as we look at larger kernels,
-and consider successive layers of convolutions,
-it might be impossible to specify
-precisely what each filter should be doing manually.
 
-Now let us see whether we can learn the kernel that generated `Y` from `X`
-by looking at the input--output pairs only.
-We first construct a convolutional layer
-and initialize its kernel as a random tensor.
-Next, in each iteration, we will use the squared error
-to compare `Y` with the output of the convolutional layer.
-We can then calculate the gradient to update the kernel.
-For the sake of simplicity,
-in the following
-we use the built-in class
-for two-dimensional convolutional layers
-and ignore the bias.
+Projetar um detector de borda por diferenças finitas `[1, -1]` é legal
+se sabemos que é exatamente isso que estamos procurando.
+No entanto, quando olhamos para *kernels* maiores,
+e considere camadas sucessivas de convoluções,
+pode ser impossível especificar
+exatamente o que cada filtro deve fazer manualmente.
+
+Agora vamos ver se podemos aprender o *kernel* que gerou `Y` de` X`
+olhando apenas para os pares de entrada--saída.
+Primeiro construímos uma camada convolucional
+e inicializamos seu *kernel* como um tensor aleatório.
+A seguir, em cada iteração, usaremos o erro quadrático
+para comparar `Y` com a saída da camada convolucional.
+Podemos então calcular o gradiente para atualizar o *kernel*.
+Por uma questão de simplicidade,
+na sequência
+nós usamos a classe embutida
+para camadas convolucionais bidimensionais
+e ignorar o *bias*.
 
 ```{.python .input}
 # Construct a two-dimensional convolutional layer with 1 output channel and a
@@ -344,7 +345,7 @@ for i in range(10):
             print(f'batch {i + 1}, loss {tf.reduce_sum(l):.3f}')
 ```
 
-Note that the error has dropped to a small value after 10 iterations. Now we will take a look at the kernel tensor we learned.
+Observe que o erro caiu para um valor pequeno após 10 iterações. Agora daremos uma olhada no tensor do *kernel* que aprendemos.
 
 ```{.python .input}
 d2l.reshape(conv2d.weight.data(), (1, 2))
@@ -363,7 +364,7 @@ d2l.reshape(conv2d.get_weights()[0], (1, 2))
 Indeed, the learned kernel tensor is remarkably close
 to the kernel tensor `K` we defined earlier.
 
-## Cross-Correlation and Convolution
+## Correlação Cruzada e Convolução
 
 Recall our observation from :numref:`sec_why-conv` of the correspondence
 between the cross-correlation and convolution operations.
@@ -483,7 +484,7 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTg0NzQ3MzUsLTE0OTQ2MDExMTIsLT
-I0MjE5ODI3NywtNjc0ODUxNzY5LDU1OTEzNTQ1MCwxOTg0OTc5
-Nzk3XX0=
+eyJoaXN0b3J5IjpbLTE5ODg2NDM0NzUsLTE4MTg0NzQ3MzUsLT
+E0OTQ2MDExMTIsLTI0MjE5ODI3NywtNjc0ODUxNzY5LDU1OTEz
+NTQ1MCwxOTg0OTc5Nzk3XX0=
 -->
