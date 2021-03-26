@@ -454,25 +454,25 @@ podemos construir uma rede mais profunda.
 
 ## Resumo
 
-* The core computation of a two-dimensional convolutional layer is a two-dimensional cross-correlation operation. In its simplest form, this performs a cross-correlation operation on the two-dimensional input data and the kernel, and then adds a bias.
-* We can design a kernel to detect edges in images.
-* We can learn the kernel's parameters from data.
-* With kernels learned from data, the outputs of convolutional layers remain unaffected regardless of such layers' performed operations (either strict convolution or cross-correlation).
-* When any element in a feature map needs a larger receptive field to detect broader features on the input, a deeper network can be considered.
+* O cálculo central de uma camada convolucional bidimensional é uma operação de correlação cruzada bidimensional. Em sua forma mais simples, isso executa uma operação de correlação cruzada nos dados de entrada bidimensionais e no *kernel* e, em seguida, adiciona um *bias*.
+* Podemos projetar um *kernel* para detectar bordas em imagens.
+* Podemos aprender os parâmetros do *kernel* a partir de dados.
+* Com os *kernels* aprendidos a partir dos dados, as saídas das camadas convolucionais permanecem inalteradas, independentemente das operações realizadas por essas camadas (convolução estrita ou correlação cruzada).
+* Quando qualquer elemento em um mapa de características precisa de um campo receptivo maior para detectar características mais amplas na entrada, uma rede mais profunda pode ser considerada.
 
 
-## Exercises
+## Exercícios
 
-1. Construct an image `X` with diagonal edges.
-    1. What happens if you apply the kernel `K` in this section to it?
-    1. What happens if you transpose `X`?
-    1. What happens if you transpose `K`?
-1. When you try to automatically find the gradient for the `Conv2D` class we created, what kind of error message do you see?
-1. How do you represent a cross-correlation operation as a matrix multiplication by changing the input and kernel tensors?
-1. Design some kernels manually.
-    1. What is the form of a kernel for the second derivative?
-    1. What is the kernel for an integral?
-    1. What is the minimum size of a kernel to obtain a derivative of degree $d$?
+1. Construa uma imagem `X` com bordas diagonais.
+     1. O que acontece se você aplicar o *kernel* `K` nesta seção a ele?
+     1. O que acontece se você transpõe `X`?
+     1. O que acontece se você transpõe `K`?
+1. Quando você tenta encontrar automaticamente o gradiente para a classe `Conv2D` que criamos, que tipo de mensagem de erro você vê?
+1. Como você representa uma operação de correlação cruzada como uma multiplicação de matriz, alterando os tensores de entrada e *kernel*?
+1. Projete alguns *kernels* manualmente.
+     1. Qual é a forma de um *kernel* para a segunda derivada?
+     1. Qual é o *kernel* de uma integral?
+     1. Qual é o tamanho mínimo de um *kernel* para obter uma derivada de grau $d$?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/65)
@@ -486,7 +486,7 @@ podemos construir uma rede mais profunda.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMDY1MjcwMSwxMjA2NTU0NTU3LC0xNj
+eyJoaXN0b3J5IjpbMTczNzg0NzMzNywxMjA2NTU0NTU3LC0xNj
 c3ODMxMzQ3LC0xOTg4NjQzNDc1LC0xODE4NDc0NzM1LC0xNDk0
 NjAxMTEyLC0yNDIxOTgyNzcsLTY3NDg1MTc2OSw1NTkxMzU0NT
 AsMTk4NDk3OTc5N119
