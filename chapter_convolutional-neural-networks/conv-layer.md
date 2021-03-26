@@ -366,21 +366,22 @@ to the kernel tensor `K` we defined earlier.
 
 ## Correlação Cruzada e Convolução
 
-Recall our observation from :numref:`sec_why-conv` of the correspondence
-between the cross-correlation and convolution operations.
-Here let us continue to consider two-dimensional convolutional layers.
-What if such layers 
-perform strict convolution operations
-as defined in :eqref:`eq_2d-conv-discrete`
-instead of cross-correlations?
-In order to obtain the output of the strict *convolution* operation, we only need to flip the two-dimensional kernel tensor both horizontally and vertically, and then perform the *cross-correlation* operation with the input tensor.
 
-It is noteworthy that since kernels are learned from data in deep learning,
-the outputs of convolutional layers remain unaffected
-no matter such layers
-perform
-either the strict convolution operations
-or the cross-correlation operations.
+Lembre-se de nossa observação de :numref:`sec_why-conv` da correspondência
+entre as operações de correlação cruzada e convolução.
+Aqui, vamos continuar a considerar as camadas convolucionais bidimensionais.
+E se essas camadas
+realizar operações de convolução estritas
+conforme definido em :eqref:`eq_2d-conv-discrete`
+em vez de correlações cruzadas?
+Para obter a saída da operação de *convolução* estrita, precisamos apenas inverter o tensor do *kerne*l bidimensional tanto horizontal quanto verticalmente e, em seguida, executar a operação de *correlação cruzada* com o tensor de entrada.
+
+É digno de nota que, uma vez que os *kernels* são aprendidos a partir de dados no aprendizado profundo,
+as saídas das camadas convolucionais permanecem inalteradas
+não importa se tais camadas
+executam
+as operações de convolução estrita
+ou as operações de correlação cruzada.
 
 To illustrate this, suppose that a convolutional layer performs *cross-correlation* and learns the kernel in :numref:`fig_correlation`, which is denoted as the matrix $\mathbf{K}$ here.
 Assuming that other conditions remain unchanged, 
@@ -484,7 +485,7 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODg2NDM0NzUsLTE4MTg0NzQ3MzUsLT
-E0OTQ2MDExMTIsLTI0MjE5ODI3NywtNjc0ODUxNzY5LDU1OTEz
-NTQ1MCwxOTg0OTc5Nzk3XX0=
+eyJoaXN0b3J5IjpbLTE2Nzc4MzEzNDcsLTE5ODg2NDM0NzUsLT
+E4MTg0NzQ3MzUsLTE0OTQ2MDExMTIsLTI0MjE5ODI3NywtNjc0
+ODUxNzY5LDU1OTEzNTQ1MCwxOTg0OTc5Nzk3XX0=
 -->
