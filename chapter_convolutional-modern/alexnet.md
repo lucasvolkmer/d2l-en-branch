@@ -69,11 +69,11 @@ Outra forma de definir o estado de coisas é que
 a parte mais importante do pipeline foi a representação.
 E até 2012 a representação era calculada mecanicamente.
 Na verdade, desenvolver um novo conjunto de funções de recursos, melhorar os resultados e escrever o método era um gênero de papel proeminente.
-SIFT: cite: `Lowe.2004`,
-SURF: cite: `Bay.Tuytelaars.Van-Gool.2006`,
-HOG (histogramas de gradiente orientado): cite: `Dalal.Triggs.2005`,
-[pacotes de palavras visuais] (https://en.wikipedia.org/wiki/Bag-of-words_model_in_computer_vision)
-e extratores de recursos semelhantes governaram o poleiro.
+SIFT :cite:`Lowe.2004`,
+SURF :cite:`Bay.Tuytelaars.Van-Gool.2006`,
+HOG (histogramas de gradiente orientado) :cite: `Dalal.Triggs.2005`,
+[pacotes de palavras visuais](https://en.wikipedia.org/wiki/Bag-of-words_model_in_computer_vision)
+e extratores de recursos semelhantes são os mais usados.
 
 Another group of researchers,
 including Yann LeCun, Geoff Hinton, Yoshua Bengio,
@@ -722,6 +722,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ
-==
+eyJoaXN0b3J5IjpbMTQwMzEzMzY5MCwtMTk4NjUzODY0NywtMT
+cwNDIwODk2OV19
 -->
