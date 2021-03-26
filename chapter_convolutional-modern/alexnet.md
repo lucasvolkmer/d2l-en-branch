@@ -1,28 +1,7 @@
 # Deep Convolutional Neural Networks (AlexNet)
 :label:`sec_alexnet`
 
-
-Although CNNs were well known
-in the computer vision and machine learning communities
-following the introduction of LeNet,
-they did not immediately dominate the field.
-Although LeNet achieved good results on early small datasets,
-the performance and feasibility of training CNNs
-on larger, more realistic datasets had yet to be established.
-In fact, for much of the intervening time between the early 1990s
-and the watershed results of 2012,
-neural networks were often surpassed by other machine learning methods,
-such as support vector machines.
-
-
-For computer vision, this comparison is perhaps not fair.
-That is although the inputs to convolutional networks
-consist of raw or lightly-processed (e.g., by centering) pixel values, practitioners would never feed raw pixels into traditional models.
-Instead, typical computer vision pipelines
-consisted of manually engineering feature extraction pipelines.
-Rather than *learn the features*, the features were *crafted*.
-Most of the progress came from having more clever ideas for features,
-and the learning algorithm was often relegated to an afterthought.Embora as CNNs fossem bem conhecidas
+Embora as CNNs fossem bem conhecidas
 nas comunidades de visão computacional e aprendizado de máquina
 após a introdução do LeNet,
 eles não dominaram imediatamente o campo.
@@ -33,7 +12,6 @@ Na verdade, durante grande parte do tempo intermediário entre o início da déc
 e os resultados do divisor de águas de 2012,
 redes neurais muitas vezes eram superadas por outros métodos de aprendizado de máquina,
 como máquinas de vetores de suporte.
-
 
 For computer vision, this comparison is perhaps not fair.
 That is although the inputs to convolutional networks
@@ -785,5 +763,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDQyMDg5NjldfQ==
+eyJoaXN0b3J5IjpbMTQwMzY3MjU3LC0xNzA0MjA4OTY5XX0=
 -->
