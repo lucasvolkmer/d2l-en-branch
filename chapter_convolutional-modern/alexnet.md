@@ -13,21 +13,12 @@ e os resultados do divisor de águas de 2012,
 redes neurais muitas vezes eram superadas por outros métodos de aprendizado de máquina,
 como máquinas de vetores de suporte.
 
-For computer vision, this comparison is perhaps not fair.
-That is although the inputs to convolutional networks
-consist of raw or lightly-processed (e.g., by centering) pixel values, practitioners would never feed raw pixels into traditional models.
-Instead, typical computer vision pipelines
-consisted of manually engineering feature extraction pipelines.
-Rather than *learn the features*, the features were *crafted*.
-Most of the progress came from having more clever ideas for features,
-and the learning algorithm was often relegated to an afterthought.
-
 Para a visão computacional, essa comparação talvez não seja justa.
 Isso embora as entradas para redes convolucionais
-consistir em valores de pixel brutos ou levemente processados (por exemplo, pela centralização), os profissionais nunca alimentariam pixels brutos em modelos tradicionais.
+consistam em valores de pixel brutos ou levemente processados (por exemplo, pela centralização), os profissionais nunca alimentariam pixels brutos em modelos tradicionais.
 Em vez disso, pipelines típicos de visão computacional
-consistia em pipelines de extração de recursos de engenharia manual.
-Em vez de * aprender os recursos *, os recursos foram * criados *.
+consistiam em pipelines de extração de recursos de engenharia manual.
+Em vez de *aprender os recursos*, os recursos foram *criados*.
 A maior parte do progresso veio de ter ideias mais inteligentes para recursos,
 e o algoritmo de aprendizagem foi frequentemente relegado a uma reflexão tardia.
 
@@ -45,20 +36,20 @@ and effective regularization techniques were still missing.
 Thus, rather than training *end-to-end* (pixel to classification) systems,
 classical pipelines looked more like this:
 
+Embora alguns aceleradores de rede neural estivessem disponíveis na década de 1990,
+eles ainda não eram suficientemente poderosos para fazer
+CNNs multicanal e multicamadas profundas
+com um grande número de parâmetros.
+Além disso, os conjuntos de dados ainda eram relativamente pequenos.
+Somados a esses obstáculos, truques-chave para treinar redes neurais
+incluindo heurísticas de inicialização de parâmetros,
+variantes inteligentes de descida gradiente estocástica,
+funções de ativação não esmagadoras,
+e ainda faltavam técnicas de regularização eficazes.
 
-Although some neural network accelerators were available in the 1990s,
-they were not yet sufficiently powerful to make
-deep multichannel, multilayer CNNs
-with a large number of parameters.
-Moreover, datasets were still relatively small.
-Added to these obstacles, key tricks for training neural networks
-including parameter initialization heuristics,
-clever variants of stochastic gradient descent,
-non-squashing activation functions,
-and effective regularization techniques were still missing.
+Assim, em vez de treinar sistemas * ponta a ponta * (pixel para classificação),
+pipelines clássicos pareciam mais com isto:
 
-Thus, rather than training *end-to-end* (pixel to classification) systems,
-classical pipelines looked more like this:
 
 1. Obtain an interesting dataset. In early days, these datasets required expensive sensors (at the time, 1 megapixel images were state-of-the-art).
 2. Preprocess the dataset with hand-crafted features based on some knowledge of optics, geometry, other analytic tools, and occasionally on the serendipitous discoveries of lucky graduate students.
@@ -763,5 +754,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMzY3MjU3LC0xNzA0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbLTE2ODQ3MzY0MDksLTE3MDQyMDg5NjldfQ
+==
 -->
