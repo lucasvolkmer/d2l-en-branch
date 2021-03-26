@@ -209,18 +209,6 @@ os primeiros anos do boom do aprendizado profundo.
 
 ## AlexNet
 
-AlexNet, which employed an 8-layer CNN,
-won the ImageNet Large Scale Visual Recognition Challenge 2012
-by a phenomenally large margin.
-This network showed, for the first time,
-that the features obtained by learning can transcend manually-designed features, breaking the previous paradigm in computer vision.
-
-The architectures of AlexNet and LeNet are very similar,
-as :numref:`fig_alexnet` illustrates.
-Note that we provide a slightly streamlined version of AlexNet
-removing some of the design quirks that were needed in 2012
-to make the model fit on two small GPUs.
-
 AlexNet, que empregava uma CNN de 8 camadas,
 venceu o Desafio de Reconhecimento Visual em Grande Escala ImageNet 2012
 por uma margem fenomenalmente grande.
@@ -228,21 +216,13 @@ Esta rede mostrou, pela primeira vez,
 que os recursos obtidos pelo aprendizado podem transcender recursos projetados manualmente, quebrando o paradigma anterior em visão computacional.
 
 As arquiteturas de AlexNet e LeNet são muito semelhantes,
-como: numref: `fig_alexnet` ilustra.
+como :numref:`fig_alexnet` ilustra.
 Observe que fornecemos uma versão ligeiramente simplificada do AlexNet
 removendo algumas das peculiaridades de design que eram necessárias em 2012
 para fazer o modelo caber em duas pequenas GPUs.
 
-![From LeNet (left) to AlexNet (right).](../img/alexnet.svg)
+![De LeNet (esquerda) para AlexNet (direita).](../img/alexnet.svg)
 :label:`fig_alexnet`
-
-The design philosophies of AlexNet and LeNet are very similar,
-but there are also significant differences.
-First, AlexNet is much deeper than the comparatively small LeNet5.
-AlexNet consists of eight layers: five convolutional layers,
-two fully-connected hidden layers, and one fully-connected output layer. Second, AlexNet used the ReLU instead of the sigmoid
-as its activation function.
-Let us delve into the details below.
 
 As filosofias de design de AlexNet e LeNet são muito semelhantes,
 mas também existem diferenças significativas.
@@ -252,7 +232,7 @@ duas camadas ocultas totalmente conectadas e uma camada de saída totalmente con
 como sua função de ativação.
 Vamos nos aprofundar nos detalhes abaixo.
 
-### Architecture
+### Arquit
 
 In AlexNet's first layer, the convolution window shape is $11\times11$.
 Since most images in ImageNet are more than ten times higher and wider
@@ -576,6 +556,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MTgwNTEwMywtMzQ3MDEyODYxLC0xOT
+eyJoaXN0b3J5IjpbLTcyMTk5NjUxMywtMzQ3MDEyODYxLC0xOT
 g2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
 -->
