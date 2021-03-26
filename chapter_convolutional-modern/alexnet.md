@@ -108,18 +108,6 @@ O grande avanço em 2012 pode ser atribuído a dois fatores principais.
 
 ### Ingrediente Faltante: Dados
 
-Deep models with many layers require large amounts of data
-in order to enter the regime
-where they significantly outperform traditional methods
-based on convex optimizations (e.g., linear and kernel methods).
-However, given the limited storage capacity of computers,
-the relative expense of sensors,
-and the comparatively tighter research budgets in the 1990s,
-most research relied on tiny datasets.
-Numerous papers addressed the UCI collection of datasets,
-many of which contained only hundreds or (a few) thousands of images
-captured in unnatural settings with low resolution.
-
 Modelos profundos com muitas camadas requerem grandes quantidades de dados
 a fim de entrar no regime
 onde superam significativamente os métodos tradicionais
@@ -132,23 +120,9 @@ Numerosos artigos abordaram a coleção de conjuntos de dados da UCI,
 muitos dos quais continham apenas centenas ou (alguns) milhares de imagens
 capturado em configurações não naturais com baixa resolução.
 
-In 2009, the ImageNet dataset was released,
-challenging researchers to learn models from 1 million examples,
-1000 each from 1000 distinct categories of objects.
-The researchers, led by Fei-Fei Li, who introduced this dataset
-leveraged Google Image Search to prefilter large candidate sets
-for each category and employed
-the Amazon Mechanical Turk crowdsourcing pipeline
-to confirm for each image whether it belonged to the associated category.
-This scale was unprecedented.
-The associated competition, dubbed the ImageNet Challenge
-pushed computer vision and machine learning research forward,
-challenging researchers to identify which models performed best
-at a greater scale than academics had previously considered.
-
 Em 2009, o conjunto de dados ImageNet foi lançado,
 desafiando os pesquisadores a aprender modelos a partir de 1 milhão de exemplos,
-1000 cada de 1000 categorias distintas de objetos.
+1000 categorias distintas de objetos com 1000 dados em cada.
 Os pesquisadores, liderados por Fei-Fei Li, que apresentou este conjunto de dados
 aproveitou a Pesquisa de imagens do Google para pré-filtrar grandes conjuntos de candidatos
 para cada categoria e empregado
@@ -160,7 +134,7 @@ impulsionou a pesquisa sobre visão computacional e aprendizado de máquina,
 desafiando os pesquisadores a identificar quais modelos tiveram melhor desempenho
 em uma escala maior do que os acadêmicos haviam considerado anteriormente.
 
-### Missing Ingredient: Hardware
+### Ing: Hardware
 
 Deep learning models are voracious consumers of compute cycles.
 Training can take hundreds of epochs, and each iteration
@@ -675,6 +649,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDAwNzg3NiwtMTk4NjUzODY0NywtMT
-cwNDIwODk2OV19
+eyJoaXN0b3J5IjpbLTc0MTMyNDkwLC0xOTg2NTM4NjQ3LC0xNz
+A0MjA4OTY5XX0=
 -->
