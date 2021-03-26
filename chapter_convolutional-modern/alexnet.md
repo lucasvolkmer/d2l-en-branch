@@ -22,20 +22,6 @@ Em vez de *aprender os recursos*, os recursos foram *criados*.
 A maior parte do progresso veio de ter ideias mais inteligentes para recursos,
 e o algoritmo de aprendizagem foi frequentemente relegado a uma reflexão tardia.
 
-Although some neural network accelerators were available in the 1990s,
-they were not yet sufficiently powerful to make
-deep multichannel, multilayer CNNs
-with a large number of parameters.
-Moreover, datasets were still relatively small.
-Added to these obstacles, key tricks for training neural networks
-including parameter initialization heuristics,
-clever variants of stochastic gradient descent,
-non-squashing activation functions,
-and effective regularization techniques were still missing.
-
-Thus, rather than training *end-to-end* (pixel to classification) systems,
-classical pipelines looked more like this:
-
 Embora alguns aceleradores de rede neural estivessem disponíveis na década de 1990,
 eles ainda não eram suficientemente poderosos para fazer
 CNNs multicanal e multicamadas profundas
@@ -47,7 +33,7 @@ variantes inteligentes de descida gradiente estocástica,
 funções de ativação não esmagadoras,
 e ainda faltavam técnicas de regularização eficazes.
 
-Assim, em vez de treinar sistemas * ponta a ponta * (pixel para classificação),
+Assim, em vez de treinar sistemas *ponta a ponta* (pixel para classificação),
 pipelines clássicos pareciam mais com isto:
 
 
@@ -56,10 +42,10 @@ pipelines clássicos pareciam mais com isto:
 3. Feed the data through a standard set of feature extractors such as the SIFT (scale-invariant feature transform) :cite:`Lowe.2004`, the SURF (speeded up robust features) :cite:`Bay.Tuytelaars.Van-Gool.2006`, or any number of other hand-tuned pipelines.
 4. Dump the resulting representations into your favorite classifier, likely a linear model or kernel method, to train a classifier.
 
-6. Obtenha um conjunto de dados interessante. No início, esses conjuntos de dados exigiam sensores caros (na época, as imagens de 1 megapixel eram de última geração).
-7. Pré-processe o conjunto de dados com recursos feitos à mão com base em algum conhecimento de ótica, geometria, outras ferramentas analíticas e, ocasionalmente, nas descobertas fortuitas de alunos de pós-graduação sortudos.
-8. Alimente os dados por meio de um conjunto padrão de extratores de recursos, como o SIFT (transformação de recurso invariante de escala): cite: `Lowe.2004`, o SURF (recursos robustos acelerados): cite:` Bay.Tuytelaars.Van- Gool.2006`, ou qualquer outro duto ajustado manualmente.
-9. Despeje as representações resultantes em seu classificador favorito, provavelmente um modelo linear ou método de kernel, para treinar um classificador.
+5. Obtenha um conjunto de dados interessante. No início, esses conjuntos de dados exigiam sensores caros (na época, as imagens de 1 megapixel eram de última geração).
+6. Pré-processe o conjunto de dados com recursos feitos à mão com base em algum conhecimento de ótica, geometria, outras ferramentas analíticas e, ocasionalmente, nas descobertas fortuitas de alunos de pós-graduação sortudos.
+7. Alimente os dados por meio de um conjunto padrão de extratores de recursos, como o SIFT (transformação de recurso invariante de escala) :cite:`Lowe.2004`, o SURF (recursos robustos acelerados) :cite:`Bay.Tuytelaars.Van- Gool.2006`, ou qualquer outro duto ajustado manualmente.
+8. 1.espeje as representações resultantes em seu classificador favorito, provavelmente um modelo linear ou método de kernel, para treinar um classificador.
 
 If you spoke to machine learning researchers,
 they believed that machine learning was both important and beautiful.
@@ -754,6 +740,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODQ3MzY0MDksLTE3MDQyMDg5NjldfQ
+eyJoaXN0b3J5IjpbLTExOTk3ODQyOTgsLTE3MDQyMDg5NjldfQ
 ==
 -->
