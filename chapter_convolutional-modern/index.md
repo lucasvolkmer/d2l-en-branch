@@ -22,20 +22,6 @@ arquitetura pronta para uso em visão computacional;
 e redes densamente conectadas (DenseNet),
 que são caros para calcular, mas estabeleceram alguns benchmarks recentes.
 
-While the idea of *deep* neural networks is quite simple
-(stack together a bunch of layers),
-performance can vary wildly across architectures and hyperparameter choices.
-The neural networks described in this chapter
-are the product of intuition, a few mathematical insights,
-and a whole lot of trial and error. 
-We present these models in chronological order,
-partly to convey a sense of the history
-so that you can form your own intuitions 
-about where the field is heading 
-and perhaps develop your own architectures.
-For instance,
-batch normalization and residual connections described in this chapter have offered two popular ideas for training and designing deep models.
-
 Embora a ideia de redes neurais *profundas* seja bastante simples
 (empilhar um monte de camadas),
 o desempenho pode variar muito entre as arquiteturas e as opções de hiperparâmetros.
@@ -63,6 +49,5 @@ densenet
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjg5MzY3NDcsLTEwOTA3NDQ3MTFdfQ
-==
+eyJoaXN0b3J5IjpbODc1MTAyODQyLC0xMDkwNzQ0NzExXX0=
 -->
