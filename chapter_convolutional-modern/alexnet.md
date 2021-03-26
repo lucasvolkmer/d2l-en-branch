@@ -92,14 +92,6 @@ e descreve descritores de imagem de nível inferior.
 :width:`400px`
 :label:`fig_filters`
 
-Higher layers in the network might build upon these representations
-to represent larger structures, like eyes, noses, blades of grass, and so on.
-Even higher layers might represent whole objects
-like people, airplanes, dogs, or frisbees.
-Ultimately, the final hidden state learns a compact representation
-of the image that summarizes its contents
-such that data belonging to different categories can be easily separated.
-
 As camadas superiores da rede podem se basear nessas representações
 para representar estruturas maiores, como olhos, narizes, folhas de grama e assim por diante.
 Mesmo camadas mais altas podem representar objetos inteiros
@@ -108,19 +100,13 @@ Em última análise, o estado oculto final aprende uma representação compacta
 da imagem que resume seu conteúdo
 de forma que os dados pertencentes a diferentes categorias possam ser facilmente separados.
 
-While the ultimate breakthrough for many-layered CNNs
-came in 2012, a core group of researchers had dedicated themselves
-to this idea, attempting to learn hierarchical representations of visual data
-for many years.
-The ultimate breakthrough in 2012 can be attributed to two key factors.
-
 Enquanto a inovação definitiva para CNNs de várias camadas
 veio em 2012, um grupo central de pesquisadores se dedicou
 a esta ideia, tentando aprender representações hierárquicas de dados visuais
 por muitos anos.
 O grande avanço em 2012 pode ser atribuído a dois fatores principais.
 
-### Missing Ingredient: Data
+### Ingrediente Faltante: Dados
 
 Deep models with many layers require large amounts of data
 in order to enter the regime
@@ -689,6 +675,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNDE5NDIwMiwtMTk4NjUzODY0NywtMT
+eyJoaXN0b3J5IjpbLTM1NDAwNzg3NiwtMTk4NjUzODY0NywtMT
 cwNDIwODk2OV19
 -->
