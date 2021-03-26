@@ -154,30 +154,12 @@ Naquela época, a NVIDIA e a ATI começaram a otimizar GPUs
 para operações gerais de computação,
 indo tão longe a ponto de comercializá-los como *GPUs de uso geral* (GPGPU).
 
-To provide some intuition, consider the cores of a modern microprocessor
-(CPU).
-Each of the cores is fairly powerful running at a high clock frequency
-and sporting large caches (up to several megabytes of L3).
-Each core is well-suited to executing a wide range of instructions,
-with branch predictors, a deep pipeline, and other bells and whistles
-that enable it to run a large variety of programs.
-This apparent strength, however, is also its Achilles heel:
-general-purpose cores are very expensive to build.
-They require lots of chip area,
-a sophisticated support structure
-(memory interfaces, caching logic between cores,
-high-speed interconnects, and so on),
-and they are comparatively bad at any single task.
-Modern laptops have up to 4 cores,
-and even high-end servers rarely exceed 64 cores,
-simply because it is not cost effective.
-
 Para fornecer alguma intuição, considere os núcleos de um microprocessador moderno
 (CPU).
 Cada um dos núcleos é bastante poderoso rodando em uma alta frequência de clock
 e exibindo grandes caches (até vários megabytes de L3).
 Cada núcleo é adequado para executar uma ampla gama de instruções,
-com preditores de ramificação, um pipeline profundo e outros sinos e assobios
+com preditores de ramificação, um pipeline profundo e outras técnicas
 que permitem executar uma grande variedade de programas.
 Essa aparente força, no entanto, é também seu calcanhar de Aquiles:
 núcleos de uso geral são muito caros para construir.
@@ -211,7 +193,7 @@ which makes them more energy efficient.
 Last, many operations in deep learning require high memory bandwidth.
 Again, GPUs shine here with buses that are at least 10 times as wide as many CPUs.
 
-Em comparação, as GPUs consistem em $ 100 \ sim 1000 $ pequenos elementos de processamento
+Em comparação, as GPUs consistem em $100 \sim 1000 $ pequenos elementos de processamento
 (os detalhes diferem um pouco entre NVIDIA, ATI, ARM e outros fornecedores de chips),
 frequentemente agrupados em grupos maiores (a NVIDIA os chama de warps).
 Embora cada núcleo seja relativamente fraco,
@@ -629,6 +611,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzODA5OTA3LC0xOTg2NTM4NjQ3LC0xNz
-A0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbLTEyMzkyNzQyNTgsLTE5ODY1Mzg2NDcsLT
+E3MDQyMDg5NjldfQ==
 -->
