@@ -383,30 +383,31 @@ executam
 as operações de convolução estrita
 ou as operações de correlação cruzada.
 
-To illustrate this, suppose that a convolutional layer performs *cross-correlation* and learns the kernel in :numref:`fig_correlation`, which is denoted as the matrix $\mathbf{K}$ here.
-Assuming that other conditions remain unchanged, 
-when this layer performs strict *convolution* instead,
-the learned kernel $\mathbf{K}'$ will be the same as $\mathbf{K}$
-after $\mathbf{K}'$ is 
-flipped both horizontally and vertically.
-That is to say,
-when the convolutional layer
-performs strict *convolution*
-for the input in :numref:`fig_correlation`
-and $\mathbf{K}'$,
-the same output in :numref:`fig_correlation`
-(cross-correlation of the input and $\mathbf{K}$)
-will be obtained.
 
-In keeping with standard terminology with deep learning literature,
-we will continue to refer to the cross-correlation operation
-as a convolution even though, strictly-speaking, it is slightly different.
-Besides,
-we use the term *element* to refer to
-an entry (or component) of any tensor representing a layer representation or a convolution kernel.
+Para ilustrar isso, suponha que uma camada convolucional execute *correlação cruzada* e aprenda o *kernel* em :numref:`fig_correlation`, que é denotado como a matriz $\mathbf{K}$ aqui.
+Supondo que outras condições permaneçam inalteradas,
+quando esta camada executa *convolução* estrita em vez disso,
+o *kernel* aprendido $\mathbf{K}'$ será o mesmo que $\mathbf{K}$
+depois que $\mathbf{K}'$ is  é
+invertido horizontalmente e verticalmente.
+Quer dizer,
+quando a camada convolucional
+executa *convolução* estrita
+para a entrada em :numref:`fig_correlation`
+e $\mathbf{K}'$,
+a mesma saída em :numref:`fig_correlation`
+(correlação cruzada da entrada e $\mathbf{K}$)
+será obtida.
+
+De acordo com a terminologia padrão da literatura de *deep learning*,
+continuaremos nos referindo à operação de correlação cruzada
+como uma convolução, embora, estritamente falando, seja ligeiramente diferente.
+Além do mais,
+usamos o termo *elemento* para nos referirmos a
+uma entrada (ou componente) de qualquer tensor que representa uma representação de camada ou um *kernel* de convolução.
 
 
-## Feature Map and Receptive Field
+## Mapa de Características e Campo Receptivo
 
 As described in :numref:`subsec_why-conv-channels`,
 the convolutional layer output in
@@ -485,7 +486,8 @@ we can build a deeper network.
 [Discussions](https://discuss.d2l.ai/t/271)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzc4MzEzNDcsLTE5ODg2NDM0NzUsLT
-E4MTg0NzQ3MzUsLTE0OTQ2MDExMTIsLTI0MjE5ODI3NywtNjc0
-ODUxNzY5LDU1OTEzNTQ1MCwxOTg0OTc5Nzk3XX0=
+eyJoaXN0b3J5IjpbMTIwNjU1NDU1NywtMTY3NzgzMTM0NywtMT
+k4ODY0MzQ3NSwtMTgxODQ3NDczNSwtMTQ5NDYwMTExMiwtMjQy
+MTk4Mjc3LC02NzQ4NTE3NjksNTU5MTM1NDUwLDE5ODQ5Nzk3OT
+ddfQ==
 -->
