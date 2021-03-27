@@ -1,4 +1,4 @@
-# Multiple Input and Multiple Output Channels
+# Canais de múltiplas entradas e saídas
 :label:`sec_channels`
 
 While we have described the multiple channels
@@ -280,5 +280,5 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NjM5ODc2NV19
+eyJoaXN0b3J5IjpbMTA4NDc5NTE5NywxMDk2Mzk4NzY1XX0=
 -->
