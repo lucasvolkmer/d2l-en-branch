@@ -273,7 +273,7 @@ conv2d = tf.keras.layers.Conv2D(1, kernel_size=3, padding='same', strides=2)
 comp_conv2d(conv2d, X).shape
 ```
 
-Next, we will look at a slightly more complicated example.
+A seguir, veremos um exemplo um pouco mais complicado.
 
 ```{.python .input}
 conv2d = nn.Conv2D(1, kernel_size=(3, 5), padding=(0, 1), strides=(3, 4))
@@ -328,7 +328,7 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0OTgxMDAzNiwtNDY5Mjc4NjA3LC0xOD
+eyJoaXN0b3J5IjpbMjEzMjMzMzgwMiwtNDY5Mjc4NjA3LC0xOD
 k2Nzc1NDk1LC0xNDgzMTY2NjEwLDE1NTY5NTczNDgsMTk3NDUw
 NDg5MiwtOTA0ODM3MzZdfQ==
 -->
