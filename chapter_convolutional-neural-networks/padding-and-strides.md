@@ -312,9 +312,9 @@ ou seja, geralmente temos $p_h = p_w$ e $s_h = s_w$.
 ## Exercises
 
 1. Para o último exemplo nesta seção, use matemática para calcular a forma de saída para ver se é consistente com o resultado experimental.
-1. Experimente outras combinações de preenchimento e passada nos experimentos desta seção.
-1. Para sinais de áudio, a que corresponde uma passada de 2?
-1. Quais são os benefícios computacionais de uma passada maior que 1?
+1. Experimente outras combinações de preenchimento e saltos nos experimentos desta seção.
+1. Para sinais de áudio, a que corresponde um salto de 2?
+1. Quais são os benefícios computacionais de uma salto maior que 1?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/67)
@@ -328,7 +328,7 @@ ou seja, geralmente temos $p_h = p_w$ e $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODQwNDUwNjcsMjEzMjMzMzgwMiwtND
+eyJoaXN0b3J5IjpbLTE0NDU4MTAyODcsMjEzMjMzMzgwMiwtND
 Y5Mjc4NjA3LC0xODk2Nzc1NDk1LC0xNDgzMTY2NjEwLDE1NTY5
 NTczNDgsMTk3NDUwNDg5MiwtOTA0ODM3MzZdfQ==
 -->
