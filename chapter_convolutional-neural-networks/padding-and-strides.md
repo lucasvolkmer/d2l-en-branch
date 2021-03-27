@@ -240,7 +240,7 @@ não há saída porque o elemento de entrada não pode preencher a janela
 ![Correlação cruzada com passos de 3 e 2 para altura e largura, respectivamente.](../img/conv-stride.svg)
 :label:`img_conv_stride`
 
-Em geral, quando o passo para a altura é $s_h$
+Em geral, quando o salto para a altura é $s_h$
 e a distância para a largura é $s_w$, a forma de saída é
 
 $$\lfloor(n_h-k_h+p_h+s_h)/s_h\rfloor \times \lfloor(n_w-k_w+p_w+s_w)/s_w\rfloor.$$
@@ -250,10 +250,10 @@ Se definirmos $p_h=k_h-1$ e $p_w=k_w-1$,
 então a forma de saída será simplificada para
 $\lfloor(n_h+s_h-1)/s_h\rfloor \times \lfloor(n_w+s_w-1)/s_w\rfloor$.
 Indo um passo adiante, se a altura e largura de entrada
-são divisíveis pelas passadas na altura e largura,
+são divisíveis pelos saltos na altura e largura,
 então a forma de saída será $(n_h/s_h) \times (n_w/s_w)$.
 
-Abaixo, definimos os passos de altura e largura para 2,
+Abaixo, definimos os saltos de altura e largura para 2,
 reduzindo assim pela metade a altura e a largura da entrada.
 
 ```{.python .input}
@@ -296,18 +296,18 @@ comp_conv2d(conv2d, X).shape
 Por uma questão de brevidade, quando o número de preenchimento
 em ambos os lados da altura e largura de entrada são $p_h$ e$p_w$ respectivamente, chamamos o preenchimento $(p_h, p_w)$.
 Especificamente, quando $p_h = p_w = p$, o preenchimento é $p$.
-Quando os passos de altura e largura são $s_h$ e $s_w$, respectivamente,
-chamamos o passo de $(s_h, s_w)$.
-Especificamente, quando $s_h = s_w = s$, , o passo é $s$.
-Por padrão, o preenchimento é 0 e a passada é 1.
-Na prática, raramente usamos passadas não homogêneas ou preenchimento,
+Quando os saltos de altura e largura são $s_h$ e $s_w$, respectivamente,
+chamamos o salto de $(s_h, s_w)$.
+Especificamente, quando $s_h = s_w = s$, , o salto é $s$.
+Por padrão, o preenchimento é 0 e a salto é 1.
+Na prática, raramente usamos saltos não homogêneos ou preenchimento,
 ou seja, geralmente temos $p_h = p_w$ e $s_h = s_w$.
 
 ## Resumo
 
 * O preenchimento pode aumentar a altura e a largura da saída. Isso geralmente é usado para dar à saída a mesma altura e largura da entrada.
-* A passada pode reduzir a resolução da saída, por exemplo, reduzindo a altura e largura da saída para apenas $1/n$ da altura e largura da entrada ($n$ é um número inteiro maior que $1$).
-* Preenchimento e passada podem ser usados para ajustar a dimensionalidade dos dados de forma eficaz.
+* Os saltos podem reduzir a resolução da saída, por exemplo, reduzindo a altura e largura da saída para apenas $1/n$ da altura e largura da entrada ($n$ é um número inteiro maior que $1$).
+* Preenchimento e saltos podem ser usados para ajustar a dimensionalidade dos dados de forma eficaz.
 
 ## Exercises
 
@@ -328,7 +328,7 @@ ou seja, geralmente temos $p_h = p_w$ e $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMzE0MDc5NCwyMTMyMzMzODAyLC00Nj
-kyNzg2MDcsLTE4OTY3NzU0OTUsLTE0ODMxNjY2MTAsMTU1Njk1
-NzM0OCwxOTc0NTA0ODkyLC05MDQ4MzczNl19
+eyJoaXN0b3J5IjpbLTEwODQwNDUwNjcsMjEzMjMzMzgwMiwtND
+Y5Mjc4NjA3LC0xODk2Nzc1NDk1LC0xNDgzMTY2NjEwLDE1NTY5
+NTczNDgsMTk3NDUwNDg5MiwtOTA0ODM3MzZdfQ==
 -->
