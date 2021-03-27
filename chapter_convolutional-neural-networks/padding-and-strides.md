@@ -212,29 +212,30 @@ comp_conv2d(conv2d, X).shape
 
 ## Saltos
 
-When computing the cross-correlation,
-we start with the convolution window
-at the top-left corner of the input tensor,
-and then slide it over all locations both down and to the right.
-In previous examples, we default to sliding one element at a time.
-However, sometimes, either for computational efficiency
-or because we wish to downsample,
-we move our window more than one element at a time,
-skipping the intermediate locations.
 
-We refer to the number of rows and columns traversed per slide as the *stride*.
-So far, we have used strides of 1, both for height and width.
-Sometimes, we may want to use a larger stride.
-:numref:`img_conv_stride` shows a two-dimensional cross-correlation operation
-with a stride of 3 vertically and 2 horizontally.
-The shaded portions are the output elements as well as the input and kernel tensor elements used for the output computation: $0\times0+0\times1+1\times2+2\times3=8$, $0\times0+6\times1+0\times2+0\times3=6$.
-We can see that when the second element of the first column is outputted,
-the convolution window slides down three rows.
-The convolution window slides two columns to the right
-when the second element of the first row is outputted.
-When the convolution window continues to slide two columns to the right on the input,
-there is no output because the input element cannot fill the window
-(unless we add another column of padding).
+Ao calcular a correlação cruzada,
+começamos com a janela de convolução
+no canto superior esquerdo do tensor de entrada,
+e o deslizamos sobre todos os locais para baixo e para a direita.
+Nos exemplos anteriores, optamos por deslizar um elemento de cada vez.
+No entanto, às vezes, seja para eficiência computacional
+ou porque desejamos reduzir a resolução,
+movemos nossa janela mais de um elemento por vez,
+pulando os locais intermediários.
+
+Nos referimos ao número de linhas e colunas percorridas por slide como o *passo*.
+Até agora, usamos passos de 1, tanto para altura quanto para largura.
+Às vezes, podemos querer dar uma passada maior.
+:numref:`img_conv_stride` mostra uma operação de correlação cruzada bidimensional
+com uma passada de 3 na vertical e 2 na horizontal.
+As partes sombreadas são os elementos de saída, bem como os elementos tensores de entrada e *kernel* usados ​​para o cálculo de saída: $0\times0+0\times1+1\times2+2\times3=8$, $0\times0+6\times1+0\times2+0\times3=6$.
+Podemos ver que quando o segundo elemento da primeira coluna é gerado,
+a janela de convolução desliza três fileiras para baixo.
+A janela de convolução desliza duas colunas para a direita
+quando o segundo elemento da primeira linha é gerado.
+Quando a janela de convolução continua a deslizar duas colunas para a direita na entrada,
+não há saída porque o elemento de entrada não pode preencher a janela
+(a menos que adicionemos outra coluna de preenchimento).
 
 ![Cross-correlation with strides of 3 and 2 for height and width, respectively.](../img/conv-stride.svg)
 :label:`img_conv_stride`
@@ -326,6 +327,7 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTY3NzU0OTUsLTE0ODMxNjY2MTAsMT
-U1Njk1NzM0OCwxOTc0NTA0ODkyLC05MDQ4MzczNl19
+eyJoaXN0b3J5IjpbLTQ2OTI3ODYwNywtMTg5Njc3NTQ5NSwtMT
+Q4MzE2NjYxMCwxNTU2OTU3MzQ4LDE5NzQ1MDQ4OTIsLTkwNDgz
+NzM2XX0=
 -->
