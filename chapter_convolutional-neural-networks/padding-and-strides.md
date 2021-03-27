@@ -58,11 +58,11 @@ As partes sombreadas são o primeiro elemento de saída, bem como os elementos t
 ![Correlação cruzada bidimensional com preenchimento.](../img/conv-pad.svg)
 :label:`img_conv_pad`
 
-In general, if we add a total of $p_h$ rows of padding
-(roughly half on top and half on bottom)
-and a total of $p_w$ columns of padding
-(roughly half on the left and half on the right),
-the output shape will be
+Em geral, se adicionarmos um total de $p_h$ linhas de preenchimento
+(cerca de metade na parte superior e metade na parte inferior)
+e um total de $p_w$ colunas de preenchimento
+(cerca de metade à esquerda e metade à direita),
+a forma de saída será
 
 $$(n_h-k_h+p_h+1)\times(n_w-k_w+p_w+1).$$
 
@@ -324,6 +324,6 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzE5MjkxNDEsMTU1Njk1NzM0OCwxOT
+eyJoaXN0b3J5IjpbLTE0ODMxNjY2MTAsMTU1Njk1NzM0OCwxOT
 c0NTA0ODkyLC05MDQ4MzczNl19
 -->
