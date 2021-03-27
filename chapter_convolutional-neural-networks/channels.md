@@ -1,21 +1,22 @@
 # Canais de Múltiplas Entradas e Saídas
 :label:`sec_channels`
 
-While we have described the multiple channels
-that comprise each image (e.g., color images have the standard RGB channels
-to indicate the amount of red, green and blue) and convolutional layers for multiple channels in :numref:`subsec_why-conv-channels`,
-until now, we simplified all of our numerical examples
-by working with just a single input and a single output channel.
-This has allowed us to think of our inputs, convolution kernels,
-and outputs each as two-dimensional tensors.
 
-When we add channels into the mix,
-our inputs and hidden representations
-both become three-dimensional tensors.
-For example, each RGB input image has shape $3\times h\times w$.
-We refer to this axis, with a size of 3, as the *channel* dimension.
-In this section, we will take a deeper look
-at convolution kernels with multiple input and multiple output channels.
+Embora tenhamos descrito os vários canais
+que compõem cada imagem (por exemplo, imagens coloridas têm os canais RGB padrão
+para indicar a quantidade de vermelho, verde e azul) e camadas convolucionais para vários canais em :numref:`subsec_why-conv-channels`,
+até agora, simplificamos todos os nossos exemplos numéricos
+trabalhando com apenas uma única entrada e um único canal de saída.
+Isso nos permitiu pensar em nossas entradas, *kernels* de convolução,
+e saídas, cada um como tensores bidimensionais.
+
+Quando adicionamos canais a isto,
+nossas entradas e representações ocultas
+ambas se tornam tensores tridimensionais.
+Por exemplo, cada imagem de entrada RGB tem a forma $3\times h\times w$.
+Referimo-nos a este eixo, com um tamanho de 3, como a dimensão do *canal*.
+Nesta seção, daremos uma olhada mais detalhada
+em núcleos de convolução com múltiplos canais de entrada e saída.
 
 ## Multiple Input Channels
 
@@ -280,6 +281,6 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTQyMjg0NTEsMTA4NDc5NTE5NywxMD
-k2Mzk4NzY1XX0=
+eyJoaXN0b3J5IjpbMjIzNjY5NjMzLDEwODQ3OTUxOTcsMTA5Nj
+M5ODc2NV19
 -->
