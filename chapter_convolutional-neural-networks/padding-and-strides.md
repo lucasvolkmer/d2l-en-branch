@@ -39,23 +39,23 @@ e.g., if we find the original input resolution to be unwieldy.
 
 ## Preenchimento
 
-As described above, one tricky issue when applying convolutional layers
-is that we tend to lose pixels on the perimeter of our image.
-Since we typically use small kernels,
-for any given convolution,
-we might only lose a few pixels,
-but this can add up as we apply
-many successive convolutional layers.
-One straightforward solution to this problem
-is to add extra pixels of filler around the boundary of our input image,
-thus increasing the effective size of the image.
-Typically, we set the values of the extra pixels to zero.
-In :numref:`img_conv_pad`, we pad a $3 \times 3$ input,
-increasing its size to $5 \times 5$.
-The corresponding output then increases to a $4 \times 4$ matrix.
-The shaded portions are the first output element as well as the input and kernel tensor elements used for the output computation: $0\times0+0\times1+0\times2+0\times3=0$.
+Conforme descrito acima, um problema complicado ao aplicar camadas convolucionais
+é que tendemos a perder pixels no perímetro de nossa imagem.
+Uma vez que normalmente usamos pequenos *kernels*,
+para qualquer convolução dada,
+podemos perder apenas alguns pixels,
+mas isso pode somar conforme aplicamos
+muitas camadas convolucionais sucessivas.
+Uma solução direta para este problema
+é adicionar pixels extras de preenchimento ao redor do limite de nossa imagem de entrada,
+aumentando assim o tamanho efetivo da imagem.
+Normalmente, definimos os valores dos pixels extras para zero.
+Em :numref:`img_conv_pad`, preenchemos uma entrada $3 \times 3$,
+aumentando seu tamanho para $5 \times 5$.
+A saída correspondente então aumenta para uma matriz $4 \times 4$
+As partes sombreadas são o primeiro elemento de saída, bem como os elementos tensores de entrada e kernel usados para o cálculo de saída: $0\times0+0\times1+0\times2+0\times3=0$.
 
-![Two-dimensional cross-correlation with padding.](../img/conv-pad.svg)
+![Correlação cruzada bidimensional com preenchimento.](../img/conv-pad.svg)
 :label:`img_conv_pad`
 
 In general, if we add a total of $p_h$ rows of padding
@@ -324,6 +324,6 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1Njk1NzM0OCwxOTc0NTA0ODkyLC05MD
-Q4MzczNl19
+eyJoaXN0b3J5IjpbLTIxMzE5MjkxNDEsMTU1Njk1NzM0OCwxOT
+c0NTA0ODkyLC05MDQ4MzczNl19
 -->
