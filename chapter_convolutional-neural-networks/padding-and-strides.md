@@ -237,23 +237,24 @@ Quando a janela de convolução continua a deslizar duas colunas para a direita 
 não há saída porque o elemento de entrada não pode preencher a janela
 (a menos que adicionemos outra coluna de preenchimento).
 
-![Cross-correlation with strides of 3 and 2 for height and width, respectively.](../img/conv-stride.svg)
+![Correlação cruzada com passos de 3 e 2 para altura e largura, respectivamente.](../img/conv-stride.svg)
 :label:`img_conv_stride`
 
-In general, when the stride for the height is $s_h$
-and the stride for the width is $s_w$, the output shape is
+Em geral, quando o passo para a altura é $s_h$
+e a distância para a largura é $s_w$, a forma de saída é
 
 $$\lfloor(n_h-k_h+p_h+s_h)/s_h\rfloor \times \lfloor(n_w-k_w+p_w+s_w)/s_w\rfloor.$$
 
-If we set $p_h=k_h-1$ and $p_w=k_w-1$,
-then the output shape will be simplified to
-$\lfloor(n_h+s_h-1)/s_h\rfloor \times \lfloor(n_w+s_w-1)/s_w\rfloor$.
-Going a step further, if the input height and width
-are divisible by the strides on the height and width,
-then the output shape will be $(n_h/s_h) \times (n_w/s_w)$.
 
-Below, we set the strides on both the height and width to 2,
-thus halving the input height and width.
+Se definirmos $p_h=k_h-1$ e $p_w=k_w-1$,
+então a forma de saída será simplificada para
+$\lfloor(n_h+s_h-1)/s_h\rfloor \times \lfloor(n_w+s_w-1)/s_w\rfloor$.
+Indo um passo adiante, se a altura e largura de entrada
+são divisíveis pelas passadas na altura e largura,
+então a forma de saída será $(n_h/s_h) \times (n_w/s_w)$.
+
+Abaixo, definimos os passos de altura e largura para 2,
+reduzindo assim pela metade a altura e a largura da entrada.
 
 ```{.python .input}
 conv2d = nn.Conv2D(1, kernel_size=3, padding=1, strides=2)
@@ -327,7 +328,7 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2OTI3ODYwNywtMTg5Njc3NTQ5NSwtMT
-Q4MzE2NjYxMCwxNTU2OTU3MzQ4LDE5NzQ1MDQ4OTIsLTkwNDgz
-NzM2XX0=
+eyJoaXN0b3J5IjpbMTE0OTgxMDAzNiwtNDY5Mjc4NjA3LC0xOD
+k2Nzc1NDk1LC0xNDgzMTY2NjEwLDE1NTY5NTczNDgsMTk3NDUw
+NDg5MiwtOTA0ODM3MzZdfQ==
 -->
