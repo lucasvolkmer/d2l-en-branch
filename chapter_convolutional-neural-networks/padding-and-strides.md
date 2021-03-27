@@ -1,36 +1,37 @@
-# Padding and reenchimento e *Stride*
+# Preenchimento e Saltos
 :label:`sec_padding`
 
 
-In the previous example of :numref:`fig_correlation`,
-our input had both a height and width of 3
-and our convolution kernel had both a height and width of 2,
-yielding an output representation with dimension $2\times2$.
-As we generalized in :numref:`sec_conv_layer`,
-assuming that
-the input shape is $n_h\times n_w$
-and the convolution kernel shape is $k_h\times k_w$,
-then the output shape will be
-$(n_h-k_h+1) \times (n_w-k_w+1)$.
-Therefore, the output shape of the convolutional layer
-is determined by the shape of the input
-and the shape of the convolution kernel.
 
-In several cases, we incorporate techniques,
-including padding and strided convolutions,
-that affect the size of the output.
-As motivation, note that since kernels generally
-have width and height greater than $1$,
-after applying many successive convolutions,
-we tend to wind up with outputs that are
-considerably smaller than our input.
-If we start with a $240 \times 240$ pixel image,
-$10$ layers of $5 \times 5$ convolutions
-reduce the image to $200 \times 200$ pixels,
-slicing off $30 \%$ of the image and with it
-obliterating any interesting information
-on the boundaries of the original image.
-*Padding* is the most popular tool for handling this issue.
+No exemplo anterior de :numref:`fig_correlation`,
+nossa entrada tinha altura e largura de 3
+e nosso núcleo de convolução tinha altura e largura de 2,
+produzindo uma representação de saída com dimensão $2\times2$.
+Como generalizamos em :numref:`sec_conv_layer`,
+assumindo que
+a forma de entrada é $n_h\times n_w$
+e a forma do kernel de convolução é $k_h\times k_w$,
+então a forma de saída será
+$(n_h-k_h+1) \times (n_w-k_w+1)$.
+Portanto, a forma de saída da camada convolucional
+é determinada pela forma da entrada
+e a forma do núcleo de convolução.
+
+Em vários casos, incorporamos técnicas,
+incluindo preenchimento e convoluções com saltos,
+que afetam o tamanho da saída.
+Como motivação, note que uma vez que os *kernels* geralmente
+têm largura e altura maiores que $1$,
+depois de aplicar muitas convoluções sucessivas,
+tendemos a acabar com resultados que são
+consideravelmente menor do que nossa entrada.
+Se começarmos com uma imagem de $240 \times 240$ pixels,
+$10$ camadas de $5 \times 5$ convoluções
+reduzem a imagem para $200 \times 200$ pixels,
+cortando $30 \%$ da imagem e com ela
+obliterando qualquer informação interessante
+nos limites da imagem original.
+*Preenchimento* é a ferramenta mais popular para lidar com esse problema.
 
 In other cases, we may want to reduce the dimensionality drastically,
 e.g., if we find the original input resolution to be unwieldy.
@@ -323,5 +324,5 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNDgzNzM2XX0=
+eyJoaXN0b3J5IjpbMTk3NDUwNDg5MiwtOTA0ODM3MzZdfQ==
 -->
