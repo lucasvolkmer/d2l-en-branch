@@ -293,17 +293,17 @@ conv2d = tf.keras.layers.Conv2D(1, kernel_size=(3,5), padding='valid',
 comp_conv2d(conv2d, X).shape
 ```
 
-For the sake of brevity, when the padding number
-on both sides of the input height and width are $p_h$ and $p_w$ respectively, we call the padding $(p_h, p_w)$.
-Specifically, when $p_h = p_w = p$, the padding is $p$.
-When the strides on the height and width are $s_h$ and $s_w$, respectively,
-we call the stride $(s_h, s_w)$.
-Specifically, when $s_h = s_w = s$, the stride is $s$.
-By default, the padding is 0 and the stride is 1.
-In practice, we rarely use inhomogeneous strides or padding,
-i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
+Por uma questão de brevidade, quando o número de preenchimento
+em ambos os lados da altura e largura de entrada são $p_h$ e$p_w$ respectivamente, chamamos o preenchimento $(p_h, p_w)$.
+Especificamente, quando $p_h = p_w = p$, o preenchimento é $p$.
+Quando os passos de altura e largura são $s_h$ e $s_w$, respectivamente,
+chamamos o passo de $(s_h, s_w)$.
+Especificamente, quando $s_h = s_w = s$, , o passo é $s$.
+Por padrão, o preenchimento é 0 e a passada é 1.
+Na prática, raramente usamos passadas não homogêneas ou preenchimento,
+ou seja, geralmente temos $p_h = p_w$ e $s_h = s_w$.
 
-## Summary
+## Resumo
 
 * Padding can increase the height and width of the output. This is often used to give the output the same height and width as the input.
 * The stride can reduce the resolution of the output, for example reducing the height and width of the output to only $1/n$ of the height and width of the input ($n$ is an integer greater than $1$).
@@ -328,7 +328,7 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMjMzMzgwMiwtNDY5Mjc4NjA3LC0xOD
-k2Nzc1NDk1LC0xNDgzMTY2NjEwLDE1NTY5NTczNDgsMTk3NDUw
-NDg5MiwtOTA0ODM3MzZdfQ==
+eyJoaXN0b3J5IjpbMzg4NzU5MjY3LDIxMzIzMzM4MDIsLTQ2OT
+I3ODYwNywtMTg5Njc3NTQ5NSwtMTQ4MzE2NjYxMCwxNTU2OTU3
+MzQ4LDE5NzQ1MDQ4OTIsLTkwNDgzNzM2XX0=
 -->
