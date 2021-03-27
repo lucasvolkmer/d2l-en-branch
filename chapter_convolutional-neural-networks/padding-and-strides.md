@@ -180,9 +180,9 @@ X = tf.random.uniform(shape=(8, 8))
 comp_conv2d(conv2d, X).shape
 ```
 
-When the height and width of the convolution kernel are different,
-we can make the output and input have the same height and width
-by setting different padding numbers for height and width.
+Quando a altura e largura do núcleo de convolução são diferentes,
+podemos fazer com que a saída e a entrada tenham a mesma altura e largura
+definindo diferentes números de preenchimento para altura e largura.
 
 ```{.python .input}
 # Here, we use a convolution kernel with a height of 5 and a width of 3. The
@@ -210,7 +210,7 @@ conv2d = tf.keras.layers.Conv2D(1, kernel_size=(5, 3), padding='same')
 comp_conv2d(conv2d, X).shape
 ```
 
-## Stride
+## Saltos
 
 When computing the cross-correlation,
 we start with the convolution window
@@ -326,6 +326,6 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDkxNzUxMjMsLTE0ODMxNjY2MTAsMT
+eyJoaXN0b3J5IjpbLTE4OTY3NzU0OTUsLTE0ODMxNjY2MTAsMT
 U1Njk1NzM0OCwxOTc0NTA0ODkyLC05MDQ4MzczNl19
 -->
