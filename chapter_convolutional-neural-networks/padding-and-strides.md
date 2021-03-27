@@ -37,7 +37,7 @@ In other cases, we may want to reduce the dimensionality drastically,
 e.g., if we find the original input resolution to be unwieldy.
 *Strided convolutions* are a popular technique that can help in these instances.
 
-## Padding
+## Preenchimento
 
 As described above, one tricky issue when applying convolutional layers
 is that we tend to lose pixels on the perimeter of our image.
@@ -324,5 +324,6 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NDUwNDg5MiwtOTA0ODM3MzZdfQ==
+eyJoaXN0b3J5IjpbMTU1Njk1NzM0OCwxOTc0NTA0ODkyLC05MD
+Q4MzczNl19
 -->
