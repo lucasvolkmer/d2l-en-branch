@@ -223,11 +223,11 @@ ou porque desejamos reduzir a resolução,
 movemos nossa janela mais de um elemento por vez,
 pulando os locais intermediários.
 
-Nos referimos ao número de linhas e colunas percorridas por slide como o *passo*.
-Até agora, usamos passos de 1, tanto para altura quanto para largura.
-Às vezes, podemos querer dar uma passada maior.
+Nos referimos ao número de linhas e colunas percorridas por slide como o *salto*.
+Até agora, usamos saltos de 1, tanto para altura quanto para largura.
+Às vezes, podemos querer dar um salto maior.
 :numref:`img_conv_stride` mostra uma operação de correlação cruzada bidimensional
-com uma passada de 3 na vertical e 2 na horizontal.
+com um salto de 3 na vertical e 2 na horizontal.
 As partes sombreadas são os elementos de saída, bem como os elementos tensores de entrada e *kernel* usados ​​para o cálculo de saída: $0\times0+0\times1+1\times2+2\times3=8$, $0\times0+6\times1+0\times2+0\times3=6$.
 Podemos ver que quando o segundo elemento da primeira coluna é gerado,
 a janela de convolução desliza três fileiras para baixo.
@@ -305,16 +305,16 @@ ou seja, geralmente temos $p_h = p_w$ e $s_h = s_w$.
 
 ## Resumo
 
-* Padding can increase the height and width of the output. This is often used to give the output the same height and width as the input.
-* The stride can reduce the resolution of the output, for example reducing the height and width of the output to only $1/n$ of the height and width of the input ($n$ is an integer greater than $1$).
-* Padding and stride can be used to adjust the dimensionality of the data effectively.
+* O preenchimento pode aumentar a altura e a largura da saída. Isso geralmente é usado para dar à saída a mesma altura e largura da entrada.
+* A passada pode reduzir a resolução da saída, por exemplo, reduzindo a altura e largura da saída para apenas $1/n$ da altura e largura da entrada ($n$ é um número inteiro maior que $1$).
+* Preenchimento e passada podem ser usados para ajustar a dimensionalidade dos dados de forma eficaz.
 
 ## Exercises
 
-1. For the last example in this section, use mathematics to calculate the output shape to see if it is consistent with the experimental result.
-1. Try other padding and stride combinations on the experiments in this section.
-1. For audio signals, what does a stride of 2 correspond to?
-1. What are the computational benefits of a stride larger than 1?
+1. Para o último exemplo nesta seção, use matemática para calcular a forma de saída para ver se é consistente com o resultado experimental.
+1. Experimente outras combinações de preenchimento e passada nos experimentos desta seção.
+1. Para sinais de áudio, a que corresponde uma passada de 2?
+1. Quais são os benefícios computacionais de uma passada maior que 1?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/67)
@@ -328,7 +328,7 @@ ou seja, geralmente temos $p_h = p_w$ e $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg4NzU5MjY3LDIxMzIzMzM4MDIsLTQ2OT
-I3ODYwNywtMTg5Njc3NTQ5NSwtMTQ4MzE2NjYxMCwxNTU2OTU3
-MzQ4LDE5NzQ1MDQ4OTIsLTkwNDgzNzM2XX0=
+eyJoaXN0b3J5IjpbMTQyMzE0MDc5NCwyMTMyMzMzODAyLC00Nj
+kyNzg2MDcsLTE4OTY3NzU0OTUsLTE0ODMxNjY2MTAsMTU1Njk1
+NzM0OCwxOTc0NTA0ODkyLC05MDQ4MzczNl19
 -->
