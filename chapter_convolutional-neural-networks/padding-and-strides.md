@@ -66,44 +66,46 @@ a forma de saída será
 
 $$(n_h-k_h+p_h+1)\times(n_w-k_w+p_w+1).$$
 
-This means that the height and width of the output
-will increase by $p_h$ and $p_w$, respectively.
 
-In many cases, we will want to set $p_h=k_h-1$ and $p_w=k_w-1$
-to give the input and output the same height and width.
-This will make it easier to predict the output shape of each layer
-when constructing the network.
-Assuming that $k_h$ is odd here,
-we will pad $p_h/2$ rows on both sides of the height.
-If $k_h$ is even, one possibility is to
-pad $\lceil p_h/2\rceil$ rows on the top of the input
-and $\lfloor p_h/2\rfloor$ rows on the bottom.
-We will pad both sides of the width in the same way.
+Isso significa que a altura e largura da saída
+aumentará em $p_h$ e $p_w$, respectivamente.
 
-CNNs commonly use convolution kernels
-with odd height and width values, such as 1, 3, 5, or 7.
-Choosing odd kernel sizes has the benefit
-that we can preserve the spatial dimensionality
-while padding with the same number of rows on top and bottom,
-and the same number of columns on left and right.
+Em muitos casos, queremos definir $p_h=k_h-1$ e $p_w=k_w-1$
+para dar à entrada e saída a mesma altura e largura.
+Isso tornará mais fácil prever a forma de saída de cada camada
+ao construir a rede.
+Supondo que $k_h$ seja estranho aqui,
+vamos preencher $p_h/2$ linhas em ambos os lados da altura.
+Se $k_h$ for par, uma possibilidade é
+juntar $\lceil p_h/2\rceil$ linhas no topo da entrada
+e $\lfloor p_h/2\rfloor$ linhas na parte inferior.
+Vamos preencher ambos os lados da largura da mesma maneira.
 
-Moreover, this practice of using odd kernels
-and padding to precisely preserve dimensionality
-offers a clerical benefit.
-For any two-dimensional tensor `X`,
-when the kernel's size is odd
-and the number of padding rows and columns
-on all sides are the same,
-producing an output with the same height and width as the input,
-we know that the output `Y[i, j]` is calculated
-by cross-correlation of the input and convolution kernel
-with the window centered on `X[i, j]`.
 
-In the following example, we create a two-dimensional convolutional layer
-with a height and width of 3
-and apply 1 pixel of padding on all sides.
-Given an input with a height and width of 8,
-we find that the height and width of the output is also 8.
+CNNs geralmente usam *kernels* de convolução
+com valores de altura e largura ímpares, como 1, 3, 5 ou 7.
+Escolher tamanhos ímpares de *kernel* tem o benefício
+que podemos preservar a dimensionalidade espacial
+enquanto preenche com o mesmo número de linhas na parte superior e inferior,
+e o mesmo número de colunas à esquerda e à direita.
+
+Além disso, esta prática de usar *kernels* estranhos
+e preenchimento para preservar precisamente a dimensionalidade
+oferece um benefício administrativo.
+Para qualquer tensor bidimensional `X`,
+quando o tamanho do *kernel* é estranho
+e o número de linhas e colunas de preenchimento
+em todos os lados são iguais,
+produzindo uma saída com a mesma altura e largura da entrada,
+sabemos que a saída `Y [i, j]` é calculada
+por correlação cruzada do kernel de entrada e convolução
+com a janela centralizada em `X [i, j]`.
+
+No exemplo a seguir, criamos uma camada convolucional bidimensional
+com altura e largura de 3
+e aplique 1 pixel de preenchimento em todos os lados.
+Dada uma entrada com altura e largura de 8,
+descobrimos que a altura e a largura da saída também é 8.
 
 ```{.python .input}
 from mxnet import np, npx
@@ -324,6 +326,6 @@ i.e., we usually have $p_h = p_w$ and $s_h = s_w$.
 [Discussions](https://discuss.d2l.ai/t/272)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODMxNjY2MTAsMTU1Njk1NzM0OCwxOT
-c0NTA0ODkyLC05MDQ4MzczNl19
+eyJoaXN0b3J5IjpbLTE2MDkxNzUxMjMsLTE0ODMxNjY2MTAsMT
+U1Njk1NzM0OCwxOTc0NTA0ODkyLC05MDQ4MzczNl19
 -->
