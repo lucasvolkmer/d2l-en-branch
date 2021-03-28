@@ -454,10 +454,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 
 ## Sumário
 
-* AlexNet has a similar structure to that of LeNet, but uses more convolutional layers and a larger parameter space to fit the large-scale ImageNet dataset.
-* Today AlexNet has been surpassed by much more effective architectures but it is a key step from shallow to deep networks that are used nowadays.
-* Although it seems that there are only a few more lines in AlexNet's implementation than in LeNet, it took the academic community many years to embrace this conceptual change and take advantage of its excellent experimental results. This was also due to the lack of efficient computational tools.
-* Dropout, ReLU, and preprocessing were the other key steps in achieving excellent performance in computer vision tasks.
 * AlexNet tem uma estrutura semelhante à do LeNet, mas usa mais camadas convolucionais e um espaço de parâmetro maior para caber no conjunto de dados ImageNet em grande escala.
 * Hoje o AlexNet foi superado por arquiteturas muito mais eficazes, mas é um passo importante das redes superficiais para as profundas que são usadas hoje em dia.
 * Embora pareça que existam apenas mais algumas linhas na implementação do AlexNet do que no LeNet, a comunidade acadêmica levou muitos anos para abraçar essa mudança conceitual e tirar proveito de seus excelentes resultados experimentais. Isso também se deveu à falta de ferramentas computacionais eficientes.
@@ -479,7 +475,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 6. Experimente aumentar o número de épocas. Comparado com o LeNet, como os resultados são diferentes? Porque?
 7. AlexNet pode ser muito complexo para o conjunto de dados Fashion-MNIST.
      1. Tente simplificar o modelo para tornar o treinamento mais rápido, garantindo que a precisão não caia significativamente.
-     1. Projete um modelo melhor que funcione diretamente em imagens de $28 \ vezes 28$.
+     1. Projete um modelo melhor que funcione diretamente em imagens de $28 \times 28$.
 8. Modifique o tamanho do lote e observe as mudanças na precisão e na memória da GPU.
 9. Analise o desempenho computacional do AlexNet.
      1. Qual é a parte dominante para a pegada de memória do AlexNet?
@@ -499,8 +495,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0Nzg2ODk4NiwxODg5NDY0MDAyLDIwNz
-UxNzc5MjYsMTQ1NjcwODQ4NCwxMzMxMzM5NDg3LDU1Njg1NDU5
-NCwyNjcwOTA5MzQsMzQ0NjgzMjkzLC0xODg4NjE3MjQ5LC0zND
-cwMTI4NjEsLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ==
+eyJoaXN0b3J5IjpbLTE4NDYxNTg3NzUsMTg4OTQ2NDAwMiwyMD
+c1MTc3OTI2LDE0NTY3MDg0ODQsMTMzMTMzOTQ4Nyw1NTY4NTQ1
+OTQsMjY3MDkwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0OSwtMz
+Q3MDEyODYxLC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
 -->
