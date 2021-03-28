@@ -421,17 +421,6 @@ for layer in net().layers:
 
 ## Lendo o Dataset
 
-Although AlexNet is trained on ImageNet in the paper, we use Fashion-MNIST here
-since training an ImageNet model to convergence could take hours or days
-even on a modern GPU.
-One of the problems with applying AlexNet directly on Fashion-MNIST
-is that its images have lower resolution ($28 \times 28$ pixels)
-than ImageNet images.
-To make things work, we upsample them to $224 \times 224$
-(generally not a smart practice,
-but we do it here to be faithful to the AlexNet architecture).
-We perform this resizing with the `resize` argument in the `d2l.load_data_fashion_mnist` function.
-
 Embora AlexNet seja treinado em ImageNet no jornal, usamos Fashion-MNIST aqui
 já que treinar um modelo ImageNet para convergência pode levar horas ou dias
 mesmo em uma GPU moderna.
@@ -449,16 +438,10 @@ batch_size = 128
 train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size, resize=224)
 ```
 
-## Training
-
-Now, we can start training AlexNet.
-Compared with LeNet in :numref:`sec_lenet`,
-the main change here is the use of a smaller learning rate
-and much slower training due to the deeper and wider network,
-the higher image resolution, and the more costly convolutions.
+## Treinamento
 
 Agora, podemos começar a treinar AlexNet.
-Comparado com LeNet em: numref: `sec_lenet`,
+Comparado com LeNet em :numref:`sec_lenet`,
 a principal mudança aqui é o uso de uma taxa de aprendizado menor
 e um treinamento muito mais lento devido à rede mais ampla e profunda,
 a resolução de imagem mais alta e as convoluções mais caras.
@@ -469,7 +452,7 @@ lr, num_epochs = 0.01, 10
 d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 ```
 
-## Summary
+## Sumário
 
 * AlexNet has a similar structure to that of LeNet, but uses more convolutional layers and a larger parameter space to fit the large-scale ImageNet dataset.
 * Today AlexNet has been surpassed by much more effective architectures but it is a key step from shallow to deep networks that are used nowadays.
@@ -480,7 +463,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 * Embora pareça que existam apenas mais algumas linhas na implementação do AlexNet do que no LeNet, a comunidade acadêmica levou muitos anos para abraçar essa mudança conceitual e tirar proveito de seus excelentes resultados experimentais. Isso também se deveu à falta de ferramentas computacionais eficientes.
 * Desistência, ReLU e pré-processamento foram as outras etapas importantes para alcançar um desempenho excelente em tarefas de visão computacional.
 
-## Exercises
+## Exercício
 
 1. Try increasing the number of epochs. Compared with LeNet, how are the results different? Why?
 2. AlexNet may be too complex for the Fashion-MNIST dataset.
@@ -496,7 +479,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 6. Experimente aumentar o número de épocas. Comparado com o LeNet, como os resultados são diferentes? Porque?
 7. AlexNet pode ser muito complexo para o conjunto de dados Fashion-MNIST.
      1. Tente simplificar o modelo para tornar o treinamento mais rápido, garantindo que a precisão não caia significativamente.
-     1. Projete um modelo melhor que funcione diretamente em imagens de $ 28 \ vezes 28 $.
+     1. Projete um modelo melhor que funcione diretamente em imagens de $28 \ vezes 28$.
 8. Modifique o tamanho do lote e observe as mudanças na precisão e na memória da GPU.
 9. Analise o desempenho computacional do AlexNet.
      1. Qual é a parte dominante para a pegada de memória do AlexNet?
@@ -516,8 +499,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4OTQ2NDAwMiwyMDc1MTc3OTI2LDE0NT
-Y3MDg0ODQsMTMzMTMzOTQ4Nyw1NTY4NTQ1OTQsMjY3MDkwOTM0
-LDM0NDY4MzI5MywtMTg4ODYxNzI0OSwtMzQ3MDEyODYxLC0xOT
-g2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbMTE0Nzg2ODk4NiwxODg5NDY0MDAyLDIwNz
+UxNzc5MjYsMTQ1NjcwODQ4NCwxMzMxMzM5NDg3LDU1Njg1NDU5
+NCwyNjcwOTA5MzQsMzQ0NjgzMjkzLC0xODg4NjE3MjQ5LC0zND
+cwMTI4NjEsLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ==
 -->
