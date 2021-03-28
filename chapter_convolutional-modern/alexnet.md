@@ -323,29 +323,15 @@ net = nn.Sequential(
     # é muito maior do que no LeNet
     nn.Conv2d(1, 96, kernel_size=11, stride=4, padding=1), nn.ReLU(),
     nn.MaxPool2d(kernel_size=3, stride=2),
-    # Make the convolution window smaller, set padding to 2 for consistent
-    #
-    # height and width across the input and output, and increase the number of
-    #
-    # output channels
-    # Faça a janela de convolução menor, defina o preenchimento para 2 para consistente
-     #
-     # altura e largura na entrada e saída, e aumentar o número de
-     #
-     # canais de saída
-     # Torne a janela de convolução menor, defina o preenchimento para 2
-     # para altura e largura consistentes na entrada e saída,
-     # e aumente o número de canais de saída
+    # Torne a janela de convolução menor, defina o preenchimento para 2
+    # para altura e largura consistentes na entrada e saída,
+    # e aumente o número de canais de saída
     nn.Conv2d(96, 256, kernel_size=5, padding=2), nn.ReLU(),
     nn.MaxPool2d(kernel_size=3, stride=2),
-    # Use three successive convolutional layers and a smaller convolution
-    #
-    # window. Except for the final convolutional layer, the number of output
-    #
-    # channels is further increased. Pooling layers are not used to reduce the
-    #
-    # height and width of input after the first two convolutional layers
-    #
+    # Use três camadas convolucionais sucessivas e uma janela de convolução menor.
+    # Exceto para a camada convolucional final, o número de canais de saída
+    # é aumentado ainda mais. Camadas de pooling não são usadas para reduzir 
+    # a altura e largura de entrada após as duas primeiras camadas convolucionais
     nn.Conv2d(256, 384, kernel_size=3, padding=1), nn.ReLU(),
     nn.Conv2d(384, 384, kernel_size=3, padding=1), nn.ReLU(),
     nn.Conv2d(384, 256, kernel_size=3, padding=1), nn.ReLU(),
@@ -549,8 +535,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDk2OTY2MTYsMTMzMTMzOTQ4Nyw1NT
-Y4NTQ1OTQsMjY3MDkwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0
-OSwtMzQ3MDEyODYxLC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX
-0=
+eyJoaXN0b3J5IjpbMTI3NzYwNTYwOSwxMzMxMzM5NDg3LDU1Nj
+g1NDU5NCwyNjcwOTA5MzQsMzQ0NjgzMjkzLC0xODg4NjE3MjQ5
+LC0zNDcwMTI4NjEsLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ
+==
 -->
