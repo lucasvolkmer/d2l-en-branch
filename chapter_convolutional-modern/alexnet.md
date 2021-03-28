@@ -374,10 +374,10 @@ def net():
         # output channels is further increased. Pooling layers are not used to
         # reduce the height and width of input after the first two
         # convolutional layers
-        # Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. 
-        # Ao mesmo tempo, usamos um passo de 4 para reduzir significativamente
-        # a altura e a largura da saída.
-        # Aqui, o número de canais de saída é muito maior do que no LeNet
+        # Use três camadas convolucionais sucessivas e uma janela de convolução menor.
+        # Exceto para a camada convolucional final, o número de canais de saída 
+        # é aumentado ainda mais. Camadas de pooling não são usadas para reduzir a 
+        # altura e largura de entrada após as duas primeiras camadas convolucionais
         tf.keras.layers.Conv2D(filters=384, kernel_size=3, padding='same',
                                activation='relu'),
         tf.keras.layers.Conv2D(filters=384, kernel_size=3, padding='same',
@@ -526,8 +526,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTAzOTg3LDIwNzUxNzc5MjYsMTQ1Nj
-cwODQ4NCwxMzMxMzM5NDg3LDU1Njg1NDU5NCwyNjcwOTA5MzQs
-MzQ0NjgzMjkzLC0xODg4NjE3MjQ5LC0zNDcwMTI4NjEsLTE5OD
-Y1Mzg2NDcsLTE3MDQyMDg5NjldfQ==
+eyJoaXN0b3J5IjpbLTE0MDIxMTIyMzMsMjA3NTE3NzkyNiwxND
+U2NzA4NDg0LDEzMzEzMzk0ODcsNTU2ODU0NTk0LDI2NzA5MDkz
+NCwzNDQ2ODMyOTMsLTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMT
+k4NjUzODY0NywtMTcwNDIwODk2OV19
 -->
