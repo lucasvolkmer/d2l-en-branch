@@ -317,13 +317,10 @@ import torch
 from torch import nn
 
 net = nn.Sequential(
-    # Here, we use a larger 11 x 11 window to capture objects. At the same
-    #
-    # time, we use a stride of 4 to greatly reduce the height and width of the
-    #
-    # output. Here, the number of output channels is much larger than that in
-    #
-    # LeNet
+    # Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. Ao mesmo tempo,
+    # usamos um passo de 4 para reduzir significativamente a altura e a largura
+    # da saída. Aqui, o número de canais de saída 
+    # é muito maior do que no LeNet
     nn.Conv2d(1, 96, kernel_size=11, stride=4, padding=1), nn.ReLU(),
     nn.MaxPool2d(kernel_size=3, stride=2),
     # Make the convolution window smaller, set padding to 2 for consistent
@@ -331,7 +328,14 @@ net = nn.Sequential(
     # height and width across the input and output, and increase the number of
     #
     # output channels
-    #
+    # Faça a janela de convolução menor, defina o preenchimento para 2 para consistente
+     #
+     # altura e largura na entrada e saída, e aumentar o número de
+     #
+     # canais de saída
+     # Torne a janela de convolução menor, defina o preenchimento para 2
+     # para altura e largura consistentes na entrada e saída,
+     # e aumente o número de canais de saída
     nn.Conv2d(96, 256, kernel_size=5, padding=2), nn.ReLU(),
     nn.MaxPool2d(kernel_size=3, stride=2),
     # Use three successive convolutional layers and a smaller convolution
@@ -545,8 +549,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NzA2ODI5MCwxMzMxMzM5NDg3LDU1Nj
-g1NDU5NCwyNjcwOTA5MzQsMzQ0NjgzMjkzLC0xODg4NjE3MjQ5
-LC0zNDcwMTI4NjEsLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ
-==
+eyJoaXN0b3J5IjpbLTIxMDk2OTY2MTYsMTMzMTMzOTQ4Nyw1NT
+Y4NTQ1OTQsMjY3MDkwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0
+OSwtMzQ3MDEyODYxLC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX
+0=
 -->
