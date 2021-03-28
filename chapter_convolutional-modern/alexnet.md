@@ -356,13 +356,6 @@ import tensorflow as tf
 
 def net():
     return tf.keras.models.Sequential([
-        # Here, we use a larger 11 x 11 window to capture objects. At the same
-        #
-        # time, we use a stride of 4 to greatly reduce the height and width of
-        #
-        # the output. Here, the number of output channels is much larger than
-        #
-        # that in LeNet
         # Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. 
         # Ao mesmo tempo, usamos um passo de 4 para reduzir significativamente 
         # a altura e a largura da saída.
@@ -370,12 +363,9 @@ def net():
         tf.keras.layers.Conv2D(filters=96, kernel_size=11, strides=4,
                                activation='relu'),
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2),
-        # Make the convolution window smaller, set padding to 2 for consistent
-        #
-        # height and width across the input and output, and increase the
-        #
-        # number of output channels
-        #
+        # Torne a janela de convolução menor, defina o preenchimento
+        # para 2 para altura e largura consistentes na entrada e
+        # saída e aumente o número de canais de saída
         tf.keras.layers.Conv2D(filters=256, kernel_size=5, padding='same',
                                activation='relu'),
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2),
@@ -384,7 +374,10 @@ def net():
         # output channels is further increased. Pooling layers are not used to
         # reduce the height and width of input after the first two
         # convolutional layers
-        # Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. Ao mesmo tempo, usamos um passo de 4 para reduzir significativamente a altura e a largura da saída. Aqui, o número de canais de saída é muito maior do que no LeNet
+        # Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. 
+        # Ao mesmo tempo, usamos um passo de 4 para reduzir significativamente
+        # a altura e a largura da saída.
+        # Aqui, o número de canais de saída é muito maior do que no LeNet
         tf.keras.layers.Conv2D(filters=384, kernel_size=3, padding='same',
                                activation='relu'),
         tf.keras.layers.Conv2D(filters=384, kernel_size=3, padding='same',
@@ -533,8 +526,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NTE3NzkyNiwxNDU2NzA4NDg0LDEzMz
-EzMzk0ODcsNTU2ODU0NTk0LDI2NzA5MDkzNCwzNDQ2ODMyOTMs
-LTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMTk4NjUzODY0NywtMT
-cwNDIwODk2OV19
+eyJoaXN0b3J5IjpbMTg5MTAzOTg3LDIwNzUxNzc5MjYsMTQ1Nj
+cwODQ4NCwxMzMxMzM5NDg3LDU1Njg1NDU5NCwyNjcwOTA5MzQs
+MzQ0NjgzMjkzLC0xODg4NjE3MjQ5LC0zNDcwMTI4NjEsLTE5OD
+Y1Mzg2NDcsLTE3MDQyMDg5NjldfQ==
 -->
