@@ -461,27 +461,16 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 
 ## Exercício
 
-1. Try increasing the number of epochs. Compared with LeNet, how are the results different? Why?
-2. AlexNet may be too complex for the Fashion-MNIST dataset.
-    1. Try simplifying the model to make the training faster, while ensuring that the accuracy does not drop significantly.
-    1. Design a better model that works directly on $28 \times 28$ images.
-3. Modify the batch size, and observe the changes in accuracy and GPU memory.
-4. Analyze computational performance of AlexNet.
-    1. What is the dominant part for the memory footprint of AlexNet?
-    1. What is the dominant part for computation in AlexNet?
-    1. How about memory bandwidth when computing the results?
-5. Apply dropout and ReLU to LeNet-5. Does it improve? How about preprocessing?
-
-6. Experimente aumentar o número de épocas. Comparado com o LeNet, como os resultados são diferentes? Porque?
-7. AlexNet pode ser muito complexo para o conjunto de dados Fashion-MNIST.
+1. Experimente aumentar o número de épocas. Comparado com o LeNet, como os resultados são diferentes? Porque?
+1. AlexNet pode ser muito complexo para o conjunto de dados Fashion-MNIST.
      1. Tente simplificar o modelo para tornar o treinamento mais rápido, garantindo que a precisão não caia significativamente.
      1. Projete um modelo melhor que funcione diretamente em imagens de $28 \times 28$.
-8. Modifique o tamanho do lote e observe as mudanças na precisão e na memória da GPU.
-9. Analise o desempenho computacional do AlexNet.
+1. Modifique o tamanho do lote e observe as mudanças na precisão e na memória da GPU.
+1. Analise o desempenho computacional do AlexNet.
      1. Qual é a parte dominante para a pegada de memória do AlexNet?
      1. Qual é a parte dominante para computação no AlexNet?
      1. E quanto à largura de banda da memória ao calcular os resultados?
-10. Aplique dropout e ReLU ao LeNet-5. Isso melhora? Que tal pré-processamento?
+1. Aplique dropout e ReLU ao LeNet-5. Isso melhora? Que tal pré-processamento?
  
 :begin_tab:`mxnet`
 [Discussão](https://discuss.d2l.ai/t/75)
@@ -495,8 +484,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDYxNTg3NzUsMTg4OTQ2NDAwMiwyMD
-c1MTc3OTI2LDE0NTY3MDg0ODQsMTMzMTMzOTQ4Nyw1NTY4NTQ1
-OTQsMjY3MDkwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0OSwtMz
-Q3MDEyODYxLC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbLTg0MjIzODQxMywxODg5NDY0MDAyLDIwNz
+UxNzc5MjYsMTQ1NjcwODQ4NCwxMzMxMzM5NDg3LDU1Njg1NDU5
+NCwyNjcwOTA5MzQsMzQ0NjgzMjkzLC0xODg4NjE3MjQ5LC0zND
+cwMTI4NjEsLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ==
 -->
