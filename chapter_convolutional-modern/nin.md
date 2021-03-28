@@ -33,14 +33,6 @@ Outra maneira de ver isso é pensar em cada elemento na dimensão espacial
 (altura e largura) como equivalente a um exemplo
 e um canal como equivalente a um recurso.
 
-:numref:`fig_nin` illustrates the main structural differences
-between VGG and NiN, and their blocks.
-The NiN block consists of one convolutional layer
-followed by two $1\times 1$ convolutional layers that act as
-per-pixel fully-connected layers with ReLU activations.
-The convolution window shape of the first layer is typically set by the user.
-The subsequent window shapes are fixed to $1 \times 1$.
-
 :numref:`fig_nin` ilustra as principais diferenças estruturais
 entre VGG e NiN, e seus blocos.
 O bloco NiN consiste em uma camada convolucional
@@ -97,7 +89,7 @@ def nin_block(num_channels, kernel_size, strides, padding):
                                activation='relu')])
 ```
 
-## NiN Model
+## Modelo NiN 
 
 The original NiN network was proposed shortly after AlexNet
 and clearly draws some inspiration.
@@ -275,6 +267,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODk1NjEwMTUsLTE3NTA5Mzg0ODcsMj
-AwNDUxNDgyXX0=
+eyJoaXN0b3J5IjpbMTYwOTcyNjAyNSwtMTc1MDkzODQ4NywyMD
+A0NTE0ODJdfQ==
 -->
