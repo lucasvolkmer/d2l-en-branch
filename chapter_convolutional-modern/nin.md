@@ -207,37 +207,29 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 * A remoção das camadas totalmente conectadas reduz o ajuste excessivo. NiN tem muito menos parâmetros.
 * O design NiN influenciou muitos designs subsequentes da CNN.
 
-## Exercises
-
-1. Tune the hyperparameters to improve the classification accuracy.
-1. Why are there two $1\times 1$ convolutional layers in the NiN block? Remove one of them, and then observe and analyze the experimental phenomena.
-1. Calculate the resource usage for NiN.
-    1. What is the number of parameters?
-    1. What is the amount of computation?
-    1. What is the amount of memory needed during training?
-    1. What is the amount of memory needed during prediction?
-1. What are possible problems with reducing the $384 \times 5 \times 5$ representation to a $10 \times 5 \times 5$ representation in one step?
+## Exercícios
 
 1. Ajuste os hiperparâmetros para melhorar a precisão da classificação.
-1. Por que existem duas camadas convolucionais $ 1 \ times 1 $ no bloco NiN? Remova um deles e então observe e analise os fenômenos experimentais.
-1. Calcule o uso de recursos para NiN.
+2. Por que existem duas camadas convolucionais $1\times 1$ no bloco NiN? Remova um deles e então observe e analise os fenômenos experimentais.
+3. Calcule o uso de recursos para NiN.
      1. Qual é o número de parâmetros?
      1. Qual é a quantidade de computação?
      1. Qual é a quantidade de memória necessária durante o treinamento?
      1. Qual é a quantidade de memória necessária durante a previsão?
-1. Quais são os possíveis problemas com a redução da representação $ 384 \ vezes 5 \ vezes 5 $ para uma representação $ 10 \ vezes 5 \ vezes 5 $ em uma etapa?
+4. Quais são os possíveis problemas com a redução da representação $384 \times 5 \times 5$ para uma representação $10 \times 5 \times 5$ em uma etapa?
+
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/79)
+[Discussão](https://discuss.d2l.ai/t/79)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/80)
+[Discussão](https://discuss.d2l.ai/t/80)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/332)
+[Discuss](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMjIyNDM2OCwxNDE3MDk3MTM5LDMxOD
+eyJoaXN0b3J5IjpbMTQ1OTY2ODE4MCwxNDE3MDk3MTM5LDMxOD
 U2OTc2NywtMTc1MDkzODQ4NywyMDA0NTE0ODJdfQ==
 -->
