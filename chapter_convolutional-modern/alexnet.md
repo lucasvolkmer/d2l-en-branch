@@ -246,18 +246,6 @@ a rede adiciona camadas de pooling máximas
 com um formato de janela de $3 \times 3$ e uma distância de 2.
 Além disso, o AlexNet tem dez vezes mais canais de convolução do que o LeNet.
 
-After the last convolutional layer there are two fully-connected layers
-with 4096 outputs.
-These two huge fully-connected layers produce model parameters of nearly 1 GB.
-Due to the limited memory in early GPUs,
-the original AlexNet used a dual data stream design,
-so that each of their two GPUs could be responsible
-for storing and computing only its half of the model.
-Fortunately, GPU memory is comparatively abundant now,
-so we rarely need to break up models across GPUs these days
-(our version of the AlexNet model deviates
-from the original paper in this aspect).
-
 Após a última camada convolucional, existem duas camadas totalmente conectadas
 com 4096 saídas.
 Essas duas enormes camadas totalmente conectadas produzem parâmetros de modelo de quase 1 GB.
@@ -270,7 +258,7 @@ então raramente precisamos separar os modelos das GPUs hoje em dia
 (nossa versão do modelo AlexNet se desvia
 do artigo original neste aspecto).
 
-### Activation Functions
+### Função de Ativação
 
 Besides, AlexNet changed the sigmoid activation function to a simpler ReLU activation function. On one hand, the computation of the ReLU activation function is simpler. For example, it does not have the exponentiation operation found in the sigmoid activation function.
  On the other hand, the ReLU activation function makes model training easier when using different parameter initialization methods. This is because, when the output of the sigmoid activation function is very close to 0 or 1, the gradient of these regions is almost 0, so that backpropagation cannot continue to update some of the model parameters. In contrast, the gradient of the ReLU activation function in the positive interval is always 1. Therefore, if the model parameters are not properly initialized, the sigmoid function may obtain a gradient of almost 0 in the positive interval, so that the model cannot be effectively trained.
@@ -544,6 +532,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMT
-k4NjUzODY0NywtMTcwNDIwODk2OV19
+eyJoaXN0b3J5IjpbMzQ0NjgzMjkzLC0xODg4NjE3MjQ5LC0zND
+cwMTI4NjEsLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ==
 -->
