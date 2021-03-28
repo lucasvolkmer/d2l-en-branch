@@ -16,7 +16,7 @@ They were proposed based on a very simple insight:
 to use an MLP on the channels for each pixel separately :cite:`Lin.Chen.Yan.2013`.
 
 LeNet, AlexNet e VGG compartilham um padrão de design comum:
-extrair recursos que exploram a estrutura * espacial *
+extrair recursos que exploram a estrutura *espacial*
 por meio de uma sequência de camadas de convolução e agrupamento
 e, em seguida, pós-processar as representações por meio de camadas totalmente conectadas.
 As melhorias no LeNet por AlexNet e VGG residem principalmente
@@ -25,9 +25,9 @@ Alternativamente, pode-se imaginar o uso de camadas totalmente conectadas
 no início do processo.
 No entanto, um uso descuidado de camadas densas pode desistir do
 estrutura espacial da representação inteiramente,
-Os blocos * rede em rede * (* NiN *) oferecem uma alternativa.
+Os blocos *rede em rede* (*NiN*) oferecem uma alternativa.
 Eles foram propostos com base em uma visão muito simples:
-para usar um MLP nos canais para cada pixel separadamente: cite: `Lin.Chen.Yan.2013`.
+para usar um MLP nos canais para cada pixel separadamente :cite:`Lin.Chen.Yan.2013`.
 
 
 ## NiN Blocks
@@ -310,5 +310,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExOTU1MjA0N119
+eyJoaXN0b3J5IjpbMTM1NzA3NjE3M119
 -->
