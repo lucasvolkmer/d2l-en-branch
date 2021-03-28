@@ -49,7 +49,7 @@ são tipicamente tensores bidimensionais correspondentes ao exemplo e ao recurso
 A ideia por trás do NiN é aplicar uma camada totalmente conectada
 em cada localização de pixel (para cada altura e largura).
 Se amarrarmos os pesos em cada localização espacial,
-poderíamos pensar nisso como uma camada convolucional $ 1 \ vezes 1 $
+poderíamos pensar nisso como uma camada convolucional $1 \times 1$
 (conforme descrito em: numref: `sec_channels`)
 ou como uma camada totalmente conectada agindo de forma independente em cada localização de pixel.
 Outra maneira de ver isso é pensar em cada elemento na dimensão espacial
@@ -67,10 +67,10 @@ The subsequent window shapes are fixed to $1 \times 1$.
 : numref: `fig_nin` ilustra as principais diferenças estruturais
 entre VGG e NiN, e seus blocos.
 O bloco NiN consiste em uma camada convolucional
-seguido por duas camadas convolucionais $ 1 \ vezes 1 $ que atuam como
+seguido por duas camadas convolucionais $1\times 1$ que atuam como
 camadas totalmente conectadas por pixel com ativações ReLU.
 A forma da janela de convolução da primeira camada é normalmente definida pelo usuário.
-As formas de janela subsequentes são fixadas em $ 1 \ vezes 1 $.
+As formas de janela subsequentes são fixadas em $1 \times 1$.
 
 ![Comparing architectures of VGG and NiN, and their blocks.](../img/nin.svg)
 :width:`600px`
@@ -298,5 +298,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NTkzOTczNiwyMDA0NTE0ODJdfQ==
+eyJoaXN0b3J5IjpbLTE1OTcwODE3NjksMjAwNDUxNDgyXX0=
 -->
