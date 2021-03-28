@@ -1,4 +1,4 @@
-# Networks Using Blocks (VGG)
+# Redes Usando Blocos (VGG)
 :label:`sec_vgg`
 
 Enquanto AlexNet ofereceu evidências empíricas de que CNNs profundas
@@ -16,13 +16,6 @@ com pesquisadores deixando de pensar em termos de
 neurônios individuais para camadas inteiras,
 e agora para blocos, repetindo padrões de camadas.
 
-The idea of using blocks first emerged from the
-[Visual Geometry Group](http://www.robots.ox.ac.uk/~vgg/) (VGG)
-at Oxford University,
-in their eponymously-named *VGG* network.
-It is easy to implement these repeated structures in code
-with any modern deep learning framework by using loops and subroutines.
-
 A ideia de usar blocos surgiu pela primeira vez a partir do
 [Grupo de Geometria Visual](http://www.robots.ox.ac.uk/~vgg/) (VGG)
 na Universidade de Oxford,
@@ -31,7 +24,7 @@ em sua rede de mesmo nome *VGG*.
 com qualquer estrutura moderna de aprendizado profundo usando loops e sub-rotinas.
 
 
-## VGG Blocks
+## Os Blocos VGG 
 
 The basic building block of classic CNNs
 is a sequence of the following:
@@ -48,7 +41,9 @@ employed convolutions with $3\times3$ kernels with padding of 1 (keeping height 
 and $2 \times 2$ max pooling with stride of 2
 (halving the resolution after each block).
 In the code below, we define a function called `vgg_block`
-to implement one VGG blockO progresso neste campo reflete aquele no design de chips
+to implement one VGG block
+
+O progresso neste campo reflete aquele no design de chips
 onde os engenheiros deixaram de colocar transistores
 para elementos lógicos para blocos lógicos.
 Da mesma forma, o projeto de arquiteturas de rede neural
@@ -410,5 +405,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTcwMDAyMTQsMTgzMjAxMzg4OF19
+eyJoaXN0b3J5IjpbODI2NDg0NjMwLDE4MzIwMTM4ODhdfQ==
 -->
