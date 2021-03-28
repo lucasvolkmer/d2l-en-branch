@@ -118,13 +118,10 @@ net.add(nin_block(96, kernel_size=11, strides=4, padding=0),
         nn.Dropout(0.5),
         # Há 3 classes de rótulos
         nin_block(10, kernel_size=3, strides=1, padding=1),
-        # The global average pooling layer automatically sets the window shape
-        # to the height and width of the input
         # A camada de pool de média global define automaticamente a forma da janela
         # à altura e largura da entrada
         nn.GlobalAvgPool2D(),
-        # Transform the four-dimensional output into two-dimensional output
-        # with a shape of (batch size, 10)
+        # Transforme a saída quadridimensional em saída bidimensional com uma forma de (batch size, 10)
         nn.Flatten())
 ```
 
@@ -253,6 +250,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzM4MzU0ODksMzE4NTY5NzY3LC0xNz
-UwOTM4NDg3LDIwMDQ1MTQ4Ml19
+eyJoaXN0b3J5IjpbLTQxNTE0MjEwMywzMTg1Njk3NjcsLTE3NT
+A5Mzg0ODcsMjAwNDUxNDgyXX0=
 -->
