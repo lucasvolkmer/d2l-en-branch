@@ -290,15 +290,23 @@ net = nn.Sequential()
 net.add(nn.Conv2D(96, kernel_size=11, strides=4, activation='relu'),
         nn.MaxPool2D(pool_size=3, strides=2),
         # Make the convolution window smaller, set padding to 2 for consistent
+        # Torne a janela de convolução menor, defina o preenchimento para 2 para obter consistência
         # height and width across the input and output, and increase the
+        # altura e largura na entrada e saída, e aumentar o
         # number of output channels
+        # número de canais de saída
         nn.Conv2D(256, kernel_size=5, padding=2, activation='relu'),
         nn.MaxPool2D(pool_size=3, strides=2),
         # Use three successive convolutional layers and a smaller convolution
+        # Use três camadas convolucionais sucessivas e uma convolução menor
         # window. Except for the final convolutional layer, the number of
+        # janela. Exceto para a camada convolucional final, o número de
+        # output channels is further increased. Pooling layers are not used to
         # output channels is further increased. Pooling layers are not used to
         # reduce the height and width of input after the first two
+        # reduza a altura e largura da entrada após os dois primeiros
         # convolutional layers
+        # 
         nn.Conv2D(384, kernel_size=3, padding=1, activation='relu'),
         nn.Conv2D(384, kernel_size=3, padding=1, activation='relu'),
         nn.Conv2D(256, kernel_size=3, padding=1, activation='relu'),
@@ -523,7 +531,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NDQ2MzE2MCw1NTY4NTQ1OTQsMjY3MD
-kwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0OSwtMzQ3MDEyODYx
-LC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbLTE1Nzg2NDc1MDEsNTU2ODU0NTk0LDI2Nz
+A5MDkzNCwzNDQ2ODMyOTMsLTE4ODg2MTcyNDksLTM0NzAxMjg2
+MSwtMTk4NjUzODY0NywtMTcwNDIwODk2OV19
 -->
