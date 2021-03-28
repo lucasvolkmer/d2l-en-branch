@@ -101,9 +101,9 @@ with a stride of 2 and a window shape of $3\times 3$.
 A rede NiN original foi proposta logo após AlexNet
 e claramente tira alguma inspiração.
 NiN usa camadas convolucionais com formas de janela
-de $ 11 \ vezes 11 $, $ 5 \ vezes 5 $ e $ 3 \ vezes 3 $,
+de $11\times 11$, $5\times 5$ e $3\times 3$,
 e os números correspondentes de canais de saída são iguais aos do AlexNet. Cada bloco NiN é seguido por uma camada de pooling máxima
-com um passo de 2 e uma forma de janela de $ 3 \ vezes 3 $.
+com um passo de 2 e uma forma de janela de $3\times 3$.
 
 One significant difference between NiN and AlexNet
 is that NiN avoids fully-connected layers altogether.
@@ -267,6 +267,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwOTcyNjAyNSwtMTc1MDkzODQ4NywyMD
-A0NTE0ODJdfQ==
+eyJoaXN0b3J5IjpbMzE4NTY5NzY3LC0xNzUwOTM4NDg3LDIwMD
+Q1MTQ4Ml19
 -->
