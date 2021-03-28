@@ -23,50 +23,6 @@ em sua rede de mesmo nome *VGG*.
 É fácil implementar essas estruturas repetidas no código
 com qualquer estrutura moderna de aprendizado profundo usando loops e sub-rotinas.
 
-
-## Os Blocos VGG 
-
-The basic building block of classic CNNs
-is a sequence of the following:
-(i) a convolutional layer
-with padding to maintain the resolution,
-(ii) a nonlinearity such as a ReLU,
-(iii) a pooling layer such
-as a max pooling layer.
-One VGG block consists of a sequence of convolutional layers,
-followed by a max pooling layer for spatial downsampling.
-In the original VGG paper :cite:`Simonyan.Zisserman.2014`,
-the authors
-employed convolutions with $3\times3$ kernels with padding of 1 (keeping height and width)
-and $2 \times 2$ max pooling with stride of 2
-(halving the resolution after each block).
-In the code below, we define a function called `vgg_block`
-to implement one VGG block
-
-O progresso neste campo reflete aquele no design de chips
-onde os engenheiros deixaram de colocar transistores
-para elementos lógicos para blocos lógicos.
-Da mesma forma, o projeto de arquiteturas de rede neural
-tornou-se progressivamente mais abstrato,
-com pesquisadores deixando de pensar em termos de
-neurônios individuais para camadas inteiras,
-e agora para blocos, repetindo padrões de camadas.
-
-The idea of using blocks first emerged from the
-[Visual Geometry Group](http://www.robots.ox.ac.uk/~vgg/) (VGG)
-at Oxford University,
-in their eponymously-named *VGG* network.
-It is easy to implement these repeated structures in code
-with any modern deep learning framework by using loops and subroutines.
-
-A ideia de usar blocos surgiu pela primeira vez a partir do
-[Grupo de Geometria Visual] (http://www.robots.ox.ac.uk/~vgg/) (VGG)
-na Universidade de Oxford,
-em sua rede de mesmo nome * VGG *.
-É fácil implementar essas estruturas repetidas no código
-com qualquer estrutura moderna de aprendizado profundo usando loops e sub-rotinas.
-
-
 ## VGG Blocks
 
 The basic building block of classic CNNs
@@ -95,31 +51,19 @@ com preenchimento para manter a resolução,
 como uma camada de pooling máxima.
 Um bloco VGG consiste em uma sequência de camadas convolucionais,
 seguido por uma camada de pooling máxima para downsampling espacial.
-No artigo VGG original: cite: `Simonyan.Zisserman.2014`,
+No artigo VGG original :cite:`Simonyan.Zisserman.2014`,
 Os autores
-convoluções empregadas com $ 3 \ times3 $ kernels com preenchimento de 1 (mantendo a altura e largura)
-e $ 2 \ vezes 2 $ pool máximo com passo de 2
+convoluções empregadas com $3 \times 3$ kernels com preenchimento de 1 (mantendo a altura e largura)
+e $2 \times 2$ pool máximo com passo de 2
 (reduzindo pela metade a resolução após cada bloco).
 No código abaixo, definimos uma função chamada `vgg_block`
 para implementar um bloco VGG.
-
-:begin_tab:`mxnet,tensorflow`
-The function takes two arguments
-corresponding to the number of convolutional layers `num_convs`
-and the number of output channels `num_channels`.
-:end_tab:
 
 : begin_tab: `mxnet, tensorflow`
 A função leva dois argumentos
 correspondendo ao número de camadas convolucionais `num_convs`
 e o número de canais de saída `num_channels`.
 : end_tab:
-
-:begin_tab:`pytorch`
-The function takes three arguments corresponding to the number
-of convolutional layers `num_convs`, the number of input channels `in_channels`
-and the number of output channels `out_channels`.
-:end_tab:
 
 : begin_tab: `pytorch`
 A função leva três argumentos correspondentes ao número
@@ -405,5 +349,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI2NDg0NjMwLDE4MzIwMTM4ODhdfQ==
+eyJoaXN0b3J5IjpbMTY2MTIwOTY0MCwxODMyMDEzODg4XX0=
 -->
