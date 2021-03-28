@@ -140,10 +140,10 @@ O código a seguir implementa VGG-11. Esta é uma simples questão de executar u
 ```{.python .input}
 def vgg(conv_arch):
     net = nn.Sequential()
-    # The convolutional part
+    # A parte convolucional
     for (num_convs, num_channels) in conv_arch:
         net.add(vgg_block(num_convs, num_channels))
-    # The fully-connected part
+    # A parte totalmente conectada
     net.add(nn.Dense(4096, activation='relu'), nn.Dropout(0.5),
             nn.Dense(4096, activation='relu'), nn.Dropout(0.5),
             nn.Dense(10))
@@ -157,14 +157,14 @@ net = vgg(conv_arch)
 def vgg(conv_arch):
     conv_blks = []
     in_channels = 1
-    # The convolutional part
+    # A parte convolucional
     for (num_convs, out_channels) in conv_arch:
         conv_blks.append(vgg_block(num_convs, in_channels, out_channels))
         in_channels = out_channels
 
     return nn.Sequential(
         *conv_blks, nn.Flatten(),
-        # The fully-connected part
+        # A parte totalmente conectada
         nn.Linear(out_channels * 7 * 7, 4096), nn.ReLU(), nn.Dropout(0.5),
         nn.Linear(4096, 4096), nn.ReLU(), nn.Dropout(0.5),
         nn.Linear(4096, 10))
@@ -176,10 +176,10 @@ net = vgg(conv_arch)
 #@tab tensorflow
 def vgg(conv_arch):
     net = tf.keras.models.Sequential()
-    # The convulational part
+    # A parte convolucional
     for (num_convs, num_channels) in conv_arch:
         net.add(vgg_block(num_convs, num_channels))
-    # The fully-connected part
+    # A parte totalmente conectada
     net.add(tf.keras.models.Sequential([
         tf.keras.layers.Flatten(),
         tf.keras.layers.Dense(4096, activation='relu'),
@@ -191,9 +191,6 @@ def vgg(conv_arch):
 
 net = vgg(conv_arch)
 ```
-
-Next, we will construct a single-channel data example
-with a height and width of 224 to observe the output shape of each layer.
 
 A seguir, construiremos um exemplo de dados de canal único
 com altura e largura de 224 para observar a forma de saída de cada camada.
@@ -221,11 +218,6 @@ for blk in net.layers:
     X = blk(X)
     print(blk.__class__.__name__,'output shape:\t', X.shape)
 ```
-
-As you can see, we halve height and width at each block,
-finally reaching a height and width of 7
-before flattening the representations
-for processing by the fully-connected part of the network.
 
 Como você pode ver, dividimos a altura e a largura em cada bloco,
 finalmente alcançando uma altura e largura de 7
@@ -305,5 +297,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNDY3OTk1NSwxODMyMDEzODg4XX0=
+eyJoaXN0b3J5IjpbLTE0NDU2NDI2NzYsMTgzMjAxMzg4OF19
 -->
