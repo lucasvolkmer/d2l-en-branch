@@ -7,14 +7,14 @@ para orientar os pesquisadores subsequentes na concepção de novas redes.
 Nas seções a seguir, apresentaremos vários conceitos heurísticos
 comumente usado para projetar redes profundas.
 
-Progress in this field mirrors that in chip design
-where engineers went from placing transistors
-to logical elements to logic blocks.
-Similarly, the design of neural network architectures
-had grown progressively more abstract,
-with researchers moving from thinking in terms of
-individual neurons to whole layers,
-and now to blocks, repeating patterns of layers.
+O progresso neste campo reflete aquele no design de chips
+onde os engenheiros deixaram de colocar transistores
+para elementos lógicos para blocos lógicos.
+Da mesma forma, o projeto de arquiteturas de rede neural
+tornou-se progressivamente mais abstrato,
+com pesquisadores deixando de pensar em termos de
+neurônios individuais para camadas inteiras,
+e agora para blocos, repetindo padrões de camadas.
 
 The idea of using blocks first emerged from the
 [Visual Geometry Group](http://www.robots.ox.ac.uk/~vgg/) (VGG)
@@ -22,6 +22,13 @@ at Oxford University,
 in their eponymously-named *VGG* network.
 It is easy to implement these repeated structures in code
 with any modern deep learning framework by using loops and subroutines.
+
+A ideia de usar blocos surgiu pela primeira vez a partir do
+[Grupo de Geometria Visual](http://www.robots.ox.ac.uk/~vgg/) (VGG)
+na Universidade de Oxford,
+em sua rede de mesmo nome *VGG*.
+É fácil implementar essas estruturas repetidas no código
+com qualquer estrutura moderna de aprendizado profundo usando loops e sub-rotinas.
 
 
 ## VGG Blocks
@@ -403,5 +410,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjMxNTI2MTcsMTgzMjAxMzg4OF19
+eyJoaXN0b3J5IjpbLTExNTcwMDAyMTQsMTgzMjAxMzg4OF19
 -->
