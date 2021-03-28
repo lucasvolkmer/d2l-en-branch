@@ -202,11 +202,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 
 ## Sumário
 
-* NiN uses blocks consisting of a convolutional layer and multiple $1\times 1$ convolutional layers. This can be used within the convolutional stack to allow for more per-pixel nonlinearity.
-* NiN removes the fully-connected layers and replaces them with global average pooling (i.e., summing over all locations) after reducing the number of channels to the desired number of outputs (e.g., 10 for Fashion-MNIST).
-* Removing the fully-connected layers reduces overfitting. NiN has dramatically fewer parameters.
-* The NiN design influenced many subsequent CNN designs.
-
 * NiN usa blocos que consistem em uma camada convolucional e várias camadas convolucionais $1\times 1$. Isso pode ser usado dentro da pilha convolucional para permitir mais não linearidade por pixel.
 * NiN remove as camadas totalmente conectadas e as substitui pelo agrupamento médio global (ou seja, somando todos os locais) depois de reduzir o número de canais para o número desejado de saídas (por exemplo, 10 para Fashion-MNIST).
 * A remoção das camadas totalmente conectadas reduz o ajuste excessivo. NiN tem muito menos parâmetros.
@@ -243,6 +238,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNzA5NzEzOSwzMTg1Njk3NjcsLTE3NT
-A5Mzg0ODcsMjAwNDUxNDgyXX0=
+eyJoaXN0b3J5IjpbMjAxMjIyNDM2OCwxNDE3MDk3MTM5LDMxOD
+U2OTc2NywtMTc1MDkzODQ4NywyMDA0NTE0ODJdfQ==
 -->
