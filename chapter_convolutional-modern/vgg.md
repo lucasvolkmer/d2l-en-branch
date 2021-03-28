@@ -112,16 +112,6 @@ Isso é descrito em :numref:`fig_vgg`.
 :width:`400px`
 :label:`fig_vgg`
 
-
-The convolutional part of the network connects several VGG blocks from :numref:`fig_vgg` (also defined in the `vgg_block` function)
-in succession.
-The following variable `conv_arch` consists of a list of tuples (one per block),
-where each contains two values: the number of convolutional layers
-and the number of output channels,
-which are precisely the arguments required to call
-the `vgg_block` function.
-The fully-connected part of the VGG network is identical to that covered in AlexNet.
-
 A parte convolucional da rede conecta vários blocos VGG de :numref:`fig_vgg` (também definido na função` vgg_block`)
 em sucessão.
 A seguinte variável `conv_arch` consiste em uma lista de tuplas (uma por bloco),
@@ -130,15 +120,6 @@ e o número de canais de saída,
 quais são precisamente os argumentos necessários para chamar
 a função `vgg_block`.
 A parte totalmente conectada da rede VGG é idêntica à coberta no AlexNet.
-
-The original VGG network had 5 convolutional blocks,
-among which the first two have one convolutional layer each
-and the latter three contain two convolutional layers each.
-The first block has 64 output channels
-and each subsequent block doubles the number of output channels,
-until that number reaches 512.
-Since this network uses 8 convolutional layers
-and 3 fully-connected layers, it is often called VGG-11.
 
 A rede VGG original tinha 5 blocos convolucionais,
 entre os quais os dois primeiros têm uma camada convolucional cada
@@ -153,8 +134,6 @@ e 3 camadas totalmente conectadas, geralmente chamado de VGG-11.
 #@tab all
 conv_arch = ((1, 64), (1, 128), (2, 256), (2, 512), (2, 512))
 ```
-
-The following code implements VGG-11. This is a simple matter of executing a for-loop over `conv_arch`.
 
 O código a seguir implementa VGG-11. Esta é uma simples questão de executar um loop for sobre `conv_arch`.
 
@@ -326,5 +305,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY2NDEzMTQ3LDE4MzIwMTM4ODhdfQ==
+eyJoaXN0b3J5IjpbMjExNDY3OTk1NSwxODMyMDEzODg4XX0=
 -->
