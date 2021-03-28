@@ -408,12 +408,11 @@ def net():
                                activation='relu'),
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2),
         # Use three successive convolutional layers and a smaller convolution
-        #
         # window. Except for the final convolutional layer, the number of
-        #
         # output channels is further increased. Pooling layers are not used to
         # reduce the height and width of input after the first two
         # convolutional layers
+        # Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. Ao mesmo tempo, usamos um passo de 4 para reduzir significativamente a altura e a largura da saída. Aqui, o número de canais de saída é muito maior do que no LeNet
         tf.keras.layers.Conv2D(filters=384, kernel_size=3, padding='same',
                                activation='relu'),
         tf.keras.layers.Conv2D(filters=384, kernel_size=3, padding='same',
@@ -560,8 +559,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTk5OTU0MDUsMTMzMTMzOTQ4Nyw1NT
-Y4NTQ1OTQsMjY3MDkwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0
-OSwtMzQ3MDEyODYxLC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX
-0=
+eyJoaXN0b3J5IjpbMTc1NTAxNDYxLDEzMzEzMzk0ODcsNTU2OD
+U0NTk0LDI2NzA5MDkzNCwzNDQ2ODMyOTMsLTE4ODg2MTcyNDks
+LTM0NzAxMjg2MSwtMTk4NjUzODY0NywtMTcwNDIwODk2OV19
 -->
