@@ -91,32 +91,16 @@ def nin_block(num_channels, kernel_size, strides, padding):
 
 ## Modelo NiN 
 
-The original NiN network was proposed shortly after AlexNet
-and clearly draws some inspiration.
-NiN uses convolutional layers with window shapes
-of $11\times 11$, $5\times 5$, and $3\times 3$,
-and the corresponding numbers of output channels are the same as in AlexNet. Each NiN block is followed by a maximum pooling layer
-with a stride of 2 and a window shape of $3\times 3$.
-
 A rede NiN original foi proposta logo após AlexNet
 e claramente tira alguma inspiração.
 NiN usa camadas convolucionais com formas de janela
 de $11\times 11$, $5\times 5$ e $3\times 3$,
-e os números correspondentes de canais de saída são iguais aos do AlexNet. Cada bloco NiN é seguido por uma camada de pooling máxima
+e os números correspondentes de canais de saída são iguais aos do AlexNet. Cada bloco NiN é seguido por uma camada de *pooling* máxima
 com um passo de 2 e uma forma de janela de $3\times 3$.
-
-One significant difference between NiN and AlexNet
-is that NiN avoids fully-connected layers altogether.
-Instead, NiN uses an NiN block with a number of output channels equal to the number of label classes, followed by a *global* average pooling layer,
-yielding a vector of logits.
-One advantage of NiN's design is that it significantly
-reduces the number of required model parameters.
-However, in practice, this design sometimes requires
-increased model training time.
 
 Uma diferença significativa entre NiN e AlexNet
 é que o NiN evita camadas totalmente conectadas.
-Em vez disso, NiN usa um bloco NiN com um número de canais de saída igual ao número de classes de rótulo, seguido por uma camada de pooling média * global *,
+Em vez disso, NiN usa um bloco NiN com um número de canais de saída igual ao número de classes de rótulo, seguido por uma camada de *pooling* média global,
 produzindo um vetor de logits.
 Uma vantagem do design da NiN é que
 reduz o número de parâmetros de modelo necessários.
@@ -132,10 +116,12 @@ net.add(nin_block(96, kernel_size=11, strides=4, padding=0),
         nin_block(384, kernel_size=3, strides=1, padding=1),
         nn.MaxPool2D(pool_size=3, strides=2),
         nn.Dropout(0.5),
-        # There are 10 label classes
+        # Há 3 classes de rótulos
         nin_block(10, kernel_size=3, strides=1, padding=1),
         # The global average pooling layer automatically sets the window shape
         # to the height and width of the input
+        # A camada de pool de média global define automaticamente a forma da janela
+        # à altura e largura da entrada
         nn.GlobalAvgPool2D(),
         # Transform the four-dimensional output into two-dimensional output
         # with a shape of (batch size, 10)
@@ -267,6 +253,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE4NTY5NzY3LC0xNzUwOTM4NDg3LDIwMD
-Q1MTQ4Ml19
+eyJoaXN0b3J5IjpbLTE1NzM4MzU0ODksMzE4NTY5NzY3LC0xNz
+UwOTM4NDg3LDIwMDQ1MTQ4Ml19
 -->
