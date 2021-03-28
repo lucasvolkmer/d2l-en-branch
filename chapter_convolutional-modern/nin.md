@@ -1,20 +1,6 @@
 # Network in Network (NiN)
 :label:`sec_nin`
 
-LeNet, AlexNet, and VGG all share a common design pattern:
-extract features exploiting *spatial* structure
-via a sequence of convolution and pooling layers
-and then post-process the representations via fully-connected layers.
-The improvements upon LeNet by AlexNet and VGG mainly lie
-in how these later networks widen and deepen these two modules.
-Alternatively, one could imagine using fully-connected layers
-earlier in the process.
-However, a careless use of dense layers might give up the
-spatial structure of the representation entirely,
-*network in network* (*NiN*) blocks offer an alternative.
-They were proposed based on a very simple insight:
-to use an MLP on the channels for each pixel separately :cite:`Lin.Chen.Yan.2013`.
-
 LeNet, AlexNet e VGG compartilham um padrão de design comum:
 extrair recursos que exploram a estrutura *espacial*
 por meio de uma sequência de camadas de convolução e agrupamento
@@ -23,14 +9,14 @@ As melhorias no LeNet por AlexNet e VGG residem principalmente
 em como essas redes posteriores ampliam e aprofundam esses dois módulos.
 Alternativamente, pode-se imaginar o uso de camadas totalmente conectadas
 no início do processo.
-No entanto, um uso descuidado de camadas densas pode desistir do
+No entanto, um uso descuidado de camadas densas pode desistir da
 estrutura espacial da representação inteiramente,
 Os blocos *rede em rede* (*NiN*) oferecem uma alternativa.
 Eles foram propostos com base em uma visão muito simples:
 para usar um MLP nos canais para cada pixel separadamente :cite:`Lin.Chen.Yan.2013`.
 
 
-## NiN Blocks
+## Blocos NiN 
 
 Recall that the inputs and outputs of convolutional layers
 consist of four-dimensional tensors with axes
@@ -53,7 +39,9 @@ The NiN block consists of one convolutional layer
 followed by two $1\times 1$ convolutional layers that act as
 per-pixel fully-connected layers with ReLU activations.
 The convolution window shape of the first layer is typically set by the user.
-The subsequent window shapes are fixed to $1 \times 1Lembre-se de que as entradas e saídas das camadas convolucionais
+The subsequent window shapes are fixed to $1 \times 1$.
+
+Lembre-se de que as entradas e saídas das camadas convolucionais
 consistem em tensores quadridimensionais com eixos
 correspondendo ao exemplo, canal, altura e largura.
 Lembre-se também de que as entradas e saídas de camadas totalmente conectadas
@@ -310,5 +298,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NzA3NjE3M119
+eyJoaXN0b3J5IjpbMjAwNDUxNDgyXX0=
 -->
