@@ -25,23 +25,6 @@ com qualquer estrutura moderna de aprendizado profundo usando loops e sub-rotina
 
 ## VGG Blocks
 
-The basic building block of classic CNNs
-is a sequence of the following:
-(i) a convolutional layer
-with padding to maintain the resolution,
-(ii) a nonlinearity such as a ReLU,
-(iii) a pooling layer such
-as a max pooling layer.
-One VGG block consists of a sequence of convolutional layers,
-followed by a max pooling layer for spatial downsampling.
-In the original VGG paper :cite:`Simonyan.Zisserman.2014`,
-the authors
-employed convolutions with $3\times3$ kernels with padding of 1 (keeping height and width)
-and $2 \times 2$ max pooling with stride of 2
-(halving the resolution after each block).
-In the code below, we define a function called `vgg_block`
-to implement one VGG block.
-
 O bloco de construção básico das CNNs clássicas
 é uma sequência do seguinte:
 (i) uma camada convolucional
@@ -50,11 +33,11 @@ com preenchimento para manter a resolução,
 (iii) uma camada de pooling tal
 como uma camada de pooling máxima.
 Um bloco VGG consiste em uma sequência de camadas convolucionais,
-seguido por uma camada de pooling máxima para downsampling espacial.
+seguido por uma camada de *pooling* máxima para *downsampling* espacial.
 No artigo VGG original :cite:`Simonyan.Zisserman.2014`,
 Os autores
 convoluções empregadas com $3 \times 3$ kernels com preenchimento de 1 (mantendo a altura e largura)
-e $2 \times 2$ pool máximo com passo de 2
+e $2 \times 2$ *pool* máximo com passo de 2
 (reduzindo pela metade a resolução após cada bloco).
 No código abaixo, definimos uma função chamada `vgg_block`
 para implementar um bloco VGG.
@@ -67,7 +50,7 @@ e o número de canais de saída `num_channels`.
 
 : begin_tab: `pytorch`
 A função leva três argumentos correspondentes ao número
-de camadas convolucionais `num_convs`, o número de canais de entrada` in_channels`
+de camadas convolucionais `num_convs`, o número de canais de entrada `in_channels`
 e o número de canais de saída `out_channels`.
 : end_tab:
 
@@ -349,5 +332,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MTIwOTY0MCwxODMyMDEzODg4XX0=
+eyJoaXN0b3J5IjpbLTEyMjgwNDUwOTYsMTgzMjAxMzg4OF19
 -->
