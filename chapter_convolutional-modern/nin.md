@@ -18,29 +18,6 @@ para usar um MLP nos canais para cada pixel separadamente :cite:`Lin.Chen.Yan.20
 
 ## Blocos NiN 
 
-Recall that the inputs and outputs of convolutional layers
-consist of four-dimensional tensors with axes
-corresponding to the example, channel, height, and width.
-Also recall that the inputs and outputs of fully-connected layers
-are typically two-dimensional tensors corresponding to the example and feature.
-The idea behind NiN is to apply a fully-connected layer
-at each pixel location (for each height and  width).
-If we tie the weights across each spatial location,
-we could think of this as a $1\times 1$ convolutional layer
-(as described in :numref:`sec_channels`)
-or as a fully-connected layer acting independently on each pixel location.
-Another way to view this is to think of each element in the spatial dimension
-(height and width) as equivalent to an example
-and a channel as equivalent to a feature.
-
-:numref:`fig_nin` illustrates the main structural differences
-between VGG and NiN, and their blocks.
-The NiN block consists of one convolutional layer
-followed by two $1\times 1$ convolutional layers that act as
-per-pixel fully-connected layers with ReLU activations.
-The convolution window shape of the first layer is typically set by the user.
-The subsequent window shapes are fixed to $1 \times 1$ .
-
 Lembre-se de que as entradas e saídas das camadas convolucionais
 consistem em tensores quadridimensionais com eixos
 correspondendo ao exemplo, canal, altura e largura.
@@ -50,7 +27,7 @@ A ideia por trás do NiN é aplicar uma camada totalmente conectada
 em cada localização de pixel (para cada altura e largura).
 Se amarrarmos os pesos em cada localização espacial,
 poderíamos pensar nisso como uma camada convolucional $1 \times 1$
-(conforme descrito em: numref: `sec_channels`)
+(conforme descrito em :numref:`sec_channels`)
 ou como uma camada totalmente conectada agindo de forma independente em cada localização de pixel.
 Outra maneira de ver isso é pensar em cada elemento na dimensão espacial
 (altura e largura) como equivalente a um exemplo
@@ -64,10 +41,10 @@ per-pixel fully-connected layers with ReLU activations.
 The convolution window shape of the first layer is typically set by the user.
 The subsequent window shapes are fixed to $1 \times 1$.
 
-: numref: `fig_nin` ilustra as principais diferenças estruturais
+:numref:`fig_nin` ilustra as principais diferenças estruturais
 entre VGG e NiN, e seus blocos.
 O bloco NiN consiste em uma camada convolucional
-seguido por duas camadas convolucionais $1\times 1$ que atuam como
+seguido por duas camadas convolucionais $1 \times 1$ que atuam como
 camadas totalmente conectadas por pixel com ativações ReLU.
 A forma da janela de convolução da primeira camada é normalmente definida pelo usuário.
 As formas de janela subsequentes são fixadas em $1 \times 1$.
@@ -298,5 +275,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTA5Mzg0ODcsMjAwNDUxNDgyXX0=
+eyJoaXN0b3J5IjpbLTE0ODk1NjEwMTUsLTE3NTA5Mzg0ODcsMj
+AwNDUxNDgyXX0=
 -->
