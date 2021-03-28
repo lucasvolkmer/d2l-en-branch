@@ -265,15 +265,6 @@ Além disso, AlexNet mudou a função de ativação sigmóide para uma função 
 
 ### Controle de Capacidade e Pré-processamento
 
-AlexNet controls the model complexity of the fully-connected layer
-by dropout (:numref:`sec_dropout`),
-while LeNet only uses weight decay.
-To augment the data even further, the training loop of AlexNet
-added a great deal of image augmentation,
-such as flipping, clipping, and color changes.
-This makes the model more robust and the larger sample size effectively reduces overfitting.
-We will discuss data augmentation in greater detail in :numref:`sec_image_augmentation`.
-
 AlexNet controla a complexidade do modelo da camada totalmente conectada
 por *dropout* (:numref:`sec_dropout`),
 enquanto o LeNet usa apenas redução de peso.
@@ -291,8 +282,11 @@ npx.set_np()
 
 net = nn.Sequential()
 # Here, we use a larger 11 x 11 window to capture objects. At the same time,
+# Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. Ao mesmo tempo,
 # we use a stride of 4 to greatly reduce the height and width of the output.
+# usamos um passo de 4 para reduzir significativamente a altura e a largura da saída.
 # Here, the number of output channels is much larger than that in LeNet
+# Aqui, o número de canais de saída é muito maior do que no LeNet
 net.add(nn.Conv2D(96, kernel_size=11, strides=4, activation='relu'),
         nn.MaxPool2D(pool_size=3, strides=2),
         # Make the convolution window smaller, set padding to 2 for consistent
@@ -529,7 +523,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU2ODU0NTk0LDI2NzA5MDkzNCwzNDQ2OD
-MyOTMsLTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMTk4NjUzODY0
-NywtMTcwNDIwODk2OV19
+eyJoaXN0b3J5IjpbMTY3NDQ2MzE2MCw1NTY4NTQ1OTQsMjY3MD
+kwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0OSwtMzQ3MDEyODYx
+LC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
 -->
