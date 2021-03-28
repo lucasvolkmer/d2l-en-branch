@@ -39,7 +39,7 @@ The NiN block consists of one convolutional layer
 followed by two $1\times 1$ convolutional layers that act as
 per-pixel fully-connected layers with ReLU activations.
 The convolution window shape of the first layer is typically set by the user.
-The subsequent window shapes are fixed to $1 \times 1$.
+The subsequent window shapes are fixed to $1 \times 1$ .
 
 Lembre-se de que as entradas e saídas das camadas convolucionais
 consistem em tensores quadridimensionais com eixos
@@ -298,5 +298,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNDUxNDgyXX0=
+eyJoaXN0b3J5IjpbLTI0NTkzOTczNiwyMDA0NTE0ODJdfQ==
 -->
