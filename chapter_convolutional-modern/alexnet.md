@@ -369,11 +369,6 @@ def net():
         tf.keras.layers.Conv2D(filters=256, kernel_size=5, padding='same',
                                activation='relu'),
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2),
-        # Use three successive convolutional layers and a smaller convolution
-        # window. Except for the final convolutional layer, the number of
-        # output channels is further increased. Pooling layers are not used to
-        # reduce the height and width of input after the first two
-        # convolutional layers
         # Use três camadas convolucionais sucessivas e uma janela de convolução menor.
         # Exceto para a camada convolucional final, o número de canais de saída 
         # é aumentado ainda mais. Camadas de pooling não são usadas para reduzir a 
@@ -526,7 +521,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDIxMTIyMzMsMjA3NTE3NzkyNiwxND
+eyJoaXN0b3J5IjpbLTE4MzMzNzIyMjMsMjA3NTE3NzkyNiwxND
 U2NzA4NDg0LDEzMzEzMzk0ODcsNTU2ODU0NTk0LDI2NzA5MDkz
 NCwzNDQ2ODMyOTMsLTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMT
 k4NjUzODY0NywtMTcwNDIwODk2OV19
