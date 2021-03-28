@@ -281,9 +281,7 @@ from mxnet.gluon import nn
 npx.set_np()
 
 net = nn.Sequential()
-# Here, we use a larger 11 x 11 window to capture objects. At the same time,
 # Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. Ao mesmo tempo,
-# we use a stride of 4 to greatly reduce the height and width of the output.
 # usamos um passo de 4 para reduzir significativamente a altura e a largura da saída.
 # Here, the number of output channels is much larger than that in LeNet
 # Aqui, o número de canais de saída é muito maior do que no LeNet
@@ -424,12 +422,14 @@ def net():
         # Here, the number of outputs of the fully-connected layer is several
         # times larger than that in LeNet. Use the dropout layer to mitigate
         # overfitting
+        # Aqui, o número de saídas da camada totalmente conectada é várias vezes maior do que no LeNet. Use a camada de eliminação para mitigar overfitting
         tf.keras.layers.Dense(4096, activation='relu'),
         tf.keras.layers.Dropout(0.5),
         tf.keras.layers.Dense(4096, activation='relu'),
         tf.keras.layers.Dropout(0.5),
         # Output layer. Since we are using Fashion-MNIST, the number of
         # classes is 10, instead of 1000 as in the paper
+        # Camada de saída. Como estamos usando o Fashion-MNIST, o número de classes é 10, em vez de 1000 como no papel
         tf.keras.layers.Dense(10)
     ])
 ```
@@ -559,7 +559,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NTAxNDYxLDEzMzEzMzk0ODcsNTU2OD
-U0NTk0LDI2NzA5MDkzNCwzNDQ2ODMyOTMsLTE4ODg2MTcyNDks
-LTM0NzAxMjg2MSwtMTk4NjUzODY0NywtMTcwNDIwODk2OV19
+eyJoaXN0b3J5IjpbLTM5NDQ0OTI1MSwxMzMxMzM5NDg3LDU1Nj
+g1NDU5NCwyNjcwOTA5MzQsMzQ0NjgzMjkzLC0xODg4NjE3MjQ5
+LC0zNDcwMTI4NjEsLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ
+==
 -->
