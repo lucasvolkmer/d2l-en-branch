@@ -306,18 +306,23 @@ net.add(nn.Conv2D(96, kernel_size=11, strides=4, activation='relu'),
         # reduce the height and width of input after the first two
         # reduza a altura e largura da entrada após os dois primeiros
         # convolutional layers
-        # 
+        # camada convolucional
         nn.Conv2D(384, kernel_size=3, padding=1, activation='relu'),
         nn.Conv2D(384, kernel_size=3, padding=1, activation='relu'),
         nn.Conv2D(256, kernel_size=3, padding=1, activation='relu'),
         nn.MaxPool2D(pool_size=3, strides=2),
         # Here, the number of outputs of the fully-connected layer is several
+        # Aqui, o número de saídas da camada totalmente conectada é vários
         # times larger than that in LeNet. Use the dropout layer to mitigate
+        # vezes maior do que no LeNet. Use a camada de eliminação para mitigar
         # overfitting
+        # sobreajuste
         nn.Dense(4096, activation='relu'), nn.Dropout(0.5),
         nn.Dense(4096, activation='relu'), nn.Dropout(0.5),
         # Output layer. Since we are using Fashion-MNIST, the number of
+        # Camada de saída. Como estamos usando o Fashion-MNIST, o número de
         # classes is 10, instead of 1000 as in the paper
+        # classes é 10, em vez de 1000 como no papel
         nn.Dense(10))
 ```
 
@@ -531,7 +536,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Nzg2NDc1MDEsNTU2ODU0NTk0LDI2Nz
-A5MDkzNCwzNDQ2ODMyOTMsLTE4ODg2MTcyNDksLTM0NzAxMjg2
-MSwtMTk4NjUzODY0NywtMTcwNDIwODk2OV19
+eyJoaXN0b3J5IjpbMTMzMTMzOTQ4Nyw1NTY4NTQ1OTQsMjY3MD
+kwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0OSwtMzQ3MDEyODYx
+LC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
 -->
