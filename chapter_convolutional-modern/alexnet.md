@@ -283,27 +283,18 @@ npx.set_np()
 net = nn.Sequential()
 # Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. Ao mesmo tempo,
 # usamos um passo de 4 para reduzir significativamente a altura e a largura da saída.
-# Here, the number of output channels is much larger than that in LeNet
 # Aqui, o número de canais de saída é muito maior do que no LeNet
 net.add(nn.Conv2D(96, kernel_size=11, strides=4, activation='relu'),
         nn.MaxPool2D(pool_size=3, strides=2),
-        # Make the convolution window smaller, set padding to 2 for consistent
         # Torne a janela de convolução menor, defina o preenchimento para 2 para obter consistência
-        # height and width across the input and output, and increase the
-        # altura e largura na entrada e saída, e aumentar o
-        # number of output channels
+        # de altura e largura na entrada e saída, e aumentar o
         # número de canais de saída
         nn.Conv2D(256, kernel_size=5, padding=2, activation='relu'),
         nn.MaxPool2D(pool_size=3, strides=2),
-        # Use three successive convolutional layers and a smaller convolution
-        # Use três camadas convolucionais sucessivas e uma convolução menor
-        # window. Except for the final convolutional layer, the number of
-        # janela. Exceto para a camada convolucional final, o número de
-        # output channels is further increased. Pooling layers are not used to
-        # output channels is further increased. Pooling layers are not used to
-        # reduce the height and width of input after the first two
-        # reduza a altura e largura da entrada após os dois primeiros
-        # convolutional layers
+        # Use três camadas convolucionais sucessivas e uma janela de convolução menor.
+        # Exceto para a camada convolucional final, o número de
+        # os canais de saída são aumentados ainda mais. Camadas de pooling não são usadas para
+        # reduzir a altura e largura da entrada após as duas primeiras
         # camada convolucional
         nn.Conv2D(384, kernel_size=3, padding=1, activation='relu'),
         nn.Conv2D(384, kernel_size=3, padding=1, activation='relu'),
@@ -559,8 +550,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NDQ0OTI1MSwxMzMxMzM5NDg3LDU1Nj
-g1NDU5NCwyNjcwOTA5MzQsMzQ0NjgzMjkzLC0xODg4NjE3MjQ5
-LC0zNDcwMTI4NjEsLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ
-==
+eyJoaXN0b3J5IjpbLTE3NjA0MzM2NzEsMTMzMTMzOTQ4Nyw1NT
+Y4NTQ1OTQsMjY3MDkwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0
+OSwtMzQ3MDEyODYxLC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX
+0=
 -->
