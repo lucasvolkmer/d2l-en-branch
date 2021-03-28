@@ -72,7 +72,7 @@ camadas totalmente conectadas por pixel com ativações ReLU.
 A forma da janela de convolução da primeira camada é normalmente definida pelo usuário.
 As formas de janela subsequentes são fixadas em $1 \times 1$.
 
-![Comparing architectures of VGG and NiN, and their blocks.](../img/nin.svg)
+![Comparando arquiteturas de VGG e NiN, e seus blocos.](../img/nin.svg)
 :width:`600px`
 :label:`fig_nin`
 
@@ -298,5 +298,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTcwODE3NjksMjAwNDUxNDgyXX0=
+eyJoaXN0b3J5IjpbLTE3NTA5Mzg0ODcsMjAwNDUxNDgyXX0=
 -->
