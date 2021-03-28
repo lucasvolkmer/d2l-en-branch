@@ -100,21 +100,15 @@ def vgg_block(num_convs, num_channels):
     return blk
 ```
 
-## VGG Network
-
-Like AlexNet and LeNet,
-the VGG Network can be partitioned into two parts:
-the first consisting mostly of convolutional and pooling layers
-and the second consisting of fully-connected layers.
-This is depicted in :numref:`fig_vgg`.
+## Camadas VGG 
 
 Como AlexNet e LeNet,
 a rede VGG pode ser dividida em duas partes:
-o primeiro consistindo principalmente de camadas convolucionais e de pooling
+o primeiro consistindo principalmente de camadas convolucionais e de *pooling*
 e a segunda consistindo em camadas totalmente conectadas.
-Isso é descrito em: numref: `fig_vgg`.
+Isso é descrito em :numref:`fig_vgg`.
 
-![From AlexNet to VGG that is designed from building blocks.](../img/vgg.svg)
+![De AlexNet a VGG que é projetado a partir de blocos de construção.](../img/vgg.svg)
 :width:`400px`
 :label:`fig_vgg`
 
@@ -128,7 +122,7 @@ which are precisely the arguments required to call
 the `vgg_block` function.
 The fully-connected part of the VGG network is identical to that covered in AlexNet.
 
-A parte convolucional da rede conecta vários blocos VGG de: numref: `fig_vgg` (também definido na função` vgg_block`)
+A parte convolucional da rede conecta vários blocos VGG de :numref:`fig_vgg` (também definido na função` vgg_block`)
 em sucessão.
 A seguinte variável `conv_arch` consiste em uma lista de tuplas (uma por bloco),
 onde cada um contém dois valores: o número de camadas convolucionais
@@ -332,5 +326,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjgwNDUwOTYsMTgzMjAxMzg4OF19
+eyJoaXN0b3J5IjpbMjY2NDEzMTQ3LDE4MzIwMTM4ODhdfQ==
 -->
