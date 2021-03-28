@@ -363,7 +363,10 @@ def net():
         # the output. Here, the number of output channels is much larger than
         #
         # that in LeNet
-        #
+        # Aqui, usamos uma janela maior de 11 x 11 para capturar objetos. 
+        # Ao mesmo tempo, usamos um passo de 4 para reduzir significativamente 
+        # a altura e a largura da saída.
+        # Aqui, o número de canais de saída é muito maior do que no LeNet
         tf.keras.layers.Conv2D(filters=96, kernel_size=11, strides=4,
                                activation='relu'),
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2),
@@ -530,8 +533,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NjcwODQ4NCwxMzMxMzM5NDg3LDU1Nj
-g1NDU5NCwyNjcwOTA5MzQsMzQ0NjgzMjkzLC0xODg4NjE3MjQ5
-LC0zNDcwMTI4NjEsLTE5ODY1Mzg2NDcsLTE3MDQyMDg5NjldfQ
-==
+eyJoaXN0b3J5IjpbMjA3NTE3NzkyNiwxNDU2NzA4NDg0LDEzMz
+EzMzk0ODcsNTU2ODU0NTk0LDI2NzA5MDkzNCwzNDQ2ODMyOTMs
+LTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMTk4NjUzODY0NywtMT
+cwNDIwODk2OV19
 -->
