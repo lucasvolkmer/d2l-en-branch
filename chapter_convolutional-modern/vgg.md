@@ -1,12 +1,6 @@
 # Networks Using Blocks (VGG)
 :label:`sec_vgg`
 
-While AlexNet offered empirical evidence that deep CNNs
-can achieve good results, it did not provide a general template
-to guide subsequent researchers in designing new networks.
-In the following sections, we will introduce several heuristic concepts
-commonly used to design deep networks.
-
 Enquanto AlexNet ofereceu evidências empíricas de que CNNs profundas
 pode alcançar bons resultados, não forneceu um modelo geral
 para orientar os pesquisadores subsequentes na concepção de novas redes.
@@ -409,5 +403,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMjAxMzg4OF19
+eyJoaXN0b3J5IjpbLTE2MjMxNTI2MTcsMTgzMjAxMzg4OF19
 -->
