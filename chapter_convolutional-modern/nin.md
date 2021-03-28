@@ -135,11 +135,10 @@ net = nn.Sequential(
     nin_block(256, 384, kernel_size=3, strides=1, padding=1),
     nn.MaxPool2d(3, stride=2),
     nn.Dropout(0.5),
-    # There are 10 label classes
+    # Há 3 classes de rótulos
     nin_block(384, 10, kernel_size=3, strides=1, padding=1),
     nn.AdaptiveAvgPool2d((1, 1)),
-    # Transform the four-dimensional output into two-dimensional output with a
-    # shape of (batch size, 10)
+    # Transforme a saída quadridimensional em saída bidimensional com uma forma de (batch size, 10)
     nn.Flatten())
 ```
 
@@ -154,17 +153,14 @@ def net():
         nin_block(384, kernel_size=3, strides=1, padding='same'),
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2),
         tf.keras.layers.Dropout(0.5),
-        # There are 10 label classes
+        # Há 10 classes de rótulos
         nin_block(10, kernel_size=3, strides=1, padding='same'),
         tf.keras.layers.GlobalAveragePooling2D(),
         tf.keras.layers.Reshape((1, 1, 10)),
-        # Transform the four-dimensional output into two-dimensional output
-        # with a shape of (batch size, 10)
+        # Transforme a saída quadridimensional em saída bidimensional com uma forma de (batch size, 10)
         tf.keras.layers.Flatten(),
         ])
 ```
-
-We create a data example to see the output shape of each block.
 
 Criamos um exemplo de dados para ver a forma de saída de cada bloco.
 
@@ -250,6 +246,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/332)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNTE0MjEwMywzMTg1Njk3NjcsLTE3NT
-A5Mzg0ODcsMjAwNDUxNDgyXX0=
+eyJoaXN0b3J5IjpbODk3NjM0NzU4LDMxODU2OTc2NywtMTc1MD
+kzODQ4NywyMDA0NTE0ODJdfQ==
 -->
