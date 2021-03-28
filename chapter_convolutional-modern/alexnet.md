@@ -334,34 +334,49 @@ from torch import nn
 
 net = nn.Sequential(
     # Here, we use a larger 11 x 11 window to capture objects. At the same
+    #
     # time, we use a stride of 4 to greatly reduce the height and width of the
+    #
     # output. Here, the number of output channels is much larger than that in
+    #
     # LeNet
     nn.Conv2d(1, 96, kernel_size=11, stride=4, padding=1), nn.ReLU(),
     nn.MaxPool2d(kernel_size=3, stride=2),
     # Make the convolution window smaller, set padding to 2 for consistent
+    #
     # height and width across the input and output, and increase the number of
+    #
     # output channels
+    #
     nn.Conv2d(96, 256, kernel_size=5, padding=2), nn.ReLU(),
     nn.MaxPool2d(kernel_size=3, stride=2),
     # Use three successive convolutional layers and a smaller convolution
+    #
     # window. Except for the final convolutional layer, the number of output
+    #
     # channels is further increased. Pooling layers are not used to reduce the
+    #
     # height and width of input after the first two convolutional layers
+    #
     nn.Conv2d(256, 384, kernel_size=3, padding=1), nn.ReLU(),
     nn.Conv2d(384, 384, kernel_size=3, padding=1), nn.ReLU(),
     nn.Conv2d(384, 256, kernel_size=3, padding=1), nn.ReLU(),
     nn.MaxPool2d(kernel_size=3, stride=2),
     nn.Flatten(),
     # Here, the number of outputs of the fully-connected layer is several
+    #
     # times larger than that in LeNet. Use the dropout layer to mitigate
+    #
     # overfitting
+    #
     nn.Linear(6400, 4096), nn.ReLU(),
     nn.Dropout(p=0.5),
     nn.Linear(4096, 4096), nn.ReLU(),
     nn.Dropout(p=0.5),
     # Output layer. Since we are using Fashion-MNIST, the number of classes is
+    #
     # 10, instead of 1000 as in the paper
+    #
     nn.Linear(4096, 10))
 ```
 
@@ -373,20 +388,29 @@ import tensorflow as tf
 def net():
     return tf.keras.models.Sequential([
         # Here, we use a larger 11 x 11 window to capture objects. At the same
+        #
         # time, we use a stride of 4 to greatly reduce the height and width of
+        #
         # the output. Here, the number of output channels is much larger than
+        #
         # that in LeNet
+        #
         tf.keras.layers.Conv2D(filters=96, kernel_size=11, strides=4,
                                activation='relu'),
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2),
         # Make the convolution window smaller, set padding to 2 for consistent
+        #
         # height and width across the input and output, and increase the
+        #
         # number of output channels
+        #
         tf.keras.layers.Conv2D(filters=256, kernel_size=5, padding='same',
                                activation='relu'),
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2),
         # Use three successive convolutional layers and a smaller convolution
+        #
         # window. Except for the final convolutional layer, the number of
+        #
         # output channels is further increased. Pooling layers are not used to
         # reduce the height and width of input after the first two
         # convolutional layers
@@ -536,7 +560,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMTMzOTQ4Nyw1NTY4NTQ1OTQsMjY3MD
-kwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0OSwtMzQ3MDEyODYx
-LC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbLTEzNTk5OTU0MDUsMTMzMTMzOTQ4Nyw1NT
+Y4NTQ1OTQsMjY3MDkwOTM0LDM0NDY4MzI5MywtMTg4ODYxNzI0
+OSwtMzQ3MDEyODYxLC0xOTg2NTM4NjQ3LC0xNzA0MjA4OTY5XX
+0=
 -->
