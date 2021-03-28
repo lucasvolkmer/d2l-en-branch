@@ -275,13 +275,13 @@ This makes the model more robust and the larger sample size effectively reduces 
 We will discuss data augmentation in greater detail in :numref:`sec_image_augmentation`.
 
 AlexNet controla a complexidade do modelo da camada totalmente conectada
-por dropout (: numref: `sec_dropout`),
+por *dropout* (:numref:`sec_dropout`),
 enquanto o LeNet usa apenas redução de peso.
 Para aumentar ainda mais os dados, o loop de treinamento do AlexNet
 adicionou uma grande quantidade de aumento de imagem,
 como inversão, recorte e alterações de cor.
 Isso torna o modelo mais robusto e o tamanho de amostra maior reduz efetivamente o sobreajuste.
-Discutiremos o aumento de dados em maiores detalhes em: numref: `sec_image_augmentation`.
+Discutiremos o aumento de dados em maiores detalhes em :numref:`sec_image_augmentation`.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -529,7 +529,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODM0NjQ1NzQsMjY3MDkwOTM0LDM0ND
-Y4MzI5MywtMTg4ODYxNzI0OSwtMzQ3MDEyODYxLC0xOTg2NTM4
-NjQ3LC0xNzA0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbNTU2ODU0NTk0LDI2NzA5MDkzNCwzNDQ2OD
+MyOTMsLTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMTk4NjUzODY0
+NywtMTcwNDIwODk2OV19
 -->
