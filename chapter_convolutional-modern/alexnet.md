@@ -393,8 +393,6 @@ def net():
     ])
 ```
 
-We construct a single-channel data example with both height and width of 224 to observe the output shape of each layer. It matches the AlexNet architecture in :numref:`fig_alexnet`.
-
 Construímos um exemplo de dados de canal único com altura e largura de 224 para observar a forma de saída de cada camada. Ele corresponde à arquitetura AlexNet em :numref:`fig_alexnet`.
 
 ```{.python .input}
@@ -421,7 +419,7 @@ for layer in net().layers:
     print(layer.__class__.__name__, 'output shape:\t', X.shape)
 ```
 
-## Reading the Dataset
+## Lendo o Dataset
 
 Although AlexNet is trained on ImageNet in the paper, we use Fashion-MNIST here
 since training an ImageNet model to convergence could take hours or days
@@ -518,8 +516,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MjE1NDg1NiwyMDc1MTc3OTI2LDE0NT
-Y3MDg0ODQsMTMzMTMzOTQ4Nyw1NTY4NTQ1OTQsMjY3MDkwOTM0
-LDM0NDY4MzI5MywtMTg4ODYxNzI0OSwtMzQ3MDEyODYxLC0xOT
-g2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
+eyJoaXN0b3J5IjpbLTExNjc5NDc1ODAsMjA3NTE3NzkyNiwxND
+U2NzA4NDg0LDEzMzEzMzk0ODcsNTU2ODU0NTk0LDI2NzA5MDkz
+NCwzNDQ2ODMyOTMsLTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMT
+k4NjUzODY0NywtMTcwNDIwODk2OV19
 -->
