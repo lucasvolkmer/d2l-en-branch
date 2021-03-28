@@ -436,9 +436,9 @@ Embora AlexNet seja treinado em ImageNet no jornal, usamos Fashion-MNIST aqui
 já que treinar um modelo ImageNet para convergência pode levar horas ou dias
 mesmo em uma GPU moderna.
 Um dos problemas de aplicar AlexNet diretamente no Fashion-MNIST
-é que suas imagens têm resolução inferior ($ 28 \ vezes 28 $ pixels)
+é que suas imagens têm resolução inferior ($28 \times 28$ pixels)
 do que imagens ImageNet.
-Para fazer as coisas funcionarem, aumentamos a amostra para $ 224 \ vezes 224 $
+Para fazer as coisas funcionarem, aumentamos a amostra para $224 \times 224$
 (geralmente não é uma prática inteligente,
 mas fazemos isso aqui para sermos fiéis à arquitetura AlexNet).
 Realizamos esse redimensionamento com o argumento `resize` na função` d2l.load_data_fashion_mnist`.
@@ -516,8 +516,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussão](https://discuss.d2l.ai/t/276)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjc5NDc1ODAsMjA3NTE3NzkyNiwxND
-U2NzA4NDg0LDEzMzEzMzk0ODcsNTU2ODU0NTk0LDI2NzA5MDkz
-NCwzNDQ2ODMyOTMsLTE4ODg2MTcyNDksLTM0NzAxMjg2MSwtMT
-k4NjUzODY0NywtMTcwNDIwODk2OV19
+eyJoaXN0b3J5IjpbMTg4OTQ2NDAwMiwyMDc1MTc3OTI2LDE0NT
+Y3MDg0ODQsMTMzMTMzOTQ4Nyw1NTY4NTQ1OTQsMjY3MDkwOTM0
+LDM0NDY4MzI5MywtMTg4ODYxNzI0OSwtMzQ3MDEyODYxLC0xOT
+g2NTM4NjQ3LC0xNzA0MjA4OTY5XX0=
 -->
