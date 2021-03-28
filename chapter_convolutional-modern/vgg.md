@@ -244,7 +244,9 @@ small_conv_arch = [(pair[0], pair[1] // ratio) for pair in conv_arch]
 # Recall that this has to be a function that will be passed to
 # `d2l.train_ch6()` so that model building/compiling need to be within
 # `strategy.scope()` in order to utilize the CPU/GPU devices that we have
-# Lembre-se de que esta deve ser uma função que será passada para `d2l.train_ch6 ()` para que a construção/compilação do modelo precise estar dentro de `strategy.scope ()` a fim de utilizar os dispositivos CPU/GPU que temos
+# Lembre-se de que esta deve ser uma função que será passada para `d2l.train_ch6 ()`
+# para que a construção/compilação do modelo precise estar dentro de `strategy.scope ()` 
+# a fim de utilizar os dispositivos CPU/GPU que temos
 net = lambda: vgg(small_conv_arch)
 ```
 
@@ -294,5 +296,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/277)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NDE4OTE3MywxODMyMDEzODg4XX0=
+eyJoaXN0b3J5IjpbLTE2NDg3Mzc2MjksMTgzMjAxMzg4OF19
 -->
