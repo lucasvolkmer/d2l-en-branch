@@ -1,4 +1,4 @@
-# Pooling
+# *Pooling*
 :label:`sec_pooling`
 
 
@@ -365,3 +365,6 @@ output vertically yields the same output as the other implementations.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEzMDk5MTE4Nl19
+-->
