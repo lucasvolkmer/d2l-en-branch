@@ -40,32 +40,32 @@ e de representações de *downsampling* espacialmente.
 
 ## *Pooling* Máximo e *Pooling* Médio
 
-Like convolutional layers, *pooling* operators
-consist of a fixed-shape window that is slid over
-all regions in the input according to its stride,
-computing a single output for each location traversed
-by the fixed-shape window (sometimes known as the *pooling window*).
-However, unlike the cross-correlation computation
-of the inputs and kernels in the convolutional layer,
-the pooling layer contains no parameters (there is no *kernel*).
-Instead, pooling operators are deterministic,
-typically calculating either the maximum or the average value
-of the elements in the pooling window.
-These operations are called *maximum pooling* (*max pooling* for short)
-and *average pooling*, respectively.
+
+Como camadas convolucionais, operadores de *pooling*
+consistem em uma janela de formato fixo que é deslizada
+todas as regiões na entrada de acordo com seu passo,
+computando uma única saída para cada local percorrido
+pela janela de formato fixo (também conhecida como *janela de pooling*).
+No entanto, ao contrário do cálculo de correlação cruzada
+das entradas e grãos na camada convolucional,
+a camada de *pooling* não contém parâmetros (não há *kernel*).
+Em vez disso, os operadores de *pooling* são determinísticos,
+normalmente calculando o valor máximo ou médio
+dos elementos na janela de *pooling*.
+Essas operações são chamadas de *pooling máximo* (*pooling máximo* para breve)
+e *pooling médio*, respectivamente.
 
 
-In both cases, as with the cross-correlation operator,
-we can think of the pooling window
-as starting from the top left of the input tensor
-and sliding across the input tensor from left to right and top to bottom.
-At each location that the pooling window hits,
-it computes the maximum or average
-value of the input subtensor in the window,
-depending on whether max or average pooling is employed.
+Em ambos os casos, como com o operador de correlação cruzada,
+podemos pensar na janela de *pooling*
+começando da parte superior esquerda do tensor de entrada
+e deslizando pelo tensor de entrada da esquerda para a direita e de cima para baixo.
+Em cada local que atinge a janela de *pooling*,
+ele calcula o máximo ou o médio
+valor do subtensor de entrada na janela,
+dependendo se o *pooling* máximo ou médio é empregado.
 
-
-![Maximum pooling with a pooling window shape of $2\times 2$. The shaded portions are the first output element as well as the input tensor elements used for the output computation: $\max(0, 1, 3, 4)=4$.](../img/pooling.svg)
+![Pooling máximo com uma forma de janela de pool de $2\times 2$. As partes sombreadas são o primeiro elemento de saída, bem como os elementos tensores de entrada usados para o cálculo de saída: $\max(0, 1, 3, 4)=4$.](../img/pooling.svg)
 :label:`fig_pooling`
 
 The output tensor in :numref:`fig_pooling`  has a height of 2 and a width of 2.
@@ -367,5 +367,5 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MTQwNDk2MCwtMTMwOTkxMTg2XX0=
+eyJoaXN0b3J5IjpbLTE3MjMwOTM1ODQsLTEzMDk5MTE4Nl19
 -->
