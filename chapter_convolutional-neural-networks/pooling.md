@@ -153,14 +153,14 @@ X = d2l.tensor([[0.0, 1.0, 2.0], [3.0, 4.0, 5.0], [6.0, 7.0, 8.0]])
 pool2d(X, (2, 2))
 ```
 
-Also, we experiment with the average pooling layer.
+Além disso, experimentamos a camada de *pooling* média.
 
 ```{.python .input}
 #@tab all
 pool2d(X, (2, 2), 'avg')
 ```
 
-## Padding and Stride
+## Preenchimento e Passos
 
 As with convolutional layers, pooling layers
 can also change the output shape.
@@ -368,6 +368,6 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDAwMzcwMzgsMTg5NDAzMzIzNywtMT
-MwOTkxMTg2XX0=
+eyJoaXN0b3J5IjpbMjEyMTczNzk0MCwtMTEwMDAzNzAzOCwxOD
+k0MDMzMjM3LC0xMzA5OTExODZdfQ==
 -->
