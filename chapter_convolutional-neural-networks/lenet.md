@@ -1,42 +1,42 @@
 # Redes Neurais Convolucionais (LeNet)
 :label:`sec_lenet`
 
-We now have all the ingredients required to assemble
-a fully-functional CNN.
-In our earlier encounter with image data,
-we applied
-a softmax regression model (:numref:`sec_softmax_scratch`)
-and
-an MLP model (:numref:`sec_mlp_scratch`)
-to pictures of clothing in the Fashion-MNIST dataset.
-To make such data amenable to softmax regression and MLPs,
-we first flattened each image from a $28\times28$ matrix
-into a fixed-length $784$-dimensional vector,
-and thereafter processed them with fully-connected layers.
-Now that we have a handle on convolutional layers,
-we can retain the spatial structure in our images.
-As an additional benefit of replacing fully-connected layers with convolutional layers,
-we will enjoy more parsimonious models that require far fewer parameters.
 
-In this section, we will introduce *LeNet*,
-among the first published CNNs
-to capture wide attention for its performance on computer vision tasks.
-The model was introduced by (and named for) Yann LeCun,
-then a researcher at AT&T Bell Labs,
-for the purpose of recognizing handwritten digits in images :cite:`LeCun.Bottou.Bengio.ea.1998`.
-This work represented the culmination
-of a decade of research developing the technology.
-In 1989, LeCun published the first study to successfully
-train CNNs via backpropagation.
+Agora temos todos os ingredientes necessários para montar
+uma CNN totalmente funcional.
+Em nosso encontro anterior com dados de imagem,
+nós aplicamos
+um modelo de regressão *softmax* (:numref: `sec_softmax_scratch`)
+e
+um modelo MLP (:numref:`sec_mlp_scratch`)
+a fotos de roupas no conjunto de dados Fashion-MNIST.
+Para tornar esses dados passíveis de regressão *softmax* e MLPs,
+primeiro nivelamos cada imagem de uma matriz $28\times28$
+em um vetor de comprimento fixo $784$-dimensional,
+e depois os processamos com camadas totalmente conectadas.
+Agora que temos um controle sobre as camadas convolucionais,
+podemos reter a estrutura espacial em nossas imagens.
+Como um benefício adicional de substituir camadas totalmente conectadas por camadas convolucionais,
+desfrutaremos de modelos mais parcimoniosos que requerem muito menos parâmetros.
 
+Nesta seção, apresentaremos *LeNet*,
+entre as primeiras CNNs publicadas
+para chamar a atenção para seu desempenho em tarefas de visão computacional.
+O modelo foi apresentado por (e nomeado em homenagem a) Yann LeCun,
+em seguida, um pesquisador da AT&T Bell Labs,
+para fins de reconhecimento de dígitos manuscritos em imagens :cite:`LeCun.Bottou.Bengio.ea.1998`.
+Este trabalho representou o culminar
+de uma década de pesquisa desenvolvendo a tecnologia.
+Em 1989, LeCun publicou o primeiro estudo com sucesso
+treinar CNNs via retropropagação.
 
-At the time LeNet achieved outstanding results
-matching the performance of support vector machines,
-then a dominant approach in supervised learning.
-LeNet was eventually adapted to recognize digits
-for processing deposits in ATM machines.
-To this day, some ATMs still run the code
-that Yann and his colleague Leon Bottou wrote in the 1990s!
+Na época, LeNet alcançou resultados excelentes
+combinando o desempenho das máquinas de vetores de suporte,
+em seguida, uma abordagem dominante na aprendizagem supervisionada.
+LeNet foi eventualmente adaptado para reconhecer dígitos
+para processar depósitos em caixas eletrônicos.
+Até hoje, alguns caixas eletrônicos ainda executam o código
+que Yann e seu colega Leon Bottou escreveram na década de 1990!
 
 
 ## LeNet
@@ -456,5 +456,5 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/275)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjQxMzk5MTJdfQ==
+eyJoaXN0b3J5IjpbLTc3NzA4MjU0MSwtMTIyNDEzOTkxMl19
 -->
