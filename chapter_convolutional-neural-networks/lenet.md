@@ -149,17 +149,18 @@ def net():
         tf.keras.layers.Dense(10)])
 ```
 
-We took a small liberty with the original model,
-removing the Gaussian activation in the final layer.
-Other than that, this network matches
-the original LeNet-5 architecture.
 
-By passing a single-channel (black and white)
-$28 \times 28$ image through the network
-and printing the output shape at each layer,
-we can inspect the model to make sure
-that its operations line up with
-what we expect from :numref:`img_lenet_vert`.
+Tomamos uma pequena liberdade com o modelo original,
+removendo a ativação gaussiana na camada final.
+Fora isso, esta rede corresponde
+a arquitetura LeNet-5 original.
+
+Ao passar por um canal único (preto e branco)
+$28 \times 28$ imagem através da rede
+e imprimir a forma de saída em cada camada,
+podemos inspecionar o modelo para ter certeza
+que suas operações se alinham com
+o que esperamos de :numref:`img_lenet_vert`.
 
 ![Compressed notation for LeNet-5.](../img/lenet-vert.svg)
 :label:`img_lenet_vert`
@@ -457,6 +458,6 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/275)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzE4NDU4MzUsLTE5NTM4NDg3OTgsLT
-c3NzA4MjU0MSwtMTIyNDEzOTkxMl19
+eyJoaXN0b3J5IjpbLTQ0NDQzMTkwMSwtMTk1Mzg0ODc5OCwtNz
+c3MDgyNTQxLC0xMjI0MTM5OTEyXX0=
 -->
