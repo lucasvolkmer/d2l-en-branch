@@ -352,12 +352,12 @@ a saída verticalmente produz a mesma saída que as outras implementações.
 
 ## Exercícios
 
-1. Can you implement average pooling as a special case of a convolution layer? If so, do it.
-1. Can you implement max pooling as a special case of a convolution layer? If so, do it.
-1. What is the computational cost of the pooling layer? Assume that the input to the pooling layer is of size $c\times h\times w$, the pooling window has a shape of $p_h\times p_w$ with a padding of $(p_h, p_w)$ and a stride of $(s_h, s_w)$.
-1. Why do you expect maximum pooling and average pooling to work differently?
-1. Do we need a separate minimum pooling layer? Can you replace it with another operation?
-1. Is there another operation between average and maximum pooling that you could consider (hint: recall the softmax)? Why might it not be so popular?
+1. Você pode implementar o *pooling* médio como um caso especial de uma camada de convolução? Se sim, faça.
+1. Você pode implementar o *pooling* máximo como um caso especial de uma camada de convolução? Se for assim, faça.
+1. Qual é o custo computacional da camada de *pooling*? Suponha que a entrada para a camada de *pooling* seja do tamanho  $c\times h\times w$, a janela de *pooling* tem um formato de $p_h\times p_w$ com um preenchimento de $(p_h, p_w)$ e um passo de $(s_h, s_w)$.
+1. Por que você espera que o *pooling* máximo e o *pooling* médio funcionem de maneira diferente?
+1. Precisamos de uma camada mínima de *pooling* separada? Você pode substituí-la por outra operação?
+1. Existe outra operação entre o *pooling* médio e máximo que você possa considerar (dica: lembre-se do *softmax*)? Por que não é tão popular?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/71)
@@ -371,6 +371,6 @@ a saída verticalmente produz a mesma saída que as outras implementações.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1OTc5NTAxNSwtMTIwOTA5MTA3NiwtMT
+eyJoaXN0b3J5IjpbMjAzMjIwMDQ0NiwtMTIwOTA5MTA3NiwtMT
 EwMDAzNzAzOCwxODk0MDMzMjM3LC0xMzA5OTExODZdfQ==
 -->
