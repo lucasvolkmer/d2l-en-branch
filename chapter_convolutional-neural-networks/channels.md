@@ -18,7 +18,7 @@ Referimo-nos a este eixo, com um tamanho de 3, como a dimensão do *canal*.
 Nesta seção, daremos uma olhada mais detalhada
 em núcleos de convolução com múltiplos canais de entrada e saída.
 
-## Multiple Input Channels
+## Canais de Entrada Múltiplos
 
 When the input data contain multiple channels,
 we need to construct a convolution kernel
@@ -281,6 +281,6 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIzNjY5NjMzLDEwODQ3OTUxOTcsMTA5Nj
-M5ODc2NV19
+eyJoaXN0b3J5IjpbLTExMzg1NTY3NCwyMjM2Njk2MzMsMTA4ND
+c5NTE5NywxMDk2Mzk4NzY1XX0=
 -->
