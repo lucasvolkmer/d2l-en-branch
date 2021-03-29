@@ -455,3 +455,6 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/275)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTY0NDY0NDQwMV19
+-->
