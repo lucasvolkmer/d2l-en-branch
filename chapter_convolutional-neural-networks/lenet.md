@@ -49,44 +49,45 @@ A arquitetura é resumida em :numref:`img_lenet`.
 ![Fluxo de dados em LeNet. A entrada é um dígito escrito à mão, a saída uma probabilidade de mais de 10 resultados possíveis.](../img/lenet.svg)
 :label:`img_lenet`
 
-The basic units in each convolutional block
-are a convolutional layer, a sigmoid activation function,
-and a subsequent average pooling operation.
-Note that while ReLUs and max-pooling work better,
-these discoveries had not yet been made in the 1990s.
-Each convolutional layer uses a $5\times 5$ kernel
-and a sigmoid activation function.
-These layers map spatially arranged inputs
-to a number of two-dimensional feature maps, typically
-increasing the number of channels.
-The first convolutional layer has 6 output channels,
-while the second has 16.
-Each $2\times2$ pooling operation (stride 2)
-reduces dimensionality by a factor of $4$ via spatial downsampling.
-The convolutional block emits an output with shape given by
-(batch size, number of channel, height, width).
 
-In order to pass output from the convolutional block
-to the dense block,
-we must flatten each example in the minibatch.
-In other words, we take this four-dimensional input and transform it
-into the two-dimensional input expected by fully-connected layers:
-as a reminder, the two-dimensional representation that we desire
-has uses the first dimension to index examples in the minibatch
-and the second to give the flat vector representation of each example.
-LeNet's dense block has three fully-connected layers,
-with 120, 84, and 10 outputs, respectively.
-Because we are still performing classification,
-the 10-dimensional output layer corresponds
-to the number of possible output classes.
+As unidades básicas em cada bloco convolucional
+são uma camada convolucional, uma função de ativação *sigmoid*
+e uma subsequente operação média de *pooling*.
+Observe que, embora ReLUs e *max-pooling* funcionem melhor,
+essas descobertas ainda não haviam sido feitas na década de 1990.
+Cada camada convolucional usa um *kernel* $5\times 5$
+e uma função de ativação *sigmoid*.
+Essas camadas mapeiam entradas organizadas espacialmente
+a uma série de mapas de recursos bidimensionais, normalmente
+aumentando o número de canais.
+A primeira camada convolucional tem 6 canais de saída,
+enquanto o segundo tem 16.
+Cada operação de *pooling* $2\times2$ (passo 2)
+reduz a dimensionalidade por um fator de $4$ por meio da redução da resolução espacial.
+O bloco convolucional emite uma saída com forma dada por
+(tamanho do lote, número de canal, altura, largura).
 
-While getting to the point where you truly understand
-what is going on inside LeNet may have taken a bit of work,
-hopefully the following code snippet will convince you
-that implementing such models with modern deep learning frameworks
-is remarkably simple.
-We need only to instantiate a `Sequential` block
-and chain together the appropriate layers.
+Para passar a saída do bloco convolucional
+para o bloco denso,
+devemos nivelar cada exemplo no *minibatch*.
+Em outras palavras, pegamos essa entrada quadridimensional e a transformamos
+na entrada bidimensional esperada por camadas totalmente conectadas:
+como um lembrete, a representação bidimensional que desejamos
+usa a primeira dimensão para indexar exemplos no *minibatch*
+e o segundo para dar a representação vetorial plana de cada exemplo.
+O bloco denso do LeNet tem três camadas totalmente conectadas,
+com 120, 84 e 10 saídas, respectivamente.
+Porque ainda estamos realizando a classificação,
+a camada de saída de 10 dimensões corresponde
+ao número de classes de saída possíveis.
+
+Chegar ao ponto em que você realmente entende
+o que está acontecendo dentro do LeNet pode dar um pouco de trabalho, mas
+espero que o seguinte *snippet* de código o convença
+que a implementação de tais modelos com estruturas modernas de *deep learning*
+é extremamente simples.
+Precisamos apenas instanciar um bloco `Sequential`
+e encadear as camadas apropriadas.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -456,6 +457,6 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/275)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTM4NDg3OTgsLTc3NzA4MjU0MSwtMT
-IyNDEzOTkxMl19
+eyJoaXN0b3J5IjpbLTIwMzE4NDU4MzUsLTE5NTM4NDg3OTgsLT
+c3NzA4MjU0MSwtMTIyNDEzOTkxMl19
 -->
