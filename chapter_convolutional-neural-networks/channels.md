@@ -20,36 +20,37 @@ em núcleos de convolução com múltiplos canais de entrada e saída.
 
 ## Canais de Entrada Múltiplos
 
-When the input data contain multiple channels,
-we need to construct a convolution kernel
-with the same number of input channels as the input data,
-so that it can perform cross-correlation with the input data.
-Assuming that the number of channels for the input data is $c_i$,
-the number of input channels of the convolution kernel also needs to be $c_i$. If our convolution kernel's window shape is $k_h\times k_w$,
-then when $c_i=1$, we can think of our convolution kernel
-as just a two-dimensional tensor of shape $k_h\times k_w$.
 
-However, when $c_i>1$, we need a kernel
-that contains a tensor of shape $k_h\times k_w$ for *every* input channel. Concatenating these $c_i$ tensors together
-yields a convolution kernel of shape $c_i\times k_h\times k_w$.
-Since the input and convolution kernel each have $c_i$ channels,
-we can perform a cross-correlation operation
-on the two-dimensional tensor of the input
-and the two-dimensional tensor of the convolution kernel
-for each channel, adding the $c_i$ results together
-(summing over the channels)
-to yield a two-dimensional tensor.
-This is the result of a two-dimensional cross-correlation
-between a multi-channel input and
-a multi-input-channel convolution kernel.
+Quando os dados de entrada contêm vários canais,
+precisamos construir um *kernel* de convolução
+com o mesmo número de canais de entrada que os dados de entrada,
+para que possa realizar correlação cruzada com os dados de entrada.
+Supondo que o número de canais para os dados de entrada seja $c_i$,
+o número de canais de entrada do *kernel* de convolução também precisa ser $c_i$. Se a forma da janela do nosso kernel de convolução é $k_h\times k_w$,
+então quando $c_i=1$, podemos pensar em nosso kernel de convolução
+apenas como um tensor bidimensional de forma $k_h\times k_w$.
 
-In :numref:`fig_conv_multi_in`, we demonstrate an example
-of a two-dimensional cross-correlation with two input channels.
-The shaded portions are the first output element
-as well as the input and kernel tensor elements used for the output computation:
+No entanto, quando $c_i>1$, precisamos de um kernel
+que contém um tensor de forma $k_h\times k_w$ para *cada* canal de entrada. Concatenando estes $c_i$ tensores juntos
+produz um kernel de convolução de forma $c_i\times k_h\times k_w$.
+Uma vez que o *kernel* de entrada e convolução tem cada um $c_i$ canais,
+podemos realizar uma operação de correlação cruzada
+no tensor bidimensional da entrada
+e o tensor bidimensional do núcleo de convolução
+para cada canal, adicionando os resultados $c_i$ juntos
+(somando os canais)
+para produzir um tensor bidimensional.
+Este é o resultado de uma correlação cruzada bidimensional
+entre uma entrada multicanal e
+um *kernel* de convolução com vários canais de entrada.
+
+Em :numref:`fig_conv_multi_in`, demonstramos um exemplo
+de uma correlação cruzada bidimensional com dois canais de entrada.
+As partes sombreadas são o primeiro elemento de saída
+bem como os elementos tensores de entrada e kernel usados ​​para o cálculo de saída:
 $(1\times1+2\times2+4\times3+5\times4)+(0\times0+1\times1+3\times2+4\times3)=56$.
 
-![Cross-correlation computation with 2 input channels.](../img/conv-multi-in.svg)
+![Cálculo de correlação cruzada com 2 canais de entrada.](../img/conv-multi-in.svg)
 :label:`fig_conv_multi_in`
 
 
@@ -281,6 +282,6 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzg1NTY3NCwyMjM2Njk2MzMsMTA4ND
-c5NTE5NywxMDk2Mzk4NzY1XX0=
+eyJoaXN0b3J5IjpbMTc0ODQyNDI0MiwtMTEzODU1Njc0LDIyMz
+Y2OTYzMywxMDg0Nzk1MTk3LDEwOTYzOTg3NjVdfQ==
 -->
