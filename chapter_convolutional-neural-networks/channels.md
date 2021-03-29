@@ -158,20 +158,20 @@ K = d2l.stack((K, K + 1, K + 2), 0)
 K.shape
 ```
 
-Below, we perform cross-correlation operations
-on the input tensor `X` with the kernel tensor `K`.
-Now the output contains 3 channels.
-The result of the first channel is consistent
-with the result of the previous input tensor `X`
-and the multi-input channel,
-single-output channel kernel.
+Abaixo, realizamos operações de correlação cruzada
+no tensor de entrada `X` com o tensor do kernel` K`.
+Agora a saída contém 3 canais.
+O resultado do primeiro canal é consistente
+com o resultado do tensor de entrada anterior `X`
+e o canal de múltiplas entradas,
+*kernel* do canal de saída única.
 
 ```{.python .input}
 #@tab all
 corr2d_multi_in_out(X, K)
 ```
 
-## $1\times 1$ Convolutional Layer
+## Camada Convolucional $1\times 1$
 
 At first, a $1 \times 1$ convolution, i.e., $k_h = k_w = 1$,
 does not seem to make much sense.
@@ -283,7 +283,7 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzI3MDY2MSwtNDA1NDAzOTA0LC0xMT
+eyJoaXN0b3J5IjpbMTg3NzU1MTY4NCwtNDA1NDAzOTA0LC0xMT
 M4NTU2NzQsMjIzNjY5NjMzLDEwODQ3OTUxOTcsMTA5NjM5ODc2
 NV19
 -->
