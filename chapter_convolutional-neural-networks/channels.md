@@ -54,10 +54,10 @@ $(1\times1+2\times2+4\times3+5\times4)+(0\times0+1\times1+3\times2+4\times3)=56$
 :label:`fig_conv_multi_in`
 
 
-To make sure we really understand what is going on here,
-we can implement cross-correlation operations with multiple input channels ourselves.
-Notice that all we are doing is performing one cross-correlation operation
-per channel and then adding up the results.
+Para ter certeza de que realmente entendemos o que está acontecendo aqui,
+podemos implementar operações de correlação cruzada com vários canais de entrada.
+Observe que tudo o que estamos fazendo é realizar uma operação de correlação cruzada
+por canal e depois somando os resultados.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -90,9 +90,9 @@ def corr2d_multi_in(X, K):
     return tf.reduce_sum([d2l.corr2d(x, k) for x, k in zip(X, K)], axis=0)
 ```
 
-We can construct the input tensor `X` and the kernel tensor `K`
-corresponding to the values in :numref:`fig_conv_multi_in`
-to validate the output of the cross-correlation operation.
+Podemos construir o tensor de entrada `X` e o tensor do kernel` K`
+correspondendo aos valores em :numref:`fig_conv_multi_in`
+para validar a saída da operação de correlação cruzada.
 
 ```{.python .input}
 #@tab all
@@ -103,7 +103,7 @@ K = d2l.tensor([[[0.0, 1.0], [2.0, 3.0]], [[1.0, 2.0], [3.0, 4.0]]])
 corr2d_multi_in(X, K)
 ```
 
-## Multiple Output Channels
+## Canais de Saída Múltiplos
 
 Regardless of the number of input channels,
 so far we always ended up with one output channel.
@@ -282,6 +282,6 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0ODQyNDI0MiwtMTEzODU1Njc0LDIyMz
+eyJoaXN0b3J5IjpbLTQwNTQwMzkwNCwtMTEzODU1Njc0LDIyMz
 Y2OTYzMywxMDg0Nzk1MTk3LDEwOTYzOTg3NjVdfQ==
 -->
