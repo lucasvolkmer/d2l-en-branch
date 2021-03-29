@@ -259,19 +259,19 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 
 ## Exercícios
 
-1. Assume that we have two convolution kernels of size $k_1$ and $k_2$, respectively (with no nonlinearity in between).
-    1. Prove that the result of the operation can be expressed by a single convolution.
-    1. What is the dimensionality of the equivalent single convolution?
-    1. Is the converse true?
-1. Assume an input of shape $c_i\times h\times w$ and a convolution kernel of shape $c_o\times c_i\times k_h\times k_w$, padding of $(p_h, p_w)$, and stride of $(s_h, s_w)$.
-    1. What is the computational cost (multiplications and additions) for the forward propagation?
-    1. What is the memory footprint?
-    1. What is the memory footprint for the backward computation?
-    1. What is the computational cost for the backpropagation?
-1. By what factor does the number of calculations increase if we double the number of input channels $c_i$ and the number of output channels $c_o$? What happens if we double the padding?
-1. If the height and width of a convolution kernel is $k_h=k_w=1$, what is the computational complexity of the forward propagation?
-1. Are the variables `Y1` and `Y2` in the last example of this section exactly the same? Why?
-1. How would you implement convolutions using matrix multiplication when the convolution window is not $1\times 1$?
+1. Suponha que temos dois *kernels* de convolução de tamanho $k_1$ e $k_2$, respectivamente (sem não linearidade entre eles).
+    1. Prove que o resultado da operação pode ser expresso por uma única convolução.
+    1. Qual é a dimensionalidade da convolução única equivalente?
+    1. O inverso é verdadeiro?
+1. Assuma uma entrada de forma $c_i\times h\times w$ e um *kernel* de convolução de forma $c_o\times c_i\times k_h\times k_w$, preenchimento de $(p_h, p_w)$, e passo de $(s_h, s_w)$.
+    1. Qual é o custo computacional (multiplicações e adições) para a propagação direta?
+    1. Qual é a pegada de memória?
+    1. Qual é a pegada de memória para a computação reversa?
+    1. Qual é o custo computacional para a retropropagação?
+1. Por que fator o número de cálculos aumenta se dobrarmos o número de canais de entrada $c_i$ e o número de canais de saída $c_o$? O que acontece se dobrarmos o preenchimento?
+1. Se a altura e largura de um *kernel* de convolução é $k_h=k_w=1$,, qual é a complexidade computacional da propagação direta?
+1. As variáveis ​​`Y1` e` Y2` no último exemplo desta seção são exatamente as mesmas? Porque?
+1. Como você implementaria convoluções usando a multiplicação de matrizes quando a janela de convolução não é $1\times 1$?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/69)
@@ -285,7 +285,7 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcxMDkyNjUxLDE4Nzc1NTE2ODQsLTQwNT
-QwMzkwNCwtMTEzODU1Njc0LDIyMzY2OTYzMywxMDg0Nzk1MTk3
-LDEwOTYzOTg3NjVdfQ==
+eyJoaXN0b3J5IjpbLTE2NjY1MDUzNDUsOTcxMDkyNjUxLDE4Nz
+c1NTE2ODQsLTQwNTQwMzkwNCwtMTEzODU1Njc0LDIyMzY2OTYz
+MywxMDg0Nzk1MTk3LDEwOTYzOTg3NjVdfQ==
 -->
