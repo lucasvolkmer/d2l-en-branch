@@ -334,14 +334,14 @@ pool2d(X_padded)
 
 ```
 
-:begin_tab:`tensorflow`
-Note that the output for the tensorflow pooling appears at first glance to be different, however 
-numerically the same results are presented as MXNet and PyTorch.
-The difference lies in the dimensionality, and reading the 
-output vertically yields the same output as the other implementations. 
+:begin_tab: `tensorflow`
+Observe que a saída para o *pooling* de tensorflow parece à primeira vista ser diferente, no entanto
+numericamente, os mesmos resultados são apresentados como MXNet e PyTorch.
+A diferença está na dimensionalidade, e na leitura do
+a saída verticalmente produz a mesma saída que as outras implementações.
 :end_tab:
 
-## Summary
+## Resumo
 
 * Taking the input elements in the pooling window, the maximum pooling operation assigns the maximum value as the output and the average pooling operation assigns the average value as the output.
 * One of the major benefits of a pooling layer is to alleviate the excessive sensitivity of the convolutional layer to location.
@@ -371,6 +371,6 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNTMyODQyNiwtMTIwOTA5MTA3NiwtMT
-EwMDAzNzAzOCwxODk0MDMzMjM3LC0xMzA5OTExODZdfQ==
+eyJoaXN0b3J5IjpbOTgwMDA1NzU1LC0xMjA5MDkxMDc2LC0xMT
+AwMDM3MDM4LDE4OTQwMzMyMzcsLTEzMDk5MTE4Nl19
 -->
