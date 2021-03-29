@@ -78,27 +78,28 @@ $$
 \max(4, 5, 7, 8)=8.\\
 $$
 
-A pooling layer with a pooling window shape of $p \times q$
-is called a $p \times q$ pooling layer.
-The pooling operation is called $p \times q$ pooling.
 
-Let us return to the object edge detection example
-mentioned at the beginning of this section.
-Now we will use the output of the convolutional layer
-as the input for $2\times 2$ maximum pooling.
-Set the convolutional layer input as `X` and the pooling layer output as `Y`. Whether or not the values of `X[i, j]` and `X[i, j + 1]` are different,
-or `X[i, j + 1]` and `X[i, j + 2]` are different,
-the pooling layer always outputs `Y[i, j] = 1`.
-That is to say, using the $2\times 2$ maximum pooling layer,
-we can still detect if the pattern recognized by the convolutional layer
-moves no more than one element in height or width.
+Uma camada de *pooling* com uma forma de janela de pool de $p \times q$
+é chamado de camada de *pooling* $p \times q$
+A operação de *pooling* é chamada $p \times q$ *pooling*.
 
-In the code below, we implement the forward propagation
-of the pooling layer in the `pool2d` function.
-This function is similar to the `corr2d` function
-in :numref:`sec_conv_layer`.
-However, here we have no kernel, computing the output
-as either the maximum or the average of each region in the input.
+Vamos retornar ao exemplo de detecção de borda do objeto
+mencionado no início desta seção.
+Agora vamos usar a saída da camada convolucional
+como entrada para $2\times 2$ *pooling* máximo.
+Defina a entrada da camada convolucional como `X` e a saída da camada de pooling como` Y`. Se os valores de `X [i, j]` e `X [i, j + 1]` são ou não diferentes,
+ou `X [i, j + 1]` e `X [i, j + 2]` são diferentes,
+a camada de pool sempre produz `Y [i, j] = 1`.
+Ou seja, usando a camada de pooling máxima $2\times 2$
+ainda podemos detectar se o padrão reconhecido pela camada convolucional
+move no máximo um elemento em altura ou largura.
+
+No código abaixo, implementamos a propagação direta
+da camada de *pooling* na função `pool2d`.
+Esta função é semelhante à função `corr2d`
+in: numref: `sec_conv_layer`.
+No entanto, aqui não temos *kernel*, computando a saída
+como o máximo ou a média de cada região na entrada.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -144,7 +145,7 @@ def pool2d(X, pool_size, mode='max'):
     return Y
 ```
 
-We can construct the input tensor `X` in :numref:`fig_pooling` to validate the output of the two-dimensional maximum pooling layer.
+Podemos construir o tensor de entrada `X` em :numref:`fig_pooling`  para validar a saída da camada de *pooling* máximo bidimensional.
 
 ```{.python .input}
 #@tab all
@@ -367,5 +368,6 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NDAzMzIzNywtMTMwOTkxMTg2XX0=
+eyJoaXN0b3J5IjpbLTExMDAwMzcwMzgsMTg5NDAzMzIzNywtMT
+MwOTkxMTg2XX0=
 -->
