@@ -190,10 +190,10 @@ X = d2l.reshape(d2l.arange(16, dtype=d2l.float32), (1, 4, 4, 1))
 X
 ```
 
-By default, the stride and the pooling window in the instance from the framework's built-in class
-have the same shape.
-Below, we use a pooling window of shape `(3, 3)`,
-so we get a stride shape of `(3, 3)` by default.
+Por padrão, o passo e a janela de *pooling* na instância da classe interna do *framework*
+têm a mesma forma.
+Abaixo, usamos uma janela de *pooling* de forma `(3, 3)`,
+portanto, obtemos uma forma de passo de `(3, 3)` por padrão.
 
 ```{.python .input}
 pool2d = nn.MaxPool2D(3)
@@ -214,7 +214,7 @@ pool2d = tf.keras.layers.MaxPool2D(pool_size=[3, 3])
 pool2d(X)
 ```
 
-The stride and padding can be manually specified.
+O passo e o preenchimento podem ser especificados manualmente.
 
 ```{.python .input}
 pool2d = nn.MaxPool2D(3, padding=1, strides=2)
@@ -369,6 +369,6 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUxNzQ5Mjc1LC0xMTAwMDM3MDM4LDE4OT
-QwMzMyMzcsLTEzMDk5MTE4Nl19
+eyJoaXN0b3J5IjpbLTEyMDkwOTEwNzYsLTExMDAwMzcwMzgsMT
+g5NDAzMzIzNywtMTMwOTkxMTg2XX0=
 -->
