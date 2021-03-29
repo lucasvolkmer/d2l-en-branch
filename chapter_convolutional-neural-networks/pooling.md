@@ -285,18 +285,19 @@ pool2d(X_padded)
 
 ## Canais Múltiplos
 
-When processing multi-channel input data,
-the pooling layer pools each input channel separately,
-rather than summing the inputs up over channels
-as in a convolutional layer.
-This means that the number of output channels for the pooling layer
-is the same as the number of input channels.
-Below, we will concatenate tensors `X` and `X + 1`
-on the channel dimension to construct an input with 2 channels. 
 
-:begin_tab:`tensorflow`
-Note that this will require a 
-concatenation along the last dimension for TensorFlow due to the channels-last syntax.
+Ao processar dados de entrada multicanal,
+a camada de *pooling* agrupa cada canal de entrada separadamente,
+em vez de somar as entradas nos canais
+como em uma camada convolucional.
+Isso significa que o número de canais de saída para a camada de *pooling*
+é igual ao número de canais de entrada.
+Abaixo, vamos concatenar os tensores `X` e` X + 1`
+na dimensão do canal para construir uma entrada com 2 canais.
+
+:begin_tab: `tensorflow`
+Observe que isso exigirá um
+concatenação ao longo da última dimensão do TensorFlow devido à sintaxe dos últimos canais.
 :end_tab:
 
 ```{.python .input}
@@ -310,7 +311,7 @@ X
 X = tf.concat([X, X + 1], 3)  # Concatenate along `dim=3` due to channels-last syntax
 ```
 
-As we can see, the number of output channels is still 2 after pooling.
+Como podemos ver, o número de canais de saída ainda é 2 após o *pooling*.
 
 ```{.python .input}
 pool2d = nn.MaxPool2D(3, padding=1, strides=2)
@@ -370,6 +371,6 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4Mjc1NTE2MCwtMTIwOTA5MTA3NiwtMT
+eyJoaXN0b3J5IjpbLTYyNTMyODQyNiwtMTIwOTA5MTA3NiwtMT
 EwMDAzNzAzOCwxODk0MDMzMjM3LC0xMzA5OTExODZdfQ==
 -->
