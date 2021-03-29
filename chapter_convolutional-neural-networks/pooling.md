@@ -238,25 +238,26 @@ pool2d(X_padded)
 
 
 
+
 :begin_tab:`mxnet`
-Of course, we can specify an arbitrary rectangular pooling window
-and specify the padding and stride for height and width, respectively.
+Claro, podemos especificar uma janela de *pooling* retangular arbitrária
+e especificar o preenchimento e o passo para altura e largura, respectivamente.
 :end_tab:
 
-:begin_tab:`pytorch`
-Of course, we can specify an arbitrary rectangular pooling window
-and specify the padding and stride for height and width, respectively.
-For `nn.MaxPool2D` padding should be smaller than half of the kernel_size.
-If the condition is not met, we can first pad the input using
-`nn.functional.pad` and then pass it to the pooling layer.
+:begin_tab: `pytorch`
+Claro, podemos especificar uma janela de *pooling* retangular arbitrária
+e especificar o preenchimento e o passo para altura e largura, respectivamente.
+Para `nn.MaxPool2D`, o preenchimento deve ser menor que a metade do kernel_size.
+Se a condição não for atendida, podemos primeiro preenchemos a entrada usando
+`nn.functional.pad` e, em seguida, o passamos para a camada de *pooling*.
 :end_tab:
 
-:begin_tab:`tensorflow`
-Of course, we can specify an arbitrary rectangular pooling window
-and specify the padding and stride for height and width, respectively.
-In TensorFlow, to implement a padding of 1 all the way around the tensor, a function designed for padding 
-must be invoked using `tf.pad`. This will implement the required padding and allow the aforementioned (3, 3) pooling with a (2, 2) stride to perform
-similar to those in PyTorch and MXNet. When padding in this way, the built-in `padding` variable must be set to `valid`.
+:begin_tab: `tensorflow`
+Claro, podemos especificar uma janela de *pooling* retangular arbitrária
+e especificar o preenchimento e o passo para altura e largura, respectivamente.
+No TensorFlow, para implementar um preenchimento de 1 em todo o tensor, uma função projetada para preenchimento
+deve ser invocada usando `tf.pad`. Isso implementará o preenchimento necessário e permitirá que o supracitado (3, 3) agrupamento com uma passada (2, 2) para realizar
+semelhantes aos do PyTorch e MXNet. Ao preencher desta forma, a variável embutida `padding` deve ser definida como `válida`.
 :end_tab:
 
 ```{.python .input}
@@ -282,7 +283,7 @@ pool2d(X_padded)
 ```
 
 
-## Multiple Channels
+## Canais Múltiplos
 
 When processing multi-channel input data,
 the pooling layer pools each input channel separately,
@@ -369,6 +370,6 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDkwOTEwNzYsLTExMDAwMzcwMzgsMT
-g5NDAzMzIzNywtMTMwOTkxMTg2XX0=
+eyJoaXN0b3J5IjpbLTg4Mjc1NTE2MCwtMTIwOTA5MTA3NiwtMT
+EwMDAzNzAzOCwxODk0MDMzMjM3LC0xMzA5OTExODZdfQ==
 -->
