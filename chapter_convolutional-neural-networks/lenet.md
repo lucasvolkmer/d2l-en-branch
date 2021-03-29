@@ -270,24 +270,25 @@ def evaluate_accuracy_gpu(net, data_iter, device=None): #@save
     return metric[0] / metric[1]
 ```
 
-We also need to update our training function to deal with GPUs.
-Unlike the `train_epoch_ch3` defined in :numref:`sec_softmax_scratch`,
-we now need to move each minibatch of data
-to our designated device (hopefully, the GPU)
-prior to making the forward and backward propagations.
 
-The training function `train_ch6` is also similar
-to `train_ch3` defined in :numref:`sec_softmax_scratch`.
-Since we will be implementing networks with many layers
-going forward, we will rely primarily on high-level APIs.
-The following training function assumes a model created from high-level APIs
-as input and is optimized accordingly.
-We initialize the model parameters
-on the device indicated by the `device` argument, using Xavier initialization as introduced in :numref:`subsec_xavier`.
-Just as with MLPs, our loss function is cross-entropy,
-and we minimize it via minibatch stochastic gradient descent.
-Since each epoch takes tens of seconds to run,
-we visualize the training loss more frequently.
+Também precisamos atualizar nossa função de treinamento para lidar com GPUs.
+Ao contrário do `train_epoch_ch3` definido em :numref:`sec_softmax_scratch`,
+agora precisamos mover cada *minibatch* de dados
+para o nosso dispositivo designado (esperançosamente, a GPU)
+antes de fazer as propagações para frente e para trás.
+
+A função de treinamento `train_ch6` também é semelhante
+para `train_ch3` definido em :numref:`sec_softmax_scratch`.
+Como iremos implementar redes com muitas camadas
+daqui para frente, contaremos principalmente com APIs de alto nível.
+A função de treinamento a seguir pressupõe um modelo criado a partir de APIs de alto nível
+como entrada e é otimizado em conformidade.
+Inicializamos os parâmetros do modelo
+no dispositivo indicado pelo argumento `device`, usando a inicialização do Xavier conforme apresentado em :numref:`subsec_xavier`.
+Assim como com MLPs, nossa função de perda é entropia cruzada,
+e o minimizamos por meio da descida gradiente estocástica de *minibatch*.
+Como cada época leva dezenas de segundos para ser executada,
+visualizamos a perda de treinamento com mais frequência.
 
 ```{.python .input}
 #@save
@@ -418,7 +419,7 @@ def train_ch6(net_fn, train_iter, test_iter, num_epochs, lr, device):
     return net
 ```
 
-Now let us train and evaluate the LeNet-5 model.
+Agora vamos treinar e avaliar o modelo LeNet-5.
 
 ```{.python .input}
 #@tab all
@@ -426,15 +427,15 @@ lr, num_epochs = 0.9, 10
 train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 ```
 
-## Summary
+## Resumo
 
-* A CNN is a network that employs convolutional layers.
-* In a CNN, we interleave convolutions, nonlinearities, and (often) pooling operations.
-* In a CNN, convolutional layers are typically arranged so that they gradually decrease the spatial resolution of the representations, while increasing the number of channels.
-* In traditional CNNs, the representations encoded by the convolutional blocks are processed by one or more fully-connected layers prior to emitting output.
-* LeNet was arguably the first successful deployment of such a network.
+* A CNN é uma rede que emprega camadas convolucionais.
+* Em uma CNN, intercalamos convoluções, não linearidades e (frequentemente) operações de agrupamento.
+* Em uma CNN, as camadas convolucionais são normalmente organizadas de forma que diminuam gradualmente a resolução espacial das representações, enquanto aumentam o número de canais.
+* Em CNNs tradicionais, as representações codificadas pelos blocos convolucionais são processadas por uma ou mais camadas totalmente conectadas antes de emitir a saída.
+* LeNet foi indiscutivelmente a primeira implantação bem-sucedida de tal rede.
 
-## Exercises
+## Exercícios
 
 1. Replace the average pooling with max pooling. What happens?
 1. Try to construct a more complex network based on LeNet to improve its accuracy.
@@ -459,6 +460,6 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/275)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NTI5NTg2MywtMTk1Mzg0ODc5OCwtNz
+eyJoaXN0b3J5IjpbMTIxMTAyMDQ0MiwtMTk1Mzg0ODc5OCwtNz
 c3MDgyNTQxLC0xMjI0MTM5OTEyXX0=
 -->
