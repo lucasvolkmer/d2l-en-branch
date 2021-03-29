@@ -38,7 +38,7 @@ que servem ao duplo propósito de
 mitigando a sensibilidade das camadas convolucionais à localização
 e de representações de *downsampling* espacialmente.
 
-## Pooling áximo e *Pooling* Médio
+## *Pooling* Máximo e *Pooling* Médio
 
 Like convolutional layers, *pooling* operators
 consist of a fixed-shape window that is slid over
@@ -367,5 +367,5 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM5NjM4MjQ5LC0xMzA5OTExODZdfQ==
+eyJoaXN0b3J5IjpbLTY2MTQwNDk2MCwtMTMwOTkxMTg2XX0=
 -->
