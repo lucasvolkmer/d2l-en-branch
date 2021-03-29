@@ -162,18 +162,19 @@ pool2d(X, (2, 2), 'avg')
 
 ## Preenchimento e Passos
 
-As with convolutional layers, pooling layers
-can also change the output shape.
-And as before, we can alter the operation to achieve a desired output shape
-by padding the input and adjusting the stride.
-We can demonstrate the use of padding and strides
-in pooling layers via the built-in two-dimensional maximum pooling layer from the deep learning framework.
-We first construct an input tensor `X` whose shape has four dimensions,
-where the number of examples (batch size) and number of channels are both 1.
+
+Tal como acontece com as camadas convolucionais, camadas de *pooling*
+também podem alterar a forma de saída.
+E como antes, podemos alterar a operação para obter uma forma de saída desejada
+preenchendo a entrada e ajustando o passo.
+Podemos demonstrar o uso de preenchimento e passos
+em camadas de agrupamento por meio da camada de agrupamento máximo bidimensional integrada do framework de *deep learning*.
+Primeiro construímos um tensor de entrada `X` cuja forma tem quatro dimensões,
+onde o número de exemplos (tamanho do lote) e o número de canais são ambos 1.
 
 :begin_tab:`tensorflow`
-It is important to note that tensorflow
-prefers and is optimized for *channels-last* input.
+É importante notar que o *tensorflow*
+prefere e é otimizado para *as últimas* entradas dos canais.
 :end_tab:
 
 ```{.python .input}
@@ -368,6 +369,6 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMTczNzk0MCwtMTEwMDAzNzAzOCwxOD
-k0MDMzMjM3LC0xMzA5OTExODZdfQ==
+eyJoaXN0b3J5IjpbNTUxNzQ5Mjc1LC0xMTAwMDM3MDM4LDE4OT
+QwMzMyMzcsLTEzMDk5MTE4Nl19
 -->
