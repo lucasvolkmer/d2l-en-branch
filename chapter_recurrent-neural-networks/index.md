@@ -1,4 +1,4 @@
-# Recurrent Neural Networks
+# Redes Neurais Recorrentes
 :label:`chap_rnn`
 
 So far we encountered two types of data: tabular data and image data.
@@ -34,5 +34,5 @@ bptt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTYxNzkwMzNdfQ==
+eyJoaXN0b3J5IjpbLTM1MDI3NDEzXX0=
 -->
