@@ -41,12 +41,12 @@ que Yann e seu colega Leon Bottou escreveram na década de 1990!
 
 ## LeNet
 
-At a high level, LeNet (LeNet-5) consists of two parts:
-(i) a convolutional encoder consisting of two convolutional layers; and
-(ii) a dense block consisting of three fully-connected layers;
-The architecture is summarized in :numref:`img_lenet`.
+Em um alto nível, LeNet (LeNet-5) consiste em duas partes:
+(i) um codificador convolucional que consiste em duas camadas convolucionais; e
+(ii) um bloco denso que consiste em três camadas totalmente conectadas;
+A arquitetura é resumida em :numref:`img_lenet`.
 
-![Data flow in LeNet. The input is a handwritten digit, the output a probability over 10 possible outcomes.](../img/lenet.svg)
+![Fluxo de dados em LeNet. A entrada é um dígito escrito à mão, a saída uma probabilidade de mais de 10 resultados possíveis.](../img/lenet.svg)
 :label:`img_lenet`
 
 The basic units in each convolutional block
@@ -456,5 +456,6 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/275)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NzA4MjU0MSwtMTIyNDEzOTkxMl19
+eyJoaXN0b3J5IjpbLTE5NTM4NDg3OTgsLTc3NzA4MjU0MSwtMT
+IyNDEzOTkxMl19
 -->
