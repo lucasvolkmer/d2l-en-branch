@@ -437,16 +437,16 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 
 ## Exercícios
 
-1. Replace the average pooling with max pooling. What happens?
-1. Try to construct a more complex network based on LeNet to improve its accuracy.
-    1. Adjust the convolution window size.
-    1. Adjust the number of output channels.
-    1. Adjust the activation function (e.g., ReLU).
-    1. Adjust the number of convolution layers.
-    1. Adjust the number of fully connected layers.
-    1. Adjust the learning rates and other training details (e.g., initialization and number of epochs.)
-1. Try out the improved network on the original MNIST dataset.
-1. Display the activations of the first and second layer of LeNet for different inputs (e.g., sweaters and coats).
+1. Substitua o *pooling* médio pelo *pooling* máximo. O que acontece?
+1. Tente construir uma rede mais complexa baseada em LeNet para melhorar sua precisão.
+     1. Ajuste o tamanho da janela de convolução.
+     1. Ajuste o número de canais de saída.
+     1. Ajuste a função de ativação (por exemplo, ReLU).
+     1. Ajuste o número de camadas de convolução.
+     1. Ajuste o número de camadas totalmente conectadas.
+     1. Ajuste as taxas de aprendizagem e outros detalhes de treinamento (por exemplo, inicialização e número de épocas).
+1. Experimente a rede aprimorada no conjunto de dados MNIST original.
+1. Exibir as ativações da primeira e da segunda camada do LeNet para diferentes entradas (por exemplo, suéteres e casacos).
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/73)
@@ -460,6 +460,6 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/275)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMTAyMDQ0MiwtMTk1Mzg0ODc5OCwtNz
-c3MDgyNTQxLC0xMjI0MTM5OTEyXX0=
+eyJoaXN0b3J5IjpbMzgwMzk0NjcwLC0xOTUzODQ4Nzk4LC03Nz
+cwODI1NDEsLTEyMjQxMzk5MTJdfQ==
 -->
