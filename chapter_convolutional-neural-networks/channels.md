@@ -105,38 +105,39 @@ corr2d_multi_in(X, K)
 
 ## Canais de Saída Múltiplos
 
-Regardless of the number of input channels,
-so far we always ended up with one output channel.
-However, as we discussed in :numref:`subsec_why-conv-channels`,
-it turns out to be essential to have multiple channels at each layer.
-In the most popular neural network architectures,
-we actually increase the channel dimension
-as we go higher up in the neural network,
-typically downsampling to trade off spatial resolution
-for greater *channel depth*.
-Intuitively, you could think of each channel
-as responding to some different set of features.
-Reality is a bit more complicated than the most naive interpretations of this intuition since representations are not learned independent but are rather optimized to be jointly useful.
-So it may not be that a single channel learns an edge detector but rather that some direction in channel space corresponds to detecting edges.
+
+Independentemente do número de canais de entrada,
+até agora acabamos sempre com um canal de saída.
+No entanto, como discutimos em :numref:`subsec_why-conv-channels`,
+é essencial ter vários canais em cada camada.
+Nas arquiteturas de rede neural mais populares,
+na verdade, aumentamos a dimensão do canal
+à medida que subimos na rede neural,
+normalmente reduzindo as amostras para compensar a resolução espacial
+para maior *profundidade do canal*.
+Intuitivamente, você pode pensar em cada canal
+como respondendo a algum conjunto diferente de *features*.
+A realidade é um pouco mais complicada do que as interpretações mais ingênuas dessa intuição, uma vez que as representações não são aprendidas de forma independente, mas sim otimizadas para serem úteis em conjunto.
+Portanto, pode não ser que um único canal aprenda um detector de bordas, mas sim que alguma direção no espaço do canal corresponde à detecção de bordas.
 
 
-Denote by $c_i$ and $c_o$ the number
-of input and output channels, respectively,
-and let $k_h$ and $k_w$ be the height and width of the kernel.
-To get an output with multiple channels,
-we can create a kernel tensor
-of shape $c_i\times k_h\times k_w$
-for *every* output channel.
-We concatenate them on the output channel dimension,
-so that the shape of the convolution kernel
-is $c_o\times c_i\times k_h\times k_w$.
-In cross-correlation operations,
-the result on each output channel is calculated
-from the convolution kernel corresponding to that output channel
-and takes input from all channels in the input tensor.
+Denote por $c_i$ e $c_o$ o número
+dos canais de entrada e saída, respectivamente,
+e sejam $k_h$ e $k_w$ a altura e a largura do *kernel*.
+Para obter uma saída com vários canais,
+podemos criar um tensor de kernel
+da forma $c_i\times k_h\times k_w$
+para *cada* canal de saída.
+Nós os concatenamos na dimensão do canal de saída,
+de modo que a forma do núcleo de convolução
+é $c_o\times c_i\times k_h\times k_w$.
+Em operações de correlação cruzada,
+o resultado em cada canal de saída é calculado
+do *kernel* de convolução correspondente a esse canal de saída
+e recebe a entrada de todos os canais no tensor de entrada.
 
-We implement a cross-correlation function
-to calculate the output of multiple channels as shown below.
+Implementamos uma função de correlação cruzada
+para calcular a saída de vários canais, conforme mostrado abaixo.
 
 ```{.python .input}
 #@tab all
@@ -147,9 +148,9 @@ def corr2d_multi_in_out(X, K):
     return d2l.stack([corr2d_multi_in(X, k) for k in K], 0)
 ```
 
-We construct a convolution kernel with 3 output channels
-by concatenating the kernel tensor `K` with `K+1`
-(plus one for each element in `K`) and `K+2`.
+Construímos um *kernel* de convolução com 3 canais de saída
+concatenando o tensor do kernel `K` com` K + 1`
+(mais um para cada elemento em `K`) e` K + 2`.
 
 ```{.python .input}
 #@tab all
@@ -282,6 +283,7 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNTQwMzkwNCwtMTEzODU1Njc0LDIyMz
-Y2OTYzMywxMDg0Nzk1MTk3LDEwOTYzOTg3NjVdfQ==
+eyJoaXN0b3J5IjpbMjAyMzI3MDY2MSwtNDA1NDAzOTA0LC0xMT
+M4NTU2NzQsMjIzNjY5NjMzLDEwODQ3OTUxOTcsMTA5NjM5ODc2
+NV19
 -->
