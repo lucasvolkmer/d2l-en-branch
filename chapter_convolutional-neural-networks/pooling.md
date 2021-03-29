@@ -343,14 +343,14 @@ a saída verticalmente produz a mesma saída que as outras implementações.
 
 ## Resumo
 
-* Taking the input elements in the pooling window, the maximum pooling operation assigns the maximum value as the output and the average pooling operation assigns the average value as the output.
-* One of the major benefits of a pooling layer is to alleviate the excessive sensitivity of the convolutional layer to location.
-* We can specify the padding and stride for the pooling layer.
-* Maximum pooling, combined with a stride larger than 1 can be used to reduce the spatial dimensions (e.g., width and height).
-* The pooling layer's number of output channels is the same as the number of input channels.
+* Pegando os elementos de entrada na janela de agrupamento, a operação de agrupamento máxima atribui o valor máximo como a saída e a operação de agrupamento média atribui o valor médio como a saída.
+* Um dos principais benefícios de uma camada de *pooling* é aliviar a sensibilidade excessiva da camada convolucional ao local.
+* Podemos especificar o preenchimento e a passada para a camada de *pooling*.
+* O agrupamento máximo, combinado com uma passada maior do que 1, pode ser usado para reduzir as dimensões espaciais (por exemplo, largura e altura).
+* O número de canais de saída da camada de *pooling* é igual ao número de canais de entrada.
 
 
-## Exercises
+## Exercícios
 
 1. Can you implement average pooling as a special case of a convolution layer? If so, do it.
 1. Can you implement max pooling as a special case of a convolution layer? If so, do it.
@@ -371,6 +371,6 @@ a saída verticalmente produz a mesma saída que as outras implementações.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgwMDA1NzU1LC0xMjA5MDkxMDc2LC0xMT
-AwMDM3MDM4LDE4OTQwMzMyMzcsLTEzMDk5MTE4Nl19
+eyJoaXN0b3J5IjpbMTI1OTc5NTAxNSwtMTIwOTA5MTA3NiwtMT
+EwMDAzNzAzOCwxODk0MDMzMjM3LC0xMzA5OTExODZdfQ==
 -->
