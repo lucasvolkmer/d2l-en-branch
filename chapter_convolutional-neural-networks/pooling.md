@@ -2,42 +2,43 @@
 :label:`sec_pooling`
 
 
-Often, as we process images, we want to gradually
-reduce the spatial resolution of our hidden representations,
-aggregating information so that
-the higher up we go in the network,
-the larger the receptive field (in the input)
-to which each hidden node is sensitive.
 
-Often our ultimate task asks some global question about the image,
-e.g., *does it contain a cat?*
-So typically the units of our final layer should be sensitive
-to the entire input.
-By gradually aggregating information, yielding coarser and coarser maps,
-we accomplish this goal of ultimately learning a global representation,
-while keeping all of the advantages of convolutional layers at the intermediate layers of processing.
+Muitas vezes, conforme processamos imagens, queremos gradualmente
+reduzir a resolução espacial de nossas representações ocultas,
+agregando informações para que
+quanto mais alto subimos na rede,
+maior o campo receptivo (na entrada)
+ao qual cada nó oculto é sensível.
 
-Moreover, when detecting lower-level features, such as edges
-(as discussed in :numref:`sec_conv_layer`),
-we often want our representations to be somewhat invariant to translation.
-For instance, if we take the image `X`
-with a sharp delineation between black and white
-and shift the whole image by one pixel to the right,
-i.e., `Z[i, j] = X[i, j + 1]`,
-then the output for the new image `Z` might be vastly different.
-The edge will have shifted by one pixel.
-In reality, objects hardly ever occur exactly at the same place.
-In fact, even with a tripod and a stationary object,
-vibration of the camera due to the movement of the shutter
-might shift everything by a pixel or so
-(high-end cameras are loaded with special features to address this problem).
+Muitas vezes, nossa tarefa final faz alguma pergunta global sobre a imagem,
+por exemplo, *contém um gato?*
+Então, normalmente, as unidades de nossa camada final devem ser sensíveis
+para toda a entrada.
+Ao agregar informações gradualmente, produzindo mapas cada vez mais grosseiros,
+alcançamos esse objetivo de, em última análise, aprendendo uma representação global,
+enquanto mantém todas as vantagens das camadas convolucionais nas camadas intermediárias de processamento.
 
-This section introduces *pooling layers*,
-which serve the dual purposes of
-mitigating the sensitivity of convolutional layers to location
-and of spatially downsampling representations.
+Além disso, ao detectar recursos de nível inferior, como bordas
+(conforme discutido em :numref:`sec_conv_layer`),
+frequentemente queremos que nossas representações sejam um tanto invariáveis ​​à tradução.
+Por exemplo, se pegarmos a imagem `X`
+com uma delimitação nítida entre preto e branco
+e deslocarmos a imagem inteira em um pixel para a direita,
+ou seja, `Z [i, j] = X [i, j + 1]`,
+então a saída para a nova imagem `Z` pode ser muito diferente.
+A borda terá deslocado um pixel.
+Na realidade, os objetos dificilmente ocorrem exatamente no mesmo lugar.
+Na verdade, mesmo com um tripé e um objeto estacionário,
+a vibração da câmera devido ao movimento do obturador
+pode mudar tudo em um pixel ou mais
+(câmeras de última geração são carregadas com recursos especiais para resolver esse problema).
 
-## Maximum Pooling and Average Pooling
+Esta seção apresenta *camadas de pooling*,
+que servem ao duplo propósito de
+mitigando a sensibilidade das camadas convolucionais à localização
+e de representações de *downsampling* espacialmente.
+
+## Pooling áximo e *Pooling* Médio
 
 Like convolutional layers, *pooling* operators
 consist of a fixed-shape window that is slid over
@@ -366,5 +367,5 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDk5MTE4Nl19
+eyJoaXN0b3J5IjpbNjM5NjM4MjQ5LC0xMzA5OTExODZdfQ==
 -->
