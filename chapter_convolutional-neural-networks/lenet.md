@@ -219,20 +219,21 @@ batch_size = 256
 train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size=batch_size)
 ```
 
-While CNNs have fewer parameters,
-they can still be more expensive to compute
-than similarly deep MLPs
-because each parameter participates in many more
-multiplications.
-If you have access to a GPU, this might be a good time
-to put it into action to speed up training.
 
-:begin_tab:`mxnet, pytorch`
-For evaluation, we need to make a slight modification
-to the `evaluate_accuracy` function that we described
-in :numref:`sec_softmax_scratch`.
-Since the full dataset is in the main memory,
-we need to copy it to the GPU memory before the model uses GPU to compute with the dataset.
+Embora as CNNs tenham menos parâmetros,
+eles ainda podem ser mais caros para computar
+do que MLPs igualmente profundas
+porque cada parâmetro participa de muitas
+multiplicações a mais.
+Se você tiver acesso a uma GPU, este pode ser um bom momento
+para colocá-la em ação para acelerar o treinamento.
+
+:begin_tab: `mxnet, pytorch`
+Para avaliação, precisamos fazer uma pequena modificação
+para a função `evaluate_accuracy` que descrevemos
+em :numref:`sec_softmax_scratch`.
+Uma vez que o conjunto de dados completo está na memória principal,
+precisamos copiá-lo para a memória da GPU antes que o modelo use a GPU para calcular com o conjunto de dados.
 :end_tab:
 
 ```{.python .input}
@@ -458,6 +459,6 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/275)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEwOTcyMTUyLC0xOTUzODQ4Nzk4LC03Nz
-cwODI1NDEsLTEyMjQxMzk5MTJdfQ==
+eyJoaXN0b3J5IjpbLTU5NTI5NTg2MywtMTk1Mzg0ODc5OCwtNz
+c3MDgyNTQxLC0xMjI0MTM5OTEyXX0=
 -->
