@@ -189,29 +189,29 @@ for layer in net().layers:
     print(layer.__class__.__name__, 'output shape: \t', X.shape)
 ```
 
-Note that the height and width of the representation
-at each layer throughout the convolutional block
-is reduced (compared with the previous layer).
-The first convolutional layer uses 2 pixels of padding
-to compensate for the reduction in height and width
-that would otherwise result from using a $5 \times 5$ kernel.
-In contrast, the second convolutional layer forgoes padding,
-and thus the height and width are both reduced by 4 pixels.
-As we go up the stack of layers,
-the number of channels increases layer-over-layer
-from 1 in the input to 6 after the first convolutional layer
-and 16 after the second convolutional layer.
-However, each pooling layer halves the height and width.
-Finally, each fully-connected layer reduces dimensionality,
-finally emitting an output whose dimension
-matches the number of classes.
+Observe que a altura e largura da representação
+em cada camada ao longo do bloco convolucional
+é reduzido (em comparação com a camada anterior).
+A primeira camada convolucional usa 2 pixels de preenchimento
+para compensar a redução de altura e largura
+que de outra forma resultaria do uso de um *kernel* $5 \times 5$.
+Em contraste, a segunda camada convolucional dispensa o preenchimento,
+e, portanto, a altura e a largura são reduzidas em 4 pixels.
+Conforme subimos na pilha de camadas,
+o número de canais aumenta camada sobre camada
+de 1 na entrada a 6 após a primeira camada convolucional
+e 16 após a segunda camada convolucional.
+No entanto, cada camada de *pooling* divide a altura e a largura pela metade.
+Finalmente, cada camada totalmente conectada reduz a dimensionalidade,
+finalmente emitindo uma saída cuja dimensão
+corresponde ao número de classes.
 
 
 
-## Training
+## Trainamento
 
-Now that we have implemented the model,
-let us run an experiment to see how LeNet fares on Fashion-MNIST.
+Agora que implementamos o modelo,
+vamos fazer um experimento para ver como o LeNet se sai no Fashion-MNIST.
 
 ```{.python .input}
 #@tab all
@@ -458,6 +458,6 @@ train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/275)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NDQzMTkwMSwtMTk1Mzg0ODc5OCwtNz
-c3MDgyNTQxLC0xMjI0MTM5OTEyXX0=
+eyJoaXN0b3J5IjpbODEwOTcyMTUyLC0xOTUzODQ4Nzk4LC03Nz
+cwODI1NDEsLTEyMjQxMzk5MTJdfQ==
 -->
