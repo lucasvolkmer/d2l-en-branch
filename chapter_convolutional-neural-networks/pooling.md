@@ -68,8 +68,8 @@ dependendo se o *pooling* máximo ou médio é empregado.
 ![Pooling máximo com uma forma de janela de pool de $2\times 2$. As partes sombreadas são o primeiro elemento de saída, bem como os elementos tensores de entrada usados para o cálculo de saída: $\max(0, 1, 3, 4)=4$.](../img/pooling.svg)
 :label:`fig_pooling`
 
-The output tensor in :numref:`fig_pooling`  has a height of 2 and a width of 2.
-The four elements are derived from the maximum value in each pooling window:
+O tensor de saída em :numref:`fig_pooling` tem uma altura de 2 e uma largura de 2.
+Os quatro elementos são derivados do valor máximo em cada janela de *pooling*:
 
 $$
 \max(0, 1, 3, 4)=4,\\
@@ -367,5 +367,5 @@ output vertically yields the same output as the other implementations.
 [Discussions](https://discuss.d2l.ai/t/274)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjMwOTM1ODQsLTEzMDk5MTE4Nl19
+eyJoaXN0b3J5IjpbMTg5NDAzMzIzNywtMTMwOTkxMTg2XX0=
 -->
