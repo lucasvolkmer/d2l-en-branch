@@ -173,46 +173,48 @@ corr2d_multi_in_out(X, K)
 
 ## Camada Convolucional $1\times 1$
 
-At first, a $1 \times 1$ convolution, i.e., $k_h = k_w = 1$,
-does not seem to make much sense.
-After all, a convolution correlates adjacent pixels.
-A $1 \times 1$ convolution obviously does not.
-Nonetheless, they are popular operations that are sometimes included
-in the designs of complex deep networks.
-Let us see in some detail what it actually does.
 
-Because the minimum window is used,
-the $1\times 1$ convolution loses the ability
-of larger convolutional layers
-to recognize patterns consisting of interactions
-among adjacent elements in the height and width dimensions.
-The only computation of the $1\times 1$ convolution occurs
-on the channel dimension.
+No início, uma convolução $1 \times 1$, ou seja, $k_h = k_w = 1$,
+não parece fazer muito sentido.
+Afinal, uma convolução correlaciona pixels adjacentes.
+Uma convolução $1 \times 1$ obviamente não faz isso.
+No entanto, são operações populares que às vezes são incluídas
+nos projetos de redes profundas complexas.
+Vejamos com alguns detalhes o que ele realmente faz.
 
-:numref:`fig_conv_1x1` shows the cross-correlation computation
-using the $1\times 1$ convolution kernel
-with 3 input channels and 2 output channels.
-Note that the inputs and outputs have the same height and width.
-Each element in the output is derived
-from a linear combination of elements *at the same position*
-in the input image.
-You could think of the $1\times 1$ convolutional layer
-as constituting a fully-connected layer applied at every single pixel location
-to transform the $c_i$ corresponding input values into $c_o$ output values.
-Because this is still a convolutional layer,
-the weights are tied across pixel location.
-Thus the $1\times 1$ convolutional layer requires $c_o\times c_i$ weights
-(plus the bias).
+Como a janela mínima é usada,
+a convolução $1\times 1$ perde a capacidade
+de camadas convolucionais maiores
+para reconhecer padrões que consistem em interações
+entre os elementos adjacentes nas dimensões de altura e largura.
+O único cálculo da convolução $1\times 1$ ocorre
+na dimensão do canal.
+
+:numref:`fig_conv_1x1` mostra o cálculo de correlação cruzada
+usando o kernel de convolução $1\times 1$
+com 3 canais de entrada e 2 canais de saída.
+Observe que as entradas e saídas têm a mesma altura e largura.
+Cada elemento na saída é derivado
+de uma combinação linear de elementos *na mesma posição*
+na imagem de entrada.
+Você poderia pensar na camada convolucional $1\times 1$
+como constituindo uma camada totalmente conectada aplicada em cada localização de pixel
+para transformar os valores de entrada correspondentes $c_i$ em valores de saída $c_o$.
+Porque esta ainda é uma camada convolucional,
+os pesos são vinculados à localização do pixel.
+Assim, a camada convolucional $1\times 1$ requer pesos $c_o\times c_i$ 
+(mais o *bias*).
 
 
-![The cross-correlation computation uses the $1\times 1$ convolution kernel with 3 input channels and 2 output channels. The input and output have the same height and width.](../img/conv-1x1.svg)
+
+![O cálculo de correlação cruzada usa o *kernel* de convolução $1\times 1$  com 3 canais de entrada e 2 canais de saída. A entrada e a saída têm a mesma altura e largura.](../img/conv-1x1.svg)
 :label:`fig_conv_1x1`
 
-Let us check whether this works in practice:
-we implement a $1 \times 1$ convolution
-using a fully-connected layer.
-The only thing is that we need to make some adjustments
-to the data shape before and after the matrix multiplication.
+Vamos verificar se isso funciona na prática:
+implementamos uma convolução $1 \times 1$
+usando uma camada totalmente conectada.
+A única coisa é que precisamos fazer alguns ajustes
+para a forma de dados antes e depois da multiplicação da matriz.
 
 ```{.python .input}
 #@tab all
@@ -283,7 +285,7 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NzU1MTY4NCwtNDA1NDAzOTA0LC0xMT
-M4NTU2NzQsMjIzNjY5NjMzLDEwODQ3OTUxOTcsMTA5NjM5ODc2
-NV19
+eyJoaXN0b3J5IjpbMTQzOTA4MDM2OCwxODc3NTUxNjg0LC00MD
+U0MDM5MDQsLTExMzg1NTY3NCwyMjM2Njk2MzMsMTA4NDc5NTE5
+NywxMDk2Mzk4NzY1XX0=
 -->
