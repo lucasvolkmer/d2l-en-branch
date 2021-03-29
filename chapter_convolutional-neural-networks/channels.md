@@ -227,9 +227,9 @@ def corr2d_multi_in_out_1x1(X, K):
     return d2l.reshape(Y, (c_o, h, w))
 ```
 
-When performing $1\times 1$ convolution,
-the above function is equivalent to the previously implemented cross-correlation function `corr2d_multi_in_out`.
-Let us check this with some sample data.
+Ao realizar convolução $1\times 1$ ,
+a função acima é equivalente à função de correlação cruzada implementada anteriormente `corr2d_multi_in_out`.
+Vamos verificar isso com alguns dados de amostra.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -250,14 +250,14 @@ Y2 = corr2d_multi_in_out(X, K)
 assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 ```
 
-## Summary
+## Resumo
 
-* Multiple channels can be used to extend the model parameters of the convolutional layer.
-* The $1\times 1$ convolutional layer is equivalent to the fully-connected layer, when applied on a per pixel basis.
-* The $1\times 1$ convolutional layer is typically used to adjust the number of channels between network layers and to control model complexity.
+* Vários canais podem ser usados para estender os parâmetros do modelo da camada convolucional.
+* A camada convolucional $1\times 1$ é equivalente à camada totalmente conectada, quando aplicada por pixel.
+* A camada convolucional $1\times 1$ é normalmente usada para ajustar o número de canais entre as camadas de rede e para controlar a complexidade do modelo.
 
 
-## Exercises
+## Exercícios
 
 1. Assume that we have two convolution kernels of size $k_1$ and $k_2$, respectively (with no nonlinearity in between).
     1. Prove that the result of the operation can be expressed by a single convolution.
@@ -285,7 +285,7 @@ assert float(d2l.reduce_sum(d2l.abs(Y1 - Y2))) < 1e-6
 [Discussions](https://discuss.d2l.ai/t/273)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzOTA4MDM2OCwxODc3NTUxNjg0LC00MD
-U0MDM5MDQsLTExMzg1NTY3NCwyMjM2Njk2MzMsMTA4NDc5NTE5
-NywxMDk2Mzk4NzY1XX0=
+eyJoaXN0b3J5IjpbOTcxMDkyNjUxLDE4Nzc1NTE2ODQsLTQwNT
+QwMzkwNCwtMTEzODU1Njc0LDIyMzY2OTYzMywxMDg0Nzk1MTk3
+LDEwOTYzOTg3NjVdfQ==
 -->
