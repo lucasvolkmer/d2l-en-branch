@@ -1,18 +1,19 @@
 # Redes Neurais Recorrentes
 :label:`chap_rnn`
 
-So far we encountered two types of data: tabular data and image data.
-For the latter we designed specialized layers to take advantage of the regularity in them.
-In other words, if we were to permute the pixels in an image, it would be much more difficult to reason about its content of something that would look much like the background of a test pattern in the times of analog TV.
 
-Most importantly, so far we tacitly assumed that our data are all drawn from some distribution,
-and all the examples are independently and identically distributed (i.i.d.).
-Unfortunately, this is not true for most data. For instance, the words in this paragraph are written in sequence, and it would be quite difficult to decipher its meaning if they were permuted randomly.
-Likewise, image frames in a video, the audio signal in a conversation, and the browsing behavior on a website, all follow sequential order.
-It is thus reasonable to assume that specialized models for such data will do better at describing them.
+Até agora encontramos dois tipos de dados: dados tabulares e dados de imagem.
+Para o último, projetamos camadas especializadas para aproveitar a regularidade delas.
+Em outras palavras, se permutássemos os pixels em uma imagem, seria muito mais difícil raciocinar sobre seu conteúdo de algo que se pareceria muito com o fundo de um padrão de teste na época da TV analógica.
 
-Another issue arises from the fact that we might not only receive a sequence as an input but rather might be expected to continue the sequence.
-For instance, the task could be to continue the series $2, 4, 6, 8, 10, \ldots$ This is quite common in time series analysis, to predict the stock market, the fever curve of a patient, or the acceleration needed for a race car. Again we want to have models that can handle such data.
+O mais importante é que, até agora, assumimos tacitamente que todos os nossos dados são retirados de alguma distribuição,
+e todos os exemplos são distribuídos de forma independente e idêntica (d.i.i.).
+Infelizmente, isso não é verdade para a maioria dos dados. Por exemplo, as palavras neste parágrafo são escritas em sequência e seria muito difícil decifrar seu significado se fossem permutadas aleatoriamente.
+Da mesma forma, os quadros de imagem em um vídeo, o sinal de áudio em uma conversa e o comportamento de navegação em um site seguem uma ordem sequencial.
+Portanto, é razoável supor que modelos especializados para esses dados terão um desempenho melhor em descrevê-los.
+
+Outro problema surge do fato de que podemos não apenas receber uma sequência como uma entrada, mas esperar que continuemos a sequência.
+Por exemplo, a tarefa poderia ser continuar a série $2, 4, 6, 8, 10, \ldots$ Isso é bastante comum na análise de série temporal, para prever o mercado de ações, a curva de febre de um paciente ou a aceleração necessária para um carro de corrida. Novamente, queremos ter modelos que possam lidar com esses dados.
 
 In short, while CNNs can efficiently process spatial information, *recurrent neural networks* (RNNs) are designed to better handle sequential information.
 RNNs introduce state variables to store past information, together with the current inputs, to determine the current outputs.
@@ -34,5 +35,5 @@ bptt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MDI3NDEzXX0=
+eyJoaXN0b3J5IjpbMTAxNTU0NTg4NCwtMzUwMjc0MTNdfQ==
 -->
