@@ -403,14 +403,14 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 
 ## Exercícios
 
-1. Improve the model in the experiment of this section.
-    1. Incorporate more than the past 4 observations? How many do you really need?
-    1. How many past observations would you need if there was no noise? Hint: you can write $\sin$ and $\cos$ as a differential equation.
-    1. Can you incorporate older observations while keeping the total number of features constant? Does this improve accuracy? Why?
-    1. Change the neural network architecture and evaluate the performance.
-1. An investor wants to find a good security to buy. He looks at past returns to decide which one is likely to do well. What could possibly go wrong with this strategy?
-1. Does causality also apply to text? To which extent?
-1. Give an example for when a latent autoregressive model might be needed to capture the dynamic of the data.
+1. Melhore o modelo no experimento desta seção.
+     1. Incorpora mais do que as últimas 4 observações? De quantas você realmente precisa?
+     1. Quantas observações anteriores você precisaria se não houvesse ruído? Dica: você pode escrever $\sin$ e $\cos$ como uma equação diferencial.
+     1. Você pode incorporar observações mais antigas enquanto mantém constante o número total de recursos? Isso melhora a precisão? Por quê?
+     1. Altere a arquitetura da rede neural e avalie o desempenho.
+1. Um investidor deseja encontrar um bom título para comprar. Ele olha para os retornos anteriores para decidir qual deles provavelmente terá um bom desempenho. O que poderia dar errado com essa estratégia?
+1. A causalidade também se aplica ao texto? Até que ponto?
+1. Dê um exemplo de quando um modelo autoregressivo latente pode ser necessário para capturar a dinâmica dos dados.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/113)
@@ -424,6 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MjEyNDI5MiwyMDU0NzA1NTkxLDE1MT
-c2OTQzOTUsLTQ2MzI5NzIxMCwtMTA4MjExMzIxN119
+eyJoaXN0b3J5IjpbMzU2MDc3MTU2LDIwNTQ3MDU1OTEsMTUxNz
+Y5NDM5NSwtNDYzMjk3MjEwLC0xMDgyMTEzMjE3XX0=
 -->
