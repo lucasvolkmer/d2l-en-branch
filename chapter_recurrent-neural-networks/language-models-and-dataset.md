@@ -1,4 +1,4 @@
-# Language Models and the Dataset
+# Language Models and the Modelos de Linguagem e o *Dataset*
 :label:`sec_language_model`
 
 
@@ -440,3 +440,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTM3MTYyMTU4NF19
+-->
