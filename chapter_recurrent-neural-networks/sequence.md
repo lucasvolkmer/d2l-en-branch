@@ -64,9 +64,9 @@ Observe que as considerações acima ainda valem se lidarmos com objetos discret
 
 ### Modelos de Markov
 
-Recall the approximation that in an autoregressive model we use only $x_{t-1}, \ldots, x_{t-\tau}$ instead of $x_{t-1}, \ldots, x_1$ to estimate $x_t$. Whenever this approximation is accurate we say that the sequence satisfies a *Markov condition*. In particular, if $\tau = 1$, we have a *first-order Markov model* and $P(x)$ is given by
+Lembre-se da aproximação de que em um modelo autoregressivo usamos apenas $x_{t-1}, \ldots, x_{t-\tau}$ em vez de $x_{t-1}, \ldots, x_1$ para estimar $x_t$ . Sempre que essa aproximação for precisa, dizemos que a sequência satisfaz uma *condição de Markov*. Em particular, se $\tau = 1$,  temos um *modelo de Markov de primeira ordem* e $P(x)$ é dado por
 
-$$P(x_1, \ldots, x_T) = \prod_{t=1}^T P(x_t \mid x_{t-1}) \text{ where } P(x_1 \mid x_0) = P(x_1).$$
+$$P(x_1, \ldots, x_T) = \prod_{t=1}^T P(x_t \mid x_{t-1}) \text{ onde } P(x_1 \mid x_0) = P(x_1).$$
 
 Such models are particularly nice whenever $x_t$ assumes only a discrete value, since in this case dynamic programming can be used to compute values along the chain exactly. For instance, we can compute $P(x_{t+1} \mid x_{t-1})$ efficiently:
 
@@ -424,5 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MzI5NzIxMCwtMTA4MjExMzIxN119
+eyJoaXN0b3J5IjpbLTM0NjM5MDk0MCwtNDYzMjk3MjEwLC0xMD
+gyMTEzMjE3XX0=
 -->
