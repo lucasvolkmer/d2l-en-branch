@@ -1,4 +1,4 @@
-# Text Preprocessing
+# Text Preprocessingamento de Texto
 :label:`sec_text_preprocessing`
 
 We have reviewed and evaluated
@@ -208,3 +208,6 @@ len(corpus), len(vocab)
 1. In the experiment of this section, tokenize text into words and vary the `min_freq` arguments of the `Vocab` instance. How does this affect the vocabulary size? 
 
 [Discussions](https://discuss.d2l.ai/t/115)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTI0ODI3MDQ1NV19
+-->
