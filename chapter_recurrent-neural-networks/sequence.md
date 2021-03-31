@@ -1,18 +1,19 @@
 # Modelos Sequenciais
 :label:`sec_sequence`
 
-Imagine that you are watching movies on Netflix. As a good Netflix user, you decide to rate each of the movies religiously. After all, a good movie is a good movie, and you want to watch more of them, right? As it turns out, things are not quite so simple. People's opinions on movies can change quite significantly over time. In fact, psychologists even have names for some of the effects:
 
-* There is *anchoring*, based on someone else's opinion. For instance, after the Oscar awards, ratings for the corresponding movie go up, even though it is still the same movie. This effect persists for a few months until the award is forgotten. It has been shown that the effect lifts rating by over half a point
+Imagine que você está assistindo a filmes na Netflix. Como um bom usuário do Netflix, você decide avaliar cada um dos filmes religiosamente. Afinal, um bom filme é um bom filme, e você quer assistir mais deles, certo? Acontece que as coisas não são tão simples. As opiniões das pessoas sobre os filmes podem mudar significativamente com o tempo. Na verdade, os psicólogos até têm nomes para alguns dos efeitos:
+
+* Há *ancoragem*, com base na opinião de outra pessoa. Por exemplo, após a premiação do Oscar, as avaliações do filme correspondente aumentam, embora ainda seja o mesmo filme. Este efeito persiste por alguns meses até que o prêmio seja esquecido. Foi demonstrado que o efeito eleva a classificação em mais de meio ponto
 :cite:`Wu.Ahmed.Beutel.ea.2017`.
-* There is the *hedonic adaptation*, where humans quickly adapt to accept an improved or a worsened situation as the new normal. For instance, after watching many good movies, the expectations that the next movie is equally good or better are high. Hence, even an average movie might be considered as bad after many great ones are watched.
-* There is *seasonality*. Very few viewers like to watch a Santa Claus movie in August.
-* In some cases, movies become unpopular due to the misbehaviors of directors or actors in the production.
-* Some movies become cult movies, because they were almost comically bad. *Plan 9 from Outer Space* and *Troll 2* achieved a high degree of notoriety for this reason.
+* Existe a *adaptação hedônica*, onde os humanos se adaptam rapidamente para aceitar uma situação melhorada ou piorada como o novo normal. Por exemplo, depois de assistir a muitos filmes bons, as expectativas de que o próximo filme seja igualmente bom ou melhor são altas. Consequentemente, mesmo um filme comum pode ser considerado ruim depois que muitos filmes incríveis são assistidos.
+* Existe *sazonalidade*. Muito poucos espectadores gostam de assistir a um filme do Papai Noel em agosto.
+* Em alguns casos, os filmes se tornam impopulares devido ao mau comportamento de diretores ou atores na produção.
+* Alguns filmes se tornam filmes de culto, porque eram quase comicamente ruins. *Plan 9 from Outer Space* e *Troll 2* alcançaram um alto grau de notoriedade por este motivo.
 
-In short, movie ratings are anything but stationary. Thus, using temporal dynamics
-led to more accurate movie recommendations :cite:`Koren.2009`.
-Of course, sequence data are not just about movie ratings. The following gives more illustrations.
+Resumindo, as avaliações dos filmes são tudo menos estacionárias. Assim, usando a dinâmica temporal
+levou a recomendações de filmes mais precisas :cite:`Koren.2009`.
+É claro que os dados da sequência não se referem apenas às classificações dos filmes. O seguinte fornece mais ilustrações.
 
 * Many users have highly particular behavior when it comes to the time when they open apps. For instance, social media apps are much more popular after school with students. Stock market trading apps are more commonly used when the markets are open.
 * It is much harder to predict tomorrow's stock prices than to fill in the blanks for a stock price we missed yesterday, even though both are just a matter of estimating one number. After all, foresight is so much harder than hindsight. In statistics, the former (predicting beyond the known observations) is called *extrapolation* whereas the latter (estimating between the existing observations) is called *interpolation*.
@@ -422,5 +423,5 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjYzNDg3NjZdfQ==
+eyJoaXN0b3J5IjpbLTE3MzEwODM4MzZdfQ==
 -->
