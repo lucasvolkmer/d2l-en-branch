@@ -20,11 +20,12 @@ levou a recomendações de filmes mais precisas :cite:`Koren.2009`.
 * Música, fala, texto e vídeos são todos sequenciais por natureza. Se fôssemos permutá-los, eles fariam pouco sentido. O título *cachorro morde homem* é muito menos surpreendente do que *homem morde cachorro*, embora as palavras sejam idênticas.
 * Terremotos estão fortemente correlacionados, ou seja, após um grande terremoto, é muito provável que ocorram vários tremores menores, muito mais do que sem o forte terremoto. Na verdade, os terremotos são correlacionados espaço-temporalmente, ou seja, os tremores secundários ocorrem normalmente em um curto espaço de tempo e nas proximidades.
 * Os humanos interagem uns com os outros em uma natureza sequencial, como pode ser visto nas lutas do Twitter, padrões de dança e debates.
-## Statistical Tools
 
-We need statistical tools and new deep neural network architectures to deal with sequence data. To keep things simple, we use the stock price (FTSE 100 index) illustrated in :numref:`fig_ftse100` as an example.
+## Ferramentas Estatísticas
 
-![FTSE 100 index over about 30 years.](../img/ftse100.png)
+Precisamos de ferramentas estatísticas e novas arquiteturas de rede neural profunda para lidar com dados de sequência. Para manter as coisas simples, usamos o preço das ações (índice FTSE 100) ilustrado em :numref:`fig_ftse100 como exemplo.
+
+![Índice FTSE 100 ao longo de cerca de 30 anos.](../img/ftse100.png)
 :width:`400px`
 :label:`fig_ftse100`
 
@@ -422,5 +423,5 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU2MDM1MTc2XX0=
+eyJoaXN0b3J5IjpbLTYwNjcyMjk0MF19
 -->
