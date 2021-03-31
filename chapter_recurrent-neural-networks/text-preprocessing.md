@@ -72,14 +72,14 @@ print(lines[10])
 
 ## Tokenização
 
-The following `tokenize` function
-takes a list (`lines`) as the input,
-where each list is a text sequence (e.g., a text line).
-Each text sequence is split into a list of tokens.
-A *token* is the basic unit in text.
-In the end,
-a list of token lists are returned,
-where each token is a string.
+A seguinte função `tokenize`
+recebe uma lista (`lines`) como entrada,
+onde cada lista é uma sequência de texto (por exemplo, uma linha de texto).
+Cada sequência de texto é dividida em uma lista de tokens.
+Um *token* é a unidade básica no texto.
+No fim,
+uma lista de listas de tokens é retornada,
+onde cada token é uma string.
 
 ```{.python .input}
 #@tab all
@@ -97,18 +97,18 @@ for i in range(11):
     print(tokens[i])
 ```
 
-## Vocabulary
+## Vocabulário
 
-The string type of the token is inconvenient to be used by models, which take numerical inputs.
-Now let us build a dictionary, often called *vocabulary* as well, to map string tokens into numerical indices starting from 0.
-To do so, we first count the unique tokens in all the documents from the training set,
-namely a *corpus*,
-and then assign a numerical index to each unique token according to its frequency.
-Rarely appeared tokens are often removed to reduce the complexity.
-Any token that does not exist in the corpus or has been removed is mapped into a special unknown token “&lt;unk&gt;”.
-We optionally add a list of reserved tokens, such as
-“&lt;pad&gt;” for padding,
-“&lt;bos&gt;” to present the beginning for a sequence, and “&lt;eos&gt;” for the end of a sequence.
+O tipo de string do token é inconveniente para ser usado por modelos, que usam entradas numéricas.
+Agora, vamos construir um dicionário, também chamado de *vocabulário*, para mapear tokens de string em índices numéricos começando em 0.
+Para fazer isso, primeiro contamos os tokens exclusivos em todos os documentos do conjunto de treinamento,
+ou seja, um *corpus*,
+e, em seguida, atribua um índice numérico a cada token exclusivo de acordo com sua frequência.
+Os tokens raramente exibidos são frequentemente removidos para reduzir a complexidade.
+Qualquer token que não exista no corpus ou que tenha sido removido é mapeado em um token especial desconhecido “&lt;unk&gt;”.
+Opcionalmente, adicionamos uma lista de tokens reservados, como
+“&lt;pad&gt;” para preenchimento,
+“&lt;bos&gt;” para apresentar o início de uma sequência, e “&lt;eos&gt;”” para o final de uma sequência.
 
 ```{.python .input}
 #@tab all
@@ -210,5 +210,5 @@ len(corpus), len(vocab)
 
 [Discussions](https://discuss.d2l.ai/t/115)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk3NDI1Mjg5LC0xMTU3MDE3Mzk0XX0=
+eyJoaXN0b3J5IjpbNTczMTQ3MjM0LC0xMTU3MDE3Mzk0XX0=
 -->
