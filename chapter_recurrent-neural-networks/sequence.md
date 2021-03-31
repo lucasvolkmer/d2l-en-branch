@@ -1,4 +1,4 @@
-# Sequence Models
+# Modelos Sequenciais
 :label:`sec_sequence`
 
 Imagine that you are watching movies on Netflix. As a good Netflix user, you decide to rate each of the movies religiously. After all, a good movie is a good movie, and you want to watch more of them, right? As it turns out, things are not quite so simple. People's opinions on movies can change quite significantly over time. In fact, psychologists even have names for some of the effects:
@@ -422,5 +422,5 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNzgwNTMyNF19
+eyJoaXN0b3J5IjpbLTE4MjYzNDg3NjZdfQ==
 -->
