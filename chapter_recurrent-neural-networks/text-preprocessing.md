@@ -1,27 +1,28 @@
 # Preprocessamento de Texto
 :label:`sec_text_preprocessing`
 
-We have reviewed and evaluated
-statistical tools 
-and prediction challenges
-for sequence data.
-Such data can take many forms.
-Specifically,
-as we will focus on
-in many chapters of the book,
-text is one of the most popular examples of sequence data.
-For example,
-an article can be simply viewed as a sequence of words, or even a sequence of characters.
-To facilitate our future experiments
-with sequence data,
-we will dedicate this section
-to explain common preprocessing steps for text.
-Usually, these steps are:
 
-1. Load text as strings into memory.
-1. Split strings into tokens (e.g., words and characters).
-1. Build a table of vocabulary to map the split tokens to numerical indices.
-1. Convert text into sequences of numerical indices so they can be manipulated by models easily.
+Nós revisamos e avaliamos
+ferramentas estatísticas
+e desafios de previsão
+para dados de sequência.
+Esses dados podem assumir várias formas.
+Especificamente,
+como vamos nos concentrar em
+em muitos capítulos do livro,
+text é um dos exemplos mais populares de dados de sequência.
+Por exemplo,
+um artigo pode ser visto simplesmente como uma sequência de palavras ou mesmo uma sequência de caracteres.
+Para facilitar nossos experimentos futuros
+com dados de sequência,
+vamos dedicar esta seção
+para explicar as etapas comuns de pré-processamento para texto.
+Normalmente, essas etapas são:
+
+1. Carregar o texto como strings na memória.
+1. Dividir as strings em tokens (por exemplo, palavras e caracteres).
+1. Construir uma tabela de vocabulário para mapear os tokens divididos em índices numéricos.
+1. Converter o texto em sequências de índices numéricos para que possam ser facilmente manipulados por modelos.
 
 ```{.python .input}
 import collections
@@ -43,13 +44,13 @@ from d2l import tensorflow as d2l
 import re
 ```
 
-## Reading the Dataset
+## Lendo o Dataset
 
-To get started we load text from H. G. Wells' [*The Time Machine*](http://www.gutenberg.org/ebooks/35).
-This is a fairly small corpus of just over 30000 words, but for the purpose of what we want to illustrate this is just fine.
-More realistic document collections contain many billions of words.
-The following function reads the dataset into a list of text lines, where each line is a string.
-For simplicity, here we ignore punctuation and capitalization.
+Para começar, carregamos o texto de H. G. Wells '[*The Time Machine*] (http://www.gutenberg.org/ebooks/35).
+Este é um corpus bastante pequeno de pouco mais de 30000 palavras, mas para o propósito do que queremos ilustrar, está tudo bem.
+Coleções de documentos mais realistas contêm muitos bilhões de palavras.
+A função a seguir lê o conjunto de dados em uma lista de linhas de texto, onde cada linha é uma *string*.
+Para simplificar, aqui ignoramos a pontuação e a capitalização.
 
 ```{.python .input}
 #@tab all
@@ -69,7 +70,7 @@ print(lines[0])
 print(lines[10])
 ```
 
-## Tokenization
+## Tokenização
 
 The following `tokenize` function
 takes a list (`lines`) as the input,
@@ -209,5 +210,5 @@ len(corpus), len(vocab)
 
 [Discussions](https://discuss.d2l.ai/t/115)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTcwMTczOTRdfQ==
+eyJoaXN0b3J5IjpbMjk3NDI1Mjg5LC0xMTU3MDE3Mzk0XX0=
 -->
