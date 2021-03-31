@@ -68,7 +68,7 @@ Lembre-se da aproximação de que em um modelo autoregressivo usamos apenas $x_{
 
 $$P(x_1, \ldots, x_T) = \prod_{t=1}^T P(x_t \mid x_{t-1}) \text{ onde } P(x_1 \mid x_0) = P(x_1).$$
 
-Such models are particularly nice whenever $x_t$ assumes only a discrete value, since in this case dynamic programming can be used to compute values along the chain exactly. For instance, we can compute $P(x_{t+1} \mid x_{t-1})$ efficiently:
+Esses modelos são particularmente bons sempre que $x_t$ assume apenas um valor discreto, uma vez que, neste caso, a programação dinâmica pode ser usada para calcular valores exatamente ao longo da cadeia. Por exemplo, podemos calcular $P(x_{t+1} \mid x_{t-1})$ de forma eficiente:
 
 $$\begin{aligned}
 P(x_{t+1} \mid x_{t-1})
@@ -424,6 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NjM5MDk0MCwtNDYzMjk3MjEwLC0xMD
-gyMTEzMjE3XX0=
+eyJoaXN0b3J5IjpbLTIwMzkyOTQ2NjMsLTQ2MzI5NzIxMCwtMT
+A4MjExMzIxN119
 -->
