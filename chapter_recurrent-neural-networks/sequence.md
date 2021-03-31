@@ -87,18 +87,18 @@ Em princípio, não há nada de errado em desdobrar $P(x_1, \ldots, x_T)$ na ord
 
 $$P(x_1, \ldots, x_T) = \prod_{t=T}^1 P(x_t \mid x_{t+1}, \ldots, x_T).$$
 
-In fact, if we have a Markov model, we can obtain a reverse conditional probability distribution, too. In many cases, however, there exists a natural direction for the data, namely going forward in time. It is clear that future events cannot influence the past. Hence, if we change $x_t$, we may be able to influence what happens for $x_{t+1}$ going forward but not the converse. That is, if we change $x_t$, the distribution over past events will not change. Consequently, it ought to be easier to explain $P(x_{t+1} \mid x_t)$ rather than $P(x_t \mid x_{t+1})$. For instance, it has been shown that in some cases we can find $x_{t+1} = f(x_t) + \epsilon$ for some additive noise $\epsilon$, whereas the converse is not true :cite:`Hoyer.Janzing.Mooij.ea.2009`. This is great news, since it is typically the forward direction that we are interested in estimating.
-The book by Peters et al. has
-explained more on this topic :cite:`Peters.Janzing.Scholkopf.2017`.
-We are barely scratching the surface of it.
+Na verdade, se tivermos um modelo de Markov, também podemos obter uma distribuição de probabilidade condicional reversa. Em muitos casos, no entanto, existe uma direção natural para os dados, a saber, avançar no tempo. É claro que eventos futuros não podem influenciar o passado. Portanto, se mudarmos $x_t$, podemos influenciar o que acontece com $x_{t+1}$ daqui para frente, mas não o contrário. Ou seja, se mudarmos $x_t$, a distribuição sobre os eventos anteriores não mudará. Consequentemente, deveria ser mais fácil explicar $P(x_{t+1} \mid x_t)$ em vez de $P(x_t \mid x_{t+1})$. Por exemplo, foi mostrado que em alguns casos podemos encontrar $x_{t+1} = f(x_t) + \epsilon$ para algum ruído aditivo $\epsilon$, enquanto o inverso não é verdadeiro :cite:`Hoyer.Janzing.Mooij.ea.2009`. Esta é uma ótima notícia, pois normalmente é a direção para a frente que estamos interessados ​​em estimar.
+O livro de Peters et al.
+explicou mais sobre este tópico :cite:`Peters.Janzing.Scholkopf.2017`.
+Estamos apenas arranhando a superfície disso.
 
 
-## Training
+## Trainamento
 
-After reviewing so many statistical tools,
-let us try this out in practice.
-We begin by generating some data.
-To keep things simple we generate our sequence data by using a sine function with some additive noise for time steps $1, 2, \ldots, 1000$.
+Depois de revisar tantas ferramentas estatísticas,
+vamos tentar isso na prática.
+Começamos gerando alguns dados.
+Para manter as coisas simples, geramos nossos dados de sequência usando uma função seno com algum ruído aditivo para etapas de tempo $1, 2, \ldots, 1000$.
 
 ```{.python .input}
 %matplotlib inline
@@ -424,6 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NDcwNTU5MSwxNTE3Njk0Mzk1LC00Nj
-MyOTcyMTAsLTEwODIxMTMyMTddfQ==
+eyJoaXN0b3J5IjpbMTM4NzY5NzA4NSwyMDU0NzA1NTkxLDE1MT
+c2OTQzOTUsLTQ2MzI5NzIxMCwtMTA4MjExMzIxN119
 -->
