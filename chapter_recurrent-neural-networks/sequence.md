@@ -15,12 +15,11 @@ Resumindo, as avaliações dos filmes são tudo menos estacionárias. Assim, usa
 levou a recomendações de filmes mais precisas :cite:`Koren.2009`.
 É claro que os dados da sequência não se referem apenas às classificações dos filmes. O seguinte fornece mais ilustrações.
 
-* Many users have highly particular behavior when it comes to the time when they open apps. For instance, social media apps are much more popular after school with students. Stock market trading apps are more commonly used when the markets are open.
-* It is much harder to predict tomorrow's stock prices than to fill in the blanks for a stock price we missed yesterday, even though both are just a matter of estimating one number. After all, foresight is so much harder than hindsight. In statistics, the former (predicting beyond the known observations) is called *extrapolation* whereas the latter (estimating between the existing observations) is called *interpolation*.
-* Music, speech, text, and videos are all sequential in nature. If we were to permute them they would make little sense. The headline *dog bites man* is much less surprising than *man bites dog*, even though the words are identical.
-* Earthquakes are strongly correlated, i.e., after a massive earthquake there are very likely several smaller aftershocks, much more so than without the strong quake. In fact, earthquakes are spatiotemporally correlated, i.e., the aftershocks typically occur within a short time span and in close proximity.
-* Humans interact with each other in a sequential nature, as can be seen in Twitter fights, dance patterns, and debates.
-
+* Muitos usuários têm um comportamento altamente específico quando se trata do momento em que abrem aplicativos. Por exemplo, os aplicativos de mídia social são muito mais populares entre os alunos depois da escola. Os aplicativos de negociação do mercado de ações são mais comumente usados ​​quando os mercados estão abertos.
+* É muito mais difícil prever os preços das ações de amanhã do que preencher as lacunas de um preço das ações que perdemos ontem, embora ambos sejam apenas uma questão de estimar um número. Afinal, a previsão é muito mais difícil do que a retrospectiva. Em estatística, a primeira (previsão além das observações conhecidas) é chamada de *extrapolação*, enquanto a última (estimativa entre as observações existentes) é chamada de *interpolação*.
+* Música, fala, texto e vídeos são todos sequenciais por natureza. Se fôssemos permutá-los, eles fariam pouco sentido. O título *cachorro morde homem* é muito menos surpreendente do que *homem morde cachorro*, embora as palavras sejam idênticas.
+* Terremotos estão fortemente correlacionados, ou seja, após um grande terremoto, é muito provável que ocorram vários tremores menores, muito mais do que sem o forte terremoto. Na verdade, os terremotos são correlacionados espaço-temporalmente, ou seja, os tremores secundários ocorrem normalmente em um curto espaço de tempo e nas proximidades.
+* Os humanos interagem uns com os outros em uma natureza sequencial, como pode ser visto nas lutas do Twitter, padrões de dança e debates.
 ## Statistical Tools
 
 We need statistical tools and new deep neural network architectures to deal with sequence data. To keep things simple, we use the stock price (FTSE 100 index) illustrated in :numref:`fig_ftse100` as an example.
@@ -423,5 +422,5 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzEwODM4MzZdfQ==
+eyJoaXN0b3J5IjpbNjU2MDM1MTc2XX0=
 -->
