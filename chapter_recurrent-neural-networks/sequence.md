@@ -81,9 +81,9 @@ $$
 usando o fato de que só precisamos levar em consideração um histórico muito curto de observações anteriores: $P(x_{t+1} \mid x_t, x_{t-1}) = P(x_{t+1} \mid x_t)$.
 Entraremos em detalhes da programação dinâmica está além do escopo desta seção. Algoritmos de aprendizagem de controle e reforço usam essas ferramentas extensivamente.
 
-### Causality
+### Causalidade
 
-In principle, there is nothing wrong with unfolding $P(x_1, \ldots, x_T)$ in reverse order. After all, by conditioning we can always write it via
+Em princípio, não há nada de errado em desdobrar $P(x_1, \ldots, x_T)$ na ordem inversa. Afinal, por condicionamento, podemos sempre escrevê-la via
 
 $$P(x_1, \ldots, x_T) = \prod_{t=T}^1 P(x_t \mid x_{t+1}, \ldots, x_T).$$
 
@@ -424,6 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNzY5NDM5NSwtNDYzMjk3MjEwLC0xMD
-gyMTEzMjE3XX0=
+eyJoaXN0b3J5IjpbMjA1NDcwNTU5MSwxNTE3Njk0Mzk1LC00Nj
+MyOTcyMTAsLTEwODIxMTMyMTddfQ==
 -->
