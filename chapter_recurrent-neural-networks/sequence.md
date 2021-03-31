@@ -280,10 +280,10 @@ net = get_net()
 train(net, train_iter, loss, 5, 0.01)
 ```
 
-## Prediction
+## Predição
 
-Since the training loss is small, we would expect our model to work well. Let us see what this means in practice. The first thing to check is how well the model is able to predict what happens just in the next time step,
-namely the *one-step-ahead prediction*.
+Como a perda de treinamento é pequena, esperamos que nosso modelo funcione bem. Vamos ver o que isso significa na prática. A primeira coisa a verificar é o quão bem o modelo é capaz de prever o que acontece na próxima etapa,
+ou seja, a *previsão um passo à frente*.
 
 ```{.python .input}
 #@tab all
@@ -292,11 +292,11 @@ d2l.plot([time, time[tau:]], [d2l.numpy(x), d2l.numpy(onestep_preds)], 'time',
          'x', legend=['data', '1-step preds'], xlim=[1, 1000], figsize=(6, 3))
 ```
 
-The one-step-ahead predictions look nice, just as we expected.
-Even beyond 604 (`n_train + tau`) observations the predictions still look trustworthy.
-However, there is just one little problem to this:
-if we observe sequence data only until time step 604, we cannot hope to receive the inputs for all the future one-step-ahead predictions.
-Instead, we need to work our way forward one step at a time:
+As previsões de um passo à frente parecem boas, exatamente como esperávamos.
+Mesmo além de 604 (`n_train + tau`) observações, as previsões ainda parecem confiáveis.
+No entanto, há apenas um pequeno problema para isso:
+se observarmos os dados de sequência apenas até a etapa de tempo 604, não podemos esperar receber as entradas para todas as previsões futuras de um passo à frente.
+Em vez disso, precisamos trabalhar nosso caminho adiante, um passo de cada vez:
 
 $$
 \hat{x}_{605} = f(x_{601}, x_{602}, x_{603}, x_{604}), \\
@@ -424,6 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNzcwMDIxMiwyMDU0NzA1NTkxLDE1MT
+eyJoaXN0b3J5IjpbLTgwNDU1NTA1NywyMDU0NzA1NTkxLDE1MT
 c2OTQzOTUsLTQ2MzI5NzIxMCwtMTA4MjExMzIxN119
 -->
