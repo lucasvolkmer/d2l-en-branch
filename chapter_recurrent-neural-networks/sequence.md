@@ -49,10 +49,10 @@ Muito do que se segue neste capítulo girará em torno de como estimar $P(x_t \m
 Primeiro, assuma que a sequência potencialmente bastante longa $ $x_{t-1}, \ldots, x_1$ não é realmente necessária.
 Neste caso, podemos nos contentar com algum intervalo de tempo de comprimento $\tau$ e usar apenas observações $x_{t-1}, \ldots, x_{t-\tau}$. O benefício imediato é que agora o número de argumentos é sempre o mesmo, pelo menos para $t > \tau$. Isso nos permite treinar uma rede profunda, conforme indicado acima. Esses modelos serão chamados de *modelos autorregressivos*, pois eles literalmente realizam regressão em si mesmos.
 
-The second strategy, shown in :numref:`fig_sequence-model`, is to keep some summary $h_t$ of the past observations, and at the same time update $h_t$ in addition to the prediction $\hat{x}_t$.
-This leads to models that estimate $x_t$ with $\hat{x}_t = P(x_t \mid h_{t})$ and moreover updates of the form  $h_t = g(h_{t-1}, x_{t-1})$. Since $h_t$ is never observed, these models are also called *latent autoregressive models*.
+A segunda estratégia, mostrada em :numref:`fig_sequence-model`,  é manter algum resumo $h_t$ das observações anteriores, e ao mesmo tempo atualizar $h_t$ além da previsão $\hat{x}_t$.
+Isso leva a modelos que estimam $x_t$ com $\hat{x}_t = P(x_t \mid h_{t})$ e, além disso, atualizações da forma $h_t = g(h_{t-1}, x_{t-1})$.  Como $h_t$ nunca é observado, esses modelos também são chamados de *modelos autorregressivos latentes*.
 
-![A latent autoregressive model.](../img/sequence-model.svg)
+![Um modelo autorregressivo latente.](../img/sequence-model.svg)
 :label:`fig_sequence-model`
 
 Both cases raise the obvious question of how to generate training data. One typically uses historical observations to predict the next observation given the ones up to right now. Obviously we do not expect time to stand still. However, a common assumption is that while the specific values of $x_t$ might change, at least the dynamics of the sequence itself will not. This is reasonable, since novel dynamics are just that, novel and thus not predictable using data that we have so far. Statisticians call dynamics that do not change *stationary*.
@@ -424,5 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODIzNTYxMywtMTA4MjExMzIxN119
+eyJoaXN0b3J5IjpbLTEyOTY0MDk2NzQsLTEwODIxMTMyMTddfQ
+==
 -->
