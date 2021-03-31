@@ -30,15 +30,15 @@ Precisamos de ferramentas estatísticas e novas arquiteturas de rede neural prof
 :label:`fig_ftse100`
 
 
-Let us denote the prices by $x_t$, i.e., at *time step* $t \in \mathbb{Z}^+$ we observe price $x_t$.
-Note that for sequences in this text,
-$t$ will typically be discrete and vary over integers or its subset.
-Suppose that
-a trader who wants to do well in the stock market on day $t$ predicts $x_t$ via
+Vamos denotar os preços por $x_t$, ou seja, no *passo de tempo*$t \in \mathbb{Z}^+$ observamos o preço $x_t$.
+Observe que para sequências neste texto,
+$t$ normalmente será discreto e variará em números inteiros ou em seu subconjunto.
+Suponha que
+um trader que deseja ter um bom desempenho no mercado de ações no dia $t$ prevê $x_t$ via
 
 $$x_t \sim P(x_t \mid x_{t-1}, \ldots, x_1).$$
 
-### Autoregressive Models
+### Modelos Autorregressivos
 
 In order to achieve this, our trader could use a regression model such as the one that we trained in :numref:`sec_linear_concise`.
 There is just one major problem: the number of inputs, $x_{t-1}, \ldots, x_1$ varies, depending on $t$.
@@ -423,5 +423,5 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjcyMjk0MF19
+eyJoaXN0b3J5IjpbLTEwODIxMTMyMTddfQ==
 -->
