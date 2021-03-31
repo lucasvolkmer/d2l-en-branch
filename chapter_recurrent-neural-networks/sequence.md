@@ -40,13 +40,14 @@ $$x_t \sim P(x_t \mid x_{t-1}, \ldots, x_1).$$
 
 ### Modelos Autorregressivos
 
-In order to achieve this, our trader could use a regression model such as the one that we trained in :numref:`sec_linear_concise`.
-There is just one major problem: the number of inputs, $x_{t-1}, \ldots, x_1$ varies, depending on $t$.
-That is to say, the number increases with the amount of data that we encounter, and we will need an approximation to make this computationally tractable.
-Much of what follows in this chapter will revolve around how to estimate $P(x_t \mid x_{t-1}, \ldots, x_1)$ efficiently. In a nutshell it boils down to two strategies as follows.
 
-First, assume that the potentially rather long sequence $x_{t-1}, \ldots, x_1$ is not really necessary.
-In this case we might content ourselves with some timespan of length $\tau$ and only use $x_{t-1}, \ldots, x_{t-\tau}$ observations. The immediate benefit is that now the number of arguments is always the same, at least for $t > \tau$. This allows us to train a deep network as indicated above. Such models will be called *autoregressive models*, as they quite literally perform regression on themselves.
+Para conseguir isso, nosso trader pode usar um modelo de regressão como o que treinamosem :numref:`sec_linear_concise`.
+Existe apenas um grande problema: o número de entradas, $x_{t-1}, \ldots, x_1$ varia, dependendo de $t$.
+Ou seja, o número aumenta com a quantidade de dados que encontramos e precisaremos de uma aproximação para tornar isso computacionalmente tratável.
+Muito do que se segue neste capítulo girará em torno de como estimar $P(x_t \mid x_{t-1}, \ldots, x_1)$ de forma eficiente. Em poucas palavras, ele se resume a duas estratégias como segue.
+
+Primeiro, assuma que a sequência potencialmente bastante longa $ $x_{t-1}, \ldots, x_1$ não é realmente necessária.
+Neste caso, podemos nos contentar com algum intervalo de tempo de comprimento $\tau$ e usar apenas observações $x_{t-1}, \ldots, x_{t-\tau}$. O benefício imediato é que agora o número de argumentos é sempre o mesmo, pelo menos para $t > \tau$. Isso nos permite treinar uma rede profunda, conforme indicado acima. Esses modelos serão chamados de *modelos autorregressivos*, pois eles literalmente realizam regressão em si mesmos.
 
 The second strategy, shown in :numref:`fig_sequence-model`, is to keep some summary $h_t$ of the past observations, and at the same time update $h_t$ in addition to the prediction $\hat{x}_t$.
 This leads to models that estimate $x_t$ with $\hat{x}_t = P(x_t \mid h_{t})$ and moreover updates of the form  $h_t = g(h_{t-1}, x_{t-1})$. Since $h_t$ is never observed, these models are also called *latent autoregressive models*.
@@ -423,5 +424,5 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODIxMTMyMTddfQ==
+eyJoaXN0b3J5IjpbLTE5ODIzNTYxMywtMTA4MjExMzIxN119
 -->
