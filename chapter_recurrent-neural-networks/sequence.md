@@ -55,14 +55,14 @@ Isso leva a modelos que estimam $x_t$ com $\hat{x}_t = P(x_t \mid h_{t})$ e, al�
 ![Um modelo autorregressivo latente.](../img/sequence-model.svg)
 :label:`fig_sequence-model`
 
-Both cases raise the obvious question of how to generate training data. One typically uses historical observations to predict the next observation given the ones up to right now. Obviously we do not expect time to stand still. However, a common assumption is that while the specific values of $x_t$ might change, at least the dynamics of the sequence itself will not. This is reasonable, since novel dynamics are just that, novel and thus not predictable using data that we have so far. Statisticians call dynamics that do not change *stationary*.
-Regardless of what we do, we will thus get an estimate of the entire sequence via
+Ambos os casos levantam a questão óbvia de como gerar dados de treinamento. Normalmente, usa-se observações históricas para prever a próxima observação, dadas as até agora. Obviamente, não esperamos que o tempo pare. No entanto, uma suposição comum é que, embora os valores específicos de $x_t$ possam mudar, pelo menos a dinâmica da própria sequência não mudará. Isso é razoável, uma vez que novas dinâmicas são apenas isso, novas e, portanto, não previsíveis usando os dados que temos até agora. Os estatísticos chamam a dinâmica que não muda de *estacionária*.
+Independentemente do que fizermos, obteremos uma estimativa de toda a sequência por meio de
 
 $$P(x_1, \ldots, x_T) = \prod_{t=1}^T P(x_t \mid x_{t-1}, \ldots, x_1).$$
 
-Note that the above considerations still hold if we deal with discrete objects, such as words, rather than continuous numbers. The only difference is that in such a situation we need to use a classifier rather than a regression model to estimate $P(x_t \mid  x_{t-1}, \ldots, x_1)$.
+Observe que as considerações acima ainda valem se lidarmos com objetos discretos, como palavras, em vez de números contínuos. A única diferença é que, em tal situação, precisamos usar um classificador em vez de um modelo de regressão para estimar $P(x_t \mid  x_{t-1}, \ldots, x_1)$.
 
-### Markov Models
+### Modelos de Markov
 
 Recall the approximation that in an autoregressive model we use only $x_{t-1}, \ldots, x_{t-\tau}$ instead of $x_{t-1}, \ldots, x_1$ to estimate $x_t$. Whenever this approximation is accurate we say that the sequence satisfies a *Markov condition*. In particular, if $\tau = 1$, we have a *first-order Markov model* and $P(x)$ is given by
 
@@ -424,6 +424,5 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTY0MDk2NzQsLTEwODIxMTMyMTddfQ
-==
+eyJoaXN0b3J5IjpbLTQ2MzI5NzIxMCwtMTA4MjExMzIxN119
 -->
