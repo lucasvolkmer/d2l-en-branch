@@ -307,9 +307,9 @@ $$
 \ldots
 $$
 
-Generally, for an observed sequence up to $x_t$, its predicted output $\hat{x}_{t+k}$ at time step $t+k$ is called the $k$*-step-ahead prediction*. Since we have observed up to $x_{604}$, its $k$-step-ahead prediction is $\hat{x}_{604+k}$.
-In other words, we will have to use our own predictions to make multistep-ahead predictions.
-Let us see how well this goes.
+Geralmente, para uma sequência observada até $x_t$, sua saída prevista $\hat{x}_{t+k}$ no passo de tempo $t+k$ é chamada de $k$ *- previsão passo à frente*. Como observamos até $x_{604}$, sua previsão de $k$-step-forward é $\hat{x}_{604+k}$.
+Em outras palavras, teremos que usar nossas próprias previsões para fazer previsões em várias etapas.
+Vamos ver como isso vai bem.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -424,6 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNDU1NTA1NywyMDU0NzA1NTkxLDE1MT
+eyJoaXN0b3J5IjpbLTMwODUzMDYwNywyMDU0NzA1NTkxLDE1MT
 c2OTQzOTUsLTQ2MzI5NzIxMCwtMTA4MjExMzIxN119
 -->
