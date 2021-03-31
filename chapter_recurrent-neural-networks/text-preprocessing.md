@@ -154,8 +154,8 @@ def count_corpus(tokens):  #@save
     return collections.Counter(tokens)
 ```
 
-We construct a vocabulary using the time machine dataset as the corpus. 
-Then we print the first few frequent tokens with their indices.
+Construímos um vocabulário usando o conjunto de dados da máquina do tempo como corpus.
+Em seguida, imprimimos os primeiros tokens frequentes com seus índices.
 
 ```{.python .input}
 #@tab all
@@ -163,7 +163,7 @@ vocab = Vocab(tokens)
 print(list(vocab.token_to_idx.items())[:10])
 ```
 
-Now we can convert each text line into a list of numerical indices.
+Agora podemos converter cada linha de texto em uma lista de índices numéricos.
 
 ```{.python .input}
 #@tab all
@@ -172,12 +172,12 @@ for i in [0, 10]:
     print('indices:', vocab[tokens[i]])
 ```
 
-## Putting All Things Together
+## Juntando Todas as Coisas
 
-Using the above functions, we package everything into the `load_corpus_time_machine` function, which returns `corpus`, a list of token indices, and `vocab`, the vocabulary of the time machine corpus.
-The modifications we did here are:
-i) we tokenize text into characters, not words, to simplify the training in later sections;
-ii) `corpus` is a single list, not a list of token lists, since each text line in the time machine dataset is not necessarily a sentence or a paragraph.
+Usando as funções acima, empacotamos tudo na função `load_corpus_time_machine`, que retorna` corpus`, uma lista de índices de token, e `vocabulário`, o vocabulário do corpus da máquina do tempo.
+As modificações que fizemos aqui são:
+i) simbolizamos o texto em caracteres, não em palavras, para simplificar o treinamento em seções posteriores;
+ii) `corpus` é uma lista única, não uma lista de listas de tokens, uma vez que cada linha de texto no conjunto de dados da máquina do tempo não é necessariamente uma frase ou um parágrafo.
 
 ```{.python .input}
 #@tab all
@@ -197,18 +197,19 @@ corpus, vocab = load_corpus_time_machine()
 len(corpus), len(vocab)
 ```
 
-## Summary
+## Resumo
 
-* Text is an important form of sequence data.
-* To preprocess text, we usually split text into tokens, build a vocabulary to map token strings into numerical indices, and convert text data into token indices for  models to manipulate.
+* O texto é uma forma importante de dados de sequência.
+* Para pré-processar o texto, geralmente dividimos o texto em tokens, construímos um vocabulário para mapear strings de token em índices numéricos e convertemos dados de texto em índices de token para os modelos manipularem.
 
 
-## Exercises
+## Exercícios
 
-1. Tokenization is a key preprocessing step. It varies for different languages. Try to find another three commonly used methods to tokenize text.
-1. In the experiment of this section, tokenize text into words and vary the `min_freq` arguments of the `Vocab` instance. How does this affect the vocabulary size? 
+1. A tokenização é uma etapa chave de pré-processamento. Isso varia para diferentes idiomas. Tente encontrar outros três métodos comumente usados para tokenizar texto.
+1. No experimento desta seção, tokenize o texto em palavras e varie os argumentos `min_freq` da instância` Vocab`. Como isso afeta o tamanho do vocabulário?
 
 [Discussions](https://discuss.d2l.ai/t/115)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTczMTQ3MjM0LC0xMTU3MDE3Mzk0XX0=
+eyJoaXN0b3J5IjpbLTEwMjkxNDYyMTksLTExNTcwMTczOTRdfQ
+==
 -->
