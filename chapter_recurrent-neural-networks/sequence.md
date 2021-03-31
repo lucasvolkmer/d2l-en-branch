@@ -139,13 +139,13 @@ x = d2l.sin(0.01 * time) + d2l.normal([T], 0, 0.2)
 d2l.plot(time, [x], 'time', 'x', xlim=[1, 1000], figsize=(6, 3))
 ```
 
-Next, we need to turn such a sequence into features and labels that our model can train on.
-Based on the embedding dimension $\tau$ we map the data into pairs $y_t = x_t$ and $\mathbf{x}_t = [x_{t-\tau}, \ldots, x_{t-1}]$.
-The astute reader might have noticed that this gives us $\tau$ fewer data examples, since we do not have sufficient history for the first $\tau$ of them.
-A simple fix, in particular if the sequence is long,
-is to discard those few terms.
-Alternatively we could pad the sequence with zeros.
-Here we only use the first 600 feature-label pairs for training.
+Em seguida, precisamos transformar essa sequência em recursos e rótulos nos quais nosso modelo pode treinar.
+Com base na dimensão de incorporação $\tau$, mapeamos os dados em pares $y_t = x_t$ e $\mathbf{x}_t = [x_{t-\tau}, \ldots, x_{t-1}]$.
+O leitor astuto deve ter notado que isso nos dá $\tau$ menos exemplos de dados, uma vez que não temos histórico suficiente para os primeiros $\tau$ deles.
+Uma solução simples, em particular se a sequência for longa,
+é descartar esses poucos termos.
+Como alternativa, podemos preencher a sequência com zeros.
+Aqui, usamos apenas os primeiros 600 pares de rótulos de recursos para treinamento.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -173,8 +173,8 @@ train_iter = d2l.load_array((features[:n_train], labels[:n_train]),
                             batch_size, is_train=True)
 ```
 
-Here we keep the architecture fairly simple:
-just an MLP with two fully-connected layers, ReLU activation, and squared loss.
+Aqui, mantemos a arquitetura bastante simples:
+apenas um MLP com duas camadas totalmente conectadas, ativação ReLU e perda quadrática.
 
 ```{.python .input}
 # A simple MLP
@@ -223,9 +223,9 @@ def get_net():
 loss = tf.keras.losses.MeanSquaredError()
 ```
 
-Now we are ready to train the model. The code below is essentially identical to the training loop in previous sections,
-such as :numref:`sec_linear_concise`.
-Thus, we will not delve into much detail.
+Agora estamos prontos para treinar o modelo. O código abaixo é essencialmente idêntico ao loop de treinamento nas seções anteriores,
+como :numref:`sec_linear_concise`.
+Portanto, não iremos nos aprofundar em muitos detalhes.
 
 ```{.python .input}
 def train(net, train_iter, loss, epochs, lr):
@@ -424,6 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NzY5NzA4NSwyMDU0NzA1NTkxLDE1MT
+eyJoaXN0b3J5IjpbLTIzNzcwMDIxMiwyMDU0NzA1NTkxLDE1MT
 c2OTQzOTUsLTQ2MzI5NzIxMCwtMTA4MjExMzIxN119
 -->
