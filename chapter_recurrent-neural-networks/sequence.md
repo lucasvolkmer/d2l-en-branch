@@ -396,13 +396,12 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 
 ## Resumo
 
-* There is quite a difference in difficulty between interpolation and extrapolation. Consequently, if you have a sequence, always respect the temporal order of the data when training, i.e., never train on future data.
-* Sequence models require specialized statistical tools for estimation. Two popular choices are autoregressive models and latent-variable autoregressive models.
-* For causal models (e.g., time going forward), estimating the forward direction is typically a lot easier than the reverse direction.
-* For an observed sequence up to time step $t$, its predicted output at time step $t+k$ is the $k$*-step-ahead prediction*. As we predict further in time by increasing $k$, the errors accumulate and the quality of the prediction degrades, often dramatically.
+* Existe uma grande diferença de dificuldade entre interpolação e extrapolação. Consequentemente, se você tiver uma sequência, sempre respeite a ordem temporal dos dados ao treinar, ou seja, nunca treine com dados futuros.
+* Os modelos de sequência requerem ferramentas estatísticas especializadas para estimativa. Duas escolhas populares são os modelos autorregressivos e os modelos autorregressivos de variáveis latentes.
+* Para modelos causais (por exemplo, o tempo indo para frente), estimar a direção para frente é normalmente muito mais fácil do que a direção reversa.
+* Para uma sequência observada até o passo de tempo $t$, sua saída prevista no passo de tempo $t+k$ is the $k$*-previsão de avanço *. Como prevemos mais no tempo aumentando $k$, os erros se acumulam e a qualidade da previsão se degrada, muitas vezes de forma dramática.
 
-
-## Exercises
+## Exercícios
 
 1. Improve the model in the experiment of this section.
     1. Incorporate more than the past 4 observations? How many do you really need?
@@ -425,6 +424,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc5NzAzMzczLDIwNTQ3MDU1OTEsMTUxNz
-Y5NDM5NSwtNDYzMjk3MjEwLC0xMDgyMTEzMjE3XX0=
+eyJoaXN0b3J5IjpbLTM3MjEyNDI5MiwyMDU0NzA1NTkxLDE1MT
+c2OTQzOTUsLTQ2MzI5NzIxMCwtMTA4MjExMzIxN119
 -->
