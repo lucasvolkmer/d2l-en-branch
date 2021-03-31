@@ -1,4 +1,4 @@
-# Text Preprocessingamento de Texto
+# Preprocessamento de Texto
 :label:`sec_text_preprocessing`
 
 We have reviewed and evaluated
@@ -209,5 +209,5 @@ len(corpus), len(vocab)
 
 [Discussions](https://discuss.d2l.ai/t/115)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0ODI3MDQ1NV19
+eyJoaXN0b3J5IjpbLTExNTcwMTczOTRdfQ==
 -->
