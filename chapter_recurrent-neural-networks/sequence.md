@@ -338,14 +338,15 @@ d2l.plot([time, time[tau:], time[n_train + tau:]],
          xlim=[1, 1000], figsize=(6, 3))
 ```
 
-As the above example shows, this is a spectacular failure. The predictions decay to a constant pretty quickly after a few prediction steps.
-Why did the algorithm work so poorly?
-This is ultimately due to the fact that the errors build up.
-Let us say that after step 1 we have some error $\epsilon_1 = \bar\epsilon$.
-Now the *input* for step 2 is perturbed by $\epsilon_1$, hence we suffer some error in the order of $\epsilon_2 = \bar\epsilon + c \epsilon_1$ for some constant $c$, and so on. The error can diverge rather rapidly from the true observations. This is a common phenomenon. For instance, weather forecasts for the next 24 hours tend to be pretty accurate but beyond that the accuracy declines rapidly. We will discuss methods for improving this throughout this chapter and beyond.
 
-Let us take a closer look at the difficulties in $k$-step-ahead predictions
-by computing predictions on the entire sequence for $k = 1, 4, 16, 64$.
+Como mostra o exemplo acima, este é um fracasso espetacular. As previsões decaem para uma constante muito rapidamente após algumas etapas de previsão.
+Por que o algoritmo funcionou tão mal?
+Em última análise, isso se deve ao fato de que os erros se acumulam.
+Digamos que após o passo 1 tenhamos algum erro $\epsilon_1 = \bar\epsilon$.
+Agora a *entrada* para a etapa 2 é perturbada por $\epsilon_1$, portanto, sofremos algum erro na ordem de $\epsilon_2 = \bar\epsilon + c \epsilon_1$ para alguma constante $c$, e assim por diante. O erro pode divergir rapidamente das observações verdadeiras. Este é um fenômeno comum. Por exemplo, as previsões do tempo para as próximas 24 horas tendem a ser bastante precisas, mas, além disso, a precisão diminui rapidamente. Discutiremos métodos para melhorar isso ao longo deste capítulo e além.
+
+Vamos dar uma olhada mais de perto nas dificuldades nas previsões de $k$-step-ahead
+calculando previsões em toda a sequência para $k = 1, 4, 16, 64$.
 
 ```{.python .input}
 #@tab all
@@ -393,7 +394,7 @@ This clearly illustrates how the quality of the prediction changes as we try to 
 While the 4-step-ahead predictions still look good, anything beyond that is almost useless.
 
 
-## Summary
+## Resumo
 
 * There is quite a difference in difficulty between interpolation and extrapolation. Consequently, if you have a sequence, always respect the temporal order of the data when training, i.e., never train on future data.
 * Sequence models require specialized statistical tools for estimation. Two popular choices are autoregressive models and latent-variable autoregressive models.
@@ -424,6 +425,6 @@ While the 4-step-ahead predictions still look good, anything beyond that is almo
 [Discussions](https://discuss.d2l.ai/t/1048)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwODUzMDYwNywyMDU0NzA1NTkxLDE1MT
-c2OTQzOTUsLTQ2MzI5NzIxMCwtMTA4MjExMzIxN119
+eyJoaXN0b3J5IjpbNTc5NzAzMzczLDIwNTQ3MDU1OTEsMTUxNz
+Y5NDM5NSwtNDYzMjk3MjEwLC0xMDgyMTEzMjE3XX0=
 -->
