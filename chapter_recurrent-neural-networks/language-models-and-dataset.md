@@ -182,7 +182,7 @@ que afirma que a frequência $n_i$ da $i^\mathrm{a}$ palavra mais frequente
 $$n_i \propto \frac{1}{i^\alpha},$$
 :eqlabel:`eq_zipf_law`
 
-which is equivalent to
+que é equivalente a
 
 $$\log n_i = -\alpha \log i + c,$$
 
@@ -447,6 +447,7 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTM1MTI3MzksLTYyNzU0MzkyNywtNT
-IxMDE4MDk2LC00MzYzNTMzNDUsLTYyOTQ1Njg0Ml19
+eyJoaXN0b3J5IjpbLTE0OTg3Mjk2NTEsLTE5NTM1MTI3MzksLT
+YyNzU0MzkyNywtNTIxMDE4MDk2LC00MzYzNTMzNDUsLTYyOTQ1
+Njg0Ml19
 -->
