@@ -35,12 +35,13 @@ e elas só podem ser calculadas observando os dados em etapas de tempo anteriore
 Vamos dar uma olhada em um MLP com uma única camada oculta.
 Deixe a função de ativação da camada oculta ser $\phi$.
 Dado um minibatch de exemplos $\mathbf{X} \in \mathbb{R}^{n \times d}$ com tamanho de lote $n$ e $d$ entradas, a saída da camada oculta $\mathbf{H} \in \mathbb{R}^{n \times h}$ é calculada como
+
 $$\mathbf{H} = \phi(\mathbf{X} \mathbf{W}_{xh} + \mathbf{b}_h).$$
 :eqlabel:`rnn_h_without_state`
 
-In :eqref:`rnn_h_without_state`, we have the weight parameter $\mathbf{W}_{xh} \in \mathbb{R}^{d \times h}$, the bias parameter $\mathbf{b}_h \in \mathbb{R}^{1 \times h}$, and the number of hidden units $h$, for the hidden layer. 
-Thus, broadcasting (see :numref:`subsec_broadcasting`) is applied during the summation.
-Next, the hidden variable $\mathbf{H}$ is used as the input of the output layer. The output layer is given by
+Em :eqref:`rnn_h_without_state`, temos o parâmetro de peso $\mathbf{W}_{xh} \in \mathbb{R}^{d \times h}$, o parâmetro de polarização $\mathbf{b}_h \in \mathbb{R}^{1 \times h}$, e o número de unidades ocultas $h$, para a camada oculta.
+Assim, a transmissão (ver :numref:`subsec_broadcasting`) é aplicada durante a soma.
+Em seguida, a variável oculta $\mathbf{H}$ é usada como entrada da camada de saída. A camada de saída é fornecida por
 
 $$\mathbf{O} = \mathbf{H} \mathbf{W}_{hq} + \mathbf{b}_q,$$
 
@@ -288,5 +289,5 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3OTcwMDc2XX0=
+eyJoaXN0b3J5IjpbLTEyMTk5MzM2NjRdfQ==
 -->
