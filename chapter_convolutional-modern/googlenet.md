@@ -286,9 +286,9 @@ O número de canais atribuídos a esses caminhos é semelhante
 para aquele no terceiro módulo:
 o segundo caminho com a camada convolucional $3\times 3$
 produz o maior número de canais,
-seguido pelo primeiro caminho com apenas a camada convolucional $ 1 \ vezes 1 $,
-o terceiro caminho com a camada convolucional $ 5 \ times 5 $,
-e o quarto caminho com a camada de pooling máxima $ 3 \ times 3 $.
+seguido pelo primeiro caminho com apenas a camada convolucional $1\times 1$,
+o terceiro caminho com a camada convolucional $5\times 5$,
+e o quarto caminho com a camada de pooling máxima $3\times 3$.
 O segundo e terceiro caminhos irão primeiro reduzir
 o número de canais de acordo com a proporção.
 Essas proporções são ligeiramente diferentes em diferentes blocos de iniciação.
@@ -492,5 +492,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NDY5OTEzOCwtMTYxNzcxNTc4M119
+eyJoaXN0b3J5IjpbOTUzMTAwNTQxLC0xNjE3NzE1NzgzXX0=
 -->
