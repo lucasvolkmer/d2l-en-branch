@@ -1,4 +1,4 @@
-# Batch Normalization
+# Normalização de Lotes
 :label:`sec_batch_norm`
 
 Training deep neural networks is difficult.
@@ -12,8 +12,8 @@ to routinely train networks with over 100 layers.
 Treinar redes neurais profundas é difícil.
 E fazer com que eles convirjam em um período de tempo razoável pode ser complicado.
 Nesta seção, descrevemos a * normalização em lote *, uma técnica popular e eficaz
-que acelera consistentemente a convergência de redes profundas: cite: `Ioffe.Szegedy.2015`.
-Juntamente com os blocos residuais --- cobertos posteriormente em: numref: `sec_resnet` --- normalização em lote
+que acelera consistentemente a convergência de redes profundas :cite:`Ioffe.Szegedy.2015`.
+Juntamente com os blocos residuais --- cobertos posteriormente em :numref:`sec_resnet` --- normalização em lote
 tornou possível para os praticantes
 para treinar rotineiramente redes com mais de 100 camadas.
 
@@ -1017,5 +1017,6 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTc3OTQzMzYsOTc5NjE3MzE4XX0=
+eyJoaXN0b3J5IjpbMTY5NDg0NzU2MSwtMTk1Nzc5NDMzNiw5Nz
+k2MTczMThdfQ==
 -->
