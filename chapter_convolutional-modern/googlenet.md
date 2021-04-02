@@ -198,7 +198,7 @@ def b1():
 
 O segundo módulo usa duas camadas convolucionais:
 primeiro, uma camada convolucional $1\times 1$ de 64 canais,
-em seguida, uma camada convolucional $3\times 3$ que triplica o número de canais. Isso corresponde ao segundo caminho no bloco Inception.
+em seguida, uma camada convolucional $3\times 3$ que triplica o número de canais. Isso corresponde ao segundo caminho no bloco *Inception*.
 
 ```{.python .input}
 b2 = nn.Sequential()
@@ -224,33 +224,19 @@ def b2():
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2, padding='same')])
 ```
 
-The third module connects two complete Inception blocks in series.
-The number of output channels of the first Inception block is
-$64+128+32+32=256$,
-and the number-of-output-channel ratio
-among the four paths is $64:128:32:32=2:4:1:1$.
-The second and third paths first reduce the number of input channels
-to $96/192=1/2$ and $16/192=1/12$, respectively,
-and then connect the second convolutional layer.
-The number of output channels of the second Inception block
-is increased to $128+192+96+64=480$, and the number-of-output-channel ratio
-among the four paths is $128:192:96:64 = 4:6:3:2$.
-The second and third paths first reduce the number of input channels
-to $128/256=1/2$ and $32/256=1/8$, respectively.
-
 O terceiro módulo conecta dois blocos de iniciação completos em série.
 O número de canais de saída do primeiro bloco de iniciação é
-$ 64 + 128 + 32 + 32 = 256 $,
+$64+128+32+32=256$,
 e a relação número de canal de saída
-entre os quatro caminhos está $ 64: 128: 32: 32 = 2: 4: 1: 1 $.
+entre os quatro caminhos está $64:128:32:32=2:4:1:1$.
 O segundo e o terceiro caminhos reduzem primeiro o número de canais de entrada
-para $ 96/192 = 1/2 $ e $ 16/192 = 1/12 $, respectivamente,
+para $96/192=1/2$ e $16/192=1/12$, respectivamente,
 e conecte a segunda camada convolucional.
 O número de canais de saída do segundo bloco de iniciação
-é aumentado para $ 128 + 192 + 96 + 64 = 480 $, e a proporção do número de canal de saída
-entre os quatro caminhos está $ 128: 192: 96: 64 = 4: 6: 3: 2 $.
+é aumentado para $128+192+96+64=480$, e a proporção do número de canal de saída
+entre os quatro caminhos está  $128:192:96:64 = 4:6:3:2$.
 O segundo e o terceiro caminhos reduzem primeiro o número de canais de entrada
-a $ 128/256 = 1/2 $ e $ 32/256 = 1/8 $, respectivamente.
+a $128/256=1/2$ e $32/256=1/8$, respectivamente.
 
 ```{.python .input}
 b3 = nn.Sequential()
@@ -293,12 +279,12 @@ These ratios are slightly different in different Inception blocks.
 
 O quarto módulo é mais complicado.
 Ele conecta cinco blocos de iniciação em série,
-e eles têm $ 192 + 208 + 48 + 64 = 512 $, $ 160 + 224 + 64 + 64 = 512 $,
-$ 128 + 256 + 64 + 64 = 512 $, $ 112 + 288 + 64 + 64 = 528 $,
-e $ 256 + 320 + 128 + 128 = 832 $ canais de saída, respectivamente.
+e eles têm $192+208+48+64=512$, $160+224+64+64=512$,
+$128+256+64+64=512$, $112+288+64+64=528$,
+e$256+320+128+128=832$ canais de saída, respectivamente.
 O número de canais atribuídos a esses caminhos é semelhante
 para aquele no terceiro módulo:
-o segundo caminho com a camada convolucional $ 3 \ times 3 $
+o segundo caminho com a camada convolucional $3\times 3$
 produz o maior número de canais,
 seguido pelo primeiro caminho com apenas a camada convolucional $ 1 \ vezes 1 $,
 o terceiro caminho com a camada convolucional $ 5 \ times 5 $,
@@ -506,5 +492,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNzQ4NDM2NCwtMTYxNzcxNTc4M119
+eyJoaXN0b3J5IjpbLTU2NDY5OTEzOCwtMTYxNzcxNTc4M119
 -->
