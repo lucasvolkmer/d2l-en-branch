@@ -92,18 +92,18 @@ a saída da camada de saída é semelhante à computação no MLP:
 
 $$\mathbf{O}_t = \mathbf{H}_t \mathbf{W}_{hq} + \mathbf{b}_q.$$
 
-Parameters of the RNN
-include the weights $\mathbf{W}_{xh} \in \mathbb{R}^{d \times h}, \mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$,
-and the bias $\mathbf{b}_h \in \mathbb{R}^{1 \times h}$
-of the hidden layer,
-together with the weights $\mathbf{W}_{hq} \in \mathbb{R}^{h \times q}$
-and the bias $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$
-of the output layer.
-It is worth mentioning that 
-even at different time steps,
-RNNs always use these model parameters.
-Therefore, the parameterization cost of an RNN
-does not grow as the number of time steps increases.
+Parâmetros do RNN
+incluem os pesos $\mathbf{W}_{xh} \in \mathbb{R}^{d \times h}, \mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$,
+e o *bias* $\mathbf{b}_h \in \mathbb{R}^{1 \times h}$
+da camada oculta,
+junto com os pesos $\mathbf{W}_{hq} \in \mathbb{R}^{h \times q}$
+e o *bias*  $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$
+da camada de saída.
+Vale a pena mencionar que
+mesmo em diferentes etapas de tempo,
+Os RNNs sempre usam esses parâmetros do modelo.
+Portanto, o custo de parametrização de um RNN
+não cresce à medida que o número de etapas de tempo aumenta.
 
 :numref:`fig_rnn` illustrates the computational logic of an RNN at three adjacent time steps.
 At any time step $t$,
@@ -292,5 +292,6 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgyMTAyOTAwLC04MTA2NDkwNjFdfQ==
+eyJoaXN0b3J5IjpbMjAwMzY0MTY1Niw2ODIxMDI5MDAsLTgxMD
+Y0OTA2MV19
 -->
