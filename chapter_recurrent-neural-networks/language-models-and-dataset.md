@@ -2,11 +2,11 @@
 :label:`sec_language_model`
 
 
-In :numref:`sec_text_preprocessing`, we see how to map text data into tokens, where these tokens can be viewed as a sequence of discrete observations, such as words or characters.
-Assume that the tokens in a text sequence of length $T$ are in turn $x_1, x_2, \ldots, x_T$. 
-Then, in the text sequence,
-$x_t$($1 \leq t \leq T$) can be considered as the observation or label at time step $t$. Given such a text sequence,
-the goal of a *language model* is to estimate the joint probability of the sequence
+Em :numref:`sec_text_preprocessing`,  vemos como mapear dados de texto em tokens, onde esses tokens podem ser vistos como uma sequência de observações discretas, como palavras ou caracteres.
+Suponha que os tokens em uma sequência de texto de comprimento $T$ sejam, por sua vez, $x_1, x_2, \ldots, x_T$. 
+Então, na sequência de texto,
+$x_t$($1 \leq t \leq T$) pode ser considerado como a observação ou rótulo no intervalo de tempo $t$. Dada essa sequência de texto,
+o objetivo de um *modelo de linguagem* é estimar a probabilidade conjunta da sequência
 
 $$P(x_1, x_2, \ldots, x_T).$$
 
@@ -441,5 +441,5 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyOTQ1Njg0Ml19
+eyJoaXN0b3J5IjpbLTQzNjM1MzM0NSwtNjI5NDU2ODQyXX0=
 -->
