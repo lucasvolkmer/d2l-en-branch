@@ -10,9 +10,9 @@ Portanto, em vez de modelar $P(x_t \mid x_{t-1}, \ldots, x_{t-n+1})$, é prefer�
 
 $$P(x_t \mid x_{t-1}, \ldots, x_1) \approx P(x_t \mid h_{t-1}),$$
 
-where $h_{t-1}$ is a *hidden state* (also known as a hidden variable) that stores the sequence information up to time step $t-1$.
-In general,
-the hidden state at any time step $t$ could be computed based on both the current input $x_{t}$ and the previous hidden state $h_{t-1}$:
+onde $h_{t-1}$ é um *estado oculto* (também conhecido como uma variável oculta) que armazena as informações da sequência até o passo de tempo $t-1$.
+Em geral,
+o estado oculto em qualquer etapa $t$ pode ser calculado com base na entrada atual $x_ {t}$ e no estado oculto anterior $h_ {t-1}$:
 
 $$h_t = f(x_{t}, h_{t-1}).$$
 :eqlabel:`eq_ht_xt`
@@ -288,5 +288,5 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjcxNjc1MjRdfQ==
+eyJoaXN0b3J5IjpbLTExNDI2NzcyNDJdfQ==
 -->
