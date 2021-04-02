@@ -273,17 +273,18 @@ descrevemos como fazer isso para ambos
 
 ### Amostragem Aleatória
 
-In random sampling, each example is a subsequence arbitrarily captured on the original long sequence.
-The subsequences from two adjacent random minibatches
-during iteration
-are not necessarily adjacent on the original sequence.
-For language modeling,
-the target is to predict the next token based on what tokens we have seen so far, hence the labels are the original sequence, shifted by one token.
 
-The following code randomly generates a minibatch from the data each time.
-Here, the argument `batch_size` specifies the number of subsequence examples in each minibatch
-and `num_steps` is the predefined number of time steps
-in each subsequence.
+Na amostragem aleatória, cada exemplo é uma subsequência capturada arbitrariamente na longa sequência original.
+As subsequências de dois minibatches aleatórios adjacentes
+durante a iteração
+não são necessariamente adjacentes na sequência original.
+Para modelagem de linguagem,
+o objetivo é prever o próximo token com base nos tokens que vimos até agora, portanto, os rótulos são a sequência original, deslocada por um token.
+
+O código a seguir gera aleatoriamente um minibatch dos dados a cada vez.
+Aqui, o argumento `batch_size` especifica o número de exemplos de subsequência em cada minibatch
+e `num_steps` é o número predefinido de etapas de tempo
+em cada subsequência.
 
 ```{.python .input}
 #@tab all
@@ -315,12 +316,11 @@ def seq_data_iter_random(corpus, batch_size, num_steps):  #@save
         yield d2l.tensor(X), d2l.tensor(Y)
 ```
 
-Let us manually generate a sequence from 0 to 34.
-We assume that
-the batch size and numbers of time steps are 2 and 5,
-respectively.
-This means that we can generate $\lfloor (35 - 1) / 5 \rfloor= 6$ feature-label subsequence pairs. With a minibatch size of 2, we only get 3 minibatches.
-
+Vamos gerar manualmente uma sequência de 0 a 34.
+Nós assumimos que
+o tamanho do lote e o número de etapas de tempo são 2 e 5,
+respectivamente.
+Isso significa que podemos gerar $\lfloor (35 - 1) / 5 \rfloor= 6$  pares de subsequências de rótulo de recurso. Com um tamanho de minibatch de 2, obtemos apenas 3 minibatches.
 ```{.python .input}
 #@tab all
 my_seq = list(range(35))
@@ -448,7 +448,7 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwODk0ODc4MiwtMTk1MzUxMjczOSwtNj
-I3NTQzOTI3LC01MjEwMTgwOTYsLTQzNjM1MzM0NSwtNjI5NDU2
-ODQyXX0=
+eyJoaXN0b3J5IjpbMTA4OTQ3MjM3NywxODA4OTQ4NzgyLC0xOT
+UzNTEyNzM5LC02Mjc1NDM5MjcsLTUyMTAxODA5NiwtNDM2MzUz
+MzQ1LC02Mjk0NTY4NDJdfQ==
 -->
