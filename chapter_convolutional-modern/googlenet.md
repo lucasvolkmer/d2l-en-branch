@@ -19,15 +19,11 @@ mas são desnecessários agora com melhores algoritmos de treinamento disponíve
 
 ## Inception Blocks
 
-The basic convolutional block in GoogLeNet is called an *Inception block*,
-likely named due to a quote from the movie *Inception* ("We need to go deeper"),
-which launched a viral meme.
-
-O bloco convolucional básico no GoogLeNet é chamado de *bloco de iniciação*,
+O bloco convolucional básico no GoogLeNet é chamado de *bloco Inception*,
 provavelmente nomeado devido a uma citação do filme *Inception* ("Precisamos ir mais fundo"),
 que lançou um meme viral.
 
-![Structure of the Inception block.](../img/inception.svg)
+![Estrutura do bloco Inception.](../img/inception.svg)
 :label:`fig_inception`
 
 As depicted in :numref:`fig_inception`,
@@ -550,5 +546,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NjQ4NjAzNCwtMTYxNzcxNTc4M119
+eyJoaXN0b3J5IjpbLTU0NTIxODY5MSwtMTYxNzcxNTc4M119
 -->
