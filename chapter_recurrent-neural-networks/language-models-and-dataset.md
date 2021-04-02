@@ -258,20 +258,20 @@ Observe que temos bastante liberdade, pois podemos escolher um deslocamento arbi
 ![Different offsets lead to different subsequences when splitting up text.](../img/timemachine-5gram.svg)
 :label:`fig_timemachine_5gram`
 
-Hence, which one should we pick from :numref:`fig_timemachine_5gram`?
-In fact, all of them are equally good.
-However, if we pick just one offset,
-there is limited coverage of all the possible subsequences
-for training our network.
-Therefore,
-we can start with a random offset to partition a sequence
-to get both *coverage* and *randomness*.
-In the following,
-we describe how to accomplish this for both
-*random sampling* and *sequential partitioning* strategies.
+Portanto, qual devemos escolher de :numref:`fig_timemachine_5gram`?
+Na verdade, todos eles são igualmente bons.
+No entanto, se escolhermos apenas um deslocamento,
+há cobertura limitada de todas as possíveis subsequências
+para treinar nossa rede.
+Portanto,
+podemos começar com um deslocamento aleatório para particionar uma sequência
+para obter *cobertura* e *aleatoriedade*.
+Na sequência,
+descrevemos como fazer isso para ambos
+*estratégias de amostragem aleatória* e *particionamento sequencial*.
 
 
-### Random Sampling
+### Amostragem Aleatória
 
 In random sampling, each example is a subsequence arbitrarily captured on the original long sequence.
 The subsequences from two adjacent random minibatches
@@ -448,7 +448,7 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDc5MDMzOTEsLTE5NTM1MTI3MzksLT
-YyNzU0MzkyNywtNTIxMDE4MDk2LC00MzYzNTMzNDUsLTYyOTQ1
-Njg0Ml19
+eyJoaXN0b3J5IjpbMTgwODk0ODc4MiwtMTk1MzUxMjczOSwtNj
+I3NTQzOTI3LC01MjEwMTgwOTYsLTQzNjM1MzM0NSwtNjI5NDU2
+ODQyXX0=
 -->
