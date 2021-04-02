@@ -32,10 +32,9 @@ e elas só podem ser calculadas observando os dados em etapas de tempo anteriore
 
 ## Redes Neurais sem Estados Ocultos
 
-Let us take a look at an MLP with a single hidden layer.
-Let the hidden layer's activation function be $\phi$.
-Given a minibatch of examples $\mathbf{X} \in \mathbb{R}^{n \times d}$ with batch size $n$ and $d$ inputs, the hidden layer's output $\mathbf{H} \in \mathbb{R}^{n \times h}$ is calculated as
-
+Vamos dar uma olhada em um MLP com uma única camada oculta.
+Deixe a função de ativação da camada oculta ser $\phi$.
+Dado um minibatch de exemplos $\mathbf{X} \in \mathbb{R}^{n \times d}$ com tamanho de lote $n$ e $d$ entradas, a saída da camada oculta $\mathbf{H} \in \mathbb{R}^{n \times h}$ é calculada como
 $$\mathbf{H} = \phi(\mathbf{X} \mathbf{W}_{xh} + \mathbf{b}_h).$$
 :eqlabel:`rnn_h_without_state`
 
@@ -289,5 +288,5 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NjEwOTE4NV19
+eyJoaXN0b3J5IjpbMTE3OTcwMDc2XX0=
 -->
