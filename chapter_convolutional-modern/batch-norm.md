@@ -19,7 +19,7 @@ para treinar rotineiramente redes com mais de 100 camadas.
 
 
 
-## Training Deep Networks
+## Treinando Redes Pro
 
 To motivate batch normalization, let us review
 a few practical challenges that arise
@@ -1017,6 +1017,6 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NDg0NzU2MSwtMTk1Nzc5NDMzNiw5Nz
-k2MTczMThdfQ==
+eyJoaXN0b3J5IjpbOTg5MTkwNTE2LC0xOTU3Nzk0MzM2LDk3OT
+YxNzMxOF19
 -->
