@@ -127,9 +127,9 @@ As fórmulas de probabilidade que envolvem uma, duas e três variáveis são nor
 
 ## Estatísticas de Linguagem Natural
 
-Let us see how this works on real data.
-We construct a vocabulary based on the time machine dataset as introduced in :numref:`sec_text_preprocessing` 
-and print the top 10 most frequent words.
+Vamos ver como isso funciona com dados reais.
+Construímos um vocabulário baseado no conjunto de dados da máquina do tempo, conforme apresentado em :numref:`sec_text_preprocessing` 
+e imprima as 10 palavras mais frequentes.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -162,10 +162,10 @@ vocab = d2l.Vocab(corpus)
 vocab.token_freqs[:10]
 ```
 
-As we can see, the most popular words are actually quite boring to look at.
-They are often referred to as *stop words* and thus filtered out.
-Nonetheless, they still carry meaning and we will still use them.
-Besides, it is quite clear that the word frequency decays rather rapidly. The $10^{\mathrm{th}}$ most frequent word is less than $1/5$ as common as the most popular one. To get a better idea, we plot the figure of the word frequency.
+Como podemos ver, as palavras mais populares são realmente muito chatas de se olhar.
+Freqüentemente, são chamadas de *palavras de interrupção* e, portanto, são filtradas.
+No entanto, eles ainda carregam significado e ainda os usaremos.
+Além disso, é bastante claro que a palavra frequência decai rapidamente. A $10^{\mathrm{th}}$ palavra mais frequente é menos de $1/5$ tão comum quanto a mais popular. Para se ter uma ideia melhor, traçamos a figura da frequência da palavra.
 
 ```{.python .input}
 #@tab all
@@ -447,6 +447,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTQzMDEyNiwtNjI3NTQzOTI3LC01Mj
-EwMTgwOTYsLTQzNjM1MzM0NSwtNjI5NDU2ODQyXX0=
+eyJoaXN0b3J5IjpbLTkwNzE5NzQ3LC02Mjc1NDM5MjcsLTUyMT
+AxODA5NiwtNDM2MzUzMzQ1LC02Mjk0NTY4NDJdfQ==
 -->
