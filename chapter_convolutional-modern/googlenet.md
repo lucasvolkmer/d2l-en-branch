@@ -421,33 +421,33 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
     * Include it in the residual connection
       :cite:`Szegedy.Ioffe.Vanhoucke.ea.2017`, as described later in
       :numref:`sec_resnet`.
-1. What is the minimum image size for GoogLeNet to work?
-1. Compare the model parameter sizes of AlexNet, VGG, and NiN with GoogLeNet. How do the latter two network architectures significantly reduce the model parameter size?
+2. What is the minimum image size for GoogLeNet to work?
+3. Compare the model parameter sizes of AlexNet, VGG, and NiN with GoogLeNet. How do the latter two network architectures significantly reduce the model parameter size?
 
-1. Existem várias iterações do GoogLeNet. Tente implementá-los e executá-los. Alguns deles incluem o seguinte:
-     * Adicione uma camada de normalização em lote: cite: `Ioffe.Szegedy.2015`, conforme descrito
-       mais tarde em: numref: `sec_batch_norm`.
+4. Existem várias iterações do GoogLeNet. Tente implementá-los e executá-los. Alguns deles incluem o seguinte:
+     * Adicione uma camada de normalização em lote :cite:`Ioffe.Szegedy.2015`, conforme descrito
+       mais tarde em :numref:`sec_batch_norm`.
      * Faça ajustes no bloco de iniciação
-       : cite: `Szegedy.Vanhoucke.Ioffe.ea.2016`.
+       :cite:`Szegedy.Vanhoucke.Ioffe.ea.2016`.
      * Use suavização de rótulo para regularização de modelo
-       : cite: `Szegedy.Vanhoucke.Ioffe.ea.2016`.
+       :cite:`Szegedy.Vanhoucke.Ioffe.ea.2016`.
      * Incluir na conexão residual
-       : cite: `Szegedy.Ioffe.Vanhoucke.ea.2017`, conforme descrito posteriormente em
-       : numref: `sec_resnet`.
-1. Qual é o tamanho mínimo de imagem para o GoogLeNet funcionar?
-1. Compare os tamanhos dos parâmetros do modelo de AlexNet, VGG e NiN com GoogLeNet. Como as duas últimas arquiteturas de rede reduzem significativamente o tamanho do parâmetro do modelo?
+       :cite:`Szegedy.Ioffe.Vanhoucke.ea.2017`, conforme descrito posteriormente em
+       :numref:`sec_resnet`.
+5. Qual é o tamanho mínimo de imagem para o GoogLeNet funcionar?
+6. Compare os tamanhos dos parâmetros do modelo de AlexNet, VGG e NiN com GoogLeNet. Como as duas últimas arquiteturas de rede reduzem significativamente o tamanho do parâmetro do modelo?
+
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/81)
+[Discussão](https://discuss.d2l.ai/t/81)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/82)
+[Discussão](https://discuss.d2l.ai/t/82)
 :end_tab:
 
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjMyMzQwMjMsLTE2MTc3MTU3ODNdfQ
-==
+eyJoaXN0b3J5IjpbMTg5OTEzMDE4OCwtMTYxNzcxNTc4M119
 -->
