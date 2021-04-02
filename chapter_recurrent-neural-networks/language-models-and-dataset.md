@@ -63,24 +63,25 @@ palavras. Continuando, podemos tentar estimar
 
 $$\hat{P}(\text{learning} \mid \text{deep}) = \frac{n(\text{deep, learning})}{n(\text{deep})},$$
 
-where $n(x)$ and $n(x, x')$ are the number of occurrences of singletons
-and consecutive word pairs, respectively.
-Unfortunately, estimating the
-probability of a word pair is somewhat more difficult, since the
-occurrences of "deep learning" are a lot less frequent. In
-particular, for some unusual word combinations it may be tricky to
-find enough occurrences to get accurate estimates.
-Things take a turn for the worse for three-word combinations and beyond.
-There will be many plausible three-word combinations that we likely will not see in our dataset.
-Unless we provide some solution to assign such word combinations nonzero count, we will not be able to use them in a language model. If the dataset is small or if the words are very rare, we might not find even a single one of them.
 
-A common strategy is to perform some form of *Laplace smoothing*.
-The solution is to
-add a small constant to all counts. 
-Denote by $n$ the total number of words in
-the training set
-and $m$ the number of unique words.
-This solution helps with singletons, e.g., via
+onde $n(x)$ e $n(x, x')$ são o número de ocorrências de *singletons*
+e pares de palavras consecutivas, respectivamente.
+Infelizmente, estimando a
+probabilidade de um par de palavras é um pouco mais difícil, uma vez que
+as ocorrências de "deep learning" são muito menos frequentes. No
+em particular, para algumas combinações incomuns de palavras, pode ser complicado
+encontrar ocorrências suficientes para obter estimativas precisas.
+As coisas pioram com as combinações de três palavras e além.
+Haverá muitas combinações plausíveis de três palavras que provavelmente não veremos em nosso conjunto de dados.
+A menos que forneçamos alguma solução para atribuir tais combinações de palavras contagens diferentes de zero, não poderemos usá-las em um modelo de linguagem. Se o conjunto de dados for pequeno ou se as palavras forem muito raras, podemos não encontrar nem mesmo uma delas.
+
+Uma estratégia comum é realizar alguma forma de *suavização de Laplace*.
+A solução é
+adicionar uma pequena constante a todas as contagens.
+Denote por $n$ o número total de palavras em
+o conjunto de treinamento
+e $m$ o número de palavras únicas.
+Esta solução ajuda com singletons, por exemplo, via
 
 $$\begin{aligned}
 	\hat{P}(x) & = \frac{n(x) + \epsilon_1/m}{n + \epsilon_1}, \\
@@ -445,6 +446,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkzMTM5MzIxLC00MzYzNTMzNDUsLTYyOT
-Q1Njg0Ml19
+eyJoaXN0b3J5IjpbLTUyMTAxODA5NiwtNDM2MzUzMzQ1LC02Mj
+k0NTY4NDJdfQ==
 -->
