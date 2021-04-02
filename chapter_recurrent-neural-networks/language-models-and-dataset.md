@@ -10,24 +10,27 @@ o objetivo de um *modelo de linguagem* é estimar a probabilidade conjunta da se
 
 $$P(x_1, x_2, \ldots, x_T).$$
 
-Language models are incredibly useful. For instance, an ideal language model would be able to generate natural text just on its own, simply by drawing one token at a time $x_t \sim P(x_t \mid x_{t-1}, \ldots, x_1)$.
-Quite unlike the monkey using a typewriter, all text emerging from such a model would pass as natural language, e.g., English text. Furthermore, it would be sufficient for generating a meaningful dialog, simply by conditioning the text on previous dialog fragments.
-Clearly we are still very far from designing such a system, since it would need to *understand* the text rather than just generate grammatically sensible content.
 
-Nonetheless, language models are of great service even in their limited form.
-For instance, the phrases "to recognize speech" and "to wreck a nice beach" sound very similar.
-This can cause ambiguity in speech recognition,
-which is easily resolved through a language model that rejects the second translation as outlandish.
-Likewise, in a document summarization algorithm
-it is worthwhile knowing that "dog bites man" is much more frequent than "man bites dog", or that "I want to eat grandma" is a rather disturbing statement, whereas "I want to eat, grandma" is much more benign.
+Os modelos de linguagem são incrivelmente úteis. Por exemplo, um modelo de linguagem ideal seria capaz de gerar texto natural sozinho, simplesmente desenhando um token por vez $x_t \sim P(x_t \mid x_{t-1}, \ldots, x_1)$.
+Bem ao contrário do macaco usando uma máquina de escrever, todo texto emergente de tal modelo passaria como linguagem natural, por exemplo, texto em inglês. Além disso, seria suficiente para gerar um diálogo significativo, simplesmente condicionando o texto a fragmentos de diálogo anteriores.
+Claramente, ainda estamos muito longe de projetar tal sistema, uma vez que seria necessário *compreender* o texto em vez de apenas gerar conteúdo gramaticalmente sensato.
+
+No entanto, os modelos de linguagem são de grande utilidade, mesmo em sua forma limitada.
+Por exemplo, as frases "reconhecer a fala" e "destruir uma bela praia" [^1] soam muito semelhantes.
+Isso pode causar ambiguidade no reconhecimento de fala,
+o que é facilmente resolvido por meio de um modelo de linguagem que rejeita a segunda tradução como bizarra.
+Da mesma forma, em um algoritmo de sumarização de documentos
+vale a pena saber que "cachorro morde homem" é muito mais frequente do que "homem morde cachorro", ou que "quero comer vovó" é uma afirmação um tanto perturbadora, enquanto "quero comer, vovó" é muito mais benigna.
+
+[^1]: Traduzido de  *to recognize speech* e *to wreck a nice beach*
 
 
-## Learning a Language Model
+## Aprendendo um Modelo de Linguagem
 
-The obvious question is how we should model a document, or even a sequence of tokens. 
-Suppose that we tokenize text data at the word level.
-We can take recourse to the analysis we applied to sequence models in :numref:`sec_sequence`.
-Let us start by applying basic probability rules:
+A questão óbvia é como devemos modelar um documento, ou mesmo uma sequência de tokens.
+Suponha que tokenizemos dados de texto no nível da palavra.
+Podemos recorrer à análise que aplicamos aos modelos de sequência em :numref:`sec_sequence`.
+Vamos começar aplicando regras básicas de probabilidade:
 
 $$P(x_1, x_2, \ldots, x_T) = \prod_{t=1}^T P(x_t  \mid  x_1, \ldots, x_{t-1}).$$
 
@@ -441,5 +444,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNjM1MzM0NSwtNjI5NDU2ODQyXX0=
+eyJoaXN0b3J5IjpbLTE2MTMzMjI1MDMsLTQzNjM1MzM0NSwtNj
+I5NDU2ODQyXX0=
 -->
