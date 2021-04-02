@@ -89,25 +89,26 @@ $$\begin{aligned}
 	\hat{P}(x'' \mid x,x') & = \frac{n(x, x',x'') + \epsilon_3 \hat{P}(x'')}{n(x, x') + \epsilon_3}.
 \end{aligned}$$
 
-Here $\epsilon_1,\epsilon_2$, and $\epsilon_3$ are hyperparameters.
-Take $\epsilon_1$ as an example:
-when $\epsilon_1 = 0$, no smoothing is applied;
-when $\epsilon_1$ approaches positive infinity,
-$\hat{P}(x)$ approaches the uniform probability $1/m$. 
-The above is a rather primitive variant of what
-other techniques can accomplish :cite:`Wood.Gasthaus.Archambeau.ea.2011`.
+
+Aqui $\epsilon_1,\epsilon_2$, and $\epsilon_3$ são hiperparâmetros.
+Tome $\epsilon_1$ como exemplo:
+quando $\epsilon_1 = 0$, nenhuma suavização é aplicada;
+quando $\epsilon_1$ se aproxima do infinito positivo,
+$\hat{P}(x)$ se aproxima da probabilidade uniforme $1/m$. 
+O acima é uma variante bastante primitiva do que
+outras técnicas podem realizar: cite: `Wood.Gasthaus.Archambeau.ea.2011`.
 
 
-Unfortunately, models like this get unwieldy rather quickly
-for the following reasons. First, we need to store all counts.
-Second, this entirely ignores the meaning of the words. For
-instance, "cat" and "feline" should occur in related contexts.
-It is quite difficult to adjust such models to additional contexts,
-whereas, deep learning based language models are well suited to
-take this into account.
-Last, long word
-sequences are almost certain to be novel, hence a model that simply
-counts the frequency of previously seen word sequences is bound to perform poorly there.
+Infelizmente, modelos como este tornam-se difíceis de manejar rapidamente
+pelos seguintes motivos. Primeiro, precisamos armazenar todas as contagens.
+Em segundo lugar, isso ignora inteiramente o significado das palavras. Para
+Por exemplo, "gato" e "felino" devem ocorrer em contextos relacionados.
+É muito difícil ajustar esses modelos a contextos adicionais,
+Considerando que, modelos de linguagem baseados em aprendizagem profunda são bem adequados para
+levar em consideração.
+Por último, sequências de palavras longas
+são quase certas de serem novas, portanto, um modelo que simplesmente
+conta que a frequência de sequências de palavras vistas anteriormente tem um desempenho insatisfatório.
 
 ## Markov Models and $n$-grams
 
@@ -446,6 +447,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMTAxODA5NiwtNDM2MzUzMzQ1LC02Mj
-k0NTY4NDJdfQ==
+eyJoaXN0b3J5IjpbLTYyNzU0MzkyNywtNTIxMDE4MDk2LC00Mz
+YzNTMzNDUsLTYyOTQ1Njg0Ml19
 -->
