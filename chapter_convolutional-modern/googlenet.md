@@ -358,14 +358,6 @@ def net():
                                 tf.keras.layers.Dense(10)])
 ```
 
-The GoogLeNet model is computationally complex,
-so it is not as easy to modify the number of channels as in VGG.
-To have a reasonable training time on Fashion-MNIST,
-we reduce the input height and width from 224 to 96.
-This simplifies the computation.
-The changes in the shape of the output
-between the various modules are demonstrated below.
-
 O modelo GoogLeNet é computacionalmente complexo,
 portanto, não é tão fácil modificar o número de canais como no VGG.
 Para ter um tempo de treinamento razoável no Fashion-MNIST,
@@ -398,14 +390,10 @@ for layer in net().layers:
     print(layer.__class__.__name__, 'output shape:\t', X.shape)
 ```
 
-## Training
-
-As before, we train our model using the Fashion-MNIST dataset.
- We transform it to $96 \times 96$ pixel resolution
- before invoking the training procedure.
+## Treinamento
  
 Como antes, treinamos nosso modelo usando o conjunto de dados Fashion-MNIST.
-  Nós o transformamos em resolução de $ 96 \ vezes 96 $ pixels
+  Nós o transformamos em resolução de $96 \times 96$ pixels
   antes de invocar o procedimento de treinamento.
 
 ```{.python .input}
@@ -415,17 +403,13 @@ train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size, resize=96)
 d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 ```
 
-## Summary
+## Sumário
 
-* The Inception block is equivalent to a subnetwork with four paths. It extracts information in parallel through convolutional layers of different window shapes and maximum pooling layers. $1 \times 1$ convolutions reduce channel dimensionality on a per-pixel level. Maximum pooling reduces the resolution.
-* GoogLeNet connects multiple well-designed Inception blocks with other layers in series. The ratio of the number of channels assigned in the Inception block is obtained through a large number of experiments on the ImageNet dataset.
-* GoogLeNet, as well as its succeeding versions, was one of the most efficient models on ImageNet, providing similar test accuracy with lower computational complexity.
-
-* O bloco de iniciação é equivalente a uma sub-rede com quatro caminhos. Ele extrai informações em paralelo por meio de camadas convolucionais de diferentes formatos de janela e camadas de agrupamento máximo. As convoluções $ 1 \ vezes 1 $ reduzem a dimensionalidade do canal em um nível por pixel. O pool máximo reduz a resolução.
+* O bloco de iniciação é equivalente a uma sub-rede com quatro caminhos. Ele extrai informações em paralelo por meio de camadas convolucionais de diferentes formatos de janela e camadas de agrupamento máximo. As convoluções $1 \times 1$ reduzem a dimensionalidade do canal em um nível por pixel. O pool máximo reduz a resolução.
 * GoogLeNet conecta vários blocos de iniciação bem projetados com outras camadas em série. A proporção do número de canais atribuídos no bloco de iniciação é obtida por meio de um grande número de experimentos no conjunto de dados ImageNet.
 * GoogLeNet, assim como suas versões subsequentes, foi um dos modelos mais eficientes no ImageNet, fornecendo precisão de teste semelhante com menor complexidade computacional.
 
-## Exercises
+## Exercícios
 
 1. There are several iterations of GoogLeNet. Try to implement and run them. Some of them include the following:
     * Add a batch normalization layer :cite:`Ioffe.Szegedy.2015`, as described
@@ -464,5 +448,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzg2NDg2NCwtMTYxNzcxNTc4M119
+eyJoaXN0b3J5IjpbLTIwNjMyMzQwMjMsLTE2MTc3MTU3ODNdfQ
+==
 -->
