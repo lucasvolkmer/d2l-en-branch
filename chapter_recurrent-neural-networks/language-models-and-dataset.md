@@ -39,26 +39,27 @@ a probabilidade de uma sequência de texto contendo quatro palavras seria dada c
 
 $$P(\text{deep}, \text{learning}, \text{é}, \text{divertido}) =  P(\text{deep}) P(\text{learning}  \mid  \text{deep}) P(\text{é}  \mid  \text{deep}, \text{learning}) P(\text{divertido}  \mid  \text{deep}, \text{learning}, \text{é}).$$
 
-In order to compute the language model, we need to calculate the
-probability of words and the conditional probability of a word given
-the previous few words.
-Such probabilities are essentially
-language model parameters.
 
-Here, we
-assume that the training dataset is a large text corpus, such as all
-Wikipedia entries, [Project Gutenberg](https://en.wikipedia.org/wiki/Project_Gutenberg),
-and all text posted on the
-Web.
-The probability of words can be calculated from the relative word
-frequency of a given word in the training dataset.
-For example, the estimate $\hat{P}(\text{deep})$ can be calculated as the
-probability of any sentence starting with the word "deep". A
-slightly less accurate approach would be to count all occurrences of
-the word "deep" and divide it by the total number of words in
-the corpus.
-This works fairly well, particularly for frequent
-words. Moving on, we could attempt to estimate
+Para calcular o modelo de linguagem, precisamos calcular a
+probabilidade de palavras e a probabilidade condicional de uma palavra dada
+as poucas palavras anteriores.
+Essas probabilidades são essencialmente
+parâmetros do modelo de linguagem.
+
+Aqui nós
+supomos que o conjunto de dados de treinamento é um grande corpus de texto, como todas as
+entradas da Wikipedia, [Project Gutenberg](https://en.wikipedia.org/wiki/Project_Gutenberg),
+e todo o texto postado no
+wede.
+A probabilidade das palavras pode ser calculada a partir da palavra relativa
+frequência de uma determinada palavra no conjunto de dados de treinamento.
+Por exemplo, a estimativa $\hat{P}(\text{deep})$ pode ser calculada como o
+probabilidade de qualquer frase que comece com a palavra "deep". Uma
+abordagem ligeiramente menos precisa seria contar todas as ocorrências de
+a palavra "deep" e dividi-la pelo número total de palavras em
+o corpus.
+Isso funciona muito bem, especialmente para
+palavras. Continuando, podemos tentar estimar
 
 $$\hat{P}(\text{learning} \mid \text{deep}) = \frac{n(\text{deep, learning})}{n(\text{deep})},$$
 
@@ -444,6 +445,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjEwODE5NzEsLTQzNjM1MzM0NSwtNj
-I5NDU2ODQyXX0=
+eyJoaXN0b3J5IjpbNTkzMTM5MzIxLC00MzYzNTMzNDUsLTYyOT
+Q1Njg0Ml19
 -->
