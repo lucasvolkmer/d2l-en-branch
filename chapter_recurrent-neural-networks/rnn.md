@@ -71,23 +71,24 @@ Ao contrário do MLP, aqui salvamos a variável oculta $\mathbf{H}_{t-1}$ da eta
 $$\mathbf{H}_t = \phi(\mathbf{X}_t \mathbf{W}_{xh} + \mathbf{H}_{t-1} \mathbf{W}_{hh}  + \mathbf{b}_h).$$
 :eqlabel:`rnn_h_with_state`
 
-Compared with :eqref:`rnn_h_without_state`, :eqref:`rnn_h_with_state` adds one more term $\mathbf{H}_{t-1} \mathbf{W}_{hh}$ and thus
-instantiates :eqref:`eq_ht_xt`.
-From the relationship between hidden variables $\mathbf{H}_t$ and $\mathbf{H}_{t-1}$ of adjacent time steps,
-we know that these variables captured and retained the sequence's historical information up to their current time step, just like the state or memory of the neural network's current time step. Therefore, such a hidden variable is called a *hidden state*.
-Since the hidden state uses the same definition of the previous time step in the current time step, the computation of :eqref:`rnn_h_with_state` is *recurrent*. Hence, neural networks with hidden states
-based on recurrent computation are named
-*recurrent neural networks*.
-Layers that perform
-the computation of :eqref:`rnn_h_with_state`
-in RNNs 
-are called *recurrent layers*.
+
+Comparado com :eqref:`rnn_h_without_state`,  :eqref:`rnn_h_with_state` adiciona mais um termo $\mathbf{H}_{t-1} \mathbf{W}_{hh}$ e assim
+instancia :eqref:`eq_ht_xt`.
+A partir da relação entre as variáveis ​​ocultas $\mathbf{H}_t$  e $\mathbf{H}_{t-1}$ de etapas de tempo adjacentes,
+sabemos que essas variáveis ​​capturaram e retiveram as informações históricas da sequência até sua etapa de tempo atual, assim como o estado ou a memória da etapa de tempo atual da rede neural. Portanto, essa variável oculta é chamada de *estado oculto*.
+Visto que o estado oculto usa a mesma definição da etapa de tempo anterior na etapa de tempo atual, o cálculo de :eqref:`rnn_h_with_state` é *recorrente*. Consequentemente, redes neurais com estados ocultos
+com base em cálculos recorrentes são nomeados
+*redes neurais recorrentes*.
+Camadas que fazem
+o cálculo de :eqref:`rnn_h_with_state`
+em RNNs
+são chamadas de *camadas recorrentes*.
 
 
-There are many different ways for constructing RNNs.
-RNNs with a hidden state defined by :eqref:`rnn_h_with_state` are very common.
-For time step $t$,
-the output of the output layer is similar to the computation in the MLP:
+Existem muitas maneiras diferentes de construir RNNs.
+RNNs com um estado oculto definido por :eqref:`rnn_h_with_state` são muito comuns.
+Para a etapa de tempo $t$,
+a saída da camada de saída é semelhante à computação no MLP:
 
 $$\mathbf{O}_t = \mathbf{H}_t \mathbf{W}_{hq} + \mathbf{b}_q.$$
 
@@ -291,5 +292,5 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMDY0OTA2MV19
+eyJoaXN0b3J5IjpbNjgyMTAyOTAwLC04MTA2NDkwNjFdfQ==
 -->
