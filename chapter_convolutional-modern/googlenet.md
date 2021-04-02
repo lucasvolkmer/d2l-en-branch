@@ -1,4 +1,4 @@
-# Networks with Parallel Concatenations (GoogLeNet)
+# Redes com Concatenações Paralelas (GoogLeNet)
 :label:`sec_googlenet`
 
 In 2014, *GoogLeNet*
@@ -16,13 +16,13 @@ we
 omit a few ad-hoc features that were added to stabilize training
 but are unnecessary now with better training algorithms available.
 
-Em 2014, * GoogLeNet *
+Em 2014, *GoogLeNet*
 venceu o ImageNet Challenge, propondo uma estrutura
-que combinou as forças de NiN e paradigmas de blocos repetidos: cite: `Szegedy.Liu.Jia.ea.2015`.
+que combinou as forças de NiN e paradigmas de blocos repetidos :cite:`Szegedy.Liu.Jia.ea.2015`.
 Um dos focos do artigo foi abordar a questão
 dos quais núcleos de convolução de tamanho são os melhores.
 Afinal, as redes populares anteriores empregavam escolhas
-tão pequeno quanto $ 1 \ vezes 1 $ e tão grande quanto $ 11 \ vezes 11 $.
+tão pequeno quanto $1 \times 1$ e tão grande quanto $11 \times 11$.
 Uma ideia neste artigo foi que às vezes
 pode ser vantajoso empregar uma combinação de grãos de vários tamanhos.
 Nesta seção, apresentaremos GoogLeNet,
@@ -565,5 +565,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTc3MTU3ODNdfQ==
+eyJoaXN0b3J5IjpbMTY1NDQwMjg5NywtMTYxNzcxNTc4M119
 -->
