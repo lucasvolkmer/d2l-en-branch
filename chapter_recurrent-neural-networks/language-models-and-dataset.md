@@ -186,10 +186,10 @@ que é equivalente a
 
 $$\log n_i = -\alpha \log i + c,$$
 
-where $\alpha$ is the exponent that characterizes the distribution and $c$ is a constant.
-This should already give us pause if we want to model words by count statistics and smoothing.
-After all, we will significantly overestimate the frequency of the tail, also known as the infrequent words. But what about the other word combinations, such as bigrams, trigrams, and beyond?
-Let us see whether the bigram frequency behaves in the same manner as the unigram frequency.
+onde $\alpha$ é o expoente que caracteriza a distribuição e $c$ é uma constante.
+Isso já deve nos dar uma pausa se quisermos modelar palavras por estatísticas de contagem e suavização.
+Afinal, superestimaremos significativamente a frequência da cauda, também conhecida como palavras infrequentes. Mas e quanto às outras combinações de palavras, como bigramas, trigramas e além?
+Vamos ver se a frequência do bigrama se comporta da mesma maneira que a frequência do unigrama.
 
 ```{.python .input}
 #@tab all
@@ -198,7 +198,7 @@ bigram_vocab = d2l.Vocab(bigram_tokens)
 bigram_vocab.token_freqs[:10]
 ```
 
-One thing is notable here. Out of the ten most frequent word pairs, nine are composed of both stop words and only one is relevant to the actual book---"the time". Furthermore, let us see whether the trigram frequency behaves in the same manner.
+Uma coisa é notável aqui. Dos dez pares de palavras mais frequentes, nove são compostos de palavras irrelevantes e apenas um é relevante para o livro real --- "o tempo". Além disso, vejamos se a frequência do trigrama se comporta da mesma maneira.
 
 ```{.python .input}
 #@tab all
@@ -208,7 +208,7 @@ trigram_vocab = d2l.Vocab(trigram_tokens)
 trigram_vocab.token_freqs[:10]
 ```
 
-Last, let us visualize the token frequency among these three models: unigrams, bigrams, and trigrams.
+Por último, vamos visualizar a frequência do token entre esses três modelos: unigramas, bigramas e trigramas.
 
 ```{.python .input}
 #@tab all
@@ -447,7 +447,7 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTg3Mjk2NTEsLTE5NTM1MTI3MzksLT
+eyJoaXN0b3J5IjpbLTE3OTg1MzA2NjUsLTE5NTM1MTI3MzksLT
 YyNzU0MzkyNywtNTIxMDE4MDk2LC00MzYzNTMzNDUsLTYyOTQ1
 Njg0Ml19
 -->
