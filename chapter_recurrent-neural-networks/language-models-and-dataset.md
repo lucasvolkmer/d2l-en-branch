@@ -219,12 +219,12 @@ d2l.plot([freqs, bigram_freqs, trigram_freqs], xlabel='token: x',
          legend=['unigram', 'bigram', 'trigram'])
 ```
 
-This figure is quite exciting for a number of reasons. First, beyond unigram words, sequences of words also appear to be following Zipf's law, albeit with a smaller exponent $\alpha$ in :eqref:`eq_zipf_law`, depending on the sequence length.
-Second, the number of distinct $n$-grams is not that large. This gives us hope that there is quite a lot of structure in language.
-Third, many $n$-grams occur very rarely, which makes Laplace smoothing rather unsuitable for language modeling. Instead, we will use deep learning based models.
+Esse número é bastante empolgante por uma série de razões. Primeiro, além das palavras unigrama, as sequências de palavras também parecem seguir a lei de Zipf, embora com um expoente menor $\alpha$ em :eqref:`eq_zipf_law`,  dependendo do comprimento da sequência.
+Em segundo lugar, o número de $n$-gramas distintos não é tão grande. Isso nos dá esperança de que haja uma grande estrutura na linguagem.
+Terceiro, muitos $n$-gramas ocorrem muito raramente, o que torna a suavização de Laplace bastante inadequada para modelagem de linguagem. Em vez disso, usaremos modelos baseados em *deep learning*.
 
 
-## Reading Long Sequence Data
+## Leitura de Dados de Longa Sequência
 
 Since sequence data are by their very nature sequential, we need to address
 the issue of processing it.
@@ -447,7 +447,7 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTg1MzA2NjUsLTE5NTM1MTI3MzksLT
-YyNzU0MzkyNywtNTIxMDE4MDk2LC00MzYzNTMzNDUsLTYyOTQ1
-Njg0Ml19
+eyJoaXN0b3J5IjpbMTM3MjY3NzEyLC0xOTUzNTEyNzM5LC02Mj
+c1NDM5MjcsLTUyMTAxODA5NiwtNDM2MzUzMzQ1LC02Mjk0NTY4
+NDJdfQ==
 -->
