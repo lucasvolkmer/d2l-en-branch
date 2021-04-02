@@ -110,7 +110,7 @@ Por último, sequências de palavras longas
 são quase certas de serem novas, portanto, um modelo que simplesmente
 conta que a frequência de sequências de palavras vistas anteriormente tem um desempenho insatisfatório.
 
-## Markov Models and $n$-grams
+## Modelos de Markov e $n$-gramas
 
 Before we discuss solutions involving deep learning, we need some more terminology and concepts. Recall our discussion of Markov Models in :numref:`sec_sequence`.
 Let us apply this to language modeling. A distribution over sequences satisfies the Markov property of first order if $P(x_{t+1} \mid x_t, \ldots, x_1) = P(x_{t+1} \mid x_t)$. Higher orders correspond to longer dependencies. This leads to a number of approximations that we could apply to model a sequence:
@@ -447,6 +447,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNzU0MzkyNywtNTIxMDE4MDk2LC00Mz
-YzNTMzNDUsLTYyOTQ1Njg0Ml19
+eyJoaXN0b3J5IjpbLTYwNjY5Mjk0MiwtNjI3NTQzOTI3LC01Mj
+EwMTgwOTYsLTQzNjM1MzM0NSwtNjI5NDU2ODQyXX0=
 -->
