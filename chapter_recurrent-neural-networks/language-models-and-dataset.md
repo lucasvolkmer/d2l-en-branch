@@ -321,6 +321,7 @@ Nós assumimos que
 o tamanho do lote e o número de etapas de tempo são 2 e 5,
 respectivamente.
 Isso significa que podemos gerar $\lfloor (35 - 1) / 5 \rfloor= 6$  pares de subsequências de rótulo de recurso. Com um tamanho de minibatch de 2, obtemos apenas 3 minibatches.
+
 ```{.python .input}
 #@tab all
 my_seq = list(range(35))
@@ -328,13 +329,13 @@ for X, Y in seq_data_iter_random(my_seq, batch_size=2, num_steps=5):
     print('X: ', X, '\nY:', Y)
 ```
 
-### Sequential Partitioning
+### Particionamento Sequencial
 
-In addition to random sampling of the original sequence, we can also ensure that 
-the subsequences from two adjacent minibatches
-during iteration
-are adjacent on the original sequence.
-This strategy preserves the order of split subsequences when iterating over minibatches, hence is called sequential partitioning.
+Além da amostragem aleatória da sequência original, também podemos garantir que
+as subsequências de dois minibatches adjacentes
+durante a iteração
+são adjacentes na sequência original.
+Essa estratégia preserva a ordem das subsequências divididas ao iterar em minibatches; portanto, é chamada de particionamento sequencial.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -371,12 +372,12 @@ def seq_data_iter_sequential(corpus, batch_size, num_steps):  #@save
         yield X, Y
 ```
 
-Using the same settings,
-let us print features `X` and labels `Y` for each minibatch of subsequences read by sequential partitioning.
-Note that
-the subsequences from two adjacent minibatches
-during iteration
-are indeed adjacent on the original sequence.
+Usando as mesmas configurações,
+vamos imprimir as *features* `X` e os rótulos `Y` para cada minibatch de subsequências lidas por particionamento sequencial.
+Observe que
+as subsequências de dois minibatches adjacentes
+durante a iteração
+são de fato adjacentes na sequência original.
 
 ```{.python .input}
 #@tab all
@@ -384,7 +385,7 @@ for X, Y in seq_data_iter_sequential(my_seq, batch_size=2, num_steps=5):
     print('X: ', X, '\nY:', Y)
 ```
 
-Now we wrap the above two sampling functions to a class so that we can use it as a data iterator later.
+Agora, agrupamos as duas funções de amostragem acima em uma classe para que possamos usá-la como um iterador de dados posteriormente.
 
 ```{.python .input}
 #@tab all
@@ -448,7 +449,7 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4OTQ3MjM3NywxODA4OTQ4NzgyLC0xOT
-UzNTEyNzM5LC02Mjc1NDM5MjcsLTUyMTAxODA5NiwtNDM2MzUz
-MzQ1LC02Mjk0NTY4NDJdfQ==
+eyJoaXN0b3J5IjpbLTE4MzgzOTQ0MjksMTgwODk0ODc4MiwtMT
+k1MzUxMjczOSwtNjI3NTQzOTI3LC01MjEwMTgwOTYsLTQzNjM1
+MzM0NSwtNjI5NDU2ODQyXX0=
 -->
