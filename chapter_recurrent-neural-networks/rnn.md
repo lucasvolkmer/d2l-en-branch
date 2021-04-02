@@ -2,11 +2,11 @@
 :label:`sec_rnn`
 
 
-In :numref:`sec_language_model` we introduced $n$-gram models, where the conditional probability of word $x_t$ at time step $t$ only depends on the $n-1$ previous words.
-If we want to incorporate the possible effect of words earlier than time step $t-(n-1)$ on $x_t$,
-we need to increase $n$.
-However, the number of model parameters would also increase exponentially with it, as we need to store $|\mathcal{V}|^n$ numbers for a vocabulary set $\mathcal{V}$.
-Hence, rather than modeling $P(x_t \mid x_{t-1}, \ldots, x_{t-n+1})$ it is preferable to use a latent variable model:
+Em :numref:`sec_language_model` introduzimos modelos de $n$-gramas, onde a probabilidade condicional da palavra $x_t$ no passo de tempo $t$ depende apenas das $n-1$ palavras anteriores.
+Se quisermos incorporar o possível efeito de palavras anteriores ao passo de tempo $t-(n-1)$ em $x_t$,
+precisamos aumentar $n$.
+No entanto, o número de parâmetros do modelo também aumentaria exponencialmente com ele, pois precisamos armazenar $|\mathcal{V}|^n$  números para um conjunto de vocabulário $\mathcal{V}$.
+Portanto, em vez de modelar $P(x_t \mid x_{t-1}, \ldots, x_{t-n+1})$, é preferível usar um modelo de variável latente:
 
 $$P(x_t \mid x_{t-1}, \ldots, x_1) \approx P(x_t \mid h_{t-1}),$$
 
@@ -288,5 +288,5 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjEzOTA3ODhdfQ==
+eyJoaXN0b3J5IjpbLTE2MjcxNjc1MjRdfQ==
 -->
