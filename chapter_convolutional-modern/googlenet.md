@@ -160,14 +160,6 @@ para filtros diferentes.
 
 ## Modelo GoogLeNet 
 
-As shown in :numref:`fig_inception_full`, GoogLeNet uses a stack of a total of 9 inception blocks
-and global average pooling to generate its estimates.
-Maximum pooling between inception blocks reduces the dimensionality.
-The first module is similar to AlexNet and LeNet.
-The stack of blocks is inherited from VGG
-and the global average pooling avoids
-a stack of fully-connected layers at the end.
-
 Conforme mostrado em :numref:`fig_inception_full`, GoogLeNet usa uma pilha de um total de 9 blocos iniciais
 e pooling médio global para gerar suas estimativas.
 O agrupamento máximo entre os blocos de iniciação reduz a dimensionalidade.
@@ -176,14 +168,11 @@ A pilha de blocos é herdada de VGG
 e o pool de média global evita
 uma pilha de camadas totalmente conectadas no final.
 
-![The GoogLeNet architecture.](../img/inception-full.svg)
+![A arquitetura GoogLeNet.](../img/inception-full.svg)
 :label:`fig_inception_full`
 
-We can now implement GoogLeNet piece by piece.
-The first module uses a 64-channel $7\times 7$ convolutional layer.
-
 Agora podemos implementar o GoogLeNet peça por peça.
-O primeiro módulo usa uma camada convolucional $ 7 \ vezes 7 $ de 64 canais.
+O primeiro módulo usa uma camada convolucional $7\times 7$ de 64 canais.
 
 ```{.python .input}
 b1 = nn.Sequential()
@@ -207,14 +196,9 @@ def b1():
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2, padding='same')])
 ```
 
-The second module uses two convolutional layers:
-first, a 64-channel $1\times 1$ convolutional layer,
-then a $3\times 3$ convolutional layer that triples the number of channels. This corresponds to the second path in the Inception block.
-
-
 O segundo módulo usa duas camadas convolucionais:
-primeiro, uma camada convolucional $ 1 \ vezes 1 $ de 64 canais,
-em seguida, uma camada convolucional $ 3 vezes 3 $ que triplica o número de canais. Isso corresponde ao segundo caminho no bloco de iniciação.
+primeiro, uma camada convolucional $1\times 1$ de 64 canais,
+em seguida, uma camada convolucional $3\times 3$ que triplica o número de canais. Isso corresponde ao segundo caminho no bloco Inception.
 
 ```{.python .input}
 b2 = nn.Sequential()
@@ -522,5 +506,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MTY4OTcxMSwtMTYxNzcxNTc4M119
+eyJoaXN0b3J5IjpbLTIxNzQ4NDM2NCwtMTYxNzcxNTc4M119
 -->
