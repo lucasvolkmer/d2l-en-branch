@@ -261,27 +261,11 @@ def b3():
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2, padding='same')])
 ```
 
-The fourth module is more complicated.
-It connects five Inception blocks in series,
-and they have $192+208+48+64=512$, $160+224+64+64=512$,
-$128+256+64+64=512$, $112+288+64+64=528$,
-and $256+320+128+128=832$ output channels, respectively.
-The number of channels assigned to these paths is similar
-to that in the third module:
-the second path with the $3\times 3$ convolutional layer
-outputs the largest number of channels,
-followed by the first path with only the $1\times 1$ convolutional layer,
-the third path with the $5\times 5$ convolutional layer,
-and the fourth path with the $3\times 3$ maximum pooling layer.
-The second and third paths will first reduce
-the number of channels according to the ratio.
-These ratios are slightly different in different Inception blocks.
-
 O quarto módulo é mais complicado.
 Ele conecta cinco blocos de iniciação em série,
 e eles têm $192+208+48+64=512$, $160+224+64+64=512$,
 $128+256+64+64=512$, $112+288+64+64=528$,
-e$256+320+128+128=832$ canais de saída, respectivamente.
+e $256+320+128+128=832$ canais de saída, respectivamente.
 O número de canais atribuídos a esses caminhos é semelhante
 para aquele no terceiro módulo:
 o segundo caminho com a camada convolucional $3\times 3$
@@ -291,7 +275,7 @@ o terceiro caminho com a camada convolucional $5\times 5$,
 e o quarto caminho com a camada de pooling máxima $3\times 3$.
 O segundo e terceiro caminhos irão primeiro reduzir
 o número de canais de acordo com a proporção.
-Essas proporções são ligeiramente diferentes em diferentes blocos de iniciação.
+Essas proporções são ligeiramente diferentes em diferentes blocos *Inception*.
 
 ```{.python .input}
 b4 = nn.Sequential()
@@ -325,20 +309,8 @@ def b4():
         tf.keras.layers.MaxPool2D(pool_size=3, strides=2, padding='same')])
 ```
 
-The fifth module has two Inception blocks with $256+320+128+128=832$
-and $384+384+128+128=1024$ output channels.
-The number of channels assigned to each path
-is the same as that in the third and fourth modules,
-but differs in specific values.
-It should be noted that the fifth block is followed by the output layer.
-This block uses the global average pooling layer
-to change the height and width of each channel to 1, just as in NiN.
-Finally, we turn the output into a two-dimensional array
-followed by a fully-connected layer
-whose number of outputs is the number of label classes.
-
-O quinto módulo tem dois blocos de iniciação com $ 256 + 320 + 128 + 128 = 832 $
-e $ 384 + 384 + 128 + 128 = 1024 $ canais de saída.
+O quinto módulo tem dois blocos de iniciação com $256+320+128+128=832$
+e$384+384+128+128=1024$ canais de saída.
 O número de canais atribuídos a cada caminho
 é o mesmo que no terceiro e quarto módulos,
 mas difere em valores específicos.
@@ -492,5 +464,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUzMTAwNTQxLC0xNjE3NzE1NzgzXX0=
+eyJoaXN0b3J5IjpbMTUxMzg2NDg2NCwtMTYxNzcxNTc4M119
 -->
