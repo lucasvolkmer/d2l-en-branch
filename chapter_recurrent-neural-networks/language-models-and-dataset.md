@@ -226,33 +226,34 @@ Terceiro, muitos $n$-gramas ocorrem muito raramente, o que torna a suavização 
 
 ## Leitura de Dados de Longa Sequência
 
-Since sequence data are by their very nature sequential, we need to address
-the issue of processing it.
-We did so in a rather ad-hoc manner in :numref:`sec_sequence`.
-When sequences get too long to be processed by models
-all at once,
-we may wish to split such sequences for reading.
-Now let us describe general strategies.
-Before introducing the model,
-let us assume that we will use a neural network to train a language model,
-where the network processes a minibatch of sequences with predefined length, say $n$ time steps, at a time.
-Now the question is how to read minibatches of features and labels at random.
 
-To begin with,
-since a text sequence can be arbitrarily long,
-such as the entire *The Time Machine* book,
-we can partition such a long sequence into subsequences
-with the same number of time steps.
-When training our neural network,
-a minibatch of such subsequences
-will be fed into the model.
-Suppose that the network processes a subsequence
-of $n$ time steps
-at a time.
+Uma vez que os dados da sequência são, por sua própria natureza, sequenciais, precisamos abordar
+a questão de processá-la.
+Fizemos isso de uma maneira bastante ad-hoc em :numref:`sec_sequence`.
+Quando as sequências ficam muito longas para serem processadas por modelos
+tudas de uma vez,
+podemos desejar dividir essas sequências para leitura.
+Agora vamos descrever as estratégias gerais.
+Antes de apresentar o modelo,
+vamos supor que usaremos uma rede neural para treinar um modelo de linguagem,
+onde a rede processa um minibatch de sequências com comprimento predefinido, digamos $n$ etapas de tempo, de cada vez.
+Agora, a questão é como ler minibatches de recursos e rótulos aleatoriamente.
+
+Começando,
+uma vez que uma sequência de texto pode ser arbitrariamente longa,
+como todo o livro *The Time Machine*,
+podemos particionar uma sequência tão longa em subsequências
+com o mesmo número de etapas de tempo.
+Ao treinar nossa rede neural,
+um minibatch de tais subsequências
+será alimentado no modelo.
+Suponha que a rede processe uma subsequência
+de $n$ passos de tempo
+de uma vez.
 :numref:`fig_timemachine_5gram`
-shows all the different ways to obtain subsequences
-from an original text sequence, where $n=5$ and a token at each time step corresponds to a character.
-Note that we have quite some freedom since we could pick an arbitrary offset that indicates the initial position.
+mostra todas as diferentes maneiras de obter subsequências
+de uma sequência de texto original, onde $n=5$ e um token em cada etapa corresponde a um caractere.
+Observe que temos bastante liberdade, pois podemos escolher um deslocamento arbitrário que indica a posição inicial.
 
 ![Different offsets lead to different subsequences when splitting up text.](../img/timemachine-5gram.svg)
 :label:`fig_timemachine_5gram`
@@ -447,7 +448,7 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MjY3NzEyLC0xOTUzNTEyNzM5LC02Mj
-c1NDM5MjcsLTUyMTAxODA5NiwtNDM2MzUzMzQ1LC02Mjk0NTY4
-NDJdfQ==
+eyJoaXN0b3J5IjpbLTE2MDc5MDMzOTEsLTE5NTM1MTI3MzksLT
+YyNzU0MzkyNywtNTIxMDE4MDk2LC00MzYzNTMzNDUsLTYyOTQ1
+Njg0Ml19
 -->
