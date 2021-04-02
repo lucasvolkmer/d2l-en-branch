@@ -112,8 +112,8 @@ conta que a frequência de sequências de palavras vistas anteriormente tem um d
 
 ## Modelos de Markov e $n$-gramas
 
-Before we discuss solutions involving deep learning, we need some more terminology and concepts. Recall our discussion of Markov Models in :numref:`sec_sequence`.
-Let us apply this to language modeling. A distribution over sequences satisfies the Markov property of first order if $P(x_{t+1} \mid x_t, \ldots, x_1) = P(x_{t+1} \mid x_t)$. Higher orders correspond to longer dependencies. This leads to a number of approximations that we could apply to model a sequence:
+Antes de discutirmos as soluções que envolvem o *deep learning*, precisamos de mais terminologia e conceitos. Lembre-se de nossa discussão sobre os Modelos de Markov em :numref:`sec_sequence`.
+Vamos aplicar isso à modelagem de linguagem. Uma distribuição sobre sequências satisfaz a propriedade Markov de primeira ordem se $P(x_{t+1} \mid x_t, \ldots, x_1) = P(x_{t+1} \mid x_t)$. Ordens mais altas correspondem a dependências mais longas. Isso leva a uma série de aproximações que podemos aplicar para modelar uma sequência:
 
 $$
 \begin{aligned}
@@ -123,9 +123,9 @@ P(x_1, x_2, x_3, x_4) &=  P(x_1) P(x_2  \mid  x_1) P(x_3  \mid  x_1, x_2) P(x_4 
 \end{aligned}
 $$
 
-The probability formulae that involve one, two, and three variables are typically referred to as *unigram*, *bigram*, and *trigram* models, respectively. In the following, we will learn how to design better models.
+As fórmulas de probabilidade que envolvem uma, duas e três variáveis são normalmente referidas como modelos *unigrama*, *bigrama* e *trigrama*, respectivamente. A seguir, aprenderemos como projetar modelos melhores.
 
-## Natural Language Statistics
+## Estatísticas de Linguagem Natural
 
 Let us see how this works on real data.
 We construct a vocabulary based on the time machine dataset as introduced in :numref:`sec_text_preprocessing` 
@@ -447,6 +447,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjY5Mjk0MiwtNjI3NTQzOTI3LC01Mj
+eyJoaXN0b3J5IjpbLTExOTQzMDEyNiwtNjI3NTQzOTI3LC01Mj
 EwMTgwOTYsLTQzNjM1MzM0NSwtNjI5NDU2ODQyXX0=
 -->
