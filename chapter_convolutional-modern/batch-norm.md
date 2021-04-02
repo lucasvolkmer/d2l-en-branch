@@ -25,26 +25,12 @@ era padronizar nossos recursos de entrada
 para cada um tem uma média de zero e variância de um.
 Intuitivamente, essa padronização funciona bem com nossos otimizadores
 porque coloca os parâmetros *a priori* em uma escala semelhante.
-   
-Second, for a typical MLP or CNN, as we train,
-the variables (e.g., affine transformation outputs in MLP)
-in intermediate layers 
-may take values with widely varying magnitudes:
-both along the layers from the input to the output, across units in the same layer,
-and over time due to our updates to the model parameters.
-The inventors of batch normalization postulated informally
-that this drift in the distribution of such variables could hamper the convergence of the network.
-Intuitively, we might conjecture that if one
-layer has variable values that are 100 times that of another layer,
-this might necessitate compensatory adjustments in the learning rates.
-   
-Third, deeper networks are complex and easily capable of overfitting.
-This means that regularization becomes more critical.
+
 
 Em segundo lugar, para um MLP ou CNN típico, enquanto treinamos,
 as variáveis (por exemplo, saídas de transformação afim em MLP)
 em camadas intermediárias
-pode assumir valores com magnitudes amplamente variáveis:
+podem assumir valores com magnitudes amplamente variáveis:
 tanto ao longo das camadas da entrada até a saída, através das unidades na mesma camada,
 e ao longo do tempo devido às nossas atualizações nos parâmetros do modelo.
 Os inventores da normalização de lote postularam informalmente
@@ -53,7 +39,7 @@ Intuitivamente, podemos conjeturar que se um
 camada tem valores variáveis que são 100 vezes maiores que os de outra camada,
 isso pode exigir ajustes compensatórios nas taxas de aprendizagem.
    
-Terceiro, redes mais profundas são complexas e facilmente capazes de sobreajuste.
+Terceiro, redes mais profundas são complexas e facilmente capazes de overfitting.
 Isso significa que a regularização se torna mais crítica.
 
 Batch normalization is applied to individual layers
@@ -998,6 +984,6 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0OTE0NTA2NCwtMTMyMTk4MjUyNiwtMT
-k1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
+eyJoaXN0b3J5IjpbLTMxMDAzNzg5NCwtNzQ5MTQ1MDY0LC0xMz
+IxOTgyNTI2LC0xOTU3Nzk0MzM2LDk3OTYxNzMxOF19
 -->
