@@ -411,20 +411,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 
 ## Exercícios
 
-1. There are several iterations of GoogLeNet. Try to implement and run them. Some of them include the following:
-    * Add a batch normalization layer :cite:`Ioffe.Szegedy.2015`, as described
-      later in :numref:`sec_batch_norm`.
-    * Make adjustments to the Inception block
-      :cite:`Szegedy.Vanhoucke.Ioffe.ea.2016`.
-    * Use label smoothing for model regularization
-      :cite:`Szegedy.Vanhoucke.Ioffe.ea.2016`.
-    * Include it in the residual connection
-      :cite:`Szegedy.Ioffe.Vanhoucke.ea.2017`, as described later in
-      :numref:`sec_resnet`.
-2. What is the minimum image size for GoogLeNet to work?
-3. Compare the model parameter sizes of AlexNet, VGG, and NiN with GoogLeNet. How do the latter two network architectures significantly reduce the model parameter size?
-
-4. Existem várias iterações do GoogLeNet. Tente implementá-los e executá-los. Alguns deles incluem o seguinte:
+1. Existem várias iterações do GoogLeNet. Tente implementá-los e executá-los. Alguns deles incluem o seguinte:
      * Adicione uma camada de normalização em lote :cite:`Ioffe.Szegedy.2015`, conforme descrito
        mais tarde em :numref:`sec_batch_norm`.
      * Faça ajustes no bloco de iniciação
@@ -434,8 +421,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
      * Incluir na conexão residual
        :cite:`Szegedy.Ioffe.Vanhoucke.ea.2017`, conforme descrito posteriormente em
        :numref:`sec_resnet`.
-5. Qual é o tamanho mínimo de imagem para o GoogLeNet funcionar?
-6. Compare os tamanhos dos parâmetros do modelo de AlexNet, VGG e NiN com GoogLeNet. Como as duas últimas arquiteturas de rede reduzem significativamente o tamanho do parâmetro do modelo?
+1. Qual é o tamanho mínimo de imagem para o GoogLeNet funcionar?
+1. Compare os tamanhos dos parâmetros do modelo de AlexNet, VGG e NiN com GoogLeNet. Como as duas últimas arquiteturas de rede reduzem significativamente o tamanho do parâmetro do modelo?
 
 :begin_tab:`mxnet`
 [Discussão](https://discuss.d2l.ai/t/81)
@@ -446,8 +433,8 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/316)
+[Discussão](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTEzMDE4OCwtMTYxNzcxNTc4M119
+eyJoaXN0b3J5IjpbMTE5NDgzNjA2NywtMTYxNzcxNTc4M119
 -->
