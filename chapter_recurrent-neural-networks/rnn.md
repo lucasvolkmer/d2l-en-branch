@@ -105,21 +105,21 @@ Os RNNs sempre usam esses parâmetros do modelo.
 Portanto, o custo de parametrização de um RNN
 não cresce à medida que o número de etapas de tempo aumenta.
 
-:numref:`fig_rnn` illustrates the computational logic of an RNN at three adjacent time steps.
-At any time step $t$,
-the computation of the hidden state can be treated as:
-i) concatenating the input $\mathbf{X}_t$ at the current time step $t$ and the hidden state $\mathbf{H}_{t-1}$ at the previous time step $t-1$;
-ii) feeding the concatenation result into a fully-connected layer with the activation function $\phi$.
-The output of such a fully-connected layer is the hidden state $\mathbf{H}_t$ of the current time step $t$.
-In this case,
-the model parameters are the concatenation of $\mathbf{W}_{xh}$ and $\mathbf{W}_{hh}$, and a bias of $\mathbf{b}_h$, all from :eqref:`rnn_h_with_state`.
-The hidden state of the current time step $t$, $\mathbf{H}_t$, will participate in computing the hidden state $\mathbf{H}_{t+1}$ of the next time step $t+1$.
-What is more, $\mathbf{H}_t$ will also be
-fed into the fully-connected output layer
-to compute the output
-$\mathbf{O}_t$ of the current time step $t$.
+:numref:`fig_rnn` ilustra a lógica computacional de uma RNN em três etapas de tempo adjacentes.
+A qualquer momento, passo $t$,
+o cálculo do estado oculto pode ser tratado como:
+i) concatenar a entrada $\mathbf{X}_t$ na etapa de tempo atual $t$ e o estado oculto $\mathbf{H}_{t-1}$ na etapa de tempo anterior $t-1$;
+ii) alimentar o resultado da concatenação em uma camada totalmente conectada com a função de ativação $\phi$.
+A saída dessa camada totalmente conectada é o estado oculto $\mathbf{H}_t$ do intervalo de tempo atual $t$.
+Nesse caso,
+os parâmetros do modelo são a concatenação de $\mathbf{W}_{xh}$ e $\mathbf{W}_{hh}$, e um *bias* de $\mathbf{b}_h$, tudo de :eqref:`rnn_h_with_state`.
+O estado oculto do passo de tempo atual $t$, $\mathbf{H}_t$, participará do cálculo do estado oculto $\mathbf{H}_{t+1}$ do próximo passo de tempo $t+1$.
+Além disso, $\mathbf{H}_t$ também será
+alimentado na camada de saída totalmente conectada
+para calcular a saída
+$\mathbf{O}_t$ do passo de tempo atual $t$.
 
-![An RNN with a hidden state.](../img/rnn.svg)
+![Uma RNN com um estado oculto.](../img/rnn.svg)
 :label:`fig_rnn`
 
 We just mentioned that the calculation of $\mathbf{X}_t \mathbf{W}_{xh} + \mathbf{H}_{t-1} \mathbf{W}_{hh}$ for the hidden state is equivalent to
@@ -292,6 +292,6 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMzY0MTY1Niw2ODIxMDI5MDAsLTgxMD
-Y0OTA2MV19
+eyJoaXN0b3J5IjpbMTc4MDgxNzMyNSwyMDAzNjQxNjU2LDY4Mj
+EwMjkwMCwtODEwNjQ5MDYxXX0=
 -->
