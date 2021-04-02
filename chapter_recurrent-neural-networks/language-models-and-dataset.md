@@ -34,10 +34,10 @@ Vamos começar aplicando regras básicas de probabilidade:
 
 $$P(x_1, x_2, \ldots, x_T) = \prod_{t=1}^T P(x_t  \mid  x_1, \ldots, x_{t-1}).$$
 
-For example, 
-the probability of a text sequence containing four words would be given as:
+Por exemplo,
+a probabilidade de uma sequência de texto contendo quatro palavras seria dada como:
 
-$$P(\text{deep}, \text{learning}, \text{is}, \text{fun}) =  P(\text{deep}) P(\text{learning}  \mid  \text{deep}) P(\text{is}  \mid  \text{deep}, \text{learning}) P(\text{fun}  \mid  \text{deep}, \text{learning}, \text{is}).$$
+$$P(\text{deep}, \text{learning}, \text{é}, \text{divertido}) =  P(\text{deep}) P(\text{learning}  \mid  \text{deep}) P(\text{é}  \mid  \text{deep}, \text{learning}) P(\text{divertido}  \mid  \text{deep}, \text{learning}, \text{é}).$$
 
 In order to compute the language model, we need to calculate the
 probability of words and the conditional probability of a word given
@@ -444,6 +444,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTMzMjI1MDMsLTQzNjM1MzM0NSwtNj
+eyJoaXN0b3J5IjpbLTE0NjEwODE5NzEsLTQzNjM1MzM0NSwtNj
 I5NDU2ODQyXX0=
 -->
