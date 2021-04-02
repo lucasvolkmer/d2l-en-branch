@@ -426,15 +426,15 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 
 ## Exercícios
 
-1. Suppose there are $100,000$ words in the training dataset. How much word frequency and multi-word adjacent frequency does a four-gram need to store?
-1. How would you model a dialogue?
-1. Estimate the exponent of Zipf's law for unigrams, bigrams, and trigrams.
-1. What other methods can you think of for reading long sequence data?
-1. Consider the random offset that we use for reading long sequences.
-    1. Why is it a good idea to have a random offset?
-    1. Does it really lead to a perfectly uniform distribution over the sequences on the document?
-    1. What would you have to do to make things even more uniform?
-1. If we want a sequence example to be a complete sentence, what kind of problem does this introduce in minibatch sampling? How can we fix the problem?
+1. Suponha que haja $100.000$ palavras no conjunto de dados de treinamento. Quanta frequência de palavra e frequência adjacente de várias palavras um quadrigrama precisa armazenar?
+1. Como você modelaria um diálogo?
+1. Estime o expoente da lei de Zipf para unigramas, bigramas e trigramas.
+1. Em que outros métodos você pode pensar para ler dados de sequência longa?
+1. Considere o deslocamento aleatório que usamos para ler sequências longas.
+     1. Por que é uma boa ideia ter um deslocamento aleatório?
+     1. Isso realmente leva a uma distribuição perfeitamente uniforme nas sequências do documento?
+     1. O que você teria que fazer para tornar as coisas ainda mais uniformes?
+1. Se quisermos que um exemplo de sequência seja uma frase completa, que tipo de problema isso apresenta na amostragem de minibatch? Como podemos resolver o problema?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/117)
@@ -448,7 +448,7 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMTMxMTk0NSwxODA4OTQ4NzgyLC0xOT
-UzNTEyNzM5LC02Mjc1NDM5MjcsLTUyMTAxODA5NiwtNDM2MzUz
-MzQ1LC02Mjk0NTY4NDJdfQ==
+eyJoaXN0b3J5IjpbLTEzNzc0OTg3MjQsMTgwODk0ODc4MiwtMT
+k1MzUxMjczOSwtNjI3NTQzOTI3LC01MjEwMTgwOTYsLTQzNjM1
+MzM0NSwtNjI5NDU2ODQyXX0=
 -->
