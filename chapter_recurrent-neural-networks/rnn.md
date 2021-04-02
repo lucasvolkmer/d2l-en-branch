@@ -17,19 +17,20 @@ o estado oculto em qualquer etapa $t$ pode ser calculado com base na entrada atu
 $$h_t = f(x_{t}, h_{t-1}).$$
 :eqlabel:`eq_ht_xt`
 
-For a sufficiently powerful function $f$ in :eqref:`eq_ht_xt`, the latent variable model is not an approximation. After all, $h_t$ may simply store all the data it has observed so far.
-However, it could potentially make both computation and storage expensive.
 
-Recall that we have discussed hidden layers with hidden units in :numref:`chap_perceptrons`.
-It is noteworthy that
-hidden layers and hidden states refer to two very different concepts.
-Hidden layers are, as explained, layers that are hidden from view on the path from input to output.
-Hidden states are technically speaking *inputs* to whatever we do at a given step,
-and they can only be computed by looking at data at previous time steps.
+Para uma função suficientemente poderosa $f$ em :eqref:`eq_ht_xt`, o modelo de variável latente não é uma aproximação. Afinal, $h_t$ pode simplesmente armazenar todos os dados que observou até agora.
+No entanto, isso pode tornar a computação e o armazenamento caros.
 
-*Recurrent neural networks* (RNNs) are neural networks with hidden states. Before introducing the RNN model, we first revisit the MLP model introduced in :numref:`sec_mlp`.
+Lembre-se de que discutimos camadas ocultas com unidades ocultas em :numref:`chap_perceptrons`.
+É digno de nota que
+camadas ocultas e estados ocultos referem-se a dois conceitos muito diferentes.
+Camadas ocultas são, conforme explicado, camadas que ficam ocultas da visualização no caminho da entrada à saída.
+Estados ocultos são tecnicamente falando *entradas* para tudo o que fazemos em uma determinada etapa,
+e elas só podem ser calculadas observando os dados em etapas de tempo anteriores.
 
-## Neural Networks without Hidden States
+*Redes neurais recorrentes* (RNNs) são redes neurais com estados ocultos. Antes de introduzir o modelo RNN, primeiro revisitamos o modelo MLP introduzido em :numref:`sec_mlp`.
+
+## Redes Neurais sem Estados Ocultos
 
 Let us take a look at an MLP with a single hidden layer.
 Let the hidden layer's activation function be $\phi$.
@@ -288,5 +289,5 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDI2NzcyNDJdfQ==
+eyJoaXN0b3J5IjpbMTU5NjEwOTE4NV19
 -->
