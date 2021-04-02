@@ -403,7 +403,7 @@ class SeqDataLoader:  #@save
         return self.data_iter_fn(self.corpus, self.batch_size, self.num_steps)
 ```
 
-Last, we define a function `load_data_time_machine` that returns both the data iterator and the vocabulary, so we can use it similarly as other other functions with the `load_data` prefix, such as `d2l.load_data_fashion_mnist` defined in :numref:`sec_fashion_mnist`.
+Por último, definimos uma função `load_data_time_machine` que retorna o iterador de dados e o vocabulário, para que possamos usá-lo da mesma forma que outras funções com o prefixo `load_data`, como `d2l.load_data_fashion_mnist` definido em :numref:`sec_fashion_mnist`.
 
 ```{.python .input}
 #@tab all
@@ -415,17 +415,16 @@ def load_data_time_machine(batch_size, num_steps,  #@save
     return data_iter, data_iter.vocab
 ```
 
-## Summary
+## Resumo
 
-* Language models are key to natural language processing.
-* $n$-grams provide a convenient model for dealing with long sequences by truncating the dependence.
-* Long sequences suffer from the problem that they occur very rarely or never.
-* Zipf's law governs the word distribution for not only unigrams but also the other $n$-grams.
-* There is a lot of structure but not enough frequency to deal with infrequent word combinations efficiently via Laplace smoothing.
-* The main choices for reading long sequences are random sampling and sequential partitioning. The latter can ensure that the subsequences from two adjacent minibatches during iteration are adjacent on the original sequence.
+* Modelos de linguagem são fundamentais para o processamento de linguagem natural.
+* $n$-grams fornecem um modelo conveniente para lidar com sequências longas truncando a dependência.
+* Sequências longas sofrem com o problema de ocorrerem muito raramente ou nunca.
+* A lei de Zipf rege a distribuição de palavras não apenas para unigramas, mas também para os outros $n$-gramas.
+* Há muita estrutura, mas não frequência suficiente para lidar com combinações de palavras infrequentes de forma eficiente por meio da suavização de Laplace.
+* As principais opções para ler sequências longas são a amostragem aleatória e o particionamento sequencial. O último pode garantir que as subsequências de dois minibatches adjacentes durante a iteração sejam adjacentes à sequência original.
 
-
-## Exercises
+## Exercícios
 
 1. Suppose there are $100,000$ words in the training dataset. How much word frequency and multi-word adjacent frequency does a four-gram need to store?
 1. How would you model a dialogue?
@@ -449,7 +448,7 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzgzOTQ0MjksMTgwODk0ODc4MiwtMT
-k1MzUxMjczOSwtNjI3NTQzOTI3LC01MjEwMTgwOTYsLTQzNjM1
-MzM0NSwtNjI5NDU2ODQyXX0=
+eyJoaXN0b3J5IjpbLTkzMTMxMTk0NSwxODA4OTQ4NzgyLC0xOT
+UzNTEyNzM5LC02Mjc1NDM5MjcsLTUyMTAxODA5NiwtNDM2MzUz
+MzQ1LC02Mjk0NTY4NDJdfQ==
 -->
