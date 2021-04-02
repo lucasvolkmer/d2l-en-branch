@@ -45,12 +45,13 @@ Em seguida, a variável oculta $\mathbf{H}$ é usada como entrada da camada de s
 
 $$\mathbf{O} = \mathbf{H} \mathbf{W}_{hq} + \mathbf{b}_q,$$
 
-where $\mathbf{O} \in \mathbb{R}^{n \times q}$ is the output variable, $\mathbf{W}_{hq} \in \mathbb{R}^{h \times q}$ is the weight parameter, and $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$ is the bias parameter of the output layer.  If it is a classification problem, we can use $\text{softmax}(\mathbf{O})$ to compute the probability distribution of the output categories.
 
-This is entirely analogous to the regression problem we solved previously in :numref:`sec_sequence`, hence we omit details.
-Suffice it to say that we can pick feature-label pairs at random and learn the parameters of our network via automatic differentiation and stochastic gradient descent.
+onde $\mathbf{O} \in \mathbb{R}^{n \times q}$ é a variável de saída, $\mathbf{W}_{hq} \in \mathbb{R}^{h \times q}$ é o parâmetro de peso, e $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$ é o parâmetro de polarização da camada de saída. Se for um problema de classificação, podemos usar $\text{softmax}(\mathbf{O})$ para calcular a distribuição de probabilidade das categorias de saída.
 
-## Recurrent Neural Networks with Hidden States
+Isso é inteiramente análogo ao problema de regressão que resolvemos anteriormente em :numref:`sec_sequence`, portanto omitimos detalhes.
+Basta dizer que podemos escolher pares de rótulo de recurso aleatoriamente e aprender os parâmetros de nossa rede por meio de diferenciação automática e gradiente descendente estocástico.
+
+## Redes Neurais Recorrentes com Estados Ocultos
 :label:`subsec_rnn_w_hidden_states`
 
 Matters are entirely different when we have hidden states. Let us look at the structure in some more detail.
@@ -289,5 +290,5 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTk5MzM2NjRdfQ==
+eyJoaXN0b3J5IjpbNTA1NzkyNjM2XX0=
 -->
