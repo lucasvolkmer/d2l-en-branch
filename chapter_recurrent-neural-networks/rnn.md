@@ -287,3 +287,6 @@ to evaluate such models.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE1MjEzOTA3ODhdfQ==
+-->
