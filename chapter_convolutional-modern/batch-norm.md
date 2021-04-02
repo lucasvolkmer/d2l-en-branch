@@ -1,17 +1,10 @@
 # Normalização de Lotes
 :label:`sec_batch_norm`
 
-Training deep neural networks is difficult.
-And getting them to converge in a reasonable amount of time can be tricky.
-In this section, we describe *batch normalization*, a popular and effective technique
-that consistently accelerates the convergence of deep networks :cite:`Ioffe.Szegedy.2015`.
-Together with residual blocks---covered later in :numref:`sec_resnet`---batch normalization
-has made it possible for practitioners
-to routinely train networks with over 100 layers.
 
 Treinar redes neurais profundas é difícil.
 E fazer com que eles convirjam em um período de tempo razoável pode ser complicado.
-Nesta seção, descrevemos a * normalização em lote *, uma técnica popular e eficaz
+Nesta seção, descrevemos a *normalização em lote*, uma técnica popular e eficaz
 que acelera consistentemente a convergência de redes profundas :cite:`Ioffe.Szegedy.2015`.
 Juntamente com os blocos residuais --- cobertos posteriormente em :numref:`sec_resnet` --- normalização em lote
 tornou possível para os praticantes
@@ -19,7 +12,7 @@ para treinar rotineiramente redes com mais de 100 camadas.
 
 
 
-## Treinando Redes Pro
+## Treinando Redes Profundas
 
 To motivate batch normalization, let us review
 a few practical challenges that arise
@@ -38,12 +31,12 @@ alguns desafios práticos que surgem
 ao treinar modelos de aprendizado de máquina e redes neurais em particular.
 
 Em primeiro lugar, as escolhas relativas ao pré-processamento de dados costumam fazer uma enorme diferença nos resultados finais.
-Lembre-se de nossa aplicação de MLPs para prever preços de casas (: numref: `sec_kaggle_house`).
+Lembre-se de nossa aplicação de MLPs para prever preços de casas (:numref:`sec_kaggle_house`).
 Nosso primeiro passo ao trabalhar com dados reais
 era padronizar nossos recursos de entrada
 para cada um tem uma média de zero e variância de um.
 Intuitivamente, essa padronização funciona bem com nossos otimizadores
-porque coloca os parâmetros * a priori * em uma escala semelhante.
+porque coloca os parâmetros *a priori* em uma escala semelhante.
    
 Second, for a typical MLP or CNN, as we train,
 the variables (e.g., affine transformation outputs in MLP)
@@ -1017,6 +1010,6 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg5MTkwNTE2LC0xOTU3Nzk0MzM2LDk3OT
-YxNzMxOF19
+eyJoaXN0b3J5IjpbLTEzMjE5ODI1MjYsLTE5NTc3OTQzMzYsOT
+c5NjE3MzE4XX0=
 -->
