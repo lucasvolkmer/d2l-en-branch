@@ -54,18 +54,19 @@ Basta dizer que podemos escolher pares de rótulo de recurso aleatoriamente e ap
 ## Redes Neurais Recorrentes com Estados Ocultos
 :label:`subsec_rnn_w_hidden_states`
 
-Matters are entirely different when we have hidden states. Let us look at the structure in some more detail.
 
-Assume that we have
-a minibatch of inputs
+As coisas são totalmente diferentes quando temos estados ocultos. Vejamos a estrutura com mais detalhes.
+
+Suponha que temos
+um minibatch de entradas
 $\mathbf{X}_t \in \mathbb{R}^{n \times d}$
-at time step $t$.
-In other words,
-for a minibatch of $n$ sequence examples,
-each row of $\mathbf{X}_t$ corresponds to one example at time step $t$ from the sequence.
-Next,
-denote by $\mathbf{H}_t  \in \mathbb{R}^{n \times h}$ the hidden variable of time step $t$.
-Unlike the MLP, here we save the hidden variable $\mathbf{H}_{t-1}$ from the previous time step and introduce a new weight parameter $\mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$ to describe how to use the hidden variable of the previous time step in the current time step. Specifically, the calculation of the hidden variable of the current time step is determined by the input of the current time step together with the hidden variable of the previous time step:
+no passo de tempo $t$.
+Em outras palavras,
+para um minibatch de exemplos de sequência $n$,
+cada linha de $\mathbf{X}_t$ corresponde a um exemplo no passo de tempo $t$ da sequência.
+Em seguida,
+denote por $\mathbf{H}_t  \in \mathbb{R}^{n \times h}$ a variável oculta do passo de tempo $t$.
+Ao contrário do MLP, aqui salvamos a variável oculta $\mathbf{H}_{t-1}$ da etapa de tempo anterior e introduzimos um novo parâmetro de peso $\mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$ para descrever como usar a variável oculta da etapa de tempo anterior na etapa de tempo atual. Especificamente, o cálculo da variável oculta da etapa de tempo atual é determinado pela entrada da etapa de tempo atual junto com a variável oculta da etapa de tempo anterior:
 
 $$\mathbf{H}_t = \phi(\mathbf{X}_t \mathbf{W}_{xh} + \mathbf{H}_{t-1} \mathbf{W}_{hh}  + \mathbf{b}_h).$$
 :eqlabel:`rnn_h_with_state`
@@ -290,5 +291,5 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA1NzkyNjM2XX0=
+eyJoaXN0b3J5IjpbLTgxMDY0OTA2MV19
 -->
