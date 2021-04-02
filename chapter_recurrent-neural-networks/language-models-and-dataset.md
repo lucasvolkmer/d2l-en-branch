@@ -165,7 +165,7 @@ vocab.token_freqs[:10]
 Como podemos ver, as palavras mais populares são realmente muito chatas de se olhar.
 Freqüentemente, são chamadas de *palavras de interrupção* e, portanto, são filtradas.
 No entanto, eles ainda carregam significado e ainda os usaremos.
-Além disso, é bastante claro que a palavra frequência decai rapidamente. A $10^{\mathrm{th}}$ palavra mais frequente é menos de $1/5$ tão comum quanto a mais popular. Para se ter uma ideia melhor, traçamos a figura da frequência da palavra.
+Além disso, é bastante claro que a palavra frequência decai rapidamente. A $10^{\mathrm{a}}$ palavra mais frequente é menos de $1/5$ tão comum quanto a mais popular. Para se ter uma ideia melhor, traçamos a figura da frequência da palavra.
 
 ```{.python .input}
 #@tab all
@@ -174,10 +174,10 @@ d2l.plot(freqs, xlabel='token: x', ylabel='frequency: n(x)',
          xscale='log', yscale='log')
 ```
 
-We are on to something quite fundamental here: the word frequency decays rapidly in a well-defined way.
-After dealing with the first few words as exceptions, all the remaining words roughly follow a straight line on a log-log plot. This means that words satisfy *Zipf's law*,
-which states that the frequency $n_i$ of the $i^\mathrm{th}$ most frequent word
-is:
+Chegamos a algo bastante fundamental aqui: a frequência da palavra  decai rapidamente de uma forma bem definida.
+Depois de lidar com as primeiras palavras como exceções, todas as palavras restantes seguem aproximadamente uma linha reta em um gráfico log-log. Isso significa que as palavras satisfazem a *lei de Zipf*,
+que afirma que a frequência $n_i$ da $i^\mathrm{a}$ palavra mais frequente
+é:
 
 $$n_i \propto \frac{1}{i^\alpha},$$
 :eqlabel:`eq_zipf_law`
@@ -447,6 +447,6 @@ def load_data_time_machine(batch_size, num_steps,  #@save
 [Discussions](https://discuss.d2l.ai/t/1049)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzE5NzQ3LC02Mjc1NDM5MjcsLTUyMT
-AxODA5NiwtNDM2MzUzMzQ1LC02Mjk0NTY4NDJdfQ==
+eyJoaXN0b3J5IjpbLTE5NTM1MTI3MzksLTYyNzU0MzkyNywtNT
+IxMDE4MDk2LC00MzYzNTMzNDUsLTYyOTQ1Njg0Ml19
 -->
