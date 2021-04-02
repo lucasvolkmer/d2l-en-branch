@@ -26,22 +26,6 @@ que lançou um meme viral.
 ![Estrutura do bloco Inception.](../img/inception.svg)
 :label:`fig_inception`
 
-As depicted in :numref:`fig_inception`,
-the inception block consists of four parallel paths.
-The first three paths use convolutional layers
-with window sizes of $1\times 1$, $3\times 3$, and $5\times 5$
-to extract information from different spatial sizes.
-The middle two paths perform a $1\times 1$ convolution on the input
-to reduce the number of channels, reducing the model's complexity.
-The fourth path uses a $3\times 3$ maximum pooling layer,
-followed by a $1\times 1$ convolutional layer
-to change the number of channels.
-The four paths all use appropriate padding to give the input and output the same height and width.
-Finally, the outputs along each path are concatenated
-along the channel dimension and comprise the block's output.
-The commonly-tuned hyperparameters of the Inception block
-are the number of output channels per layer.
-
 Conforme descrito em :numref:`fig_inception`,
 o bloco de iniciação consiste em quatro caminhos paralelos.
 Os primeiros três caminhos usam camadas convolucionais
@@ -165,14 +149,6 @@ class Inception(tf.keras.Model):
         return tf.keras.layers.Concatenate()([p1, p2, p3, p4])
 ```
 
-To gain some intuition for why this network works so well,
-consider the combination of the filters.
-They explore the image in a variety of filter sizes.
-This means that details at different extents
-can be recognized efficiently by filters of different sizes.
-At the same time, we can allocate different amounts of parameters
-for different filters.
-
 Para ter alguma intuição de por que essa rede funciona tão bem,
 considere a combinação dos filtros.
 Eles exploram a imagem em uma variedade de tamanhos de filtro.
@@ -182,7 +158,7 @@ Ao mesmo tempo, podemos alocar diferentes quantidades de parâmetros
 para filtros diferentes.
 
 
-## GoogLeNet Model
+## Modelo GoogLeNet 
 
 As shown in :numref:`fig_inception_full`, GoogLeNet uses a stack of a total of 9 inception blocks
 and global average pooling to generate its estimates.
@@ -192,7 +168,7 @@ The stack of blocks is inherited from VGG
 and the global average pooling avoids
 a stack of fully-connected layers at the end.
 
-Conforme mostrado em: numref: `fig_inception_full`, GoogLeNet usa uma pilha de um total de 9 blocos iniciais
+Conforme mostrado em :numref:`fig_inception_full`, GoogLeNet usa uma pilha de um total de 9 blocos iniciais
 e pooling médio global para gerar suas estimativas.
 O agrupamento máximo entre os blocos de iniciação reduz a dimensionalidade.
 O primeiro módulo é semelhante ao AlexNet e LeNet.
@@ -546,5 +522,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MjI1MzA5MSwtMTYxNzcxNTc4M119
+eyJoaXN0b3J5IjpbMTU2MTY4OTcxMSwtMTYxNzcxNTc4M119
 -->
