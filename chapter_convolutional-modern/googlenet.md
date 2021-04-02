@@ -47,7 +47,7 @@ o bloco de iniciação consiste em quatro caminhos paralelos.
 Os primeiros três caminhos usam camadas convolucionais
 com tamanhos de janela de $1\times 1$, $3\times 3$, e $5\times 5$
 para extrair informações de diferentes tamanhos espaciais.
-Os dois caminhos intermediários realizam uma convolução $1\times 1$ na entrada
+Os dois caminhos intermediários realizam uma convolução $1\times 1$ na entrada para
 reduzir o número de canais, diminuindo a complexidade do modelo.
 O quarto caminho usa uma camada de pooling máxima de $3\times 3$,
 seguido por uma camada convolucional $1\times 1$
@@ -546,5 +546,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY2MjMyNjY3LC0xNjE3NzE1NzgzXX0=
+eyJoaXN0b3J5IjpbLTU4MjI1MzA5MSwtMTYxNzcxNTc4M119
 -->
