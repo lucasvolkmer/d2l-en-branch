@@ -14,18 +14,6 @@ para treinar rotineiramente redes com mais de 100 camadas.
 
 ## Treinando Redes Profundas
 
-To motivate batch normalization, let us review
-a few practical challenges that arise
-when training machine learning models and neural networks in particular.
-
-First, choices regarding data preprocessing often make an enormous difference in the final results.
-Recall our application of MLPs to predicting house prices (:numref:`sec_kaggle_house`).
-Our first step when working with real data
-was to standardize our input features
-to each have a mean of zero and variance of one.
-Intuitively, this standardization plays nicely with our optimizers
-because it puts the parameters *a priori* at a similar scale.
-
 Para motivar a normalização do lote, vamos revisar
 alguns desafios práticos que surgem
 ao treinar modelos de aprendizado de máquina e redes neurais em particular.
@@ -65,7 +53,7 @@ Intuitivamente, podemos conjeturar que se um
 camada tem valores variáveis que são 100 vezes maiores que os de outra camada,
 isso pode exigir ajustes compensatórios nas taxas de aprendizagem.
    
-Terceiro, redes mais profundas são complexas e facilmente capazes de overfitting.
+Terceiro, redes mais profundas são complexas e facilmente capazes de sobreajuste.
 Isso significa que a regularização se torna mais crítica.
 
 Batch normalization is applied to individual layers
@@ -1010,6 +998,6 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjE5ODI1MjYsLTE5NTc3OTQzMzYsOT
-c5NjE3MzE4XX0=
+eyJoaXN0b3J5IjpbLTc0OTE0NTA2NCwtMTMyMTk4MjUyNiwtMT
+k1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
