@@ -1,28 +1,13 @@
 # Redes com Concatenações Paralelas (GoogLeNet)
 :label:`sec_googlenet`
 
-In 2014, *GoogLeNet*
-won the ImageNet Challenge, proposing a structure
-that combined the strengths of NiN and  paradigms of repeated blocks :cite:`Szegedy.Liu.Jia.ea.2015`.
-One focus of the paper was to address the question
-of which sized convolution kernels are best.
-After all, previous popular networks employed choices
-as small as $1 \times 1$ and as large as $11 \times 11$.
-One insight in this paper was that sometimes
-it can be advantageous to employ a combination of variously-sized kernels.
-In this section, we will introduce GoogLeNet,
-presenting a slightly simplified version of the original model:
-we
-omit a few ad-hoc features that were added to stabilize training
-but are unnecessary now with better training algorithms available.
-
 Em 2014, *GoogLeNet*
 venceu o ImageNet Challenge, propondo uma estrutura
 que combinou as forças de NiN e paradigmas de blocos repetidos :cite:`Szegedy.Liu.Jia.ea.2015`.
 Um dos focos do artigo foi abordar a questão
-dos quais núcleos de convolução de tamanho são os melhores.
+dos quais tamanhos de núcleos de convolução são os melhores.
 Afinal, as redes populares anteriores empregavam escolhas
-tão pequeno quanto $1 \times 1$ e tão grande quanto $11 \times 11$.
+tão pequenas quanto $1 \times 1$ e tão grande quanto $11 \times 11$.
 Uma ideia neste artigo foi que às vezes
 pode ser vantajoso empregar uma combinação de grãos de vários tamanhos.
 Nesta seção, apresentaremos GoogLeNet,
@@ -38,8 +23,8 @@ The basic convolutional block in GoogLeNet is called an *Inception block*,
 likely named due to a quote from the movie *Inception* ("We need to go deeper"),
 which launched a viral meme.
 
-O bloco convolucional básico no GoogLeNet é chamado de * bloco de iniciação *,
-provavelmente nomeado devido a uma citação do filme * Inception * ("Precisamos ir mais fundo"),
+O bloco convolucional básico no GoogLeNet é chamado de *bloco de iniciação*,
+provavelmente nomeado devido a uma citação do filme *Inception* ("Precisamos ir mais fundo"),
 que lançou um meme viral.
 
 ![Structure of the Inception block.](../img/inception.svg)
@@ -565,5 +550,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/316)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NDQwMjg5NywtMTYxNzcxNTc4M119
+eyJoaXN0b3J5IjpbMTA1NjQ4NjAzNCwtMTYxNzcxNTc4M119
 -->
