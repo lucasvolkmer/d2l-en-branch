@@ -70,7 +70,7 @@ de acordo com a seguinte expressão:
 $$\mathrm{BN}(\mathbf{x}) = \boldsymbol{\gamma} \odot \frac{\mathbf{x} - \hat{\boldsymbol{\mu}}_\mathcal{B}}{\hat{\boldsymbol{\sigma}}_\mathcal{B}} + \boldsymbol{\beta}.$$
 :eqlabel:`eq_batchnorm`
 
-In :eqref:`eq_batchnorm`, 
+Em :eqref:`eq_batchnorm`, 
 $\hat{\boldsymbol{\mu}}_\mathcal{B}$ é a média da amostra
 e $\hat{\boldsymbol{\sigma}}_\mathcal{B}$ é o desvio padrão da amostra do minibatch $\mathcal{B}$.
 Depois de aplicar a padronização,
@@ -84,22 +84,14 @@ que tem a mesma forma de $\mathbf{x}$.
 Observe que $\boldsymbol{\gamma}$ e$\boldsymbol{\beta}$ são
   parâmetros que precisam ser aprendidos em conjunto com os outros parâmetros do modelo.
 
-Consequently, the variable magnitudes
-for intermediate layers cannot diverge during training
-because batch normalization actively centers and rescales them back
-to a given mean and size (via $\hat{\boldsymbol{\mu}}_\mathcal{B}$ and ${\hat{\boldsymbol{\sigma}}_\mathcal{B}}$).
-One piece of practitioner's intuition or wisdom
-is that batch normalization seems to allow for more aggressive learning rates.
-
 Consequentemente, as magnitudes variáveis
 para camadas intermediárias não pode divergir durante o treinamento
 porque a normalização em lote centra ativamente e os redimensiona de volta
-para uma dada média e tamanho (via $ \ hat {\ boldsymbol {\ mu}} _ \ mathcal {B} $ e $ {\ hat {\ boldsymbol {\ sigma}} _ \ mathcal {B}} $).
+para uma dada média e tamanho (via $\hat{\boldsymbol{\mu}}_\mathcal{B}$ e ${\hat{\boldsymbol{\sigma}}_\mathcal{B}}$)
 Um pedaço da intuição ou sabedoria do praticante
 é que a normalização em lote parece permitir taxas de aprendizagem mais agressivas.
 
-Formally, 
-we calculate $\hat{\boldsymbol{\mu}}_\mathcal{B}$ and ${\hat{\boldsymbol{\sigma}}_\mathcal{B}}$ in :eqref:`eq_batchnorm` as follows:
+Formalmente, calculamos $\hat{\boldsymbol{\mu}}_\mathcal{B}$ e${\hat{\boldsymbol{\sigma}}_\mathcal{B}}$ em :eqref:`eq_batchnorm` como a seguir:
 
 $$\begin{aligned} \hat{\boldsymbol{\mu}}_\mathcal{B} &= \frac{1}{|\mathcal{B}|} \sum_{\mathbf{x} \in \mathcal{B}} \mathbf{x},\\
 \hat{\boldsymbol{\sigma}}_\mathcal{B}^2 &= \frac{1}{|\mathcal{B}|} \sum_{\mathbf{x} \in \mathcal{B}} (\mathbf{x} - \hat{\boldsymbol{\mu}}_{\mathcal{B}})^2 + \epsilon.\end{aligned}$$
@@ -944,7 +936,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MTg0ODc0MiwtMTc3MTg1OTg1NiwtNz
-QxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5ODI1MjYsLTE5NTc3
-OTQzMzYsOTc5NjE3MzE4XX0=
+eyJoaXN0b3J5IjpbODUwNjcwODkzLC0xNzcxODU5ODU2LC03ND
+E3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4MjUyNiwtMTk1Nzc5
+NDMzNiw5Nzk2MTczMThdfQ==
 -->
