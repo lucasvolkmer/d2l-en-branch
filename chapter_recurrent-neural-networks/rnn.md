@@ -214,19 +214,20 @@ Na prática, cada token é representado por um vetor $d$-dimensional e usamos um
 ## Perplexidade
 :label:`subsec_perplexity`
 
-Last, let us discuss about how to measure the language model quality, which will be used to evaluate our RNN-based models in the subsequent sections.
-One way is to check how surprising the text is.
-A good language model is able to predict with
-high-accuracy tokens that what we will see next.
-Consider the following continuations of the phrase "It is raining", as proposed by different language models:
 
-1. "It is raining outside"
-1. "It is raining banana tree"
-1. "It is raining piouw;kcj pwepoiut"
+Por último, vamos discutir sobre como medir a qualidade do modelo de linguagem, que será usado para avaliar nossos modelos baseados em RNN nas seções subsequentes.
+Uma maneira é verificar o quão surpreendente é o texto.
+Um bom modelo de linguagem é capaz de prever com
+tokens de alta precisão que veremos a seguir.
+Considere as seguintes continuações da frase "Está chovendo", conforme proposto por diferentes modelos de linguagem:
 
-In terms of quality, example 1 is clearly the best. The words are sensible and logically coherent.
-While it might not quite accurately reflect which word follows semantically ("in San Francisco" and "in winter" would have been perfectly reasonable extensions), the model is able to capture which kind of word follows.
-Example 2 is considerably worse by producing a nonsensical extension. Nonetheless, at least the model has learned how to spell words and some degree of correlation between words. Last, example 3 indicates a poorly trained model that does not fit data properly.
+1. "Está chovendo lá fora"
+1. "Está chovendo bananeira"
+1. "Está chovendo piouw; kcj pwepoiut"
+
+Em termos de qualidade, o exemplo 1 é claramente o melhor. As palavras são sensatas e logicamente coerentes.
+Embora possa não refletir com muita precisão qual palavra segue semanticamente ("em São Francisco" e "no inverno" seriam extensões perfeitamente razoáveis), o modelo é capaz de capturar qual tipo de palavra se segue.
+O exemplo 2 é consideravelmente pior ao produzir uma extensão sem sentido. No entanto, pelo menos o modelo aprendeu como soletrar palavras e algum grau de correlação entre as palavras. Por último, o exemplo 3 indica um modelo mal treinado que não ajusta os dados adequadamente.
 
 We might measure the quality of the model by computing  the likelihood of the sequence.
 Unfortunately this is a number that is hard to understand and difficult to compare.
@@ -293,6 +294,6 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMjAwNjM5MCwxNzgwODE3MzI1LDIwMD
-M2NDE2NTYsNjgyMTAyOTAwLC04MTA2NDkwNjFdfQ==
+eyJoaXN0b3J5IjpbLTE1MTgwNTczODIsMTc4MDgxNzMyNSwyMD
+AzNjQxNjU2LDY4MjEwMjkwMCwtODEwNjQ5MDYxXX0=
 -->
