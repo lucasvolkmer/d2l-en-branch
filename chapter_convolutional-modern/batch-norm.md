@@ -305,20 +305,6 @@ Além disso, nossa camada manterá
 médias móveis das médias e variâncias
 para uso subsequente durante a previsão do modelo.
 
-Putting aside the algorithmic details,
-note the design pattern underlying our implementation of the layer.
-Typically, we define the mathematics in a separate function, say `batch_norm`.
-We then integrate this functionality into a custom layer,
-whose code mostly addresses bookkeeping matters,
-such as moving data to the right device context,
-allocating and initializing any required variables,
-keeping track of moving averages (here for mean and variance), and so on.
-This pattern enables a clean separation of mathematics from boilerplate code.
-Also note that for the sake of convenience
-we did not worry about automatically inferring the input shape here,
-thus we need to specify the number of features throughout.
-Do not worry, the high-level batch normalization APIs in the deep learning framework will care of this for us and we will demonstrate that later.
-
 Deixando de lado os detalhes algorítmicos,
 observe o padrão de design subjacente à nossa implementação da camada.
 Normalmente, definimos a matemática em uma função separada, digamos `batch_norm`.
@@ -449,7 +435,7 @@ class BatchNorm(tf.keras.layers.Layer):
         return output
 ```
 
-## Applying Batch Normalization in LeNet
+## Aplicando Normalização de Lotes em LeNet
 
 To see how to apply `BatchNorm` in context,
 below we apply it to a traditional LeNet model (:numref:`sec_lenet`).
@@ -458,7 +444,7 @@ after the convolutional layers or fully-connected layers
 but before the corresponding activation functions.
 
 Para ver como aplicar `BatchNorm` no contexto,
-abaixo nós o aplicamos a um modelo LeNet tradicional (: numref: `sec_lenet`).
+abaixo nós o aplicamos a um modelo LeNet tradicional (:numref:`sec_lenet`).
 Lembre-se de que a normalização de lote é aplicada
 após as camadas convolucionais ou camadas totalmente conectadas
 mas antes das funções de ativação correspondentes.
@@ -825,7 +811,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY3MTcxNTMxLDExODMyNDc3MjgsLTE3Nz
-E4NTk4NTYsLTc0MTc0NDYyNiwtNzQ5MTQ1MDY0LC0xMzIxOTgy
-NTI2LC0xOTU3Nzk0MzM2LDk3OTYxNzMxOF19
+eyJoaXN0b3J5IjpbLTE4NTA4Njk5MTQsMTE4MzI0NzcyOCwtMT
+c3MTg1OTg1NiwtNzQxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5
+ODI1MjYsLTE5NTc3OTQzMzYsOTc5NjE3MzE4XX0=
 -->
