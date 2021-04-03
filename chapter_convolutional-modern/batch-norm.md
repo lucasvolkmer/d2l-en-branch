@@ -610,18 +610,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 
 ## Controvérsia
 
-Intuitively, batch normalization is thought
-to make the optimization landscape smoother.
-However, we must be careful to distinguish between
-speculative intuitions and true explanations
-for the phenomena that we observe when training deep models.
-Recall that we do not even know why simpler
-deep neural networks (MLPs and conventional CNNs)
-generalize well in the first place.
-Even with dropout and weight decay,
-they remain so flexible that their ability to generalize to unseen data
-cannot be explained via conventional learning-theoretic generalization guarantees.
-
 Intuitivamente, a normalização de lote é pensada
 para tornar o cenário de otimização mais suave.
 No entanto, devemos ter o cuidado de distinguir entre
@@ -660,17 +648,17 @@ between technical claims and hunches.
 
 No artigo original, propondo a normalização do lote,
 os autores, além de apresentar uma ferramenta poderosa e útil,
-ofereceu uma explicação de por que funciona:
-reduzindo * deslocamento interno da covariável *.
-Presumivelmente por * mudança interna de covariável * os autores
+ofereceram uma explicação de por que funciona:
+reduzindo *deslocamento interno da covariável*.
+Presumivelmente por *mudança interna de covariável* os autores
 significava algo como a intuição expressa acima --- o
 noção de que a distribuição dos valores das variáveis ​​muda
 ao longo do treinamento.
 No entanto, houve dois problemas com esta explicação:
-i) Esta deriva é muito diferente de * mudança de covariável *,
+i) Esta deriva é muito diferente de *mudança de covariável*,
 tornando o nome um nome impróprio.
 ii) A explicação oferece uma intuição subespecificada
-mas deixa a questão de * por que exatamente essa técnica funciona *
+mas deixa a questão de *por que exatamente essa técnica funciona*
 uma questão aberta que necessita de uma explicação rigorosa.
 Ao longo deste livro, pretendemos transmitir as intuições de que os praticantes
 usar para orientar o desenvolvimento de redes neurais profundas.
@@ -784,7 +772,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNzc4NTQ5MiwxMTgzMjQ3NzI4LC0xNz
+eyJoaXN0b3J5IjpbMTUzNTk0NjIyNSwxMTgzMjQ3NzI4LC0xNz
 cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
 MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
