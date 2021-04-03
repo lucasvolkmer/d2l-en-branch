@@ -52,16 +52,6 @@ Em seguida, aplicamos um coeficiente de escala e um deslocamento de escala.
 É precisamente devido a esta *normalização* baseada em estatísticas *batch*
 que *normalização de lote* deriva seu nome.
 
-Note that if we tried to apply batch normalization with minibatches of size 1,
-we would not be able to learn anything.
-That is because after subtracting the means,
-each hidden unit would take value 0!
-As you might guess, since we are devoting a whole section to batch normalization,
-with large enough minibatches, the approach proves effective and stable.
-One takeaway here is that when applying batch normalization,
-the choice of batch size may be
-even more significant than without batch normalization.
-
 Observe que se tentamos aplicar a normalização de lote com minibatches de tamanho 1,
 não seríamos capazes de aprender nada.
 Isso porque depois de subtrair as médias,
@@ -77,7 +67,7 @@ that is from a minibatch $\mathcal{B}$,
 batch normalization transforms $\mathbf{x}$
 according to the following expression:
 
-Formalmente, denotando por $ \ mathbf {x} \ in \ mathcal {B} $ uma entrada para normalização em lote ($ \ mathrm {BN} $)
+Formalmente, denotando por $\mathbf{x} \in \mathcal{B}$ uma entrada para normalização em lote ($\mathrm{BN}$)
 que é de um minibatch $ \ mathcal {B} $,
 a normalização em lote transforma $ \ mathbf {x} $
 de acordo com a seguinte expressão:
@@ -972,6 +962,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MTc0NDYyNiwtNzQ5MTQ1MDY0LC0xMz
-IxOTgyNTI2LC0xOTU3Nzk0MzM2LDk3OTYxNzMxOF19
+eyJoaXN0b3J5IjpbMTI1NDExMDUwMywtNzQxNzQ0NjI2LC03ND
+kxNDUwNjQsLTEzMjE5ODI1MjYsLTE5NTc3OTQzMzYsOTc5NjE3
+MzE4XX0=
 -->
