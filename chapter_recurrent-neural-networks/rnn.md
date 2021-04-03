@@ -202,15 +202,16 @@ e considere um *modelo de linguagem em nível de caractere*.
 ![Um modelo de linguagem de nível de caractere baseado no RNN. As sequências de entrada e rótulo são "machin" e "achine", respectivamente.](../img/rnn-train.svg)
 :label:`fig_rnn_train`
 
-During the training process,
-we run a softmax operation on the output from the output layer for each time step, and then use the cross-entropy loss to compute the error between the model output and the label.
-Due to the recurrent computation of the hidden state in the hidden layer, the output of time step 3 in :numref:`fig_rnn_train`,
-$\mathbf{O}_3$, is determined by the text sequence "m", "a", and "c". Since the next character of the sequence in the training data is "h", the loss of time step 3 will depend on the probability distribution of the next character generated based on the feature sequence "m", "a", "c" and the label "h" of this time step.
 
-In practice, each token is represented by a $d$-dimensional vector, and we use a batch size $n>1$. Therefore, the input $\mathbf X_t$ at time step $t$ will be a $n\times d$ matrix, which is identical to what we discussed in :numref:`subsec_rnn_w_hidden_states`.
+Durante o processo de treinamento,
+executamos uma operação softmax na saída da camada de saída para cada etapa de tempo e, em seguida, usamos a perda de entropia cruzada para calcular o erro entre a saída do modelo e o rótulo.
+Devido ao cálculo recorrente do estado oculto na camada oculta, a saída da etapa de tempo 3 em :numref:`fig_rnn_train`,
+$\mathbf{O}_3$, é determinada pela sequência de texto "m", "a" e "c". Como o próximo caractere da sequência nos dados de treinamento é "h", a perda de tempo da etapa 3 dependerá da distribuição de probabilidade do próximo caractere gerado com base na sequência de características "m", "a", "c" e o rótulo "h" desta etapa de tempo.
+
+Na prática, cada token é representado por um vetor $d$-dimensional e usamos um tamanho de batch $n>1$. Portanto, a entrada $ \ mathbf X_t $ no passo de tempo $ t $ será uma matriz $\mathbf X_t$, que é idêntica ao que discutimos em :numref:`subsec_rnn_w_hidden_states`.
 
 
-## Perplexity
+## Perplexidade
 :label:`subsec_perplexity`
 
 Last, let us discuss about how to measure the language model quality, which will be used to evaluate our RNN-based models in the subsequent sections.
@@ -292,6 +293,6 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTIwODM0OTAsMTc4MDgxNzMyNSwyMD
-AzNjQxNjU2LDY4MjEwMjkwMCwtODEwNjQ5MDYxXX0=
+eyJoaXN0b3J5IjpbLTUxMjAwNjM5MCwxNzgwODE3MzI1LDIwMD
+M2NDE2NTYsNjgyMTAyOTAwLC04MTA2NDkwNjFdfQ==
 -->
