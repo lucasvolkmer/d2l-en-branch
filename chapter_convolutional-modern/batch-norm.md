@@ -96,15 +96,6 @@ Formalmente, calculamos $\hat{\boldsymbol{\mu}}_\mathcal{B}$ e${\hat{\boldsymbol
 $$\begin{aligned} \hat{\boldsymbol{\mu}}_\mathcal{B} &= \frac{1}{|\mathcal{B}|} \sum_{\mathbf{x} \in \mathcal{B}} \mathbf{x},\\
 \hat{\boldsymbol{\sigma}}_\mathcal{B}^2 &= \frac{1}{|\mathcal{B}|} \sum_{\mathbf{x} \in \mathcal{B}} (\mathbf{x} - \hat{\boldsymbol{\mu}}_{\mathcal{B}})^2 + \epsilon.\end{aligned}$$
 
-Note that we add a small constant $\epsilon > 0$
-to the variance estimate
-to ensure that we never attempt division by zero,
-even in cases where the empirical variance estimate might vanish.
-The estimates $\hat{\boldsymbol{\mu}}_\mathcal{B}$ and ${\hat{\boldsymbol{\sigma}}_\mathcal{B}}$ counteract the scaling issue
-by using noisy estimates of mean and variance.
-You might think that this noisiness should be a problem.
-As it turns out, this is actually beneficial.
-
 Observe que adicionamos uma pequena constante $\epsilon > 0$
 para a estimativa de variância
 para garantir que nunca tentemos a divisão por zero,
@@ -128,13 +119,12 @@ of why batch normalization works best for moderate minibatches sizes in the $50 
 Esse é um tema recorrente no aprendizado profundo.
 Por razões que ainda não são bem caracterizadas teoricamente,
 várias fontes de ruído na otimização
-muitas vezes levam a um treinamento mais rápido e menos sobreajuste:
+muitas vezes levam a um treinamento mais rápido e menor sobreajuste:
 essa variação parece atuar como uma forma de regularização.
-Em algumas pesquisas preliminares,
-: cite: `Teye.Azizpour.Smith.2018` e: cite:` Luo.Wang.Shao.ea.2018`
-relacionar as propriedades de normalização de lote aos antecedentes e penalidades Bayesianas, respectivamente.
+Em algumas pesquisas preliminares, :cite:`Teye.Azizpour.Smith.2018` e :cite:`Luo.Wang.Shao.ea.2018`
+relacionam as propriedades de normalização de lote aos antecedentes e penalidades Bayesianas, respectivamente.
 Em particular, isso lança alguma luz sobre o quebra-cabeça
-de por que a normalização em lote funciona melhor para tamanhos moderados de minibatches na faixa de $ 50 \ sim 100 $.
+de por que a normalização em lote funciona melhor para tamanhos moderados de minibatches na faixa de $50 \sim 100$.
 
 Fixing a trained model, you might think
 that we would prefer using the entire dataset
@@ -936,7 +926,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTk2MzQxMTUsLTE3NzE4NTk4NTYsLT
-c0MTc0NDYyNiwtNzQ5MTQ1MDY0LC0xMzIxOTgyNTI2LC0xOTU3
-Nzk0MzM2LDk3OTYxNzMxOF19
+eyJoaXN0b3J5IjpbMTIwNDA2NDQ0NywtMTc3MTg1OTg1NiwtNz
+QxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5ODI1MjYsLTE5NTc3
+OTQzMzYsOTc5NjE3MzE4XX0=
 -->
