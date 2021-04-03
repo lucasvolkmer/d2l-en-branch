@@ -1,9 +1,9 @@
-# Densely Connected Networks (DenseNet)
+# Redes Densamente Conectadas (DenseNet)
 
 ResNet significantly changed the view of how to parametrize the functions in deep networks. *DenseNet* (dense convolutional network) is to some extent the logical extension of this :cite:`Huang.Liu.Van-Der-Maaten.ea.2017`.
 To understand how to arrive at it, let us take a small detour to mathematics.
 
-A ResNet mudou significativamente a visão de como parametrizar as funções em redes profundas. * DenseNet * (rede convolucional densa) é, até certo ponto, a extensão lógica disso: cite: `Huang.Liu.Van-Der-Maaten.ea.2017`.
+A ResNet mudou significativamente a visão de como parametrizar as funções em redes profundas. *DenseNet* (rede convolucional densa) é, até certo ponto, a extensão lógica disso :cite:`Huang.Liu.Van-Der-Maaten.ea.2017`.
 Para entender como chegar a isso, façamos um pequeno desvio para a matemática.
 
 
@@ -454,5 +454,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1OTU3OTUzNV19
+eyJoaXN0b3J5IjpbMTg1OTQwMTk3MV19
 -->
