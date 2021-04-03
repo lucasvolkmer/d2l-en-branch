@@ -416,28 +416,29 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 ## Exercícios
 
 1. What are the major differences between the Inception block in :numref:`fig_inception` and the residual block? After removing some paths in the Inception block, how are they related to each other?
-1. Refer to Table 1 in the ResNet paper :cite:`He.Zhang.Ren.ea.2016` to
+2. Refer to Table 1 in the ResNet paper :cite:`He.Zhang.Ren.ea.2016` to
    implement different variants.
-1. For deeper networks, ResNet introduces a "bottleneck" architecture to reduce
+3. For deeper networks, ResNet introduces a "bottleneck" architecture to reduce
    model complexity. Try to implement it.
-1. In subsequent versions of ResNet, the authors changed the "convolution, batch
+4. In subsequent versions of ResNet, the authors changed the "convolution, batch
    normalization, and activation" structure to the "batch normalization,
    activation, and convolution" structure. Make this improvement
    yourself. See Figure 1 in :cite:`He.Zhang.Ren.ea.2016*1`
    for details.
-1. Why can't we just increase the complexity of functions without bound, even if the function classes are nested?
+5. Why can't we just increase the complexity of functions without bound, even if the function classes are nested?
 
-1. Quais são as principais diferenças entre o bloco de iniciação em :numref:`fig_inception` e o bloco residual? Depois de remover alguns caminhos no bloco de Iniciação, como eles se relacionam?
-1. Consulte a Tabela 1 no artigo ResNet :cite:`He.Zhang.Ren.ea.2016` para
+6. Quais são as principais diferenças entre o bloco de iniciação em :numref:`fig_inception` e o bloco residual? Depois de remover alguns caminhos no bloco de Iniciação, como eles se relacionam?
+7. Consulte a Tabela 1 no artigo ResNet :cite:`He.Zhang.Ren.ea.2016` para
     implementar variantes diferentes.
-1. Para redes mais profundas, a ResNet apresenta uma arquitetura de "gargalo" para reduzir
+8. Para redes mais profundas, a ResNet apresenta uma arquitetura de "gargalo" para reduzir
     complexidade do modelo. Tente implementá-lo.
-1. Nas versões subsequentes do ResNet, os autores alteraram a configuração "convolução, lote
+9. Nas versões subsequentes do ResNet, os autores alteraram a configuração "convolução, lote
     normalização e ativação "estrutura para a" normalização em lote,
     estrutura de ativação e convolução ". Faça esta melhoria
     você mesmo. Veja a Figura 1 em :cite:`He.Zhang.Ren.ea.2016 * 1`
     para detalhes.
-1. Por que não podemos simplesmente aumentar a complexidade das funções sem limites, mesmo se as classes de função estiverem aninhadas?
+10. Por que não podemos simplesmente aumentar a complexidade das funções sem limites, mesmo se as classes de função estiverem aninhadas?
+ 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/85)
 :end_tab:
@@ -450,7 +451,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMTM5ODI5NSw5Mjk1MzA1OTEsLTE5Mj
+eyJoaXN0b3J5IjpbLTUzMjA1MDc3Nyw5Mjk1MzA1OTEsLTE5Mj
 Y0NjI5MjQsLTkzNzUzMjY0NiwxNDM0MDMxMTI1LDM3NzU4NTU0
 M119
 -->
