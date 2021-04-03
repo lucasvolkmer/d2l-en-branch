@@ -354,9 +354,7 @@ def net():
     return net
 ```
 
-## Training
-
-Since we are using a deeper network here, in this section, we will reduce the input height and width from 224 to 96 to simplify the computation.
+## Treinamento
 
 Como estamos usando uma rede mais profunda aqui, nesta seção, reduziremos a altura e largura de entrada de 224 para 96 para simplificar o cálculo.
 
@@ -367,34 +365,23 @@ train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size, resize=96)
 d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 ```
 
-## Summary
-
-* In terms of cross-layer connections, unlike ResNet, where inputs and outputs are added together, DenseNet concatenates inputs and outputs on the channel dimension.
-* The main components that compose DenseNet are dense blocks and transition layers.
-* We need to keep the dimensionality under control when composing the network by adding transition layers that shrink the number of channels again.
+## Sumário
 
 * Em termos de conexões entre camadas, ao contrário do ResNet, onde entradas e saídas são adicionadas, o DenseNet concatena entradas e saídas na dimensão do canal.
 * Os principais componentes que compõem o DenseNet são blocos densos e camadas de transição.
 * Precisamos manter a dimensionalidade sob controle ao compor a rede, adicionando camadas de transição que reduzem o número de canais novamente.
 
-## Exercises
-
-1. Why do we use average pooling rather than maximum pooling in the transition layer?
-1. One of the advantages mentioned in the DenseNet paper is that its model parameters are smaller than those of ResNet. Why is this the case?
-1. One problem for which DenseNet has been criticized is its high memory consumption.
-    1. Is this really the case? Try to change the input shape to $224\times 224$ to see the actual GPU memory consumption.
-    1. Can you think of an alternative means of reducing the memory consumption? How would you need to change the framework?
-1. Implement the various DenseNet versions presented in Table 1 of the DenseNet paper :cite:`Huang.Liu.Van-Der-Maaten.ea.2017`.
-1. Design an MLP-based model by applying the DenseNet idea. Apply it to the housing price prediction task in :numref:`sec_kaggle_house`.
+## Exercícios
 
 1. Por que usamos pooling médio em vez de pooling máximo na camada de transição?
 1. Uma das vantagens mencionadas no artigo da DenseNet é que seus parâmetros de modelo são menores que os do ResNet. Por que isso acontece?
 1. Um problema pelo qual a DenseNet foi criticada é o alto consumo de memória.
-     1. Este é realmente o caso? Tente alterar a forma de entrada para $ 224 \ vezes 224 $ para ver o consumo real de memória da GPU.
+     1. Este é realmente o caso? Tente alterar a forma de entrada para $224\times 224$ para ver o consumo real de memória da GPU.
      1. Você consegue pensar em um meio alternativo de reduzir o consumo de memória? Como você precisa mudar a estrutura?
-1. Implemente as várias versões da DenseNet apresentadas na Tabela 1 do artigo da DenseNet: cite: `Huang.Liu.Van-Der-Maaten.ea.2017`.
-1. Projete um modelo baseado em MLP aplicando a ideia DenseNet. Aplique-o à tarefa de previsão do preço da habitação em: numref: `sec_kaggle_house`.
+1. Implemente as várias versões da DenseNet apresentadas na Tabela 1 do artigo da DenseNet :cite:`Huang.Liu.Van-Der-Maaten.ea.2017`.
+1. Projete um modelo baseado em MLP aplicando a ideia DenseNet. Aplique-o à tarefa de previsão do preço da habitação em :numref:`sec_kaggle_house`.
 :begin_tab:`mxnet`
+
 [Discussions](https://discuss.d2l.ai/t/87)
 :end_tab:
 
@@ -406,5 +393,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NDk0OTkyOCwxODU5NDAxOTcxXX0=
+eyJoaXN0b3J5IjpbMTA4NjU5OTM2NiwxODU5NDAxOTcxXX0=
 -->
