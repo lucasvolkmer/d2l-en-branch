@@ -199,19 +199,13 @@ de computação de estatísticas de normalização por lote.
 Por exemplo,
 podemos precisar aplicar nosso modelo para fazer uma previsão de cada vez.
 
-Typically, after training, we use the entire dataset
-to compute stable estimates of the variable statistics
-and then fix them at prediction time.
-Consequently, batch normalization behaves differently during training and at test time.
-Recall that dropout also exhibits this characteristic.
-
 Normalmente, após o treinamento, usamos todo o conjunto de dados
 para calcular estimativas estáveis das estatísticas variáveis
 e, em seguida, corrigi-los no momento da previsão.
-Conseqüentemente, a normalização do lote se comporta de maneira diferente durante o treinamento e no momento do teste.
+Consequentemente, a normalização do lote se comporta de maneira diferente durante o treinamento e no momento do teste.
 Lembre-se de que o abandono também exibe essa característica.
 
-## Implementation from Scratch
+## Implementação do Z
 
 Below, we implement a batch normalization layer with tensors from scratch.
 
@@ -841,7 +835,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMjgzNjUzNSwxMTgzMjQ3NzI4LC0xNz
-cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
-MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
+eyJoaXN0b3J5IjpbMzQyNjIzOTY5LDExODMyNDc3MjgsLTE3Nz
+E4NTk4NTYsLTc0MTc0NDYyNiwtNzQ5MTQ1MDY0LC0xMzIxOTgy
+NTI2LC0xOTU3Nzk0MzM2LDk3OTYxNzMxOF19
 -->
