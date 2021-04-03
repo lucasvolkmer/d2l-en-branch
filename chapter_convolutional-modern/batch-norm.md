@@ -105,17 +105,6 @@ usando estimativas ruidosas de média e variância.
 Você pode pensar que esse barulho deve ser um problema.
 Acontece que isso é realmente benéfico.
 
-This turns out to be a recurring theme in deep learning.
-For reasons that are not yet well-characterized theoretically,
-various sources of noise in optimization
-often lead to faster training and less overfitting:
-this variation appears to act as a form of regularization.
-In some preliminary research,
-:cite:`Teye.Azizpour.Smith.2018` and :cite:`Luo.Wang.Shao.ea.2018`
-relate the properties of batch normalization to Bayesian priors and penalties respectively.
-In particular, this sheds some light on the puzzle
-of why batch normalization works best for moderate minibatches sizes in the $50 \sim 100$ range.
-
 Esse é um tema recorrente no aprendizado profundo.
 Por razões que ainda não são bem caracterizadas teoricamente,
 várias fontes de ruído na otimização
@@ -926,7 +915,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNDA2NDQ0NywtMTc3MTg1OTg1NiwtNz
-QxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5ODI1MjYsLTE5NTc3
-OTQzMzYsOTc5NjE3MzE4XX0=
+eyJoaXN0b3J5IjpbMTExMDg1MjU0LC0xNzcxODU5ODU2LC03ND
+E3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4MjUyNiwtMTk1Nzc5
+NDMzNiw5Nzk2MTczMThdfQ==
 -->
