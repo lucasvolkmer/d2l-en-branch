@@ -646,23 +646,6 @@ e comece a escrever seus próprios artigos de pesquisa
 você vai querer ser claro para delinear
 entre afirmações técnicas e palpites.
 
-Following the success of batch normalization,
-its explanation in terms of *internal covariate shift*
-has repeatedly surfaced in debates in the technical literature
-and broader discourse about how to present machine learning research.
-In a memorable speech given while accepting a Test of Time Award
-at the 2017 NeurIPS conference,
-Ali Rahimi used *internal covariate shift*
-as a focal point in an argument likening
-the modern practice of deep learning to alchemy.
-Subsequently, the example was revisited in detail
-in a position paper outlining
-troubling trends in machine learning :cite:`Lipton.Steinhardt.2018`.
-Other authors
-have proposed alternative explanations for the success of batch normalization,
-some claiming that batch normalization's success comes despite exhibiting behavior
-that is in some ways opposite to those claimed in the original paper :cite:`Santurkar.Tsipras.Ilyas.ea.2018`.
-
 Após o sucesso da normalização em lote,
 sua explicação em termos de *mudança interna de covariável*
 tem aparecido repetidamente em debates na literatura técnica
@@ -678,7 +661,7 @@ tendências preocupantes em aprendizado de máquina :cite:`Lipton.Steinhardt.201
 Outros autores
 propuseram explicações alternativas para o sucesso da normalização em lote,
 alguns alegando que o sucesso da normalização em lote vem apesar de exibir comportamento
-isso é, de certa forma, oposto ao afirmado no artigo original :cite:`Santurkar.Tsipras.Ilyas.ea.2018`.
+ ,de certa forma, oposto ao afirmado no artigo original :cite:`Santurkar.Tsipras.Ilyas.ea.2018`.
 
 We note that the *internal covariate shift*
 is no more worthy of criticism than any of
@@ -691,7 +674,7 @@ applied in nearly all deployed image classifiers,
 earning the paper that introduced the technique
 tens of thousands of citations.
 
-Notamos que a * mudança interna da covariável *
+Notamos que a *mudança interna da covariável*
 não é mais digno de crítica do que qualquer um dos
 milhares de afirmações igualmente vagas
 feito todos os anos na literatura técnica de aprendizado de máquina.
@@ -748,8 +731,8 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkzNzg1ODIsMTg4NzEwMTI5MSwxMTgzMj
-Q3NzI4LC0xNzcxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2
-NCwtMTMyMTk4MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ
-==
+eyJoaXN0b3J5IjpbMTcwNTM0NTc2MiwxODg3MTAxMjkxLDExOD
+MyNDc3MjgsLTE3NzE4NTk4NTYsLTc0MTc0NDYyNiwtNzQ5MTQ1
+MDY0LC0xMzIxOTgyNTI2LC0xOTU3Nzk0MzM2LDk3OTYxNzMxOF
+19
 -->
