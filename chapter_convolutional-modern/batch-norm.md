@@ -70,20 +70,7 @@ de acordo com a seguinte expressão:
 $$\mathrm{BN}(\mathbf{x}) = \boldsymbol{\gamma} \odot \frac{\mathbf{x} - \hat{\boldsymbol{\mu}}_\mathcal{B}}{\hat{\boldsymbol{\sigma}}_\mathcal{B}} + \boldsymbol{\beta}.$$
 :eqlabel:`eq_batchnorm`
 
-In :eqref:`eq_batchnorm`,
-$\hat{\boldsymbol{\mu}}_\mathcal{B}$ is the  sample mean
-and $\hat{\boldsymbol{\sigma}}_\mathcal{B}$ is the sample standard deviation of the minibatch $\mathcal{B}$.
-After applying standardization,
-the resulting minibatch
-has zero mean and unit variance.
-Because the choice of unit variance
-(vs. some other magic number) is an arbitrary choice,
-we commonly include elementwise
-*scale parameter* $\boldsymbol{\gamma}$ and *shift parameter* $\boldsymbol{\beta}$
-that have the same shape as $\mathbf{x}$.
-Note that $\boldsymbol{\gamma}$ and $\boldsymbol{\beta}$ are
- parameters that need to be learned jointly with the other model parameters.
- 
+In :eqref:`eq_batchnorm`, 
 $\hat{\boldsymbol{\mu}}_\mathcal{B}$ é a média da amostra
 e $\hat{\boldsymbol{\sigma}}_\mathcal{B}$ é o desvio padrão da amostra do minibatch $\mathcal{B}$.
 Depois de aplicar a padronização,
@@ -92,7 +79,7 @@ tem média zero e variância unitária.
 Porque a escolha da variação da unidade
 (vs. algum outro número mágico) é uma escolha arbitrária,
 normalmente incluímos elemento a elemento
-* parâmetro de escala * $\boldsymbol{\gamma}$ e * parâmetro de deslocamento * $\boldsymbol{\beta}$
+*parâmetro de escala* $\boldsymbol{\gamma}$ e *parâmetro de deslocamento* $\boldsymbol{\beta}$
 que tem a mesma forma de $\mathbf{x}$.
 Observe que $\boldsymbol{\gamma}$ e$\boldsymbol{\beta}$ são
   parâmetros que precisam ser aprendidos em conjunto com os outros parâmetros do modelo.
@@ -957,7 +944,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzE4NTk4NTYsLTc0MTc0NDYyNiwtNz
-Q5MTQ1MDY0LC0xMzIxOTgyNTI2LC0xOTU3Nzk0MzM2LDk3OTYx
-NzMxOF19
+eyJoaXN0b3J5IjpbLTI1MTg0ODc0MiwtMTc3MTg1OTg1NiwtNz
+QxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5ODI1MjYsLTE5NTc3
+OTQzMzYsOTc5NjE3MzE4XX0=
 -->
