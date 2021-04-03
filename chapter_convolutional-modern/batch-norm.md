@@ -198,7 +198,7 @@ Suponha que nossos minibatches contenham $m$ exemplos
 e isso para cada canal,
 a saída da convolução tem altura $p$ e largura $q$.
 Para camadas convolucionais, realizamos a normalização de cada lote
-nos elementos $ m \ cdot p \ cdot q $ por canal de saída simultaneamente.
+nos elementos $m \cdot p \cdot q$ por canal de saída simultaneamente.
 Assim, coletamos os valores de todas as localizações espaciais
 ao calcular a média e a variância
 e consequentemente
@@ -207,7 +207,7 @@ dentro de um determinado canal
 para normalizar o valor em cada localização espacial.
 
 
-### Batch Normalization During Prediction
+### Normalização de Lotes Durante Predição
 
 As we mentioned earlier, batch normalization typically behaves differently
 in training mode and prediction mode.
@@ -871,7 +871,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3ODQ5NjY1NCwxMTgzMjQ3NzI4LC0xNz
+eyJoaXN0b3J5IjpbLTE5NDE3ODQzMSwxMTgzMjQ3NzI4LC0xNz
 cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
 MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
