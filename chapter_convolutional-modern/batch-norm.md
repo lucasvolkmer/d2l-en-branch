@@ -538,12 +538,6 @@ tf.reshape(net.layers[1].gamma, (-1,)), tf.reshape(net.layers[1].beta, (-1,))
 
 ## Implementação Concisa
 
-Compared with the `BatchNorm` class,
-which we just defined ourselves,
-we can use the `BatchNorm` class defined in high-level APIs from the deep learning framework directly.
-The code looks virtually identical
-to the application our implementation above.
-
 Comparado com a classe `BatchNorm`,
 que acabamos de definir a nós mesmos,
 podemos usar a classe `BatchNorm` definida em APIs de alto nível diretamente do framework de aprendizado profundo.
@@ -604,12 +598,6 @@ def net():
         tf.keras.layers.Dense(10),
     ])
 ```
-
-Below, we use the same hyperparameters to train our model.
-Note that as usual, the high-level API variant runs much faster
-because its code has been compiled to C++ or CUDA
-while our custom implementation must be interpreted by Python.
-
 Abaixo, usamos os mesmos hiperparâmetros para treinar nosso modelo.
 Observe que, como de costume, a variante de API de alto nível é executada muito mais rápido
 porque seu código foi compilado para C ++ ou CUDA
@@ -620,7 +608,7 @@ enquanto nossa implementação customizada deve ser interpretada por Python.
 d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 ```
 
-## Controversy
+## Controvérsia
 
 Intuitively, batch normalization is thought
 to make the optimization landscape smoother.
@@ -796,7 +784,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2Mzk3MjAyMiwxMTgzMjQ3NzI4LC0xNz
+eyJoaXN0b3J5IjpbMTkzNzc4NTQ5MiwxMTgzMjQ3NzI4LC0xNz
 cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
 MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
