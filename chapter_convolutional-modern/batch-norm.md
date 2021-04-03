@@ -663,17 +663,6 @@ propuseram explicações alternativas para o sucesso da normalização em lote,
 alguns alegando que o sucesso da normalização em lote vem apesar de exibir comportamento
  ,de certa forma, oposto ao afirmado no artigo original :cite:`Santurkar.Tsipras.Ilyas.ea.2018`.
 
-We note that the *internal covariate shift*
-is no more worthy of criticism than any of
-thousands of similarly vague claims
-made every year in the technical machine learning literature.
-Likely, its resonance as a focal point of these debates
-owes to its broad recognizability to the target audience.
-Batch normalization has proven an indispensable method,
-applied in nearly all deployed image classifiers,
-earning the paper that introduced the technique
-tens of thousands of citations.
-
 Notamos que a *mudança interna da covariável*
 não é mais digna de crítica do que qualquer uma dos
 milhares de afirmações igualmente vagas
@@ -688,27 +677,12 @@ dezenas de milhares de citações.
 
 ## Sumário
 
-* During model training, batch normalization continuously adjusts the intermediate output of the neural network by utilizing the mean and standard deviation of the minibatch, so that the values of the intermediate output in each layer throughout the neural network are more stable.
-* The batch normalization methods for fully-connected layers and convolutional layers are slightly different.
-* Like a dropout layer, batch normalization layers have different computation results in training mode and prediction mode.
-* Batch normalization has many beneficial side effects, primarily that of regularization. On the other hand, the original motivation of reducing internal covariate shift seems not to be a valid explanation.
-
 * Durante o treinamento do modelo, a normalização em lote ajusta continuamente a saída intermediária da rede neural, utilizando a média e o desvio padrão do minibatch, de modo que os valores da saída intermediária em cada camada em toda a rede neural sejam mais estáveis.
 * Os métodos de normalização de lote para camadas totalmente conectadas e camadas convolucionais são ligeiramente diferentes.
 * Como uma camada de eliminação, as camadas de normalização em lote têm resultados de computação diferentes no modo de treinamento e no modo de previsão.
 * A normalização em lote tem muitos efeitos colaterais benéficos, principalmente o da regularização. Por outro lado, a motivação original de reduzir a mudança interna da covariável parece não ser uma explicação válida.
 
-## Exercises
-
-1. Can we remove the bias parameter from the fully-connected layer or the convolutional layer before the batch normalization? Why?
-1. Compare the learning rates for LeNet with and without batch normalization.
-    1. Plot the increase in training and test accuracy.
-    1. How large can you make the learning rate?
-1. Do we need batch normalization in every layer? Experiment with it?
-1. Can you replace dropout by batch normalization? How does the behavior change?
-1. Fix the parameters `beta` and `gamma`, and observe and analyze the results.
-1. Review the online documentation for `BatchNorm` from the high-level APIs to see the other applications for batch normalization.
-1. Research ideas: think of other normalization transforms that you can apply? Can you apply the probability integral transform? How about a full rank covariance estimate?
+## Exercícios
 
 1. Podemos remover o parâmetro de polarização da camada totalmente conectada ou da camada convolucional antes da normalização do lote? Porque?
 1. Compare as taxas de aprendizagem para LeNet com e sem normalização de lote.
@@ -719,6 +693,7 @@ dezenas de milhares de citações.
 1. Fixe os parâmetros `beta` e` gamma`, observe e analise os resultados.
 1. Revise a documentação online para `BatchNorm` das APIs de alto nível para ver os outros aplicativos para normalização de lote.
 1. Ideias de pesquisa: pense em outras transformações de normalização que você pode aplicar? Você pode aplicar a transformação integral de probabilidade? Que tal uma estimativa de covariância de classificação completa?
+
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/83)
 :end_tab:
@@ -731,7 +706,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTY5MDQ0NTIsMTcwNTM0NTc2MiwxOD
+eyJoaXN0b3J5IjpbLTIwNzExMTQ0MTIsMTcwNTM0NTc2MiwxOD
 g3MTAxMjkxLDExODMyNDc3MjgsLTE3NzE4NTk4NTYsLTc0MTc0
 NDYyNiwtNzQ5MTQ1MDY0LC0xMzIxOTgyNTI2LC0xOTU3Nzk0Mz
 M2LDk3OTYxNzMxOF19
