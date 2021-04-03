@@ -256,18 +256,19 @@ Isso torna o desempenho em documentos de comprimentos diferentes comparáveis. P
 
 $$\exp\left(-\frac{1}{n} \sum_{t=1}^n \log P(x_t \mid x_{t-1}, \ldots, x_1)\right).$$
 
-Perplexity can be best understood as the harmonic mean of the number of real choices that we have when deciding which token to pick next. Let us look at a number of cases:
 
-* In the best case scenario, the model always perfectly estimates the probability of the label token as 1. In this case the perplexity of the model is 1.
-* In the worst case scenario, the model always predicts the probability of the label token as 0. In this situation, the perplexity is positive infinity.
-* At the baseline, the model predicts a uniform distribution over all the available tokens of the vocabulary. In this case, the perplexity equals the number of unique tokens of the vocabulary. In fact, if we were to store the sequence without any compression, this would be the best we could do to encode it. Hence, this provides a nontrivial upper bound that any useful model must beat.
+A perplexidade pode ser melhor entendida como a média harmônica do número de escolhas reais que temos ao decidir qual ficha escolher a seguir. Vejamos alguns casos:
 
-In the following sections, we will implement RNNs
-for character-level language models and use perplexity
-to evaluate such models.
+* No melhor cenário, o modelo sempre estima perfeitamente a probabilidade do token de rótulo como 1. Nesse caso, a perplexidade do modelo é 1.
+* No pior cenário, o modelo sempre prevê a probabilidade do token de rótulo como 0. Nessa situação, a perplexidade é infinita positiva.
+* Na linha de base, o modelo prevê uma distribuição uniforme de todos os tokens disponíveis do vocabulário. Nesse caso, a perplexidade é igual ao número de tokens exclusivos do vocabulário. Na verdade, se armazenássemos a sequência sem nenhuma compressão, seria o melhor que poderíamos fazer para codificá-la. Conseqüentemente, isso fornece um limite superior não trivial que qualquer modelo útil deve superar.
+
+Nas seções a seguir, implementaremos RNNs
+para modelos de linguagem em nível de personagem e usaremos perplexidade
+para avaliar tais modelos.
 
 
-## Summary
+## Resumo
 
 * A neural network that uses recurrent computation for hidden states is called a recurrent neural network (RNN).
 * The hidden state of an RNN can capture historical information of the sequence up to the current time step.
@@ -295,6 +296,6 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMTcwNzA2NywxNzgwODE3MzI1LDIwMD
-M2NDE2NTYsNjgyMTAyOTAwLC04MTA2NDkwNjFdfQ==
+eyJoaXN0b3J5IjpbLTEyMjUyNzAyOTcsMTc4MDgxNzMyNSwyMD
+AzNjQxNjU2LDY4MjEwMjkwMCwtODEwNjQ5MDYxXX0=
 -->
