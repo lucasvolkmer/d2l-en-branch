@@ -437,12 +437,6 @@ class BatchNorm(tf.keras.layers.Layer):
 
 ## Aplicando Normalização de Lotes em LeNet
 
-To see how to apply `BatchNorm` in context,
-below we apply it to a traditional LeNet model (:numref:`sec_lenet`).
-Recall that batch normalization is applied
-after the convolutional layers or fully-connected layers
-but before the corresponding activation functions.
-
 Para ver como aplicar `BatchNorm` no contexto,
 abaixo nós o aplicamos a um modelo LeNet tradicional (:numref:`sec_lenet`).
 Lembre-se de que a normalização de lote é aplicada
@@ -506,13 +500,8 @@ def net():
         tf.keras.layers.Dense(10)]
     )
 ```
-
-As before, we will train our network on the Fashion-MNIST dataset.
-This code is virtually identical to that when we first trained LeNet (:numref:`sec_lenet`).
-The main difference is the considerably larger learning rate.
-
 Como antes, treinaremos nossa rede no conjunto de dados Fashion-MNIST.
-Este código é virtualmente idêntico àquele quando treinamos o LeNet pela primeira vez (: numref: `sec_lenet`).
+Este código é virtualmente idêntico àquele quando treinamos o LeNet pela primeira vez (:numref:`sec_lenet`).
 A principal diferença é a taxa de aprendizagem consideravelmente maior.
 
 ```{.python .input}
@@ -529,12 +518,8 @@ train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
 net = d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 ```
 
-Let us have a look at the scale parameter `gamma`
-and the shift parameter `beta` learned
-from the first batch normalization layer.
-
 Vamos dar uma olhada no parâmetro de escala `gamma`
-e o parâmetro shift `beta` aprendeu
+e o parâmetro *shift* `beta` aprendeu
 da primeira camada de normalização de lote.
 
 ```{.python .input}
@@ -551,7 +536,7 @@ net[1].gamma.reshape((-1,)), net[1].beta.reshape((-1,))
 tf.reshape(net.layers[1].gamma, (-1,)), tf.reshape(net.layers[1].beta, (-1,))
 ```
 
-## Concise Implementation
+## Implementação Concisa
 
 Compared with the `BatchNorm` class,
 which we just defined ourselves,
@@ -811,7 +796,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTA4Njk5MTQsMTE4MzI0NzcyOCwtMT
-c3MTg1OTg1NiwtNzQxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5
-ODI1MjYsLTE5NTc3OTQzMzYsOTc5NjE3MzE4XX0=
+eyJoaXN0b3J5IjpbLTI2Mzk3MjAyMiwxMTgzMjQ3NzI4LC0xNz
+cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
+MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
