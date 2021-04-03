@@ -1,4 +1,4 @@
-# Implementation of Recurrent Neural Networks from Scratchção de Redes Neurais Recorrentes do Zero
+# Implementação de Redes Neurais Recorrentes do Zero
 :label:`sec_rnn_scratch`
 
 In this section we will implement an RNN
@@ -828,5 +828,5 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ0NDQwNjldfQ==
+eyJoaXN0b3J5IjpbLTEwNjczNTI4MzhdfQ==
 -->
