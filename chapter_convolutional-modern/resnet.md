@@ -1,16 +1,12 @@
-# Residual Networks (ResNet)
+# Redes Residuais (ResNet)
 :label:`sec_resnet`
-
-As we design increasingly deeper networks it becomes imperative to understand how adding layers can increase the complexity and expressiveness of the network.
-Even more important is the ability to design networks where adding layers makes networks strictly more expressive rather than just different.
-To make some progress we need a bit of mathematics.
 
 À medida que projetamos redes cada vez mais profundas, torna-se imperativo entender como a adição de camadas pode aumentar a complexidade e a expressividade da rede.
 Ainda mais importante é a capacidade de projetar redes onde adicionar camadas torna as redes estritamente mais expressivas, em vez de apenas diferentes.
 Para fazer algum progresso, precisamos de um pouco de matemática.
 
 
-## Function Classes
+## Classes Função
 
 Consider $\mathcal{F}$, the class of functions that a specific network architecture (together with learning rates and other hyperparameter settings) can reach.
 That is, for all $f \in \mathcal{F}$ there exists some set of parameters (e.g., weights and biases) that can be obtained through training on a suitable dataset.
@@ -22,13 +18,13 @@ given a dataset with features $\mathbf{X}$
 and labels $\mathbf{y}$,
 we might try finding it by solving the following optimization problem:
 
-Considere $ \ mathcal {F} $, a classe de funções que uma arquitetura de rede específica (junto com as taxas de aprendizado e outras configurações de hiperparâmetros) pode alcançar.
-Ou seja, para todos os $ f \ in \ mathcal {F} $ existe algum conjunto de parâmetros (por exemplo, pesos e vieses) que podem ser obtidos através do treinamento em um conjunto de dados adequado.
-Vamos supor que $ f ^ * $ seja a função "verdade" que realmente gostaríamos de encontrar.
-Se estiver em $ \ mathcal {F} $, estamos em boa forma, mas normalmente não teremos tanta sorte.
-Em vez disso, tentaremos encontrar $ f ^ * _ \ mathcal {F} $, que é nossa melhor aposta em $ \ mathcal {F} $.
+Considere $\mathcal{F}$, a classe de funções que uma arquitetura de rede específica (junto com as taxas de aprendizado e outras configurações de hiperparâmetros) pode alcançar.
+Ou seja, para todos os $f \in \mathcal{F}$ existe algum conjunto de parâmetros (por exemplo, pesos e vieses) que podem ser obtidos através do treinamento em um conjunto de dados adequado.
+Vamos supor que $f^*$ seja a função "verdade" que realmente gostaríamos de encontrar.
+Se estiver em $\mathcal{F}$, estamos em boa forma, mas normalmente não teremos tanta sorte.
+Em vez disso, tentaremos encontrar $f^*_\mathcal{F}$, que é nossa melhor aposta em $\mathcal{F}$.
 Por exemplo,
-dado um conjunto de dados com recursos $ \ mathbf {X} $
+dado um conjunto de dados com recursos $\mathbf{X}$
 e rótulos $ \ mathbf {y} $,
 podemos tentar encontrá-lo resolvendo o seguinte problema de otimização:
 
@@ -552,5 +548,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTAwNDgxNDFdfQ==
+eyJoaXN0b3J5IjpbMTg5MTk0MTQ4NV19
 -->
