@@ -75,15 +75,15 @@ $\mathbf{x}$ para o operador de adição
 Com blocos residuais, as entradas podem
 para a frente se propagam mais rápido através das conexões residuais entre as camadas.
 
-![A regular block (left) and a residual block (right).](../img/residual-block.svg)
+![Um bloco regular (esquerda) e um bloco residual (direita).](../img/residual-block.svg)
 :label:`fig_residual_block`
 
 
 ResNet follows VGG's full $3\times 3$ convolutional layer design. The residual block has two $3\times 3$ convolutional layers with the same number of output channels. Each convolutional layer is followed by a batch normalization layer and a ReLU activation function. Then, we skip these two convolution operations and add the input directly before the final ReLU activation function.
 This kind of design requires that the output of the two convolutional layers has to be of the same shape as the input, so that they can be added together. If we want to change the number of channels, we need to introduce an additional $1\times 1$ convolutional layer to transform the input into the desired shape for the addition operation. Let us have a look at the code below.
 
-ResNet segue o design de camada convolucional $ 3 \ times 3 $ completo do VGG. O bloco residual tem duas camadas convolucionais $ 3 \ vezes 3 $ com o mesmo número de canais de saída. Cada camada convolucional é seguida por uma camada de normalização em lote e uma função de ativação ReLU. Em seguida, pulamos essas duas operações de convolução e adicionamos a entrada diretamente antes da função de ativação final do ReLU.
-Esse tipo de projeto requer que a saída das duas camadas convolucionais tenha o mesmo formato da entrada, para que possam ser somadas. Se quisermos mudar o número de canais, precisamos introduzir uma camada convolucional adicional $ 1 \ vezes 1 $ para transformar a entrada na forma desejada para a operação de adição. Vamos dar uma olhada no código abaixo.
+ResNet segue o design de camada convolucional  $3\times 3$ completo do VGG. O bloco residual tem duas camadas convolucionais $3\times 3$ com o mesmo número de canais de saída. Cada camada convolucional é seguida por uma camada de normalização em lote e uma função de ativação ReLU. Em seguida, pulamos essas duas operações de convolução e adicionamos a entrada diretamente antes da função de ativação final do ReLU.
+Esse tipo de projeto requer que a saída das duas camadas convolucionais tenha o mesmo formato da entrada, para que possam ser somadas. Se quisermos mudar o número de canais, precisamos introduzir uma camada convolucional adicional $1\times 1$ para transformar a entrada na forma desejada para a operação de adição. Vamos dar uma olhada no código abaixo.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -487,6 +487,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg1NjE2MDAxLDE0MzQwMzExMjUsMzc3NT
-g1NTQzXX0=
+eyJoaXN0b3J5IjpbLTkzNzUzMjY0NiwxNDM0MDMxMTI1LDM3Nz
+U4NTU0M119
 -->
