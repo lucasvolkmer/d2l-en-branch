@@ -109,7 +109,7 @@ Observe que adicionamos uma pequena constante $\epsilon > 0$
 para a estimativa de variância
 para garantir que nunca tentemos a divisão por zero,
 mesmo nos casos em que a estimativa de variância empírica pode desaparecer.
-As estimativas $ \ hat {\ boldsymbol {\ mu}} _ \ mathcal {B} $ e $ {\ hat {\ boldsymbol {\ sigma}} _ \ mathcal {B}} $ neutralizam o problema de escala
+As estimativas $\hat{\boldsymbol{\mu}}_\mathcal{B}$ e ${\hat{\boldsymbol{\sigma}}_\mathcal{B}}$ neutralizam o problema de escala
 usando estimativas ruidosas de média e variância.
 Você pode pensar que esse barulho deve ser um problema.
 Acontece que isso é realmente benéfico.
@@ -936,7 +936,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDM0MDg2OTUsLTE3NzE4NTk4NTYsLT
+eyJoaXN0b3J5IjpbLTE1OTk2MzQxMTUsLTE3NzE4NTk4NTYsLT
 c0MTc0NDYyNiwtNzQ5MTQ1MDY0LC0xMzIxOTgyNTI2LC0xOTU3
 Nzk0MzM2LDk3OTYxNzMxOF19
 -->
