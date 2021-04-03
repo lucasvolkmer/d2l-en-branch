@@ -148,13 +148,9 @@ class DenseBlock(tf.keras.layers.Layer):
         return x
 ```
 
-In the following example,
-we define a `DenseBlock` instance with 2 convolution blocks of 10 output channels.
-When using an input with 3 channels, we will get an output with  $3+2\times 10=23$ channels. The number of convolution block channels controls the growth in the number of output channels relative to the number of input channels. This is also referred to as the *growth rate*.
-
 No exemplo a seguir,
 definimos uma instância `DenseBlock` com 2 blocos de convolução de 10 canais de saída.
-Ao usar uma entrada com 3 canais, obteremos uma saída com $ 3 + 2 \ vezes 10 = 23 $ canais. O número de canais de bloco de convolução controla o crescimento do número de canais de saída em relação ao número de canais de entrada. Isso também é conhecido como * taxa de crescimento *.
+Ao usar uma entrada com 3 canais, obteremos uma saída com $3+2\times 10=23$ canais. O número de canais de bloco de convolução controla o crescimento do número de canais de saída em relação ao número de canais de entrada. Isso também é conhecido como *taxa de crescimento*.
 
 ```{.python .input}
 blk = DenseBlock(2, 10)
@@ -180,11 +176,9 @@ Y = blk(X)
 Y.shape
 ```
 
-## Transition Layers
+## Camadas de Transição
 
-Since each dense block will increase the number of channels, adding too many of them will lead to an excessively complex model. A *transition layer* is used to control the complexity of the model. It reduces the number of channels by using the $1\times 1$ convolutional layer and halves the height and width of the average pooling layer with a stride of 2, further reducing the complexity of the model.
-
-Uma vez que cada bloco denso aumentará o número de canais, adicionar muitos deles levará a um modelo excessivamente complexo. Uma * camada de transição * é usada para controlar a complexidade do modelo. Ele reduz o número de canais usando a camada convolucional $ 1 \ vezes 1 $ e divide pela metade a altura e a largura da camada de pooling média com uma distância de 2, reduzindo ainda mais a complexidade do modelo.
+Uma vez que cada bloco denso aumentará o número de canais, adicionar muitos deles levará a um modelo excessivamente complexo. Uma *camada de transição* é usada para controlar a complexidade do modelo. Ele reduz o número de canais usando a camada convolucional $1\times 1$ e divide pela metade a altura e a largura da camada de pooling média com uma distância de 2, reduzindo ainda mais a complexidade do modelo.
 
 ```{.python .input}
 def transition_block(num_channels):
@@ -221,8 +215,6 @@ class TransitionBlock(tf.keras.layers.Layer):
         return self.avg_pool(x)
 ```
 
-Apply a transition layer with 10 channels to the output of the dense block in the previous example.  This reduces the number of output channels to 10, and halves the height and width.
-
 Aplique uma camada de transição com 10 canais à saída do bloco denso no exemplo anterior. Isso reduz o número de canais de saída para 10 e divide a altura e a largura pela metade.
 
 ```{.python .input}
@@ -243,7 +235,7 @@ blk = TransitionBlock(10)
 blk(Y).shape
 ```
 
-## DenseNet Model
+## Modelo DenseNet 
 
 Next, we will construct a DenseNet model. DenseNet first uses the same single convolutional layer and maximum pooling layer as in ResNet.
 
@@ -425,5 +417,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MTgyMjc4LDE4NTk0MDE5NzFdfQ==
+eyJoaXN0b3J5IjpbLTE5NjA3NTY1MjMsMTg1OTQwMTk3MV19
 -->
