@@ -153,8 +153,8 @@ das variáveis de cada camada com base em todo o conjunto de dados.
 Na verdade, esta é uma prática padrão para
 modelos que empregam normalização em lote
 e, portanto, as camadas de normalização em lote funcionam de maneira diferente
-no * modo de treinamento * (normalizando por estatísticas de minibatch)
-e no * modo de previsão * (normalizando por estatísticas do conjunto de dados).
+no *modo de treinamento* (normalizando por estatísticas de minibatch)
+e no *modo de previsão* (normalizando por estatísticas do conjunto de dados).
 
 Agora estamos prontos para dar uma olhada em como a normalização em lote funciona na prática.
 
@@ -915,7 +915,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDg1MjU0LC0xNzcxODU5ODU2LC03ND
-E3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4MjUyNiwtMTk1Nzc5
-NDMzNiw5Nzk2MTczMThdfQ==
+eyJoaXN0b3J5IjpbMTE4MzI0NzcyOCwtMTc3MTg1OTg1NiwtNz
+QxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5ODI1MjYsLTE5NTc3
+OTQzMzYsOTc5NjE3MzE4XX0=
 -->
