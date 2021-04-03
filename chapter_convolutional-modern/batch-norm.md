@@ -675,9 +675,9 @@ earning the paper that introduced the technique
 tens of thousands of citations.
 
 Notamos que a *mudança interna da covariável*
-não é mais digno de crítica do que qualquer um dos
+não é mais digna de crítica do que qualquer uma dos
 milhares de afirmações igualmente vagas
-feito todos os anos na literatura técnica de aprendizado de máquina.
+feitas todos os anos na literatura técnica de aprendizado de máquina.
 Provavelmente, sua ressonância como ponto focal desses debates
 deve-se ao seu amplo reconhecimento pelo público-alvo.
 A normalização em lote provou ser um método indispensável,
@@ -686,7 +686,7 @@ ganhando o papel que introduziu a técnica
 dezenas de milhares de citações.
 
 
-## Summary
+## Sumário
 
 * During model training, batch normalization continuously adjusts the intermediate output of the neural network by utilizing the mean and standard deviation of the minibatch, so that the values of the intermediate output in each layer throughout the neural network are more stable.
 * The batch normalization methods for fully-connected layers and convolutional layers are slightly different.
@@ -731,8 +731,8 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNTM0NTc2MiwxODg3MTAxMjkxLDExOD
-MyNDc3MjgsLTE3NzE4NTk4NTYsLTc0MTc0NDYyNiwtNzQ5MTQ1
-MDY0LC0xMzIxOTgyNTI2LC0xOTU3Nzk0MzM2LDk3OTYxNzMxOF
-19
+eyJoaXN0b3J5IjpbLTE4NTY5MDQ0NTIsMTcwNTM0NTc2MiwxOD
+g3MTAxMjkxLDExODMyNDc3MjgsLTE3NzE4NTk4NTYsLTc0MTc0
+NDYyNiwtNzQ5MTQ1MDY0LC0xMzIxOTgyNTI2LC0xOTU3Nzk0Mz
+M2LDk3OTYxNzMxOF19
 -->
