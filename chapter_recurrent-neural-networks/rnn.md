@@ -229,29 +229,30 @@ Em termos de qualidade, o exemplo 1 é claramente o melhor. As palavras são sen
 Embora possa não refletir com muita precisão qual palavra segue semanticamente ("em São Francisco" e "no inverno" seriam extensões perfeitamente razoáveis), o modelo é capaz de capturar qual tipo de palavra se segue.
 O exemplo 2 é consideravelmente pior ao produzir uma extensão sem sentido. No entanto, pelo menos o modelo aprendeu como soletrar palavras e algum grau de correlação entre as palavras. Por último, o exemplo 3 indica um modelo mal treinado que não ajusta os dados adequadamente.
 
-We might measure the quality of the model by computing  the likelihood of the sequence.
-Unfortunately this is a number that is hard to understand and difficult to compare.
-After all, shorter sequences are much more likely to occur than the longer ones,
-hence evaluating the model on Tolstoy's magnum opus
-*War and Peace* will inevitably produce a much smaller likelihood than, say, on Saint-Exupery's novella *The Little Prince*. What is missing is the equivalent of an average.
 
-Information theory comes handy here.
-We have defined entropy, surprisal, and cross-entropy 
-when we introduced the softmax regression
+Podemos medir a qualidade do modelo calculando a probabilidade da sequência.
+Infelizmente, esse é um número difícil de entender e difícil de comparar.
+Afinal, as sequências mais curtas têm muito mais probabilidade de ocorrer do que as mais longas,
+portanto, avaliando o modelo na magnum opus de Tolstoy
+*Guerra e paz* produzirá inevitavelmente uma probabilidade muito menor do que, digamos, na novela de Saint-Exupéry *O Pequeno Príncipe*. O que falta equivale a uma média.
+
+A teoria da informação é útil aqui.
+Definimos entropia, surpresa e entropia cruzada
+quando introduzimos a regressão softmax
 (:numref:`subsec_info_theory_basics`)
-and more of information theory is discussed in the [online appendix on information theory](https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/information-theory.html).
-If we want to compress text, we can ask about
-predicting the next token given the current set of tokens.
-A better language model should allow us to predict the next token more accurately.
-Thus, it should allow us to spend fewer bits in compressing the sequence.
-So we can measure it by the cross-entropy loss averaged
-over all the $n$ tokens of a sequence:
+e mais sobre a teoria da informação é discutido no [apêndice online sobre teoria da informação](https://d2l.ai/chapter_apencha-mathematics-for-deep-learning/information-theory.html).
+Se quisermos compactar o texto, podemos perguntar sobre
+prever o próximo token dado o conjunto atual de tokens.
+Um modelo de linguagem melhor deve nos permitir prever o próximo token com mais precisão.
+Assim, deve permitir-nos gastar menos bits na compressão da sequência.
+Então, podemos medi-lo pela perda de entropia cruzada média
+sobre todos os $n$ tokens de uma sequência:
 
 $$\frac{1}{n} \sum_{t=1}^n -\log P(x_t \mid x_{t-1}, \ldots, x_1),$$
 :eqlabel:`eq_avg_ce_for_lm`
 
-where $P$ is given by a language model and $x_t$ is the actual token observed at time step $t$ from the sequence.
-This makes the performance on documents of different lengths comparable. For historical reasons, scientists in natural language processing prefer to use a quantity called *perplexity*. In a nutshell, it is the exponential of :eqref:`eq_avg_ce_for_lm`:
+onde $P$ é dado por um modelo de linguagem e $x_t$ é o token real observado no passo de tempo $t$ da sequência.
+Isso torna o desempenho em documentos de comprimentos diferentes comparáveis. Por razões históricas, os cientistas do processamento de linguagem natural preferem usar uma quantidade chamada *perplexidade*. Em poucas palavras, é a exponencial de :eqref:`eq_avg_ce_for_lm`:
 
 $$\exp\left(-\frac{1}{n} \sum_{t=1}^n \log P(x_t \mid x_{t-1}, \ldots, x_1)\right).$$
 
@@ -294,6 +295,6 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTgwNTczODIsMTc4MDgxNzMyNSwyMD
-AzNjQxNjU2LDY4MjEwMjkwMCwtODEwNjQ5MDYxXX0=
+eyJoaXN0b3J5IjpbMTkyMTcwNzA2NywxNzgwODE3MzI1LDIwMD
+M2NDE2NTYsNjgyMTAyOTAwLC04MTA2NDkwNjFdfQ==
 -->
