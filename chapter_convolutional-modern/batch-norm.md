@@ -191,12 +191,12 @@ podemos aplicar a normalização de lote após a convolução
 e antes da função de ativação não linear.
 Quando a convolução tem vários canais de saída,
 precisamos realizar a normalização do lote
-para * cada * uma das saídas desses canais,
+para *cada* uma das saídas desses canais,
 e cada canal tem sua própria escala e parâmetros de deslocamento,
 ambos são escalares.
-Suponha que nossos minibatches contenham $ m $ exemplos
+Suponha que nossos minibatches contenham $m$ exemplos
 e isso para cada canal,
-a saída da convolução tem altura $ p $ e largura $ q $.
+a saída da convolução tem altura $p$ e largura $q$.
 Para camadas convolucionais, realizamos a normalização de cada lote
 nos elementos $ m \ cdot p \ cdot q $ por canal de saída simultaneamente.
 Assim, coletamos os valores de todas as localizações espaciais
@@ -871,7 +871,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjE1MDIxNjQsMTE4MzI0NzcyOCwtMT
-c3MTg1OTg1NiwtNzQxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5
-ODI1MjYsLTE5NTc3OTQzMzYsOTc5NjE3MzE4XX0=
+eyJoaXN0b3J5IjpbLTk3ODQ5NjY1NCwxMTgzMjQ3NzI4LC0xNz
+cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
+MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
