@@ -86,17 +86,17 @@ a parte dentro da caixa de linha pontilhada
 precisa de
 aprenda o *mapeamento residual* $f(\mathbf{x}) - \mathbf{x}$,
 que é como o bloco residual deriva seu nome.
-Se o mapeamento de identidade $ f (\ mathbf {x}) = \ mathbf {x} $ for o mapeamento subjacente desejado,
+Se o mapeamento de identidade $f(\mathbf{x}) = \mathbf{x}$ for o mapeamento subjacente desejado,
 o mapeamento residual é mais fácil de aprender:
 nós só precisamos empurrar os pesos e preconceitos
 do
 camada de peso superior (por exemplo, camada totalmente conectada e camada convolucional)
 dentro da caixa de linha pontilhada
 a zero.
-A figura certa em: numref: `fig_residual_block` ilustra o * bloco residual * do ResNet,
+A figura certa em :numref:`fig_residual_block` ilustra o *bloco residual* do ResNet,
 onde a linha sólida carregando a entrada da camada
-$ \ mathbf {x} $ para o operador de adição
-é chamada de * conexão residual * (ou * conexão de atalho *).
+$\mathbf{x}$ para o operador de adição
+é chamada de *conexão residual* (ou *conexão de atalho*).
 Com blocos residuais, as entradas podem
 para a frente se propagam mais rápido através das conexões residuais entre as camadas.
 
@@ -512,6 +512,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgwNzI5MDg0LDE0MzQwMzExMjUsMzc3NT
-g1NTQzXX0=
+eyJoaXN0b3J5IjpbMTczNjAyMzg0NCwxNDM0MDMxMTI1LDM3Nz
+U4NTU0M119
 -->
