@@ -622,36 +622,12 @@ Mesmo com abandono e queda de peso,
 eles permanecem tão flexíveis que sua capacidade de generalizar para dados invisíveis
 não pode ser explicado por meio de garantias convencionais de generalização da teoria da aprendizagem.
 
-In the original paper proposing batch normalization,
-the authors, in addition to introducing a powerful and useful tool,
-offered an explanation for why it works:
-by reducing *internal covariate shift*.
-Presumably by *internal covariate shift* the authors
-meant something like the intuition expressed above---the
-notion that the distribution of variable values changes
-over the course of training.
-However, there were two problems with this explanation:
-i) This drift is very different from *covariate shift*,
-rendering the name a misnomer.
-ii) The explanation offers an under-specified intuition
-but leaves the question of *why precisely this technique works*
-an open question wanting for a rigorous explanation.
-Throughout this book, we aim to convey the intuitions that practitioners
-use to guide their development of deep neural networks.
-However, we believe that it is important
-to separate these guiding intuitions
-from established scientific fact.
-Eventually, when you master this material
-and start writing your own research papers
-you will want to be clear to delineate
-between technical claims and hunches.
-
 No artigo original, propondo a normalização do lote,
 os autores, além de apresentar uma ferramenta poderosa e útil,
 ofereceram uma explicação de por que funciona:
 reduzindo *deslocamento interno da covariável*.
 Presumivelmente por *mudança interna de covariável* os autores
-significava algo como a intuição expressa acima --- o
+significava algo como a intuição expressa acima --- a
 noção de que a distribuição dos valores das variáveis ​​muda
 ao longo do treinamento.
 No entanto, houve dois problemas com esta explicação:
@@ -688,12 +664,12 @@ some claiming that batch normalization's success comes despite exhibiting behavi
 that is in some ways opposite to those claimed in the original paper :cite:`Santurkar.Tsipras.Ilyas.ea.2018`.
 
 Após o sucesso da normalização em lote,
-sua explicação em termos de * mudança interna de covariável *
+sua explicação em termos de *mudança interna de covariável*
 tem aparecido repetidamente em debates na literatura técnica
 e um discurso mais amplo sobre como apresentar a pesquisa de aprendizado de máquina.
 Em um discurso memorável ao aceitar o Prêmio Teste do Tempo
 na conferência NeurIPS de 2017,
-Ali Rahimi usou * mudança de covariável interna *
+Ali Rahimi usou *mudança de covariável interna*
 como um ponto focal em um argumento comparando
 a prática moderna de aprendizado profundo para alquimia.
 Posteriormente, o exemplo foi revisitado em detalhes
@@ -772,7 +748,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNTk0NjIyNSwxMTgzMjQ3NzI4LC0xNz
+eyJoaXN0b3J5IjpbMTk5NTQ0MjI5NSwxMTgzMjQ3NzI4LC0xNz
 cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
 MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
