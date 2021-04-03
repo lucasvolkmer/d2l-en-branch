@@ -264,12 +264,6 @@ def block_1():
        tf.keras.layers.MaxPool2D(pool_size=3, strides=2, padding='same')])
 ```
 
-Then, similar to the four modules made up of residual blocks that ResNet uses,
-DenseNet uses four dense blocks.
-Similar to ResNet, we can set the number of convolutional layers used in each dense block. Here, we set it to 4, consistent with the ResNet-18 model in :numref:`sec_resnet`. Furthermore, we set the number of channels (i.e., growth rate) for the convolutional layers in the dense block to 32, so 128 channels will be added to each dense block.
-
-In ResNet, the height and width are reduced between each module by a residual block with a stride of 2. Here, we use the transition layer to halve the height and width and halve the number of channels.
-
 Então, semelhante aos quatro módulos compostos de blocos residuais que o ResNet usa,
 A DenseNet usa quatro blocos densos.
 Semelhante ao ResNet, podemos definir o número de camadas convolucionais usadas em cada bloco denso. Aqui, nós o definimos como 4, consistente com o modelo ResNet-18 em :numref:`sec_resnet`. Além disso, definimos o número de canais (ou seja, taxa de crescimento) para as camadas convolucionais no bloco denso para 32, de modo que 128 canais serão adicionados a cada bloco denso.
@@ -328,9 +322,6 @@ def block_2():
             net.add(TransitionBlock(num_channels))
     return net
 ```
-
-Similar to ResNet, a global pooling layer and a fully-connected layer are connected at the end to produce the output.
-
 
 Semelhante ao ResNet, uma camada de pooling global e uma camada totalmente conectada são conectadas na extremidade para produzir a saída.
 
@@ -415,5 +406,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDg2MDkzMjYsMTg1OTQwMTk3MV19
+eyJoaXN0b3J5IjpbMTQ5NDk0OTkyOCwxODU5NDAxOTcxXX0=
 -->
