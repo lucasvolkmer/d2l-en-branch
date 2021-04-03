@@ -62,14 +62,9 @@ Uma lição aqui é que, ao aplicar a normalização em lote,
 a escolha do tamanho do lote pode ser
 ainda mais significativo do que sem normalização em lote.
 
-Formally, denoting by $\mathbf{x} \in \mathcal{B}$ an input to batch normalization ($\mathrm{BN}$)
-that is from a minibatch $\mathcal{B}$,
-batch normalization transforms $\mathbf{x}$
-according to the following expression:
-
 Formalmente, denotando por $\mathbf{x} \in \mathcal{B}$ uma entrada para normalização em lote ($\mathrm{BN}$)
-que é de um minibatch $ \ mathcal {B} $,
-a normalização em lote transforma $ \ mathbf {x} $
+que é de um minibatch $\mathcal{B}$,
+a normalização em lote transforma $\mathbf{x}$
 de acordo com a seguinte expressão:
 
 $$\mathrm{BN}(\mathbf{x}) = \boldsymbol{\gamma} \odot \frac{\mathbf{x} - \hat{\boldsymbol{\mu}}_\mathcal{B}}{\hat{\boldsymbol{\sigma}}_\mathcal{B}} + \boldsymbol{\beta}.$$
@@ -89,17 +84,17 @@ that have the same shape as $\mathbf{x}$.
 Note that $\boldsymbol{\gamma}$ and $\boldsymbol{\beta}$ are
  parameters that need to be learned jointly with the other model parameters.
  
-$ \ hat {\ boldsymbol {\ mu}} _ \ mathcal {B} $ é a média da amostra
-e $ \ hat {\ boldsymbol {\ sigma}} _ \ mathcal {B} $ é o desvio padrão da amostra do minibatch $ \ mathcal {B} $.
+$\hat{\boldsymbol{\mu}}_\mathcal{B}$ é a média da amostra
+e $\hat{\boldsymbol{\sigma}}_\mathcal{B}$ é o desvio padrão da amostra do minibatch $\mathcal{B}$.
 Depois de aplicar a padronização,
 o minibatch resultante
 tem média zero e variância unitária.
 Porque a escolha da variação da unidade
 (vs. algum outro número mágico) é uma escolha arbitrária,
 normalmente incluímos elemento a elemento
-* parâmetro de escala * $ \ boldsymbol {\ gamma} $ e * parâmetro de deslocamento * $ \ boldsymbol {\ beta} $
-que tem a mesma forma de $ \ mathbf {x} $.
-Observe que $ \ boldsymbol {\ gamma} $ e $ \ boldsymbol {\ beta} $ são
+* parâmetro de escala * $\boldsymbol{\gamma}$ e * parâmetro de deslocamento * $\boldsymbol{\beta}$
+que tem a mesma forma de $\mathbf{x}$.
+Observe que $\boldsymbol{\gamma}$ e$\boldsymbol{\beta}$ são
   parâmetros que precisam ser aprendidos em conjunto com os outros parâmetros do modelo.
 
 Consequently, the variable magnitudes
@@ -962,7 +957,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NDExMDUwMywtNzQxNzQ0NjI2LC03ND
-kxNDUwNjQsLTEzMjE5ODI1MjYsLTE5NTc3OTQzMzYsOTc5NjE3
-MzE4XX0=
+eyJoaXN0b3J5IjpbLTE3NzE4NTk4NTYsLTc0MTc0NDYyNiwtNz
+Q5MTQ1MDY0LC0xMzIxOTgyNTI2LC0xOTU3Nzk0MzM2LDk3OTYx
+NzMxOF19
 -->
