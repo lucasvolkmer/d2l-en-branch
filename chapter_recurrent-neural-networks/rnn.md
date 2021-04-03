@@ -122,17 +122,17 @@ $\mathbf{O}_t$ do passo de tempo atual $t$.
 ![Uma RNN com um estado oculto.](../img/rnn.svg)
 :label:`fig_rnn`
 
-We just mentioned that the calculation of $\mathbf{X}_t \mathbf{W}_{xh} + \mathbf{H}_{t-1} \mathbf{W}_{hh}$ for the hidden state is equivalent to
-matrix multiplication of
-concatenation of $\mathbf{X}_t$ and $\mathbf{H}_{t-1}$
-and
-concatenation of $\mathbf{W}_{xh}$ and $\mathbf{W}_{hh}$.
-Though this can be proven in mathematics,
-in the following we just use a simple code snippet to show this.
-To begin with,
-we define matrices `X`, `W_xh`, `H`, and `W_hh`, whose shapes are (3, 1), (1, 4), (3, 4), and (4, 4), respectively.
-Multiplying `X` by `W_xh`, and `H` by `W_hh`, respectively, and then adding these two multiplications,
-we obtain a matrix of shape (3, 4).
+Acabamos de mencionar que o cálculo de $\mathbf{X}_t \mathbf{W}_{xh} + \mathbf{H}_{t-1} \mathbf{W}_{hh}$ para o estado oculto é equivalente a
+multiplicação de matriz de
+concatenação de $\mathbf{X}_t$ and $\mathbf{H}_{t-1}$
+e
+concatenação de $\mathbf{W}_{xh}$ and $\mathbf{W}_{hh}$.
+Embora isso possa ser comprovado pela matemática,
+a seguir, apenas usamos um trecho de código simples para mostrar isso.
+Começando por,
+definir as matrizes `X`,` W_xh`, `H` e` W_hh`, cujas formas são (3, 1), (1, 4), (3, 4) e (4, 4), respectivamente.
+Multiplicando `X` por` W_xh`, e `H` por` W_hh`, respectivamente e, em seguida, adicionando essas duas multiplicações,
+obtemos uma matriz de forma (3, 4).
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -166,17 +166,17 @@ H, W_hh = d2l.normal((3, 4), 0, 1), d2l.normal((4, 4), 0, 1)
 d2l.matmul(X, W_xh) + d2l.matmul(H, W_hh)
 ```
 
-Now we concatenate the matrices `X` and `H`
-along columns (axis 1),
-and the matrices 
-`W_xh` and `W_hh` along rows (axis 0).
-These two concatenations
-result in
-matrices of shape (3, 5)
-and of shape (5, 4), respectively.
-Multiplying these two concatenated matrices,
-we obtain the same output matrix of shape (3, 4)
-as above.
+Agora vamos concatenar as matrizes `X` e` H`
+ao longo das colunas (eixo 1),
+e as matrizes
+`W_xh` e` W_hh` ao longo das linhas (eixo 0).
+Essas duas concatenações
+resulta em
+matrizes de forma (3, 5)
+e da forma (5, 4), respectivamente.
+Multiplicando essas duas matrizes concatenadas,
+obtemos a mesma matriz de saída de forma (3, 4)
+como acima.
 
 ```{.python .input}
 #@tab all
@@ -292,6 +292,6 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MDgxNzMyNSwyMDAzNjQxNjU2LDY4Mj
-EwMjkwMCwtODEwNjQ5MDYxXX0=
+eyJoaXN0b3J5IjpbMTE4MjUzNDUxMSwxNzgwODE3MzI1LDIwMD
+M2NDE2NTYsNjgyMTAyOTAwLC04MTA2NDkwNjFdfQ==
 -->
