@@ -105,7 +105,7 @@ by using noisy estimates of mean and variance.
 You might think that this noisiness should be a problem.
 As it turns out, this is actually beneficial.
 
-Observe que adicionamos uma pequena constante $ \ epsilon> 0 $
+Observe que adicionamos uma pequena constante $\epsilon > 0$
 para a estimativa de variância
 para garantir que nunca tentemos a divisão por zero,
 mesmo nos casos em que a estimativa de variância empírica pode desaparecer.
@@ -936,7 +936,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwNjcwODkzLC0xNzcxODU5ODU2LC03ND
-E3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4MjUyNiwtMTk1Nzc5
-NDMzNiw5Nzk2MTczMThdfQ==
+eyJoaXN0b3J5IjpbLTE3MDM0MDg2OTUsLTE3NzE4NTk4NTYsLT
+c0MTc0NDYyNiwtNzQ5MTQ1MDY0LC0xMzIxOTgyNTI2LC0xOTU3
+Nzk0MzM2LDk3OTYxNzMxOF19
 -->
