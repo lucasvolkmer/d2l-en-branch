@@ -224,8 +224,6 @@ blk(X).shape
 
 ## Modelo ResNet
 
-The first two layers of ResNet are the same as those of the GoogLeNet we described before: the $7\times 7$ convolutional layer with 64 output channels and a stride of 2 is followed by the $3\times 3$ maximum pooling layer with a stride of 2. The difference is the batch normalization layer added after each convolutional layer in ResNet.
-
 As duas primeiras camadas do ResNet são iguais às do GoogLeNet que descrevemos antes: a camada convolucional $7\times 7$ com 64 canais de saída e uma passada de 2 é seguida pela camada de pooling máxima $3\times 3$ com uma passada de 2. A diferença é a camada de normalização de lote adicionada após cada camada convolucional no ResNet.
 
 ```{.python .input}
@@ -474,6 +472,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNzg0NDUwOSwtOTM3NTMyNjQ2LDE0Mz
-QwMzExMjUsMzc3NTg1NTQzXX0=
+eyJoaXN0b3J5IjpbLTE5MjY0NjI5MjQsLTkzNzUzMjY0NiwxND
+M0MDMxMTI1LDM3NzU4NTU0M119
 -->
