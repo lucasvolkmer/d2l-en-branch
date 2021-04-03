@@ -183,7 +183,7 @@ como acima.
 d2l.matmul(d2l.concat((X, H), 1), d2l.concat((W_xh, W_hh), 0))
 ```
 
-## RNN-based Character-Level Language Models
+## Modelos de Linguagem em Nível de Caracteres Baseados em RNN
 
 Recall that for language modeling in :numref:`sec_language_model`,
 we aim to predict the next token based on
@@ -292,6 +292,6 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MjUzNDUxMSwxNzgwODE3MzI1LDIwMD
-M2NDE2NTYsNjgyMTAyOTAwLC04MTA2NDkwNjFdfQ==
+eyJoaXN0b3J5IjpbLTE3OTU4MjgzOTAsMTc4MDgxNzMyNSwyMD
+AzNjQxNjU2LDY4MjEwMjkwMCwtODEwNjQ5MDYxXX0=
 -->
