@@ -270,18 +270,18 @@ para avaliar tais modelos.
 
 ## Resumo
 
-* A neural network that uses recurrent computation for hidden states is called a recurrent neural network (RNN).
-* The hidden state of an RNN can capture historical information of the sequence up to the current time step.
-* The number of RNN model parameters does not grow as the number of time steps increases.
-* We can create character-level language models using an  RNN.
-* We can use perplexity to evaluate the quality of language models.
+* Uma rede neural que usa computação recorrente para estados ocultos é chamada de rede neural recorrente (RNN).
+* O estado oculto de uma RNN pode capturar informações históricas da sequência até o intervalo de tempo atual.
+* O número de parâmetros do modelo RNN não aumenta com o aumento do número de etapas de tempo.
+* Podemos criar modelos de linguagem em nível de caractere usando um RNN.
+* Podemos usar a perplexidade para avaliar a qualidade dos modelos de linguagem.
 
-## Exercises
+## Exercícios
 
-1. If we use an RNN to predict the next character in a text sequence, what is the required dimension for any output?
-1. Why can RNNs express the conditional probability of a token at some time step based on all the previous tokens in the text sequence?
-1. What happens to the gradient if you backpropagate through a long sequence?
-1. What are some of the problems associated with the language model described in this section?
+1. Se usarmos uma RNN para prever o próximo caractere em uma sequência de texto, qual é a dimensão necessária para qualquer saída?
+1. Por que as RNNs podem expressar a probabilidade condicional de um token em algum intervalo de tempo com base em todos os tokens anteriores na sequência de texto?
+1. O que acontece com o gradiente se você retropropaga através de uma longa sequência?
+1. Quais são alguns dos problemas associados ao modelo de linguagem descrito nesta seção?
 
 
 :begin_tab:`mxnet`
@@ -296,6 +296,6 @@ para avaliar tais modelos.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjUyNzAyOTcsMTc4MDgxNzMyNSwyMD
+eyJoaXN0b3J5IjpbLTEzMjgzODEyNzMsMTc4MDgxNzMyNSwyMD
 AzNjQxNjU2LDY4MjEwMjkwMCwtODEwNjQ5MDYxXX0=
 -->
