@@ -40,27 +40,17 @@ Para redes neurais profundas,
 se pudermos
 treinar a camada recém-adicionada em uma função de identidade $f(\mathbf{x}) = \mathbf{x}$, o novo modelo será tão eficaz quanto o modelo original. Como o novo modelo pode obter uma solução melhor para se ajustar ao conjunto de dados de treinamento, a camada adicionada pode facilitar a redução de erros de treinamento.
 
-This is the question that He et al. considered when working on very deep computer vision models :cite:`He.Zhang.Ren.ea.2016`. 
-At the heart of their proposed *residual network* (*ResNet*) is the idea that every additional layer should 
-more easily
-contain the identity function as one of its elements. 
-These considerations are rather profound but they led to a surprisingly simple
-solution, a *residual block*.
-With it, ResNet won the ImageNet Large Scale Visual Recognition Challenge in 2015. The design had a profound influence on how to
-build deep neural networks.
-
 Essa é a pergunta que He et al. considerado quando se trabalha em modelos de visão computacional muito profundos :cite:`He.Zhang.Ren.ea.2016`.
 No cerne de sua proposta de *rede residual* (*ResNet*) está a ideia de que cada camada adicional deve
 mais facilmente
 conter a função de identidade como um de seus elementos.
-Essas considerações são bastante profundas, mas levaram a um surpreendentemente simples
-solução, um *bloco residual*.
+Essas considerações são bastante profundas, mas levaram a uma soluçao surpreendentemente simples, um *bloco residual*.
 Com ele, a ResNet venceu o Desafio de Reconhecimento Visual em Grande Escala da ImageNet em 2015. O design teve uma profunda influência em como
 construir redes neurais profundas.
 
 
 
-## Residual Blocks
+## Blocos Residuais
 
 Let us focus on a local part of a neural network, as depicted in :numref:`fig_residual_block`. Denote the input by $\mathbf{x}$.
 We assume that the desired underlying mapping we want to obtain by learning is $f(\mathbf{x})$, to be used as the input to the activation function on the top.
@@ -86,15 +76,15 @@ is called a *residual connection* (or *shortcut connection*).
 With residual blocks, inputs can 
 forward propagate faster through the residual connections across layers.
 
-Vamos nos concentrar em uma parte local de uma rede neural, conforme descrito em: numref: `fig_residual_block`. Denote a entrada por $ \ mathbf {x} $.
-Assumimos que o mapeamento subjacente desejado que queremos obter aprendendo é $ f (\ mathbf {x}) $, a ser usado como entrada para a função de ativação no topo.
-À esquerda de: numref: `fig_residual_block`,
+Vamos nos concentrar em uma parte local de uma rede neural, conforme descrito em :numref:`fig_residual_block`. Denote a entrada por $\mathbf{x}$.
+Assumimos que o mapeamento subjacente desejado que queremos obter aprendendo é $f(\mathbf{x})$, a ser usado como entrada para a função de ativação no topo.
+À esquerda de :numref:`fig_residual_block`,
 a parte dentro da caixa de linha pontilhada
-deve aprender diretamente o mapeamento $ f (\ mathbf {x}) $.
+deve aprender diretamente o mapeamento $f(\mathbf{x})$.
 A direita,
 a parte dentro da caixa de linha pontilhada
 precisa de
-aprenda o * mapeamento residual * $ f (\ mathbf {x}) - \ mathbf {x} $,
+aprenda o *mapeamento residual* $f(\mathbf{x}) - \mathbf{x}$,
 que é como o bloco residual deriva seu nome.
 Se o mapeamento de identidade $ f (\ mathbf {x}) = \ mathbf {x} $ for o mapeamento subjacente desejado,
 o mapeamento residual é mais fácil de aprender:
@@ -522,5 +512,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNDAzMTEyNSwzNzc1ODU1NDNdfQ==
+eyJoaXN0b3J5IjpbNjgwNzI5MDg0LDE0MzQwMzExMjUsMzc3NT
+g1NTQzXX0=
 -->
