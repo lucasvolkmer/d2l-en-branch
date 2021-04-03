@@ -160,13 +160,13 @@ fully-connected layer output $\mathbf{h}$ as follows:
 
 Ao aplicar a normalização de lote a camadas totalmente conectadas,
 o papel original insere a normalização do lote após a transformação afim
-e antes da função de ativação não linear (aplicativos posteriores podem inserir a normalização em lote logo após as funções de ativação): cite: `Ioffe.Szegedy.2015`.
-Denotando a entrada para a camada totalmente conectada por $ \ mathbf {x} $,
+e antes da função de ativação não linear (aplicativos posteriores podem inserir a normalização em lote logo após as funções de ativação) :cite:`Ioffe.Szegedy.2015`.
+Denotando a entrada para a camada totalmente conectada por $\mathbf{x}$,
 a transformação afim
-por $ \ mathbf {W} \ mathbf {x} + \ mathbf {b} $ (com o parâmetro de peso $ \ mathbf {W} $ e o parâmetro de polarização $ \ mathbf {b} $),
-e a função de ativação por $ \ phi $,
+por $\mathbf{W}\mathbf{x} + \mathbf{b}$ (com o parâmetro de peso $\mathbf{W}$ e o parâmetro de polarização $\mathbf{b}$),
+e a função de ativação por $\phi$,
 podemos expressar o cálculo de uma normalização de lote habilitada,
-saída de camada totalmente conectada $ \ mathbf {h} $ como segue:
+saída de camada totalmente conectada $\mathbf{h}$ como segue:
 
 $$\mathbf{h} = \phi(\mathrm{BN}(\mathbf{W}\mathbf{x} + \mathbf{b}) ).$$
 
@@ -885,7 +885,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDAwNjEyNTUsMTE4MzI0NzcyOCwtMT
-c3MTg1OTg1NiwtNzQxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5
-ODI1MjYsLTE5NTc3OTQzMzYsOTc5NjE3MzE4XX0=
+eyJoaXN0b3J5IjpbMTY0MDY4ODc4NywxMTgzMjQ3NzI4LC0xNz
+cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
+MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
