@@ -368,8 +368,6 @@ Configurando diferentes números de canais e blocos residuais no módulo, podemo
 ![A arquiteturaResNet-18.](../img/resnet18.svg)
 :label:`fig_resnet18`
 
-Before training ResNet, let us observe how the input shape changes across different modules in ResNet. As in all the previous architectures, the resolution decreases while the number of channels increases up until the point where a global average pooling layer aggregates all features.
-
 Antes de treinar o ResNet, vamos observar como a forma da entrada muda nos diferentes módulos do ResNet. Como em todas as arquiteturas anteriores, a resolução diminui enquanto o número de canais aumenta até o ponto em que uma camada de pooling média global agrega todos os recursos.
 
 ```{.python .input}
@@ -396,9 +394,7 @@ for layer in net().layers:
     print(layer.__class__.__name__,'output shape:\t', X.shape)
 ```
 
-## Training
-
-We train ResNet on the Fashion-MNIST dataset, just like before.
+## Treinamento
 
 Treinamos ResNet no conjunto de dados Fashion-MNIST, assim como antes.
 
@@ -409,12 +405,7 @@ train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size, resize=96)
 d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 ```
 
-## Summary
-
-* Nested function classes are desirable. Learning an additional layer in deep neural networks as an identity function (though this is an extreme case) should be made easy.
-* The residual mapping can learn the identity function more easily, such as pushing parameters in the weight layer to zero.
-* We can train an effective deep neural network by having residual blocks. Inputs can forward propagate faster through the residual connections across layers.
-* ResNet had a major influence on the design of subsequent deep neural networks, both for convolutional and sequential nature.
+## Sumário
 
 * As classes de funções aninhadas são desejáveis. Aprender uma camada adicional em redes neurais profundas como uma função de identidade (embora este seja um caso extremo) deve ser facilitado.
 * O mapeamento residual pode aprender a função de identidade mais facilmente, como empurrar parâmetros na camada de peso para zero.
@@ -422,7 +413,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 * O ResNet teve uma grande influência no projeto de redes neurais profundas subsequentes, tanto de natureza convolucional quanto sequencial.
 
 
-## Exercises
+## Exercícios
 
 1. What are the major differences between the Inception block in :numref:`fig_inception` and the residual block? After removing some paths in the Inception block, how are they related to each other?
 1. Refer to Table 1 in the ResNet paper :cite:`He.Zhang.Ren.ea.2016` to
@@ -436,15 +427,15 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
    for details.
 1. Why can't we just increase the complexity of functions without bound, even if the function classes are nested?
 
-1. Quais são as principais diferenças entre o bloco de iniciação em: numref: `fig_inception` e o bloco residual? Depois de remover alguns caminhos no bloco de Iniciação, como eles se relacionam?
-1. Consulte a Tabela 1 no artigo ResNet: cite: `He.Zhang.Ren.ea.2016` para
+1. Quais são as principais diferenças entre o bloco de iniciação em :numref:`fig_inception` e o bloco residual? Depois de remover alguns caminhos no bloco de Iniciação, como eles se relacionam?
+1. Consulte a Tabela 1 no artigo ResNet :cite:`He.Zhang.Ren.ea.2016` para
     implementar variantes diferentes.
 1. Para redes mais profundas, a ResNet apresenta uma arquitetura de "gargalo" para reduzir
     complexidade do modelo. Tente implementá-lo.
 1. Nas versões subsequentes do ResNet, os autores alteraram a configuração "convolução, lote
     normalização e ativação "estrutura para a" normalização em lote,
     estrutura de ativação e convolução ". Faça esta melhoria
-    você mesmo. Veja a Figura 1 em: cite: `He.Zhang.Ren.ea.2016 * 1`
+    você mesmo. Veja a Figura 1 em :cite:`He.Zhang.Ren.ea.2016 * 1`
     para detalhes.
 1. Por que não podemos simplesmente aumentar a complexidade das funções sem limites, mesmo se as classes de função estiverem aninhadas?
 :begin_tab:`mxnet`
@@ -459,6 +450,7 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI5NTMwNTkxLC0xOTI2NDYyOTI0LC05Mz
-c1MzI2NDYsMTQzNDAzMTEyNSwzNzc1ODU1NDNdfQ==
+eyJoaXN0b3J5IjpbMTQzMTM5ODI5NSw5Mjk1MzA1OTEsLTE5Mj
+Y0NjI5MjQsLTkzNzUzMjY0NiwxNDM0MDMxMTI1LDM3NzU4NTU0
+M119
 -->
