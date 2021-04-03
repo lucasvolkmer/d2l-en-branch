@@ -31,22 +31,14 @@ onde $\mathcal{F}_1 \subseteq \ldots \subseteq \mathcal{F}_6$
 podemos evitar o problema mencionado nas classes de função não aninhadas.
 
 
-![For non-nested function classes, a larger (indicated by area) function class does not guarantee to get closer to the "truth" function ($f^*$). This does not happen in nested function classes.
-
-](../img/functionclasses.svg)
+![Para classes de função não aninhadas, uma classe de função maior (indicada por área) não garante a aproximação da função "verdade" ($f^*$). Isso não acontece em classes de funções aninhadas.](../img/functionclasses.svg)
 :label:`fig_functionclasses`
-
-Thus,
-only if larger function classes contain the smaller ones are we guaranteed that increasing them strictly increases the expressive power of the network.
-For deep neural networks,
-if we can 
-train the newly-added layer into an identity function $f(\mathbf{x}) = \mathbf{x}$, the new model will be as effective as the original model. As the new model may get a better solution to fit the training dataset, the added layer might make it easier to reduce training errors.
 
 Por isso,
 somente se as classes de função maiores contiverem as menores teremos a garantia de que aumentá-las aumenta estritamente o poder expressivo da rede.
 Para redes neurais profundas,
 se pudermos
-treinar a camada recém-adicionada em uma função de identidade $ f (\ mathbf {x}) = \ mathbf {x} $, o novo modelo será tão eficaz quanto o modelo original. Como o novo modelo pode obter uma solução melhor para se ajustar ao conjunto de dados de treinamento, a camada adicionada pode facilitar a redução de erros de treinamento.
+treinar a camada recém-adicionada em uma função de identidade $f(\mathbf{x}) = \mathbf{x}$, o novo modelo será tão eficaz quanto o modelo original. Como o novo modelo pode obter uma solução melhor para se ajustar ao conjunto de dados de treinamento, a camada adicionada pode facilitar a redução de erros de treinamento.
 
 This is the question that He et al. considered when working on very deep computer vision models :cite:`He.Zhang.Ren.ea.2016`. 
 At the heart of their proposed *residual network* (*ResNet*) is the idea that every additional layer should 
@@ -530,5 +522,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwODA0MTk2OCwzNzc1ODU1NDNdfQ==
+eyJoaXN0b3J5IjpbMTgyNDYwMDc3NywzNzc1ODU1NDNdfQ==
 -->
