@@ -52,44 +52,19 @@ construir redes neurais profundas.
 
 ## Blocos Residuais
 
-Let us focus on a local part of a neural network, as depicted in :numref:`fig_residual_block`. Denote the input by $\mathbf{x}$.
-We assume that the desired underlying mapping we want to obtain by learning is $f(\mathbf{x})$, to be used as the input to the activation function on the top.
-On the left of :numref:`fig_residual_block`,
-the portion within the dotted-line box 
-must directly learn the mapping $f(\mathbf{x})$.
-On the right,
-the portion within the dotted-line box
-needs to
-learn the *residual mapping* $f(\mathbf{x}) - \mathbf{x}$,
-which is how the residual block derives its name.
-If the identity mapping $f(\mathbf{x}) = \mathbf{x}$ is the desired underlying mapping,
-the residual mapping is easier to learn:
-we only need to push the weights and biases
-of the
-upper weight layer (e.g., fully-connected layer and convolutional layer)
-within the dotted-line box
-to zero.
-The right figure in :numref:`fig_residual_block` illustrates the  *residual block* of ResNet,
-where the solid line carrying the layer input 
-$\mathbf{x}$ to the addition operator
-is called a *residual connection* (or *shortcut connection*).
-With residual blocks, inputs can 
-forward propagate faster through the residual connections across layers.
-
 Vamos nos concentrar em uma parte local de uma rede neural, conforme descrito em :numref:`fig_residual_block`. Denote a entrada por $\mathbf{x}$.
 Assumimos que o mapeamento subjacente desejado que queremos obter aprendendo é $f(\mathbf{x})$, a ser usado como entrada para a função de ativação no topo.
 À esquerda de :numref:`fig_residual_block`,
 a parte dentro da caixa de linha pontilhada
 deve aprender diretamente o mapeamento $f(\mathbf{x})$.
 A direita,
-a parte dentro da caixa de linha pontilhada
-precisa de
-aprenda o *mapeamento residual* $f(\mathbf{x}) - \mathbf{x}$,
+a parte de dentro da caixa de linha pontilhada
+precisa aprender o *mapeamento residual* $f(\mathbf{x}) - \mathbf{x}$,
 que é como o bloco residual deriva seu nome.
 Se o mapeamento de identidade $f(\mathbf{x}) = \mathbf{x}$ for o mapeamento subjacente desejado,
 o mapeamento residual é mais fácil de aprender:
 nós só precisamos empurrar os pesos e preconceitos
-do
+da
 camada de peso superior (por exemplo, camada totalmente conectada e camada convolucional)
 dentro da caixa de linha pontilhada
 a zero.
@@ -512,6 +487,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNjAyMzg0NCwxNDM0MDMxMTI1LDM3Nz
-U4NTU0M119
+eyJoaXN0b3J5IjpbMzg1NjE2MDAxLDE0MzQwMzExMjUsMzc3NT
+g1NTQzXX0=
 -->
