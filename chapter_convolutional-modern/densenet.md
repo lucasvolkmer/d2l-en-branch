@@ -30,28 +30,19 @@ $$\mathbf{x} \to \left[
 f_1(\mathbf{x}),
 f_2([\mathbf{x}, f_1(\mathbf{x})]), f_3([\mathbf{x}, f_1(\mathbf{x}), f_2([\mathbf{x}, f_1(\mathbf{x})])]), \ldots\right].$$
 
-In the end, all these functions are combined in MLP to reduce the number of features again. In terms of implementation this is quite simple:
-rather than adding terms, we concatenate them. The name DenseNet arises from the fact that the dependency graph between variables becomes quite dense. The last layer of such a chain is densely connected to all previous layers. The dense connections are shown in :numref:`fig_densenet`.
-
 No final, todas essas funções são combinadas no MLP para reduzir o número de recursos novamente. Em termos de implementação, isso é bastante simples:
 em vez de adicionar termos, nós os concatenamos. O nome DenseNet surge do fato de o gráfico de dependência entre as variáveis se tornar bastante denso. A última camada de tal cadeia está densamente conectada a todas as camadas anteriores. As conexões densas são mostradas em :numref:`fig_densenet`.
 
-![Dense connections in DenseNet.](../img/densenet.svg)
+![Conexões densas na DenseNet.](../img/densenet.svg)
 :label:`fig_densenet`
 
 
-The main components that compose a DenseNet are *dense blocks* and *transition layers*. The former define how the inputs and outputs are concatenated, while the latter control the number of channels so that it is not too large.
+Os principais componentes que compõem uma DenseNet são *blocos densos* e *camadas de transição*. O primeiro define como as entradas e saídas são concatenadas, enquanto o último controla o número de canais para que não seja muito grande.
 
-Os principais componentes que compõem uma DenseNet são * blocos densos * e * camadas de transição *. O primeiro define como as entradas e saídas são concatenadas, enquanto o último controla o número de canais para que não seja muito grande.
-
-## Dense Blocks
-
-DenseNet uses the modified "batch normalization, activation, and convolution"
-structure of ResNet (see the exercise in :numref:`sec_resnet`).
-First, we implement this convolution block structure.
+## Blocos Densos
 
 A DenseNet usa a "normalização, ativação e convolução em lote" modificada
-estrutura do ResNet (veja o exercício em: numref: `sec_resnet`).
+estrutura do ResNet (veja o exercício em :numref:`sec_resnet`).
 Primeiro, implementamos essa estrutura de bloco de convolução.
 
 ```{.python .input}
@@ -103,9 +94,7 @@ class ConvBlock(tf.keras.layers.Layer):
         return y
 ```
 
-A *dense block* consists of multiple convolution blocks, each using the same number of output channels. In the forward propagation, however, we concatenate the input and output of each convolution block on the channel dimension.
-
-Um * bloco denso * consiste em vários blocos de convolução, cada um usando o mesmo número de canais de saída. Na propagação direta, entretanto, concatenamos a entrada e a saída de cada bloco de convolução na dimensão do canal.
+Um *bloco denso* consiste em vários blocos de convolução, cada um usando o mesmo número de canais de saída. Na propagação direta, entretanto, concatenamos a entrada e a saída de cada bloco de convolução na dimensão do canal.
 
 ```{.python .input}
 class DenseBlock(nn.Block):
@@ -436,5 +425,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NTcwMjk0MiwxODU5NDAxOTcxXX0=
+eyJoaXN0b3J5IjpbMjA3MTgyMjc4LDE4NTk0MDE5NzFdfQ==
 -->
