@@ -185,21 +185,21 @@ d2l.matmul(d2l.concat((X, H), 1), d2l.concat((W_xh, W_hh), 0))
 
 ## Modelos de Linguagem em Nível de Caracteres Baseados em RNN
 
-Recall that for language modeling in :numref:`sec_language_model`,
-we aim to predict the next token based on
-the current and past tokens,
-thus we shift the original sequence by one token
-as the labels.
-Bengio et al. first proposed
-to use a neural network for language modeling :cite:`Bengio.Ducharme.Vincent.ea.2003`.
-In the following we illustrate how RNNs can be used to build a language model.
-Let the minibatch size be one, and the sequence of the text be "machine".
-To simplify training in subsequent sections,
-we tokenize text into characters rather than words
-and consider a *character-level language model*.
-:numref:`fig_rnn_train` demonstrates how to predict the next character based on the current and previous characters via an RNN for character-level language modeling.
+Lembre-se que para a modelagem de linguagem em :numref:`sec_language_model`,
+pretendemos prever o próximo token com base em
+os tokens atuais e passados,
+assim, mudamos a sequência original em um token
+como os rótulos.
+Bengio et al. propuseram primeiro
+usar uma rede neural para modelagem de linguagem :cite:`Bengio.Ducharme.Vincent.ea.2003`.
+A seguir, ilustramos como os RNNs podem ser usadas para construir um modelo de linguagem.
+Deixe o tamanho do minibatch ser um e a sequência do texto ser "máquina".
+Para simplificar o treinamento nas seções subsequentes,
+nós tokenizamos o texto em caracteres em vez de palavras
+e considere um *modelo de linguagem em nível de caractere*.
+ :numref:`fig_rnn_train` demonstra como prever o próximo caractere com base nos caracteres atuais e anteriores através de um RNN para modelagem de linguagem em nível de caractere.
 
-![A character-level language model based on the RNN. The input and label sequences are "machin" and "achine", respectively.](../img/rnn-train.svg)
+![Um modelo de linguagem de nível de caractere baseado no RNN. As sequências de entrada e rótulo são "machin" e "achine", respectivamente.](../img/rnn-train.svg)
 :label:`fig_rnn_train`
 
 During the training process,
@@ -292,6 +292,6 @@ to evaluate such models.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTU4MjgzOTAsMTc4MDgxNzMyNSwyMD
+eyJoaXN0b3J5IjpbLTE3NTIwODM0OTAsMTc4MDgxNzMyNSwyMD
 AzNjQxNjU2LDY4MjEwMjkwMCwtODEwNjQ5MDYxXX0=
 -->
