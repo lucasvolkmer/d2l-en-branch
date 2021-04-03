@@ -237,8 +237,6 @@ blk(Y).shape
 
 ## Modelo DenseNet 
 
-Next, we will construct a DenseNet model. DenseNet first uses the same single convolutional layer and maximum pooling layer as in ResNet.
-
 A seguir, construiremos um modelo DenseNet. A DenseNet usa primeiro a mesma camada convolucional única e camada máxima de pooling que no ResNet.
 
 ```{.python .input}
@@ -274,7 +272,7 @@ In ResNet, the height and width are reduced between each module by a residual bl
 
 Então, semelhante aos quatro módulos compostos de blocos residuais que o ResNet usa,
 A DenseNet usa quatro blocos densos.
-Semelhante ao ResNet, podemos definir o número de camadas convolucionais usadas em cada bloco denso. Aqui, nós o definimos como 4, consistente com o modelo ResNet-18 em: numref: `sec_resnet`. Além disso, definimos o número de canais (ou seja, taxa de crescimento) para as camadas convolucionais no bloco denso para 32, de modo que 128 canais serão adicionados a cada bloco denso.
+Semelhante ao ResNet, podemos definir o número de camadas convolucionais usadas em cada bloco denso. Aqui, nós o definimos como 4, consistente com o modelo ResNet-18 em :numref:`sec_resnet`. Além disso, definimos o número de canais (ou seja, taxa de crescimento) para as camadas convolucionais no bloco denso para 32, de modo que 128 canais serão adicionados a cada bloco denso.
 
 No ResNet, a altura e a largura são reduzidas entre cada módulo por um bloco residual com uma distância de 2. Aqui, usamos a camada de transição para reduzir pela metade a altura e a largura e pela metade o número de canais.
 
@@ -417,5 +415,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjA3NTY1MjMsMTg1OTQwMTk3MV19
+eyJoaXN0b3J5IjpbLTIwNDg2MDkzMjYsMTg1OTQwMTk3MV19
 -->
