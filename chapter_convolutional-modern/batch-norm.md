@@ -115,28 +115,6 @@ relacionam as propriedades de normalização de lote aos antecedentes e penalida
 Em particular, isso lança alguma luz sobre o quebra-cabeça
 de por que a normalização em lote funciona melhor para tamanhos moderados de minibatches na faixa de $50 \sim 100$.
 
-Fixing a trained model, you might think
-that we would prefer using the entire dataset
-to estimate the mean and variance.
-Once training is complete, why would we want
-the same image to be classified differently,
-depending on the batch in which it happens to reside?
-During training, such exact calculation is infeasible
-because the intermediate variables
-for all data examples
-change every time we update our model.
-However, once the model is trained,
-we can calculate the means and variances
-of each layer's variables based on the entire dataset.
-Indeed this is standard practice for
-models employing batch normalization
-and thus batch normalization layers function differently
-in *training mode* (normalizing by minibatch statistics)
-and in *prediction mode* (normalizing by dataset statistics).
-
-We are now ready to take a look at how batch normalization works in practice.
-
-
 Consertando um modelo treinado, você pode pensar
 que preferiríamos usar todo o conjunto de dados
 para estimar a média e a variância.
@@ -158,15 +136,7 @@ e no *modo de previsão* (normalizando por estatísticas do conjunto de dados).
 
 Agora estamos prontos para dar uma olhada em como a normalização em lote funciona na prática.
 
-## Batch Normalization Layers
-
-Batch normalization implementations for fully-connected layers
-and convolutional layers are slightly different.
-We discuss both cases below.
-Recall that one key differences between batch normalization and other layers
-is that because batch normalization operates on a full minibatch at a time,
-we cannot just ignore the batch dimension
-as we did before when introducing other layers.
+## Camadas de Normalização de Lotes
 
 Implementações de normalização em lote para camadas totalmente conectadas
 e as camadas convolucionais são ligeiramente diferentes.
@@ -176,7 +146,7 @@ Lembre-se de que uma diferença fundamental entre a normalização em lote e out
 não podemos simplesmente ignorar a dimensão do lote
 como fizemos antes ao introduzir outras camadas.
 
-### Fully-Connected Layers
+### Camadas Completamente Conectadas
 
 When applying batch normalization to fully-connected layers,
 the original paper inserts batch normalization after the affine transformation
@@ -915,7 +885,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MzI0NzcyOCwtMTc3MTg1OTg1NiwtNz
-QxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5ODI1MjYsLTE5NTc3
-OTQzMzYsOTc5NjE3MzE4XX0=
+eyJoaXN0b3J5IjpbLTIxMDAwNjEyNTUsMTE4MzI0NzcyOCwtMT
+c3MTg1OTg1NiwtNzQxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5
+ODI1MjYsLTE5NTc3OTQzMzYsOTc5NjE3MzE4XX0=
 -->
