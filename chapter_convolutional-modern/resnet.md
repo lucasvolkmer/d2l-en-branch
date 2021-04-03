@@ -8,16 +8,6 @@ Para fazer algum progresso, precisamos de um pouco de matemática.
 
 ## Classes Função
 
-Consider $\mathcal{F}$, the class of functions that a specific network architecture (together with learning rates and other hyperparameter settings) can reach.
-That is, for all $f \in \mathcal{F}$ there exists some set of parameters (e.g., weights and biases) that can be obtained through training on a suitable dataset.
-Let us assume that $f^*$ is the "truth" function that we really would like to find.
-If it is in $\mathcal{F}$, we are in good shape but typically we will not be quite so lucky.
-Instead, we will try to find some $f^*_\mathcal{F}$ which is our best bet within $\mathcal{F}$.
-For instance, 
-given a dataset with features $\mathbf{X}$
-and labels $\mathbf{y}$,
-we might try finding it by solving the following optimization problem:
-
 Considere $\mathcal{F}$, a classe de funções que uma arquitetura de rede específica (junto com as taxas de aprendizado e outras configurações de hiperparâmetros) pode alcançar.
 Ou seja, para todos os $f \in \mathcal{F}$ existe algum conjunto de parâmetros (por exemplo, pesos e vieses) que podem ser obtidos através do treinamento em um conjunto de dados adequado.
 Vamos supor que $f^*$ seja a função "verdade" que realmente gostaríamos de encontrar.
@@ -25,7 +15,7 @@ Se estiver em $\mathcal{F}$, estamos em boa forma, mas normalmente não teremos 
 Em vez disso, tentaremos encontrar $f^*_\mathcal{F}$, que é nossa melhor aposta em $\mathcal{F}$.
 Por exemplo,
 dado um conjunto de dados com recursos $\mathbf{X}$
-e rótulos $ \ mathbf {y} $,
+e rótulos $\mathbf{y}$,
 podemos tentar encontrá-lo resolvendo o seguinte problema de otimização:
 
 $$f^*_\mathcal{F} \stackrel{\mathrm{def}}{=} \mathop{\mathrm{argmin}}_f L(\mathbf{X}, \mathbf{y}, f) \text{ subject to } f \in \mathcal{F}.$$
@@ -40,7 +30,7 @@ where $\mathcal{F}_1 \subseteq \ldots \subseteq \mathcal{F}_6$
 on the right of :numref:`fig_functionclasses`,
 we can avoid the aforementioned issue from the non-nested function classes.
 
-É razoável supor que, se projetarmos uma arquitetura diferente e mais poderosa $ \ mathcal {F} '$, chegaremos a um resultado melhor. Em outras palavras, esperaríamos que $ f ^ * _ {\ mathcal {F} '} $ seja "melhor" do que $ f ^ * _ {\ mathcal {F}} $. No entanto, se $ \ mathcal {F} \ not \ subseteq \ mathcal {F} '$ não há garantia de que isso acontecerá. Na verdade, $ f ^ * _ {\ mathcal {F} '} $ pode muito bem ser pior.
+É razoável supor que, se projetarmos uma arquitetura diferente e mais poderosa $\mathcal{F}'$, chegaremos a um resultado melhor. Em outras palavras, esperaríamos que $f^*_{\mathcal{F}'}$ seja "melhor" do que $ f ^ * _ {\ mathcal {F}} $. No entanto, se $ \ mathcal {F} \ not \ subseteq \ mathcal {F} '$ não há garantia de que isso acontecerá. Na verdade, $ f ^ * _ {\ mathcal {F} '} $ pode muito bem ser pior.
 Conforme ilustrado por: numref: `fig_functionclasses`,
 para classes de função não aninhadas, uma classe de função maior nem sempre se aproxima da função "verdade" $ f ^ * $. Por exemplo,
 à esquerda de: numref: `fig_functionclasses`,
@@ -548,5 +538,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTk0MTQ4NV19
+eyJoaXN0b3J5IjpbLTIwNTYwNDAxODldfQ==
 -->
