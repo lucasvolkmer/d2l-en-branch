@@ -20,16 +20,6 @@ podemos tentar encontrá-lo resolvendo o seguinte problema de otimização:
 
 $$f^*_\mathcal{F} \stackrel{\mathrm{def}}{=} \mathop{\mathrm{argmin}}_f L(\mathbf{X}, \mathbf{y}, f) \text{ subject to } f \in \mathcal{F}.$$
 
-It is only reasonable to assume that if we design a different and more powerful architecture $\mathcal{F}'$ we should arrive at a better outcome. In other words, we would expect that $f^*_{\mathcal{F}'}$ is "better" than $f^*_{\mathcal{F}}$. However, if $\mathcal{F} \not\subseteq \mathcal{F}'$ there is no guarantee that this should even happen. In fact, $f^*_{\mathcal{F}'}$ might well be worse. 
-As illustrated by :numref:`fig_functionclasses`,
-for non-nested function classes, a larger function class does not always move closer to the "truth" function $f^*$. For instance,
-on the left of :numref:`fig_functionclasses`,
-though $\mathcal{F}_3$ is closer to $f^*$ than $\mathcal{F}_1$, $\mathcal{F}_6$ moves away and there is no guarantee that further increasing the complexity can reduce the distance from $f^*$.
-With nested function classes
-where $\mathcal{F}_1 \subseteq \ldots \subseteq \mathcal{F}_6$
-on the right of :numref:`fig_functionclasses`,
-we can avoid the aforementioned issue from the non-nested function classes.
-
 É razoável supor que, se projetarmos uma arquitetura diferente e mais poderosa $\mathcal{F}'$, chegaremos a um resultado melhor. Em outras palavras, esperaríamos que $f^*_{\mathcal{F}'}$ seja "melhor" do que $f^*_{\mathcal{F}}$. No entanto, se $\mathcal{F} \not\subseteq \mathcal{F}'$ não há garantia de que isso acontecerá. Na verdade, $f^*_{\mathcal{F}'}$ pode muito bem ser pior.
 Conforme ilustrado por :numref:`fig_functionclasses`,
 para classes de função não aninhadas, uma classe de função maior nem sempre se aproxima da função "verdade" $f^*$. Por exemplo,
@@ -41,7 +31,9 @@ onde $\mathcal{F}_1 \subseteq \ldots \subseteq \mathcal{F}_6$
 podemos evitar o problema mencionado nas classes de função não aninhadas.
 
 
-![For non-nested function classes, a larger (indicated by area) function class does not guarantee to get closer to the "truth" function ($f^*$). This does not happen in nested function classes.](../img/functionclasses.svg)
+![For non-nested function classes, a larger (indicated by area) function class does not guarantee to get closer to the "truth" function ($f^*$). This does not happen in nested function classes.
+
+](../img/functionclasses.svg)
 :label:`fig_functionclasses`
 
 Thus,
@@ -538,5 +530,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyOTM3MTk5MSwzNzc1ODU1NDNdfQ==
+eyJoaXN0b3J5IjpbMTMwODA0MTk2OCwzNzc1ODU1NDNdfQ==
 -->
