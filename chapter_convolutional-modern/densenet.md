@@ -5,36 +5,25 @@ Para entender como chegar a isso, façamos um pequeno desvio para a matemática.
 
 ## De ResNet para DenseNet
 
-Recall the Taylor expansion for functions. For the point $x = 0$ it can be written as
-Lembre-se da expansão de Taylor para funções. Para o ponto $ x = 0 $, pode ser escrito como
-
+Lembre-se da expansão de Taylor para funções. Para o ponto $x = 0$, pode ser escrito como
 
 $$f(x) = f(0) + f'(0) x + \frac{f''(0)}{2!}  x^2 + \frac{f'''(0)}{3!}  x^3 + \ldots.$$
-
 
 O ponto principal é que ele decompõe uma função em termos de ordem cada vez mais elevados. De maneira semelhante, o ResNet decompõe funções em
 
 $$f(\mathbf{x}) = \mathbf{x} + g(\mathbf{x}).$$
 
-That is, ResNet decomposes $f$ into a simple linear term and a more complex
-nonlinear one.
-What if we want to capture (not necessarily add) information beyond two terms?
-One solution was 
-
-Ou seja, o ResNet decompõe $ f $ em um termo linear simples e um termo mais complexo
+Ou seja, o ResNet decompõe $f$ em um termo linear simples e um termo mais complexo
 não linear.
 E se quisermos capturar (não necessariamente adicionar) informações além de dois termos?
 Uma solução foi
 DenseNet :cite:`Huang.Liu.Van-Der-Maaten.ea.2017`.
 
-![The main difference between ResNet (left) and DenseNet (right) in cross-layer connections: use of addition and use of concatenation. ](../img/densenet-block.svg)
+![A principal diferença entre ResNet (esquerda) e DenseNet (direita) em conexões de camada cruzada: uso de adição e uso de concatenação. ](../img/densenet-block.svg)
 :label:`fig_densenet_block`
 
-As shown in :numref:`fig_densenet_block`, the key difference between ResNet and DenseNet is that in the latter case outputs are *concatenated* (denoted by $[,]$) rather than added.
-As a result, we perform a mapping from $\mathbf{x}$ to its values after applying an increasingly complex sequence of functions:
-
-Conforme mostrado em: numref: `fig_densenet_block`, a principal diferença entre ResNet e DenseNet é que, no último caso, as saídas são * concatenadas * (denotadas por $ [,] $) em vez de adicionadas.
-Como resultado, realizamos um mapeamento de $ \ mathbf {x} $ para seus valores após aplicar uma sequência cada vez mais complexa de funções:
+Conforme mostrado em :numref:`fig_densenet_block`, a principal diferença entre ResNet e DenseNet é que, no último caso, as saídas são *concatenadas* (denotadas por $[,]$) em vez de adicionadas.
+Como resultado, realizamos um mapeamento de $\mathbf {x}$ para seus valores após aplicar uma sequência cada vez mais complexa de funções:
 
 $$\mathbf{x} \to \left[
 \mathbf{x},
@@ -45,7 +34,7 @@ In the end, all these functions are combined in MLP to reduce the number of feat
 rather than adding terms, we concatenate them. The name DenseNet arises from the fact that the dependency graph between variables becomes quite dense. The last layer of such a chain is densely connected to all previous layers. The dense connections are shown in :numref:`fig_densenet`.
 
 No final, todas essas funções são combinadas no MLP para reduzir o número de recursos novamente. Em termos de implementação, isso é bastante simples:
-em vez de adicionar termos, nós os concatenamos. O nome DenseNet surge do fato de o gráfico de dependência entre as variáveis se tornar bastante denso. A última camada de tal cadeia está densamente conectada a todas as camadas anteriores. As conexões densas são mostradas em: numref: `fig_densenet`.
+em vez de adicionar termos, nós os concatenamos. O nome DenseNet surge do fato de o gráfico de dependência entre as variáveis se tornar bastante denso. A última camada de tal cadeia está densamente conectada a todas as camadas anteriores. As conexões densas são mostradas em :numref:`fig_densenet`.
 
 ![Dense connections in DenseNet.](../img/densenet.svg)
 :label:`fig_densenet`
@@ -447,5 +436,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MTI1ODEwNywxODU5NDAxOTcxXX0=
+eyJoaXN0b3J5IjpbMTg0NTcwMjk0MiwxODU5NDAxOTcxXX0=
 -->
