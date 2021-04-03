@@ -30,14 +30,14 @@ where $\mathcal{F}_1 \subseteq \ldots \subseteq \mathcal{F}_6$
 on the right of :numref:`fig_functionclasses`,
 we can avoid the aforementioned issue from the non-nested function classes.
 
-É razoável supor que, se projetarmos uma arquitetura diferente e mais poderosa $\mathcal{F}'$, chegaremos a um resultado melhor. Em outras palavras, esperaríamos que $f^*_{\mathcal{F}'}$ seja "melhor" do que $ f ^ * _ {\ mathcal {F}} $. No entanto, se $ \ mathcal {F} \ not \ subseteq \ mathcal {F} '$ não há garantia de que isso acontecerá. Na verdade, $ f ^ * _ {\ mathcal {F} '} $ pode muito bem ser pior.
-Conforme ilustrado por: numref: `fig_functionclasses`,
+É razoável supor que, se projetarmos uma arquitetura diferente e mais poderosa $\mathcal{F}'$, chegaremos a um resultado melhor. Em outras palavras, esperaríamos que $f^*_{\mathcal{F}'}$ seja "melhor" do que $f^*_{\mathcal{F}}$. No entanto, se $\mathcal{F} \not\subseteq \mathcal{F}'$não há garantia de que isso acontecerá. Na verdade, $f^*_{\mathcal{F}'}$ pode muito bem ser pior.
+Conforme ilustrado por :numref:`fig_functionclasses`,
 para classes de função não aninhadas, uma classe de função maior nem sempre se aproxima da função "verdade" $ f ^ * $. Por exemplo,
 à esquerda de: numref: `fig_functionclasses`,
-embora $ \ mathcal {F} _3 $ esteja mais perto de $ f ^ * $ do que $ \ mathcal {F} _1 $, $ \ mathcal {F} _6 $ se afasta e não há garantia de que aumentar ainda mais a complexidade pode reduzir o distância de $ f ^ * $.
+embora$\mathcal{F}_3$ esteja mais perto de  $f^*$ do que $\mathcal{F}_1$, $\mathcal{F}_6$ se afasta e não há garantia de que aumentar ainda mais a complexidade pode reduzir o distância de $f^*$.
 Com classes de função aninhadas
-onde $ \ mathcal {F} _1 \ subseteq \ ldots \ subseteq \ mathcal {F} _6 $
-à direita de: numref: `fig_functionclasses`,
+onde $\mathcal{F}_1 \subseteq \ldots \subseteq \mathcal{F}_6$
+à direita de: numref:`fig_functionclasses`,
 podemos evitar o problema mencionado nas classes de função não aninhadas.
 
 
@@ -538,5 +538,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTYwNDAxODldfQ==
+eyJoaXN0b3J5IjpbLTIwNDEwNjcyNzddfQ==
 -->
