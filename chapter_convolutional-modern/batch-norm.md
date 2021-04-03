@@ -205,9 +205,7 @@ e, em seguida, corrigi-los no momento da previsão.
 Consequentemente, a normalização do lote se comporta de maneira diferente durante o treinamento e no momento do teste.
 Lembre-se de que o abandono também exibe essa característica.
 
-## Implementação do Z
-
-Below, we implement a batch normalization layer with tensors from scratch.
+## Implementação do Zero
 
 Abaixo, implementamos uma camada de normalização em lote com tensores do zero.
 
@@ -298,14 +296,6 @@ def batch_norm(X, gamma, beta, moving_mean, moving_var, eps):
     Y = X * inv + (beta - moving_mean * inv)
     return Y
 ```
-
-We can now create a proper `BatchNorm` layer.
-Our layer will maintain proper parameters
-for scale `gamma` and shift `beta`,
-both of which will be updated in the course of training.
-Additionally, our layer will maintain
-moving averages of the means and variances
-for subsequent use during model prediction.
 
 Agora podemos criar uma camada `BatchNorm` adequada.
 Nossa camada manterá os parâmetros adequados
@@ -835,7 +825,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQyNjIzOTY5LDExODMyNDc3MjgsLTE3Nz
+eyJoaXN0b3J5IjpbODY3MTcxNTMxLDExODMyNDc3MjgsLTE3Nz
 E4NTk4NTYsLTc0MTc0NDYyNiwtNzQ5MTQ1MDY0LC0xMzIxOTgy
 NTI2LC0xOTU3Nzk0MzM2LDk3OTYxNzMxOF19
 -->
