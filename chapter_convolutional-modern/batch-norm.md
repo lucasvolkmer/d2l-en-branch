@@ -148,16 +148,6 @@ como fizemos antes ao introduzir outras camadas.
 
 ### Camadas Completamente Conectadas
 
-When applying batch normalization to fully-connected layers,
-the original paper inserts batch normalization after the affine transformation
-and before the nonlinear activation function (later applications may insert batch normalization right after activation functions) :cite:`Ioffe.Szegedy.2015`.
-Denoting the input to the fully-connected layer by $\mathbf{x}$,
-the affine transformation
-by $\mathbf{W}\mathbf{x} + \mathbf{b}$ (with the weight parameter $\mathbf{W}$ and the bias parameter $\mathbf{b}$),
-and the activation function by $\phi$,
-we can express the computation of a batch-normalization-enabled,
-fully-connected layer output $\mathbf{h}$ as follows:
-
 Ao aplicar a normalização de lote a camadas totalmente conectadas,
 o papel original insere a normalização do lote após a transformação afim
 e antes da função de ativação não linear (aplicativos posteriores podem inserir a normalização em lote logo após as funções de ativação) :cite:`Ioffe.Szegedy.2015`.
@@ -170,12 +160,8 @@ saída de camada totalmente conectada $\mathbf{h}$ como segue:
 
 $$\mathbf{h} = \phi(\mathrm{BN}(\mathbf{W}\mathbf{x} + \mathbf{b}) ).$$
 
-Recall that mean and variance are computed
-on the *same* minibatch 
-on which the transformation is applied.
-
 Lembre-se de que a média e a variância são calculadas
-no * mesmo * minibatch
+no *mesmo* minibatch
 no qual a transformação é aplicada.
 
 ### Convolutional Layers
@@ -885,7 +871,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MDY4ODc4NywxMTgzMjQ3NzI4LC0xNz
-cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
-MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
+eyJoaXN0b3J5IjpbLTE2MjE1MDIxNjQsMTE4MzI0NzcyOCwtMT
+c3MTg1OTg1NiwtNzQxNzQ0NjI2LC03NDkxNDUwNjQsLTEzMjE5
+ODI1MjYsLTE5NTc3OTQzMzYsOTc5NjE3MzE4XX0=
 -->
