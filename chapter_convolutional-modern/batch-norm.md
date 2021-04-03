@@ -671,9 +671,9 @@ Em um discurso memorável ao aceitar o Prêmio Teste do Tempo
 na conferência NeurIPS de 2017,
 Ali Rahimi usou *mudança de covariável interna*
 como um ponto focal em um argumento comparando
-a prática moderna de aprendizado profundo para alquimia.
+a prática moderna de aprendizado profundo a alquimia.
 Posteriormente, o exemplo foi revisitado em detalhes
-em uma posição delineando papel
+em um artigo opinativo delineando
 tendências preocupantes em aprendizado de máquina :cite:`Lipton.Steinhardt.2018`.
 Outros autores
 propuseram explicações alternativas para o sucesso da normalização em lote,
@@ -748,7 +748,8 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NzEwMTI5MSwxMTgzMjQ3NzI4LC0xNz
-cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
-MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
+eyJoaXN0b3J5IjpbNjkzNzg1ODIsMTg4NzEwMTI5MSwxMTgzMj
+Q3NzI4LC0xNzcxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2
+NCwtMTMyMTk4MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ
+==
 -->
