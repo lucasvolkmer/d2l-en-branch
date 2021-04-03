@@ -674,11 +674,11 @@ como um ponto focal em um argumento comparando
 a prática moderna de aprendizado profundo para alquimia.
 Posteriormente, o exemplo foi revisitado em detalhes
 em uma posição delineando papel
-tendências preocupantes em aprendizado de máquina: cite: `Lipton.Steinhardt.2018`.
+tendências preocupantes em aprendizado de máquina :cite:`Lipton.Steinhardt.2018`.
 Outros autores
 propuseram explicações alternativas para o sucesso da normalização em lote,
 alguns alegando que o sucesso da normalização em lote vem apesar de exibir comportamento
-isso é, de certa forma, oposto ao afirmado no artigo original: cite: `Santurkar.Tsipras.Ilyas.ea.2018`.
+isso é, de certa forma, oposto ao afirmado no artigo original :cite:`Santurkar.Tsipras.Ilyas.ea.2018`.
 
 We note that the *internal covariate shift*
 is no more worthy of criticism than any of
@@ -748,7 +748,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NTQ0MjI5NSwxMTgzMjQ3NzI4LC0xNz
+eyJoaXN0b3J5IjpbMTg4NzEwMTI5MSwxMTgzMjQ3NzI4LC0xNz
 cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
 MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
