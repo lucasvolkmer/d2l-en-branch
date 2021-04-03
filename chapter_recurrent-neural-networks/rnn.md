@@ -1,4 +1,4 @@
-# Recurrent Neural Networks
+# Redes Neurais Recorrentes (RNNs)
 :label:`sec_rnn`
 
 
@@ -296,6 +296,6 @@ para avaliar tais modelos.
 [Discussions](https://discuss.d2l.ai/t/1051)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjgzODEyNzMsMTc4MDgxNzMyNSwyMD
-AzNjQxNjU2LDY4MjEwMjkwMCwtODEwNjQ5MDYxXX0=
+eyJoaXN0b3J5IjpbNTM1ODI1MzU3LDE3ODA4MTczMjUsMjAwMz
+Y0MTY1Niw2ODIxMDI5MDAsLTgxMDY0OTA2MV19
 -->
