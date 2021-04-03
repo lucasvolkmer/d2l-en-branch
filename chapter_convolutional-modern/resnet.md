@@ -249,12 +249,6 @@ b1 = tf.keras.models.Sequential([
     tf.keras.layers.MaxPool2D(pool_size=3, strides=2, padding='same')])
 ```
 
-GoogLeNet uses four modules made up of Inception blocks.
-However, ResNet uses four modules made up of residual blocks, each of which uses several residual blocks with the same number of output channels. 
-The number of channels in the first module is the same as the number of input channels. Since a maximum pooling layer with a stride of 2 has already been used, it is not necessary to reduce the height and width. In the first residual block for each of the subsequent modules, the number of channels is doubled compared with that of the previous module, and the height and width are halved.
-
-Now, we implement this module. Note that special processing has been performed on the first module.
-
 GoogLeNet usa quatro módulos compostos de blocos de iniciação.
 No entanto, o ResNet usa quatro módulos compostos de blocos residuais, cada um dos quais usa vários blocos residuais com o mesmo número de canais de saída.
 O número de canais no primeiro módulo é igual ao número de canais de entrada. Como uma camada de pooling máxima com uma passada de 2 já foi usada, não é necessário reduzir a altura e a largura. No primeiro bloco residual para cada um dos módulos subsequentes, o número de canais é duplicado em comparação com o do módulo anterior e a altura e a largura são reduzidas à metade.
@@ -306,7 +300,6 @@ class ResnetBlock(tf.keras.layers.Layer):
         return X
 ```
 
-Then, we add all the modules to ResNet. Here, two residual blocks are used for each module.
 
 Em seguida, adicionamos todos os módulos ao ResNet. Aqui, dois blocos residuais são usados para cada módulo.
 
@@ -472,6 +465,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjY0NjI5MjQsLTkzNzUzMjY0NiwxND
-M0MDMxMTI1LDM3NzU4NTU0M119
+eyJoaXN0b3J5IjpbLTIxMzU3NzgyOTcsLTE5MjY0NjI5MjQsLT
+kzNzUzMjY0NiwxNDM0MDMxMTI1LDM3NzU4NTU0M119
 -->
