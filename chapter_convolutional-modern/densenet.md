@@ -382,16 +382,16 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 1. Projete um modelo baseado em MLP aplicando a ideia DenseNet. Aplique-o à tarefa de previsão do preço da habitação em :numref:`sec_kaggle_house`.
 :begin_tab:`mxnet`
 
-[Discussions](https://discuss.d2l.ai/t/87)
+[Discussão](https://discuss.d2l.ai/t/87)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/88)
+[Discussão](https://discuss.d2l.ai/t/88)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/331)
+[Discussão](https://discuss.d2l.ai/t/331)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NjU5OTM2NiwxODU5NDAxOTcxXX0=
+eyJoaXN0b3J5IjpbMTU4NDQ5NzczMywxODU5NDAxOTcxXX0=
 -->
