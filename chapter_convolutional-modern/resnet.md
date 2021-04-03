@@ -49,12 +49,12 @@ solution, a *residual block*.
 With it, ResNet won the ImageNet Large Scale Visual Recognition Challenge in 2015. The design had a profound influence on how to
 build deep neural networks.
 
-Essa é a pergunta que He et al. considerado quando se trabalha em modelos de visão computacional muito profundos: cite: `He.Zhang.Ren.ea.2016`.
-No cerne de sua proposta de * rede residual * (* ResNet *) está a ideia de que cada camada adicional deve
+Essa é a pergunta que He et al. considerado quando se trabalha em modelos de visão computacional muito profundos :cite:`He.Zhang.Ren.ea.2016`.
+No cerne de sua proposta de *rede residual* (*ResNet*) está a ideia de que cada camada adicional deve
 mais facilmente
 conter a função de identidade como um de seus elementos.
 Essas considerações são bastante profundas, mas levaram a um surpreendentemente simples
-solução, um * bloco residual *.
+solução, um *bloco residual*.
 Com ele, a ResNet venceu o Desafio de Reconhecimento Visual em Grande Escala da ImageNet em 2015. O design teve uma profunda influência em como
 construir redes neurais profundas.
 
@@ -522,5 +522,5 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNDYwMDc3NywzNzc1ODU1NDNdfQ==
+eyJoaXN0b3J5IjpbMTQzNDAzMTEyNSwzNzc1ODU1NDNdfQ==
 -->
