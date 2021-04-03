@@ -166,26 +166,6 @@ no qual a transformação é aplicada.
 
 ### Convolutional Layers
 
-Similarly, with convolutional layers,
-we can apply batch normalization after the convolution
-and before the nonlinear activation function.
-When the convolution has multiple output channels,
-we need to carry out batch normalization
-for *each* of the outputs of these channels,
-and each channel has its own scale and shift parameters,
-both of which are scalars.
-Assume that our minibatches contain $m$ examples
-and that for each channel,
-the output of the convolution has height $p$ and width $q$.
-For convolutional layers, we carry out each batch normalization
-over the $m \cdot p \cdot q$ elements per output channel simultaneously.
-Thus, we collect the values over all spatial locations
-when computing the mean and variance
-and consequently 
-apply the same mean and variance
-within a given channel
-to normalize the value at each spatial location.
-
 Da mesma forma, com camadas convolucionais,
 podemos aplicar a normalização de lote após a convolução
 e antes da função de ativação não linear.
@@ -208,16 +188,6 @@ para normalizar o valor em cada localização espacial.
 
 
 ### Normalização de Lotes Durante Predição
-
-As we mentioned earlier, batch normalization typically behaves differently
-in training mode and prediction mode.
-First, the noise in the sample mean and the sample variance
-arising from estimating each on minibatches
-are no longer desirable once we have trained the model.
-Second, we might not have the luxury
-of computing per-batch normalization statistics.
-For example,
-we might need to apply our model to make one prediction at a time.
 
 Como mencionamos anteriormente, a normalização em lote normalmente se comporta de maneira diferente
 no modo de treinamento e no modo de previsão.
@@ -871,7 +841,7 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDE3ODQzMSwxMTgzMjQ3NzI4LC0xNz
+eyJoaXN0b3J5IjpbMTkxMjgzNjUzNSwxMTgzMjQ3NzI4LC0xNz
 cxODU5ODU2LC03NDE3NDQ2MjYsLTc0OTE0NTA2NCwtMTMyMTk4
 MjUyNiwtMTk1Nzc5NDMzNiw5Nzk2MTczMThdfQ==
 -->
