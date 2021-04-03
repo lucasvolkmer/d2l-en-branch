@@ -41,17 +41,6 @@ isso pode exigir ajustes compensatórios nas taxas de aprendizagem.
 Terceiro, redes mais profundas são complexas e facilmente capazes de overfitting.
 Isso significa que a regularização se torna mais crítica.
 
-Batch normalization is applied to individual layers
-(optionally, to all of them) and works as follows:
-In each training iteration,
-we first normalize the inputs (of batch normalization)
-by subtracting their mean and
-dividing by their standard deviation,
-where both are estimated based on the statistics of the current minibatch.
-Next, we apply a scale coefficient and a scale offset.
-It is precisely due to this *normalization* based on *batch* statistics
-that *batch normalization* derives its name.
-
 A normalização em lote é aplicada a camadas individuais
 (opcionalmente, para todos eles) e funciona da seguinte forma:
 Em cada iteração de treinamento,
@@ -983,6 +972,6 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MDc5OTk5MCwtNzQ5MTQ1MDY0LC0xMz
+eyJoaXN0b3J5IjpbLTc0MTc0NDYyNiwtNzQ5MTQ1MDY0LC0xMz
 IxOTgyNTI2LC0xOTU3Nzk0MzM2LDk3OTYxNzMxOF19
 -->
