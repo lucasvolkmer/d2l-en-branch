@@ -300,7 +300,6 @@ class ResnetBlock(tf.keras.layers.Layer):
         return X
 ```
 
-
 Em seguida, adicionamos todos os módulos ao ResNet. Aqui, dois blocos residuais são usados para cada módulo.
 
 ```{.python .input}
@@ -325,8 +324,6 @@ b3 = ResnetBlock(128, 2)
 b4 = ResnetBlock(256, 2)
 b5 = ResnetBlock(512, 2)
 ```
-
-Finally, just like GoogLeNet, we add a global average pooling layer, followed by the fully-connected layer output.
 
 Finalmente, assim como GoogLeNet, adicionamos uma camada de pooling global média, seguida pela saída da camada totalmente conectada.
 
@@ -368,8 +365,8 @@ def net():
 There are 4 convolutional layers in each module (excluding the $1\times 1$ convolutional layer). Together with the first $7\times 7$ convolutional layer and the final fully-connected layer, there are 18 layers in total. Therefore, this model is commonly known as ResNet-18.
 By configuring different numbers of channels and residual blocks in the module, we can create different ResNet models, such as the deeper 152-layer ResNet-152. Although the main architecture of ResNet is similar to that of GoogLeNet, ResNet's structure is simpler and easier to modify. All these factors have resulted in the rapid and widespread use of ResNet. :numref:`fig_resnet18` depicts the full ResNet-18.
 
-Existem 4 camadas convolucionais em cada módulo (excluindo a camada convolucional $ 1 \ vezes 1 $). Junto com a primeira camada convolucional $ 7 vezes 7 $ e a camada final totalmente conectada, há 18 camadas no total. Portanto, esse modelo é comumente conhecido como ResNet-18.
-Configurando diferentes números de canais e blocos residuais no módulo, podemos criar diferentes modelos de ResNet, como o ResNet-152 de 152 camadas mais profundo. Embora a arquitetura principal do ResNet seja semelhante à do GoogLeNet, a estrutura do ResNet é mais simples e fácil de modificar. Todos esses fatores resultaram no uso rápido e generalizado da ResNet. : numref: `fig_resnet18` representa o ResNet-18 completo.
+Existem 4 camadas convolucionais em cada módulo (excluindo a camada convolucional $1\times 1$). Junto com a primeira camada convolucional $7\times 7$ e a camada final totalmente conectada, há 18 camadas no total. Portanto, esse modelo é comumente conhecido como ResNet-18.
+Configurando diferentes números de canais e blocos residuais no módulo, podemos criar diferentes modelos de ResNet, como o ResNet-152 de 152 camadas mais profundo. Embora a arquitetura principal do ResNet seja semelhante à do GoogLeNet, a estrutura do ResNet é mais simples e fácil de modificar. Todos esses fatores resultaram no uso rápido e generalizado da ResNet. :numref:`fig_resnet18` representa o ResNet-18 completo.
 
 ![The ResNet-18 architecture.](../img/resnet18.svg)
 :label:`fig_resnet18`
@@ -465,6 +462,6 @@ d2l.train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
 [Discussions](https://discuss.d2l.ai/t/333)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzU3NzgyOTcsLTE5MjY0NjI5MjQsLT
-kzNzUzMjY0NiwxNDM0MDMxMTI1LDM3NzU4NTU0M119
+eyJoaXN0b3J5IjpbLTkwMjM5NjY5NiwtMTkyNjQ2MjkyNCwtOT
+M3NTMyNjQ2LDE0MzQwMzExMjUsMzc3NTg1NTQzXX0=
 -->
