@@ -26,7 +26,6 @@ para cada um tem uma média de zero e variância de um.
 Intuitivamente, essa padronização funciona bem com nossos otimizadores
 porque coloca os parâmetros *a priori* em uma escala semelhante.
 
-
 Em segundo lugar, para um MLP ou CNN típico, enquanto treinamos,
 as variáveis (por exemplo, saídas de transformação afim em MLP)
 em camadas intermediárias
@@ -61,8 +60,8 @@ subtraindo sua média e
 dividindo por seu desvio padrão,
 onde ambos são estimados com base nas estatísticas do minibatch atual.
 Em seguida, aplicamos um coeficiente de escala e um deslocamento de escala.
-É precisamente devido a esta * normalização * baseada em estatísticas * batch *
-que * normalização de lote * deriva seu nome.
+É precisamente devido a esta *normalização* baseada em estatísticas *batch*
+que *normalização de lote* deriva seu nome.
 
 Note that if we tried to apply batch normalization with minibatches of size 1,
 we would not be able to learn anything.
@@ -984,6 +983,6 @@ dezenas de milhares de citações.
 [Discussions](https://discuss.d2l.ai/t/330)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMDAzNzg5NCwtNzQ5MTQ1MDY0LC0xMz
+eyJoaXN0b3J5IjpbLTQ5MDc5OTk5MCwtNzQ5MTQ1MDY0LC0xMz
 IxOTgyNTI2LC0xOTU3Nzk0MzM2LDk3OTYxNzMxOF19
 -->
