@@ -469,14 +469,15 @@ Neste caso, podemos assumir com segurança que, se atualizarmos o vetor de parâ
 
 $$|f(\mathbf{x}) - f(\mathbf{x} - \eta\mathbf{g})| \leq L \eta\|\mathbf{g}\|,$$
 
-which means that
-we will not observe a change by more than $L \eta \|\mathbf{g}\|$. This is both a curse and a blessing.
-On the curse side,
-it limits the speed of making progress;
-whereas on the blessing side,
-it limits the extent to which things can go wrong if we move in the wrong direction.
 
-Sometimes the gradients can be quite large and the optimization algorithm may fail to converge. We could address this by reducing the learning rate $\eta$. But what if we only *rarely* get large gradients? In this case such an approach may appear entirely unwarranted. One popular alternative is to clip the gradient $\mathbf{g}$ by projecting them back to a ball of a given radius, say $\theta$ via
+o que significa que
+não observaremos uma mudança de mais de $L \eta \|\mathbf{g}\|$. Isso é uma maldição e uma bênção.
+Do lado da maldição,
+limita a velocidade de progresso;
+enquanto do lado da bênção,
+limita até que ponto as coisas podem dar errado se seguirmos na direção errada.
+
+Às vezes, os gradientes podem ser muito grandes e o algoritmo de otimização pode falhar em convergir. Poderíamos resolver isso reduzindo a taxa de aprendizado $\eta$. Mas e se nós *raramente* obtivermos gradientes grandes? Nesse caso, essa abordagem pode parecer totalmente injustificada. Uma alternativa popular é cortar o gradiente $\mathbf{g}$ projetando-o de volta para uma bola de um determinado raio, digamos $\theta$  via
 
 $$\mathbf{g} \leftarrow \min\left(1, \frac{\theta}{\|\mathbf{g}\|}\right) \mathbf{g}.$$
 
@@ -828,6 +829,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkxMzQ1NzkyLDU4Mzc5ODE1Miw0NjY5Mz
+eyJoaXN0b3J5IjpbNzEyODczNjY2LDU4Mzc5ODE1Miw0NjY5Mz
 gxMTQsLTEwNjczNTI4MzhdfQ==
 -->
