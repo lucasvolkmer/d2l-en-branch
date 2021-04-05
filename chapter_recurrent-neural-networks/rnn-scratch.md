@@ -548,27 +548,26 @@ vamos definir uma função para treinar o modelo em uma época. É diferente de 
 1. Cortamos os gradientes antes de atualizar os parâmetros do modelo. Isso garante que o modelo não diverge, mesmo quando os gradientes explodem em algum ponto durante o processo de treinamento.
 1. Usamos perplexidade para avaliar o modelo. Conforme discutido em :numref:`subsec_perplexity`, isso garante que as sequências de comprimentos diferentes sejam comparáveis.
 
-Specifically,
-when sequential partitioning is used, we initialize the hidden state only at the beginning of each epoch.
-Since the $i^\mathrm{th}$ subsequence example  in the next minibatch is adjacent to the current $i^\mathrm{th}$ subsequence example,
-the hidden state at the end of the current minibatch
-will be
-used to initialize
-the hidden state at the beginning of the next minibatch.
-In this way,
-historical information of the sequence
-stored in the hidden state
-might flow over
-adjacent subsequences within an epoch.
-However, the computation of the hidden state
-at any point depends on all the previous minibatches
-in the same epoch,
-which complicates the gradient computation.
-To reduce computational cost,
-we detach the gradient before processing any minibatch
-so that the gradient computation of the hidden state
-is always limited to
-the time steps in one minibatch. 
+Especificamente,
+quando o particionamento sequencial é usado, inicializamos o estado oculto apenas no início de cada época.
+Uma vez que o exemplo de subsequência $i^\mathrm{th}$ no próximo minibatch é adjacente ao exemplo de subsequência $i^\mathrm{th}$ atual,
+o estado oculto no final do minibatch atual
+será
+usado para inicializar
+o estado oculto no início do próximo minibatch.
+Nesse caminho,
+informação histórica da sequência
+armazenado no estado oculto
+pode fluir em 
+subsequências adjacentes dentro de uma época.
+No entanto, o cálculo do estado oculto
+em qualquer ponto depende de todos os minibatches anteriores
+na mesma época,
+o que complica o cálculo do gradiente.
+Para reduzir o custo computacional,
+destacamos o gradiente antes de processar qualquer minibatch
+de modo que o cálculo do gradiente do estado oculto
+é sempre limitado aos passos de tempo em um minibatch.
 
 When using the random sampling,
 we need to re-initialize the hidden state for each iteration since each example is sampled with a random position.
@@ -830,6 +829,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjgxODYzMjQsNTgzNzk4MTUyLDQ2Nj
+eyJoaXN0b3J5IjpbLTE2MDU5MjkzNjksNTgzNzk4MTUyLDQ2Nj
 kzODExNCwtMTA2NzM1MjgzOF19
 -->
