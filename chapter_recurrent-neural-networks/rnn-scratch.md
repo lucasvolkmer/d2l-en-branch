@@ -795,15 +795,14 @@ e fazê-lo funcionar mais rápido.
 
 ## Resumo
 
-* We can train an RNN-based character-level language model to generate text following the user-provided text prefix.
-* A simple RNN language model consists of input encoding, RNN modeling, and output generation.
-* RNN models need state initialization for training, though random sampling and sequential partitioning use different ways.
-* When using sequential partitioning, we need to detach the gradient to reduce computational cost.
-* A warm-up period allows a model to update itself (e.g., obtain a better hidden state than its initialized value) before making any prediction.
-* Gradient clipping prevents gradient explosion, but it cannot fix vanishing gradients.
+* Podemos treinar um modelo de linguagem de nível de caractere baseado em RNN para gerar texto seguindo o prefixo de texto fornecido pelo usuário.
+* Um modelo de linguagem RNN simples consiste em codificação de entrada, modelagem RNN e geração de saída.
+* Os modelos RNN precisam de inicialização de estado para treinamento, embora a amostragem aleatória e o particionamento sequencial usem maneiras diferentes.
+* Ao usar o particionamento sequencial, precisamos separar o gradiente para reduzir o custo computacional.
+* Um período de aquecimento permite que um modelo se atualize (por exemplo, obtenha um estado oculto melhor do que seu valor inicializado) antes de fazer qualquer previsão.
+* O recorte de gradiente evita a explosão do gradiente, mas não pode corrigir gradientes que desaparecem.
 
-
-## Exercises
+## Exercícios
 
 1. Show that one-hot encoding is equivalent to picking a different embedding for each object.
 1. Adjust the hyperparameters (e.g., number of epochs, number of hidden units, number of time steps in a minibatch, and learning rate) to improve the perplexity.
@@ -829,6 +828,6 @@ e fazê-lo funcionar mais rápido.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0OTgxMjY1NSw1ODM3OTgxNTIsNDY2OT
-M4MTE0LC0xMDY3MzUyODM4XX0=
+eyJoaXN0b3J5IjpbNDE5NDQwMjY0LC05NDk4MTI2NTUsNTgzNz
+k4MTUyLDQ2NjkzODExNCwtMTA2NzM1MjgzOF19
 -->
