@@ -440,7 +440,7 @@ predict_ch8('time traveller ', 10, net, vocab, d2l.try_gpu())
 predict_ch8('time traveller ', 10, net, vocab, params)
 ```
 
-## Recorte de  gradiente
+## Recorte de  Gradiente
 
 For a sequence of length $T$,
 we compute the gradients over these $T$ time steps in an iteration, which results in a chain of matrix-products with length  $\mathcal{O}(T)$ during backpropagation.
@@ -827,6 +827,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDE2MjM4NDgsNTgzNzk4MTUyLDQ2Nj
-kzODExNCwtMTA2NzM1MjgzOF19
+eyJoaXN0b3J5IjpbMTc2MjAxNDM5Miw1ODM3OTgxNTIsNDY2OT
+M4MTE0LC0xMDY3MzUyODM4XX0=
 -->
