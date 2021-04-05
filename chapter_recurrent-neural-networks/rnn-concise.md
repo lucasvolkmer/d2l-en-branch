@@ -1,12 +1,12 @@
 # Implementação Concisa de Redes Neurais Recorrentes
 :label:`sec_rnn-concise`
 
-While :numref:`sec_rnn_scratch` was instructive to see how RNNs are implemented,
-this is not convenient or fast.
-This section will show how to implement the same language model more efficiently
-using functions provided by high-level APIs
-of a deep learning framework.
-We begin as before by reading the time machine dataset.
+Embora :numref:`sec_rnn_scratch` tenha sido instrutivo para ver como RNNs são implementados,
+isso não é conveniente ou rápido.
+Esta seção mostrará como implementar o mesmo modelo de linguagem de forma mais eficiente
+usando funções fornecidas por APIs de alto nível
+de uma estrutura de aprendizado profundo.
+Começamos como antes, lendo o conjunto de dados da máquina do tempo.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -29,7 +29,7 @@ batch_size, num_steps = 32, 35
 train_iter, vocab = d2l.load_data_time_machine(batch_size, num_steps)
 ```
 
-## Defining the Model
+## Definindo o Modelo
 
 High-level APIs provide implementations of recurrent neural networks.
 We construct the recurrent neural network layer `rnn_layer` with a single hidden layer and 256 hidden units.
@@ -248,5 +248,5 @@ high-level APIs of the deep learning framework.
 [Discussions](https://discuss.d2l.ai/t/1053)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTU4Njk1NjJdfQ==
+eyJoaXN0b3J5IjpbOTE1OTU5NDEsLTE3OTU4Njk1NjJdfQ==
 -->
