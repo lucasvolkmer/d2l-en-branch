@@ -804,17 +804,17 @@ e fazê-lo funcionar mais rápido.
 
 ## Exercícios
 
-1. Show that one-hot encoding is equivalent to picking a different embedding for each object.
-1. Adjust the hyperparameters (e.g., number of epochs, number of hidden units, number of time steps in a minibatch, and learning rate) to improve the perplexity.
-    * How low can you go?
-    * Replace one-hot encoding with learnable embeddings. Does this lead to better performance?
-    * How well will it work on other books by H. G. Wells, e.g., [*The War of the Worlds*](http://www.gutenberg.org/ebooks/36)?
-1. Modify the prediction function such as to use sampling rather than picking the most likely next character.
-    * What happens?
-    * Bias the model towards more likely outputs, e.g., by sampling from $q(x_t \mid x_{t-1}, \ldots, x_1) \propto P(x_t \mid x_{t-1}, \ldots, x_1)^\alpha$ for $\alpha > 1$.
-1. Run the code in this section without clipping the gradient. What happens?
-1. Change sequential partitioning so that it does not separate hidden states from the computational graph. Does the running time change? How about the perplexity?
-1. Replace the activation function used in this section with ReLU and repeat the experiments in this section. Do we still need gradient clipping? Why?
+1. Mostre que a codificação one-hot é equivalente a escolher uma incorporação diferente para cada objeto.
+1. Ajuste os hiperparâmetros (por exemplo, número de épocas, número de unidades ocultas, número de etapas de tempo em um minibatch e taxa de aprendizado) para melhorar a perplexidade.
+    * Quão baixo você pode ir?
+    * Substitua a codificação one-hot por *embeddings* que podem ser aprendidos. Isso leva a um melhor desempenho?
+    * Será que funcionará bem em outros livros de H. G. Wells, por exemplo, [*The War of the Worlds*](http://www.gutenberg.org/ebooks/36)?
+1. Modifique a função de previsão para usar amostragem em vez de escolher o próximo caractere mais provável.
+    * O que acontece?
+    * Desvie o modelo para resultados mais prováveis, por exemplo, amostrando de $q(x_t \mid x_{t-1}, \ldots, x_1) \propto P(x_t \mid x_{t-1}, \ldots, x_1)^\alpha$ para $\alpha > 1$.
+1. Execute o código nesta seção sem cortar o gradiente. O que acontece?
+1. Altere o particionamento sequencial para que não separe os estados ocultos do gráfico computacional. O tempo de execução muda? Que tal a perplexidade?
+1. Substitua a função de ativação usada nesta seção por ReLU e repita os experimentos nesta seção. Ainda precisamos de recorte de gradiente? Por quê?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/336)
@@ -828,6 +828,6 @@ e fazê-lo funcionar mais rápido.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE5NDQwMjY0LC05NDk4MTI2NTUsNTgzNz
-k4MTUyLDQ2NjkzODExNCwtMTA2NzM1MjgzOF19
+eyJoaXN0b3J5IjpbMTkyNjIwNjc1NCwtOTQ5ODEyNjU1LDU4Mz
+c5ODE1Miw0NjY5MzgxMTQsLTEwNjczNTI4MzhdfQ==
 -->
