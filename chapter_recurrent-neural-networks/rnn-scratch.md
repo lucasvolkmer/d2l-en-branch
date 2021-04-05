@@ -203,19 +203,19 @@ def init_rnn_state(batch_size, num_hiddens):
     return (d2l.zeros((batch_size, num_hiddens)), )
 ```
 
-The following `rnn` function defines how to compute the hidden state and output
-at a time step.
-Note that
-the RNN model
-loops through the outermost dimension of `inputs`
-so that it updates hidden states `H` of a minibatch,
-time step by time step.
-Besides,
-the activation function here uses the $\tanh$ function.
-As
-described in :numref:`sec_mlp`, the
-mean value of the $\tanh$ function is 0, when the elements are uniformly
-distributed over the real numbers.
+A seguinte função `rnn` define como calcular o estado oculto e a saída
+em uma etapa de tempo.
+Observe que
+o modelo RNN
+percorre a dimensão mais externa de `entradas`
+para que ela atualize os estados ocultos `H` de um minibatch,
+passo a passo do tempo.
+Além do mais,
+a função de ativação aqui usa a função $\tanh$.
+Como
+descrito em :numref:`sec_mlp`, o
+o valor médio da função $\tanh$ é 0, quando os elementos são uniformemente
+distribuídos sobre os números reais.
 
 ```{.python .input}
 def rnn(inputs, state, params):
@@ -262,8 +262,8 @@ def rnn(inputs, state, params):
     return d2l.concat(outputs, axis=0), (H,)
 ```
 
-With all the needed functions being defined,
-next we create a class to wrap these functions and store parameters for an RNN model implemented from scratch.
+Com todas as funções necessárias sendo definidas,
+em seguida, criamos uma classe para envolver essas funções e armazenar parâmetros para um modelo RNN implementado do zero.
 
 ```{.python .input}
 class RNNModelScratch:  #@save
@@ -318,7 +318,7 @@ class RNNModelScratch: #@save
         return self.init_state(batch_size, self.num_hiddens)
 ```
 
-Let us check whether the outputs have the correct shapes, e.g., to ensure that the dimensionality of the hidden state remains unchanged.
+Vamos verificar se as saídas têm as formas corretas, por exemplo, para garantir que a dimensionalidade do estado oculto permaneça inalterada.
 
 ```{.python .input}
 #@tab mxnet
@@ -355,10 +355,10 @@ Y, new_state = net(X, state, params)
 Y.shape, len(new_state), new_state[0].shape
 ```
 
-We can see that the output shape is (number of time steps $\times$ batch size, vocabulary size), while the hidden state shape remains the same, i.e., (batch size, number of hidden units).
+Podemos ver que a forma de saída é (número de etapas de tempo $\times$ tamanho do lote, tamanho do vocabulário), enquanto a forma do estado oculto permanece a mesma, ou seja, (tamanho do lote, número de unidades ocultas).
 
 
-## Prediction
+## Predição
 
 Let us first define the prediction function
 to generate new characters following
@@ -828,6 +828,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgzNzk4MTUyLDQ2NjkzODExNCwtMTA2Nz
-M1MjgzOF19
+eyJoaXN0b3J5IjpbMTgwODY3ODY1Myw1ODM3OTgxNTIsNDY2OT
+M4MTE0LC0xMDY3MzUyODM4XX0=
 -->
