@@ -107,13 +107,13 @@ tf.one_hot(tf.transpose(X), 28).shape
 
 ## Inicializando os Parâmetros do Modelo
 
-Next, we initialize the model parameters for
-the RNN model.
-The number of hidden units `num_hiddens` is a tunable hyperparameter.
-When training language models,
-the inputs and outputs are from the same vocabulary.
-Hence, they have the same dimension,
-which is equal to the vocabulary size.
+Em seguida, inicializamos os parâmetros do modelo para
+o modelo RNN.
+O número de unidades ocultas `num_hiddens` é um hiperparâmetro ajustável.
+Ao treinar modelos de linguagem,
+as entradas e saídas são do mesmo vocabulário.
+Portanto, eles têm a mesma dimensão,
+que é igual ao tamanho do vocabulário.
 
 ```{.python .input}
 def get_params(vocab_size, num_hiddens, device):
@@ -177,7 +177,7 @@ def get_params(vocab_size, num_hiddens):
     return params
 ```
 
-## RNN Model
+## Modelo RNN
 
 To define an RNN model,
 we first need an `init_rnn_state` function
@@ -828,6 +828,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MjMwNzQwNCw0NjY5MzgxMTQsLTEwNj
-czNTI4MzhdfQ==
+eyJoaXN0b3J5IjpbMjcwNDA2Mzg5LDQ2NjkzODExNCwtMTA2Nz
+M1MjgzOF19
 -->
