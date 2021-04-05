@@ -78,16 +78,15 @@ F.one_hot(torch.tensor([0, 2]), len(vocab))
 tf.one_hot(tf.constant([0, 2]), len(vocab))
 ```
 
-The shape of the minibatch that we sample each time is (batch size, number of time steps).
-The `one_hot` function transforms such a minibatch into a three-dimensional tensor with the last dimension equals to the vocabulary size (`len(vocab)`).
-We often transpose the input so that we will obtain an
-output of shape
-(number of time steps, batch size, vocabulary size).
-This will allow us
-to more conveniently
-loop through the outermost dimension
-for updating hidden states of a minibatch,
-time step by time step.
+A forma do minibatch que amostramos a cada vez é (tamanho do lote, número de etapas de tempo).
+A função `one_hot` transforma tal minibatch em um tensor tridimensional com a última dimensão igual ao tamanho do vocabulário (` len (vocab) `).
+Freqüentemente, transpomos a entrada para que possamos obter um
+saída de forma
+(número de etapas de tempo, tamanho do lote, tamanho do vocabulário).
+Isso nos permitirá mais convenientemente
+fazer um loop pela dimensão mais externa
+para atualizar os estados ocultos de um minibatch,
+passo a passo do tempo.
 
 ```{.python .input}
 X = d2l.reshape(d2l.arange(10), (2, 5))
@@ -106,7 +105,7 @@ X = d2l.reshape(d2l.arange(10), (2, 5))
 tf.one_hot(tf.transpose(X), 28).shape
 ```
 
-## Initializing the Model Parameters
+## Inicializando os Parâmetros do Modelo
 
 Next, we initialize the model parameters for
 the RNN model.
@@ -829,6 +828,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0ODI2MzA3Myw0NjY5MzgxMTQsLTEwNj
+eyJoaXN0b3J5IjpbMTk3MjMwNzQwNCw0NjY5MzgxMTQsLTEwNj
 czNTI4MzhdfQ==
 -->
