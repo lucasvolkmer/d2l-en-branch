@@ -481,16 +481,17 @@ limita até que ponto as coisas podem dar errado se seguirmos na direção errad
 
 $$\mathbf{g} \leftarrow \min\left(1, \frac{\theta}{\|\mathbf{g}\|}\right) \mathbf{g}.$$
 
-By doing so we know that the gradient norm never exceeds $\theta$ and that the
-updated gradient is entirely aligned with the original direction of $\mathbf{g}$.
-It also has the desirable side-effect of limiting the influence any given
-minibatch (and within it any given sample) can exert on the parameter vector. This
-bestows a certain degree of robustness to the model. Gradient clipping provides
-a quick fix to the gradient exploding. While it does not entirely solve the problem, it is one of the many techniques to alleviate it.
 
-Below we define a function to clip the gradients of
-a model that is implemented from scratch or a model constructed by the high-level APIs.
-Also note that we compute the gradient norm over all the model parameters.
+Fazendo isso, sabemos que a norma do gradiente nunca excede $\theta$ e que o
+gradiente atualizado é totalmente alinhado com a direção original de $\mathbf{g}$.
+Também tem o efeito colateral desejável de limitar a influência de qualquer
+minibatch (e dentro dele qualquer amostra dada) pode exercer sobre o vetor de parâmetro. Isto
+confere certo grau de robustez ao modelo. O recorte de gradiente fornece
+uma solução rápida para a explosão do gradiente. Embora não resolva totalmente o problema, é uma das muitas técnicas para aliviá-lo.
+
+Abaixo, definimos uma função para cortar os gradientes de
+um modelo que é implementado do zero ou um modelo construído pelas APIs de alto nível.
+Observe também que calculamos a norma do gradiente em todos os parâmetros do modelo.
 
 ```{.python .input}
 def grad_clipping(net, theta):  #@save
@@ -537,7 +538,7 @@ def grad_clipping(grads, theta): #@save
     return new_grad
 ```
 
-## Training
+## Trainamento
 
 Before training the model,
 let us define a function to train the model in one epoch. It differs from how we train the model of :numref:`sec_softmax_scratch` in three places:
@@ -829,6 +830,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEyODczNjY2LDU4Mzc5ODE1Miw0NjY5Mz
+eyJoaXN0b3J5IjpbODY5NjI0Njk0LDU4Mzc5ODE1Miw0NjY5Mz
 gxMTQsLTEwNjczNTI4MzhdfQ==
 -->
