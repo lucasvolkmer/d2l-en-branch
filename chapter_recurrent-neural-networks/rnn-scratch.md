@@ -538,15 +538,15 @@ def grad_clipping(grads, theta): #@save
     return new_grad
 ```
 
-## Trainamento
+## Treinamento
 
-Before training the model,
-let us define a function to train the model in one epoch. It differs from how we train the model of :numref:`sec_softmax_scratch` in three places:
 
-1. Different sampling methods for sequential data (random sampling and sequential partitioning) will result in differences in the initialization of hidden states.
-1. We clip the gradients before updating the model parameters. This ensures that the model does not diverge even when gradients blow up at some point during the training process.
-1. We use perplexity to evaluate the model. As discussed in :numref:`subsec_perplexity`, this ensures that sequences of different length are comparable.
+Antes de treinar o modelo,
+vamos definir uma função para treinar o modelo em uma época. É diferente de como treinamos o modelo de: :numref:`sec_softmax_scratch` em três lugares:
 
+1. Diferentes métodos de amostragem para dados sequenciais (amostragem aleatória e particionamento sequencial) resultarão em diferenças na inicialização de estados ocultos.
+1. Cortamos os gradientes antes de atualizar os parâmetros do modelo. Isso garante que o modelo não diverge, mesmo quando os gradientes explodem em algum ponto durante o processo de treinamento.
+1. Usamos perplexidade para avaliar o modelo. Conforme discutido em :numref:`subsec_perplexity`, isso garante que as sequências de comprimentos diferentes sejam comparáveis.
 
 Specifically,
 when sequential partitioning is used, we initialize the hidden state only at the beginning of each epoch.
@@ -830,6 +830,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY5NjI0Njk0LDU4Mzc5ODE1Miw0NjY5Mz
-gxMTQsLTEwNjczNTI4MzhdfQ==
+eyJoaXN0b3J5IjpbLTE1NjgxODYzMjQsNTgzNzk4MTUyLDQ2Nj
+kzODExNCwtMTA2NzM1MjgzOF19
 -->
