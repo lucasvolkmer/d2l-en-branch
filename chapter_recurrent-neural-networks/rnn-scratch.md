@@ -1,14 +1,14 @@
 # Implementação de Redes Neurais Recorrentes do Zero
 :label:`sec_rnn_scratch`
 
-In this section we will implement an RNN
-from scratch
-for a character-level language model,
-according to our descriptions
-in :numref:`sec_rnn`.
-Such a model
-will be trained on H. G. Wells' *The Time Machine*.
-As before, we start by reading the dataset first, which is introduced in :numref:`sec_language_model`.
+Nesta seção, implementaremos uma RNN
+do zero
+para um modelo de linguagem de nível de personagem,
+de acordo com nossas descrições
+em :numref:`sec_rnn`.
+Tal modelo
+será treinado em H. G. Wells '* The Time Machine *.
+Como antes, começamos lendo o conjunto de dados primeiro, que é apresentado em :numref:`sec_language_model`.
 
 ```{.python .input}
 %matplotlib inline
@@ -828,5 +828,5 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjczNTI4MzhdfQ==
+eyJoaXN0b3J5IjpbNDY2OTM4MTE0LC0xMDY3MzUyODM4XX0=
 -->
