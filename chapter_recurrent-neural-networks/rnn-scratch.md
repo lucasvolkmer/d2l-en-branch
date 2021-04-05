@@ -442,29 +442,30 @@ predict_ch8('time traveller ', 10, net, vocab, params)
 
 ## Recorte de  Gradiente
 
-For a sequence of length $T$,
-we compute the gradients over these $T$ time steps in an iteration, which results in a chain of matrix-products with length  $\mathcal{O}(T)$ during backpropagation.
-As mentioned in :numref:`sec_numerical_stability`, it might result in numerical instability, e.g., the gradients may either explode or vanish, when $T$ is large. Therefore, RNN models often need extra help to stabilize the training.
 
-Generally speaking,
-when solving an optimization problem,
-we take update steps for the model parameter,
-say in the vector form
+Para uma sequência de comprimento $T$,
+calculamos os gradientes ao longo desses $T$ passos de tempo em uma iteração, que resulta em uma cadeia de produtos-matriz com comprimento $\mathcal{O}(T)$ durante a retropropagação.
+Conforme mencionado em :numref:`sec_numerical_stability`, pode resultar em instabilidade numérica, por exemplo, os gradientes podem explodir ou desaparecer, quando $T$ é grande. Portanto, os modelos RNN geralmente precisam de ajuda extra para estabilizar o treinamento.
+
+De um modo geral,
+ao resolver um problema de otimização,
+executamos etapas de atualização para o parâmetro do modelo,
+diga na forma vetorial
 $\mathbf{x}$,
-in the direction of the negative gradient $\mathbf{g}$ on a minibatch.
-For example,
-with $\eta > 0$ as the learning rate,
-in one iteration we update
+na direção do gradiente negativo $\mathbf{g}$ em um minibatch.
+Por exemplo,
+com $\eta > 0$ como a taxa de aprendizagem,
+em uma iteração nós atualizamos
 $\mathbf{x}$
-as $\mathbf{x} - \eta \mathbf{g}$.
-Let us further assume that the objective function $f$
-is well behaved, say, *Lipschitz continuous* with constant $L$.
-That is to say,
-for any $\mathbf{x}$ and $\mathbf{y}$ we have
+como $\mathbf{x} - \eta \mathbf{g}$.
+Vamos supor ainda que a função objetivo $f$
+é bem comportada, digamos, *Lipschitz contínuo* com $L$ constante.
+Quer dizer,
+para qualquer $\mathbf{x}$ e $\mathbf{y}$, temos
 
 $$|f(\mathbf{x}) - f(\mathbf{y})| \leq L \|\mathbf{x} - \mathbf{y}\|.$$
 
-In this case we can safely assume that if we update the parameter vector by $\eta \mathbf{g}$, then
+Neste caso, podemos assumir com segurança que, se atualizarmos o vetor de parâmetro por $\eta \mathbf{g}$, então
 
 $$|f(\mathbf{x}) - f(\mathbf{x} - \eta\mathbf{g})| \leq L \eta\|\mathbf{g}\|,$$
 
@@ -827,6 +828,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MjAxNDM5Miw1ODM3OTgxNTIsNDY2OT
-M4MTE0LC0xMDY3MzUyODM4XX0=
+eyJoaXN0b3J5IjpbNDkxMzQ1NzkyLDU4Mzc5ODE1Miw0NjY5Mz
+gxMTQsLTEwNjczNTI4MzhdfQ==
 -->
