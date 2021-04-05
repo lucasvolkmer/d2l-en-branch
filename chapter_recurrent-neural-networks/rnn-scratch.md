@@ -569,13 +569,13 @@ destacamos o gradiente antes de processar qualquer minibatch
 de modo que o cálculo do gradiente do estado oculto
 é sempre limitado aos passos de tempo em um minibatch.
 
-When using the random sampling,
-we need to re-initialize the hidden state for each iteration since each example is sampled with a random position.
-Same as the `train_epoch_ch3` function in :numref:`sec_softmax_scratch`,
-`updater` is a general function
-to update the model parameters.
-It can be either the `d2l.sgd` function implemented from scratch or the built-in optimization function in
-a deep learning framework.
+Ao usar a amostragem aleatória,
+precisamos reinicializar o estado oculto para cada iteração, uma vez que cada exemplo é amostrado com uma posição aleatória.
+Igual à função `train_epoch_ch3` em :numref:`sec_softmax_scratch`,
+`atualizador` é uma função geral
+para atualizar os parâmetros do modelo.
+Pode ser a função `d2l.sgd` implementada do zero ou a função de otimização integrada em
+uma estrutura de aprendizagem profunda.
 
 ```{.python .input}
 #@save
@@ -670,10 +670,10 @@ def train_epoch_ch8(net, train_iter, loss, updater, params, use_random_iter):
     return math.exp(metric[0] / metric[1]), metric[1] / timer.stop()
 ```
 
-The training function supports
-an RNN model implemented
-either from scratch
-or using high-level APIs.
+A função de treinamento suporta
+um modelo RNN implementado
+ou do zero
+ou usando APIs de alto nível.
 
 ```{.python .input}
 def train_ch8(net, train_iter, vocab, lr, num_epochs, device,  #@save
@@ -756,8 +756,8 @@ def train_ch8(net, train_iter, vocab, num_hiddens, lr, num_epochs, strategy,
     print(predict('traveller'))
 ```
 
-Now we can train the RNN model.
-Since we only use 10000 tokens in the dataset, the model needs more epochs to converge better.
+Agora podemos treinar o modelo RNN.
+Como usamos apenas 10.000 tokens no conjunto de dados, o modelo precisa de mais épocas para convergir melhor.
 
 ```{.python .input}
 #@tab mxnet,pytorch
@@ -771,8 +771,8 @@ num_epochs, lr = 500, 1
 train_ch8(net, train_iter, vocab, num_hiddens, lr, num_epochs, strategy)
 ```
 
-Finally,
-let us check the results of using the random sampling method.
+Finalmente,
+vamos verificar os resultados do uso do método de amostragem aleatória.
 
 ```{.python .input}
 #@tab mxnet,pytorch
@@ -787,13 +787,13 @@ train_ch8(net, train_random_iter, vocab_random_iter, num_hiddens, lr,
           num_epochs, strategy, use_random_iter=True)
 ```
 
-While implementing the above RNN model from scratch is instructive, it is not convenient.
-In the next section we will see how to improve the RNN model,
-such as how to make it easier to implement
-and make it run faster.
+Embora a implementação do modelo RNN acima do zero seja instrutiva, não é conveniente.
+Na próxima seção, veremos como melhorar o modelo RNN,
+por exemplo, como torná-lo mais fácil de implementar
+e fazê-lo funcionar mais rápido.
 
 
-## Summary
+## Resumo
 
 * We can train an RNN-based character-level language model to generate text following the user-provided text prefix.
 * A simple RNN language model consists of input encoding, RNN modeling, and output generation.
@@ -829,6 +829,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDU5MjkzNjksNTgzNzk4MTUyLDQ2Nj
-kzODExNCwtMTA2NzM1MjgzOF19
+eyJoaXN0b3J5IjpbLTk0OTgxMjY1NSw1ODM3OTgxNTIsNDY2OT
+M4MTE0LC0xMDY3MzUyODM4XX0=
 -->
