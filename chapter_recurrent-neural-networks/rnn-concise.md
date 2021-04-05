@@ -31,10 +31,10 @@ train_iter, vocab = d2l.load_data_time_machine(batch_size, num_steps)
 
 ## Definindo o Modelo
 
-High-level APIs provide implementations of recurrent neural networks.
-We construct the recurrent neural network layer `rnn_layer` with a single hidden layer and 256 hidden units.
-In fact, we have not even discussed yet what it means to have multiple layers---this will happen in :numref:`sec_deep_rnn`.
-For now, suffice it to say that multiple layers simply amount to the output of one layer of RNN being used as the input for the next layer of RNN.
+APIs de alto nível fornecem implementações de redes neurais recorrentes.
+Construímos a camada de rede neural recorrente `rnn_layer` com uma única camada oculta e 256 unidades ocultas.
+Na verdade, ainda não discutimos o que significa ter várias camadas --- isso vai acontecer em :numref:`sec_deep_rnn`.
+Por enquanto, basta dizer que várias camadas simplesmente equivalem à saída de uma camada de RNN sendo usada como entrada para a próxima camada de RNN.
 
 ```{.python .input}
 num_hiddens = 256
@@ -48,26 +48,27 @@ num_hiddens = 256
 rnn_layer = nn.RNN(len(vocab), num_hiddens)
 ```
 
+
 :begin_tab:`mxnet`
-Initializing the hidden state is straightforward.
-We invoke the member function `begin_state`.
-This returns a list (`state`)
-that contains
-an initial hidden state
-for each example in the minibatch,
-whose shape is
-(number of hidden layers, batch size, number of hidden units).
-For some models 
-to be introduced later 
-(e.g., long short-term memory),
-such a list also
-contains other information.
+A inicialização do estado oculto é simples.
+Invocamos a função de membro `begin_state`.
+Isso retorna uma lista (`estado`)
+que contém
+um estado inicial oculto
+para cada exemplo no minibatch,
+cuja forma é
+(número de camadas ocultas, tamanho do lote, número de unidades ocultas).
+Para alguns modelos
+a serem apresentados mais tarde
+(por exemplo, memória longa de curto prazo),
+essa lista também
+contém outras informações.
 :end_tab:
 
 :begin_tab:`pytorch`
-We use a tensor to initialize the hidden state,
-whose shape is
-(number of hidden layers, batch size, number of hidden units).
+Usamos um tensor para inicializar o estado oculto,
+cuja forma é
+(número de camadas ocultas, tamanho do lote, número de unidades ocultas).
 :end_tab:
 
 ```{.python .input}
@@ -248,5 +249,6 @@ high-level APIs of the deep learning framework.
 [Discussions](https://discuss.d2l.ai/t/1053)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE1OTU5NDEsLTE3OTU4Njk1NjJdfQ==
+eyJoaXN0b3J5IjpbLTE3NTg4NjE0OTQsLTE3OTU4Njk1NjJdfQ
+==
 -->
