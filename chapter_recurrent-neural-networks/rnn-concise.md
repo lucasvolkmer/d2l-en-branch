@@ -1,4 +1,4 @@
-# Concise Implementation of Recurrent Neural Networkção Concisa de Redes Neurais Recorrentes
+# Implementação Concisa de Redes Neurais Recorrentes
 :label:`sec_rnn-concise`
 
 While :numref:`sec_rnn_scratch` was instructive to see how RNNs are implemented,
@@ -248,5 +248,5 @@ high-level APIs of the deep learning framework.
 [Discussions](https://discuss.d2l.ai/t/1053)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MDkwNTk4MF19
+eyJoaXN0b3J5IjpbLTE3OTU4Njk1NjJdfQ==
 -->
