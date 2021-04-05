@@ -179,12 +179,12 @@ def get_params(vocab_size, num_hiddens):
 
 ## Modelo RNN
 
-To define an RNN model,
-we first need an `init_rnn_state` function
-to return the hidden state at initialization.
-It returns a tensor filled with 0 and with a shape of (batch size, number of hidden units).
-Using tuples makes it easier to handle situations where the hidden state contains multiple variables,
-which we will encounter in later sections.
+Para definir um modelo RNN,
+primeiro precisamos de uma função `init_rnn_state`
+para retornar ao estado oculto na inicialização.
+Ele retorna um tensor preenchido com 0 e com uma forma de (tamanho do lote, número de unidades ocultas).
+O uso de tuplas torna mais fácil lidar com situações em que o estado oculto contém várias variáveis,
+que encontraremos em seções posteriores.
 
 ```{.python .input}
 def init_rnn_state(batch_size, num_hiddens, device):
@@ -828,6 +828,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcwNDA2Mzg5LDQ2NjkzODExNCwtMTA2Nz
+eyJoaXN0b3J5IjpbNTgzNzk4MTUyLDQ2NjkzODExNCwtMTA2Nz
 M1MjgzOF19
 -->
