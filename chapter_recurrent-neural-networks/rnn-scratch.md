@@ -360,22 +360,21 @@ Podemos ver que a forma de saída é (número de etapas de tempo $\times$ tamanh
 
 ## Predição
 
-Let us first define the prediction function
-to generate new characters following
-the user-provided `prefix`,
-which is a string containing several characters.
-When looping through these beginning characters in `prefix`,
-we keep passing the hidden state
-to the next time step without
-generating any output.
-This is called the *warm-up* period,
-during which the model updates itself
-(e.g., update the hidden state)
-but does not make predictions.
-After the warm-up period,
-the hidden state is generally better than
-its initialized value at the beginning.
-So we generate the predicted characters and emit them.
+Vamos primeiro definir a função de predição para gerar novos personagens seguindo
+o `prefixo` fornecido pelo usuário,
+que é uma string contendo vários caracteres.
+Ao percorrer esses caracteres iniciais em `prefixo`,
+continuamos passando pelo estado escondido
+para a próxima etapa sem
+gerando qualquer saída.
+Isso é chamado de período de *aquecimento*,
+durante o qual o modelo se atualiza
+(por exemplo, atualizar o estado oculto)
+mas não faz previsões.
+Após o período de aquecimento,
+o estado oculto é geralmente melhor do que
+seu valor inicializado no início.
+Assim, geramos os caracteres previstos e os emitimos.
 
 ```{.python .input}
 def predict_ch8(prefix, num_preds, net, vocab, device):  #@save
@@ -426,10 +425,10 @@ def predict_ch8(prefix, num_preds, net, vocab, params):  #@save
     return ''.join([vocab.idx_to_token[i] for i in outputs])
 ```
 
-Now we can test the `predict_ch8` function.
-We specify the prefix as `time traveller ` and have it generate 10 additional characters.
-Given that we have not trained the network,
-it will generate nonsensical predictions.
+Agora podemos testar a função `predict_ch8`.
+Especificamos o prefixo como `viajante do tempo` e fazemos com que ele gere 10 caracteres adicionais.
+Visto que não treinamos a rede,
+isso vai gerar previsões sem sentido.
 
 ```{.python .input}
 #@tab mxnet,pytorch
@@ -441,7 +440,7 @@ predict_ch8('time traveller ', 10, net, vocab, d2l.try_gpu())
 predict_ch8('time traveller ', 10, net, vocab, params)
 ```
 
-## Gradient Clipping
+## Recorte de  gradiente
 
 For a sequence of length $T$,
 we compute the gradients over these $T$ time steps in an iteration, which results in a chain of matrix-products with length  $\mathcal{O}(T)$ during backpropagation.
@@ -828,6 +827,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwODY3ODY1Myw1ODM3OTgxNTIsNDY2OT
-M4MTE0LC0xMDY3MzUyODM4XX0=
+eyJoaXN0b3J5IjpbLTEwNDE2MjM4NDgsNTgzNzk4MTUyLDQ2Nj
+kzODExNCwtMTA2NzM1MjgzOF19
 -->
