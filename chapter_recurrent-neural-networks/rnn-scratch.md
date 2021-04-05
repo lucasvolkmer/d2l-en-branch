@@ -49,19 +49,20 @@ train_random_iter, vocab_random_iter = d2l.load_data_time_machine(
     batch_size, num_steps, use_random_iter=True)
 ```
 
-## One-Hot Encoding
+## Codificação One-Hot
 
-Recall that each token is represented as a numerical index in `train_iter`.
-Feeding these indices directly to a neural network might make it hard to
-learn.
-We often represent each token as a more expressive feature vector.
-The easiest representation is called *one-hot encoding*,
-which is introduced
-in :numref:`subsec_classification-problem`.
 
-In a nutshell, we map each index to a different unit vector: assume that the number of different tokens in the vocabulary is $N$ (`len(vocab)`) and the token indices range from 0 to $N-1$.
-If the index of a token is the integer $i$, then we create a vector of all 0s with a length of $N$ and set the element at position $i$ to 1.
-This vector is the one-hot vector of the original token. The one-hot vectors with indices 0 and 2 are shown below.
+Lembre-se de que cada token é representado como um índice numérico em `train_iter`.
+Alimentar esses índices diretamente para uma rede neural pode tornar difícil
+aprender.
+Frequentemente, representamos cada token como um vetor de *features* mais expressivo.
+A representação mais fácil é chamada de *codificação one-hot*,
+que é introduzida
+em :numref:`subsec_classification-problem`.
+
+Em resumo, mapeamos cada índice para um vetor de unidade diferente: suponha que o número de tokens diferentes no vocabulário seja $N$ (`len (vocab)`) e os índices de token variam de 0 a $N-1$.
+Se o índice de um token é o inteiro $i$, então criamos um vetor de 0s com um comprimento de $N$ e definimos o elemento na posição $i$ como 1.
+Este vetor é o vetor one-hot do token original. Os vetores one-hot com índices 0 e 2 são mostrados abaixo.
 
 ```{.python .input}
 npx.one_hot(np.array([0, 2]), len(vocab))
@@ -828,5 +829,6 @@ and make it run faster.
 [Discussions](https://discuss.d2l.ai/t/1052)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY2OTM4MTE0LC0xMDY3MzUyODM4XX0=
+eyJoaXN0b3J5IjpbLTQ0ODI2MzA3Myw0NjY5MzgxMTQsLTEwNj
+czNTI4MzhdfQ==
 -->
