@@ -82,33 +82,34 @@ state = torch.zeros((1, batch_size, num_hiddens))
 state.shape
 ```
 
-With a hidden state and an input,
-we can compute the output with
-the updated hidden state.
-It should be emphasized that
-the "output" (`Y`) of `rnn_layer`
-does *not* involve computation of output layers:
-it refers to 
-the hidden state at *each* time step,
-and they can be used as the input
-to the subsequent output layer.
+
+Com um estado oculto e uma entrada,
+podemos calcular a saída com
+o estado oculto atualizado.
+Deve ser enfatizado que
+a "saída" (`Y`) de` rnn_layer`
+*não* envolve computação de camadas de saída:
+isso se refere a
+o estado oculto em *cada* passo de tempo,
+e eles podem ser usados como entrada
+para a camada de saída subsequente.
 
 :begin_tab:`mxnet`
-Besides,
-the updated hidden state (`state_new`) returned by `rnn_layer`
-refers to the hidden state
-at the *last* time step of the minibatch.
-It can be used to initialize the 
-hidden state for the next minibatch within an epoch
-in sequential partitioning.
-For multiple hidden layers,
-the hidden state of each layer will be stored
-in this variable (`state_new`).
-For some models 
-to be introduced later 
-(e.g., long short-term memory),
-this variable also
-contains other information.
+Além do mais,
+o estado oculto atualizado (`state_new`) retornado por `rnn_layer`
+refere-se ao estado oculto
+na *última* etapa de tempo do minibatch.
+Ele pode ser usado para inicializar o
+estado oculto para o próximo minibatch dentro de uma época
+no particionamento sequencial.
+Para várias camadas ocultas,
+o estado oculto de cada camada será armazenado
+nesta variável (`estado_novo`).
+Para alguns modelos
+para ser apresentado mais tarde
+(por exemplo, memória longa de curto prazo),
+esta variável também
+contém outras informações.
 :end_tab:
 
 ```{.python .input}
@@ -249,6 +250,5 @@ high-level APIs of the deep learning framework.
 [Discussions](https://discuss.d2l.ai/t/1053)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTg4NjE0OTQsLTE3OTU4Njk1NjJdfQ
-==
+eyJoaXN0b3J5IjpbMTIzMTc4OTU1LC0xNzk1ODY5NTYyXX0=
 -->
