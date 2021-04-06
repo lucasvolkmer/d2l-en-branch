@@ -225,18 +225,18 @@ num_epochs, lr = 500, 1
 d2l.train_ch8(net, train_iter, vocab, lr, num_epochs, device)
 ```
 
-Compared with the last section, this model achieves comparable perplexity,
-albeit within a shorter period of time, due to the code being more optimized by
-high-level APIs of the deep learning framework.
+Comparado com a última seção, este modelo atinge perplexidade comparável,
+embora dentro de um período de tempo mais curto, devido ao código ser mais otimizado por
+APIs de alto nível da estrutura de aprendizado profundo.
 
 
-## Summary
+## Resumo
 
-* High-level APIs of the deep learning framework provides an implementation of the RNN layer.
-* The RNN layer of high-level APIs returns an output and an updated hidden state, where the output does not involve output layer computation.
-* Using high-level APIs leads to faster RNN training than using its implementation from scratch.
+* APIs de alto nível da estrutura de *deep learning* fornecem uma implementação da camada RNN.
+* A camada RNN de APIs de alto nível retorna uma saída e um estado oculto atualizado, em que a saída não envolve computação da camada de saída.
+* Usar APIs de alto nível leva a um treinamento RNN mais rápido do que usar sua implementação do zero.
 
-## Exercises
+## Exercícios
 
 1. Can you make the RNN model overfit using the high-level APIs?
 1. What happens if you increase the number of hidden layers in the RNN model? Can you make the model work?
@@ -250,6 +250,6 @@ high-level APIs of the deep learning framework.
 [Discussions](https://discuss.d2l.ai/t/1053)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjg2NjYwOTEsMTIzMTc4OTU1LC0xNz
-k1ODY5NTYyXX0=
+eyJoaXN0b3J5IjpbNDQ1OTE0NywxMjMxNzg5NTUsLTE3OTU4Nj
+k1NjJdfQ==
 -->
