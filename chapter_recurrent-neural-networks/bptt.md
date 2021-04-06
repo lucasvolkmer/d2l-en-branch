@@ -31,34 +31,33 @@ que não há nada conceitualmente novo em como funciona. Afinal, ainda estamos a
 vale a pena revisar a retropropagação (:numref:`sec_backprop`) novamente.
 
 
-We have described forward and backward propagations
-and computational graphs
-in MLPs in :numref:`sec_backprop`.
-Forward propagation in an RNN is relatively
-straightforward.
-*Backpropagation through time* is actually a specific
-application of backpropagation
-in RNNs :cite:`Werbos.1990`.
-It
-requires us to expand the 
-computational graph of an RNN
-one time step at a time to
-obtain the dependencies
-among model variables and parameters.
-Then,
-based on the chain rule,
-we apply backpropagation to compute and
-store gradients.
-Since sequences can be rather long, the dependency can be rather lengthy.
-For instance, for a sequence of 1000 characters, 
-the first token could potentially have significant influence on the token at the final position.
-This is not really computationally feasible
-(it takes too long and requires too much memory) and it requires over 1000 matrix products before we would arrive at that very elusive gradient.
-This is a process fraught with computational and statistical uncertainty.
-In the following we will elucidate what happens
-and how to address this in practice.
+Descrevemos propagações para frente e para trás
+e gráficos computacionais
+em MLPs em :numref:`sec_backprop`.
+A propagação direta em uma RNN é relativamente
+para a frente.
+*Retropropagação através do tempo* é, na verdade, uma aplicação específica de retropropagação
+em RNNs :cite:`Werbos.1990`.
+Isto
+exige que expandamos o
+gráfico computacional de uma RNN
+um passo de cada vez para
+obter as dependências
+entre variáveis ​​e parâmetros do modelo.
+Então,
+com base na regra da cadeia,
+aplicamos retropropagação para calcular e
+gradientes de loja.
+Uma vez que as sequências podem ser bastante longas, a dependência pode ser bastante longa.
+Por exemplo, para uma sequência de 1000 caracteres,
+o primeiro token pode ter uma influência significativa sobre o token na posição final.
+Isso não é realmente viável computacionalmente
+(leva muito tempo e requer muita memória) e requer mais de 1000 produtos de matriz antes de chegarmos a esse gradiente muito indescritível.
+Este é um processo repleto de incertezas computacionais e estatísticas.
+A seguir iremos elucidar o que acontece
+e como resolver isso na prática.
 
-## Analysis of Gradients in RNNs
+## Análise de Gradientes em RNNs
 :label:`subsec_bptt_analysis`
 
 We start with a simplified model of how an RNN works.
@@ -427,6 +426,6 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDkxMzQ5MjAsLTExMDI3Njk0MDRdfQ
+eyJoaXN0b3J5IjpbLTE4NjAwNzYyMDEsLTExMDI3Njk0MDRdfQ
 ==
 -->
