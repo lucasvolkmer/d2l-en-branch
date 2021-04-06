@@ -173,15 +173,15 @@ Uma das consequências disso é que o modelo se concentra principalmente na infl
 
 ### Truncamento Randomizado ### 
 
-Last, we can replace $\partial h_t/\partial w_h$
-by a random variable which is correct in expectation but  truncates the sequence.
-This is achieved by using a sequence of $\xi_t$
-with predefined $0 \leq \pi_t \leq 1$,
-where $P(\xi_t = 0) = 1-\pi_t$ and  $P(\xi_t = \pi_t^{-1}) = \pi_t$, thus $E[\xi_t] = 1$.
-We use this to replace the gradient
+Por último, podemos substituir $\partial h_t/\partial w_h$
+por uma variável aleatória que está correta na expectativa, mas trunca a sequência.
+Isso é conseguido usando uma sequência de $\xi_t$
+com $0 \leq \pi_t \leq 1$ predefinido,
+onde $P(\xi_t = 0) = 1-\pi_t$ e  $P(\xi_t = \pi_t^{-1}) = \pi_t$,  portanto  $E[\xi_t] = 1$.
+Usamos isso para substituir o gradiente
 $\partial h_t/\partial w_h$
-in :eqref:`eq_bptt_partial_ht_wh_recur`
-with
+em :eqref:`eq_bptt_partial_ht_wh_recur`
+com
 
 $$z_t= \frac{\partial f(x_{t},h_{t-1},w_h)}{\partial w_h} +\xi_t \frac{\partial f(x_{t},h_{t-1},w_h)}{\partial h_{t-1}} \frac{\partial h_{t-1}}{\partial w_h}.$$
 
@@ -427,6 +427,6 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NjI4MDQyMSwxOTA1NDcxOTUzLDUwMD
+eyJoaXN0b3J5IjpbLTg3NTAwNzg5NCwxOTA1NDcxOTUzLDUwMD
 Q2NDUzMiwtMTEwMjc2OTQwNF19
 -->
