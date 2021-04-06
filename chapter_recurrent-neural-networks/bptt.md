@@ -158,20 +158,20 @@ Ou seja, poderíamos ver coisas semelhantes ao efeito borboleta, em que mudança
 Na verdade, isso é bastante indesejável em termos do modelo que queremos estimar.
 Afinal, estamos procurando estimadores robustos que generalizem bem. Portanto, essa estratégia quase nunca é usada na prática.
 
-### Truncating Time Steps###
+### Truncamento de Etapas de Tempo
 
-Alternatively,
-we can truncate the sum in
+Alternativamente,
+podemos truncar a soma em
 :eqref:`eq_bptt_partial_ht_wh_gen`
-after $\tau$ steps. 
-This is what we have been discussing so far,
-such as when we detached the gradients in :numref:`sec_rnn_scratch`. 
-This leads to an *approximation* of the true gradient, simply by terminating the sum at 
+após $\tau$  passos.
+Isso é o que estivemos discutindo até agora,
+como quando separamos os gradientes em :numref:`sec_rnn_scratch`. 
+Isso leva a uma *aproximação* do gradiente verdadeiro, simplesmente terminando a soma em
 $\partial h_{t-\tau}/\partial w_h$. 
-In practice this works quite well. It is what is commonly referred to as truncated backpropgation through time :cite:`Jaeger.2002`.
-One of the consequences of this is that the model focuses primarily on short-term influence rather than long-term consequences. This is actually *desirable*, since it biases the estimate towards simpler and more stable models.
+Na prática, isso funciona muito bem. É o que é comumente referido como retropropagação truncada ao longo do tempo :cite:`Jaeger.2002`.
+Uma das consequências disso é que o modelo se concentra principalmente na influência de curto prazo, e não nas consequências de longo prazo. Na verdade, isso é *desejável*, pois inclina a estimativa para modelos mais simples e estáveis.
 
-### Randomized Truncation ### 
+### Truncamento Randomizado ### 
 
 Last, we can replace $\partial h_t/\partial w_h$
 by a random variable which is correct in expectation but  truncates the sequence.
@@ -427,6 +427,6 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NjI3ODc2NywxOTA1NDcxOTUzLDUwMD
+eyJoaXN0b3J5IjpbMTM1NjI4MDQyMSwxOTA1NDcxOTUzLDUwMD
 Q2NDUzMiwtMTEwMjc2OTQwNF19
 -->
