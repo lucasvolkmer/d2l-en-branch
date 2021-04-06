@@ -86,20 +86,20 @@ Como resultado, os estados ocultos e saídas em cada etapa de tempo podem ser ex
 $$\begin{aligned}h_t &= f(x_t, h_{t-1}, w_h),\\o_t &= g(h_t, w_o),\end{aligned}$$
 :eqlabel:`eq_bptt_ht_ot`
 
-where $f$ and $g$ are transformations
-of the hidden layer and the output layer, respectively.
-Hence, we have a chain of values $\{\ldots, (x_{t-1}, h_{t-1}, o_{t-1}), (x_{t}, h_{t}, o_t), \ldots\}$ that depend on each other via recurrent computation.
-The forward propagation is fairly straightforward.
-All we need is to loop through the $(x_t, h_t, o_t)$ triples one time step at a time.
-The discrepancy between output $o_t$ and the desired label $y_t$ is then evaluated by an objective function
-across all the $T$ time steps
-as
+onde $f$ e $g$ são transformações
+da camada oculta e da camada de saída, respectivamente.
+Portanto, temos uma cadeia de valores $\{\ldots, (x_{t-1}, h_{t-1}, o_{t-1}), (x_{t}, h_{t}, o_t), \ldots\}$ que dependem uns dos outros por meio de computação recorrente.
+A propagação direta é bastante direta.
+Tudo o que precisamos é percorrer as triplas $(x_t, h_t, o_t)$ um passo de tempo de cada vez.
+A discrepância entre a saída $o_t$ e o rótulo desejado $y_t$ é então avaliada por uma função objetivo
+em todas as etapas de tempo $T$
+como
 
 $$L(x_1, \ldots, x_T, y_1, \ldots, y_T, w_h, w_o) = \frac{1}{T}\sum_{t=1}^T l(y_t, o_t).$$
 
 
 
-For backpropagation, matters are a bit trickier, especially when we compute the gradients with regard to the parameters $w_h$ of the objective function $L$. To be specific, by the chain rule,
+Para retropropagação, as coisas são um pouco mais complicadas, especialmente quando calculamos os gradientes em relação aos parâmetros $w_h$ da função objetivo $L$. Para ser específico, pela regra da cadeia,
 
 $$\begin{aligned}\frac{\partial L}{\partial w_h}  & = \frac{1}{T}\sum_{t=1}^T \frac{\partial l(y_t, o_t)}{\partial w_h}  \\& = \frac{1}{T}\sum_{t=1}^T \frac{\partial l(y_t, o_t)}{\partial o_t} \frac{\partial g(h_t, w_o)}{\partial h_t}  \frac{\partial h_t}{\partial w_h}.\end{aligned}$$
 :eqlabel:`eq_bptt_partial_L_wh`
@@ -427,5 +427,5 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDY2NzY1LC0xMTAyNzY5NDA0XX0=
+eyJoaXN0b3J5IjpbNTAwNDY0NTMyLC0xMTAyNzY5NDA0XX0=
 -->
