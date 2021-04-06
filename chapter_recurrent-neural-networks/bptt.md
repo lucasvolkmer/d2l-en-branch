@@ -104,17 +104,17 @@ Para retropropagação, as coisas são um pouco mais complicadas, especialmente 
 $$\begin{aligned}\frac{\partial L}{\partial w_h}  & = \frac{1}{T}\sum_{t=1}^T \frac{\partial l(y_t, o_t)}{\partial w_h}  \\& = \frac{1}{T}\sum_{t=1}^T \frac{\partial l(y_t, o_t)}{\partial o_t} \frac{\partial g(h_t, w_o)}{\partial h_t}  \frac{\partial h_t}{\partial w_h}.\end{aligned}$$
 :eqlabel:`eq_bptt_partial_L_wh`
 
-The first and the second factors of the
-product in :eqref:`eq_bptt_partial_L_wh`
-are easy to compute.
-The third factor $\partial h_t/\partial w_h$ is where things get tricky, since we need to recurrently compute the effect of the parameter $w_h$ on $h_t$.
-According to the recurrent computation
-in :eqref:`eq_bptt_ht_ot`,
-$h_t$ depends on both $h_{t-1}$ and $w_h$,
-where computation of $h_{t-1}$
-also depends on $w_h$.
-Thus,
-using the chain rule yields
+O primeiro e o segundo fatores do
+produto em :eqref:`eq_bptt_partial_L_wh`
+são fáceis de calcular.
+O terceiro fator $\partial h_t/\partial w_h$ é onde as coisas ficam complicadas, já que precisamos calcular recorrentemente o efeito do parâmetro $w_h$ em $h_t$.
+De acordo com o cálculo recorrente
+em :eqref:`eq_bptt_ht_ot`,
+$h_t$ depende de $h_{t-1}$ e $w_h$,
+onde cálculo de $h_{t-1}$
+também depende de $w_h$.
+Assim,
+usando a regra da cadeia temos
 
 $$\frac{\partial h_t}{\partial w_h}= \frac{\partial f(x_{t},h_{t-1},w_h)}{\partial w_h} +\frac{\partial f(x_{t},h_{t-1},w_h)}{\partial h_{t-1}} \frac{\partial h_{t-1}}{\partial w_h}.$$
 :eqlabel:`eq_bptt_partial_ht_wh_recur`
@@ -427,5 +427,6 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAwNDY0NTMyLC0xMTAyNzY5NDA0XX0=
+eyJoaXN0b3J5IjpbMTkwNTQ3MTk1Myw1MDA0NjQ1MzIsLTExMD
+I3Njk0MDRdfQ==
 -->
