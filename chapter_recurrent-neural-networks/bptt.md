@@ -1,33 +1,34 @@
 # BackRetropropagation Through Timeção ao Longo do Tempo
 :label:`sec_bptt`
 
-So far we have repeatedly alluded to things like
-*exploding gradients*,
-*vanishing gradients*,
-and the need to
-*detach the gradient* for RNNs.
-For instance, in :numref:`sec_rnn_scratch`
-we invoked the `detach` function on the sequence.
-None of this was really fully
-explained, in the interest of being able to build a model quickly and
-to see how it works.
-In this section,
-we will delve a bit more deeply
-into the details of backpropagation for sequence models and why (and how) the mathematics works.
 
-We encountered some of the effects of gradient explosion when we first
-implemented RNNs (:numref:`sec_rnn_scratch`).
-In
-particular,
-if you solved the exercises,
-you would
-have seen that gradient clipping is vital to ensure proper
-convergence.
-To provide a better understanding of this issue, this
-section will review how gradients are computed for sequence models.
-Note
-that there is nothing conceptually new in how it works. After all, we are still merely applying the chain rule to compute gradients. Nonetheless, it is
-worth while reviewing backpropagation (:numref:`sec_backprop`) again.
+Até agora, temos repetidamente aludido a coisas como
+*gradientes explosivos*,
+*gradientes de desaparecimento*,
+e a necessidade de
+*destacar o gradiente* para RNNs.
+Por exemplo, em :numref:`sec_rnn_scratch`
+invocamos a função `detach` na sequência.
+Nada disso foi realmente completamente
+explicado, no interesse de ser capaz de construir um modelo rapidamente e
+para ver como funciona.
+Nesta secção,
+vamos nos aprofundar um pouco mais
+nos detalhes de retropropagação para modelos de sequência e por que (e como) a matemática funciona.
+
+Encontramos alguns dos efeitos da explosão de gradiente quando primeiro
+RNNs implementados (:numref:`sec_rnn_scratch`).
+No
+especial,
+se você resolveu os exercícios,
+você poderia
+ter visto que o corte de gradiente é vital para garantir
+convergência.
+Para fornecer uma melhor compreensão deste problema, esta
+seção irá rever como os gradientes são calculados para modelos de sequência.
+Observe
+que não há nada conceitualmente novo em como funciona. Afinal, ainda estamos apenas aplicando a regra da cadeia para calcular gradientes. No entanto,
+vale a pena revisar a retropropagação (:numref:`sec_backprop`) novamente.
 
 
 We have described forward and backward propagations
@@ -426,5 +427,6 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDI3Njk0MDRdfQ==
+eyJoaXN0b3J5IjpbLTExMDkxMzQ5MjAsLTExMDI3Njk0MDRdfQ
+==
 -->
