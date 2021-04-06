@@ -134,29 +134,29 @@ $$\begin{aligned}a_t &= \frac{\partial h_t}{\partial w_h},\\
 b_t &= \frac{\partial f(x_{t},h_{t-1},w_h)}{\partial w_h}, \\
 c_t &= \frac{\partial f(x_{t},h_{t-1},w_h)}{\partial h_{t-1}},\end{aligned}$$
 
-the gradient computation in :eqref:`eq_bptt_partial_ht_wh_recur` satisfies
+o cálculo do gradiente em: eqref: `eq_bptt_partial_ht_wh_recur` satisfaz
 $a_{t}=b_{t}+c_{t}a_{t-1}$.
-Thus,
-per :eqref:`eq_bptt_at`,
-we can remove the recurrent computation in :eqref:`eq_bptt_partial_ht_wh_recur`
-with
+Assim,
+por :eqref:`eq_bptt_at`,
+podemos remover o cálculo recorrente em :eqref:`eq_bptt_partial_ht_wh_recur`
+com
 
 $$\frac{\partial h_t}{\partial w_h}=\frac{\partial f(x_{t},h_{t-1},w_h)}{\partial w_h}+\sum_{i=1}^{t-1}\left(\prod_{j=i+1}^{t} \frac{\partial f(x_{j},h_{j-1},w_h)}{\partial h_{j-1}} \right) \frac{\partial f(x_{i},h_{i-1},w_h)}{\partial w_h}.$$
 :eqlabel:`eq_bptt_partial_ht_wh_gen`
 
-While we can use the chain rule to compute $\partial h_t/\partial w_h$ recursively, this chain can get very long whenever $t$ is large. Let us discuss a number of strategies for dealing with this problem.
+Embora possamos usar a regra da cadeia para calcular \partial h_t/\partial w_h$ recursivamente, esta cadeia pode ficar muito longa sempre que $t$ for grande. Vamos discutir uma série de estratégias para lidar com esse problema.
 
-### Full Computation ### 
+### Computação Completa
 
-Obviously,
-we can just compute the full sum in
+Obviamente,
+podemos apenas calcular a soma total em
 :eqref:`eq_bptt_partial_ht_wh_gen`.
-However,
-this is very slow and gradients can blow up,
-since subtle changes in the initial conditions can potentially affect the outcome a lot.
-That is, we could see things similar to the butterfly effect where minimal changes in the initial conditions lead to disproportionate changes in the outcome.
-This is actually quite undesirable in terms of the model that we want to estimate.
-After all, we are looking for robust estimators that generalize well. Hence this strategy is almost never used in practice.
+Porém,
+isso é muito lento e os gradientes podem explodir,
+uma vez que mudanças sutis nas condições iniciais podem afetar muito o resultado.
+Ou seja, poderíamos ver coisas semelhantes ao efeito borboleta, em que mudanças mínimas nas condições iniciais levam a mudanças desproporcionais no resultado.
+Na verdade, isso é bastante indesejável em termos do modelo que queremos estimar.
+Afinal, estamos procurando estimadores robustos que generalizem bem. Portanto, essa estratégia quase nunca é usada na prática.
 
 ### Truncating Time Steps###
 
@@ -427,6 +427,6 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE2Nzc3NDcsMTkwNTQ3MTk1Myw1MDA0Nj
-Q1MzIsLTExMDI3Njk0MDRdfQ==
+eyJoaXN0b3J5IjpbMTg5NjI3ODc2NywxOTA1NDcxOTUzLDUwMD
+Q2NDUzMiwtMTEwMjc2OTQwNF19
 -->
