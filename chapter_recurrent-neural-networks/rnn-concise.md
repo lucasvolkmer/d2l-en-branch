@@ -238,9 +238,9 @@ APIs de alto nível da estrutura de aprendizado profundo.
 
 ## Exercícios
 
-1. Can you make the RNN model overfit using the high-level APIs?
-1. What happens if you increase the number of hidden layers in the RNN model? Can you make the model work?
-1. Implement the autoregressive model of :numref:`sec_sequence` using an RNN.
+1. Você pode fazer o modelo RNN sobreajustar usando as APIs de alto nível?
+1. O que acontece se você aumentar o número de camadas ocultas no modelo RNN? Você pode fazer o modelo funcionar?
+1. Implemente o modelo autoregressivo de :numref:`sec_sequence` usando um RNN.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/335)
@@ -250,6 +250,6 @@ APIs de alto nível da estrutura de aprendizado profundo.
 [Discussions](https://discuss.d2l.ai/t/1053)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ1OTE0NywxMjMxNzg5NTUsLTE3OTU4Nj
-k1NjJdfQ==
+eyJoaXN0b3J5IjpbNTM4NTA4MjI0LDEyMzE3ODk1NSwtMTc5NT
+g2OTU2Ml19
 -->
