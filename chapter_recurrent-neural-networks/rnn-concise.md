@@ -125,10 +125,10 @@ Y, state_new = rnn_layer(X, state)
 Y.shape, state_new.shape
 ```
 
-Similar to :numref:`sec_rnn_scratch`,
-we define an `RNNModel` class 
-for a complete RNN model.
-Note that `rnn_layer` only contains the hidden recurrent layers, we need to create a separate output layer.
+Semelhante a :numref:`sec_rnn_scratch`,
+nós definimos uma classe `RNNModel`
+para um modelo RNN completo.
+Observe que `rnn_layer` contém apenas as camadas recorrentes ocultas, precisamos criar uma camada de saída separada.
 
 ```{.python .input}
 #@save
@@ -198,9 +198,9 @@ class RNNModel(nn.Module):
                         batch_size, self.num_hiddens), device=device))
 ```
 
-## Training and Predicting
+## Treinamento e Previsão
 
-Before training the model, let us make a prediction with the a model that has random weights.
+Antes de treinar o modelo, façamos uma previsão com um modelo que possui pesos aleatórios.
 
 ```{.python .input}
 device = d2l.try_gpu()
@@ -217,7 +217,7 @@ net = net.to(device)
 d2l.predict_ch8('time traveller', 10, net, vocab, device)
 ```
 
-As is quite obvious, this model does not work at all. Next, we call `train_ch8` with the same hyperparameters defined in :numref:`sec_rnn_scratch` and train our model with high-level APIs.
+Como é bastante óbvio, este modelo não funciona. Em seguida, chamamos `train_ch8` com os mesmos hiperparâmetros definidos em :numref:`sec_rnn_scratch` e treinamos nosso modelo com APIs de alto nível.
 
 ```{.python .input}
 #@tab all
@@ -250,5 +250,6 @@ high-level APIs of the deep learning framework.
 [Discussions](https://discuss.d2l.ai/t/1053)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMTc4OTU1LC0xNzk1ODY5NTYyXX0=
+eyJoaXN0b3J5IjpbLTE3Mjg2NjYwOTEsMTIzMTc4OTU1LC0xNz
+k1ODY5NTYyXX0=
 -->
