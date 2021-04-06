@@ -60,27 +60,28 @@ e como resolver isso na prática.
 ## Análise de Gradientes em RNNs
 :label:`subsec_bptt_analysis`
 
-We start with a simplified model of how an RNN works.
-This model ignores details about the specifics of the hidden state and how it is updated.
-The mathematical notation here
-does not explicitly distinguish
-scalars, vectors, and matrices as it used to do.
-These details are immaterial to the analysis
-and would only serve to clutter the notation
-in this subsection.
 
-In this simplified model,
-we denote $h_t$ as the hidden state,
-$x_t$ as the input, and $o_t$ as the output
-at time step $t$.
-Recall our discussions in
+Começamos com um modelo simplificado de como funciona uma RNN.
+Este modelo ignora detalhes sobre as especificações do estado oculto e como ele é atualizado.
+A notação matemática aqui
+não distingue explicitamente
+escalares, vetores e matrizes como costumava fazer.
+Esses detalhes são irrelevantes para a análise
+e serviriam apenas para bagunçar a notação
+nesta subseção.
+
+Neste modelo simplificado,
+denotamos $h_t$ como o estado oculto,
+$x_t$ como a entrada e $o_t$ como a saída
+no passo de tempo $t$.
+Lembre-se de nossas discussões em
 :numref:`subsec_rnn_w_hidden_states`
-that the input and the hidden state
-can be concatenated to
-be multiplied by one weight variable in the hidden layer.
-Thus, we use $w_h$ and $w_o$ to
-indicate the weights of the hidden layer and the output layer, respectively.
-As a result, the hidden states and outputs at each time steps can be explained as
+que a entrada e o estado oculto
+podem ser concatenados ao
+serem multiplicados por uma variável de peso na camada oculta.
+Assim, usamos $w_h$ e $w_o$ para
+indicar os pesos da camada oculta e da camada de saída, respectivamente.
+Como resultado, os estados ocultos e saídas em cada etapa de tempo podem ser explicados como
 
 $$\begin{aligned}h_t &= f(x_t, h_{t-1}, w_h),\\o_t &= g(h_t, w_o),\end{aligned}$$
 :eqlabel:`eq_bptt_ht_ot`
@@ -426,6 +427,5 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjAwNzYyMDEsLTExMDI3Njk0MDRdfQ
-==
+eyJoaXN0b3J5IjpbLTE4NDY2NzY1LC0xMTAyNzY5NDA0XX0=
 -->
