@@ -120,15 +120,15 @@ $$\frac{\partial h_t}{\partial w_h}= \frac{\partial f(x_{t},h_{t-1},w_h)}{\parti
 :eqlabel:`eq_bptt_partial_ht_wh_recur`
 
 
-To derive the above gradient, assume that we have three sequences $\{a_{t}\},\{b_{t}\},\{c_{t}\}$ satisfying
+Para derivar o gradiente acima, suponha que temos três sequências $\{a_{t}\},\{b_{t}\},\{c_{t}\}$ satisfatória
 $a_{0}=0$ and $a_{t}=b_{t}+c_{t}a_{t-1}$ for $t=1, 2,\ldots$.
-Then for $t\geq 1$, it is easy to show
+Então, para $t\geq 1$, é fácil mostrar
 
 $$a_{t}=b_{t}+\sum_{i=1}^{t-1}\left(\prod_{j=i+1}^{t}c_{j}\right)b_{i}.$$
 :eqlabel:`eq_bptt_at`
 
-By substituting $a_t$, $b_t$, and $c_t$
-according to
+Substituindo $$a_t$, $b_t$, e $c_t$
+de acordo com
 
 $$\begin{aligned}a_t &= \frac{\partial h_t}{\partial w_h},\\
 b_t &= \frac{\partial f(x_{t},h_{t-1},w_h)}{\partial w_h}, \\
@@ -427,6 +427,6 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNTQ3MTk1Myw1MDA0NjQ1MzIsLTExMD
-I3Njk0MDRdfQ==
+eyJoaXN0b3J5IjpbOTE2Nzc3NDcsMTkwNTQ3MTk1Myw1MDA0Nj
+Q1MzIsLTExMDI3Njk0MDRdfQ==
 -->
