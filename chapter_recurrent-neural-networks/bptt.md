@@ -250,14 +250,14 @@ desde o início da sequência
 $$L = \frac{1}{T} \sum_{t=1}^T l(\mathbf{o}_t, y_t).$$
 
 
-In order to visualize the dependencies among
-model variables and parameters during computation
-of the RNN,
-we can draw a computational graph for the model,
-as shown in :numref:`fig_rnn_bptt`.
-For example, the computation of the hidden states of time step 3, $\mathbf{h}_3$, depends on the model parameters $\mathbf{W}_{hx}$ and $\mathbf{W}_{hh}$,
-the hidden state of the last time step $\mathbf{h}_2$,
-and the input of the current time step $\mathbf{x}_3$.
+A fim de visualizar as dependências entre
+variáveis e parâmetros do modelo durante o cálculo
+do RNN,
+podemos desenhar um gráfico computacional para o modelo,
+como mostrado em :numref:`fig_rnn_bptt`.
+Por exemplo, o cálculo dos estados ocultos do passo de tempo 3, $\mathbf{h}_3$, depende dos parâmetros do modelo $\mathbf{W}_{hx}$ e $\mathbf{W}_{hh}$,
+o estado oculto da última etapa de tempo $\mathbf{h}_2$,
+e a entrada do intervalo de tempo atual $\mathbf{x}_3$..
 
 ![Computational graph showing dependencies for an RNN model with three time steps. Boxes represent variables (not shaded) or parameters (shaded) and circles represent operators.](../img/rnn-bptt.svg)
 :label:`fig_rnn_bptt`
@@ -426,7 +426,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzU4MDEzMzAsLTE2MzUxMjk2NDAsLT
-g3NTAwNzg5NCwxOTA1NDcxOTUzLDUwMDQ2NDUzMiwtMTEwMjc2
-OTQwNF19
+eyJoaXN0b3J5IjpbOTA1NzYzODQ3LC0xNDM1ODAxMzMwLC0xNj
+M1MTI5NjQwLC04NzUwMDc4OTQsMTkwNTQ3MTk1Myw1MDA0NjQ1
+MzIsLTExMDI3Njk0MDRdfQ==
 -->
