@@ -1,33 +1,34 @@
 # Mecanismos de Atenção
 :label:`chap_attention`
 
-The optic nerve of a primate's visual system
-receives massive sensory input,
-far exceeding what the brain can fully process.
-Fortunately,
-not all stimuli are created equal.
-Focalization and concentration of consciousness
-have enabled primates to direct attention
-to objects of interest,
-such as preys and predators,
-in the complex visual environment.
-The ability of paying attention to
-only a small fraction of the information
-has evolutionary significance,
-allowing human beings
-to live and succeed.
 
-Scientists have been studying attention
-in the cognitive neuroscience field
-since the 19th century.
-In this chapter,
-we will begin by reviewing a popular framework
-explaining how attention is deployed in a visual scene.
-Inspired by the attention cues in this framework,
-we will design models
-that leverage such attention cues.
-Notably, the Nadaraya-Waston kernel regression
-in 1964 is a simple demonstration of machine learning with *attention mechanisms*.
+O nervo óptico do sistema visual de um primata
+recebe entrada sensorial massiva,
+excedendo em muito o que o cérebro pode processar totalmente.
+Felizmente,
+nem todos os estímulos são criados iguais.
+Focalização e concentração de consciência
+permitiram que os primatas direcionassem a atenção
+para objetos de interesse,
+como presas e predadores,
+no ambiente visual complexo.
+A capacidade de prestar atenção a
+apenas uma pequena fração das informações
+tem significado evolutivo,
+permitindo seres humanos
+para viver e ter sucesso.
+
+Os cientistas têm estudado a atenção
+no campo da neurociência cognitiva
+desde o século XIX.
+Neste capítulo,
+começaremos revisando uma estrutura popular
+explicando como a atenção é implantada em uma cena visual.
+Inspirado pelas dicas de atenção neste quadro,
+nós iremos projetar modelos
+que alavancam tais dicas de atenção.
+Notavelmente, a regressão do kernel Nadaraya-Waston
+em 1964 é uma demonstração simples de aprendizado de máquina com *mecanismos de atenção*.
 
 Next, we will go on to introduce attention functions
 that have been extensively used in
@@ -67,5 +68,5 @@ transformer
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTQzMzQ1ODJdfQ==
+eyJoaXN0b3J5IjpbLTM2MTUxNTI0NywtMTMxNDMzNDU4Ml19
 -->
