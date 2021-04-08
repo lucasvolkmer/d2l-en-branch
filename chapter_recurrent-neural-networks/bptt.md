@@ -186,16 +186,16 @@ com
 $$z_t= \frac{\partial f(x_{t},h_{t-1},w_h)}{\partial w_h} +\xi_t \frac{\partial f(x_{t},h_{t-1},w_h)}{\partial h_{t-1}} \frac{\partial h_{t-1}}{\partial w_h}.$$
 
 
-It follows from the definition of $\xi_t$ that $E[z_t] = \partial h_t/\partial w_h$.
-Whenever $\xi_t = 0$ the recurrent computation
-terminates at that time step $t$.
-This leads to a weighted sum of sequences of varying lengths where long sequences are rare but appropriately overweighted. 
-This idea was proposed by Tallec and Ollivier
+Segue da definição de $\xi_t$ that $E[z_t] = \partial h_t/\partial w_h$.
+Sempre que $\xi_t = 0$ o cálculo recorrente
+termina nesse momento no passo $t$.
+Isso leva a uma soma ponderada de sequências de comprimentos variados, em que sequências longas são raras, mas apropriadamente sobrecarregadas.
+Esta ideia foi proposta por Tallec e Ollivier
 :cite:`Tallec.Ollivier.2017`.
 
-### Comparing Strategies
+### Comparando Estratégias
 
-![Comparing strategies for computing gradients in RNNs. From top to bottom: randomized truncation, regular truncation, and full computation.](../img/truncated-bptt.svg)
+![Comparando estratégias para computar gradientes em RNNs. De cima para baixo: truncamento aleatório, truncamento regular e computação completa.](../img/truncated-bptt.svg)
 :label:`fig_truncated_bptt`
 
 
@@ -427,6 +427,6 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NTAwNzg5NCwxOTA1NDcxOTUzLDUwMD
-Q2NDUzMiwtMTEwMjc2OTQwNF19
+eyJoaXN0b3J5IjpbLTE2MzUxMjk2NDAsLTg3NTAwNzg5NCwxOT
+A1NDcxOTUzLDUwMDQ2NDUzMiwtMTEwMjc2OTQwNF19
 -->
