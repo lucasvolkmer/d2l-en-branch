@@ -262,30 +262,26 @@ e a entrada do intervalo de tempo atual $\mathbf{x}_3$.
 ![Gráfico computacional mostrando dependências para um modelo RNN com três intervalos de tempo. Caixas representam variáveis (não sombreadas) ou parâmetros (sombreados) e círculos representam operadores.](../img/rnn-bptt.svg)
 :label:`fig_rnn_bptt`
 
-As just mentioned, the model parameters in :numref:`fig_rnn_bptt` are $\mathbf{W}_{hx}$, $\mathbf{W}_{hh}$, and $\mathbf{W}_{qh}$. 
-Generally,
-training this model
-requires 
-gradient computation with respect to these parameters
-$\partial L/\partial \mathbf{W}_{hx}$, $\partial L/\partial \mathbf{W}_{hh}$, and $\partial L/\partial \mathbf{W}_{qh}$.
-According to the dependencies in :numref:`fig_rnn_bptt`,
-we can traverse 
-in the opposite direction of the arrows
-to calculate and store the gradients in turn.
-To flexibly express the multiplication
-of matrices, vectors, and scalars of different shapes
-in the chain rule,
-we continue to use 
-the 
-$\text{prod}$ operator as described in
+Como acabamos de mencionar, os parâmetros do modelo em :numref:`fig_rnn_bptt` são $\mathbf{W}_{hx}$, $\mathbf{W}_{hh}$, e $\mathbf{W}_{qh}$. 
+Geralmente, treinar este modelo
+requer cálculo de gradiente em relação a esses parâmetros
+$\partial L/\partial \mathbf{W}_{hx}$, $\partial L/\partial \mathbf{W}_{hh}$, e $\partial L/\partial \mathbf{W}_{qh}$.
+De acordo com as dependências em :numref:`fig_rnn_bptt`,
+nós podemos atravessar
+na direção oposta das setas
+para calcular e armazenar os gradientes por sua vez.
+Para expressar de forma flexível a multiplicação
+de matrizes, vetores e escalares de diferentes formas
+na regra da cadeia,
+nós continuamos a usar
+o operador $\text{prod}$ conforme descrito em
 :numref:`sec_backprop`.
 
-
-First of all,
-differentiating the objective function
-with respect to the model output
-at any time step $t$
-is fairly straightforward:
+Em primeiro lugar,
+diferenciando a função objetivo
+com relação à saída do modelo
+a qualquer momento, etapa $t$
+é bastante simples:
 
 $$\frac{\partial L}{\partial \mathbf{o}_t} =  \frac{\partial l (\mathbf{o}_t, y_t)}{T \cdot \partial \mathbf{o}_t} \in \mathbb{R}^q.$$
 :eqlabel:`eq_bptt_partial_L_ot`
@@ -426,7 +422,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NzUyMjEzOCwtMTQzNTgwMTMzMCwtMT
+eyJoaXN0b3J5IjpbLTY2NzkyOTA2MiwtMTQzNTgwMTMzMCwtMT
 YzNTEyOTY0MCwtODc1MDA3ODk0LDE5MDU0NzE5NTMsNTAwNDY0
 NTMyLC0xMTAyNzY5NDA0XX0=
 -->
