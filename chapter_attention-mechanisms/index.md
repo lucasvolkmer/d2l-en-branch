@@ -1,4 +1,4 @@
-# Attention Mechanisms
+# Attention Mechanismsos de Atenção
 :label:`chap_attention`
 
 The optic nerve of a primate's visual system
@@ -66,3 +66,6 @@ self-attention-and-positional-encoding
 transformer
 ```
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTk0MjU2MDQxMV19
+-->
