@@ -199,19 +199,20 @@ Esta ideia foi proposta por Tallec e Ollivier
 :label:`fig_truncated_bptt`
 
 
-:numref:`fig_truncated_bptt` illustrates the three strategies when analyzing the first few characters of *The Time Machine* book using backpropagation through time for RNNs:
 
-* The first row is the randomized truncation that partitions the text into segments of varying lengths.
-* The second row is the regular truncation that breaks the text into subsequences of the same length. This is what we have been doing in RNN experiments.
-* The third row is the full backpropagation through time that leads to a computationally infeasible expression.
+:numref:`fig_truncated_bptt` ilustra as três estratégias ao analisar os primeiros caracteres do livro *The Time Machine* usando retropropagação através do tempo para RNNs:
+
+* A primeira linha é o truncamento aleatório que divide o texto em segmentos de comprimentos variados.
+* A segunda linha é o truncamento regular que divide o texto em subsequências do mesmo comprimento. Isso é o que temos feito em experimentos RNN.
+* A terceira linha é a retropropagação completa ao longo do tempo que leva a uma expressão computacionalmente inviável.
 
 
-Unfortunately, while appealing in theory, randomized truncation does not work much better than regular truncation, most likely due to a number of factors.
-First, the effect of an observation after a number of backpropagation steps into the past is quite sufficient to capture dependencies in practice. 
-Second, the increased variance counteracts the fact that the gradient is more accurate with more steps. 
-Third, we actually *want* models that have only a short range of interactions. Hence, regularly truncated backpropagation through time has a slight regularizing effect that can be desirable.
+Infelizmente, embora seja atraente em teoria, o truncamento aleatório não funciona muito melhor do que o truncamento regular, provavelmente devido a uma série de fatores.
+Primeiro, o efeito de uma observação após várias etapas de retropropagação no passado é suficiente para capturar dependências na prática.
+Segundo, o aumento da variância neutraliza o fato de que o gradiente é mais preciso com mais etapas.
+Terceiro, nós realmente *queremos* modelos que tenham apenas um curto intervalo de interações. Conseqüentemente, a retropropagação regularmente truncada ao longo do tempo tem um leve efeito de regularização que pode ser desejável.
 
-## Backpropagation Through Time in Detail
+## Retropropagação ao Longo do Tempo em Detalhes
 
 After discussing the general principle,
 let us discuss backpropagation through time in detail.
@@ -427,6 +428,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzUxMjk2NDAsLTg3NTAwNzg5NCwxOT
-A1NDcxOTUzLDUwMDQ2NDUzMiwtMTEwMjc2OTQwNF19
+eyJoaXN0b3J5IjpbLTE0MDMxMzYyNywtMTYzNTEyOTY0MCwtOD
+c1MDA3ODk0LDE5MDU0NzE5NTMsNTAwNDY0NTMyLC0xMTAyNzY5
+NDA0XX0=
 -->
