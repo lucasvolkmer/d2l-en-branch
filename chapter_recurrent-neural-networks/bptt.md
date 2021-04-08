@@ -257,9 +257,9 @@ podemos desenhar um gráfico computacional para o modelo,
 como mostrado em :numref:`fig_rnn_bptt`.
 Por exemplo, o cálculo dos estados ocultos do passo de tempo 3, $\mathbf{h}_3$, depende dos parâmetros do modelo $\mathbf{W}_{hx}$ e $\mathbf{W}_{hh}$,
 o estado oculto da última etapa de tempo $\mathbf{h}_2$,
-e a entrada do intervalo de tempo atual $\mathbf{x}_3$..
+e a entrada do intervalo de tempo atual $\mathbf{x}_3$.
 
-![Computational graph showing dependencies for an RNN model with three time steps. Boxes represent variables (not shaded) or parameters (shaded) and circles represent operators.](../img/rnn-bptt.svg)
+![Gráfico computacional mostrando dependências para um modelo RNN com três intervalos de tempo. Caixas representam variáveis (não sombreadas) ou parâmetros (sombreados) e círculos representam operadores.](../img/rnn-bptt.svg)
 :label:`fig_rnn_bptt`
 
 As just mentioned, the model parameters in :numref:`fig_rnn_bptt` are $\mathbf{W}_{hx}$, $\mathbf{W}_{hh}$, and $\mathbf{W}_{qh}$. 
@@ -426,7 +426,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA1NzYzODQ3LC0xNDM1ODAxMzMwLC0xNj
-M1MTI5NjQwLC04NzUwMDc4OTQsMTkwNTQ3MTk1Myw1MDA0NjQ1
-MzIsLTExMDI3Njk0MDRdfQ==
+eyJoaXN0b3J5IjpbLTQ5NzUyMjEzOCwtMTQzNTgwMTMzMCwtMT
+YzNTEyOTY0MCwtODc1MDA3ODk0LDE5MDU0NzE5NTMsNTAwNDY0
+NTMyLC0xMTAyNzY5NDA0XX0=
 -->
