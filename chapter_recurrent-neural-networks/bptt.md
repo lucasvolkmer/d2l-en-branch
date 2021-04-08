@@ -326,10 +326,10 @@ a qualquer momento, o passo $t<T$ pode ser calculado recorrentemente como:
 $$\frac{\partial L}{\partial \mathbf{h}_t} = \text{prod}\left(\frac{\partial L}{\partial \mathbf{h}_{t+1}}, \frac{\partial \mathbf{h}_{t+1}}{\partial \mathbf{h}_t} \right) + \text{prod}\left(\frac{\partial L}{\partial \mathbf{o}_t}, \frac{\partial \mathbf{o}_t}{\partial \mathbf{h}_t} \right) = \mathbf{W}_{hh}^\top \frac{\partial L}{\partial \mathbf{h}_{t+1}} + \mathbf{W}_{qh}^\top \frac{\partial L}{\partial \mathbf{o}_t}.$$
 :eqlabel:`eq_bptt_partial_L_ht_recur`
 
-For analysis,
-expanding the recurrent computation
-for any time step $1 \leq t \leq T$
-gives
+Para análise,
+expandindo a computação recorrente
+para qualquer etapa de tempo $1 \leq t \leq T$
+dá
 
 $$\frac{\partial L}{\partial \mathbf{h}_t}= \sum_{i=t}^T {\left(\mathbf{W}_{hh}^\top\right)}^{T-i} \mathbf{W}_{qh}^\top \frac{\partial L}{\partial \mathbf{o}_{T+t-i}}.$$
 :eqlabel:`eq_bptt_partial_L_ht`
@@ -422,7 +422,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTM2MTQ4MTcsLTE0MzU4MDEzMzAsLT
+eyJoaXN0b3J5IjpbLTE4NTk2Njc1NjEsLTE0MzU4MDEzMzAsLT
 E2MzUxMjk2NDAsLTg3NTAwNzg5NCwxOTA1NDcxOTUzLDUwMDQ2
 NDUzMiwtMTEwMjc2OTQwNF19
 -->
