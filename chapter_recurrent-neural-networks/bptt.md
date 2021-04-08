@@ -214,27 +214,25 @@ Terceiro, nós realmente *queremos* modelos que tenham apenas um curto intervalo
 
 ## Retropropagação ao Longo do Tempo em Detalhes
 
-After discussing the general principle,
-let us discuss backpropagation through time in detail.
-Different from the analysis in
+Depois de discutir o princípio geral,
+vamos discutir a retropropagação ao longo do tempo em detalhes.
+Diferente da análise em
 :numref:`subsec_bptt_analysis`,
-in the following
-we will show
-how to compute
-the gradients of the objective function
-with respect to all the decomposed model parameters.
-To keep things simple, we consider 
-an RNN without bias parameters,
-whose 
-activation function
-in the hidden layer
-uses the identity mapping ($\phi(x)=x$).
-For time step $t$,
-let the single example input and the label be
-$\mathbf{x}_t \in \mathbb{R}^d$ and $y_t$, respectively. 
-The hidden state $\mathbf{h}_t \in \mathbb{R}^h$ 
-and the output $\mathbf{o}_t \in \mathbb{R}^q$
-are computed as
+na sequência
+vamos mostrar
+como calcular
+os gradientes da função objetivo
+com respeito a todos os parâmetros do modelo decomposto.
+Para manter as coisas simples, consideramos
+uma RNN sem parâmetros de polarização,
+cuja função de ativação na camada oculta
+usa o mapeamento de identidade ($\phi(x)=x$).
+Para a etapa de tempo $t$,
+deixe a entrada de exemplo único e o rótulo ser
+$$\mathbf{x}_t \in \mathbb{R}^d$ and $y_t$, respectivamente.
+O estado oculto $\mathbf{h}_t \in \mathbb{R}^h$ 
+e a saída $\mathbf{o}_t \in \mathbb{R}^q$
+são computados como
 
 $$\begin{aligned}\mathbf{h}_t &= \mathbf{W}_{hx} \mathbf{x}_t + \mathbf{W}_{hh} \mathbf{h}_{t-1},\\
 \mathbf{o}_t &= \mathbf{W}_{qh} \mathbf{h}_{t},\end{aligned}$$
@@ -428,7 +426,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDMxMzYyNywtMTYzNTEyOTY0MCwtOD
+eyJoaXN0b3J5IjpbMTA5ODAwMzE0NCwtMTYzNTEyOTY0MCwtOD
 c1MDA3ODk0LDE5MDU0NzE5NTMsNTAwNDY0NTMyLC0xMTAyNzY5
 NDA0XX0=
 -->
