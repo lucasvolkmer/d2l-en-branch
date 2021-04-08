@@ -299,27 +299,28 @@ $$
 = \sum_{t=1}^T \frac{\partial L}{\partial \mathbf{o}_t} \mathbf{h}_t^\top,
 $$
 
-where $\partial L/\partial \mathbf{o}_t$
-is given by :eqref:`eq_bptt_partial_L_ot`.
 
-Next, as shown in :numref:`fig_rnn_bptt`,
-at the final time step $T$
-the objective function
-$L$ depends on the hidden state $\mathbf{h}_T$ only via $\mathbf{o}_T$.
-Therefore, we can easily find
-the gradient 
+onde $\partial L/\partial \mathbf{o}_t$
+é fornecido por :eqref:`eq_bptt_partial_L_ot`.
+
+A seguir, conforme mostrado em :numref:`fig_rnn_bptt`,
+no tempo final, passo $T$
+a função objetivo
+$L$ depende do estado oculto $\mathbf{h}_T$ apenas via $\mathbf{o}_T$.
+Portanto, podemos facilmente encontrar
+o gradiente
 $\partial L/\partial \mathbf{h}_T \in \mathbb{R}^h$
-using the chain rule:
+usando a regra da cadeia:
 
 $$\frac{\partial L}{\partial \mathbf{h}_T} = \text{prod}\left(\frac{\partial L}{\partial \mathbf{o}_T}, \frac{\partial \mathbf{o}_T}{\partial \mathbf{h}_T} \right) = \mathbf{W}_{qh}^\top \frac{\partial L}{\partial \mathbf{o}_T}.$$
 :eqlabel:`eq_bptt_partial_L_hT_final_step`
 
-It gets trickier for any time step $t < T$,
-where the objective function $L$ depends on $\mathbf{h}_t$ via $\mathbf{h}_{t+1}$ and $\mathbf{o}_t$.
-According to the chain rule,
-the gradient of the hidden state
+Fica mais complicado para qualquer passo de tempo $t < T$,
+onde a função objetivo $L$ depende de $\mathbf{h}_t$ via $\mathbf{h}_{t+1}$ e $\mathbf{o}_t$.
+De acordo com a regra da cadeia,
+o gradiente do estado oculto
 $\partial L/\partial \mathbf{h}_t \in \mathbb{R}^h$
-at any time step $t < T$ can be recurrently computed as:
+a qualquer momento, o passo $t<T$ pode ser calculado recorrentemente como:
 
 
 $$\frac{\partial L}{\partial \mathbf{h}_t} = \text{prod}\left(\frac{\partial L}{\partial \mathbf{h}_{t+1}}, \frac{\partial \mathbf{h}_{t+1}}{\partial \mathbf{h}_t} \right) + \text{prod}\left(\frac{\partial L}{\partial \mathbf{o}_t}, \frac{\partial \mathbf{o}_t}{\partial \mathbf{h}_t} \right) = \mathbf{W}_{hh}^\top \frac{\partial L}{\partial \mathbf{h}_{t+1}} + \mathbf{W}_{qh}^\top \frac{\partial L}{\partial \mathbf{o}_t}.$$
@@ -421,7 +422,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQzMzU5NjA2LC0xNDM1ODAxMzMwLC0xNj
-M1MTI5NjQwLC04NzUwMDc4OTQsMTkwNTQ3MTk1Myw1MDA0NjQ1
-MzIsLTExMDI3Njk0MDRdfQ==
+eyJoaXN0b3J5IjpbLTE4MTM2MTQ4MTcsLTE0MzU4MDEzMzAsLT
+E2MzUxMjk2NDAsLTg3NTAwNzg5NCwxOTA1NDcxOTUzLDUwMDQ2
+NDUzMiwtMTEwMjc2OTQwNF19
 -->
