@@ -334,32 +334,33 @@ dá
 $$\frac{\partial L}{\partial \mathbf{h}_t}= \sum_{i=t}^T {\left(\mathbf{W}_{hh}^\top\right)}^{T-i} \mathbf{W}_{qh}^\top \frac{\partial L}{\partial \mathbf{o}_{T+t-i}}.$$
 :eqlabel:`eq_bptt_partial_L_ht`
 
-We can see from :eqref:`eq_bptt_partial_L_ht` that
-this simple linear example already
-exhibits some key problems of long sequence models: it involves potentially very large powers of $\mathbf{W}_{hh}^\top$.
-In it, eigenvalues smaller than 1 vanish
-and eigenvalues larger than 1 diverge.
-This is numerically unstable,
-which manifests itself in the form of vanishing 
-and exploding gradients.
-One way to address this is to truncate the time steps
-at a computationally convenient size as discussed in :numref:`subsec_bptt_analysis`. 
-In practice, this truncation is effected by detaching the gradient after a given number of time steps.
-Later on 
-we will see how more sophisticated sequence models such as long short-term memory can alleviate this further. 
 
-Finally,
-:numref:`fig_rnn_bptt` shows that
-the objective function
-$L$ depends on model parameters
-$\mathbf{W}_{hx}$ and $\mathbf{W}_{hh}$
-in the hidden layer
-via hidden states
+Podemos ver em :eqref:`eq_bptt_partial_L_ht` que
+este exemplo linear simples já
+exibe alguns problemas-chave de modelos de sequência longa: envolve potências potencialmente muito grandes de $\mathbf{W}_{hh}^\top$.
+Nele, autovalores menores que 1 desaparecem
+e os autovalores maiores que 1 divergem.
+Isso é numericamente instável,
+que se manifesta na forma de desaparecimento
+e gradientes explosivos.
+Uma maneira de resolver isso é truncar as etapas de tempo
+em um tamanho computacionalmente conveniente conforme discutido em :numref:`subsec_bptt_analysis`. 
+Na prática, esse truncamento é efetuado destacando-se o gradiente após um determinado número de etapas de tempo.
+Mais tarde
+veremos como modelos de sequência mais sofisticados, como a memória de curto prazo longa, podem aliviar ainda mais isso.
+
+Finalmente,
+:numref:`fig_rnn_bptt` mostra que
+a função objetivo
+$L$ depende dos parâmetros do modelo
+$\mathbf{W}_{hx}$ e $\mathbf{W}_{hh}$
+na camada oculta
+via estados ocultos
 $\mathbf{h}_1, \ldots, \mathbf{h}_T$.
-To compute gradients
-with respect to such parameters
-$\partial L / \partial \mathbf{W}_{hx} \in \mathbb{R}^{h \times d}$ and $\partial L / \partial \mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$,
-we apply the chain rule that gives
+Para calcular gradientes
+com respeito a tais parâmetros
+$\partial L / \partial \mathbf{W}_{hx} \in \mathbb{R}^{h \times d}$ e $\partial L / \partial \mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$,
+aplicamos a regra da cadeia que dá
 
 $$
 \begin{aligned}
@@ -422,7 +423,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTk2Njc1NjEsLTE0MzU4MDEzMzAsLT
-E2MzUxMjk2NDAsLTg3NTAwNzg5NCwxOTA1NDcxOTUzLDUwMDQ2
-NDUzMiwtMTEwMjc2OTQwNF19
+eyJoaXN0b3J5IjpbMTAxMDc0MTg1NCwtMTQzNTgwMTMzMCwtMT
+YzNTEyOTY0MCwtODc1MDA3ODk0LDE5MDU0NzE5NTMsNTAwNDY0
+NTMyLC0xMTAyNzY5NDA0XX0=
 -->
