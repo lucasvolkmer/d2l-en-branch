@@ -237,15 +237,15 @@ são computados como
 $$\begin{aligned}\mathbf{h}_t &= \mathbf{W}_{hx} \mathbf{x}_t + \mathbf{W}_{hh} \mathbf{h}_{t-1},\\
 \mathbf{o}_t &= \mathbf{W}_{qh} \mathbf{h}_{t},\end{aligned}$$
 
-where $\mathbf{W}_{hx} \in \mathbb{R}^{h \times d}$, $\mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$, and
+onde $\mathbf{W}_{hx} \in \mathbb{R}^{h \times d}$,  $\mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$, e
 $\mathbf{W}_{qh} \in \mathbb{R}^{q \times h}$
-are the weight parameters.
-Denote by $l(\mathbf{o}_t, y_t)$
-the loss at time step $t$. 
-Our objective function,
-the loss over $T$ time steps
-from the beginning of the sequence
-is thus
+são os parâmetros de peso.
+Denotar por $l(\mathbf{o}_t, y_t)$
+a perda na etapa de tempo $t$.
+Nossa função objetivo,
+a perda em etapas de tempo de $T$
+desde o início da sequência
+é assim
 
 $$L = \frac{1}{T} \sum_{t=1}^T l(\mathbf{o}_t, y_t).$$
 
@@ -426,7 +426,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5ODAwMzE0NCwtMTYzNTEyOTY0MCwtOD
-c1MDA3ODk0LDE5MDU0NzE5NTMsNTAwNDY0NTMyLC0xMTAyNzY5
-NDA0XX0=
+eyJoaXN0b3J5IjpbLTE0MzU4MDEzMzAsLTE2MzUxMjk2NDAsLT
+g3NTAwNzg5NCwxOTA1NDcxOTUzLDUwMDQ2NDUzMiwtMTEwMjc2
+OTQwNF19
 -->
