@@ -373,46 +373,47 @@ $$
 \end{aligned}
 $$
 
-where
+
+Onde
 $\partial L/\partial \mathbf{h}_t$
-that is recurrently computed by
+que é calculado recorrentemente por
 :eqref:`eq_bptt_partial_L_hT_final_step`
-and
+e
 :eqref:`eq_bptt_partial_L_ht_recur`
-is the key quantity
-that affects the numerical stability.
+é a quantidade chave
+que afeta a estabilidade numérica.
 
 
 
-Since backpropagation through time
-is the application of backpropagation in RNNs,
-as we have explained in :numref:`sec_backprop`,
-training RNNs
-alternates forward propagation with
-backpropagation through time.
-Besides,
-backpropagation through time
-computes and stores the above gradients
-in turn.
-Specifically,
-stored intermediate values
-are reused
-to avoid duplicate calculations,
-such as storing 
+Como a retropropagação através do tempo
+é a aplicação de retropropagação em RNNs,
+como explicamos em :numref:`sec_backprop`,
+o treinamento de RNNs
+alterna a propagação direta com
+retropropagação através do tempo.
+Além do mais,
+retropropagação através do tempo
+calcula e armazena os gradientes acima
+por sua vez.
+Especificamente,
+valores intermediários armazenados
+são reutilizados
+para evitar cálculos duplicados,
+como armazenar
 $\partial L/\partial \mathbf{h}_t$
-to be used in computation of both $\partial L / \partial \mathbf{W}_{hx}$ and $\partial L / \partial \mathbf{W}_{hh}$.
+para ser usado no cálculo de  $\partial L / \partial \mathbf{W}_{hx}$ e $\partial L / \partial \mathbf{W}_{hh}$.
 
 
-## Summary
+## Resumo
 
-* Backpropagation through time is merely an application of backpropagation to sequence models with a hidden state.
-* Truncation is needed for computational convenience and numerical stability, such as regular truncation and randomized truncation.
-* High powers of matrices can lead to divergent or vanishing eigenvalues. This manifests itself in the form of exploding or vanishing gradients.
-* For efficient computation, intermediate values are cached during backpropagation through time.
+* A retropropagação através do tempo é meramente uma aplicação da retropropagação para sequenciar modelos com um estado oculto.
+* O truncamento é necessário para conveniência computacional e estabilidade numérica, como truncamento regular e truncamento aleatório.
+* Altos poderes de matrizes podem levar a autovalores divergentes ou desaparecendo. Isso se manifesta na forma de gradientes explodindo ou desaparecendo.
+* Para computação eficiente, os valores intermediários são armazenados em cache durante a retropropagação ao longo do tempo.
 
 
 
-## Exercises
+## Exercícios
 
 1. Assume that we have a symmetric matrix $\mathbf{M} \in \mathbb{R}^{n \times n}$ with eigenvalues $\lambda_i$ whose corresponding eigenvectors are $\mathbf{v}_i$ ($i = 1, \ldots, n$). Without loss of generality, assume that they are ordered in the order $|\lambda_i| \geq |\lambda_{i+1}|$. 
    1. Show that $\mathbf{M}^k$ has eigenvalues $\lambda_i^k$.
@@ -423,7 +424,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMDc0MTg1NCwtMTQzNTgwMTMzMCwtMT
-YzNTEyOTY0MCwtODc1MDA3ODk0LDE5MDU0NzE5NTMsNTAwNDY0
-NTMyLC0xMTAyNzY5NDA0XX0=
+eyJoaXN0b3J5IjpbNTgwNzYyNDY3LC0xNDM1ODAxMzMwLC0xNj
+M1MTI5NjQwLC04NzUwMDc4OTQsMTkwNTQ3MTk1Myw1MDA0NjQ1
+MzIsLTExMDI3Njk0MDRdfQ==
 -->
