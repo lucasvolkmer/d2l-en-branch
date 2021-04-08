@@ -30,30 +30,31 @@ que alavancam tais dicas de atenção.
 Notavelmente, a regressão do kernel Nadaraya-Waston
 em 1964 é uma demonstração simples de aprendizado de máquina com *mecanismos de atenção*.
 
-Next, we will go on to introduce attention functions
-that have been extensively used in
-the design of attention models in deep learning.
-Specifically,
-we will show how to use these functions
-to design the *Bahdanau attention*,
-a groundbreaking attention model in deep learning
-that can align bidirectionally and is differentiable.
 
-In the end,
-equipped with
-the more recent
-*multi-head attention*
-and *self-attention* designs,
-we will describe the *transformer* architecture
-based solely on attention mechanisms.
-Since their proposal in 2017,
-transformers
-have been pervasive in modern
-deep learning applications,
-such as in areas of
-language,
-vision, speech,
-and reinforcement learning.
+A seguir, iremos apresentar as funções de atenção
+que têm sido amplamente usadas em
+o desenho de modelos de atenção em *deep learning*.
+Especificamente,
+vamos mostrar como usar essas funções
+para projetar a *atenção Bahdanau*,
+um modelo de atenção inovador em *deep learning*
+que pode se alinhar bidirecionalmente e é diferenciável.
+
+No fim,
+equipados com
+a mais recente
+*atenção de várias cabeças*
+e designs de *autoatenção*,
+iremos descrever a arquitetura do *transformador*
+baseado unicamente em mecanismos de atenção.
+Desde sua proposta em 2017,
+transformadores
+têm sido difundidos na modernidade
+aplicativos de *deep learning*,
+como em áreas de
+língua,
+visão, fala,
+e aprendizagem por reforço.
 
 ```toc
 :maxdepth: 2
@@ -68,5 +69,6 @@ transformer
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MTUxNTI0NywtMTMxNDMzNDU4Ml19
+eyJoaXN0b3J5IjpbLTE5MTIyOTkwNzAsLTM2MTUxNTI0NywtMT
+MxNDMzNDU4Ml19
 -->
