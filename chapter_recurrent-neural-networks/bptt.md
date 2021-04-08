@@ -415,16 +415,15 @@ para ser usado no cálculo de  $\partial L / \partial \mathbf{W}_{hx}$ e $\parti
 
 ## Exercícios
 
-1. Assume that we have a symmetric matrix $\mathbf{M} \in \mathbb{R}^{n \times n}$ with eigenvalues $\lambda_i$ whose corresponding eigenvectors are $\mathbf{v}_i$ ($i = 1, \ldots, n$). Without loss of generality, assume that they are ordered in the order $|\lambda_i| \geq |\lambda_{i+1}|$. 
-   1. Show that $\mathbf{M}^k$ has eigenvalues $\lambda_i^k$.
-   1. Prove that for a random vector $\mathbf{x} \in \mathbb{R}^n$, with high probability $\mathbf{M}^k \mathbf{x}$ will be very much aligned with the eigenvector $\mathbf{v}_1$ 
-of $\mathbf{M}$. Formalize this statement.
-   1. What does the above result mean for gradients in RNNs?
-1. Besides gradient clipping, can you think of any other methods to cope with gradient explosion in recurrent neural networks?
+1. Suponha que temos uma matriz simétrica $\mathbf{M} \in \mathbb{R}^{n \times n}$ with eigenvalues $\lambda_i$ cujos autovetores correspondentes são $\mathbf{v}_i$ ($i = 1, \ldots, n$). Sem perda de generalidade, assuma que eles estão ordenados na ordem $|\lambda_i| \geq |\lambda_{i+1}|$. 
+    1. Mostre que $\mathbf{M}^k$ tem autovalores $\lambda_i^k$.
+    1. Prove que para um vetor aleatório $\mathbf{x} \in \mathbb{R}^n$, com alta probabilidade $\mathbf{M}^k \mathbf{x}$  estará muito alinhado com o autovetor $\mathbf{v}_1$ de $\mathbf{M}$. Formalize esta declaração.
+    1. O que o resultado acima significa para gradientes em RNNs?
+1. Além do recorte de gradiente, você consegue pensar em outros métodos para lidar com a explosão de gradiente em redes neurais recorrentes?
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgwNzYyNDY3LC0xNDM1ODAxMzMwLC0xNj
-M1MTI5NjQwLC04NzUwMDc4OTQsMTkwNTQ3MTk1Myw1MDA0NjQ1
-MzIsLTExMDI3Njk0MDRdfQ==
+eyJoaXN0b3J5IjpbLTY4ODgyNjA1LDU4MDc2MjQ2NywtMTQzNT
+gwMTMzMCwtMTYzNTEyOTY0MCwtODc1MDA3ODk0LDE5MDU0NzE5
+NTMsNTAwNDY0NTMyLC0xMTAyNzY5NDA0XX0=
 -->
