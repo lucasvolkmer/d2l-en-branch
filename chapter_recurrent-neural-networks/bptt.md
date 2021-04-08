@@ -1,4 +1,4 @@
-# BackRetropropagation Through Timeção ao Longo do Tempo
+# Retropropagação ao Longo do Tempo
 :label:`sec_bptt`
 
 
@@ -423,7 +423,7 @@ para ser usado no cálculo de  $\partial L / \partial \mathbf{W}_{hx}$ e $\parti
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4ODgyNjA1LDU4MDc2MjQ2NywtMTQzNT
+eyJoaXN0b3J5IjpbODMxNDY5NTkwLDU4MDc2MjQ2NywtMTQzNT
 gwMTMzMCwtMTYzNTEyOTY0MCwtODc1MDA3ODk0LDE5MDU0NzE5
 NTMsNTAwNDY0NTMyLC0xMTAyNzY5NDA0XX0=
 -->
