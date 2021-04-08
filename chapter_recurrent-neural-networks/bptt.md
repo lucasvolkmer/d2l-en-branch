@@ -286,13 +286,12 @@ a qualquer momento, etapa $t$
 $$\frac{\partial L}{\partial \mathbf{o}_t} =  \frac{\partial l (\mathbf{o}_t, y_t)}{T \cdot \partial \mathbf{o}_t} \in \mathbb{R}^q.$$
 :eqlabel:`eq_bptt_partial_L_ot`
 
-Now, we can calculate the gradient of the objective function
-with respect to
-the parameter $\mathbf{W}_{qh}$
-in the output layer:
-$\partial L/\partial \mathbf{W}_{qh} \in \mathbb{R}^{q \times h}$. Based on :numref:`fig_rnn_bptt`, 
-the objective function
-$L$ depends on $\mathbf{W}_{qh}$ via $\mathbf{o}_1, \ldots, \mathbf{o}_T$. Using the chain rule yields
+Agora, podemos calcular o gradiente da função objetivo
+em relação ao parâmetro $\mathbf{W}_{qh}$
+na camada de saída:
+$\partial L/\partial \mathbf{W}_{qh} \in \mathbb{R}^{q \times h}$. Com base em :numref:`fig_rnn_bptt`, 
+a função objetivo
+$L$ depende de $\mathbf{W}_{qh}$ via $\mathbf{o}_1, \ldots, \mathbf{o}_T$. Usar a regra da cadeia produz
 
 $$
 \frac{\partial L}{\partial \mathbf{W}_{qh}}
@@ -422,7 +421,7 @@ of $\mathbf{M}$. Formalize this statement.
 
 [Discussions](https://discuss.d2l.ai/t/334)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NzkyOTA2MiwtMTQzNTgwMTMzMCwtMT
-YzNTEyOTY0MCwtODc1MDA3ODk0LDE5MDU0NzE5NTMsNTAwNDY0
-NTMyLC0xMTAyNzY5NDA0XX0=
+eyJoaXN0b3J5IjpbODQzMzU5NjA2LC0xNDM1ODAxMzMwLC0xNj
+M1MTI5NjQwLC04NzUwMDc4OTQsMTkwNTQ3MTk1Myw1MDA0NjQ1
+MzIsLTExMDI3Njk0MDRdfQ==
 -->
