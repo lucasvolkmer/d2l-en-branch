@@ -108,7 +108,7 @@ are given by two fully-connected layers
 with a sigmoid activation function.
 
 Começamos projetando esses portões.
-: numref: `fig_gru_1` ilustra as entradas para ambos
+:numref:`fig_gru_1` ilustra as entradas para ambos
 as portas de reset e atualização em uma GRU, dada a entrada
 da etapa de tempo atual
 e o estado oculto da etapa de tempo anterior.
@@ -116,7 +116,7 @@ As saídas de duas portas
 são fornecidos por duas camadas totalmente conectadas
 com uma função de ativação sigmóide.
 
-![Computing the reset gate and the update gate in a GRU model.](../img/gru-1.svg)
+![Calculando a porta de reinicialização e a porta de atualização em um modelo GRU.](../img/gru-1.svg)
 :label:`fig_gru_1`
 
 Mathematically,
@@ -125,6 +125,12 @@ suppose that the input is
 a minibatch
 $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (number of examples: $n$, number of inputs: $d$) and the hidden state of the previous time step is $\mathbf{H}_{t-1} \in \mathbb{R}^{n \times h}$ (number of hidden units: $h$). Then, the reset gate $\mathbf{R}_t \in \mathbb{R}^{n \times h}$ and update gate $\mathbf{Z}_t \in \mathbb{R}^{n \times h}$ are computed as follows:
 
+Matematicamente,
+para um determinado intervalo de tempo $ t $,
+suponha que a entrada seja
+um minibatch
+$\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (número de exemplos: $ n $, número de entradas: $ d $) e o estado oculto da etapa de tempo anterior é $\mathbf{H}_{t-1} \in \mathbb{R}^{n \times h}$ (número de unidades ocultas: $ h $). Então, reinicie o portão $\mathbf{R}_t \in \mathbb{R}^{n \times h}$ e atualize o portão $\mathbf{Z}_t \in \mathbb{R}^{n \times h}$ são calculados da seguinte forma:
+
 $$
 \begin{aligned}
 \mathbf{R}_t = \sigma(\mathbf{X}_t \mathbf{W}_{xr} + \mathbf{H}_{t-1} \mathbf{W}_{hr} + \mathbf{b}_r),\\
@@ -132,9 +138,8 @@ $$
 \end{aligned}
 $$
 
-where $\mathbf{W}_{xr}, \mathbf{W}_{xz} \in \mathbb{R}^{d \times h}$ and
-$\mathbf{W}_{hr}, \mathbf{W}_{hz} \in \mathbb{R}^{h \times h}$ are weight
-parameters and $\mathbf{b}_r, \mathbf{b}_z \in \mathbb{R}^{1 \times h}$ are
+onde $\mathbf{W}_{xr}, \mathbf{W}_{xz} \in \mathbb{R}^{d \times h}$ e
+$\mathbf{W}_{hr}, \mathbf{W}_{hz} \in \mathbb{R}^{h \times h}$ são pesos de parâmetros e $\mathbf{b}_r, \mathbf{b}_z \in \mathbb{R}^{1 \times h}$ are
 biases. 
 Note that broadcasting (see :numref:`subsec_broadcasting`) is triggered during the summation.
 We use sigmoid functions (as introduced in :numref:`sec_mlp`) to transform input values to the interval $(0, 1)$.
@@ -402,6 +407,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MjYwNTE0MSw4NDU0NDY4MTEsLTc3NT
-E4NDMyMF19
+eyJoaXN0b3J5IjpbOTA3OTQxOTE0LDg0NTQ0NjgxMSwtNzc1MT
+g0MzIwXX0=
 -->
