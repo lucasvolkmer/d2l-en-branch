@@ -1,39 +1,39 @@
 # Attention CuesDicas para atenção
 :label:`sec_attention-cues`
 
-Thank you for your attention
-to this book.
-Attention is a scarce resource:
-at the moment
-you are reading this book
-and ignoring the rest.
-Thus, similar to money,
-your attention is being paid with an opportunity cost.
-To ensure that your investment of attention
-right now is worthwhile,
-we have been highly motivated to pay our attention carefully
-to produce a nice book.
-Attention
-is the keystone in the arch of life and
-holds the key to any work's exceptionalism.
+
+Obrigado pela sua atenção
+a este livro.
+Atenção é um recurso escasso:
+no momento
+você está lendo este livro
+e ignorando o resto.
+Assim, semelhante ao dinheiro,
+sua atenção está sendo paga com um custo de oportunidade.
+Para garantir que seu investimento de atenção
+agora vale a pena,
+estamos altamente motivados a prestar nossa atenção com cuidado
+para produzir um bom livro.
+Atenção
+é a pedra angular do arco da vida e
+detém a chave para o excepcionalismo de qualquer trabalho.
 
 
-Since economics studies the allocation of scarce resources,
-we are
-in the era of the attention economy,
-where human attention is treated as a limited, valuable, and scarce commodity
-that can be exchanged.
-Numerous business models have been
-developed to capitalize on it.
-On music or video streaming services,
-we either pay attention to their ads
-or pay money to hide them.
-For growth in the world of online games,
-we either pay attention to
-participate in battles, which attract new gamers,
-or pay money to instantly become powerful.
-Nothing comes for free.
-
+Já que a economia estuda a alocação de recursos escassos,
+Nós estamos
+na era da economia da atenção,
+onde a atenção humana é tratada como uma mercadoria limitada, valiosa e escassa
+que pode ser trocada.
+Numerosos modelos de negócios foram
+desenvolvido para capitalizar sobre ele.
+Em serviços de streaming de música ou vídeo,
+ou prestamos atenção aos seus anúncios
+ou pagar para escondê-los.
+Para crescer no mundo dos jogos online,
+nós ou prestamos atenção a
+participar de batalhas, que atraem novos jogadores,
+ou pagamos dinheiro para nos tornarmos poderosos instantaneamente.
+Nada vem de graça.
 All in all,
 information in our environment is not scarce,
 attention is.
@@ -237,5 +237,6 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTUyNzU2MzAsLTg0Nzk5MjAwN119
+eyJoaXN0b3J5IjpbMTI5ODg4MTg0NCwtMTg1NTI3NTYzMCwtOD
+Q3OTkyMDA3XX0=
 -->
