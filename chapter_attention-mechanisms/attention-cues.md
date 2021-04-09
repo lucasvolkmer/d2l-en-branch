@@ -57,28 +57,28 @@ como a detecção de predadores, presas e companheiros.
 
 ## Dicas de Atenção em Biologia
 
-To explain how our attention is deployed in the visual world,
-a two-component framework has emerged
-and been pervasive.
-This idea dates back to William James in the 1890s,
-who is considered the "father of American psychology" :cite:`James.2007`.
-In this framework,
-subjects selectively direct the spotlight of attention
-using both the *nonvolitional cue* and *volitional cue*.
 
-The nonvolitional cue is based on
-the saliency and conspicuity of objects in the environment.
-Imagine there are five objects in front of you:
-a newspaper, a research paper, a cup of coffee, a notebook, and a book such as in :numref:`fig_eye-coffee`.
-While all the paper products are printed in black and white,
-the coffee cup is red.
-In other words,
-this coffee is intrinsically salient and conspicuous in
-this visual environment,
-automatically and involuntarily drawing attention.
-So you bring the fovea (the center of the macula where visual acuity is highest) onto the coffee as shown in :numref:`fig_eye-coffee`.
+Para explicar como nossa atenção é implantada no mundo visual,
+uma estrutura de dois componentes surgiu
+e tem sido generalizado.
+Essa ideia remonta a William James na década de 1890,
+que é considerado o "pai da psicologia americana" :cite:`James.2007`.
+Nesta estrutura,
+assuntos direcionam seletivamente o holofote da atenção
+usando a *dica não-voluntária* e a *dica volitiva*.
 
-![Using the nonvolitional cue based on saliency (red cup, non-paper), attention is involuntarily directed to the coffee.](../img/eye-coffee.svg)
+A sugestão não-voluntária é baseada em
+a saliência e conspicuidade de objetos no ambiente.
+Imagine que há cinco objetos à sua frente:
+um jornal, um artigo de pesquisa, uma xícara de café, um caderno e um livro como em :numref:`fig_eye-coffee`.
+Embora todos os produtos de papel sejam impressos em preto e branco,
+a xícara de café é vermelha.
+Em outras palavras,
+este café é intrinsecamente saliente e conspícuo neste ambiente visual,
+chamando a atenção automática e involuntariamente.
+Então você traz a fóvea (o centro da mácula onde a acuidade visual é mais alta) para o café como mostrado em :numref:`fig_eye-coffee`.
+
+![Usando a sugestão não-voluntária baseada na saliência (xícara vermelha, não papel), a atenção é involuntariamente voltada para o café.](../img/eye-coffee.svg)
 :width:`400px`
 :label:`fig_eye-coffee`
 
@@ -238,6 +238,6 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA0MDY4NDQ1LC0xODU1Mjc1NjMwLC04ND
-c5OTIwMDddfQ==
+eyJoaXN0b3J5IjpbNDI3NzM3NTg0LDMwNDA2ODQ0NSwtMTg1NT
+I3NTYzMCwtODQ3OTkyMDA3XX0=
 -->
