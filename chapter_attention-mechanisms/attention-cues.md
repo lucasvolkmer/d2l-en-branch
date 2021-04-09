@@ -96,7 +96,7 @@ Usando a dica volitiva com base em critérios de seleção de variáveis,
 esta forma de atenção é mais deliberada.
 Também é mais poderoso com o esforço voluntário do sujeito.
 
-![Using the volitional cue (want to read a book) that is task-dependent, attention is directed to the book under volitional control.](../img/eye-book.svg)
+![Usando a dica volitiva (quero ler um livro) que depende da tarefa, a atenção é direcionada para o livro sob controle volitivo.](../img/eye-book.svg)
 :width:`400px`
 :label:`fig_eye-book`
 
@@ -237,6 +237,6 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMzIwMjUxLDQyNzczNzU4NCwzMDQwNj
-g0NDUsLTE4NTUyNzU2MzAsLTg0Nzk5MjAwN119
+eyJoaXN0b3J5IjpbMTk2NzI1MDAyNiw0Mjc3Mzc1ODQsMzA0MD
+Y4NDQ1LC0xODU1Mjc1NjMwLC04NDc5OTIwMDddfQ==
 -->
