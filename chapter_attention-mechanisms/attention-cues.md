@@ -101,7 +101,7 @@ Também é mais poderoso com o esforço voluntário do sujeito.
 :label:`fig_eye-book`
 
 
-## Queries, Keys, and Values
+## Consultas, Chaves e Valores
 
 Inspired by the nonvolitional and volitional attention cues that explain the attentional deployment,
 in the following we will
@@ -237,6 +237,7 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NzI1MDAyNiw0Mjc3Mzc1ODQsMzA0MD
-Y4NDQ1LC0xODU1Mjc1NjMwLC04NDc5OTIwMDddfQ==
+eyJoaXN0b3J5IjpbLTIwMTIwNTE3NjIsMTk2NzI1MDAyNiw0Mj
+c3Mzc1ODQsMzA0MDY4NDQ1LC0xODU1Mjc1NjMwLC04NDc5OTIw
+MDddfQ==
 -->
