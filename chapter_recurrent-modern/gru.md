@@ -90,6 +90,14 @@ For instance,
 a reset gate would allow us to control how much of the previous state we might still want to remember.
 Likewise, an update gate would allow us to control how much of the new state is just a copy of the old state.
 
+A primeira coisa que precisamos apresentar é
+a * porta de reinicialização * e a * porta de atualização *.
+Nós os projetamos para serem vetores com entradas em $ (0, 1) $
+para que possamos realizar combinações convexas.
+Por exemplo,
+uma porta de reinicialização nos permitiria controlar quanto do estado anterior ainda podemos querer lembrar.
+Da mesma forma, uma porta de atualização nos permitiria controlar quanto do novo estado é apenas uma cópia do antigo estado.
+
 We begin by engineering these gates.
 :numref:`fig_gru_1` illustrates the inputs for both
 the reset and update gates in a GRU, given the input
@@ -98,6 +106,15 @@ and the hidden state of the previous time step.
 The outputs of two gates
 are given by two fully-connected layers
 with a sigmoid activation function.
+
+Começamos projetando esses portões.
+: numref: `fig_gru_1` ilustra as entradas para ambos
+as portas de reset e atualização em uma GRU, dada a entrada
+da etapa de tempo atual
+e o estado oculto da etapa de tempo anterior.
+As saídas de duas portas
+são fornecidos por duas camadas totalmente conectadas
+com uma função de ativação sigmóide.
 
 ![Computing the reset gate and the update gate in a GRU model.](../img/gru-1.svg)
 :label:`fig_gru_1`
@@ -385,6 +402,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2OTE0NDAzMCw4NDU0NDY4MTEsLTc3NT
+eyJoaXN0b3J5IjpbLTc5MjYwNTE0MSw4NDU0NDY4MTEsLTc3NT
 E4NDMyMF19
 -->
