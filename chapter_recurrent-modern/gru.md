@@ -54,7 +54,7 @@ variante que muitas vezes oferece desempenho comparável e é significativamente
 compute :cite:`Chung.Gulcehre.Cho.ea.2014`.
 Por sua simplicidade, comecemos com o GRU.
 
-## Gated Hidden State
+## Estado Oculto Fechado
 
 The key distinction between vanilla RNNs and GRUs
 is that the latter support gating of the hidden state.
@@ -374,5 +374,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ1NDQ2ODExLC03NzUxODQzMjBdfQ==
+eyJoaXN0b3J5IjpbMTAxOTE5NTYxNSw4NDU0NDY4MTEsLTc3NT
+E4NDMyMF19
 -->
