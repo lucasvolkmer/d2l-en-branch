@@ -82,20 +82,19 @@ Então você traz a fóvea (o centro da mácula onde a acuidade visual é mais a
 :width:`400px`
 :label:`fig_eye-coffee`
 
-After drinking coffee,
-you become caffeinated and
-want to read a book.
-So you turn your head, refocus your eyes,
-and look at the book as depicted in :numref:`fig_eye-book`.
-Different from
-the case in :numref:`fig_eye-coffee`
-where the coffee biases you towards
-selecting based on saliency,
-in this task-dependent case you select the book under
-cognitive and volitional control.
-Using the volitional cue based on variable selection criteria,
-this form of attention is more deliberate.
-It is also more powerful with the subject's voluntary effort.
+Depois de beber café,
+você se torna cafeinado e
+quer ler um livro.
+Então você vira sua cabeça, reorienta seus olhos,
+e olha para o livro conforme descrito em :numref:`fig_eye-book`.
+Diferente do caso em :numref:`fig_eye-coffee`
+onde o café o inclina para
+selecionar com base na saliência,
+neste caso dependente da tarefa, você seleciona o livro em
+controle cognitivo e volitivo.
+Usando a dica volitiva com base em critérios de seleção de variáveis,
+esta forma de atenção é mais deliberada.
+Também é mais poderoso com o esforço voluntário do sujeito.
 
 ![Using the volitional cue (want to read a book) that is task-dependent, attention is directed to the book under volitional control.](../img/eye-book.svg)
 :width:`400px`
@@ -238,6 +237,6 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI3NzM3NTg0LDMwNDA2ODQ0NSwtMTg1NT
-I3NTYzMCwtODQ3OTkyMDA3XX0=
+eyJoaXN0b3J5IjpbMjEzMzIwMjUxLDQyNzczNzU4NCwzMDQwNj
+g0NDUsLTE4NTUyNzU2MzAsLTg0Nzk5MjAwN119
 -->
