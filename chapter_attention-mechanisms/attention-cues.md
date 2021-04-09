@@ -1,4 +1,4 @@
-# Attention CuesDicas para atenção
+# Dicas para atenção
 :label:`sec_attention-cues`
 
 
@@ -238,6 +238,6 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwODIwMjQyNywtMTg1NTI3NTYzMCwtOD
-Q3OTkyMDA3XX0=
+eyJoaXN0b3J5IjpbMzA0MDY4NDQ1LC0xODU1Mjc1NjMwLC04ND
+c5OTIwMDddfQ==
 -->
