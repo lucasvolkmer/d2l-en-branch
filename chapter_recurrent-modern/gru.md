@@ -47,7 +47,7 @@ anomalias de gradiente significam na prática:
 * Podemos encontrar situações em que alguns tokens não carreguem
   observação. Por exemplo, ao analisar uma página da web, pode haver
   Código HTML que é irrelevante para o propósito de avaliar o sentimento
-  transmitido na página. Gostaríamos de ter algum mecanismo para * pular * tais
+  transmitido na página. Gostaríamos de ter algum mecanismo para *pular* tais
   tokens na representação do estado latente.
 * Podemos encontrar situações em que haja uma quebra lógica entre as partes do
   uma sequência. Por exemplo, pode haver uma transição entre capítulos em um
@@ -61,6 +61,13 @@ will discuss in :numref:`sec_lstm`. The gated recurrent unit (GRU)
 variant that often offers comparable performance and is significantly faster to
 compute  :cite:`Chung.Gulcehre.Cho.ea.2014`.
 Due to its simplicity, let us start with the GRU.
+
+Vários métodos foram propostos para resolver isso. Uma das mais antigas é a memória de curto prazo longa :cite:`Hochreiter.Schmidhuber.1997` que nós
+irá discutir em :numref:`sec_lstm`. A unidade recorrente fechada (GRU)
+:cite:`Cho.Van-Merrienboer.Bahdanau.ea.2014` é um pouco mais simplificado
+variante que muitas vezes oferece desempenho comparável e é significativamente mais rápido para
+compute :cite:`Chung.Gulcehre.Cho.ea.2014`.
+Por sua simplicidade, comecemos com o GRU.
 
 ## Gated Hidden State
 
@@ -382,5 +389,5 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNzMyMjQ5Ml19
+eyJoaXN0b3J5IjpbLTc3NTE4NDMyMF19
 -->
