@@ -1,14 +1,6 @@
 # Gated Recurrent Units (GRU)
 :label:`sec_gru`
 
-In :numref:`sec_bptt`,
-we discussed how gradients are calculated
-in RNNs.
-In particular we found that long products of matrices can lead
-to vanishing or exploding gradients.
-Let us briefly think about what such
-gradient anomalies mean in practice:
-
 * We might encounter a situation where an early observation is highly
   significant for predicting all future observations. Consider the somewhat
   contrived case where the first observation contains a checksum and the goal is
@@ -55,15 +47,8 @@ anomalias de gradiente significam na prática:
   neste caso seria bom ter um meio de *redefinir* nosso estado interno
   representação.
 
-A number of methods have been proposed to address this. One of the earliest is long short-term memory :cite:`Hochreiter.Schmidhuber.1997` which we
-will discuss in :numref:`sec_lstm`. The gated recurrent unit (GRU)
-:cite:`Cho.Van-Merrienboer.Bahdanau.ea.2014` is a slightly more streamlined
-variant that often offers comparable performance and is significantly faster to
-compute  :cite:`Chung.Gulcehre.Cho.ea.2014`.
-Due to its simplicity, let us start with the GRU.
-
 Vários métodos foram propostos para resolver isso. Uma das mais antigas é a memória de curto prazo longa :cite:`Hochreiter.Schmidhuber.1997` que nós
-irá discutir em :numref:`sec_lstm`. A unidade recorrente fechada (GRU)
+iremos discutir em :numref:`sec_lstm`. A unidade recorrente fechada (GRU)
 :cite:`Cho.Van-Merrienboer.Bahdanau.ea.2014` é um pouco mais simplificado
 variante que muitas vezes oferece desempenho comparável e é significativamente mais rápido para
 compute :cite:`Chung.Gulcehre.Cho.ea.2014`.
@@ -389,5 +374,5 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NTE4NDMyMF19
+eyJoaXN0b3J5IjpbODQ1NDQ2ODExLC03NzUxODQzMjBdfQ==
 -->
