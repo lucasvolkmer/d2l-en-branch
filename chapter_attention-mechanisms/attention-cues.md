@@ -103,19 +103,20 @@ Também é mais poderoso com o esforço voluntário do sujeito.
 
 ## Consultas, Chaves e Valores
 
-Inspired by the nonvolitional and volitional attention cues that explain the attentional deployment,
-in the following we will
-describe a framework for
-designing attention mechanisms
-by incorporating these two attention cues.
 
-To begin with, consider the simpler case where only
-nonvolitional cues are available.
-To bias selection over sensory inputs,
-we can simply use
-a parameterized fully-connected layer
-or even non-parameterized
-max or average pooling.
+Inspirado pelas dicas de atenção não-voluntárias e volitivas que explicam a implantação da atenção,
+a seguir iremos
+descrever uma estrutura para
+projetando mecanismos de atenção
+incorporando essas duas pistas de atenção.
+
+Para começar, considere o caso mais simples, onde apenas
+sugestões não-tradicionais estão disponíveis.
+Para influenciar a seleção sobre as entradas sensoriais,
+podemos simplesmente usar
+uma camada parametrizada totalmente conectada
+ou mesmo não parametrizada
+de agrupamento máximo ou médio.
 
 Therefore,
 what sets attention mechanisms
@@ -237,7 +238,7 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTIwNTE3NjIsMTk2NzI1MDAyNiw0Mj
-c3Mzc1ODQsMzA0MDY4NDQ1LC0xODU1Mjc1NjMwLC04NDc5OTIw
-MDddfQ==
+eyJoaXN0b3J5IjpbMTA3NTcxMTYxNywtMjAxMjA1MTc2MiwxOT
+Y3MjUwMDI2LDQyNzczNzU4NCwzMDQwNjg0NDUsLTE4NTUyNzU2
+MzAsLTg0Nzk5MjAwN119
 -->
