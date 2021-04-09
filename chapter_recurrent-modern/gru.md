@@ -139,12 +139,13 @@ $$
 $$
 
 onde $\mathbf{W}_{xr}, \mathbf{W}_{xz} \in \mathbb{R}^{d \times h}$ e
-$\mathbf{W}_{hr}, \mathbf{W}_{hz} \in \mathbb{R}^{h \times h}$ são pesos de parâmetros e $\mathbf{b}_r, \mathbf{b}_z \in \mathbb{R}^{1 \times h}$ are
-biases. 
+$\mathbf{W}_{hr}, \mathbf{W}_{hz} \in \mathbb{R}^{h \times h}$ são pesos de parâmetros e $\mathbf{b}_r, \mathbf{b}_z \in \mathbb{R}^{1 \times h}$ são viéses
 Note that broadcasting (see :numref:`subsec_broadcasting`) is triggered during the summation.
 We use sigmoid functions (as introduced in :numref:`sec_mlp`) to transform input values to the interval $(0, 1)$.
+Observe que a transmissão (consulte :numref:`subsec_broadcasting`) é acionada durante a soma.
+Usamos funções sigmóides (como introduzidas em :numref:`sec_mlp`) para transformar os valores de entrada no intervalo $(0, 1)$.
 
-### Candidate Hidden State
+### Candidate Hidden State Estado Oculto do Candidato
 
 Next, let us
 integrate the reset gate $\mathbf{R}_t$ with
@@ -407,6 +408,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA3OTQxOTE0LDg0NTQ0NjgxMSwtNzc1MT
+eyJoaXN0b3J5IjpbMTk1OTQzODgwLDg0NTQ0NjgxMSwtNzc1MT
 g0MzIwXX0=
 -->
