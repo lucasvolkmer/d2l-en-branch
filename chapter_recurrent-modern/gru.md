@@ -68,6 +68,17 @@ Likewise, we will learn to skip irrelevant temporary observations.
 Last, we will learn to reset the latent state whenever needed.
 We discuss this in detail below.
 
+A principal distinção entre RNNs vanilla e GRUs
+é que o último suporta o bloqueio do estado oculto.
+Isso significa que temos mecanismos dedicados para
+quando um estado oculto deve ser *atualizado* e
+também quando deve ser *redefinido*.
+Esses mecanismos são aprendidos e atendem às questões listadas acima.
+Por exemplo, se o primeiro token é de grande importância
+aprenderemos a não atualizar o estado oculto após a primeira observação.
+Da mesma forma, aprenderemos a pular observações temporárias irrelevantes.
+Por último, aprenderemos a redefinir o estado latente sempre que necessário.
+Discutimos isso em detalhes abaixo.
 
 ### Reset Gate and Update Gate
 
@@ -374,6 +385,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxOTE5NTYxNSw4NDU0NDY4MTEsLTc3NT
+eyJoaXN0b3J5IjpbMTg2OTE0NDAzMCw4NDU0NDY4MTEsLTc3NT
 E4NDMyMF19
 -->
