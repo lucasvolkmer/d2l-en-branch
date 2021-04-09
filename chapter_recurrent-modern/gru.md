@@ -28,6 +28,33 @@ gradient anomalies mean in practice:
   this case it would be nice to have a means of *resetting* our internal state
   representation.
 
+Em :numref:`sec_bptt`,
+discutimos como os gradientes são calculados
+em RNNs.
+Em particular, descobrimos que produtos longos de matrizes podem levar
+para gradientes desaparecendo ou explodindo.
+Vamos pensar brevemente sobre como
+anomalias de gradiente significam na prática:
+
+* Podemos encontrar uma situação em que uma observação precoce é altamente
+  significativo para prever todas as observações futuras. Considere o pouco
+  caso inventado em que a primeira observação contém uma soma de verificação e o objetivo é
+  para discernir se a soma de verificação está correta no final da sequência. Nisso
+  caso, a influência do primeiro token é vital. Gostaríamos de ter algum
+  mecanismos para armazenar informações precoces vitais em uma *célula de memória*. Sem tal
+  um mecanismo, teremos que atribuir um gradiente muito grande a esta observação,
+  uma vez que afeta todas as observações subsequentes.
+* Podemos encontrar situações em que alguns tokens não carreguem
+  observação. Por exemplo, ao analisar uma página da web, pode haver
+  Código HTML que é irrelevante para o propósito de avaliar o sentimento
+  transmitido na página. Gostaríamos de ter algum mecanismo para * pular * tais
+  tokens na representação do estado latente.
+* Podemos encontrar situações em que haja uma quebra lógica entre as partes do
+  uma sequência. Por exemplo, pode haver uma transição entre capítulos em um
+  livro, ou uma transição entre um mercado de valores em baixa e em alta. No
+  neste caso seria bom ter um meio de *redefinir* nosso estado interno
+  representação.
+
 A number of methods have been proposed to address this. One of the earliest is long short-term memory :cite:`Hochreiter.Schmidhuber.1997` which we
 will discuss in :numref:`sec_lstm`. The gated recurrent unit (GRU)
 :cite:`Cho.Van-Merrienboer.Bahdanau.ea.2014` is a slightly more streamlined
@@ -355,5 +382,5 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIwNjE1MDY3XX0=
+eyJoaXN0b3J5IjpbLTcxNzMyMjQ5Ml19
 -->
