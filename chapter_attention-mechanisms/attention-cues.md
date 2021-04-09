@@ -34,27 +34,28 @@ nós ou prestamos atenção a
 participar de batalhas, que atraem novos jogadores,
 ou pagamos dinheiro para nos tornarmos poderosos instantaneamente.
 Nada vem de graça.
-All in all,
-information in our environment is not scarce,
-attention is.
-When inspecting a visual scene,
-our optic nerve receives information
-at the order of $10^8$ bits per second,
-far exceeding what our brain can fully process.
-Fortunately,
-our ancestors had learned from experience (also known as data)
-that *not all sensory inputs are created equal*.
-Throughout human history,
-the capability of directing attention
-to only a fraction of information of interest
-has enabled our brain
-to allocate resources more smartly
-to survive, to grow, and to socialize,
-such as detecting predators, preys, and mates.
+
+Contudo,
+as informações em nosso ambiente não são escassas,
+atenção é.
+Ao inspecionar uma cena visual,
+nosso nervo óptico recebe informações
+na ordem de $10^8$ bits por segundo,
+excedendo em muito o que nosso cérebro pode processar totalmente.
+Felizmente,
+nossos ancestrais aprenderam com a experiência (também conhecido como dados)
+que *nem todas as entradas sensoriais são criadas iguais*.
+Ao longo da história humana,
+a capacidade de direcionar a atenção
+para apenas uma fração da informação de interesse
+habilitou nosso cérebro
+para alocar recursos de forma mais inteligente
+para sobreviver, crescer e se socializar,
+como a detecção de predadores, presas e companheiros.
 
 
 
-## Attention Cues in Biology
+## Dicas de Atenção em Biologia
 
 To explain how our attention is deployed in the visual world,
 a two-component framework has emerged
@@ -237,6 +238,6 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5ODg4MTg0NCwtMTg1NTI3NTYzMCwtOD
+eyJoaXN0b3J5IjpbMTQwODIwMjQyNywtMTg1NTI3NTYzMCwtOD
 Q3OTkyMDA3XX0=
 -->
