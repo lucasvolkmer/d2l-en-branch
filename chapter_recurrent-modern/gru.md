@@ -166,11 +166,15 @@ $$\tilde{\mathbf{H}}_t = \tanh(\mathbf{X}_t \mathbf{W}_{xh} + \left(\mathbf{R}_t
 :eqlabel:`gru_tilde_H`
 
 onde $\mathbf{W}_{xh} \in \mathbb{R}^{d \times h}$ and $\mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$
-are weight parameters,
+são parâmetros de pesos,
 $\mathbf{b}_h \in \mathbb{R}^{1 \times h}$
 is the bias,
 and the symbol $\odot$ is the Hadamard (elementwise) product operator.
 Here we use a nonlinearity in the form of tanh to ensure that the values in the candidate hidden state remain in the interval $(-1, 1)$.
+
+é o preconceito,
+e o símbolo $\odot$ é o operador de produto Hadamard (elementwise).
+Aqui, usamos uma não linearidade na forma de tanh para garantir que os valores no estado oculto candidato permaneçam no intervalo $(-1, 1)$.
 
 The result is a *candidate* since we still need to incorporate the action of the update gate.
 Comparing with :eqref:`rnn_h_with_state`,
@@ -415,6 +419,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NTA0NzQ5Myw4NDU0NDY4MTEsLTc3NT
-E4NDMyMF19
+eyJoaXN0b3J5IjpbLTE4NDM4MjI0MDUsODQ1NDQ2ODExLC03Nz
+UxODQzMjBdfQ==
 -->
