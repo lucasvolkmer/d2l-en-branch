@@ -194,21 +194,25 @@ agora a influência dos estados anteriores
 pode ser reduzido com o
 multiplicação elementar de
 $\mathbf{R}_t$ e$\mathbf{H}_{t-1}$
-in :eqref:`gru_tilde_H`.
+em :eqref:`gru_tilde_H`.
 Sempre que as entradas na porta de reset $\mathbf{R}_t$ estão perto de 1, recuperamos um RNN vanilla como em :eqref:`rnn_h_with_state`.
 Para todas as entradas da porta de reset $\mathbf{R}_t$ que estão próximas de 0, o estado oculto candidato é o resultado de um MLP com $\mathbf{X}_t$ como a entrada. Qualquer estado oculto pré-existente é, portanto, *redefinido* para os padrões.
 
-: numref: `fig_gru_2` ilustra o fluxo computacional após aplicar a porta de reset.
+:numref:`fig_gru_2` ilustra o fluxo computacional após aplicar a porta de reset.
 
-![Computing the candidate hidden state in a GRU model.](../img/gru-2.svg)
+![Calculando o estado oculto candidato em um modelo GRU.](../img/gru-2.svg)
 :label:`fig_gru_2`
 
 
-### Hidden State
+### Estados Escondidos
 
 Finally, we need to incorporate the effect of the update gate $\mathbf{Z}_t$. This determines the extent to which the new hidden state $\mathbf{H}_t \in \mathbb{R}^{n \times h}$ is just the old state $\mathbf{H}_{t-1}$ and by how much the new candidate state $\tilde{\mathbf{H}}_t$ is used.
 The update gate $\mathbf{Z}_t$ can be used for this purpose, simply by taking elementwise convex combinations between both $\mathbf{H}_{t-1}$ and $\tilde{\mathbf{H}}_t$.
 This leads to the final update equation for the GRU:
+
+Finalmente, precisamos incorporar o efeito da porta de atualização $\mathbf{Z}_t$. Isso determina até que ponto o novo estado oculto $\mathbf{H}_t \in \mathbb{R}^{n \times h}$ é apenas o antigo estado $\mathbf{H}_{t-1}$ e em quanto o novo estado candidato $ \ tilde {\ mathbf {H}} _ t $ é usado.
+A porta de atualização $ \ mathbf {Z} _t $ pode ser usada para este propósito, simplesmente tomando combinações convexas elementwise entre $ \ mathbf {H} _ {t-1} $ e $ \ tilde {\ mathbf {H}} _t $.
+Isso leva à equação de atualização final para a GRU:
 
 $$\mathbf{H}_t = \mathbf{Z}_t \odot \mathbf{H}_{t-1}  + (1 - \mathbf{Z}_t) \odot \tilde{\mathbf{H}}_t.$$
 
@@ -431,6 +435,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwOTU5MjY3Myw4NDU0NDY4MTEsLTc3NT
-E4NDMyMF19
+eyJoaXN0b3J5IjpbMjMzODY4MjE3LDg0NTQ0NjgxMSwtNzc1MT
+g0MzIwXX0=
 -->
