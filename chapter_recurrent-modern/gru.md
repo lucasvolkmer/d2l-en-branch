@@ -287,6 +287,12 @@ with standard deviation to be 0.01 and set the bias to 0. The hyperparameter `nu
 We instantiate all weights and biases relating to the update gate, the reset gate, the candidate hidden state,
 and the output layer.
 
+A próxima etapa é inicializar os parâmetros do modelo.
+Tiramos os pesos de uma distribuição gaussiana
+com desvio padrão de 0,01 e defina o bias como 0. O hiperparâmetro `num_hiddens` define o número de unidades ocultas.
+Instanciamos todos os pesos e vieses relacionados à porta de atualização, a porta de redefinição, o estado oculto candidato,
+e a camada de saída.
+
 ```{.python .input}
 def get_params(vocab_size, num_hiddens, device):
     num_inputs = num_outputs = vocab_size
@@ -338,9 +344,11 @@ def get_params(vocab_size, num_hiddens, device):
     return params
 ```
 
-### Defining the Model
+### Defining the Model Definindo o modelo
 
 Now we will define the hidden state initialization function `init_gru_state`. Just like the `init_rnn_state` function defined in :numref:`sec_rnn_scratch`, this function returns a tensor with a shape (batch size, number of hidden units) whose values are all zeros.
+
+Agora vamos definir a função de inicialização de estado oculto `init_gru_state`. Assim como a função `init_rnn_state` definida em: numref:` sec_rnn_scratch`, esta função retorna um tensor com uma forma (tamanho do lote, número de unidades ocultas) cujos valores são todos zeros.
 
 ```{.python .input}
 def init_gru_state(batch_size, num_hiddens, device):
@@ -355,6 +363,9 @@ def init_gru_state(batch_size, num_hiddens, device):
 
 Now we are ready to define the GRU model.
 Its structure is the same as that of the basic RNN cell, except that the update equations are more complex.
+
+Agora estamos prontos para definir o modelo GRU.
+Sua estrutura é a mesma da célula RNN básica, exceto que as equações de atualização são mais complexas.
 
 ```{.python .input}
 def gru(inputs, state, params):
@@ -387,13 +398,19 @@ def gru(inputs, state, params):
     return torch.cat(outputs, dim=0), (H,)
 ```
 
-### Training and Prediction
+### Training and Prediction Treinamento e previsão
 
 Training and prediction work in exactly the same manner as in :numref:`sec_rnn_scratch`.
 After training,
 we print out the perplexity on the training set
 and the predicted sequence following
 the provided prefixes "time traveller" and "traveller", respectively.
+
+O treinamento e a previsão funcionam exatamente da mesma maneira que em: numref: `sec_rnn_scratch`.
+Após o treinamento,
+imprimimos a perplexidade no conjunto de treinamento
+e a sequência prevista seguindo
+os prefixos fornecidos "viajante do tempo" e "viajante", respectivamente.
 
 ```{.python .input}
 #@tab all
@@ -404,13 +421,19 @@ model = d2l.RNNModelScratch(len(vocab), num_hiddens, device, get_params,
 d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 ```
 
-## Concise Implementation
+## Concise Implementation Implementação concisa
 
 In high-level APIs,
 we can directly
 instantiate a GPU model.
 This encapsulates all the configuration detail that we made explicit above.
 The code is significantly faster as it uses compiled operators rather than Python for many details that we spelled out before.
+
+Em APIs de alto nível,
+nós podemos diretamente
+instanciar um modelo de GPU.
+Isso encapsula todos os detalhes de configuração que tornamos explícitos acima.
+O código é significativamente mais rápido, pois usa operadores compilados em vez de Python para muitos detalhes que explicamos antes.
 
 ```{.python .input}
 gru_layer = rnn.GRU(num_hiddens)
@@ -427,7 +450,7 @@ model = model.to(device)
 d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 ```
 
-## Summary
+## Sumário
 
 * Gated RNNs can better capture dependencies for sequences with large time step distances.
 * Reset gates help capture short-term dependencies in sequences.
@@ -451,6 +474,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjkwNTQ3NTAsODQ1NDQ2ODExLC03Nz
+eyJoaXN0b3J5IjpbLTEyNDM3Njg3OTQsODQ1NDQ2ODExLC03Nz
 UxODQzMjBdfQ==
 -->
