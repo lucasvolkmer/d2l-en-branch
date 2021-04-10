@@ -139,7 +139,7 @@ $$
 $$
 
 onde $\mathbf{W}_{xr}, \mathbf{W}_{xz} \in \mathbb{R}^{d \times h}$ e
-$\mathbf{W}_{hr}, \mathbf{W}_{hz} \in \mathbb{R}^{h \times h}$ são pesos de parâmetros e $\mathbf{b}_r, \mathbf{b}_z \in \mathbb{R}^{1 \times h}$ são viéses
+$\mathbf{W}_{hr}, \mathbf{W}_{hz} \in \mathbb{R}^{h \times h}$ são pesos de parâmetros e $\mathbf{b}_r, \mathbf{b}_z \in \mathbb{R}^{1 \times h}$ são viéses.
 Note that broadcasting (see :numref:`subsec_broadcasting`) is triggered during the summation.
 We use sigmoid functions (as introduced in :numref:`sec_mlp`) to transform input values to the interval $(0, 1)$.
 Observe que a transmissão (consulte :numref:`subsec_broadcasting`) é acionada durante a soma.
@@ -153,12 +153,19 @@ the regular latent state updating mechanism
 in :eqref:`rnn_h_with_state`.
 It leads to the following
 *candidate hidden state*
+
+Em seguida, vamos
+integrar a porta de reset $\mathbf {R} _t$ com
+o mecanismo regular de atualização de estado latente
+in :eqref:`rnn_h_with_state`.
+Isso leva ao seguinte
+*estado oculto candidato*
 $\tilde{\mathbf{H}}_t \in \mathbb{R}^{n \times h}$ at time step $t$:
 
 $$\tilde{\mathbf{H}}_t = \tanh(\mathbf{X}_t \mathbf{W}_{xh} + \left(\mathbf{R}_t \odot \mathbf{H}_{t-1}\right) \mathbf{W}_{hh} + \mathbf{b}_h),$$
 :eqlabel:`gru_tilde_H`
 
-where $\mathbf{W}_{xh} \in \mathbb{R}^{d \times h}$ and $\mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$
+onde $\mathbf{W}_{xh} \in \mathbb{R}^{d \times h}$ and $\mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$
 are weight parameters,
 $\mathbf{b}_h \in \mathbb{R}^{1 \times h}$
 is the bias,
@@ -408,6 +415,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1OTQzODgwLDg0NTQ0NjgxMSwtNzc1MT
-g0MzIwXX0=
+eyJoaXN0b3J5IjpbMTA2NTA0NzQ5Myw4NDU0NDY4MTEsLTc3NT
+E4NDMyMF19
 -->
