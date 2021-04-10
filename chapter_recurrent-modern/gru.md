@@ -188,6 +188,18 @@ For all entries of the reset gate $\mathbf{R}_t$ that are close to 0, the candid
 
 :numref:`fig_gru_2` illustrates the computational flow after applying the reset gate.
 
+O resultado é um *candidato*, pois ainda precisamos incorporar a ação da porta de atualização.
+Comparando com :eqref:`rnn_h_with_state`,
+agora a influência dos estados anteriores
+pode ser reduzido com o
+multiplicação elementar de
+$\mathbf{R}_t$ e$\mathbf{H}_{t-1}$
+in :eqref:`gru_tilde_H`.
+Sempre que as entradas na porta de reset $\mathbf{R}_t$ estão perto de 1, recuperamos um RNN vanilla como em :eqref:`rnn_h_with_state`.
+Para todas as entradas da porta de reset $\mathbf{R}_t$ que estão próximas de 0, o estado oculto candidato é o resultado de um MLP com $\mathbf{X}_t$ como a entrada. Qualquer estado oculto pré-existente é, portanto, *redefinido* para os padrões.
+
+: numref: `fig_gru_2` ilustra o fluxo computacional após aplicar a porta de reset.
+
 ![Computing the candidate hidden state in a GRU model.](../img/gru-2.svg)
 :label:`fig_gru_2`
 
@@ -419,6 +431,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDM4MjI0MDUsODQ1NDQ2ODExLC03Nz
-UxODQzMjBdfQ==
+eyJoaXN0b3J5IjpbLTcwOTU5MjY3Myw4NDU0NDY4MTEsLTc3NT
+E4NDMyMF19
 -->
