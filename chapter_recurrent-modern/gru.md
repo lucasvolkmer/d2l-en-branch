@@ -210,8 +210,8 @@ Finally, we need to incorporate the effect of the update gate $\mathbf{Z}_t$. Th
 The update gate $\mathbf{Z}_t$ can be used for this purpose, simply by taking elementwise convex combinations between both $\mathbf{H}_{t-1}$ and $\tilde{\mathbf{H}}_t$.
 This leads to the final update equation for the GRU:
 
-Finalmente, precisamos incorporar o efeito da porta de atualização $\mathbf{Z}_t$. Isso determina até que ponto o novo estado oculto $\mathbf{H}_t \in \mathbb{R}^{n \times h}$ é apenas o antigo estado $\mathbf{H}_{t-1}$ e em quanto o novo estado candidato $ \ tilde {\ mathbf {H}} _ t $ é usado.
-A porta de atualização $ \ mathbf {Z} _t $ pode ser usada para este propósito, simplesmente tomando combinações convexas elementwise entre $ \ mathbf {H} _ {t-1} $ e $ \ tilde {\ mathbf {H}} _t $.
+Finalmente, precisamos incorporar o efeito da porta de atualização $\mathbf{Z}_t$. Isso determina até que ponto o novo estado oculto $\mathbf{H}_t \in \mathbb{R}^{n \times h}$ é apenas o antigo estado $\mathbf{H}_{t-1}$ e em quanto o novo estado candidato $\tilde{\mathbf{H}}_t$ é usado.
+A porta de atualização $\mathbf{Z}_t$ pode ser usada para este propósito, simplesmente tomando combinações convexas elementwise entre $\mathbf{H}_{t-1}$ e $\tilde{\mathbf{H}}_t$.
 Isso leva à equação de atualização final para a GRU:
 
 $$\mathbf{H}_t = \mathbf{Z}_t \odot \mathbf{H}_{t-1}  + (1 - \mathbf{Z}_t) \odot \tilde{\mathbf{H}}_t.$$
@@ -225,6 +225,15 @@ the old hidden state at the time step of its beginning
 will be easily retained and passed
 to its end,
 regardless of the length of the subsequence.
+
+Sempre que a porta de atualização $\mathbf{Z}_t$ está próxima de 1, simplesmente mantemos o estado antigo. Neste caso, a informação de $\mathbf{X}_t$ é essencialmente ignorada, pulando efetivamente o passo de tempo $t$ na cadeia de dependências. Em contraste, sempre que $\mathbf{Z}_t$ está próximo de 0, o novo estado latente $\mathbf{H}_t$ se aproxima do estado latente candidato $\tilde{\mathbf{H}}_t$. Esses projetos podem nos ajudar a lidar com o problema do gradiente de desaparecimento em RNNs e melhor capturar dependências para sequências com grandes distâncias de intervalo de tempo.
+Por exemplo,
+se a porta de atualização estiver perto de 1
+para todas as etapas de tempo de uma subsequência inteira,
+o antigo estado oculto na etapa do tempo de seu início
+será facilmente retido e aprovado
+até o fim,
+independentemente do comprimento da subsequência.
 
 
 
@@ -435,6 +444,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMzODY4MjE3LDg0NTQ0NjgxMSwtNzc1MT
-g0MzIwXX0=
+eyJoaXN0b3J5IjpbMTM0NjA3NjkxNiw4NDU0NDY4MTEsLTc3NT
+E4NDMyMF19
 -->
