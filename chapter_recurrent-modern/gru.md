@@ -237,9 +237,9 @@ independentemente do comprimento da subsequência.
 
 
 
-:numref:`fig_gru_3` illustrates the computational flow after the update gate is in action.
+:numref:`fig_gru_3` illustrates the computational flow after the update gate is in action. ilustra o fluxo computacional depois que a porta de atualização está em ação.
 
-![Computing the hidden state in a GRU model.](../img/gru-3.svg)
+![Computing the hidden state in a GRU model. Calculando o estado oculto em um modelo GRU.](../img/gru-3.svg)
 :label:`fig_gru_3`
 
 
@@ -248,9 +248,16 @@ In summary, GRUs have the following two distinguishing features:
 * Reset gates help capture short-term dependencies in sequences.
 * Update gates help capture long-term dependencies in sequences.
 
-## Implementation from Scratch
+Em resumo, GRUs têm as duas características distintas a seguir:
+
+* As portas de redefinição ajudam a capturar dependências de curto prazo em sequências.
+* Portas de atualização ajudam a capturar dependências de longo prazo em sequências.
+
+## Implementation from Scratch Implementação do zero
 
 To gain a better understanding of the GRU model, let us implement it from scratch. We begin by reading the time machine dataset that we used in :numref:`sec_rnn_scratch`. The code for reading the dataset is given below.
+
+Para entender melhor o modelo GRU, vamos implementá-lo do zero. Começamos lendo o conjunto de dados da máquina do tempo que usamos em: numref: `sec_rnn_scratch`. O código para ler o conjunto de dados é fornecido abaixo.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -272,7 +279,7 @@ batch_size, num_steps = 32, 35
 train_iter, vocab = d2l.load_data_time_machine(batch_size, num_steps)
 ```
 
-### Initializing Model Parameters
+### Initializing Model Parameters Inicializando os parâmetros do modelo
 
 The next step is to initialize the model parameters.
 We draw the weights from a Gaussian distribution
@@ -444,6 +451,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NjA3NjkxNiw4NDU0NDY4MTEsLTc3NT
-E4NDMyMF19
+eyJoaXN0b3J5IjpbLTE3NjkwNTQ3NTAsODQ1NDQ2ODExLC03Nz
+UxODQzMjBdfQ==
 -->
