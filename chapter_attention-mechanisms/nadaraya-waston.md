@@ -72,8 +72,8 @@ n_test = len(x_test)  # No. of testing examples
 n_test
 ```
 
-The following function plots all the training examples (represented by circles),
-the ground-truth data generation function `f` without the noise term (labeled by "Truth"), and the learned prediction function (labeled by "Pred").
+A função a seguir plota todos os exemplos de treinamento (representados por círculos),
+a função de geração de dados de verdade básica `f` sem o termo de ruído (rotulado como "Truth"), e a função de predição aprendida (rotulado como "Pred").
 
 ```{.python .input}
 #@tab all
@@ -83,15 +83,15 @@ def plot_kernel_reg(y_hat):
     d2l.plt.plot(x_train, y_train, 'o', alpha=0.5);
 ```
 
-## Average Pooling
+## *Pooling* Médio
 
-We begin with perhaps the world's "dumbest" estimator for this regression problem:
-using average pooling to average over all the training outputs:
+Começamos com talvez o estimador "mais idiota" do mundo para este problema de regressão:
+usando o *pooling* médio para calcular a média de todos os resultados do treinamento:
 
 $$f(x) = \frac{1}{n}\sum_{i=1}^n y_i,$$
 :eqlabel:`eq_avg-pooling`
 
-which is plotted below. As we can see, this estimator is indeed not so smart.
+que é plotado abaixo. Como podemos ver, este estimador não é tão inteligente.
 
 ```{.python .input}
 y_hat = y_train.mean().repeat(n_test)
@@ -104,7 +104,7 @@ y_hat = torch.repeat_interleave(y_train.mean(), n_test)
 plot_kernel_reg(y_hat)
 ```
 
-## Nonparametric Attention Pooling
+## *Pooling* de Atenção não-Paramétrico
 
 Obviously,
 average pooling omits the inputs $x_i$.
@@ -466,5 +466,5 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzc5MTQ2MCw5NjEzNjk0MTVdfQ==
+eyJoaXN0b3J5IjpbLTE5NDk1MjAwMyw5NjEzNjk0MTVdfQ==
 -->
