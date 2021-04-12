@@ -133,16 +133,6 @@ Isso leva à equação de atualização final para a GRU:
 
 $$\mathbf{H}_t = \mathbf{Z}_t \odot \mathbf{H}_{t-1}  + (1 - \mathbf{Z}_t) \odot \tilde{\mathbf{H}}_t.$$
 
-
-Whenever the update gate $\mathbf{Z}_t$ is close to 1, we simply retain the old state. In this case the information from $\mathbf{X}_t$ is essentially ignored, effectively skipping time step $t$ in the dependency chain. In contrast, whenever $\mathbf{Z}_t$ is close to 0, the new latent state $\mathbf{H}_t$ approaches the candidate latent state $\tilde{\mathbf{H}}_t$. These designs can help us cope with the vanishing gradient problem in RNNs and better capture dependencies for sequences with large time step distances.
-For instance,
-if the update gate has been close to 1
-for all the time steps of an entire subsequence,
-the old hidden state at the time step of its beginning
-will be easily retained and passed
-to its end,
-regardless of the length of the subsequence.
-
 Sempre que a porta de atualização $\mathbf{Z}_t$ está próxima de 1, simplesmente mantemos o estado antigo. Neste caso, a informação de $\mathbf{X}_t$ é essencialmente ignorada, pulando efetivamente o passo de tempo $t$ na cadeia de dependências. Em contraste, sempre que $\mathbf{Z}_t$ está próximo de 0, o novo estado latente $\mathbf{H}_t$ se aproxima do estado latente candidato $\tilde{\mathbf{H}}_t$. Esses projetos podem nos ajudar a lidar com o problema do gradiente de desaparecimento em RNNs e melhor capturar dependências para sequências com grandes distâncias de intervalo de tempo.
 Por exemplo,
 se a porta de atualização estiver perto de 1
@@ -154,27 +144,19 @@ independentemente do comprimento da subsequência.
 
 
 
-:numref:`fig_gru_3` illustrates the computational flow after the update gate is in action. ilustra o fluxo computacional depois que a porta de atualização está em ação.
+:numref:`fig_gru_3` ilustra o fluxo computacional depois que a porta de atualização está em ação.
 
 ![Computing the hidden state in a GRU model. Calculando o estado oculto em um modelo GRU.](../img/gru-3.svg)
 :label:`fig_gru_3`
-
-
-In summary, GRUs have the following two distinguishing features:
-
-* Reset gates help capture short-term dependencies in sequences.
-* Update gates help capture long-term dependencies in sequences.
 
 Em resumo, GRUs têm as duas características distintas a seguir:
 
 * As portas de redefinição ajudam a capturar dependências de curto prazo em sequências.
 * Portas de atualização ajudam a capturar dependências de longo prazo em sequências.
 
-## Implementation from Scratch Implementação do zero
+## Implementação do zero
 
-To gain a better understanding of the GRU model, let us implement it from scratch. We begin by reading the time machine dataset that we used in :numref:`sec_rnn_scratch`. The code for reading the dataset is given below.
-
-Para entender melhor o modelo GRU, vamos implementá-lo do zero. Começamos lendo o conjunto de dados da máquina do tempo que usamos em: numref: `sec_rnn_scratch`. O código para ler o conjunto de dados é fornecido abaixo.
+Para entender melhor o modelo GRU, vamos implementá-lo do zero. Começamos lendo o conjunto de dados da máquina do tempo que usamos em :numref:`sec_rnn_scratch`. O código para ler o conjunto de dados é fornecido abaixo.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -196,13 +178,7 @@ batch_size, num_steps = 32, 35
 train_iter, vocab = d2l.load_data_time_machine(batch_size, num_steps)
 ```
 
-### Initializing Model Parameters Inicializando os parâmetros do modelo
-
-The next step is to initialize the model parameters.
-We draw the weights from a Gaussian distribution
-with standard deviation to be 0.01 and set the bias to 0. The hyperparameter `num_hiddens` defines the number of hidden units.
-We instantiate all weights and biases relating to the update gate, the reset gate, the candidate hidden state,
-and the output layer.
+### Inicializando os parâmetros do modelo
 
 A próxima etapa é inicializar os parâmetros do modelo.
 Tiramos os pesos de uma distribuição gaussiana
@@ -261,11 +237,9 @@ def get_params(vocab_size, num_hiddens, device):
     return params
 ```
 
-### Defining the Model Definindo o modelo
+### Definindo o modelo
 
-Now we will define the hidden state initialization function `init_gru_state`. Just like the `init_rnn_state` function defined in :numref:`sec_rnn_scratch`, this function returns a tensor with a shape (batch size, number of hidden units) whose values are all zeros.
-
-Agora vamos definir a função de inicialização de estado oculto `init_gru_state`. Assim como a função `init_rnn_state` definida em: numref:` sec_rnn_scratch`, esta função retorna um tensor com uma forma (tamanho do lote, número de unidades ocultas) cujos valores são todos zeros.
+Agora vamos definir a função de inicialização de estado oculto `init_gru_state`. Assim como a função `init_rnn_state` definida em :numref:`sec_rnn_scratch`, esta função retorna um tensor com uma forma (tamanho do lote, número de unidades ocultas) cujos valores são todos zeros.
 
 ```{.python .input}
 def init_gru_state(batch_size, num_hiddens, device):
@@ -277,9 +251,6 @@ def init_gru_state(batch_size, num_hiddens, device):
 def init_gru_state(batch_size, num_hiddens, device):
     return (torch.zeros((batch_size, num_hiddens), device=device), )
 ```
-
-Now we are ready to define the GRU model.
-Its structure is the same as that of the basic RNN cell, except that the update equations are more complex.
 
 Agora estamos prontos para definir o modelo GRU.
 Sua estrutura é a mesma da célula RNN básica, exceto que as equações de atualização são mais complexas.
@@ -315,7 +286,7 @@ def gru(inputs, state, params):
     return torch.cat(outputs, dim=0), (H,)
 ```
 
-### Training and Prediction Treinamento e previsão
+### Treinamento e previsão
 
 Training and prediction work in exactly the same manner as in :numref:`sec_rnn_scratch`.
 After training,
@@ -400,6 +371,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTYxMjEwOCwtMjAwNzk5NzA3LDg0NT
+eyJoaXN0b3J5IjpbMTE2OTE4Nzk4MCwtMjAwNzk5NzA3LDg0NT
 Q0NjgxMSwtNzc1MTg0MzIwXX0=
 -->
