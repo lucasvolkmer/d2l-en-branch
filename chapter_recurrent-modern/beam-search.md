@@ -189,33 +189,35 @@ escolhemos a sequência com a maior das seguintes pontuações como a sequência
 $$ \frac{1}{L^\alpha} \log P(y_1, \ldots, y_{L}) = \frac{1}{L^\alpha} \sum_{t'=1}^L \log P(y_{t'} \mid y_1, \ldots, y_{t'-1}, \mathbf{c}),$$
 :eqlabel:`eq_beam-search-score`
 
-where $L$ is the length of the final candidate sequence and $\alpha$ is usually set to 0.75. 
-Since a longer sequence has more logarithmic terms in the summation of :eqref:`eq_beam-search-score`,
-the term $L^\alpha$ in the denominator penalizes
-long sequences.
+onde $L$ é o comprimento da sequência candidata final e $\alpha$ é geralmente definido como 0,75.
+Uma vez que uma sequência mais longa tem mais termos logarítmicos na soma de :eqref:`eq_beam-search-score`,
+o termo $L^\alpha$ no denominador penaliza
+longas sequências.
 
-The computational cost of beam search is $\mathcal{O}(k\left|\mathcal{Y}\right|T')$. 
-This result is in between that of greedy search and that of exhaustive search. In fact, greedy search can be treated as a special type of beam search with 
-a beam size of 1. 
-With a flexible choice of the beam size,
-beam search provides a tradeoff between
-accuracy versus computational cost.
-
-
-
-## Summary
-
-* Sequence searching strategies include greedy search, exhaustive search, and beam search.
-* Beam search provides a tradeoff between accuracy versus computational cost via its flexible choice of the beam size.
+O custo computacional da pesquisa do feixe é $\mathcal{O}(k\left|\mathcal{Y}\right|T')$.
+Esse resultado está entre o da busca gananciosa e o da busca exaustiva. Na verdade, a pesquisa gananciosa pode ser tratada como um tipo especial de pesquisa de feixe com
+um tamanho de feixe de 1.
+Com uma escolha flexível do tamanho do feixe,
+pesquisa de feixe fornece uma compensação entre
+precisão versus custo computacional.
 
 
-## Exercises
+
+## Sumário
+
+* As estratégias de busca de sequência incluem busca gananciosa, busca exaustiva e busca de feixe.
+* A pesquisa de feixe oferece uma compensação entre precisão e custo computacional por meio de sua escolha flexível do tamanho do feixe.
+
+## Exercícios
 
 1. Can we treat exhaustive search as a special type of beam search? Why or why not?
 1. Apply beam search in the machine translation problem in :numref:`sec_seq2seq`. How does the beam size affect the translation results and the prediction speed?
 1. We used language modeling for generating text following  user-provided prefixes in :numref:`sec_rnn_scratch`. Which kind of search strategy does it use? Can you improve it?
 
+1. Podemos tratar a pesquisa exaustiva como um tipo especial de pesquisa de feixe? Por que ou por que não?
+1. Aplique a pesquisa de feixe no problema de tradução automática em: numref: `sec_seq2seq`. Como o tamanho do feixe afeta os resultados da tradução e a velocidade de previsão?
+1. Usamos modelagem de linguagem para gerar texto seguindo prefixos fornecidos pelo usuário em: numref: `sec_rnn_scratch`. Que tipo de estratégia de pesquisa ele usa? Você pode melhorar isso?
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNDMzNTUzLDI1MjA3NjQ3OV19
+eyJoaXN0b3J5IjpbMTY1MTQ3Njk0NiwyNTIwNzY0NzldfQ==
 -->
