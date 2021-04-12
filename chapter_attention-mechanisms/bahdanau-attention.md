@@ -1,4 +1,4 @@
-# Bahdanau AttentionAtenção de Bahdanau
+# Atenção de Bahdanau
 :label:`sec_seq2seq_attention`
 
 We studied the machine translation
@@ -361,5 +361,5 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MDMxMzMxN119
+eyJoaXN0b3J5IjpbMTM5MTExMzkyMV19
 -->
