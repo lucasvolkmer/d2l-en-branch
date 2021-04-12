@@ -144,19 +144,7 @@ Um aplicativo do mundo real geralmente pergunta
 uma pergunta complicada,
 em algum lugar entre esses dois extremos.
 
-*Beam search* is an improved version of greedy search. It has a hyperparameter named *beam size*, $k$. 
-At time step 1, 
-we select $k$ tokens with the highest conditional probabilities.
-Each of them will be the first token of 
-$k$ candidate output sequences, respectively.
-At each subsequent time step, 
-based on the $k$ candidate output sequences
-at the previous time step,
-we continue to select $k$ candidate output sequences 
-with the highest conditional probabilities 
-from $k\left|\mathcal{Y}\right|$ possible choices.
-
-* Pesquisa de feixe * é uma versão aprimorada da pesquisa gananciosa. Ele tem um hiperparâmetro denominado* tamanho do feixe *, $k$.
+*Pesquisa de feixe* é uma versão aprimorada da pesquisa gananciosa. Ele tem um hiperparâmetro denominado *tamanho do feixe*, $k$.
 Na etapa de tempo 1,
 selecionamos $k$ tokens com as probabilidades condicionais mais altas.
 Cada um deles será o primeiro símbolo de
@@ -168,7 +156,7 @@ continuamos a selecionar sequências de saída candidatas a $k$
 com as maiores probabilidades condicionais
 de $k\left|\mathcal{Y}\right|$ escolhas possíveis.
 
-![The process of beam search (beam size: 2, maximum length of an output sequence: 3). The candidate output sequences are $A$, $C$, $AB$, $CE$, $ABD$, and $CED$.](../img/beam-search.svg)
+![ O processo de busca do feixe (tamanho do feixe: 2, comprimento máximo de uma sequência de saída: 3). As sequências de saída candidatas são $A$, $C$, $AB$, $CE$, $ABD$, e$CED$.](../img/beam-search.svg)
 :label:`fig_beam-search`
 
 
@@ -231,5 +219,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcyODUzMzEzXX0=
+eyJoaXN0b3J5IjpbMjUyMDc2NDc5XX0=
 -->
