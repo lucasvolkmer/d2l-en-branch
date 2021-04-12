@@ -37,22 +37,21 @@ uma média ponderada.
 
 
 
-Mathematically,
-suppose that we have
-a query $\mathbf{q} \in \mathbb{R}^q$
-and $m$ key-value pairs $(\mathbf{k}_1, \mathbf{v}_1), \ldots, (\mathbf{k}_m, \mathbf{v}_m)$, where any $\mathbf{k}_i \in \mathbb{R}^k$ and any $\mathbf{v}_i \in \mathbb{R}^v$.
-The attention pooling $f$
-is instantiated as a weighted sum of the values:
+Matematicamente,
+suponha que temos
+uma consulta $\mathbf{q} \in \mathbb{R}^q$
+e $m$ pares de valores-chave $(\mathbf{k}_1, \mathbf{v}_1), \ldots, (\mathbf{k}_m, \mathbf{v}_m)$, onde qualquer $\mathbf{k}_i \in \mathbb{R}^k$ e qualquer $\mathbf{v}_i \in \mathbb{R}^v$.
+O *pooling* de atenção $f$
+é instanciado como uma soma ponderada dos valores:
 
 $$f(\mathbf{q}, (\mathbf{k}_1, \mathbf{v}_1), \ldots, (\mathbf{k}_m, \mathbf{v}_m)) = \sum_{i=1}^m \alpha(\mathbf{q}, \mathbf{k}_i) \mathbf{v}_i \in \mathbb{R}^v,$$
 :eqlabel:`eq_attn-pooling`
 
-where
-the attention weight (scalar) for the query $\mathbf{q}$
-and key $\mathbf{k}_i$
-is computed by
-the softmax operation of
-an attention scoring function $a$ that maps two vectors to a scalar:
+Onde
+o peso da atenção (escalar) para a consulta $\mathbf{q}$
+e a chave $\mathbf{k}_i$
+é calculado pela operação softmax de
+uma função de pontuação de atenção $a$ que mapeia dois vetores para um escalar:
 
 $$\alpha(\mathbf{q}, \mathbf{k}_i) = \mathrm{softmax}(a(\mathbf{q}, \mathbf{k}_i)) = \frac{\exp(a(\mathbf{q}, \mathbf{k}_i))}{\sum_{j=1}^m \exp(a(\mathbf{q}, \mathbf{k}_j))} \in \mathbb{R}.$$
 :eqlabel:`eq_attn-scoring-alpha`
@@ -448,5 +447,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDU3MDAwNDEsLTcyOTI5NDA2MF19
+eyJoaXN0b3J5IjpbMjA5MTIyMzU5MywtNzI5Mjk0MDYwXX0=
 -->
