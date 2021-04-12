@@ -100,32 +100,37 @@ Observe que, em termos abstratos, a recursão para trás pode ser escrita como $
 Veja o capítulo introdutório do livro sobre algoritmos sequenciais de Monte Carlo para mais detalhes :cite:`Doucet.De-Freitas.Gordon.2001`.
 
 
-## Modelo Bid
+## Modelo Bidirecional
 
-If we want to have a mechanism in RNNs that offers comparable look-ahead ability as in hidden Markov models, we need to modify the RNN design that we have seen so far. Fortunately, this is easy conceptually. Instead of running an RNN only in the forward mode starting from the first token, we start another one from the last token running from back to front. 
-*Bidirectional RNNs* add a hidden layer that passes information in a backward direction to more flexibly process such information. :numref:`fig_birnn` illustrates the architecture of a bidirectional RNN with a single hidden layer.
+Se quisermos ter um mecanismo em RNNs que ofereça capacidade de antecipação comparável aos modelos de Markov ocultos, precisamos modificar o projeto RNN que vimos até agora. Felizmente, isso é fácil conceitualmente. Em vez de executar um RNN apenas no modo de encaminhamento a partir do primeiro token, iniciamos outro a partir do último token executado de trás para a frente.
+*RNNs bidirecionais* adicionam uma camada oculta que transmite informações para trás para processar essas informações com mais flexibilidade. :numref:`fig_birnn` ilustra a arquitetura de um RNN bidirecional com uma única camada oculta.
 
-![Architecture of a bidirectional RNN.](../img/birnn.svg)
+![Arquitetura de RNN bidirecional.](../img/birnn.svg)
 :label:`fig_birnn`
 
-In fact, this is not too dissimilar to the forward and backward recursions in the dynamic programing of hidden Markov models. 
-The main distinction is that in the previous case these equations had a specific statistical meaning.
-Now they are devoid of such easily accessible interpretations and we can just treat them as 
-generic and learnable functions.
-This transition epitomizes many of the principles guiding the design of modern deep networks: first, use the type of functional dependencies of classical statistical models, and then parameterize them in a generic form.
+Na verdade, isso não é muito diferente das recursões para frente e para trás na programação dinâmica de modelos ocultos de Markov.
+A principal diferença é que no caso anterior essas equações tinham um significado estatístico específico.
+Agora eles estão desprovidos de tais interpretações facilmente acessíveis e podemos apenas tratá-los como
+funções genéricas e aprendíveis.
+Essa transição resume muitos dos princípios que orientam o projeto de redes profundas modernas: primeiro, use o tipo de dependências funcionais dos modelos estatísticos clássicos e, em seguida, os parametrize de uma forma genérica.
 
 
-### Definition
+### Definição
 
-Bidirectional RNNs were introduced by :cite:`Schuster.Paliwal.1997`. 
-For a detailed discussion of the various architectures see also the paper :cite:`Graves.Schmidhuber.2005`.
-Let us look at the specifics of such a network.
+RNNs bidirecionais foram introduzidos por :cite:`Schuster.Paliwal.1997`.
+Para uma discussão detalhada das várias arquiteturas, consulte também o artigo :cite:`Graves.Schmidhuber.2005`.
+Vejamos as especificidades dessa rede.
 
 
 For any time step $t$, 
 given a minibatch input $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (number of examples: $n$, number of inputs in each example: $d$) and let the hidden layer activation function be $\phi$. In the bidirectional architecture, we assume that the forward and backward hidden states for this time step are $\overrightarrow{\mathbf{H}}_t  \in \mathbb{R}^{n \times h}$ and $\overleftarrow{\mathbf{H}}_t  \in \mathbb{R}^{n \times h}$, respectively,
 where $h$ is the number of hidden units.
 The forward and backward hidden state updates are as follows:
+
+Para qualquer etapa de tempo $t$,
+dado um minibatch input $ \ mathbf {X} _t \ in \ mathbb {R} ^ {n \ times d} $ (número de exemplos: $ n $, número de entradas em cada exemplo: $ d $) e deixe o oculto a função de ativação da camada seja $ \ phi $. Na arquitetura bidirecional, assumimos que os estados ocultos para frente e para trás para este intervalo de tempo são $ \ overrightarrow {\ mathbf {H}} _ t \ in \ mathbb {R} ^ {n \ times h} $ e $ \ overleftarrow { \ mathbf {H}} _ t \ in \ mathbb {R} ^ {n \ vezes h} $, respectivamente,
+onde $ h $ é o número de unidades ocultas.
+As atualizações de estado oculto para frente e para trás são as seguintes:
 
 
 $$
@@ -240,5 +245,5 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzcyNTkzOTcsLTUzNTQ3ODQxM119
+eyJoaXN0b3J5IjpbMTczMTU4ODI3MiwtNTM1NDc4NDEzXX0=
 -->
