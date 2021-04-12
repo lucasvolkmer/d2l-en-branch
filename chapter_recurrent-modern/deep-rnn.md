@@ -31,30 +31,17 @@ Nossa discussão a seguir se concentra principalmente em
 o modelo vanilla RNN,
 mas também se aplica a outros modelos de sequência.
 
-Suppose that we have a minibatch input
-$\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (number of examples: $n$, number of inputs in each example: $d$) at time step $t$.
-At the same time step,
-let
-the hidden state of the $l^\mathrm{th}$ hidden layer  ($l=1,\ldots,L$) be $\mathbf{H}_t^{(l)}  \in \mathbb{R}^{n \times h}$ (number of hidden units: $h$)
-and 
-the output layer variable be $\mathbf{O}_t \in \mathbb{R}^{n \times q}$ (number of outputs: $q$).
-Setting $\mathbf{H}_t^{(0)} = \mathbf{X}_t$,
-the hidden state of 
-the $l^\mathrm{th}$ hidden layer
-that uses the activation function $\phi_l$
-is expressed as follows:
-
 Suponha que temos uma entrada de minibatch
 $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (número de exemplos: $n$, número de entradas em cada exemplo: $d$) no passo de tempo $t$.
 Ao mesmo tempo,
 deixar
-o estado oculto da camada oculta $l^\mathrm{th}$ ($ l = 1, \ ldots, L $) é $ \ mathbf {H} _t ^ {(l)} \ in \ mathbb {R} ^ {n \ times h} $ (número de unidades ocultas: $ h $)
+o estado oculto da camada oculta $l^\mathrm{th}$ ($ l = 1, \ ldots, L $) é $l=1,\ldots,L$) é $\mathbf{H}_t^{(l)}  \in \mathbb{R}^{n \times h}$ (número de unidades ocultas: $h$)
 e
-a variável da camada de saída é $ \ mathbf {O} _t \ in \ mathbb {R} ^ {n \ times q} $ (número de saídas: $ q $).
-Configurando $ \ mathbf {H} _t ^ {(0)} = \ mathbf {X} _t $,
+a variável da camada de saída é $\mathbf{O}_t \in \mathbb{R}^{n \times q}$ (número de saídas: $q$).
+Configurando $\mathbf{H}_t^{(0)} = \mathbf{X}_t$,
 o estado oculto de
-a camada oculta $ l ^ \ mathrm {th} $
-que usa a função de ativação $ \ phi_l $
+a camada oculta $l^\mathrm{th}$
+que usa a função de ativação $\phi_l$
 é expresso da seguinte forma:
 
 $$\mathbf{H}_t^{(l)} = \phi_l(\mathbf{H}_t^{(l-1)} \mathbf{W}_{xh}^{(l)} + \mathbf{H}_{t-1}^{(l)} \mathbf{W}_{hh}^{(l)}  + \mathbf{b}_h^{(l)}),$$
@@ -163,5 +150,5 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1058)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNDE5Nzk3M119
+eyJoaXN0b3J5IjpbLTMyMDM4NzkxOV19
 -->
