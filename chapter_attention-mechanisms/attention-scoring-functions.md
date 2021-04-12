@@ -80,7 +80,7 @@ import torch
 from torch import nn
 ```
 
-## Operação *Softmax* Masca
+## Operação *Softmax* Mascarada
 
 Como acabamos de mencionar,
 uma operação softmax é usada para
@@ -144,13 +144,13 @@ def masked_softmax(X, valid_lens):
         return nn.functional.softmax(X.reshape(shape), dim=-1)
 ```
 
-To demonstrate how this function works,
-consider a minibatch of two $2 \times 4$ matrix examples,
-where the valid lengths for these two examples
-are two and three, respectively.
-As a result of the masked softmax operation,
-values beyond the valid lengths
-are all masked as zero.
+Para demonstrar como essa função funciona,
+considere um minibatch de dois exemplos de matriz $2 \times 4$,
+onde os comprimentos válidos para esses dois exemplos
+são dois e três, respectivamente.
+Como resultado da operação mascarada softmax,
+valores além dos comprimentos válidos
+são todos mascarados como zero.
 
 ```{.python .input}
 masked_softmax(np.random.uniform(size=(2, 2, 4)), d2l.tensor([2, 3]))
@@ -161,10 +161,10 @@ masked_softmax(np.random.uniform(size=(2, 2, 4)), d2l.tensor([2, 3]))
 masked_softmax(torch.rand(2, 2, 4), torch.tensor([2, 3]))
 ```
 
-Similarly, we can also
-use a two-dimensional tensor
-to specify valid lengths
-for every row in each matrix example.
+Da mesma forma, também podemos
+use um tensor bidimensional
+para especificar comprimentos válidos
+para cada linha em cada exemplo de matriz.
 
 ```{.python .input}
 masked_softmax(np.random.uniform(size=(2, 2, 4)),
@@ -176,7 +176,7 @@ masked_softmax(np.random.uniform(size=(2, 2, 4)),
 masked_softmax(torch.rand(2, 2, 4), d2l.tensor([[1, 3], [2, 4]]))
 ```
 
-## Additive Attention
+## Atenção Aditiva
 :label:`subsec_additive-attention`
 
 In general,
@@ -447,5 +447,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3OTc4OTAxNiwtNzI5Mjk0MDYwXX0=
+eyJoaXN0b3J5IjpbLTQyMTEyNTY1MSwtNzI5Mjk0MDYwXX0=
 -->
