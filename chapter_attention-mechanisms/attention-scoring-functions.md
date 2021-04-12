@@ -56,13 +56,13 @@ uma função de pontuação de atenção $a$ que mapeia dois vetores para um esc
 $$\alpha(\mathbf{q}, \mathbf{k}_i) = \mathrm{softmax}(a(\mathbf{q}, \mathbf{k}_i)) = \frac{\exp(a(\mathbf{q}, \mathbf{k}_i))}{\sum_{j=1}^m \exp(a(\mathbf{q}, \mathbf{k}_j))} \in \mathbb{R}.$$
 :eqlabel:`eq_attn-scoring-alpha`
 
-As we can see,
-different choices of the attention scoring function $a$
-lead to different behaviors of attention pooling.
-In this section,
-we introduce two popular scoring functions
-that we will use to develop more
-sophisticated attention mechanisms later.
+Como podemos ver,
+diferentes escolhas da função de pontuação de atenção $a$
+levam a diferentes comportamentos de concentração de atenção.
+Nesta secção,
+apresentamos duas funções populares de pontuação
+que usaremos para desenvolver mais
+mecanismos sofisticados de atenção posteriormente.
 
 ```{.python .input}
 import math
@@ -80,7 +80,7 @@ import torch
 from torch import nn
 ```
 
-## Masked Softmax Operation
+## Operação *Masked Softmax*
 
 As we just mentioned,
 a softmax operation is used to
@@ -447,5 +447,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MTIyMzU5MywtNzI5Mjk0MDYwXX0=
+eyJoaXN0b3J5IjpbLTE1MzM2ODkxMiwtNzI5Mjk0MDYwXX0=
 -->
