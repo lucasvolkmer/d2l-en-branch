@@ -189,3 +189,6 @@ this encoder-decoder architecture.
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1061)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTU1NDU3NDY3NF19
+-->
