@@ -1,4 +1,4 @@
-# Attention Pooling: Nadaraya-Watson Kernel Regression
+# *Pooling* de Atenção: Regressão de Kernel de Nadaraya-Watson 
 :label:`sec_nadaraya-waston`
 
 Now you know the major components of attention mechanisms under the framework in :numref:`fig_qkv`.
@@ -465,5 +465,5 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQzNjg5ODc3XX0=
+eyJoaXN0b3J5IjpbOTYxMzY5NDE1XX0=
 -->
