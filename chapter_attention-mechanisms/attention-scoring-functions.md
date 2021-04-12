@@ -179,27 +179,27 @@ masked_softmax(torch.rand(2, 2, 4), d2l.tensor([[1, 3], [2, 4]]))
 ## Atenção Aditiva
 :label:`subsec_additive-attention`
 
-In general,
-when queries and keys are vectors of different lengths,
-we can use additive attention
-as the scoring function.
-Given a query $\mathbf{q} \in \mathbb{R}^q$
-and a key $\mathbf{k} \in \mathbb{R}^k$,
-the *additive attention* scoring function
+Em geral,
+quando as consultas e as chaves são vetores de comprimentos diferentes,
+podemos usar atenção aditiva
+como a função de pontuação.
+Dada uma consulta  $\mathbf{q} \in \mathbb{R}^q$
+e uma chave \mathbf{k} \in \mathbb{R}^k$,
+a função de pontuação *atenção aditiva*
 
 $$a(\mathbf q, \mathbf k) = \mathbf w_v^\top \text{tanh}(\mathbf W_q\mathbf q + \mathbf W_k \mathbf k) \in \mathbb{R},$$
 :eqlabel:`eq_additive-attn`
 
-where
-learnable parameters
-$\mathbf W_q\in\mathbb R^{h\times q}$, $\mathbf W_k\in\mathbb R^{h\times k}$, and $\mathbf w_v\in\mathbb R^{h}$.
-Equivalent to :eqref:`eq_additive-attn`,
-the query and the key are concatenated
-and fed into an MLP with a single hidden layer
-whose number of hidden units is $h$, a hyperparameter.
-By using $\tanh$ as the activation function and disabling
-bias terms,
-we implement additive attention in the following.
+onde
+parâmetros aprendíveis
+$\mathbf W_q\in\mathbb R^{h\times q}$, $\mathbf W_k\in\mathbb R^{h\times k}$, e $\mathbf w_v\in\mathbb R^{h}$.
+Equivalente a :eqref:`eq_additive-attn`,
+a consulta e a chave são concatenadas
+e alimentado em um MLP com uma única camada oculta
+cujo número de unidades ocultas é $h$, um hiperparâmetro.
+Usando $\tanh$ como a função de ativação e desativando
+termos de *bias*,
+implementamos atenção aditiva a seguir.
 
 ```{.python .input}
 #@save
@@ -447,5 +447,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMTEyNTY1MSwtNzI5Mjk0MDYwXX0=
+eyJoaXN0b3J5IjpbMTkwNjQwOTA4MiwtNzI5Mjk0MDYwXX0=
 -->
