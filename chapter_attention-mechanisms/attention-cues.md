@@ -215,16 +215,16 @@ frequentemente invocaremos essa função para visualizar pesos de atenção.
 
 ## Resumo
 
-* Human attention is a limited, valuable, and scarce resource.
-* Subjects selectively direct attention using both the nonvolitional and volitional cues. The former is based on saliency and the latter is task-dependent.
-* Attention mechanisms are different from fully-connected layers or pooling layers due to inclusion of the volitional cues.
-* Attention mechanisms bias selection over values (sensory inputs) via attention pooling, which incorporates queries (volitional cues) and keys (nonvolitional cues). Keys and values are paired.
-* We can visualize attention weights between queries and keys.
+* A atenção humana é um recurso limitado, valioso e escasso.
+* Os sujeitos direcionam seletivamente a atenção usando as dicas não-volitivas e volitivas. O primeiro é baseado na saliência e o último depende da tarefa.
+* Os mecanismos de atenção são diferentes de camadas totalmente conectadas ou camadas de agrupamento devido à inclusão das dicas volitivas.
+* Os mecanismos de atenção colocam um *bias* na seleção sobre os valores (entradas sensoriais) por meio do *pooling* de atenção, que incorpora consultas (dicas volitivas) e chaves (dicas não-volitivas). Chaves e valores estão emparelhados.
+* Podemos visualizar pesos de atenção entre consultas e chaves.
 
-## Exercises
+## Exercícios
 
-1. What can be the volitional cue when decoding a sequence token by token in machine translation? What are the nonvolitional cues and the sensory inputs?
-1. Randomly generate a $10 \times 10$ matrix and use the softmax operation to ensure each row is a valid probability distribution. Visualize the output attention weights.
+1. Qual pode ser a dica volitiva ao decodificar um token de sequência por token na tradução automática? Quais são as dicas não-convencionais e as entradas sensoriais?
+1. Gere aleatoriamente uma matriz $10 \times 10$ e use a operação softmax para garantir que cada linha seja uma distribuição de probabilidade válida. Visualize os pesos de atenção de saída.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/1596)
@@ -238,7 +238,7 @@ frequentemente invocaremos essa função para visualizar pesos de atenção.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MDEyOTQyNiwxMDc1NzExNjE3LC0yMD
+eyJoaXN0b3J5IjpbMjEwNjcyNzIzMCwxMDc1NzExNjE3LC0yMD
 EyMDUxNzYyLDE5NjcyNTAwMjYsNDI3NzM3NTg0LDMwNDA2ODQ0
 NSwtMTg1NTI3NTYzMCwtODQ3OTkyMDA3XX0=
 -->
