@@ -219,27 +219,26 @@ d2l.show_heatmaps(attention_weights.unsqueeze(0).unsqueeze(0),
 
 ## *Pooling* de Atenção Paramétrica
 
-Nonparametric Nadaraya-Watson kernel regression
-enjoys the *consistency* benefit:
-given enough data this model converges to the optimal solution.
-Nonetheless,
-we can easily integrate learnable parameters into attention pooling.
 
-As an example, slightly different from :eqref:`eq_nadaraya-waston-gaussian`,
-in the following
-the distance between the query $x$ and the key $x_i$
-is multiplied a learnable parameter $w$:
+A regressão de kernel não paramétrica de Nadaraya-Watson
+desfruta do benefício de *consistência*:
+com dados suficientes, esse modelo converge para a solução ótima.
+Não obstante,
+podemos facilmente integrar parâmetros aprendíveis no *pooling* de atenção.
+
+Por exemplo, um pouco diferente de :eqref:`eq_nadaraya-waston-gaussian`, na sequência
+a distância entre a consulta $x$ e a chave $x_i$
+é multiplicado por um parâmetro aprendível $w$:
 
 
 $$\begin{aligned}f(x) &= \sum_{i=1}^n \alpha(x, x_i) y_i \\&= \sum_{i=1}^n \frac{\exp\left(-\frac{1}{2}((x - x_i)w)^2\right)}{\sum_{j=1}^n \exp\left(-\frac{1}{2}((x - x_i)w)^2\right)} y_i \\&= \sum_{i=1}^n \mathrm{softmax}\left(-\frac{1}{2}((x - x_i)w)^2\right) y_i.\end{aligned}$$
 :eqlabel:`eq_nadaraya-waston-gaussian-para`
 
-In the rest of the section,
-we will train this model by learning the parameter of
-the attention pooling in :eqref:`eq_nadaraya-waston-gaussian-para`.
+No resto da seção,
+vamos treinar este modelo aprendendo o parâmetro de
+a concentração de atenção em :eqref:`eq_nadaraya-waston-gaussian-para`.
 
-
-### Batch Matrix Multiplication
+### Multiplicação de matriz de lote
 :label:`subsec_batch_dot`
 
 To more efficiently compute attention
@@ -468,6 +467,6 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NDU3MDg5LC01MjAwODA4OTQsLTQ2MT
-U0NDkxOSw5NjEzNjk0MTVdfQ==
+eyJoaXN0b3J5IjpbLTM4NjUzODc5NCwtNTIwMDgwODk0LC00Nj
+E1NDQ5MTksOTYxMzY5NDE1XX0=
 -->
