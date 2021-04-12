@@ -175,9 +175,9 @@ import torch
 from d2l import tensorflow as d2l
 import tensorflow as tf
 ```
-To visualize attention weights,
-we define the `show_heatmaps` function.
-Its input `matrices` has the shape (number of rows for display, number of columns for display, number of queries, number of keys).
+Para visualizar pesos de atenção,
+definimos a função `show_heatmaps`.
+Sua entrada `matrices` tem a forma (número de linhas para exibição, número de colunas para exibição, número de consultas, número de chaves).
 
 ```{.python .input}
 #@tab all
@@ -200,9 +200,9 @@ def show_heatmaps(matrices, xlabel, ylabel, titles=None, figsize=(2.5, 2.5),
     fig.colorbar(pcm, ax=axes, shrink=0.6);
 ```
 
-For demonstration,
-we consider a simple case where
-the attention weight is one only when the query and the key are the same; otherwise it is zero.
+Para demonstração,
+consideramos um caso simples onde
+o peso da atenção é único apenas quando a consulta e a chave são as mesmas; caso contrário, é zero.
 
 ```{.python .input}
 #@tab all
@@ -210,10 +210,10 @@ attention_weights = d2l.reshape(d2l.eye(10), (1, 1, 10, 10))
 show_heatmaps(attention_weights, xlabel='Keys', ylabel='Queries')
 ```
 
-In the subsequent sections,
-we will often invoke this function to visualize attention weights.
+Nas seções subsequentes,
+frequentemente invocaremos essa função para visualizar pesos de atenção.
 
-## Summary
+## Resumo
 
 * Human attention is a limited, valuable, and scarce resource.
 * Subjects selectively direct attention using both the nonvolitional and volitional cues. The former is based on saliency and the latter is task-dependent.
@@ -238,7 +238,7 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMDE5OTg5MiwxMDc1NzExNjE3LC0yMD
+eyJoaXN0b3J5IjpbLTk5MDEyOTQyNiwxMDc1NzExNjE3LC0yMD
 EyMDUxNzYyLDE5NjcyNTAwMjYsNDI3NzM3NTg0LDMwNDA2ODQ0
 NSwtMTg1NTI3NTYzMCwtODQ3OTkyMDA3XX0=
 -->
