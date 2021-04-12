@@ -78,17 +78,15 @@ onde $\mathbf{W}_{xi}, \mathbf{W}_{xf}, \mathbf{W}_{xo} \in \mathbb{R}^{d \times
 
 ### Célula de Memória Candidata
 
-Next we design the memory cell. Since we have not specified the action of the various gates yet, we first introduce the *candidate* memory cell $\tilde{\mathbf{C}}_t \in \mathbb{R}^{n \times h}$. Its computation is similar to that of the three gates described above, but using a $\tanh$ function with a value range for $(-1, 1)$ as the activation function. This leads to the following equation at time step $t$:
-
-Em seguida, projetamos a célula de memória. Como ainda não especificamos a ação das várias portas, primeiro introduzimos a célula de memória * candidata * $ \ tilde {\ mathbf {C}} _ t \ in \ mathbb {R} ^ {n \ times h} $. Seu cálculo é semelhante ao das três portas descritas acima, mas usando uma função $ \ tanh $ com um intervalo de valores para $ (- 1, 1) $ como a função de ativação. Isso leva à seguinte equação na etapa de tempo $ t $:
+Em seguida, projetamos a célula de memória. Como ainda não especificamos a ação das várias portas, primeiro introduzimos a célula de memória *candidata* $\tilde{\mathbf{C}}_t \in \mathbb{R}^{n \times h}$. Seu cálculo é semelhante ao das três portas descritas acima, mas usando uma função $\tanh$ com um intervalo de valores para $(-1,1)$ como a função de ativação. Isso leva à seguinte equação na etapa de tempo $t$:
 
 $$\tilde{\mathbf{C}}_t = \text{tanh}(\mathbf{X}_t \mathbf{W}_{xc} + \mathbf{H}_{t-1} \mathbf{W}_{hc} + \mathbf{b}_c),$$
 
-where $\mathbf{W}_{xc} \in \mathbb{R}^{d \times h}$ and $\mathbf{W}_{hc} \in \mathbb{R}^{h \times h}$ are weight parameters and $\mathbf{b}_c \in \mathbb{R}^{1 \times h}$ is a bias parameter.
+onde $\mathbf{W}_{xc} \in \mathbb{R}^{d \times h}$ and $\mathbf{W}_{hc} \in \mathbb{R}^{h \times h}$ são parâmetros de pesos $\mathbf{b}_c \in \mathbb{R}^{1 \times h}$ é um parâmetro de viés.
 
-A quick illustration of the candidate memory cell is shown in :numref:`lstm_1`.
+Uma ilustração rápida da célula de memória candidata é mostrada em :numref:`lstm_1`.
 
-![Computing the candidate memory cell in an LSTM model.](../img/lstm-1.svg)
+![Computando a célula de memória candidata em um modelo LSTM.](../img/lstm-1.svg)
 :label:`lstm_1`
 
 ### Memory Cell
@@ -332,5 +330,5 @@ Later we will encounter alternative models such as transformers that can be used
 [Discussions](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNDE1NDUxMl19
+eyJoaXN0b3J5IjpbLTE3ODc0MDAzN119
 -->
