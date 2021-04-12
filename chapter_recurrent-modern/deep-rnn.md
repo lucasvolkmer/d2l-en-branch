@@ -97,12 +97,7 @@ batch_size, num_steps = 32, 35
 train_iter, vocab = d2l.load_data_time_machine(batch_size, num_steps)
 ```
 
-The architectural decisions such as choosing hyperparameters are very similar to those of :numref:`sec_lstm`. 
-We pick the same number of inputs and outputs as we have distinct tokens, i.e., `vocab_size`.
-The number of hidden units is still 256.
-The only difference is that we now select a nontrivial number of hidden layers by specifying the value of `num_layers`.
-
-As decisões arquitetônicas, como a escolha de hiperparâmetros, são muito semelhantes às de: numref: `sec_lstm`.
+As decisões arquitetônicas, como a escolha de hiperparâmetros, são muito semelhantes às de :numref:`sec_lstm`.
 Escolhemos o mesmo número de entradas e saídas, pois temos tokens distintos, ou seja, `vocab_size`.
 O número de unidades ocultas ainda é 256.
 A única diferença é que agora selecionamos um número não trivial de camadas ocultas, especificando o valor de `núm_camadas`.
@@ -124,9 +119,9 @@ model = d2l.RNNModel(lstm_layer, len(vocab))
 model = model.to(device)
 ```
 
-## Training and Prediction
+## Treinamento e Predição
 
-Since now we instantiate two layers with the LSTM model, this rather more complex architecture slows down training considerably.
+Como agora instanciamos duas camadas com o modelo LSTM, essa arquitetura um tanto mais complexa retarda o treinamento consideravelmente.
 
 ```{.python .input}
 #@tab all
@@ -134,26 +129,25 @@ num_epochs, lr = 500, 2
 d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 ```
 
-## Summary
+## Sumário
 
-* In deep RNNs, the hidden state information is passed to the next time step of the current layer and the current time step of the next layer.
-* There exist many different flavors of deep RNNs, such as LSTMs, GRUs, or vanilla RNNs. Conveniently these models are all available as parts of the high-level APIs of deep learning frameworks.
-* Initialization of models requires care. Overall, deep RNNs require considerable amount of work (such as learning rate and clipping) to ensure proper convergence.
+* Em RNNs profundos, as informações de estado oculto são passadas para a próxima etapa da camada atual e a etapa atual da próxima camada.
+* Existem muitos sabores diferentes de RNNs profundos, como LSTMs, GRUs ou RNNs vanilla. Convenientemente, esses modelos estão todos disponíveis como partes das APIs de alto nível de estruturas de aprendizado profundo.
+* A inicialização de modelos requer cuidados. No geral, os RNNs profundos requerem uma quantidade considerável de trabalho (como taxa de aprendizado e recorte) para garantir a convergência adequada.
 
-## Exercises
-
-1. Try to implement a two-layer RNN from scratch using the single layer implementation we discussed in :numref:`sec_rnn_scratch`.
-2. Replace the LSTM by a GRU and compare the accuracy and training speed.
-3. Increase the training data to include multiple books. How low can you go on the perplexity scale?
-4. Would you want to combine sources of different authors when modeling text? Why is this a good idea? What could go wrong?
+## Exercícios
+1. Tente implementar um RNN de duas camadas do zero usando a implementação de camada única que discutimos em :numref:`sec_rnn_scratch`.
+2. Substitua o LSTM por um GRU e compare a precisão e a velocidade de treinamento.
+3. Aumente os dados de treinamento para incluir vários livros. Quão baixo você pode ir na escala de perplexidade?
+4. Você gostaria de combinar fontes de diferentes autores ao modelar um texto? Por que isso é uma boa ideia? O que poderia dar errado?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/340)
+[Discussão](https://discuss.d2l.ai/t/340)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1058)
+[Discussão](https://discuss.d2l.ai/t/1058)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNzE3NDM1NV19
+eyJoaXN0b3J5IjpbLTE3NTI2MzUwMTRdfQ==
 -->
