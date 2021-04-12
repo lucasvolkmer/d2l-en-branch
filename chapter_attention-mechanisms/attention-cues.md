@@ -141,22 +141,22 @@ que orienta a seleção de *bias* sobre os valores (entradas sensoriais).
 ![Os mecanismos de atenção colocam *bias* na seleção sobre os valores (entradas sensoriais) por meio do agrupamento de atenção, que incorpora consultas (dicas volitivas) e chaves (dicas não-volitivas).](../img/qkv.svg)
 :label:`fig_qkv`
 
-Note that there are many alternatives for the design of attention mechanisms.
-For instance,
-we can design a non-differentiable attention model
-that can be trained using reinforcement learning methods :cite:`Mnih.Heess.Graves.ea.2014`.
-Given the dominance of the framework in :numref:`fig_qkv`,
-models under this framework
-will be the center of our attention in this chapter.
+Observe que existem muitas alternativas para o design de mecanismos de atenção.
+Por exemplo,
+podemos projetar um modelo de atenção não diferenciável
+que pode ser treinado usando métodos de aprendizagem por reforço :cite:`Mnih.Heess.Graves.ea.2014`.
+Dado o domínio do framework em :numref:`fig_qkv`,
+modelos sob esta estrutura
+serão o centro de nossa atenção neste capítulo.
 
 
-## Visualization of Attention
+## Visualização da Atenção
 
-Average pooling
-can be treated as a weighted average of inputs,
-where weights are uniform.
-In practice,
-attention pooling aggregates values using weighted average, where weights are computed between the given query and different keys.
+*Pooling* médio
+pode ser tratado como uma média ponderada de entradas,
+onde os pesos são uniformes.
+Na prática,
+O *pooling* de atenção agrega valores usando a média ponderada, onde os pesos são calculados entre a consulta fornecida e chaves diferentes.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -238,7 +238,7 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4ODgxNjEzLDEwNzU3MTE2MTcsLTIwMT
-IwNTE3NjIsMTk2NzI1MDAyNiw0Mjc3Mzc1ODQsMzA0MDY4NDQ1
-LC0xODU1Mjc1NjMwLC04NDc5OTIwMDddfQ==
+eyJoaXN0b3J5IjpbLTUwMDE5OTg5MiwxMDc1NzExNjE3LC0yMD
+EyMDUxNzYyLDE5NjcyNTAwMjYsNDI3NzM3NTg0LDMwNDA2ODQ0
+NSwtMTg1NTI3NTYzMCwtODQ3OTkyMDA3XX0=
 -->
