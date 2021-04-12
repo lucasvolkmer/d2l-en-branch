@@ -56,28 +56,26 @@ o cálculo da camada de saída é baseado apenas no estado oculto da camada ocul
 
 $$\mathbf{O}_t = \mathbf{H}_t^{(L)} \mathbf{W}_{hq} + \mathbf{b}_q,$$
 
-where the weight $\mathbf{W}_{hq} \in \mathbb{R}^{h \times q}$ and the bias $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$ are the model parameters of the output layer.
+onde o peso $\mathbf{W}_{hq} \in \mathbb{R}^{h \times q}$ e o viés $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$ são os parâmetros do modelo da camada de saída.
 
-onde o peso $\mathbf{W}_{hq} \in \mathbb{R}^{h \times q}$ e o viés $ \ mathbf {b} _q \ in \ mathbb {R} ^ {1 \ times q} $ são os parâmetros do modelo da camada de saída.
-
-Just as with MLPs, the number of hidden layers $L$ and the number of hidden units $h$ are hyperparameters.
-In other words, they can be tuned or specified by us.
-In addition, we can easily
-get a deep gated RNN
-by replacing 
-the hidden state computation in 
+Assim como acontece com os MLPs, o número de camadas ocultas $L$ e o número de unidades ocultas $h$ são hiperparâmetros.
+Em outras palavras, eles podem ser ajustados ou especificados por nós.
+Além disso, podemos facilmente
+obter um RNN com portas profundas
+substituindo
+o cálculo do estado oculto em
 :eqref:`eq_deep_rnn_H`
-with that from a GRU or an LSTM.
+com aquele de um GRU ou um LSTM.
 
 
-## Concise Implementation
+## Implementação Concisa
 
-Fortunately many of the logistical details required to implement multiple layers of an RNN are readily available in high-level APIs.
-To keep things simple we only illustrate the implementation using such built-in functionalities.
-Let us take an LSTM model as an example.
-The code is very similar to the one we used previously in :numref:`sec_lstm`.
-In fact, the only difference is that we specify the number of layers explicitly rather than picking the default of a single layer. 
-As usual, we begin by loading the dataset.
+Felizmente, muitos dos detalhes logísticos necessários para implementar várias camadas de um RNN estão prontamente disponíveis em APIs de alto nível.
+Para manter as coisas simples, apenas ilustramos a implementação usando essas funcionalidades integradas.
+Tomemos um modelo LSTM como exemplo.
+O código é muito semelhante ao que usamos anteriormente em :numref:`sec_lstm`.
+Na verdade, a única diferença é que especificamos o número de camadas explicitamente, em vez de escolher o padrão de uma única camada.
+Como de costume, começamos carregando o conjunto de dados.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -103,6 +101,11 @@ The architectural decisions such as choosing hyperparameters are very similar to
 We pick the same number of inputs and outputs as we have distinct tokens, i.e., `vocab_size`.
 The number of hidden units is still 256.
 The only difference is that we now select a nontrivial number of hidden layers by specifying the value of `num_layers`.
+
+As decisões arquitetônicas, como a escolha de hiperparâmetros, são muito semelhantes às de: numref: `sec_lstm`.
+Escolhemos o mesmo número de entradas e saídas, pois temos tokens distintos, ou seja, `vocab_size`.
+O número de unidades ocultas ainda é 256.
+A única diferença é que agora selecionamos um número não trivial de camadas ocultas, especificando o valor de `núm_camadas`.
 
 ```{.python .input}
 vocab_size, num_hiddens, num_layers = len(vocab), 256, 2
@@ -152,5 +155,5 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1058)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcwNTU3MTJdfQ==
+eyJoaXN0b3J5IjpbMTIxNzE3NDM1NV19
 -->
