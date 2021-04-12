@@ -280,9 +280,9 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 
 ## Implementação concisa
 
-Using high-level APIs,
-we can directly instantiate an `LSTM` model.
-This encapsulates all the configuration details that we made explicit above. The code is significantly faster as it uses compiled operators rather than Python for many details that we spelled out in detail before.
+Usando APIs de alto nível,
+podemos instanciar diretamente um modelo `LSTM`.
+Isso encapsula todos os detalhes de configuração que tornamos explícitos acima. O código é significativamente mais rápido, pois usa operadores compilados em vez de Python para muitos detalhes que explicamos em detalhes antes.
 
 ```{.python .input}
 lstm_layer = rnn.LSTM(num_hiddens)
@@ -299,25 +299,27 @@ model = model.to(device)
 d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 ```
 
-LSTMs are the prototypical latent variable autoregressive model with nontrivial state control.
-Many variants thereof have been proposed over the years, e.g., multiple layers, residual connections, different types of regularization. However, training LSTMs and other sequence models (such as GRUs) are quite costly due to the long range dependency of the sequence.
-Later we will encounter alternative models such as transformers that can be used in some cases.
+
+LSTMs são o modelo autorregressivo de variável latente prototípica com controle de estado não trivial.
+Muitas variantes foram propostas ao longo dos anos, por exemplo, camadas múltiplas, conexões residuais, diferentes tipos de regularização. No entanto, treinar LSTMs e outros modelos de sequência (como GRUs) são bastante caros devido à dependência de longo alcance da sequência.
+Mais tarde, encontraremos modelos alternativos, como transformadores, que podem ser usados em alguns casos.
 
 
-## Summary
+## Resumo
 
-* LSTMs have three types of gates: input gates, forget gates, and output gates that control the flow of information.
-* The hidden layer output of LSTM includes the hidden state and the memory cell. Only the hidden state is passed into the output layer. The memory cell is entirely internal.
-* LSTMs can alleviate vanishing and exploding gradients.
+* Os LSTMs têm três tipos de portas: portas de entrada, portas de esquecimento e portas de saída que controlam o fluxo de informações.
+* A saída da camada oculta do LSTM inclui o estado oculto e a célula de memória. Apenas o estado oculto é passado para a camada de saída. A célula de memória é totalmente interna.
+* LSTMs podem aliviar gradientes que desaparecem e explodem.
 
 
-## Exercises
 
-1. Adjust the hyperparameters and analyze the their influence on running time, perplexity, and the output sequence.
-1. How would you need to change the model to generate proper words as opposed to sequences of characters?
-1. Compare the computational cost for GRUs, LSTMs, and regular RNNs for a given hidden dimension. Pay special attention to the training and inference cost.
-1. Since the candidate memory cell ensures that the value range is between $-1$ and $1$ by  using the $\tanh$ function, why does the hidden state need to use the $\tanh$ function again to ensure that the output value range is between $-1$ and $1$?
-1. Implement an LSTM model for time series prediction rather than character sequence prediction.
+## Exercícios
+
+1. Ajuste os hiperparâmetros e analise sua influência no tempo de execução, perplexidade e sequência de saída.
+1. Como você precisaria mudar o modelo para gerar palavras adequadas em vez de sequências de caracteres?
+1. Compare o custo computacional para GRUs, LSTMs e RNNs regulares para uma determinada dimensão oculta. Preste atenção especial ao custo de treinamento e inferência.
+1. Uma vez que a célula de memória candidata garante que o intervalo de valores está entre $-1$ e $1$ usando a função $\tanh$, por que o estado oculto precisa usar a função $\tanh$ novamente para garantir que a saída o intervalo de valores está entre $-1$ e $1$?
+1. Implemente um modelo LSTM para predição de série temporal em vez de predição de sequência de caracteres.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/343)
@@ -327,5 +329,5 @@ Later we will encounter alternative models such as transformers that can be used
 [Discussions](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MjQzMDQ2OF19
+eyJoaXN0b3J5IjpbMTAyMzMyNzUzXX0=
 -->
