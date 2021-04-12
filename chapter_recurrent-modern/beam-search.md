@@ -47,26 +47,18 @@ na saída real.
 
 ## Busca Gulosa
 
-First, let us take a look at 
-a simple strategy: *greedy search*.
-This strategy has been used to predict sequences in :numref:`sec_seq2seq`.
-In greedy search,
-at any time step $t'$ of the output sequence, 
-we search for the token 
-with the highest conditional probability from $\mathcal{Y}$, i.e., 
-
 Primeiro, vamos dar uma olhada em
-uma estratégia simples: * busca gananciosa *.
-Esta estratégia foi usada para prever sequências em: numref: `sec_seq2seq`.
+uma estratégia simples: *busca gananciosa*.
+Esta estratégia foi usada para prever sequências em :numref:`sec_seq2seq`.
 Em busca gananciosa,
-a qualquer momento, etapa $ t '$ da sequência de saída,
+a qualquer momento, etapa $t'$ da sequência de saída,
 nós procuramos pelo token
-com a maior probabilidade condicional de $ \ mathcal {Y} $, ou seja,
+com a maior probabilidade condicional de $\mathcal{Y}$, ou seja,
 
 $$y_{t'} = \operatorname*{argmax}_{y \in \mathcal{Y}} P(y \mid y_1, \ldots, y_{t'-1}, \mathbf{c}),$$
 
-as the output. 
-Once "&lt;eos&gt;" is outputted or the output sequence has reached its maximum length $T'$, the output sequence is completed.
+como a saída.
+Uma vez que "&lt;eos&gt;" é emitida ou a sequência de saída atingiu seu comprimento máximo $T'$, a sequência de saída é concluída.
 
 So what can go wrong with greedy search?
 In fact,
@@ -79,6 +71,18 @@ the conditional probability of generating an output sequence based on the input 
 Unfortunately, there is no guarantee
 that the optimal sequence will be obtained
 by greedy search.
+
+Então, o que pode dar errado com a busca gananciosa?
+Na verdade,
+a * sequência ideal *
+deve ser a sequência de saída
+com o máximo
+$\prod_{t'=1}^{T'} P(y_{t'} \mid y_1, \ldots, y_{t'-1}, \mathbf{c})$,
+qual é
+a probabilidade condicional de gerar uma sequência de saída com base na sequência de entrada.
+Infelizmente, não há garantia
+que a sequência ótima será obtida
+por busca gananciosa.
 
 ![At each time step, greedy search selects the token with the highest conditional probability.](../img/s2s-prob1.svg)
 :label:`fig_s2s-prob1`
@@ -229,5 +233,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE5MTgwMzEwXX0=
+eyJoaXN0b3J5IjpbLTg4MDE5MTUxMl19
 -->
