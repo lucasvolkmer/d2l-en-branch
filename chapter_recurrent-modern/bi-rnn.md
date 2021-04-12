@@ -121,17 +121,10 @@ RNNs bidirecionais foram introduzidos por :cite:`Schuster.Paliwal.1997`.
 Para uma discussão detalhada das várias arquiteturas, consulte também o artigo :cite:`Graves.Schmidhuber.2005`.
 Vejamos as especificidades dessa rede.
 
-
-For any time step $t$, 
-given a minibatch input $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (number of examples: $n$, number of inputs in each example: $d$) and let the hidden layer activation function be $\phi$. In the bidirectional architecture, we assume that the forward and backward hidden states for this time step are $\overrightarrow{\mathbf{H}}_t  \in \mathbb{R}^{n \times h}$ and $\overleftarrow{\mathbf{H}}_t  \in \mathbb{R}^{n \times h}$, respectively,
-where $h$ is the number of hidden units.
-The forward and backward hidden state updates are as follows:
-
 Para qualquer etapa de tempo $t$,
-dado um minibatch input $ \ mathbf {X} _t \ in \ mathbb {R} ^ {n \ times d} $ (número de exemplos: $ n $, número de entradas em cada exemplo: $ d $) e deixe o oculto a função de ativação da camada seja $ \ phi $. Na arquitetura bidirecional, assumimos que os estados ocultos para frente e para trás para este intervalo de tempo são $ \ overrightarrow {\ mathbf {H}} _ t \ in \ mathbb {R} ^ {n \ times h} $ e $ \ overleftarrow { \ mathbf {H}} _ t \ in \ mathbb {R} ^ {n \ vezes h} $, respectivamente,
-onde $ h $ é o número de unidades ocultas.
+dado um minibatch input $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (número de exemplos: $n$, número de entradas em cada exemplo: $d$) e deixe o oculto a função de ativação da camada seja $\phi$. Na arquitetura bidirecional, assumimos que os estados ocultos para frente e para trás para este intervalo de tempo são  $\overrightarrow{\mathbf{H}}_t  \in \mathbb{R}^{n \times h}$ e $\overleftarrow{\mathbf{H}}_t  \in \mathbb{R}^{n \times h}$, respectivamente,
+onde $h$ é o número de unidades ocultas.
 As atualizações de estado oculto para frente e para trás são as seguintes:
-
 
 $$
 \begin{aligned}
@@ -140,7 +133,7 @@ $$
 \end{aligned}
 $$
 
-where the weights $\mathbf{W}_{xh}^{(f)} \in \mathbb{R}^{d \times h}, \mathbf{W}_{hh}^{(f)} \in \mathbb{R}^{h \times h}, \mathbf{W}_{xh}^{(b)} \in \mathbb{R}^{d \times h}, \text{ and } \mathbf{W}_{hh}^{(b)} \in \mathbb{R}^{h \times h}$, and biases $\mathbf{b}_h^{(f)} \in \mathbb{R}^{1 \times h} \text{ and } \mathbf{b}_h^{(b)} \in \mathbb{R}^{1 \times h}$ are all the model parameters.
+onde os pesos $\mathbf{W}_{xh}^{(f)} \in \mathbb{R}^{d \times h}, \mathbf{W}_{hh}^{(f)} \in \mathbb{R}^{h \times h}, \mathbf{W}_{xh}^{(b)} \in \mathbb{R}^{d \times h}, \text{ and } \mathbf{W}_{hh}^{(b)} \in \mathbb{R}^{h \times h}$, e vieses $\mathbf{b}_h^{(f)} \in \mathbb{R}^{1 \times h} \text{ and } \mathbf{b}_h^{(b)} \in \mathbb{R}^{1 \times h}$ são todos os parâmetros do modelo.
 
 Next, we concatenate the forward and backward hidden states $\overrightarrow{\mathbf{H}}_t$ and $\overleftarrow{\mathbf{H}}_t$
 to obtain the hidden state $\mathbf{H}_t \in \mathbb{R}^{n \times 2h}$ to be fed into the output layer.
@@ -245,5 +238,5 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMTU4ODI3MiwtNTM1NDc4NDEzXX0=
+eyJoaXN0b3J5IjpbLTMzMjcxMjIyNywtNTM1NDc4NDEzXX0=
 -->
