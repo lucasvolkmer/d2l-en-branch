@@ -309,22 +309,11 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 
 ## Atenção de Produto Escalar em Escala
 
-A more computationally efficient
-design for the scoring function can be
-simply dot product.
-However,
-the dot product operation
-requires that both the query and the key
-have the same vector length, say $d$.
-Assume that
-all the elements of the query and the key
-are independent random variables
-with zero mean and unit variance.
-The dot product of
-both vectors has zero mean and a variance of $d$.
-To ensure that the variance of the dot product
-still remains one regardless of vector length,
-the *scaled dot-product attention* scoring function
+Um design mais eficiente do ponto de vista computacional para a função de pontuação pode ser simplesmente o produto escalar.
+No entanto, a operação de produto escalar requer que a consulta e a chave tenham o mesmo comprimento de vetor, digamos $d$.
+Suponha que todos os elementos da consulta e a chave sejam variáveis aleatórias independentes com média zero e variância unitária.
+O produto escalar de ambos os vetores tem média zero e variância de $d$.
+Para garantir que a variação do produto escalar ainda permaneça um, independentemente do comprimento do vetor, a  função de pontuação de *atenção ao produto escalar em escala*
 
 
 $$a(\mathbf q, \mathbf k) = \mathbf{q}^\top \mathbf{k}  /\sqrt{d}$$
@@ -447,5 +436,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEzODcwNjk0LC03MjkyOTQwNjBdfQ==
+eyJoaXN0b3J5IjpbLTc3MjQ4OTE4LC03MjkyOTQwNjBdfQ==
 -->
