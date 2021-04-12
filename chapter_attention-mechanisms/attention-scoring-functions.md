@@ -318,26 +318,15 @@ Para garantir que a variação do produto escalar ainda permaneça um, independe
 
 $$a(\mathbf q, \mathbf k) = \mathbf{q}^\top \mathbf{k}  /\sqrt{d}$$
 
-divides the dot product by $\sqrt{d}$.
-In practice,
-we often think in minibatches
-for efficiency,
-such as computing attention
-for
-$n$ queries and $m$ key-value pairs,
-where queries and keys are of length $d$
-and values are of length $v$.
-The scaled dot-product attention
-of queries $\mathbf Q\in\mathbb R^{n\times d}$,
-keys $\mathbf K\in\mathbb R^{m\times d}$,
-and values $\mathbf V\in\mathbb R^{m\times v}$
-is
+divide o produto escalar por $\sqrt{d}$.
+Na prática, geralmente pensamos em minibatches para eficiência, como computação de atenção para $n$ consultas e $m$ pares de valor-chave, onde consultas e chaves têm comprimento $d$ e os valores têm comprimento $v$.
+A atenção do produto escalar das consultas $\mathbf Q\in\mathbb R^{n\times d}$, chaves $\mathbf K\in\mathbb R^{m\times d}$, e valores $\mathbf V\in\mathbb R^{m\times v}$ é
 
 
 $$ \mathrm{softmax}\left(\frac{\mathbf Q \mathbf K^\top }{\sqrt{d}}\right) \mathbf V \in \mathbb{R}^{n\times v}.$$
 :eqlabel:`eq_softmax_QK_V`
 
-In the following implementation of the scaled dot product attention, we use dropout for model regularization.
+Na implementação a seguir da atenção ao produto escalar, usamos o *dropout* para regularização do modelo.
 
 ```{.python .input}
 #@save
@@ -436,5 +425,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MjQ4OTE4LC03MjkyOTQwNjBdfQ==
+eyJoaXN0b3J5IjpbLTE2MDU4NTkxNjksLTcyOTI5NDA2MF19
 -->
