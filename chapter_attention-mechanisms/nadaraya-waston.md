@@ -34,19 +34,20 @@ from torch import nn
 
 ## Gerando o Dataset
 
-To keep things simple,
-let us consider the following regression problem:
-given a dataset of input-output pairs $\{(x_1, y_1), \ldots, (x_n, y_n)\}$,
-how to learn $f$ to predict the output $\hat{y} = f(x)$ for any new input $x$?
 
-Here we generate an artificial dataset according to the following nonlinear function with the noise term $\epsilon$:
+Para manter as coisas simples,
+vamos considerar o seguinte problema de regressão:
+dado um conjunto de dados de pares de entrada-saída $\{(x_1, y_1), \ldots, (x_n, y_n)\}$,
+como aprender $f$ para prever a saída $\hat{y} = f(x)$ para qualquer nova entrada $x$?
+
+Aqui, geramos um conjunto de dados artificial de acordo com a seguinte função não linear com o termo de ruído $\epsilon$:
 
 $$y_i = 2\sin(x_i) + x_i^{0.8} + \epsilon,$$
 
-where $\epsilon$ obeys a normal distribution with zero mean and standard deviation 0.5.
-Both 50 training examples and 50 testing examples
-are generated.
-To better visualize the pattern of attention later, the training inputs are sorted.
+onde $\epsilon$ obedece a uma distribuição normal com média zero e desvio padrão 0,5.
+Ambos, 50 exemplos de treinamento e 50 exemplos de teste
+são gerados.
+Para visualizar melhor o padrão de atenção posteriormente, as entradas de treinamento são classificadas.
 
 ```{.python .input}
 n_train = 50  # No. of training examples
@@ -465,5 +466,5 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg0ODkxOTg5LDk2MTM2OTQxNV19
+eyJoaXN0b3J5IjpbMTgzMzc5MTQ2MCw5NjEzNjk0MTVdfQ==
 -->
