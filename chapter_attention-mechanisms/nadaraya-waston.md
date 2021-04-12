@@ -246,9 +246,9 @@ para *minibatches*,
 podemos aproveitar os utilitários de multiplicação de matrizes em lote
 fornecidos por *frameworks* de *deep learning*.
 
-Suppose that the first minibatch contains $n$ matrices $\mathbf{X}_1, \ldots, \mathbf{X}_n$ of shape $a\times b$, and the second minibatch contains $n$ matrices $\mathbf{Y}_1, \ldots, \mathbf{Y}_n$ of shape $b\times c$. Their batch matrix multiplication
-results in
-$n$ matrices $\mathbf{X}_1\mathbf{Y}_1, \ldots, \mathbf{X}_n\mathbf{Y}_n$ of shape $a\times c$. Therefore, given two tensors of shape ($n$, $a$, $b$) and ($n$, $b$, $c$), the shape of their batch matrix multiplication output is ($n$, $a$, $c$).
+Suponha que o primeiro minibatch contém $n$ matrizes $\mathbf{X}_1, \ldots, \mathbf{X}_n$ de forma $a\times b$, e o segundo minibatch contém $n$ matrizes $\mathbf{Y}_1, \ldots, \mathbf{Y}_n$ da forma $b\times c$. Sua multiplicação da matriz de lote
+resulta em
+$n$ matrizes $\mathbf{X}_1\mathbf{Y}_1, \ldots, \mathbf{X}_n\mathbf{Y}_n$ da forma $a\times c$. Portanto, dados dois tensores de forma ($n$, $a$, $b$) e ($n$, $b$, $c$),  a forma de sua saída de multiplicação da matriz em lote é ($n$, $a$, $c$).
 
 ```{.python .input}
 X = d2l.ones((2, 1, 4))
@@ -263,7 +263,7 @@ Y = d2l.ones((2, 4, 6))
 torch.bmm(X, Y).shape
 ```
 
-In the context of attention mechanisms, we can use minibatch matrix multiplication to compute weighted averages of values in a minibatch.
+No contexto dos mecanismos de atenção, podemos usar a multiplicação da matriz de minibatch para calcular médias ponderadas de valores em um minibatch.
 
 ```{.python .input}
 weights = d2l.ones((2, 10)) * 0.1
@@ -278,12 +278,12 @@ values = d2l.reshape(d2l.arange(20.0), (2, 10))
 torch.bmm(weights.unsqueeze(1), values.unsqueeze(-1))
 ```
 
-### Defining the Model
+### Definindo o Modelo
 
-Using minibatch matrix multiplication,
-below we define the parametric version
-of Nadaraya-Watson kernel regression
-based on the parametric attention pooling in
+Usando a multiplicação de matriz de minibatch,
+abaixo nós definimos a versão paramétrica
+da regressão do kernel Nadaraya-Watson
+com base no agrupamento de atenção paramétrica em
 :eqref:`eq_nadaraya-waston-gaussian-para`.
 
 ```{.python .input}
@@ -323,7 +323,7 @@ class NWKernelRegression(nn.Module):
                          values.unsqueeze(-1)).reshape(-1)
 ```
 
-### Training
+### Treinamento
 
 In the following, we transform the training dataset
 to keys and values to train the attention model.
@@ -466,6 +466,6 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMzY3NTY3NiwtNTIwMDgwODk0LC00Nj
-E1NDQ5MTksOTYxMzY5NDE1XX0=
+eyJoaXN0b3J5IjpbLTE3NzAzNTA5ODUsMTcxMzY3NTY3NiwtNT
+IwMDgwODk0LC00NjE1NDQ5MTksOTYxMzY5NDE1XX0=
 -->
