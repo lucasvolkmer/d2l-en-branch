@@ -1,12 +1,12 @@
-# Bidirectional Recurrent Neural Networks
+# Redes Neurais Recorrentes Bidirecionais
 :label:`sec_bi_rnn`
 
-In sequence learning,
-so far we assumed that our goal is to model the next output given what we have seen so far, e.g., in the context of a time series or in the context of a language model. While this is a typical scenario, it is not the only one we might encounter. To illustrate the issue, consider the following three tasks of filling in the blank in a text sequence:
+No aprendizado sequencial,
+até agora, assumimos que nosso objetivo é modelar a próxima saída, dado o que vimos até agora, por exemplo, no contexto de uma série temporal ou no contexto de um modelo de linguagem. Embora este seja um cenário típico, não é o único que podemos encontrar. Para ilustrar o problema, considere as três tarefas a seguir para preencher o espaço em branco em uma sequência de texto:
 
-* I am `___`.
-* I am `___` hungry.
-* I am `___` hungry, and I can eat half a pig.
+* Eu estou`___`.
+* Eu estou `___` faminto.
+* Eu estou `___` faminto, e poderia comer meio porco.
 
 Depending on the amount of information available, we might fill in the blanks with very different words such as "happy", "not", and "very".
 Clearly the end of the phrase (if available) conveys significant information about which word to pick.
@@ -242,5 +242,5 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTQwMzE4OTRdfQ==
+eyJoaXN0b3J5IjpbMTUzMzM2ODA2XX0=
 -->
