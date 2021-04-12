@@ -238,14 +238,13 @@ No resto da seção,
 vamos treinar este modelo aprendendo o parâmetro de
 a concentração de atenção em :eqref:`eq_nadaraya-waston-gaussian-para`.
 
-### Multiplicação de matriz de lote
+### Multiplicação de Matriz de Lote
 :label:`subsec_batch_dot`
 
-To more efficiently compute attention
-for minibatches,
-we can leverage batch matrix multiplication utilities
-provided by deep learning frameworks.
-
+Para computar a atenção com mais eficiência
+para *minibatches*,
+podemos aproveitar os utilitários de multiplicação de matrizes em lote
+fornecidos por *frameworks* de *deep learning*.
 
 Suppose that the first minibatch contains $n$ matrices $\mathbf{X}_1, \ldots, \mathbf{X}_n$ of shape $a\times b$, and the second minibatch contains $n$ matrices $\mathbf{Y}_1, \ldots, \mathbf{Y}_n$ of shape $b\times c$. Their batch matrix multiplication
 results in
@@ -467,6 +466,6 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NjUzODc5NCwtNTIwMDgwODk0LC00Nj
+eyJoaXN0b3J5IjpbMTcxMzY3NTY3NiwtNTIwMDgwODk0LC00Nj
 E1NDQ5MTksOTYxMzY5NDE1XX0=
 -->
