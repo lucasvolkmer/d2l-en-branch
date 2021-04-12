@@ -110,28 +110,25 @@ Assim, chegamos ao diagrama de fluxo em :numref:`lstm_2`.
 
 ### Estado Oculto
 
-Last, we need to define how to compute the hidden state $\mathbf{H}_t \in \mathbb{R}^{n \times h}$. This is where the output gate comes into play. In LSTM it is simply a gated version of the $\tanh$ of the memory cell.
-This ensures that the values of $\mathbf{H}_t$ are always in the interval $(-1, 1)$.
+Por último, precisamos definir como calcular o estado oculto $\mathbf{H}_t \in \mathbb{R}^{n \times h}$. É aqui que a porta de saída entra em ação. No LSTM, é simplesmente uma versão bloqueada do $\tanh$ da célula de memória.
+Isso garante que os valores de $\mathbf{H}_t$ estejam sempre no intervalo $(-1,1)$.
 
 $$\mathbf{H}_t = \mathbf{O}_t \odot \tanh(\mathbf{C}_t).$$
 
+Sempre que a porta de saída se aproxima de 1, passamos efetivamente todas as informações da memória para o preditor, enquanto para a porta de saída próxima de 0, retemos todas as informações apenas dentro da célula de memória e não realizamos nenhum processamento posterior.
 
-Whenever the output gate approximates 1 we effectively pass all memory information through to the predictor, whereas for the output gate close to 0 we retain all the information only within the memory cell and perform no further processing.
+:numref:`lstm_3` tem uma ilustração gráfica do fluxo de dados.
 
-
-
-:numref:`lstm_3` has a graphical illustration of the data flow.
-
-![Computing the hidden state in an LSTM model.](../img/lstm-3.svg)
+![Calculando o estado oculto em um modelo LSTM.](../img/lstm-3.svg)
 :label:`lstm_3`
 
 
 
-## Implementation from Scratch
+## Implementação do zero
 
-Now let us implement an LSTM from scratch.
-As same as the experiments in :numref:`sec_rnn_scratch`,
-we first load the time machine dataset.
+Agora, vamos implementar um LSTM do zero.
+Da mesma forma que os experimentos em :numref:`sec_rnn_scratch`,
+primeiro carregamos o conjunto de dados da máquina do tempo.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -330,5 +327,5 @@ Later we will encounter alternative models such as transformers that can be used
 [Discussions](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA4OTI5OTgwXX0=
+eyJoaXN0b3J5IjpbMjQ2NDgxODY4XX0=
 -->
