@@ -210,14 +210,11 @@ precisão versus custo computacional.
 
 ## Exercícios
 
-1. Can we treat exhaustive search as a special type of beam search? Why or why not?
-1. Apply beam search in the machine translation problem in :numref:`sec_seq2seq`. How does the beam size affect the translation results and the prediction speed?
-1. We used language modeling for generating text following  user-provided prefixes in :numref:`sec_rnn_scratch`. Which kind of search strategy does it use? Can you improve it?
-
 1. Podemos tratar a pesquisa exaustiva como um tipo especial de pesquisa de feixe? Por que ou por que não?
-1. Aplique a pesquisa de feixe no problema de tradução automática em: numref: `sec_seq2seq`. Como o tamanho do feixe afeta os resultados da tradução e a velocidade de previsão?
-1. Usamos modelagem de linguagem para gerar texto seguindo prefixos fornecidos pelo usuário em: numref: `sec_rnn_scratch`. Que tipo de estratégia de pesquisa ele usa? Você pode melhorar isso?
-[Discussions](https://discuss.d2l.ai/t/338)
+2. Aplique a pesquisa de feixe no problema de tradução automática em :numref:`sec_seq2seq`. Como o tamanho do feixe afeta os resultados da tradução e a velocidade de previsão?
+3. Usamos modelagem de linguagem para gerar texto seguindo prefixos fornecidos pelo usuário em :numref:`sec_rnn_scratch`. Que tipo de estratégia de pesquisa ele usa? Você pode melhorar isso?
+
+[Discussão](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MTQ3Njk0NiwyNTIwNzY0NzldfQ==
+eyJoaXN0b3J5IjpbMTkxNjExMjM3NiwyNTIwNzY0NzldfQ==
 -->
