@@ -60,21 +60,9 @@ $$y_{t'} = \operatorname*{argmax}_{y \in \mathcal{Y}} P(y \mid y_1, \ldots, y_{t
 como a saída.
 Uma vez que "&lt;eos&gt;" é emitida ou a sequência de saída atingiu seu comprimento máximo $T'$, a sequência de saída é concluída.
 
-So what can go wrong with greedy search?
-In fact,
-the *optimal sequence*
-should be the output sequence
-with the maximum 
-$\prod_{t'=1}^{T'} P(y_{t'} \mid y_1, \ldots, y_{t'-1}, \mathbf{c})$,
-which is
-the conditional probability of generating an output sequence based on the input sequence.
-Unfortunately, there is no guarantee
-that the optimal sequence will be obtained
-by greedy search.
-
 Então, o que pode dar errado com a busca gananciosa?
 Na verdade,
-a * sequência ideal *
+a *sequência ideal*
 deve ser a sequência de saída
 com o máximo
 $\prod_{t'=1}^{T'} P(y_{t'} \mid y_1, \ldots, y_{t'-1}, \mathbf{c})$,
@@ -87,16 +75,16 @@ por busca gananciosa.
 ![At each time step, greedy search selects the token with the highest conditional probability.](../img/s2s-prob1.svg)
 :label:`fig_s2s-prob1`
 
-Let us illustrate it with an example.
-Suppose that there are four tokens 
-"A", "B", "C", and "&lt;eos&gt;" in the output dictionary.
-In :numref:`fig_s2s-prob1`,
-the four numbers under each time step represent the conditional probabilities of generating "A", "B", "C", and "&lt;eos&gt;" at that time step, respectively.  
-At each time step, 
-greedy search selects the token with the highest conditional probability. 
-Therefore, the output sequence "A", "B", "C", and "&lt;eos&gt;" will be predicted 
-in :numref:`fig_s2s-prob1`. 
-The conditional probability of this output sequence is $0.5\times0.4\times0.4\times0.6 = 0.048$.
+Vamos ilustrar com um exemplo.
+Suponha que existam quatro tokens
+"A", "B", "C" e "&lt;eos&gt;" no dicionário de saída.
+Em: numref: `fig_s2s-prob1`,
+os quatro números em cada etapa de tempo representam as probabilidades condicionais de gerar "A", "B", "C" e "&lt;eos&gt;" nessa etapa de tempo, respectivamente.
+Em cada etapa de tempo,
+a pesquisa gananciosa seleciona o token com a probabilidade condicional mais alta.
+Portanto, a sequência de saída "A", "B", "C" e "&lt;eos&gt;" será previsto
+in :numref:`fig_s2s-prob1`.
+A probabilidade condicional desta sequência de saída é $0.5\times0.4\times0.4\times0.6 = 0.048$.
 
 ![The four numbers under each time step represent the conditional probabilities of generating "A", "B", "C", and "&lt;eos&gt;" at that time step.  At time step 2, the token "C", which has the second highest conditional probability, is selected.](../img/s2s-prob2.svg)
 :label:`fig_s2s-prob2`
@@ -233,5 +221,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MDE5MTUxMl19
+eyJoaXN0b3J5IjpbMTkzNTc3MDI5M119
 -->
