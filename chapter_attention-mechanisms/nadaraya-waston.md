@@ -1,21 +1,21 @@
 # *Pooling* de Atenção: Regressão de Kernel de Nadaraya-Watson 
 :label:`sec_nadaraya-waston`
 
-Now you know the major components of attention mechanisms under the framework in :numref:`fig_qkv`.
-To recapitulate,
-the interactions between
-queries (volitional cues) and keys (nonvolitional cues)
-result in *attention pooling*.
-The attention pooling selectively aggregates values (sensory inputs) to produce the output.
-In this section,
-we will describe attention pooling in greater detail
-to give you a high-level view of
-how attention mechanisms work in practice.
-Specifically,
-the Nadaraya-Watson kernel regression model
-proposed in 1964
-is a simple yet complete example
-for demonstrating machine learning with attention mechanisms.
+Agora você conhece os principais componentes dos mecanismos de atenção sob a estrutura em :numref:`fig_qkv`.
+Para recapitular,
+as interações entre
+consultas (dicas volitivas) e chaves (dicas não volitivas)
+resultam em *concentração de atenção*.
+O *pooling* de atenção agrega valores seletivamente (entradas sensoriais) para produzir a saída.
+Nesta secção,
+vamos descrever o agrupamento de atenção em mais detalhes
+para lhe dar uma visão de alto nível
+como os mecanismos de atenção funcionam na prática.
+Especificamente,
+o modelo de regressão do kernel de Nadaraya-Watson
+proposto em 1964
+é um exemplo simples, mas completo
+para demonstrar o aprendizado de máquina com mecanismos de atenção.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -32,7 +32,7 @@ import torch
 from torch import nn
 ```
 
-## Generating the Dataset
+## Gerando o Dataset
 
 To keep things simple,
 let us consider the following regression problem:
@@ -465,5 +465,5 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYxMzY5NDE1XX0=
+eyJoaXN0b3J5IjpbNDg0ODkxOTg5LDk2MTM2OTQxNV19
 -->
