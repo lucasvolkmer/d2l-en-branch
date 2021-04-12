@@ -393,10 +393,10 @@ attention.eval()
 attention(queries, keys, values, valid_lens)
 ```
 
-Same as in the additive attention demonstration,
-since `keys` contains the same element
-that cannot be differentiated by any query,
-uniform attention weights are obtained.
+Da mesma forma que na demonstração de atenção aditiva,
+uma vez que `keys` contém o mesmo elemento
+que não pode ser diferenciado por nenhuma consulta,
+pesos uniformes de atenção são obtidos.
 
 ```{.python .input}
 #@tab all
@@ -404,14 +404,14 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
                   xlabel='Keys', ylabel='Queries')
 ```
 
-## Summary
+## Resumo
 
-* We can compute the output of attention pooling as a weighted average of values, where different choices of the attention scoring function lead to different behaviors of attention pooling.
-* When queries and keys are vectors of different lengths, we can use the additive attention scoring function. When they are the same, the scaled dot-product attention scoring function is more computationally efficient.
+* Podemos calcular a saída do *pooling* de atenção como uma média ponderada de valores, onde diferentes escolhas da função de pontuação de atenção levam a diferentes comportamentos de agrupamento de atenção.
+* Quando consultas e chaves são vetores de comprimentos diferentes, podemos usar a função de pontuação de atenção aditiva. Quando são iguais, a função de pontuação de atenção do produto escalonado é mais eficiente do ponto de vista computacional.
 
 
 
-## Exercises
+## Exercícios
 
 1. Modify keys in the toy example and visualize attention weights. Do additive attention and scaled dot-product attention still output the same attention weights? Why or why not?
 1. Using matrix multiplications only, can you design a new scoring function for queries and keys with different vector lengths?
@@ -425,5 +425,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTcxNjU1NTAsLTcyOTI5NDA2MF19
+eyJoaXN0b3J5IjpbMTYxMjE3NTU1NSwtNzI5Mjk0MDYwXX0=
 -->
