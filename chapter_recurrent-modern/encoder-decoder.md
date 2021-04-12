@@ -1,23 +1,23 @@
-# Encoder-Decoder Architecture
+# Arquitetura Encoder-Decoder
 :label:`sec_encoder-decoder`
 
-As we have discussed in 
+Como discutimos em
 :numref:`sec_machine_translation`,
-machine translation
-is a major problem domain for sequence transduction models,
-whose input and output are
-both variable-length sequences.
-To handle this type of inputs and outputs,
-we can design an architecture with two major components.
-The first component is an *encoder*:
-it takes a variable-length sequence as the input and transforms it into a state with a fixed shape.
-The second component is a *decoder*:
-it maps the encoded state of a fixed shape
-to a variable-length sequence.
-This is called an *encoder-decoder* architecture,
-which is depicted in :numref:`fig_encoder_decoder`.
+maquina de tradução
+é um domínio de problema principal para modelos de transdução de sequência,
+cuja entrada e saída são
+ambas as sequências de comprimento variável.
+Para lidar com este tipo de entradas e saídas,
+podemos projetar uma arquitetura com dois componentes principais.
+O primeiro componente é um *codificador*:
+ele pega uma sequência de comprimento variável como entrada e a transforma em um estado com uma forma fixa.
+O segundo componente é um *decodificador*:
+ele mapeia o estado codificado de uma forma fixa
+a uma sequência de comprimento variável.
+Isso é chamado de arquitetura *codificador-decodificador*,
+que é representado em :numref:`fig_encoder_decoder`.
 
-![The encoder-decoder architecture.](../img/encoder-decoder.svg)
+![A arquitetura encoder-decoder.](../img/encoder-decoder.svg)
 :label:`fig_encoder_decoder`
 
 Let us take machine translation from English to French
@@ -36,6 +36,23 @@ of different sequence transduction models
 in subsequent sections,
 this section will convert this architecture
 into an interface that will be implemented later.
+
+Vamos fazer uma tradução automática de inglês para francês
+como um exemplo.
+Dada uma sequência de entrada em inglês:
+"Eles estão assistindo", ".",
+esta arquitetura de codificador-decodificador
+primeiro codifica a entrada de comprimento variável em um estado,
+então decodifica o estado
+para gerar o token de sequência traduzido por token
+como saída:
+"Ils", "respectent", ".".
+Uma vez que a arquitetura codificador-decodificador
+forma a base
+de diferentes modelos de transdução de sequência
+nas seções subsequentes,
+esta seção irá converter esta arquitetura
+em uma interface que será implementada posteriormente.
 
 ## Encoder
 
@@ -190,5 +207,5 @@ this encoder-decoder architecture.
 [Discussions](https://discuss.d2l.ai/t/1061)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NDU3NDY3NF19
+eyJoaXN0b3J5IjpbMTI0MDIzNjk2NV19
 -->
