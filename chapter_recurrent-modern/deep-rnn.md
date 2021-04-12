@@ -17,19 +17,19 @@ devido à combinação de várias camadas simples. Em particular, os dados podem
 Além de toda a discussão abstrata acima
 provavelmente é mais fácil entender a família de modelos em que estamos interessados revisando :numref:`fig_deep_rnn`. Ele descreve um RNN profundo com $L$ camadas ocultas.
 Cada estado oculto é continuamente passado para a próxima etapa da camada atual e para a etapa atual da próxima camada.
-![Arquitetura de RNN .](../img/deep-rnn.svg)
+![Arquitetura de RNN profunda.](../img/deep-rnn.svg)
 :label:`fig_deep_rnn`
 
-## Functional Dependencies
+## Dependência Funcional
 
-We can formalize the 
-functional dependencies 
-within the  deep architecture
-of $L$ hidden layers
-depicted in :numref:`fig_deep_rnn`.
-Our following discussion focuses primarily on
-the vanilla RNN model,
-but it applies to other sequence models, too.
+Podemos formalizar o
+dependências funcionais
+dentro da arquitetura profunda
+de $L$ camadas ocultas
+representado em :numref:`fig_deep_rnn`.
+Nossa discussão a seguir se concentra principalmente em
+o modelo vanilla RNN,
+mas também se aplica a outros modelos de sequência.
 
 Suppose that we have a minibatch input
 $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (number of examples: $n$, number of inputs in each example: $d$) at time step $t$.
@@ -43,6 +43,19 @@ the hidden state of
 the $l^\mathrm{th}$ hidden layer
 that uses the activation function $\phi_l$
 is expressed as follows:
+
+Suponha que temos uma entrada de minibatch
+$\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (número de exemplos: $n$, número de entradas em cada exemplo: $d$) no passo de tempo $t$.
+Ao mesmo tempo,
+deixar
+o estado oculto da camada oculta $l^\mathrm{th}$ ($ l = 1, \ ldots, L $) é $ \ mathbf {H} _t ^ {(l)} \ in \ mathbb {R} ^ {n \ times h} $ (número de unidades ocultas: $ h $)
+e
+a variável da camada de saída é $ \ mathbf {O} _t \ in \ mathbb {R} ^ {n \ times q} $ (número de saídas: $ q $).
+Configurando $ \ mathbf {H} _t ^ {(0)} = \ mathbf {X} _t $,
+o estado oculto de
+a camada oculta $ l ^ \ mathrm {th} $
+que usa a função de ativação $ \ phi_l $
+é expresso da seguinte forma:
 
 $$\mathbf{H}_t^{(l)} = \phi_l(\mathbf{H}_t^{(l-1)} \mathbf{W}_{xh}^{(l)} + \mathbf{H}_{t-1}^{(l)} \mathbf{W}_{hh}^{(l)}  + \mathbf{b}_h^{(l)}),$$
 :eqlabel:`eq_deep_rnn_H`
@@ -150,5 +163,5 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1058)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NjMxMTQ1NF19
+eyJoaXN0b3J5IjpbLTczNDE5Nzk3M119
 -->
