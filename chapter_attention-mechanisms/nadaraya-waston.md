@@ -444,17 +444,17 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 
 ## Resumo
 
-* Nadaraya-Watson kernel regression is an example of machine learning with attention mechanisms.
-* The attention pooling of Nadaraya-Watson kernel regression is a weighted average of the training outputs. From the attention perspective, the attention weight is assigned to a value based on a function of a query and the key that is paired with the value.
-* Attention pooling can be either nonparametric or parametric.
+* A regressão do kernel Nadaraya-Watson é um exemplo de *machine learning* com mecanismos de atenção.
+* O agrupamento de atenção da regressão do kernel Nadaraya-Watson é uma média ponderada dos resultados do treinamento. Do ponto de vista da atenção, o peso da atenção é atribuído a um valor com base em uma função de uma consulta e a chave que está emparelhada com o valor.
+* O *pooling* de atenção pode ser não paramétrico ou paramétrico.
 
 
-## Exercises
+## Exercícios
 
-1. Increase the number of training examples. Can you learn  nonparametric Nadaraya-Watson kernel regression better?
-1. What is the value of our learned $w$ in the parametric attention pooling experiment? Why does it make the weighted region sharper when visualizing the attention weights?
-1. How can we add hyperparameters to nonparametric Nadaraya-Watson kernel regression to predict better?
-1. Design another parametric attention pooling for the kernel regression of this section. Train this new model and visualize its attention weights.
+1. Aumente o número de exemplos de treinamento. Você pode aprender melhor a regressão de kernel não paramétrica Nadaraya-Watson?
+1. Qual é o valor de nosso $w$ aprendido no experimento paramétrico de concentração de atenção? Por que torna a região ponderada mais nítida ao visualizar os pesos de atenção?
+1. Como podemos adicionar hiperparâmetros à regressão de kernel Nadaraya-Watson não paramétrica para prever melhor?
+1. Projete outro agrupamento de atenção paramétrica para a regressão do kernel desta seção. Treine este novo modelo e visualize seus pesos de atenção.
 
 
 
@@ -466,6 +466,6 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc2MDM1NzA4LDE3MTM2NzU2NzYsLTUyMD
-A4MDg5NCwtNDYxNTQ0OTE5LDk2MTM2OTQxNV19
+eyJoaXN0b3J5IjpbLTIxMzMzNjQwMTMsMTcxMzY3NTY3NiwtNT
+IwMDgwODk0LC00NjE1NDQ5MTksOTYxMzY5NDE1XX0=
 -->
