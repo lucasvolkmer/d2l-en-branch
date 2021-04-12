@@ -89,26 +89,26 @@ Uma ilustração rápida da célula de memória candidata é mostrada em :numref
 ![Computando a célula de memória candidata em um modelo LSTM.](../img/lstm-1.svg)
 :label:`lstm_1`
 
-### Memory Cell
+### Célula de Memória
 
-In GRUs, we have a mechanism to govern input and forgetting (or skipping).
-Similarly,
-in LSTMs we have two dedicated gates for such purposes: the input gate $\mathbf{I}_t$ governs how much we take new data into account via $\tilde{\mathbf{C}}_t$ and the forget gate $\mathbf{F}_t$ addresses how much of the old memory cell content $\mathbf{C}_{t-1} \in \mathbb{R}^{n \times h}$ we retain. Using the same pointwise multiplication trick as before, we arrive at the following update equation:
+Em GRUs, temos um mecanismo para controlar a entrada e o esquecimento (ou salto).
+De forma similar,
+em LSTMs, temos duas portas dedicadas para tais propósitos: a porta de entrada $\mathbf{I}_t$ governa o quanto levamos os novos dados em conta via $\tilde{\mathbf{C}}_t$ e a porta de esquecer $\mathbf{F}_t$ aborda quanto do conteúdo da célula de memória antiga $\mathbf{C}_{t-1} \in \mathbb{R}^{n \times h}$ retemos. Usando o mesmo truque de multiplicação pontual de antes, chegamos à seguinte equação de atualização:
 
 $$\mathbf{C}_t = \mathbf{F}_t \odot \mathbf{C}_{t-1} + \mathbf{I}_t \odot \tilde{\mathbf{C}}_t.$$
 
-If the forget gate is always approximately 1 and the input gate is always approximately 0, the past memory cells $\mathbf{C}_{t-1}$ will be saved over time and passed to the current time step.
-This design is introduced to alleviate the vanishing gradient problem and to better capture
-long range dependencies within sequences.
+Se a porta de esquecimento é sempre aproximadamente 1 e a porta de entrada é sempre aproximadamente 0, as células de memória anteriores $\mathbf{C}_{t-1}$ serão salvas ao longo do tempo e passadas para o intervalo de tempo atual.
+Este projeto é introduzido para aliviar o problema do gradiente de desaparecimento e para melhor capturar
+dependências de longo alcance dentro de sequências.
 
-We thus arrive at the flow diagram in :numref:`lstm_2`.
+Assim, chegamos ao diagrama de fluxo em :numref:`lstm_2`.
 
-![Computing the memory cell in an LSTM model.](../img/lstm-2.svg)
+![Calculando a célula de memória em um modelo LSTM.](../img/lstm-2.svg)
 
 :label:`lstm_2`
 
 
-### Hidden State
+### Estado Oculto
 
 Last, we need to define how to compute the hidden state $\mathbf{H}_t \in \mathbb{R}^{n \times h}$. This is where the output gate comes into play. In LSTM it is simply a gated version of the $\tanh$ of the memory cell.
 This ensures that the values of $\mathbf{H}_t$ are always in the interval $(-1, 1)$.
@@ -330,5 +330,5 @@ Later we will encounter alternative models such as transformers that can be used
 [Discussions](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODc0MDAzN119
+eyJoaXN0b3J5IjpbODA4OTI5OTgwXX0=
 -->
