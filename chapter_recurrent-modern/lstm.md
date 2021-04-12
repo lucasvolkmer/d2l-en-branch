@@ -322,12 +322,12 @@ Mais tarde, encontraremos modelos alternativos, como transformadores, que podem 
 1. Implemente um modelo LSTM para predição de série temporal em vez de predição de sequência de caracteres.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/343)
+[Discussão](https://discuss.d2l.ai/t/343)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1057)
+[Discussão](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMzMyNzUzXX0=
+eyJoaXN0b3J5IjpbMTk4MzU0MjQxOV19
 -->
