@@ -86,19 +86,10 @@ $$
 
 onde $\mathbf{W}_{xr}, \mathbf{W}_{xz} \in \mathbb{R}^{d \times h}$ e
 $\mathbf{W}_{hr}, \mathbf{W}_{hz} \in \mathbb{R}^{h \times h}$ são pesos de parâmetros e $\mathbf{b}_r, \mathbf{b}_z \in \mathbb{R}^{1 \times h}$ são viéses.
-Note that broadcasting (see :numref:`subsec_broadcasting`) is triggered during the summation.
-We use sigmoid functions (as introduced in :numref:`sec_mlp`) to transform input values to the interval $(0, 1)$.
 Observe que a transmissão (consulte :numref:`subsec_broadcasting`) é acionada durante a soma.
 Usamos funções sigmóides (como introduzidas em :numref:`sec_mlp`) para transformar os valores de entrada no intervalo $(0, 1)$.
 
-### Candidate Hidden State Estado Oculto do Candidato
-
-Next, let us
-integrate the reset gate $\mathbf{R}_t$ with
-the regular latent state updating mechanism
-in :eqref:`rnn_h_with_state`.
-It leads to the following
-*candidate hidden state*
+### Estado Oculto do Candidato
 
 Em seguida, vamos
 integrar a porta de reset $\mathbf {R} _t$ com
@@ -106,7 +97,7 @@ o mecanismo regular de atualização de estado latente
 in :eqref:`rnn_h_with_state`.
 Isso leva ao seguinte
 *estado oculto candidato*
-$\tilde{\mathbf{H}}_t \in \mathbb{R}^{n \times h}$ at time step $t$:
+$\tilde{\mathbf{H}}_t \in \mathbb{R}^{n \times h}$ no passo de tempo $t$:
 
 $$\tilde{\mathbf{H}}_t = \tanh(\mathbf{X}_t \mathbf{W}_{xh} + \left(\mathbf{R}_t \odot \mathbf{H}_{t-1}\right) \mathbf{W}_{hh} + \mathbf{b}_h),$$
 :eqlabel:`gru_tilde_H`
@@ -114,25 +105,9 @@ $$\tilde{\mathbf{H}}_t = \tanh(\mathbf{X}_t \mathbf{W}_{xh} + \left(\mathbf{R}_t
 onde $\mathbf{W}_{xh} \in \mathbb{R}^{d \times h}$ and $\mathbf{W}_{hh} \in \mathbb{R}^{h \times h}$
 são parâmetros de pesos,
 $\mathbf{b}_h \in \mathbb{R}^{1 \times h}$
-is the bias,
-and the symbol $\odot$ is the Hadamard (elementwise) product operator.
-Here we use a nonlinearity in the form of tanh to ensure that the values in the candidate hidden state remain in the interval $(-1, 1)$.
-
-é o preconceito,
+é o viés,
 e o símbolo $\odot$ é o operador de produto Hadamard (elementwise).
 Aqui, usamos uma não linearidade na forma de tanh para garantir que os valores no estado oculto candidato permaneçam no intervalo $(-1, 1)$.
-
-The result is a *candidate* since we still need to incorporate the action of the update gate.
-Comparing with :eqref:`rnn_h_with_state`,
-now the influence of the previous states
-can be reduced with the
-elementwise multiplication of
-$\mathbf{R}_t$ and $\mathbf{H}_{t-1}$
-in :eqref:`gru_tilde_H`.
-Whenever the entries in the reset gate $\mathbf{R}_t$ are close to 1, we recover a vanilla RNN such as in :eqref:`rnn_h_with_state`.
-For all entries of the reset gate $\mathbf{R}_t$ that are close to 0, the candidate hidden state is the result of an MLP with $\mathbf{X}_t$ as the input. Any pre-existing hidden state is thus *reset* to defaults.
-
-:numref:`fig_gru_2` illustrates the computational flow after applying the reset gate.
 
 O resultado é um *candidato*, pois ainda precisamos incorporar a ação da porta de atualização.
 Comparando com :eqref:`rnn_h_with_state`,
@@ -151,10 +126,6 @@ Para todas as entradas da porta de reset $\mathbf{R}_t$ que estão próximas de 
 
 
 ### Estados Escondidos
-
-Finally, we need to incorporate the effect of the update gate $\mathbf{Z}_t$. This determines the extent to which the new hidden state $\mathbf{H}_t \in \mathbb{R}^{n \times h}$ is just the old state $\mathbf{H}_{t-1}$ and by how much the new candidate state $\tilde{\mathbf{H}}_t$ is used.
-The update gate $\mathbf{Z}_t$ can be used for this purpose, simply by taking elementwise convex combinations between both $\mathbf{H}_{t-1}$ and $\tilde{\mathbf{H}}_t$.
-This leads to the final update equation for the GRU:
 
 Finalmente, precisamos incorporar o efeito da porta de atualização $\mathbf{Z}_t$. Isso determina até que ponto o novo estado oculto $\mathbf{H}_t \in \mathbb{R}^{n \times h}$ é apenas o antigo estado $\mathbf{H}_{t-1}$ e em quanto o novo estado candidato $\tilde{\mathbf{H}}_t$ é usado.
 A porta de atualização $\mathbf{Z}_t$ pode ser usada para este propósito, simplesmente tomando combinações convexas elementwise entre $\mathbf{H}_{t-1}$ e $\tilde{\mathbf{H}}_t$.
@@ -429,6 +400,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMDQ2ODE0LC0yMDA3OTk3MDcsODQ1ND
-Q2ODExLC03NzUxODQzMjBdfQ==
+eyJoaXN0b3J5IjpbLTEzMTYxMjEwOCwtMjAwNzk5NzA3LDg0NT
+Q0NjgxMSwtNzc1MTg0MzIwXX0=
 -->
