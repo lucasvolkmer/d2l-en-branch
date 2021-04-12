@@ -14,7 +14,7 @@ Nesta secção,
 começaremos formalizando essa estratégia de *busca gananciosa*
 e explorando problemas com isso,
 em seguida, compare essa estratégia com outras alternativeas:
-*pesquisa exhaustive search* and *beam searcha* e *pesquisa por feixe*.
+* pesquisa exhaustive search* and *beam searcha* e *pesquisa por feixe*.
 
 Before a formal introduction to greedy search,
 let us formalize the search problem
@@ -44,6 +44,35 @@ Of course,
 for all these output sequences,
 portions including and after "&lt;eos&gt;" will be discarded
 in the actual output.
+
+Antes de uma introdução formal à busca gananciosa,
+vamos formalizar o problema de pesquisa
+usando
+a mesma notação matemática de :numref:`sec_seq2seq`.
+A qualquer momento, passo $t'$,
+a probabilidade de saída do decodificador $y_{t '}$
+é condicional
+na subseqüência de saída
+$ y_1, \ ldots, y_ {t'-1} $ antes de $ t '$ e
+a variável de contexto $ \ mathbf {c} $ que
+codifica as informações da sequência de entrada.
+Para quantificar o custo computacional,
+denotar por
+$ \ mathcal {Y} $ (contém "& lt; eos & gt;")
+o vocabulário de saída.
+Portanto, a cardinalidade $ \ left | \ mathcal {Y} \ right | $ deste conjunto de vocabulário
+é o tamanho do vocabulário.
+Vamos também especificar o número máximo de tokens
+de uma sequência de saída como $ T '$.
+Como resultado,
+nosso objetivo é procurar um resultado ideal
+de todo o
+$ \ mathcal {O} (\ left | \ mathcal {Y} \ right | ^ {T '}) $
+possíveis sequências de saída.
+Claro,
+para todas essas sequências de saída,
+porções incluindo e após "& lt; eos & gt;" será descartado
+na saída real.
 
 ## Greedy Search
 
@@ -221,5 +250,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIwMDM0OTk3XX0=
+eyJoaXN0b3J5IjpbLTE3MzkwNjI4NDNdfQ==
 -->
