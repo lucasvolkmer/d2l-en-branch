@@ -35,26 +35,24 @@ para uma sequência de observações $T$, temos a seguinte distribuição de pro
 $$P(x_1, \ldots, x_T, h_1, \ldots, h_T) = \prod_{t=1}^T P(h_t \mid h_{t-1}) P(x_t \mid h_t), \text{ onde} P(h_1 \mid h_0) = P(h_1).$$
 :eqlabel:`eq_hmm_jointP`
 
-
-Now assume that we observe all $x_i$ with the exception of some $x_j$ and it is our goal to compute $P(x_j \mid x_{-j})$, where $x_{-j} = (x_1, \ldots, x_{j-1}, x_{j+1}, \ldots, x_{T})$.
-Since there is no latent variable
-in $P(x_j \mid x_{-j})$,
-we consider summing over
-all the possible combinations of choices for $h_1, \ldots, h_T$.
-In case any $h_i$ can take on $k$ distinct values (a finite number of states), this means that we need to sum over $k^T$ terms---usually mission impossible! Fortunately there is an elegant solution for this: *dynamic programming*.
-
-Agora suponha que observamos todos os $ x_i $ com exceção de alguns $ x_j $ e nosso objetivo é calcular $ P (x_j \ mid x _ {- j}) $, onde $ x _ {- j} = (x_1, \ ldots, x_ {j-1}, x_ {j + 1}, \ ldots, x_ {T}) $.
+Agora suponha que observamos todos os $x_i$ com exceção de alguns $x_j$ e nosso objetivo é calcular $P(x_j \mid x_{-j})$, onde $x_{-j} = (x_1, \ldots, x_{j-1}, x_{j+1}, \ldots, x_{T})$.
 Uma vez que não há variável latente
-em $ P (x_j \ mid x _ {- j}) $,
+em $P(x_j \mid x_{-j})$,
 nós consideramos resumir
-todas as combinações possíveis de escolhas para $ h_1, \ ldots, h_T $.
-No caso de qualquer $ h_i $ poder assumir valores distintos de $ k $ (um número finito de estados), isso significa que precisamos somar mais de $ k ^ T $ termos --- normalmente missão impossível! Felizmente, existe uma solução elegante para isso: * programação dinâmica *.
+todas as combinações possíveis de escolhas para $h_1, \ldots, h_T$.
+No caso de qualquer $h_i$ poder assumir valores distintos de $k$ (um número finito de estados), isso significa que precisamos somar mais de $k^T$ termos --- normalmente missão impossível! Felizmente, existe uma solução elegante para isso: *programação dinâmica*.
 
 To see how it works,
 consider summing over latent variables
 $h_1, \ldots, h_T$ in turn.
 According to :eqref:`eq_hmm_jointP`,
 this yields:
+
+Para ver como funciona,
+considere somar as variáveis latentes
+$h_1, \ldots, h_T$ por sua vez.
+De acordo com :eqref:`eq_hmm_jointP`,
+isso produz:
 
 $$\begin{aligned}
     &P(x_1, \ldots, x_T) \\
@@ -249,5 +247,5 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNTQ3ODQxM119
+eyJoaXN0b3J5IjpbMTM5NjM0NTg1MiwtNTM1NDc4NDEzXX0=
 -->
