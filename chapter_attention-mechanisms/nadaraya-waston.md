@@ -129,29 +129,30 @@ $$f(x) = \sum_{i=1}^n \alpha(x, x_i) y_i,$$
 :eqlabel:`eq_attn-pooling`
 
 
-where $x$ is the query and $(x_i, y_i)$ is the key-value pair.
-Comparing :eqref:`eq_attn-pooling` and :eqref:`eq_avg-pooling`,
-the attention pooling here
-is a weighted average of values $y_i$.
-The *attention weight* $\alpha(x, x_i)$
-in :eqref:`eq_attn-pooling`
-is assigned to the corresponding value $y_i$
-based on the interaction
-between the query $x$ and the key $x_i$
-modeled by $\alpha$.
-For any query, its attention weights over all the key-value pairs are a valid probability distribution: they are non-negative and sum up to one.
 
-To gain intuitions of attention pooling,
-just consider a *Gaussian kernel* defined as
+onde $x$ é a consulta e $(x_i, y_i)$ é o par de valores-chave.
+Comparando :eqref:`eq_attn-pooling` e :eqref:`eq_avg-pooling`,
+a atenção concentrada aqui
+é uma média ponderada de valores $y_i$.
+O *peso de atenção* $\alpha(x, x_i)$
+em :eqref:`eq_attn-pooling`
+é atribuído ao valor correspondente $y_i$
+baseado na interação
+entre a consulta $x$ e a chave $x_i$
+modelado por $\alpha$.
+Para qualquer consulta, seus pesos de atenção sobre todos os pares de valores-chave são uma distribuição de probabilidade válida: eles não são negativos e somam um.
+
+Para obter intuições de concentração de atenção,
+apenas considere um *kernel gaussiano* definido como
 
 $$
 K(u) = \frac{1}{\sqrt{2\pi}} \exp(-\frac{u^2}{2}).
 $$
 
 
-Plugging the Gaussian kernel into
-:eqref:`eq_attn-pooling` and
-:eqref:`eq_nadaraya-waston` gives
+Conectando o kernel gaussiano em
+:eqref:`eq_attn-pooling` e
+:eqref:`eq_nadaraya-waston` dá
 
 $$\begin{aligned} f(x) &=\sum_{i=1}^n \alpha(x, x_i) y_i\\ &= \sum_{i=1}^n \frac{\exp\left(-\frac{1}{2}(x - x_i)^2\right)}{\sum_{j=1}^n \exp\left(-\frac{1}{2}(x - x_j)^2\right)} y_i \\&= \sum_{i=1}^n \mathrm{softmax}\left(-\frac{1}{2}(x - x_i)^2\right) y_i. \end{aligned}$$
 :eqlabel:`eq_nadaraya-waston-gaussian`
@@ -466,5 +467,5 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MDc1MzMyNiw5NjEzNjk0MTVdfQ==
+eyJoaXN0b3J5IjpbLTQ2MTU0NDkxOSw5NjEzNjk0MTVdfQ==
 -->
