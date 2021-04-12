@@ -174,18 +174,17 @@ $$\begin{aligned}P(A, y_2 \mid \mathbf{c}) = P(A \mid \mathbf{c})P(y_2 \mid A, \
 
 e escolha os dois maiores entre esses dez valores, digamos
 $P(A, B \mid \mathbf{c})$ e$P(C, E \mid \mathbf{c})$.
-Depois para o passo de d $y_3 \in \mathcal{Y}$, we compute 
+Depois para o passo de tempo 3, para todos $y_3 \in \mathcal{Y}$, nós computamos
 
 $$\begin{aligned}P(A, B, y_3 \mid \mathbf{c}) = P(A, B \mid \mathbf{c})P(y_3 \mid A, B, \mathbf{c}),\\P(C, E, y_3 \mid \mathbf{c}) = P(C, E \mid \mathbf{c})P(y_3 \mid C, E, \mathbf{c}),\end{aligned}$$ 
 
-and pick the largest two among these ten values, say 
-$P(A, B, D \mid \mathbf{c})$   and  $P(C, E, D \mid  \mathbf{c}).$
-As a result, we get six candidates output sequences: (i) $A$; (ii) $C$; (iii) $A$, $B$; (iv) $C$, $E$; (v) $A$, $B$, $D$; and (vi) $C$, $E$, $D$. 
+e escolha os dois maiores entre esses dez valores, digamos
+$P(A, B, D \mid \mathbf{c})$  e $P(C, E, D \mid  \mathbf{c}).$
+Como resultado, obtemos seis sequências de saída de candidatos:  (i) $A$; (ii) $C$; (iii) $A$, $B$; (iv) $C$, $E$; (v) $A$, $B$, $D$; e (vi) $C$, $E$, $D$. 
 
-
-In the end, we obtain the set of final candidate output sequences based on these six sequences (e.g., discard portions including and after “&lt;eos&gt;”).
-Then
-we choose the sequence with the highest of the following score as the output sequence:
+No final, obtemos o conjunto de sequências de saída candidatas finais com base nessas seis sequências (por exemplo, descarte porções incluindo e após “&lt;eos&gt;”).
+Então
+escolhemos a sequência com a maior das seguintes pontuações como a sequência de saída:
 
 $$ \frac{1}{L^\alpha} \log P(y_1, \ldots, y_{L}) = \frac{1}{L^\alpha} \sum_{t'=1}^L \log P(y_{t'} \mid y_1, \ldots, y_{t'-1}, \mathbf{c}),$$
 :eqlabel:`eq_beam-search-score`
@@ -218,5 +217,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYyODIwNjI3LDI1MjA3NjQ3OV19
+eyJoaXN0b3J5IjpbLTgzNDMzNTUzLDI1MjA3NjQ3OV19
 -->
