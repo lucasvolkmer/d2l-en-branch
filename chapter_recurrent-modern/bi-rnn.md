@@ -86,21 +86,21 @@ Podemos, portanto, escrever a *recursão para trás* como
 
 $$\rho_{t-1}(h_{t-1})= \sum_{h_{t}} P(h_{t} \mid h_{t-1}) P(x_{t} \mid h_{t}) \rho_{t}(h_{t}),$$
 
-with initialization $\rho_T(h_T) = 1$. 
-Both the forward and backward recursions allow us to sum over $T$ latent variables in $\mathcal{O}(kT)$ (linear) time over all values of $(h_1, \ldots, h_T)$ rather than in exponential time.
-This is one of the great benefits of the probabilistic inference with graphical models.
-It is 
-also a very special instance of 
-a general message passing algorithm :cite:`Aji.McEliece.2000`.
-Combining both forward and backward recursions, we are able to compute
+com inicialização $\rho_T(h_T) = 1$. 
+Ambas as recursões para frente e para trás nos permitem somar mais de $T$ variáveis latentes em $\mathcal{O}(kT)$ (linear) tempo sobre todos os valores de $(h_1, \ldots, h_T)$ em vez de em tempo exponencial .
+Este é um dos grandes benefícios da inferência probabilística com modelos gráficos.
+Isto é
+também uma instância muito especial de
+um algoritmo geral de passagem de mensagens :cite:`Aji.McEliece.2000`.
+Combinando recursões para frente e para trás, somos capazes de calcular
 
 $$P(x_j \mid x_{-j}) \propto \sum_{h_j} \pi_j(h_j) \rho_j(h_j) P(x_j \mid h_j).$$
 
-Note that in abstract terms the backward recursion can be written as $\rho_{t-1} = g(\rho_t, x_t)$, where $g$ is a learnable function. Again, this looks very much like an update equation, just running backwards unlike what we have seen so far in RNNs. Indeed, hidden Markov models benefit from knowing future data when it is available. Signal processing scientists distinguish between the two cases of knowing and not knowing future observations as interpolation v.s. extrapolation.
-See the introductory chapter of the book on sequential Monte Carlo algorithms for more details :cite:`Doucet.De-Freitas.Gordon.2001`.
+Observe que, em termos abstratos, a recursão para trás pode ser escrita como $\rho_{t-1} = g(\rho_t, x_t)$, onde $g$ é uma função que pode ser aprendida. Novamente, isso se parece muito com uma equação de atualização, apenas rodando para trás, ao contrário do que vimos até agora em RNNs. Na verdade, os modelos ocultos de Markov se beneficiam do conhecimento de dados futuros, quando estiverem disponíveis. Os cientistas de processamento de sinais distinguem entre os dois casos de conhecimento e não conhecimento de observações futuras como interpolação vs. extrapolação.
+Veja o capítulo introdutório do livro sobre algoritmos sequenciais de Monte Carlo para mais detalhes :cite:`Doucet.De-Freitas.Gordon.2001`.
 
 
-## Bidirectional Model
+## Modelo Bid
 
 If we want to have a mechanism in RNNs that offers comparable look-ahead ability as in hidden Markov models, we need to modify the RNN design that we have seen so far. Fortunately, this is easy conceptually. Instead of running an RNN only in the forward mode starting from the first token, we start another one from the last token running from back to front. 
 *Bidirectional RNNs* add a hidden layer that passes information in a backward direction to more flexibly process such information. :numref:`fig_birnn` illustrates the architecture of a bidirectional RNN with a single hidden layer.
@@ -240,5 +240,5 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MTAwMjI2MCwtNTM1NDc4NDEzXX0=
+eyJoaXN0b3J5IjpbLTE3MzcyNTkzOTcsLTUzNTQ3ODQxM119
 -->
