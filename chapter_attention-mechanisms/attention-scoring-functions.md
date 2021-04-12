@@ -371,12 +371,12 @@ class DotProductAttention(nn.Module):
         return torch.bmm(self.dropout(self.attention_weights), values)
 ```
 
-To demonstrate the above `DotProductAttention` class,
-we use the same keys, values, and valid lengths from the earlier toy example
-for additive attention.
-For the dot product operation,
-we make the feature size of queries
-the same as that of keys.
+Para demonstrar a classe `DotProductAttention` acima,
+usamos as mesmas chaves, valores e comprimentos válidos do exemplo de brinquedo anterior
+para atenção aditiva.
+Para a operação de produto escalar,
+fazemos o tamanho da *feature* de consultas
+o mesmo que o das chaves.
 
 ```{.python .input}
 queries = d2l.normal(0, 1, (2, 1, 2))
@@ -425,5 +425,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDU4NTkxNjksLTcyOTI5NDA2MF19
+eyJoaXN0b3J5IjpbLTE0NTcxNjU1NTAsLTcyOTI5NDA2MF19
 -->
