@@ -20,27 +20,10 @@ que é representado em :numref:`fig_encoder_decoder`.
 ![A arquitetura encoder-decoder.](../img/encoder-decoder.svg)
 :label:`fig_encoder_decoder`
 
-Let us take machine translation from English to French
-as an example.
-Given an input sequence in English:
-"They", "are", "watching", ".",
-this encoder-decoder architecture
-first encodes the variable-length input into a state,
-then decodes the state 
-to generate the translated sequence token by token
-as the output:
-"Ils", "regardent", ".".
-Since the encoder-decoder architecture
-forms the basis
-of different sequence transduction models
-in subsequent sections,
-this section will convert this architecture
-into an interface that will be implemented later.
-
 Vamos fazer uma tradução automática de inglês para francês
 como um exemplo.
 Dada uma sequência de entrada em inglês:
-"Eles estão assistindo", ".",
+"They", "are", "watching", ".",
 esta arquitetura de codificador-decodificador
 primeiro codifica a entrada de comprimento variável em um estado,
 então decodifica o estado
@@ -56,11 +39,11 @@ em uma interface que será implementada posteriormente.
 
 ## Encoder
 
-In the encoder interface,
-we just specify that
-the encoder takes variable-length sequences as the input `X`.
-The implementation will be provided 
-by any model that inherits this base `Encoder` class.
+Na interface do codificador,
+nós apenas especificamos isso
+o codificador recebe sequências de comprimento variável como `X` de entrada.
+A implementação será fornecida
+por qualquer modelo que herde esta classe `Encoder` base.
 
 ```{.python .input}
 from mxnet.gluon import nn
@@ -91,20 +74,20 @@ class Encoder(nn.Module):
 
 ## Decoder
 
-In the following decoder interface,
-we add an additional `init_state` function
-to convert the encoder output (`enc_outputs`)
-into the encoded state.
-Note that this step
-may need extra inputs such as 
-the valid length of the input,
-which was explained
+Na seguinte interface do decodificador,
+adicionamos uma função adicional `init_state`
+para converter a saída do codificador (`enc_outputs`)
+no estado codificado.
+Observe que esta etapa
+pode precisar de entradas extras, como
+o comprimento válido da entrada,
+o que foi explicado
 in :numref:`subsec_mt_data_loading`.
-To generate a variable-length sequence token by token,
-every time the decoder
-may map an input (e.g., the generated token at the previous time step)
-and the encoded state
-into an output token at the current time step.
+Para gerar um token de sequência de comprimento variável por token,
+toda vez que o decodificador
+pode mapear uma entrada (por exemplo, o token gerado na etapa de tempo anterior)
+e o estado codificado
+em um token de saída na etapa de tempo atual.
 
 ```{.python .input}
 #@save
@@ -135,7 +118,7 @@ class Decoder(nn.Module):
         raise NotImplementedError
 ```
 
-## Putting the Encoder and Decoder Together
+## Somando o Encoder e o Decoder
 
 In the end,
 the encoder-decoder architecture
@@ -207,5 +190,5 @@ this encoder-decoder architecture.
 [Discussions](https://discuss.d2l.ai/t/1061)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MDIzNjk2NV19
+eyJoaXN0b3J5IjpbMTA5OTUxMzQ0Ml19
 -->
