@@ -1,4 +1,4 @@
-# Beam SearchPesquisa de feixe
+# Pesquisa de feixe
 :label:`sec_beam-search`
 
 InEm :numref:`sec_seq2seq`,
@@ -120,7 +120,8 @@ a sequência de saída "A", "B", "C" e "&lt;eos&gt;" obtida pela busca ganancios
 Se o objetivo é obter a sequência ideal, podemos considerar o uso de *pesquisa exaustiva*:
 enumerar exaustivamente todas as sequências de saída possíveis com suas probabilidades condicionais,
 em seguida, envie o um
-com a probabilidade condicional mais alta.7
+com a probabilidade condicional mais alta.
+
 Embora possamos usar uma pesquisa exaustiva para obter a sequência ideal,
 seu custo computacional $\mathcal{O}(\left|\mathcal{Y}\right|^{T'})$ é provavelmente excessivamente alto.
 Por exemplo, quando $|\mathcal{Y}|=10000$ e $T'=10$, precisaremos avaliar $10000^{10} = 10^{40}$ sequências. Isso é quase impossível!
@@ -130,18 +131,18 @@ $\mathcal{O}(\left|\mathcal{Y}\right|T')$:
 geralmente é significativamente menor do que
 o da pesquisa exaustiva. Por exemplo, quando $|\mathcal{Y}|=10000$ e$T'=10$, só precisamos avaliar $10000\times10=10^5$ sequências.
 
-## Beam Search
+## Busca de Feixe
 
-Decisions about sequence searching strategies
-lie on a spectrum,
-with easy questions at either extreme.
-What if only accuracy matters?
-Obviously, exhaustive search.
-What if only computational cost matters?
-Clearly, greedy search.
-A real-world application usually asks
-a complicated question,
-somewhere in between those two extremes.
+Decisões sobre estratégias de busca de sequência
+mentem em um espectro,
+com perguntas fáceis em qualquer um dos extremos.
+E se apenas a precisão importasse?
+Obviamente, pesquisa exaustiva.
+E se apenas o custo computacional importa?
+Claramente, busca gananciosa.
+Um aplicativo do mundo real geralmente pergunta
+uma pergunta complicada,
+em algum lugar entre esses dois extremos.
 
 *Beam search* is an improved version of greedy search. It has a hyperparameter named *beam size*, $k$. 
 At time step 1, 
@@ -154,6 +155,18 @@ at the previous time step,
 we continue to select $k$ candidate output sequences 
 with the highest conditional probabilities 
 from $k\left|\mathcal{Y}\right|$ possible choices.
+
+* Pesquisa de feixe * é uma versão aprimorada da pesquisa gananciosa. Ele tem um hiperparâmetro denominado* tamanho do feixe *, $k$.
+Na etapa de tempo 1,
+selecionamos $k$ tokens com as probabilidades condicionais mais altas.
+Cada um deles será o primeiro símbolo de
+$k$ sequências de saída candidatas, respectivamente.
+Em cada etapa de tempo subsequente,
+com base nas sequências de saída do candidato $k$
+na etapa de tempo anterior,
+continuamos a selecionar sequências de saída candidatas a $k$
+com as maiores probabilidades condicionais
+de $k\left|\mathcal{Y}\right|$ escolhas possíveis.
 
 ![The process of beam search (beam size: 2, maximum length of an output sequence: 3). The candidate output sequences are $A$, $C$, $AB$, $CE$, $ABD$, and $CED$.](../img/beam-search.svg)
 :label:`fig_beam-search`
@@ -218,5 +231,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3OTEzNDcxOV19
+eyJoaXN0b3J5IjpbMjcyODUzMzEzXX0=
 -->
