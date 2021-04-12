@@ -21,33 +21,9 @@ design than GRUs but predates GRUs by almost twodo que GRUs, mas antecede GRUs e
 
 ## Gated Memory CellCélula de Memória Bloqueada
 
-Arguably LSTM's design is inspired
-by logic gates of a computer.
-LSTM introduces a *memory cell* (or *cell* for short)
-that has the same shape as the hidden state
-(some literatures consider the memory cell
-as a special type of the hidden state),
-engineered to record additional information.
-To control the memory cell
-we need a number of gates.
-One gate is needed to read out the entries from the
-cell.
-We will refer to this as the
-*output gate*.
-A second gate is needed to decide when to read data into the
-cell.
-We refer to this as the *input gate*.
-Last, we need a mechanism to reset
-the content of the cell, governed by a *forget gate*.
-The motivation for such a
-design is the same as that of GRUs,
-namely to be able to decide when to remember and
-when to ignore inputs in the hidden state via a dedicated mechanism. Let us see
-how this works in practice.
-
 Indiscutivelmente, o design da LSTM é inspirado
 pelas portas lógicas de um computador.
-LSTM introduz uma * célula de memória * (ou * célula * para abreviar)
+LSTM introduz uma *célula de memória* (ou *célula* para abreviar)
 que tem a mesma forma que o estado oculto
 (algumas literaturas consideram a célula de memória
 como um tipo especial de estado oculto),
@@ -57,38 +33,43 @@ precisamos de vários portões.
 Um portão é necessário para ler as entradas do
 célula.
 Vamos nos referir a isso como o
-* portão de saída *.
+*portão de saída*.
 Uma segunda porta é necessária para decidir quando ler os dados para o
 célula.
 Chamamos isso de *porta de entrada*.
 Por último, precisamos de um mecanismo para redefinir
-o conteúdo da célula, governado por um * portão de esquecimento *.
+o conteúdo da célula, governado por um *portão de esquecimento*.
 A motivação para tal
 design é o mesmo das GRUs,
 ou seja, ser capaz de decidir quando lembrar e
 quando ignorar entradas no estado oculto por meio de um mecanismo dedicado. Deixe-nos ver
 como isso funciona na prática.
 
-### Input Gate, Forget Gate, and Output Gate
+### Porta de entrada, porta de esquecimento e porta de saída
 
-Just like in GRUs,
-the data feeding into the LSTM gates are
-the input at the current time step and
-the hidden state of the previous time step,
-as illustrated in :numref:`lstm_0`.
-They are processed by
-three fully-connected layers with a sigmoid activation function to compute the values of
-the input, forget. and output gates.
-As a result, values of the three gates
-are in the range of $(0, 1)$.
+Assim como em GRUs,
+os dados que alimentam as portas LSTM são
+a entrada na etapa de tempo atual e
+o estado oculto da etapa de tempo anterior,
+conforme ilustrado em :numref:`lstm_0`.
+Eles são processados por
+três camadas totalmente conectadas com uma função de ativação sigmóide para calcular os valores de
+a entrada, esqueça. e portas de saída.
+Como resultado, os valores das três portas
+estão na faixa de $(0, 1)$.
 
-![Computing the input gate, the forget gate, and the output gate in an LSTM model.](../img/lstm-0.svg)
+![Calculando a porta de entrada, a porta de esquecimento e a porta de saída em um modelo LSTM.](../img/lstm-0.svg)
 :label:`lstm_0`
 
 Mathematically,
 suppose that there are $h$ hidden units, the batch size is $n$, and the number of inputs is $d$.
 Thus, the input is $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ and the hidden state of the previous time step is $\mathbf{H}_{t-1} \in \mathbb{R}^{n \times h}$. Correspondingly, the gates at time step $t$
 are defined as follows: the input gate is $\mathbf{I}_t \in \mathbb{R}^{n \times h}$, the forget gate is $\mathbf{F}_t \in \mathbb{R}^{n \times h}$, and the output gate is $\mathbf{O}_t \in \mathbb{R}^{n \times h}$. They are calculated as follows:
+
+Matematicamente,
+suponha que existam $ h $ unidades ocultas, o tamanho do lote é $ n $ e o número de entradas é $ d $.
+Assim, a entrada é $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ e o estado oculto da etapa de tempo anterior é $ \ mathbf {H} _ {t-1} \ em \ mathbb {R} ^ {n \ vezes h} $. Correspondentemente, as portas na etapa de tempo $ t $
+são definidos da seguinte forma: a porta de entrada é $ \ mathbf {I} _t \ in \ mathbb {R} ^ {n \ vezes h} $, a porta de esquecimento é $ \ mathbf {F} _t \ in \ mathbb {R} ^ {n \ vezes h} $, e a porta de saída é $ \ mathbf {O} _t \ in \ mathbb {R} ^ {n \ vezes h} $. Eles são calculados da seguinte forma:
 
 $$
 \begin{aligned}
@@ -354,5 +335,5 @@ Later we will encounter alternative models such as transformers that can be used
 [Discussions](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODE1MDIyNTRdfQ==
+eyJoaXN0b3J5IjpbLTE0MDk5MjMzMjFdfQ==
 -->
