@@ -1,4 +1,4 @@
-# Attention Scoring Functions
+# Funções de Pontuação de Atenção
 :label:`sec_attention-scoring-functions`
 
 In :numref:`sec_nadaraya-waston`,
@@ -448,5 +448,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyOTI5NDA2MF19
+eyJoaXN0b3J5IjpbNTk4MjcyNjY4LC03MjkyOTQwNjBdfQ==
 -->
