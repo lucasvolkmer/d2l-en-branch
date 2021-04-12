@@ -1,38 +1,38 @@
 # Funções de Pontuação de Atenção
 :label:`sec_attention-scoring-functions`
 
-In :numref:`sec_nadaraya-waston`,
-we used a Gaussian kernel to model
-interactions between queries and keys.
-Treating the exponent of the Gaussian kernel
-in :eqref:`eq_nadaraya-waston-gaussian`
-as an *attention scoring function* (or *scoring function* for short),
-the results of this function were
-essentially fed into
-a softmax operation.
-As a result,
-we obtained
-a probability distribution (attention weights)
-over values that are paired with keys.
-In the end,
-the output of the attention pooling
-is simply a weighted sum of the values
-based on these attention weights.
 
-At a high level,
-we can use the above algorithm
-to instantiate the framework of attention mechanisms
-in :numref:`fig_qkv`.
-Denoting an attention scoring function by $a$,
+Em :numref:`sec_nadaraya-waston`,
+usamos um kernel gaussiano para modelar
+interações entre consultas e chaves.
+Tratando o expoente do kernel gaussiano
+em :eqref:`eq_nadaraya-waston-gaussian` como uma *função de pontuação de atenção* (ou *função de pontuação* para abreviar),
+os resultados desta função foram
+essencialmente alimentados em
+uma operação softmax.
+Como resultado,
+Nós obtivemos
+uma distribuição de probabilidade (pesos de atenção)
+sobre valores que estão emparelhados com chaves.
+No fim,
+a saída do *pooling* de atenção
+é simplesmente uma soma ponderada dos valores
+com base nesses pesos de atenção.
+
+Em alto nível,
+podemos usar o algoritmo acima
+para instanciar a estrutura de mecanismos de atenção
+em :numref:`fig_qkv`.
+Denotando uma função de pontuação de atenção por $a$,
 :numref:`fig_attention_output`
-illustrates how the output of attention pooling
-can be computed as a weighted sum of values.
-Since attention weights are
-a probability distribution,
-the weighted sum is essentially
-a weighted average.
+ilustra como a saída do *pooling* de atenção
+pode ser calculado como uma soma ponderada de valores.
+Uma vez que os pesos de atenção são
+uma distribuição de probabilidade,
+a soma ponderada é essencialmente
+uma média ponderada.
 
-![Computing the output of attention pooling as a weighted average of values.](../img/attention-output.svg)
+![Calculando a saída do *pooling* de atenção como uma média ponderada de valores.](../img/attention-output.svg)
 :label:`fig_attention_output`
 
 
@@ -448,5 +448,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk4MjcyNjY4LC03MjkyOTQwNjBdfQ==
+eyJoaXN0b3J5IjpbLTExMDU3MDAwNDEsLTcyOTI5NDA2MF19
 -->
