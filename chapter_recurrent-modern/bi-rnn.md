@@ -135,12 +135,6 @@ $$
 
 onde os pesos $\mathbf{W}_{xh}^{(f)} \in \mathbb{R}^{d \times h}, \mathbf{W}_{hh}^{(f)} \in \mathbb{R}^{h \times h}, \mathbf{W}_{xh}^{(b)} \in \mathbb{R}^{d \times h}, \text{ and } \mathbf{W}_{hh}^{(b)} \in \mathbb{R}^{h \times h}$, e vieses $\mathbf{b}_h^{(f)} \in \mathbb{R}^{1 \times h} \text{ and } \mathbf{b}_h^{(b)} \in \mathbb{R}^{1 \times h}$ são todos os parâmetros do modelo.
 
-Next, we concatenate the forward and backward hidden states $\overrightarrow{\mathbf{H}}_t$ and $\overleftarrow{\mathbf{H}}_t$
-to obtain the hidden state $\mathbf{H}_t \in \mathbb{R}^{n \times 2h}$ to be fed into the output layer.
-In deep bidirectional RNNs with multiple hidden layers,
-such information
-is passed on as *input* to the next bidirectional layer. Last, the output layer computes the output $\mathbf{O}_t \in \mathbb{R}^{n \times q}$ (number of outputs: $q$):
-
 A seguir, concatenamos os estados ocultos para frente e para trás $\overrightarrow{\mathbf{H}}_t$ e $\overleftarrow{\mathbf{H}}_t$
 para obter o estado oculto $\mathbf{H}_t \in \mathbb{R}^{n \times 2h}$ para alimentar a camada de saída.
 Em RNNs bidirecionais profundos com várias camadas ocultas,
@@ -149,26 +143,25 @@ tal informação
 
 $$\mathbf{O}_t = \mathbf{H}_t \mathbf{W}_{hq} + \mathbf{b}_q.$$
 
-Here, the weight matrix $\mathbf{W}_{hq} \in \mathbb{R}^{2h \times q}$ and the bias $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$ are the model parameters of the output layer. In fact, the two directions can have different numbers of hidden units.
+Aqui, a matriz de peso $\mathbf{W}_{hq} \in \mathbb{R}^{2h \times q}$ e o viés $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$ são os parâmetros do modelo da camada de saída. Na verdade, as duas direções podem ter diferentes números de unidades ocultas.
 
-### Computational Cost and Applications
+### Custo computacional e aplicativos
 
-One of the key features of a bidirectional RNN is that information from both ends of the sequence is used to estimate the output. That is, we use information from both future and past observations to predict the current one. 
-In the case of next token prediction this is not quite what we want.
-After all, we do not have the luxury of knowing the next to next token when predicting the next one. Hence, if we were to use a bidirectional RNN naively we would not get a very good accuracy: during training we have past and future data to estimate the present. During test time we only have past data and thus poor accuracy. We will illustrate this in an experiment below.
+Uma das principais características de um RNN bidirecional é que as informações de ambas as extremidades da sequência são usadas para estimar a saída. Ou seja, usamos informações de observações futuras e passadas para prever a atual.
+No caso da previsão do próximo token, isso não é bem o que desejamos.
+Afinal, não podemos nos dar ao luxo de saber o próximo token ao prever o próximo. Portanto, se fôssemos usar um RNN bidirecional ingenuamente, não obteríamos uma precisão muito boa: durante o treinamento, temos dados passados ​​e futuros para estimar o presente. Durante o tempo de teste, temos apenas dados anteriores e, portanto, pouca precisão. Vamos ilustrar isso em um experimento abaixo.
 
-To add insult to injury, bidirectional RNNs are also exceedingly slow.
-The main reasons for this are that 
-the forward propagation
-requires both forward and backward recursions
-in bidirectional layers
-and that the backpropagation is dependent on the outcomes of the forward propagation. Hence, gradients will have a very long dependency chain.
+Para piorar a situação, os RNNs bidirecionais também são excessivamente lentos.
+As principais razões para isso são que
+a propagação para a frente
+requer recursões para frente e para trás
+em camadas bidirecionais
+e que a retropropagação depende dos resultados da propagação direta. Portanto, os gradientes terão uma cadeia de dependência muito longa.
 
-In practice bidirectional layers are used very sparingly and only for a narrow set of applications, such as filling in missing words, annotating tokens (e.g., for named entity recognition), and encoding sequences wholesale as a step in a sequence processing pipeline (e.g., for machine translation).
-In :numref:`sec_bert` and :numref:`sec_sentiment_rnn`,
-we will introduce how to use bidirectional RNNs
-to encode text sequences.
-
+Na prática, as camadas bidirecionais são usadas com muito moderação e apenas para um conjunto estreito de aplicações, como preencher palavras que faltam, tokens de anotação (por exemplo, para reconhecimento de entidade nomeada) e sequências de codificação por atacado como uma etapa em um pipeline de processamento de sequência (por exemplo, para tradução automática).
+Em :numref:`sec_bert` e :numref:`sec_sentiment_rnn`,
+apresentaremos como usar RNNs bidirecionais
+para codificar sequências de texto.
 
 
 ## Training a Bidirectional RNN for a Wrong Application
@@ -244,6 +237,6 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzIzODA1OTgsLTMzMjcxMjIyNywtNT
-M1NDc4NDEzXX0=
+eyJoaXN0b3J5IjpbLTkxMjk3MzY0NSwtMzMyNzEyMjI3LC01Mz
+U0Nzg0MTNdfQ==
 -->
