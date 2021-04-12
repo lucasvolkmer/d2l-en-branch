@@ -42,12 +42,6 @@ nós consideramos resumir
 todas as combinações possíveis de escolhas para $h_1, \ldots, h_T$.
 No caso de qualquer $h_i$ poder assumir valores distintos de $k$ (um número finito de estados), isso significa que precisamos somar mais de $k^T$ termos --- normalmente missão impossível! Felizmente, existe uma solução elegante para isso: *programação dinâmica*.
 
-To see how it works,
-consider summing over latent variables
-$h_1, \ldots, h_T$ in turn.
-According to :eqref:`eq_hmm_jointP`,
-this yields:
-
 Para ver como funciona,
 considere somar as variáveis latentes
 $h_1, \ldots, h_T$ por sua vez.
@@ -66,15 +60,15 @@ $$\begin{aligned}
     =& \sum_{h_T} \pi_T(h_T) P(x_T \mid h_T).
 \end{aligned}$$
 
-In general we have the *forward recursion* as
+Em geral, temos a *recursão direta* como
 
 $$\pi_{t+1}(h_{t+1}) = \sum_{h_t} \pi_t(h_t) P(x_t \mid h_t) P(h_{t+1} \mid h_t).$$
 
-The recursion is initialized as $\pi_1(h_1) = P(h_1)$. In abstract terms this can be written as $\pi_{t+1} = f(\pi_t, x_t)$, where $f$ is some learnable function. This looks very much like the update equation in the latent variable models we discussed so far in the context of RNNs! 
+A recursão é inicializada como $\pi_1(h_1) = P(h_1)$. Em termos abstratos, isso pode ser escrito como $\pi_{t+1} = f(\pi_t, x_t)$, onde $f$ é alguma função aprendível. Isso se parece muito com a equação de atualização nos modelos de variáveis latentes que discutimos até agora no contexto de RNNs!
 
-Entirely analogously to the forward recursion,
-we can also 
-sum over the same set of latent variables with a backward recursion. This yields:
+De forma totalmente análoga à recursão direta,
+nós também podemos
+soma sobre o mesmo conjunto de variáveis latentes com uma recursão para trás. Isso produz:
 
 $$\begin{aligned}
     & P(x_1, \ldots, x_T) \\
@@ -88,8 +82,7 @@ $$\begin{aligned}
     =& \sum_{h_1} P(h_1) P(x_1 \mid h_1)\rho_{1}(h_{1}).
 \end{aligned}$$
 
-
-We can thus write the *backward recursion* as
+Podemos, portanto, escrever a *recursão para trás* como
 
 $$\rho_{t-1}(h_{t-1})= \sum_{h_{t}} P(h_{t} \mid h_{t-1}) P(x_{t} \mid h_{t}) \rho_{t}(h_{t}),$$
 
@@ -247,5 +240,5 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjM0NTg1MiwtNTM1NDc4NDEzXX0=
+eyJoaXN0b3J5IjpbLTM5MTAwMjI2MCwtNTM1NDc4NDEzXX0=
 -->
