@@ -150,9 +150,9 @@ batch_size, num_steps = 32, 35
 train_iter, vocab = d2l.load_data_time_machine(batch_size, num_steps)
 ```
 
-### Initializing Model Parameters
+### Inicializando os parâmetros do modelo
 
-Next we need to define and initialize the model parameters. As previously, the hyperparameter `num_hiddens` defines the number of hidden units. We initialize weights following a Gaussian distribution with 0.01 standard deviation, and we set the biases to 0.
+Em seguida, precisamos definir e inicializar os parâmetros do modelo. Como anteriormente, o hiperparâmetro `num_hiddens` define o número de unidades ocultas. Inicializamos os pesos seguindo uma distribuição gaussiana com desvio padrão de 0,01 e definimos os vieses como 0.
 
 ```{.python .input}
 def get_lstm_params(vocab_size, num_hiddens, device):
@@ -209,9 +209,9 @@ def get_lstm_params(vocab_size, num_hiddens, device):
     return params
 ```
 
-### Defining the Model
+### Definindo o modelo
 
-In the initialization function, the hidden state of the LSTM needs to return an *additional* memory cell with a value of 0 and a shape of (batch size, number of hidden units). Hence we get the following state initialization.
+Na função de inicialização, o estado oculto do LSTM precisa retornar uma célula de memória *adicional* com um valor de 0 e uma forma de (tamanho do lote, número de unidades ocultas). Conseqüentemente, obtemos a seguinte inicialização de estado.
 
 ```{.python .input}
 def init_lstm_state(batch_size, num_hiddens, device):
@@ -226,7 +226,7 @@ def init_lstm_state(batch_size, num_hiddens, device):
             torch.zeros((batch_size, num_hiddens), device=device))
 ```
 
-The actual model is defined just like what we discussed before: providing three gates and an auxiliary memory cell. Note that only the hidden state is passed to the output layer. The memory cell $\mathbf{C}_t$ does not directly participate in the output computation.
+O modelo real é definido exatamente como o que discutimos antes: fornecer três portas e uma célula de memória auxiliar. Observe que apenas o estado oculto é passado para a camada de saída. A célula de memória $\mathbf{C}_t$ não participa diretamente no cálculo de saída.
 
 ```{.python .input}
 def lstm(inputs, state, params):
@@ -265,9 +265,9 @@ def lstm(inputs, state, params):
     return torch.cat(outputs, dim=0), (H, C)
 ```
 
-### Training and Prediction
+### Treinamento e previsão
 
-Let us train an LSTM as same as what we did in :numref:`sec_gru`, by instantiating the `RNNModelScratch` class as introduced in :numref:`sec_rnn_scratch`.
+Vamos treinar um LSTM da mesma forma que fizemos em :numref:`sec_gru`, instanciando a classe `RNNModelScratch` como introduzida em :numref:`sec_rnn_scratch`.
 
 ```{.python .input}
 #@tab all
@@ -278,7 +278,7 @@ model = d2l.RNNModelScratch(len(vocab), num_hiddens, device, get_lstm_params,
 d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 ```
 
-## Concise Implementation
+## Implementação concisa
 
 Using high-level APIs,
 we can directly instantiate an `LSTM` model.
@@ -327,5 +327,5 @@ Later we will encounter alternative models such as transformers that can be used
 [Discussions](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ2NDgxODY4XX0=
+eyJoaXN0b3J5IjpbMTg3MjQzMDQ2OF19
 -->
