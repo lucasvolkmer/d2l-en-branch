@@ -223,18 +223,18 @@ em :numref:`sec_sentiment_rnn`.
 
 ## Exercícios
 
-4. Se as diferentes direções usarem um número diferente de unidades ocultas, como a forma de $\mathbf{H}_t$ mudará?
-5. Projete um RNN bidirecional com várias camadas ocultas.
-6. A polissemia é comum em línguas naturais. Por exemplo, a palavra "banco" tem significados diferentes em contextos “fui ao banco para depositar dinheiro” e “fui ao banco para me sentar”. Como podemos projetar um modelo de rede neural de modo que, dada uma sequência de contexto e uma palavra, uma representação vetorial da palavra no contexto seja retornada? Que tipo de arquitetura neural é preferida para lidar com a polissemia?
-7. 
+1. Se as diferentes direções usarem um número diferente de unidades ocultas, como a forma de $\mathbf{H}_t$ mudará?
+1. Projete um RNN bidirecional com várias camadas ocultas.
+1. A polissemia é comum em línguas naturais. Por exemplo, a palavra "banco" tem significados diferentes em contextos “fui ao banco para depositar dinheiro” e “fui ao banco para me sentar”. Como podemos projetar um modelo de rede neural de modo que, dada uma sequência de contexto e uma palavra, uma representação vetorial da palavra no contexto seja retornada? Que tipo de arquitetura neural é preferida para lidar com a polissemia?
+ 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/339)
+[Discussão](https://discuss.d2l.ai/t/339)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1059)
+[Discussão](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODA1NzIzNjMsLTMzMjcxMjIyNywtNT
-M1NDc4NDEzXX0=
+eyJoaXN0b3J5IjpbLTcxMzMyMDA5NCwtMzMyNzEyMjI3LC01Mz
+U0Nzg0MTNdfQ==
 -->
