@@ -325,10 +325,10 @@ class NWKernelRegression(nn.Module):
 
 ### Treinamento
 
-In the following, we transform the training dataset
-to keys and values to train the attention model.
-In the parametric attention pooling,
-any training input takes key-value pairs from all the training examples except for itself to predict its output.
+A seguir, transformamos o conjunto de dados de treinamento
+às chaves e valores para treinar o modelo de atenção.
+No agrupamento paramétrico de atenção,
+qualquer entrada de treinamento pega pares de valores-chave de todos os exemplos de treinamento, exceto ela mesma, para prever sua saída.
 
 ```{.python .input}
 # Shape of `X_tile`: (`n_train`, `n_train`), where each column contains the
@@ -466,6 +466,6 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzAzNTA5ODUsMTcxMzY3NTY3NiwtNT
+eyJoaXN0b3J5IjpbLTEyMDU2MzgyNjcsMTcxMzY3NTY3NiwtNT
 IwMDgwODk0LC00NjE1NDQ5MTksOTYxMzY5NDE1XX0=
 -->
