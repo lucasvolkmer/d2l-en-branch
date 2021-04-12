@@ -1,25 +1,6 @@
 # Gated Recurrent Units (GRU)
 :label:`sec_gru`
 
-* We might encounter a situation where an early observation is highly
-  significant for predicting all future observations. Consider the somewhat
-  contrived case where the first observation contains a checksum and the goal is
-  to discern whether the checksum is correct at the end of the sequence. In this
-  case, the influence of the first token is vital. We would like to have some
-  mechanisms for storing vital early information in a *memory cell*. Without such
-  a mechanism, we will have to assign a very large gradient to this observation,
-  since it affects all the subsequent observations.
-* We might encounter situations where some tokens carry no pertinent
-  observation. For instance, when parsing a web page there might be auxiliary
-  HTML code that is irrelevant for the purpose of assessing the sentiment
-  conveyed on the page. We would like to have some mechanism for *skipping* such
-  tokens in the latent state representation.
-* We might encounter situations where there is a logical break between parts of
-  a sequence. For instance, there might be a transition between chapters in a
-  book, or a transition between a bear and a bull market for securities. In
-  this case it would be nice to have a means of *resetting* our internal state
-  representation.
-
 Em :numref:`sec_bptt`,
 discutimos como os gradientes são calculados
 em RNNs.
@@ -56,18 +37,6 @@ Por sua simplicidade, comecemos com o GRU.
 
 ## Estado Oculto Fechado
 
-The key distinction between vanilla RNNs and GRUs
-is that the latter support gating of the hidden state.
-This means that we have dedicated mechanisms for
-when a hidden state should be *updated* and
-also when it should be *reset*.
-These mechanisms are learned and they address the concerns listed above.
-For instance, if the first token is of great importance
-we will learn not to update the hidden state after the first observation.
-Likewise, we will learn to skip irrelevant temporary observations.
-Last, we will learn to reset the latent state whenever needed.
-We discuss this in detail below.
-
 A principal distinção entre RNNs vanilla e GRUs
 é que o último suporta o bloqueio do estado oculto.
 Isso significa que temos mecanismos dedicados para
@@ -82,30 +51,13 @@ Discutimos isso em detalhes abaixo.
 
 ### Reset Gate and Update Gate
 
-The first thing we need to introduce are
-the *reset gate* and the *update gate*.
-We engineer them to be vectors with entries in $(0, 1)$
-such that we can perform convex combinations.
-For instance,
-a reset gate would allow us to control how much of the previous state we might still want to remember.
-Likewise, an update gate would allow us to control how much of the new state is just a copy of the old state.
-
 A primeira coisa que precisamos apresentar é
-a * porta de reinicialização * e a * porta de atualização *.
-Nós os projetamos para serem vetores com entradas em $ (0, 1) $
+a *porta de reinicialização* e a *porta de atualização*.
+Nós os projetamos para serem vetores com entradas em $(0, 1)$
 para que possamos realizar combinações convexas.
 Por exemplo,
 uma porta de reinicialização nos permitiria controlar quanto do estado anterior ainda podemos querer lembrar.
 Da mesma forma, uma porta de atualização nos permitiria controlar quanto do novo estado é apenas uma cópia do antigo estado.
-
-We begin by engineering these gates.
-:numref:`fig_gru_1` illustrates the inputs for both
-the reset and update gates in a GRU, given the input
-of the current time step
-and the hidden state of the previous time step.
-The outputs of two gates
-are given by two fully-connected layers
-with a sigmoid activation function.
 
 Começamos projetando esses portões.
 :numref:`fig_gru_1` ilustra as entradas para ambos
@@ -118,12 +70,6 @@ com uma função de ativação sigmóide.
 
 ![Calculando a porta de reinicialização e a porta de atualização em um modelo GRU.](../img/gru-1.svg)
 :label:`fig_gru_1`
-
-Mathematically,
-for a given time step $t$,
-suppose that the input is
-a minibatch
-$\mathbf{X}_t \in \mathbb{R}^{n \times d}$ (number of examples: $n$, number of inputs: $d$) and the hidden state of the previous time step is $\mathbf{H}_{t-1} \in \mathbb{R}^{n \times h}$ (number of hidden units: $h$). Then, the reset gate $\mathbf{R}_t \in \mathbb{R}^{n \times h}$ and update gate $\mathbf{Z}_t \in \mathbb{R}^{n \times h}$ are computed as follows:
 
 Matematicamente,
 para um determinado intervalo de tempo $ t $,
@@ -483,6 +429,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDc5OTcwNyw4NDU0NDY4MTEsLTc3NT
-E4NDMyMF19
+eyJoaXN0b3J5IjpbMTQzMDQ2ODE0LC0yMDA3OTk3MDcsODQ1ND
+Q2ODExLC03NzUxODQzMjBdfQ==
 -->
