@@ -8,23 +8,23 @@ até agora, assumimos que nosso objetivo é modelar a próxima saída, dado o qu
 * Eu estou `___` faminto.
 * Eu estou `___` faminto, e poderia comer meio porco.
 
-Depending on the amount of information available, we might fill in the blanks with very different words such as "happy", "not", and "very".
-Clearly the end of the phrase (if available) conveys significant information about which word to pick.
-A sequence model that is incapable of taking advantage of this will perform poorly on related tasks.
-For instance, to do well in named entity recognition (e.g., to recognize whether "Green" refers to "Mr. Green" or to the color)
-longer-range context is equally vital.
-To get some inspiration for addressing the problem let us take a detour to probabilistic graphical models.
+Dependendo da quantidade de informações disponíveis, podemos preencher os espaços em branco com palavras muito diferentes, como "feliz", "não" e "muito".
+Claramente, o final da frase (se disponível) transmite informações significativas sobre qual palavra escolher.
+Um modelo de sequência que é incapaz de tirar vantagem disso terá um desempenho ruim em tarefas relacionadas.
+Por exemplo, para se sair bem no reconhecimento de entidade nomeada (por exemplo, para reconhecer se "Verde" se refere a "Sr. Verde" ou à cor)
+contexto de longo alcance é igualmente vital.
+Para obter alguma inspiração para abordar o problema, façamos um desvio para modelos gráficos probabilísticos.
 
 
-## Dynamic Programming in Hidden Markov Models
+## Programação dinâmica em modelos de Markov ocultos
 
-This subsection serves to illustrate the dynamic programming problem. The specific technical details do not matter for understanding the deep learning models
-but they help in motivating why one might use deep learning and why one might pick specific architectures.
+Esta subseção serve para ilustrar o problema de programação dinâmica. Os detalhes técnicos específicos não importam para a compreensão dos modelos de aprendizagem profunda
+mas ajudam a motivar por que se pode usar o aprendizado profundo e por que se pode escolher arquiteturas específicas.
 
-If we want to solve the problem using probabilistic graphical models we could for instance design a latent variable model as follows.
-At any time step $t$,
-we assume that there exists some latent variable $h_t$ that governs our observed emission $x_t$ via $P(x_t \mid h_t)$.
-Moreover, any transition $h_t \to h_{t+1}$ is given by some state transition probability $P(h_{t+1} \mid h_{t})$. This probabilistic graphical model is then a *hidden Markov model*  as in :numref:`fig_hmm`.
+Se quisermos resolver o problema usando modelos gráficos probabilísticos, poderíamos, por exemplo, projetar um modelo de variável latente como segue.
+A qualquer momento, passo $t$,
+assumimos que existe alguma variável latente $h_t$ que governa nossa emissão observada $x_t$ via $P(x_t \mid h_t)$.
+Além disso, qualquer transição $h_t \to h_{t+1}$ é dada por alguma probabilidade de transição de estado $P(h_{t+1} \mid h_{t})$. Este modelo gráfico probabilístico é então um *modelo Markov oculto* como em :numref: =`fig_hmm`.
 
 ![A hidden Markov model.](../img/hmm.svg)
 :label:`fig_hmm`
@@ -242,5 +242,5 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMzM2ODA2XX0=
+eyJoaXN0b3J5IjpbMTE1NzIxMDgyOF19
 -->
