@@ -80,28 +80,28 @@ import torch
 from torch import nn
 ```
 
-## Operação *Masked Softmax*
+## Operação *Softmax* Masca
 
-As we just mentioned,
-a softmax operation is used to
-output a probability distribution as attention weights.
-In some cases,
-not all the values should be fed into attention pooling.
-For instance,
-for efficient minibatch processing in :numref:`sec_machine_translation`,
-some text sequences are padded with
-special tokens that do not carry meaning.
-To get an attention pooling
-over
-only meaningful tokens as values,
-we can specify a valid sequence length (in number of tokens)
-to filter out those beyond this specified range
-when computing softmax.
-In this way,
-we can implement such a *masked softmax operation*
-in the following `masked_softmax` function,
-where any value beyond the valid length
-is masked as zero.
+Como acabamos de mencionar,
+uma operação softmax é usada para
+produzir uma distribuição de probabilidade como pesos de atenção.
+Em alguns casos,
+nem todos os valores devem ser incluídos no agrupamento de atenção.
+Por exemplo,
+para processamento eficiente de minibatch em :numref:`sec_machine_translation`,
+algumas sequências de texto são preenchidas com
+tokens especiais que não possuem significado.
+Para obter um *pooling* de atenção
+sobre
+apenas tokens significativos como valores,
+podemos especificar um comprimento de sequência válido (em número de tokens)
+para filtrar aqueles que estão além deste intervalo especificado
+ao calcular softmax.
+Desta maneira,
+podemos implementar tal *operação de softmax mascarada*
+na seguinte função `masked_softmax`,
+onde qualquer valor além do comprimento válido
+é mascarado como zero.
 
 ```{.python .input}
 #@save
@@ -447,5 +447,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzM2ODkxMiwtNzI5Mjk0MDYwXX0=
+eyJoaXN0b3J5IjpbMTI3OTc4OTAxNiwtNzI5Mjk0MDYwXX0=
 -->
