@@ -413,9 +413,9 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 
 ## Exercícios
 
-1. Modify keys in the toy example and visualize attention weights. Do additive attention and scaled dot-product attention still output the same attention weights? Why or why not?
-1. Using matrix multiplications only, can you design a new scoring function for queries and keys with different vector lengths?
-1. When queries and keys have the same vector length, is vector summation a better design than dot product for the scoring function? Why or why not?
+1. Modifique as chaves no exemplo do brinquedo e visualize o peso da atenção. A atenção aditiva e a atenção de produto escalar em escala ainda geram os mesmos pesos de atenção? Por que ou por que não?
+1. Usando apenas multiplicações de matrizes, você pode projetar uma nova função de pontuação para consultas e chaves com diferentes comprimentos de vetor?
+1. Quando as consultas e as chaves têm o mesmo comprimento de vetor, a soma de vetores é um design melhor do que o produto escalar para a função de pontuação? Por que ou por que não?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/346)
@@ -425,5 +425,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMjE3NTU1NSwtNzI5Mjk0MDYwXX0=
+eyJoaXN0b3J5IjpbLTE1NzE4Mjc0MjgsLTcyOTI5NDA2MF19
 -->
