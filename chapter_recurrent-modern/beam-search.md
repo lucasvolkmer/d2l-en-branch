@@ -89,33 +89,6 @@ A probabilidade condicional desta sequência de saída é $0.5\times0.4\times0.4
 ![Os quatro números em cada etapa de tempo representam as probabilidades condicionais de gerar "A", "B", "C" e "&lt;eos&gt;" nessa etapa de tempo. Na etapa de tempo 2, o token "C", que tem a segunda maior probabilidade condicional, é selecionado.](../img/s2s-prob2.svg)
 :label:`fig_s2s-prob2`
 
-
-Next, let us look at another example 
-in :numref:`fig_s2s-prob2`. 
-Unlike in :numref:`fig_s2s-prob1`, 
-at time step 2
-we select the token "C"
-in :numref:`fig_s2s-prob2`, 
-which has the *second* highest conditional probability.
-Since the output subsequences at time steps 1 and 2, 
-on which time step 3 is based, 
-have changed from "A" and "B" in :numref:`fig_s2s-prob1` to "A" and "C" in :numref:`fig_s2s-prob2`, 
-the conditional probability of each token 
-at time step 3 has also changed in :numref:`fig_s2s-prob2`. 
-Suppose that we choose the token "B" at time step 3. 
-Now time step 4 is conditional on
-the output subsequence at the first three time steps
-"A", "C", and "B", 
-which is different from "A", "B", and "C" in :numref:`fig_s2s-prob1`. 
-Therefore, the conditional probability of generating each token at time step 4 in :numref:`fig_s2s-prob2` is also different from that in :numref:`fig_s2s-prob1`. 
-As a result, 
-the conditional probability of the output sequence "A", "C", "B", and "&lt;eos&gt;" 
-in :numref:`fig_s2s-prob2`
-is $0.5\times0.3 \times0.6\times0.6=0.054$, 
-which is greater than that of greedy search in :numref:`fig_s2s-prob1`. 
-In this example, 
-the output sequence "A", "B", "C", and "&lt;eos&gt;" obtained by the greedy search is not an optimal sequence.
-
 A seguir, vejamos outro exemplo
 in :numref:`fig_s2s-prob2`.
 Ao contrário de :numref:`fig_s2s-prob1`,
@@ -132,22 +105,27 @@ Suponha que escolhemos o token "B" na etapa de tempo 3.
 Agora, a etapa 4 está condicionada a
 a subseqüência de saída nas três primeiras etapas de tempo
 "A", "C" e "B",
-que é diferente de "A", "B" e "C" em: numref: `fig_s2s-prob1`.
-Portanto, a probabilidade condicional de gerar cada token na etapa de tempo 4 em: numref: `fig_s2s-prob2` também é diferente daquela em: numref:` fig_s2s-prob1`.
+que é diferente de "A", "B" e "C" em :numref:`fig_s2s-prob1`.
+Portanto, a probabilidade condicional de gerar cada token na etapa de tempo 4 em :numref:`fig_s2s-prob2` também é diferente daquela em :numref:`fig_s2s-prob1`.
 Como resultado,
-a probabilidade condicional da sequência de saída "A", "C", "B" e "& lt; eos & gt;"
-in: numref: `fig_s2s-prob2`
-é $ 0,5 \ times0,3 \ times0,6 \ times0,6 = 0,054 $,
-que é maior do que a busca gananciosa em: numref: `fig_s2s-prob1`.
+a probabilidade condicional da sequência de saída "A", "C", "B" e "&lt;eos&gt;"
+in :numref:`fig_s2s-prob2`
+é $0.5\times0.3 \times0.6\times0.6=0.054$, 
+que é maior do que a busca gananciosa em :numref:`fig_s2s-prob1`.
 Neste exemplo,
-a sequência de saída "A", "B", "C" e "& lt; eos & gt;" obtida pela busca gananciosa não é uma sequência ótima.
+a sequência de saída "A", "B", "C" e "&lt;eos&gt;" obtida pela busca gananciosa não é uma sequência ótima.
 
-## Exhaustive Search
+## Busca Exaustiva 
 
 If the goal is to obtain the optimal sequence, we may consider using *exhaustive search*: 
 exhaustively enumerate all the possible output sequences with their conditional probabilities,
 then output the one 
 with the highest conditional probability.
+
+Se o objetivo é obter a sequência ideal, podemos considerar o uso de *pesquisa exaustiva*:
+enumerar exaustivamente todas as sequências de saída possíveis com suas probabilidades condicionais,
+em seguida, envie o um
+com a probabilidade condicional mais alta.
 
 Although we can use exhaustive search to obtain the optimal sequence, 
 its computational cost $\mathcal{O}(\left|\mathcal{Y}\right|^{T'})$ is likely to be excessively high. 
@@ -247,5 +225,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzY1MDE5MTBdfQ==
+eyJoaXN0b3J5IjpbODg1NDA5NDYzXX0=
 -->
