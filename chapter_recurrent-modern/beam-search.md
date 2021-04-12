@@ -86,7 +86,7 @@ Portanto, a sequência de saída "A", "B", "C" e "&lt;eos&gt;" será previsto
 in :numref:`fig_s2s-prob1`.
 A probabilidade condicional desta sequência de saída é $0.5\times0.4\times0.4\times0.6 = 0.048$.
 
-![The four numbers under each time step represent the conditional probabilities of generating "A", "B", "C", and "&lt;eos&gt;" at that time step.  At time step 2, the token "C", which has the second highest conditional probability, is selected.](../img/s2s-prob2.svg)
+![Os quatro números em cada etapa de tempo representam as probabilidades condicionais de gerar "A", "B", "C" e "&lt;eos&gt;" nessa etapa de tempo. Na etapa de tempo 2, o token "C", que tem a segunda maior probabilidade condicional, é selecionado.](../img/s2s-prob2.svg)
 :label:`fig_s2s-prob2`
 
 
@@ -115,6 +115,32 @@ is $0.5\times0.3 \times0.6\times0.6=0.054$,
 which is greater than that of greedy search in :numref:`fig_s2s-prob1`. 
 In this example, 
 the output sequence "A", "B", "C", and "&lt;eos&gt;" obtained by the greedy search is not an optimal sequence.
+
+A seguir, vejamos outro exemplo
+in :numref:`fig_s2s-prob2`.
+Ao contrário de :numref:`fig_s2s-prob1`,
+no passo de tempo 2
+selecionamos o token "C"
+in :numref:`fig_s2s-prob2`,
+que tem a *segunda* probabilidade condicional mais alta.
+Uma vez que as subseqüências de saída nas etapas de tempo 1 e 2,
+em que a etapa de tempo 3 se baseia,
+mudaram de "A" e "B" em :numref:`fig_s2s-prob1` para"A" e "C" em :numref:`fig_s2s-prob2`,
+a probabilidade condicional de cada token
+na etapa 3 também mudou em :numref:`fig_s2s-prob2`.
+Suponha que escolhemos o token "B" na etapa de tempo 3.
+Agora, a etapa 4 está condicionada a
+a subseqüência de saída nas três primeiras etapas de tempo
+"A", "C" e "B",
+que é diferente de "A", "B" e "C" em: numref: `fig_s2s-prob1`.
+Portanto, a probabilidade condicional de gerar cada token na etapa de tempo 4 em: numref: `fig_s2s-prob2` também é diferente daquela em: numref:` fig_s2s-prob1`.
+Como resultado,
+a probabilidade condicional da sequência de saída "A", "C", "B" e "& lt; eos & gt;"
+in: numref: `fig_s2s-prob2`
+é $ 0,5 \ times0,3 \ times0,6 \ times0,6 = 0,054 $,
+que é maior do que a busca gananciosa em: numref: `fig_s2s-prob1`.
+Neste exemplo,
+a sequência de saída "A", "B", "C" e "& lt; eos & gt;" obtida pela busca gananciosa não é uma sequência ótima.
 
 ## Exhaustive Search
 
@@ -221,5 +247,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNTc3MDI5M119
+eyJoaXN0b3J5IjpbLTE3NzY1MDE5MTBdfQ==
 -->
