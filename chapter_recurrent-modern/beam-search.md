@@ -117,25 +117,18 @@ a sequência de saída "A", "B", "C" e "&lt;eos&gt;" obtida pela busca ganancios
 
 ## Busca Exaustiva 
 
-If the goal is to obtain the optimal sequence, we may consider using *exhaustive search*: 
-exhaustively enumerate all the possible output sequences with their conditional probabilities,
-then output the one 
-with the highest conditional probability.
-
 Se o objetivo é obter a sequência ideal, podemos considerar o uso de *pesquisa exaustiva*:
 enumerar exaustivamente todas as sequências de saída possíveis com suas probabilidades condicionais,
 em seguida, envie o um
-com a probabilidade condicional mais alta.
-
-Although we can use exhaustive search to obtain the optimal sequence, 
-its computational cost $\mathcal{O}(\left|\mathcal{Y}\right|^{T'})$ is likely to be excessively high. 
-For example, when $|\mathcal{Y}|=10000$ and $T'=10$, we will need to evaluate $10000^{10} = 10^{40}$ sequences. This is next to impossible!
-On the other hand,
-the computational cost of greedy search is 
+com a probabilidade condicional mais alta.7
+Embora possamos usar uma pesquisa exaustiva para obter a sequência ideal,
+seu custo computacional $\mathcal{O}(\left|\mathcal{Y}\right|^{T'})$ é provavelmente excessivamente alto.
+Por exemplo, quando $|\mathcal{Y}|=10000$ e $T'=10$, precisaremos avaliar $10000^{10} = 10^{40}$ sequências. Isso é quase impossível!
+Por outro lado,
+o custo computacional da busca gananciosa é
 $\mathcal{O}(\left|\mathcal{Y}\right|T')$: 
-it is usually significantly smaller than
-that of exhaustive search. For example, when $|\mathcal{Y}|=10000$ and $T'=10$, we only need to evaluate $10000\times10=10^5$ sequences.
-
+geralmente é significativamente menor do que
+o da pesquisa exaustiva. Por exemplo, quando $|\mathcal{Y}|=10000$ e$T'=10$, só precisamos avaliar $10000\times10=10^5$ sequências.
 
 ## Beam Search
 
@@ -225,5 +218,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg1NDA5NDYzXX0=
+eyJoaXN0b3J5IjpbMTI3OTEzNDcxOV19
 -->
