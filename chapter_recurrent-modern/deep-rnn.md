@@ -151,3 +151,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1058)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTU5MjIxMTU1OV19
+-->
