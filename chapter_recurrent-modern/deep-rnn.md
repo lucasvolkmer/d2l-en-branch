@@ -2,24 +2,22 @@
 
 :label:`sec_deep_rnn`
 
-Up to now, we only discussed RNNs with a single unidirectional hidden layer.
-In it the specific functional form of how latent variables and observations interact is rather arbitrary.
-This is not a big problem as long as we have enough flexibility to model different types of interactions.
-With a single layer, however, this can be quite challenging.
-In the case of the linear models,
-we fixed this problem by adding more layers.
-Within RNNs this is a bit trickier, since we first need to decide how and where to add extra nonlinearity.
+Até agora, discutimos apenas RNNs com uma única camada oculta unidirecional.
+Nele, a forma funcional específica de como as variáveis latentes e as observações interagem é bastante arbitrária.
+Este não é um grande problema, desde que tenhamos flexibilidade suficiente para modelar diferentes tipos de interações.
+Com uma única camada, no entanto, isso pode ser bastante desafiador.
+No caso dos modelos lineares,
+corrigimos esse problema adicionando mais camadas.
+Em RNNs, isso é um pouco mais complicado, pois primeiro precisamos decidir como e onde adicionar não linearidade extra.
 
-In fact,
-we could stack multiple layers of RNNs on top of each other. This results in a flexible mechanism,
-due to the combination of several simple layers. In particular, data might be relevant at different levels of the stack. For instance, we might want to keep high-level data about financial market conditions (bear or bull market) available, whereas at a lower level we only record shorter-term temporal dynamics.
+Na verdade,
+poderíamos empilhar várias camadas de RNNs umas sobre as outras. Isso resulta em um mecanismo flexível,
+devido à combinação de várias camadas simples. Em particular, os dados podem ser relevantes em diferentes níveis da pilha. Por exemplo, podemos querer manter disponíveis dados de alto nível sobre as condições do mercado financeiro (bear ou bull market), ao passo que em um nível mais baixo registramos apenas dinâmicas temporais de curto prazo.
 
-
-Beyond all the above abstract discussion 
-it is probably easiest to understand the family of models we are interested in by reviewing :numref:`fig_deep_rnn`. It describes a deep RNN with $L$ hidden layers.
-Each hidden state is continuously passed to both the next time step of the current layer and the current time step of the next layer.
-
-![Architecture of a deep RNN.](../img/deep-rnn.svg)
+Além de toda a discussão abstrata acima
+provavelmente é mais fácil entender a família de modelos em que estamos interessados revisando :numref:`fig_deep_rnn`. Ele descreve um RNN profundo com $L$ camadas ocultas.
+Cada estado oculto é continuamente passado para a próxima etapa da camada atual e para a etapa atual da próxima camada.
+![Arquitetura de RNN .](../img/deep-rnn.svg)
 :label:`fig_deep_rnn`
 
 ## Functional Dependencies
@@ -152,5 +150,5 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1058)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MjIxMTU1OV19
+eyJoaXN0b3J5IjpbMTk4NjMxMTQ1NF19
 -->
