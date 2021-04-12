@@ -157,16 +157,17 @@ Conectando o kernel gaussiano em
 $$\begin{aligned} f(x) &=\sum_{i=1}^n \alpha(x, x_i) y_i\\ &= \sum_{i=1}^n \frac{\exp\left(-\frac{1}{2}(x - x_i)^2\right)}{\sum_{j=1}^n \exp\left(-\frac{1}{2}(x - x_j)^2\right)} y_i \\&= \sum_{i=1}^n \mathrm{softmax}\left(-\frac{1}{2}(x - x_i)^2\right) y_i. \end{aligned}$$
 :eqlabel:`eq_nadaraya-waston-gaussian`
 
-In :eqref:`eq_nadaraya-waston-gaussian`,
-a key $x_i$ that is closer to the given query $x$ will get
-*more attention* via a *larger attention weight* assigned to the key's corresponding value $y_i$.
 
-Notably, Nadaraya-Watson kernel regression is a nonparametric model;
-thus :eqref:`eq_nadaraya-waston-gaussian`
-is an example of *nonparametric attention pooling*.
-In the following, we plot the prediction based on this
-nonparametric attention model.
-The predicted line is smooth and closer to the ground-truth than that produced by average pooling.
+In :eqref:`eq_nadaraya-waston-gaussian`,
+uma chave $x_i$ que está mais próxima da consulta dada $x$ obterá
+*mais atenção * por meio de um *peso de atenção maior* atribuído ao valor correspondente da chave $y_i$.
+
+Notavelmente, a regressão do kernel Nadaraya-Watson é um modelo não paramétrico;
+assim :eqref:`eq_nadaraya-waston-gaussian`
+é um exemplo de *agrupamento de atenção não paramétrica*.
+A seguir, traçamos a previsão com base neste
+modelo de atenção não paramétrica.
+A linha prevista é suave e mais próxima da verdade fundamental do que a produzida pelo agrupamento médio.
 
 ```{.python .input}
 # Shape of `X_repeat`: (`n_test`, `n_train`), where each row contains the
@@ -197,11 +198,11 @@ y_hat = d2l.matmul(attention_weights, y_train)
 plot_kernel_reg(y_hat)
 ```
 
-Now let us take a look at the attention weights.
-Here testing inputs are queries while training inputs are keys.
-Since both inputs are sorted,
-we can see that the closer the query-key pair is,
-the higher attention weight is in the attention pooling.
+Agora, vamos dar uma olhada nos pesos de atenção.
+Aqui, as entradas de teste são consultas, enquanto as entradas de treinamento são essenciais.
+Uma vez que ambas as entradas são classificadas,
+podemos ver que quanto mais próximo o par de chave de consulta está,
+o maior peso de atenção está no *pooling* de atenção.
 
 ```{.python .input}
 d2l.show_heatmaps(np.expand_dims(np.expand_dims(attention_weights, 0), 0),
@@ -467,5 +468,6 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MTU0NDkxOSw5NjEzNjk0MTVdfQ==
+eyJoaXN0b3J5IjpbLTUyMDA4MDg5NCwtNDYxNTQ0OTE5LDk2MT
+M2OTQxNV19
 -->
