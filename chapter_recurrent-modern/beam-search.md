@@ -159,23 +159,22 @@ de $k\left|\mathcal{Y}\right|$ escolhas possíveis.
 ![ O processo de busca do feixe (tamanho do feixe: 2, comprimento máximo de uma sequência de saída: 3). As sequências de saída candidatas são $A$, $C$, $AB$, $CE$, $ABD$, e$CED$.](../img/beam-search.svg)
 :label:`fig_beam-search`
 
-
-:numref:`fig_beam-search` demonstrates the 
-process of beam search with an example. 
-Suppose that the output vocabulary
-contains only five elements: 
+: numref: `fig_beam-search` demonstra o
+processo de pesquisa de feixe com um exemplo.
+Suponha que o vocabulário de saída
+contém apenas cinco elementos:
 $\mathcal{Y} = \{A, B, C, D, E\}$, 
-where one of them is “&lt;eos&gt;”. 
-Let the beam size be 2 and 
-the maximum length of an output sequence be 3. 
-At time step 1, 
-suppose that the tokens with the highest conditional probabilities $P(y_1 \mid \mathbf{c})$ are $A$ and $C$. At time step 2, for all $y_2 \in \mathcal{Y},$ we compute 
+onde um deles é “&lt;eos&gt;”. 
+Deixe o tamanho do feixe ser 2 e
+o comprimento máximo de uma sequência de saída é 3.
+Na etapa de tempo 1,
+suponha que os tokens com as probabilidades condicionais mais altas $P(y_1 \mid \mathbf{c})$ sejam $A$ e $C$ No passo de tempo 2, para todos os $y_2 \in \mathcal{Y},$ calculamos
 
 $$\begin{aligned}P(A, y_2 \mid \mathbf{c}) = P(A \mid \mathbf{c})P(y_2 \mid A, \mathbf{c}),\\ P(C, y_2 \mid \mathbf{c}) = P(C \mid \mathbf{c})P(y_2 \mid C, \mathbf{c}),\end{aligned}$$  
 
-and pick the largest two among these ten values, say
-$P(A, B \mid \mathbf{c})$ and $P(C, E \mid \mathbf{c})$.
-Then at time step 3, for all $y_3 \in \mathcal{Y}$, we compute 
+e escolha os dois maiores entre esses dez valores, digamos
+$P(A, B \mid \mathbf{c})$ e$P(C, E \mid \mathbf{c})$.
+Depois para o passo de d $y_3 \in \mathcal{Y}$, we compute 
 
 $$\begin{aligned}P(A, B, y_3 \mid \mathbf{c}) = P(A, B \mid \mathbf{c})P(y_3 \mid A, B, \mathbf{c}),\\P(C, E, y_3 \mid \mathbf{c}) = P(C, E \mid \mathbf{c})P(y_3 \mid C, E, \mathbf{c}),\end{aligned}$$ 
 
@@ -219,5 +218,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUyMDc2NDc5XX0=
+eyJoaXN0b3J5IjpbNjYyODIwNjI3LDI1MjA3NjQ3OV19
 -->
