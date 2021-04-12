@@ -16,35 +16,6 @@ e explorando problemas com isso,
 em seguida, compare essa estratégia com outras alternativeas:
 * pesquisa exhaustive search* and *beam searcha* e *pesquisa por feixe*.
 
-Before a formal introduction to greedy search,
-let us formalize the search problem
-using
-the same mathematical notation from :numref:`sec_seq2seq`.
-At any time step $t'$, 
-the probability of the decoder output $y_{t'}$ 
-is conditional 
-on the output subsequence
-$y_1, \ldots, y_{t'-1}$ before $t'$ and 
-the context variable $\mathbf{c}$ that
-encodes the information of the input sequence.
-To quantify computational cost,
-denote by 
-$\mathcal{Y}$ (it contains "&lt;eos&gt;")
-the output vocabulary.
-So the cardinality $\left|\mathcal{Y}\right|$ of this vocabulary set
-is the vocabulary size.
-Let us also specify the maximum number of tokens
-of an output sequence as $T'$.
-As a result,
-our goal is to search for an ideal output
-from all the 
-$\mathcal{O}(\left|\mathcal{Y}\right|^{T'})$
-possible output sequences.
-Of course, 
-for all these output sequences,
-portions including and after "&lt;eos&gt;" will be discarded
-in the actual output.
-
 Antes de uma introdução formal à busca gananciosa,
 vamos formalizar o problema de pesquisa
 usando
@@ -53,28 +24,28 @@ A qualquer momento, passo $t'$,
 a probabilidade de saída do decodificador $y_{t '}$
 é condicional
 na subseqüência de saída
-$ y_1, \ ldots, y_ {t'-1} $ antes de $ t '$ e
-a variável de contexto $ \ mathbf {c} $ que
+$y_1, \ldots, y_{t'-1}$ antes de $t'$ e
+a variável de contexto $\mathbf{c}$ que
 codifica as informações da sequência de entrada.
 Para quantificar o custo computacional,
 denotar por
-$ \ mathcal {Y} $ (contém "& lt; eos & gt;")
+$\mathcal{Y}$ (contém "&lt;eos&gt;")
 o vocabulário de saída.
-Portanto, a cardinalidade $ \ left | \ mathcal {Y} \ right | $ deste conjunto de vocabulário
+Portanto, a cardinalidade $\left|\mathcal{Y}\right|$ deste conjunto de vocabulário
 é o tamanho do vocabulário.
 Vamos também especificar o número máximo de tokens
-de uma sequência de saída como $ T '$.
+de uma sequência de saída como $T'$.
 Como resultado,
 nosso objetivo é procurar um resultado ideal
 de todo o
-$ \ mathcal {O} (\ left | \ mathcal {Y} \ right | ^ {T '}) $
+$\mathcal{O}(\left|\mathcal{Y}\right|^{T'})$
 possíveis sequências de saída.
 Claro,
 para todas essas sequências de saída,
 porções incluindo e após "& lt; eos & gt;" será descartado
 na saída real.
 
-## Greedy Search
+## Busca Gulosa
 
 First, let us take a look at 
 a simple strategy: *greedy search*.
@@ -83,6 +54,14 @@ In greedy search,
 at any time step $t'$ of the output sequence, 
 we search for the token 
 with the highest conditional probability from $\mathcal{Y}$, i.e., 
+
+Primeiro, vamos dar uma olhada em
+uma estratégia simples: * busca gananciosa *.
+Esta estratégia foi usada para prever sequências em: numref: `sec_seq2seq`.
+Em busca gananciosa,
+a qualquer momento, etapa $ t '$ da sequência de saída,
+nós procuramos pelo token
+com a maior probabilidade condicional de $ \ mathcal {Y} $, ou seja,
 
 $$y_{t'} = \operatorname*{argmax}_{y \in \mathcal{Y}} P(y \mid y_1, \ldots, y_{t'-1}, \mathbf{c}),$$
 
@@ -250,5 +229,5 @@ accuracy versus computational cost.
 
 [Discussions](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzkwNjI4NDNdfQ==
+eyJoaXN0b3J5IjpbODE5MTgwMzEwXX0=
 -->
