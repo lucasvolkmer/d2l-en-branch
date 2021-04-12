@@ -217,7 +217,7 @@ d2l.show_heatmaps(attention_weights.unsqueeze(0).unsqueeze(0),
                   ylabel='Sorted testing inputs')
 ```
 
-## Parametric Attention Pooling
+## *Pooling* de Atenção Paramétrica
 
 Nonparametric Nadaraya-Watson kernel regression
 enjoys the *consistency* benefit:
@@ -468,6 +468,6 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMDA4MDg5NCwtNDYxNTQ0OTE5LDk2MT
-M2OTQxNV19
+eyJoaXN0b3J5IjpbLTc3NDU3MDg5LC01MjAwODA4OTQsLTQ2MT
+U0NDkxOSw5NjEzNjk0MTVdfQ==
 -->
