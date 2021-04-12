@@ -288,13 +288,7 @@ def gru(inputs, state, params):
 
 ### Treinamento e previsão
 
-Training and prediction work in exactly the same manner as in :numref:`sec_rnn_scratch`.
-After training,
-we print out the perplexity on the training set
-and the predicted sequence following
-the provided prefixes "time traveller" and "traveller", respectively.
-
-O treinamento e a previsão funcionam exatamente da mesma maneira que em: numref: `sec_rnn_scratch`.
+O treinamento e a previsão funcionam exatamente da mesma maneira que em :numref:`sec_rnn_scratch`.
 Após o treinamento,
 imprimimos a perplexidade no conjunto de treinamento
 e a sequência prevista seguindo
@@ -309,13 +303,7 @@ model = d2l.RNNModelScratch(len(vocab), num_hiddens, device, get_params,
 d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 ```
 
-## Concise Implementation Implementação concisa
-
-In high-level APIs,
-we can directly
-instantiate a GPU model.
-This encapsulates all the configuration detail that we made explicit above.
-The code is significantly faster as it uses compiled operators rather than Python for many details that we spelled out before.
+## Implementação concisa
 
 Em APIs de alto nível,
 nós podemos diretamente
@@ -340,11 +328,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 
 ## Sumário
 
-* Gated RNNs can better capture dependencies for sequences with large time step distances.
-* Reset gates help capture short-term dependencies in sequences.
-* Update gates help capture long-term dependencies in sequences.
-* GRUs contain basic RNNs as their extreme case whenever the reset gate is switched on. They can also skip subsequences by turning on the update gate.
-
 * RNNs bloqueados podem capturar melhor as dependências para sequências com grandes distâncias de intervalo de tempo.
 * As portas de redefinição ajudam a capturar dependências de curto prazo em sequências.
 * Portas de atualização ajudam a capturar dependências de longo prazo em sequências.
@@ -352,25 +335,20 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 
 ## Exercícios
 
-1. Assume that we only want to use the input at time step $t'$ to predict the output at time step $t > t'$. What are the best values for the reset and update gates for each time step?
-2. Adjust the hyperparameters and analyze the their influence on running time, perplexity, and the output sequence.
-3. Compare runtime, perplexity, and the output strings for `rnn.RNN` and `rnn.GRU` implementations with each other.
-4. What happens if you implement only parts of a GRU, e.g., with only a reset gate or only an update gate?
-
-1. Suponha que queremos apenas usar a entrada na etapa de tempo $ t '$ para prever a saída na etapa de tempo $ t> t' $. Quais são os melhores valores para as portas de reset e atualização para cada intervalo de tempo?
+1. Suponha que queremos apenas usar a entrada na etapa de tempo $t'$ para prever a saída na etapa de tempo $t > t'$. Quais são os melhores valores para as portas de reset e atualização para cada intervalo de tempo?
 1. Ajuste os hiperparâmetros e analise sua influência no tempo de execução, perplexidade e sequência de saída.
-1. Compare o tempo de execução, a perplexidade e as strings de saída para as implementações `rnn.RNN` e` rnn.GRU` entre si.
+1. Compare o tempo de execução, a perplexidade e as strings de saída para as implementações `rnn.RNN` e `rnn.GRU` entre si.
 1. O que acontece se você implementar apenas partes de uma GRU, por exemplo, com apenas uma porta de reinicialização ou apenas uma porta de atualização?
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/342)
+[Discussão](https://discuss.d2l.ai/t/342)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1056)
+[Discussão](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2OTE4Nzk4MCwtMjAwNzk5NzA3LDg0NT
+eyJoaXN0b3J5IjpbLTU4NTcxODAyMCwtMjAwNzk5NzA3LDg0NT
 Q0NjgxMSwtNzc1MTg0MzIwXX0=
 -->
