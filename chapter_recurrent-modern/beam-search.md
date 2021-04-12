@@ -1,15 +1,20 @@
-# Beam Search
+# Beam SearchPesquisa de feixe
 :label:`sec_beam-search`
 
-In :numref:`sec_seq2seq`,
-we predicted the output sequence token by token
-until the special end-of-sequence "&lt;eos&gt;" token
+InEm :numref:`sec_seq2seq`,
+we predicted the outputprevimos a sequeênceia de saída token bypor token
+until the special end-of-até o final da sequeênceia especial "&lt;eos&gt;" token
 is predicted.
 In this section,
 we will begin with formalizing this *greedy search* strategy
 and exploring issues with it,
-then compare this strategy with other alternatives:
-*exhaustive search* and *beam search*.
+then compare this strategy with othersímbolo
+é previsto.
+Nesta secção,
+começaremos formalizando essa estratégia de *busca gananciosa*
+e explorando problemas com isso,
+em seguida, compare essa estratégia com outras alternativeas:
+*pesquisa exhaustive search* and *beam searcha* e *pesquisa por feixe*.
 
 Before a formal introduction to greedy search,
 let us formalize the search problem
@@ -215,3 +220,6 @@ accuracy versus computational cost.
 1. We used language modeling for generating text following  user-provided prefixes in :numref:`sec_rnn_scratch`. Which kind of search strategy does it use? Can you improve it?
 
 [Discussions](https://discuss.d2l.ai/t/338)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjIwMDM0OTk3XX0=
+-->
