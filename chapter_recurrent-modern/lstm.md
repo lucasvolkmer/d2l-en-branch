@@ -61,15 +61,10 @@ estão na faixa de $(0, 1)$.
 ![Calculando a porta de entrada, a porta de esquecimento e a porta de saída em um modelo LSTM.](../img/lstm-0.svg)
 :label:`lstm_0`
 
-Mathematically,
-suppose that there are $h$ hidden units, the batch size is $n$, and the number of inputs is $d$.
-Thus, the input is $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ and the hidden state of the previous time step is $\mathbf{H}_{t-1} \in \mathbb{R}^{n \times h}$. Correspondingly, the gates at time step $t$
-are defined as follows: the input gate is $\mathbf{I}_t \in \mathbb{R}^{n \times h}$, the forget gate is $\mathbf{F}_t \in \mathbb{R}^{n \times h}$, and the output gate is $\mathbf{O}_t \in \mathbb{R}^{n \times h}$. They are calculated as follows:
-
 Matematicamente,
-suponha que existam $ h $ unidades ocultas, o tamanho do lote é $ n $ e o número de entradas é $ d $.
-Assim, a entrada é $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ e o estado oculto da etapa de tempo anterior é $ \ mathbf {H} _ {t-1} \ em \ mathbb {R} ^ {n \ vezes h} $. Correspondentemente, as portas na etapa de tempo $ t $
-são definidos da seguinte forma: a porta de entrada é $ \ mathbf {I} _t \ in \ mathbb {R} ^ {n \ vezes h} $, a porta de esquecimento é $ \ mathbf {F} _t \ in \ mathbb {R} ^ {n \ vezes h} $, e a porta de saída é $ \ mathbf {O} _t \ in \ mathbb {R} ^ {n \ vezes h} $. Eles são calculados da seguinte forma:
+suponha que existam $h$ unidades ocultas, o tamanho do lote é $n$ e o número de entradas é $d$.
+Assim, a entrada é $\mathbf{X}_t \in \mathbb{R}^{n \times d}$ e o estado oculto da etapa de tempo anterior é $\mathbf{H}_{t-1} \in \mathbb{R}^{n \times h}$. Correspondentemente, as portas na etapa de tempo $t$
+são definidos da seguinte forma: a porta de entrada é $\mathbf{I}_t \in \mathbb{R}^{n \times h}$, a porta de esquecimento é $\mathbf{F}_t \in \mathbb{R}^{n \times h}$, e a porta de saída é $\mathbf{O}_t \in \mathbb{R}^{n \times h}$. Eles são calculados da seguinte forma:
 
 $$
 \begin{aligned}
@@ -79,11 +74,13 @@ $$
 \end{aligned}
 $$
 
-where $\mathbf{W}_{xi}, \mathbf{W}_{xf}, \mathbf{W}_{xo} \in \mathbb{R}^{d \times h}$ and $\mathbf{W}_{hi}, \mathbf{W}_{hf}, \mathbf{W}_{ho} \in \mathbb{R}^{h \times h}$ are weight parameters and $\mathbf{b}_i, \mathbf{b}_f, \mathbf{b}_o \in \mathbb{R}^{1 \times h}$ are bias parameters.
+onde $\mathbf{W}_{xi}, \mathbf{W}_{xf}, \mathbf{W}_{xo} \in \mathbb{R}^{d \times h}$ e $\mathbf{W}_{hi}, \mathbf{W}_{hf}, \mathbf{W}_{ho} \in \mathbb{R}^{h \times h}$ são parâmetros de pesos e $\mathbf{b}_i, \mathbf{b}_f, \mathbf{b}_o \in \mathbb{R}^{1 \times h}$ são parâmetros viéses.
 
-### Candidate Memory Cell
+### Célula de Memória Candidata
 
 Next we design the memory cell. Since we have not specified the action of the various gates yet, we first introduce the *candidate* memory cell $\tilde{\mathbf{C}}_t \in \mathbb{R}^{n \times h}$. Its computation is similar to that of the three gates described above, but using a $\tanh$ function with a value range for $(-1, 1)$ as the activation function. This leads to the following equation at time step $t$:
+
+Em seguida, projetamos a célula de memória. Como ainda não especificamos a ação das várias portas, primeiro introduzimos a célula de memória * candidata * $ \ tilde {\ mathbf {C}} _ t \ in \ mathbb {R} ^ {n \ times h} $. Seu cálculo é semelhante ao das três portas descritas acima, mas usando uma função $ \ tanh $ com um intervalo de valores para $ (- 1, 1) $ como a função de ativação. Isso leva à seguinte equação na etapa de tempo $ t $:
 
 $$\tilde{\mathbf{C}}_t = \text{tanh}(\mathbf{X}_t \mathbf{W}_{xc} + \mathbf{H}_{t-1} \mathbf{W}_{hc} + \mathbf{b}_c),$$
 
@@ -335,5 +332,5 @@ Later we will encounter alternative models such as transformers that can be used
 [Discussions](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDk5MjMzMjFdfQ==
+eyJoaXN0b3J5IjpbMTkzNDE1NDUxMl19
 -->
