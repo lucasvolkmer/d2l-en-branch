@@ -118,27 +118,27 @@ uma camada parametrizada totalmente conectada
 ou mesmo não parametrizada
 de agrupamento máximo ou médio.
 
-Therefore,
-what sets attention mechanisms
-apart from those fully-connected layers
-or pooling layers
-is the inclusion of the volitional cues.
-In the context of attention mechanisms,
-we refer to volitional cues as *queries*.
-Given any query,
-attention mechanisms
-bias selection over sensory inputs (e.g., intermediate feature representations)
-via *attention pooling*.
-These sensory inputs are called *values* in the context of attention mechanisms.
-More generally,
-every value is paired with a *key*,
-which can be thought of the nonvolitional cue of that sensory input.
-As shown in :numref:`fig_qkv`,
-we can design attention pooling
-so that the given query (volitional cue) can interact with keys (nonvolitional cues),
-which guides bias selection over values (sensory inputs).
+Portanto,
+o que define mecanismos de atenção
+além dessas camadas totalmente conectadas
+ou camadas de *pooling*
+é a inclusão das dicas volitivas.
+No contexto dos mecanismos de atenção,
+nos referimos às dicas volitivas como *consultas*.
+Dada qualquer consulta,
+mecanismos de atenção
+seleção de *bias* sobre entradas sensoriais (por exemplo, representações de recursos intermediários)
+via *pooling de atenção*.
+Essas entradas sensoriais são chamadas de *valores* no contexto dos mecanismos de atenção.
+De forma geral,
+cada valor é emparelhado com uma *chave*,
+que pode ser pensado como a sugestão não-voluntária dessa entrada sensorial.
+Conforme mostrado em :numref:`fig_qkv`,
+podemos projetar concentração de atenção
+para que a consulta dada (dica volitiva) possa interagir com as chaves (dicas não-volitivas),
+que orienta a seleção de *bias* sobre os valores (entradas sensoriais).
 
-![Attention mechanisms bias selection over values (sensory inputs) via attention pooling, which incorporates queries (volitional cues) and keys (nonvolitional cues).](../img/qkv.svg)
+![Os mecanismos de atenção colocam *bias* na seleção sobre os valores (entradas sensoriais) por meio do agrupamento de atenção, que incorpora consultas (dicas volitivas) e chaves (dicas não-volitivas).](../img/qkv.svg)
 :label:`fig_qkv`
 
 Note that there are many alternatives for the design of attention mechanisms.
@@ -238,7 +238,7 @@ we will often invoke this function to visualize attention weights.
 [Discussions](https://discuss.d2l.ai/t/1710)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NTcxMTYxNywtMjAxMjA1MTc2MiwxOT
-Y3MjUwMDI2LDQyNzczNzU4NCwzMDQwNjg0NDUsLTE4NTUyNzU2
-MzAsLTg0Nzk5MjAwN119
+eyJoaXN0b3J5IjpbLTc4ODgxNjEzLDEwNzU3MTE2MTcsLTIwMT
+IwNTE3NjIsMTk2NzI1MDAyNiw0Mjc3Mzc1ODQsMzA0MDY4NDQ1
+LC0xODU1Mjc1NjMwLC04NDc5OTIwMDddfQ==
 -->
