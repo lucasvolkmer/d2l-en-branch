@@ -262,14 +262,14 @@ class AdditiveAttention(nn.Module):
         return torch.bmm(self.dropout(self.attention_weights), values)
 ```
 
-Let us demonstrate the above `AdditiveAttention` class
-with a toy example,
-where shapes (batch size, number of steps or sequence length in tokens, feature size)
-of queries, keys, and values
-are ($2$, $1$, $20$), ($2$, $10$, $2$),
-and ($2$, $10$, $4$), respectively.
-The attention pooling output
-has a shape of (batch size, number of steps for queries, feature size for values).
+Vamos demonstrar a classe `AdditiveAttention` acima
+com um exemplo de brinquedo,
+onde formas (tamanho do lote, número de etapas ou comprimento da sequência em tokens, tamanho da *feature*)
+de consultas, chaves e valores
+são ($2$, $1$, $20$), ($2$, $10$, $2$),
+e ($2$, $10$, $4$), respectivamente.
+A saída de concentração de atenção
+tem uma forma de (tamanho do lote, número de etapas para consultas, tamanho do *feature* para valores).
 
 ```{.python .input}
 queries, keys = d2l.normal(0, 1, (2, 1, 20)), d2l.ones((2, 10, 2))
@@ -296,10 +296,10 @@ attention.eval()
 attention(queries, keys, values, valid_lens)
 ```
 
-Although additive attention contains learnable parameters,
-since every key is the same in this example,
-the attention weights are uniform,
-determined by the specified valid lengths.
+Embora a atenção aditiva contenha parâmetros que podem ser aprendidos,
+uma vez que cada chave é a mesma neste exemplo,
+os pesos de atenção são uniformes,
+determinados pelos comprimentos válidos especificados.
 
 ```{.python .input}
 #@tab all
@@ -447,5 +447,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNjQwOTA4MiwtNzI5Mjk0MDYwXX0=
+eyJoaXN0b3J5IjpbMTczOTY5ODI4OCwtNzI5Mjk0MDYwXX0=
 -->
