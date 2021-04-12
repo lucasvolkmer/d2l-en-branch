@@ -141,6 +141,12 @@ In deep bidirectional RNNs with multiple hidden layers,
 such information
 is passed on as *input* to the next bidirectional layer. Last, the output layer computes the output $\mathbf{O}_t \in \mathbb{R}^{n \times q}$ (number of outputs: $q$):
 
+A seguir, concatenamos os estados ocultos para frente e para trás $\overrightarrow{\mathbf{H}}_t$ e $\overleftarrow{\mathbf{H}}_t$
+para obter o estado oculto $\mathbf{H}_t \in \mathbb{R}^{n \times 2h}$ para alimentar a camada de saída.
+Em RNNs bidirecionais profundos com várias camadas ocultas,
+tal informação
+é passado como *entrada* para a próxima camada bidirecional. Por último, a camada de saída calcula a saída $\mathbf{O}_t \in \mathbb{R}^{n \times q}$ (número de saídas: $q$):
+
 $$\mathbf{O}_t = \mathbf{H}_t \mathbf{W}_{hq} + \mathbf{b}_q.$$
 
 Here, the weight matrix $\mathbf{W}_{hq} \in \mathbb{R}^{2h \times q}$ and the bias $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$ are the model parameters of the output layer. In fact, the two directions can have different numbers of hidden units.
@@ -238,5 +244,6 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMjcxMjIyNywtNTM1NDc4NDEzXX0=
+eyJoaXN0b3J5IjpbLTE2NzIzODA1OTgsLTMzMjcxMjIyNywtNT
+M1NDc4NDEzXX0=
 -->
