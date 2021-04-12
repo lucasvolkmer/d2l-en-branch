@@ -116,14 +116,14 @@ para pesar as saídas $y_i$ de acordo com seus locais de entrada:
 $$f(x) = \sum_{i=1}^n \frac{K(x - x_i)}{\sum_{j=1}^n K(x - x_j)} y_i,$$
 :eqlabel:`eq_nadaraya-waston`
 
-where $K$ is a *kernel*.
-The estimator in :eqref:`eq_nadaraya-waston`
-is called *Nadaraya-Watson kernel regression*.
-Here we will not dive into details of kernels.
-Recall the framework of attention mechanisms in :numref:`fig_qkv`.
-From the perspective of attention,
-we can rewrite :eqref:`eq_nadaraya-waston`
-in a more generalized form of *attention pooling*:
+onde $K$ é um *kernel*.
+O estimador em :eqref:`eq_nadaraya-waston`
+é chamado de *regressão do kernel Nadaraya-Watson*.
+Aqui não entraremos em detalhes sobre os grãos.
+Lembre-se da estrutura dos mecanismos de atenção em :numref:`fig_qkv`.
+Do ponto de vista da atenção,
+podemos reescrever :eqref:`eq_nadaraya-waston`
+em uma forma mais generalizada de *concentração de atenção*:
 
 $$f(x) = \sum_{i=1}^n \alpha(x, x_i) y_i,$$
 :eqlabel:`eq_attn-pooling`
@@ -466,5 +466,5 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA4ODQ1ODcxLDk2MTM2OTQxNV19
+eyJoaXN0b3J5IjpbMTQ3MDc1MzMyNiw5NjEzNjk0MTVdfQ==
 -->
