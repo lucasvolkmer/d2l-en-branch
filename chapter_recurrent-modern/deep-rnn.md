@@ -47,16 +47,18 @@ que usa a função de ativação $\phi_l$
 $$\mathbf{H}_t^{(l)} = \phi_l(\mathbf{H}_t^{(l-1)} \mathbf{W}_{xh}^{(l)} + \mathbf{H}_{t-1}^{(l)} \mathbf{W}_{hh}^{(l)}  + \mathbf{b}_h^{(l)}),$$
 :eqlabel:`eq_deep_rnn_H`
 
-where the weights $\mathbf{W}_{xh}^{(l)} \in \mathbb{R}^{h \times h}$ and $\mathbf{W}_{hh}^{(l)} \in \mathbb{R}^{h \times h}$, together with 
-the bias $\mathbf{b}_h^{(l)} \in \mathbb{R}^{1 \times h}$, are the model parameters of
-the $l^\mathrm{th}$ hidden layer.
+onde os pesos $\mathbf{W}_{xh}^{(l)} \in \mathbb{R}^{h \times h}$ e $\mathbf{W}_{hh}^{(l)} \in \mathbb{R}^{h \times h}$, junto com
+o viés $\mathbf{b}_h^{(l)} \in \mathbb{R}^{1 \times h}$, são os parâmetros do modelo de
+a camada oculta $l^\mathrm{th}$.
 
-In the end,
-the calculation of the output layer is only based on the hidden state of the final $L^\mathrm{th}$ hidden layer:
+No fim,
+o cálculo da camada de saída é baseado apenas no estado oculto da camada oculta final $L^\mathrm{th}$:
 
 $$\mathbf{O}_t = \mathbf{H}_t^{(L)} \mathbf{W}_{hq} + \mathbf{b}_q,$$
 
 where the weight $\mathbf{W}_{hq} \in \mathbb{R}^{h \times q}$ and the bias $\mathbf{b}_q \in \mathbb{R}^{1 \times q}$ are the model parameters of the output layer.
+
+onde o peso $\mathbf{W}_{hq} \in \mathbb{R}^{h \times q}$ e o viés $ \ mathbf {b} _q \ in \ mathbb {R} ^ {1 \ times q} $ são os parâmetros do modelo da camada de saída.
 
 Just as with MLPs, the number of hidden layers $L$ and the number of hidden units $h$ are hyperparameters.
 In other words, they can be tuned or specified by us.
@@ -150,5 +152,5 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussions](https://discuss.d2l.ai/t/1058)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMDM4NzkxOV19
+eyJoaXN0b3J5IjpbOTcwNTU3MTJdfQ==
 -->
