@@ -163,13 +163,12 @@ Em :numref:`sec_bert` e :numref:`sec_sentiment_rnn`,
 apresentaremos como usar RNNs bidirecionais
 para codificar sequências de texto.
 
+## Treinar um RNN bidirecional para uma aplicação errada
 
-## Training a Bidirectional RNN for a Wrong Application
-
-If we were to ignore all advice regarding the fact that bidirectional RNNs use past and future data and simply apply it to language models, 
-we will get estimates with acceptable perplexity. Nonetheless, the ability of the model to predict future tokens is severely compromised as the experiment below illustrates. 
-Despite reasonable perplexity, it only generates gibberish even after many iterations.
-We include the code below as a cautionary example against using them in the wrong context.
+Se ignorarmos todos os conselhos sobre o fato de que RNNs bidirecionais usam dados passados e futuros e simplesmente os aplicam a modelos de linguagem,
+obteremos estimativas com perplexidade aceitável. No entanto, a capacidade do modelo de prever tokens futuros está seriamente comprometida, conforme ilustra o experimento abaixo.
+Apesar da perplexidade razoável, ele só gera rabiscos mesmo depois de muitas iterações.
+Incluímos o código abaixo como um exemplo de advertência contra usá-los no contexto errado.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -209,26 +208,25 @@ num_epochs, lr = 500, 1
 d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 ```
 
-The output is clearly unsatisfactory for the reasons described above. 
-For a
-discussion of more effective uses of bidirectional RNNs, please see the sentiment
-analysis application 
-in :numref:`sec_sentiment_rnn`.
+O resultado é claramente insatisfatório pelos motivos descritos acima.
+Para
+discussão de usos mais eficazes de RNNs bidirecionais, consulte o sentimento
+aplicação de análise
+em :numref:`sec_sentiment_rnn`.
 
-## Summary
+## Sumário
 
-* In bidirectional RNNs, the hidden state for each time step is simultaneously determined by the data prior to and after the current time step.
-* Bidirectional RNNs bear a striking resemblance with the forward-backward algorithm in probabilistic graphical models.
-* Bidirectional RNNs are mostly useful for sequence encoding and the estimation of observations given bidirectional context.
-* Bidirectional RNNs are very costly to train due to long gradient chains.
+* Em RNNs bidirecionais, o estado oculto para cada intervalo de tempo é simultaneamente determinado pelos dados antes e depois do intervalo de tempo atual.
+* Os RNNs bidirecionais apresentam uma semelhança notável com o algoritmo para frente e para trás em modelos gráficos probabilísticos.
+* RNNs bidirecionais são mais úteis para codificação de sequência e estimativa de observações em contexto bidirecional.
+* RNNs bidirecionais são muito caros para treinar devido às longas cadeias de gradiente.
 
-## Exercises
+## Exercícios
 
-1. If the different directions use a different number of hidden units, how will the shape of $\mathbf{H}_t$ change?
-1. Design a bidirectional RNN with multiple hidden layers.
-1. Polysemy is common in natural languages. For example, the word "bank" has different meanings in contexts “i went to the bank to deposit cash” and “i went to the bank to sit down”. How can we design a neural network model such that given a context sequence and a word, a vector representation of the word in the context will be returned? What type of neural architectures is preferred for handling polysemy?
-
-
+4. Se as diferentes direções usarem um número diferente de unidades ocultas, como a forma de $\mathbf{H}_t$ mudará?
+5. Projete um RNN bidirecional com várias camadas ocultas.
+6. A polissemia é comum em línguas naturais. Por exemplo, a palavra "banco" tem significados diferentes em contextos “fui ao banco para depositar dinheiro” e “fui ao banco para me sentar”. Como podemos projetar um modelo de rede neural de modo que, dada uma sequência de contexto e uma palavra, uma representação vetorial da palavra no contexto seja retornada? Que tipo de arquitetura neural é preferida para lidar com a polissemia?
+7. 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/339)
 :end_tab:
@@ -237,6 +235,6 @@ in :numref:`sec_sentiment_rnn`.
 [Discussions](https://discuss.d2l.ai/t/1059)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMjk3MzY0NSwtMzMyNzEyMjI3LC01Mz
-U0Nzg0MTNdfQ==
+eyJoaXN0b3J5IjpbLTIwODA1NzIzNjMsLTMzMjcxMjIyNywtNT
+M1NDc4NDEzXX0=
 -->
