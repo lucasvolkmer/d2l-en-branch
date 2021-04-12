@@ -120,15 +120,15 @@ class Decoder(nn.Module):
 
 ## Somando o Encoder e o Decoder
 
-In the end,
-the encoder-decoder architecture
-contains both an encoder and a decoder,
-with optionally extra arguments.
-In the forward propagation,
-the output of the encoder
-is used to produce the encoded state,
-and this state
-will be further used by the decoder as one of its input.
+No fim,
+a arquitetura codificador-decodificador
+contém um codificador e um decodificador,
+com argumentos opcionalmente extras.
+Na propagação direta,
+a saída do codificador
+é usado para produzir o estado codificado,
+e este estado
+será posteriormente usado pelo decodificador como uma de suas entradas.
 
 ```{.python .input}
 #@save
@@ -161,34 +161,34 @@ class EncoderDecoder(nn.Module):
         return self.decoder(dec_X, dec_state)
 ```
 
-The term "state" in the encoder-decoder architecture
-has probably inspired you to implement this
-architecture using neural networks with states.
-In the next section,
-we will see how to apply RNNs to design 
-sequence transduction models based on 
-this encoder-decoder architecture.
+O termo "estado" na arquitetura do codificador-decodificador
+provavelmente inspirou você a implementar este
+arquitetura usando redes neurais com estados.
+Na próxima seção,
+veremos como aplicar RNNs para projetar
+modelos de transdução de sequência baseados em
+esta arquitetura de codificador-decodificador.
 
 
-## Summary
+## Sumário
 
-* The encoder-decoder architecture can handle inputs and outputs that are both variable-length sequences, thus is suitable for sequence transduction problems such as machine translation.
-* The encoder takes a variable-length sequence as the input and transforms it into a state with a fixed shape.
-* The decoder maps the encoded state of a fixed shape to a variable-length sequence.
+* A arquitetura do codificador-decodificador pode lidar com entradas e saídas que são sequências de comprimento variável, portanto, é adequada para problemas de transdução de sequência, como tradução automática.
+* O codificador pega uma sequência de comprimento variável como entrada e a transforma em um estado com forma fixa.
+* O decodificador mapeia o estado codificado de uma forma fixa para uma sequência de comprimento variável.
 
 
-## Exercises
+## Exercícios
 
-1. Suppose that we use neural networks to implement the encoder-decoder architecture. Do the encoder and the decoder have to be the same type of neural network?  
-1. Besides machine translation, can you think of another application where the encoder-decoder architecture can be applied?
+1. Suponha que usamos redes neurais para implementar a arquitetura codificador-decodificador. O codificador e o decodificador precisam ser do mesmo tipo de rede neural?
+1. Além da tradução automática, você consegue pensar em outro aplicativo em que a arquitetura codificador-decodificador possa ser aplicada?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/341)
+[Discussão](https://discuss.d2l.ai/t/341)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1061)
+[Discussão](https://discuss.d2l.ai/t/1061)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5OTUxMzQ0Ml19
+eyJoaXN0b3J5IjpbOTEyMDkwMTk3XX0=
 -->
