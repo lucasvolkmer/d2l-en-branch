@@ -361,8 +361,8 @@ values = d2l.reshape(Y_tile[(1 - d2l.eye(n_train)).type(torch.bool)],
                      (n_train, -1))
 ```
 
-Using the squared loss and stochastic gradient descent,
-we train the parametric attention model.
+Usando a perda quadrada e a descida do gradiente estocástico,
+treinamos o modelo paramétrico de atenção.
 
 ```{.python .input}
 net = NWKernelRegression()
@@ -398,11 +398,11 @@ for epoch in range(5):
     animator.add(epoch + 1, float(l.sum()))
 ```
 
-After training the parametric attention model,
-we can plot its prediction.
-Trying to fit the training dataset with noise,
-the predicted line is less smooth
-than its nonparametric counterpart that was plotted earlier.
+Depois de treinar o modelo paramétrico de atenção,
+podemos traçar sua previsão.
+Tentando ajustar o conjunto de dados de treinamento com ruído,
+a linha prevista é menos suave
+do que sua contraparte não paramétrica que foi traçada anteriormente.
 
 ```{.python .input}
 # Shape of `keys`: (`n_test`, `n_train`), where each column contains the same
@@ -425,9 +425,9 @@ y_hat = net(x_test, keys, values).unsqueeze(1).detach()
 plot_kernel_reg(y_hat)
 ```
 
-Comparing with nonparametric attention pooling,
-the region with large attention weights becomes sharper
-in the learnable and parametric setting.
+Comparando com o *pooling* de atenção não paramétrico,
+a região com grandes pesos de atenção torna-se mais nítida
+na configuração programável e paramétrica.
 
 ```{.python .input}
 d2l.show_heatmaps(np.expand_dims(np.expand_dims(net.attention_weights, 0), 0),
@@ -442,7 +442,7 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
                   ylabel='Sorted testing inputs')
 ```
 
-## Summary
+## Resumo
 
 * Nadaraya-Watson kernel regression is an example of machine learning with attention mechanisms.
 * The attention pooling of Nadaraya-Watson kernel regression is a weighted average of the training outputs. From the attention perspective, the attention weight is assigned to a value based on a function of a query and the key that is paired with the value.
@@ -466,6 +466,6 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDU2MzgyNjcsMTcxMzY3NTY3NiwtNT
-IwMDgwODk0LC00NjE1NDQ5MTksOTYxMzY5NDE1XX0=
+eyJoaXN0b3J5IjpbODc2MDM1NzA4LDE3MTM2NzU2NzYsLTUyMD
+A4MDg5NCwtNDYxNTQ0OTE5LDk2MTM2OTQxNV19
 -->
