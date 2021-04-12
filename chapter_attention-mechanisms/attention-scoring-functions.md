@@ -307,7 +307,7 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
                   xlabel='Keys', ylabel='Queries')
 ```
 
-## Scaled Dot-Product Attention
+## Atenção de Produto Escalar em Escala
 
 A more computationally efficient
 design for the scoring function can be
@@ -447,5 +447,5 @@ d2l.show_heatmaps(d2l.reshape(attention.attention_weights, (1, 1, 2, 10)),
 [Discussions](https://discuss.d2l.ai/t/1064)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczOTY5ODI4OCwtNzI5Mjk0MDYwXX0=
+eyJoaXN0b3J5IjpbNjEzODcwNjk0LC03MjkyOTQwNjBdfQ==
 -->
