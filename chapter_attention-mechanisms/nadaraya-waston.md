@@ -106,12 +106,12 @@ plot_kernel_reg(y_hat)
 
 ## *Pooling* de Atenção não-Paramétrico
 
-Obviously,
-average pooling omits the inputs $x_i$.
-A better idea was proposed
-by Nadaraya :cite:`Nadaraya.1964`
-and Waston :cite:`Watson.1964`
-to weigh the outputs $y_i$ according to their input locations:
+Obviamente,
+o agrupamento médio omite as entradas $x_i$.
+Uma ideia melhor foi proposta
+por Nadaraya :cite:`Nadaraya.1964`
+e Waston :cite:`Watson.1964`
+para pesar as saídas $y_i$ de acordo com seus locais de entrada:
 
 $$f(x) = \sum_{i=1}^n \frac{K(x - x_i)}{\sum_{j=1}^n K(x - x_j)} y_i,$$
 :eqlabel:`eq_nadaraya-waston`
@@ -466,5 +466,5 @@ d2l.show_heatmaps(net.attention_weights.unsqueeze(0).unsqueeze(0),
 [Discussions](https://discuss.d2l.ai/t/1599)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDk1MjAwMyw5NjEzNjk0MTVdfQ==
+eyJoaXN0b3J5IjpbMzA4ODQ1ODcxLDk2MTM2OTQxNV19
 -->
