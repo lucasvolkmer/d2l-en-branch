@@ -64,24 +64,23 @@ a variável de contexto na etapa de tempo de decodificação $t'$
 
 $$\mathbf{c}_{t'} = \sum_{t=1}^T \alpha(\mathbf{s}_{t' - 1}, \mathbf{h}_t) \mathbf{h}_t,$$
 
-where the decoder hidden state
-$\mathbf{s}_{t' - 1}$ at time step $t' - 1$
-is the query,
-and the encoder hidden states $\mathbf{h}_t$
-are both the keys and values,
-and the attention weight $\alpha$
-is computed as in
+onde o decodificador está escondido
+$\mathbf{s}_{t' - 1}$ no passo de tempo $t' - 1$
+é a consulta,
+e os estados ocultos do codificador $\mathbf{h}_t$
+são as chaves e os valores,
+e o peso de atenção $\alpha$
+é calculado como em
 :eqref:`eq_attn-scoring-alpha`
-using the additive attention scoring function
-defined by
+usando a função de pontuação de atenção aditiva
+definida por
 :eqref:`eq_additive-attn`.
 
 
-Slightly different from 
-the vanilla RNN encoder-decoder architecture 
-in :numref:`fig_seq2seq_details`,
-the same architecture
-with Bahdanau attention is depicted in 
+Um pouco diferente da arquitetura do codificador-decodificador Vanilla RNN
+em :numref:`fig_seq2seq_details`,
+a mesma arquitetura
+com atenção de Bahdanau, é retratada em
 :numref:`fig_s2s_attention_details`.
 
 ![Layers in an RNN encoder-decoder model with Bahdanau attention.](../img/seq2seq-attention-details.svg)
@@ -362,6 +361,6 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNjEwMzA2MywzNDEzMjM5MjYsMTM5MT
-ExMzkyMV19
+eyJoaXN0b3J5IjpbLTE1MTg0NDMzODgsLTQxNjEwMzA2MywzND
+EzMjM5MjYsMTM5MTExMzkyMV19
 -->
