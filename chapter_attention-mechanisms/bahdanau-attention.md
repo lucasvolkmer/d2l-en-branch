@@ -272,14 +272,14 @@ output.shape, len(state), state[0].shape, len(state[1]), state[1][0].shape
 ## Treinamento
 
 
-Similar to :numref:`sec_seq2seq_training`,
-here we specify hyperparemeters,
-instantiate
-an encoder and a decoder with Bahdanau attention,
-and train this model for machine translation.
-Due to the newly added attention mechanism,
-this training is much slower than
-that in :numref:`sec_seq2seq_training` without attention mechanisms.
+Semelhante a :numref:`sec_seq2seq_training`,
+aqui especificamos hiperparâmetros,
+instanciamos
+um codificador e um decodificador com atenção Bahdanau,
+e treinamos este modelo para tradução automática.
+Devido ao mecanismo de atenção recém-adicionado,
+este treinamento é muito mais lento do que
+que em :numref:`sec_seq2seq_training` sem mecanismos de atenção.
 
 ```{.python .input}
 #@tab all
@@ -361,6 +361,7 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzU5Nzg4MTksLTUxMDgzMjQzMiwtND
-E2MTAzMDYzLDM0MTMyMzkyNiwxMzkxMTEzOTIxXX0=
+eyJoaXN0b3J5IjpbLTE0NDQwMjEyNjUsLTExMzU5Nzg4MTksLT
+UxMDgzMjQzMiwtNDE2MTAzMDYzLDM0MTMyMzkyNiwxMzkxMTEz
+OTIxXX0=
 -->
