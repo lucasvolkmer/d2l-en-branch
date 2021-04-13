@@ -307,3 +307,6 @@ attention(X, Y, Y, valid_lens).shape
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1635)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTk1NTU2MjEwNV19
+-->
