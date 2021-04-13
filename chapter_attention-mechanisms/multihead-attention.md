@@ -1,42 +1,43 @@
-# Multi-Head Attention
+# Atenção Multi-Head 
 :label:`sec_multihead-attention`
 
 
-In practice,
-given the same set of queries, keys, and values
-we may want our model to
-combine knowledge from
-different behaviors of the same attention mechanism,
-such as capturing dependencies of various ranges (e.g., shorter-range vs. longer-range)
-within a sequence.
-Thus, 
-it may be beneficial 
-to allow our attention mechanism
-to jointly use different representation subspaces
-of queries, keys, and values.
+
+Na prática,
+dado o mesmo conjunto de consultas, chaves e valores
+podemos querer que nosso modelo
+combine conhecimento de
+diferentes comportamentos do mesmo mecanismo de atenção,
+como capturar dependências de vários intervalos (por exemplo, intervalo mais curto vs. intervalo mais longo)
+dentro de uma sequência.
+Desse modo,
+pode ser benéfico
+permitir nosso mecanismo de atenção
+para usar em conjunto diferentes subespaços de representação
+de consultas, chaves e valores.
 
 
 
-To this end,
-instead of performing a single attention pooling,
-queries, keys, and values
-can be transformed
-with $h$ independently learned linear projections.
-Then these $h$ projected queries, keys, and values
-are fed into attention pooling in parallel.
-In the end,
-$h$ attention pooling outputs
-are concatenated and 
-transformed with another learned linear projection
-to produce the final output.
-This design
-is called *multi-head attention*,
-where each of the $h$ attention pooling outputs
-is a *head* :cite:`Vaswani.Shazeer.Parmar.ea.2017`.
-Using fully-connected layers
-to perform learnable linear transformations,
+Para este fim,
+em vez de realizar um único agrupamento de atenção,
+consultas, chaves e valores
+podem ser transformados
+com $h$ projeções lineares aprendidas independentemente.
+Então, essas $h$ consultas, chaves e valores projetados
+são alimentados em agrupamento de atenção em paralelo.
+No fim,
+$h$ resultados de concentração de atenção
+são concatenados e
+transformados com outra projeção linear aprendida
+para produzir a saída final.
+Este design
+é chamado de *atenção multi-head*,
+onde cada uma das saídas de concentração de $h$
+é um *head* :cite:`Vaswani.Shazeer.Parmar.ea.2017`.
+Usando camadas totalmente conectadas
+para realizar transformações lineares que podem ser aprendidas,
 :numref:`fig_multi-head-attention`
-describes multi-head attention.
+descreve a atenção de *multi-head*.
 
 ![Multi-head attention, where multiple heads are concatenated then linearly transformed.](../img/multi-head-attention.svg)
 :label:`fig_multi-head-attention`
@@ -308,5 +309,5 @@ attention(X, Y, Y, valid_lens).shape
 [Discussions](https://discuss.d2l.ai/t/1635)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NTU2MjEwNV19
+eyJoaXN0b3J5IjpbLTk3OTIwOTU0MSwxOTU1NTYyMTA1XX0=
 -->
