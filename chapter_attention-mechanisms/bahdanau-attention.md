@@ -296,9 +296,9 @@ net = d2l.EncoderDecoder(encoder, decoder)
 d2l.train_seq2seq(net, train_iter, lr, num_epochs, tgt_vocab, device)
 ```
 
-After the model is trained,
-we use it to translate a few English sentences
-into French and compute their BLEU scores.
+Depois que o modelo é treinado,
+nós o usamos para traduzir algumas frases do inglês
+para o francês e computar suas pontuações BLEU.
 
 ```{.python .input}
 #@tab all
@@ -318,13 +318,13 @@ attention_weights = d2l.reshape(
     (1, 1, -1, num_steps))
 ```
 
-By visualizing the attention weights
-when translating the last English sentence,
-we can see that each query assigns non-uniform weights
-over key-value pairs.
-It shows that at each decoding step,
-different parts of the input sequences 
-are selectively aggregated in the attention pooling.
+Visualizando os pesos de atenção
+ao traduzir a última frase em inglês,
+podemos ver que cada consulta atribui pesos não uniformes
+sobre pares de valores-chave.
+Isso mostra que em cada etapa de decodificação,
+diferentes partes das sequências de entrada
+são agregadas seletivamente no pool de atenção.
 
 ```{.python .input}
 # Plus one to include the end-of-sequence token
@@ -341,7 +341,7 @@ d2l.show_heatmaps(
     xlabel='Key posistions', ylabel='Query posistions')
 ```
 
-## Summary
+## Resumo
 
 * When predicting a token, if not all the input tokens are relevant, the RNN encoder-decoder with Bahdanau attention selectively aggregates different parts of the input sequence. This is achieved by treating the context variable as an output of additive attention pooling.
 * In the RNN encoder-decoder, Bahdanau attention treats the decoder hidden state at the previous time step as the query, and the encoder hidden states at all the time steps as both the keys and values.
@@ -361,7 +361,7 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQwMjEyNjUsLTExMzU5Nzg4MTksLT
-UxMDgzMjQzMiwtNDE2MTAzMDYzLDM0MTMyMzkyNiwxMzkxMTEz
-OTIxXX0=
+eyJoaXN0b3J5IjpbMTY4NzcwMTM0MiwtMTEzNTk3ODgxOSwtNT
+EwODMyNDMyLC00MTYxMDMwNjMsMzQxMzIzOTI2LDEzOTExMTM5
+MjFdfQ==
 -->
