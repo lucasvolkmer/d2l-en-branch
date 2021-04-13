@@ -1,44 +1,45 @@
 # Atenção de Bahdanau
 :label:`sec_seq2seq_attention`
 
-We studied the machine translation
-problem in :numref:`sec_seq2seq`,
-where we designed
-an encoder-decoder architecture based on two RNNs
-for sequence to sequence learning.
-Specifically,
-the RNN encoder 
-transforms
-a variable-length sequence
-into a fixed-shape context variable,
-then
-the RNN decoder
-generates the output (target) sequence token by token
-based on the generated tokens and the context variable.
-However,
-even though not all the input (source) tokens
-are useful for decoding a certain token,
-the *same* context variable
-that encodes the entire input sequence
-is still used at each decoding step.
+
+Nós estudamos a tradução automática
+problema em :numref:`sec_seq2seq`,
+onde projetamos
+uma arquitetura de codificador-decodificador baseada em duas RNNs
+para aprendizagem de sequência em sequência.
+Especificamente,
+o codificador de RNN
+transforma
+uma sequência de comprimento variável
+em uma variável de contexto de forma fixa,
+então
+o decodificador de RNN
+gera o token de sequência de saída (destino) por token
+com base nos tokens gerados e na variável de contexto.
+Contudo,
+mesmo que nem todos os tokens de entrada (fonte)
+são úteis para decodificar um certo token,
+a *mesma* variável de contexto
+que codifica toda a sequência de entrada
+ainda é usada em cada etapa de decodificação.
 
 
-In a separate but related
-challenge of handwriting generation for a given text sequence,
-Graves designed a differentiable attention model
-to align text characters with the much longer pen trace,
-where the alignment moves only in one direction :cite:`Graves.2013`.
-Inspired by the idea of learning to align,
-Bahdanau et al. proposed a differentiable attention model
-without the severe unidirectional alignment limitation :cite:`Bahdanau.Cho.Bengio.2014`.
-When predicting a token,
-if not all the input tokens are relevant,
-the model aligns (or attends)
-only to parts of the input sequence that are relevant to the current prediction.
-This is achieved
-by treating the context variable as an output of attention pooling.
+Em um separado, mas relacionado
+desafio de geração de caligrafia para uma determinada sequência de texto,
+Graves projetou um modelo de atenção diferenciável
+para alinhar caracteres de texto com o traço de caneta muito mais longo,
+onde o alinhamento se move apenas em uma direção :cite:`Graves.2013`.
+Inspirado pela ideia de aprender a alinhar,
+Bahdanau et al. propôs um modelo de atenção diferenciável
+sem a limitação severa de alinhamento unidirecional :cite:`Bahdanau.Cho.Bengio.2014`.
+Ao prever um token,
+se nem todos os tokens de entrada forem relevantes,
+o modelo alinha (ou atende)
+apenas para partes da sequência de entrada que são relevantes para a previsão atual.
+Isso é alcançado
+tratando a variável de contexto como uma saída do agrupamento de atenção.
 
-## Model
+## Modelo
 
 When describing 
 Bahdanau attention
@@ -361,5 +362,5 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MTExMzkyMV19
+eyJoaXN0b3J5IjpbMzQxMzIzOTI2LDEzOTExMTM5MjFdfQ==
 -->
