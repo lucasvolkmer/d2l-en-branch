@@ -237,10 +237,10 @@ class Seq2SeqAttentionDecoder(AttentionDecoder):
         return self._attention_weights
 ```
 
-In the following, we test the implemented 
-decoder with Bahdanau attention
-using a minibatch of 4 sequence inputs
-of 7 time steps.
+A seguir, testamos o
+decodificador implementado com atenção Bahdanau
+usando um minibatch de 4 entradas de sequência
+de 7 etapas de tempo.
 
 ```{.python .input}
 encoder = d2l.Seq2SeqEncoder(vocab_size=10, embed_size=8, num_hiddens=16,
@@ -269,7 +269,7 @@ output, state = decoder(X, state)
 output.shape, len(state), state[0].shape, len(state[1]), state[1][0].shape
 ```
 
-## Training
+## Treinamento
 
 
 Similar to :numref:`sec_seq2seq_training`,
@@ -361,6 +361,6 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNzgxNDY2MiwtNTEwODMyNDMyLC00MT
-YxMDMwNjMsMzQxMzIzOTI2LDEzOTExMTM5MjFdfQ==
+eyJoaXN0b3J5IjpbLTExMzU5Nzg4MTksLTUxMDgzMjQzMiwtND
+E2MTAzMDYzLDM0MTMyMzkyNiwxMzkxMTEzOTIxXX0=
 -->
