@@ -123,19 +123,19 @@ class AttentionDecoder(d2l.Decoder):
         raise NotImplementedError
 ```
 
-Now let us implement
-the RNN decoder with Bahdanau attention
-in the following `Seq2SeqAttentionDecoder` class.
-The state of the decoder
-is initialized with 
-i) the encoder final-layer hidden states at all the time steps (as keys and values of the attention);
-ii) the encoder all-layer hidden state at the final time step (to initialize the hidden state of the decoder);
-and iii) the encoder valid length (to exclude the padding tokens in attention pooling).
-At each decoding time step,
-the decoder final-layer hidden state at the previous time step is used as the query of the attention.
-As a result, both the attention output
-and the input embedding are concatenated
-as the input of the RNN decoder.
+Agora vamos implementar
+o decodificador RNN com atenção Bahdanau
+na seguinte classe `Seq2SeqAttentionDecoder`.
+O estado do decodificador
+é inicializado com
+i) os estados ocultos da camada final do codificador em todas as etapas de tempo (como chaves e valores da atenção);
+ii) o estado oculto de todas as camadas do codificador na etapa de tempo final (para inicializar o estado oculto do decodificador);
+e iii) o comprimento válido do codificador (para excluir os tokens de preenchimento no agrupamento de atenção).
+Em cada etapa de tempo de decodificação,
+o estado oculto da camada final do decodificador na etapa de tempo anterior é usado como a consulta da atenção.
+Como resultado, tanto a saída de atenção
+e a incorporação de entrada são concatenadas
+como entrada do decodificador RNN.
 
 ```{.python .input}
 class Seq2SeqAttentionDecoder(AttentionDecoder):
@@ -361,6 +361,6 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDgzMjQzMiwtNDE2MTAzMDYzLDM0MT
-MyMzkyNiwxMzkxMTEzOTIxXX0=
+eyJoaXN0b3J5IjpbLTcwNzgxNDY2MiwtNTEwODMyNDMyLC00MT
+YxMDMwNjMsMzQxMzIzOTI2LDEzOTExMTM5MjFdfQ==
 -->
