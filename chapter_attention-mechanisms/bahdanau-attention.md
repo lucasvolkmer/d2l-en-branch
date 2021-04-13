@@ -41,26 +41,26 @@ tratando a variável de contexto como uma saída do agrupamento de atenção.
 
 ## Modelo
 
-When describing 
-Bahdanau attention
-for the RNN encoder-decoder below,
-we will follow the same notation in
+Ao descrever
+Atenção Bahdanau
+para o codificador-decodificador RNN abaixo,
+nós seguiremos a mesma notação em
 :numref:`sec_seq2seq`.
-The new attention-based model
-is the same as that
-in :numref:`sec_seq2seq`
-except that
-the context variable
+O novo modelo baseado na atenção
+é o mesmo que 
+em :numref:`sec_seq2seq`
+exceto que
+a variável de contexto
 $\mathbf{c}$
-in 
+em
 :eqref:`eq_seq2seq_s_t`
-is replaced by
+é substituída por
 $\mathbf{c}_{t'}$
-at any decoding time step $t'$.
-Suppose that
-there are $T$ tokens in the input sequence,
-the context variable at the decoding time step $t'$
-is the output of attention pooling:
+em qualquer passo de tempo de decodificação $t'$.
+Suponha que
+existem tokens $T$ na sequência de entrada,
+a variável de contexto na etapa de tempo de decodificação $t'$
+é o resultado do agrupamento de atenção:
 
 $$\mathbf{c}_{t'} = \sum_{t=1}^T \alpha(\mathbf{s}_{t' - 1}, \mathbf{h}_t) \mathbf{h}_t,$$
 
@@ -362,5 +362,6 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQxMzIzOTI2LDEzOTExMTM5MjFdfQ==
+eyJoaXN0b3J5IjpbLTQxNjEwMzA2MywzNDEzMjM5MjYsMTM5MT
+ExMzkyMV19
 -->
