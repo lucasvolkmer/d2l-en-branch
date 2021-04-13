@@ -83,7 +83,7 @@ a mesma arquitetura
 com atenção de Bahdanau, é retratada em
 :numref:`fig_s2s_attention_details`.
 
-![Layers in an RNN encoder-decoder model with Bahdanau attention.](../img/seq2seq-attention-details.svg)
+![Camadas em um modelo de codificador-decodificador RNN com atenção Bahdanau.](../img/seq2seq-attention-details.svg)
 :label:`fig_s2s_attention_details`
 
 ```{.python .input}
@@ -100,15 +100,15 @@ import torch
 from torch import nn
 ```
 
-## Defining the Decoder with Attention
+## Definindo o Decodificador com Atenção
 
-To implement the RNN encoder-decoder
-with Bahdanau attention,
-we only need to redefine the decoder.
-To visualize the learned attention weights more conveniently,
-the following `AttentionDecoder` class
-defines the base interface for 
-decoders with attention mechanisms.
+Para implementar o codificador-decodificador RNN
+com atenção Bahdanau,
+só precisamos redefinir o decodificador.
+Para visualizar os pesos de atenção aprendidos de forma mais conveniente,
+a seguinte classe `AttentionDecoder`
+define a interface base para
+decodificadores com mecanismos de atenção.
 
 ```{.python .input}
 #@tab all
@@ -361,6 +361,6 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTg0NDMzODgsLTQxNjEwMzA2MywzND
-EzMjM5MjYsMTM5MTExMzkyMV19
+eyJoaXN0b3J5IjpbLTUxMDgzMjQzMiwtNDE2MTAzMDYzLDM0MT
+MyMzkyNiwxMzkxMTEzOTIxXX0=
 -->
