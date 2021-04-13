@@ -343,14 +343,14 @@ d2l.show_heatmaps(
 
 ## Resumo
 
-* When predicting a token, if not all the input tokens are relevant, the RNN encoder-decoder with Bahdanau attention selectively aggregates different parts of the input sequence. This is achieved by treating the context variable as an output of additive attention pooling.
-* In the RNN encoder-decoder, Bahdanau attention treats the decoder hidden state at the previous time step as the query, and the encoder hidden states at all the time steps as both the keys and values.
+* Ao prever um token, se nem todos os tokens de entrada forem relevantes, o codificador-decodificador RNN com atenção Bahdanau seletivamente agrega diferentes partes da sequência de entrada. Isso é obtido tratando a variável de contexto como uma saída do agrupamento de atenção aditiva.
+* No codificador-decodificador RNN, a atenção Bahdanau trata o estado oculto do decodificador na etapa de tempo anterior como a consulta, e os estados ocultos do codificador em todas as etapas de tempo como as chaves e os valores.
 
 
-## Exercises
+## Exercícios
 
-1. Replace GRU with LSTM in the experiment.
-1. Modify the experiment to replace the additive attention scoring function with the scaled dot-product. How does it influence the training efficiency?
+1. Substitua GRU por LSTM no experimento.
+1. Modifique o experimento para substituir a função de pontuação de atenção aditiva pelo produto escalar escalonado. Como isso influencia a eficiência do treinamento?
 
 
 :begin_tab:`mxnet`
@@ -361,7 +361,7 @@ d2l.show_heatmaps(
 [Discussions](https://discuss.d2l.ai/t/1065)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NzcwMTM0MiwtMTEzNTk3ODgxOSwtNT
-EwODMyNDMyLC00MTYxMDMwNjMsMzQxMzIzOTI2LDEzOTExMTM5
-MjFdfQ==
+eyJoaXN0b3J5IjpbLTEwMjQ1NzU5NTcsLTExMzU5Nzg4MTksLT
+UxMDgzMjQzMiwtNDE2MTAzMDYzLDM0MTMyMzkyNiwxMzkxMTEz
+OTIxXX0=
 -->
