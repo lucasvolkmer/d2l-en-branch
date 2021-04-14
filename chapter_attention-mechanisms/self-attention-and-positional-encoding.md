@@ -200,7 +200,7 @@ d2l.plot(d2l.arange(num_steps), P[0, :, 6:10].T, xlabel='Row (position)',
          figsize=(6, 2.5), legend=["Col %d" % d for d in d2l.arange(6, 10)])
 ```
 
-### Absolute Positional Information
+### Informação Posicional Absoluta
 
 To see how the monotonically decreased frequency
 along the encoding dimension relates to absolute positional information,
@@ -292,6 +292,6 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODAwNzUwNzIsODIzMjQ0NDM1LDQ5Nz
-UzMjYxNywtMTYzMTk0OTcxNSwxNzIyMjQ4OTc5XX0=
+eyJoaXN0b3J5IjpbMTMyMzIwMTk4LDgyMzI0NDQzNSw0OTc1Mz
+I2MTcsLTE2MzE5NDk3MTUsMTcyMjI0ODk3OV19
 -->
