@@ -1,20 +1,27 @@
-#  Sequence to Sequence Learning
+#  Aprendizado Sequeênce toia a Sequeênce Learningia
 :label:`sec_seq2seq`
 
-As we have seen in :numref:`sec_machine_translation`,
+As we have seen in :Como vimos em: numref: `sec_machine_translation`,
 in machine translation
 both the input and output are a variable-length sequence.
-To address this type of problem,
-we have designed a general encoder-decoder architecture
+To address this type ofna tradução automática
+tanto a entrada quanto a saída são uma sequência de comprimento variável.
+Para resolver este tipo de problema,
+we have designed nós projetamos uma arquitetura general encoder-decoder architecturede codificador-decodificador
 in :numref:`sec_encoder-decoder`.
 In this section,
-we will
-use two RNNs to design
+we willNesta secção,
+nós vamos
+use twodois RNNs to design
 the encoder and the decoder of
-this architecture
-and apply it to *sequence to sequence* learning
-for machine translation
-:cite:`Sutskever.Vinyals.Le.2014,Cho.Van-Merrienboer.Gulcehre.ea.2014`.
+thispara projetar
+o codificador e o decodificador de
+esta archquitecture
+anda
+e apply it toicá-lo a * sequeênce toia a sequeênce* learning
+for machine translationia * de aprendizagem
+para tradução automática
+:cite:`Sutskever.Vinyals.Le.2014, Cho.Van-Merrienboer.Gulcehre.ea.2014`.
 
 Following the design principle
 of the encoder-decoder architecture,
@@ -827,3 +834,6 @@ for eng, fra in zip(engs, fras):
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwMTcwMjc3MThdfQ==
+-->
