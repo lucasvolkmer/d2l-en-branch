@@ -811,26 +811,20 @@ for eng, fra in zip(engs, fras):
 
 ## Exercícios
 
-1. Can you adjust the hyperparameters to improve the translation results?
-1. Rerun the experiment without using masks in the loss calculation. What results do you observe? Why?
-1. If the encoder and the decoder differ in the number of layers or the number of hidden units, how can we initialize the hidden state of the decoder?
-1. In training, replace teacher forcing with feeding the prediction at the previous time step into the decoder. How does this influence the performance?
-1. Rerun the experiment by replacing GRU with LSTM.
-1. Are there any other ways to design the output layer of the decoder?
-
 1. Você pode ajustar os hiperparâmetros para melhorar os resultados da tradução?
 1. Repita o experimento sem usar máscaras no cálculo da perda. Que resultados você observa? Por quê?
 1. Se o codificador e o decodificador diferem no número de camadas ou no número de unidades ocultas, como podemos inicializar o estado oculto do decodificador?
 1. No treinamento, substitua o forçamento do professor com a alimentação da previsão da etapa de tempo anterior no decodificador. Como isso influencia o desempenho?
 1. Execute novamente o experimento substituindo GRU por LSTM.
 1. Existem outras maneiras de projetar a camada de saída do decodificador?
+
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/345)
+[Discussão](https://discuss.d2l.ai/t/345)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1062)
+[Discussão](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTQ2NTUwMiwtMjM0MDU0MTYzXX0=
+eyJoaXN0b3J5IjpbLTE2MDIyNTgzMDksLTIzNDA1NDE2M119
 -->
