@@ -253,14 +253,14 @@ onde a matriz de projeção $2\times 2$ não depende de nenhum índice de posiç
 
 ## Resumo
 
-* In self-attention, the queries, keys, and values all come from the same place.
-* Both CNNs and self-attention enjoy parallel computation and self-attention has the shortest maximum path length. However, the quadratic computational complexity with respect to the sequence length makes self-attention prohibitively slow for very long sequences.
-* To use the sequence order information, we can inject absolute or relative positional information by adding positional encoding to the input representations.
+* Na atenção própria, as consultas, chaves e valores vêm todos do mesmo lugar.
+* Tanto as CNNs quanto a autoatenção desfrutam de computação paralela e a autoatenção tem o menor comprimento de caminho máximo. No entanto, a complexidade computacional quadrática em relação ao comprimento da sequência torna a autoatenção proibitivamente lenta para sequências muito longas.
+* Para usar as informações de ordem de sequência, podemos injetar informações posicionais absolutas ou relativas adicionando codificação posicional às representações de entrada.
 
-## Exercises
+## Exercícios
 
-1. Suppose that we design a deep architecture to represent a sequence by stacking self-attention layers with positional encoding. What could be issues?
-1. Can you design a learnable positional encoding method?
+1. Suponha que projetemos uma arquitetura profunda para representar uma sequência, empilhando camadas de autoatenção com codificação posicional. Quais podem ser os problemas?
+1. Você pode projetar um método de codificação posicional que possa ser aprendido?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/1651)
@@ -270,7 +270,7 @@ onde a matriz de projeção $2\times 2$ não depende de nenhum índice de posiç
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODM1NzY3OCwtMTc2MDcwNTgsODIzMj
-Q0NDM1LDQ5NzUzMjYxNywtMTYzMTk0OTcxNSwxNzIyMjQ4OTc5
-XX0=
+eyJoaXN0b3J5IjpbOTA2ODU2MzA1LC0xNzYwNzA1OCw4MjMyND
+Q0MzUsNDk3NTMyNjE3LC0xNjMxOTQ5NzE1LDE3MjIyNDg5Nzld
+fQ==
 -->
