@@ -232,26 +232,13 @@ d2l.show_heatmaps(P, xlabel='Column (encoding dimension)',
 
 ### Informação Posicional Relativa
 
-Besides capturing absolute positional information,
-the above positional encoding
-also allows
-a model to easily learn to attend by relative positions.
-This is because
-for any fixed position offset $\delta$,
-the positional encoding at position $i + \delta$
-can be represented by a linear projection
-of that at position $i$.
+
+Além de capturar informações posicionais absolutas, a codificação posicional acima também permite que um modelo aprenda facilmente a atender por posições relativas.
+Isso ocorre porque para qualquer deslocamento de posição fixa $\delta$, a codificação posicional na posição $i + \delta$ pode ser representada por uma projeção linear daquela na posição $i$.
 
 
-This projection can be explained
-mathematically.
-Denoting
-$\omega_j = 1/10000^{2j/d}$,
-any pair of $(p_{i, 2j}, p_{i, 2j+1})$ 
-in :eqref:`eq_positional-encoding-def`
-can 
-be linearly projected to $(p_{i+\delta, 2j}, p_{i+\delta, 2j+1})$
-for any fixed offset $\delta$:
+Essa projeção pode ser explicada matematicamente.
+Denotando $\omega_j = 1/10000^{2j/d}$, qualquer par de $(p_{i, 2j}, p_{i, 2j+1})$ em :eqref:`eq_positional-encoding-def` pode ser linearmente projetado para $(p_{i+\delta, 2j}, p_{i+\delta, 2j+1})$ para qualquer deslocamento fixo $\delta$:
 
 $$\begin{aligned}
 &\begin{bmatrix} \cos(\delta \omega_j) & \sin(\delta \omega_j) \\  -\sin(\delta \omega_j) & \cos(\delta \omega_j) \\ \end{bmatrix}
@@ -262,9 +249,9 @@ $$\begin{aligned}
 \begin{bmatrix} p_{i+\delta, 2j} \\  p_{i+\delta, 2j+1} \\ \end{bmatrix},
 \end{aligned}$$
 
-where the $2\times 2$ projection matrix does not depend on any position index $i$.
+onde a matriz de projeção $2\times 2$ não depende de nenhum índice de posição $i$.
 
-## Summary
+## Resumo
 
 * In self-attention, the queries, keys, and values all come from the same place.
 * Both CNNs and self-attention enjoy parallel computation and self-attention has the shortest maximum path length. However, the quadratic computational complexity with respect to the sequence length makes self-attention prohibitively slow for very long sequences.
@@ -283,6 +270,7 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjA3MDU4LDgyMzI0NDQzNSw0OTc1Mz
-I2MTcsLTE2MzE5NDk3MTUsMTcyMjI0ODk3OV19
+eyJoaXN0b3J5IjpbLTEzODM1NzY3OCwtMTc2MDcwNTgsODIzMj
+Q0NDM1LDQ5NzUzMjYxNywtMTYzMTk0OTcxNSwxNzIyMjQ4OTc5
+XX0=
 -->
