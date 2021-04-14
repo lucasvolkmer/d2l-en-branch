@@ -230,26 +230,6 @@ Na tradução automática, cada exemplo é
 um par de sequências de texto de origem e destino,
 onde cada sequência de texto pode ter comprimentos diferentes.
 
-For computational efficiency,
-we can still process a minibatch of text sequences
-at one time by *truncation* and *padding*.
-Suppose that every sequence in the same minibatch
-should have the same length `num_steps`.
-If a text sequence has fewer than `num_steps` tokens,
-we will keep appending the special "&lt;pad&gt;" token
-to its end until its length reaches `num_steps`.
-Otherwise,
-we will truncate the text sequence
-by only taking its first `num_steps` tokens
-and discarding the remaining.
-In this way,
-every text sequence
-will have the same length
-to be loaded in minibatches of the same shape.
-
-The following `truncate_pad` function
-truncates or pads text sequences as described before.
-
 Para eficiência computacional,
 ainda podemos processar um minibatch de sequências de texto
 ao mesmo tempo por *truncamento* e *preenchimento*.
@@ -282,24 +262,24 @@ def truncate_pad(line, num_steps, padding_token):
 truncate_pad(src_vocab[source[0]], 10, src_vocab['<pad>'])
 ```
 
-Now we define a function to transform
-text sequences into minibatches for training.
-We append the special “&lt;eos&gt;” token
-to the end of every sequence to indicate the
-end of the sequence.
-When a model is predicting
-by
-generating a sequence token after token,
-the generation
-of the “&lt;eos&gt;” token
-can suggest that
-the output sequence is complete.
-Besides,
-we also record the length
-of each text sequence excluding the padding tokens.
-This information will be needed by
-some models that
-we will cover later.
+Agora definimos uma função para transformar
+sequências de texto em minibatches para treinamento.
+Anexamos o especial “&lt;eos&gt;” símbolo
+ao final de cada sequência para indicar o
+fim da sequência.
+Quando um modelo está prevendo
+de
+gerar um token de sequência após o token,
+a geração
+do “&lt;eos&gt;” símbolo
+pode sugerir que
+a sequência de saída está completa.
+Além do mais,
+nós também gravamos o comprimento
+de cada sequência de texto, excluindo os tokens de preenchimento.
+Esta informação será necessária por
+alguns modelos que
+nós cobriremos mais tarde.
 
 ```{.python .input}
 #@tab all
@@ -315,11 +295,11 @@ def build_array_nmt(lines, vocab, num_steps):
     return array, valid_len
 ```
 
-## Putting All Things Together
+## Juntando todas as coisas
 
-Finally, we define the `load_data_nmt` function
-to return the data iterator, together with
-the vocabularies for both the source language and the target language.
+Finalmente, definimos a função `load_data_nmt`
+para retornar o iterador de dados, junto com
+os vocabulários do idioma de origem e do idioma de destino.
 
 ```{.python .input}
 #@tab all
@@ -339,7 +319,7 @@ def load_data_nmt(batch_size, num_steps, num_examples=600):
     return data_iter, src_vocab, tgt_vocab
 ```
 
-Let us read the first minibatch from the English-French dataset.
+Vamos ler o primeiro minibatch do conjunto de dados inglês-francês.
 
 ```{.python .input}
 #@tab all
@@ -352,14 +332,13 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
     break
 ```
 
-## Summary
+## Sumário
 
-* Machine translation refers to the automatic translation of a sequence from one language to another.
-* Using word-level tokenization, the vocabulary size will be significantly larger than that using character-level tokenization. To alleviate this, we can treat infrequent tokens as the same unknown token.
-* We can truncate and pad text sequences so that all of them will have the same length to be loaded in minibatches.
+* Tradução automática refere-se à tradução automática de uma sequência de um idioma para outro.
+* Usando tokenização em nível de palavra, o tamanho do vocabulário será significativamente maior do que usando tokenização em nível de caractere. Para aliviar isso, podemos tratar tokens raros como o mesmo token desconhecido.
+* Podemos truncar e preencher sequências de texto para que todas tenham o mesmo comprimento para serem carregadas em minibatches.
 
-
-## Exercises
+## Exercícios
 
 1. Try different values of the `num_examples` argument in the `load_data_nmt` function. How does this affect the vocabulary sizes of the source language and the target language?
 1. Text in some languages such as Chinese and Japanese does not have word boundary indicators (e.g., space). Is word-level tokenization still a good idea for such cases? Why or why not?
@@ -372,5 +351,5 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1060)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTI5Mzk2MzldfQ==
+eyJoaXN0b3J5IjpbNjY1MDAyMTU5XX0=
 -->
