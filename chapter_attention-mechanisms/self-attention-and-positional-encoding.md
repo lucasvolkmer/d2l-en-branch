@@ -202,11 +202,8 @@ d2l.plot(d2l.arange(num_steps), P[0, :, 6:10].T, xlabel='Row (position)',
 
 ### Informação Posicional Absoluta
 
-To see how the monotonically decreased frequency
-along the encoding dimension relates to absolute positional information,
-let us print out the binary representations of $0, 1, \ldots, 7$.
-As we can see,
-the lowest bit, the second-lowest bit, and the third-lowest bit alternate on every number, every two numbers, and every four numbers, respectively.
+Para ver como a frequência monotonicamente diminuída ao longo da dimensão de codificação se relaciona com a informação posicional absoluta, vamos imprimir as representações binárias de $0, 1, \ldots, 7$.
+Como podemos ver, o bit mais baixo, o segundo bit mais baixo e o terceiro bit mais baixo se alternam em cada número, a cada dois números e a cada quatro números, respectivamente.
 
 ```{.python .input}
 #@tab all
@@ -214,17 +211,11 @@ for i in range(8):
     print(f'{i} in binary is {i:>03b}')
 ```
 
-In binary representations,
-a higher bit has a lower frequency than a lower bit.
-Similarly,
-as demonstrated in the heat map below,
-the positional encoding decreases
-frequencies along the encoding dimension
-by using trigonometric functions.
-Since the outputs are float numbers,
-such continuous representations
-are more space-efficient
-than binary representations.
+Em representações binárias, um bit mais alto tem uma frequência mais baixa do que um bit mais baixo.
+Da mesma forma, conforme demonstrado no mapa de calor abaixo, a codificação posicional diminui as frequências ao longo da dimensão de codificação
+usando funções trigonométricas.
+Uma vez que as saídas são números flutuantes, tais
+  as representações são mais eficientes em termos de espaço do que as representações binárias.
 
 ```{.python .input}
 P = np.expand_dims(np.expand_dims(P[0, :, :], 0), 0)
@@ -239,7 +230,7 @@ d2l.show_heatmaps(P, xlabel='Column (encoding dimension)',
                   ylabel='Row (position)', figsize=(3.5, 4), cmap='Blues')
 ```
 
-### Relative Positional Information
+### Informação Posicional Relativa
 
 Besides capturing absolute positional information,
 the above positional encoding
@@ -292,6 +283,6 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMzIwMTk4LDgyMzI0NDQzNSw0OTc1Mz
+eyJoaXN0b3J5IjpbLTE3NjA3MDU4LDgyMzI0NDQzNSw0OTc1Mz
 I2MTcsLTE2MzE5NDk3MTUsMTcyMjI0ODk3OV19
 -->
