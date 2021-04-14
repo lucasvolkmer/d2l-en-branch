@@ -87,17 +87,17 @@ Por exemplo, $\mathbf{x}_1$ e $\mathbf{x}_5
 estão dentro do campo receptivo de um CNN de duas camadas
 com tamanho de kernel 3 em :numref:`fig_cnn-rnn-self-attention`.
 
-When updating the hidden state of RNNs,
-multiplication of the $d \times d$ weight matrix
-and the $d$-dimensional hidden state has 
-a computational complexity of $\mathcal{O}(d^2)$.
-Since the sequence length is $n$,
-the computational complexity of the recurrent layer
-is $\mathcal{O}(nd^2)$.
-According to :numref:`fig_cnn-rnn-self-attention`,
-there are $\mathcal{O}(n)$ sequential operations
-that cannot be parallelized
-and the maximum path length is also $\mathcal{O}(n)$.
+Ao atualizar o estado oculto de RNNs,
+multiplicação da matriz de pesos $d \times d$
+e o estado oculto $d$-dimensional tem
+uma complexidade computacional de $\mathcal{O}(d^2)$.
+Uma vez que o comprimento da sequência é $n$,
+a complexidade computacional da camada recorrente
+é $\mathcal{O}(nd^2)$.
+De acordo com :numref:`fig_cnn-rnn-self-attention`,
+existem $\mathcal{O}(n)$ operações sequenciais
+que não pode ser paralelizadas
+e o comprimento máximo do caminho também é $\mathcal{O}(n)$.
 
 In self-attention,
 the queries, keys, and values 
@@ -332,5 +332,5 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI1MDY4MzcsMTcyMjI0ODk3OV19
+eyJoaXN0b3J5IjpbLTE2MzE5NDk3MTUsMTcyMjI0ODk3OV19
 -->
