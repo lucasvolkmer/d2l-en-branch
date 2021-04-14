@@ -47,13 +47,13 @@ descreve a atenção de *multi-head*.
 
 ## Modelo
 
-Before providing the implementation of multi-head attention,
-let us formalize this model mathematically.
-Given a query $\mathbf{q} \in \mathbb{R}^{d_q}$,
-a key $\mathbf{k} \in \mathbb{R}^{d_k}$,
-and a value $\mathbf{v} \in \mathbb{R}^{d_v}$,
-each attention head $\mathbf{h}_i$  ($i = 1, \ldots, h$)
-is computed as
+Antes de fornecer a implementação da atenção *multi-head*,
+vamos formalizar este modelo matematicamente.
+Dada uma consulta $\mathbf{q} \in \mathbb{R}^{d_q}$,
+uma chave $\mathbf{k} \in \mathbb{R}^{d_k}$,
+e um valor $\mathbf{v} \in \mathbb{R}^{d_v}$,
+cada *head* de atenção $\mathbf{h}_i$  ($i = 1, \ldots, h$)
+é calculado como
 
 $$\mathbf{h}_i = f(\mathbf W_i^{(q)}\mathbf q, \mathbf W_i^{(k)}\mathbf k,\mathbf W_i^{(v)}\mathbf v) \in \mathbb R^{p_v},$$
 
@@ -309,6 +309,6 @@ attention(X, Y, Y, valid_lens).shape
 [Discussions](https://discuss.d2l.ai/t/1635)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMzkwNjgyMCwtOTc5MjA5NTQxLDE5NT
-U1NjIxMDVdfQ==
+eyJoaXN0b3J5IjpbLTExOTAzNjEzMjgsMTQyMzkwNjgyMCwtOT
+c5MjA5NTQxLDE5NTU1NjIxMDVdfQ==
 -->
