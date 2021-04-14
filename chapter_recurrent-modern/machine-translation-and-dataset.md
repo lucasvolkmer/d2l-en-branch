@@ -37,25 +37,24 @@ que envolve análise estatística
 em componentes como
 o modelo de tradução e o modelo de linguagem.
 
-
-Emphasizing end-to-end learning,
-this book will focus on neural machine translation methods.
-Different from our language model problem
+Enfatizando o aprendizado de ponta a ponta,
+este livro se concentrará em métodos de tradução automática neural.
+Diferente do nosso problema de modelo de linguagem
 in :numref:`sec_language_model`
-whose corpus is in one single language,
-machine translation datasets
-are composed of pairs of text sequences
-that are in
-the source language and the target language, respectively.
-Thus,
-instead of reusing the preprocessing routine
-for language modeling,
-we need a different way to preprocess
-machine translation datasets.
-In the following,
-we show how to
-load the preprocessed data
-into minibatches for training.
+cujo corpus está em um único idioma,
+conjuntos de dados de tradução automática
+são compostos por pares de sequências de texto
+que estão em
+o idioma de origem e o idioma de destino, respectivamente.
+Desse modo,
+em vez de reutilizar a rotina de pré-processamento
+para modelagem de linguagem,
+precisamos de uma maneira diferente de pré-processar
+conjuntos de dados de tradução automática.
+Na sequência,
+nós mostramos como
+carregar os dados pré-processados
+em minibatches para treinamento.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -78,21 +77,21 @@ import tensorflow as tf
 import os
 ```
 
-## Downloading and Preprocessing the Dataset
+## Download e Pré-processamento do Conjunto de Dados
 
-To begin with,
-we download an English-French dataset
-that consists of [bilingual sentence pairs from the Tatoeba Project](http://www.manythings.org/anki/).
-Each line in the dataset
-is a tab-delimited pair
-of an English text sequence
-and the translated French text sequence.
-Note that each text sequence
-can be just one sentence or a paragraph of multiple sentences.
-In this machine translation problem
-where English is translated into French,
-English is the *source language*
-and French is the *target language*.
+Começar com,
+baixamos um conjunto de dados inglês-francês
+que consiste em [pares de frases bilíngues do Projeto Tatoeba](http://www.manythings.org/anki/).
+Cada linha no conjunto de dados
+é um par delimitado por tabulação
+de uma sequência de texto em inglês
+e a sequência de texto traduzida em francês.
+Observe que cada sequência de texto
+pode ser apenas uma frase ou um parágrafo de várias frases.
+Neste problema de tradução automática
+onde o inglês é traduzido para o francês,
+Inglês é o *idioma de origem*
+e o francês é o *idioma de destino*.
 
 ```{.python .input}
 #@tab all
@@ -111,13 +110,13 @@ raw_text = read_data_nmt()
 print(raw_text[:75])
 ```
 
-After downloading the dataset,
-we proceed with several preprocessing steps
-for the raw text data.
-For instance,
-we replace non-breaking space with space,
-convert uppercase letters to lowercase ones,
-and insert space between words and punctuation marks.
+Depois de baixar o conjunto de dados,
+continuamos com várias etapas de pré-processamento
+para os dados de texto brutos.
+Por exemplo,
+substituímos o espaço ininterrupto por espaço,
+converter letras maiúsculas em minúsculas,
+e insira espaço entre palavras e sinais de pontuação.
 
 ```{.python .input}
 #@tab all
@@ -139,7 +138,7 @@ text = preprocess_nmt(raw_text)
 print(text[:80])
 ```
 
-## Tokenization
+## Tokenização
 
 Different from character-level tokenization
 in :numref:`sec_language_model`,
@@ -155,6 +154,21 @@ two lists of token lists: `source` and `target`.
 Specifically,
 `source[i]` is a list of tokens from the
 $i^\mathrm{th}$ text sequence in the source language (English here) and `target[i]` is that in the target language (French here).
+
+Diferente da tokenização em nível de personagem
+in: numref: `sec_language_model`,
+para tradução automática
+preferimos tokenização em nível de palavra aqui
+(modelos de última geração podem usar técnicas de tokenização mais avançadas).
+A seguinte função `tokenize_nmt`
+tokeniza os primeiros pares de sequência de texto `num_examples`,
+Onde
+cada token é uma palavra ou um sinal de pontuação.
+Esta função retorna
+duas listas de listas de tokens: `source` e` target`.
+Especificamente,
+`source [i]` é uma lista de tokens do
+$ i ^ \ mathrm {th} $ sequência de texto no idioma de origem (inglês aqui) e `target [i]` é a do idioma de destino (francês aqui).
 
 ```{.python .input}
 #@tab all
@@ -354,5 +368,5 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1060)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUyNDE5MTQwXX0=
+eyJoaXN0b3J5IjpbLTE2NzgxNjU0NjVdfQ==
 -->
