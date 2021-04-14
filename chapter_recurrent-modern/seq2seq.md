@@ -744,28 +744,6 @@ Então, BLEU é definido como
 $$ \exp\left(\min\left(0, 1 - \frac{\mathrm{len}_{\text{label}}}{\mathrm{len}_{\text{pred}}}\right)\right) \prod_{n=1}^k p_n^{1/2^n},$$
 :eqlabel:`eq_bleu`
 
-where $k$ is the longest $n$-grams for matching.
-
-Based on the definition of BLEU in :eqref:`eq_bleu`,
-whenever the predicted sequence is the same as the label sequence, BLEU is 1.
-Moreover,
-since matching longer $n$-grams is more difficult,
-BLEU assigns a greater weight
-to a longer $n$-gram precision.
-Specifically, when $p_n$ is fixed,
-$p_n^{1/2^n}$ increases as $n$ grows (the original paper uses $p_n^{1/n}$).
-Furthermore,
-since
-predicting shorter sequences
-tends to obtain a higher $p_n$ value,
-the coefficient before the multiplication term in :eqref:`eq_bleu`
-penalizes shorter predicted sequences.
-For example, when $k=2$,
-given the label sequence $A$, $B$, $C$, $D$, $E$, $F$ and the predicted sequence $A$, $B$,
-although $p_1 = p_2 = 1$, the penalty factor $\exp(1-6/2) \approx 0.14$ lowers the BLEU.
-
-We implement the BLEU measure as follows.
-
 onde $k$ são os $n$-gramas mais longos para correspondência.
 
 Com base na definição de BLEU em :eqref:`eq_bleu`,
@@ -783,8 +761,8 @@ tende a obter um valor maior de $p_n$,
 o coeficiente antes do termo de multiplicação em :eqref:`eq_bleu`
 penaliza sequências preditas mais curtas.
 Por exemplo, quando $k=2$,
-dada a sequência de rótulo $ A $, $ B $, $ C $, $ D $, $ E $, $ F $ e a sequência prevista $ A $, $ B $,
-embora $ p_1 = p_2 = 1 $, o fator de penalidade $ \ exp (1-6 / 2) \ aproximadamente 0,14 $ reduz o BLEU.
+dada a sequência de rótulo $A$, $B$, $C$, $D$, $E$, $F$ e a sequência prevista $A$, $B$,
+embora $p_1 = p_2 = 1$, o fator de penalidade $\exp(1-6/2) \approx 0.14$ reduz o BLEU.
 
 Implementamos a medida BLEU da seguinte forma.
 
@@ -807,10 +785,10 @@ def bleu(pred_seq, label_seq, k):  #@save
     return score
 ```
 
-In the end,
-we use the trained RNN encoder-decoder
-to translate a few English sentences into French
-and compute the BLEU of the results.
+No fim,
+usamos o codificador-decodificador RNN treinado
+traduzir algumas frases em inglês para o francês
+e calcular o BLEU dos resultados.
 
 ```{.python .input}
 #@tab all
@@ -822,16 +800,16 @@ for eng, fra in zip(engs, fras):
     print(f'{eng} => {translation}, bleu {bleu(translation, fra, k=2):.3f}')
 ```
 
-## Summary
+## Sumário
 
-* Following the design of the encoder-decoder architecture, we can use two RNNs to design a model for sequence to sequence learning.
-* When implementing the encoder and the decoder, we can use multilayer RNNs.
-* We can use masks to filter out irrelevant computations, such as when calculating the loss.
-* In encoder-decoder training, the teacher forcing approach feeds original output sequences (in contrast to predictions) into the decoder.
-* BLEU is a popular measure for evaluating output sequences by matching $n$-grams between the predicted sequence and the label sequence.
+* Seguindo o projeto da arquitetura do codificador-decodificador, podemos usar dois RNNs para projetar um modelo para o aprendizado de sequência para sequência.
+* Ao implementar o codificador e o decodificador, podemos usar RNNs multicamadas.
+* Podemos usar máscaras para filtrar cálculos irrelevantes, como ao calcular a perda.
+* No treinamento de codificador-decodificador, a abordagem de força do professor alimenta as sequências de saída originais (em contraste com as previsões) para o decodificador.
+* BLEU é uma medida popular para avaliar sequências de saída combinando $n$-gramas entre a sequência prevista e a sequência de rótulo.
 
 
-## Exercises
+## Exercícios
 
 1. Can you adjust the hyperparameters to improve the translation results?
 1. Rerun the experiment without using masks in the loss calculation. What results do you observe? Why?
@@ -840,6 +818,12 @@ for eng, fra in zip(engs, fras):
 1. Rerun the experiment by replacing GRU with LSTM.
 1. Are there any other ways to design the output layer of the decoder?
 
+1. Você pode ajustar os hiperparâmetros para melhorar os resultados da tradução?
+1. Repita o experimento sem usar máscaras no cálculo da perda. Que resultados você observa? Por quê?
+1. Se o codificador e o decodificador diferem no número de camadas ou no número de unidades ocultas, como podemos inicializar o estado oculto do decodificador?
+1. No treinamento, substitua o forçamento do professor com a alimentação da previsão da etapa de tempo anterior no decodificador. Como isso influencia o desempenho?
+1. Execute novamente o experimento substituindo GRU por LSTM.
+1. Existem outras maneiras de projetar a camada de saída do decodificador?
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/345)
 :end_tab:
@@ -848,5 +832,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMzEwODEwNCwtMjM0MDU0MTYzXX0=
+eyJoaXN0b3J5IjpbLTEwMTQ2NTUwMiwtMjM0MDU0MTYzXX0=
 -->
