@@ -354,3 +354,6 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1060)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTI0MTc1OTI2NV19
+-->
