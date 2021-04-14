@@ -97,45 +97,35 @@ o codificador transforma uma sequência de entrada de comprimento variável em u
 Conforme descrito em :numref:`fig_seq2seq`,
 podemos usar um RNN para projetar o codificador.
 
-Let us consider a sequence example (batch size: 1).
-Suppose that
-the input sequence is $x_1, \ldots, x_T$, such that $x_t$ is the $t^{\mathrm{th}}$ token in the input text sequence.
-At time step $t$, the RNN transforms
-the input feature vector $\mathbf{x}_t$ for $x_t$
-and the hidden state $\mathbf{h} _{t-1}$ from the previous time step
-into the current hidden state $\mathbf{h}_t$.
-We can use a function $f$ to express the transformation of the RNN's recurrent layer:
-
 Vamos considerar um exemplo de sequência (tamanho do lote: 1).
 Suponha que
 a sequência de entrada é $x_1, \ldots, x_T$, de modo que $x_t$ é o token $t^{\mathrm{th}}$ na sequência de texto de entrada.
 No passo de tempo $t$, o RNN transforma
 o vetor de característica de entrada $\mathbf{x}_t$ para $x_t$
 e o estado oculto $\mathbf{h} _{t-1}$ da etapa de tempo anterior
-no estado oculto atual $ \ mathbf {h} _t $.
-Podemos usar a função $ f $ para expressar a transformação da camada recorrente do RNN:
+no estado oculto atual $\mathbf{h}_t$.
+Podemos usar a função $f$ para expressar a transformação da camada recorrente do RNN:
 
 $$\mathbf{h}_t = f(\mathbf{x}_t, \mathbf{h}_{t-1}). $$
 
-In general,
-the encoder transforms the hidden states at
-all the time steps
-into the context variable through a customized function $q$:
+Em geral,
+o codificador transforma os estados ocultos em
+todos os passos do tempo
+na variável de contexto por meio de uma função personalizada $q$:
 
 $$\mathbf{c} =  q(\mathbf{h}_1, \ldots, \mathbf{h}_T).$$
 
-For example, when choosing $q(\mathbf{h}_1, \ldots, \mathbf{h}_T) = \mathbf{h}_T$ such as in :numref:`fig_seq2seq`,
-the context variable is just the hidden state $\mathbf{h}_T$
-of the input sequence at the final time step.
+Por exemplo, ao escolher $q(\mathbf{h}_1, \ldots, \mathbf{h}_T) = \mathbf{h}_T$ como em :numref:`fig_seq2seq`,
+a variável de contexto é apenas o estado oculto $\mathbf{h}_T$
+da sequência de entrada na etapa de tempo final.
 
-So far we have used a unidirectional RNN
-to design the encoder,
-where
-a hidden state only depends on
-the input subsequence at and before the time step of the hidden state.
-We can also construct encoders using bidirectional RNNs. In this case, a hidden state depends on
-the subsequence before and after the time step (including the input at the current time step), which encodes the information of the entire sequence.
-
+Até agora, usamos um RNN unidirecional
+para projetar o codificador,
+Onde
+um estado oculto depende apenas de
+a subseqüência de entrada na e antes da etapa de tempo do estado oculto.
+Também podemos construir codificadores usando RNNs bidirecionais. Neste caso, um estado oculto depende de
+a subsequência antes e depois da etapa de tempo (incluindo a entrada na etapa de tempo atual), que codifica as informações de toda a sequência.
 
 Now let us implement the RNN encoder.
 Note that we use an *embedding layer*
@@ -152,6 +142,22 @@ to return its feature vector.
 Besides,
 here we choose a multilayer GRU to
 implement the encoder.
+
+Agora, vamos implementar o codificador RNN.
+Observe que usamos uma *camada de incorporação*
+para obter o vetor de recurso para cada token na sequência de entrada.
+O peso
+de uma camada de incorporação
+é uma matriz
+cujo número de linhas é igual ao tamanho do vocabulário de entrada (`vocab_size`)
+e o número de colunas é igual à dimensão do vetor de recursos (`embed_size`).
+Para qualquer índice de token de entrada $ i $,
+a camada de incorporação
+busca a $ i ^ {\ mathrm {th}} $ linha (começando em 0) da matriz de peso
+para retornar seu vetor de recurso.
+Além do mais,
+aqui, escolhemos um GRU multicamadas para
+implementar o codificador.
 
 ```{.python .input}
 #@save
@@ -837,5 +843,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDgzNjMzNjYsLTIzNDA1NDE2M119
+eyJoaXN0b3J5IjpbLTE5NDEzNjE2MTcsLTIzNDA1NDE2M119
 -->
