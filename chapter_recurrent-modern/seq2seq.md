@@ -34,7 +34,7 @@ para aprendizagem de sequência para sequência
 na tradução automática.
 
 
-![Sequência para aprendizagem de sequência com um codificador RNN e um decodificador RNN.](../img/seq2seq.svg)
+![Aprendizado sequência a sequência com um codificador RNN e um decodificador RNN.](../img/seq2seq.svg)
 :label:`fig_seq2seq`
 
 In :numref:`fig_seq2seq`,
@@ -61,6 +61,33 @@ Similar to the training of language models in
 :numref:`sec_language_model`,
 we can allow the labels to be the original output sequence,
 shifted by one token:
+"&lt;bos&gt;", "Ils", "regardent", "." $\rightarrow$
+"Ils", "regardent", ".", "&lt;eos&gt;".
+
+Em :numref:`fig_seq2seq`,
+o especial "& lt; eos & gt;" símbolo
+marca o fim da sequência.
+O modelo pode parar de fazer previsões
+uma vez que este token é gerado.
+Na etapa de tempo inicial do decodificador RNN,
+existem duas decisões de design especiais.
+Primeiro, o início de sequência especial "& lt; bos & gt;" token é uma entrada.
+Segundo,
+o estado final oculto do codificador RNN é usado
+para iniciar o estado oculto do decodificador.
+Em designs como :cite:`Sutskever.Vinyals.Le.2014`,
+isto é exatamente
+como as informações da sequência de entrada codificada
+é alimentado no decodificador para gerar a sequência de saída (destino).
+Em alguns outros designs, como :cite:`Cho.Van-Merrienboer.Gulcehre.ea.2014`,
+o estado oculto final do codificador
+também é alimentado no decodificador como
+parte das entradas
+em cada etapa de tempo, conforme mostrado em :numref:`fig_seq2seq`.
+Semelhante ao treinamento de modelos de linguagem em
+:numref:`sec_language_model`,
+podemos permitir que os rótulos sejam a sequência de saída original,
+deslocado por um token:
 "&lt;bos&gt;", "Ils", "regardent", "." $\rightarrow$
 "Ils", "regardent", ".", "&lt;eos&gt;".
 
@@ -828,5 +855,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NzU5MjUzMF19
+eyJoaXN0b3J5IjpbLTE5NDU1MzI5ODddfQ==
 -->
