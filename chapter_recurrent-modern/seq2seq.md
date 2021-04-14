@@ -257,18 +257,6 @@ na subsequência de saída anterior
 $y_1, \ldots, y_{t'-1}$ e
 a variável de contexto $\mathbf{c}$, i.e., $P(y_{t'} \mid y_1, \ldots, y_{t'-1}, \mathbf{c})$.
 
-To model this conditional probability on sequences,
-we can use another RNN as the decoder.
-At any time step $t^\prime$ on the output sequence,
-the RNN takes the output $y_{t^\prime-1}$ from the previous time step
-and the context variable $\mathbf{c}$ as its input,
-then transforms
-them and
-the previous hidden state $\mathbf{s}_{t^\prime-1}$
-into the
-hidden state $\mathbf{s}_{t^\prime}$ at the current time step.
-As a result, we can use a function $g$ to express the transformation of the decoder's hidden layer:
-
 Para modelar essa probabilidade condicional em sequências,
 podemos usar outro RNN como decodificador.
 A qualquer momento, passo $t^\prime$ na sequência de saída,
@@ -276,30 +264,30 @@ o RNN pega a saída $y_{t^\prime-1}$ da etapa de tempo anterior
 e a variável de contexto $\mathbf{c}$ como sua entrada,
 então se transforma
 eles e
-o estado oculto anterior $ \ mathbf {s} _ {t ^ \ prime-1} $
+o estado oculto anterior $\mathbf{s}_{t^\prime-1}$
 no
-estado oculto $ \ mathbf {s} _ {t ^ \ prime} $ no intervalo de tempo atual.
-Como resultado, podemos usar uma função $ g $ para expressar a transformação da camada oculta do decodificador:
+estado oculto $\mathbf{s}_{t^\prime}$ no intervalo de tempo atual.
+Como resultado, podemos usar uma função $g$ para expressar a transformação da camada oculta do decodificador:
 
 $$\mathbf{s}_{t^\prime} = g(y_{t^\prime-1}, \mathbf{c}, \mathbf{s}_{t^\prime-1}).$$
 :eqlabel:`eq_seq2seq_s_t`
 
-After obtaining the hidden state of the decoder,
-we can use an output layer and the softmax operation to compute the conditional probability distribution
-$P(y_{t^\prime} \mid y_1, \ldots, y_{t^\prime-1}, \mathbf{c})$ for the output at time step $t^\prime$.
+Depois de obter o estado oculto do decodificador,
+podemos usar uma camada de saída e a operação softmax para calcular a distribuição de probabilidade condicional
+$P(y_{t^\prime} \mid y_1, \ldots, y_{t^\prime-1}, \mathbf{c})$ para a saída na etapa de tempo $t^\prime$.
 
-Following :numref:`fig_seq2seq`,
-when implementing the decoder as follows,
-we directly use the hidden state at the final time step
-of the encoder
-to initialize the hidden state of the decoder.
-This requires that the RNN encoder and the RNN decoder have the same number of layers and hidden units.
-To further incorporate the encoded input sequence information,
-the context variable is concatenated
-with the decoder input at all the time steps.
-To predict the probability distribution of the output token,
-a fully-connected layer is used to transform
-the hidden state at the final layer of the RNN decoder.
+Seguindo :numref:`fig_seq2seq`,
+ao implementar o decodificador da seguinte forma,
+usamos diretamente o estado oculto na etapa de tempo final
+do codificador
+para inicializar o estado oculto do decodificador.
+Isso requer que o codificador RNN e o decodificador RNN tenham o mesmo número de camadas e unidades ocultas.
+Para incorporar ainda mais as informações da sequência de entrada codificada,
+a variável de contexto é concatenada
+com a entrada do decodificador em todas as etapas de tempo.
+Para prever a distribuição de probabilidade do token de saída,
+uma camada totalmente conectada é usada para transformar
+o estado oculto na camada final do decodificador RNN.
 
 ```{.python .input}
 class Seq2SeqDecoder(d2l.Decoder):
@@ -358,10 +346,10 @@ class Seq2SeqDecoder(d2l.Decoder):
         return output, state
 ```
 
-To illustrate the implemented decoder,
-below we instantiate it with the same hyperparameters from the aforementioned encoder.
-As we can see, the output shape of the decoder becomes (batch size, number of time steps, vocabulary size),
-where the last dimension of the tensor stores the predicted token distribution.
+Para ilustrar o decodificador implementado,
+abaixo, nós o instanciamos com os mesmos hiperparâmetros do codificador mencionado.
+Como podemos ver, a forma de saída do decodificador torna-se (tamanho do lote, número de etapas de tempo, tamanho do vocabulário),
+onde a última dimensão do tensor armazena a distribuição de token prevista.
 
 ```{.python .input}
 decoder = Seq2SeqDecoder(vocab_size=10, embed_size=8, num_hiddens=16,
@@ -381,11 +369,10 @@ state = decoder.init_state(encoder(X))
 output, state = decoder(X, state)
 output.shape, state.shape
 ```
+Para resumir,
+as camadas no modelo de codificador-decodificador RNN acima são ilustradas em :numref:`fig_seq2seq_details`.
 
-To summarize,
-the layers in the above RNN encoder-decoder model are illustrated in :numref:`fig_seq2seq_details`.
-
-![Layers in an RNN encoder-decoder model.](../img/seq2seq-details.svg)
+![Camadas em um modelo de codificador-decodificador RNN.](../img/seq2seq-details.svg)
 :label:`fig_seq2seq_details`
 
 ## Loss Function
@@ -839,5 +826,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjExMDA2MCwtMjM0MDU0MTYzXX0=
+eyJoaXN0b3J5IjpbNjM1NDkzNzA3LC0yMzQwNTQxNjNdfQ==
 -->
