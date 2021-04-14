@@ -66,25 +66,14 @@ attention(X, X, X, valid_lens).shape
 ## Comparando CNNs, RNNs e Autoatenção
 :label:`subsec_cnn-rnn-self-attention`
 
-Let us
-compare architectures for mapping
-a sequence of $n$ tokens
-to another sequence of equal length,
-where each input or output token is represented by
-a $d$-dimensional vector.
-Specifically,
-we will consider CNNs, RNNs, and self-attention.
-We will compare their
-computational complexity, 
-sequential operations,
-and maximum path lengths.
-Note that sequential operations prevent parallel computation,
-while a shorter path between
-any combination of sequence positions
-makes it easier to learn long-range dependencies within the sequence :cite:`Hochreiter.Bengio.Frasconi.ea.2001`.
+Vamos comparar arquiteturas para mapear uma sequência de $n$ tokens para outra sequência de igual comprimento,
+onde cada token de entrada ou saída é representado por um vetor $d$-dimensional.
+Especificamente, consideraremos CNNs, RNNs e autoatenção.
+Compararemos sua complexidade computacional, operações sequenciais e comprimentos máximos de caminho.
+Observe que as operações sequenciais evitam a computação paralela, enquanto um caminho mais curto entre qualquer combinação de posições de sequência torna mais fácil aprender dependências de longo alcance dentro da sequência :cite:`Hochreiter.Bengio.Frasconi.ea.2001`.
 
 
-![Comparing CNN (padding tokens are omitted), RNN, and self-attention architectures.](../img/cnn-rnn-self-attention.svg)
+![Comparando CNN (tokens de preenchimento são omitidos), RNN e arquiteturas de autoatenção.](../img/cnn-rnn-self-attention.svg)
 :label:`fig_cnn-rnn-self-attention`
 
 Consider a convolutional layer whose kernel size is $k$.
@@ -348,5 +337,5 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgzMTY3NDk0XX0=
+eyJoaXN0b3J5IjpbMTcyMjI0ODk3OV19
 -->
