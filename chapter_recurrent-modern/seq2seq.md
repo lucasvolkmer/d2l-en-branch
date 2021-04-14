@@ -709,19 +709,19 @@ def predict_seq2seq(net, src_sentence, src_vocab, tgt_vocab, num_steps,
     return ' '.join(tgt_vocab.to_tokens(output_seq)), attention_weight_seq
 ```
 
-## Avaliação de Sequências preditas
+## Avaliação de Sequências Preditas
 
-We can evaluate a predicted sequence
-by comparing it with the
-label sequence (the ground-truth).
-BLEU (Bilingual Evaluation Understudy),
-though originally proposed for evaluating
-machine translation results :cite:`Papineni.Roukos.Ward.ea.2002`,
-has been extensively used in measuring
-the quality of output sequences for different applications.
-In principle, for any $n$-grams in the predicted sequence,
-BLEU evaluates whether this $n$-grams appears
-in the label sequence.
+Podemos avaliar uma sequência prevista
+comparando-o com o
+sequência de rótulos (a verdade fundamental).
+BLEU (Understudy de Avaliação Bilíngue),
+embora originalmente proposto para avaliação
+resultados da tradução automática :cite:`Papineni.Roukos.Ward.ea.2002`,
+tem sido amplamente utilizado na medição
+a qualidade das sequências de saída para diferentes aplicações.
+Em princípio, para quaisquer $n$-gramas na sequência prevista,
+BLEU avalia se este $n$-grams aparece
+na sequência do rótulo.
 
 Denote by $p_n$
 the precision of $n$-grams,
@@ -740,6 +740,24 @@ let $\mathrm{len}_{\text{label}}$ and $\mathrm{len}_{\text{pred}}$
 be
 the numbers of tokens in the label sequence and the predicted sequence, respectively.
 Then, BLEU is defined as
+
+Denotado por $p_n$
+a precisão de $n$-grams,
+qual é
+a proporção de
+o número de $n$-grams correspondentes em
+as sequências preditas e rotuladas
+para
+o número de $n$-gramas na sequência prevista.
+Explicar,
+dada uma sequência de rótulo $A$, $B$, $C$, $D$, $E$, $F$,
+e uma sequência prevista $A$, $B$, $B$, $C$, $D$,
+temos $p_1 = 4/5$,  $p_2 = 3/4$, $p_3 = 1/3$, e $p_4 = 0$.
+Além do mais,
+deixe $ \ mathrm {len} _ {\ text {label}} $ e $ \ mathrm {len} _ {\ text {pred}} $
+ser
+os números de tokens na sequência do rótulo e na sequência prevista, respectivamente.
+Então, BLEU é definido como
 
 $$ \exp\left(\min\left(0, 1 - \frac{\mathrm{len}_{\text{label}}}{\mathrm{len}_{\text{pred}}}\right)\right) \prod_{n=1}^k p_n^{1/2^n},$$
 :eqlabel:`eq_bleu`
@@ -826,5 +844,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NjMwNjc2MCwtMjM0MDU0MTYzXX0=
+eyJoaXN0b3J5IjpbMTEwODI0MzE5MiwtMjM0MDU0MTYzXX0=
 -->
