@@ -127,22 +127,6 @@ a subseqüência de entrada na e antes da etapa de tempo do estado oculto.
 Também podemos construir codificadores usando RNNs bidirecionais. Neste caso, um estado oculto depende de
 a subsequência antes e depois da etapa de tempo (incluindo a entrada na etapa de tempo atual), que codifica as informações de toda a sequência.
 
-Now let us implement the RNN encoder.
-Note that we use an *embedding layer*
-to obtain the feature vector for each token in the input sequence.
-The weight
-of an embedding layer
-is a matrix
-whose number of rows equals to the size of the input vocabulary (`vocab_size`)
-and number of columns equals to the feature vector's dimension (`embed_size`).
-For any input token index $i$,
-the embedding layer
-fetches the $i^{\mathrm{th}}$ row (starting from 0) of the weight matrix
-to return its feature vector.
-Besides,
-here we choose a multilayer GRU to
-implement the encoder.
-
 Agora, vamos implementar o codificador RNN.
 Observe que usamos uma *camada de incorporação*
 para obter o vetor de recurso para cada token na sequência de entrada.
@@ -151,9 +135,9 @@ de uma camada de incorporação
 é uma matriz
 cujo número de linhas é igual ao tamanho do vocabulário de entrada (`vocab_size`)
 e o número de colunas é igual à dimensão do vetor de recursos (`embed_size`).
-Para qualquer índice de token de entrada $ i $,
+Para qualquer índice de token de entrada $i$,
 a camada de incorporação
-busca a $ i ^ {\ mathrm {th}} $ linha (começando em 0) da matriz de peso
+busca a $i^{\mathrm{th}}$ linha (começando em 0) da matriz de peso
 para retornar seu vetor de recurso.
 Além do mais,
 aqui, escolhemos um GRU multicamadas para
@@ -207,22 +191,22 @@ class Seq2SeqEncoder(d2l.Encoder):
         return output, state
 ```
 
-The returned variables of recurrent layers
-have been explained in :numref:`sec_rnn-concise`.
-Let us still use a concrete example
-to illustrate the above encoder implementation.
-Below
-we instantiate a two-layer GRU encoder
-whose number of hidden units is 16.
-Given
-a minibatch of sequence inputs `X`
-(batch size: 4, number of time steps: 7),
-the hidden states of the last layer
-at all the time steps
-(`output` return by the encoder's recurrent layers)
-are a tensor
-of shape
-(number of time steps, batch size, number of hidden units).
+As variáveis retornadas de camadas recorrentes
+foram explicados em :numref:`sec_rnn-concise`.
+Vamos ainda usar um exemplo concreto
+para ilustrar a implementação do codificador acima.
+Abaixo de
+nós instanciamos um codificador GRU de duas camadas
+cujo número de unidades ocultas é 16.
+Dado
+um minibatch de entradas de sequência `X`
+(tamanho do lote: 4, número de etapas de tempo: 7),
+os estados ocultos da última camada
+em todas as etapas do tempo
+(retorno de `saída` pelas camadas recorrentes do codificador)
+são um tensor
+de forma
+(número de etapas de tempo, tamanho do lote, número de unidades ocultas).
 
 ```{.python .input}
 encoder = Seq2SeqEncoder(vocab_size=10, embed_size=8, num_hiddens=16,
@@ -243,13 +227,13 @@ output, state = encoder(X)
 output.shape
 ```
 
-Since a GRU is employed here,
-the shape of the multilayer hidden states
-at the final time step
-is
-(number of hidden layers, batch size, number of hidden units).
-If an LSTM is used,
-memory cell information will also be contained in `state`.
+Uma vez que um GRU é empregado aqui,
+a forma dos estados ocultos multicamadas
+na etapa final do tempo
+é
+(número de camadas ocultas, tamanho do lote, número de unidades ocultas).
+Se um LSTM for usado,
+as informações da célula de memória também estarão contidas em `estado`.
 
 ```{.python .input}
 len(state), state[0].shape
@@ -270,6 +254,14 @@ for each time step $t'$
 the probability of the decoder output $y_{t'}$
 is conditional
 on the previous output subsequence
+
+Como acabamos de mencionar,
+a variável de contexto $\mathbf{c}$ da saída do codificador codifica toda a seqüência de entrada $x_1, \ldots, x_T$. Dada a sequência de saída $ y_1, y_2, \ ldots, y_ {T '} $ do conjunto de dados de treinamento,
+para cada passo de tempo $ t '$
+(o símbolo difere da etapa de tempo $ t $ das sequências de entrada ou codificadores),
+a probabilidade de saída do decodificador $ y_ {t '} $
+é condicional
+na subseqüência de saída anterior
 $y_1, \ldots, y_{t'-1}$ and
 the context variable $\mathbf{c}$, i.e., $P(y_{t'} \mid y_1, \ldots, y_{t'-1}, \mathbf{c})$.
 
@@ -843,5 +835,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDEzNjE2MTcsLTIzNDA1NDE2M119
+eyJoaXN0b3J5IjpbLTEyNjU1OTA1MjksLTIzNDA1NDE2M119
 -->
