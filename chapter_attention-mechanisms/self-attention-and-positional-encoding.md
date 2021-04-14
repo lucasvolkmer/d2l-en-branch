@@ -1,4 +1,4 @@
-# Self-Attention and Positional Encoding
+# Autoatenção e Codificação Posicional
 :label:`sec_self-attention-and-positional-encoding`
 
 In deep learning,
@@ -361,5 +361,5 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1OTI1NzM4XX0=
+eyJoaXN0b3J5IjpbLTE3MzA4NTMyMzRdfQ==
 -->
