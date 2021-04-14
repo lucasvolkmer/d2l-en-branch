@@ -119,22 +119,12 @@ torna a auto-atenção proibitivamente lenta em sequências muito longas.
 :label:`subsec_positional-encoding`
 
 
-Unlike RNNs that recurrently process
-tokens of a sequence one by one,
-self-attention ditches
-sequential operations in favor of 
-parallel computation.
-To use the sequence order information,
-we can inject
-absolute or relative
-positional information
-by adding *positional encoding*
-to the input representations.
-Positional encodings can be 
-either learned or fixed.
-In the following, 
-we describe a fixed positional encoding
-based on sine and cosine functions :cite:`Vaswani.Shazeer.Parmar.ea.2017`.
+Ao contrário dos RNNs que processam recorrentemente tokens de uma sequência, um por um, a autoatenção desvia as operações sequenciais em favor de
+computação paralela.
+Para usar as informações de ordem de sequência, podemos injetar informações posicionais absolutas ou relativas adicionando *codificação posicional*
+às representações de entrada.
+Codificações posicionais podem ser aprendidas ou corrigidas.
+A seguir, descrevemos uma codificação posicional fixa baseada nas funções seno e cosseno :cite:`Vaswani.Shazeer.Parmar.ea.2017`.
 
 Suppose that
 the input representation $\mathbf{X} \in \mathbb{R}^{n \times d}$ contains the $d$-dimensional embeddings for $n$ tokens of a sequence.
@@ -319,6 +309,6 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3NTMyNjE3LC0xNjMxOTQ5NzE1LDE3Mj
-IyNDg5NzldfQ==
+eyJoaXN0b3J5IjpbODIzMjQ0NDM1LDQ5NzUzMjYxNywtMTYzMT
+k0OTcxNSwxNzIyMjQ4OTc5XX0=
 -->
