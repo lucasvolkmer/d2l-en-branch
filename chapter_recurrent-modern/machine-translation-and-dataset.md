@@ -140,23 +140,8 @@ print(text[:80])
 
 ## Tokenização
 
-Different from character-level tokenization
-in :numref:`sec_language_model`,
-for machine translation
-we prefer word-level tokenization here
-(state-of-the-art models may use more advanced tokenization techniques).
-The following `tokenize_nmt` function
-tokenizes the the first `num_examples` text sequence pairs,
-where
-each token is either a word or a punctuation mark.
-This function returns
-two lists of token lists: `source` and `target`.
-Specifically,
-`source[i]` is a list of tokens from the
-$i^\mathrm{th}$ text sequence in the source language (English here) and `target[i]` is that in the target language (French here).
-
 Diferente da tokenização em nível de personagem
-in: numref: `sec_language_model`,
+in:numref:`sec_language_model`,
 para tradução automática
 preferimos tokenização em nível de palavra aqui
 (modelos de última geração podem usar técnicas de tokenização mais avançadas).
@@ -168,7 +153,7 @@ Esta função retorna
 duas listas de listas de tokens: `source` e` target`.
 Especificamente,
 `source [i]` é uma lista de tokens do
-$ i ^ \ mathrm {th} $ sequência de texto no idioma de origem (inglês aqui) e `target [i]` é a do idioma de destino (francês aqui).
+$i^\mathrm{th}$ sequência de texto no idioma de origem (inglês aqui) e `target [i]` é a do idioma de destino (francês aqui).
 
 ```{.python .input}
 #@tab all
@@ -188,10 +173,9 @@ def tokenize_nmt(text, num_examples=None):
 source, target = tokenize_nmt(text)
 source[:6], target[:6]
 ```
-
-Let us plot the histogram of the number of tokens per text sequence.
-In this simple English-French dataset,
-most of the text sequences have fewer than 20 tokens.
+Deixe-nos representar graficamente o histograma do número de tokens por sequência de texto.
+Neste conjunto de dados inglês-francês simples,
+a maioria das sequências de texto tem menos de 20 tokens.
 
 ```{.python .input}
 #@tab all
@@ -204,26 +188,26 @@ for patch in patches[1].patches:
 d2l.plt.legend(loc='upper right');
 ```
 
-## Vocabulary
+## Vocabulário
 
-Since the machine translation dataset
-consists of pairs of languages,
-we can build two vocabularies for
-both the source language and
-the target language separately.
-With word-level tokenization,
-the vocabulary size will be significantly larger
-than that using character-level tokenization.
-To alleviate this,
-here we treat infrequent tokens
-that appear less than 2 times
-as the same unknown ("&lt;unk&gt;") token.
-Besides that,
-we specify additional special tokens
-such as for padding ("&lt;pad&gt;") sequences to the same length in minibatches,
-and for marking the beginning ("&lt;bos&gt;") or end ("&lt;eos&gt;") of sequences.
-Such special tokens are commonly used in
-natural language processing tasks.
+Uma vez que o conjunto de dados da tradução automática
+consiste em pares de línguas,
+podemos construir dois vocabulários para
+tanto o idioma de origem quanto
+o idioma de destino separadamente.
+Com tokenização em nível de palavra,
+o tamanho do vocabulário será significativamente maior
+do que usando tokenização em nível de caractere.
+Para aliviar isso,
+aqui tratamos tokens infrequentes
+que aparecem menos de 2 vezes
+como o mesmo token desconhecido ("&lt;bos&gt;").
+Além disso,
+especificamos tokens especiais adicionais
+como para sequências de preenchimento ("&lt;bos&gt;") com o mesmo comprimento em minibatches,
+e para marcar o início ("&lt;bos&gt;") ou o fim ("&lt;bos&gt;") das sequências.
+Esses tokens especiais são comumente usados em
+tarefas de processamento de linguagem natural.
 
 ```{.python .input}
 #@tab all
@@ -368,5 +352,5 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1060)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzgxNjU0NjVdfQ==
+eyJoaXN0b3J5IjpbLTEwMzc0OTY5NjNdfQ==
 -->
