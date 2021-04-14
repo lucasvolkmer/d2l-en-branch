@@ -375,37 +375,37 @@ as camadas no modelo de codificador-decodificador RNN acima são ilustradas em :
 ![Camadas em um modelo de codificador-decodificador RNN.](../img/seq2seq-details.svg)
 :label:`fig_seq2seq_details`
 
-## Loss Function
+## Função de Perdas
 
-At each time step, the decoder
-predicts a probability distribution for the output tokens.
-Similar to language modeling,
-we can apply softmax to obtain the distribution
-and calculate the cross-entropy loss for optimization.
-Recall :numref:`sec_machine_translation`
-that the special padding tokens
-are appended to the end of sequences
-so sequences of varying lengths
-can be efficiently loaded
-in minibatches of the same shape.
-However,
-prediction of padding tokens
-should be excluded from loss calculations.
+Em cada etapa de tempo, o decodificador
+prevê uma distribuição de probabilidade para os tokens de saída.
+Semelhante à modelagem de linguagem,
+podemos aplicar softmax para obter a distribuição
+e calcular a perda de entropia cruzada para otimização.
+Lembre-se de :numref:`sec_machine_translation`
+que os tokens de preenchimento especiais
+são anexados ao final das sequências
+então sequências de comprimentos variados
+pode ser carregado de forma eficiente
+em minibatches da mesma forma.
+Contudo,
+previsão de tokens de preenchimento
+devem ser excluídos dos cálculos de perdas.
 
-To this end,
-we can use the following
-`sequence_mask` function
-to mask irrelevant entries with zero values
-so later
-multiplication of any irrelevant prediction
-with zero equals to zero.
-For example,
-if the valid length of two sequences
-excluding padding tokens
-are one and two, respectively,
-the remaining entries after
-the first one
-and the first two entries are cleared to zeros.
+Para este fim,
+podemos usar o seguinte
+função `sequence_mask`
+para mascarar entradas irrelevantes com valores zero
+então mais tarde
+multiplicação de qualquer previsão irrelevante
+com zero igual a zero.
+Por exemplo,
+se o comprimento válido de duas sequências
+excluindo tokens de preenchimento
+são um e dois, respectivamente,
+as entradas restantes após
+o primeiro
+e as duas primeiras entradas são zeradas.
 
 ```{.python .input}
 X = np.array([[1, 2, 3], [4, 5, 6]])
@@ -427,10 +427,10 @@ X = torch.tensor([[1, 2, 3], [4, 5, 6]])
 sequence_mask(X, torch.tensor([1, 2]))
 ```
 
-We can also mask all the entries across the last
-few axes.
-If you like, you may even specify
-to replace such entries with a non-zero value.
+Também podemos mascarar todas as entradas do último
+alguns eixos.
+Se quiser, você pode até especificar
+para substituir essas entradas por um valor diferente de zero.
 
 ```{.python .input}
 X = d2l.ones((2, 3, 4))
@@ -443,17 +443,17 @@ X = d2l.ones(2, 3, 4)
 sequence_mask(X, torch.tensor([1, 2]), value=-1)
 ```
 
-Now we can extend the softmax cross-entropy loss
-to allow the masking of irrelevant predictions.
-Initially,
-masks for all the predicted tokens are set to one.
-Once the valid length is given,
-the mask corresponding to any padding token
-will be cleared to zero.
-In the end,
-the loss for all the tokens
-will be multipled by the mask to filter out
-irrelevant predictions of padding tokens in the loss.
+Agora podemos estender a perda de entropia cruzada softmax
+para permitir o mascaramento de previsões irrelevantes.
+Inicialmente,
+máscaras para todos os tokens previstos são definidas como um.
+Uma vez que o comprimento válido é fornecido,
+a máscara correspondente a qualquer token de preenchimento
+será zerado.
+No fim,
+a perda de todos os tokens
+será multiplicado pela máscara para filtrar
+previsões irrelevantes de tokens de preenchimento na perda.
 
 ```{.python .input}
 #@save
@@ -487,14 +487,14 @@ class MaskedSoftmaxCELoss(nn.CrossEntropyLoss):
         return weighted_loss
 ```
 
-For a sanity check, we can create three identical sequences.
-Then we can
-specify that the valid lengths of these sequences
-are 4, 2, and 0, respectively.
-As a result,
-the loss of the first sequence
-should be twice as large as that of the second sequence,
-while the third sequence should have a zero loss.
+Para uma verificação de sanidade, podemos criar três sequências idênticas.
+Então nós podemos
+especificar que os comprimentos válidos dessas sequências
+são 4, 2 e 0, respectivamente.
+Como resultado,
+a perda da primeira sequência
+deve ser duas vezes maior que o da segunda sequência,
+enquanto a terceira sequência deve ter uma perda zero.
 
 ```{.python .input}
 loss = MaskedSoftmaxCELoss()
@@ -508,19 +508,19 @@ loss(d2l.ones(3, 4, 10), d2l.ones((3, 4), dtype=torch.long),
      torch.tensor([4, 2, 0]))
 ```
 
-## Training
+## Treinamento
 :label:`sec_seq2seq_training`
 
-In the following training loop,
-we concatenate the special beginning-of-sequence token
-and the original output sequence excluding the final token as
-the input to the decoder, as shown in :numref:`fig_seq2seq`.
-This is called *teacher forcing* because
-the original output sequence (token labels) is fed into the decoder.
-Alternatively,
-we could also feed the *predicted* token
-from the previous time step
-as the current input to the decoder.
+No ciclo de treinamento a seguir,
+nós concatenamos o token especial de início de sequência
+e a sequência de saída original excluindo o token final como
+a entrada para o decodificador, conforme mostrado em: numref: `fig_seq2seq`.
+Isso é chamado de * professor forçando* porque
+a sequência de saída original (rótulos de token) é alimentada no decodificador.
+Alternativamente,
+também poderíamos alimentar o token * predito *
+da etapa de tempo anterior
+como a entrada atual para o decodificador.
 
 ```{.python .input}
 #@save
@@ -826,5 +826,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM1NDkzNzA3LC0yMzQwNTQxNjNdfQ==
+eyJoaXN0b3J5IjpbLTM2NDA3MTU0NiwtMjM0MDU0MTYzXX0=
 -->
