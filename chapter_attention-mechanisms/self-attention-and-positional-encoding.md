@@ -99,36 +99,23 @@ existem $\mathcal{O}(n)$ operações sequenciais
 que não pode ser paralelizadas
 e o comprimento máximo do caminho também é $\mathcal{O}(n)$.
 
-In self-attention,
-the queries, keys, and values 
-are all $n \times d$ matrices.
-Consider the scaled dot-product attention in
-:eqref:`eq_softmax_QK_V`,
-where a $n \times d$ matrix is multiplied by
-a $d \times n$ matrix,
-then the output $n \times n$ matrix is multiplied
-by a $n \times d$ matrix.
-As a result,
-the self-attention
-has a $\mathcal{O}(n^2d)$ computational complexity.
-As we can see in :numref:`fig_cnn-rnn-self-attention`,
-each token is directly connected
-to any other token via self-attention.
-Therefore,
-computation can be parallel with $\mathcal{O}(1)$ sequential operations
-and the maximum path length is also $\mathcal{O}(1)$.
+Na autoatenção, as consultas, chaves e valores são todas matrizes $n \times d$
+Considere a atenção do produto escalonado em :eqref:`eq_softmax_QK_V`, onde uma matriz $n \times d$ é multiplicada por uma matriz $d \times n$, então a matriz de saída $n \times n$  é multiplicada por uma matriz $n \times d$.
+Como resultado, a autoatenção tem uma complexidade computacional $\mathcal{O}(n^2d)$ 
+Como podemos ver em :numref:`fig_cnn-rnn-self-attention`, cada token está diretamente conectado a qualquer outro token via auto-atenção.
+Portanto, a computação pode ser paralela com $\mathcal{O}(1)$  operações sequenciais e o comprimento máximo do caminho também é $\mathcal{O}(1)$.
 
-All in all,
-both CNNs and self-attention enjoy parallel computation
-and self-attention has the shortest maximum path length.
-However, the quadratic computational complexity with respect to the sequence length
-makes self-attention prohibitively slow for very long sequences.
+Contudo,
+tanto CNNs quanto autoatenção desfrutam de computação paralela
+e a autoatenção tem o menor comprimento de caminho máximo.
+No entanto, a complexidade computacional quadrática em relação ao comprimento da sequência
+torna a auto-atenção proibitivamente lenta em sequências muito longas.
 
 
 
 
 
-## Positional Encoding
+## Codificação Posicional
 :label:`subsec_positional-encoding`
 
 
@@ -332,5 +319,6 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzE5NDk3MTUsMTcyMjI0ODk3OV19
+eyJoaXN0b3J5IjpbNDk3NTMyNjE3LC0xNjMxOTQ5NzE1LDE3Mj
+IyNDg5NzldfQ==
 -->
