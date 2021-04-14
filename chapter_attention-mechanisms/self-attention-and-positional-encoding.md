@@ -76,21 +76,16 @@ Observe que as operações sequenciais evitam a computação paralela, enquanto 
 ![Comparando CNN (tokens de preenchimento são omitidos), RNN e arquiteturas de autoatenção.](../img/cnn-rnn-self-attention.svg)
 :label:`fig_cnn-rnn-self-attention`
 
-Consider a convolutional layer whose kernel size is $k$.
-We will provide more details about sequence processing
-using CNNs in later chapters.
-For now,
-we only need to know that
-since the sequence length is $n$,
-the numbers of input and output channels are both $d$,
-the computational complexity of the convolutional layer is $\mathcal{O}(knd^2)$.
-As :numref:`fig_cnn-rnn-self-attention` shows,
-CNNs are hierarchical  so 
-there are $\mathcal{O}(1)$ sequential operations
-and the maximum path length is $\mathcal{O}(n/k)$.
-For example, $\mathbf{x}_1$ and $\mathbf{x}_5$
-are within the receptive field of a two-layer CNN
-with kernel size 3 in :numref:`fig_cnn-rnn-self-attention`.
+Considere uma camada convolucional cujo tamanho do kernel é $k$.
+Forneceremos mais detalhes sobre o processamento de sequência
+usando CNNs em capítulos posteriores.
+Por enquanto, só precisamos saber que, como o comprimento da sequência é $n$, os números de canais de entrada e saída são $d$,
+a complexidade computacional da camada convolucional é $\mathcal{O}(knd^2)$.
+Como mostra :numref:`fig_cnn-rnn-self-attention`, CNNs são hierárquicas, então existem $\mathcal{O}(1)$ operações sequenciais
+e o comprimento máximo do caminho é $\mathcal{O}(n/k)$.
+Por exemplo, $\mathbf{x}_1$ e $\mathbf{x}_5
+estão dentro do campo receptivo de um CNN de duas camadas
+com tamanho de kernel 3 em :numref:`fig_cnn-rnn-self-attention`.
 
 When updating the hidden state of RNNs,
 multiplication of the $d \times d$ weight matrix
@@ -337,5 +332,5 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjI0ODk3OV19
+eyJoaXN0b3J5IjpbMzI1MDY4MzcsMTcyMjI0ODk3OV19
 -->
