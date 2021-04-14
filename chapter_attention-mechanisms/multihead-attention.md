@@ -95,7 +95,7 @@ import torch
 from torch import nn
 ```
 
-## Implementation
+## Implementação
 
 In our implementation,
 we choose the scaled dot-product attention
@@ -309,6 +309,6 @@ attention(X, Y, Y, valid_lens).shape
 [Discussions](https://discuss.d2l.ai/t/1635)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTI0MzE2MjQsMTQyMzkwNjgyMCwtOT
-c5MjA5NTQxLDE5NTU1NjIxMDVdfQ==
+eyJoaXN0b3J5IjpbMTEzMDMwMjAxNSwtMTM5MjQzMTYyNCwxND
+IzOTA2ODIwLC05NzkyMDk1NDEsMTk1NTU2MjEwNV19
 -->
