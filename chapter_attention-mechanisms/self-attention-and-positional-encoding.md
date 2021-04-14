@@ -126,14 +126,9 @@ Para usar as informações de ordem de sequência, podemos injetar informações
 Codificações posicionais podem ser aprendidas ou corrigidas.
 A seguir, descrevemos uma codificação posicional fixa baseada nas funções seno e cosseno :cite:`Vaswani.Shazeer.Parmar.ea.2017`.
 
-Suppose that
-the input representation $\mathbf{X} \in \mathbb{R}^{n \times d}$ contains the $d$-dimensional embeddings for $n$ tokens of a sequence.
-The positional encoding outputs
-$\mathbf{X} + \mathbf{P}$
-using a positional embedding matrix $\mathbf{P} \in \mathbb{R}^{n \times d}$ of the same shape,
-whose element on the $i^\mathrm{th}$ row 
-and the $(2j)^\mathrm{th}$
-or the $(2j + 1)^\mathrm{th}$ column is
+Suponha que a representação de entrada $\mathbf{X} \in \mathbb{R}^{n \times d}$ contém as características $d$-dimensionais embutidas para $n$ tokens de uma sequência.
+A codificação posicional gera $\mathbf{X} + \mathbf{P}$
+usando uma matriz de *embedding* posicional $\mathbf{P} \in \mathbb{R}^{n \times d}$ da mesma forma, cujo elemento na linha $i^\mathrm{th}$ row  and the $(2j)^\mathrm{th}$ ou a coluna $(2j + 1)^\mathrm{th}$ é
 
 $$\begin{aligned} p_{i, 2j} &= \sin\left(\frac{i}{10000^{2j/d}}\right),\\p_{i, 2j+1} &= \cos\left(\frac{i}{10000^{2j/d}}\right).\end{aligned}$$
 :eqlabel:`eq_positional-encoding-def`
@@ -309,6 +304,6 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIzMjQ0NDM1LDQ5NzUzMjYxNywtMTYzMT
-k0OTcxNSwxNzIyMjQ4OTc5XX0=
+eyJoaXN0b3J5IjpbLTIxODUwMTYsODIzMjQ0NDM1LDQ5NzUzMj
+YxNywtMTYzMTk0OTcxNSwxNzIyMjQ4OTc5XX0=
 -->
