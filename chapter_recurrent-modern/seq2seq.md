@@ -514,11 +514,11 @@ loss(d2l.ones(3, 4, 10), d2l.ones((3, 4), dtype=torch.long),
 No ciclo de treinamento a seguir,
 nós concatenamos o token especial de início de sequência
 e a sequência de saída original excluindo o token final como
-a entrada para o decodificador, conforme mostrado em: numref: `fig_seq2seq`.
-Isso é chamado de * professor forçando* porque
+a entrada para o decodificador, conforme mostrado em :numref:`fig_seq2seq`.
+Isso é chamado de *professor forçando* porque
 a sequência de saída original (rótulos de token) é alimentada no decodificador.
 Alternativamente,
-também poderíamos alimentar o token * predito *
+também poderíamos alimentar o token *predito*
 da etapa de tempo anterior
 como a entrada atual para o decodificador.
 
@@ -596,8 +596,8 @@ def train_seq2seq(net, data_iter, lr, num_epochs, tgt_vocab, device):
           f'tokens/sec on {str(device)}')
 ```
 
-Now we can create and train an RNN encoder-decoder model
-for sequence to sequence learning on the machine translation dataset.
+Agora podemos criar e treinar um modelo de codificador-decodificador RNN
+para aprendizado de sequência para sequência no conjunto de dados de tradução automática.
 
 ```{.python .input}
 #@tab all
@@ -614,28 +614,28 @@ net = d2l.EncoderDecoder(encoder, decoder)
 train_seq2seq(net, train_iter, lr, num_epochs, tgt_vocab, device)
 ```
 
-## Prediction
+## Predição
 
-To predict the output sequence
-token by token,
-at each decoder time step
-the predicted token from the previous
-time step is fed into the decoder as an input.
-Similar to training,
-at the initial time step
-the beginning-of-sequence ("&lt;bos&gt;") token
-is fed into the decoder.
-This prediction process
-is illustrated in :numref:`fig_seq2seq_predict`.
-When the end-of-sequence ("&lt;eos&gt;") token is predicted,
-the prediction of the output sequence is complete.
+Para prever a sequência de saída
+token por token,
+em cada etapa de tempo do decodificador
+o token previsto do anterior
+intervalo de tempo é alimentado no decodificador como uma entrada.
+Semelhante ao treinamento,
+na etapa de tempo inicial
+o token de início de sequência ("&lt;eos&gt;")
+é alimentado no decodificador.
+Este processo de previsão
+é ilustrado em :numref:`fig_seq2seq_predict`.
+Quando o token de fim de sequência ("&lt;eos&gt;") é previsto,
+a previsão da sequência de saída está completa.
 
 
 ![Predicting the output sequence token by token using an RNN encoder-decoder.](../img/seq2seq-predict.svg)
 :label:`fig_seq2seq_predict`
 
-We will introduce different
-strategies for sequence generation in
+Vamos apresentar diferentes
+estratégias para geração de sequência em
 :numref:`sec_beam-search`.
 
 ```{.python .input}
@@ -709,7 +709,7 @@ def predict_seq2seq(net, src_sentence, src_vocab, tgt_vocab, num_steps,
     return ' '.join(tgt_vocab.to_tokens(output_seq)), attention_weight_seq
 ```
 
-## Evaluation of Predicted Sequences
+## Avaliação de Sequências preditas
 
 We can evaluate a predicted sequence
 by comparing it with the
@@ -826,5 +826,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NDA3MTU0NiwtMjM0MDU0MTYzXX0=
+eyJoaXN0b3J5IjpbLTM4NjMwNjc2MCwtMjM0MDU0MTYzXX0=
 -->
