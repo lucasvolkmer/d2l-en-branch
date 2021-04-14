@@ -360,3 +360,6 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTc1OTI1NzM4XX0=
+-->
