@@ -216,19 +216,19 @@ src_vocab = d2l.Vocab(source, min_freq=2,
 len(src_vocab)
 ```
 
-## Loading the Dataset
+## Carregando o Conjunto de Dados
 :label:`subsec_mt_data_loading`
 
-Recall that in language modeling
-each sequence example,
-either a segment of one sentence
-or a span over multiple sentences,
-has a fixed length.
-This was specified by the `num_steps`
-(number of time steps or tokens) argument in :numref:`sec_language_model`.
-In machine translation, each example is
-a pair of source and target text sequences,
-where each text sequence may have different lengths.
+Lembre-se de que na modelagem de linguagem
+cada exemplo de sequência,
+ou um segmento de uma frase
+ou uma extensão de várias frases,
+tem um comprimento fixo.
+Isso foi especificado pelo `num_steps`
+(número de etapas de tempo ou tokens) argumento em :numref:`sec_language_model`.
+Na tradução automática, cada exemplo é
+um par de sequências de texto de origem e destino,
+onde cada sequência de texto pode ter comprimentos diferentes.
 
 For computational efficiency,
 we can still process a minibatch of text sequences
@@ -249,6 +249,26 @@ to be loaded in minibatches of the same shape.
 
 The following `truncate_pad` function
 truncates or pads text sequences as described before.
+
+Para eficiência computacional,
+ainda podemos processar um minibatch de sequências de texto
+ao mesmo tempo por *truncamento* e *preenchimento*.
+Suponha que cada sequência no mesmo minibatch
+deve ter o mesmo comprimento `num_steps`.
+Se uma sequência de texto tiver menos de tokens `num_steps`,
+continuaremos acrescentando a seção especial "&lt;pad&gt;" símbolo
+ao final até que seu comprimento alcance `num_steps`.
+Por outro lado,
+vamos truncar a sequência de texto
+pegando apenas seus primeiros tokens `num_steps`
+e descartando o restante.
+Desta maneira,
+cada sequência de texto
+terá o mesmo comprimento
+para ser carregado em minibatches do mesmo formato.
+
+A seguinte função `truncate_pad`
+trunca ou preenche sequências de texto conforme descrito anteriormente.
 
 ```{.python .input}
 #@tab all
@@ -352,5 +372,5 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1060)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzc0OTY5NjNdfQ==
+eyJoaXN0b3J5IjpbLTExNTI5Mzk2MzldfQ==
 -->
