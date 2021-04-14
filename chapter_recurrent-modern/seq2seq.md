@@ -271,9 +271,9 @@ As a result, we can use a function $g$ to express the transformation of the deco
 
 Para modelar essa probabilidade condicional em sequências,
 podemos usar outro RNN como decodificador.
-A qualquer momento, passo $ t ^ \ prime $ na sequência de saída,
-o RNN pega a saída $ y_ {t ^ \ prime-1} $ da etapa de tempo anterior
-e a variável de contexto $ \ mathbf {c} $ como sua entrada,
+A qualquer momento, passo $t^\prime$ na sequência de saída,
+o RNN pega a saída $y_{t^\prime-1}$ da etapa de tempo anterior
+e a variável de contexto $\mathbf{c}$ como sua entrada,
 então se transforma
 eles e
 o estado oculto anterior $ \ mathbf {s} _ {t ^ \ prime-1} $
@@ -839,5 +839,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzk3NTczMDYsLTIzNDA1NDE2M119
+eyJoaXN0b3J5IjpbLTExNjExMDA2MCwtMjM0MDU0MTYzXX0=
 -->
