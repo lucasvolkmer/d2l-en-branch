@@ -97,21 +97,21 @@ from torch import nn
 
 ## Implementação
 
-In our implementation,
-we choose the scaled dot-product attention
-for each head of the multi-head attention.
-To avoid significant growth
-of computational cost and parameterization cost,
-we set
+Em nossa implementação,
+nós escolhemos a atenção do produto escalonado
+para cada *head* da atenção de várias cabeças.
+Para evitar um crescimento significativo
+de custo computacional e custo de parametrização,
+montamos
 $p_q = p_k = p_v = p_o / h$.
-Note that $h$ heads
-can be computed in parallel
-if we set
-the number of outputs of linear transformations
-for the query, key, and value
-to $p_q h = p_k h = p_v h = p_o$.
-In the following implementation,
-$p_o$ is specified via the argument `num_hiddens`.
+Observe que $h$ *heads*
+pode ser calculado em paralelo
+se definirmos
+o número de saídas de transformações lineares
+para a consulta, chave e valor
+a $p_q h = p_k h = p_v h = p_o$.
+Na implementação a seguir,
+$p_o$ é especificado através do argumento `num_hiddens`.
 
 ```{.python .input}
 #@save
@@ -195,11 +195,11 @@ class MultiHeadAttention(nn.Module):
         return self.W_o(output_concat)
 ```
 
-To allow for parallel computation of multiple heads,
-the above `MultiHeadAttention` class uses two transposition functions as defined below.
-Specifically,
-the `transpose_output` function reverses the operation
-of the `transpose_qkv` function.
+Para permitir o cálculo paralelo de várias *heads*
+a classe `MultiHeadAttention` acima usa duas funções de transposição, conforme definido abaixo.
+Especificamente,
+a função `transpose_output` reverte a operação
+da função `transpose_qkv`.
 
 ```{.python .input}
 #@save
@@ -309,6 +309,6 @@ attention(X, Y, Y, valid_lens).shape
 [Discussions](https://discuss.d2l.ai/t/1635)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMDMwMjAxNSwtMTM5MjQzMTYyNCwxND
+eyJoaXN0b3J5IjpbLTM4NzQxOTgxOSwtMTM5MjQzMTYyNCwxND
 IzOTA2ODIwLC05NzkyMDk1NDEsMTk1NTU2MjEwNV19
 -->
