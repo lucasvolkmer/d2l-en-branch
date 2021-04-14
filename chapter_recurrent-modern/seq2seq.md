@@ -1,40 +1,40 @@
 #  Aprendizado Sequência a Sequência
 :label:`sec_seq2seq`
 
-Como vimos em: numref: `sec_machine_translation`,
+Como vimos em :numref:`sec_machine_translation`,
 na tradução automática
 tanto a entrada quanto a saída são uma sequência de comprimento variável.
 Para resolver este tipo de problema,
 nós projetamos uma arquitetura geral de codificador-decodificador
-in: numref: `sec_encoder-decoder`.
+in :numref:`sec_encoder-decoder`.
 Nesta secção,
 nós vamos
 use dois RNNs para projetar
 o codificador e o decodificador de
 esta arquitetura
-e aplicá-lo a * sequência a sequência * de aprendizagem
+e aplicá-lo a *sequência a sequência* de aprendizagem
 para tradução automática
-: cite: `Sutskever.Vinyals.Le.2014, Cho.Van-Merrienboer.Gulcehre.ea.2014`.
+:cite:`Sutskever.Vinyals.Le.2014, Cho.Van-Merrienboer.Gulcehre.ea.2014`.
 
-Following the design principle
-of the encoder-decoder architecture,
-the RNN encoder can
-take a variable-length sequence as the input and transforms it into a fixed-shape hidden state.
-In other words,
-information of the input (source) sequence
-is *encoded* in the hidden state of the RNN encoder.
-To generate the output sequence token by token,
-a separate RNN decoder
-can predict the next token based on
-what tokens have been seen (such as in language modeling) or generated,
-together with the encoded information of the input sequence.
-:numref:`fig_seq2seq` illustrates
-how to use two RNNs
-for sequence to sequence learning
-in machine translation.
+Seguindo o princípio de design
+da arquitetura codificador-decodificador,
+o codificador RNN pode
+pega uma sequência de comprimento variável como entrada e a transforma em um estado oculto de forma fixa.
+Em outras palavras,
+informação da sequência de entrada (fonte)
+é *codificado* no estado oculto do codificador RNN.
+Para gerar o token de sequência de saída por token,
+um decodificador RNN separado
+pode prever o próximo token com base em
+quais tokens foram vistos (como na modelagem de linguagem) ou gerados,
+junto com as informações codificadas da sequência de entrada.
+:numref:`fig_seq2seq` ilustra
+como usar dois RNNs
+para aprendizagem de sequência para sequência
+na tradução automática.
 
 
-![Sequence to sequence learning with an RNN encoder and an RNN decoder.](../img/seq2seq.svg)
+![Sequência para aprendizagem de sequência com um codificador RNN e um decodificador RNN.](../img/seq2seq.svg)
 :label:`fig_seq2seq`
 
 In :numref:`fig_seq2seq`,
@@ -828,5 +828,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNzIwMjU3OV19
+eyJoaXN0b3J5IjpbLTI0NzU5MjUzMF19
 -->
