@@ -247,23 +247,15 @@ state.shape
 ## Decoder
 :label:`sec_seq2seq_decoder`
 
-As we just mentioned,
-the context variable $\mathbf{c}$ of the encoder's output encodes the entire input sequence $x_1, \ldots, x_T$. Given the output sequence $y_1, y_2, \ldots, y_{T'}$ from the training dataset,
-for each time step $t'$
-(the symbol differs from the time step $t$ of input sequences or encoders),
-the probability of the decoder output $y_{t'}$
-is conditional
-on the previous output subsequence
-
 Como acabamos de mencionar,
-a variável de contexto $\mathbf{c}$ da saída do codificador codifica toda a seqüência de entrada $x_1, \ldots, x_T$. Dada a sequência de saída $ y_1, y_2, \ ldots, y_ {T '} $ do conjunto de dados de treinamento,
-para cada passo de tempo $ t '$
-(o símbolo difere da etapa de tempo $ t $ das sequências de entrada ou codificadores),
-a probabilidade de saída do decodificador $ y_ {t '} $
+a variável de contexto $\mathbf{c}$ da saída do codificador codifica toda a seqüência de entrada $x_1, \ldots, x_T$. Dada a sequência de saída $y_1, y_2, \ldots, y_{T'}$ do conjunto de dados de treinamento,
+para cada passo de tempo $t'$
+(o símbolo difere da etapa de tempo $t$ das sequências de entrada ou codificadores),
+a probabilidade de saída do decodificador $y_{t'}$
 é condicional
-na subseqüência de saída anterior
-$y_1, \ldots, y_{t'-1}$ and
-the context variable $\mathbf{c}$, i.e., $P(y_{t'} \mid y_1, \ldots, y_{t'-1}, \mathbf{c})$.
+na subsequência de saída anterior
+$y_1, \ldots, y_{t'-1}$ e
+a variável de contexto $\mathbf{c}$, i.e., $P(y_{t'} \mid y_1, \ldots, y_{t'-1}, \mathbf{c})$.
 
 To model this conditional probability on sequences,
 we can use another RNN as the decoder.
@@ -276,6 +268,18 @@ the previous hidden state $\mathbf{s}_{t^\prime-1}$
 into the
 hidden state $\mathbf{s}_{t^\prime}$ at the current time step.
 As a result, we can use a function $g$ to express the transformation of the decoder's hidden layer:
+
+Para modelar essa probabilidade condicional em sequências,
+podemos usar outro RNN como decodificador.
+A qualquer momento, passo $ t ^ \ prime $ na sequência de saída,
+o RNN pega a saída $ y_ {t ^ \ prime-1} $ da etapa de tempo anterior
+e a variável de contexto $ \ mathbf {c} $ como sua entrada,
+então se transforma
+eles e
+o estado oculto anterior $ \ mathbf {s} _ {t ^ \ prime-1} $
+no
+estado oculto $ \ mathbf {s} _ {t ^ \ prime} $ no intervalo de tempo atual.
+Como resultado, podemos usar uma função $ g $ para expressar a transformação da camada oculta do decodificador:
 
 $$\mathbf{s}_{t^\prime} = g(y_{t^\prime-1}, \mathbf{c}, \mathbf{s}_{t^\prime-1}).$$
 :eqlabel:`eq_seq2seq_s_t`
@@ -835,5 +839,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjU1OTA1MjksLTIzNDA1NDE2M119
+eyJoaXN0b3J5IjpbLTExNzk3NTczMDYsLTIzNDA1NDE2M119
 -->
