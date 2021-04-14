@@ -25,22 +25,22 @@ from torch import nn
 
 ## Autoatenção
 
-Given a sequence of input tokens
-$\mathbf{x}_1, \ldots, \mathbf{x}_n$ where any $\mathbf{x}_i \in \mathbb{R}^d$ ($1 \leq i \leq n$),
-its self-attention outputs
-a sequence of the same length
+Dada uma sequência de tokens de entrada
+$\mathbf{x}_1, \ldots, \mathbf{x}_n$ onde qualquer $\mathbf{x}_i \in \mathbb{R}^d$ ($1 \leq i \leq n$),
+suas saídas de autoatenção é
+uma sequência do mesmo comprimento
 $\mathbf{y}_1, \ldots, \mathbf{y}_n$,
-where
+Onde
 
 $$\mathbf{y}_i = f(\mathbf{x}_i, (\mathbf{x}_1, \mathbf{x}_1), \ldots, (\mathbf{x}_n, \mathbf{x}_n)) \in \mathbb{R}^d$$
 
-according to the definition of attention pooling $f$ in
+de acordo com a definição de concentração de $f$ em
 :eqref:`eq_attn-pooling`.
-Using multi-head attention,
-the following code snippet
-computes the self-attention of a tensor
-with shape (batch size, number of time steps or sequence length in tokens, $d$).
-The output tensor has the same shape.
+Usando a atenção de várias cabeças,
+o seguinte trecho de código
+calcula a autoatenção de um tensor
+com forma (tamanho do lote, número de etapas de tempo ou comprimento da sequência em tokens, $d$).
+O tensor de saída tem o mesmo formato.
 
 ```{.python .input}
 num_hiddens, num_heads = 100, 5
@@ -63,7 +63,7 @@ X = d2l.ones((batch_size, num_queries, num_hiddens))
 attention(X, X, X, valid_lens).shape
 ```
 
-## Comparing CNNs, RNNs, and Self-Attention
+## Comparando CNNs, RNNs e Autoatenção
 :label:`subsec_cnn-rnn-self-attention`
 
 Let us
@@ -348,5 +348,5 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NDg1ODE5MF19
+eyJoaXN0b3J5IjpbNzgzMTY3NDk0XX0=
 -->
