@@ -1,24 +1,11 @@
 # Autoatenção e Codificação Posicional
 :label:`sec_self-attention-and-positional-encoding`
 
-In deep learning,
-we often use CNNs or RNNs to encode a sequence.
-Now with attention mechanisms.
-imagine that we feed a sequence of tokens
-into attention pooling
-so that
-the same set of tokens
-act as queries, keys, and values.
-Specifically,
-each query attends to all the key-value pairs
-and generates one attention output.
-Since the queries, keys, and values
-come from the same place,
-this performs
-*self-attention* :cite:`Lin.Feng.Santos.ea.2017,Vaswani.Shazeer.Parmar.ea.2017`, which is also called *intra-attention* :cite:`Cheng.Dong.Lapata.2016,Parikh.Tackstrom.Das.ea.2016,Paulus.Xiong.Socher.2017`.
-In this section,
-we will discuss sequence encoding using self-attention,
-including using additional information for the sequence order.
+No aprendizado profundo, costumamos usar CNNs ou RNNs para codificar uma sequência.
+Agora, com os mecanismos de atenção, imagine que alimentamos uma sequência de tokens no *pooling* de atenção para que o mesmo conjunto de tokens atue como consultas, chaves e valores.
+Especificamente, cada consulta atende a todos os pares de valores-chave e gera uma saída de atenção.
+Como as consultas, chaves e valores vêm do mesmo lugar, isso executa *autoatenção* :cite:`Lin.Feng.Santos.ea.2017,Vaswani.Shazeer.Parmar.ea.2017`,  que também é chamado *intra-atenção* :cite:`Cheng.Dong.Lapata.2016,Parikh.Tackstrom.Das.ea.2016,Paulus.Xiong.Socher.2017`.
+Nesta seção, discutiremos a codificação de sequência usando autoatenção, incluindo o uso de informações adicionais para a ordem da sequência.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -36,7 +23,7 @@ import torch
 from torch import nn
 ```
 
-## Self-Attention
+## Autoatenção
 
 Given a sequence of input tokens
 $\mathbf{x}_1, \ldots, \mathbf{x}_n$ where any $\mathbf{x}_i \in \mathbb{R}^d$ ($1 \leq i \leq n$),
@@ -361,5 +348,5 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzA4NTMyMzRdfQ==
+eyJoaXN0b3J5IjpbMTY4NDg1ODE5MF19
 -->
