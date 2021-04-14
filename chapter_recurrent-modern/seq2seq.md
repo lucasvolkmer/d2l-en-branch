@@ -106,6 +106,15 @@ and the hidden state $\mathbf{h} _{t-1}$ from the previous time step
 into the current hidden state $\mathbf{h}_t$.
 We can use a function $f$ to express the transformation of the RNN's recurrent layer:
 
+Vamos considerar um exemplo de sequência (tamanho do lote: 1).
+Suponha que
+a sequência de entrada é $x_1, \ldots, x_T$, de modo que $x_t$ é o token $t^{\mathrm{th}}$ na sequência de texto de entrada.
+No passo de tempo $t$, o RNN transforma
+o vetor de característica de entrada $\mathbf{x}_t$ para $x_t$
+e o estado oculto $\mathbf{h} _{t-1}$ da etapa de tempo anterior
+no estado oculto atual $ \ mathbf {h} _t $.
+Podemos usar a função $ f $ para expressar a transformação da camada recorrente do RNN:
+
 $$\mathbf{h}_t = f(\mathbf{x}_t, \mathbf{h}_{t-1}). $$
 
 In general,
@@ -828,5 +837,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNDA1NDE2M119
+eyJoaXN0b3J5IjpbLTE4MDgzNjMzNjYsLTIzNDA1NDE2M119
 -->
