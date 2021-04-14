@@ -297,8 +297,8 @@ attention(X, Y, Y, valid_lens).shape
 
 ## Exercícios
 
-1. Visualize attention weights of multiple heads in this experiment.
-1. Suppose that we have a trained model based on multi-head attention and we want to prune least important attention heads to increase the prediction speed. How can we design experiments to measure the importance of an attention head?
+1. Visualize o peso da atenção *multi-head* neste experimento.
+1. Suponha que temos um modelo treinado com base na atenção *multi-head* e queremos podar as *heads* menos importantes para aumentar a velocidade de previsão. Como podemos projetar experimentos para medir a importância de uma *head* de atenção?
 
 
 :begin_tab:`mxnet`
@@ -309,6 +309,6 @@ attention(X, Y, Y, valid_lens).shape
 [Discussions](https://discuss.d2l.ai/t/1635)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjIxMDA1NzEsLTEzOTI0MzE2MjQsMT
+eyJoaXN0b3J5IjpbLTEzOTQ3NzkwNDMsLTEzOTI0MzE2MjQsMT
 QyMzkwNjgyMCwtOTc5MjA5NTQxLDE5NTU1NjIxMDVdfQ==
 -->
