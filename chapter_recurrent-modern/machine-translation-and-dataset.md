@@ -1,42 +1,41 @@
 # Machine Translation and the Dataset
 :label:`sec_machine_translation`
 
-We have used RNNs to design language models,
-which are key to natural language processing.
-Another flagship benchmark is *machine translation*,
-a central problem domain for *sequence transduction* models
-that transform input sequences into output sequences.
-Playing a crucial role in various modern AI applications,
-sequence transduction models will form the focus of the remainder of this chapter
-and :numref:`chap_attention`.
-To this end,
-this section introduces the machine translation problem
-and its dataset that will be used later.
+Usamos RNNs para projetar modelos de linguagem,
+que são essenciais para o processamento de linguagem natural.
+Outro benchmark emblemático é a *tradução automática*,
+um domínio de problema central para modelos de *transdução de sequência*
+que transformam sequências de entrada em sequências de saída.
+Desempenhando um papel crucial em várias aplicações modernas de IA,
+modelos de transdução de sequência formarão o foco do restante deste capítulo
+e :numref:`chap_attention`.
+Para este fim,
+esta seção apresenta o problema da tradução automática
+e seu conjunto de dados que será usado posteriormente.
 
-
-*Machine translation* refers to the
-automatic translation of a sequence
-from one language to another.
-In fact, this field
-may date back to 1940s
-soon after digital computers were invented,
-especially by considering the use of computers
-for cracking language codes in World War II.
-For decades,
-statistical approaches
-had been dominant in this field :cite:`Brown.Cocke.Della-Pietra.ea.1988,Brown.Cocke.Della-Pietra.ea.1990`
-before the rise
-of
-end-to-end learning using
-neural networks.
-The latter
-is often called
-*neural machine translation*
-to distinguish itself from
-*statistical machine translation*
-that involves statistical analysis
-in components such as
-the translation model and the language model.
+*Tradução automática* refere-se ao
+tradução automática de uma sequência
+de um idioma para outro.
+Na verdade, este campo
+pode remontar a 1940
+logo depois que os computadores digitais foram inventados,
+especialmente considerando o uso de computadores
+para decifrar códigos de linguagem na Segunda Guerra Mundial.
+Por décadas,
+abordagens estatísticas
+tinha sido dominante neste campo :cite:`Brown.Cocke.Della-Pietra.ea.1988, Brown.Cocke.Della-Pietra.ea.1990`
+antes da ascensão
+de
+aprendizagem ponta a ponta usando
+redes neurais.
+O último
+é frequentemente chamado
+*tradução automática neural*
+para se distinguir de
+*tradução automática de estatística*
+que envolve análise estatística
+em componentes como
+o modelo de tradução e o modelo de linguagem.
 
 
 Emphasizing end-to-end learning,
@@ -355,5 +354,5 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1060)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MTc1OTI2NV19
+eyJoaXN0b3J5IjpbNzUyNDE5MTQwXX0=
 -->
