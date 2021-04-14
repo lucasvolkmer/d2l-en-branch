@@ -723,24 +723,6 @@ Em princípio, para quaisquer $n$-gramas na sequência prevista,
 BLEU avalia se este $n$-grams aparece
 na sequência do rótulo.
 
-Denote by $p_n$
-the precision of $n$-grams,
-which is
-the ratio of
-the number of matched $n$-grams in
-the predicted and label sequences
-to
-the number of $n$-grams in the predicted sequence.
-To explain,
-given a label sequence $A$, $B$, $C$, $D$, $E$, $F$,
-and a predicted sequence $A$, $B$, $B$, $C$, $D$,
-we have $p_1 = 4/5$,  $p_2 = 3/4$, $p_3 = 1/3$, and $p_4 = 0$.
-Besides,
-let $\mathrm{len}_{\text{label}}$ and $\mathrm{len}_{\text{pred}}$
-be
-the numbers of tokens in the label sequence and the predicted sequence, respectively.
-Then, BLEU is defined as
-
 Denotado por $p_n$
 a precisão de $n$-grams,
 qual é
@@ -754,7 +736,7 @@ dada uma sequência de rótulo $A$, $B$, $C$, $D$, $E$, $F$,
 e uma sequência prevista $A$, $B$, $B$, $C$, $D$,
 temos $p_1 = 4/5$,  $p_2 = 3/4$, $p_3 = 1/3$, e $p_4 = 0$.
 Além do mais,
-deixe $ \ mathrm {len} _ {\ text {label}} $ e $ \ mathrm {len} _ {\ text {pred}} $
+deixe $\mathrm{len}_{\text{label}}$ e $\mathrm{len}_{\text{pred}}$
 ser
 os números de tokens na sequência do rótulo e na sequência prevista, respectivamente.
 Então, BLEU é definido como
@@ -783,6 +765,28 @@ given the label sequence $A$, $B$, $C$, $D$, $E$, $F$ and the predicted sequence
 although $p_1 = p_2 = 1$, the penalty factor $\exp(1-6/2) \approx 0.14$ lowers the BLEU.
 
 We implement the BLEU measure as follows.
+
+onde $k$ são os $n$-gramas mais longos para correspondência.
+
+Com base na definição de BLEU em :eqref:`eq_bleu`,
+sempre que a sequência prevista for igual à sequência do rótulo, BLEU será 1.
+Além disso,
+já que combinar $n$-gramas mais longos é mais difícil,
+BLEU atribui um peso maior
+para uma precisão maior de $n$-gram.
+Especificamente, quando $p_n$ é corrigido,
+$p_n^{1/2^n}$ aumenta à medida que $n$ cresce (o artigo original usa $p_n^{1/n}$).
+Além disso,
+Desde a
+predição de sequências mais curtas
+tende a obter um valor maior de $p_n$,
+o coeficiente antes do termo de multiplicação em :eqref:`eq_bleu`
+penaliza sequências preditas mais curtas.
+Por exemplo, quando $k=2$,
+dada a sequência de rótulo $ A $, $ B $, $ C $, $ D $, $ E $, $ F $ e a sequência prevista $ A $, $ B $,
+embora $ p_1 = p_2 = 1 $, o fator de penalidade $ \ exp (1-6 / 2) \ aproximadamente 0,14 $ reduz o BLEU.
+
+Implementamos a medida BLEU da seguinte forma.
 
 ```{.python .input}
 #@tab all
@@ -844,5 +848,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwODI0MzE5MiwtMjM0MDU0MTYzXX0=
+eyJoaXN0b3J5IjpbMTIzMzEwODEwNCwtMjM0MDU0MTYzXX0=
 -->
