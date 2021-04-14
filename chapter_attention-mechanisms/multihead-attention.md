@@ -57,27 +57,27 @@ cada *head* de atenção $\mathbf{h}_i$  ($i = 1, \ldots, h$)
 
 $$\mathbf{h}_i = f(\mathbf W_i^{(q)}\mathbf q, \mathbf W_i^{(k)}\mathbf k,\mathbf W_i^{(v)}\mathbf v) \in \mathbb R^{p_v},$$
 
-where learnable parameters
+onde parâmetros aprendíveis
 $\mathbf W_i^{(q)}\in\mathbb R^{p_q\times d_q}$,
 $\mathbf W_i^{(k)}\in\mathbb R^{p_k\times d_k}$
-and $\mathbf W_i^{(v)}\in\mathbb R^{p_v\times d_v}$,
-and
-$f$ is attention pooling,
-such as
-additive attention and scaled dot-product attention
-in :numref:`sec_attention-scoring-functions`.
-The multi-head attention output
-is another linear transformation via 
-learnable parameters
+e $\mathbf W_i^{(v)}\in\mathbb R^{p_v\times d_v}$,
+e
+$f$ é concentração de atenção,
+tal como
+atenção aditiva e atenção de produto escalonado
+em :numref:`sec_attention-scoring-functions`.
+A saída de atenção *multi-head*
+é outra transformação linear via
+parâmetros aprendíveis
 $\mathbf W_o\in\mathbb R^{p_o\times h p_v}$
-of the concatenation of $h$ heads:
+da concatenação de $h$ cabeças:
 
 $$\mathbf W_o \begin{bmatrix}\mathbf h_1\\\vdots\\\mathbf h_h\end{bmatrix} \in \mathbb{R}^{p_o}.$$
 
-Based on this design,
-each head may attend to different parts of the input.
-More sophisticated functions than the simple weighted average
-can be expressed.
+Com base neste design,
+cada cabeça pode atender a diferentes partes da entrada.
+Funções mais sofisticadas do que a média ponderada simples
+podem ser expressadas.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -309,6 +309,6 @@ attention(X, Y, Y, valid_lens).shape
 [Discussions](https://discuss.d2l.ai/t/1635)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTAzNjEzMjgsMTQyMzkwNjgyMCwtOT
+eyJoaXN0b3J5IjpbLTEzOTI0MzE2MjQsMTQyMzkwNjgyMCwtOT
 c5MjA5NTQxLDE5NTU1NjIxMDVdfQ==
 -->
