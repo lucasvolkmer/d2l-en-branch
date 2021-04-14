@@ -1,4 +1,4 @@
-# Transformeador
+# Transformador
 :label:`sec_transformer`
 
 
@@ -884,5 +884,5 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDgwODc2ODVdfQ==
+eyJoaXN0b3J5IjpbNzA5NzYyNTIwXX0=
 -->
