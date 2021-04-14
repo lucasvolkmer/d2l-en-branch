@@ -340,8 +340,8 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
 
 ## Exercícios
 
-1. Try different values of the `num_examples` argument in the `load_data_nmt` function. How does this affect the vocabulary sizes of the source language and the target language?
-1. Text in some languages such as Chinese and Japanese does not have word boundary indicators (e.g., space). Is word-level tokenization still a good idea for such cases? Why or why not?
+1. Tente valores diferentes do argumento `num_examples` na função` load_data_nmt`. Como isso afeta os tamanhos do vocabulário do idioma de origem e do idioma de destino?
+1. O texto em alguns idiomas, como chinês e japonês, não tem indicadores de limite de palavras (por exemplo, espaço). A tokenização em nível de palavra ainda é uma boa ideia para esses casos? Por que ou por que não?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/344)
@@ -351,5 +351,5 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1060)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY1MDAyMTU5XX0=
+eyJoaXN0b3J5IjpbNjQyMTc3MjQ0XX0=
 -->
