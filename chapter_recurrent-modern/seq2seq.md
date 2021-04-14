@@ -37,41 +37,14 @@ na tradução automática.
 ![Aprendizado sequência a sequência com um codificador RNN e um decodificador RNN.](../img/seq2seq.svg)
 :label:`fig_seq2seq`
 
-In :numref:`fig_seq2seq`,
-the special "&lt;eos&gt;" token
-marks the end of the sequence.
-The model can stop making predictions
-once this token is generated.
-At the initial time step of the RNN decoder,
-there are two special design decisions.
-First, the special beginning-of-sequence "&lt;bos&gt;" token is an input.
-Second,
-the final hidden state of the RNN encoder is used
-to initiate the hidden state of the decoder.
-In designs such as :cite:`Sutskever.Vinyals.Le.2014`,
-this is exactly
-how the encoded input sequence information
-is fed into the decoder for generating the output (target) sequence.
-In some other designs such as :cite:`Cho.Van-Merrienboer.Gulcehre.ea.2014`,
-the final hidden state of the encoder
-is also fed into the decoder as
-part of the inputs
-at every time step as shown in :numref:`fig_seq2seq`.
-Similar to the training of language models in
-:numref:`sec_language_model`,
-we can allow the labels to be the original output sequence,
-shifted by one token:
-"&lt;bos&gt;", "Ils", "regardent", "." $\rightarrow$
-"Ils", "regardent", ".", "&lt;eos&gt;".
-
 Em :numref:`fig_seq2seq`,
-o especial "& lt; eos & gt;" símbolo
+o especial "&lt;bos&gt;" símbolo
 marca o fim da sequência.
 O modelo pode parar de fazer previsões
 uma vez que este token é gerado.
 Na etapa de tempo inicial do decodificador RNN,
 existem duas decisões de design especiais.
-Primeiro, o início de sequência especial "& lt; bos & gt;" token é uma entrada.
+Primeiro, o início de sequência especial "&lt;bos&gt;" token é uma entrada.
 Segundo,
 o estado final oculto do codificador RNN é usado
 para iniciar o estado oculto do decodificador.
@@ -92,11 +65,11 @@ deslocado por um token:
 "Ils", "regardent", ".", "&lt;eos&gt;".
 
 
-In the following,
-we will explain the design of :numref:`fig_seq2seq`
-in greater detail.
-We will train this model for machine translation
-on the English-French dataset as introduced in
+Na sequência,
+vamos explicar o design de :numref:`fig_seq2seq`
+em maiores detalhes.
+Vamos treinar este modelo para tradução automática
+no conjunto de dados inglês-francês, conforme apresentado em
 :numref:`sec_machine_translation`.
 
 ```{.python .input}
@@ -119,10 +92,10 @@ from torch import nn
 
 ## Encoder
 
-Technically speaking,
-the encoder transforms an input sequence of variable length into a fixed-shape *context variable* $\mathbf{c}$, and encodes the input sequence information in this context variable.
-As depicted in :numref:`fig_seq2seq`,
-we can use an RNN to design the encoder.
+Tecnicamente falando,
+o codificador transforma uma sequência de entrada de comprimento variável em um formato fixo *variável de contexto* $\ mathbf{c}$ e codifica as informações da sequência de entrada nesta variável de contexto.
+Conforme descrito em :numref:`fig_seq2seq`,
+podemos usar um RNN para projetar o codificador.
 
 Let us consider a sequence example (batch size: 1).
 Suppose that
@@ -855,5 +828,5 @@ for eng, fra in zip(engs, fras):
 [Discussions](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDU1MzI5ODddfQ==
+eyJoaXN0b3J5IjpbLTIzNDA1NDE2M119
 -->
