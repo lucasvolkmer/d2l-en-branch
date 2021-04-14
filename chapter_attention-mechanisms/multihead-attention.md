@@ -45,7 +45,7 @@ descreve a atenção de *multi-head*.
 
 
 
-## Model
+## Modelo
 
 Before providing the implementation of multi-head attention,
 let us formalize this model mathematically.
@@ -309,5 +309,6 @@ attention(X, Y, Y, valid_lens).shape
 [Discussions](https://discuss.d2l.ai/t/1635)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3OTIwOTU0MSwxOTU1NTYyMTA1XX0=
+eyJoaXN0b3J5IjpbMTQyMzkwNjgyMCwtOTc5MjA5NTQxLDE5NT
+U1NjIxMDVdfQ==
 -->
