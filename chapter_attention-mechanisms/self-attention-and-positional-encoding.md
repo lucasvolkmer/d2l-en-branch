@@ -133,11 +133,8 @@ usando uma matriz de *embedding* posicional $\mathbf{P} \in \mathbb{R}^{n \times
 $$\begin{aligned} p_{i, 2j} &= \sin\left(\frac{i}{10000^{2j/d}}\right),\\p_{i, 2j+1} &= \cos\left(\frac{i}{10000^{2j/d}}\right).\end{aligned}$$
 :eqlabel:`eq_positional-encoding-def`
 
-At first glance,
-this trigonometric-function
-design looks weird.
-Before explanations of this design,
-let us first implement it in the following `PositionalEncoding` class.
+À primeira vista, esse design de função trigonométrica parece estranho.
+Antes das explicações deste design, vamos primeiro implementá-lo na seguinte classe `PositionalEncoding`.
 
 ```{.python .input}
 #@save
@@ -304,6 +301,6 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxODUwMTYsODIzMjQ0NDM1LDQ5NzUzMj
-YxNywtMTYzMTk0OTcxNSwxNzIyMjQ4OTc5XX0=
+eyJoaXN0b3J5IjpbNTg1OTg1MTgwLDgyMzI0NDQzNSw0OTc1Mz
+I2MTcsLTE2MzE5NDk3MTUsMTcyMjI0ODk3OV19
 -->
