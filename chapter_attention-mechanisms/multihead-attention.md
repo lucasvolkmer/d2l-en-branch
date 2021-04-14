@@ -260,11 +260,11 @@ def transpose_output(X, num_heads):
     return X.reshape(X.shape[0], X.shape[1], -1)
 ```
 
-Let us test our implemented `MultiHeadAttention` class
-using a toy example where keys and values are the same.
-As a result,
-the shape of the multi-head attention output
-is (`batch_size`, `num_queries`, `num_hiddens`).
+Vamos testar nossa classe `MultiHeadAttention` implementada
+usando um exemplo de brinquedo em que as chaves e os valores são iguais.
+Como resultado,
+a forma da saída de atenção *multi-head*
+é (`batch_size`,` num_queries`, `num_hiddens`).
 
 ```{.python .input}
 num_hiddens, num_heads = 100, 5
@@ -288,14 +288,14 @@ Y = d2l.ones((batch_size, num_kvpairs, num_hiddens))
 attention(X, Y, Y, valid_lens).shape
 ```
 
-## Summary
+## Resumo
 
-* Multi-head attention combines knowledge of the same attention pooling via different representation subspaces of queries, keys, and values.
-* To compute multiple heads of multi-head attention in parallel, proper tensor manipulation is needed.
+* A atenção *multi-head* combina o conhecimento do mesmo agrupamento de atenção por meio de diferentes subespaços de representação de consultas, chaves e valores.
+* Para calcular várias *heads* de atenção de *multi-heads* em paralelo, é necessária a manipulação adequada do tensor.
 
 
 
-## Exercises
+## Exercícios
 
 1. Visualize attention weights of multiple heads in this experiment.
 1. Suppose that we have a trained model based on multi-head attention and we want to prune least important attention heads to increase the prediction speed. How can we design experiments to measure the importance of an attention head?
@@ -309,6 +309,6 @@ attention(X, Y, Y, valid_lens).shape
 [Discussions](https://discuss.d2l.ai/t/1635)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NzQxOTgxOSwtMTM5MjQzMTYyNCwxND
-IzOTA2ODIwLC05NzkyMDk1NDEsMTk1NTU2MjEwNV19
+eyJoaXN0b3J5IjpbLTE1NjIxMDA1NzEsLTEzOTI0MzE2MjQsMT
+QyMzkwNjgyMCwtOTc5MjA5NTQxLDE5NTU1NjIxMDVdfQ==
 -->
