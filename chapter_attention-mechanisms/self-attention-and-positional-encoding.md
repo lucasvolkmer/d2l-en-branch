@@ -174,19 +174,10 @@ class PositionalEncoding(nn.Module):
         return self.dropout(X)
 ```
 
-In the positional embedding matrix $\mathbf{P}$,
-rows correspond to positions within a sequence
-and columns represent different positional encoding dimensions.
-In the example below,
-we can see that
-the $6^{\mathrm{th}}$ and the $7^{\mathrm{th}}$
-columns of the positional embedding matrix 
-have a higher frequency than 
-the $8^{\mathrm{th}}$ and the $9^{\mathrm{th}}$
-columns.
-The offset between 
-the $6^{\mathrm{th}}$ and the $7^{\mathrm{th}}$ (same for the $8^{\mathrm{th}}$ and the $9^{\mathrm{th}}$) columns
-is due to the alternation of sine and cosine functions.
+Na matriz de incorporação posicional $\mathbf{P}$, as linhas correspondem às posições dentro de uma sequência e as colunas representam diferentes dimensões de codificação posicional.
+No exemplo abaixo, podemos ver que as colunas $6^{\mathrm{th}}$ e $7^{\mathrm{th}}$ da matriz de embedding posicional têm uma frequência maior do que $8^{\mathrm{th}}$ e as colunas $9^{\mathrm{th}}$.
+O deslocamento entre o $6^{\mathrm{th}}$ e o
+$7^{\mathrm{th}}$ (o mesmo para as colunas $8^{\mathrm{th}}$ e $9^{\mathrm{th}}$) é devido à alternância das funções seno e cosseno.
 
 ```{.python .input}
 encoding_dim, num_steps = 32, 60
@@ -301,6 +292,6 @@ where the $2\times 2$ projection matrix does not depend on any position index $i
 [Discussions](https://discuss.d2l.ai/t/1652)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg1OTg1MTgwLDgyMzI0NDQzNSw0OTc1Mz
-I2MTcsLTE2MzE5NDk3MTUsMTcyMjI0ODk3OV19
+eyJoaXN0b3J5IjpbLTIwODAwNzUwNzIsODIzMjQ0NDM1LDQ5Nz
+UzMjYxNywtMTYzMTk0OTcxNSwxNzIyMjQ4OTc5XX0=
 -->
