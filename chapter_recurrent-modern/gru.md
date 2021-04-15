@@ -12,7 +12,7 @@ anomalias de gradiente significam na prática:
 * Podemos encontrar uma situação em que uma observação precoce é altamente
   significativo para prever todas as observações futuras. Considere o pouco
   caso inventado em que a primeira observação contém uma soma de verificação e o objetivo é
-  para discernir se a soma de verificação está correta no final da sequência. Nisso
+  para discernir se a soma de verificação está correta no final da sequência. Nesse
   caso, a influência do primeiro token é vital. Gostaríamos de ter algum
   mecanismos para armazenar informações precoces vitais em uma *célula de memória*. Sem tal
   um mecanismo, teremos que atribuir um gradiente muito grande a esta observação,
@@ -349,6 +349,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussão](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NTcxODAyMCwtMjAwNzk5NzA3LDg0NT
-Q0NjgxMSwtNzc1MTg0MzIwXX0=
+eyJoaXN0b3J5IjpbLTg1ODA0NDY4MiwtNTg1NzE4MDIwLC0yMD
+A3OTk3MDcsODQ1NDQ2ODExLC03NzUxODQzMjBdfQ==
 -->
