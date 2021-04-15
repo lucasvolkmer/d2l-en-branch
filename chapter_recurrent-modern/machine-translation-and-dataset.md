@@ -1,4 +1,4 @@
-# Machine Translation and the Dataset
+# Tradução Automática e o Conjunto de Dados
 :label:`sec_machine_translation`
 
 Usamos RNNs para projetar modelos de linguagem,
@@ -351,5 +351,5 @@ for X, X_valid_len, Y, Y_valid_len in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1060)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQyMTc3MjQ0XX0=
+eyJoaXN0b3J5IjpbLTE0NjI0MTk1OTEsNjQyMTc3MjQ0XX0=
 -->
