@@ -5,75 +5,19 @@ Introduzimos os conceitos básicos de RNNs, que podem lidar melhor com dados de 
 não ser suficiente para os profissionais quando eles enfrentam uma ampla gama de problemas de aprendizagem de sequência
 hoje em dia.
 
-FPor instance,
-a notable issue inexemplo,
-um problema notável na pracátice
-is tha
-é a instabilidade numeérical instability of RNNs.
-Although we have dos RNNs.
-Embora tenhamos applied implementation tricks
-such as gradient clipping,
-this issue can be alleviated further
-with morecado truques de implementação
-como recorte de gradiente,
-este problema pode ser aliviado ainda mais
-com designs mais sophfisticated designs ofdos de modelos de sequeênce models.
-Specifically,
-gated RNNs are much more common inia.
-Especificamente,
-RNNs bloqueados são muito mais comuns na pracáticea.
-We will begin by introducing two of such widely-used networks,
-namely *gatedComeçaremos apresentando duas dessas redes amplamente utilizadas,
-nomeadamente *unidades recuorrent units* (GRUs) and *long short-term memory* (LSTM).
-Furthermore, we will expand the RNNes bloqueadas* (GRUs) e *memória de longo prazo* (LSTM).
-Além disso, vamos expandir a archquitecture
-with a single undirectional hidden layer
-that has been discussed so far.
-We will describe deepa RNN
-com uma única camada oculta indireta
-que foi discutido até agora.
-Descreveremos archquitectureas withprofundas com
-muúltiple hidden layers,
-and discuss theas camadas ocultas,
-e discutir o projeto bidirectional design
-with both forward and backward recurrent computations.
-Such expansions are frequently adopted
-in modern
-com cálculos recorrentes para frente e para trás.
-Essas expansões são frequentemente adotadas
-em redes recuorrent networks.
-When explaining these RNN variants,
-wees modernas.
-Ao explicar essas variantes RNN,
-nós continue toamos a consider
-the same language moar
-o mesmo problema de modelagem de ling probluagem introduced inzido em :numref:`chap_rnn`.
-
 Por exemplo, um problema notável na prática é a instabilidade numérica dos RNNs. Embora tenhamos
 truques de implementação aplicados, como recorte de gradiente, esse problema pode ser aliviado ainda mais com
-designs mais sofisticados de modelos de sequência. Especificamente, os RNNs controlados são muito mais comuns na prática. Começaremos apresentando duas dessas redes amplamente utilizadas, chamadas de *gated recurrent units* (GRUs) e long-term memory (LSTM). Além disso, vamos expandir o RNN
+designs mais sofisticados de modelos de sequência. Especificamente, os RNNs controlados são muito mais comuns na prática. Começaremos apresentando duas dessas redes amplamente utilizadas, chamadas de *gated recurrent units* (GRUs) e *long short-term memory* (LSTM). Além disso, vamos expandir o RNN
 arquitetura com uma única camada oculta indireta que foi discutida até agora. Descreveremos arquiteturas profundas com múltiplas camadas ocultas e discutiremos o projeto bidirecional com
 cálculos recorrentes para frente e para trás. Essas expansões são frequentemente adotadas em
 redes recorrentes modernas. Ao explicar essas variantes RNN, continuamos a considerar o
 mesmo problema de modelagem de linguagem apresentado no :numref:`chap_rnn`.
 
-In fact, language moNa verdade, a modelagem de ling
-reveals only a small fraction of what 
-sequence learning is capable of.
-In a variety of sequence learning problems,
-such asuagem
-revela apenas uma pequena fração do que
-a aprendizagem em sequência é capaz.
-Em uma variedade de problemas de aprendizagem de sequência,
-como reconhecimento automaátic speech recognition,o de fala, conversão de text to speech, and machine translation,
-both inputs and outputs areem fala e tradução automática,
-tanto as entradas quanto as saídas são sequeênces of arbitrary length.
-To explain how to fit this type of data,
-we will take machine translation as anias de comprimento arbitrário.
-Para explicar como ajustar este tipo de dados,
-vamos tomar a tradução automática como exaempleo,
-and introduce the encoder-decoder architecturee apresentar a arquitetura codificador-decodificador com based on em
-RNNs and beam search fore pesquisa de feixe para geração de sequeênce generationia.
+Na verdade, a modelagem de linguagem revela apenas uma pequena fração do que o aprendizado de sequência é capaz.
+Em uma variedade de problemas de aprendizagem de sequência, como reconhecimento automático de fala, conversão de texto em fala,
+e tradução automática, tanto as entradas quanto as saídas são sequências de comprimento arbitrário. Explicar
+como ajustar este tipo de dados, tomaremos a tradução automática como exemplo e apresentaremos o
+arquitetura codificador-decodificador baseada em RNNs e busca de feixe para geração de sequência.
 
 ```toc
 :maxdepth: 2
@@ -89,5 +33,5 @@ beam-search
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MDA5NTM2NiwxNTAwNTQzNTA2XX0=
+eyJoaXN0b3J5IjpbMzAwNTc5NDg1LDE1MDA1NDM1MDZdfQ==
 -->
