@@ -127,7 +127,7 @@ Para todas as entradas da porta de reset $\mathbf{R}_t$ que estão próximas de 
 ### Estados Escondidos
 
 Finalmente, precisamos incorporar o efeito da porta de atualização $\mathbf{Z}_t$. Isso determina até que ponto o novo estado oculto $\mathbf{H}_t \in \mathbb{R}^{n \times h}$ é apenas o antigo estado $\mathbf{H}_{t-1}$ e em quanto o novo estado candidato $\tilde{\mathbf{H}}_t$ é usado.
-A porta de atualização $\mathbf{Z}_t$ pode ser usada para este propósito, simplesmente tomando combinações convexas elementwise entre $\mathbf{H}_{t-1}$ e $\tilde{\mathbf{H}}_t$.
+A porta de atualização $\mathbf{Z}_t$ pode ser usada para este propósito, simplesmente tomando combinações convexas elemento a elemento entre $\mathbf{H}_{t-1}$ e $\tilde{\mathbf{H}}_t$.
 Isso leva à equação de atualização final para a GRU:
 
 $$\mathbf{H}_t = \mathbf{Z}_t \odot \mathbf{H}_{t-1}  + (1 - \mathbf{Z}_t) \odot \tilde{\mathbf{H}}_t.$$
@@ -348,6 +348,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussão](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY0NDk5MDc5LC01ODU3MTgwMjAsLTIwMD
-c5OTcwNyw4NDU0NDY4MTEsLTc3NTE4NDMyMF19
+eyJoaXN0b3J5IjpbLTIxNDg3MDc3OCwtNTg1NzE4MDIwLC0yMD
+A3OTk3MDcsODQ1NDQ2ODExLC03NzUxODQzMjBdfQ==
 -->
