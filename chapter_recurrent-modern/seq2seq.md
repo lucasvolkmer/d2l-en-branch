@@ -515,7 +515,7 @@ No ciclo de treinamento a seguir,
 nós concatenamos o token especial de início de sequência
 e a sequência de saída original excluindo o token final como
 a entrada para o decodificador, conforme mostrado em :numref:`fig_seq2seq`.
-Isso é chamado de *prof* porque
+Isso é chamado de *aprendizado forçado* porque
 a sequência de saída original (rótulos de token) é alimentada no decodificador.
 Alternativamente,
 também poderíamos alimentar o token *predito*
@@ -826,6 +826,6 @@ for eng, fra in zip(engs, fras):
 [Discussão](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMTg2MDY5MSwtMTYwMjI1ODMwOSwtMj
-M0MDU0MTYzXX0=
+eyJoaXN0b3J5IjpbLTIwMzI0NzI0NzEsLTE2MDIyNTgzMDksLT
+IzNDA1NDE2M119
 -->
