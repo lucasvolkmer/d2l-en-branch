@@ -1,29 +1,11 @@
-# Long Short-Term Memory (LSTM)
+# Memória Longa de Curto Prazo (LSTM)
 :label:`sec_lstm`
-
-The challenge to address long-term information preservation and short-term input
-skipping in latent variableMemória Longa de Curto Prazo (LSTM)
-:label:`sec_lstm`
-
-O desafio de abordar a preservação de informações de longo prazo e entrada de curto prazo
-pular em modelos has existed for a long time. One of the
-earliest approaches to address this was the
-long short-term memory (LSTM) :cite:`Hochreiter.Schmidhuber.1997`. It shares many of the properties of the
-GRU.
-Interestingly, LSTMs have a slightly morede variáveis latentes existe há muito tempo. Um dos
-as primeiras abordagens para resolver isso foram
-memória longa de curto prazo (LSTM) :cite:`Hochreiter.Schmidhuber.1997`. Ele compartilha muitas das propriedades do
-GRU.
-Curiosamente, os LSTMs têm um aspecto um pouco mais complexo
-design than GRUs but predates GRUs by almost twodo que GRUs, mas antecede GRUs em quase duas deécadeas.
-
 
 O desafio de abordar a preservação de informações de longo prazo e entrada de curto prazo pulando
 modelos de variáveis latentes existem há muito tempo. Uma das primeiras abordagens para resolver isso
-foi a longa memória de curto prazo (LSTM) (Hochreiter & Schmidhuber, 1997). Ele compartilha muitos dos
+foi a longa memória de curto prazo (LSTM) :cite:`Hochreiter.Schmidhuber.1997`. Ele compartilha muitos dos
 as propriedades da GRU. Curiosamente, os LSTMs têm um design um pouco mais complexo do que os GRUs
 mas antecede GRUs em quase duas décadas.
-
 
 ## Célula de Memória Bloqueada
 
@@ -335,5 +317,5 @@ Mais tarde, encontraremos modelos alternativos, como transformadores, que podem 
 [Discussão](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTY1Mjc5NTFdfQ==
+eyJoaXN0b3J5IjpbLTE1MTg4MjExODRdfQ==
 -->
