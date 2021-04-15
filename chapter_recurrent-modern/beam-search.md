@@ -2,19 +2,14 @@
 :label:`sec_beam-search`
 
 Em :numref:`sec_seq2seq`,
-previmos a sequênceia de saída token bypor token
-until the special end-of-até o final da sequeênceia especial "&lt;eos&gt;" token
-is predicted.
-In this section,
-we will begin with formalizing this *greedy search* strategy
-and exploring issues with it,
-then compare this strategy with othersímbolo
-é previsto.
+previmos a sequência de saída token por token
+até o final da sequênceia especial "&lt;eos&gt;" token
+é predito.
 Nesta secção,
 começaremos formalizando essa estratégia de *busca gananciosa*
 e explorando problemas com isso,
-em seguida, compare essa estratégia com outras alternativeas:
-* pesquisa exhaustive search* and *beam searcha* e *pesquisa por feixe*.
+em seguida, comparamos essa estratégia com outras alternativas:
+* pesquisa exaustiva* e *pesquisa por feixe*.
 
 Antes de uma introdução formal à busca gananciosa,
 vamos formalizar o problema de pesquisa
@@ -23,7 +18,7 @@ a mesma notação matemática de :numref:`sec_seq2seq`.
 A qualquer momento, passo $t'$,
 a probabilidade de saída do decodificador $y_{t '}$
 é condicional
-na subseqüência de saída
+na subsequência de saída
 $y_1, \ldots, y_{t'-1}$ antes de $t'$ e
 a variável de contexto $\mathbf{c}$ que
 codifica as informações da sequência de entrada.
@@ -216,5 +211,5 @@ precisão versus custo computacional.
 
 [Discussão](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNjM2MzUyOCwyNTIwNzY0NzldfQ==
+eyJoaXN0b3J5IjpbLTU1OTMwNjM1NCwyNTIwNzY0NzldfQ==
 -->
