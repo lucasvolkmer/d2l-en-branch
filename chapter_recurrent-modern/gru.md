@@ -48,7 +48,7 @@ Da mesma forma, aprenderemos a pular observações temporárias irrelevantes.
 Por último, aprenderemos a redefinir o estado latente sempre que necessário.
 Discutimos isso em detalhes abaixo.
 
-### Porta de Reinicialização e a Porta de atualização
+### Porta de Reinicialização e a Porta de Atualização
 
 A primeira coisa que precisamos apresentar é
 a *porta de reinicialização* e a *porta de atualização*.
@@ -105,7 +105,7 @@ onde $\mathbf{W}_{xh} \in \mathbb{R}^{d \times h}$ and $\mathbf{W}_{hh} \in \mat
 são parâmetros de pesos,
 $\mathbf{b}_h \in \mathbb{R}^{1 \times h}$
 é o viés,
-e o símbolo $\odot$ é o operador de produto Hadamard (elementwise).
+e o símbolo $\odot$ é o operador de produto Hadamard (elemento a elemento).
 Aqui, usamos uma não linearidade na forma de tanh para garantir que os valores no estado oculto candidato permaneçam no intervalo $(-1, 1)$.
 
 O resultado é um *candidato*, pois ainda precisamos incorporar a ação da porta de atualização.
@@ -348,6 +348,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussão](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU5ODc2NjQ4LC01ODU3MTgwMjAsLTIwMD
+eyJoaXN0b3J5IjpbODY0NDk5MDc5LC01ODU3MTgwMjAsLTIwMD
 c5OTcwNyw4NDU0NDY4MTEsLTc3NTE4NDMyMF19
 -->
