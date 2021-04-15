@@ -123,7 +123,7 @@ Até agora, usamos um RNN unidirecional
 para projetar o codificador,
 Onde
 um estado oculto depende apenas de
-a subseqüência de entrada na e antes da etapa de tempo do estado oculto.
+a subsequência de entrada na e antes da etapa de tempo do estado oculto.
 Também podemos construir codificadores usando RNNs bidirecionais. Neste caso, um estado oculto depende de
 a subsequência antes e depois da etapa de tempo (incluindo a entrada na etapa de tempo atual), que codifica as informações de toda a sequência.
 
@@ -248,7 +248,7 @@ state.shape
 :label:`sec_seq2seq_decoder`
 
 Como acabamos de mencionar,
-a variável de contexto $\mathbf{c}$ da saída do codificador codifica toda a seqüência de entrada $x_1, \ldots, x_T$. Dada a sequência de saída $y_1, y_2, \ldots, y_{T'}$ do conjunto de dados de treinamento,
+a variável de contexto $\mathbf{c}$ da saída do codificador codifica toda a sequência de entrada $x_1, \ldots, x_T$. Dada a sequência de saída $y_1, y_2, \ldots, y_{T'}$ do conjunto de dados de treinamento,
 para cada passo de tempo $t'$
 (o símbolo difere da etapa de tempo $t$ das sequências de entrada ou codificadores),
 a probabilidade de saída do decodificador $y_{t'}$
@@ -515,7 +515,7 @@ No ciclo de treinamento a seguir,
 nós concatenamos o token especial de início de sequência
 e a sequência de saída original excluindo o token final como
 a entrada para o decodificador, conforme mostrado em :numref:`fig_seq2seq`.
-Isso é chamado de *professor forçando* porque
+Isso é chamado de *prof* porque
 a sequência de saída original (rótulos de token) é alimentada no decodificador.
 Alternativamente,
 também poderíamos alimentar o token *predito*
@@ -826,5 +826,6 @@ for eng, fra in zip(engs, fras):
 [Discussão](https://discuss.d2l.ai/t/1062)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDIyNTgzMDksLTIzNDA1NDE2M119
+eyJoaXN0b3J5IjpbLTMyMTg2MDY5MSwtMTYwMjI1ODMwOSwtMj
+M0MDU0MTYzXX0=
 -->
