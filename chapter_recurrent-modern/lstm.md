@@ -199,7 +199,7 @@ def get_lstm_params(vocab_size, num_hiddens, device):
 
 ### Definindo o modelo
 
-Na função de inicialização, o estado oculto do LSTM precisa retornar uma célula de memória *adicional* com um valor de 0 e uma forma de (tamanho do lote, número de unidades ocultas). Conseqüentemente, obtemos a seguinte inicialização de estado.
+Na função de inicialização, o estado oculto do LSTM precisa retornar uma célula de memória *adicional* com um valor de 0 e uma forma de (tamanho do lote, número de unidades ocultas). Consequentemente, obtemos a seguinte inicialização de estado.
 
 ```{.python .input}
 def init_lstm_state(batch_size, num_hiddens, device):
@@ -317,5 +317,5 @@ Mais tarde, encontraremos modelos alternativos, como transformadores, que podem 
 [Discussão](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTg4MjExODRdfQ==
+eyJoaXN0b3J5IjpbLTM2OTg2MTQ2NV19
 -->
