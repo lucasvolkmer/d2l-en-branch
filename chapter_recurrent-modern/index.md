@@ -1,22 +1,9 @@
 # Redes Neurais Recorrentes Modernas
 :label:`chap_modern_rnn`
 
-We have introduced theIntroduzimos o baásics ofo dos RNNs,
-which can better handlque pode lidar melhor com os dados de sequeênce data.
-For demonstration,
-we implemented RNN-based
-language models on text data.
-However, 
-such techniques may not beia.
-Para demonstração,
-implementamos com base em RNN
-modelos de linguagem em dados de texto.
-Contudo,
-tais técnicas podem não ser sufficient
-fores
-para os practitioners when they face
-a wide range ofcantes quando eles enfrentam
-uma ampla gama de problemas de aprendizado de sequeênce learning problems nowadaysia hoje em dia.
+Introduzimos os conceitos básicos de RNNs, que podem lidar melhor com dados de sequência. Para demonstração, implementamos modelos de linguagem baseados em RNN em dados de texto. No entanto, tais técnicas podem
+não ser suficiente para os profissionais quando eles enfrentam uma ampla gama de problemas de aprendizagem de sequência
+hoje em dia.
 
 FPor instance,
 a notable issue inexemplo,
@@ -62,6 +49,14 @@ nós continue toamos a consider
 the same language moar
 o mesmo problema de modelagem de ling probluagem introduced inzido em :numref:`chap_rnn`.
 
+Por exemplo, um problema notável na prática é a instabilidade numérica dos RNNs. Embora tenhamos
+truques de implementação aplicados, como recorte de gradiente, esse problema pode ser aliviado ainda mais com
+designs mais sofisticados de modelos de sequência. Especificamente, os RNNs controlados são muito mais comuns na prática. Começaremos apresentando duas dessas redes amplamente utilizadas, chamadas de *gated recurrent units* (GRUs) e long-term memory (LSTM). Além disso, vamos expandir o RNN
+arquitetura com uma única camada oculta indireta que foi discutida até agora. Descreveremos arquiteturas profundas com múltiplas camadas ocultas e discutiremos o projeto bidirecional com
+cálculos recorrentes para frente e para trás. Essas expansões são frequentemente adotadas em
+redes recorrentes modernas. Ao explicar essas variantes RNN, continuamos a considerar o
+mesmo problema de modelagem de linguagem apresentado no :numref:`chap_rnn`.
+
 In fact, language moNa verdade, a modelagem de ling
 reveals only a small fraction of what 
 sequence learning is capable of.
@@ -94,5 +89,5 @@ beam-search
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTM3MTA3OTcsMTUwMDU0MzUwNl19
+eyJoaXN0b3J5IjpbLTY4MDA5NTM2NiwxNTAwNTQzNTA2XX0=
 -->
