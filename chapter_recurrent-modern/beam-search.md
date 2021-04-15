@@ -37,7 +37,7 @@ $\mathcal{O}(\left|\mathcal{Y}\right|^{T'})$
 possíveis sequências de saída.
 Claro,
 para todas essas sequências de saída,
-porções incluindo e após "& lt; eos & gt;" será descartado
+porções incluindo e após "&lt;eos&gt;" será descartado
 na saída real.
 
 ## Busca Gulosa
@@ -151,7 +151,7 @@ continuamos a selecionar sequências de saída candidatas a $k$
 com as maiores probabilidades condicionais
 de $k\left|\mathcal{Y}\right|$ escolhas possíveis.
 
-![ O processo de busca do feixe (tamanho do feixe: 2, comprimento máximo de uma sequência de saída: 3). As sequências de saída candidatas são $A$, $C$, $AB$, $CE$, $ABD$, e$CED$.](../img/beam-search.svg)
+![O processo de busca do feixe (tamanho do feixe: 2, comprimento máximo de uma sequência de saída: 3). As sequências de saída candidatas são $A$, $C$, $AB$, $CE$, $ABD$, e$CED$.](../img/beam-search.svg)
 :label:`fig_beam-search`
 
 : numref: `fig_beam-search` demonstra o
@@ -211,5 +211,5 @@ precisão versus custo computacional.
 
 [Discussão](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1OTMwNjM1NCwyNTIwNzY0NzldfQ==
+eyJoaXN0b3J5IjpbLTEwNzcwOTI4MjYsMjUyMDc2NDc5XX0=
 -->
