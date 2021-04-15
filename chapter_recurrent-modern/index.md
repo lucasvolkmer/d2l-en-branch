@@ -1,4 +1,4 @@
-# ModernRedes Neurais Recuorrent Neural Networkes Modernas
+# Redes Neurais Recorrentes Modernas
 :label:`chap_modern_rnn`
 
 We have introduced theIntroduzimos o baásics ofo dos RNNs,
@@ -94,5 +94,5 @@ beam-search
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMDU0MzUwNl19
+eyJoaXN0b3J5IjpbLTE0MTM3MTA3OTcsMTUwMDU0MzUwNl19
 -->
