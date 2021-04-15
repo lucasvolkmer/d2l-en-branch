@@ -31,7 +31,7 @@ Vários métodos foram propostos para resolver isso. Uma das mais antigas é a m
 iremos discutir em :numref:`sec_lstm`. A unidade recorrente fechada (GRU)
 :cite:`Cho.Van-Merrienboer.Bahdanau.ea.2014` é uma variante um pouco mais simplificada
 que muitas vezes oferece desempenho comparável e é significativamente mais rápido para
-compute :cite:`Chung.Gulcehre.Cho.ea.2014`.
+computar :cite:`Chung.Gulcehre.Cho.ea.2014`.
 Por sua simplicidade, comecemos com o GRU.
 
 ## Estado Oculto Fechado
@@ -48,7 +48,7 @@ Da mesma forma, aprenderemos a pular observações temporárias irrelevantes.
 Por último, aprenderemos a redefinir o estado latente sempre que necessário.
 Discutimos isso em detalhes abaixo.
 
-### Reset Gate and Update Gate
+### Porta de Reinicialização e a Porta de atualização
 
 A primeira coisa que precisamos apresentar é
 a *porta de reinicialização* e a *porta de atualização*.
@@ -348,6 +348,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussão](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzU2ODEyLC01ODU3MTgwMjAsLTIwMD
+eyJoaXN0b3J5IjpbNTU5ODc2NjQ4LC01ODU3MTgwMjAsLTIwMD
 c5OTcwNyw4NDU0NDY4MTEsLTc3NTE4NDMyMF19
 -->
