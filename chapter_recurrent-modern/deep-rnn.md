@@ -1,4 +1,4 @@
-# Deep Recurrent Neural Networks
+# Redes neurais recorrentes profundas
 
 :label:`sec_deep_rnn`
 
@@ -17,6 +17,7 @@ devido à combinação de várias camadas simples. Em particular, os dados podem
 Além de toda a discussão abstrata acima
 provavelmente é mais fácil entender a família de modelos em que estamos interessados revisando :numref:`fig_deep_rnn`. Ele descreve um RNN profundo com $L$ camadas ocultas.
 Cada estado oculto é continuamente passado para a próxima etapa da camada atual e para a etapa atual da próxima camada.
+
 ![Arquitetura de RNN profunda.](../img/deep-rnn.svg)
 :label:`fig_deep_rnn`
 
@@ -149,5 +150,5 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussão](https://discuss.d2l.ai/t/1058)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTI2MzUwMTRdfQ==
+eyJoaXN0b3J5IjpbMzU1ODMyMDE4XX0=
 -->
