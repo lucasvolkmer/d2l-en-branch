@@ -18,8 +18,14 @@ Curiosamente, os LSTMs têm um aspecto um pouco mais complexo
 design than GRUs but predates GRUs by almost twodo que GRUs, mas antecede GRUs em quase duas deécadeas.
 
 
+O desafio de abordar a preservação de informações de longo prazo e entrada de curto prazo pulando
+modelos de variáveis latentes existem há muito tempo. Uma das primeiras abordagens para resolver isso
+foi a longa memória de curto prazo (LSTM) (Hochreiter & Schmidhuber, 1997). Ele compartilha muitos dos
+as propriedades da GRU. Curiosamente, os LSTMs têm um design um pouco mais complexo do que os GRUs
+mas antecede GRUs em quase duas décadas.
 
-## Gated Memory CellCélula de Memória Bloqueada
+
+## Célula de Memória Bloqueada
 
 Indiscutivelmente, o design da LSTM é inspirado
 pelas portas lógicas de um computador.
@@ -329,5 +335,5 @@ Mais tarde, encontraremos modelos alternativos, como transformadores, que podem 
 [Discussão](https://discuss.d2l.ai/t/1057)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MzU0MjQxOV19
+eyJoaXN0b3J5IjpbLTEwNTY1Mjc5NTFdfQ==
 -->
