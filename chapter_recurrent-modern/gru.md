@@ -10,7 +10,7 @@ Vamos pensar brevemente sobre como
 anomalias de gradiente significam na prática:
 
 * Podemos encontrar uma situação em que uma observação precoce é altamente
-  significativo para prever todas as observações futuras. Considere o pouco
+  significativo para prever todas as observações futuras. Considere o
   caso inventado em que a primeira observação contém uma soma de verificação e o objetivo é
   para discernir se a soma de verificação está correta no final da sequência. Nesse
   caso, a influência do primeiro token é vital. Gostaríamos de ter algum
@@ -22,16 +22,15 @@ anomalias de gradiente significam na prática:
   Código HTML que é irrelevante para o propósito de avaliar o sentimento
   transmitido na página. Gostaríamos de ter algum mecanismo para *pular* tais
   tokens na representação do estado latente.
-* Podemos encontrar situações em que haja uma quebra lógica entre as partes do
+* Podemos encontrar situações em que haja uma quebra lógica entre as partes de
   uma sequência. Por exemplo, pode haver uma transição entre capítulos em um
-  livro, ou uma transição entre um mercado de valores em baixa e em alta. No
-  neste caso seria bom ter um meio de *redefinir* nosso estado interno
+  livro, ou uma transição entre um mercado de valores em baixa e em alta. Neste caso seria bom ter um meio de *redefinir* nosso estado interno
   representação.
 
 Vários métodos foram propostos para resolver isso. Uma das mais antigas é a memória de curto prazo longa :cite:`Hochreiter.Schmidhuber.1997` que nós
 iremos discutir em :numref:`sec_lstm`. A unidade recorrente fechada (GRU)
-:cite:`Cho.Van-Merrienboer.Bahdanau.ea.2014` é um pouco mais simplificado
-variante que muitas vezes oferece desempenho comparável e é significativamente mais rápido para
+:cite:`Cho.Van-Merrienboer.Bahdanau.ea.2014` é uma variante um pouco mais simplificada
+que muitas vezes oferece desempenho comparável e é significativamente mais rápido para
 compute :cite:`Chung.Gulcehre.Cho.ea.2014`.
 Por sua simplicidade, comecemos com o GRU.
 
@@ -349,6 +348,6 @@ d2l.train_ch8(model, train_iter, vocab, lr, num_epochs, device)
 [Discussão](https://discuss.d2l.ai/t/1056)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1ODA0NDY4MiwtNTg1NzE4MDIwLC0yMD
-A3OTk3MDcsODQ1NDQ2ODExLC03NzUxODQzMjBdfQ==
+eyJoaXN0b3J5IjpbMTgzMzU2ODEyLC01ODU3MTgwMjAsLTIwMD
+c5OTcwNyw4NDU0NDY4MTEsLTc3NTE4NDMyMF19
 -->
