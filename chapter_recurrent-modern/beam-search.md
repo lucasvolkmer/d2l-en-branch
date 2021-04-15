@@ -1,8 +1,8 @@
 # Pesquisa de feixe
 :label:`sec_beam-search`
 
-InEm :numref:`sec_seq2seq`,
-we predicted the outputprevimos a sequeênceia de saída token bypor token
+Em :numref:`sec_seq2seq`,
+previmos a sequênceia de saída token bypor token
 until the special end-of-até o final da sequeênceia especial "&lt;eos&gt;" token
 is predicted.
 In this section,
@@ -216,5 +216,5 @@ precisão versus custo computacional.
 
 [Discussão](https://discuss.d2l.ai/t/338)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNjExMjM3NiwyNTIwNzY0NzldfQ==
+eyJoaXN0b3J5IjpbLTMzNjM2MzUyOCwyNTIwNzY0NzldfQ==
 -->
