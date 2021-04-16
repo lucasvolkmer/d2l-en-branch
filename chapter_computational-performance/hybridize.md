@@ -305,7 +305,7 @@ tf.saved_model.save(net, 'my_mlp')
 ```
 
 :begin_tab:`mxnet`
-The model is decomposed into a (large binary) parameter file and a JSON description of the program required to execute to compute the model. The files can be read by other front-end languages supported by Python or MXNet, such as C++, R, Scala, and Perl. Let us have a look at the model description.
+O modelo é decomposto em um arquivo de parâmetro (binário grande) e uma descrição JSON do programa necessário para executar o cálculo do modelo. Os arquivos podem ser lidos por outras linguagens de front-end suportadas por Python ou MXNet, como C ++, R, Scala e Perl. Vamos dar uma olhada na descrição do modelo.
 :end_tab:
 
 ```{.python .input}
@@ -313,11 +313,11 @@ The model is decomposed into a (large binary) parameter file and a JSON descript
 ```
 
 :begin_tab:`mxnet`
-Things are slightly more tricky when it comes to models that resemble code more closely. Basically hybridization needs to deal with control flow and Python overhead in a much more immediate manner. Moreover,
+As coisas são um pouco mais complicadas quando se trata de modelos que se assemelham mais ao código. Basicamente, a hibridização precisa lidar com o fluxo de controle e a sobrecarga do Python de uma maneira muito mais imediata. Além disso,
 
-Contrary to the Block instance, which needs to use the `forward` function, for a HybridBlock instance we need to use the `hybrid_forward` function.
+Ao contrário da instância Block, que precisa usar a função `forward`, para uma instância HybridBlock precisamos usar a função` hybrid_forward`.
 
-Earlier, we demonstrated that, after calling the `hybridize` function, the model is able to achieve superior computing performance and portability. Note, though that hybridization can affect model flexibility, in particular in terms of control flow. We will illustrate how to design more general models and also how compilation will remove spurious Python elements.
+Anteriormente, demonstramos que, após chamar a função `hybridize` , o modelo é capaz de atingir desempenho de computação superior e portabilidade. Observe, porém, que a hibridização pode afetar a flexibilidade do modelo, em particular em termos de fluxo de controle. Ilustraremos como projetar modelos mais gerais e também como a compilação removerá elementos Python espúrios.
 :end_tab:
 
 ```{.python .input}
@@ -384,7 +384,7 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjI5MzAzNDAsMTUyMDc2Njk4NiwxOD
-IzNTIwMjgyLC0xMjM5NDM3ODcsNjQ1NjQ2NTY2LDE4Mzk3NDQ5
-MzgsMTAwMTE5OTQ2LDExODEzNjY4MjldfQ==
+eyJoaXN0b3J5IjpbMTg4NDQ3NDIzOSwxNTIwNzY2OTg2LDE4Mj
+M1MjAyODIsLTEyMzk0Mzc4Nyw2NDU2NDY1NjYsMTgzOTc0NDkz
+OCwxMDAxMTk5NDYsMTE4MTM2NjgyOV19
 -->
