@@ -336,7 +336,7 @@ class HybridNet(nn.HybridBlock):
 ```
 
 :begin_tab:`mxnet`
-The code above implements a simple network with 4 hidden units and 2 outputs. `hybrid_forward` takes an additional argument - the module `F`. This is needed since, depending on whether the code has been hybridized or not, it will use a slightly different library (`ndarray` or `symbol`) for processing. Both classes perform very similar functions and MXNet automatically determines the argument. To understand what is going on we print the arguments as part of the function invocation.
+O código acima implementa uma rede simples com 4 unidades ocultas e 2 saídas. `hybrid_forward` recebe um argumento adicional - o módulo` F`. Isso é necessário porque, dependendo se o código foi hibridizado ou não, ele usará uma biblioteca ligeiramente diferente (`ndarray` ou` símbolo`) para processamento. Ambas as classes executam funções muito semelhantes e o MXNet determina automaticamente o argumento. Para entender o que está acontecendo, imprimimos os argumentos como parte da invocação da função.
 :end_tab:
 
 ```{.python .input}
@@ -347,7 +347,7 @@ net(x)
 ```
 
 :begin_tab:`mxnet`
-Repeating the forward computation will lead to the same output (we omit details). Now let us see what happens if we invoke the `hybridize` method.
+A repetição do cálculo progressivo levará à mesma saída (omitimos os detalhes). Agora vamos ver o que acontece se invocarmos o método `hybridize`.
 :end_tab:
 
 ```{.python .input}
@@ -356,7 +356,7 @@ net(x)
 ```
 
 :begin_tab:`mxnet`
-Instead of using `ndarray` we now use the `symbol` module for `F`. Moreover, even though the input is of `ndarray` type, the data flowing through the network is now converted to `symbol` type as part of the compilation process. Repeating the function call leads to a surprising outcome:
+Em vez de usar `ndarray` agora usamos o módulo` symbol` para `F`. Além disso, embora a entrada seja do tipo `ndarray`, os dados que fluem pela rede agora são convertidos para o tipo `symbol` como parte do processo de compilação. Repetir a chamada de função leva a um resultado surpreendente:
 :end_tab:
 
 ```{.python .input}
@@ -384,7 +384,7 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NDQ3NDIzOSwxNTIwNzY2OTg2LDE4Mj
-M1MjAyODIsLTEyMzk0Mzc4Nyw2NDU2NDY1NjYsMTgzOTc0NDkz
-OCwxMDAxMTk5NDYsMTE4MTM2NjgyOV19
+eyJoaXN0b3J5IjpbLTIwMDE4NzMzMjcsMTUyMDc2Njk4NiwxOD
+IzNTIwMjgyLC0xMjM5NDM3ODcsNjQ1NjQ2NTY2LDE4Mzk3NDQ5
+MzgsMTAwMTE5OTQ2LDExODEzNjY4MjldfQ==
 -->
