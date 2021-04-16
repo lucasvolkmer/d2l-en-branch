@@ -274,17 +274,17 @@ Como é observado nos resultados acima, depois que uma instância tf.keras Seque
 ### Serialização
 
 :begin_tab:`mxnet`
-One of the benefits of compiling the models is that we can serialize (save) the model and its parameters to disk. This allows us to store a model in a manner that is independent of the front-end language of choice. This allows us to deploy trained models to other devices and easily use other front-end programming languages. At the same time the code is often faster than what can be achieved in imperative programming. Let us see the `export` method in action.
+Um dos benefícios de compilar os modelos é que podemos serializar (salvar) o modelo e seus parâmetros no disco. Isso nos permite armazenar um modelo de maneira independente da linguagem de front-end de escolha. Isso nos permite implantar modelos treinados em outros dispositivos e usar facilmente outras linguagens de programação front-end. Ao mesmo tempo, o código geralmente é mais rápido do que o que pode ser alcançado na programação imperativa. Vamos ver o método `export` em ação.
 :end_tab:
 
 :begin_tab:`pytorch`
-One of the benefits of compiling the models is that we can serialize (save) the model and its parameters to disk. This allows us to store a model in a manner that is independent of the front-end language of choice. This allows us to deploy trained models to other devices and easily use other front-end programming languages. At the same time the code is often faster than what can be achieved in imperative programming. Let us see the `save` method in action.
+Um dos benefícios de compilar os modelos é que podemos serializar (salvar) o modelo e seus parâmetros no disco. Isso nos permite armazenar um modelo de maneira independente da linguagem de front-end de escolha. Isso nos permite implantar modelos treinados em outros dispositivos e usar facilmente outras linguagens de programação front-end. Ao mesmo tempo, o código geralmente é mais rápido do que o que pode ser alcançado na programação imperativa. Vamos ver o método `save` em ação.
 :end_tab:
 
 :begin_tab:`tensorflow`
-One of the benefits of compiling the models is that we can serialize (save) the model and its parameters to disk. This allows us to store a model in a manner that is independent of the front-end language of choice. This allows us to deploy trained models to other devices and easily use other front-end programming languages or execute a trained model on a server. At the same time the code is often faster than what can be achieved in imperative programming. 
-The low-level API that allows us to save in tensorflow is `tf.saved_model`. 
-Let's see the `saved_model` instance in action.
+Um dos benefícios de compilar os modelos é que podemos serializar (salvar) o modelo e seus parâmetros no disco. Isso nos permite armazenar um modelo de maneira independente da linguagem de front-end de escolha. Isso nos permite implantar modelos treinados em outros dispositivos e usar facilmente outras linguagens de programação front-end ou executar um modelo treinado em um servidor. Ao mesmo tempo, o código geralmente é mais rápido do que o que pode ser alcançado na programação imperativa.
+A API de baixo nível que nos permite salvar em tensorflow é `tf.saved_model`.
+Vamos ver a instância `saved_model` em ação.
 :end_tab:
 
 ```{.python .input}
@@ -384,7 +384,7 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MzcyNTQ3OSwxNTIwNzY2OTg2LDE4Mj
-M1MjAyODIsLTEyMzk0Mzc4Nyw2NDU2NDY1NjYsMTgzOTc0NDkz
-OCwxMDAxMTk5NDYsMTE4MTM2NjgyOV19
+eyJoaXN0b3J5IjpbLTE0NjI5MzAzNDAsMTUyMDc2Njk4NiwxOD
+IzNTIwMjgyLC0xMjM5NDM3ODcsNjQ1NjQ2NTY2LDE4Mzk3NDQ5
+MzgsMTAwMTE5OTQ2LDExODEzNjY4MjldfQ==
 -->
