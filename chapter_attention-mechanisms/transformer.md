@@ -671,8 +671,8 @@ dec_self_attention_weights, dec_inter_attention_weights = \
 dec_self_attention_weights.shape, dec_inter_attention_weights.shape
 ```
 
-Due to the auto-regressive property of the decoder self-attention,
-no query attends to key-value pairs after the query position.
+Devido à propriedade auto-regressiva da autoatenção do *decoder*
+nenhuma consulta atende aos pares de valores-chave após a posição da consulta.
 
 ```{.python .input}
 #@tab all
@@ -683,10 +683,10 @@ d2l.show_heatmaps(
     titles=['Head %d' % i for i in range(1, 5)], figsize=(7, 3.5))
 ```
 
-Similar to the case in the encoder self-attention,
-via the specified valid length of the input sequence,
-no query from the output sequence
-attends to those padding tokens from the input sequence.
+Semelhante ao caso da autoatenção do *encoder*,
+por meio do comprimento válido especificado da sequência de entrada,
+nenhuma consulta da sequência de saída
+atende a esses tokens de preenchimento da sequência de entrada.
 
 ```{.python .input}
 #@tab all
@@ -696,16 +696,11 @@ d2l.show_heatmaps(
     figsize=(7, 3.5))
 ```
 
-Although the transformer architecture
-was originally proposed for sequence-to-sequence learning,
-as we will discover later in the book,
-either the transformer encoder
-or the transformer decoder
-is often individually used
-for different deep learning tasks.
+Embora a arquitetura do transformador tenha sido proposta originalmente para o aprendizado de sequência a sequência, como descobriremos mais tarde neste livro, ou o *encoder* do transformador ou o *decoder* do transformador
+geralmente é usado individualmente para diferentes tarefas de *deep learning*.
 
 
-## Summary
+## Resumo
 
 * The transformer is an instance of the encoder-decoder architecture, though either the encoder or the decoder can be used individually in practice.
 * In the transformer, multi-head self-attention is used for representing the input sequence and the output sequence, though the decoder has to preserve the auto-regressive property via a masked version.
@@ -730,7 +725,7 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MzU0MjE4NCwtMTI2NDQ0ODE4MCwyMD
+eyJoaXN0b3J5IjpbMTg4OTQ5NzA4MywtMTI2NDQ0ODE4MCwyMD
 AzNDczMjExLC00MjQ4NjgyNjEsLTIxNjE1NTk2NywtNjUzMjg4
 NzgyLDcwOTc2MjUyMF19
 -->
