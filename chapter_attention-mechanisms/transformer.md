@@ -144,9 +144,9 @@ X = d2l.tensor([[1, 2], [2, 3]], dtype=torch.float32)
 print('layer norm:', ln(X), '\nbatch norm:', bn(X))
 ```
 
-Now we can implement the `AddNorm` class
-using a residual connection followed by layer normalization.
-Dropout is also applied for regularization.
+Agora podemos implementar a classe `AddNorm`
+usando uma conexão residual seguida pela normalização da camada.
+O *dropout* também é aplicado para regularização.
 
 ```{.python .input}
 #@save
@@ -173,9 +173,9 @@ class AddNorm(nn.Module):
         return self.ln(self.dropout(Y) + X)
 ```
 
-The residual connection requires that
-the two inputs are of the same shape
-so that the output tensor also has the same shape after the addition operation.
+A conexão residual requer que
+as duas entradas sejam da mesma forma
+de modo que o tensor de saída também tenha a mesma forma após a operação de adição.
 
 ```{.python .input}
 add_norm = AddNorm(0.5)
@@ -190,7 +190,7 @@ add_norm.eval()
 add_norm(d2l.ones((2, 3, 4)), d2l.ones((2, 3, 4))).shape
 ```
 
-## Encoder
+## *Encoder*
 
 With all the essential components to assemble
 the transformer encoder,
@@ -791,6 +791,6 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NzcxNzk5NywtNDI0ODY4MjYxLC0yMT
+eyJoaXN0b3J5IjpbMjAwMzQ3MzIxMSwtNDI0ODY4MjYxLC0yMT
 YxNTU5NjcsLTY1MzI4ODc4Miw3MDk3NjI1MjBdfQ==
 -->
