@@ -149,17 +149,18 @@ net = get_net()
 net(x)
 ```
 
+
 :begin_tab:`mxnet`
-By calling the `hybridize` function, we are able to compile and optimize the computation in the MLP. The model's computation result remains unchanged.
+Ao chamar a função `hybridize`, podemos compilar e otimizar o cálculo no MLP. O resultado do cálculo do modelo permanece inalterado.
 :end_tab:
 
-:begin_tab:`pytorch`
-By converting the model using `torch.jit.script` function, we are able to compile and optimize the computation in the MLP. The model's computation result remains unchanged.
+:begin_tab: `pytorch`
+Ao converter o modelo usando a função `torch.jit.script`, podemos compilar e otimizar a computação no MLP. O resultado do cálculo do modelo permanece inalterado.
 :end_tab:
 
 :begin_tab:`tensorflow`
-Formerly, all functions built in tensorflow were built as a computational graph, and therefore JIT compiled by default. However, with the release of tensorflow 2.X and eager tensors, this is no longer the default behavor. 
-We cen re-enable this functionality with tf.function. tf.function is more commonly used as a function decorator, however it is possible to call it direcly as a normal python function, shown below. The model's computation result remains unchanged.
+Anteriormente, todas as funções construídas no tensorflow eram construídas como um gráfico computacional e, portanto, JIT compilado por padrão. No entanto, com o lançamento do tensorflow 2.X e tensores *eager*, este não é mais o comportamento padrão.
+Podemos reativar essa funcionalidade com tf.function. tf.function é mais comumente usado como um decorador de função, no entanto, é possível chamá-lo diretamente como uma função Python normal, mostrada abaixo. O resultado do cálculo do modelo permanece inalterado.
 :end_tab:
 
 ```{.python .input}
@@ -383,6 +384,7 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzk0Mzc4Nyw2NDU2NDY1NjYsMTgzOT
-c0NDkzOCwxMDAxMTk5NDYsMTE4MTM2NjgyOV19
+eyJoaXN0b3J5IjpbMTgyMzUyMDI4MiwtMTIzOTQzNzg3LDY0NT
+Y0NjU2NiwxODM5NzQ0OTM4LDEwMDExOTk0NiwxMTgxMzY2ODI5
+XX0=
 -->
