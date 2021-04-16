@@ -1,4 +1,4 @@
-# Compilers and Interpreters
+# Compilers andadores e Interpretadorers
 :label:`sec_hybridize`
 
 So far, this book has focused on imperative programming, which makes use of statements such as `print`, `+` or `if` to change a program's state. Consider the following example of a simple imperative program.
@@ -379,3 +379,6 @@ net(x)
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTEzODEyMjY0MF19
+-->
