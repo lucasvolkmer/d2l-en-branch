@@ -702,13 +702,13 @@ geralmente é usado individualmente para diferentes tarefas de *deep learning*.
 
 ## Resumo
 
-* The transformer is an instance of the encoder-decoder architecture, though either the encoder or the decoder can be used individually in practice.
-* In the transformer, multi-head self-attention is used for representing the input sequence and the output sequence, though the decoder has to preserve the auto-regressive property via a masked version.
-* Both the residual connections and the layer normalization in the transformer are important for training a very deep model.
-* The positionwise feed-forward network in the transformer model transforms the representation at all the sequence positions using the same MLP.
+* O transformador é uma instância da arquitetura do *encoder-decoder*, embora o *encoder* ou *decoder* possam ser usados individualmente na prática.
+* No transformador, a autoatenção com várias *heads* é usada para representar a sequência de entrada e a sequência de saída, embora o *decoder* tenha que preservar a propriedade auto-regressiva por meio de uma versão mascarada.
+* Ambas as conexões residuais e a normalização da camada no transformador são importantes para treinar um modelo muito profundo.
+* A rede *feed-forward* posicional no modelo do transformador transforma a representação em todas as posições de sequência usando o mesmo MLP.
 
 
-## Exercises
+## Exercícios
 
 1. Train a deeper transformer in the experiments. How does it affect the training speed and the translation performance?
 1. Is it a good idea to replace scaled dot-product attention with additive attention in the transformer? Why?
@@ -725,7 +725,7 @@ geralmente é usado individualmente para diferentes tarefas de *deep learning*.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4OTQ5NzA4MywtMTI2NDQ0ODE4MCwyMD
-AzNDczMjExLC00MjQ4NjgyNjEsLTIxNjE1NTk2NywtNjUzMjg4
-NzgyLDcwOTc2MjUyMF19
+eyJoaXN0b3J5IjpbLTEyNDM0Mzc3MDMsLTEyNjQ0NDgxODAsMj
+AwMzQ3MzIxMSwtNDI0ODY4MjYxLC0yMTYxNTU5NjcsLTY1MzI4
+ODc4Miw3MDk3NjI1MjBdfQ==
 -->
