@@ -55,7 +55,7 @@ import torch
 from torch import nn
 ```
 
-## Positionwise Feed-Forward Networks
+## Redes *Positionwise Feed-Forward*
 
 The positionwise feed-forward network
 transforms
@@ -817,6 +817,6 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MTk4Njk2MiwtMjE2MTU1OTY3LC02NT
-MyODg3ODIsNzA5NzYyNTIwXX0=
+eyJoaXN0b3J5IjpbLTEyNzI5Mzc1MzQsLTIxNjE1NTk2NywtNj
+UzMjg4NzgyLDcwOTc2MjUyMF19
 -->
