@@ -290,3 +290,6 @@ Even though the time to issue instructions for the backend is an order of magnit
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTgzMTE2NDI2N119
+-->
