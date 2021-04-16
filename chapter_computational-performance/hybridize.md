@@ -83,7 +83,7 @@ Como mencionado acima, PyTorch é baseado em programação imperativa e usa grá
 :end_tab:
 
 :begin_tab:`tensorflow`
-The imperative programming paradigm is now the default in Tensorflow 2, a welcoming change for those new to the language. However, the same symbolic programming techniques and subsequent computational graphs still exist in TensorFlow, and can be accessed by the easy-to-use `tf.function` decorator. This brought the imperative programming paradigm to TensorFlow, allowed users to define more intuitive functions, then wrap them and compile them into computational graphs automatically using a feature the TensorFlow team refers to as [autograph](https://www.tensorflow.org/api_docs/python/tf/autograph).
+O paradigma de programação imperativo agora é o padrão no Tensorflow 2, uma mudança acolhedora para aqueles que são novos na linguagem. No entanto, as mesmas técnicas de programação simbólica e gráficos computacionais subsequentes ainda existem no TensorFlow e podem ser acessados pelo decorador `tf.function` fácil de usar. Isso trouxe o paradigma de programação imperativo para o TensorFlow, permitindo que os usuários definissem funções mais intuitivas, depois as envolvessem e compilassem em gráficos computacionais automaticamente usando um recurso que a equipe do TensorFlow chama de [autograph](https://www.tensorflow.org/api_docs/python/tf/autograph).
 :end_tab:
 
 ## HybridSequential
@@ -383,6 +383,6 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3ODY3NjU0NSwxODM5NzQ0OTM4LDEwMD
-ExOTk0NiwxMTgxMzY2ODI5XX0=
+eyJoaXN0b3J5IjpbNjQ1NjQ2NTY2LDE4Mzk3NDQ5MzgsMTAwMT
+E5OTQ2LDExODEzNjY4MjldfQ==
 -->
