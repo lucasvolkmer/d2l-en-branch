@@ -598,9 +598,9 @@ net = d2l.EncoderDecoder(encoder, decoder)
 d2l.train_seq2seq(net, train_iter, lr, num_epochs, tgt_vocab, device)
 ```
 
-After training,
-we use the transformer model
-to translate a few English sentences into French and compute their BLEU scores.
+Após o treinamento,
+nós usamos o modelo do transformador
+para traduzir algumas frases em inglês para o francês e calcular suas pontuações BLEU.
 
 ```{.python .input}
 #@tab all
@@ -613,9 +613,9 @@ for eng, fra in zip(engs, fras):
           f'bleu {d2l.bleu(translation, fra, k=2):.3f}')
 ```
 
-Let us visualize the transformer attention weights when translating the last English sentence into French.
-The shape of the encoder self-attention weights
-is (number of encoder layers, number of attention heads, `num_steps` or number of queries, `num_steps` or number of key-value pairs).
+Vamos visualizar os pesos de atenção do transformador ao traduzir a última frase em inglês para o francês.
+A forma dos pesos de autoatenção do *encoder*
+é (número de camadas do codificador, número de *heads* de atenção, `num_steps` ou número de consultas,` num_steps` ou número de pares de valores-chave).
 
 ```{.python .input}
 #@tab all
@@ -747,7 +747,7 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTQzMTQyNDksLTEyNjQ0NDgxODAsMj
-AwMzQ3MzIxMSwtNDI0ODY4MjYxLC0yMTYxNTU5NjcsLTY1MzI4
-ODc4Miw3MDk3NjI1MjBdfQ==
+eyJoaXN0b3J5IjpbNDE5Njg1ODUzLC0xMjY0NDQ4MTgwLDIwMD
+M0NzMyMTEsLTQyNDg2ODI2MSwtMjE2MTU1OTY3LC02NTMyODg3
+ODIsNzA5NzYyNTIwXX0=
 -->
