@@ -185,7 +185,7 @@ Isso parece bom demais para ser verdade: simplesmente designe um bloco como `Hyb
 :end_tab:
 
 :begin_tab:`pytorch`
-By converting the model using `torch.jit.script` This seems almost too good to be true: write the same code as before and simply convert the model using `torch.jit.script`. Once this happens the network is optimized (we will benchmark the performance below).
+Convertendo o modelo usando `torch.jit.script` Isso parece quase bom demais para ser verdade: escreva o mesmo código de antes e simplesmente converta o modelo usando` torch.jit.script`. Assim que isso acontecer, a rede estará otimizada (faremos um benchmark do desempenho abaixo).
 :end_tab:
 
 :begin_tab:`tensorflow`
@@ -384,7 +384,7 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMDc2Njk4NiwxODIzNTIwMjgyLC0xMj
-M5NDM3ODcsNjQ1NjQ2NTY2LDE4Mzk3NDQ5MzgsMTAwMTE5OTQ2
-LDExODEzNjY4MjldfQ==
+eyJoaXN0b3J5IjpbLTE1ODY2NTk3NjYsMTUyMDc2Njk4NiwxOD
+IzNTIwMjgyLC0xMjM5NDM3ODcsNjQ1NjQ2NTY2LDE4Mzk3NDQ5
+MzgsMTAwMTE5OTQ2LDExODEzNjY4MjldfQ==
 -->
