@@ -339,43 +339,14 @@ encoder(d2l.ones((2, 100), dtype=torch.long), valid_lens).shape
 
 ## *Decoder*
 
-As shown in :numref:`fig_transformer`,
-the transformer decoder
-is composed of multiple identical layers.
-Each layer is implemented in the following
-`DecoderBlock` class,
-which contains three sublayers:
-decoder self-attention,
-encoder-decoder attention,
-and positionwise feed-forward networks.
-These sublayers employ
-a residual connection around them
-followed by layer normalization.
+
+Conforme mostrado em :numref:`fig_transformer`, o *decoder* do transformador
+é composto de várias camadas idênticas. Cada camada é implementada na seguinte classe `DecoderBlock`, que contém três subcamadas: autoatenção do *decoder*, atenção do *encoder-decoder* e redes *feed-forward* posicionais. Essas subcamadas empregam uma conexão residual em torno delas seguida pela normalização da camada.
 
 
-As we described earlier in this section,
-in the masked multi-head decoder self-attention
-(the first sublayer),
-queries, keys, and values
-all come from the outputs of the previous decoder layer.
-When training sequence-to-sequence models,
-tokens at all the positions (time steps)
-of the output sequence
-are known.
-However,
-during prediction
-the output sequence is generated token by token;
-thus,
-at any decoder time step
-only the generated tokens
-can be used in the decoder self-attention.
-To preserve auto-regression in the decoder,
-its masked self-attention
-specifies  `dec_valid_lens` so that
-any query
-only attends to
-all positions in the decoder
-up to the query position.
+Como descrevemos anteriormente nesta seção, na autoatenção do *decoder* de várias *heads* mascarada (a primeira subcamada), as consultas, as chaves e os valores vêm todos das saídas da camada do *decoder* anterior.
+Ao treinar modelos de sequência para sequência, os tokens em todas as posições (etapas de tempo) da sequência de saída são conhecidos.
+No entanto, durante a predição, a sequência de saída é gerada token por token; assim, em qualquer etapa de tempo do *decoder*, apenas os tokens gerados podem ser usados ​​na autoatenção do *decoder*. Para preservar a auto-regressão no *decoder*, sua autoatenção mascarada especifica `dec_valid_lens` para que qualquer consulta atenda apenas a todas as posições no *decoder* até a posição de consulta.
 
 ```{.python .input}
 class DecoderBlock(nn.Block):
@@ -783,7 +754,7 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjQ0NDgxODAsMjAwMzQ3MzIxMSwtND
-I0ODY4MjYxLC0yMTYxNTU5NjcsLTY1MzI4ODc4Miw3MDk3NjI1
-MjBdfQ==
+eyJoaXN0b3J5IjpbNDI1MDI0NzI5LC0xMjY0NDQ4MTgwLDIwMD
+M0NzMyMTEsLTQyNDg2ODI2MSwtMjE2MTU1OTY3LC02NTMyODg3
+ODIsNzA5NzYyNTIwXX0=
 -->
