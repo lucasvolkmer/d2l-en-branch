@@ -2,28 +2,11 @@
 :label:`sec_transformer`
 
 
-We have compared CNNs, RNNs, and self-attention in
-:numref:`subsec_cnn-rnn-self-attention`.
-Notably,
-self-attention
-enjoys both parallel computation and
-the shortest maximum path length.
-Therefore natually,
-it is appealing to design deep architectures
-by using self-attention.
-Unlike earlier self-attention models
-that still rely on RNNs for input representations :cite:`Cheng.Dong.Lapata.2016,Lin.Feng.Santos.ea.2017,Paulus.Xiong.Socher.2017`,
-the transformer model
-is solely based on attention mechanisms
-without any convolutional or recurrent layer :cite:`Vaswani.Shazeer.Parmar.ea.2017`.
-Though originally proposed
-for sequence to sequence learning on text data,
-transformers have been
-pervasive in a wide range of
-modern deep learning applications,
-such as in areas of language, vision, speech, and reinforcement learning.
+Comparamos CNNs, RNNs e autoatenção em :numref:`subsec_cnn-rnn-self-attention`. Notavelmente, a auto-atenção desfruta de computação paralela e do comprimento máximo de caminho mais curto. Portanto, naturalmente, é atraente projetar profundamente
+  arquiteturas usando auto-atenção. Ao contrário dos modelos anteriores de autoatenção que ainda contam com RNNs para representações de entrada
+cite:`Cheng.Dong.Lapata.2016,Lin.Feng.Santos.ea.2017,Paulus.Xiong.Socher.2017`, o modelo do transformador é exclusivamente baseado em mecanismos de atenção sem qualquer camada convolucional ou recorrente :cite:`Vaswani.Shazeer.Parmar.ea.2017`.  Embora originalmente propostos para aprendizagem de sequência para sequência em dados de texto, os transformadores têm sido difundidos em uma ampla gama de aplicações modernas de aprendizagem profunda, como nas áreas de linguagem, visão, fala e aprendizagem por reforço.
 
-## Model
+## Modelo
 
 
 As an instance of the encoder-decoder
@@ -884,5 +867,5 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA5NzYyNTIwXX0=
+eyJoaXN0b3J5IjpbOTg5Mjc4NTUxLDcwOTc2MjUyMF19
 -->
