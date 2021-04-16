@@ -469,14 +469,7 @@ state = [encoder_blk(X, valid_lens), valid_lens, [None]]
 decoder_blk(X, state)[0].shape
 ```
 
-Now we construct the entire transformer decoder
-composed of `num_layers` instances of `DecoderBlock`.
-In the end,
-a fully-connected layer computes the prediction
-for all the `vocab_size` possible output tokens.
-Both of the decoder self-attention weights
-and the encoder-decoder attention weights
-are stored for later visualization.
+Agora construímos todo o *decoder* do transformador composto por instâncias `num_layers` de` DecoderBlock`. No final, uma camada totalmente conectada calcula a previsão para todos os possíveis tokens de saída `vocab_size`. Ambos os pesos de autoatenção do *decoder* e os pesos de atenção do *encoder-decoder* são armazenados para visualização posterior.
 
 ```{.python .input}
 class TransformerDecoder(d2l.AttentionDecoder):
@@ -555,16 +548,16 @@ class TransformerDecoder(d2l.AttentionDecoder):
         return self._attention_weights
 ```
 
-## Training
+## Treinamento
 
-Let us instantiate an encoder-decoder model
-by following the transformer architecture.
-Here we specify that
-both the transformer encoder and the transformer decoder
-have 2 layers using 4-head attention.
-Similar to :numref:`sec_seq2seq_training`,
-we train the transformer model
-for sequence to sequence learning on the English-French machine translation dataset.
+Vamos instanciar um modelo de *encoder-decoder*
+seguindo a arquitetura do transformador.
+Aqui nós especificamos que
+tanto o *encoder* do transformador quanto o *decoder* do transformador
+têm 2 camadas usando a atenção de 4 *heads*.
+Semelhante a :numref:`sec_seq2seq_training`,
+nós treinamos o modelo do transformador
+para aprendizado de sequência para sequência no conjunto de dados de tradução automática inglês-francês.
 
 ```{.python .input}
 num_hiddens, num_layers, dropout, batch_size, num_steps = 32, 2, 0.1, 64, 10
@@ -754,7 +747,7 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTExNjQ5OTYsLTEyNjQ0NDgxODAsMjAwMz
-Q3MzIxMSwtNDI0ODY4MjYxLC0yMTYxNTU5NjcsLTY1MzI4ODc4
-Miw3MDk3NjI1MjBdfQ==
+eyJoaXN0b3J5IjpbLTE5NTQzMTQyNDksLTEyNjQ0NDgxODAsMj
+AwMzQ3MzIxMSwtNDI0ODY4MjYxLC0yMTYxNTU5NjcsLTY1MzI4
+ODc4Miw3MDk3NjI1MjBdfQ==
 -->
