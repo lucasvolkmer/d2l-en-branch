@@ -57,17 +57,9 @@ from torch import nn
 
 ## Redes *Positionwise Feed-Forward*
 
-The positionwise feed-forward network
-transforms
-the representation at all the sequence positions
-using the same MLP.
-This is why we call it *positionwise*.
-In the implementation below,
-the input `X` with shape
-(batch size, number of time steps or sequence length in tokens, number of hidden units or feature dimension)
-will be transformed by a two-layer MLP into
-an output tensor of shape
-(batch size, number of time steps, `ffn_num_outputs`).
+A rede feed-forward *positionwise* transforma a representação em todas as posições de sequência usando o mesmo MLP.
+É por isso que o chamamos de *positionwise*. Na implementação abaixo,
+o `X` de entrada com forma (tamanho do lote, número de etapas de tempo ou comprimento da sequência em tokens, número de unidades ocultas ou dimensão do recurso) será transformado por um MLP de duas camadas em um tensor de saída de forma (tamanho do lote, número de passos de tempo, `ffn_num_outputs`).
 
 ```{.python .input}
 #@save
@@ -97,15 +89,15 @@ class PositionWiseFFN(nn.Module):
         return self.dense2(self.relu(self.dense1(X)))
 ```
 
-The following example
-shows that the innermost dimension
-of a tensor changes to
-the number of outputs in
-the positionwise feed-forward network.
-Since the same MLP transforms
-at all the positions,
-when the inputs at all these positions are the same,
-their outputs are also identical.
+O seguinte exemplo
+mostra que a dimensão mais interna
+de um tensor muda para
+o número de saídas em
+a rede *feed-forward* posicionada.
+Uma vez que o mesmo MLP se transforma
+em todas as posições,
+quando as entradas em todas essas posições são as mesmas,
+suas saídas também são idênticas.
 
 ```{.python .input}
 ffn = PositionWiseFFN(4, 8)
@@ -817,6 +809,6 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzI5Mzc1MzQsLTIxNjE1NTk2NywtNj
-UzMjg4NzgyLDcwOTc2MjUyMF19
+eyJoaXN0b3J5IjpbLTQyNDg2ODI2MSwtMjE2MTU1OTY3LC02NT
+MyODg3ODIsNzA5NzYyNTIwXX0=
 -->
