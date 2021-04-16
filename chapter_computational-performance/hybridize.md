@@ -195,7 +195,7 @@ Adicionar explicitamente a sinalização `jit_compile = True` à chamada `tf.fun
 
 ### Aceleração por Hibridização
 
-To demonstrate the performance improvement gained by compilation we compare the time needed to evaluate `net(x)` before and after hybridization. Let us define a function to measure this time first. It will come handy throughout the chapter as we set out to measure (and improve) performance.
+Para demonstrar a melhoria de desempenho obtida pela compilação, comparamos o tempo necessário para avaliar `net (x)` antes e depois da hibridização. Vamos definir uma função para medir esse tempo primeiro. Será útil ao longo do capítulo à medida que nos propomos a medir (e melhorar) o desempenho.
 
 ```{.python .input}
 #@tab all
@@ -213,15 +213,15 @@ class Benchmark:
 ```
 
 :begin_tab:`mxnet`
-Now we can invoke the network twice, once with and once without hybridization.
+Agora podemos chamar a rede duas vezes, uma com e outra sem hibridização.
 :end_tab:
 
 :begin_tab:`pytorch`
-Now we can invoke the network twice, once with and once without torchscript.
+Agora podemos chamar a rede duas vezes, uma com e outra sem torchscript.
 :end_tab:
 
 :begin_tab:`tensorflow`
-Now we can invoke the network three times, once executed eagerly, once with graph-mode execution, and again using JIT compiled XLA.
+Agora podemos invocar a rede três vezes, uma vez executada avidamente, uma vez com execução em modo gráfico e novamente usando XLA compilado por JIT.
 :end_tab:
 
 ```{.python .input}
@@ -260,18 +260,18 @@ with Benchmark('Graph Mode'):
 
 
 :begin_tab:`mxnet`
-As is observed in the above results, after a HybridSequential instance calls the `hybridize` function, computing performance is improved through the use of symbolic programming.
+Como é observado nos resultados acima, depois que uma instância HybridSequential chama a função `hybridize`, o desempenho da computação é melhorado por meio do uso de programação simbólica.
 :end_tab:
 
 :begin_tab:`pytorch`
-As is observed in the above results, after a nn.Sequential instance is scripted using the `torch.jit.script` function, computing performance is improved through the use of symbolic programming.
+Conforme observado nos resultados acima, depois que uma instância nn.Sequential é criada com o script da função `torch.jit.script`, o desempenho da computação é aprimorado com o uso de programação simbólica.
 :end_tab:
 
 :begin_tab:`tensorflow`
-As is observed in the above results, after a tf.keras Sequential instance is scripted using the `tf.function` function, computing performance is improved through the use of symbolic programming via graph-mode execution in tensorflow. 
+Como é observado nos resultados acima, depois que uma instância tf.keras Sequential é scriptada usando a função `tf.function`, o desempenho da computação é melhorado por meio do uso de programação simbólica por meio da execução em modo gráfico em tensorflow.
 :end_tab:
 
-### Serialization
+### Serialização
 
 :begin_tab:`mxnet`
 One of the benefits of compiling the models is that we can serialize (save) the model and its parameters to disk. This allows us to store a model in a manner that is independent of the front-end language of choice. This allows us to deploy trained models to other devices and easily use other front-end programming languages. At the same time the code is often faster than what can be achieved in imperative programming. Let us see the `export` method in action.
@@ -384,7 +384,7 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMjkwMTYzMCwxNTIwNzY2OTg2LDE4Mj
+eyJoaXN0b3J5IjpbMjE0MzcyNTQ3OSwxNTIwNzY2OTg2LDE4Mj
 M1MjAyODIsLTEyMzk0Mzc4Nyw2NDU2NDY1NjYsMTgzOTc0NDkz
 OCwxMDAxMTk5NDYsMTE4MTM2NjgyOV19
 -->
