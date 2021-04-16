@@ -253,13 +253,12 @@ encoder_blk.eval()
 encoder_blk(X, valid_lens).shape
 ```
 
-In the following transformer encoder implementation,
-we stack `num_layers` instances of the above `EncoderBlock` classes.
-Since we use the fixed positional encoding
-whose values are always between -1 and 1,
-we multiply values of the learnable input embeddings
-by the square root of the embedding dimension
-to rescale before summing up the input embedding and the positional encoding.
+Na seguinte implementação do *encoder* de transformador,
+empilhamos instâncias `num_layers` das classes` EncoderBlock` acima. Uma vez que usamos a codificação posicional fixa
+cujos valores estão sempre entre -1 e 1,
+nós multiplicamos os valores dos *embeddings* de entrada aprendíveis
+pela raiz quadrada da dimensão de incorporação
+para redimensionar antes de resumir a incorporação de entrada e a codificação posicional.
 
 ```{.python .input}
 #@save
@@ -320,9 +319,9 @@ class TransformerEncoder(d2l.Encoder):
         return X
 ```
 
-Below we specify hyperparameters to create a two-layer transformer encoder.
-The shape of the transformer encoder output
-is (batch size, number of time steps, `num_hiddens`).
+Abaixo, especificamos hiperparâmetros para criar um *encoder* de transformador de duas camadas.
+A forma da saída do *encoder* do transformador
+é (tamanho do lote, número de etapas de tempo, `num_hiddens`).
 
 ```{.python .input}
 encoder = TransformerEncoder(200, 24, 48, 8, 2, 0.5)
@@ -338,7 +337,7 @@ encoder.eval()
 encoder(d2l.ones((2, 100), dtype=torch.long), valid_lens).shape
 ```
 
-## Decoder
+## *Decoder*
 
 As shown in :numref:`fig_transformer`,
 the transformer decoder
@@ -784,7 +783,7 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkxNjQ0Mjc1LDIwMDM0NzMyMTEsLTQyND
-g2ODI2MSwtMjE2MTU1OTY3LC02NTMyODg3ODIsNzA5NzYyNTIw
-XX0=
+eyJoaXN0b3J5IjpbLTEyNjQ0NDgxODAsMjAwMzQ3MzIxMSwtND
+I0ODY4MjYxLC0yMTYxNTU5NjcsLTY1MzI4ODc4Miw3MDk3NjI1
+MjBdfQ==
 -->
