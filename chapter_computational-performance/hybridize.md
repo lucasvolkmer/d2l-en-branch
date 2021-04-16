@@ -363,17 +363,17 @@ Em vez de usar `ndarray` agora usamos o módulo` symbol` para `F`. Além disso, 
 net(x)
 ```
 
-:begin_tab:`mxnet` This is quite different from what we saw previously. All print statements, as defined in `hybrid_forward` are omitted. Indeed, after hybridization the execution of `net(x)` does not involve the Python interpreter any longer. This means that any spurious Python code is omitted (such as print statements) in favor of a much more streamlined execution and better performance. Instead, MXNet directly calls the C++ backend. Also note that some functions are not supported in the `symbol` module (like `asnumpy`) and operations in-place like `a += b` and `a[:] = a + b` must be rewritten as `a = a + b`. Nonetheless, compilation of models is worth the effort whenever speed matters. The benefit can range from small percentage points to more than twice the speed, depending on the complexity of the model, the speed of the CPU and the speed and number of GPUs.
+:begin_tab:`mxnet` Isso é bem diferente do que vimos anteriormente. Todas as instruções de impressão, conforme definido em `hybrid_forward` são omitidas. De fato, após a hibridização, a execução de `net (x)` não envolve mais o interpretador Python. Isso significa que qualquer código Python espúrio é omitido (como instruções de impressão) em favor de uma execução muito mais simplificada e melhor desempenho. Em vez disso, o MXNet chama diretamente o back-end C ++. Observe também que algumas funções não são suportadas no módulo `symbol` (como`asnumpy`) e operações no local como `a += b` and `a[:] = a + b` devem ser reescritas como `a = a + b`. No entanto, a compilação de modelos vale o esforço sempre que a velocidade é importante. O benefício pode variar de pequenos pontos percentuais a mais de duas vezes a velocidade, dependendo da complexidade do modelo, da velocidade da CPU e da velocidade e número de GPUs.
 
-## Summary
+## Resumo
 
-* Imperative programming makes it easy to design new models since it is possible to write code with control flow and the ability to use a large amount of the Python software ecosystem.
-* Symbolic programming requires that we specify the program and compile it before executing it. The benefit is improved performance.
-* MXNet is able to combine the advantages of both approaches as needed.
-* Models constructed by the `HybridSequential` and `HybridBlock` classes are able to convert imperative programs into symbolic programs by calling the `hybridize` method.
+* A programação imperativa torna mais fácil projetar novos modelos, pois é possível escrever código com fluxo de controle e a capacidade de usar uma grande parte do ecossistema de *software* Python.
+* A programação simbólica requer que especifiquemos o programa e o compilemos antes de executá-lo. O benefício é um desempenho aprimorado.
+* MXNet é capaz de combinar as vantagens de ambas as abordagens conforme necessário.
+* Modelos construídos pelas classes `HybridSequential` e` HybridBlock` são capazes de converter programas imperativos em programas simbólicos chamando o método `hibridizar`.
 
 
-## Exercises
+## Exercícios
 
 1. Design a network using the `HybridConcurrent` class. Alternatively look at :ref:`sec_googlenet` for a network to compose.
 1. Add `x.asnumpy()` to the first line of the `hybrid_forward` function of the HybridNet class in this section. Execute the code and observe the errors you encounter. Why do they happen?
@@ -384,7 +384,7 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDE4NzMzMjcsMTUyMDc2Njk4NiwxOD
-IzNTIwMjgyLC0xMjM5NDM3ODcsNjQ1NjQ2NTY2LDE4Mzk3NDQ5
-MzgsMTAwMTE5OTQ2LDExODEzNjY4MjldfQ==
+eyJoaXN0b3J5IjpbMTU3MzE4MDc1MywxNTIwNzY2OTg2LDE4Mj
+M1MjAyODIsLTEyMzk0Mzc4Nyw2NDU2NDY1NjYsMTgzOTc0NDkz
+OCwxMDAxMTk5NDYsMTE4MTM2NjgyOV19
 -->
