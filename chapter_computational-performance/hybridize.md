@@ -86,9 +86,9 @@ Como mencionado acima, PyTorch é baseado em programação imperativa e usa grá
 O paradigma de programação imperativo agora é o padrão no Tensorflow 2, uma mudança acolhedora para aqueles que são novos na linguagem. No entanto, as mesmas técnicas de programação simbólica e gráficos computacionais subsequentes ainda existem no TensorFlow e podem ser acessados pelo decorador `tf.function` fácil de usar. Isso trouxe o paradigma de programação imperativo para o TensorFlow, permitindo que os usuários definissem funções mais intuitivas, depois as envolvessem e compilassem em gráficos computacionais automaticamente usando um recurso que a equipe do TensorFlow chama de [autograph](https://www.tensorflow.org/api_docs/python/tf/autograph).
 :end_tab:
 
-## HybridSequential
+## Híbrido-Sequencial
 
-The easiest way to get a feel for how hybridization works is to consider deep networks with multiple layers. Conventionally the Python interpreter will need to execute the code for all layers to generate an instruction that can then be forwarded to a CPU or a GPU. For a single (fast) compute device this does not cause any major issues. On the other hand, if we use an advanced 8-GPU server such as an AWS P3dn.24xlarge instance Python will struggle to keep all GPUs busy. The single-threaded Python interpreter becomes the bottleneck here. Let us see how we can address this for significant parts of the code by replacing `Sequential` by `HybridSequential`. We begin by defining a simple MLP.
+A maneira mais fácil de ter uma ideia de como a hibridização funciona é considerar redes profundas com várias camadas. Convencionalmente, o interpretador Python precisará executar o código para todas as camadas para gerar uma instrução que pode então ser encaminhada para uma CPU ou GPU. Para um único dispositivo de computação (rápido), isso não causa grandes problemas. Por outro lado, se usarmos um servidor avançado de 8 GPUs, como uma instância AWS P3dn.24xlarge, o Python terá dificuldade para manter todas as GPUs ocupadas. O interpretador Python de thread único torna-se o gargalo aqui. Vamos ver como podemos resolver isso para partes significativas do código, substituindo `Sequential` por `HybridSequential`. Começamos definindo um MLP simples.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -383,6 +383,6 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ1NjQ2NTY2LDE4Mzk3NDQ5MzgsMTAwMT
-E5OTQ2LDExODEzNjY4MjldfQ==
+eyJoaXN0b3J5IjpbLTEyMzk0Mzc4Nyw2NDU2NDY1NjYsMTgzOT
+c0NDkzOCwxMDAxMTk5NDYsMTE4MTM2NjgyOV19
 -->
