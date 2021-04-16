@@ -192,14 +192,7 @@ add_norm(d2l.ones((2, 3, 4)), d2l.ones((2, 3, 4))).shape
 
 ## *Encoder*
 
-With all the essential components to assemble
-the transformer encoder,
-let us start by
-implementing a single layer within the encoder.
-The following `EncoderBlock` class
-contains two sublayers: multi-head self-attention and positionwise feed-forward networks,
-where a residual connection followed by layer normalization is employed
-around both sublayers.
+Com todos os componentes essenciais para montar o *encoder* do transformador, vamos começar implementando uma única camada dentro do *encoder*. A seguinte classe `EncoderBlock` contém duas subcamadas: autoatenção com várias *heads* e redes de alimentação em posição posicionada, onde uma conexão residual seguida pela normalização da camada é empregada em torno de ambas as subcamadas.
 
 ```{.python .input}
 #@save
@@ -239,9 +232,9 @@ class EncoderBlock(nn.Module):
         return self.addnorm2(Y, self.ffn(Y))
 ```
 
-As we can see,
-any layer in the transformer encoder
-does not change the shape of its input.
+Como podemos ver,
+qualquer camada no *encoder* do transformador
+não altera a forma de sua entrada.
 
 ```{.python .input}
 X = d2l.ones((2, 100, 24))
@@ -791,6 +784,7 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMzQ3MzIxMSwtNDI0ODY4MjYxLC0yMT
-YxNTU5NjcsLTY1MzI4ODc4Miw3MDk3NjI1MjBdfQ==
+eyJoaXN0b3J5IjpbNTkxNjQ0Mjc1LDIwMDM0NzMyMTEsLTQyND
+g2ODI2MSwtMjE2MTU1OTY3LC02NTMyODg3ODIsNzA5NzYyNTIw
+XX0=
 -->
