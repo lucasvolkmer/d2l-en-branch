@@ -375,16 +375,16 @@ net(x)
 
 ## Exercícios
 
-1. Design a network using the `HybridConcurrent` class. Alternatively look at :ref:`sec_googlenet` for a network to compose.
-1. Add `x.asnumpy()` to the first line of the `hybrid_forward` function of the HybridNet class in this section. Execute the code and observe the errors you encounter. Why do they happen?
-1. What happens if we add control flow, i.e., the Python statements `if` and `for` in the `hybrid_forward` function?
-1. Review the models that interest you in the previous chapters and use the HybridBlock class or HybridSequential class to implement them.
+1. Projete uma rede usando a classe `HybridConcurrent`. Como alternativa, olhe em :ref:`sec_googlenet` para uma rede para compor.
+1. Adicione `x.asnumpy ()` à primeira linha da função `hybrid_forward` da classe HybridNet nesta seção. Execute o código e observe os erros que encontrar. Por que eles acontecem?
+1. O que acontece se adicionarmos o fluxo de controle, ou seja, as instruções Python `if` e` for` na função `hybrid_forward`?
+1. Revise os modelos de seu interesse nos capítulos anteriores e use a classe HybridBlock ou HybridSequential para implementá-los.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MzE4MDc1MywxNTIwNzY2OTg2LDE4Mj
+eyJoaXN0b3J5IjpbLTU1OTE4NjYzOSwxNTIwNzY2OTg2LDE4Mj
 M1MjAyODIsLTEyMzk0Mzc4Nyw2NDU2NDY1NjYsMTgzOTc0NDkz
 OCwxMDAxMTk5NDYsMTE4MTM2NjgyOV19
 -->
