@@ -112,7 +112,7 @@ ffn.eval()
 ffn(d2l.ones((2, 3, 4)))[0]
 ```
 
-## Residual Connection and Layer Normalization
+## Conexão residual e normalização de camada
 
 Now let us focus on
 the "add & norm" component in :numref:`fig_transformer`.
@@ -809,6 +809,6 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNDg2ODI2MSwtMjE2MTU1OTY3LC02NT
-MyODg3ODIsNzA5NzYyNTIwXX0=
+eyJoaXN0b3J5IjpbMTQ0ODgyNjk1NiwtNDI0ODY4MjYxLC0yMT
+YxNTU5NjcsLTY1MzI4ODc4Miw3MDk3NjI1MjBdfQ==
 -->
