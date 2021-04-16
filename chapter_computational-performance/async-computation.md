@@ -1,4 +1,4 @@
-# Asynchronous Computation
+# Computação Assíncrona
 :label:`sec_async`
 
 Today's computers are highly parallel systems, consisting of multiple CPU cores (often multiple threads per core), multiple processing elements per GPU and often multiple GPUs per device. In short, we can process many different things at the same time, often on different devices. Unfortunately Python is not a great way of writing parallel and asynchronous code, at least not with some extra help. After all, Python is single-threaded and this is unlikely to change in the future. Deep learning frameworks such as MXNet and TensorFlow utilize an asynchronous programming model to improve performance (PyTorch uses Python's own scheduler leading to a different performance trade-off).
@@ -291,5 +291,5 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMTE2NDI2N119
+eyJoaXN0b3J5IjpbMTczNDkxNjE2OV19
 -->
