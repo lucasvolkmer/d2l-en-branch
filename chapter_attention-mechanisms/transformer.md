@@ -625,16 +625,7 @@ enc_attention_weights = d2l.reshape(
 enc_attention_weights.shape
 ```
 
-In the encoder self-attention,
-both queries and keys come from the same input sequence.
-Since padding tokens do not carry meaning,
-with specified valid length of the input sequence,
-no query attends to positions of padding tokens.
-In the following,
-two layers of multi-head attention weights
-are presented row by row.
-Each head independently attends
-based on a separate representation subspaces of queries, keys, and values.
+Na autoatenção do *encoder*, tanto as consultas quanto as chaves vêm da mesma sequência de entrada. Como os tokens de preenchimento não têm significado, com o comprimento válido especificado da sequência de entrada, nenhuma consulta atende às posições dos tokens de preenchimento. A seguir, duas camadas de pesos de atenção de várias cabeças são apresentadas linha por linha. Cada *head* participa independentemente com base em subespaços de representação separados de consultas, chaves e valores.
 
 ```{.python .input}
 d2l.show_heatmaps(
@@ -650,16 +641,8 @@ d2l.show_heatmaps(
     figsize=(7, 3.5))
 ```
 
-To visualize both the decoder self-attention weights and the encoder-decoder attention weights,
-we need more data manipulations.
-For example,
-we fill the masked attention weights with zero.
-Note that
-the decoder self-attention weights
-and the encoder-decoder attention weights
-both have the same queries:
-the beginning-of-sequence token followed by
-the output tokens.
+Para visualizar os pesos de autoatenção do *decoder* e os pesos de atenção do *encoder-decoder*, precisamos de mais manipulações de dados. Por exemplo, preenchemos os pesos de atenção mascarados com zero. Observe que os pesos de atenção do *decoder* e os pesos de atenção do *encoder-decoder* têm as mesmas consultas:
+o token de início de sequência seguido pelos tokens de saída.
 
 ```{.python .input}
 dec_attention_weights_2d = [d2l.tensor(head[0]).tolist()
@@ -747,7 +730,7 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE5Njg1ODUzLC0xMjY0NDQ4MTgwLDIwMD
-M0NzMyMTEsLTQyNDg2ODI2MSwtMjE2MTU1OTY3LC02NTMyODg3
-ODIsNzA5NzYyNTIwXX0=
+eyJoaXN0b3J5IjpbMTY1MzU0MjE4NCwtMTI2NDQ0ODE4MCwyMD
+AzNDczMjExLC00MjQ4NjgyNjEsLTIxNjE1NTk2NywtNjUzMjg4
+NzgyLDcwOTc2MjUyMF19
 -->
