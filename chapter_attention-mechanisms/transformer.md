@@ -9,25 +9,12 @@ cite:`Cheng.Dong.Lapata.2016,Lin.Feng.Santos.ea.2017,Paulus.Xiong.Socher.2017`, 
 ## Modelo
 
 
-As an instance of the encoder-decoder
-architecture,
-the overall architecture of
-the transformer
-is presented in :numref:`fig_transformer`.
-As we can see,
-the transformer is composed of an encoder and a decoder.
-Different from
-Bahdanau attention
-for sequence to sequence learning
-in :numref:`fig_s2s_attention_details`,
-the input (source) and output (target)
-sequence embeddings
-are added with positional encoding
-before being fed into
-the encoder and the decoder
-that stack modules based on self-attention.
+Como uma instância da arquitetura codificador-decodificador,
+a arquitetura geral do transformador é apresentada em :numref:`fig_transformer`. Como podemos ver, o transformador é composto por um codificador e um decodificador. Diferente de
+Atenção Bahdanau para o aprendizado de sequência para sequência em :numref:`fig_s2s_attention_details`, os *embeddings* de sequência de entrada (origem) e saída (destino) são adicionados com codificação posicional antes de serem alimentados no codificador e no decodificador
+que empilham módulos baseados em autoatenção.
 
-![The transformer architecture.](../img/transformer.svg)
+![A arquitetura do transformador.](../img/transformer.svg)
 :width:`500px`
 :label:`fig_transformer`
 
@@ -867,5 +854,5 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg5Mjc4NTUxLDcwOTc2MjUyMF19
+eyJoaXN0b3J5IjpbLTY1MzI4ODc4Miw3MDk3NjI1MjBdfQ==
 -->
