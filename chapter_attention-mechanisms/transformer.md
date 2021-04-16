@@ -30,36 +30,12 @@ Esta adição da conexão residual é imediatamente
 seguida pela normalização da camada :cite:`Ba.Kiros.Hinton.2016`.
 Como resultado, o codificador do transformador produz uma representação vetorial $d$-dimensional para cada posição da sequência de entrada.
 
-The transformer decoder is also
-a stack of multiple identical layers with residual connections and layer normalizations.
-Besides the two sublayers described in
-the encoder, the decoder inserts
-a third sublayer, known as
-the encoder-decoder attention,
-between these two.
-In the encoder-decoder attention,
-queries are from the
-outputs of the previous decoder layer,
-and the keys and values are
-from the transformer encoder outputs.
-In the decoder self-attention,
-queries, keys, and values are all from the
-the outputs of the previous decoder layer.
-However,
-each position in the decoder is
-allowed to only attend to all positions in the decoder
-up to that position.
-This *masked* attention
-preserves the auto-regressive property,
-ensuring that the prediction only depends on those output tokens that have been generated.
+O decodificador do transformador também é uma pilha de várias camadas idênticas com conexões residuais e normalizações de camada.
+Além das duas subcamadas descritas no codificador, o decodificador insere uma terceira subcamada, conhecida como atenção do codificador-decodificador,
+entre esses dois. Na atenção do codificador-decodificador, as consultas são das saídas da camada do decodificador anterior e as chaves e valores são das saídas do codificador do transformador. Na autoatenção do decodificador, consultas, chaves e valores são todos provenientes das saídas da camada do decodificador anterior. No entanto, cada posição no decodificador só pode atender a todas as posições no decodificador até aquela posição. Essa atenção *mascarada* preserva a propriedade auto-regressiva, garantindo que a previsão dependa apenas dos tokens de saída que foram gerados.
 
 
-We have already described and implemented
-multi-head attention based on scaled dot-products
-in :numref:`sec_multihead-attention`
-and positional encoding in :numref:`subsec_positional-encoding`.
-In the following,
-we will implement the rest of the transformer model.
+Já descrevemos e implementamos a atenção multi-head com base em produtos escalonados em :numref:`sec_multihead-attention` e codificação posicional em :numref:`subsec_positional-encoding`. A seguir, implementaremos o restante do modelo do transformador.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -841,6 +817,6 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNjE1NTk2NywtNjUzMjg4NzgyLDcwOT
-c2MjUyMF19
+eyJoaXN0b3J5IjpbLTk5MTk4Njk2MiwtMjE2MTU1OTY3LC02NT
+MyODg3ODIsNzA5NzYyNTIwXX0=
 -->
