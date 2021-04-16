@@ -189,11 +189,11 @@ Convertendo o modelo usando `torch.jit.script` Isso parece quase bom demais para
 :end_tab:
 
 :begin_tab:`tensorflow`
-Converting the model using `tf.function` gives us incredible power in TensorFlow: write the same code as before and simply convert the model using `tf.function`. Once this happens the network is built as a computational graph in TensorFlow's MLIR intermediate representation and is heavily optimized at the compiler level for rapid execution (we will benchmark the performance below).
-Explicitly adding the `jit_compile = True` flag to the `tf.function()` call enables XLA (Accelerated Linear Algebra) functionality in TensorFlow. XLA can further optimize JIT compiled code in certain instances. Graph-mode execution is enabled without this explicit definition, however XLA can make certain large linear algebra operations (in the vein of those we see in deep learning applications) much faster, particularly in a GPU environment.
+Converter o modelo usando `tf.function` nos dá um poder incrível no TensorFlow: escreva o mesmo código de antes e simplesmente converta o modelo usando` tf.function`. Quando isso acontece, a rede é construída como um gráfico computacional na representação intermediária MLIR do TensorFlow e é altamente otimizada no nível do compilador para uma execução rápida (faremos o benchmark do desempenho abaixo).
+Adicionar explicitamente a sinalização `jit_compile = True` à chamada `tf.function()` ativa a funcionalidade XLA (Álgebra Linear Acelerada) no TensorFlow. O XLA pode otimizar ainda mais o código compilado JIT em certas instâncias. A execução no modo gráfico é habilitada sem essa definição explícita, no entanto, o XLA pode tornar certas operações de álgebra linear grandes (na veia daquelas que vemos em aplicativos de aprendizado profundo) muito mais rápidas, particularmente em uma GPUenvironment.
 :end_tab:
 
-### Acceleration by Hybridization
+### Aceleração por Hibridização
 
 To demonstrate the performance improvement gained by compilation we compare the time needed to evaluate `net(x)` before and after hybridization. Let us define a function to measure this time first. It will come handy throughout the chapter as we set out to measure (and improve) performance.
 
@@ -384,7 +384,7 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODY2NTk3NjYsMTUyMDc2Njk4NiwxOD
-IzNTIwMjgyLC0xMjM5NDM3ODcsNjQ1NjQ2NTY2LDE4Mzk3NDQ5
-MzgsMTAwMTE5OTQ2LDExODEzNjY4MjldfQ==
+eyJoaXN0b3J5IjpbLTcyMjkwMTYzMCwxNTIwNzY2OTg2LDE4Mj
+M1MjAyODIsLTEyMzk0Mzc4Nyw2NDU2NDY1NjYsMTgzOTc0NDkz
+OCwxMDAxMTk5NDYsMTE4MTM2NjgyOV19
 -->
