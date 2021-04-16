@@ -446,11 +446,11 @@ class DecoderBlock(nn.Module):
         return self.addnorm3(Z, self.ffn(Z)), state
 ```
 
-To facilitate scaled dot-product operations
-in the encoder-decoder attention
-and addition operations in the residual connections,
-the feature dimension (`num_hiddens`) of the decoder is
-the same as that of the encoder.
+Para facilitar as operações de produtos escalonados
+na atenção do *encoder-decoder*
+e operações de adição nas conexões residuais,
+a dimensão do recurso (`num_hiddens`) do *decoder* é
+a mesma do *encoder*.
 
 ```{.python .input}
 decoder_blk = DecoderBlock(24, 48, 8, 0.5, 0)
@@ -754,7 +754,7 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI1MDI0NzI5LC0xMjY0NDQ4MTgwLDIwMD
-M0NzMyMTEsLTQyNDg2ODI2MSwtMjE2MTU1OTY3LC02NTMyODg3
-ODIsNzA5NzYyNTIwXX0=
+eyJoaXN0b3J5IjpbNTExNjQ5OTYsLTEyNjQ0NDgxODAsMjAwMz
+Q3MzIxMSwtNDI0ODY4MjYxLC0yMTYxNTU5NjcsLTY1MzI4ODc4
+Miw3MDk3NjI1MjBdfQ==
 -->
