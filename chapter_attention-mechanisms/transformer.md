@@ -114,33 +114,15 @@ ffn(d2l.ones((2, 3, 4)))[0]
 
 ## Conexão residual e normalização de camada
 
-Now let us focus on
-the "add & norm" component in :numref:`fig_transformer`.
-As we described at the beginning
-of this section,
-this is a residual connection immediately
-followed by layer normalization.
-Both are key to effective deep architectures.
 
-In :numref:`sec_batch_norm`,
-we explained how batch normalization
-recenters and rescales across the examples within
-a minibatch.
-Layer normalization is the same as batch normalization
-except that the former
-normalizes across the feature dimension.
-Despite its pervasive applications
-in computer vision,
-batch normalization
-is usually empirically
-less effective than layer normalization
-in natural language processing
-tasks, whose inputs are often
-variable-length sequences.
+Agora vamos nos concentrar no componente "add & norm" em :numref:`fig_transformer` Como descrevemos no início
+desta seção, esta é uma conexão residual imediatamente
+seguido pela normalização da camada. Ambos são essenciais para arquiteturas profundas eficazes.
 
-The following code snippet
-compares the normalization across different dimensions
-by layer normalization and batch normalization.
+Em :numref:`sec_batch_norm`, explicamos como a normalização em lote recentraliza e redimensiona os exemplos dentro
+um minibatch. A normalização de camada é igual à normalização em lote, exceto que a primeira normaliza em toda a dimensão do recurso. Apesar de suas aplicações difundidas em visão computacional, a normalização em lote é geralmente empiricamente menos eficaz do que a normalização de camada em tarefas de processamento de linguagem natural, cujas entradas são frequentemente sequências de comprimento variável.
+
+O fragmento de código a seguir compara a normalização em diferentes dimensões por normalização de camada e normalização de lote.
 
 ```{.python .input}
 ln = nn.LayerNorm()
@@ -809,6 +791,6 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0ODgyNjk1NiwtNDI0ODY4MjYxLC0yMT
+eyJoaXN0b3J5IjpbLTI2NzcxNzk5NywtNDI0ODY4MjYxLC0yMT
 YxNTU5NjcsLTY1MzI4ODc4Miw3MDk3NjI1MjBdfQ==
 -->
