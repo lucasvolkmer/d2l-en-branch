@@ -181,7 +181,7 @@ net(x)
 ```
 
 :begin_tab:`mxnet`
-This seems almost too good to be true: simply designate a block to be `HybridSequential`, write the same code as before and invoke `hybridize`. Once this happens the network is optimized (we will benchmark the performance below). Unfortunately this does not work magically for every layer. That said, the blocks provided by Gluon are by default subclasses of `HybridBlock` and thus hybridizable. A layer will not be optimized if it inherits from the `Block` instead.
+Isso parece bom demais para ser verdade: simplesmente designe um bloco como `HybridSequential`, escreva o mesmo código de antes e invoque `hybridize`. Assim que isso acontecer, a rede estará otimizada (faremos um benchmark do desempenho abaixo). Infelizmente, isso não funciona magicamente para todas as camadas. Dito isso, os blocos fornecidos pelo Gluon são, por padrão, subclasses de `HybridBlock` e, portanto, hibridizáveis. Uma camada não será otimizada se, em vez disso, herdar do `Bloco`.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -384,7 +384,7 @@ net(x)
 [Discussions](https://discuss.d2l.ai/t/360)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMzUyMDI4MiwtMTIzOTQzNzg3LDY0NT
-Y0NjU2NiwxODM5NzQ0OTM4LDEwMDExOTk0NiwxMTgxMzY2ODI5
-XX0=
+eyJoaXN0b3J5IjpbMTUyMDc2Njk4NiwxODIzNTIwMjgyLC0xMj
+M5NDM3ODcsNjQ1NjQ2NTY2LDE4Mzk3NDQ5MzgsMTAwMTE5OTQ2
+LDExODEzNjY4MjldfQ==
 -->
