@@ -19,29 +19,16 @@ que empilham módulos baseados em autoatenção.
 :label:`fig_transformer`
 
 
-Now we provide an overview of the
-transformer architecture in :numref:`fig_transformer`.
-On a high level,
-the transformer encoder is a stack of multiple identical layers,
-where each layer
-has two sublayers (either is denoted as $\mathrm{sublayer}$).
-The first
-is a multi-head self-attention pooling
-and the second is a positionwise feed-forward network.
-Specifically,
-in the encoder self-attention,
-queries, keys, and values are all from the
-the outputs of the previous encoder layer.
-Inspired by the ResNet design in :numref:`sec_resnet`,
-a residual connection is employed
-around both sublayers.
-In the transformer,
-for any input $\mathbf{x} \in \mathbb{R}^d$ at any position of the sequence,
-we require that $\mathrm{sublayer}(\mathbf{x}) \in \mathbb{R}^d$ so that
-the residual connection $\mathbf{x} + \mathrm{sublayer}(\mathbf{x}) \in \mathbb{R}^d$ is feasible.
-This addition from the residual connection is immediately
-followed by layer normalization :cite:`Ba.Kiros.Hinton.2016`.
-As a result, the transformer encoder outputs a $d$-dimensional vector representation for each position of the input sequence.
+Agora fornecemos uma visão geral da arquitetura do transformador em :numref:`fig_transformer`. Em um alto nível, o codificador do transformador é uma pilha de várias camadas idênticas, onde cada camada
+tem duas subcamadas (qualquer uma é denotada como $\mathrm{sublayer}$).
+O primeiro é um pooling de autoatenção com várias *heads* e o segundo é uma rede *feed-forward* posicional. Especificamente, na autoatenção do codificador, as consultas, as chaves e os valores são todos provenientes das saídas da camada do codificador anterior. Inspirado no design ResNet em :numref:`sec_resnet`, uma conexão residual é empregada
+em torno de ambas as subcamadas. No transformador, para qualquer entrada
+$\mathbf{x} \in \mathbb{R}^d$ em qualquer posição da sequência,
+exigimos que $\mathrm{sublayer}(\mathbf{x}) \in 
+ \mathbb{R}^d$ para que a conexão residual $\mathbf{x} + \mathrm{sublayer}(\mathbf{x}) \in \mathbb{R}^d$ seja viável.
+Esta adição da conexão residual é imediatamente
+seguida pela normalização da camada :cite:`Ba.Kiros.Hinton.2016`.
+Como resultado, o codificador do transformador produz uma representação vetorial $d$-dimensional para cada posição da sequência de entrada.
 
 The transformer decoder is also
 a stack of multiple identical layers with residual connections and layer normalizations.
@@ -854,5 +841,6 @@ for different deep learning tasks.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MzI4ODc4Miw3MDk3NjI1MjBdfQ==
+eyJoaXN0b3J5IjpbLTIxNjE1NTk2NywtNjUzMjg4NzgyLDcwOT
+c2MjUyMF19
 -->
