@@ -710,12 +710,12 @@ geralmente é usado individualmente para diferentes tarefas de *deep learning*.
 
 ## Exercícios
 
-1. Train a deeper transformer in the experiments. How does it affect the training speed and the translation performance?
-1. Is it a good idea to replace scaled dot-product attention with additive attention in the transformer? Why?
-1. For language modeling, should we use the transformer encoder, decoder, or both? How to design this method?
-1. What can be challenges to transformers if input sequences are very long? Why?
-1. How to improve computational and memory efficiency of transformers? Hint: you may refer to the survey paper by Tay et al. :cite:`Tay.Dehghani.Bahri.ea.2020`.
-1. How can we design transformer-based models for image classification tasks without using CNNs? Hint: you may refer to the vision transformer :cite:`Dosovitskiy.Beyer.Kolesnikov.ea.2021`.
+1. Treine um transformador mais profundo nos experimentos. Como isso afeta a velocidade de treinamento e o desempenho da tradução?
+1. É uma boa ideia substituir a atenção do produto escalonado com atenção aditiva no transformador? Por quê?
+1. Para modelagem de linguagem, devemos usar o *encoder* do transformador, o *decoder* ou ambos? Como projetar este método?
+1. Quais podem ser os desafios para os transformadores se as sequências de entrada forem muito longas? Por quê?
+1. Como melhorar a eficiência computacional e de memória de transformadores? Dica: você pode consultar o artigo de pesquisa de Tay et al. :cite:`Tay.Dehghani.Bahri.ea.2020`.
+1. Como podemos projetar modelos baseados em transformadores para tarefas de classificação de imagens sem usar CNNs? Dica: você pode consultar o transformador de visão :cite:`Dosovitskiy.Beyer.Kolesnikov.ea.2021`.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/348)
@@ -725,7 +725,7 @@ geralmente é usado individualmente para diferentes tarefas de *deep learning*.
 [Discussions](https://discuss.d2l.ai/t/1066)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDM0Mzc3MDMsLTEyNjQ0NDgxODAsMj
-AwMzQ3MzIxMSwtNDI0ODY4MjYxLC0yMTYxNTU5NjcsLTY1MzI4
-ODc4Miw3MDk3NjI1MjBdfQ==
+eyJoaXN0b3J5IjpbLTQ4NTIzNTI2OSwtMTI0MzQzNzcwMywtMT
+I2NDQ0ODE4MCwyMDAzNDczMjExLC00MjQ4NjgyNjEsLTIxNjE1
+NTk2NywtNjUzMjg4NzgyLDcwOTc2MjUyMF19
 -->
