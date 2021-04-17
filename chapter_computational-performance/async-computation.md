@@ -191,15 +191,16 @@ with d2l.Benchmark('asynchronous'):
     y.wait_to_read()
 ```
 
-A slightly simplified interaction between the Python frontend thread and the C++ backend thread can be summarized as follows:
 
-1. The frontend orders the backend to insert the calculation task `y = x + 1` into the queue.
-1. The backend then receives the computation tasks from the queue and performs the actual computations.
-1. The backend then returns the computation results to the frontend.
+Uma interação ligeiramente simplificada entre a *thread* de *front-end* Python e a *thread* de *back-end* C ++ pode ser resumida da seguinte maneira:
 
-Assume that the durations of these three stages are $t_1, t_2$ and $t_3$, respectively. If we do not use asynchronous programming, the total time taken to perform 1000 computations is approximately $1000 (t_1+ t_2 + t_3)$. If asynchronous programming is used, the total time taken to perform 1000 computations can be reduced to $t_1 + 1000 t_2 + t_3$ (assuming $1000 t_2 > 999t_1$), since the frontend does not have to wait for the backend to return computation results for each loop.
+1. O *front-end* ordena que o *back-end* insira a tarefa de cálculo `y = x + 1` na fila.
+1. O *back-end* então recebe as tarefas de computação da fila e executa os cálculos reais.
+1. O *back-end* então retorna os resultados do cálculo para o *front-end*.
 
-## Improving Memory Footprint
+Suponha que as durações desses três estágios sejam $t_1, t_2$  e $t_3$, respectivamente. Se não usarmos a programação assíncrona, o tempo total necessário para realizar 1000 cálculos é de aproximadamente $1000 (t_1+ t_2 + t_3)$. Se a programação assíncrona for usada, o tempo total gasto para realizar 1000 cálculos pode ser reduzido para $t_1 + 1000 t_2 + t_3$  (assumindo $1000 t_2> 999 t_1$), uma vez que o *front-end* não precisa esperar que o *back-end- retorne os resultados dos cálculos para cada *loop*.
+
+## Melhorando o *Footprint* de Memória
 
 Imagine a situation where we keep on inserting operations into the backend by executing Python code on the frontend. For instance, the frontend might insert a large number of minibatch tasks within a very short time. After all, if no meaningful computation happens in Python this can be done quite quickly. If each of these tasks can be launched quickly at the same time this may cause a spike in memory usage. Given a finite amount of memory available on GPUs (and even on CPUs) this can lead to resource contention or even program crashes. Some readers might have noticed that previous training routines made use of synchronization methods such as `item` or even `asnumpy`.
 
@@ -292,6 +293,6 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMDc0NTExNywxMzk2MTIwMTk3LDE3Mz
-Q5MTYxNjldfQ==
+eyJoaXN0b3J5IjpbLTkwMDQyODE1MywtOTEwNzQ1MTE3LDEzOT
+YxMjAxOTcsMTczNDkxNjE2OV19
 -->
