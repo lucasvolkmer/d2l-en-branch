@@ -26,12 +26,12 @@ import numpy
 ## Asynchrony via Backend
 
 :begin_tab:`mxnet`
-For a warmup consider the following toy problem - we want to generate a random matrix and multiply it. Let us do that both in NumPy and in MXNet NP to see the difference.
+Para um aquecimento, considere o seguinte problema brinquedo - queremos gerar uma matriz aleatória e multiplicá-la. Vamos fazer isso no NumPy e no MXNet NP para ver a diferença.
 :end_tab:
 
-:begin_tab:`pytorch`
-For a warmup consider the following toy problem - we want to generate a random matrix and multiply it. Let us do that both in NumPy and in PyTorch tensor to see the difference.
-Note that PyTorch `tensor` is defined on a gpu.
+:begin_tab: `pytorch`
+Para um aquecimento, considere o seguinte problema brinquedo - queremos gerar uma matriz aleatória e multiplicá-la. Vamos fazer isso tanto no NumPy quanto no tensor PyTorch para ver a diferença.
+Observe que o `tensor` do PyTorch é definido em uma gpu.
 :end_tab:
 
 ```{.python .input  n=2}
@@ -65,7 +65,7 @@ with d2l.Benchmark('torch'):
 ```
 
 :begin_tab:`mxnet`
-This is orders of magnitude faster. At least it seems to be so. Since both are executed on the same processor something else must be going on. Forcing MXNet to finish all computation prior to returning shows what happened previously: computation is being executed by the backend while the frontend returns control to Python.
+Isso é ordens de magnitude mais rápido. Pelo menos parece que sim. Uma vez que ambos são executados no mesmo processador, algo mais deve estar acontecendo. Forçar o MXNet a terminar toda a computação antes de retornar mostra o que aconteceu anteriormente: a computação está sendo executada pelo backend enquanto o frontend retorna o controle ao Python.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -291,5 +291,5 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNDkxNjE2OV19
+eyJoaXN0b3J5IjpbLTEwNTA4MzA3MSwxNzM0OTE2MTY5XX0=
 -->
