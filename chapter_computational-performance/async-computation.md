@@ -144,13 +144,14 @@ Sempre que a *thread* de *front-end* do Python executa uma das três primeiras i
 :label:`fig_threading`
 
 
-## Barriers and Blockers
+## Barreiras e Bloqueadores
 
-There are a number of operations that will force Python to wait for completion:
-* Most obviously `npx.waitall()` waits until all computation has completed, regardless of when the compute instructions were issued. In practice it is a bad idea to use this operator unless absolutely necessary since it can lead to poor performance.
-* If we just want to wait until a specific variable is available we can call `z.wait_to_read()`. In this case MXNet blocks return to Python until the variable `z` has been computed. Other computation may well continue afterwards.
 
-Let us see how this works in practice:
+Existem várias operações que forçam o Python a aguardar a conclusão:
+* Obviamente, `npx.waitall ()` espera até que todo o cálculo seja concluído, independentemente de quando as instruções de cálculo foram emitidas. Na prática, é uma má ideia usar este operador, a menos que seja absolutamente necessário, pois pode levar a um desempenho insatisfatório.
+* Se quisermos apenas esperar até que uma variável específica esteja disponível, podemos chamar `z.wait_to_read ()`. Nesse caso, os blocos MXNet retornam ao Python até que a variável `z` seja calculada. Outros cálculos podem continuar depois.
+
+Vamos ver como isso funciona na prática:
 
 ```{.python .input  n=5}
 with d2l.Benchmark('waitall'):
@@ -291,5 +292,6 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjEyMDE5NywxNzM0OTE2MTY5XX0=
+eyJoaXN0b3J5IjpbMTI0NjExODQ1MywxMzk2MTIwMTk3LDE3Mz
+Q5MTYxNjldfQ==
 -->
