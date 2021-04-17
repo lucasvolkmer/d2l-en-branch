@@ -226,7 +226,7 @@ trainer = gluon.Trainer(net.collect_params(), 'sgd')
 loss = gluon.loss.L2Loss()
 ```
 
-Next we need a tool to measure the memory footprint of our code. We use a relatively primitive `ps` call to accomplish this (note that the latter only works on Linux and MacOS). For a much more detailed analysis of what is going on here use e.g., Nvidia's [Nsight](https://developer.nvidia.com/nsight-compute-2019_5) or Intel's [vTune](https://software.intel.com/en-us/vtune).
+Em seguida, precisamos de uma ferramenta para medir a pegada de memória de nosso código. Usamos uma chamada `ps` relativamente primitiva para fazer isso (observe que a última só funciona no Linux e MacOS). Para uma análise muito mais detalhada do que está acontecendo aqui, use, por exemplo, o [Nsight](https://developer.nvidia.com/nsight-compute-2019_5) da Nvidia  ou o [vTune](https://software.intel.com/en-us/vtune) da Intel.
 
 ```{.python .input  n=12}
 def get_mem():
@@ -234,7 +234,7 @@ def get_mem():
     return int(str(res).split()[15]) / 1e3
 ```
 
-Before we can begin testing we need to initialize the parameters of the network and process one batch. Otherwise it would be tricky to see what the additional memory consumption is. See :numref:`sec_deferred_init` for further details related to initialization.
+Antes de começarmos o teste, precisamos inicializar os parâmetros da rede e processar um lote. Caso contrário, seria complicado ver qual é o consumo de memória adicional. Veja :numref:`sec_deferred_init` para mais detalhes relacionados à inicialização.
 
 ```{.python .input  n=13}
 for X, y in data_iter():
@@ -242,7 +242,7 @@ for X, y in data_iter():
 loss(y, net(X)).wait_to_read()
 ```
 
-To ensure that we do not overflow the task buffer on the backend we insert a `wait_to_read` call for the loss function at the end of each loop. This forces the forward propagation to complete before a new forward propagation is commenced. Note that a (possibly more elegant) alternative would have been to track the loss in a scalar variable and to force a barrier via the `item` call.
+Para garantir que não estouremos o *buffer* de tarefa no *back-end*, inserimos uma chamada `wait_to_read` para a função de perda no final de cada *loop*. Isso força a propagação direta a ser concluída antes que uma nova propagação direta seja iniciada. Observe que uma alternativa (possivelmente mais elegante) seria rastrear a perda em uma variável escalar e forçar uma barreira por meio da chamada de `item`.
 
 ```{.python .input  n=14}
 mem = get_mem()
@@ -257,7 +257,7 @@ with d2l.Benchmark('time per epoch'):
 print(f'increased memory: {get_mem() - mem:f} MB')
 ```
 
-As we see, the timing of the minibatches lines up quite nicely with the overall runtime of the optimization code. Moreover, memory footprint only increases slightly. Now let us see what happens if we drop the barrier at the end of each minibatch.
+Como vemos, o tempo dos minibatches se alinha muito bem com o tempo de execução geral do código de otimização. Além disso, o consumo de memória aumenta apenas ligeiramente. Agora vamos ver o que acontece se derrubarmos a barreira no final de cada minibatch.
 
 ```{.python .input  n=14}
 mem = get_mem()
@@ -294,6 +294,6 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NTM0MDM5MywtOTEwNzQ1MTE3LDEzOT
+eyJoaXN0b3J5IjpbMTIwOTAwMTM0OCwtOTEwNzQ1MTE3LDEzOT
 YxMjAxOTcsMTczNDkxNjE2OV19
 -->
