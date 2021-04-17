@@ -1,4 +1,4 @@
-# Automatic Parallelism
+# Automatic Parallelismo Automático
 :label:`sec_auto_para`
 
 :begin_tab:`mxnet`
@@ -207,3 +207,6 @@ We conclude with an illustration of the computational graph and its dependencies
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTg0MTU0MDgzNF19
+-->
