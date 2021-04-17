@@ -275,14 +275,14 @@ Mesmo que o tempo para emitir instruções para o *back-end* seja uma ordem de m
 
 ## Resumo
 
-* MXNet decouples the Python frontend from an execution backend. This allows for fast asynchronous insertion of commands into the backend and associated parallelism.
-* Asynchrony leads to a rather responsive frontend. However, use caution not to overfill the task queue since it may lead to excessive memory consumption.
-* It is recommended to synchronize for each minibatch to keep frontend and backend approximately synchronized.
-* Be aware of the fact that conversions from MXNet's memory management to Python will force the backend to wait until  the specific variable is ready. `print`, `asnumpy` and `item` all have this effect. This can be desirable but a carless use of synchronization can ruin performance.
-* Chip vendors offer sophisticated performance analysis tools to obtain a much more fine-grained insight into the efficiency of deep learning.
+* MXNet desacopla o *front-end* Python de um *back-end* de execução. Isso permite a rápida inserção assíncrona de comandos no *back-end* e o paralelismo associado.
+* O assincronismo leva a uma interface bastante responsiva. No entanto, tenha cuidado para não sobrecarregar a fila de tarefas, pois isso pode levar ao consumo excessivo de memória.
+* Recomenda-se sincronizar para cada minibatch para manter o *front-end* e o *back-end* aproximadamente sincronizados.
+* Esteja ciente do fato de que as conversões do gerenciamento de memória do MXNet para Python forçarão o* back-end* a esperar até que a variável específica esteja pronta. `print`, `asnumpy` e `item` têm este efeito. Isso pode ser desejável, mas o uso sem carro da sincronização pode prejudicar o desempenho.
+* Os fornecedores de chips oferecem ferramentas sofisticadas de análise de desempenho para obter uma visão muito mais detalhada da eficiência do *deep learning*.
 
 
-## Exercises
+## Exercícios
 
 1. We mentioned above that using asynchronous computation can reduce the total amount of time needed to perform $1000$ computations to $t_1 + 1000 t_2 + t_3$. Why do we have to assume $1000 t_2 > 999 t_1$ here?
 1. How would you need to modify the training loop if you wanted to have an overlap of one minibatch each? I.e., if you wanted to ensure that batch $b_t$ finishes before batch $b_{t+2}$ commences?
@@ -294,6 +294,6 @@ Mesmo que o tempo para emitir instruções para o *back-end* seja uma ordem de m
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI2MjYwNTQzLC05MTA3NDUxMTcsMTM5Nj
-EyMDE5NywxNzM0OTE2MTY5XX0=
+eyJoaXN0b3J5IjpbLTQzNjU5NDE1MiwtOTEwNzQ1MTE3LDEzOT
+YxMjAxOTcsMTczNDkxNjE2OV19
 -->
