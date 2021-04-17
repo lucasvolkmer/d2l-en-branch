@@ -284,16 +284,16 @@ Mesmo que o tempo para emitir instruções para o *back-end* seja uma ordem de m
 
 ## Exercícios
 
-1. We mentioned above that using asynchronous computation can reduce the total amount of time needed to perform $1000$ computations to $t_1 + 1000 t_2 + t_3$. Why do we have to assume $1000 t_2 > 999 t_1$ here?
-1. How would you need to modify the training loop if you wanted to have an overlap of one minibatch each? I.e., if you wanted to ensure that batch $b_t$ finishes before batch $b_{t+2}$ commences?
-1. What might happen if we want to execute code on CPUs and GPUs simultaneously? Should you still insist on synchronizing after every minibatch has been issued?
-1. Measure the difference between `waitall` and `wait_to_read`. Hint: perform a number of instructions and synchronize for an intermediate result.
+1. Mencionamos acima que o uso de computação assíncrona pode reduzir a quantidade total de tempo necessária para realizar $1000$ computações para $t_1 + 1000 t_2 + t_3$. Por que temos que assumir $1000 t_2 > 999 t_1$ aqui?
+1. Como você precisaria modificar o *loop* de treinamento se quisesse ter uma sobreposição de um minibatch cada? Ou seja, se você quiser garantir que o lote $b_t$ termine antes que o lote $b_{t+2}$ comece?
+1. O que pode acontecer se quisermos executar código em CPUs e GPUs simultaneamente? Você ainda deve insistir em sincronizar após cada minibatch ter sido emitido?
+1. Meça a diferença entre `waitall` e` wait_to_read`. Dica: execute uma série de instruções e sincronize para um resultado intermediário.
 
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNjU5NDE1MiwtOTEwNzQ1MTE3LDEzOT
-YxMjAxOTcsMTczNDkxNjE2OV19
+eyJoaXN0b3J5IjpbMzQ3NTA1MTA3LC05MTA3NDUxMTcsMTM5Nj
+EyMDE5NywxNzM0OTE2MTY5XX0=
 -->
