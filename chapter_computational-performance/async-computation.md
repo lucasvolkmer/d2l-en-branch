@@ -271,9 +271,9 @@ with d2l.Benchmark('time per epoch'):
 print(f'increased memory: {get_mem() - mem:f} MB')
 ```
 
-Even though the time to issue instructions for the backend is an order of magnitude smaller, we still need to perform computation. Consequently a large amount of intermediate results cannot be released and may pile up in memory. While this didn't cause any issues in the toy example above, it might well have resulted in out of memory situations when left unchecked in real world scenarios.
+Mesmo que o tempo para emitir instruções para o *back-end* seja uma ordem de magnitude menor, ainda precisamos realizar o cálculo. Consequentemente, uma grande quantidade de resultados intermediários não pode ser liberada e pode se acumular na memória. Embora isso não tenha causado nenhum problema no exemplo acima, pode muito bem ter resultado em situações de falta de memória quando não verificado em cenários do mundo real.
 
-## Summary
+## Resumo
 
 * MXNet decouples the Python frontend from an execution backend. This allows for fast asynchronous insertion of commands into the backend and associated parallelism.
 * Asynchrony leads to a rather responsive frontend. However, use caution not to overfill the task queue since it may lead to excessive memory consumption.
@@ -294,6 +294,6 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwOTAwMTM0OCwtOTEwNzQ1MTE3LDEzOT
-YxMjAxOTcsMTczNDkxNjE2OV19
+eyJoaXN0b3J5IjpbNTI2MjYwNTQzLC05MTA3NDUxMTcsMTM5Nj
+EyMDE5NywxNzM0OTE2MTY5XX0=
 -->
