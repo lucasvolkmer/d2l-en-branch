@@ -69,15 +69,14 @@ Isso é ordens de magnitude mais rápido. Pelo menos parece que sim. Uma vez que
 :end_tab:
 
 :begin_tab:`pytorch`
-This is orders of magnitude faster. At least it seems to be so.
-Numpy dot product is executed on the cpu processor while
-Pytorch matrix multiplication is executed on gpu and hence the latter
-is expected to be much faster. But the huge time difference suggests something
-else must be going on.
-By default, GPU operations are asynchronous in PyTorch.
-Forcing PyTorch to finish all computation prior to returning shows
-what happened previously: computation is being executed by the backend
-while the frontend returns control to Python.
+Isso é ordens de magnitude mais rápido. Pelo menos parece que sim.
+O produto de ponto Numpy é executado no processador cpu enquanto
+A multiplicação da matriz de Pytorch é executada no gpu e, portanto, o último
+espera-se que seja muito mais rápida. Mas a enorme diferença de tempo sugere que algo mais deve estar acontecendo.
+Por padrão, as operações da GPU são assíncronas no PyTorch.
+Forçando PyTorch a terminar todos os cálculos antes de retornar os programas,
+o que aconteceu anteriormente: o cálculo está sendo executado pelo backend
+enquanto o front-end retorna o controle para Python.
 :end_tab:
 
 ```{.python .input  n=3}
@@ -98,9 +97,9 @@ with d2l.Benchmark():
 ```
 
 :begin_tab:`mxnet`
-Broadly speaking, MXNet has a frontend for direct interaction with the users, e.g., via Python, as well as a backend used by the system to perform the computation. 
-As shown in :numref:`fig_frontends`, users can write MXNet programs in various frontend languages, such as Python, R, Scala, and C++. Regardless of the frontend programming language used, the execution of MXNet programs occurs primarily in the backend of C++ implementations. Operations issued by the frontend language are passed on to the backend for execution. 
-The backend manages its own threads that continuously collect and execute queued tasks. Note that for this to work the backend must be able to keep track of the dependencies between various steps in the computational graph. Hence, it is not possible to parallelize operations that depend on each other.
+De um modo geral, o MXNet possui um front-end para interação direta com os usuários, por exemplo, via Python, bem como um back-end usado pelo sistema para realizar a computação.
+Conforme mostrado em: numref: `fig_frontends`, os usuários podem escrever programas MXNet em várias linguagens de front-end, como Python, R, Scala e C ++. Independentemente da linguagem de programação de front-end usada, a execução de programas MXNet ocorre principalmente no back-end de implementações C ++. As operações emitidas pela linguagem do front-end são passadas para o back-end para execução.
+O back-end gerencia seus próprios threads que continuamente coletam e executam tarefas enfileiradas. Observe que, para que isso funcione, o back-end deve ser capaz de controlar as dependências entre as várias etapas do gráfico computacional. Portanto, não é possível paralelizar operações que dependem umas das outras.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -291,5 +290,5 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTA4MzA3MSwxNzM0OTE2MTY5XX0=
+eyJoaXN0b3J5IjpbNjQ4NTIyNDk2LDE3MzQ5MTYxNjldfQ==
 -->
