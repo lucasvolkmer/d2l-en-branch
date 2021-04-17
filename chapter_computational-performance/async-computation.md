@@ -23,7 +23,7 @@ from torch import nn
 import numpy
 ```
 
-## Asynchrony via Backend
+## Assincronismo via *Back-end*
 
 :begin_tab:`mxnet`
 Para um aquecimento, considere o seguinte problema brinquedo - queremos gerar uma matriz aleatória e multiplicá-la. Vamos fazer isso no NumPy e no MXNet NP para ver a diferença.
@@ -65,7 +65,7 @@ with d2l.Benchmark('torch'):
 ```
 
 :begin_tab:`mxnet`
-Isso é ordens de magnitude mais rápido. Pelo menos parece que sim. Uma vez que ambos são executados no mesmo processador, algo mais deve estar acontecendo. Forçar o MXNet a terminar toda a computação antes de retornar mostra o que aconteceu anteriormente: a computação está sendo executada pelo backend enquanto o frontend retorna o controle ao Python.
+Isso é ordens de magnitude mais rápido. Pelo menos parece que sim. Uma vez que ambos são executados no mesmo processador, algo mais deve estar acontecendo. Forçar o MXNet a terminar toda a computação antes de retornar mostra o que aconteceu anteriormente: a computação está sendo executada pelo *back-end* enquanto o *front-end* retorna o controle ao Python.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -97,15 +97,15 @@ with d2l.Benchmark():
 ```
 
 :begin_tab:`mxnet`
-De um modo geral, o MXNet possui um front-end para interação direta com os usuários, por exemplo, via Python, bem como um back-end usado pelo sistema para realizar a computação.
-Conforme mostrado em: numref: `fig_frontends`, os usuários podem escrever programas MXNet em várias linguagens de front-end, como Python, R, Scala e C ++. Independentemente da linguagem de programação de front-end usada, a execução de programas MXNet ocorre principalmente no back-end de implementações C ++. As operações emitidas pela linguagem do front-end são passadas para o back-end para execução.
-O back-end gerencia seus próprios threads que continuamente coletam e executam tarefas enfileiradas. Observe que, para que isso funcione, o back-end deve ser capaz de controlar as dependências entre as várias etapas do gráfico computacional. Portanto, não é possível paralelizar operações que dependem umas das outras.
+De um modo geral, o MXNet possui um front-end para interação direta com os usuários, por exemplo, via Python, bem como um *back-end* usado pelo sistema para realizar a computação.
+Conforme mostrado em: numref: `fig_frontends`, os usuários podem escrever programas MXNet em várias linguagens de front-end, como Python, R, Scala e C ++. Independentemente da linguagem de programação de front-end usada, a execução de programas MXNet ocorre principalmente no *back-end* de implementações C ++. As operações emitidas pela linguagem do front-end são passadas para o back-end para execução.
+O back-end gerencia seus próprios threads que continuamente coletam e executam tarefas enfileiradas. Observe que, para que isso funcione, o *back-end* deve ser capaz de controlar as dependências entre as várias etapas do gráfico computacional. Portanto, não é possível paralelizar operações que dependem umas das outras.
 :end_tab:
 
 :begin_tab:`pytorch`
 Em termos gerais, o PyTorch tem um *front-end* para interação direta com os usuários, por exemplo, via Python, bem como um *back-end* usado pelo sistema para realizar a computação.
-Conforme mostrado em: numref: `fig_frontends`, os usuários podem escrever programas PyTorch em várias linguagens de *frontend*, como Python e C ++. Independentemente da linguagem de programação de frontend usada, a execução de programas PyTorch ocorre principalmente no backend de implementações C ++. As operações emitidas pela linguagem do front-end são passadas para o *back-end* para execução.
-O back-end gerencia suas próprias threads que continuamente coletam e executam tarefas enfileiradas.
+Conforme mostrado em: numref: `fig_frontends`, os usuários podem escrever programas PyTorch em várias linguagens de *front-end*, como Python e C ++. Independentemente da linguagem de programação de frontend usada, a execução de programas PyTorch ocorre principalmente no backend de implementações C ++. As operações emitidas pela linguagem do *front-end* são passadas para o *back-end* para execução.
+O *back-end* gerencia suas próprias threads que continuamente coletam e executam tarefas enfileiradas.
 Observe que para que isso funcione, o *back-end* deve ser capaz de rastrear as
 dependências entre várias etapas no gráfico computacional.
 Portanto, não é possível paralelizar operações que dependem umas das outras.
@@ -290,5 +290,5 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkwMjkyNTQzLDE3MzQ5MTYxNjldfQ==
+eyJoaXN0b3J5IjpbLTEzNDAzOTY1MTUsMTczNDkxNjE2OV19
 -->
