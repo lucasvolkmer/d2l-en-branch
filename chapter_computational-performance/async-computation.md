@@ -163,7 +163,7 @@ with d2l.Benchmark('wait_to_read'):
     b.wait_to_read()
 ```
 
-Both operations take approximately the same time to complete. Besides the obvious blocking operations we recommend that the reader is aware of *implicit* blockers. Printing a variable clearly requires the variable to be available and is thus a blocker. Lastly, conversions to NumPy via `z.asnumpy()` and conversions to scalars via `z.item()` are blocking, since NumPy has no notion of asynchrony. It needs access to the values just like the `print` function. Copying small amounts of data frequently from MXNet's scope to NumPy and back can destroy performance of an otherwise efficient code, since each such operation requires the computational graph to evaluate all intermediate results needed to get the relevant term *before* anything else can be done.
+Ambas as operações levam aproximadamente o mesmo tempo para serem concluídas. Além das operações de bloqueio óbvias, recomendamos que o leitor esteja ciente dos bloqueadores *implícitos*. Imprimir uma variável requer claramente que a variável esteja disponível e, portanto, é um bloqueador. Por último, as conversões para NumPy via `z.asnumpy ()` e conversões para escalares via `z.item ()` estão bloqueando, uma vez que NumPy não tem noção de assincronismo. Ele precisa acessar os valores assim como a função `print`. Copiar pequenas quantidades de dados frequentemente do escopo do MXNet para NumPy e vice-versa pode destruir o desempenho de um código eficiente, uma vez que cada operação requer o gráfico computacional para avaliar todos os resultados intermediários necessários para obter o termo relevante *antes* que qualquer outra coisa possa ser feita.
 
 ```{.python .input  n=7}
 with d2l.Benchmark('numpy conversion'):
@@ -175,9 +175,9 @@ with d2l.Benchmark('scalar conversion'):
     b.sum().item()
 ```
 
-## Improving Computation
+## Melhorando a Computação
 
-On a heavily multithreaded system (even regular laptops have 4 threads or more and on multi-socket servers this number can exceed 256) the overhead of scheduling operations can become significant. This is why it is highly desirable to have computation and scheduling occur asynchronously and in parallel. To illustrate the benefit of doing this let us see what happens if we increment a variable by 1 multiple times, both in sequence or asynchronously. We simulate synchronous execution by inserting a `wait_to_read()` barrier in between each addition.
+Em um sistema altamente *multithread* (mesmo laptops regulares têm 4 threads ou mais e em servidores multithread esse número pode exceder 256), a sobrecarga das operações de agendamento pode se tornar significativa. É por isso que é altamente desejável que a computação e a programação ocorram de forma assíncrona e em paralelo. Para ilustrar o benefício de fazer isso, vamos ver o que acontece se incrementarmos uma variável em 1 várias vezes, tanto em sequência quanto de forma assíncrona. Simulamos a execução síncrona inserindo uma barreira `wait_to_read ()` entre cada adição.
 
 ```{.python .input  n=9}
 with d2l.Benchmark('synchronous'):
@@ -292,6 +292,6 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NjExODQ1MywxMzk2MTIwMTk3LDE3Mz
+eyJoaXN0b3J5IjpbLTkxMDc0NTExNywxMzk2MTIwMTk3LDE3Mz
 Q5MTYxNjldfQ==
 -->
