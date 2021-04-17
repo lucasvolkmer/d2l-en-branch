@@ -202,9 +202,10 @@ Suponha que as durações desses três estágios sejam $t_1, t_2$  e $t_3$, resp
 
 ## Melhorando o *Footprint* de Memória
 
-Imagine a situation where we keep on inserting operations into the backend by executing Python code on the frontend. For instance, the frontend might insert a large number of minibatch tasks within a very short time. After all, if no meaningful computation happens in Python this can be done quite quickly. If each of these tasks can be launched quickly at the same time this may cause a spike in memory usage. Given a finite amount of memory available on GPUs (and even on CPUs) this can lead to resource contention or even program crashes. Some readers might have noticed that previous training routines made use of synchronization methods such as `item` or even `asnumpy`.
 
-We recommend to use these operations carefully, e.g., for each minibatch, such as to balance computational efficiency and memory footprint. To illustrate what happens let us implement a simple training loop for a deep network and measure its memory consumption and timing. Below is the mock data generator and deep network.
+Imagine uma situação em que continuamos inserindo operações no *back-end*, executando o código Python no *front-end*. Por exemplo, o *front-end* pode inserir um grande número de tarefas de minibatch em um tempo muito curto. Afinal, se nenhum cálculo significativo acontecer no Python, isso pode ser feito rapidamente. Se cada uma dessas tarefas puder ser iniciada rapidamente ao mesmo tempo, isso pode causar um aumento no uso de memória. Dada uma quantidade finita de memória disponível nas GPUs (e mesmo nas CPUs), isso pode levar à contenção de recursos ou até mesmo travamentos do programa. Alguns leitores devem ter notado que as rotinas de treinamento anteriores faziam uso de métodos de sincronização como `item` ou mesmo `asnumpy`.
+
+Recomendamos usar essas operações com cuidado, por exemplo, para cada minibatch, para equilibrar a eficiência computacional e a pegada de memória. Para ilustrar o que acontece, vamos implementar um *loop* de treinamento simples para uma rede profunda e medir seu consumo de memória e tempo. Abaixo está o gerador de dados simulado e a rede profunda.
 
 ```{.python .input  n=10}
 def data_iter():
@@ -293,6 +294,6 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMDQyODE1MywtOTEwNzQ1MTE3LDEzOT
+eyJoaXN0b3J5IjpbMjA1NTM0MDM5MywtOTEwNzQ1MTE3LDEzOT
 YxMjAxOTcsMTczNDkxNjE2OV19
 -->
