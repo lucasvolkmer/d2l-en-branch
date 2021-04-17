@@ -103,16 +103,16 @@ O back-end gerencia seus próprios threads que continuamente coletam e executam 
 :end_tab:
 
 :begin_tab:`pytorch`
-Broadly speaking, PyTorch has a frontend for direct interaction with the users, e.g., via Python, as well as a backend used by the system to perform the computation. 
-As shown in :numref:`fig_frontends`, users can write PyTorch programs in various frontend languages, such as Python and C++. Regardless of the frontend programming language used, the execution of PyTorch programs occurs primarily in the backend of C++ implementations. Operations issued by the frontend language are passed on to the backend for execution.
-The backend manages its own threads that continuously collect and execute queued tasks.
-Note that for this to work the backend must be able to keep track of the
-dependencies between various steps in the computational graph.
-Hence, it is not possible to parallelize operations that depend on each other.
+Em termos gerais, o PyTorch tem um front-end para interação direta com os usuários, por exemplo, via Python, bem como um back-end usado pelo sistema para realizar a computação.
+Conforme mostrado em: numref: `fig_frontends`, os usuários podem escrever programas PyTorch em várias linguagens de frontend, como Python e C ++. Independentemente da linguagem de programação de frontend usada, a execução de programas PyTorch ocorre principalmente no backend de implementações C ++. As operações emitidas pela linguagem do front-end são passadas para o back-end para execução.
+O back-end gerencia suas próprias threads que continuamente coletam e executam tarefas enfileiradas.
+Observe que para que isso funcione, o back-end deve ser capaz de rastrear as
+dependências entre várias etapas no gráfico computacional.
+Portanto, não é possível paralelizar operações que dependem umas das outras.
 :end_tab:
 
 
-![Programming Frontends.](../img/frontends.png)
+![*Frontends* de Programação.](../img/frontends.png)
 :width:`300px`
 :label:`fig_frontends`
 
@@ -290,5 +290,5 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ4NTIyNDk2LDE3MzQ5MTYxNjldfQ==
+eyJoaXN0b3J5IjpbMjA0MTM4MDY1OSwxNzM0OTE2MTY5XX0=
 -->
