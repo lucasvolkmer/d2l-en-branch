@@ -112,11 +112,11 @@ Portanto, não é possível paralelizar operações que dependem umas das outras
 :end_tab:
 
 
-![*Frontends* de Programação.](../img/frontends.png)
+![Programação *Frontend*.](../img/frontends.png)
 :width:`300px`
 :label:`fig_frontends`
 
-Let us look at another toy example to understand the dependency graph a bit better.
+Vejamos outro exemplo brinquedo para entender um pouco melhor o grafo de dependência.
 
 ```{.python .input  n=4}
 x = np.ones((1, 2))
@@ -133,7 +133,7 @@ z = x * y + 2
 z
 ```
 
-![Dependencies.](../img/asyncgraph.svg)
+![Dependências.](../img/asyncgraph.svg)
 :label:`fig_asyncgraph`
 
 The code snippet above is also illustrated in :numref:`fig_asyncgraph`.
@@ -290,5 +290,5 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MTM4MDY1OSwxNzM0OTE2MTY5XX0=
+eyJoaXN0b3J5IjpbLTIwODY2NTM4NTAsMTczNDkxNjE2OV19
 -->
