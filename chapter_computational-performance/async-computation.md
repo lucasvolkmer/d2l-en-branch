@@ -103,10 +103,10 @@ O back-end gerencia seus próprios threads que continuamente coletam e executam 
 :end_tab:
 
 :begin_tab:`pytorch`
-Em termos gerais, o PyTorch tem um front-end para interação direta com os usuários, por exemplo, via Python, bem como um back-end usado pelo sistema para realizar a computação.
-Conforme mostrado em: numref: `fig_frontends`, os usuários podem escrever programas PyTorch em várias linguagens de frontend, como Python e C ++. Independentemente da linguagem de programação de frontend usada, a execução de programas PyTorch ocorre principalmente no backend de implementações C ++. As operações emitidas pela linguagem do front-end são passadas para o back-end para execução.
+Em termos gerais, o PyTorch tem um *front-end* para interação direta com os usuários, por exemplo, via Python, bem como um *back-end* usado pelo sistema para realizar a computação.
+Conforme mostrado em: numref: `fig_frontends`, os usuários podem escrever programas PyTorch em várias linguagens de *frontend*, como Python e C ++. Independentemente da linguagem de programação de frontend usada, a execução de programas PyTorch ocorre principalmente no backend de implementações C ++. As operações emitidas pela linguagem do front-end são passadas para o *back-end* para execução.
 O back-end gerencia suas próprias threads que continuamente coletam e executam tarefas enfileiradas.
-Observe que para que isso funcione, o back-end deve ser capaz de rastrear as
+Observe que para que isso funcione, o *back-end* deve ser capaz de rastrear as
 dependências entre várias etapas no gráfico computacional.
 Portanto, não é possível paralelizar operações que dependem umas das outras.
 :end_tab:
@@ -136,8 +136,8 @@ z
 ![Dependências.](../img/asyncgraph.svg)
 :label:`fig_asyncgraph`
 
-The code snippet above is also illustrated in :numref:`fig_asyncgraph`.
-Whenever the Python frontend thread executes one of the first three statements, it simply returns the task to the backend queue. When the last statement's results need to be printed, the Python frontend thread will wait for the C++ backend thread to finish computing result of the variable `z`. One benefit of this design is that the Python frontend thread does not need to perform actual computations. Thus, there is little impact on the program's overall performance, regardless of Python's performance. :numref:`fig_threading` illustrates how frontend and backend interact.
+O trecho de código acima também é ilustrado em :numref:`fig_asyncgraph`.
+Sempre que a *thread* de *front-end* do Python executa uma das três primeiras instruções, ela simplesmente retorna a tarefa para a fila de *back-end*. Quando os resultados da última instrução precisam ser impressos, a *thread* de *front-end* do Python irá esperar que a*thread* de *back-end* do C ++ termine de calcular o resultado da variável `z`. Um benefício desse *design* é que a *thread* de *front-end* do Python não precisa realizar cálculos reais. Portanto, há pouco impacto no desempenho geral do programa, independentemente do desempenho do Python. :numref:`fig_threading`  ilustra como *front-end* e *back-end* interagem.
 
 ![Frontend and Backend.](../img/threading.svg)
 :label:`fig_threading`
@@ -290,5 +290,5 @@ Even though the time to issue instructions for the backend is an order of magnit
 [Discussions](https://discuss.d2l.ai/t/361)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODY2NTM4NTAsMTczNDkxNjE2OV19
+eyJoaXN0b3J5IjpbNzkwMjkyNTQzLDE3MzQ5MTYxNjldfQ==
 -->
