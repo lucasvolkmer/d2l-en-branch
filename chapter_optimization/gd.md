@@ -253,24 +253,25 @@ Observe que esta análise vem com uma série de advertências: Não temos muita 
 Sem surpresa, computar e armazenar o Hessian completo é muito caro. Portanto, é desejável encontrar alternativas. Uma maneira de melhorar as coisas é evitar calcular o Hessian em sua totalidade, mas apenas calcular as entradas * diagonais *. Embora isso não seja tão bom quanto o método de Newton completo, ainda é muito melhor do que não usá-lo. Além disso, as estimativas para os principais elementos diagonais são o que impulsiona algumas das inovações em algoritmos de otimização de descida de gradiente estocástico. Isso leva à atualização de algoritmos do formulário
 
 $$\mathbf{x} \leftarrow \mathbf{x} - \eta \mathrm{diag}(H_f)^{-1} \nabla f(\mathbf{x}).$$
+
 Para ver por que isso pode ser uma boa ideia, considere uma situação em que uma variável denota a altura em milímetros e a outra denota a altura em quilômetros. Assumindo que para ambas a escala natural está em metros, temos um péssimo desencontro nas parametrizações. Usar o pré-condicionamento remove isso. O pré-condicionamento eficaz com gradiente descendente equivale a selecionar uma taxa de aprendizagem diferente para cada coordenada.
 
-### Gradient Descent with Line Search
+### Gradiente descendente com pesquisa de linha
 
-One of the key problems in gradient descent was that we might overshoot the goal or make insufficient progress. A simple fix for the problem is to use line search in conjunction with gradient descent. That is, we use the direction given by $\nabla f(\mathbf{x})$ and then perform binary search as to which step length $\eta$ minimizes $f(\mathbf{x} - \eta \nabla f(\mathbf{x}))$.
+Um dos principais problemas na descida gradiente era que poderíamos ultrapassar a meta ou fazer um progresso insuficiente. Uma solução simples para o problema é usar a pesquisa de linha em conjunto com a descida gradiente. Ou seja, usamos a direção dada por $\nabla f(\mathbf{x})$ e, em seguida, realizamos a pesquisa binária para saber qual o comprimento do passo $\eta$ minimiza $f(\mathbf{x} - \eta \nabla f(\mathbf{x}))$.
 
-This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boyd.Vandenberghe.2004`). However, for the purpose of deep learning this is not quite so feasible, since each step of the line search would require us to evaluate the objective function on the entire dataset. This is way too costly to accomplish.
+Este algoritmo converge rapidamente (para uma análise e prova veja, por exemplo, :cite:`Boyd.Vandenberghe.2004`). No entanto, para fins de aprendizado profundo, isso não é tão viável, uma vez que cada etapa da pesquisa de linha exigiria que avaliássemos a função objetivo em todo o conjunto de dados. Isso é muito caro de se realizar.
 
-## Summary
+## Sumário
 
-* Learning rates matter. Too large and we diverge, too small and we do not make progress.
-* Gradient descent can get stuck in local minima.
-* In high dimensions adjusting the learning rate is complicated.
-* Preconditioning can help with scale adjustment.
-* Newton's method is a lot faster *once* it has started working properly in convex problems.
-* Beware of using Newton's method without any adjustments for nonconvex problems.
+* As taxas de aprendizagem são importantes. Muito grande e divergimos, muito pequeno e não avançamos.
+* A descida do gradiente pode ficar presa em mínimos locais.
+* Em dimensões altas, ajustar a taxa de aprendizagem é complicado.
+* O pré-condicionamento pode ajudar no ajuste da escala.
+* O método de Newton é muito mais rápido *uma vez* que começou a funcionar corretamente em problemas convexos.
+* Cuidado ao usar o método de Newton sem quaisquer ajustes para problemas não convexos.
 
-## Exercises
+## Exercícios
 
 1. Experiment with different learning rates and objective functions for gradient descent.
 1. Implement line search to minimize a convex function in the interval $[a, b]$.
@@ -287,6 +288,6 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4ODA2NzI4NiwtMTk5MzQ3NDc1NiwtMT
-MxMTk3Nzg4MywtOTA3NDM2MzIxXX0=
+eyJoaXN0b3J5IjpbLTE3MTY2NTM1NTgsLTE5OTM0NzQ3NTYsLT
+EzMTE5Nzc4ODMsLTkwNzQzNjMyMV19
 -->
