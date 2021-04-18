@@ -300,19 +300,13 @@ Aqui, as variáveis $\alpha_i$ são os chamados *Multiplicadores de Lagrange* qu
 
 ### Penalidades
 
-One way of satisfying constrained optimization problems at least approximately is to adapt the Lagrange function $L$. Rather than satisfying $c_i(\mathbf{x}) \leq 0$ we simply add $\alpha_i c_i(\mathbf{x})$ to the objective function $f(x)$. This ensures that the constraints will not be violated too badly.
+Uma maneira de satisfazer problemas de otimização restrita pelo menos aproximadamente é adaptar a função de Lagrange $L$. Em vez de satisfazer $c_i(\mathbf{x}) \leq 0$, simplesmente adicionamos $\alpha_i c_i(\mathbf{x})$ à função objetivo $f(x)$. Isso garante que as restrições não sejam violadas demais.
 
-In fact, we have been using this trick all along. Consider weight decay in :numref:`sec_weight_decay`. In it we add $\frac{\lambda}{2} \|\mathbf{w}\|^2$ to the objective function to ensure that $\mathbf{w}$ does not grow too large. Using the constrained optimization point of view we can see that this will ensure that $\|\mathbf{w}\|^2 - r^2 \leq 0$ for some radius $r$. Adjusting the value of $\lambda$ allows us to vary the size of $\mathbf{w}$.
-
-In general, adding penalties is a good way of ensuring approximate constraint satisfaction. In practice this turns out to be much more robust than exact satisfaction. Furthermore, for nonconvex problems many of the properties that make the exact approach so appealing in the convex case (e.g., optimality) no longer hold.
-
-Uma maneira de satisfazer problemas de otimização restrita pelo menos aproximadamente é adaptar a função de Lagrange $L$. Em vez de satisfazer $c_i(\mathbf{x}) \leq 0$, simplesmente adicionamos $ \ alpha_i c_i (\ mathbf {x}) $ à função objetivo $ f (x) $. Isso garante que as restrições não sejam violadas demais.
-
-Na verdade, temos usado esse truque o tempo todo. Considere a diminuição do peso em: numref: `sec_weight_decay`. Nele adicionamos $ \ frac {\ lambda} {2} \ | \ mathbf {w} \ | ^ 2 $ à função objetivo para garantir que $ \ mathbf {w} $ não cresça muito. Usando o ponto de vista da otimização restrita, podemos ver que isso garantirá que $ \ | \ mathbf {w} \ | ^ 2 - r ^ 2 \ leq 0 $ para algum raio $ r $. Ajustar o valor de $ \ lambda $ nos permite variar o tamanho de $ \ mathbf {w} $.
+Na verdade, temos usado esse truque o tempo todo. Considere a diminuição do peso em :numref:`sec_weight_decay`. Nele adicionamos $\frac{\lambda}{2} \|\mathbf{w}\|^2$ à função objetivo para garantir que $\mathbf{w}$ não cresça muito. Usando o ponto de vista da otimização restrita, podemos ver que isso garantirá que $\|\mathbf{w}\|^2 - r^2 \leq 0$ para algum raio $r$. Ajustar o valor de $\lambda$ nos permite variar o tamanho de $\mathbf{w}$.
 
 Em geral, adicionar penalidades é uma boa maneira de garantir a satisfação aproximada da restrição. Na prática, isso acaba sendo muito mais robusto do que a satisfação exata. Além disso, para problemas não convexos, muitas das propriedades que tornam a abordagem exata tão atraente no caso convexo (por exemplo, otimização) não são mais válidas.
 
-### Projections
+### Projeções
 
 An alternative strategy for satisfying constraints are projections. Again, we encountered them before, e.g., when dealing with gradient clipping in :numref:`sec_rnn_scratch`. There we ensured that a gradient has length bounded by $c$ via
 
@@ -359,6 +353,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjAyMjYwMTQsLTg2MTA4MTA4NCwtMT
-YyODY1NzU3OCwtMTc4OTA5Mjk0OSwtMjE0NjMwMjM5XX0=
+eyJoaXN0b3J5IjpbMjU5NjAzODY4LC04NjEwODEwODQsLTE2Mj
+g2NTc1NzgsLTE3ODkwOTI5NDksLTIxNDYzMDIzOV19
 -->
