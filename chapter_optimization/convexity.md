@@ -163,22 +163,18 @@ d2l.set_figsize()
 d2l.plot([x, segment], [f(x), f(segment)], 'x', 'f(x)')
 ```
 
-The fact that the local minima for convex functions are also the global minima is very convenient. 
-It means that if we minimize functions we cannot "get stuck". 
-Note, though, that this does not mean that there cannot be more than one global minimum or that there might even exist one. For instance, the function $f(x) = \mathrm{max}(|x|-1, 0)$ attains its minimum value over the interval $[-1, 1]$. Conversely, the function $f(x) = \exp(x)$ does not attain a minimum value on $\mathbb{R}$: for $x \to -\infty$ it asymptotes to $0$, but there is no $x$ for which $f(x) = 0$.
-
 O fato de que os mínimos locais para funções convexas também são os mínimos globais é muito conveniente.
 Isso significa que, se minimizarmos as funções, não podemos "ficar presos".
-Observe, porém, que isso não significa que não possa haver mais de um mínimo global ou que possa mesmo existir um. Por exemplo, a função $ f (x) = \ mathrm {max} (| x | -1, 0) $ atinge seu valor mínimo no intervalo $ [- 1, 1] $. Por outro lado, a função $ f (x) = \ exp (x) $ não atinge um valor mínimo em $ \ mathbb {R} $: para $ x \ to - \ infty $ ele assíntotas para $ 0 $, mas não há $ x $ para o qual $ f (x) = 0 $.
+Observe, porém, que isso não significa que não possa haver mais de um mínimo global ou que possa mesmo existir um. Por exemplo, a função $f(x) = \mathrm{max}(|x|-1, 0)$ atinge seu valor mínimo no intervalo $[-1, 1]$. Por outro lado, a função $f(x) = \exp(x)$ não atinge um valor mínimo em $\mathbb{R}$: para $x \to -\infty$ ele assíntotas para $0$, mas não há $x$ para o qual $f(x) = 0$.
 
-### Below Sets of Convex Functions Are Convex
+### Os conjuntos de funções convexas abaixo são convexos
 
-We can conveniently 
-define convex sets 
-via *below sets* of convex functions.
-Concretely,
-given a convex function $f$ defined on a convex set $\mathcal{X}$,
-any below set
+Nós podemos convenientemente
+definir conjuntos convexos
+via * conjuntos abaixo * de funções convexas.
+Concretamente,
+dada uma função convexa $ f $ definida em um conjunto convexo $ \ mathcal {X} $,
+qualquer conjunto abaixo
 
 $$\mathcal{S}_b := \{x | x \in \mathcal{X} \text{ and } f(x) \leq b\}$$
 
@@ -360,6 +356,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NDQ5ODgwLC0xNzg5MDkyOTQ5LC0yMT
-Q2MzAyMzldfQ==
+eyJoaXN0b3J5IjpbLTE2NzIyMTIxNzUsLTE3ODkwOTI5NDksLT
+IxNDYzMDIzOV19
 -->
