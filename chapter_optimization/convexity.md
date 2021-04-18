@@ -207,7 +207,7 @@ $f''\geq 0$ usamos o fato de que
 
 $$\frac{1}{2} f(x + \epsilon) + \frac{1}{2} f(x - \epsilon) \geq f\left(\frac{x + \epsilon}{2} + \frac{x - \epsilon}{2}\right) = f(x).$$
 
-Since the second derivative is given by the limit over finite differences it follows that
+Uma vez que a segunda derivada é dada pelo limite sobre diferenças finitas, segue-se que
 
 $$f''(x) = \lim_{\epsilon \to 0} \frac{f(x+\epsilon) + f(x - \epsilon) - 2f(x)}{\epsilon^2} \geq 0.$$
 
@@ -218,6 +218,14 @@ where $x = (1-\lambda)a + \lambda b$ and $\lambda \in (0, 1)$.
 According to the mean value theorem,
 there exist $\alpha \in [a, x]$ and $\beta \in [x, b]$
 such that
+
+Para ver isso
+$f'' \geq 0$ implica que $f$ é convexo
+usamos o fato de que $f'' \geq 0$ implica que $f'$ é uma função monotonicamente não decrescente. Sejam $a < x < b$ três pontos em $\mathbb{R}$,
+onde $x = (1-\lambda)a + \lambda b$ and $\lambda \in (0, 1)$.
+De acordo com o teorema do valor médio,
+existem $ \ alpha \ in [a, x] $ e $ \ beta \ in [x, b] $
+de tal modo que
 
 $$f'(\alpha) = \frac{f(x) - f(a)}{x-a} \text{ and } f'(\beta) = \frac{f(b) - f(x)}{b-x}.$$
 
@@ -355,6 +363,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUxNzc5MzUxLC0xNzg5MDkyOTQ5LC0yMT
-Q2MzAyMzldfQ==
+eyJoaXN0b3J5IjpbLTQ1MzM3MzcyNywtMTc4OTA5Mjk0OSwtMj
+E0NjMwMjM5XX0=
 -->
