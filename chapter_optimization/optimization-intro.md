@@ -180,11 +180,11 @@ Para problemas de alta dimensão, a probabilidade de que pelo menos * alguns * d
 
 ### Gradiente de Desaparecimento
 
-Probably the most insidious problem to encounter is the vanishing gradient.
-Recall our commonly-used activation functions and their derivatives in :numref:`subsec_activation-functions`.
-For instance, assume that we want to minimize the function $f(x) = \tanh(x)$ and we happen to get started at $x = 4$. As we can see, the gradient of $f$ is close to nil.
-More specifically, $f'(x) = 1 - \tanh^2(x)$ and thus $f'(4) = 0.0013$.
-Consequently, optimization will get stuck for a long time before we make progress. This turns out to be one of the reasons that training deep learning models was quite tricky prior to the introduction of the ReLU activation function.
+Provavelmente, o problema mais insidioso a ser encontrado é o gradiente de desaparecimento.
+Lembre-se de nossas funções de ativação comumente usadas e seus derivados em: numref: `subsec_activation-functions`.
+Por exemplo, suponha que queremos minimizar a função $f(x) = \tanh(x)$ e começamos em $x = 4$. Como podemos ver, o gradiente de $f$ é quase nulo.
+Mais especificamente, $f'(x) = 1 - \tanh^2(x)$ e portanto $f'(4) = 0.0013$.
+Conseqüentemente, a otimização ficará parada por um longo tempo antes de progredirmos. Isso acabou sendo um dos motivos pelos quais treinar modelos de aprendizado profundo era bastante complicado antes da introdução da função de ativação ReLU.
 
 ```{.python .input}
 #@tab all
@@ -193,17 +193,17 @@ d2l.plot(x, [d2l.tanh(x)], 'x', 'f(x)')
 annotate('vanishing gradient', (4, 1), (2, 0.0))
 ```
 
-As we saw, optimization for deep learning is full of challenges. Fortunately there exists a robust range of algorithms that perform well and that are easy to use even for beginners. Furthermore, it is not really necessary to find *the* best solution. Local optima or even approximate solutions thereof are still very useful.
+Como vimos, a otimização para aprendizado profundo está cheia de desafios. Felizmente, existe uma gama robusta de algoritmos que funcionam bem e são fáceis de usar, mesmo para iniciantes. Além disso, não é realmente necessário encontrar a melhor solução. Ótimos locais ou mesmo soluções aproximadas deles ainda são muito úteis.
 
-## Summary
+## Sumário
 
-* Minimizing the training error does *not* guarantee that we find the best set of parameters to minimize the generalization error.
-* The optimization problems may have many local minima.
-* The problem may have even more saddle points, as generally the problems are not convex.
-* Vanishing gradients can cause optimization to stall. Often a reparameterization of the problem helps. Good initialization of the parameters can be beneficial, too.
+* Minimizar o erro de treinamento *não* garante que encontraremos o melhor conjunto de parâmetros para minimizar o erro de generalização.
+* Os problemas de otimização podem ter muitos mínimos locais.
+* O problema pode ter ainda mais pontos de sela, pois geralmente os problemas não são convexos.
+* O desaparecimento de gradientes pode causar o travamento da otimização. Frequentemente, uma reparametrização do problema ajuda. Uma boa inicialização dos parâmetros também pode ser benéfica.
 
 
-## Exercises
+## Exerci
 
 1. Consider a simple MLP with a single hidden layer of, say, $d$ dimensions in the hidden layer and a single output. Show that for any local minimum there are at least $d!$ equivalent solutions that behave identically.
 1. Assume that we have a symmetric random matrix $\mathbf{M}$ where the entries
@@ -229,6 +229,6 @@ As we saw, optimization for deep learning is full of challenges. Fortunately the
 [Discussions](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjYwOTkzMCwyODIxMzY1MzQsLTEwMz
-ExODk0Nl19
+eyJoaXN0b3J5IjpbLTEwMzg3NDk5OTQsMjgyMTM2NTM0LC0xMD
+MxMTg5NDZdfQ==
 -->
