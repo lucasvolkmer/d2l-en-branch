@@ -117,15 +117,12 @@ no que diz respeito ao log-verossimilhança de variáveis aleatórias parcialmen
 
 $$E_{Y \sim P(Y)}[-\log P(X \mid Y)] \geq -\log P(X),$$
 
-since $\int P(Y) P(X \mid Y) dY = P(X)$.
-This can be used in variational methods. Here $Y$ is typically the unobserved random variable, $P(Y)$ is the best guess of how it might be distributed, and $P(X)$ is the distribution with $Y$ integrated out. For instance, in clustering $Y$ might be the cluster labels and $P(X \mid Y)$ is the generative model when applying cluster labels.
+uma vez que $\int P(Y) P(X \mid Y) dY = P(X)$.
+Isso pode ser usado em métodos variacionais. Aqui $Y$ é normalmente a variável aleatória não observada, $P(Y)$ é a melhor estimativa de como ela pode ser distribuída e $P(X)$ é a distribuição com $Y$ integrada. Por exemplo, no agrupamento $Y$ podem ser os rótulos de cluster e $P(X \mid Y)$ é o modelo gerador ao aplicar rótulos de cluster.
 
-uma vez que $ \ int P (Y) P (X \ mid Y) dY = P (X) $.
-Isso pode ser usado em métodos variacionais. Aqui $ Y $ é normalmente a variável aleatória não observada, $ P (Y) $ é a melhor estimativa de como ela pode ser distribuída e $ P (X) $ é a distribuição com $ Y $ integrada. Por exemplo, no agrupamento $ Y $ podem ser os rótulos de cluster e $ P (X \ mid Y) $ é o modelo gerador ao aplicar rótulos de cluster.
+## Propriedades 
 
-## Properties
-
-Convex functions have a few useful properties. We describe them below.
+As funções convexas têm algumas propriedades úteis. Nós os descrevemos abaixo.
 
 
 ### Local Minima Are Global Minima
@@ -359,6 +356,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDc5MDM2MjEsLTE3ODkwOTI5NDksLT
-IxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbLTE2MjM1OTEyNCwtMTc4OTA5Mjk0OSwtMj
+E0NjMwMjM5XX0=
 -->
