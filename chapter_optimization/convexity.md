@@ -60,18 +60,19 @@ Suponha que $\mathcal{X}$ e $\mathcal{Y}$ são conjuntos convexos. Então $\math
 ![A interseção entre dois conjuntos convexos é convexa.](../img/convex-intersect.svg)
 :label:`fig_convex_intersect`
 
-We can strengthen this result with little effort: given convex sets $\mathcal{X}_i$, their intersection $\cap_{i} \mathcal{X}_i$ is convex.
-To see that the converse is not true, consider two disjoint sets $\mathcal{X} \cap \mathcal{Y} = \emptyset$. Now pick $a \in \mathcal{X}$ and $b \in \mathcal{Y}$. The line segment in :numref:`fig_nonconvex` connecting $a$ and $b$ needs to contain some part that is neither in $\mathcal{X}$ nor in $\mathcal{Y}$, since we assumed that $\mathcal{X} \cap \mathcal{Y} = \emptyset$. Hence the line segment is not in $\mathcal{X} \cup \mathcal{Y}$ either, thus proving that in general unions of convex sets need not be convex.
-
 Podemos reforçar este resultado com pouco esforço: dados os conjuntos convexos $\mathcal{X}_i$, sua interseção $\cap_{i} \mathcal{X}_i$ é convexa.
-Para ver que o inverso não é verdadeiro, considere dois conjuntos disjuntos $\mathcal{X} \cap \mathcal{Y} = \emptyset$. Agora escolha $ a \ in \ mathcal {X} $ e $b \in \mathcal{Y}$. O segmento de linha em: numref: `fig_nonconvex` conectando $ a $ e $ b $ precisa conter alguma parte que não está em $ \ mathcal {X} $ nem em $ \ mathcal {Y} $, uma vez que assumimos que $ \ mathcal {X} \ cap \ mathcal {Y} = \ emptyset $. Conseqüentemente, o segmento de linha também não está em $ \ mathcal {X} \ cup \ mathcal {Y} $, provando assim que, em geral, as uniões de conjuntos convexos não precisam ser convexas.
+Para ver que o inverso não é verdadeiro, considere dois conjuntos disjuntos $\mathcal{X} \cap \mathcal{Y} = \emptyset$. Agora escolha $a \in \mathcal{X}$ e $b \in \mathcal{Y}$. O segmento de linha em :numref:`fig_nonconvex` conectando $a$ e $b$ precisa conter alguma parte que não está em $\mathcal{X}$ nem em $\mathcal{Y}$, uma vez que assumimos que $\mathcal{X} \cap \mathcal{Y} = \emptyset$. Consequentemente, o segmento de linha também não está em $\mathcal{X} \cup \mathcal{Y}$, provando assim que, em geral, as uniões de conjuntos convexos não precisam ser convexas.
 
-![The union of two convex sets need not be convex.](../img/nonconvex.svg)
+![A união de dois conjuntos convexos não precisa ser convexa.](../img/nonconvex.svg)
 :label:`fig_nonconvex`
 
 Typically the problems in deep learning are defined on convex sets. For instance, $\mathbb{R}^d$,
 the set of $d$-dimensional vectors of real numbers,
 is a convex set (after all, the line between any two points in $\mathbb{R}^d$ remains in $\mathbb{R}^d$). In some cases we work with variables of bounded length, such as balls of radius $r$ as defined by $\{\mathbf{x} | \mathbf{x} \in \mathbb{R}^d \text{ and } \|\mathbf{x}\| \leq r\}$.
+
+Normalmente, os problemas de aprendizado profundo são definidos em conjuntos convexos. Por exemplo, $ \ mathbb {R} ^ d $,
+o conjunto de vetores $ d $ -dimensionais de números reais,
+é um conjunto convexo (afinal, a linha entre quaisquer dois pontos em $ \ mathbb {R} ^ d $ permanece em $ \ mathbb {R} ^ d $). Em alguns casos, trabalhamos com variáveis de comprimento limitado, como bolas de raio $ r $ conforme definido por $ \ {\ mathbf {x} | \ mathbf {x} \ in \ mathbb {R} ^ d \ text {e} \ | \ mathbf {x} \ | \ leq r \} $.
 
 ### Convex Functions
 
@@ -362,6 +363,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MjQwNzExOCwtMTc4OTA5Mjk0OSwtMj
+eyJoaXN0b3J5IjpbLTQ2MDk5MTI3NSwtMTc4OTA5Mjk0OSwtMj
 E0NjMwMjM5XX0=
 -->
