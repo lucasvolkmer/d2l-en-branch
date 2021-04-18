@@ -151,15 +151,10 @@ $$\begin{aligned}
     &= f(x^{\ast}),
 \end{aligned}$$
 
-which contradicts with our statement that $x^{\ast}$ is a local minimum.
-Therefore, there does not exist $x' \in \mathcal{X}$ for which $f(x') < f(x^{\ast})$. The local minimum $x^{\ast}$ is also the global minimum.
-
-For instance, the convex function $f(x) = (x-1)^2$ has a local minimum at $x=1$, which is also the global minimum.
-
 o que contradiz nossa afirmação de que $x^{\ast}$ é um mínimo local.
 Portanto, não existe $x' \in \mathcal{X}$ para o qual $f(x') < f(x^{\ast})$. O mínimo local $x^{\ast}$ também é o mínimo global.
 
-Por exemplo, a função convexa $ f (x) = (x-1) ^ 2 $ tem um mínimo local em $ x = 1 $, que também é o mínimo global.
+Por exemplo, a função convexa $f(x) = (x-1)^2$ tem um mínimo local em $x=1$, que também é o mínimo global.
 
 ```{.python .input}
 #@tab all
@@ -171,6 +166,10 @@ d2l.plot([x, segment], [f(x), f(segment)], 'x', 'f(x)')
 The fact that the local minima for convex functions are also the global minima is very convenient. 
 It means that if we minimize functions we cannot "get stuck". 
 Note, though, that this does not mean that there cannot be more than one global minimum or that there might even exist one. For instance, the function $f(x) = \mathrm{max}(|x|-1, 0)$ attains its minimum value over the interval $[-1, 1]$. Conversely, the function $f(x) = \exp(x)$ does not attain a minimum value on $\mathbb{R}$: for $x \to -\infty$ it asymptotes to $0$, but there is no $x$ for which $f(x) = 0$.
+
+O fato de que os mínimos locais para funções convexas também são os mínimos globais é muito conveniente.
+Isso significa que, se minimizarmos as funções, não podemos "ficar presos".
+Observe, porém, que isso não significa que não possa haver mais de um mínimo global ou que possa mesmo existir um. Por exemplo, a função $ f (x) = \ mathrm {max} (| x | -1, 0) $ atinge seu valor mínimo no intervalo $ [- 1, 1] $. Por outro lado, a função $ f (x) = \ exp (x) $ não atinge um valor mínimo em $ \ mathbb {R} $: para $ x \ to - \ infty $ ele assíntotas para $ 0 $, mas não há $ x $ para o qual $ f (x) = 0 $.
 
 ### Below Sets of Convex Functions Are Convex
 
@@ -361,6 +360,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4NzY3Njc5LC0xNzg5MDkyOTQ5LC0yMT
+eyJoaXN0b3J5IjpbMTE0NDQ5ODgwLC0xNzg5MDkyOTQ5LC0yMT
 Q2MzAyMzldfQ==
 -->
