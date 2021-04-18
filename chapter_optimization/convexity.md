@@ -171,18 +171,22 @@ Observe, porém, que isso não significa que não possa haver mais de um mínimo
 
 Nós podemos convenientemente
 definir conjuntos convexos
-via * conjuntos abaixo * de funções convexas.
+via *conjuntos abaixo* de funções convexas.
 Concretamente,
-dada uma função convexa $ f $ definida em um conjunto convexo $ \ mathcal {X} $,
+dada uma função convexa $f$ definida em um conjunto convexo $\mathcal{X}$,
 qualquer conjunto abaixo
 
 $$\mathcal{S}_b := \{x | x \in \mathcal{X} \text{ and } f(x) \leq b\}$$
 
-is convex. 
+é convexo.
 
 Let us prove this quickly. Recall that for any $x, x' \in \mathcal{S}_b$ we need to show that $\lambda x + (1-\lambda) x' \in \mathcal{S}_b$ as long as $\lambda \in [0, 1]$. 
 Since $f(x) \leq b$ and $f(x') \leq b$,
 by the definition of convexity we have 
+
+Vamos provar isso rapidamente. Lembre-se de que para qualquer $x, x' \in \mathcal{S}_b$ precisamos mostrar que $\lambda x + (1-\lambda) x' \in \mathcal{S}_b$ as long as $\lambda \in [0, 1]$.
+Como $ f (x) \ leq b $ e $ f (x ') \ leq b $,
+pela definição de convexidade, temos
 
 $$f(\lambda x + (1-\lambda) x') \leq \lambda f(x) + (1-\lambda) f(x') \leq b.$$
 
@@ -356,6 +360,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzIyMTIxNzUsLTE3ODkwOTI5NDksLT
+eyJoaXN0b3J5IjpbLTExNzQxMjkzNzQsLTE3ODkwOTI5NDksLT
 IxNDYzMDIzOV19
 -->
