@@ -120,14 +120,14 @@ Agora que temos uma melhor intuição do caso univariado, consideremos a situaç
 
 $$\nabla f(\mathbf{x}) = \bigg[\frac{\partial f(\mathbf{x})}{\partial x_1}, \frac{\partial f(\mathbf{x})}{\partial x_2}, \ldots, \frac{\partial f(\mathbf{x})}{\partial x_d}\bigg]^\top.$$
 
-Each partial derivative element $\partial f(\mathbf{x})/\partial x_i$ in the gradient indicates the rate of change of $f$ at $\mathbf{x}$ with respect to the input $x_i$. As before in the univariate case we can use the corresponding Taylor approximation for multivariate functions to get some idea of what we should do. In particular, we have that
-
-Cada elemento derivado parcial $ \ partial f (\ mathbf {x}) / \ partial x_i $ no gradiente indica a taxa de variação de $ f $ em $ \ mathbf {x} $ em relação à entrada $ x_i $. Como antes, no caso univariado, podemos usar a aproximação de Taylor correspondente para funções multivariadas para ter uma ideia do que devemos fazer. Em particular, temos que
+Cada elemento derivado parcial $\partial f(\mathbf{x})/\partial x_i$ no gradiente indica a taxa de variação de $f$ em $\mathbf{x}$ em relação à entrada $x_i$. Como antes, no caso univariado, podemos usar a aproximação de Taylor correspondente para funções multivariadas para ter uma ideia do que devemos fazer. Em particular, temos que
 
 $$f(\mathbf{x} + \mathbf{\epsilon}) = f(\mathbf{x}) + \mathbf{\epsilon}^\top \nabla f(\mathbf{x}) + \mathcal{O}(\|\mathbf{\epsilon}\|^2).$$
 :eqlabel:`gd-multi-taylor`
 
 In other words, up to second order terms in $\mathbf{\epsilon}$ the direction of steepest descent is given by the negative gradient $-\nabla f(\mathbf{x})$. Choosing a suitable learning rate $\eta > 0$ yields the prototypical gradient descent algorithm:
+
+Em outras palavras, até os termos de segunda ordem em $ \ mathbf {\ epsilon} $, a direção da descida mais acentuada é dada pelo gradiente negativo $ - \ nabla f (\ mathbf {x}) $. A escolha de uma taxa de aprendizagem adequada $ \ eta> 0 $ produz o algoritmo de descida gradiente prototípico:
 
 $$\mathbf{x} \leftarrow \mathbf{x} - \eta \nabla f(\mathbf{x}).$$
 
@@ -290,5 +290,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDMxNjExMDgsLTkwNzQzNjMyMV19
+eyJoaXN0b3J5IjpbLTE4NDkwOTE4MjAsLTkwNzQzNjMyMV19
 -->
