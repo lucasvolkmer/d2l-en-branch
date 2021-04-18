@@ -1,9 +1,6 @@
 # Stochastic Gradiente Descent
 :label:`sec_sgd`
 
-In this section, we are going to introduce the basic principles of stochastic gradient descentdente Estocástico
-:label:`sec_sgd`
-
 Nesta seção, apresentaremos os princípios básicos da descida gradiente estocástica.
 
 ```{.python .input}
@@ -295,7 +292,7 @@ A similar reasoning shows that the probability of picking a sample exactly once 
 Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exatamente uma vez é dada por $ {N \ choose 1} N ^ {- 1} (1-N ^ {- 1}) ^ {N-1} = \ frac {N -1} {N} (1-N ^ {- 1}) ^ {N} \ approx e ^ {- 1} \ approx 0,37 $. Isso leva a um aumento da variância e diminuição da eficiência dos dados em relação à amostragem sem reposição. Portanto, na prática, fazemos o último (e esta é a escolha padrão em todo este livro). Por último, observe que passagens repetidas pelo conjunto de dados percorrem-no em uma ordem aleatória * diferente *.
 
 
-## Summary
+## Sumário
 
 * For convex problems we can prove that for a wide choice of learning rates Stochastic Gradient Descent will converge to the optimal solution.
 * For deep learning this is generally not the case. However, the analysis of convex problems gives us useful insight into how to approach optimization, namely to reduce the learning rate progressively, albeit not too quickly.
@@ -303,28 +300,43 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 * When there are more examples in the training dataset, it costs more to compute each iteration for gradient descent, so SGD is preferred in these cases.
 * Optimality guarantees for SGD are in general not available in nonconvex cases since the number of local minima that require checking might well be exponential.
 
+* Para problemas convexos, podemos provar que, para uma ampla escolha de taxas de aprendizado, a Descida de Gradiente Estocástico convergirá para a solução ótima.
+* Geralmente, esse não é o caso para aprendizagem profunda. No entanto, a análise de problemas convexos nos dá uma visão útil sobre como abordar a otimização, nomeadamente para reduzir a taxa de aprendizagem progressivamente, embora não muito rapidamente.
+* Os problemas ocorrem quando a taxa de aprendizagem é muito pequena ou muito grande. Na prática, uma taxa de aprendizado adequada geralmente é encontrada somente após vários experimentos.
+* Quando há mais exemplos no conjunto de dados de treinamento, custa mais calcular cada iteração para a descida do gradiente, portanto, SGD é preferível nesses casos.
+* As garantias de otimização para SGD em geral não estão disponíveis em casos não convexos, pois o número de mínimos locais que requerem verificação pode ser exponencial.
 
-## Exercises
+
+## Exercícios
 
 1. Experiment with different learning rate schedules for SGD and with different numbers of iterations. In particular, plot the distance from the optimal solution $(0, 0)$ as a function of the number of iterations.
-1. Prove that for the function $f(x_1, x_2) = x_1^2 + 2 x_2^2$ adding normal noise to the gradient is equivalent to minimizing a loss function $l(\mathbf{x}, \mathbf{w}) = (x_1 - w_1)^2 + 2 (x_2 - w_2)^2$ where $x$ is drawn from a normal distribution.
+2. Prove that for the function $f(x_1, x_2) = x_1^2 + 2 x_2^2$ adding normal noise to the gradient is equivalent to minimizing a loss function $l(\mathbf{x}, \mathbf{w}) = (x_1 - w_1)^2 + 2 (x_2 - w_2)^2$ where $x$ is drawn from a normal distribution.
     * Derive mean and variance of the distribution for $\mathbf{x}$.
     * Show that this property holds in general for objective functions $f(\mathbf{x}) = \frac{1}{2} (\mathbf{x} - \mathbf{\mu})^\top Q (\mathbf{x} - \mathbf{\mu})$ for $Q \succeq 0$.
-1. Compare convergence of SGD when you sample from $\{(x_1, y_1), \ldots, (x_m, y_m)\}$ with replacement and when you sample without replacement.
-1. How would you change the SGD solver if some gradient (or rather some coordinate associated with it) was consistently larger than all other gradients?
-1. Assume that $f(x) = x^2 (1 + \sin x)$. How many local minima does $f$ have? Can you change $f$ in such a way that to minimize it one needs to evaluate all local minima?
+3. Compare convergence of SGD when you sample from $\{(x_1, y_1), \ldots, (x_m, y_m)\}$ with replacement and when you sample without replacement.
+4. How would you change the SGD solver if some gradient (or rather some coordinate associated with it) was consistently larger than all other gradients?
+5. Assume that $f(x) = x^2 (1 + \sin x)$. How many local minima does $f$ have? Can you change $f$ in such a way that to minimize it one needs to evaluate all local minima?
 
+
+6. Experimente diferentes programações de taxa de aprendizagem para SGD e com diferentes números de iterações. Em particular, plote a distância da solução ótima $ (0, 0) $ como uma função do número de iterações.
+7. Prove que para a função $ f (x_1, x_2) = x_1 ^ 2 + 2 x_2 ^ 2 $ adicionar ruído normal ao gradiente é equivalente a minimizar uma função de perda $ l (\ mathbf {x}, \ mathbf {w }) = (x_1 - w_1) ^ 2 + 2 (x_2 - w_2) ^ 2 $ onde $ x $ é extraído de uma distribuição normal.
+    * Derive a média e a variância da distribuição de $ \ mathbf {x} $.
+    * Mostre que esta propriedade é geralmente válida para funções objetivo $ f (\ mathbf {x}) = \ frac {1} {2} (\ mathbf {x} - \ mathbf {\ mu}) ^ \ top Q (\ mathbf {x} - \ mathbf {\ mu}) $ para $ Q \ successq 0 $.
+8. Compare a convergência de SGD quando você faz a amostra de $ \ {(x_1, y_1), \ ldots, (x_m, y_m) \} $ com substituição e quando você faz a amostra sem substituição.
+9. Como você mudaria o solucionador SGD se algum gradiente (ou melhor, alguma coordenada associada a ele) fosse consistentemente maior do que todos os outros gradientes?
+10. Suponha que $ f (x) = x ^ 2 (1 + \ sin x) $. Quantos mínimos locais $ f $ tem? Você pode alterar $ f $ de forma que, para minimizá-lo, seja necessário avaliar todos os mínimos locais?
+ 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/352)
+[Discussão](https://discuss.d2l.ai/t/352)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/497)
+[Discussão](https://discuss.d2l.ai/t/497)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1067)
+[Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE4MDA3NjZdfQ==
+eyJoaXN0b3J5IjpbLTg3MzA1MTE0MF19
 -->
