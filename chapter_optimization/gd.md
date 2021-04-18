@@ -104,7 +104,7 @@ show_trace(gd(1.1))
 
 ### Minimo Local
 
-To illustrate what happens for nonconvex functions consider the case of $f(x) = x \cdot \cos c x$. This function has infinitely many local minima. Depending on our choice of learning rate and depending on how well conditioned the problem is, we may end up with one of many solutions. The example below illustrates how an (unrealistically) high learning rate will lead to a poor local minimum.
+Para ilustrar o que acontece com funções não convexas, considere o caso de $f(x) = x \cdot \cos c x$. Esta função possui infinitos mínimos locais. Dependendo de nossa escolha da taxa de aprendizado e de quão bem condicionado o problema está, podemos chegar a uma de muitas soluções. O exemplo abaixo ilustra como uma alta taxa de aprendizado (irrealista) levará a um mínimo local insatisfatório.
 
 ```{.python .input}
 #@tab all
@@ -114,13 +114,15 @@ gradf = lambda x: d2l.cos(c * x) - c * x * d2l.sin(c * x)
 show_trace(gd(2))
 ```
 
-## Multivariate Gradient Descent
+## Gradiente descendente multivariado
 
-Now that we have a better intuition of the univariate case, let us consider the situation where $\mathbf{x} \in \mathbb{R}^d$. That is, the objective function $f: \mathbb{R}^d \to \mathbb{R}$ maps vectors into scalars. Correspondingly its gradient is multivariate, too. It is a vector consisting of $d$ partial derivatives:
+Agora que temos uma melhor intuição do caso univariado, consideremos a situação em que $\mathbf{x} \in \mathbb{R}^d$. Ou seja, a função objetivo $f: \mathbb{R}^d \to \mathbb{R}$ mapeia vetores em escalares. Correspondentemente, seu gradiente também é multivariado. É um vetor que consiste em $d$ derivadas parciais:
 
 $$\nabla f(\mathbf{x}) = \bigg[\frac{\partial f(\mathbf{x})}{\partial x_1}, \frac{\partial f(\mathbf{x})}{\partial x_2}, \ldots, \frac{\partial f(\mathbf{x})}{\partial x_d}\bigg]^\top.$$
 
 Each partial derivative element $\partial f(\mathbf{x})/\partial x_i$ in the gradient indicates the rate of change of $f$ at $\mathbf{x}$ with respect to the input $x_i$. As before in the univariate case we can use the corresponding Taylor approximation for multivariate functions to get some idea of what we should do. In particular, we have that
+
+Cada elemento derivado parcial $ \ partial f (\ mathbf {x}) / \ partial x_i $ no gradiente indica a taxa de variação de $ f $ em $ \ mathbf {x} $ em relação à entrada $ x_i $. Como antes, no caso univariado, podemos usar a aproximação de Taylor correspondente para funções multivariadas para ter uma ideia do que devemos fazer. Em particular, temos que
 
 $$f(\mathbf{x} + \mathbf{\epsilon}) = f(\mathbf{x}) + \mathbf{\epsilon}^\top \nabla f(\mathbf{x}) + \mathcal{O}(\|\mathbf{\epsilon}\|^2).$$
 :eqlabel:`gd-multi-taylor`
@@ -288,5 +290,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTE1NzIzNzYsLTkwNzQzNjMyMV19
+eyJoaXN0b3J5IjpbLTIwMDMxNjExMDgsLTkwNzQzNjMyMV19
 -->
