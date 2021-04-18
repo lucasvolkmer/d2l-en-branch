@@ -243,18 +243,17 @@ Isso vale para alguns $\xi_k \in [x_k - e_k, x_k]$. Lembre-se de que temos a atu
 
 $$e_k - f'(x_k) / f''(x_k) = \frac{1}{2} e_k^2 f'''(\xi_k) / f''(x_k).$$
 
-Plugging in the update equations leads to the following bound $e_{k+1} \leq e_k^2 f'''(\xi_k) / f'(x_k)$. Consequently, whenever we are in a region of bounded $f'''(\xi_k) / f''(x_k) \leq c$, we have a quadratically decreasing error $e_{k+1} \leq c e_k^2$.
+Conectar as equações de atualização leva ao seguinte limite $e_{k+1} \leq e_k^2 f'''(\xi_k) / f'(x_k)$. Consequentemente, sempre que estamos em uma região de $f'''(\xi_k) / f''(x_k) \leq c$ limitada, temos um erro quadraticamente decrescente $e_{k+1} \leq c e_k^2$.
 
-As an aside, optimization researchers call this *linear* convergence, whereas a condition such as $e_{k+1} \leq \alpha e_k$ would be called a *constant* rate of convergence.
-Note that this analysis comes with a number of caveats: We do not really have much of a guarantee when we will reach the region of rapid convergence. Instead, we only know that once we reach it, convergence will be very quick. Second, this requires that $f$ is well-behaved up to higher order derivatives. It comes down to ensuring that $f$ does not have any "surprising" properties in terms of how it might change its values.
+À parte, os pesquisadores de otimização chamam isso de convergência *linear*, enquanto uma condição como $e_{k+1} \leq \alpha e_k$ seria chamada de taxa de convergência *constante*.
+Observe que esta análise vem com uma série de advertências: Não temos muita garantia de quando alcançaremos a região de convergência rápida. Em vez disso, sabemos apenas que, uma vez que o alcance, a convergência será muito rápida. Em segundo lugar, isso requer que $f$ seja bem comportado com os derivados de ordem superior. Tudo se resume a garantir que $f$ não tenha nenhuma propriedade "surpreendente" em termos de como ele pode alterar seus valores.
 
-### Preconditioning
+### Precondicionamento
 
-Quite unsurprisingly computing and storing the full Hessian is very expensive. It is thus desirable to find alternatives. One way to improve matters is by avoiding to compute the Hessian in its entirety but only compute the *diagonal* entries. While this is not quite as good as the full Newton method, it is still much better than not using it. Moreover, estimates for the main diagonal elements are what drives some of the innovation in stochastic gradient descent optimization algorithms. This leads to update algorithms of the form
+Sem surpresa, computar e armazenar o Hessian completo é muito caro. Portanto, é desejável encontrar alternativas. Uma maneira de melhorar as coisas é evitar calcular o Hessian em sua totalidade, mas apenas calcular as entradas * diagonais *. Embora isso não seja tão bom quanto o método de Newton completo, ainda é muito melhor do que não usá-lo. Além disso, as estimativas para os principais elementos diagonais são o que impulsiona algumas das inovações em algoritmos de otimização de descida de gradiente estocástico. Isso leva à atualização de algoritmos do formulário
 
 $$\mathbf{x} \leftarrow \mathbf{x} - \eta \mathrm{diag}(H_f)^{-1} \nabla f(\mathbf{x}).$$
-
-To see why this might be a good idea consider a situation where one variable denotes height in millimeters and the other one denotes height in kilometers. Assuming that for both the natural scale is in meters we have a terrible mismatch in parameterizations. Using preconditioning removes this. Effectively preconditioning with gradient descent amounts to selecting a different learning rate for each coordinate.
+Para ver por que isso pode ser uma boa ideia, considere uma situação em que uma variável denota a altura em milímetros e a outra denota a altura em quilômetros. Assumindo que para ambas a escala natural está em metros, temos um péssimo desencontro nas parametrizações. Usar o pré-condicionamento remove isso. O pré-condicionamento eficaz com gradiente descendente equivale a selecionar uma taxa de aprendizagem diferente para cada coordenada.
 
 ### Gradient Descent with Line Search
 
@@ -288,6 +287,6 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTgxNTM0ODksLTE5OTM0NzQ3NTYsLT
-EzMTE5Nzc4ODMsLTkwNzQzNjMyMV19
+eyJoaXN0b3J5IjpbMTM4ODA2NzI4NiwtMTk5MzQ3NDc1NiwtMT
+MxMTk3Nzg4MywtOTA3NDM2MzIxXX0=
 -->
