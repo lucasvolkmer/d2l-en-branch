@@ -125,13 +125,13 @@ Cada elemento derivado parcial $\partial f(\mathbf{x})/\partial x_i$ no gradient
 $$f(\mathbf{x} + \mathbf{\epsilon}) = f(\mathbf{x}) + \mathbf{\epsilon}^\top \nabla f(\mathbf{x}) + \mathcal{O}(\|\mathbf{\epsilon}\|^2).$$
 :eqlabel:`gd-multi-taylor`
 
-In other words, up to second order terms in $\mathbf{\epsilon}$ the direction of steepest descent is given by the negative gradient $-\nabla f(\mathbf{x})$. Choosing a suitable learning rate $\eta > 0$ yields the prototypical gradient descent algorithm:
-
-Em outras palavras, até os termos de segunda ordem em $ \ mathbf {\ epsilon} $, a direção da descida mais acentuada é dada pelo gradiente negativo $ - \ nabla f (\ mathbf {x}) $. A escolha de uma taxa de aprendizagem adequada $ \ eta> 0 $ produz o algoritmo de descida gradiente prototípico:
+Em outras palavras, até os termos de segunda ordem em $\mathbf{\epsilon}$, a direção da descida mais acentuada é dada pelo gradiente negativo $-\nabla f(\mathbf{x})$. A escolha de uma taxa de aprendizagem adequada $\eta > 0$ produz o algoritmo de descida gradiente prototípico:
 
 $$\mathbf{x} \leftarrow \mathbf{x} - \eta \nabla f(\mathbf{x}).$$
 
 To see how the algorithm behaves in practice let us construct an objective function $f(\mathbf{x})=x_1^2+2x_2^2$ with a two-dimensional vector $\mathbf{x} = [x_1, x_2]^\top$ as input and a scalar as output. The gradient is given by $\nabla f(\mathbf{x}) = [2x_1, 4x_2]^\top$. We will observe the trajectory of $\mathbf{x}$ by gradient descent from the initial position $[-5, -2]$. We need two more helper functions. The first uses an update function and applies it $20$ times to the initial value. The second helper visualizes the trajectory of $\mathbf{x}$.
+
+Para ver como o algoritmo se comporta na prática, vamos construir uma função objetivo $f(\mathbf{x})=x_1^2+2x_2^2$ com um vetor bidimensional $\mathbf{x} = [x_1, x_2]^\top$ como entrada e um escalar como saída. O gradiente é dado por $ \ nabla f (\ mathbf {x}) = [2x_1, 4x_2] ^ \ top $. Observaremos a trajetória de $\mathbf{x}$ por gradiente descendente a partir da posição inicial $ [- 5, -2] $. Precisamos de mais duas funções auxiliares. O primeiro usa uma função de atualização e aplica $ 20 $ vezes ao valor inicial. O segundo auxiliar visualiza a trajetória de $\mathbf{x}$.
 
 ```{.python .input}
 #@tab all
@@ -290,5 +290,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDkwOTE4MjAsLTkwNzQzNjMyMV19
+eyJoaXN0b3J5IjpbMTA2MTA0ODcxMCwtOTA3NDM2MzIxXX0=
 -->
