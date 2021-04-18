@@ -334,6 +334,7 @@ No contexto de aprendizagem profunda, o principal objetivo das funções convexa
 * As projeções são mapeadas para pontos no conjunto (convexo) mais próximo do ponto original.
 
 ## Exercícios
+
 1. Suponha que queremos verificar a convexidade de um conjunto desenhando todas as linhas entre os pontos dentro do conjunto e verificando se as linhas estão contidas.
     1. Prove que é suficiente verificar apenas os pontos no limite.
     1. Prove que é suficiente verificar apenas os vértices do conjunto.
@@ -351,6 +352,6 @@ No contexto de aprendizagem profunda, o principal objetivo das funções convexa
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQyNjg5MzgwLC04NjEwODEwODQsLTE2Mj
+eyJoaXN0b3J5IjpbOTI5Njc5NDc4LC04NjEwODEwODQsLTE2Mj
 g2NTc1NzgsLTE3ODkwOTI5NDksLTIxNDYzMDIzOV19
 -->
