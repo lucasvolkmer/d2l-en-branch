@@ -77,8 +77,8 @@ Dado um conjunto convexo $\mathcal{X}$, uma função $f: \mathcal{X} \to \mathbb
 
 $$\lambda f(x) + (1-\lambda) f(x') \geq f(\lambda x + (1-\lambda) x').$$
 
-To illustrate this let us plot a few functions and check which ones satisfy the requirement.
-Below we define a few functions, both convex and nonconvex.
+Para ilustrar isso, vamos representar graficamente algumas funções e verificar quais satisfazem o requisito.
+Abaixo definimos algumas funções, convexas e não convexas.
 
 ```{.python .input}
 #@tab all
@@ -93,15 +93,15 @@ for ax, func in zip(axes, [f, g, h]):
     d2l.plot([x, segment], [func(x), func(segment)], axes=ax)
 ```
 
-As expected, the cosine function is *nonconvex*, whereas the parabola and the exponential function are. Note that the requirement that $\mathcal{X}$ is a convex set is necessary for the condition to make sense. Otherwise the outcome of $f(\lambda x + (1-\lambda) x')$ might not be well defined.
+Como esperado, a função cosseno é *não convexa*, enquanto a parábola e a função exponencial são. Observe que o requisito de que $\mathcal{X}$ seja um conjunto convexo é necessário para que a condição faça sentido. Caso contrário, o resultado de $f(\lambda x + (1-\lambda) x')$ pode não ser bem definido.
 
 
-### Jensen's Inequality
+### Desigualdades de Jensen
 
-Given a convex function $f$,
-one of the most useful mathematical tools
-is *Jensen's inequality*.
-It amounts to a generalization of the definition of convexity:
+Dada uma função convexa $f$,
+uma das ferramentas matemáticas mais úteis
+é a *desigualdade de Jensen*.
+Isso equivale a uma generalização da definição de convexidade:
 
 $$\sum_i \alpha_i f(x_i)  \geq f\left(\sum_i \alpha_i x_i\right)    \text{ and }    E_X[f(X)]  \geq f\left(E_X[X]\right),$$
 
@@ -359,6 +359,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NTAwOTQ1NSwtMTc4OTA5Mjk0OSwtMj
-E0NjMwMjM5XX0=
+eyJoaXN0b3J5IjpbMjM1MzY3MDk0LC0xNzg5MDkyOTQ5LC0yMT
+Q2MzAyMzldfQ==
 -->
