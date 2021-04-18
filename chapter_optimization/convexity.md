@@ -66,18 +66,17 @@ Para ver que o inverso não é verdadeiro, considere dois conjuntos disjuntos $\
 ![A união de dois conjuntos convexos não precisa ser convexa.](../img/nonconvex.svg)
 :label:`fig_nonconvex`
 
-Typically the problems in deep learning are defined on convex sets. For instance, $\mathbb{R}^d$,
-the set of $d$-dimensional vectors of real numbers,
-is a convex set (after all, the line between any two points in $\mathbb{R}^d$ remains in $\mathbb{R}^d$). In some cases we work with variables of bounded length, such as balls of radius $r$ as defined by $\{\mathbf{x} | \mathbf{x} \in \mathbb{R}^d \text{ and } \|\mathbf{x}\| \leq r\}$.
+Normalmente, os problemas de aprendizado profundo são definidos em conjuntos convexos. Por exemplo, $\mathbb{R}^d$,
+o conjunto de vetores $d$-dimensionais de números reais,
+é um conjunto convexo (afinal, a linha entre quaisquer dois pontos em $\mathbb{R}^d$ permanece em $\mathbb{R}^d$). Em alguns casos, trabalhamos com variáveis de comprimento limitado, como bolas de raio $r$ conforme definido por $\{\mathbf{x} | \mathbf{x} \in \mathbb{R}^d \text{ e } \|\mathbf{x}\| \leq r\}$.
 
-Normalmente, os problemas de aprendizado profundo são definidos em conjuntos convexos. Por exemplo, $ \ mathbb {R} ^ d $,
-o conjunto de vetores $ d $ -dimensionais de números reais,
-é um conjunto convexo (afinal, a linha entre quaisquer dois pontos em $ \ mathbb {R} ^ d $ permanece em $ \ mathbb {R} ^ d $). Em alguns casos, trabalhamos com variáveis de comprimento limitado, como bolas de raio $ r $ conforme definido por $ \ {\ mathbf {x} | \ mathbf {x} \ in \ mathbb {R} ^ d \ text {e} \ | \ mathbf {x} \ | \ leq r \} $.
-
-### Convex Functions
+### Função Convexa
 
 Now that we have convex sets we can introduce *convex functions* $f$.
 Given a convex set $\mathcal{X}$, a function $f: \mathcal{X} \to \mathbb{R}$ is *convex* if for all $x, x' \in \mathcal{X}$ and for all $\lambda \in [0, 1]$ we have
+
+Agora que temos conjuntos convexos, podemos introduzir *funções convexas* $f$.
+Dado um conjunto convexo $ \ mathcal {X} $, uma função $ f: \ mathcal {X} \ to \ mathbb {R} $ é * convexa * se para todos $ x, x '\ in \ mathcal {X} $ e para todos $ \ lambda \ em [0, 1] $ temos
 
 $$\lambda f(x) + (1-\lambda) f(x') \geq f(\lambda x + (1-\lambda) x').$$
 
@@ -363,6 +362,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MDk5MTI3NSwtMTc4OTA5Mjk0OSwtMj
+eyJoaXN0b3J5IjpbMjAzMjE5MDYwNSwtMTc4OTA5Mjk0OSwtMj
 E0NjMwMjM5XX0=
 -->
