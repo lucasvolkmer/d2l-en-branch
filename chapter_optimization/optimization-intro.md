@@ -178,7 +178,7 @@ posição onde o gradiente da função é zero:
 
 Para problemas de alta dimensão, a probabilidade de que pelo menos * alguns * dos autovalores sejam negativos é bastante alta. Isso torna os pontos de sela mais prováveis do que os mínimos locais. Discutiremos algumas exceções a essa situação na próxima seção, ao introduzir a convexidade. Em suma, funções convexas são aquelas em que os autovalores do Hessiano nunca são negativos. Infelizmente, porém, a maioria dos problemas de aprendizado profundo não se enquadra nessa categoria. No entanto, é uma ótima ferramenta para estudar algoritmos de otimização.
 
-### Vanishing Gradients
+### Gradiente de Desaparecimento
 
 Probably the most insidious problem to encounter is the vanishing gradient.
 Recall our commonly-used activation functions and their derivatives in :numref:`subsec_activation-functions`.
@@ -229,5 +229,6 @@ As we saw, optimization for deep learning is full of challenges. Fortunately the
 [Discussions](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjgyMTM2NTM0LC0xMDMxMTg5NDZdfQ==
+eyJoaXN0b3J5IjpbMTM5NjYwOTkzMCwyODIxMzY1MzQsLTEwMz
+ExODk0Nl19
 -->
