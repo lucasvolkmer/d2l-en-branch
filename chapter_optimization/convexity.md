@@ -358,15 +358,15 @@ No contexto de aprendizagem profunda, o principal objetivo das funções convexa
 1. Prove que a normalização da função softmax é convexa. Mais especificamente, provar a convexidade de
     $f(x) = \log \sum_i \exp(x_i)$.
 1. Prove que os subespaços lineares são conjuntos convexos, ou seja, $\mathcal{X} = \{\mathbf{x} | \mathbf{W} \mathbf{x} = \mathbf{b}\}$.
-1. Prove que no caso de subespaços lineares com $ \ mathbf {b} = 0 $ a projeção $ \ mathrm {Proj} _ \ mathcal {X} $ pode ser escrita como $ \ mathbf {M} \ mathbf {x} $ para alguma matriz $ \ mathbf {M} $.
-1. Mostre que para funções convexas duas vezes diferenciáveis ​​$ f $ podemos escrever $ f (x + \ epsilon) = f (x) + \ epsilon f '(x) + \ frac {1} {2} \ epsilon ^ 2 f '' (x + \ xi) $ para algum $ \ xi \ in [0, \ epsilon] $.
+1. Prove que no caso de subespaços lineares com $\mathbf{b} = 0$ a projeção $\mathrm{Proj}_\mathcal{X}$ pode ser escrita como $\mathbf{M} \mathbf{x}$ para algumas matrizes $\mathbf{M}$.
+1. Mostre que para funções convexas duas vezes diferenciáveis ​​$f$ podemos escrever $ f (x + \ epsilon) = f (x) + \ epsilon f '(x) + \ frac {1} {2} \ epsilon ^ 2 f '' (x + \ xi) $ para algum $ \ xi \ in [0, \ epsilon] $.
 1. Dado um vetor $ \ mathbf {w} \ in \ mathbb {R} ^ d $ com $ \ | \ mathbf {w} \ | _1> 1 $, calcule a projeção na bola unitária $ \ ell_1 $.
-    1. Como etapa intermediária, escreva o objetivo penalizado $ \ | \ mathbf {w} - \ mathbf {w} '\ | _2 ^ 2 + \ lambda \ | \ mathbf {w}' \ | _1 $ e calcule a solução para um dado $ \ lambda> 0 $.
-    1. Você consegue encontrar o valor 'certo' de $ \ lambda $ sem muitas tentativas e erros?
-1. Dado um conjunto convexo $ \ mathcal {X} $ e dois vetores $ \ mathbf {x} $ e $ \ mathbf {y} $ provam que as projeções nunca aumentam as distâncias, ou seja, $ \ | \ mathbf {x} - \ mathbf {y} \ | \ geq \ | \ mathrm {Proj} _ \ mathcal {X} (\ mathbf {x}) - \ mathrm {Proj} _ \ mathcal {X} (\ mathbf {y}) \ | $.
+    1. Como etapa intermediária, escreva o objetivo penalizado $ \ | \ mathbf {w} - \ mathbf {w} '\ | _2 ^ 2 + \ lambda \ | \ mathbf {w}' \ | _1 $ e calcule a solução para um dado $\lambda > 0$.
+    1. Você consegue encontrar o valor 'certo' de $\lambda$ sem muitas tentativas e erros?
+1. Dado um conjunto convexo $\mathcal{X}$ e dois vetores $\mathbf{x}$ e $\mathbf{y}$ provam que as projeções nunca aumentam as distâncias, ou seja, $\|\mathbf{x} - \mathbf{y}\| \geq \|\mathrm{Proj}_\mathcal{X}(\mathbf{x}) - \mathrm{Proj}_\mathcal{X}(\mathbf{y})\|$.
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2Mzg0MTg4MiwtODYxMDgxMDg0LC0xNj
+eyJoaXN0b3J5IjpbLTM0OTQ0MzE3OSwtODYxMDgxMDg0LC0xNj
 I4NjU3NTc4LC0xNzg5MDkyOTQ5LC0yMTQ2MzAyMzldfQ==
 -->
