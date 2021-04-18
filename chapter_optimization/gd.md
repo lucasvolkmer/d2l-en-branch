@@ -287,3 +287,6 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 
 [Discussions](https://discuss.d2l.ai/t/351)
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTkwNzQzNjMyMV19
+-->
