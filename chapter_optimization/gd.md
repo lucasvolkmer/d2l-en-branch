@@ -273,21 +273,21 @@ Este algoritmo converge rapidamente (para uma análise e prova veja, por exemplo
 
 ## Exercícios
 
-1. Experiment with different learning rates and objective functions for gradient descent.
-1. Implement line search to minimize a convex function in the interval $[a, b]$.
-    * Do you need derivatives for binary search, i.e., to decide whether to pick $[a, (a+b)/2]$ or $[(a+b)/2, b]$.
-    * How rapid is the rate of convergence for the algorithm?
-    * Implement the algorithm and apply it to minimizing $\log (\exp(x) + \exp(-2*x -3))$.
-1. Design an objective function defined on $\mathbb{R}^2$ where gradient descent is exceedingly slow. Hint: scale different coordinates differently.
-1. Implement the lightweight version of Newton's method using preconditioning:
-    * Use diagonal Hessian as preconditioner.
-    * Use the absolute values of that rather than the actual (possibly signed) values.
-    * Apply this to the problem above.
-1. Apply the algorithm above to a number of objective functions (convex or not). What happens if you rotate coordinates by $45$ degrees?
-
+1. Experimente diferentes taxas de aprendizagem e funções objetivas para a descida do gradiente.
+2. Implemente a pesquisa de linha para minimizar uma função convexa no intervalo $[a, b]$.
+     * Você precisa de derivadas para pesquisa binária, ou seja, para decidir se deve escolher $[a, (a+b)/2]$ ou $[(a+b)/2, b]$.
+     * Quão rápida é a taxa de convergência do algoritmo?
+     * Implemente o algoritmo e aplique-o para minimizar $\log (\exp(x) + \exp(-2*x -3))$.
+3. Projete uma função objetivo definida em $\mathbb{R}^2$ onde a descida do gradiente é excessivamente lenta. Dica: dimensione coordenadas diferentes de forma diferente.
+4. Implemente a versão leve do método de Newton usando o pré-condicionamento:
+     * Use diagonal Hessian como pré-condicionador.
+     * Use os valores absolutos disso em vez dos valores reais (possivelmente com sinal).
+     * Aplique isso ao problema acima.
+5. Aplique o algoritmo acima a uma série de funções objetivo (convexas ou não). O que acontece se você girar as coordenadas em $45$ graus?
+6. 
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTY2NTM1NTgsLTE5OTM0NzQ3NTYsLT
-EzMTE5Nzc4ODMsLTkwNzQzNjMyMV19
+eyJoaXN0b3J5IjpbMTM3MDE4NDgyMCwtMTk5MzQ3NDc1NiwtMT
+MxMTk3Nzg4MywtOTA3NDM2MzIxXX0=
 -->
