@@ -105,26 +105,23 @@ Isso equivale a uma generalização da definição de convexidade:
 
 $$\sum_i \alpha_i f(x_i)  \geq f\left(\sum_i \alpha_i x_i\right)    \text{ and }    E_X[f(X)]  \geq f\left(E_X[X]\right),$$
 
-where $\alpha_i$ are nonnegative real numbers such that $\sum_i \alpha_i = 1$ and $X$ is a random variable.
-In other words, the expectation of a convex function is no less than the convex function of an expectation, where the latter is usually a simpler expression. 
-To prove the first inequality we repeatedly apply the definition of convexity to one term in the sum at a time.
-
 onde $\alpha_i$ são números reais não negativos tais que $\sum_i \alpha_i = 1$ e $X$ é uma variável aleatória.
 Em outras palavras, a expectativa de uma função convexa não é menos do que a função convexa de uma expectativa, onde a última é geralmente uma expressão mais simples.
 Para provar a primeira desigualdade, aplicamos repetidamente a definição de convexidade a um termo da soma de cada vez.
 
-One of the common applications of Jensen's inequality is
-to bound a more complicated expression by a simpler one.
-For example,
-its application can be
-with regard to the log-likelihood of partially observed random variables. That is, we use
+Uma das aplicações comuns da desigualdade de Jensen é
+para ligar uma expressão mais complicada por uma mais simples.
+Por exemplo,
+sua aplicação pode ser
+no que diz respeito ao log-verossimilhança de variáveis aleatórias parcialmente observadas. Ou seja, usamos
 
 $$E_{Y \sim P(Y)}[-\log P(X \mid Y)] \geq -\log P(X),$$
 
 since $\int P(Y) P(X \mid Y) dY = P(X)$.
 This can be used in variational methods. Here $Y$ is typically the unobserved random variable, $P(Y)$ is the best guess of how it might be distributed, and $P(X)$ is the distribution with $Y$ integrated out. For instance, in clustering $Y$ might be the cluster labels and $P(X \mid Y)$ is the generative model when applying cluster labels.
 
-
+uma vez que $ \ int P (Y) P (X \ mid Y) dY = P (X) $.
+Isso pode ser usado em métodos variacionais. Aqui $ Y $ é normalmente a variável aleatória não observada, $ P (Y) $ é a melhor estimativa de como ela pode ser distribuída e $ P (X) $ é a distribuição com $ Y $ integrada. Por exemplo, no agrupamento $ Y $ podem ser os rótulos de cluster e $ P (X \ mid Y) $ é o modelo gerador ao aplicar rótulos de cluster.
 
 ## Properties
 
@@ -362,6 +359,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNzEyMzQ3MSwtMTc4OTA5Mjk0OSwtMj
-E0NjMwMjM5XX0=
+eyJoaXN0b3J5IjpbLTExNDc5MDM2MjEsLTE3ODkwOTI5NDksLT
+IxNDYzMDIzOV19
 -->
