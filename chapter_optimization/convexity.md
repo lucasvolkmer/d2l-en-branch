@@ -196,19 +196,14 @@ $\mathbf{x}^\top \mathbf{H} \mathbf{x} \geq 0$
 para todo $\mathbf{x} \in \mathbb{R}^n$.
 Por exemplo, a função $f(\mathbf{x}) = \frac{1}{2} \|\mathbf{x}\|^2$ é convexa, pois $\nabla^2 f = \mathbf{1}$, ou seja, seu Hessian é uma matriz de identidade.
 
-
-Formally, any twice-differentiable one-dimensional function $f: \mathbb{R} \rightarrow \mathbb{R}$ is convex
-if and only if its second derivative $f'' \geq 0$. For any twice-differentiable multi-dimensional function $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$,
-it is convex if and only if its Hessian $\nabla^2f \succeq 0$.
-
 Formalmente, qualquer função unidimensional duas vezes diferenciável $f: \mathbb{R} \rightarrow \mathbb{R}$ é convexa
 se e somente se sua segunda derivada $f'' \geq 0$. Para qualquer função multidimensional duas vezes diferenciável $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$,
-é convexo se e somente se for Hessiano $ \ nabla ^ 2f \ successq 0 $.
+é convexo se e somente se for Hessiano $\nabla^2f \succeq 0$.
 
-First, we need to prove the one-dimensional case.
-To see that 
-convexity of $f$ implies 
-$f'' \geq 0$  we use the fact that
+Primeiro, precisamos provar o caso unidimensional.
+Para ver isso
+convexidade de $f$ implica
+$f''\geq 0$ usamos o fato de que
 
 $$\frac{1}{2} f(x + \epsilon) + \frac{1}{2} f(x - \epsilon) \geq f\left(\frac{x + \epsilon}{2} + \frac{x - \epsilon}{2}\right) = f(x).$$
 
@@ -360,6 +355,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjI1MzIyNTcsLTE3ODkwOTI5NDksLT
-IxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbODUxNzc5MzUxLC0xNzg5MDkyOTQ5LC0yMT
+Q2MzAyMzldfQ==
 -->
