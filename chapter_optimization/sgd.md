@@ -180,18 +180,26 @@ d2l.show_trace_2d(f, d2l.train_2d(sgd, steps=50))
 
 There exist many more choices for how to set the learning rate. For instance, we could start with a small rate, then rapidly ramp up and then decrease it again, albeit more slowly. We could even alternate between smaller and larger learning rates. There exists a large variety of such schedules. For now let us focus on learning rate schedules for which a comprehensive theoretical analysis is possible, i.e., on learning rates in a convex setting. For general nonconvex problems it is very difficult to obtain meaningful convergence guarantees, since in general minimizing nonlinear nonconvex problems is NP hard. For a survey see e.g., the excellent [lecture notes](https://www.stat.cmu.edu/~ryantibs/convexopt-F15/lectures/26-nonconvex.pdf) of Tibshirani 2015.
 
-## Convergence Analysis for Convex Objectives
+Existem muitas outras opções de como definir a taxa de aprendizagem. Por exemplo, poderíamos começar com uma taxa pequena, aumentar rapidamente e diminuí-la novamente, embora mais lentamente. Poderíamos até alternar entre taxas de aprendizagem menores e maiores. Existe uma grande variedade de tais horários. Por enquanto, vamos nos concentrar em tabelas de taxas de aprendizagem para as quais uma análise teórica abrangente é possível, ou seja, em taxas de aprendizagem em um cenário convexo. Para problemas não-convexos gerais é muito difícil obter garantias de convergência significativas, uma vez que, em geral, minimizar problemas não-convexos não lineares é NP difícil. Para uma pesquisa, consulte, por exemplo, as excelentes [notas de aula] (https://www.stat.cmu.edu/~ryantibs/convexopt-F15/lectures/26-nonconvex.pdf) de Tibshirani 2015.
+
+## Análise de convergência para objetivos convexos
 
 The following is optional and primarily serves to convey more intuition about the problem. We limit ourselves to one of the simplest proofs, as described by :cite:`Nesterov.Vial.2000`. Significantly more advanced proof techniques exist, e.g., whenever the objective function is particularly well behaved. :cite:`Hazan.Rakhlin.Bartlett.2008` show that for strongly convex functions, i.e., for functions that can be bounded from below by $\mathbf{x}^\top \mathbf{Q} \mathbf{x}$, it is possible to minimize them in a small number of steps while decreasing the learning rate like $\eta(t) = \eta_0/(\beta t + 1)$. Unfortunately this case never really occurs in deep learning and we are left with a much more slowly decreasing rate in practice.
 
-Consider the case where
+O que segue é opcional e serve principalmente para transmitir mais intuição sobre o problema. Nos limitamos a uma das provas mais simples, conforme descrito por: cite: `Nesterov.Vial.2000`. Existem técnicas de prova significativamente mais avançadas, por exemplo, sempre que a função objetiva é particularmente bem comportada. : cite: `Hazan.Rakhlin.Bartlett.2008` mostra que para funções fortemente convexas, ou seja, para funções que podem ser limitadas de baixo por $ \ mathbf {x} ^ \ top \ mathbf {Q} \ mathbf {x} $ , é possível minimizá-los em um pequeno número de etapas enquanto diminui a taxa de aprendizagem como $ \ eta (t) = \ eta_0 / (\ beta t + 1) $. Infelizmente, esse caso nunca ocorre realmente no aprendizado profundo e ficamos com uma taxa de diminuição muito mais lenta na prática.
+
+Considere o caso onde
 $$\mathbf{w}_{t+1} = \mathbf{w}_{t} - \eta_t \partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w}).$$
 
 In particular, assume that $\mathbf{x}_t$ is drawn from some distribution $P(\mathbf{x})$ and that $l(\mathbf{x}, \mathbf{w})$ is a convex function in $\mathbf{w}$ for all $\mathbf{x}$. Last denote by
 
+Em particular, assuma que $ \ mathbf {x} _t $ é retirado de alguma distribuição $ P (\ mathbf {x}) $ e que $ l (\ mathbf {x}, \ mathbf {w}) $ é uma função convexa em $ \ mathbf {w} $ para todos os $ \ mathbf {x} $. Última denotada por
+
 $$R(\mathbf{w}) = E_{\mathbf{x} \sim P}[l(\mathbf{x}, \mathbf{w})]$$
 
 the expected risk and by $R^*$ its minimum with regard to $\mathbf{w}$. Last let $\mathbf{w}^*$ be the minimizer (we assume that it exists within the domain which $\mathbf{w}$ is defined). In this case we can track the distance between the current parameter $\mathbf{w}_t$ and the risk minimizer $\mathbf{w}^*$ and see whether it improves over time:
+
+o risco esperado e por $ R ^ * $ seu mínimo em relação a $ \ mathbf {w} $. Por último, seja $ \ mathbf {w} ^ * $ o minimizador (assumimos que ele existe dentro do domínio que $ \ mathbf {w} $ está definido). Neste caso, podemos rastrear a distância entre o parâmetro atual $ \ mathbf {w} _t $ e o minimizador de risco $ \ mathbf {w} ^ * $ e ver se melhora com o tempo:
 
 $$\begin{aligned}
     \|\mathbf{w}_{t+1} - \mathbf{w}^*\|^2 & = \|\mathbf{w}_{t} - \eta_t \partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w}) - \mathbf{w}^*\|^2 \\
@@ -202,9 +210,13 @@ $$
 
 The gradient $\partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w})$ can be bounded from above by some Lipschitz constant $L$, hence we have that
 
+O gradiente $ \ partial_ \ mathbf {w} l (\ mathbf {x} _t, \ mathbf {w}) $ pode ser limitado de cima por alguma constante de Lipschitz $ L $, portanto, temos que
+
 $$\eta_t^2 \|\partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w})\|^2 \leq \eta_t^2 L^2.$$
 
 We are mostly interested in how the distance between $\mathbf{w}_t$ and $\mathbf{w}^*$ changes *in expectation*. In fact, for any specific sequence of steps the distance might well increase, depending on whichever $\mathbf{x}_t$ we encounter. Hence we need to bound the inner product. By convexity we have that
+
+Estamos principalmente interessados em como a distância entre $ \ mathbf {w} _t $ e $ \ mathbf {w} ^ * $ muda * na expectativa *. Na verdade, para qualquer sequência específica de passos, a distância pode muito bem aumentar, dependendo de qualquer $ \ mathbf {x} _t $ que encontrarmos. Portanto, precisamos limitar o produto interno. Por convexidade temos que
 
 $$
 l(\mathbf{x}_t, \mathbf{w}^*) \geq l(\mathbf{x}_t, \mathbf{w}_t) + \left\langle \mathbf{w}^* - \mathbf{w}_t, \partial_{\mathbf{w}} l(\mathbf{x}_t, \mathbf{w}_t) \right\rangle.
@@ -212,15 +224,23 @@ $$
 
 Using both inequalities and plugging it into the above we obtain a bound on the distance between parameters at time $t+1$ as follows:
 
+Usando ambas as desigualdades e conectando-as ao acima, obtemos um limite para a distância entre os parâmetros no tempo $ t + 1 $ da seguinte forma:
+
 $$\|\mathbf{w}_{t} - \mathbf{w}^*\|^2 - \|\mathbf{w}_{t+1} - \mathbf{w}^*\|^2 \geq 2 \eta_t (l(\mathbf{x}_t, \mathbf{w}_t) - l(\mathbf{x}_t, \mathbf{w}^*)) - \eta_t^2 L^2.$$
 
 This means that we make progress as long as the expected difference between current loss and the optimal loss outweighs $\eta_t L^2$. Since the former is bound to converge to $0$ it follows that the learning rate $\eta_t$ also needs to vanish.
 
 Next we take expectations over this expression. This yields
 
+Isso significa que progredimos enquanto a diferença esperada entre a perda atual e a perda ótima supera $ \ eta_t L ^ 2 $. Como o primeiro tende a convergir para $ 0 $, segue-se que a taxa de aprendizado $ \ eta_t $ também precisa desaparecer.
+
+Em seguida, consideramos as expectativas sobre essa expressão. Isso produz
+
 $$E_{\mathbf{w}_t}\left[\|\mathbf{w}_{t} - \mathbf{w}^*\|^2\right] - E_{\mathbf{w}_{t+1}\mid \mathbf{w}_t}\left[\|\mathbf{w}_{t+1} - \mathbf{w}^*\|^2\right] \geq 2 \eta_t [E[R[\mathbf{w}_t]] - R^*] -  \eta_t^2 L^2.$$
 
 The last step involves summing over the inequalities for $t \in \{t, \ldots, T\}$. Since the sum telescopes and by dropping the lower term we obtain
+
+A última etapa envolve a soma das desigualdades para $ t \ in \ {t, \ ldots, T \} $. Uma vez que a soma dos telescópios e diminuindo o termo inferior, obtemos
 
 $$\|\mathbf{w}_{0} - \mathbf{w}^*\|^2 \geq 2 \sum_{t=1}^T \eta_t [E[R[\mathbf{w}_t]] - R^*] - L^2 \sum_{t=1}^T \eta_t^2.$$
 
@@ -287,5 +307,5 @@ A similar reasoning shows that the probability of picking a sample exactly once 
 [Discussions](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MDE0ODA3XX0=
+eyJoaXN0b3J5IjpbLTE0NDE5NjQwNDRdfQ==
 -->
