@@ -53,13 +53,9 @@ Os outros dois conjuntos não sofrem esse problema.
 ![O primeiro conjunto é não convexo e os outros dois são convexos.](../img/pacman.svg)
 :label:`fig_pacman`
 
-Definitions on their own are not particularly useful unless you can do something with them.
-In this case we can look at intersections as shown in :numref:`fig_convex_intersect`.
-Assume that $\mathcal{X}$ and $\mathcal{Y}$ are convex sets. Then $\mathcal{X} \cap \mathcal{Y}$ is also convex. To see this, consider any $a, b \in \mathcal{X} \cap \mathcal{Y}$. Since $\mathcal{X}$ and $\mathcal{Y}$ are convex, the line segments connecting $a$ and $b$ are contained in both $\mathcal{X}$ and $\mathcal{Y}$. Given that, they also need to be contained in $\mathcal{X} \cap \mathcal{Y}$, thus proving our theorem.
-
 As definições por si só não são particularmente úteis, a menos que você possa fazer algo com elas.
-Neste caso, podemos olhar as interseções como mostrado em: numref: `fig_convex_intersect`.
-Suponha que $ \ mathcal {X} $ e $ \ mathcal {Y} $ são conjuntos convexos. Então $ \ mathcal {X} \ cap \ mathcal {Y} $ também é convexo. Para ver isso, considere qualquer $ a, b \ in \ mathcal {X} \ cap \ mathcal {Y} $. Como $ \ mathcal {X} $ e $ \ mathcal {Y} $ são convexos, os segmentos de linha que conectam $ a $ e $ b $ estão contidos em $ \ mathcal {X} $ e $ \ mathcal {Y} $. Dado isso, eles também precisam estar contidos em $ \ mathcal {X} \ cap \ mathcal {Y} $, provando assim nosso teorema.
+Neste caso, podemos olhar as interseções como mostrado em :numref:`fig_convex_intersect`.
+Suponha que $\mathcal{X}$ e $\mathcal{Y}$ são conjuntos convexos. Então $\mathcal{X} \cap \mathcal{Y}$ também é convexo. Para ver isso, considere qualquer $a, b \in \mathcal{X} \cap \mathcal{Y}$. Como $\mathcal{X}$ e $\mathcal{Y}$ são convexos, os segmentos de linha que conectam $a$ e $b$ estão contidos em $\mathcal{X}$ e $\mathcal{Y}$. Dado isso, eles também precisam estar contidos em $\mathcal{X} \cap \mathcal{Y}$, provando assim nosso teorema.
 
 ![The intersection between two convex sets is convex.](../img/convex-intersect.svg)
 :label:`fig_convex_intersect`
@@ -363,6 +359,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMTI5MzM2OSwtMTc4OTA5Mjk0OSwtMj
-E0NjMwMjM5XX0=
+eyJoaXN0b3J5IjpbLTIxMDM5ODQ3NDIsLTE3ODkwOTI5NDksLT
+IxNDYzMDIzOV19
 -->
