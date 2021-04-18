@@ -1,28 +1,28 @@
 # Optimization andção e Deep Learning
 
-In this section, we will discuss the relationship between optimization and deep learning as well as the challenges of using optimization in deep learning.
-For a deep learning problem, we will usually define a *loss function* first. Once we have the loss function, we can use an optimization algorithm in attempt to minimize the loss.
-In optimization, a loss function is often referred to as the *objective function* of the optimization problem. By tradition and convention most optimization algorithms are concerned with *minimization*. If we ever need to maximize an objective there is a simple solution: just flip the sign on the objective.
+Nesta seção, discutiremos a relação entre a otimização e o aprendizado profundo, bem como os desafios de usar a otimização no aprendizado profundo.
+Para um problema de aprendizado profundo, geralmente definiremos uma *função de perda* primeiro. Uma vez que temos a função de perda, podemos usar um algoritmo de otimização na tentativa de minimizar a perda.
+Na otimização, uma função de perda é freqüentemente referida como a *função objetivo* do problema de otimização. Por tradição e convenção, a maioria dos algoritmos de otimização se preocupa com a *minimização*. Se alguma vez precisarmos maximizar um objetivo, há uma solução simples: basta virar o sinal no objetivo.
 
 ## Objetivos da Optimizationção
 
-Although optimization provides a way to minimize the loss function for deep
-learning, in essence, the goals of optimization and deep learning are
-fundamentally different.
-The former is primarily concerned with minimizing an
-objective whereas the latter is concerned with finding a suitable model, given a
-finite amount of data.
-In :numref:`sec_model_selection`,
-we discussed the difference between these two goals in detail.
-For instance,
-training error and generalization error generally differ: since the objective
-function of the optimization algorithm is usually a loss function based on the
-training dataset, the goal of optimization is to reduce the training error.
-However, the goal of deep learning (or more broadly, statistical inference) is to
-reduce the generalization error.
-To accomplish the latter we need to pay
-attention to overfitting in addition to using the optimization algorithm to
-reduce the training error.
+Embora a otimização forneça uma maneira de minimizar a função de perda para profundas
+aprendizagem, em essência, as metas de otimização e aprendizagem profunda são
+fundamentalmente diferente.
+O primeiro se preocupa principalmente em minimizar um
+objetivo, enquanto o último está preocupado em encontrar um modelo adequado, dado um
+quantidade finita de dados.
+Em :numref: `sec_model_selection`,
+discutimos a diferença entre esses dois objetivos em detalhes.
+Por exemplo,
+erro de treinamento e erro de generalização geralmente diferem: uma vez que o objetivo
+função do algoritmo de otimização é geralmente uma função de perda com base no
+conjunto de dados de treinamento, o objetivo da otimização é reduzir o erro de treinamento.
+No entanto, o objetivo do aprendizado profundo (ou mais amplamente, inferência estatística) é
+reduzir o erro de generalização.
+Para realizar o último, precisamos pagar
+atenção ao overfitting, além de usar o algoritmo de otimização para
+reduzir o erro de treinamento.
 
 ```{.python .input}
 %matplotlib inline
@@ -50,21 +50,21 @@ from mpl_toolkits import mplot3d
 import tensorflow as tf
 ```
 
-To illustrate the aforementioned different goals,
-let us consider 
-the empirical risk and the risk. 
-As described
-in :numref:`subsec_empirical-risk-and-risk`,
-the empirical risk
-is an average loss
-on the training dataset
-while the risk is the expected loss 
-on the entire population of data.
-Below we define two functions:
-the risk function `f`
-and the empirical risk function `g`.
-Suppose that we have only a finite amount of training data.
-As a result, here `g` is less smooth than `f`.
+Para ilustrar os diferentes objetivos mencionados acima,
+deixe-nos considerar
+o risco empírico e o risco.
+Conforme descrito
+in :numref: `subsec_empirical-risk-and-risk`,
+o risco empírico
+é uma perda média
+no conjunto de dados de treinamento
+enquanto o risco é a perda esperada
+em toda a população de dados.
+Abaixo, definimos duas funções:
+a função de risco `f`
+e a função de risco empírica `g`.
+Suponha que tenhamos apenas uma quantidade finita de dados de treinamento.
+Como resultado, aqui `g` é menos suave do que `f`.
 
 ```{.python .input}
 #@tab all
@@ -75,7 +75,7 @@ def g(x):
     return f(x) + 0.2 * d2l.cos(5 * np.pi * x)
 ```
 
-The graph below illustrates that the minimum of the empirical risk on a training dataset may be at a different location from the minimum of the risk (generalization error).
+O gráfico abaixo ilustra que o mínimo do risco empírico em um conjunto de dados de treinamento pode estar em um local diferente do mínimo do risco (erro de generalização).
 
 ```{.python .input}
 #@tab all
@@ -90,23 +90,21 @@ annotate('min of\nempirical risk', (1.0, -1.2), (0.5, -1.1))
 annotate('min of risk', (1.1, -1.05), (0.95, -0.5))
 ```
 
-## Optimization Challenges in Deep Learning
+## Desafios de otimização em Deep Learning
+Neste capítulo, vamos nos concentrar especificamente no desempenho dos algoritmos de otimização para minimizar a função objetivo, ao invés de um
+erro de generalização do modelo.
+Em: numref: `sec_linear_regression`
+distinguimos entre soluções analíticas e soluções numéricas em
+problemas de otimização.
+No aprendizado profundo, a maioria das funções objetivas são
+complicadas e não possuem soluções analíticas. Em vez disso, devemos usar
+algoritmos de otimização.
+Os algoritmos de otimização neste capítulo
+todos caem nisso
+categoria.
 
-In this chapter, we are going to focus specifically on the performance of optimization algorithms in minimizing the objective function, rather than a
-model's generalization error. 
-In :numref:`sec_linear_regression`
-we distinguished between analytical solutions and numerical solutions in
-optimization problems. 
-In deep learning, most objective functions are
-complicated and do not have analytical solutions. Instead, we must use numerical
-optimization algorithms. 
-The optimization algorithms in this chapter
-all fall into this
-category.
-
-There are many challenges in deep learning optimization. Some of the most vexing ones are local minima, saddle points, and vanishing gradients. 
-Let us have a look at them.
-
+Existem muitos desafios na otimização do aprendizado profundo. Alguns dos mais irritantes são mínimos locais, pontos de sela e gradientes de desaparecimento.
+Vamos dar uma olhada neles.
 
 ### Local Minima
 
@@ -230,5 +228,5 @@ As we saw, optimization for deep learning is full of challenges. Fortunately the
 [Discussions](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI0OTg2MjgsLTEwMzExODk0Nl19
+eyJoaXN0b3J5IjpbLTc0NTA0MzE1NiwtMTAzMTE4OTQ2XX0=
 -->
