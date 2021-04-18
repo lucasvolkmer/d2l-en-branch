@@ -4,7 +4,7 @@ In this section, we will discuss the relationship between optimization and deep 
 For a deep learning problem, we will usually define a *loss function* first. Once we have the loss function, we can use an optimization algorithm in attempt to minimize the loss.
 In optimization, a loss function is often referred to as the *objective function* of the optimization problem. By tradition and convention most optimization algorithms are concerned with *minimization*. If we ever need to maximize an objective there is a simple solution: just flip the sign on the objective.
 
-## Goal ofObjetivos da Optimizationção
+## Objetivos da Optimizationção
 
 Although optimization provides a way to minimize the loss function for deep
 learning, in essence, the goals of optimization and deep learning are
@@ -230,5 +230,5 @@ As we saw, optimization for deep learning is full of challenges. Fortunately the
 [Discussions](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzExODk0Nl19
+eyJoaXN0b3J5IjpbODI0OTg2MjgsLTEwMzExODk0Nl19
 -->
