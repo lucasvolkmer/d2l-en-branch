@@ -233,10 +233,6 @@ show_trace(newton(0.5))
 
 ### Análise de Convergência
 
-We only analyze the convergence rate for convex and three times differentiable $f$, where at its minimum $x^*$ the second derivative is nonzero, i.e., where $f''(x^*) > 0$. The multivariate proof is a straightforward extension of the argument below and omitted since it doesn't help us much in terms of intuition.
-
-Denote by $x_k$ the value of $x$ at the $k$-th iteration and let $e_k := x_k - x^*$ be the distance from optimality. By Taylor series expansion we have that the condition $f'(x^*) = 0$ can be written as
-
 Analisamos apenas a taxa de convergência para $f$ convexa e três vezes diferenciável, onde em seu mínimo $x^*$ a segunda derivada é diferente de zero, ou seja, onde $f''(x^*) > 0$. A prova multivariada é uma extensão direta do argumento abaixo e omitida por não nos ajudar muito em termos de intuição.
 
 Denote por $x_k$ o valor de $x$ na $k$-ésima iteração e seja $e_k:= x_k - x^*$ a distância da otimização. Pela expansão da série de Taylor, temos que a condição $f'(x^*) = 0$ pode ser escrita como
@@ -244,6 +240,8 @@ Denote por $x_k$ o valor de $x$ na $k$-ésima iteração e seja $e_k:= x_k - x^*
 $$0 = f'(x_k - e_k) = f'(x_k) - e_k f''(x_k) + \frac{1}{2} e_k^2 f'''(\xi_k).$$
 
 This holds for some $\xi_k \in [x_k - e_k, x_k]$. Recall that we have the update $x_{k+1} = x_k - f'(x_k) / f''(x_k)$. Dividing the above expansion by $f''(x_k)$ yields
+
+Isso vale para alguns $\xi_k \in [x_k - e_k, x_k]$. Lembre-se de que temos a atualização $ x_ {k + 1} = x_k - f '(x_k) / f' '(x_k) $. Dividindo a expansão acima por $ f '' (x_k) $, os rendimentos
 
 $$e_k - f'(x_k) / f''(x_k) = \frac{1}{2} e_k^2 f'''(\xi_k) / f''(x_k).$$
 
@@ -292,5 +290,6 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTE5Nzc4ODMsLTkwNzQzNjMyMV19
+eyJoaXN0b3J5IjpbLTE5OTM0NzQ3NTYsLTEzMTE5Nzc4ODMsLT
+kwNzQzNjMyMV19
 -->
