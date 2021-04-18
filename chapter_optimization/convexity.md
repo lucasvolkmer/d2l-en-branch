@@ -57,11 +57,14 @@ As definições por si só não são particularmente úteis, a menos que você p
 Neste caso, podemos olhar as interseções como mostrado em :numref:`fig_convex_intersect`.
 Suponha que $\mathcal{X}$ e $\mathcal{Y}$ são conjuntos convexos. Então $\mathcal{X} \cap \mathcal{Y}$ também é convexo. Para ver isso, considere qualquer $a, b \in \mathcal{X} \cap \mathcal{Y}$. Como $\mathcal{X}$ e $\mathcal{Y}$ são convexos, os segmentos de linha que conectam $a$ e $b$ estão contidos em $\mathcal{X}$ e $\mathcal{Y}$. Dado isso, eles também precisam estar contidos em $\mathcal{X} \cap \mathcal{Y}$, provando assim nosso teorema.
 
-![The intersection between two convex sets is convex.](../img/convex-intersect.svg)
+![A interseção entre dois conjuntos convexos é convexa.](../img/convex-intersect.svg)
 :label:`fig_convex_intersect`
 
 We can strengthen this result with little effort: given convex sets $\mathcal{X}_i$, their intersection $\cap_{i} \mathcal{X}_i$ is convex.
 To see that the converse is not true, consider two disjoint sets $\mathcal{X} \cap \mathcal{Y} = \emptyset$. Now pick $a \in \mathcal{X}$ and $b \in \mathcal{Y}$. The line segment in :numref:`fig_nonconvex` connecting $a$ and $b$ needs to contain some part that is neither in $\mathcal{X}$ nor in $\mathcal{Y}$, since we assumed that $\mathcal{X} \cap \mathcal{Y} = \emptyset$. Hence the line segment is not in $\mathcal{X} \cup \mathcal{Y}$ either, thus proving that in general unions of convex sets need not be convex.
+
+Podemos reforçar este resultado com pouco esforço: dados os conjuntos convexos $\mathcal{X}_i$, sua interseção $\cap_{i} \mathcal{X}_i$ é convexa.
+Para ver que o inverso não é verdadeiro, considere dois conjuntos disjuntos $\mathcal{X} \cap \mathcal{Y} = \emptyset$. Agora escolha $ a \ in \ mathcal {X} $ e $b \in \mathcal{Y}$. O segmento de linha em: numref: `fig_nonconvex` conectando $ a $ e $ b $ precisa conter alguma parte que não está em $ \ mathcal {X} $ nem em $ \ mathcal {Y} $, uma vez que assumimos que $ \ mathcal {X} \ cap \ mathcal {Y} = \ emptyset $. Conseqüentemente, o segmento de linha também não está em $ \ mathcal {X} \ cup \ mathcal {Y} $, provando assim que, em geral, as uniões de conjuntos convexos não precisam ser convexas.
 
 ![The union of two convex sets need not be convex.](../img/nonconvex.svg)
 :label:`fig_nonconvex`
@@ -359,6 +362,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDM5ODQ3NDIsLTE3ODkwOTI5NDksLT
-IxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbMTE1MjQwNzExOCwtMTc4OTA5Mjk0OSwtMj
+E0NjMwMjM5XX0=
 -->
