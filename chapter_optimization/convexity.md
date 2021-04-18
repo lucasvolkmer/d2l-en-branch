@@ -125,14 +125,18 @@ Isso pode ser usado em métodos variacionais. Aqui $Y$ é normalmente a variáve
 As funções convexas têm algumas propriedades úteis. Nós os descrevemos abaixo.
 
 
-### Local Minima Are Global Minima
+### Mínimos locais são mínimos globais
 
-First and foremost, the local minima of convex functions are also the global minima. 
-We can prove it by contradiction as follows.
+Em primeiro lugar, os mínimos locais das funções convexas também são os mínimos globais.
+Podemos provar isso por contradição como segue.
 
 Consider a convex function $f$ defined on a convex set $\mathcal{X}$.
 Suppose that $x^{\ast} \in \mathcal{X}$ is a local minimum:
 there exists a small positive value $p$ so that for $x \in \mathcal{X}$ that satisfies $0 < |x - x^{\ast}| \leq p$ we have $f(x^{\ast}) < f(x)$.
+
+Considere uma função convexa $f$ definida em um conjunto convexo $\mathcal{X}$.
+Suponha que $x^{\ast} \in \mathcal{X}$ seja um mínimo local:
+existe um pequeno valor positivo $p$ de forma que para $x \in \mathcal{X}$ que satisfaz $ 0 <| x - x ^ {\ ast} | \ leq p $ temos $ f (x ^ {\ ast}) <f (x) $.
 
 Assume that the local minimum $x^{\ast}$
 is not the global minumum of $f$:
@@ -356,6 +360,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjM1OTEyNCwtMTc4OTA5Mjk0OSwtMj
-E0NjMwMjM5XX0=
+eyJoaXN0b3J5IjpbLTExNDQ4MjQ4NTgsLTE3ODkwOTI5NDksLT
+IxNDYzMDIzOV19
 -->
