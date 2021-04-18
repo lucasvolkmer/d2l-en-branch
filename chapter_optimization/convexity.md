@@ -43,21 +43,23 @@ Eles levam a ferramentas matemáticas que são comumente aplicadas ao aprendizad
 
 ### Convex Sets
 
-Sets are the basis of convexity. Simply put, a set $\mathcal{X}$ in a vector space is *convex* if for any $a, b \in \mathcal{X}$ the line segment connecting $a$ and $b$ is also in $\mathcal{X}$. In mathematical terms this means that for all $\lambda \in [0, 1]$ we have
-
-Os conjuntos são a base da convexidade. Simplificando, um conjunto $\mathcal{X}$ em um espaço vetorial é *convexo* se para qualquer $ a, b \ in \ mathcal {X} $ o segmento de linha conectando $ a $ e $ b $ também estiver em $ \ mathcal {X} $. Em termos matemáticos, isso significa que para todos $ \ lambda \ in [0, 1] $ temos
+Os conjuntos são a base da convexidade. Simplificando, um conjunto $\mathcal{X}$ em um espaço vetorial é *convexo* se para qualquer $a, b \in \mathcal{X}$ o segmento de linha conectando $a$ e $b$ também estiver em $\mathcal{X}$. Em termos matemáticos, isso significa que para todos $\lambda \in [0, 1]$ temos
 
 $$\lambda  a + (1-\lambda)  b \in \mathcal{X} \text{ whenever } a, b \in \mathcal{X}.$$
 
-This sounds a bit abstract. Consider :numref:`fig_pacman`. The first set is not convex since there exist line segments that are not contained in it.
-The other two sets suffer no such problem.
+Isso soa um pouco abstrato. Considere :numref:`fig_pacman`. O primeiro conjunto não é convexo, pois existem segmentos de linha que não estão contidos nele.
+Os outros dois conjuntos não sofrem esse problema.
 
-![The first set is nonconvex and the other two are convex.](../img/pacman.svg)
+![O primeiro conjunto é não convexo e os outros dois são convexos.](../img/pacman.svg)
 :label:`fig_pacman`
 
 Definitions on their own are not particularly useful unless you can do something with them.
 In this case we can look at intersections as shown in :numref:`fig_convex_intersect`.
 Assume that $\mathcal{X}$ and $\mathcal{Y}$ are convex sets. Then $\mathcal{X} \cap \mathcal{Y}$ is also convex. To see this, consider any $a, b \in \mathcal{X} \cap \mathcal{Y}$. Since $\mathcal{X}$ and $\mathcal{Y}$ are convex, the line segments connecting $a$ and $b$ are contained in both $\mathcal{X}$ and $\mathcal{Y}$. Given that, they also need to be contained in $\mathcal{X} \cap \mathcal{Y}$, thus proving our theorem.
+
+As definições por si só não são particularmente úteis, a menos que você possa fazer algo com elas.
+Neste caso, podemos olhar as interseções como mostrado em: numref: `fig_convex_intersect`.
+Suponha que $ \ mathcal {X} $ e $ \ mathcal {Y} $ são conjuntos convexos. Então $ \ mathcal {X} \ cap \ mathcal {Y} $ também é convexo. Para ver isso, considere qualquer $ a, b \ in \ mathcal {X} \ cap \ mathcal {Y} $. Como $ \ mathcal {X} $ e $ \ mathcal {Y} $ são convexos, os segmentos de linha que conectam $ a $ e $ b $ estão contidos em $ \ mathcal {X} $ e $ \ mathcal {Y} $. Dado isso, eles também precisam estar contidos em $ \ mathcal {X} \ cap \ mathcal {Y} $, provando assim nosso teorema.
 
 ![The intersection between two convex sets is convex.](../img/convex-intersect.svg)
 :label:`fig_convex_intersect`
@@ -361,5 +363,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODkwOTI5NDksLTIxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbMTEzMTI5MzM2OSwtMTc4OTA5Mjk0OSwtMj
+E0NjMwMjM5XX0=
 -->
