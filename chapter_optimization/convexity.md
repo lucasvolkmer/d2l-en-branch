@@ -180,10 +180,6 @@ $$\mathcal{S}_b := \{x | x \in \mathcal{X} \text{ and } f(x) \leq b\}$$
 
 é convexo.
 
-Let us prove this quickly. Recall that for any $x, x' \in \mathcal{S}_b$ we need to show that $\lambda x + (1-\lambda) x' \in \mathcal{S}_b$ as long as $\lambda \in [0, 1]$. 
-Since $f(x) \leq b$ and $f(x') \leq b$,
-by the definition of convexity we have 
-
 Vamos provar isso rapidamente. Lembre-se de que para qualquer $x, x' \in \mathcal{S}_b$ precisamos mostrar que $\lambda x + (1-\lambda) x' \in \mathcal{S}_b$ enquanto $\lambda \in [0, 1]$.
 Como $f(x) \leq b$ e $f(x') \leq b$,
 pela definição de convexidade, temos
@@ -191,7 +187,7 @@ pela definição de convexidade, temos
 $$f(\lambda x + (1-\lambda) x') \leq \lambda f(x) + (1-\lambda) f(x') \leq b.$$
 
 
-### Convexity and Second Derivatives
+### Convexidade e derivados secundários
 
 Whenever the second derivative of a function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ exists it is very easy to check whether $f$ is convex. 
 All we need to do is check whether the Hessian of $f$ is positive semidefinite: $\nabla^2f \succeq 0$, i.e., 
@@ -199,6 +195,13 @@ denoting the Hessian matrix $\nabla^2f$ by $\mathbf{H}$,
 $\mathbf{x}^\top \mathbf{H} \mathbf{x} \geq 0$
 for all $\mathbf{x} \in \mathbb{R}^n$.
 For instance, the function $f(\mathbf{x}) = \frac{1}{2} \|\mathbf{x}\|^2$ is convex since $\nabla^2 f = \mathbf{1}$, i.e., its Hessian is an identity matrix.
+
+Sempre que a segunda derivada de uma função $f: \mathbb{R}^n \rightarrow \mathbb{R}$ existe, é muito fácil verificar se $f$ é convexa.
+Tudo o que precisamos fazer é verificar se o hessiano de $f$ é semidefinido positivo: $\nabla^2f \succeq 0$, ou seja,
+denotando a matriz Hessiana $ \ nabla ^ 2f $ por $ \ mathbf {H} $,
+$ \ mathbf {x} ^ \ top \ mathbf {H} \ mathbf {x} \ geq 0 $
+para todos $ \ mathbf {x} \ in \ mathbb {R} ^ n $.
+Por exemplo, a função $ f (\ mathbf {x}) = \ frac {1} {2} \ | \ mathbf {x} \ | ^ 2 $ é convexa, pois $ \ nabla ^ 2 f = \ mathbf {1} $, ou seja, seu Hessian é uma matriz de identidade.
 
 
 Formally, any twice-differentiable one-dimensional function $f: \mathbb{R} \rightarrow \mathbb{R}$ is convex
@@ -360,6 +363,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQxOTMzOTMxLC0xNzg5MDkyOTQ5LC0yMT
-Q2MzAyMzldfQ==
+eyJoaXN0b3J5IjpbLTE2NjIzMjgwMzEsLTE3ODkwOTI5NDksLT
+IxNDYzMDIzOV19
 -->
