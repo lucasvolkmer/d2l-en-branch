@@ -1,7 +1,10 @@
-# Stochastic Gradient Descent
+# Stochastic Gradiente Descent
 :label:`sec_sgd`
 
-In this section, we are going to introduce the basic principles of stochastic gradient descent.
+In this section, we are going to introduce the basic principles of stochastic gradient descentdente Estocástico
+:label:`sec_sgd`
+
+Nesta seção, apresentaremos os princípios básicos da descida gradiente estocástica.
 
 ```{.python .input}
 %matplotlib inline
@@ -27,19 +30,27 @@ import math
 import tensorflow as tf
 ```
 
-## Stochastic Gradient Updates
+## Stochastic Gradient UpdatesAtualizações de gradiente estocástico
 
 In deep learning, the objective function is usually the average of the loss functions for each example in the training dataset. We assume that $f_i(\mathbf{x})$ is the loss function of the training dataset with $n$ examples, an index of $i$, and parameter vector of $\mathbf{x}$, then we have the objective function
+
+No aprendizado profundo, a função objetivo é geralmente a média das funções de perda para cada exemplo no conjunto de dados de treinamento. Assumimos que $ f_i (\ mathbf {x}) $ é a função de perda do conjunto de dados de treinamento com $ n $ exemplos, um índice de $ i $ e um vetor de parâmetro de $ \ mathbf {x} $, então temos o função objetiva
 
 $$f(\mathbf{x}) = \frac{1}{n} \sum_{i = 1}^n f_i(\mathbf{x}).$$
 
 The gradient of the objective function at $\mathbf{x}$ is computed as
 
+O gradiente da função objetivo em $ \ mathbf {x} $ é calculado como
+
 $$\nabla f(\mathbf{x}) = \frac{1}{n} \sum_{i = 1}^n \nabla f_i(\mathbf{x}).$$
 
 If gradient descent is used, the computing cost for each independent variable iteration is $\mathcal{O}(n)$, which grows linearly with $n$. Therefore, when the model training dataset is large, the cost of gradient descent for each iteration will be very high.
 
+Stochastic gradient descent (SGD) reduces computational cost at each iteration. At each iteration of stochastic gradient descent, we uniformly sample an index $i\in\{1,\ldots, n\}$ for data examples at random, and compute the gradient $\nabla f_i(\mathbf{x})$ to update $\mathbf{x}e o gradiente descendente for usado, o custo de computação para cada iteração de variável independente é $ \ mathcal {O} (n) $, que cresce linearmente com $ n $. Portanto, quando o conjunto de dados de treinamento do modelo é grande, o custo da descida do gradiente para cada iteração será muito alto.
+
 Stochastic gradient descent (SGD) reduces computational cost at each iteration. At each iteration of stochastic gradient descent, we uniformly sample an index $i\in\{1,\ldots, n\}$ for data examples at random, and compute the gradient $\nabla f_i(\mathbf{x})$ to update $\mathbf{x}$:
+
+A descida gradiente estocástica (SGD) reduz o custo computacional a cada iteração. A cada iteração de descida do gradiente estocástico, amostramos uniformemente um índice $ i \ in \ {1, \ ldots, n \} $ para exemplos de dados aleatoriamente e calculamos o gradiente $ \ nabla f_i (\ mathbf {x}) $ para atualizar $ \ mathbf {x} $:
 
 $$\mathbf{x} \leftarrow \mathbf{x} - \eta \nabla f_i(\mathbf{x}).$$
 
@@ -259,3 +270,6 @@ A similar reasoning shows that the probability of picking a sample exactly once 
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1067)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTMyOTkwMTUzOV19
+-->
