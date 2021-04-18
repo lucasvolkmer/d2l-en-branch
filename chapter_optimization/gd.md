@@ -14,19 +14,21 @@ Ou seja, na primeira aproximação $f(x+\epsilon)$ é dado pelo valor da funçã
 
 $$f(x - \eta f'(x)) = f(x) - \eta f'^2(x) + \mathcal{O}(\eta^2 f'^2(x)).$$
 
-If the derivative $f'(x) \neq 0$ does not vanish we make progress since $\eta f'^2(x)>0$. Moreover, we can always choose $\eta$ small enough for the higher order terms to become irrelevant. Hence we arrive at
-
-Se a derivada $f'(x) \neq 0$ não desaparecer, fazemos progresso, pois $\eta f'^2(x)>0$. Além disso, podemos sempre escolher $ \ eta $ pequeno o suficiente para que os termos de ordem superior se tornem irrelevantes. Daí chegamos a
+Se a derivada $f'(x) \neq 0$ não desaparecer, fazemos progresso, pois $\eta f'^2(x)>0$. Além disso, podemos sempre escolher $\eta$ pequeno o suficiente para que os termos de ordem superior se tornem irrelevantes. Daí chegamos a
 
 $$f(x - \eta f'(x)) \lessapprox f(x).$$
 
-This means that, if we use
+Isso significa que, se usarmos
 
 $$x \leftarrow x - \eta f'(x)$$
 
 to iterate $x$, the value of function $f(x)$ might decline. Therefore, in gradient descent we first choose an initial value $x$ and a constant $\eta > 0$ and then use them to continuously iterate $x$ until the stop condition is reached, for example, when the magnitude of the gradient $|f'(x)|$ is small enough or the number of iterations has reached a certain value.
 
 For simplicity we choose the objective function $f(x)=x^2$ to illustrate how to implement gradient descent. Although we know that $x=0$ is the solution to minimize $f(x)$, we still use this simple function to observe how $x$ changes. As always, we begin by importing all required modules.
+
+para iterar $x$, o valor da função $f(x)$ pode diminuir. Portanto, na descida do gradiente, primeiro escolhemos um valor inicial $x$ e uma constante $\eta > 0$ e, em seguida, os usamos para iterar continuamente $x$ até que a condição de parada seja alcançada, por exemplo, quando a magnitude do gradiente $|f'(x)|$ é pequeno o suficiente ou o número de iterações atingiu um determinado valor.
+
+Para simplificar, escolhemos a função objetivo $f(x)=x^2$ para ilustrar como implementar a descida gradiente. Embora saibamos que $x=0$ é a solução para minimizar $f(x)$, ainda usamos esta função simples para observar como $ x $ muda. Como sempre, começamos importando todos os módulos necessários.
 
 ```{.python .input}
 %matplotlib inline
@@ -290,5 +292,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0ODYyOTk4MSwtOTA3NDM2MzIxXX0=
+eyJoaXN0b3J5IjpbMjMwOTYzMzMzLC05MDc0MzYzMjFdfQ==
 -->
