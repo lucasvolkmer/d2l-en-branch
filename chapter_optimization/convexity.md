@@ -184,8 +184,8 @@ Let us prove this quickly. Recall that for any $x, x' \in \mathcal{S}_b$ we need
 Since $f(x) \leq b$ and $f(x') \leq b$,
 by the definition of convexity we have 
 
-Vamos provar isso rapidamente. Lembre-se de que para qualquer $x, x' \in \mathcal{S}_b$ precisamos mostrar que $\lambda x + (1-\lambda) x' \in \mathcal{S}_b$ as long as $\lambda \in [0, 1]$.
-Como $ f (x) \ leq b $ e $ f (x ') \ leq b $,
+Vamos provar isso rapidamente. Lembre-se de que para qualquer $x, x' \in \mathcal{S}_b$ precisamos mostrar que $\lambda x + (1-\lambda) x' \in \mathcal{S}_b$ enquanto $\lambda \in [0, 1]$.
+Como $f(x) \leq b$ e $f(x') \leq b$,
 pela definição de convexidade, temos
 
 $$f(\lambda x + (1-\lambda) x') \leq \lambda f(x) + (1-\lambda) f(x') \leq b.$$
@@ -360,6 +360,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzQxMjkzNzQsLTE3ODkwOTI5NDksLT
-IxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbNDQxOTMzOTMxLC0xNzg5MDkyOTQ5LC0yMT
+Q2MzAyMzldfQ==
 -->
