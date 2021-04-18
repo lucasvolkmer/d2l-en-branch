@@ -308,17 +308,17 @@ Em geral, adicionar penalidades é uma boa maneira de garantir a satisfação ap
 
 ### Projeções
 
-An alternative strategy for satisfying constraints are projections. Again, we encountered them before, e.g., when dealing with gradient clipping in :numref:`sec_rnn_scratch`. There we ensured that a gradient has length bounded by $c$ via
+Uma estratégia alternativa para satisfazer as restrições são as projeções. Novamente, nós os encontramos antes, por exemplo, ao lidar com recorte de gradiente em :numref:`sec_rnn_scratch`. Lá, garantimos que um gradiente tem comprimento limitado por $c$ via
 
 $$\mathbf{g} \leftarrow \mathbf{g} \cdot \mathrm{min}(1, c/\|\mathbf{g}\|).$$
 
-This turns out to be a *projection* of $g$ onto the ball of radius $c$. More generally, a projection on a (convex) set $\mathcal{X}$ is defined as
+Isso acaba sendo uma *projeção* de $g$ na bola de raio $c$. Mais geralmente, uma projeção em um conjunto (convexo) $\mathcal{X}$ é definida como
 
 $$\mathrm{Proj}_\mathcal{X}(\mathbf{x}) = \mathop{\mathrm{argmin}}_{\mathbf{x}' \in \mathcal{X}} \|\mathbf{x} - \mathbf{x}'\|_2.$$
 
-It is thus the closest point in $\mathcal{X}$ to $\mathbf{x}$. This sounds a bit abstract. :numref:`fig_projections` explains it somewhat more clearly. In it we have two convex sets, a circle and a diamond. Points inside the set (yellow) remain unchanged. Points outside the set (black) are mapped to the closest point inside the set (red). While for $L_2$ balls this leaves the direction unchanged, this need not be the case in general, as can be seen in the case of the diamond.
+Portanto, é o ponto mais próximo em $\mathcal{X}$ para $\mathbf{x}$. Isso soa um pouco abstrato.  :numref:`fig_projections` explica um pouco mais claramente. Nele temos dois conjuntos convexos, um círculo e um diamante. Os pontos dentro do conjunto (amarelo) permanecem inalterados. Pontos fora do conjunto (preto) são mapeados para o ponto mais próximo dentro do conjunto (vermelho). Enquanto para bolas de $L_2$ isso não altera a direção, este não precisa ser o caso em geral, como pode ser visto no caso do diamante.
 
-![Convex Projections.](../img/projections.svg)
+![Projetç.](../img/projections.svg)
 :label:`fig_projections`
 
 One of the uses for convex projections is to compute sparse weight vectors. In this case we project $\mathbf{w}$ onto an $L_1$ ball (the latter is a generalized version of the diamond in the picture above).
@@ -353,6 +353,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU5NjAzODY4LC04NjEwODEwODQsLTE2Mj
-g2NTc1NzgsLTE3ODkwOTI5NDksLTIxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbLTE5MDcxNzI2MjUsLTg2MTA4MTA4NCwtMT
+YyODY1NzU3OCwtMTc4OTA5Mjk0OSwtMjE0NjMwMjM5XX0=
 -->
