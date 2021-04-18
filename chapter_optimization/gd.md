@@ -239,9 +239,7 @@ Denote por $x_k$ o valor de $x$ na $k$-ésima iteração e seja $e_k:= x_k - x^*
 
 $$0 = f'(x_k - e_k) = f'(x_k) - e_k f''(x_k) + \frac{1}{2} e_k^2 f'''(\xi_k).$$
 
-This holds for some $\xi_k \in [x_k - e_k, x_k]$. Recall that we have the update $x_{k+1} = x_k - f'(x_k) / f''(x_k)$. Dividing the above expansion by $f''(x_k)$ yields
-
-Isso vale para alguns $\xi_k \in [x_k - e_k, x_k]$. Lembre-se de que temos a atualização $ x_ {k + 1} = x_k - f '(x_k) / f' '(x_k) $. Dividindo a expansão acima por $ f '' (x_k) $, os rendimentos
+Isso vale para alguns $\xi_k \in [x_k - e_k, x_k]$. Lembre-se de que temos a atualização $x_{k+1} = x_k - f'(x_k) / f''(x_k)$. Dividindo a expansão acima por $f''(x_k)$, obtemos
 
 $$e_k - f'(x_k) / f''(x_k) = \frac{1}{2} e_k^2 f'''(\xi_k) / f''(x_k).$$
 
@@ -290,6 +288,6 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTM0NzQ3NTYsLTEzMTE5Nzc4ODMsLT
-kwNzQzNjMyMV19
+eyJoaXN0b3J5IjpbLTEyNTgxNTM0ODksLTE5OTM0NzQ3NTYsLT
+EzMTE5Nzc4ODMsLTkwNzQzNjMyMV19
 -->
