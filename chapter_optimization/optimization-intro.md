@@ -165,18 +165,18 @@ d2l.plt.xlabel('x')
 d2l.plt.ylabel('y');
 ```
 
-We assume that the input of a function is a $k$-dimensional vector and its
-output is a scalar, so its Hessian matrix will have $k$ eigenvalues
-(refer to the [online appendix on eigendecompositions](https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/eigendecomposition.html)).
-The solution of the
-function could be a local minimum, a local maximum, or a saddle point at a
-position where the function gradient is zero:
+Assumimos que a entrada de uma função é um vetor $k$ -dimensional e seu
+a saída é um escalar, então sua matriz Hessiana terá $k$ autovalores
+(consulte o [apêndice online sobre eigendecompositions](https://d2l.ai/chapter_apencha-mathematics-for-deep-learning/eigendecomposition.html)).
+A solução do
+função pode ser um mínimo local, um máximo local ou um ponto de sela em um
+posição onde o gradiente da função é zero:
 
-* When the eigenvalues of the function's Hessian matrix at the zero-gradient position are all positive, we have a local minimum for the function.
-* When the eigenvalues of the function's Hessian matrix at the zero-gradient position are all negative, we have a local maximum for the function.
-* When the eigenvalues of the function's Hessian matrix at the zero-gradient position are negative and positive, we have a saddle point for the function.
+* Quando os autovalores da matriz Hessiana da função na posição do gradiente zero são todos positivos, temos um mínimo local para a função.
+* Quando os valores próprios da matriz Hessiana da função na posição do gradiente zero são todos negativos, temos um máximo local para a função.
+* Quando os valores próprios da matriz Hessiana da função na posição do gradiente zero são negativos e positivos, temos um ponto de sela para a função.
 
-For high-dimensional problems the likelihood that at least *some* of the eigenvalues are negative is quite high. This makes saddle points more likely than local minima. We will discuss some exceptions to this situation in the next section when introducing convexity. In short, convex functions are those where the eigenvalues of the Hessian are never negative. Sadly, though, most deep learning problems do not fall into this category. Nonetheless it is a great tool to study optimization algorithms.
+Para problemas de alta dimensão, a probabilidade de que pelo menos * alguns * dos autovalores sejam negativos é bastante alta. Isso torna os pontos de sela mais prováveis do que os mínimos locais. Discutiremos algumas exceções a essa situação na próxima seção, ao introduzir a convexidade. Em suma, funções convexas são aquelas em que os autovalores do Hessiano nunca são negativos. Infelizmente, porém, a maioria dos problemas de aprendizado profundo não se enquadra nessa categoria. No entanto, é uma ótima ferramenta para estudar algoritmos de otimização.
 
 ### Vanishing Gradients
 
@@ -229,5 +229,5 @@ As we saw, optimization for deep learning is full of challenges. Fortunately the
 [Discussions](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQ4OTYzMzgsLTEwMzExODk0Nl19
+eyJoaXN0b3J5IjpbMjgyMTM2NTM0LC0xMDMxMTg5NDZdfQ==
 -->
