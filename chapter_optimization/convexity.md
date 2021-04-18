@@ -130,13 +130,9 @@ As funções convexas têm algumas propriedades úteis. Nós os descrevemos abai
 Em primeiro lugar, os mínimos locais das funções convexas também são os mínimos globais.
 Podemos provar isso por contradição como segue.
 
-Consider a convex function $f$ defined on a convex set $\mathcal{X}$.
-Suppose that $x^{\ast} \in \mathcal{X}$ is a local minimum:
-there exists a small positive value $p$ so that for $x \in \mathcal{X}$ that satisfies $0 < |x - x^{\ast}| \leq p$ we have $f(x^{\ast}) < f(x)$.
-
 Considere uma função convexa $f$ definida em um conjunto convexo $\mathcal{X}$.
 Suponha que $x^{\ast} \in \mathcal{X}$ seja um mínimo local:
-existe um pequeno valor positivo $p$ de forma que para $x \in \mathcal{X}$ que satisfaz $ 0 <| x - x ^ {\ ast} | \ leq p $ temos $ f (x ^ {\ ast}) <f (x) $.
+existe um pequeno valor positivo $p$ de forma que para $x \in \mathcal{X}$ que satisfaz $0 < |x - x^{\ast}| \leq p$ temos $f(x^{\ast}) < f(x)$.
 
 Assume that the local minimum $x^{\ast}$
 is not the global minumum of $f$:
@@ -148,6 +144,17 @@ $0 < |\lambda x^{\ast} + (1-\lambda) x' - x^{\ast}| \leq p$.
 
 However,
 according to the definition of convex functions, we have
+
+Suponha que o mínimo local $x^{\ast}$
+não é o mínimo global de $f$:
+existe $ x '\ in \ mathcal {X} $ para o qual $ f (x') <f (x ^ {\ ast}) $.
+Também existe
+$ \ lambda \ in [0, 1) $ como $ \ lambda = 1 - \ frac {p} {| x ^ {\ ast} - x '|} $
+de modo a
+$ 0 <| \ lambda x ^ {\ ast} + (1- \ lambda) x '- x ^ {\ ast} | \ leq p $.
+
+Contudo,
+de acordo com a definição de funções convexas, temos
 
 $$\begin{aligned}
     f(\lambda x^{\ast} + (1-\lambda) x') &\leq \lambda f(x^{\ast}) + (1-\lambda) f(x') \\
@@ -360,6 +367,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDQ4MjQ4NTgsLTE3ODkwOTI5NDksLT
-IxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbLTk0MjE3MjIyNCwtMTc4OTA5Mjk0OSwtMj
+E0NjMwMjM5XX0=
 -->
