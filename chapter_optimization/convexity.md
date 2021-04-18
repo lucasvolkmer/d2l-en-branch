@@ -1,12 +1,12 @@
-# Convexity
+# Convexidade
 :label:`sec_convexity`
 
-Convexity plays a vital role in the design of optimization algorithms. 
-This is largely due to the fact that it is much easier to analyze and test algorithms in such a context. 
-In other words,
-if the algorithm performs poorly even in the convex setting,
-typically we should not hope to see great results otherwise. 
-Furthermore, even though the optimization problems in deep learning are generally nonconvex, they often exhibit some properties of convex ones near local minima. This can lead to exciting new optimization variants such as :cite:`Izmailov.Podoprikhin.Garipov.ea.2018`.
+A convexidade desempenha um papel vital no projeto de algoritmos de otimização.
+Em grande parte, isso se deve ao fato de que é muito mais fácil analisar e testar algoritmos em tal contexto.
+Em outras palavras,
+se o algoritmo funcionar mal, mesmo na configuração convexa,
+normalmente, não devemos esperar ver grandes resultados de outra forma.
+Além disso, embora os problemas de otimização no aprendizado profundo sejam geralmente não convexos, eles costumam exibir algumas propriedades dos convexos próximos aos mínimos locais. Isso pode levar a novas variantes de otimização interessantes, como :cite:`Izmailov.Podoprikhin.Garipov.ea.2018`.
 
 ```{.python .input}
 %matplotlib inline
@@ -359,5 +359,5 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbLTEyMjg4NTM1NDksLTIxNDYzMDIzOV19
 -->
