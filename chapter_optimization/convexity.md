@@ -34,16 +34,18 @@ from mpl_toolkits import mplot3d
 import tensorflow as tf
 ```
 
-## Definitions
+## Definições
 
-Before convex analysis,
-we need to define *convex sets* and *convex functions*.
-They lead to mathematical tools that are commonly applied to machine learning.
+Antes da análise convexa,
+precisamos definir *conjuntos convexos* e *funções convexas*.
+Eles levam a ferramentas matemáticas que são comumente aplicadas ao aprendizado de máquina.
 
 
 ### Convex Sets
 
 Sets are the basis of convexity. Simply put, a set $\mathcal{X}$ in a vector space is *convex* if for any $a, b \in \mathcal{X}$ the line segment connecting $a$ and $b$ is also in $\mathcal{X}$. In mathematical terms this means that for all $\lambda \in [0, 1]$ we have
+
+Os conjuntos são a base da convexidade. Simplificando, um conjunto $\mathcal{X}$ em um espaço vetorial é *convexo* se para qualquer $ a, b \ in \ mathcal {X} $ o segmento de linha conectando $ a $ e $ b $ também estiver em $ \ mathcal {X} $. Em termos matemáticos, isso significa que para todos $ \ lambda \ in [0, 1] $ temos
 
 $$\lambda  a + (1-\lambda)  b \in \mathcal{X} \text{ whenever } a, b \in \mathcal{X}.$$
 
@@ -359,5 +361,5 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjg4NTM1NDksLTIxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbLTE3ODkwOTI5NDksLTIxNDYzMDIzOV19
 -->
