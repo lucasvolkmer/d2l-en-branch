@@ -224,18 +224,22 @@ hessf = lambda x: - 2 * c * d2l.sin(c * x) - x * c**2 * d2l.cos(c * x)
 show_trace(newton())
 ```
 
-This went spectacularly wrong. How can we fix it? One way would be to "fix" the Hessian by taking its absolute value instead. Another strategy is to bring back the learning rate. This seems to defeat the purpose, but not quite. Having second order information allows us to be cautious whenever the curvature is large and to take longer steps whenever the objective is flat. Let us see how this works with a slightly smaller learning rate, say $\eta = 0.5$. As we can see, we have quite an efficient algorithm.
+Isso deu espetacularmente errado. Como podemos arranjá-lo? Uma maneira seria "consertar" o Hessian tomando seu valor absoluto. Outra estratégia é trazer de volta a taxa de aprendizado. Isso parece anular o propósito, mas não totalmente. Ter informações de segunda ordem permite-nos ser cautelosos sempre que a curvatura for grande e dar passos mais longos sempre que a objetiva for plana. Vamos ver como isso funciona com uma taxa de aprendizado um pouco menor, digamos $\eta = 0.5$. Como podemos ver, temos um algoritmo bastante eficiente.
 
 ```{.python .input}
 #@tab all
 show_trace(newton(0.5))
 ```
 
-### Convergence Analysis
+### Análise de Convergência
 
 We only analyze the convergence rate for convex and three times differentiable $f$, where at its minimum $x^*$ the second derivative is nonzero, i.e., where $f''(x^*) > 0$. The multivariate proof is a straightforward extension of the argument below and omitted since it doesn't help us much in terms of intuition.
 
 Denote by $x_k$ the value of $x$ at the $k$-th iteration and let $e_k := x_k - x^*$ be the distance from optimality. By Taylor series expansion we have that the condition $f'(x^*) = 0$ can be written as
+
+Analisamos apenas a taxa de convergência para $ f $ convexa e três vezes diferenciável, onde em seu mínimo $ x ^ * $ a segunda derivada é diferente de zero, ou seja, onde $ f '' (x ^ *)> 0 $. A prova multivariada é uma extensão direta do argumento abaixo e omitida por não nos ajudar muito em termos de intuição.
+
+Denote por $x_k$ o valor de $x$ na $k$-ésima iteração e seja $e_k: = x_k - x ^ *$ a distância da otimização. Pela expansão da série de Taylor, temos que a condição $f'(x ^ *) = 0$ pode ser escrita como
 
 $$0 = f'(x_k - e_k) = f'(x_k) - e_k f''(x_k) + \frac{1}{2} e_k^2 f'''(\xi_k).$$
 
@@ -288,5 +292,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NzE3MzE4NiwtOTA3NDM2MzIxXX0=
+eyJoaXN0b3J5IjpbMTYzNDA3MjYyOSwtOTA3NDM2MzIxXX0=
 -->
