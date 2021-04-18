@@ -203,7 +203,7 @@ Como vimos, a otimização para aprendizado profundo está cheia de desafios. Fe
 * O desaparecimento de gradientes pode causar o travamento da otimização. Frequentemente, uma reparametrização do problema ajuda. Uma boa inicialização dos parâmetros também pode ser benéfica.
 
 
-## Exerci
+## Exercícios
 
 1. Consider a simple MLP with a single hidden layer of, say, $d$ dimensions in the hidden layer and a single output. Show that for any local minimum there are at least $d!$ equivalent solutions that behave identically.
 1. Assume that we have a symmetric random matrix $\mathbf{M}$ where the entries
@@ -215,7 +215,19 @@ Como vimos, a otimização para aprendizado profundo está cheia de desafios. Fe
 1. What other challenges involved in deep learning optimization can you think of?
 1. Assume that you want to balance a (real) ball on a (real) saddle.
     1. Why is this hard?
-    1. Can you exploit this effect also for optimization algorithms?
+    2. Can you exploit this effect also for optimization algorithms?
+
+1. Considere um MLP simples com uma única camada oculta de, digamos, $d$ dimensões na camada oculta e uma única saída. Mostre que, para qualquer mínimo local, existem pelo menos $d!$ Soluções equivalentes que se comportam de forma idêntica.
+1. Suponha que temos uma matriz aleatória simétrica $\mathbf{M}$ onde as entradas
+   $M_{ij} = M_{ji}$ são, cada um, extraídos de alguma distribuição de probabilidade
+   $p_{ij}$. Além disso, assuma que $p_{ij}(x) = p_{ij}(-x)$, ou seja, que o
+   a distribuição é simétrica (consulte, por exemplo :cite:`Wigner.1958` para obter detalhes).
+    1. Prove que a distribuição sobre os autovalores também é simétrica. Ou seja, para qualquer autovetor $\mathbf{v}$ a probabilidade de que o autovalor associado $ \ lambda $ satisfaça $ P (\ lambda> 0) = P (\ lambda <0) $.
+    1. Por que o acima *não* implica $ P (\ lambda> 0) = 0,5 $?
+1. Em que outros desafios envolvidos na otimização do aprendizado profundo você consegue pensar?
+1. Suponha que você deseja equilibrar uma bola (real) em uma sela (real).
+    1. Por que isso é difícil?
+    1. Você pode explorar esse efeito também para algoritmos de otimização?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/349)
@@ -229,6 +241,6 @@ Como vimos, a otimização para aprendizado profundo está cheia de desafios. Fe
 [Discussions](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzg3NDk5OTQsMjgyMTM2NTM0LC0xMD
-MxMTg5NDZdfQ==
+eyJoaXN0b3J5IjpbMTUzODgyNDg2NSwyODIxMzY1MzQsLTEwMz
+ExODk0Nl19
 -->
