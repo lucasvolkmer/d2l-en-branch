@@ -262,26 +262,25 @@ $$\begin{aligned} &f(\lambda \mathbf{x} + (1-\lambda) \mathbf{y})\\
 =& \lambda f(\mathbf{x}) + (1-\lambda) g(\mathbf{y}).
 \end{aligned}$$
 
-
-Finally,
-using the lemma above and the result of the one-dimensional case,
-the multi-dimensional case
-can be proven as follows.
-A multi-dimensional function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is convex
-if and only if for all $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$ $g(z) \stackrel{\mathrm{def}}{=} f(z \mathbf{x} + (1-z)  \mathbf{y})$, where $z \in [0,1]$,
-is convex.
-According to the one-dimensional case,
-this holds if and only if
+Finalmente,
+usando o lema acima e o resultado do caso unidimensional,
+o caso multi-dimensional
+pode ser comprovado da seguinte forma.
+Uma função multidimensional $f: \mathbb{R}^n \rightarrow \mathbb{R}$ é convexa
+se e somente se para todos $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$ $g(z) \stackrel{\mathrm{def}}{=} f(z \mathbf{x} + (1-z)  \mathbf{y})$, onde $z \in [0,1]$,
+é convexo.
+De acordo com o caso unidimensional,
+isso vale se e somente se
 $g'' = (\mathbf{x} - \mathbf{y})^\top \mathbf{H}(\mathbf{x} - \mathbf{y}) \geq 0$ ($\mathbf{H} \stackrel{\mathrm{def}}{=} \nabla^2f$)
-for all $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$,
-which is equivalent to $\mathbf{H} \succeq 0$
-per the definition of positive semidefinite matrices.
+para todo $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$,
+que é equivalente a $\mathbf{H} \succeq 0$
+de acordo com a definição de matrizes semidefinidas positivas.
 
 
 
-## Constraints
+## Restrições
 
-One of the nice properties of convex optimization is that it allows us to handle constraints efficiently. That is, it allows us to solve problems of the form:
+Uma das boas propriedades da otimização convexa é que ela nos permite lidar com as restrições de maneira eficiente. Ou seja, permite-nos resolver problemas da forma:
 
 $$\begin{aligned} \mathop{\mathrm{minimize~}}_{\mathbf{x}} & f(\mathbf{x}) \\
     \text{ subject to } & c_i(\mathbf{x}) \leq 0 \text{ for all } i \in \{1, \ldots, N\}.
@@ -289,7 +288,7 @@ $$\begin{aligned} \mathop{\mathrm{minimize~}}_{\mathbf{x}} & f(\mathbf{x}) \\
 
 Here $f$ is the objective and the functions $c_i$ are constraint functions. To see what this does consider the case where $c_1(\mathbf{x}) = \|\mathbf{x}\|_2 - 1$. In this case the parameters $\mathbf{x}$ are constrained to the unit ball. If a second constraint is $c_2(\mathbf{x}) = \mathbf{v}^\top \mathbf{x} + b$, then this corresponds to all $\mathbf{x}$ lying on a halfspace. Satisfying both constraints simultaneously amounts to selecting a slice of a ball as the constraint set.
 
-### Lagrange Function
+### Função de Lagrange 
 
 In general, solving a constrained optimization problem is difficult. One way of addressing it stems from physics with a rather simple intuition. Imagine a ball inside a box. The ball will roll to the place that is lowest and the forces of gravity will be balanced out with the forces that the sides of the box can impose on the ball. In short, the gradient of the objective function (i.e., gravity) will be offset by the gradient of the constraint function (need to remain inside the box by virtue of the walls "pushing back"). Note that any constraint that is not active (i.e., the ball does not touch the wall) will not be able to exert any force on the ball.
 
@@ -354,6 +353,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM1NzQyMjI0LC0xNjI4NjU3NTc4LC0xNz
-g5MDkyOTQ5LC0yMTQ2MzAyMzldfQ==
+eyJoaXN0b3J5IjpbLTE1MjkzMTcyMTAsLTE2Mjg2NTc1NzgsLT
+E3ODkwOTI5NDksLTIxNDYzMDIzOV19
 -->
