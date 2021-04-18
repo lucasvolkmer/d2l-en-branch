@@ -10,13 +10,13 @@ A descida gradiente em uma dimensão é um excelente exemplo para explicar por q
 $$f(x + \epsilon) = f(x) + \epsilon f'(x) + \mathcal{O}(\epsilon^2).$$
 :eqlabel:`gd-taylor`
 
-That is, in first approximation $f(x+\epsilon)$ is given by the function value $f(x)$ and the first derivative $f'(x)$ at $x$. It is not unreasonable to assume that for small $\epsilon$ moving in the direction of the negative gradient will decrease $f$. To keep things simple we pick a fixed step size $\eta > 0$ and choose $\epsilon = -\eta f'(x)$. Plugging this into the Taylor expansion above we get
-
-Ou seja, na primeira aproximação $ f (x + \ epsilon) $ é dado pelo valor da função $ f (x) $ e a primeira derivada $ f '(x) $ em $ x $. Não é irracional supor que, para pequenos $ \ epsilon $ movendo-se na direção do gradiente negativo, $ f $ diminuirá. Para manter as coisas simples, escolhemos um tamanho de passo fixo $ \ eta> 0 $ e escolhemos $ \ epsilon = - \ eta f '(x) $. Conectando isso à expansão Taylor acima, obtemos
+Ou seja, na primeira aproximação $f(x+\epsilon)$ é dado pelo valor da função $f(x)$ e a primeira derivada $f'(x)$ em $x$. Não é irracional supor que, para pequenos $\epsilon$ movendo-se na direção do gradiente negativo, $f$ diminuirá. Para manter as coisas simples, escolhemos um tamanho de passo fixo $\eta > 0$ e escolhemos $\epsilon = -\eta f'(x)$. Conectando isso à expansão Taylor acima, obtemos
 
 $$f(x - \eta f'(x)) = f(x) - \eta f'^2(x) + \mathcal{O}(\eta^2 f'^2(x)).$$
 
 If the derivative $f'(x) \neq 0$ does not vanish we make progress since $\eta f'^2(x)>0$. Moreover, we can always choose $\eta$ small enough for the higher order terms to become irrelevant. Hence we arrive at
+
+Se a derivada $f'(x) \neq 0$ não desaparecer, fazemos progresso, pois $\eta f'^2(x)>0$. Além disso, podemos sempre escolher $ \ eta $ pequeno o suficiente para que os termos de ordem superior se tornem irrelevantes. Daí chegamos a
 
 $$f(x - \eta f'(x)) \lessapprox f(x).$$
 
@@ -290,5 +290,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTI4MDM5MCwtOTA3NDM2MzIxXX0=
+eyJoaXN0b3J5IjpbMTk0ODYyOTk4MSwtOTA3NDM2MzIxXX0=
 -->
