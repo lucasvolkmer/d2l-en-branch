@@ -211,31 +211,22 @@ Uma vez que a segunda derivada é dada pelo limite sobre diferenças finitas, se
 
 $$f''(x) = \lim_{\epsilon \to 0} \frac{f(x+\epsilon) + f(x - \epsilon) - 2f(x)}{\epsilon^2} \geq 0.$$
 
-To see that 
-$f'' \geq 0$ implies that $f$ is convex
-we use the fact that $f'' \geq 0$ implies that $f'$ is a monotonically nondecreasing function. Let $a < x < b$ be three points in $\mathbb{R}$,
-where $x = (1-\lambda)a + \lambda b$ and $\lambda \in (0, 1)$.
-According to the mean value theorem,
-there exist $\alpha \in [a, x]$ and $\beta \in [x, b]$
-such that
-
 Para ver isso
 $f'' \geq 0$ implica que $f$ é convexo
 usamos o fato de que $f'' \geq 0$ implica que $f'$ é uma função monotonicamente não decrescente. Sejam $a < x < b$ três pontos em $\mathbb{R}$,
-onde $x = (1-\lambda)a + \lambda b$ and $\lambda \in (0, 1)$.
+onde $x = (1-\lambda)a + \lambda b$ e $\lambda \in (0, 1)$.
 De acordo com o teorema do valor médio,
-existem $ \ alpha \ in [a, x] $ e $ \ beta \ in [x, b] $
+existem $\alpha \in [a, x]$ e $\beta \in [x, b]$
 de tal modo que
 
 $$f'(\alpha) = \frac{f(x) - f(a)}{x-a} \text{ and } f'(\beta) = \frac{f(b) - f(x)}{b-x}.$$
 
-
-By monotonicity $f'(\beta) \geq f'(\alpha)$, hence
+Por monotonicidade  $f'(\beta) \geq f'(\alpha)$, por isso
 
 $$\frac{x-a}{b-a}f(b) + \frac{b-x}{b-a}f(a) \geq f(x).$$
 
-Since $x = (1-\lambda)a + \lambda b$,
-we have
+De $x = (1-\lambda)a + \lambda b$,
+temos
 
 $$\lambda f(b) + (1-\lambda)f(a) \geq f((1-\lambda)a + \lambda b),$$
 
@@ -363,6 +354,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MzM3MzcyNywtMTc4OTA5Mjk0OSwtMj
-E0NjMwMjM5XX0=
+eyJoaXN0b3J5IjpbLTE2Mjg2NTc1NzgsLTE3ODkwOTI5NDksLT
+IxNDYzMDIzOV19
 -->
