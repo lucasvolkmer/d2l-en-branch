@@ -134,24 +134,13 @@ Considere uma função convexa $f$ definida em um conjunto convexo $\mathcal{X}$
 Suponha que $x^{\ast} \in \mathcal{X}$ seja um mínimo local:
 existe um pequeno valor positivo $p$ de forma que para $x \in \mathcal{X}$ que satisfaz $0 < |x - x^{\ast}| \leq p$ temos $f(x^{\ast}) < f(x)$.
 
-Assume that the local minimum $x^{\ast}$
-is not the global minumum of $f$:
-there exists $x' \in \mathcal{X}$ for which $f(x') < f(x^{\ast})$. 
-There also exists 
-$\lambda \in [0, 1)$ such as $\lambda = 1 - \frac{p}{|x^{\ast} - x'|}$
-so that
-$0 < |\lambda x^{\ast} + (1-\lambda) x' - x^{\ast}| \leq p$. 
-
-However,
-according to the definition of convex functions, we have
-
 Suponha que o mínimo local $x^{\ast}$
 não é o mínimo global de $f$:
-existe $ x '\ in \ mathcal {X} $ para o qual $ f (x') <f (x ^ {\ ast}) $.
+existe $x' \in \mathcal{X}$ para o qual $f(x') < f(x^{\ast})$. 
 Também existe
-$ \ lambda \ in [0, 1) $ como $ \ lambda = 1 - \ frac {p} {| x ^ {\ ast} - x '|} $
+$\lambda \in [0, 1)$ como $\lambda = 1 - \frac{p}{|x^{\ast} - x'|}$
 de modo a
-$ 0 <| \ lambda x ^ {\ ast} + (1- \ lambda) x '- x ^ {\ ast} | \ leq p $.
+$0 < |\lambda x^{\ast} + (1-\lambda) x' - x^{\ast}| \leq p$. 
 
 Contudo,
 de acordo com a definição de funções convexas, temos
@@ -166,6 +155,11 @@ which contradicts with our statement that $x^{\ast}$ is a local minimum.
 Therefore, there does not exist $x' \in \mathcal{X}$ for which $f(x') < f(x^{\ast})$. The local minimum $x^{\ast}$ is also the global minimum.
 
 For instance, the convex function $f(x) = (x-1)^2$ has a local minimum at $x=1$, which is also the global minimum.
+
+o que contradiz nossa afirmação de que $x^{\ast}$ é um mínimo local.
+Portanto, não existe $x' \in \mathcal{X}$ para o qual $f(x') < f(x^{\ast})$. O mínimo local $x^{\ast}$ também é o mínimo global.
+
+Por exemplo, a função convexa $ f (x) = (x-1) ^ 2 $ tem um mínimo local em $ x = 1 $, que também é o mínimo global.
 
 ```{.python .input}
 #@tab all
@@ -367,6 +361,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MjE3MjIyNCwtMTc4OTA5Mjk0OSwtMj
-E0NjMwMjM5XX0=
+eyJoaXN0b3J5IjpbMzY4NzY3Njc5LC0xNzg5MDkyOTQ5LC0yMT
+Q2MzAyMzldfQ==
 -->
