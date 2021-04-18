@@ -246,13 +246,19 @@ $$\|\mathbf{w}_{0} - \mathbf{w}^*\|^2 \geq 2 \sum_{t=1}^T \eta_t [E[R[\mathbf{w}
 
 Note that we exploited that $\mathbf{w}_0$ is given and thus the expectation can be dropped. Last define
 
+Observe que exploramos que $ \ mathbf {w} _0 $ é dado e, portanto, a expectativa pode ser descartada. Última definição
+
 $$\bar{\mathbf{w}} := \frac{\sum_{t=1}^T \eta_t \mathbf{w}_t}{\sum_{t=1}^T \eta_t}.$$
 
 Then by convexity it follows that
 
+Então, por convexidade, segue-se que
+
 $$\sum_t \eta_t E[R[\mathbf{w}_t]] \geq \sum \eta_t \cdot \left[E[\bar{\mathbf{w}}]\right].$$
 
 Plugging this into the above inequality yields the bound
+
+Conectar isso à desigualdade acima produz o limite
 
 $$
 \left[E[\bar{\mathbf{w}}]\right] - R^* \leq \frac{r^2 + L^2 \sum_{t=1}^T \eta_t^2}{2 \sum_{t=1}^T \eta_t}.
@@ -260,20 +266,33 @@ $$
 
 Here $r^2 := \|\mathbf{w}_0 - \mathbf{w}^*\|^2$ is a bound on the distance between the initial choice of parameters and the final outcome. In short, the speed of convergence depends on how rapidly the loss function changes via the Lipschitz constant $L$ and how far away from optimality the initial value is $r$. Note that the bound is in terms of $\bar{\mathbf{w}}$ rather than $\mathbf{w}_T$. This is the case since $\bar{\mathbf{w}}$ is a smoothed version of the optimization path. Now let us analyze some choices for $\eta_t$.
 
+Aqui $ r ^ 2: = \ | \ mathbf {w} _0 - \ mathbf {w} ^ * \ | ^ 2 $ é um limite na distância entre a escolha inicial dos parâmetros e o resultado final. Em suma, a velocidade de convergência depende de quão rapidamente a função de perda muda por meio da constante de Lipschitz $ L $ e quão longe da otimização o valor inicial está $ r $. Observe que o limite é em termos de $ \ bar {\ mathbf {w}} $ em vez de $ \ mathbf {w} _T $. Este é o caso, pois $ \ bar {\ mathbf {w}} $ é uma versão suavizada do caminho de otimização. Agora vamos analisar algumas opções para $ \ eta_t $.
+
 * **Known Time Horizon**. Whenever $r, L$ and $T$ are known we can pick $\eta = r/L \sqrt{T}$. This yields as upper bound $r L (1 + 1/T)/2\sqrt{T} < rL/\sqrt{T}$. That is, we converge with rate $\mathcal{O}(1/\sqrt{T})$ to the optimal solution.
 * **Unknown Time Horizon**. Whenever we want to have a good solution for *any* time $T$ we can pick $\eta = \mathcal{O}(1/\sqrt{T})$. This costs us an extra logarithmic factor and it leads to an upper bound of the form $\mathcal{O}(\log T / \sqrt{T})$.
 
+* ** Horizonte de tempo conhecido **. Sempre que $ r, L $ e $ T $ são conhecidos, podemos escolher $ \ eta = r / L \ sqrt {T} $. Isso resulta no limite superior $ r L (1 + 1 / T) / 2 \ sqrt {T} <rL / \ sqrt {T} $. Ou seja, convergimos com a taxa $ \ mathcal {O} (1 / \ sqrt {T}) $ para a solução ótima.
+* ** Horizonte de tempo desconhecido **. Sempre que quisermos ter uma boa solução para * a qualquer * momento $ T $, podemos escolher $ \ eta = \ mathcal {O} (1 / \ sqrt {T}) $. Isso nos custa um fator logarítmico extra e leva a um limite superior da forma $ \ mathcal {O} (\ log T / \ sqrt {T}) $.
+
 Note that for strongly convex losses $l(\mathbf{x}, \mathbf{w}') \geq l(\mathbf{x}, \mathbf{w}) + \langle \mathbf{w}'-\mathbf{w}, \partial_\mathbf{w} l(\mathbf{x}, \mathbf{w}) \rangle + \frac{\lambda}{2} \|\mathbf{w}-\mathbf{w}'\|^2$ we can design even more rapidly converging optimization schedules. In fact, an exponential decay in $\eta$ leads to a bound of the form $\mathcal{O}(\log T / T)$.
 
-## Stochastic Gradients and Finite Samples
+Observe que para perdas fortemente convexas $ l (\ mathbf {x}, \ mathbf {w} ') \ geq l (\ mathbf {x}, \ mathbf {w}) + \ langle \ mathbf {w}' - \ mathbf {w}, \ partial_ \ mathbf {w} l (\ mathbf {x}, \ mathbf {w}) \ rangle + \ frac {\ lambda} {2} \ | \ mathbf {w} - \ mathbf {w} '\ | ^ 2 $ podemos projetar agendas de otimização convergentes ainda mais rapidamente. Na verdade, um declínio exponencial em $ \ eta $ leva a um limite da forma $ \ mathcal {O} (\ log T / T) $.
+
+## Gradientes estocásticos e amostras finitas
 
 So far we have played a bit fast and loose when it comes to talking about stochastic gradient descent. We posited that we draw instances $x_i$, typically with labels $y_i$ from some distribution $p(x, y)$ and that we use this to update the weights $w$ in some manner. In particular, for a finite sample size we simply argued that the discrete distribution $p(x, y) = \frac{1}{n} \sum_{i=1}^n \delta_{x_i}(x) \delta_{y_i}(y)$ allows us to perform SGD over it.
 
+Até agora, fomos um pouco rápidos e soltos quando se trata de falar sobre a descida gradiente estocástica. Postulamos que desenhamos instâncias $ x_i $, normalmente com rótulos $ y_i $ de alguma distribuição $ p (x, y) $ e que usamos isso para atualizar os pesos $ w $ de alguma maneira. Em particular, para um tamanho de amostra finito, simplesmente argumentamos que a distribuição discreta $ p (x, y) = \ frac {1} {n} \ sum_ {i = 1} ^ n \ delta_ {x_i} (x) \ delta_ {y_i} (y) $ nos permite realizar SGD sobre ele.
+
 However, this is not really what we did. In the toy examples in the current section we simply added noise to an otherwise non-stochastic gradient, i.e., we pretended to have pairs $(x_i, y_i)$. It turns out that this is justified here (see the exercises for a detailed discussion). More troubling is that in all previous discussions we clearly did not do this. Instead we iterated over all instances exactly once. To see why this is preferable consider the converse, namely that we are sampling $n$ observations from the discrete distribution with replacement. The probability of choosing an element $i$ at random is $N^{-1}$. Thus to choose it at least once is
+
+No entanto, não foi exatamente isso que fizemos. Nos exemplos de brinquedos na seção atual, simplesmente adicionamos ruído a um gradiente não estocástico, ou seja, fingimos ter pares $ (x_i, y_i) $. Acontece que isso se justifica aqui (veja os exercícios para uma discussão detalhada). Mais preocupante é que em todas as discussões anteriores claramente não fizemos isso. Em vez disso, iteramos em todas as instâncias exatamente uma vez. Para ver por que isso é preferível, considere o inverso, ou seja, estamos amostrando $ n $ observações da distribuição discreta com substituição. A probabilidade de escolher um elemento $ i $ aleatoriamente é $ N ^ {- 1} $. Portanto, escolher pelo menos uma vez é
 
 $$P(\mathrm{choose~} i) = 1 - P(\mathrm{omit~} i) = 1 - (1-N^{-1})^N \approx 1-e^{-1} \approx 0.63.$$
 
 A similar reasoning shows that the probability of picking a sample exactly once is given by ${N \choose 1} N^{-1} (1-N^{-1})^{N-1} = \frac{N-1}{N} (1-N^{-1})^{N} \approx e^{-1} \approx 0.37$. This leads to an increased variance and decreased data efficiency relative to sampling without replacement. Hence, in practice we perform the latter (and this is the default choice throughout this book). Last note that repeated passes through the dataset traverse it in a *different* random order.
+
+Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exatamente uma vez é dada por $ {N \ choose 1} N ^ {- 1} (1-N ^ {- 1}) ^ {N-1} = \ frac {N -1} {N} (1-N ^ {- 1}) ^ {N} \ approx e ^ {- 1} \ approx 0,37 $. Isso leva a um aumento da variância e diminuição da eficiência dos dados em relação à amostragem sem reposição. Portanto, na prática, fazemos o último (e esta é a escolha padrão em todo este livro). Por último, observe que passagens repetidas pelo conjunto de dados percorrem-no em uma ordem aleatória * diferente *.
 
 
 ## Summary
@@ -307,5 +326,5 @@ A similar reasoning shows that the probability of picking a sample exactly once 
 [Discussions](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDE5NjQwNDRdfQ==
+eyJoaXN0b3J5IjpbNjE4MDA3NjZdfQ==
 -->
