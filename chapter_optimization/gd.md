@@ -129,9 +129,7 @@ Em outras palavras, até os termos de segunda ordem em $\mathbf{\epsilon}$, a di
 
 $$\mathbf{x} \leftarrow \mathbf{x} - \eta \nabla f(\mathbf{x}).$$
 
-To see how the algorithm behaves in practice let us construct an objective function $f(\mathbf{x})=x_1^2+2x_2^2$ with a two-dimensional vector $\mathbf{x} = [x_1, x_2]^\top$ as input and a scalar as output. The gradient is given by $\nabla f(\mathbf{x}) = [2x_1, 4x_2]^\top$. We will observe the trajectory of $\mathbf{x}$ by gradient descent from the initial position $[-5, -2]$. We need two more helper functions. The first uses an update function and applies it $20$ times to the initial value. The second helper visualizes the trajectory of $\mathbf{x}$.
-
-Para ver como o algoritmo se comporta na prática, vamos construir uma função objetivo $f(\mathbf{x})=x_1^2+2x_2^2$ com um vetor bidimensional $\mathbf{x} = [x_1, x_2]^\top$ como entrada e um escalar como saída. O gradiente é dado por $ \ nabla f (\ mathbf {x}) = [2x_1, 4x_2] ^ \ top $. Observaremos a trajetória de $\mathbf{x}$ por gradiente descendente a partir da posição inicial $ [- 5, -2] $. Precisamos de mais duas funções auxiliares. O primeiro usa uma função de atualização e aplica $ 20 $ vezes ao valor inicial. O segundo auxiliar visualiza a trajetória de $\mathbf{x}$.
+Para ver como o algoritmo se comporta na prática, vamos construir uma função objetivo $f(\mathbf{x})=x_1^2+2x_2^2$ com um vetor bidimensional $\mathbf{x} = [x_1, x_2]^\top$ como entrada e um escalar como saída. O gradiente é dado por $ \ nabla f (\ mathbf {x}) = [2x_1, 4x_2] ^ \ top $. Observaremos a trajetória de $\mathbf{x}$ por gradiente descendente a partir da posição inicial $[-5, -2]$. Precisamos de mais duas funções auxiliares. O primeiro usa uma função de atualização e aplica $ 20 $ vezes ao valor inicial. O segundo auxiliar visualiza a trajetória de $\mathbf{x}$.
 
 ```{.python .input}
 #@tab all
@@ -157,7 +155,7 @@ def show_trace_2d(f, results):  #@save
     d2l.plt.ylabel('x2')
 ```
 
-Next, we observe the trajectory of the optimization variable $\mathbf{x}$ for learning rate $\eta = 0.1$. We can see that after 20 steps the value of $\mathbf{x}$ approaches its minimum at $[0, 0]$. Progress is fairly well-behaved albeit rather slow.
+A seguir, observamos a trajetória da variável de otimização $\mathbf{x}$ para a taxa de aprendizagem $\eta = 0.1$. Podemos ver que após 20 passos o valor de $\mathbf{x}$ se aproxima de seu mínimo em $[0, 0]$. O progresso é bastante bem comportado, embora bastante lento.
 
 ```{.python .input}
 #@tab all
@@ -172,9 +170,9 @@ eta = 0.1
 show_trace_2d(f, train_2d(gd))
 ```
 
-## Adaptive Methods
+## Métodos Adaptativos
 
-As we could see in :numref:`section_gd-learningrate`, getting the learning rate $\eta$ "just right" is tricky. If we pick it too small, we make no progress. If we pick it too large, the solution oscillates and in the worst case it might even diverge. What if we could determine $\eta$ automatically or get rid of having to select a step size at all? Second order methods that look not only at the value and gradient of the objective but also at its *curvature* can help in this case. While these methods cannot be applied to deep learning directly due to the computational cost, they provide useful intuition into how to design advanced optimization algorithms that mimic many of the desirable properties of the algorithms outlined below.
+Como pudemos ver em :numref:`section_gd-learningrate`, obter a taxa de aprendizado $\eta $" na medida certa "é complicado. Se o pegarmos muito pequeno, não faremos progresso. Se o escolhermos muito grande, a solução oscila e, no pior dos casos, pode até divergir. E se pudéssemos determinar $ \ eta $ automaticamente ou nos livrarmos da necessidade de selecionar um tamanho de passo? Métodos de segunda ordem que olham não apenas para o valor e gradiente da objetiva, mas também para sua * curvatura * podem ajudar neste caso. Embora esses métodos não possam ser aplicados ao aprendizado profundo diretamente devido ao custo computacional, eles fornecem intuição útil sobre como projetar algoritmos de otimização avançados que imitam muitas das propriedades desejáveis dos algoritmos descritos abaixo.
 
 
 ### Newton's Method
@@ -290,5 +288,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MTA0ODcxMCwtOTA3NDM2MzIxXX0=
+eyJoaXN0b3J5IjpbMTM1MjYyNjIzNCwtOTA3NDM2MzIxXX0=
 -->
