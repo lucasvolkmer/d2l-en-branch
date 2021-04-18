@@ -1,16 +1,18 @@
-# Gradient Descent
+# Gradiente descendente
 :label:`sec_gd`
 
-In this section we are going to introduce the basic concepts underlying gradient descent. This is brief by necessity. See e.g., :cite:`Boyd.Vandenberghe.2004` for an in-depth introduction to convex optimization. Although the latter is rarely used directly in deep learning, an understanding of gradient descent is key to understanding stochastic gradient descent algorithms. For instance, the optimization problem might diverge due to an overly large learning rate. This phenomenon can already be seen in gradient descent. Likewise, preconditioning is a common technique in gradient descent and carries over to more advanced algorithms. Let us start with a simple special case.
+Nesta seção, apresentaremos os conceitos básicos da descida gradiente. Isso é breve por necessidade. Veja, por exemplo, :cite:`Boyd.Vandenberghe.2004` para uma introdução detalhada à otimização convexa. Embora o último raramente seja usado diretamente no aprendizado profundo, uma compreensão da descida gradiente é a chave para entender os algoritmos de descida gradiente estocásticos. Por exemplo, o problema de otimização pode divergir devido a uma taxa de aprendizado excessivamente grande. Este fenômeno já pode ser visto na descida do gradiente. Da mesma forma, o pré-condicionamento é uma técnica comum na descida de gradiente e é transportado para algoritmos mais avançados. Comecemos com um caso especial simples.
 
-## Gradient Descent in One Dimension
+## Gradiente descendente em uma dimensão
 
-Gradient descent in one dimension is an excellent example to explain why the gradient descent algorithm may reduce the value of the objective function. Consider some continuously differentiable real-valued function $f: \mathbb{R} \rightarrow \mathbb{R}$. Using a Taylor expansion (:numref:`sec_single_variable_calculus`) we obtain that
+A descida gradiente em uma dimensão é um excelente exemplo para explicar por que o algoritmo de descida gradiente pode reduzir o valor da função objetivo. Considere alguma função de valor real continuamente diferenciável $f: \mathbb{R} \rightarrow \mathbb{R}$. Usando uma expansão de Taylor (:numref:`sec_single_variable_calculus`), obtemos que
 
 $$f(x + \epsilon) = f(x) + \epsilon f'(x) + \mathcal{O}(\epsilon^2).$$
 :eqlabel:`gd-taylor`
 
 That is, in first approximation $f(x+\epsilon)$ is given by the function value $f(x)$ and the first derivative $f'(x)$ at $x$. It is not unreasonable to assume that for small $\epsilon$ moving in the direction of the negative gradient will decrease $f$. To keep things simple we pick a fixed step size $\eta > 0$ and choose $\epsilon = -\eta f'(x)$. Plugging this into the Taylor expansion above we get
+
+Ou seja, na primeira aproximação $ f (x + \ epsilon) $ é dado pelo valor da função $ f (x) $ e a primeira derivada $ f '(x) $ em $ x $. Não é irracional supor que, para pequenos $ \ epsilon $ movendo-se na direção do gradiente negativo, $ f $ diminuirá. Para manter as coisas simples, escolhemos um tamanho de passo fixo $ \ eta> 0 $ e escolhemos $ \ epsilon = - \ eta f '(x) $. Conectando isso à expansão Taylor acima, obtemos
 
 $$f(x - \eta f'(x)) = f(x) - \eta f'^2(x) + \mathcal{O}(\eta^2 f'^2(x)).$$
 
@@ -288,5 +290,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzQzNjMyMV19
+eyJoaXN0b3J5IjpbLTE3NTI4MDM5MCwtOTA3NDM2MzIxXX0=
 -->
