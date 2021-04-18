@@ -128,15 +128,16 @@ d2l.plot(x, [f(x), ], 'x', 'f(x)')
 annotate('local minimum', (-0.3, -0.25), (-0.77, -1.0))
 annotate('global minimum', (1.1, -0.95), (0.6, 0.8))
 ```
+
 A função objetivo dos modelos de aprendizado profundo geralmente tem muitos ótimos locais.
-Quando a solução numérica de um problema de otimização está próxima do ótimo local, a solução numérica obtida pela iteração final pode apenas minimizar a função objetivo * localmente *, ao invés de * globalmente *, conforme o gradiente das soluções da função objetivo se aproxima ou torna-se zero .
+Quando a solução numérica de um problema de otimização está próxima do ótimo local, a solução numérica obtida pela iteração final pode apenas minimizar a função objetivo *localmente*, ao invés de *globalmente*, conforme o gradiente das soluções da função objetivo se aproxima ou torna-se zero .
 Apenas algum grau de ruído pode derrubar o parâmetro do mínimo local. Na verdade, esta é uma das propriedades benéficas de
 descida gradiente estocástica do minibatch onde a variação natural dos gradientes sobre os minibatches é capaz de deslocar os parâmetros dos mínimos locais.
 
-### Saddle Points
+### Pontos de Sela
 
-Besides local minima, saddle points are another reason for gradients to vanish. A *saddle point* is any location where all gradients of a function vanish but which is neither a global nor a local minimum. 
-Consider the function $f(x) = x^3$. Its first and second derivative vanish for $x=0$. Optimization might stall at this point, even though it is not a minimum.
+Além dos mínimos locais, os pontos de sela são outra razão para o desaparecimento dos gradientes. Um * ponto de sela * é qualquer local onde todos os gradientes de uma função desaparecem, mas que não é um mínimo global nem local.
+Considere a função $f(x) = x^3$. Sua primeira e segunda derivadas desaparecem para $x=0$. A otimização pode parar neste ponto, embora não seja o mínimo.
 
 ```{.python .input}
 #@tab all
@@ -145,7 +146,7 @@ d2l.plot(x, [x**3], 'x', 'f(x)')
 annotate('saddle point', (0, -0.2), (-0.52, -5.0))
 ```
 
-Saddle points in higher dimensions are even more insidious, as the example below shows. Consider the function $f(x, y) = x^2 - y^2$. It has its saddle point at $(0, 0)$. This is a maximum with respect to $y$ and a minimum with respect to $x$. Moreover, it *looks* like a saddle, which is where this mathematical property got its name.
+Os pontos de sela em dimensões mais altas são ainda mais insidiosos, como mostra o exemplo abaixo. Considere a função $f(x, y) = x^2 - y^2$. Ele tem seu ponto de sela em $(0, 0)$. Este é um máximo em relação a $y$ e um mínimo em relação a $x$. Além disso, *se parece* com uma sela, que é onde essa propriedade matemática recebeu seu nome.
 
 ```{.python .input}
 #@tab all
@@ -228,5 +229,5 @@ As we saw, optimization for deep learning is full of challenges. Fortunately the
 [Discussions](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMDg2MzU2NywtMTAzMTE4OTQ2XX0=
+eyJoaXN0b3J5IjpbLTE5MDQ4OTYzMzgsLTEwMzExODk0Nl19
 -->
