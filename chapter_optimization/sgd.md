@@ -1,7 +1,7 @@
-# Stochastic Gradiente Descent
+# Gradiente Descendente Estocástico
 :label:`sec_sgd`
 
-Nesta seção, apresentaremos os princípios básicos da descida gradiente estocástica.
+Nesta seção, apresentaremos os princípios básicos da gradiente descendente estocástico.
 
 ```{.python .input}
 %matplotlib inline
@@ -27,17 +27,13 @@ import math
 import tensorflow as tf
 ```
 
-## Stochastic Gradient UpdatesAtualizações de gradiente estocástico
+## Atualizações de gradiente estocástico
 
-In deep learning, the objective function is usually the average of the loss functions for each example in the training dataset. We assume that $f_i(\mathbf{x})$ is the loss function of the training dataset with $n$ examples, an index of $i$, and parameter vector of $\mathbf{x}$, then we have the objective function
-
-No aprendizado profundo, a função objetivo é geralmente a média das funções de perda para cada exemplo no conjunto de dados de treinamento. Assumimos que $ f_i (\ mathbf {x}) $ é a função de perda do conjunto de dados de treinamento com $ n $ exemplos, um índice de $ i $ e um vetor de parâmetro de $ \ mathbf {x} $, então temos o função objetiva
+No aprendizado profundo, a função objetivo é geralmente a média das funções de perda para cada exemplo no conjunto de dados de treinamento. Assumimos que $f_i(\mathbf{x})$ é a função de perda do conjunto de dados de treinamento com $n$ exemplos, um índice de $i$ e um vetor de parâmetro de $\mathbf{x}$, então temos o função objetiva
 
 $$f(\mathbf{x}) = \frac{1}{n} \sum_{i = 1}^n f_i(\mathbf{x}).$$
 
-The gradient of the objective function at $\mathbf{x}$ is computed as
-
-O gradiente da função objetivo em $ \ mathbf {x} $ é calculado como
+O gradiente da função objetivo em $\mathbf{x}$ é calculado como
 
 $$\nabla f(\mathbf{x}) = \frac{1}{n} \sum_{i = 1}^n \nabla f_i(\mathbf{x}).$$
 
@@ -338,5 +334,5 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MzA1MTE0MF19
+eyJoaXN0b3J5IjpbLTI3NTc2MDgwOV19
 -->
