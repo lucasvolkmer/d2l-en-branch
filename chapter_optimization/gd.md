@@ -88,23 +88,21 @@ show_trace(res)
 ### Taxa de Aprendizagem
 :label:`section_gd-learningrate`
 
-The learning rate $\eta$ can be set by the algorithm designer. If we use a learning rate that is too small, it will cause $x$ to update very slowly, requiring more iterations to get a better solution. To show what happens in such a case, consider the progress in the same optimization problem for $\eta = 0.05$. As we can see, even after 10 steps we are still very far from the optimal solution.
-
-A taxa de aprendizagem $\eta$ pode ser definida pelo designer do algoritmo. Se usarmos uma taxa de aprendizado muito pequena, a atualização de $x$ será muito lenta, exigindo mais iterações para obter uma solução melhor. Para mostrar o que acontece nesse caso, considere o progresso no mesmo problema de otimização para $\eta = 0,05 $. Como podemos ver, mesmo após 10 passos ainda estamos muito longe da solução ótima.
+A taxa de aprendizagem $\eta$ pode ser definida pelo designer do algoritmo. Se usarmos uma taxa de aprendizado muito pequena, a atualização de $x$ será muito lenta, exigindo mais iterações para obter uma solução melhor. Para mostrar o que acontece nesse caso, considere o progresso no mesmo problema de otimização para $\eta = 0,05$. Como podemos ver, mesmo após 10 passos ainda estamos muito longe da solução ótima.
 
 ```{.python .input}
 #@tab all
 show_trace(gd(0.05))
 ```
 
-Conversely, if we use an excessively high learning rate, $\left|\eta f'(x)\right|$ might be too large for the first-order Taylor expansion formula. That is, the term $\mathcal{O}(\eta^2 f'^2(x))$ in :eqref:`gd-taylor` might become significant. In this case, we cannot guarantee that the iteration of $x$ will be able to lower the value of $f(x)$. For example, when we set the learning rate to $\eta=1.1$, $x$ overshoots the optimal solution $x=0$ and gradually diverges.
+Por outro lado, se usarmos uma taxa de aprendizado excessivamente alta, $\left|\eta f'(x)\right|$ pode ser muito grande para a fórmula de expansão de Taylor de primeira ordem. Ou seja, o termo $\mathcal{O}(\eta^2 f'^2(x))$ in :eqref:`gd-taylor` pode se tornar significativo. Nesse caso, não podemos garantir que a iteração de $x$ será capaz de diminuir o valor de $f(x)$. Por exemplo, quando definimos a taxa de aprendizagem para $\eta=1.1$, $x$ ultrapassa a solução ótima $x=0$ e diverge gradualmente.
 
 ```{.python .input}
 #@tab all
 show_trace(gd(1.1))
 ```
 
-### Local Minima
+### Minimo Local
 
 To illustrate what happens for nonconvex functions consider the case of $f(x) = x \cdot \cos c x$. This function has infinitely many local minima. Depending on our choice of learning rate and depending on how well conditioned the problem is, we may end up with one of many solutions. The example below illustrates how an (unrealistically) high learning rate will lead to a poor local minimum.
 
@@ -290,5 +288,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3Njg0MjE4NCwtOTA3NDM2MzIxXX0=
+eyJoaXN0b3J5IjpbLTE1NTE1NzIzNzYsLTkwNzQzNjMyMV19
 -->
