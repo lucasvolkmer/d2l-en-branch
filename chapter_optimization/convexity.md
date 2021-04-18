@@ -358,3 +358,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 
 [Discussions](https://discuss.d2l.ai/t/350)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIxNDYzMDIzOV19
+-->
