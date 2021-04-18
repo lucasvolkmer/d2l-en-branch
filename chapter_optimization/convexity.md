@@ -298,6 +298,8 @@ $$L(\mathbf{x},\alpha) = f(\mathbf{x}) + \sum_i \alpha_i c_i(\mathbf{x}) \text{ 
 
 Here the variables $\alpha_i$ are the so-called *Lagrange Multipliers* that ensure that a constraint is properly enforced. They are chosen just large enough to ensure that $c_i(\mathbf{x}) \leq 0$ for all $i$. For instance, for any $\mathbf{x}$ for which $c_i(\mathbf{x}) < 0$ naturally, we'd end up picking $\alpha_i = 0$. Moreover, this is a *saddlepoint* optimization problem where one wants to *maximize* $L$ with respect to $\alpha$ and simultaneously *minimize* it with respect to $\mathbf{x}$. There is a rich body of literature explaining how to arrive at the function $L(\mathbf{x}, \alpha)$. For our purposes it is sufficient to know that the saddlepoint of $L$ is where the original constrained optimization problem is solved optimally.
 
+Aqui, as variáveis $\alpha_i$ são os chamados *Multiplicadores de Lagrange* que garantem que uma restrição seja devidamente aplicada. Eles são escolhidos apenas grandes o suficiente para garantir que $ c_i (\ mathbf {x}) \ leq 0 $ para todos os $ i $. Por exemplo, para qualquer $ \ mathbf {x} $ para o qual $ c_i (\ mathbf {x}) <0 $ naturalmente, acabaríamos escolhendo $ \ alpha_i = 0 $. Além disso, este é um problema de otimização *ponto de sela* em que se deseja *maximizar* $L$ em relação a $\alpha$ e simultaneamente *minimizá-lo* em relação a $ \ mathbf {x} $. Existe uma vasta literatura explicando como chegar à função $L(\mathbf{x}, \alpha)$. Para nossos propósitos, é suficiente saber que o ponto de sela de $L$ é onde o problema de otimização restrito original é resolvido de forma otimizada.
+
 ### Penalties
 
 One way of satisfying constrained optimization problems at least approximately is to adapt the Lagrange function $L$. Rather than satisfying $c_i(\mathbf{x}) \leq 0$ we simply add $\alpha_i c_i(\mathbf{x})$ to the objective function $f(x)$. This ensures that the constraints will not be violated too badly.
@@ -353,6 +355,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTcxNTU0NDgsLTg2MTA4MTA4NCwtMT
-YyODY1NzU3OCwtMTc4OTA5Mjk0OSwtMjE0NjMwMjM5XX0=
+eyJoaXN0b3J5IjpbMTc0MTEyMTE1NywtODYxMDgxMDg0LC0xNj
+I4NjU3NTc4LC0xNzg5MDkyOTQ5LC0yMTQ2MzAyMzldfQ==
 -->
