@@ -288,6 +288,8 @@ $$\begin{aligned} \mathop{\mathrm{minimize~}}_{\mathbf{x}} & f(\mathbf{x}) \\
 
 Here $f$ is the objective and the functions $c_i$ are constraint functions. To see what this does consider the case where $c_1(\mathbf{x}) = \|\mathbf{x}\|_2 - 1$. In this case the parameters $\mathbf{x}$ are constrained to the unit ball. If a second constraint is $c_2(\mathbf{x}) = \mathbf{v}^\top \mathbf{x} + b$, then this corresponds to all $\mathbf{x}$ lying on a halfspace. Satisfying both constraints simultaneously amounts to selecting a slice of a ball as the constraint set.
 
+Aqui $ f $ é o objetivo e as funções $ c_i $ são funções de restrição. Para ver o que isso faz, considere o caso em que $ c_1 (\ mathbf {x}) = \ | \ mathbf {x} \ | _2 - 1 $. Neste caso, os parâmetros $ \ mathbf {x} $ são restritos à bola unitária. Se uma segunda restrição é $ c_2 (\ mathbf {x}) = \ mathbf {v} ^ \ top \ mathbf {x} + b $, então isso corresponde a todos $ \ mathbf {x} $ em um meio-espaço. Satisfazer as duas restrições simultaneamente significa selecionar uma fatia de uma bola como o conjunto de restrições.
+
 ### Função de Lagrange 
 
 In general, solving a constrained optimization problem is difficult. One way of addressing it stems from physics with a rather simple intuition. Imagine a ball inside a box. The ball will roll to the place that is lowest and the forces of gravity will be balanced out with the forces that the sides of the box can impose on the ball. In short, the gradient of the objective function (i.e., gravity) will be offset by the gradient of the constraint function (need to remain inside the box by virtue of the walls "pushing back"). Note that any constraint that is not active (i.e., the ball does not touch the wall) will not be able to exert any force on the ball.
@@ -353,6 +355,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjkzMTcyMTAsLTE2Mjg2NTc1NzgsLT
-E3ODkwOTI5NDksLTIxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbLTg2MTA4MTA4NCwtMTYyODY1NzU3OCwtMT
+c4OTA5Mjk0OSwtMjE0NjMwMjM5XX0=
 -->
