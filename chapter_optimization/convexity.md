@@ -318,22 +318,22 @@ $$\mathrm{Proj}_\mathcal{X}(\mathbf{x}) = \mathop{\mathrm{argmin}}_{\mathbf{x}' 
 
 Portanto, é o ponto mais próximo em $\mathcal{X}$ para $\mathbf{x}$. Isso soa um pouco abstrato.  :numref:`fig_projections` explica um pouco mais claramente. Nele temos dois conjuntos convexos, um círculo e um diamante. Os pontos dentro do conjunto (amarelo) permanecem inalterados. Pontos fora do conjunto (preto) são mapeados para o ponto mais próximo dentro do conjunto (vermelho). Enquanto para bolas de $L_2$ isso não altera a direção, este não precisa ser o caso em geral, como pode ser visto no caso do diamante.
 
-![Projetç.](../img/projections.svg)
+![Projeções convexas.](../img/projections.svg)
 :label:`fig_projections`
 
-One of the uses for convex projections is to compute sparse weight vectors. In this case we project $\mathbf{w}$ onto an $L_1$ ball (the latter is a generalized version of the diamond in the picture above).
+Um dos usos para projeções convexas é calcular vetores de peso esparsos. Neste caso, projetamos $\mathbf{w}$ em uma bola $L_1$ (a última é uma versão generalizada do diamante na imagem acima).
 
-## Summary
+## Sumário
 
-In the context of deep learning the main purpose of convex functions is to motivate optimization algorithms and help us understand them in detail. In the following we will see how gradient descent and stochastic gradient descent can be derived accordingly.
+No contexto de aprendizagem profunda, o principal objetivo das funções convexas é motivar algoritmos de otimização e nos ajudar a entendê-los em detalhes. A seguir, veremos como a descida gradiente e a descida gradiente estocástica podem ser derivadas de acordo.
 
-* Intersections of convex sets are convex. Unions are not.
-* The expectation of a convex function is larger than the convex function of an expectation (Jensen's inequality).
-* A twice-differentiable function is convex if and only if its second derivative has only nonnegative eigenvalues throughout.
-* Convex constraints can be added via the Lagrange function. In practice simply add them with a penalty to the objective function.
-* Projections map to points in the (convex) set closest to the original point.
+* As interseções de conjuntos convexos são convexas. Os sindicatos não.
+* A expectativa de uma função convexa é maior do que a função convexa de uma expectativa (desigualdade de Jensen).
+* Uma função duas vezes diferenciável é convexa se, e somente se, sua segunda derivada tem apenas autovalores não negativos em toda a extensão.
+* Restrições convexas podem ser adicionadas por meio da função Lagrange. Na prática, basta adicioná-los com uma penalidade à função objetivo.
+* As projeções são mapeadas para pontos no conjunto (convexo) mais próximo do ponto original.
 
-## Exercises
+## Exercícios
 
 1. Assume that we want to verify convexity of a set by drawing all lines between points within the set and checking whether the lines are contained.
     1. Prove that it is sufficient to check only the points on the boundary.
@@ -350,9 +350,23 @@ In the context of deep learning the main purpose of convex functions is to motiv
     1. Can you find the 'right' value of $\lambda$ without a lot of trial and error?
 1. Given a convex set $\mathcal{X}$ and two vectors $\mathbf{x}$ and $\mathbf{y}$ prove that projections never increase distances, i.e., $\|\mathbf{x} - \mathbf{y}\| \geq \|\mathrm{Proj}_\mathcal{X}(\mathbf{x}) - \mathrm{Proj}_\mathcal{X}(\mathbf{y})\|$.
 
+1. Suponha que queremos verificar a convexidade de um conjunto desenhando todas as linhas entre os pontos dentro do conjunto e verificando se as linhas estão contidas.
+    1. Prove que é suficiente verificar apenas os pontos no limite.
+    1. Prove que é suficiente verificar apenas os vértices do conjunto.
+1. Denote por $\mathcal{B}_p[r] := \{\mathbf{x} | \mathbf{x} \in \mathbb{R}^d \text{ and } \|\mathbf{x}\|_p \leq r\}$  a bola de raio $ r $ usando a norma $ p $. Prove que $ \ mathcal {B} _p [r] $ é convexo para todos $ p \ geq 1 $.
+1. Dadas as funções convexas $ f $ e $ g $ mostram que $ \ mathrm {max} (f, g) $ também é convexo. Prove que $ \ mathrm {min} (f, g) $ não é convexo.
+1. Prove que a normalização da função softmax é convexa. Mais especificamente, provar a convexidade de
+    $ f (x) = \ log \ sum_i \ exp (x_i) $.
+1. Prove que os subespaços lineares são conjuntos convexos, ou seja, $ \ mathcal {X} = \ {\ mathbf {x} | \ mathbf {W} \ mathbf {x} = \ mathbf {b} \} $.
+1. Prove que no caso de subespaços lineares com $ \ mathbf {b} = 0 $ a projeção $ \ mathrm {Proj} _ \ mathcal {X} $ pode ser escrita como $ \ mathbf {M} \ mathbf {x} $ para alguma matriz $ \ mathbf {M} $.
+1. Mostre que para funções convexas duas vezes diferenciáveis ​​$ f $ podemos escrever $ f (x + \ epsilon) = f (x) + \ epsilon f '(x) + \ frac {1} {2} \ epsilon ^ 2 f '' (x + \ xi) $ para algum $ \ xi \ in [0, \ epsilon] $.
+1. Dado um vetor $ \ mathbf {w} \ in \ mathbb {R} ^ d $ com $ \ | \ mathbf {w} \ | _1> 1 $, calcule a projeção na bola unitária $ \ ell_1 $.
+    1. Como etapa intermediária, escreva o objetivo penalizado $ \ | \ mathbf {w} - \ mathbf {w} '\ | _2 ^ 2 + \ lambda \ | \ mathbf {w}' \ | _1 $ e calcule a solução para um dado $ \ lambda> 0 $.
+    1. Você consegue encontrar o valor 'certo' de $ \ lambda $ sem muitas tentativas e erros?
+1. Dado um conjunto convexo $ \ mathcal {X} $ e dois vetores $ \ mathbf {x} $ e $ \ mathbf {y} $ provam que as projeções nunca aumentam as distâncias, ou seja, $ \ | \ mathbf {x} - \ mathbf {y} \ | \ geq \ | \ mathrm {Proj} _ \ mathcal {X} (\ mathbf {x}) - \ mathrm {Proj} _ \ mathcal {X} (\ mathbf {y}) \ | $.
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDcxNzI2MjUsLTg2MTA4MTA4NCwtMT
-YyODY1NzU3OCwtMTc4OTA5Mjk0OSwtMjE0NjMwMjM5XX0=
+eyJoaXN0b3J5IjpbMTE4NTEwMjYwNCwtODYxMDgxMDg0LC0xNj
+I4NjU3NTc4LC0xNzg5MDkyOTQ5LC0yMTQ2MzAyMzldfQ==
 -->
