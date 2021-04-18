@@ -353,11 +353,11 @@ No contexto de aprendizagem profunda, o principal objetivo das funções convexa
 1. Suponha que queremos verificar a convexidade de um conjunto desenhando todas as linhas entre os pontos dentro do conjunto e verificando se as linhas estão contidas.
     1. Prove que é suficiente verificar apenas os pontos no limite.
     1. Prove que é suficiente verificar apenas os vértices do conjunto.
-1. Denote por $\mathcal{B}_p[r] := \{\mathbf{x} | \mathbf{x} \in \mathbb{R}^d \text{ and } \|\mathbf{x}\|_p \leq r\}$  a bola de raio $ r $ usando a norma $ p $. Prove que $ \ mathcal {B} _p [r] $ é convexo para todos $ p \ geq 1 $.
-1. Dadas as funções convexas $ f $ e $ g $ mostram que $ \ mathrm {max} (f, g) $ também é convexo. Prove que $ \ mathrm {min} (f, g) $ não é convexo.
+1. Denote por $\mathcal{B}_p[r] := \{\mathbf{x} | \mathbf{x} \in \mathbb{R}^d \text{ and } \|\mathbf{x}\|_p \leq r\}$  a bola de raio $r$ usando a norma $p$. Prove que $\mathcal{B}_p[r]$ é convexo para todos $p\geq 1$.
+1. Dadas as funções convexas $f$ e $g$ mostram que $\mathrm{max} (f, g)$ também é convexo. Prove que $\mathrm{min} (f, g)$ não é convexo.
 1. Prove que a normalização da função softmax é convexa. Mais especificamente, provar a convexidade de
-    $ f (x) = \ log \ sum_i \ exp (x_i) $.
-1. Prove que os subespaços lineares são conjuntos convexos, ou seja, $ \ mathcal {X} = \ {\ mathbf {x} | \ mathbf {W} \ mathbf {x} = \ mathbf {b} \} $.
+    $f(x) = \log \sum_i \exp(x_i)$.
+1. Prove que os subespaços lineares são conjuntos convexos, ou seja, $\mathcal{X} = \{\mathbf{x} | \mathbf{W} \mathbf{x} = \mathbf{b}\}$.
 1. Prove que no caso de subespaços lineares com $ \ mathbf {b} = 0 $ a projeção $ \ mathrm {Proj} _ \ mathcal {X} $ pode ser escrita como $ \ mathbf {M} \ mathbf {x} $ para alguma matriz $ \ mathbf {M} $.
 1. Mostre que para funções convexas duas vezes diferenciáveis ​​$ f $ podemos escrever $ f (x + \ epsilon) = f (x) + \ epsilon f '(x) + \ frac {1} {2} \ epsilon ^ 2 f '' (x + \ xi) $ para algum $ \ xi \ in [0, \ epsilon] $.
 1. Dado um vetor $ \ mathbf {w} \ in \ mathbb {R} ^ d $ com $ \ | \ mathbf {w} \ | _1> 1 $, calcule a projeção na bola unitária $ \ ell_1 $.
@@ -367,6 +367,6 @@ No contexto de aprendizagem profunda, o principal objetivo das funções convexa
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTEwMjYwNCwtODYxMDgxMDg0LC0xNj
+eyJoaXN0b3J5IjpbMTA2Mzg0MTg4MiwtODYxMDgxMDg0LC0xNj
 I4NjU3NTc4LC0xNzg5MDkyOTQ5LC0yMTQ2MzAyMzldfQ==
 -->
