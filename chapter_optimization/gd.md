@@ -284,10 +284,10 @@ Este algoritmo converge rapidamente (para uma análise e prova veja, por exemplo
      * Use os valores absolutos disso em vez dos valores reais (possivelmente com sinal).
      * Aplique isso ao problema acima.
 5. Aplique o algoritmo acima a uma série de funções objetivo (convexas ou não). O que acontece se você girar as coordenadas em $45$ graus?
-6. 
-[Discussions](https://discuss.d2l.ai/t/351)
+
+[Discussão](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MDE4NDgyMCwtMTk5MzQ3NDc1NiwtMT
+eyJoaXN0b3J5IjpbMTYxMzc5OTM5MywtMTk5MzQ3NDc1NiwtMT
 MxMTk3Nzg4MywtOTA3NDM2MzIxXX0=
 -->
