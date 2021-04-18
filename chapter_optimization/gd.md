@@ -22,13 +22,9 @@ Isso significa que, se usarmos
 
 $$x \leftarrow x - \eta f'(x)$$
 
-to iterate $x$, the value of function $f(x)$ might decline. Therefore, in gradient descent we first choose an initial value $x$ and a constant $\eta > 0$ and then use them to continuously iterate $x$ until the stop condition is reached, for example, when the magnitude of the gradient $|f'(x)|$ is small enough or the number of iterations has reached a certain value.
-
-For simplicity we choose the objective function $f(x)=x^2$ to illustrate how to implement gradient descent. Although we know that $x=0$ is the solution to minimize $f(x)$, we still use this simple function to observe how $x$ changes. As always, we begin by importing all required modules.
-
 para iterar $x$, o valor da função $f(x)$ pode diminuir. Portanto, na descida do gradiente, primeiro escolhemos um valor inicial $x$ e uma constante $\eta > 0$ e, em seguida, os usamos para iterar continuamente $x$ até que a condição de parada seja alcançada, por exemplo, quando a magnitude do gradiente $|f'(x)|$ é pequeno o suficiente ou o número de iterações atingiu um determinado valor.
 
-Para simplificar, escolhemos a função objetivo $f(x)=x^2$ para ilustrar como implementar a descida gradiente. Embora saibamos que $x=0$ é a solução para minimizar $f(x)$, ainda usamos esta função simples para observar como $ x $ muda. Como sempre, começamos importando todos os módulos necessários.
+Para simplificar, escolhemos a função objetivo $f(x)=x^2$ para ilustrar como implementar a descida gradiente. Embora saibamos que $x=0$ é a solução para minimizar $f(x)$, ainda usamos esta função simples para observar como $x$ muda. Como sempre, começamos importando todos os módulos necessários.
 
 ```{.python .input}
 %matplotlib inline
@@ -59,7 +55,7 @@ f = lambda x: x**2  # Objective function
 gradf = lambda x: 2 * x  # Its derivative
 ```
 
-Next, we use $x=10$ as the initial value and assume $\eta=0.2$. Using gradient descent to iterate $x$ for 10 times we can see that, eventually, the value of $x$ approaches the optimal solution.
+Em seguida, usamos $x=10$ como o valor inicial e assumimos $\eta=0,2$. Usando a descida gradiente para iterar $x$ por 10 vezes, podemos ver que, eventualmente, o valor de $x$ se aproxima da solução ótima.
 
 ```{.python .input}
 #@tab all
@@ -75,7 +71,7 @@ def gd(eta):
 res = gd(0.2)
 ```
 
-The progress of optimizing over $x$ can be plotted as follows.
+O progresso da otimização em $x$ pode ser traçado da seguinte maneira.
 
 ```{.python .input}
 #@tab all
@@ -89,10 +85,12 @@ def show_trace(res):
 show_trace(res)
 ```
 
-### Learning Rate
+### Taxa de Aprendizagem
 :label:`section_gd-learningrate`
 
 The learning rate $\eta$ can be set by the algorithm designer. If we use a learning rate that is too small, it will cause $x$ to update very slowly, requiring more iterations to get a better solution. To show what happens in such a case, consider the progress in the same optimization problem for $\eta = 0.05$. As we can see, even after 10 steps we are still very far from the optimal solution.
+
+A taxa de aprendizagem $\eta$ pode ser definida pelo designer do algoritmo. Se usarmos uma taxa de aprendizado muito pequena, a atualização de $x$ será muito lenta, exigindo mais iterações para obter uma solução melhor. Para mostrar o que acontece nesse caso, considere o progresso no mesmo problema de otimização para $\eta = 0,05 $. Como podemos ver, mesmo após 10 passos ainda estamos muito longe da solução ótima.
 
 ```{.python .input}
 #@tab all
@@ -292,5 +290,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMwOTYzMzMzLC05MDc0MzYzMjFdfQ==
+eyJoaXN0b3J5IjpbLTg3Njg0MjE4NCwtOTA3NDM2MzIxXX0=
 -->
