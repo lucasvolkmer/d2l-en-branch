@@ -334,22 +334,6 @@ No contexto de aprendizagem profunda, o principal objetivo das funções convexa
 * As projeções são mapeadas para pontos no conjunto (convexo) mais próximo do ponto original.
 
 ## Exercícios
-
-1. Assume that we want to verify convexity of a set by drawing all lines between points within the set and checking whether the lines are contained.
-    1. Prove that it is sufficient to check only the points on the boundary.
-    1. Prove that it is sufficient to check only the vertices of the set.
-1. Denote by $\mathcal{B}_p[r] := \{\mathbf{x} | \mathbf{x} \in \mathbb{R}^d \text{ and } \|\mathbf{x}\|_p \leq r\}$ the ball of radius $r$ using the $p$-norm. Prove that $\mathcal{B}_p[r]$ is convex for all $p \geq 1$.
-1. Given convex functions $f$ and $g$ show that $\mathrm{max}(f, g)$ is convex, too. Prove that $\mathrm{min}(f, g)$ is not convex.
-1. Prove that the normalization of the softmax function is convex. More specifically prove the convexity of
-    $f(x) = \log \sum_i \exp(x_i)$.
-1. Prove that linear subspaces are convex sets, i.e., $\mathcal{X} = \{\mathbf{x} | \mathbf{W} \mathbf{x} = \mathbf{b}\}$.
-1. Prove that in the case of linear subspaces with $\mathbf{b} = 0$ the projection $\mathrm{Proj}_\mathcal{X}$ can be written as $\mathbf{M} \mathbf{x}$ for some matrix $\mathbf{M}$.
-1. Show that for convex twice differentiable functions $f$ we can write $f(x + \epsilon) = f(x) + \epsilon f'(x) + \frac{1}{2} \epsilon^2 f''(x + \xi)$ for some $\xi \in [0, \epsilon]$.
-1. Given a vector $\mathbf{w} \in \mathbb{R}^d$ with $\|\mathbf{w}\|_1 > 1$ compute the projection on the $\ell_1$ unit ball.
-    1. As intermediate step write out the penalized objective $\|\mathbf{w} - \mathbf{w}'\|_2^2 + \lambda \|\mathbf{w}'\|_1$ and compute the solution for a given $\lambda > 0$.
-    1. Can you find the 'right' value of $\lambda$ without a lot of trial and error?
-1. Given a convex set $\mathcal{X}$ and two vectors $\mathbf{x}$ and $\mathbf{y}$ prove that projections never increase distances, i.e., $\|\mathbf{x} - \mathbf{y}\| \geq \|\mathrm{Proj}_\mathcal{X}(\mathbf{x}) - \mathrm{Proj}_\mathcal{X}(\mathbf{y})\|$.
-
 1. Suponha que queremos verificar a convexidade de um conjunto desenhando todas as linhas entre os pontos dentro do conjunto e verificando se as linhas estão contidas.
     1. Prove que é suficiente verificar apenas os pontos no limite.
     1. Prove que é suficiente verificar apenas os vértices do conjunto.
@@ -359,14 +343,14 @@ No contexto de aprendizagem profunda, o principal objetivo das funções convexa
     $f(x) = \log \sum_i \exp(x_i)$.
 1. Prove que os subespaços lineares são conjuntos convexos, ou seja, $\mathcal{X} = \{\mathbf{x} | \mathbf{W} \mathbf{x} = \mathbf{b}\}$.
 1. Prove que no caso de subespaços lineares com $\mathbf{b} = 0$ a projeção $\mathrm{Proj}_\mathcal{X}$ pode ser escrita como $\mathbf{M} \mathbf{x}$ para algumas matrizes $\mathbf{M}$.
-1. Mostre que para funções convexas duas vezes diferenciáveis ​​$f$ podemos escrever $ f (x + \ epsilon) = f (x) + \ epsilon f '(x) + \ frac {1} {2} \ epsilon ^ 2 f '' (x + \ xi) $ para algum $ \ xi \ in [0, \ epsilon] $.
-1. Dado um vetor $ \ mathbf {w} \ in \ mathbb {R} ^ d $ com $ \ | \ mathbf {w} \ | _1> 1 $, calcule a projeção na bola unitária $ \ ell_1 $.
-    1. Como etapa intermediária, escreva o objetivo penalizado $ \ | \ mathbf {w} - \ mathbf {w} '\ | _2 ^ 2 + \ lambda \ | \ mathbf {w}' \ | _1 $ e calcule a solução para um dado $\lambda > 0$.
+1. Mostre que para funções convexas duas vezes diferenciáveis ​​$f$ podemos escrever $f(x + \epsilon) = f(x) + \epsilon f'(x) + \frac{1}{2} \epsilon^2 f''(x + \xi)$ para algum $\xi \in [0, \epsilon]$.
+1. Dado um vetor $\mathbf{w} \in \mathbb{R}^d$ com $\|\mathbf{w}\|_1 > 1$, calcule a projeção na bola unitária $\ell_1$.
+    1. Como etapa intermediária, escreva o objetivo penalizado $\|\mathbf{w} - \mathbf{w}'\|_2^2 + \lambda \|\mathbf{w}'\|_1$ e calcule a solução para um dado $\lambda > 0$.
     1. Você consegue encontrar o valor 'certo' de $\lambda$ sem muitas tentativas e erros?
 1. Dado um conjunto convexo $\mathcal{X}$ e dois vetores $\mathbf{x}$ e $\mathbf{y}$ provam que as projeções nunca aumentam as distâncias, ou seja, $\|\mathbf{x} - \mathbf{y}\| \geq \|\mathrm{Proj}_\mathcal{X}(\mathbf{x}) - \mathrm{Proj}_\mathcal{X}(\mathbf{y})\|$.
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0OTQ0MzE3OSwtODYxMDgxMDg0LC0xNj
-I4NjU3NTc4LC0xNzg5MDkyOTQ5LC0yMTQ2MzAyMzldfQ==
+eyJoaXN0b3J5IjpbMzQyNjg5MzgwLC04NjEwODEwODQsLTE2Mj
+g2NTc1NzgsLTE3ODkwOTI5NDksLTIxNDYzMDIzOV19
 -->
