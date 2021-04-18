@@ -230,19 +230,19 @@ temos
 
 $$\lambda f(b) + (1-\lambda)f(a) \geq f((1-\lambda)a + \lambda b),$$
 
-thus proving convexity.
+provando assim convexidade.
 
-Second, we need a lemma before 
-proving the multi-dimensional case:
+Em segundo lugar, precisamos de um lema antes
+comprovando o caso multidimensional:
 $f: \mathbb{R}^n \rightarrow \mathbb{R}$
-is convex if and only if for all $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$
+é convexo se e somente se para todos $\mathbf{x}, \mathbf{y} \in \mathbb{R}^n$
 
 $$g(z) \stackrel{\mathrm{def}}{=} f(z \mathbf{x} + (1-z)  \mathbf{y}) \text{ where } z \in [0,1]$$ 
 
-is convex.
+é convexo.
 
-To prove that convexity of $f$ implies that $g$ is convex,
-we can show that for all $a, b, \lambda \in [0, 1]$ (thus
+Para provar que a convexidade de $f$ implica que $g$ é convexo,
+podemos mostrar que para todos $a, b, \lambda \in [0, 1]$ (portanto
 $0 \leq \lambda a + (1-\lambda) b \leq 1$)
 
 $$\begin{aligned} &g(\lambda a + (1-\lambda) b)\\
@@ -252,9 +252,9 @@ $$\begin{aligned} &g(\lambda a + (1-\lambda) b)\\
 =& \lambda g(a) + (1-\lambda) g(b).
 \end{aligned}$$
 
-To prove the converse,
-we can show that for 
-all $\lambda \in [0, 1]$ 
+Para provar o contrário,
+nós podemos mostrar isso para
+todo$\lambda \in [0, 1]$ 
 
 $$\begin{aligned} &f(\lambda \mathbf{x} + (1-\lambda) \mathbf{y})\\
 =&g(\lambda \cdot 1 + (1-\lambda) \cdot 0)\\
@@ -354,6 +354,6 @@ In the context of deep learning the main purpose of convex functions is to motiv
 
 [Discussions](https://discuss.d2l.ai/t/350)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mjg2NTc1NzgsLTE3ODkwOTI5NDksLT
-IxNDYzMDIzOV19
+eyJoaXN0b3J5IjpbMjM1NzQyMjI0LC0xNjI4NjU3NTc4LC0xNz
+g5MDkyOTQ5LC0yMTQ2MzAyMzldfQ==
 -->
