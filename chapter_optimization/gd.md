@@ -182,13 +182,9 @@ Revendo a expansão de Taylor de $f$, não há necessidade de parar após o prim
 $$f(\mathbf{x} + \mathbf{\epsilon}) = f(\mathbf{x}) + \mathbf{\epsilon}^\top \nabla f(\mathbf{x}) + \frac{1}{2} \mathbf{\epsilon}^\top \nabla \nabla^\top f(\mathbf{x}) \mathbf{\epsilon} + \mathcal{O}(\|\mathbf{\epsilon}\|^3).$$
 :eqlabel:`gd-hot-taylor`
 
-To avoid cumbersome notation we define $H_f := \nabla \nabla^\top f(\mathbf{x})$ to be the *Hessian* of $f$. This is a $d \times d$ matrix. For small $d$ and simple problems $H_f$ is easy to compute. For deep networks, on the other hand, $H_f$ may be prohibitively large, due to the cost of storing $\mathcal{O}(d^2)$ entries. Furthermore it may be too expensive to compute via backpropagation as we would need to apply backpropagation to the backpropagation call graph. For now let us ignore such considerations and look at what algorithm we'd get.
+Para evitar notações complicadas, definimos $H_f := \nabla \nabla^\top f(\mathbf{x})$ como o *Hessiano* de $f$. Esta é uma matriz $d \times d$. Para $d$ pequenos e problemas simples, $H_f$ é fácil de calcular. Para redes profundas, por outro lado, $H_f$ pode ser proibitivamente grande, devido ao custo de armazenamento de $\mathcal{O}(d^2)$ entradas. Além disso, pode ser muito caro computar por retropropagação, pois precisaríamos aplicar a retropropagação ao gráfico de chamada de retropropagação. Por enquanto, vamos ignorar essas considerações e ver que algoritmo obteríamos.
 
-After all, the minimum of $f$ satisfies $\nabla f(\mathbf{x}) = 0$. Taking derivatives of :eqref:`gd-hot-taylor` with regard to $\mathbf{\epsilon}$ and ignoring higher order terms we arrive at
-
-Para evitar notações complicadas, definimos $H_f := \nabla \nabla^\top f(\mathbf{x})$ como o *Hessiano* de $f$. Esta é uma matriz $d \times d$. Para $d$ pequenos e problemas simples, $ H_f $ é fácil de calcular. Para redes profundas, por outro lado, $ H_f $ pode ser proibitivamente grande, devido ao custo de armazenamento de $ \ mathcal {O} (d ^ 2) $ entradas. Além disso, pode ser muito caro computar por retropropagação, pois precisaríamos aplicar a retropropagação ao gráfico de chamada de retropropagação. Por enquanto, vamos ignorar essas considerações e ver que algoritmo obteríamos.
-
-Afinal, o mínimo de $ f $ satisfaz $ \ nabla f (\ mathbf {x}) = 0 $. Pegando derivados de: eqref: `gd-hot-taylor` em relação a $ \ mathbf {\ epsilon} $ e ignorando termos de ordem superior, chegamos a
+Afinal, o mínimo de $f$ satisfaz $\nabla f(\mathbf{x}) = 0$. Pegando derivados de :eqref:`gd-hot-taylor` em relação a $\mathbf{\epsilon}$ e ignorando termos de ordem superior, chegamos a
 
 $$\nabla f(\mathbf{x}) + H_f \mathbf{\epsilon} = 0 \text{ and hence }
 \mathbf{\epsilon} = -H_f^{-1} \nabla f(\mathbf{x}).$$
@@ -196,6 +192,10 @@ $$\nabla f(\mathbf{x}) + H_f \mathbf{\epsilon} = 0 \text{ and hence }
 That is, we need to invert the Hessian $H_f$ as part of the optimization problem.
 
 For $f(x) = \frac{1}{2} x^2$ we have $\nabla f(x) = x$ and $H_f = 1$. Hence for any $x$ we obtain $\epsilon = -x$. In other words, a single step is sufficient to converge perfectly without the need for any adjustment! Alas, we got a bit lucky here since the Taylor expansion was exact. Let us see what happens in other problems.
+
+Ou seja, precisamos inverter o Hessian $H_f$ como parte do problema de otimização.
+
+Para $ f (x) = \ frac {1} {2} x ^ 2 $ temos $ \ nabla f (x) = x $ e $ H_f = 1 $. Portanto, para qualquer $ x $ obtemos $ \ epsilon = -x $. Em outras palavras, um único passo é suficiente para convergir perfeitamente sem a necessidade de nenhum ajuste! Infelizmente, tivemos um pouco de sorte aqui, já que a expansão de Taylor foi exata. Vamos ver o que acontece em outros problemas.
 
 ```{.python .input}
 #@tab all
@@ -292,5 +292,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDQzNjQ0ODAsLTkwNzQzNjMyMV19
+eyJoaXN0b3J5IjpbMTI0NzA0MjEwMywtOTA3NDM2MzIxXX0=
 -->
