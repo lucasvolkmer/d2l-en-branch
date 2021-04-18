@@ -91,9 +91,10 @@ annotate('min of risk', (1.1, -1.05), (0.95, -0.5))
 ```
 
 ## Desafios de otimização em Deep Learning
+
 Neste capítulo, vamos nos concentrar especificamente no desempenho dos algoritmos de otimização para minimizar a função objetivo, ao invés de um
 erro de generalização do modelo.
-Em: numref: `sec_linear_regression`
+Em :numref: `sec_linear_regression`
 distinguimos entre soluções analíticas e soluções numéricas em
 problemas de otimização.
 No aprendizado profundo, a maioria das funções objetivas são
@@ -106,18 +107,19 @@ categoria.
 Existem muitos desafios na otimização do aprendizado profundo. Alguns dos mais irritantes são mínimos locais, pontos de sela e gradientes de desaparecimento.
 Vamos dar uma olhada neles.
 
-### Local Minima
+### Minimo Local
 
-For any objective function $f(x)$,
-if the value of $f(x)$ at $x$ is smaller than the values of $f(x)$ at any other points in the vicinity of $x$, then $f(x)$ could be a local minimum.
-If the value of $f(x)$ at $x$ is the minimum of the objective function over the entire domain,
-then $f(x)$ is the global minimum.
 
-For example, given the function
+Para qualquer função objetivo $f(x)$,
+se o valor de $f(x)$ em $x$ for menor do que os valores de $f(x)$ em quaisquer outros pontos nas proximidades de $x$, então $f(x)$ poderia ser um mínimo local .
+Se o valor de $f(x)$ em $x$ é o mínimo da função objetivo em todo o domínio,
+então $f(x)$ é o mínimo global.
+
+Por exemplo, dada a função
 
 $$f(x) = x \cdot \text{cos}(\pi x) \text{ for } -1.0 \leq x \leq 2.0,$$
 
-we can approximate the local minimum and global minimum of this function.
+podemos aproximar o mínimo local e o mínimo global desta função.
 
 ```{.python .input}
 #@tab all
@@ -126,12 +128,10 @@ d2l.plot(x, [f(x), ], 'x', 'f(x)')
 annotate('local minimum', (-0.3, -0.25), (-0.77, -1.0))
 annotate('global minimum', (1.1, -0.95), (0.6, 0.8))
 ```
-
-The objective function of deep learning models usually has many local optima. 
-When the numerical solution of an optimization problem is near the local optimum, the numerical solution obtained by the final iteration may only minimize the objective function *locally*, rather than *globally*, as the gradient of the objective function's solutions approaches or becomes zero. 
-Only some degree of noise might knock the parameter out of the local minimum. In fact, this is one of the beneficial properties of
-minibatch stochastic gradient descent where the natural variation of gradients over minibatches is able to dislodge the parameters from local minima.
-
+A função objetivo dos modelos de aprendizado profundo geralmente tem muitos ótimos locais.
+Quando a solução numérica de um problema de otimização está próxima do ótimo local, a solução numérica obtida pela iteração final pode apenas minimizar a função objetivo * localmente *, ao invés de * globalmente *, conforme o gradiente das soluções da função objetivo se aproxima ou torna-se zero .
+Apenas algum grau de ruído pode derrubar o parâmetro do mínimo local. Na verdade, esta é uma das propriedades benéficas de
+descida gradiente estocástica do minibatch onde a variação natural dos gradientes sobre os minibatches é capaz de deslocar os parâmetros dos mínimos locais.
 
 ### Saddle Points
 
@@ -228,5 +228,5 @@ As we saw, optimization for deep learning is full of challenges. Fortunately the
 [Discussions](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NTA0MzE1NiwtMTAzMTE4OTQ2XX0=
+eyJoaXN0b3J5IjpbMTYzMDg2MzU2NywtMTAzMTE4OTQ2XX0=
 -->
