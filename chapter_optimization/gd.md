@@ -172,12 +172,12 @@ show_trace_2d(f, train_2d(gd))
 
 ## Métodos Adaptativos
 
-Como pudemos ver em :numref:`section_gd-learningrate`, obter a taxa de aprendizado $\eta $" na medida certa "é complicado. Se o pegarmos muito pequeno, não faremos progresso. Se o escolhermos muito grande, a solução oscila e, no pior dos casos, pode até divergir. E se pudéssemos determinar $ \ eta $ automaticamente ou nos livrarmos da necessidade de selecionar um tamanho de passo? Métodos de segunda ordem que olham não apenas para o valor e gradiente da objetiva, mas também para sua * curvatura * podem ajudar neste caso. Embora esses métodos não possam ser aplicados ao aprendizado profundo diretamente devido ao custo computacional, eles fornecem intuição útil sobre como projetar algoritmos de otimização avançados que imitam muitas das propriedades desejáveis dos algoritmos descritos abaixo.
+Como pudemos ver em :numref:`section_gd-learningrate`, obter a taxa de aprendizado $\eta$ "na medida certa" é complicado. Se o pegarmos muito pequeno, não faremos progresso. Se o escolhermos muito grande, a solução oscila e, no pior dos casos, pode até divergir. E se pudéssemos determinar $\eta$ automaticamente ou nos livrarmos da necessidade de selecionar um tamanho de passo? Métodos de segunda ordem que olham não apenas para o valor e gradiente da objetiva, mas também para sua *curvatura* podem ajudar neste caso. Embora esses métodos não possam ser aplicados ao aprendizado profundo diretamente devido ao custo computacional, eles fornecem intuição útil sobre como projetar algoritmos de otimização avançados que imitam muitas das propriedades desejáveis dos algoritmos descritos abaixo.
 
 
-### Newton's Method
+### Método de Newton
 
-Reviewing the Taylor expansion of $f$ there is no need to stop after the first term. In fact, we can write it as
+Revendo a expansão de Taylor de $f$, não há necessidade de parar após o primeiro mandato. Na verdade, podemos escrever como
 
 $$f(\mathbf{x} + \mathbf{\epsilon}) = f(\mathbf{x}) + \mathbf{\epsilon}^\top \nabla f(\mathbf{x}) + \frac{1}{2} \mathbf{\epsilon}^\top \nabla \nabla^\top f(\mathbf{x}) \mathbf{\epsilon} + \mathcal{O}(\|\mathbf{\epsilon}\|^3).$$
 :eqlabel:`gd-hot-taylor`
@@ -185,6 +185,10 @@ $$f(\mathbf{x} + \mathbf{\epsilon}) = f(\mathbf{x}) + \mathbf{\epsilon}^\top \na
 To avoid cumbersome notation we define $H_f := \nabla \nabla^\top f(\mathbf{x})$ to be the *Hessian* of $f$. This is a $d \times d$ matrix. For small $d$ and simple problems $H_f$ is easy to compute. For deep networks, on the other hand, $H_f$ may be prohibitively large, due to the cost of storing $\mathcal{O}(d^2)$ entries. Furthermore it may be too expensive to compute via backpropagation as we would need to apply backpropagation to the backpropagation call graph. For now let us ignore such considerations and look at what algorithm we'd get.
 
 After all, the minimum of $f$ satisfies $\nabla f(\mathbf{x}) = 0$. Taking derivatives of :eqref:`gd-hot-taylor` with regard to $\mathbf{\epsilon}$ and ignoring higher order terms we arrive at
+
+Para evitar notações complicadas, definimos $H_f := \nabla \nabla^\top f(\mathbf{x})$ como o *Hessiano* de $f$. Esta é uma matriz $d \times d$. Para $d$ pequenos e problemas simples, $ H_f $ é fácil de calcular. Para redes profundas, por outro lado, $ H_f $ pode ser proibitivamente grande, devido ao custo de armazenamento de $ \ mathcal {O} (d ^ 2) $ entradas. Além disso, pode ser muito caro computar por retropropagação, pois precisaríamos aplicar a retropropagação ao gráfico de chamada de retropropagação. Por enquanto, vamos ignorar essas considerações e ver que algoritmo obteríamos.
+
+Afinal, o mínimo de $ f $ satisfaz $ \ nabla f (\ mathbf {x}) = 0 $. Pegando derivados de: eqref: `gd-hot-taylor` em relação a $ \ mathbf {\ epsilon} $ e ignorando termos de ordem superior, chegamos a
 
 $$\nabla f(\mathbf{x}) + H_f \mathbf{\epsilon} = 0 \text{ and hence }
 \mathbf{\epsilon} = -H_f^{-1} \nabla f(\mathbf{x}).$$
@@ -288,5 +292,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MjYyNjIzNCwtOTA3NDM2MzIxXX0=
+eyJoaXN0b3J5IjpbLTE0MDQzNjQ0ODAsLTkwNzQzNjMyMV19
 -->
