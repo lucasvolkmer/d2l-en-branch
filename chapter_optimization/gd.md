@@ -189,13 +189,9 @@ Afinal, o mínimo de $f$ satisfaz $\nabla f(\mathbf{x}) = 0$. Pegando derivados 
 $$\nabla f(\mathbf{x}) + H_f \mathbf{\epsilon} = 0 \text{ and hence }
 \mathbf{\epsilon} = -H_f^{-1} \nabla f(\mathbf{x}).$$
 
-That is, we need to invert the Hessian $H_f$ as part of the optimization problem.
-
-For $f(x) = \frac{1}{2} x^2$ we have $\nabla f(x) = x$ and $H_f = 1$. Hence for any $x$ we obtain $\epsilon = -x$. In other words, a single step is sufficient to converge perfectly without the need for any adjustment! Alas, we got a bit lucky here since the Taylor expansion was exact. Let us see what happens in other problems.
-
 Ou seja, precisamos inverter o Hessian $H_f$ como parte do problema de otimização.
 
-Para $ f (x) = \ frac {1} {2} x ^ 2 $ temos $ \ nabla f (x) = x $ e $ H_f = 1 $. Portanto, para qualquer $ x $ obtemos $ \ epsilon = -x $. Em outras palavras, um único passo é suficiente para convergir perfeitamente sem a necessidade de nenhum ajuste! Infelizmente, tivemos um pouco de sorte aqui, já que a expansão de Taylor foi exata. Vamos ver o que acontece em outros problemas.
+Para $f(x) = \frac{1}{2} x^2$ temos $\nabla f(x) = x$ e $H_f = 1$. Portanto, para qualquer $x$ obtemos $\epsilon = -x$. Em outras palavras, um único passo é suficiente para convergir perfeitamente sem a necessidade de nenhum ajuste! Infelizmente, tivemos um pouco de sorte aqui, já que a expansão de Taylor foi exata. Vamos ver o que acontece em outros problemas.
 
 ```{.python .input}
 #@tab all
@@ -216,7 +212,7 @@ def newton(eta=1):
 show_trace(newton())
 ```
 
-Now let us see what happens when we have a *nonconvex* function, such as $f(x) = x \cos(c x)$. After all, note that in Newton's method we end up dividing by the Hessian. This means that if the second derivative is *negative* we would walk into the direction of *increasing* $f$. That is a fatal flaw of the algorithm. Let us see what happens in practice.
+Agora vamos ver o que acontece quando temos uma função *não convexa*, como $f(x) = x \cos(c x)$. Afinal, observe que no método de Newton acabamos nos dividindo pelo Hessiano. Isso significa que se a segunda derivada for *negativa*, caminharíamos na direção de *aumentar* $f$. Essa é uma falha fatal do algoritmo. Vamos ver o que acontece na prática.
 
 ```{.python .input}
 #@tab all
@@ -292,5 +288,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NzA0MjEwMywtOTA3NDM2MzIxXX0=
+eyJoaXN0b3J5IjpbLTU3NzE3MzE4NiwtOTA3NDM2MzIxXX0=
 -->
