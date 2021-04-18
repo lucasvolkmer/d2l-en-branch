@@ -237,9 +237,9 @@ We only analyze the convergence rate for convex and three times differentiable $
 
 Denote by $x_k$ the value of $x$ at the $k$-th iteration and let $e_k := x_k - x^*$ be the distance from optimality. By Taylor series expansion we have that the condition $f'(x^*) = 0$ can be written as
 
-Analisamos apenas a taxa de convergência para $ f $ convexa e três vezes diferenciável, onde em seu mínimo $ x ^ * $ a segunda derivada é diferente de zero, ou seja, onde $ f '' (x ^ *)> 0 $. A prova multivariada é uma extensão direta do argumento abaixo e omitida por não nos ajudar muito em termos de intuição.
+Analisamos apenas a taxa de convergência para $ f $ convexa e três vezes diferenciável, onde em seu mínimo $ x ^ * $ a segunda derivada é diferente de zero, ou seja, onde $f''(x^ *)> 0$. A prova multivariada é uma extensão direta do argumento abaixo e omitida por não nos ajudar muito em termos de intuição.
 
-Denote por $x_k$ o valor de $x$ na $k$-ésima iteração e seja $e_k: = x_k - x ^ *$ a distância da otimização. Pela expansão da série de Taylor, temos que a condição $f'(x ^ *) = 0$ pode ser escrita como
+Denote por $x_k$ o valor de $x$ na $k$-ésima iteração e seja $e_k:= x_k - x^*$ a distância da otimização. Pela expansão da série de Taylor, temos que a condição $f'(x^*) = 0$ pode ser escrita como
 
 $$0 = f'(x_k - e_k) = f'(x_k) - e_k f''(x_k) + \frac{1}{2} e_k^2 f'''(\xi_k).$$
 
@@ -292,5 +292,5 @@ This algorithm converges rapidly (for an analysis and proof see e.g., :cite:`Boy
 [Discussions](https://discuss.d2l.ai/t/351)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNDA3MjYyOSwtOTA3NDM2MzIxXX0=
+eyJoaXN0b3J5IjpbLTE5NzQ2NTI5ODEsLTkwNzQzNjMyMV19
 -->
