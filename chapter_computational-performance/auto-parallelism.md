@@ -2,10 +2,12 @@
 :label:`sec_auto_para`
 
 :begin_tab:`mxnet`
-MXNet automatically constructs computational graphs at the backend. Using a
-computational graph, the system is aware of all the dependencies,
-and can selectively execute multiple non-interdependent tasks in parallel to
-improve speed. For instance, :numref:`fig_asyncgraph` in :numref:`sec_async` initializes two variables independently. Consequently the system can choose to execute them in parallel.
+O MXNet constrói automatically constructmente gráficos computatcional graphs at the is no *back-end*. Using a
+ando um
+gráfico computatcional graph, the, o syistem is aware of all thea está ciente de todas as dependeêncieas,
+and cane pode executar selectively execute multiple non-amente várias tarefas não interdependent tasks ines em parallel to
+improve speedo para
+melhorar a velocidade. FPor instanceexemplo, :numref:`fig_asyncgraph` inem :numref:`sec_async` initcializes twoa duas variableáveis independentlyemente. Consequently theemente, o syistem can choose to execute them ina pode optar por executá-las em parallelo.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -208,5 +210,5 @@ We conclude with an illustration of the computational graph and its dependencies
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NDUwMzcxM119
+eyJoaXN0b3J5IjpbLTM3NjEyNTA1MiwxODQ0NTAzNzEzXX0=
 -->
