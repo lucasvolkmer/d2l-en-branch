@@ -211,3 +211,6 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 
 [Discussions](https://discuss.d2l.ai/t/363)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjQyOTQ5MzEyXX0=
+-->
