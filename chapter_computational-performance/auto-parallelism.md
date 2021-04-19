@@ -31,7 +31,7 @@ import torch
 
 ## Computação Paralela em GPUs
 
-Let us start by defining a reference workload to test - the `run` function below performs 10 matrix-matrix multiplications on the device of our choosing using data allocated into two variables, `x_gpu1` and `x_gpu2`.
+Vamos começar definindo uma carga de trabalho de referência para testar - a função `run` abaixo realiza 10 multiplicações matriz-matriz no dispositivo de nossa escolha usando dados alocados em duas variáveis,` x_gpu1` e `x_gpu2`.
 
 ```{.python .input}
 devices = d2l.try_all_gpus()
@@ -54,11 +54,11 @@ x_gpu2 = torch.rand(size=(4000, 4000), device=devices[1])
 
 
 :begin_tab:`mxnet`
-Now we apply the function to the data. To ensure that caching does not play a role in the results we warm up the devices by performing a single pass on each of them prior to measuring.
+Agora aplicamos a função aos dados. Para garantir que o cache não desempenhe um papel nos resultados, aquecemos os dispositivos realizando uma única passagem em cada um deles antes da medição.
 :end_tab:
 
 :begin_tab:`pytorch`
-Now we apply the function to the data. To ensure that caching does not play a role in the results we warm up the devices by performing a single pass on each of them prior to measuring. `torch.cuda.synchronize()` waits for all kernels in all streams on a CUDA device to complete. It takes in a `device` argument, the device for which we need to synchronize. It uses the current device, given by `current_device()`, if the device argument is `None` (default).
+Agora aplicamos a função aos dados. Para garantir que o cache não desempenhe um papel nos resultados, aquecemos os dispositivos realizando uma única passagem em cada um deles antes da medição. `torch.cuda.synchronize ()` espera que todos os kernels em todos os streams em um dispositivo CUDA sejam concluídos. Ele recebe um argumento `device`, o dispositivo para o qual precisamos sincronizar. Ele usa o dispositivo atual, fornecido por `current_device ()`, se o argumento do dispositivo for `None` (padrão).
 :end_tab:
 
 
@@ -93,7 +93,7 @@ with d2l.Benchmark('GPU 2 time'):
 ```
 
 :begin_tab:`mxnet`
-If we remove the `waitall()` between both tasks the system is free to parallelize computation on both devices automatically.
+Se removermos o `waitall ()` entre as duas tarefas, o sistema fica livre para paralelizar a computação em ambos os dispositivos automaticamente.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -207,5 +207,5 @@ We conclude with an illustration of the computational graph and its dependencies
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk1OTM4NTQ1LDE4NDQ1MDM3MTNdfQ==
+eyJoaXN0b3J5IjpbMTMxODUyNDM3MSwxODQ0NTAzNzEzXX0=
 -->
