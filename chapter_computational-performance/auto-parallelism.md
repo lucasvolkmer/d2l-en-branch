@@ -2,7 +2,7 @@
 :label:`sec_auto_para`
 
 :begin_tab:`mxnet`
-O MXNet constrói automatically constructmente gráficos computatcional graphs at the is no *back-end*. Using a
+O MXNet constrói automaticamente gráficos computatcional graphs at the is no *back-end*. Using a
 ando um
 gráfico computatcional graph, the, o syistem is aware of all thea está ciente de todas as dependeêncieas,
 and cane pode executar selectively execute multiple non-amente várias tarefas não interdependent tasks ines em parallel to
@@ -209,6 +209,6 @@ Concluímos com uma ilustração do gráfico computacional e suas dependências 
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTk3Nzk1MSwtMTU4NTQxNzAwLDE4ND
+eyJoaXN0b3J5IjpbMTU5ODA0MjU3MSwtMTU4NTQxNzAwLDE4ND
 Q1MDM3MTNdfQ==
 -->
