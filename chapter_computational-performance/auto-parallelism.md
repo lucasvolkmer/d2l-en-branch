@@ -178,15 +178,16 @@ with d2l.Benchmark('Run on GPU1 and copy to CPU'):
     torch.cuda.synchronize()
 ```
 
-The total time required for both operations is (as expected) significantly less than the sum of their parts. Note that this task is different from parallel computation as it uses a different resource: the bus between CPU and GPUs. In fact, we could compute on both devices and communicate, all at the same time. As noted above, there is a dependency between computation and communication: `y[i]` must be computed before it can be copied to the CPU. Fortunately, the system can copy `y[i-1]` while computing `y[i]` to reduce the total running time.
 
-We conclude with an illustration of the computational graph and its dependencies for a simple two-layer MLP when training on a CPU and two GPUs, as depicted in :numref:`fig_twogpu`. It would be quite painful to schedule the parallel program resulting from this manually. This is where it is advantageous to have a graph based compute backend for optimization.
+O tempo total necessário para ambas as operações é (conforme esperado) significativamente menor do que a soma de suas partes. Observe que essa tarefa é diferente da computação paralela, pois usa um recurso diferente: o barramento entre a CPU e as GPUs. Na verdade, poderíamos computar em ambos os dispositivos e nos comunicar, tudo ao mesmo tempo. Como observado acima, há uma dependência entre computação e comunicação: `y[i]` deve ser calculado antes que possa ser copiado para a CPU. Felizmente, o sistema pode copiar `y[i-1]` enquanto calcula `y[i]` para reduzir o tempo total de execução.
 
-![Two layer MLP on a CPU and 2 GPUs.](../img/twogpu.svg)
+Concluímos com uma ilustração do gráfico computacional e suas dependências para um MLP simples de duas camadas ao treinar em uma CPU e duas GPUs, conforme descrito em :numref:`fig_twogpu`. Seria muito doloroso agendar o programa paralelo resultante disso manualmente. É aqui que é vantajoso ter um *back-end* de computação baseado em gráfico para otimização.
+
+![MLP de duas camadas em uma CPU e 2 GPUs.](../img/twogpu.svg)
 :label:`fig_twogpu`
 
 
-## Summary
+## Resu
 
 * Modern systems have a variety of devices, such as multiple GPUs and CPUs. They can be used in parallel, asynchronously. 
 * Modern systems also have a variety of resources for communication, such as PCI Express, storage (typically SSD or via network), and network bandwidth. They can be used in parallel for peak efficiency. 
@@ -208,5 +209,6 @@ We conclude with an illustration of the computational graph and its dependencies
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODU0MTcwMCwxODQ0NTAzNzEzXX0=
+eyJoaXN0b3J5IjpbMTU4NjExNTgxMywtMTU4NTQxNzAwLDE4ND
+Q1MDM3MTNdfQ==
 -->
