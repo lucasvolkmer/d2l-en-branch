@@ -11,10 +11,7 @@ melhorar a velocidade. FPor instanceexemplo, :numref:`fig_asyncgraph` inem :numr
 :end_tab:
 
 :begin_tab:`pytorch`
-PyTorch automatically constructs computational graphs at the backend. Using a
-computational graph, the system is aware of all the dependencies,
-and can selectively execute multiple non-interdependent tasks in parallel to
-improve speed. For instance, :numref:`fig_asyncgraph` in :numref:`sec_async` initializes two variables independently. Consequently the system can choose to execute them in parallel.
+O PyTorch constrói automaticamente gráficos computacionais no *back-end*. Usando um gráfico computacional, o sistema está ciente de todas as dependências e pode executar seletivamente várias tarefas não interdependentes em paralelo para melhorar a velocidade. Por exemplo, :numref:`fig_asyncgraph` em :numref:`sec_async` inicializa duas variáveis independentemente. Consequentemente, o sistema pode optar por executá-las em paralelo.
 :end_tab:
 
 Typically, a single operator will use all the computational resources on all CPUs or on a single GPU. For example, the `dot` operator will use all cores (and threads) on all CPUs, even if there are multiple CPU processors on a single machine. The same applies to a single GPU. Hence parallelization is not quite so useful single-device computers. With multiple devices things matter more. While parallelization is typically most relevant between multiple GPUs, adding the local CPU will increase performance slightly. See e.g., :cite:`Hadjis.Zhang.Mitliagkas.ea.2016` for a paper that focuses on training computer vision models combining a GPU and a CPU. With the convenience of an automatically parallelizing framework we can accomplish the same goal in a few lines of Python code. More broadly, our discussion of automatic parallel computation focuses on parallel computation using both CPUs and GPUs, as well as the parallelization of computation and communication.
@@ -210,5 +207,5 @@ We conclude with an illustration of the computational graph and its dependencies
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NjEyNTA1MiwxODQ0NTAzNzEzXX0=
+eyJoaXN0b3J5IjpbMTMzMjU3NDg0NCwxODQ0NTAzNzEzXX0=
 -->
