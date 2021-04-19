@@ -187,13 +187,13 @@ Concluímos com uma ilustração do gráfico computacional e suas dependências 
 :label:`fig_twogpu`
 
 
-## Resu
+## Resumo
 
-* Modern systems have a variety of devices, such as multiple GPUs and CPUs. They can be used in parallel, asynchronously. 
-* Modern systems also have a variety of resources for communication, such as PCI Express, storage (typically SSD or via network), and network bandwidth. They can be used in parallel for peak efficiency. 
-* The backend can improve performance through through automatic parallel computation and communication. 
+* Os sistemas modernos têm uma variedade de dispositivos, como várias GPUs e CPUs. Eles podem ser usados em paralelo, de forma assíncrona.
+* Os sistemas modernos também possuem uma variedade de recursos para comunicação, como PCI Express, armazenamento (normalmente SSD ou via rede) e largura de banda da rede. Eles podem ser usados em paralelo para eficiência máxima.
+* O *back-end* pode melhorar o desempenho por meio de comunicação e computação paralela automática.
 
-## Exercises
+## Exercícios
 
 1. 10 operations were performed in the `run` function defined in this section. There are no dependencies between them. Design an experiment to see if MXNet will automatically execute them in parallel.
 1. When the workload of an individual operator is sufficiently small, parallelization can help even on a single CPU or GPU. Design an experiment to verify this. 
@@ -209,6 +209,6 @@ Concluímos com uma ilustração do gráfico computacional e suas dependências 
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NjExNTgxMywtMTU4NTQxNzAwLDE4ND
+eyJoaXN0b3J5IjpbMTQ5MTI0NDkzMSwtMTU4NTQxNzAwLDE4ND
 Q1MDM3MTNdfQ==
 -->
