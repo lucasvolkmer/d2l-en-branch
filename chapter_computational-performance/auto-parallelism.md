@@ -97,7 +97,7 @@ Se removermos o `waitall ()` entre as duas tarefas, o sistema fica livre para pa
 :end_tab:
 
 :begin_tab:`pytorch`
-If we remove the `torch.cuda.synchronize()` between both tasks the system is free to parallelize computation on both devices automatically.
+Se removermos `torch.cuda.synchronize ()` entre as duas tarefas, o sistema fica livre para paralelizar a computação em ambos os dispositivos automaticamente.
 :end_tab:
 
 ```{.python .input}
@@ -116,15 +116,16 @@ with d2l.Benchmark('GPU1 & GPU2'):
 ```
 
 :begin_tab:`mxnet`
-In the above case the total execution time is less than the sum of its parts, since MXNet automatically schedules computation on both GPU devices without the need for sophisticated code on behalf of the user.
+No caso acima, o tempo total de execução é menor que a soma de suas partes, uma vez que o MXNet programa automaticamente a computação em ambos os dispositivos GPU sem a necessidade de um código sofisticado em nome do usuário.
 :end_tab:
 
 :begin_tab:`pytorch`
-In the above case the total execution time is less than the sum of its parts, since PyTorch automatically schedules computation on both GPU devices without the need for sophisticated code on behalf of the user.
+No caso acima, o tempo total de execução é menor que a soma de suas partes, uma vez que o PyTorch programa automaticamente a computação em ambos os dispositivos GPU sem a necessidade de um código sofisticado em nome do usuário.
 :end_tab:
 
-## Parallel Computation and Communication
-In many cases we need to move data between different devices, say between CPU and GPU, or between different GPUs. This occurs e.g., when we want to perform distributed optimization where we need to aggregate the gradients over multiple accelerator cards. Let us simulate this by computing on the GPU and then copying the results back to the CPU.
+## Computação Paralela e Comunicação
+
+Em muitos casos, precisamos mover dados entre diferentes dispositivos, digamos, entre CPU e GPU, ou entre diferentes GPUs. Isso ocorre, por exemplo, quando queremos realizar a otimização distribuída onde precisamos agregar os gradientes em vários cartões aceleradores. Vamos simular isso computando na GPU e copiando os resultados de volta para a CPU.
 
 ```{.python .input}
 def copy_to_cpu(x):
@@ -154,7 +155,7 @@ with d2l.Benchmark('Copy to CPU'):
 ```
 
 :begin_tab:`mxnet`
-This is somewhat inefficient. Note that we could already start copying parts of `y` to the CPU while the remainder of the list is still being computed. This situation occurs, e.g., when we compute the (backprop) gradient on a minibatch. The gradients of some of the parameters will be available earlier than that of others. Hence it works to our advantage to start using PCI-Express bus bandwidth while the GPU is still running. Removing `waitall` between both parts allows us to simulate this scenario.
+Isso é um tanto ineficiente. Observe que já podemos começar a copiar partes de `y` para a CPU enquanto o restante da lista ainda está sendo calculado. Essa situação ocorre, por exemplo, quando calculamos o gradiente (*backprop*) em um minibatch. Os gradientes de alguns dos parâmetros estarão disponíveis antes dos outros. Portanto, é vantajoso começar a usar a largura de banda do barramento PCI-Express enquanto a GPU ainda está em execução. Remover `waitall` entre as duas partes nos permite simular este cenário.
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -207,5 +208,5 @@ We conclude with an illustration of the computational graph and its dependencies
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxODUyNDM3MSwxODQ0NTAzNzEzXX0=
+eyJoaXN0b3J5IjpbLTEyMjQ5NzYwMTksMTg0NDUwMzcxM119
 -->
