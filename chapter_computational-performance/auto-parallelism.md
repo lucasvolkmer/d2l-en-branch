@@ -159,7 +159,7 @@ Isso é um tanto ineficiente. Observe que já podemos começar a copiar partes d
 :end_tab:
 
 :begin_tab:`pytorch`
-This is somewhat inefficient. Note that we could already start copying parts of `y` to the CPU while the remainder of the list is still being computed. This situation occurs, e.g., when we compute the (backprop) gradient on a minibatch. The gradients of some of the parameters will be available earlier than that of others. Hence it works to our advantage to start using PCI-Express bus bandwidth while the GPU is still running. In PyTorch, several functions such as `to()` and `copy_()` admit an explicit `non_blocking` argument, which lets the caller bypass synchronization when it is unnecessary. Setting `non_blocking=True` allows us to simulate this scenario.
+Isso é um tanto ineficiente. Observe que já podemos começar a copiar partes de `y` para a CPU enquanto o restante da lista ainda está sendo calculado. Essa situação ocorre, por exemplo, quando calculamos o gradiente (*backprop*) em um minibatch. Os gradientes de alguns dos parâmetros estarão disponíveis antes dos outros. Portanto, é vantajoso começar a usar a largura de banda do barramento PCI-Express enquanto a GPU ainda está em execução. No PyTorch, várias funções como `to()` e `copy_()` admitem um argumento `non_blocking` explícito, que permite ao chamador ignorar a sincronização quando ela é desnecessária. Definir `non_blocking = True` nos permite simular este cenário.
 :end_tab:
 
 
@@ -208,5 +208,5 @@ We conclude with an illustration of the computational graph and its dependencies
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjQ5NzYwMTksMTg0NDUwMzcxM119
+eyJoaXN0b3J5IjpbLTE1ODU0MTcwMCwxODQ0NTAzNzEzXX0=
 -->
