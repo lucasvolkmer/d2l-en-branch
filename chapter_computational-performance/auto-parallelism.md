@@ -14,8 +14,8 @@ melhorar a velocidade. FPor instanceexemplo, :numref:`fig_asyncgraph` inem :numr
 O PyTorch constrói automaticamente gráficos computacionais no *back-end*. Usando um gráfico computacional, o sistema está ciente de todas as dependências e pode executar seletivamente várias tarefas não interdependentes em paralelo para melhorar a velocidade. Por exemplo, :numref:`fig_asyncgraph` em :numref:`sec_async` inicializa duas variáveis independentemente. Consequentemente, o sistema pode optar por executá-las em paralelo.
 :end_tab:
 
-Typically, a single operator will use all the computational resources on all CPUs or on a single GPU. For example, the `dot` operator will use all cores (and threads) on all CPUs, even if there are multiple CPU processors on a single machine. The same applies to a single GPU. Hence parallelization is not quite so useful single-device computers. With multiple devices things matter more. While parallelization is typically most relevant between multiple GPUs, adding the local CPU will increase performance slightly. See e.g., :cite:`Hadjis.Zhang.Mitliagkas.ea.2016` for a paper that focuses on training computer vision models combining a GPU and a CPU. With the convenience of an automatically parallelizing framework we can accomplish the same goal in a few lines of Python code. More broadly, our discussion of automatic parallel computation focuses on parallel computation using both CPUs and GPUs, as well as the parallelization of computation and communication.
-We begin by importing the required packages and modules. Note that we need at least two GPUs to run the experiments in this section.
+Normalmente, um único operador usará todos os recursos computacionais em todas as CPUs ou em uma única GPU. Por exemplo, o operador `dot` usará todos os núcleos (e threads) em todas as CPUs, mesmo se houver vários processadores de CPU em uma única máquina. O mesmo se aplica a uma única GPU. Consequentemente, a paralelização não é tão útil em computadores de dispositivo único. Com vários dispositivos, as coisas são mais importantes. Embora a paralelização seja normalmente mais relevante entre várias GPUs, adicionar a CPU local aumentará um pouco o desempenho. Veja, por exemplo, :cite:`Hadjis.Zhang.Mitliagkas.ea.2016` para um artigo que se concentra no treinamento de modelos de visão computacional combinando uma GPU e uma CPU. Com a conveniência de uma estrutura de paralelização automática, podemos atingir o mesmo objetivo em algumas linhas de código Python. De forma mais ampla, nossa discussão sobre computação paralela automática concentra-se na computação paralela usando CPUs e GPUs, bem como a paralelização de computação e comunicação.
+Começamos importando os pacotes e módulos necessários. Observe que precisamos de pelo menos duas GPUs para executar os experimentos nesta seção.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -29,7 +29,7 @@ from d2l import torch as d2l
 import torch
 ```
 
-## Parallel Computation on GPUs
+## Computação Paralela em GPUs
 
 Let us start by defining a reference workload to test - the `run` function below performs 10 matrix-matrix multiplications on the device of our choosing using data allocated into two variables, `x_gpu1` and `x_gpu2`.
 
@@ -207,5 +207,5 @@ We conclude with an illustration of the computational graph and its dependencies
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMjU3NDg0NCwxODQ0NTAzNzEzXX0=
+eyJoaXN0b3J5IjpbNjk1OTM4NTQ1LDE4NDQ1MDM3MTNdfQ==
 -->
