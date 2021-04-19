@@ -195,11 +195,11 @@ Concluímos com uma ilustração do gráfico computacional e suas dependências 
 
 ## Exercícios
 
-1. 10 operations were performed in the `run` function defined in this section. There are no dependencies between them. Design an experiment to see if MXNet will automatically execute them in parallel.
-1. When the workload of an individual operator is sufficiently small, parallelization can help even on a single CPU or GPU. Design an experiment to verify this. 
-1. Design an experiment that uses parallel computation on CPU, GPU and communication between both devices.
-1. Use a debugger such as NVIDIA's Nsight to verify that your code is efficient. 
-1. Designing computation tasks that include more complex data dependencies, and run experiments to see if you can obtain the correct results while improving performance.
+1. 10 operações foram realizadas na função `run` definida nesta seção. Não há dependências entre eles. Projete um experimento para ver se o MXNet irá executá-los automaticamente em paralelo.
+1. Quando a carga de trabalho de um operador individual é suficientemente pequena, a paralelização pode ajudar até mesmo em uma única CPU ou GPU. Projete um experimento para verificar isso.
+1. Projete um experimento que use computação paralela na CPU, GPU e comunicação entre os dois dispositivos.
+1. Use um depurador como o Nsight da NVIDIA para verificar se o seu código é eficiente.
+1. Projetar tarefas de computação que incluem dependências de dados mais complexas e executar experimentos para ver se você pode obter os resultados corretos enquanto melhora o desempenho.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/362)
@@ -209,6 +209,6 @@ Concluímos com uma ilustração do gráfico computacional e suas dependências 
 [Discussions](https://discuss.d2l.ai/t/1681)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MTI0NDkzMSwtMTU4NTQxNzAwLDE4ND
+eyJoaXN0b3J5IjpbLTU3NTk3Nzk1MSwtMTU4NTQxNzAwLDE4ND
 Q1MDM3MTNdfQ==
 -->
