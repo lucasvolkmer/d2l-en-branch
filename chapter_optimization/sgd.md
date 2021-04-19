@@ -37,8 +37,7 @@ O gradiente da função objetivo em $\mathbf{x}$ é calculado como
 
 $$\nabla f(\mathbf{x}) = \frac{1}{n} \sum_{i = 1}^n \nabla f_i(\mathbf{x}).$$
 
-If gradient descent is used, the computing cost for each independent variable iteration is $\mathcal{O}(n)$, which grows linearly with $n$. Therefore, when the model training dataset is large, the cost of gradient descent for each iteration will be very high.
-
+Se o gradiente descendente for usado, o custo de computação para cada iteração de variável independente é $\mathcal{O}(n)$, que cresce linearmente com $n$. Portanto, quando o conjunto de dados de treinamento do modelo é grande, o custo da descida do gradiente para cada iteração será muito alto.
 
 A descida gradiente estocástica (SGD) reduz o custo computacional a cada iteração. A cada iteração de descida do gradiente estocástico, amostramos uniformemente um índice $i\in\{1,\ldots, n\}$ para exemplos de dados aleatoriamente e calculamos o gradiente $\nabla f_i(\mathbf{x})$ para atualizar $\mathbf{x}$:
 
@@ -331,5 +330,5 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMjMyMDgwM119
+eyJoaXN0b3J5IjpbMjA0NTk4MDA5NiwxMDIyMzIwODAzXX0=
 -->
