@@ -47,11 +47,12 @@ Vimos que algumas das principais características da RAM eram *largura de banda*
 
 Para entender o último, considere o fato de que os HDDs giram em torno de 7.200 RPM. Se fossem muito mais rápidos, estilhaçariam devido à força centrífuga exercida nas travessas. Isso tem uma grande desvantagem quando se trata de acessar um setor específico no disco: precisamos esperar até que o prato tenha girado na posição (podemos mover as cabeças, mas não acelerar os discos reais). Portanto, pode demorar mais de 8 ms até que os dados solicitados estejam disponíveis. Uma maneira comum de expressar isso é dizer que os HDDs podem operar a aproximadamente 100 IOPs. Este número permaneceu essencialmente inalterado nas últimas duas décadas. Pior ainda, é igualmente difícil aumentar a largura de banda (é da ordem de 100-200 MB/s). Afinal, cada cabeçote lê uma trilha de bits, portanto, a taxa de bits é dimensionada apenas com a raiz quadrada da densidade da informação. Como resultado, os HDDs estão rapidamente se tornando relegados ao armazenamento de arquivos e armazenamento de baixo nível para conjuntos de dados muito grandes.
 
-**Solid State Drives** use Flash memory to store information persistently. This allows for *much faster* access to stored records. Modern SSDs can operate at 100,000 to 500,000 IOPs, i.e., up to 3 orders of magnitude faster than HDDs. Furthermore, their bandwidth can reach 1-3GB/s, i.e., one order of magnitude faster than HDDs. These improvements sound almost too good to be true. Indeed, they come with a number of caveats, due to the way SSDs are designed.
 
-* SSDs store information in blocks (256 KB or larger). They can only be written as a whole, which takes significant time. Consequently bit-wise random writes on SSD have very poor performance. Likewise, writing data in general takes significant time since the block has to be read, erased and then rewritten with new information. By now SSD controllers and firmware have developed algorithms to mitigate this. Nonetheless writes can be much slower, in particular for QLC (quad level cell) SSDs. The key for improved performance is to maintain a *queue* of operations, to prefer reads and to write in large blocks if possible.
-* The memory cells in SSDs wear out relatively quickly (often already after a few thousand writes). Wear-level protection algorithms are able to spread the degradation over many cells. That said, it is not recommended to use SSDs for swap files or for large aggregations of log-files.
-* Lastly, the massive increase in bandwidth has forced computer designers to attach SSDs directly to the PCIe bus. The drives capable of handling this, referred to as NVMe (Non Volatile Memory enhanced), can use up to 4 PCIe lanes. This amounts to up to 8GB/s on PCIe 4.0.
+**Unidades de estado sólido** usam memória Flash para armazenar informações de forma persistente. Isso permite um acesso *muito mais rápido* aos registros armazenados. Os SSDs modernos podem operar de 100.000 a 500.000 IOPs, ou seja, até 3 ordens de magnitude mais rápido do que os HDDs. Além disso, sua largura de banda pode chegar a 1-3 GB/s, ou seja, uma ordem de magnitude mais rápida do que os HDDs. Essas melhorias parecem boas demais para ser verdade. Na verdade, eles vêm com uma série de ressalvas, devido à forma como os SSDs são projetados.
+
+* SSDs armazenam informações em blocos (256 KB ou maiores). Eles só podem ser escritos como um todo, o que leva um tempo significativo. Consequentemente, as gravações aleatórias bit a bit no SSD têm um desempenho muito ruim. Da mesma forma, a gravação de dados em geral leva um tempo significativo, pois o bloco deve ser lido, apagado e então reescrito com novas informações. Até agora, os controladores SSD e *firmware* desenvolveram algoritmos para atenuar isso. No entanto, as gravações podem ser muito mais lentas, em particular para SSDs QLC (célula de nível quádruplo). A chave para um melhor desempenho é manter uma *fila* de operações, preferir leituras e escrever em grandes blocos, se possível.
+* As células de memória em SSDs se desgastam com relativa rapidez (geralmente após alguns milhares de gravações). Algoritmos de proteção de nível de desgaste são capazes de espalhar a degradação por muitas células. Dito isso, não é recomendado usar SSDs para arquivos de troca ou para grandes agregações de arquivos de log.
+* Por último, o grande aumento na largura de banda forçou os designers de computador a conectar SSDs diretamente ao barramento PCIe. As unidades capazes de lidar com isso, chamadas de NVMe (Non Volatile Memory Enhanced), podem usar até 4 pistas PCIe. Isso equivale a até 8 GB / s no PCIe 4.0.
 
 **Cloud Storage** provides a configurable range of performance. That is, the assignment of storage to virtual machines is dynamic, both in terms of quantity and in terms speed, as chosen by the user. We recommend that the user increase the provisioned number of IOPs whenever latency is too high, e.g., during training with many small records.
 
@@ -216,7 +217,7 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NjA3Nzk3OSwxNjkwMTMxNDIsLTcyMD
-czOTcxNiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEy
-XX0=
+eyJoaXN0b3J5IjpbNTcyNDY3MzM5LDE2OTAxMzE0MiwtNzIwNz
+M5NzE2LC01NjQ2ODAwNDgsLTU3MjE5MDU1NiwyNDI5NDkzMTJd
+fQ==
 -->
