@@ -3,9 +3,9 @@
 
 Construir sistemas com ótimo desempenho requer um bom entendimento dos algoritmos e modelos para capturar os aspectos estatísticos do problema. Ao mesmo tempo, também é indispensável ter pelo menos um mínimo de conhecimento do *hardware* subjacente. A seção atual não substitui um curso apropriado sobre design de *hardware* e sistemas. Em vez disso, pode servir como um ponto de partida para entender por que alguns algoritmos são mais eficientes do que outros e como obter um bom rendimento. Um bom design pode facilmente fazer uma diferença de ordem de magnitude e, por sua vez, pode fazer a diferença entre ser capaz de treinar uma rede (por exemplo, em uma semana) ou não (em 3 meses, perdendo o prazo) . Começaremos examinando os computadores. Em seguida, daremos zoom para observar com mais cuidado as CPUs e GPUs. Por último, diminuímos o zoom para revisar como vários computadores estão conectados em um centro de servidores ou na nuvem. Este não é um guia de compra de GPU. Para isto, veja :numref:`sec_buy_gpu`. Uma introdução à computação em nuvem com AWS pode ser encontrada em :numref:`sec_aws`.
 
-Impatient readers may be able to get by with :numref:`fig_latencynumbers`. It is taken from Colin Scott's [interactive post](https://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html) which gives a good overview of the progress over the past decade. The original numbers are due to Jeff Dean's [Stanford talk from 2010](https://static.googleusercontent.com/media/research.google.com/en//people/jeff/Stanford-DL-Nov-2010.pdf). The discussion below explains some of the rationale for these numbers and how they can guide us in designing algorithms. The discussion below is very high level and cursory. It is clearly *no substitute* for a proper course but rather just meant to provide enough information for a statistical modeler to make suitable design decisions. For an in-depth overview of computer architecture we refer the reader to :cite:`Hennessy.Patterson.2011` or a recent course on the subject, such as the one by [Arste Asanovic](http://inst.eecs.berkeley.edu/~cs152/sp19/).
+Leitores impacientes podem se virar com :numref:`fig_latencynumbers`. Ele foi retirado da [postagem interativa](https://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html) de Colin Scott , que oferece uma boa visão geral do progresso na última década. Os números originais são devidos à  [palestra de Stanford de 2010](https://static.googleusercontent.com/media/research.google.com/en//people/jeff/Stanford-DL-Nov-2010.pdf) de Jeff Dean. A discussão abaixo explica algumas das razões para esses números e como eles podem nos guiar no projeto de algoritmos. A discussão abaixo é de alto nível e superficial. Claramente, *não substitui* um curso adequado, mas apenas fornece informações suficientes para que um modelador estatístico tome decisões de projeto adequadas. Para uma visão geral aprofundada da arquitetura de computadores, recomendamos ao leitor :cite:`Hennessy.Patterson.2011` ou um curso recente sobre o assunto, como o de [Arste Asanovic](http://inst.eecs.berkeley.edu/~cs152/sp19/).
 
-![Latency Numbers every Programmer should know.](../img/latencynumbers.png)
+![Números de latência que todo programador deve conhecer.](../img/latencynumbers.png)
 :label:`fig_latencynumbers`
 
 ## Computers
@@ -212,5 +212,5 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg3MDg3NjgyLDI0Mjk0OTMxMl19
+eyJoaXN0b3J5IjpbLTU3MjE5MDU1NiwyNDI5NDkzMTJdfQ==
 -->
