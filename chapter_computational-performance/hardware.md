@@ -8,7 +8,7 @@ Leitores impacientes podem se virar com :numref:`fig_latencynumbers`. Ele foi re
 ![Números de latência que todo programador deve conhecer.](../img/latencynumbers.png)
 :label:`fig_latencynumbers`
 
-## Computadoers
+## Computadores
 
 Most deep learning researchers have access to a computer with a fair amount of memory, compute, some form of an accelerator such as a GPU, or multiples thereof. It consists of several key components:
 
@@ -212,6 +212,6 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzIzMzI5MTgsLTU3MjE5MDU1NiwyND
-I5NDkzMTJdfQ==
+eyJoaXN0b3J5IjpbLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mj
+k0OTMxMl19
 -->
