@@ -58,14 +58,14 @@ Para entender o último, considere o fato de que os HDDs giram em torno de 7.200
 
 ## CPUs
 
-Central Processing Units (CPUs) are the centerpiece of any computer (as before we give a very high level description focusing primarily on what matters for efficient deep learning models). They consist of a number of key components: processor cores which are able to execute machine code, a bus connecting them (the specific topology differs significantly between processor models, generations and vendors), and caches to allow for higher bandwidth and lower latency memory access than what is possible by reads from main memory. Lastly, almost all modern CPUs contain vector processing units to aid with high performance linear algebra and convolutions, as they are common in media processing and machine learning.
+As Unidades de Processamento Central (CPUs) são a peça central de qualquer computador (como antes, damos uma descrição de alto nível focando principalmente no que importa para modelos de aprendizado profundo eficientes). Eles consistem em uma série de componentes principais: núcleos de processador que são capazes de executar código de máquina, um barramento conectando-os (a topologia específica difere significativamente entre modelos de processador, gerações e fornecedores) e caches para permitir maior largura de banda e menor latência de acesso à memória do que o que é possível por leituras da memória principal. Por fim, quase todas as CPUs modernas contêm unidades de processamento vetorial para auxiliar na álgebra linear e convoluções de alto desempenho, pois são comuns no processamento de mídia e no aprendizado de máquina.
 
-![Intel Skylake consumer quad-core CPU](../img/skylake.svg)
+![CPU Intel Skylake para consumidor quad-core](../img/skylake.svg)
 :label:`fig_skylake`
 
-:numref:`fig_skylake` depicts an Intel Skylake consumer grade quad-core CPU. It has an integrated GPU, caches, and a ringbus connecting the four cores. Peripherals (Ethernet, WiFi, Bluetooth, SSD controller, USB, etc.) are either part of the chipset or directly attached (PCIe) to the CPU.
+:numref:`fig_skylake` representa uma CPU quad-core Intel Skylake para o consumidor. Ele tem uma GPU integrada, caches e um ringbus conectando os quatro núcleos. Os periféricos (Ethernet, WiFi, Bluetooth, controlador SSD, USB, etc.) fazem parte do chipset ou são conectados diretamente (PCIe) à CPU.
 
-### Microarchitecture
+### Microarquitetura
 
 Each of the processor cores consists of a rather sophisticated set of components. While details differ between generations and vendors, the basic functionality is pretty much standard. The front end loads instructions and tries to predict which path will be taken (e.g., for control flow). Instructions are then decoded from assembly code to microinstructions. Assembly code is often not the lowest level code that a processor executes. Instead, complex instructions may be decoded into a set of more lower level operations. These are then processed by the actual execution core. Often the latter is capable of performing many operations simultaneously. For instance, the ARM Cortex A77 core of :numref:`fig_cortexa77` is able to perform up to 8 operations simultaneously.
 
@@ -217,7 +217,7 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODU3MTIyNjAsMTY5MDEzMTQyLC03Mj
-A3Mzk3MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMx
-Ml19
+eyJoaXN0b3J5IjpbMTEyNTU5Njk3OCwxNjkwMTMxNDIsLTcyMD
+czOTcxNiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEy
+XX0=
 -->
