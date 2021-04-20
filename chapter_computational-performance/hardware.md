@@ -1,4 +1,4 @@
-# Hardware
+# *Hardware*
 :label:`sec_hardware`
 
 Building systems with great performance requires a good understanding of the algorithms and models to capture the statistical aspects of the problem. At the same time it is also indispensable to have at least a modicum of knowledge of the underlying hardware. The current section is no substitute for a proper course on hardware and systems design. Instead, it might serve as a starting point for understanding why some algorithms are more efficient than others and how to achieve good throughput. Good design can easily make a difference of an order of magnitude and, in turn, this can make the difference between being able to train a network (e.g., in a week) or not at all (in 3 months, thus missing the deadline). We will start by looking at computers. Then we will zoom in to look more carefully at CPUs and GPUs. Lastly we zoom out to review how multiple computers are connected in a server center or in the cloud. This is not a GPU purchase guide. For this review :numref:`sec_buy_gpu`. An introduction to cloud computing with AWS can be found in :numref:`sec_aws`.
@@ -212,5 +212,5 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQyOTQ5MzEyXX0=
+eyJoaXN0b3J5IjpbMTUzMDE0ODMyLDI0Mjk0OTMxMl19
 -->
