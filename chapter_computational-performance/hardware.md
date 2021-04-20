@@ -76,9 +76,9 @@ Isso significa que programas eficientes podem ser capazes de executar mais de um
 
 ### Vetorização
 
-Deep learning is extremely compute hungry. Hence, to make CPUs suitable for machine learning, one needs to perform many operations in one clock cycle. This is achieved via vector units. They have different names: on ARM they are called NEON, on x86 the latest generation is referred to as [AVX2](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) units. A common aspect is that they are able to perform SIMD (single instruction multiple data) operations. :numref:`fig_neon128` shows how 8 short integers can be added in one clock cycle on ARM.
+O aprendizado profundo exige muita computação. Portanto, para tornar as CPUs adequadas para aprendizado de máquina, é necessário realizar muitas operações em um ciclo de clock. Isso é obtido por meio de unidades vetoriais. Eles têm nomes diferentes: no ARM são chamados de NEON, no x86 a última geração é conhecida como unidades [AVX2](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions). Um aspecto comum é que eles são capazes de realizar operações SIMD (instrução única, dados múltiplos). :numref:`fig_neon128` mostra como 8 inteiros curtos podem ser adicionados em um ciclo de clock no ARM.
 
-![128 bit NEON vectorization](../img/neon128.svg)
+![Vetorização NEON de 128 bits](../img/neon128.svg)
 :label:`fig_neon128`
 
 Depending on architecture choices, such registers are up to 512 bit long, allowing for the combination of up to 64 pairs of numbers. For instance, we might be multiplying two numbers and adding them to a third, which is also known as a fused multiply-add. Intel's [OpenVino](https://01.org/openvinotoolkit) uses these to achieve respectable throughput for deep learning on server grade CPUs. Note, though, that this number is entirely dwarved by what GPUs are capable of achieving. For instance, NVIDIA's RTX 2080 Ti has 4,352 CUDA cores, each of which is capable of processing such an operation at any time.
@@ -217,7 +217,7 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTIyOTM3MjgsMTEyNTU5Njk3OCwxNj
-kwMTMxNDIsLTcyMDczOTcxNiwtNTY0NjgwMDQ4LC01NzIxOTA1
-NTYsMjQyOTQ5MzEyXX0=
+eyJoaXN0b3J5IjpbMTI5NDUxODAxNCwtMTY1MjI5MzcyOCwxMT
+I1NTk2OTc4LDE2OTAxMzE0MiwtNzIwNzM5NzE2LC01NjQ2ODAw
+NDgsLTU3MjE5MDU1NiwyNDI5NDkzMTJdfQ==
 -->
