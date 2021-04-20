@@ -40,7 +40,7 @@ A memória da GPU está sujeita a requisitos de largura de banda ainda maiores, 
 
 ## Armazenamento
 
-We saw that some of the key characteristics of RAM were *bandwidth* and *latency*. The same is true for storage devices, just that the differences can be even more extreme.
+Vimos que algumas das principais características da RAM eram *largura de banda* e *latência*. O mesmo é verdade para dispositivos de armazenamento, só que as diferenças podem ser ainda mais extremas.
 
 **Hard Disks** have been in use for over half a century. In a nutshell they contain a number of spinning platters with heads that can be positioned to read / write at any given track. High end end disks hold up to 16TB on 9 platters. One of the key benefits of HDDs is that they are relatively inexpensive. One of their many downsides are their typically catastrophic failure modes and their relatively high read latency.
 
@@ -215,6 +215,6 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMDczOTcxNiwtNTY0NjgwMDQ4LC01Nz
-IxOTA1NTYsMjQyOTQ5MzEyXX0=
+eyJoaXN0b3J5IjpbMTY5MDEzMTQyLC03MjA3Mzk3MTYsLTU2ND
+Y4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
 -->
