@@ -74,7 +74,7 @@ Cada um dos núcleos do processador consiste em um conjunto bastante sofisticado
 
 Isso significa que programas eficientes podem ser capazes de executar mais de uma instrução por ciclo de clock, *desde que* possam ser executados independentemente. Nem todas as unidades são criadas iguais. Alguns se especializam em instruções de inteiros, enquanto outros são otimizados para desempenho de ponto flutuante. Para aumentar a taxa de transferência, o processador também pode seguir vários *codepaths* simultaneamente em uma instrução de ramificação e, em seguida, descartar os resultados das ramificações não realizadas. É por isso que as unidades de previsão de ramificação são importantes (no *front-end*) de forma que apenas os caminhos mais promissores são seguidos.
 
-### Vectorization
+### Vetorização
 
 Deep learning is extremely compute hungry. Hence, to make CPUs suitable for machine learning, one needs to perform many operations in one clock cycle. This is achieved via vector units. They have different names: on ARM they are called NEON, on x86 the latest generation is referred to as [AVX2](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) units. A common aspect is that they are able to perform SIMD (single instruction multiple data) operations. :numref:`fig_neon128` shows how 8 short integers can be added in one clock cycle on ARM.
 
@@ -217,7 +217,7 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODYxNTM5NjIsMTEyNTU5Njk3OCwxNj
+eyJoaXN0b3J5IjpbLTE2NTIyOTM3MjgsMTEyNTU5Njk3OCwxNj
 kwMTMxNDIsLTcyMDczOTcxNiwtNTY0NjgwMDQ4LC01NzIxOTA1
 NTYsMjQyOTQ5MzEyXX0=
 -->
