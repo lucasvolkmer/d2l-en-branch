@@ -67,12 +67,12 @@ As Unidades de Processamento Central (CPUs) são a peça central de qualquer com
 
 ### Microarquitetura
 
-Each of the processor cores consists of a rather sophisticated set of components. While details differ between generations and vendors, the basic functionality is pretty much standard. The front end loads instructions and tries to predict which path will be taken (e.g., for control flow). Instructions are then decoded from assembly code to microinstructions. Assembly code is often not the lowest level code that a processor executes. Instead, complex instructions may be decoded into a set of more lower level operations. These are then processed by the actual execution core. Often the latter is capable of performing many operations simultaneously. For instance, the ARM Cortex A77 core of :numref:`fig_cortexa77` is able to perform up to 8 operations simultaneously.
+Cada um dos núcleos do processador consiste em um conjunto bastante sofisticado de componentes. Embora os detalhes sejam diferentes entre gerações e fornecedores, a funcionalidade básica é praticamente padrão. O *front-end* carrega instruções e tenta prever qual caminho será seguido (por exemplo, para o fluxo de controle). As instruções são então decodificadas do código de montagem para as microinstruções. O código assembly geralmente não é o código de nível mais baixo que um processador executa. Em vez disso, instruções complexas podem ser decodificadas em um conjunto de operações de nível mais baixo. Em seguida, eles são processados pelo núcleo de execução real. Freqüentemente, o último é capaz de realizar várias operações simultaneamente. Por exemplo, o núcleo ARM Cortex A77 de :numref:`fig_cortexa77` é capaz de realizar até 8 operações simultaneamente.
 
-![ARM Cortex A77 Microarchitecture Overview](../img/a77.svg)
+![Visão geral da microarquitetura ARM Cortex A77](../img/a77.svg)
 :label:`fig_cortexa77`
 
-This means that efficient programs might be able to perform more than one instruction per clock cycle, *provided that* they can be carried out independently. Not all units are created equal. Some specialize in integer instructions whereas others are optimized for floating point performance. To increase throughput, the processor might also follow  multiple codepaths simultaneously in a branching instruction and then discard the results of the branches not taken. This is why branch prediction units matter (on the frontend) such that only the most promising paths are pursued.
+Isso significa que programas eficientes podem ser capazes de executar mais de uma instrução por ciclo de clock, *desde que* possam ser executados independentemente. Nem todas as unidades são criadas iguais. Alguns se especializam em instruções de inteiros, enquanto outros são otimizados para desempenho de ponto flutuante. Para aumentar a taxa de transferência, o processador também pode seguir vários *codepaths* simultaneamente em uma instrução de ramificação e, em seguida, descartar os resultados das ramificações não realizadas. É por isso que as unidades de previsão de ramificação são importantes (no *front-end*) de forma que apenas os caminhos mais promissores são seguidos.
 
 ### Vectorization
 
@@ -217,7 +217,7 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNTU5Njk3OCwxNjkwMTMxNDIsLTcyMD
-czOTcxNiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEy
-XX0=
+eyJoaXN0b3J5IjpbLTE2ODYxNTM5NjIsMTEyNTU5Njk3OCwxNj
+kwMTMxNDIsLTcyMDczOTcxNiwtNTY0NjgwMDQ4LC01NzIxOTA1
+NTYsMjQyOTQ5MzEyXX0=
 -->
