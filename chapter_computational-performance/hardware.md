@@ -81,7 +81,7 @@ O aprendizado profundo exige muita computação. Portanto, para tornar as CPUs a
 ![Vetorização NEON de 128 bits](../img/neon128.svg)
 :label:`fig_neon128`
 
-Depending on architecture choices, such registers are up to 512 bit long, allowing for the combination of up to 64 pairs of numbers. For instance, we might be multiplying two numbers and adding them to a third, which is also known as a fused multiply-add. Intel's [OpenVino](https://01.org/openvinotoolkit) uses these to achieve respectable throughput for deep learning on server grade CPUs. Note, though, that this number is entirely dwarved by what GPUs are capable of achieving. For instance, NVIDIA's RTX 2080 Ti has 4,352 CUDA cores, each of which is capable of processing such an operation at any time.
+Dependendo das opções de arquitetura, esses registros têm até 512 bits de comprimento, permitindo a combinação de até 64 pares de números. Por exemplo, podemos multiplicar dois números e adicioná-los a um terceiro, também conhecido como multiplicação-adição fundida. O [OpenVino](https://01.org/openvinotoolkit) da Intel usa isso para atingir um rendimento respeitável para aprendizado profundo em CPUs de nível de servidor. Observe, porém, que esse número é totalmente diminuto em relação ao que as GPUs são capazes de alcançar. Por exemplo, o RTX 2080 Ti da NVIDIA tem 4.352 núcleos CUDA, cada um dos quais é capaz de processar tal operação a qualquer momento.
 
 ### Cache
 
@@ -217,7 +217,7 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NDUxODAxNCwtMTY1MjI5MzcyOCwxMT
+eyJoaXN0b3J5IjpbLTg3MDk3NTE2OCwtMTY1MjI5MzcyOCwxMT
 I1NTk2OTc4LDE2OTAxMzE0MiwtNzIwNzM5NzE2LC01NjQ2ODAw
 NDgsLTU3MjE5MDU1NiwyNDI5NDkzMTJdfQ==
 -->
