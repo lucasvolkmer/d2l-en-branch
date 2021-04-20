@@ -54,7 +54,7 @@ Para entender o último, considere o fato de que os HDDs giram em torno de 7.200
 * As células de memória em SSDs se desgastam com relativa rapidez (geralmente após alguns milhares de gravações). Algoritmos de proteção de nível de desgaste são capazes de espalhar a degradação por muitas células. Dito isso, não é recomendado usar SSDs para arquivos de troca ou para grandes agregações de arquivos de log.
 * Por último, o grande aumento na largura de banda forçou os designers de computador a conectar SSDs diretamente ao barramento PCIe. As unidades capazes de lidar com isso, chamadas de NVMe (Non Volatile Memory Enhanced), podem usar até 4 pistas PCIe. Isso equivale a até 8 GB / s no PCIe 4.0.
 
-**Cloud Storage** provides a configurable range of performance. That is, the assignment of storage to virtual machines is dynamic, both in terms of quantity and in terms speed, as chosen by the user. We recommend that the user increase the provisioned number of IOPs whenever latency is too high, e.g., during training with many small records.
+**Cloud Storage** oferece uma gama configurável de desempenho. Ou seja, a atribuição de armazenamento às máquinas virtuais é dinâmica, tanto em termos de quantidade quanto em termos de velocidade, escolhidos pelo usuário. Recomendamos que o usuário aumente o número provisionado de IOPs sempre que a latência for muito alta, por exemplo, durante o treinamento com muitos registros pequenos.
 
 ## CPUs
 
@@ -217,7 +217,7 @@ The summary in :numref:`table_latency_numbers` and :numref:`table_latency_number
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTcyNDY3MzM5LDE2OTAxMzE0MiwtNzIwNz
-M5NzE2LC01NjQ2ODAwNDgsLTU3MjE5MDU1NiwyNDI5NDkzMTJd
-fQ==
+eyJoaXN0b3J5IjpbLTExODU3MTIyNjAsMTY5MDEzMTQyLC03Mj
+A3Mzk3MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMx
+Ml19
 -->
