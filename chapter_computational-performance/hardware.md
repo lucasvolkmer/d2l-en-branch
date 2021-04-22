@@ -171,12 +171,12 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | Leitura aleatória Intel Optane                  | 305 ns | UCSD Systems Lab Não-Volátil                   |
 | Enviar 4KB em HPC fabric com mais de 100 Gbps          |   1 μs | MVAPICH2 sobre Intel Omni-Path                   |
 | Comprimir 1 KB com Google Snappy           |   3 μs |                                                 |
-| Send 4KB over 10 Gbps ethernet             |  10 μs |                                                 |
-| Write 4KB randomly to NVMe SSD             |  30 μs | DC P3608 NVMe SSD (QOS 99% é 500μs)            |
-| Transfer 1MB to/from NVLink GPU            |  30 μs | ~33GB/s na NVIDIA 40GB NVLink                 |
-| Transfer 1MB to/from PCI-E GPU             |  80 μs | ~12GB/s na PCIe 3.0 x16 link                  |
-| Read 4KB randomly from NVMe SSD            | 120 μs | DC P3608 NVMe SSD (QOS 99%)                     |
-| Read 1MB sequentially from NVMe SSD        | 208 μs | ~4.8GB/s DC P3608 NVMe SSD                    |
+| Enviar 4 KB por Ethernet de 10 Gbps             |  10 μs |                                                 |
+| Gravar 4KB aleatoriamente no NVMe SSD             |  30 μs | DC P3608 NVMe SSD (QOS 99% é 500μs)            |
+| Transferir 1 MB de/para GPU NVLink            |  30 μs | ~33GB/s na NVIDIA 40GB NVLink                 |
+| Transferir 1 MB de/para GPU PCI-E             |  80 μs | ~12GB/s na PCIe 3.0 x16 link                  |
+| Ler 4 KB aleatoriamente do NVMe SSD            | 120 μs | DC P3608 NVMe SSD (QOS 99%)                     |
+| Ler 1 MB sequencialmente do NVMe SSD        | 208 μs | ~4.8GB/s DC P3608 NVMe SSD                    |
 | Write 4KB randomly to SATA SSD             | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
 | Read 4KB randomly from SATA SSD            | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
 | Round trip within same datacenter          | 500 μs | Ping *one-way* é ~250μs                          |
@@ -218,7 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyOTI5NTQ1MCwtODcwOTc1MTY4LC0xNj
-UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
-MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
+eyJoaXN0b3J5IjpbODc4MDgzOTE4LC04NzA5NzUxNjgsLTE2NT
+IyOTM3MjgsMTEyNTU5Njk3OCwxNjkwMTMxNDIsLTcyMDczOTcx
+NiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEyXX0=
 -->
