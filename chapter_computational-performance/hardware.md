@@ -183,7 +183,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | Ler 1 MB sequencialmente de SATA SSD        |   2 ms | ~550MB/s DC S3510 SATA SSD                    |
 | Ler 1 MB sequencialmente do disco            |   5 ms | ~200MB/s servidor HDD                           |
 | Acesso aleatório ao disco (busca + rotação)        |  10 ms |                                                 |
-| Enviar pacote Califórnia-> Holanda-> Califórnia          | 150 ms |                                                 |
+| Enviar pacote Califórnia-> Holanda-> Califórnia         | 150 ms |                                                 |
 :label:`table_latency_numbers`
 
 :Latency Numbers for NVIDIA Tesla GPUs.
@@ -218,7 +218,8 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MzQzMzIzNiwtODcwOTc1MTY4LC0xNj
-UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
-MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
+eyJoaXN0b3J5IjpbLTE0NDkyMzQ2ODYsLTg3MDk3NTE2OCwtMT
+Y1MjI5MzcyOCwxMTI1NTk2OTc4LDE2OTAxMzE0MiwtNzIwNzM5
+NzE2LC01NjQ2ODAwNDgsLTU3MjE5MDU1NiwyNDI5NDkzMTJdfQ
+==
 -->
