@@ -153,9 +153,9 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 | Ação | Tempo | Notas |
 | :----------------------------------------- | -----: | :---------------------------------------------- |
-| L1 cache reference/hit                     | 1.5 ns | 4 ciclos                                        |
-| Floating-point add/mult/FMA                | 1.5 ns | 4 ciclos                                        |
-| L2 cache reference/hit                     |   5 ns | 12 ~ 17 ciclos                                  |
+| Referência / acerto do cache L1                   | 1.5 ns | 4 ciclos                                        |
+| Adicionar ponto flutuante / mult / FMA               | 1.5 ns | 4 ciclos                                        |
+| Referência / acerto do cache L2                   |   5 ns | 12 ~ 17 ciclos                                  |
 | Branch mispredict                          |   6 ns | 15 ~ 20 ciclos                                  |
 | L3 cache hit (unshared cache)              |  16 ns | 42 ciclos                                       |
 | L3 cache hit (shared in another core)      |  25 ns | 65 ciclos                                       |
@@ -218,7 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE2NjA1MDY2LC04NzA5NzUxNjgsLTE2NT
-IyOTM3MjgsMTEyNTU5Njk3OCwxNjkwMTMxNDIsLTcyMDczOTcx
-NiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEyXX0=
+eyJoaXN0b3J5IjpbMTI3NzA5ODU4MCwtODcwOTc1MTY4LC0xNj
+UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
+MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
 -->
