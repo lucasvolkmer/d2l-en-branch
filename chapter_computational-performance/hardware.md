@@ -186,15 +186,15 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | Enviar pacote Califórnia-> Holanda-> Califórnia         | 150 ms |                                                 |
 :label:`table_latency_numbers`
 
-:Latency Numbers for NVIDIA Tesla GPUs.
+:Números de latência para GPU NVIDIA Tesla.
 
-| Action | Time | Notes |
+| Ação | Tempo | Notas |
 | :------------------------------ | -----: | :---------------------------------------- |
-| GPU Shared Memory access        |  30 ns | 30~90 cycles (conflitos de banco adicionam latência) |
-| GPU Global Memory access        | 200 ns | 200~800 ciclos                            |
-| Launch CUDA kernel on GPU       |  10 μs | A CPU do host instrui a GPU a iniciar o kernel    |
-| Transfer 1MB to/from NVLink GPU |  30 μs | ~33GB/s na NVIDIA 40GB NVLink           |
-| Transfer 1MB to/from PCI-E GPU  |  80 μs | ~12GB/s na PCI-Express x16 link         |
+| Acesso à memória compartilhada da GPU        |  30 ns | 30~90 cycles (conflitos de banco adicionam latência) |
+| Acesso à memória global da GPU        | 200 ns | 200~800 ciclos                            |
+| Iniciar o kernel CUDA na GPU       |  10 μs | A CPU do host instrui a GPU a iniciar o kernel    |
+| Transferir 1 MB de / para GPU NVLink |  30 μs | ~33GB/s na NVIDIA 40GB NVLink           |
+| Transferir 1 MB de / para GPU PCI-E  |  80 μs | ~12GB/s na PCI-Express x16 link         |
 :label:`table_latency_numbers_tesla`
 
 ## Exercícios
@@ -218,8 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDkyMzQ2ODYsLTg3MDk3NTE2OCwtMT
-Y1MjI5MzcyOCwxMTI1NTk2OTc4LDE2OTAxMzE0MiwtNzIwNzM5
-NzE2LC01NjQ2ODAwNDgsLTU3MjE5MDU1NiwyNDI5NDkzMTJdfQ
-==
+eyJoaXN0b3J5IjpbMTY0NzY3NDEyOCwtODcwOTc1MTY4LC0xNj
+UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
+MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
 -->
