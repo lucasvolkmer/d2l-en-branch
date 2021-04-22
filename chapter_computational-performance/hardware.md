@@ -181,7 +181,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | Read 4KB randomly from SATA SSD            | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
 | Round trip within same datacenter          | 500 μs | *One-way* ping is ~250μs                          |
 | Read 1MB sequentially from SATA SSD        |   2 ms | ~550MB/s DC S3510 SATA SSD                    |
-| Read 1MB sequentially from disk            |   5 ms | ~200MB/s server HDD                           |
+| Read 1MB sequentially from disk            |   5 ms | ~200MB/s servidor HDD                           |
 | Random Disk Access (seek+rotation)         |  10 ms |                                                 |
 | Send packet CA->Netherlands->CA            | 150 ms |                                                 |
 :label:`table_latency_numbers`
@@ -190,11 +190,11 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 | Action | Time | Notes |
 | :------------------------------ | -----: | :---------------------------------------- |
-| GPU Shared Memory access        |  30 ns | 30~90 cycles (bank conflicts add latency) |
-| GPU Global Memory access        | 200 ns | 200~800 cycles                            |
-| Launch CUDA kernel on GPU       |  10 μs | Host CPU instructs GPU to start kernel    |
-| Transfer 1MB to/from NVLink GPU |  30 μs | ~33GB/s on NVIDIA 40GB NVLink           |
-| Transfer 1MB to/from PCI-E GPU  |  80 μs | ~12GB/s on PCI-Express x16 link         |
+| GPU Shared Memory access        |  30 ns | 30~90 cycles (conflitos de banco adicionam latência) |
+| GPU Global Memory access        | 200 ns | 200~800 ciclos                            |
+| Launch CUDA kernel on GPU       |  10 μs | A CPU do host instrui a GPU a iniciar o kernel    |
+| Transfer 1MB to/from NVLink GPU |  30 μs | ~33GB/s na NVIDIA 40GB NVLink           |
+| Transfer 1MB to/from PCI-E GPU  |  80 μs | ~12GB/s na PCI-Express x16 link         |
 :label:`table_latency_numbers_tesla`
 
 ## Exercícios
@@ -218,8 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzE5MzcwODQsLTg3MDk3NTE2OCwtMT
-Y1MjI5MzcyOCwxMTI1NTk2OTc4LDE2OTAxMzE0MiwtNzIwNzM5
-NzE2LC01NjQ2ODAwNDgsLTU3MjE5MDU1NiwyNDI5NDkzMTJdfQ
-==
+eyJoaXN0b3J5IjpbMTgwODU2MDk4MywtODcwOTc1MTY4LC0xNj
+UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
+MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
 -->
