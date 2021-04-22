@@ -179,7 +179,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | Read 1MB sequentially from NVMe SSD        | 208 μs | ~4.8GB/s DC P3608 NVMe SSD                    |
 | Write 4KB randomly to SATA SSD             | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
 | Read 4KB randomly from SATA SSD            | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
-| Round trip within same datacenter          | 500 μs | *One-way* ping é ~250μs                          |
+| Round trip within same datacenter          | 500 μs | Ping *one-way* é ~250μs                          |
 | Read 1MB sequentially from SATA SSD        |   2 ms | ~550MB/s DC S3510 SATA SSD                    |
 | Read 1MB sequentially from disk            |   5 ms | ~200MB/s servidor HDD                           |
 | Random Disk Access (seek+rotation)         |  10 ms |                                                 |
@@ -218,7 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkwNjI4NTk0LC04NzA5NzUxNjgsLTE2NT
+eyJoaXN0b3J5IjpbNzE2NjA1MDY2LC04NzA5NzUxNjgsLTE2NT
 IyOTM3MjgsMTEyNTU5Njk3OCwxNjkwMTMxNDIsLTcyMDczOTcx
 NiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEyXX0=
 -->
