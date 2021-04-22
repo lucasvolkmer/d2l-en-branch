@@ -177,13 +177,13 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | Transferir 1 MB de/para GPU PCI-E             |  80 μs | ~12GB/s na PCIe 3.0 x16 link                  |
 | Ler 4 KB aleatoriamente do NVMe SSD            | 120 μs | DC P3608 NVMe SSD (QOS 99%)                     |
 | Ler 1 MB sequencialmente do NVMe SSD        | 208 μs | ~4.8GB/s DC P3608 NVMe SSD                    |
-| Write 4KB randomly to SATA SSD             | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
-| Read 4KB randomly from SATA SSD            | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
-| Round trip within same datacenter          | 500 μs | Ping *one-way* é ~250μs                          |
-| Read 1MB sequentially from SATA SSD        |   2 ms | ~550MB/s DC S3510 SATA SSD                    |
-| Read 1MB sequentially from disk            |   5 ms | ~200MB/s servidor HDD                           |
-| Random Disk Access (seek+rotation)         |  10 ms |                                                 |
-| Send packet CA->Netherlands->CA            | 150 ms |                                                 |
+| Gravar 4 KB aleatoriamente em SATA SSD             | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
+| Ler 4 KB aleatoriamente de SATA SSD            | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
+| Ida e volta no mesmo datacenter          | 500 μs | Ping *one-way* é ~250μs                          |
+| Ler 1 MB sequencialmente de SATA SSD        |   2 ms | ~550MB/s DC S3510 SATA SSD                    |
+| Ler 1 MB sequencialmente do disco            |   5 ms | ~200MB/s servidor HDD                           |
+| Acesso aleatório ao disco (busca + rotação)        |  10 ms |                                                 |
+| Enviar pacote Califórnia-> Holanda-> Califórnia          | 150 ms |                                                 |
 :label:`table_latency_numbers`
 
 :Latency Numbers for NVIDIA Tesla GPUs.
@@ -218,7 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc4MDgzOTE4LC04NzA5NzUxNjgsLTE2NT
-IyOTM3MjgsMTEyNTU5Njk3OCwxNjkwMTMxNDIsLTcyMDczOTcx
-NiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEyXX0=
+eyJoaXN0b3J5IjpbMTY0MzQzMzIzNiwtODcwOTc1MTY4LC0xNj
+UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
+MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
 -->
