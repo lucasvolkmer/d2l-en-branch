@@ -155,31 +155,31 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | :----------------------------------------- | -----: | :---------------------------------------------- |
 | L1 cache reference/hit                     | 1.5 ns | 4 ciclos                                        |
 | Floating-point add/mult/FMA                | 1.5 ns | 4 ciclos                                        |
-| L2 cache reference/hit                     |   5 ns | 12 ~ 17 cycles                                  |
-| Branch mispredict                          |   6 ns | 15 ~ 20 cycles                                  |
-| L3 cache hit (unshared cache)              |  16 ns | 42 cycles                                       |
-| L3 cache hit (shared in another core)      |  25 ns | 65 cycles                                       |
+| L2 cache reference/hit                     |   5 ns | 12 ~ 17 ciclos                                  |
+| Branch mispredict                          |   6 ns | 15 ~ 20 ciclos                                  |
+| L3 cache hit (unshared cache)              |  16 ns | 42 ciclos                                       |
+| L3 cache hit (shared in another core)      |  25 ns | 65 ciclos                                       |
 | Mutex lock/unlock                          |  25 ns |                                                 |
-| L3 cache hit (modified in another core)    |  29 ns | 75 cycles                                       |
-| L3 cache hit (on a remote CPU socket)      |  40 ns | 100 ~ 300 cycles (40 ~ 116 ns)                  |
+| L3 cache hit (modified in another core)    |  29 ns | 75 ciclos                                       |
+| L3 cache hit (on a remote CPU socket)      |  40 ns | 100 ~ 300 ciclos (40 ~ 116 ns)                  |
 | QPI hop to a another CPU (per hop)         |  40 ns |                                                 |
-| 64MB memory ref. (local CPU)          |  46 ns | TinyMemBench on Broadwell E5-2690v4             |
-| 64MB memory ref. (remote CPU)         |  70 ns | TinyMemBench on Broadwell E5-2690v4             |
-| 256MB memory ref. (local CPU)         |  75 ns | TinyMemBench on Broadwell E5-2690v4             |
-| Intel Optane random write                  |  94 ns | UCSD Non-Volatile Systems Lab                   |
+| 64MB memory ref. (local CPU)          |  46 ns | TinyMemBench na Broadwell E5-2690v4             |
+| 64MB memory ref. (remote CPU)         |  70 ns | TinyMemBench na Broadwell E5-2690v4             |
+| 256MB memory ref. (local CPU)         |  75 ns | TinyMemBench na Broadwell E5-2690v4             |
+| Intel Optane random write                  |  94 ns | UCSD Não-Volátil Systems Lab                   |
 | 256MB memory ref. (remote CPU)        | 120 ns | TinyMemBench on Broadwell E5-2690v4             |
 | Intel Optane random read                   | 305 ns | UCSD Non-Volatile Systems Lab                   |
 | Send 4KB over 100 Gbps HPC fabric          |   1 μs | MVAPICH2 over Intel Omni-Path                   |
 | Compress 1KB with Google Snappy            |   3 μs |                                                 |
 | Send 4KB over 10 Gbps ethernet             |  10 μs |                                                 |
-| Write 4KB randomly to NVMe SSD             |  30 μs | DC P3608 NVMe SSD (QOS 99% is 500μs)            |
-| Transfer 1MB to/from NVLink GPU            |  30 μs | ~33GB/s on NVIDIA 40GB NVLink                 |
-| Transfer 1MB to/from PCI-E GPU             |  80 μs | ~12GB/s on PCIe 3.0 x16 link                  |
+| Write 4KB randomly to NVMe SSD             |  30 μs | DC P3608 NVMe SSD (QOS 99% é 500μs)            |
+| Transfer 1MB to/from NVLink GPU            |  30 μs | ~33GB/s na NVIDIA 40GB NVLink                 |
+| Transfer 1MB to/from PCI-E GPU             |  80 μs | ~12GB/s na PCIe 3.0 x16 link                  |
 | Read 4KB randomly from NVMe SSD            | 120 μs | DC P3608 NVMe SSD (QOS 99%)                     |
 | Read 1MB sequentially from NVMe SSD        | 208 μs | ~4.8GB/s DC P3608 NVMe SSD                    |
 | Write 4KB randomly to SATA SSD             | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
 | Read 4KB randomly from SATA SSD            | 500 μs | DC S3510 SATA SSD (QOS 99.9%)                   |
-| Round trip within same datacenter          | 500 μs | *One-way* ping is ~250μs                          |
+| Round trip within same datacenter          | 500 μs | *One-way* ping é ~250μs                          |
 | Read 1MB sequentially from SATA SSD        |   2 ms | ~550MB/s DC S3510 SATA SSD                    |
 | Read 1MB sequentially from disk            |   5 ms | ~200MB/s servidor HDD                           |
 | Random Disk Access (seek+rotation)         |  10 ms |                                                 |
@@ -218,7 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwODU2MDk4MywtODcwOTc1MTY4LC0xNj
+eyJoaXN0b3J5IjpbMjAwMTYxNjI1NSwtODcwOTc1MTY4LC0xNj
 UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
 MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
 -->
