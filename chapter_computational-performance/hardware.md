@@ -163,12 +163,12 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | Acerto de cache L3 (modificado em outro núcleo)    |  29 ns | 75 ciclos                                       |
 | Acerto de cache L3 (em um soquete de CPU remoto)      |  40 ns | 100 ~ 300 ciclos (40 ~ 116 ns)                  |
 | Salto QPI para outra CPU (por salto)         |  40 ns |                                                 |
-| 64MB memory ref. (local CPU)          |  46 ns | TinyMemBench na Broadwell E5-2690v4             |
-| 64MB memory ref. (remote CPU)         |  70 ns | TinyMemBench na Broadwell E5-2690v4             |
-| 256MB memory ref. (local CPU)         |  75 ns | TinyMemBench na Broadwell E5-2690v4             |
-| Intel Optane random write                  |  94 ns | UCSD  Systems Lab Não-Volátil                  |
-| 256MB memory ref. (remote CPU)        | 120 ns | TinyMemBench na Broadwell E5-2690v4             |
-| Intel Optane random read                   | 305 ns | UCSD Systems Lab Não-Volátil                   |
+| Ref. de memória 64 MB (CPU local)          |  46 ns | TinyMemBench na Broadwell E5-2690v4             |
+| Ref. de memória 64 MB (CPU remota)          |  70 ns | TinyMemBench na Broadwell E5-2690v4             |
+| Ref. de memória 256 MB (CPU local)         |  75 ns | TinyMemBench na Broadwell E5-2690v4             |
+| Gravação aleatória Intel Optane                  |  94 ns | UCSD  Systems Lab Não-Volátil                  |
+| Ref. de memória 256 MB (CPU remota)        | 120 ns | TinyMemBench na Broadwell E5-2690v4             |
+| Leitura aleatória Intel Optane                  | 305 ns | UCSD Systems Lab Não-Volátil                   |
 | Send 4KB over 100 Gbps HPC fabric          |   1 μs | MVAPICH2 sobre Intel Omni-Path                   |
 | Compress 1KB with Google Snappy            |   3 μs |                                                 |
 | Send 4KB over 10 Gbps ethernet             |  10 μs |                                                 |
@@ -218,7 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNzgwMDI4OSwtODcwOTc1MTY4LC0xNj
-UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
-MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
+eyJoaXN0b3J5IjpbLTc1OTU0NzE2LC04NzA5NzUxNjgsLTE2NT
+IyOTM3MjgsMTEyNTU5Njk3OCwxNjkwMTMxNDIsLTcyMDczOTcx
+NiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEyXX0=
 -->
