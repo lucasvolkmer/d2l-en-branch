@@ -166,10 +166,10 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | 64MB memory ref. (local CPU)          |  46 ns | TinyMemBench na Broadwell E5-2690v4             |
 | 64MB memory ref. (remote CPU)         |  70 ns | TinyMemBench na Broadwell E5-2690v4             |
 | 256MB memory ref. (local CPU)         |  75 ns | TinyMemBench na Broadwell E5-2690v4             |
-| Intel Optane random write                  |  94 ns | UCSD Não-Volátil Systems Lab                   |
-| 256MB memory ref. (remote CPU)        | 120 ns | TinyMemBench on Broadwell E5-2690v4             |
-| Intel Optane random read                   | 305 ns | UCSD Non-Volatile Systems Lab                   |
-| Send 4KB over 100 Gbps HPC fabric          |   1 μs | MVAPICH2 over Intel Omni-Path                   |
+| Intel Optane random write                  |  94 ns | UCSD  Systems Lab Não-Volátil                  |
+| 256MB memory ref. (remote CPU)        | 120 ns | TinyMemBench na Broadwell E5-2690v4             |
+| Intel Optane random read                   | 305 ns | UCSD Systems Lab Não-Volátil                   |
+| Send 4KB over 100 Gbps HPC fabric          |   1 μs | MVAPICH2 sobre Intel Omni-Path                   |
 | Compress 1KB with Google Snappy            |   3 μs |                                                 |
 | Send 4KB over 10 Gbps ethernet             |  10 μs |                                                 |
 | Write 4KB randomly to NVMe SSD             |  30 μs | DC P3608 NVMe SSD (QOS 99% é 500μs)            |
@@ -218,7 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMTYxNjI1NSwtODcwOTc1MTY4LC0xNj
-UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
-MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
+eyJoaXN0b3J5IjpbNjkwNjI4NTk0LC04NzA5NzUxNjgsLTE2NT
+IyOTM3MjgsMTEyNTU5Njk3OCwxNjkwMTMxNDIsLTcyMDczOTcx
+NiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEyXX0=
 -->
