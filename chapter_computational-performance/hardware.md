@@ -156,13 +156,13 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | Referência / acerto do cache L1                   | 1.5 ns | 4 ciclos                                        |
 | Adicionar ponto flutuante / mult / FMA               | 1.5 ns | 4 ciclos                                        |
 | Referência / acerto do cache L2                   |   5 ns | 12 ~ 17 ciclos                                  |
-| Branch mispredict                          |   6 ns | 15 ~ 20 ciclos                                  |
-| L3 cache hit (unshared cache)              |  16 ns | 42 ciclos                                       |
-| L3 cache hit (shared in another core)      |  25 ns | 65 ciclos                                       |
-| Mutex lock/unlock                          |  25 ns |                                                 |
-| L3 cache hit (modified in another core)    |  29 ns | 75 ciclos                                       |
-| L3 cache hit (on a remote CPU socket)      |  40 ns | 100 ~ 300 ciclos (40 ~ 116 ns)                  |
-| QPI hop to a another CPU (per hop)         |  40 ns |                                                 |
+| Erro de previsão de branch                       |   6 ns | 15 ~ 20 ciclos                                  |
+| Acerto de cache L3 (cache não compartilhado)              |  16 ns | 42 ciclos                                       |
+| Acerto de cache L3 (compartilhado em outro núcleo)      |  25 ns | 65 ciclos                                       |
+| Bloqueio / desbloqueio Mutex                          |  25 ns |                                                 |
+| Acerto de cache L3 (modificado em outro núcleo)    |  29 ns | 75 ciclos                                       |
+| Acerto de cache L3 (em um soquete de CPU remoto)      |  40 ns | 100 ~ 300 ciclos (40 ~ 116 ns)                  |
+| Salto QPI para outra CPU (por salto)         |  40 ns |                                                 |
 | 64MB memory ref. (local CPU)          |  46 ns | TinyMemBench na Broadwell E5-2690v4             |
 | 64MB memory ref. (remote CPU)         |  70 ns | TinyMemBench na Broadwell E5-2690v4             |
 | 256MB memory ref. (local CPU)         |  75 ns | TinyMemBench na Broadwell E5-2690v4             |
@@ -218,7 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NzA5ODU4MCwtODcwOTc1MTY4LC0xNj
+eyJoaXN0b3J5IjpbMTcxNzgwMDI4OSwtODcwOTc1MTY4LC0xNj
 UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
 MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
 -->
