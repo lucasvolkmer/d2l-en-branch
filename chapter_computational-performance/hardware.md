@@ -169,8 +169,8 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 | Gravação aleatória Intel Optane                  |  94 ns | UCSD  Systems Lab Não-Volátil                  |
 | Ref. de memória 256 MB (CPU remota)        | 120 ns | TinyMemBench na Broadwell E5-2690v4             |
 | Leitura aleatória Intel Optane                  | 305 ns | UCSD Systems Lab Não-Volátil                   |
-| Send 4KB over 100 Gbps HPC fabric          |   1 μs | MVAPICH2 sobre Intel Omni-Path                   |
-| Compress 1KB with Google Snappy            |   3 μs |                                                 |
+| Enviar 4KB em HPC fabric com mais de 100 Gbps          |   1 μs | MVAPICH2 sobre Intel Omni-Path                   |
+| Comprimir 1 KB com Google Snappy           |   3 μs |                                                 |
 | Send 4KB over 10 Gbps ethernet             |  10 μs |                                                 |
 | Write 4KB randomly to NVMe SSD             |  30 μs | DC P3608 NVMe SSD (QOS 99% é 500μs)            |
 | Transfer 1MB to/from NVLink GPU            |  30 μs | ~33GB/s na NVIDIA 40GB NVLink                 |
@@ -218,7 +218,7 @@ O resumo em :numref:`table_latency_numbers`  e :numref:`table_latency_numbers_te
 
 [Discussions](https://discuss.d2l.ai/t/363)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1OTU0NzE2LC04NzA5NzUxNjgsLTE2NT
-IyOTM3MjgsMTEyNTU5Njk3OCwxNjkwMTMxNDIsLTcyMDczOTcx
-NiwtNTY0NjgwMDQ4LC01NzIxOTA1NTYsMjQyOTQ5MzEyXX0=
+eyJoaXN0b3J5IjpbMTkyOTI5NTQ1MCwtODcwOTc1MTY4LC0xNj
+UyMjkzNzI4LDExMjU1OTY5NzgsMTY5MDEzMTQyLC03MjA3Mzk3
+MTYsLTU2NDY4MDA0OCwtNTcyMTkwNTU2LDI0Mjk0OTMxMl19
 -->
