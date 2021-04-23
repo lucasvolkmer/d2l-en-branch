@@ -166,7 +166,7 @@ $$R(\mathbf{w}) = E_{\mathbf{x} \sim P}[l(\mathbf{x}, \mathbf{w})]$$
 
 the expected risk and by $R^*$ its minimum with regard to $\mathbf{w}$. Last let $\mathbf{w}^*$ be the minimizer (we assume that it exists within the domain which $\mathbf{w}$ is defined). In this case we can track the distance between the current parameter $\mathbf{w}_t$ and the risk minimizer $\mathbf{w}^*$ and see whether it improves over time:
 
-o risco esperado e por $R^*$ seu mínimo em relação a $\mathbf{w}$. Por último, seja $ \ mathbf {w} ^ * $ o minimizador (assumimos que ele existe dentro do domínio que $ \ mathbf {w} $ está definido). Neste caso, podemos rastrear a distância entre o parâmetro atual $ \ mathbf {w} _t $ e o minimizador de risco $ \ mathbf {w} ^ * $ e ver se melhora com o tempo:
+o risco esperado e por $R^*$ seu mínimo em relação a $\mathbf{w}$. Por último, seja $\mathbf{w}^*$ o minimizador (assumimos que ele existe dentro do domínio que $\mathbf{w}$ está definido). Neste caso, podemos rastrear a distância entre o parâmetro atual $\mathbf{w}_t$ e o minimizador de risco $\mathbf{w}^*$ e ver se melhora com o tempo:
 
 $$\begin{aligned}
     \|\mathbf{w}_{t+1} - \mathbf{w}^*\|^2 & = \|\mathbf{w}_{t} - \eta_t \partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w}) - \mathbf{w}^*\|^2 \\
@@ -308,6 +308,6 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNDY3MjgwMCwyMDQ1OTgwMDk2LDEwMj
+eyJoaXN0b3J5IjpbMTE3NzM3MjIyOCwyMDQ1OTgwMDk2LDEwMj
 IzMjA4MDNdfQ==
 -->
