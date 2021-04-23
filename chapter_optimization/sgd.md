@@ -240,22 +240,13 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 
 ## Exercícios
 
-1. Experiment with different learning rate schedules for SGD and with different numbers of iterations. In particular, plot the distance from the optimal solution $(0, 0)$ as a function of the number of iterations.
-2. Prove that for the function $f(x_1, x_2) = x_1^2 + 2 x_2^2$ adding normal noise to the gradient is equivalent to minimizing a loss function $l(\mathbf{x}, \mathbf{w}) = (x_1 - w_1)^2 + 2 (x_2 - w_2)^2$ where $x$ is drawn from a normal distribution.
-    * Derive mean and variance of the distribution for $\mathbf{x}$.
-    * Show that this property holds in general for objective functions $f(\mathbf{x}) = \frac{1}{2} (\mathbf{x} - \mathbf{\mu})^\top Q (\mathbf{x} - \mathbf{\mu})$ for $Q \succeq 0$.
-3. Compare convergence of SGD when you sample from $\{(x_1, y_1), \ldots, (x_m, y_m)\}$ with replacement and when you sample without replacement.
-4. How would you change the SGD solver if some gradient (or rather some coordinate associated with it) was consistently larger than all other gradients?
-5. Assume that $f(x) = x^2 (1 + \sin x)$. How many local minima does $f$ have? Can you change $f$ in such a way that to minimize it one needs to evaluate all local minima?
-
-
-6. Experimente diferentes programações de taxa de aprendizagem para SGD e com diferentes números de iterações. Em particular, plote a distância da solução ótima $(0, 0)$ como uma função do número de iterações.
-7. Prove que para a função $f(x_1, x_2) = x_1^2 + 2 x_2^2$ adicionar ruído normal ao gradiente é equivalente a minimizar uma função de perda $ l (\ mathbf {x}, \ mathbf {w }) = (x_1 - w_1) ^ 2 + 2 (x_2 - w_2) ^ 2 $ onde $ x $ é extraído de uma distribuição normal.
-    * Derive a média e a variância da distribuição de $ \ mathbf {x} $.
-    * Mostre que esta propriedade é geralmente válida para funções objetivo $ f (\ mathbf {x}) = \ frac {1} {2} (\ mathbf {x} - \ mathbf {\ mu}) ^ \ top Q (\ mathbf {x} - \ mathbf {\ mu}) $ para $ Q \ successq 0 $.
-8. Compare a convergência de SGD quando você faz a amostra de $ \ {(x_1, y_1), \ ldots, (x_m, y_m) \} $ com substituição e quando você faz a amostra sem substituição.
-9. Como você mudaria o solucionador SGD se algum gradiente (ou melhor, alguma coordenada associada a ele) fosse consistentemente maior do que todos os outros gradientes?
-10. Suponha que $ f (x) = x ^ 2 (1 + \ sin x) $. Quantos mínimos locais $ f $ tem? Você pode alterar $ f $ de forma que, para minimizá-lo, seja necessário avaliar todos os mínimos locais?
+1. Experimente diferentes programações de taxa de aprendizagem para SGD e com diferentes números de iterações. Em particular, plote a distância da solução ótima $(0, 0)$ como uma função do número de iterações.
+1. Prove que para a função $f(x_1, x_2) = x_1^2 + 2 x_2^2$ adicionar ruído normal ao gradiente é equivalente a minimizar uma função de perda $l(\mathbf{x}, \mathbf{w}) = (x_1 - w_1)^2 + 2 (x_2 - w_2)^2$ onde $x$  é extraído de uma distribuição normal.
+    * Derive a média e a variância da distribuição de $\mathbf{x}$.
+    * Mostre que esta propriedade é geralmente válida para funções objetivo $f(\mathbf{x}) = \frac{1}{2} (\mathbf{x} - \mathbf{\mu})^\top Q (\mathbf{x} - \mathbf{\mu})$ para $Q \succeq 0$.
+1. Compare a convergência de SGD quando você faz a amostra de $\{(x_1, y_1), \ldots, (x_m, y_m)\}$ com substituição e quando você faz a amostra sem substituição.
+1. Como você mudaria o solucionador SGD se algum gradiente (ou melhor, alguma coordenada associada a ele) fosse consistentemente maior do que todos os outros gradientes?
+1. Suponha que $f(x) = x^2 (1 + \sin x)$. Quantos mínimos locais $f$ tem? Você pode alterar $f$ de forma que, para minimizá-lo, seja necessário avaliar todos os mínimos locais?
  
 :begin_tab:`mxnet`
 [Discussão](https://discuss.d2l.ai/t/352)
@@ -269,6 +260,6 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA1MDg0ODYzLDIwNDU5ODAwOTYsMTAyMj
+eyJoaXN0b3J5IjpbNDY3NDY4MTIwLDIwNDU5ODAwOTYsMTAyMj
 MyMDgwM119
 -->
