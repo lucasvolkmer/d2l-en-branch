@@ -177,49 +177,33 @@ O gradiente $\partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w})$ pode ser limitado 
 
 $$\eta_t^2 \|\partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w})\|^2 \leq \eta_t^2 L^2.$$
 
-We are mostly interested in how the distance between $\mathbf{w}_t$ and $\mathbf{w}^*$ changes *in expectation*. In fact, for any specific sequence of steps the distance might well increase, depending on whichever $\mathbf{x}_t$ we encounter. Hence we need to bound the inner product. By convexity we have that
-
-Estamos principalmente interessados em como a distância entre $\mathbf{w}_t$ e $\mathbf{w}^*$ muda *na expectativa *. Na verdade, para qualquer sequência específica de passos, a distância pode muito bem aumentar, dependendo de qualquer $ \ mathbf {x} _t $ que encontrarmos. Portanto, precisamos limitar o produto interno. Por convexidade temos que
+Estamos principalmente interessados em como a distância entre $\mathbf{w}_t$ e $\mathbf{w}^*$ muda *na expectativa*. Na verdade, para qualquer sequência específica de passos, a distância pode muito bem aumentar, dependendo de qualquer $\mathbf{x}_t$ que encontrarmos. Portanto, precisamos limitar o produto interno. Por convexidade temos que
 
 $$
 l(\mathbf{x}_t, \mathbf{w}^*) \geq l(\mathbf{x}_t, \mathbf{w}_t) + \left\langle \mathbf{w}^* - \mathbf{w}_t, \partial_{\mathbf{w}} l(\mathbf{x}_t, \mathbf{w}_t) \right\rangle.
 $$
 
-Using both inequalities and plugging it into the above we obtain a bound on the distance between parameters at time $t+1$ as follows:
-
-Usando ambas as desigualdades e conectando-as ao acima, obtemos um limite para a distância entre os parâmetros no tempo $ t + 1 $ da seguinte forma:
+Usando ambas as desigualdades e conectando-as ao acima, obtemos um limite para a distância entre os parâmetros no tempo $t+1$ da seguinte forma:
 
 $$\|\mathbf{w}_{t} - \mathbf{w}^*\|^2 - \|\mathbf{w}_{t+1} - \mathbf{w}^*\|^2 \geq 2 \eta_t (l(\mathbf{x}_t, \mathbf{w}_t) - l(\mathbf{x}_t, \mathbf{w}^*)) - \eta_t^2 L^2.$$
 
-This means that we make progress as long as the expected difference between current loss and the optimal loss outweighs $\eta_t L^2$. Since the former is bound to converge to $0$ it follows that the learning rate $\eta_t$ also needs to vanish.
-
-Next we take expectations over this expression. This yields
-
-Isso significa que progredimos enquanto a diferença esperada entre a perda atual e a perda ótima supera $ \ eta_t L ^ 2 $. Como o primeiro tende a convergir para $ 0 $, segue-se que a taxa de aprendizado $ \ eta_t $ também precisa desaparecer.
+Isso significa que progredimos enquanto a diferença esperada entre a perda atual e a perda ótima supera $\eta_t L^2$. Como o primeiro tende a convergir para $0$, segue-se que a taxa de aprendizado $\eta_t$ também precisa desaparecer.
 
 Em seguida, consideramos as expectativas sobre essa expressão. Isso produz
 
 $$E_{\mathbf{w}_t}\left[\|\mathbf{w}_{t} - \mathbf{w}^*\|^2\right] - E_{\mathbf{w}_{t+1}\mid \mathbf{w}_t}\left[\|\mathbf{w}_{t+1} - \mathbf{w}^*\|^2\right] \geq 2 \eta_t [E[R[\mathbf{w}_t]] - R^*] -  \eta_t^2 L^2.$$
 
-The last step involves summing over the inequalities for $t \in \{t, \ldots, T\}$. Since the sum telescopes and by dropping the lower term we obtain
-
-A última etapa envolve a soma das desigualdades para $ t \ in \ {t, \ ldots, T \} $. Uma vez que a soma dos telescópios e diminuindo o termo inferior, obtemos
+A última etapa envolve a soma das desigualdades para $t \in \{t, \ldots, T\}$. Uma vez que a soma dos telescópios e diminuindo o termo inferior, obtemos
 
 $$\|\mathbf{w}_{0} - \mathbf{w}^*\|^2 \geq 2 \sum_{t=1}^T \eta_t [E[R[\mathbf{w}_t]] - R^*] - L^2 \sum_{t=1}^T \eta_t^2.$$
 
-Note that we exploited that $\mathbf{w}_0$ is given and thus the expectation can be dropped. Last define
-
-Observe que exploramos que $ \ mathbf {w} _0 $ é dado e, portanto, a expectativa pode ser descartada. Última definição
+Observe que exploramos que $\mathbf{w}_0$ é dado e, portanto, a expectativa pode ser descartada. Última definição
 
 $$\bar{\mathbf{w}} := \frac{\sum_{t=1}^T \eta_t \mathbf{w}_t}{\sum_{t=1}^T \eta_t}.$$
-
-Then by convexity it follows that
 
 Então, por convexidade, segue-se que
 
 $$\sum_t \eta_t E[R[\mathbf{w}_t]] \geq \sum \eta_t \cdot \left[E[\bar{\mathbf{w}}]\right].$$
-
-Plugging this into the above inequality yields the bound
 
 Conectar isso à desigualdade acima produz o limite
 
@@ -304,6 +288,6 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjE0OTg2NSwyMDQ1OTgwMDk2LDEwMj
+eyJoaXN0b3J5IjpbMTUzNDIwMDkwNiwyMDQ1OTgwMDk2LDEwMj
 IzMjA4MDNdfQ==
 -->
