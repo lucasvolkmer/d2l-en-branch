@@ -222,7 +222,7 @@ Observe que para perdas fortemente convexas $l(\mathbf{x}, \mathbf{w}') \geq l(\
 
 So far we have played a bit fast and loose when it comes to talking about stochastic gradient descent. We posited that we draw instances $x_i$, typically with labels $y_i$ from some distribution $p(x, y)$ and that we use this to update the weights $w$ in some manner. In particular, for a finite sample size we simply argued that the discrete distribution $p(x, y) = \frac{1}{n} \sum_{i=1}^n \delta_{x_i}(x) \delta_{y_i}(y)$ allows us to perform SGD over it.
 
-Até agora, fomos um pouco rápidos e soltos quando se trata de falar sobre a descida gradiente estocástica. Postulamos que desenhamos instâncias $ x_i $, normalmente com rótulos $ y_i $ de alguma distribuição $ p (x, y) $ e que usamos isso para atualizar os pesos $ w $ de alguma maneira. Em particular, para um tamanho de amostra finito, simplesmente argumentamos que a distribuição discreta $ p (x, y) = \ frac {1} {n} \ sum_ {i = 1} ^ n \ delta_ {x_i} (x) \ delta_ {y_i} (y) $ nos permite realizar SGD sobre ele.
+Até agora, fomos um pouco rápidos e soltos quando se trata de falar sobre a descida gradiente estocástica. Postulamos que desenhamos instâncias $x_i$, normalmente com rótulos $y_i$ de alguma distribuição $p(x, y)$ e que usamos isso para atualizar os pesos $w$ de alguma maneira. Em particular, para um tamanho de amostra finito, simplesmente argumentamos que a distribuição discreta $p(x, y) = \frac{1}{n} \sum_{i=1}^n \delta_{x_i}(x) \delta_{y_i}(y)$ nos permite realizar SGD sobre ele.
 
 However, this is not really what we did. In the toy examples in the current section we simply added noise to an otherwise non-stochastic gradient, i.e., we pretended to have pairs $(x_i, y_i)$. It turns out that this is justified here (see the exercises for a detailed discussion). More troubling is that in all previous discussions we clearly did not do this. Instead we iterated over all instances exactly once. To see why this is preferable consider the converse, namely that we are sampling $n$ observations from the discrete distribution with replacement. The probability of choosing an element $i$ at random is $N^{-1}$. Thus to choose it at least once is
 
@@ -281,6 +281,6 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0ODcyMDg1NiwyMDQ1OTgwMDk2LDEwMj
-IzMjA4MDNdfQ==
+eyJoaXN0b3J5IjpbLTIwMzIyMzY5MjQsMjA0NTk4MDA5NiwxMD
+IyMzIwODAzXX0=
 -->
