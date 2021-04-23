@@ -43,15 +43,9 @@ A descida gradiente estocástica (SGD) reduz o custo computacional a cada itera�
 
 $$\mathbf{x} \leftarrow \mathbf{x} - \eta \nabla f_i(\mathbf{x}).$$
 
-Here, $\eta$ is the learning rate. We can see that the computing cost for each iteration drops from $\mathcal{O}(n)$ of the gradient descent to the constant $\mathcal{O}(1)$. We should mention that the stochastic gradient $\nabla f_i(\mathbf{x})$ is the unbiased estimate of gradient $\nabla f(\mathbf{x})$.
-
-Aqui, $ \ eta $ é a taxa de aprendizado. Podemos ver que o custo de computação para cada iteração cai de $ \ mathcal {O} (n) $ da descida do gradiente para a constante $ \ mathcal {O} (1) $. Devemos mencionar que o gradiente estocástico $ \ nabla f_i (\ mathbf {x}) $ é a estimativa imparcial do gradiente $ \ nabla f (\ mathbf {x}) $.
+Aqui, $\eta$ é a taxa de aprendizado. Podemos ver que o custo de computação para cada iteração cai de $\mathcal{O}(n)$ da descida do gradiente para a constante $\mathcal{O}(1)$. Devemos mencionar que o gradiente estocástico $\nabla f_i(\mathbf{x})$ é a estimativa imparcial do gradiente $\nabla f(\mathbf{x})$.
 
 $$\mathbb{E}_i \nabla f_i(\mathbf{x}) = \frac{1}{n} \sum_{i = 1}^n \nabla f_i(\mathbf{x}) = \nabla f(\mathbf{x}).$$
-
-This means that, on average, the stochastic gradient is a good estimate of the gradient.
-
-Now, we will compare it to gradient descent by adding random noise with a mean of 0 and a variance of 1 to the gradient to simulate a SGD.
 
 Isso significa que, em média, o gradiente estocástico é uma boa estimativa do gradiente.
 
@@ -117,7 +111,7 @@ As we can see, the trajectory of the variables in the SGD is much more noisy tha
 
 This is also the reason for adding a learning rate function `lr` into the `sgd` step function. In the example above any functionality for learning rate scheduling lies dormant as we set the associated `lr` function to be constant, i.e., `lr = (lambda: 1)`.
 
-Como podemos ver, a trajetória das variáveis ​​no SGD é muito mais ruidosa do que a que observamos na descida do gradiente na seção anterior. Isso se deve à natureza estocástica do gradiente. Ou seja, mesmo quando chegamos perto do mínimo, ainda estamos sujeitos à incerteza injetada pelo gradiente instantâneo via $ \ eta \ nabla f_i (\ mathbf {x}) $. Mesmo após 50 passos, a qualidade ainda não é tão boa. Pior ainda, não melhorará após etapas adicionais (encorajamos o leitor a experimentar um número maior de etapas para confirmar isso por conta própria). Isso nos deixa com a única alternativa --- alterar a taxa de aprendizagem $ \ eta $. No entanto, se escolhermos isso muito pequeno, não faremos nenhum progresso significativo inicialmente. Por outro lado, se o escolhermos muito grande, não obteremos uma boa solução, como visto acima. A única maneira de resolver esses objetivos conflitantes é reduzir a taxa de aprendizado * dinamicamente * à medida que a otimização avança.
+Como podemos ver, a trajetória das variáveis ​​no SGD é muito mais ruidosa do que a que observamos na descida do gradiente na seção anterior. Isso se deve à natureza estocástica do gradiente. Ou seja, mesmo quando chegamos perto do mínimo, ainda estamos sujeitos à incerteza injetada pelo gradiente instantâneo via $\eta \nabla f_i(\mathbf{x})$. Mesmo após 50 passos, a qualidade ainda não é tão boa. Pior ainda, não melhorará após etapas adicionais (encorajamos o leitor a experimentar um número maior de etapas para confirmar isso por conta própria). Isso nos deixa com a única alternativa --- alterar a taxa de aprendizagem $\eta$. No entanto, se escolhermos isso muito pequeno, não faremos nenhum progresso significativo inicialmente. Por outro lado, se o escolhermos muito grande, não obteremos uma boa solução, como visto acima. A única maneira de resolver esses objetivos conflitantes é reduzir a taxa de aprendizado * dinamicamente * à medida que a otimização avança.
 
 Esta também é a razão para adicionar uma função de taxa de aprendizagem `lr` na função de passo` sgd`. No exemplo acima, qualquer funcionalidade para o agendamento da taxa de aprendizagem permanece latente, pois definimos a função `lr` associada como constante, ou seja,` lr = (lambda: 1) `.
 
@@ -330,5 +324,6 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NTk4MDA5NiwxMDIyMzIwODAzXX0=
+eyJoaXN0b3J5IjpbLTE1MzM4NzQ1ODUsMjA0NTk4MDA5NiwxMD
+IyMzIwODAzXX0=
 -->
