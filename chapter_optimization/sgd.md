@@ -164,8 +164,6 @@ Em particular, assuma que $\mathbf{x}_t$ é retirado de alguma distribuição $P
 
 $$R(\mathbf{w}) = E_{\mathbf{x} \sim P}[l(\mathbf{x}, \mathbf{w})]$$
 
-the expected risk and by $R^*$ its minimum with regard to $\mathbf{w}$. Last let $\mathbf{w}^*$ be the minimizer (we assume that it exists within the domain which $\mathbf{w}$ is defined). In this case we can track the distance between the current parameter $\mathbf{w}_t$ and the risk minimizer $\mathbf{w}^*$ and see whether it improves over time:
-
 o risco esperado e por $R^*$ seu mínimo em relação a $\mathbf{w}$. Por último, seja $\mathbf{w}^*$ o minimizador (assumimos que ele existe dentro do domínio que $\mathbf{w}$ está definido). Neste caso, podemos rastrear a distância entre o parâmetro atual $\mathbf{w}_t$ e o minimizador de risco $\mathbf{w}^*$ e ver se melhora com o tempo:
 
 $$\begin{aligned}
@@ -175,15 +173,13 @@ $$\begin{aligned}
    \end{aligned}
 $$
 
-The gradient $\partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w})$ can be bounded from above by some Lipschitz constant $L$, hence we have that
-
-O gradiente $ \ partial_ \ mathbf {w} l (\ mathbf {x} _t, \ mathbf {w}) $ pode ser limitado de cima por alguma constante de Lipschitz $ L $, portanto, temos que
+O gradiente $\partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w})$ pode ser limitado de cima por alguma constante de Lipschitz $L$, portanto, temos que
 
 $$\eta_t^2 \|\partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w})\|^2 \leq \eta_t^2 L^2.$$
 
 We are mostly interested in how the distance between $\mathbf{w}_t$ and $\mathbf{w}^*$ changes *in expectation*. In fact, for any specific sequence of steps the distance might well increase, depending on whichever $\mathbf{x}_t$ we encounter. Hence we need to bound the inner product. By convexity we have that
 
-Estamos principalmente interessados em como a distância entre $ \ mathbf {w} _t $ e $ \ mathbf {w} ^ * $ muda * na expectativa *. Na verdade, para qualquer sequência específica de passos, a distância pode muito bem aumentar, dependendo de qualquer $ \ mathbf {x} _t $ que encontrarmos. Portanto, precisamos limitar o produto interno. Por convexidade temos que
+Estamos principalmente interessados em como a distância entre $\mathbf{w}_t$ e $\mathbf{w}^*$ muda *na expectativa *. Na verdade, para qualquer sequência específica de passos, a distância pode muito bem aumentar, dependendo de qualquer $ \ mathbf {x} _t $ que encontrarmos. Portanto, precisamos limitar o produto interno. Por convexidade temos que
 
 $$
 l(\mathbf{x}_t, \mathbf{w}^*) \geq l(\mathbf{x}_t, \mathbf{w}_t) + \left\langle \mathbf{w}^* - \mathbf{w}_t, \partial_{\mathbf{w}} l(\mathbf{x}_t, \mathbf{w}_t) \right\rangle.
@@ -308,6 +304,6 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NzM3MjIyOCwyMDQ1OTgwMDk2LDEwMj
+eyJoaXN0b3J5IjpbMTcyMjE0OTg2NSwyMDQ1OTgwMDk2LDEwMj
 IzMjA4MDNdfQ==
 -->
