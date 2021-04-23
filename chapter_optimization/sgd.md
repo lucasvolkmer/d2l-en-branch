@@ -213,15 +213,10 @@ $$
 
 Aqui $r^2 := \|\mathbf{w}_0 - \mathbf{w}^*\|^2$ é um limite na distância entre a escolha inicial dos parâmetros e o resultado final. Em suma, a velocidade de convergência depende de quão rapidamente a função de perda muda por meio da constante de Lipschitz $L$ e quão longe da otimização o valor inicial está $r$. Observe que o limite é em termos de $\bar{\mathbf{w}}$ em vez de $\mathbf{w}_T$. Este é o caso, pois $\bar{\mathbf{w}}$ é uma versão suavizada do caminho de otimização. Agora vamos analisar algumas opções para $\eta_t$.
 
-* **Known Time Horizon**. Whenever $r, L$ and $T$ are known we can pick $\eta = r/L \sqrt{T}$. This yields as upper bound $r L (1 + 1/T)/2\sqrt{T} < rL/\sqrt{T}$. That is, we converge with rate $\mathcal{O}(1/\sqrt{T})$ to the optimal solution.
-* **Unknown Time Horizon**. Whenever we want to have a good solution for *any* time $T$ we can pick $\eta = \mathcal{O}(1/\sqrt{T})$. This costs us an extra logarithmic factor and it leads to an upper bound of the form $\mathcal{O}(\log T / \sqrt{T})$.
+* **Horizonte de tempo conhecido**. Sempre que $r, L$ e $T$ são conhecidos, podemos escolher $$\eta = r/L \sqrt{T}$. Isso resulta no limite superior $r L (1 + 1/T)/2\sqrt{T} < rL/\sqrt{T}$. Ou seja, convergimos com a taxa $\mathcal{O}(1/\sqrt{T})$ para a solução ótima.
+* **Horizonte de tempo desconhecido**. Sempre que quisermos ter uma boa solução para *a qualquer* momento $T$, podemos escolher $\eta = \mathcal{O}(1/\sqrt{T})$. Isso nos custa um fator logarítmico extra e leva a um limite superior da forma $\mathcal{O}(\log T / \sqrt{T})$.
 
-* ** Horizonte de tempo conhecido **. Sempre que $r, L$ e $T$ são conhecidos, podemos escolher $$\eta = r/L \sqrt{T}$. Isso resulta no limite superior $r L (1 + 1/T)/2\sqrt{T} < rL/\sqrt{T}$. Ou seja, convergimos com a taxa $\mathcal{O}(1/\sqrt{T})$ para a solução ótima.
-* ** Horizonte de tempo desconhecido **. Sempre que quisermos ter uma boa solução para * a qualquer * momento $ T $, podemos escolher $ \ eta = \ mathcal {O} (1 / \ sqrt {T}) $. Isso nos custa um fator logarítmico extra e leva a um limite superior da forma $ \ mathcal {O} (\ log T / \ sqrt {T}) $.
-
-Note that for strongly convex losses $l(\mathbf{x}, \mathbf{w}') \geq l(\mathbf{x}, \mathbf{w}) + \langle \mathbf{w}'-\mathbf{w}, \partial_\mathbf{w} l(\mathbf{x}, \mathbf{w}) \rangle + \frac{\lambda}{2} \|\mathbf{w}-\mathbf{w}'\|^2$ we can design even more rapidly converging optimization schedules. In fact, an exponential decay in $\eta$ leads to a bound of the form $\mathcal{O}(\log T / T)$.
-
-Observe que para perdas fortemente convexas $ l (\ mathbf {x}, \ mathbf {w} ') \ geq l (\ mathbf {x}, \ mathbf {w}) + \ langle \ mathbf {w}' - \ mathbf {w}, \ partial_ \ mathbf {w} l (\ mathbf {x}, \ mathbf {w}) \ rangle + \ frac {\ lambda} {2} \ | \ mathbf {w} - \ mathbf {w} '\ | ^ 2 $ podemos projetar agendas de otimização convergentes ainda mais rapidamente. Na verdade, um declínio exponencial em $ \ eta $ leva a um limite da forma $ \ mathcal {O} (\ log T / T) $.
+Observe que para perdas fortemente convexas $l(\mathbf{x}, \mathbf{w}') \geq l(\mathbf{x}, \mathbf{w}) + \langle \mathbf{w}'-\mathbf{w}, \partial_\mathbf{w} l(\mathbf{x}, \mathbf{w}) \rangle + \frac{\lambda}{2} \|\mathbf{w}-\mathbf{w}'\|^2$  podemos projetar agendas de otimização convergentes ainda mais rapidamente. Na verdade, um declínio exponencial em $\eta$ leva a um limite da forma $\mathcal{O}(\log T / T)$.
 
 ## Gradientes estocásticos e amostras finitas
 
@@ -286,6 +281,6 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA2NjY1MjkwLDIwNDU5ODAwOTYsMTAyMj
-MyMDgwM119
+eyJoaXN0b3J5IjpbMTA0ODcyMDg1NiwyMDQ1OTgwMDk2LDEwMj
+IzMjA4MDNdfQ==
 -->
