@@ -14,15 +14,10 @@ As coisas são um pouco mais sutis quando se trata de GPUs individuais ou até C
 
 A maneira de aliviar essas restrições é usar uma hierarquia de caches de CPU que são realmente rápidos o suficiente para fornecer dados ao processador. Esta é *a* força motriz por trás dos lotes no aprendizado profundo. Para manter as coisas simples, considere a multiplicação matriz-matriz, digamos $\mathbf{A} = \mathbf{B}\mathbf{C}$. Temos várias opções para calcular $\mathbf{A}$. Por exemplo, podemos tentar o seguinte:
 
-1. We could compute $\mathbf{A}_{ij} = \mathbf{B}_{i,:} \mathbf{C}_{:,j}^\top$, i.e., we could compute it elementwise by means of dot products.
-1. We could compute $\mathbf{A}_{:,j} = \mathbf{B} \mathbf{C}_{:,j}^\top$, i.e., we could compute it one column at a time. Likewise we could compute $\mathbf{A}$ one row $\mathbf{A}_{i,:}$ at a time.
-1. We could simply compute $\mathbf{A} = \mathbf{B} \mathbf{C}$.
-1. We could break $\mathbf{B}$ and $\mathbf{C}$ into smaller block matrices and compute $\mathbf{A}$ one block at a time.
-
 1. Poderíamos calcular $\mathbf{A}_{ij} = \mathbf{B}_{i,:} \mathbf{C}_{:,j}^\top$, ou seja, poderíamos calculá-lo elemento a elemento por meio de produtos escalares.
-1. Poderíamos calcular $\mathbf{A}_{:,j} = \mathbf{B} \mathbf{C}_{:,j}^\top$, ou seja, poderíamos calcular uma coluna de cada vez . Da mesma forma, poderíamos calcular $\mathbf{A}$ one ow $\mathbf{A}_{i,:}$ de cada vez.
-1. Poderíamos simplesmente calcular $ \ mathbf {A} = \ mathbf {B} \ mathbf {C} $.
-1. Poderíamos quebrar $ \ mathbf {B} $ e $ \ mathbf {C} $ em matrizes de blocos menores e calcular $ \ mathbf {A} $ um bloco de cada vez.
+1. Poderíamos calcular $\mathbf{A}_{:,j} = \mathbf{B} \mathbf{C}_{:,j}^\top$, ou seja, poderíamos calcular uma coluna de cada vez . Da mesma forma, poderíamos calcular $\mathbf{A}$ uma linha $\mathbf{A}_{i,:}$ de cada vez.
+1. Poderíamos simplesmente calcular $\mathbf{A} = \mathbf{B} \mathbf{C}$.
+1. Poderíamos quebrar $\mathbf{B}$ e $\mathbf{C}$ em matrizes de blocos menores e calcular $\mathbf{A}$ um bloco de cada vez.
 
 If we follow the first option, we will need to copy one row and one column vector into the CPU each time we want to compute an element $\mathbf{A}_{ij}$. Even worse, due to the fact that matrix elements are aligned sequentially we are thus required to access many disjoint locations for one of the two vectors as we read them from memory. The second option is much more favorable. In it, we are able to keep the column vector $\mathbf{C}_{:,j}$ in the CPU cache while we keep on traversing through $B$. This halves the memory bandwidth requirement with correspondingly faster access. Of course, option 3 is most desirable. Unfortunately, most matrices might not entirely fit into cache (this is what we are discussing after all). However, option 4 offers a practically useful alternative: we can move blocks of the matrix into cache and multiply them locally. Optimized libraries take care of this for us. Let us have a look at how efficient these operations are in practice.
 
@@ -585,5 +580,5 @@ train_concise_ch11(trainer, {'learning_rate': 0.05}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1069)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2OTU0MTExMiwyMjI4MjgyMzldfQ==
+eyJoaXN0b3J5IjpbNTE5MzgyODU1LDIyMjgyODIzOV19
 -->
