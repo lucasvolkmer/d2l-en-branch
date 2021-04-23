@@ -579,3 +579,6 @@ train_concise_ch11(trainer, {'learning_rate': 0.05}, data_iter)
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1069)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjIyODI4MjM5XX0=
+-->
