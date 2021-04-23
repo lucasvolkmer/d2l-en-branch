@@ -220,28 +220,16 @@ Observe que para perdas fortemente convexas $l(\mathbf{x}, \mathbf{w}') \geq l(\
 
 ## Gradientes estocásticos e amostras finitas
 
-So far we have played a bit fast and loose when it comes to talking about stochastic gradient descent. We posited that we draw instances $x_i$, typically with labels $y_i$ from some distribution $p(x, y)$ and that we use this to update the weights $w$ in some manner. In particular, for a finite sample size we simply argued that the discrete distribution $p(x, y) = \frac{1}{n} \sum_{i=1}^n \delta_{x_i}(x) \delta_{y_i}(y)$ allows us to perform SGD over it.
-
 Até agora, fomos um pouco rápidos e soltos quando se trata de falar sobre a descida gradiente estocástica. Postulamos que desenhamos instâncias $x_i$, normalmente com rótulos $y_i$ de alguma distribuição $p(x, y)$ e que usamos isso para atualizar os pesos $w$ de alguma maneira. Em particular, para um tamanho de amostra finito, simplesmente argumentamos que a distribuição discreta $p(x, y) = \frac{1}{n} \sum_{i=1}^n \delta_{x_i}(x) \delta_{y_i}(y)$ nos permite realizar SGD sobre ele.
 
-However, this is not really what we did. In the toy examples in the current section we simply added noise to an otherwise non-stochastic gradient, i.e., we pretended to have pairs $(x_i, y_i)$. It turns out that this is justified here (see the exercises for a detailed discussion). More troubling is that in all previous discussions we clearly did not do this. Instead we iterated over all instances exactly once. To see why this is preferable consider the converse, namely that we are sampling $n$ observations from the discrete distribution with replacement. The probability of choosing an element $i$ at random is $N^{-1}$. Thus to choose it at least once is
-
-No entanto, não foi exatamente isso que fizemos. Nos exemplos de brinquedos na seção atual, simplesmente adicionamos ruído a um gradiente não estocástico, ou seja, fingimos ter pares $ (x_i, y_i) $. Acontece que isso se justifica aqui (veja os exercícios para uma discussão detalhada). Mais preocupante é que em todas as discussões anteriores claramente não fizemos isso. Em vez disso, iteramos em todas as instâncias exatamente uma vez. Para ver por que isso é preferível, considere o inverso, ou seja, estamos amostrando $ n $ observações da distribuição discreta com substituição. A probabilidade de escolher um elemento $ i $ aleatoriamente é $ N ^ {- 1} $. Portanto, escolher pelo menos uma vez é
+No entanto, não foi exatamente isso que fizemos. Nos exemplos de brinquedos na seção atual, simplesmente adicionamos ruído a um gradiente não estocástico, ou seja, fingimos ter pares $(x_i, y_i)$. Acontece que isso se justifica aqui (veja os exercícios para uma discussão detalhada). Mais preocupante é que em todas as discussões anteriores claramente não fizemos isso. Em vez disso, iteramos em todas as instâncias exatamente uma vez. Para ver por que isso é preferível, considere o inverso, ou seja, estamos amostrando $n$ observações da distribuição discreta com substituição. A probabilidade de escolher um elemento $i$ aleatoriamente é $N^{-1}$. Portanto, escolher pelo menos uma vez é
 
 $$P(\mathrm{choose~} i) = 1 - P(\mathrm{omit~} i) = 1 - (1-N^{-1})^N \approx 1-e^{-1} \approx 0.63.$$
 
-A similar reasoning shows that the probability of picking a sample exactly once is given by ${N \choose 1} N^{-1} (1-N^{-1})^{N-1} = \frac{N-1}{N} (1-N^{-1})^{N} \approx e^{-1} \approx 0.37$. This leads to an increased variance and decreased data efficiency relative to sampling without replacement. Hence, in practice we perform the latter (and this is the default choice throughout this book). Last note that repeated passes through the dataset traverse it in a *different* random order.
-
-Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exatamente uma vez é dada por $ {N \ choose 1} N ^ {- 1} (1-N ^ {- 1}) ^ {N-1} = \ frac {N -1} {N} (1-N ^ {- 1}) ^ {N} \ approx e ^ {- 1} \ approx 0,37 $. Isso leva a um aumento da variância e diminuição da eficiência dos dados em relação à amostragem sem reposição. Portanto, na prática, fazemos o último (e esta é a escolha padrão em todo este livro). Por último, observe que passagens repetidas pelo conjunto de dados percorrem-no em uma ordem aleatória * diferente *.
+Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exatamente uma vez é dada por ${N \choose 1} N^{-1} (1-N^{-1})^{N-1} = \frac{N-1}{N} (1-N^{-1})^{N} \approx e^{-1} \approx 0.37$. Isso leva a um aumento da variância e diminuição da eficiência dos dados em relação à amostragem sem reposição. Portanto, na prática, fazemos o último (e esta é a escolha padrão em todo este livro). Por último, observe que passagens repetidas pelo conjunto de dados percorrem-no em uma ordem aleatória *diferente*.
 
 
 ## Sumário
-
-* For convex problems we can prove that for a wide choice of learning rates Stochastic Gradient Descent will converge to the optimal solution.
-* For deep learning this is generally not the case. However, the analysis of convex problems gives us useful insight into how to approach optimization, namely to reduce the learning rate progressively, albeit not too quickly.
-* Problems occur when the learning rate is too small or too large. In practice  a suitable learning rate is often found only after multiple experiments.
-* When there are more examples in the training dataset, it costs more to compute each iteration for gradient descent, so SGD is preferred in these cases.
-* Optimality guarantees for SGD are in general not available in nonconvex cases since the number of local minima that require checking might well be exponential.
 
 * Para problemas convexos, podemos provar que, para uma ampla escolha de taxas de aprendizado, a Descida de Gradiente Estocástico convergirá para a solução ótima.
 * Geralmente, esse não é o caso para aprendizagem profunda. No entanto, a análise de problemas convexos nos dá uma visão útil sobre como abordar a otimização, nomeadamente para reduzir a taxa de aprendizagem progressivamente, embora não muito rapidamente.
@@ -261,8 +249,8 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 5. Assume that $f(x) = x^2 (1 + \sin x)$. How many local minima does $f$ have? Can you change $f$ in such a way that to minimize it one needs to evaluate all local minima?
 
 
-6. Experimente diferentes programações de taxa de aprendizagem para SGD e com diferentes números de iterações. Em particular, plote a distância da solução ótima $ (0, 0) $ como uma função do número de iterações.
-7. Prove que para a função $ f (x_1, x_2) = x_1 ^ 2 + 2 x_2 ^ 2 $ adicionar ruído normal ao gradiente é equivalente a minimizar uma função de perda $ l (\ mathbf {x}, \ mathbf {w }) = (x_1 - w_1) ^ 2 + 2 (x_2 - w_2) ^ 2 $ onde $ x $ é extraído de uma distribuição normal.
+6. Experimente diferentes programações de taxa de aprendizagem para SGD e com diferentes números de iterações. Em particular, plote a distância da solução ótima $(0, 0)$ como uma função do número de iterações.
+7. Prove que para a função $f(x_1, x_2) = x_1^2 + 2 x_2^2$ adicionar ruído normal ao gradiente é equivalente a minimizar uma função de perda $ l (\ mathbf {x}, \ mathbf {w }) = (x_1 - w_1) ^ 2 + 2 (x_2 - w_2) ^ 2 $ onde $ x $ é extraído de uma distribuição normal.
     * Derive a média e a variância da distribuição de $ \ mathbf {x} $.
     * Mostre que esta propriedade é geralmente válida para funções objetivo $ f (\ mathbf {x}) = \ frac {1} {2} (\ mathbf {x} - \ mathbf {\ mu}) ^ \ top Q (\ mathbf {x} - \ mathbf {\ mu}) $ para $ Q \ successq 0 $.
 8. Compare a convergência de SGD quando você faz a amostra de $ \ {(x_1, y_1), \ ldots, (x_m, y_m) \} $ com substituição e quando você faz a amostra sem substituição.
@@ -281,6 +269,6 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzIyMzY5MjQsMjA0NTk4MDA5NiwxMD
-IyMzIwODAzXX0=
+eyJoaXN0b3J5IjpbNTA1MDg0ODYzLDIwNDU5ODAwOTYsMTAyMj
+MyMDgwM119
 -->
