@@ -155,22 +155,18 @@ Existem muitas outras opções de como definir a taxa de aprendizagem. Por exemp
 
 ## Análise de convergência para objetivos convexos
 
-The following is optional and primarily serves to convey more intuition about the problem. We limit ourselves to one of the simplest proofs, as described by :cite:`Nesterov.Vial.2000`. Significantly more advanced proof techniques exist, e.g., whenever the objective function is particularly well behaved. :cite:`Hazan.Rakhlin.Bartlett.2008` show that for strongly convex functions, i.e., for functions that can be bounded from below by $\mathbf{x}^\top \mathbf{Q} \mathbf{x}$, it is possible to minimize them in a small number of steps while decreasing the learning rate like $\eta(t) = \eta_0/(\beta t + 1)$. Unfortunately this case never really occurs in deep learning and we are left with a much more slowly decreasing rate in practice.
-
-O que segue é opcional e serve principalmente para transmitir mais intuição sobre o problema. Nos limitamos a uma das provas mais simples, conforme descrito por: cite: `Nesterov.Vial.2000`. Existem técnicas de prova significativamente mais avançadas, por exemplo, sempre que a função objetiva é particularmente bem comportada. : cite: `Hazan.Rakhlin.Bartlett.2008` mostra que para funções fortemente convexas, ou seja, para funções que podem ser limitadas de baixo por $ \ mathbf {x} ^ \ top \ mathbf {Q} \ mathbf {x} $ , é possível minimizá-los em um pequeno número de etapas enquanto diminui a taxa de aprendizagem como $ \ eta (t) = \ eta_0 / (\ beta t + 1) $. Infelizmente, esse caso nunca ocorre realmente no aprendizado profundo e ficamos com uma taxa de diminuição muito mais lenta na prática.
+O que segue é opcional e serve principalmente para transmitir mais intuição sobre o problema. Nos limitamos a uma das provas mais simples, conforme descrito por :cite:`Nesterov.Vial.2000`. Existem técnicas de prova significativamente mais avançadas, por exemplo, sempre que a função objetiva é particularmente bem comportada. :cite:`Hazan.Rakhlin.Bartlett.2008` mostra que para funções fortemente convexas, ou seja, para funções que podem ser limitadas de baixo por $\mathbf{x}^\top \mathbf{Q} \mathbf{x}$ , é possível minimizá-los em um pequeno número de etapas enquanto diminui a taxa de aprendizagem como $\eta(t) = \eta_0/(\beta t + 1)$. Infelizmente, esse caso nunca ocorre realmente no aprendizado profundo e ficamos com uma taxa de diminuição muito mais lenta na prática.
 
 Considere o caso onde
 $$\mathbf{w}_{t+1} = \mathbf{w}_{t} - \eta_t \partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w}).$$
 
-In particular, assume that $\mathbf{x}_t$ is drawn from some distribution $P(\mathbf{x})$ and that $l(\mathbf{x}, \mathbf{w})$ is a convex function in $\mathbf{w}$ for all $\mathbf{x}$. Last denote by
-
-Em particular, assuma que $ \ mathbf {x} _t $ é retirado de alguma distribuição $ P (\ mathbf {x}) $ e que $ l (\ mathbf {x}, \ mathbf {w}) $ é uma função convexa em $ \ mathbf {w} $ para todos os $ \ mathbf {x} $. Última denotada por
+Em particular, assuma que $\mathbf{x}_t$ é retirado de alguma distribuição $P(\mathbf{x})$ e que $l(\mathbf{x}, \mathbf{w})$ é uma função convexa em $\mathbf{w}$ para todos os $\mathbf{x}$. Última denotada por
 
 $$R(\mathbf{w}) = E_{\mathbf{x} \sim P}[l(\mathbf{x}, \mathbf{w})]$$
 
 the expected risk and by $R^*$ its minimum with regard to $\mathbf{w}$. Last let $\mathbf{w}^*$ be the minimizer (we assume that it exists within the domain which $\mathbf{w}$ is defined). In this case we can track the distance between the current parameter $\mathbf{w}_t$ and the risk minimizer $\mathbf{w}^*$ and see whether it improves over time:
 
-o risco esperado e por $ R ^ * $ seu mínimo em relação a $ \ mathbf {w} $. Por último, seja $ \ mathbf {w} ^ * $ o minimizador (assumimos que ele existe dentro do domínio que $ \ mathbf {w} $ está definido). Neste caso, podemos rastrear a distância entre o parâmetro atual $ \ mathbf {w} _t $ e o minimizador de risco $ \ mathbf {w} ^ * $ e ver se melhora com o tempo:
+o risco esperado e por $R^*$ seu mínimo em relação a $\mathbf{w}$. Por último, seja $ \ mathbf {w} ^ * $ o minimizador (assumimos que ele existe dentro do domínio que $ \ mathbf {w} $ está definido). Neste caso, podemos rastrear a distância entre o parâmetro atual $ \ mathbf {w} _t $ e o minimizador de risco $ \ mathbf {w} ^ * $ e ver se melhora com o tempo:
 
 $$\begin{aligned}
     \|\mathbf{w}_{t+1} - \mathbf{w}^*\|^2 & = \|\mathbf{w}_{t} - \eta_t \partial_\mathbf{w} l(\mathbf{x}_t, \mathbf{w}) - \mathbf{w}^*\|^2 \\
@@ -312,6 +308,6 @@ Um raciocínio semelhante mostra que a probabilidade de escolher uma amostra exa
 [Discussão](https://discuss.d2l.ai/t/1067)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgyMTE5NzU3LDIwNDU5ODAwOTYsMTAyMj
-MyMDgwM119
+eyJoaXN0b3J5IjpbMTUyNDY3MjgwMCwyMDQ1OTgwMDk2LDEwMj
+IzMjA4MDNdfQ==
 -->
