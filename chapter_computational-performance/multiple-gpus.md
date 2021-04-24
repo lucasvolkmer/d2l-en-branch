@@ -39,11 +39,11 @@ Suponha que haja $k$ GPUs em uma máquina. Dado o modelo a ser treinado, cada GP
 ![Cálculo do gradiente estocástico de minibatch usando paralelismo de dados e duas GPUs.](../img/data-parallel.svg)
 :label:`fig_data_parallel`
 
-* In any iteration of training, given a random minibatch, we split the examples in the batch into $k$ portions and distribute them evenly across the GPUs.
-* Each GPU calculates loss and gradient of the model parameters based on the minibatch subset it was assigned and the model parameters it maintains.
-* The local gradients of each of the $k$ GPUs are aggregated to obtain the current minibatch stochastic gradient.
-* The aggregate gradient is re-distributed to each GPU.
-* Each GPU uses this minibatch stochastic gradient to update the complete set of model parameters that it maintains.
+* Em qualquer iteração de treinamento, dado um minibatch aleatório, dividimos os exemplos no lote em porções de $k$ e os distribuímos uniformemente pelas GPUs.
+* Cada GPU calcula a perda e o gradiente dos parâmetros do modelo com base no subconjunto de minibatch que foi atribuído e nos parâmetros do modelo que mantém.
+* Os gradientes locais de cada uma das $k$ GPUs são agregados para obter o gradiente estocástico do minibatch atual.
+* O gradiente agregado é redistribuído para cada GPU.
+* Cada GPU usa este gradiente estocástico de minibatch para atualizar o conjunto completo de parâmetros do modelo que ele mantém.
 
 
 
@@ -380,6 +380,6 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MDk4MjAzOSwtNDg2NzgzOTIyLC0xOD
-QwMDUxNTU5XX0=
+eyJoaXN0b3J5IjpbLTEyNzMzNzgzMzIsLTQ4Njc4MzkyMiwtMT
+g0MDA1MTU1OV19
 -->
