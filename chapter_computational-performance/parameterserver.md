@@ -22,10 +22,10 @@ Esse raciocínio parece arbitrário e frívolo. Afinal, a matemática é a mesma
 ![Um servidor GPU de 4 vias.](../img/bw-hierarchy.svg)
 :label:`fig_bw_hierarchy`
 
-For the sake of the argument let us assume that the gradients 'weight' 160MB. In this case it takes 30ms to send the gradients from all 3 remaining GPUs to the fourth one (each transfer takes 10ms = 160MB / 16 GB/s). Add another 30ms to transmit the weight vectors back we arrive at a total of 60ms.
-If we send all data to the CPU we incur a penalty of 40ms since *each* of the four GPUs needs to send the data to the CPU, yielding a total of 80ms. Lastly assume that we are able to split the gradients into 4 parts of 40MB each. Now we can aggregate each of the parts on a different GPU *simultaneously* since the PCIe switch offers a full-bandwidth operation between all links. Instead of 30ms this takes 7.5ms, yielding a total of 15ms for a synchronization operation. In short, depending on how we synchronize parameters the same operation can take anywhere from 15ms to 80ms. :numref:`fig_ps_distributed` depicts the different strategies for exchanging parameters.
+Para o efeito do argumento, vamos supor que os gradientes 'pesam' 160 MB. Nesse caso, leva 30ms para enviar os gradientes de todas as 3 GPUs restantes para a quarta (cada transferência leva 10 ms = 160 MB / 16 GB/s). Adicione mais 30ms para transmitir os vetores de peso de volta, chegamos a um total de 60ms.
+Se enviarmos todos os dados para a CPU, incorremos em uma penalidade de 40ms, pois *cada* uma das quatro GPUs precisa enviar os dados para a CPU, resultando em um total de 80ms. Por último, suponha que somos capazes de dividir os gradientes em 4 partes de 40 MB cada. Agora podemos agregar cada uma das partes em uma GPU *diferente simultaneamente*, já que o switch PCIe oferece uma operação de largura de banda total entre todos os links. Em vez de 30 ms, isso leva 7,5 ms, resultando em um total de 15 ms para uma operação de sincronização. Resumindo, dependendo de como sincronizamos os parâmetros, a mesma operação pode levar de 15ms a 80ms. :numref:`fig_ps_distributed` descreve as diferentes estratégias para a troca de parâmetros.
 
-![Synchronization strategies.](../img/ps-distributed.svg)
+![Estratégias de sincronização.](../img/ps-distributed.svg)
 :label:`fig_ps_distributed`
 
 Note that we have yet another tool at our disposal when it comes to improving performance: in a deep network it takes some time to compute all gradients from the top to the bottom. We can begin synchronizing gradients for some parameter groups even while we are still busy computing them for others (the technical details for that are somewhat involved). See e.g., :cite:`Sergeev.Del-Balso.2018` for details on how to do this in [Horovod](https://github.com/horovod/horovod).
@@ -104,5 +104,5 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzU3NDk0OTBdfQ==
+eyJoaXN0b3J5IjpbMTE0MDU1NTg5LC0xODc1NzQ5NDkwXX0=
 -->
