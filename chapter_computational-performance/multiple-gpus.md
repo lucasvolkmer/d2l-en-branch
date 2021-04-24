@@ -34,9 +34,9 @@ Em geral, o paralelismo de dados é a maneira mais conveniente de proceder, desd
 
 ## Paralelismo de Dados
 
-Assume that there are $k$ GPUs on a machine. Given the model to be trained, each GPU will maintain a complete set of model parameters independently. Training proceeds as follows (see :numref:`fig_data_parallel` for details on data parallel training on two GPUs).
+Suponha que haja $k$ GPUs em uma máquina. Dado o modelo a ser treinado, cada GPU manterá um conjunto completo de parâmetros do modelo de forma independente. O treinamento prossegue da seguinte maneira (consulte :numref:`fig_data_parallel`  para obter detalhes sobre o treinamento paralelo de dados em duas GPUs).
 
-![Calculation of minibatch stochastic gradient using data parallelism and two GPUs. ](../img/data-parallel.svg)
+![Cálculo do gradiente estocástico de minibatch usando paralelismo de dados e duas GPUs.](../img/data-parallel.svg)
 :label:`fig_data_parallel`
 
 * In any iteration of training, given a random minibatch, we split the examples in the batch into $k$ portions and distribute them evenly across the GPUs.
@@ -380,5 +380,6 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4Njc4MzkyMiwtMTg0MDA1MTU1OV19
+eyJoaXN0b3J5IjpbMTc1MDk4MjAzOSwtNDg2NzgzOTIyLC0xOD
+QwMDUxNTU5XX0=
 -->
