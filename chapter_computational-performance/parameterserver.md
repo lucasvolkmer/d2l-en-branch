@@ -97,15 +97,15 @@ Ao ocultar toda a complexidade sobre a sincronização por trás de uma operaç�
 
 ## Exercícios
 
-1. Can you increase the ring synchronization even further? Hint: you can send messages in both directions.
-1. Fully asynchronous. Some delays permitted?
-1. Fault tolerance. How? What if we lose a server? Is this a problem?
-1. Checkpointing
-1. Tree aggregation. Can you do it faster?
-1. Other reductions (commutative semiring).
+1. Você pode aumentar ainda mais a sincronização do toque? Dica: você pode enviar mensagens em ambas as direções.
+1. Totalmente assíncrono. Alguns atrasos são permitidos?
+1. Tolerância a falhas. Como? E se perdermos um servidor? Isso é um problema?
+1. *Checkpoint*
+1. Agregação de árvores. Você pode fazer isso mais rápido?
+1. Outras reduções (semirregamento comutativo).
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjYwODA0MjAsLTk2MzI2ODQzOSwtMT
+eyJoaXN0b3J5IjpbLTE0MjAwMTAyNjIsLTk2MzI2ODQzOSwtMT
 g1MDI4MTI0NSwtMTg3NTc0OTQ5MF19
 -->
