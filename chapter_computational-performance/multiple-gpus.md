@@ -22,16 +22,17 @@ Vamos começar com um problema de visão computacional simples e uma rede ligeir
 ![Paralelismo de modelo no design AlexNet original devido à memória GPU limitada.](../img/alexnet-original.svg)
 :label:`fig_alexnet_original`
     
-* Lastly we could partition data across multiple GPUs. This way all GPUs perform the same type of work, albeit on different observations. Gradients are aggregated between GPUs after each minibatch.
-    * This is the simplest approach and it can be applied in any situation.
-    * Adding more GPUs does not allow us to train larger models.
-    * We only need to synchronize after each minibatch. That said, it is highly desirable to start exchanging gradients parameters already while others are still being computed.
-    * Large numbers of GPUs lead to very large minibatch sizes, thus reducing training efficiency.
 
-By and large, data parallelism is the most convenient way to proceed, provided that we have access to GPUs with sufficiently large memory. See also :cite:`Li.Andersen.Park.ea.2014` for a detailed description of partitioning for distributed training. GPU memory used to be a problem in the early days of deep learning. By now this issue has been resolved for all but the most unusual cases. We focus on data parallelism in what follows.
+* Por último, podemos particionar os dados em várias GPUs. Desta forma, todas as GPUs realizam o mesmo tipo de trabalho, embora em observações diferentes. Os gradientes são agregados entre as GPUs após cada minibatch.
+    * Esta é a abordagem mais simples e pode ser aplicada em qualquer situação.
+    * Adicionar mais GPUs não nos permite treinar modelos maiores.
+    * Só precisamos sincronizar após cada minibatch. Dito isso, é altamente desejável começar a trocar parâmetros de gradientes enquanto outros ainda estão sendo calculados.
+    * Um grande número de GPUs leva a tamanhos de minibatch muito grandes, reduzindo assim a eficiência do treinamento.
+
+Em geral, o paralelismo de dados é a maneira mais conveniente de proceder, desde que tenhamos acesso a GPUs com memória suficientemente grande. Veja também: cite: `Li.Andersen.Park.ea.2014` para uma descrição detalhada do particionamento para treinamento distribuído. A memória da GPU costumava ser um problema nos primeiros dias do *deep learning*. Até agora, esse problema foi resolvido para todos, exceto os casos mais incomuns. Nos concentramos no paralelismo de dados a seguir.
 
 
-## Data Parallelism
+## Paralelismo de Dados
 
 Assume that there are $k$ GPUs on a machine. Given the model to be trained, each GPU will maintain a complete set of model parameters independently. Training proceeds as follows (see :numref:`fig_data_parallel` for details on data parallel training on two GPUs).
 
@@ -379,6 +380,5 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjgzNjA3MTEsLTE4NDAwNTE1NTldfQ
-==
+eyJoaXN0b3J5IjpbLTQ4Njc4MzkyMiwtMTg0MDA1MTU1OV19
 -->
