@@ -65,7 +65,7 @@ O treinamento distribuído em várias máquinas adiciona mais um desafio: precis
 ![Treinamento paralelo distribuído em várias máquinas e em várias GPUs.](../img/ps-multimachine.svg)
 :label:`fig_ps_multimachine`
 
-Each of these operations seems rather straightforward. And, indeed, they can be carried out efficiently *within* a single machine. Once we look at multiple machines, though, we can see that the central parameter server becomes the bottleneck. After all, the bandwidth per server is limited, hence for $m$ workers the time it takes to send all gradients to the server is $O(m)$. We can break through this barrier by increasing the number of servers to $n$. At this point each server only needs to store $O(1/n)$ of the parameters, hence the total time for updates and optimization becomes $O(m/n)$. Matching both numbers yields constant scaling regardless of how many workers we are dealing with. In practice we use the *same* machines both as workers and as servers. :numref:`fig_ps_multips` illustrates the design. See also :cite:`Li.Andersen.Park.ea.2014` for details. In particular, ensuring that multiple machines work without unreasonable delays is nontrivial. We omit details on barriers and will only briefly touch on synchronous and asynchronous updates below.
+Cada uma dessas operações parece bastante direta. E, de fato, eles podem ser realizadas com eficiência *dentro* de uma única máquina. Quando olhamos para várias máquinas, no entanto, podemos ver que o servidor de parâmetros central se torna o gargalo. Afinal, a largura de banda por servidor é limitada, portanto, para $m$ trabalhadores, o tempo que leva para enviar todos os gradientes ao servidor é $O(m)$. Podemos quebrar essa barreira aumentando o número de servidores para $n$. Neste ponto, cada servidor só precisa armazenar $O(1/n)$ dos parâmetros, portanto, o tempo total para atualizações e otimização torna-se $O(m/n)$. Combinar os dois números resulta em um escalonamento constante, independentemente de quantos trabalhadores estamos lidando. Na prática, usamos as *mesmas* máquinas tanto como trabalhadores quanto como servidores. :numref:`fig_ps_multips` ilustra o design. Veja também :cite:`Li.Andersen.Park.ea.2014` para detalhes. Em particular, garantir que várias máquinas funcionem sem atrasos excessivos não é trivial. Omitimos detalhes sobre barreiras e apenas abordaremos brevemente as atualizações síncronas e assíncronas abaixo.
 
 ![Top - a single parameter server is a bottleneck since its bandwidth is finite. Bottom - multiple parameter servers store parts of the parameters with aggregate bandwidth.](../img/ps-multips.svg)
 :label:`fig_ps_multips`
@@ -104,6 +104,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkwNTcxOTQ2LC05NjMyNjg0MzksLTE4NT
-AyODEyNDUsLTE4NzU3NDk0OTBdfQ==
+eyJoaXN0b3J5IjpbLTEyOTYwMzc2MDksLTk2MzI2ODQzOSwtMT
+g1MDI4MTI0NSwtMTg3NTc0OTQ5MF19
 -->
