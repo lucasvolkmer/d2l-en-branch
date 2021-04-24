@@ -28,7 +28,7 @@ Se enviarmos todos os dados para a CPU, incorremos em uma penalidade de 40ms, po
 ![Estratégias de sincronização.](../img/ps-distributed.svg)
 :label:`fig_ps_distributed`
 
-Note that we have yet another tool at our disposal when it comes to improving performance: in a deep network it takes some time to compute all gradients from the top to the bottom. We can begin synchronizing gradients for some parameter groups even while we are still busy computing them for others (the technical details for that are somewhat involved). See e.g., :cite:`Sergeev.Del-Balso.2018` for details on how to do this in [Horovod](https://github.com/horovod/horovod).
+Observe que temos mais uma ferramenta à nossa disposição quando se trata de melhorar o desempenho: em uma rede profunda, leva algum tempo para calcular todos os gradientes de cima para baixo. Podemos começar a sincronizar gradientes para alguns grupos de parâmetros, mesmo enquanto ainda estamos ocupados computando-os para outros (os detalhes técnicos disso estão um tanto envolvidos). Veja, por exemplo, :cite:`Sergeev.Del-Balso.2018` para obter detalhes sobre como fazer isso em [Horovod](https://github.com/horovod/horovod).
 
 ## Ring Synchronization
 
@@ -104,5 +104,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0MDU1NTg5LC0xODc1NzQ5NDkwXX0=
+eyJoaXN0b3J5IjpbLTE4NTAyODEyNDUsLTE4NzU3NDk0OTBdfQ
+==
 -->
