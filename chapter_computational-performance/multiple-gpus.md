@@ -1,9 +1,9 @@
 # Treinamento em Várias GPUs
 :label:`sec_multi_gpu`
 
-So far we discussed how to train models efficiently on CPUs and GPUs. We even showed how deep learning frameworks such as MXNet (and TensorFlow) allow one to parallelize computation and communication automatically between them in :numref:`sec_auto_para`. Lastly, we showed in :numref:`sec_use_gpu` how to list all available GPUs on a computer using `nvidia-smi`. What we did *not* discuss is how to actually parallelize deep learning training (we omit any discussion of *inference* on multiple GPUs here as it is a rather rarely used and advanced topic that goes beyond the scope of this book). Instead, we implied in passing that one would somehow split the data across multiple devices and make it work. The present section fills in the details and shows how to train a network in parallel when starting from scratch. Details on how to take advantage of functionality in Gluon is relegated to :numref:`sec_multi_gpu_concise`. We assume that the reader is familiar with minibatch SGD algorithms such as the ones described in :numref:`sec_minibatch_sgd`.
+Até agora, discutimos como treinar modelos de forma eficiente em CPUs e GPUs. Nós até mostramos como frameworks de aprendizado profundo como MXNet (e TensorFlow) permitem paralelizar computação e comunicação automaticamente entre elas em :numref:`sec_auto_para`. Por último, mostramos em :numref:`sec_use_gpu` como listar todas as GPUs disponíveis em um computador usando `nvidia-smi`. O que *não* discutimos é como realmente paralelizar o treinamento de aprendizado profundo (omitimos qualquer discussão de *inferência* em várias GPUs aqui, pois é um tópico raramente usado e avançado que vai além do escopo deste livro). Em vez disso, sugerimos que, de alguma forma, seria possível dividir os dados em vários dispositivos e fazê-los funcionar. A presente seção preenche os detalhes e mostra como treinar uma rede em paralelo ao começar do zero. Detalhes sobre como tirar proveito da funcionalidade do Gluon são relegados a :numref:`sec_multi_gpu_concise`. Assumimos que o leitor está familiarizado com algoritmos SGD de minibatch, como os descritos em :numref:`sec_minibatch_sgd`.
 
-## Splitting the Problem
+## Dividindo o Problema
 
 Let us start with a simple computer vision problem and a slightly archaic network, e.g., with multiple layers of convolutions, pooling, and possibly a few dense layers in the end. That is, let us start with a network that looks quite similar to LeNet :cite:`LeCun.Bottou.Bengio.ea.1998` or AlexNet :cite:`Krizhevsky.Sutskever.Hinton.2012`. Given multiple GPUs (2 if it is a desktop server, 4 on a g4dn.12xlarge, 8 on an AWS p3.16xlarge, or 16 on a p2.16xlarge), we want to partition training in a manner as to achieve good speedup while simultaneously benefitting from simple and reproducible design choices. Multiple GPUs, after all, increase both *memory* and *compute* ability. In a nutshell, we have a number of choices, given a minibatch of training data that we want to classify.
 
@@ -379,5 +379,5 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ5NjA0MzM4LC0xODQwMDUxNTU5XX0=
+eyJoaXN0b3J5IjpbMTYxMTQ0MzE4MSwtMTg0MDA1MTU1OV19
 -->
