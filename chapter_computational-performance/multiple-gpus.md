@@ -251,9 +251,9 @@ def split_batch(X, y, devices):
             nn.parallel.scatter(y, devices))
 ```
 
-## Training
+## Treinamento
 
-Now we can implement multi-GPU training on a single minibatch. Its implementation is primarily based on the data parallelism approach described in this section. We will use the auxiliary functions we just discussed, `allreduce` and `split_and_load`, to synchronize the data among multiple GPUs. Note that we do not need to write any specific code to achieve parallelism. Since the computational graph does not have any dependencies across devices within a minibatch, it is executed in parallel *automatically*.
+Agora podemos implementar o treinamento multi-GPU em um único minibatch. Sua implementação é baseada principalmente na abordagem de paralelismo de dados descrita nesta seção. Usaremos as funções auxiliares que acabamos de discutir, `allreduce` e` split_and_load`, para sincronizar os dados entre várias GPUs. Observe que não precisamos escrever nenhum código específico para atingir o paralelismo. Uma vez que o gráfico computacional não tem nenhuma dependência entre dispositivos dentro de um minibatch, ele é executado em paralelo *automaticamente*.
 
 ```{.python .input}
 def train_batch(X, y, device_params, devices, lr):
@@ -291,7 +291,7 @@ def train_batch(X, y, device_params, devices, lr):
         d2l.sgd(param, lr, X.shape[0]) # Here, we use a full-size batch
 ```
 
-Now, we can define the training function. It is slightly different from the ones used in the previous chapters: we need to allocate the GPUs and copy all the model parameters to all devices. Obviously each batch is processed using `train_batch` to deal with multiple GPUs. For convenience (and conciseness of code) we compute the accuracy on a single GPU (this is *inefficient* since the other GPUs are idle).
+Agora, podemos definir a função de treinamento. É um pouco diferente dos usados nos capítulos anteriores: precisamos alocar as GPUs e copiar todos os parâmetros do modelo para todos os dispositivos. Obviamente, cada lote é processado usando `train_batch` para lidar com várias GPUs. Por conveniência (e concisão do código), calculamos a precisão em uma única GPU (isso é *ineficiente*, pois as outras GPUs estão ociosas).
 
 ```{.python .input}
 def train(num_gpus, batch_size, lr):
@@ -342,9 +342,9 @@ def train(num_gpus, batch_size, lr):
           f'on {str(devices)}')
 ```
 
-## Experiment
+## Experimento
 
-Let us see how well this works on a single GPU. We use a batch size of 256 and a learning rate of 0.2.
+Vamos ver como isso funciona bem em uma única GPU. Usamos um tamanho de lote de 256 e uma taxa de aprendizado de 0,2.
 
 ```{.python .input}
 #@tab all
@@ -380,6 +380,6 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjI2MTUxOTAsLTQ4Njc4MzkyMiwtMT
-g0MDA1MTU1OV19
+eyJoaXN0b3J5IjpbNzExNzk0NDksLTQ4Njc4MzkyMiwtMTg0MD
+A1MTU1OV19
 -->
