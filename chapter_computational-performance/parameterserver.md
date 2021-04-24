@@ -42,15 +42,15 @@ Acontece que :cite:`Wang.Li.Liberty.ea.2018` a estratégia de sincronização id
 ![Decomposição da rede NVLink em dois anéis.](../img/nvlink-twoloop.svg)
 :label:`fig_nvlink_twoloop`
 
-Consider the following thought experiment: given a ring of $n$ compute nodes (or GPUs) we can send gradients from the first to the second node. There it is added to the local gradient and sent on to the third node, and so on. After $n-1$ steps the aggregate gradient can be found in the last-visited node. That is, the time to aggregate gradients grows linearly with the number of nodes. But if we do this the algorithm is quite inefficient. After all, at any time there is only one of the nodes communicating. What if we broke the gradients into $n$ chunks and started synchronizing chunk $i$ starting at node $i$. Since each chunk is of size $1/n$ the total time is now $(n-1)/n \approx 1$. In other words, the time spent to aggregate gradients *does not grow* as we increase the size of the ring. This is quite an astonishing result. :numref:`fig_ringsync` illustrates the sequence of steps on $n=4$ nodes.
+Considere o seguinte experimento de pensamento: dado um anel de $n$  nós de computação (ou GPUs), podemos enviar gradientes do primeiro para o segundo nó. Lá, ele é adicionado ao gradiente local e enviado para o terceiro nó e assim por diante. Após $n-1$ passos, o gradiente agregado pode ser encontrado no último nó visitado. Ou seja, o tempo para agregar gradientes cresce linearmente com o número de nós. Mas, se fizermos isso, o algoritmo será bastante ineficiente. Afinal, a qualquer momento, há apenas um dos nós se comunicando. E se quebrássemos os gradientes em $n$ pedaços e começássemos a sincronizar o pedaço $i$ começando no nó $i$. Como cada pedaço tem o tamanho $1/n$, o tempo total agora é $(n-1)/n \approx 1$ Em outras palavras, o tempo gasto para agregar gradientes *não aumenta* à medida que aumentamos o tamanho do anel. Este é um resultado surpreendente. :numref:`fig_ringsync` ilustra a sequência de etapas em $n=4$ nodes.
 
-![Ring synchronization across 4 nodes. Each node starts transmitting parts of gradients to its left neighbor until the assembled gradient can be found in its right neighbor.](../img/ringsync.svg)
+![Sincronização de anel em 4 nós. Cada nó começa a transmitir partes de gradientes para seu vizinho esquerdo até que o gradiente montado possa ser encontrado em seu vizinho direito.](../img/ringsync.svg)
 :label:`fig_ringsync`
 
-If we use the same example of synchronizing 160MB across 8 V100 GPUs we arrive at approximately $2 \cdot 160 \mathrm{MB} / (3 \cdot 18 \mathrm{GB/s}) \approx 6 \mathrm{ms}$ This is quite a bit better than using the PCIe bus, even though we are now using 8 GPUs. Note that in practice these numbers are quite a bit worse, since deep learning frameworks often fail to assemble communication into large burst transfers. Moreover, timing is critical.
-Note that there is a common misconception that ring synchronization is fundamentally different from other synchronization algorithms. The only difference is that the synchronization path is somewhat more elaborate when compared to a simple tree.
+Se usarmos o mesmo exemplo de sincronização de 160 MB em 8 GPUs V100, chegaremos a aproximadamente $2 \cdot 160 \mathrm{MB} / (3 \cdot 18 \mathrm{GB/s}) \approx 6 \mathrm{ms}$. Isto é um pouco melhor do que usar o barramento PCIe, embora agora estejamos usando 8 GPUs. Observe que, na prática, esses números são um pouco piores, uma vez que os *frameworks* de aprendizado profundo geralmente falham em reunir a comunicação em grandes transferências de burst. Além disso, o tempo é crítico.
+Observe que há um equívoco comum de que a sincronização em anel é fundamentalmente diferente de outros algoritmos de sincronização. A única diferença é que o caminho de sincronização é um pouco mais elaborado quando comparado a uma árvore simples.
 
-## Multi-Machine Training
+## Treinamento Multi-Máquina
 
 Distributed training on multiple machines adds a further challenge: we need to communicate with servers that are only connected across a comparatively lower bandwidth fabric which can be over an order of magnitude slower in some cases. Synchronization across devices is tricky. After all, different machines running training code will have subtly different speed. Hence we need to *synchronize* them if we want to use synchronous distributed optimization. :numref:`fig_ps_multimachine` illustrates how distributed parallel training occurs.
 
@@ -104,6 +104,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MzI2ODQzOSwtMTg1MDI4MTI0NSwtMT
-g3NTc0OTQ5MF19
+eyJoaXN0b3J5IjpbLTI2MjI5MjI3MywtOTYzMjY4NDM5LC0xOD
+UwMjgxMjQ1LC0xODc1NzQ5NDkwXX0=
 -->
