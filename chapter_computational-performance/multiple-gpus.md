@@ -87,7 +87,7 @@ W4 = np.random.normal(scale=scale, size=(128, 10))
 b4 = np.zeros(10)
 params = [W1, b1, W2, b2, W3, b3, W4, b4]
 
-# Definir the model
+# Definir o modelo
 def lenet(X, params):
     h1_conv = npx.convolution(data=X, weight=params[0], bias=params[1],
                               kernel=(3, 3), num_filter=20)
@@ -141,9 +141,9 @@ def lenet(X, params):
 loss = nn.CrossEntropyLoss(reduction='none')
 ```
 
-## Data Synchronization
+## Sincronização de Dados
 
-For efficient multi-GPU training we need two basic operations: firstly we need to have the ability to distribute a list of parameters to multiple devices and to attach gradients (`get_params`). Without parameters it is impossible to evaluate the network on a GPU. Secondly, we need the ability to sum parameters across multiple devices, i.e., we need an `allreduce` function.
+Para um treinamento multi-GPU eficiente, precisamos de duas operações básicas: em primeiro lugar, precisamos ter a capacidade de distribuir uma lista de parâmetros para vários dispositivos e anexar gradientes (`get_params`). Sem parâmetros, é impossível avaliar a rede em uma GPU. Em segundo lugar, precisamos da capacidade de somar parâmetros em vários dispositivos, ou seja, precisamos de uma função `allreduce`.
 
 ```{.python .input}
 def get_params(params, device):
@@ -162,7 +162,7 @@ def get_params(params, device):
     return new_params
 ```
 
-Let us try it out by copying the model parameters of lenet to gpu(0).
+Vamos tentar copiar os parâmetros do modelo de lenet para gpu (0).
 
 ```{.python .input}
 #@tab all
@@ -380,6 +380,6 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc2NjAyMjAyLC00ODY3ODM5MjIsLTE4ND
-AwNTE1NTldfQ==
+eyJoaXN0b3J5IjpbMTc3MjQ3NTQ1NCwtNDg2NzgzOTIyLC0xOD
+QwMDUxNTU5XX0=
 -->
