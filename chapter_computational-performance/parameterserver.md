@@ -76,10 +76,11 @@ A implementação das etapas necessárias para o treinamento distribuído de vá
 
 $$\mathbf{g}_{i} = \sum_{k \in \mathrm{workers}} \sum_{j \in \mathrm{GPUs}} \mathbf{g}_{ijk}.$$
 
-The key aspect in this operation is that it is a *commutative reduction*, that is, it turns many vectors into one and the order in which the operation is applied does not matter. This is great for our purposes since we do not (need to) have fine grained control over when which gradient is received. Note that it is possible for us to perform the reduction stagewise. Furthermore, note that this operation is independent between blocks $i$ pertaining to different parameters (and gradients).
 
-This allows us to define the following two operations: push, which accumulates gradients, and pull, which retrieves aggregate gradients. Since we have many different sets of gradients (after all, we have many layers), we need to index the gradients with a key $i$. This similarity to (key,value) stores, such as the one introduced in Dynamo
-:cite:`DeCandia.Hastorun.Jampani.ea.2007` is not by coincidence. They, too, satisfy many similar characteristics, in particular when it comes to distributing the parameters across multiple servers.
+O aspecto chave nesta operação é que se trata de uma *redução comutativa*, ou seja, ela transforma muitos vetores em um e a ordem de aplicação da operação não importa. Isso é ótimo para nossos propósitos, uma vez que não (precisamos) ter um controle refinado sobre quando qual gradiente é recebido. Observe que é possível realizarmos a redução em etapas. Além disso, observe que esta operação é independente entre os blocos $i$ pertencentes a diferentes parâmetros (e gradientes).
+
+Isso nos permite definir as duas operações a seguir: *push*, que acumula gradientes, e *pull*, que recupera gradientes agregados. Como temos muitos conjuntos diferentes de gradientes (afinal, temos muitas camadas), precisamos indexar os gradientes com a chave $i$. Essa semelhança com armazenamento (key, value), como aquela introduzida no Dynamo
+:cite:`DeCandia.Hastorun.Jampani.ea.2007` não é por acaso. Eles também satisfazem muitas características semelhantes, em particular quando se trata de distribuir os parâmetros em vários servidores.
 
 * **push(key, value)** sends a particular gradient (the value) from a worker to a common storage. There the parameter is aggregated, e.g., by summing it up.
 * **pull(key, value)** retrieves an aggregate parameter from common storage, e.g., after combining the gradients from all workers.
@@ -104,6 +105,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjcyODkxMzQsLTk2MzI2ODQzOSwtMT
-g1MDI4MTI0NSwtMTg3NTc0OTQ5MF19
+eyJoaXN0b3J5IjpbMTA0Mjk2MTc2MiwtOTYzMjY4NDM5LC0xOD
+UwMjgxMjQ1LC0xODc1NzQ5NDkwXX0=
 -->
