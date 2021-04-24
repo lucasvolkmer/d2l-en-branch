@@ -1,7 +1,7 @@
-# Concise Implementation for Multiple GPUs
+# Concise Implementation for Multipleção Concisa para Várias GPUs
 :label:`sec_multi_gpu_concise`
 
-Implementing parallelism from scratch for every new model is no fun. Moreover, there is significant benefit in optimizing synchronization tools for high performance. In the following we will show how to do this using Gluon. The math and the algorithms are the same as in :numref:`sec_multi_gpu`. As before we begin by importing the required modules (quite unsurprisingly you will need at least two GPUs to run this notebook).
+Implementingar o parallelism from scratch for every newo do zero para cada novo model iso não fun. Moreover, there is significant benefit iné divertido. Além disso, há um benefício significativo na optimizingação de ferramentas de syinchronization tools for high performance. In the following we will show how to do this usingção para alto desempenho. A seguir, mostraremos como fazer isso usando o Gluon. TheA math and the algorithms are the same as in :numref:`sec_multi_gpu`. As before we begin by importing the required modules (quite unsurprisingly you will need at least two GPUs to run thisemática e os algoritmos são os mesmos que em :numref:`sec_multi_gpu`. Como antes, começamos importando os módulos necessários (sem surpresa, você precisará de pelo menos duas GPUs para rodar este notebook).
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -17,7 +17,7 @@ import torch
 from torch import nn
 ```
 
-## A Toy Network
+## A Toy NetworkUma Rede de Exemplo
 
 Let us use a slightly more meaningful network than LeNet from the previous section that's still sufficiently easy and quick to train. We pick a ResNet-18 variant :cite:`He.Zhang.Ren.ea.2016`. Since the input images are tiny we modify it slightly. In particular, the difference to :numref:`sec_resnet` is that we use a smaller convolution kernel, stride, and padding at the beginning. Moreover, we remove the max-pooling layer.
 
@@ -250,3 +250,6 @@ train(net, num_gpus=2, batch_size=512, lr=0.2)
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1403)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTA5NDkzMTU1MV19
+-->
