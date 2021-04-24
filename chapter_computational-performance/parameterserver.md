@@ -17,9 +17,9 @@ Em retrospecto, a decisão de agregar na GPU0 parece bastante ad-hoc. Afinal, po
 
 $$\mathbf{g}_{i} = \sum_{j \in \mathrm{GPUs}} \mathbf{g}_{ij}$$
 
-This reasoning seems arbitrary and frivolous. After all, the math is the same throughout. However, we are dealing with real physical hardware where different buses have different bandwidth as discussed in :numref:`sec_hardware`. Consider a real 4-way GPU server as described in :numref:`fig_bw_hierarchy`. If it is particularly well connected, it might have a 100 GbE network card. More typical numbers are in the 1-10 GbE range with an effective bandwidth of 100MB/s to 1GB/s. Since the CPUs have too few PCIe lanes to connect to all GPUs directly (e.g., consumer grade Intel CPUs have 24 lanes) we need a [multiplexer](https://www.broadcom.com/products/pcie-switches-bridges/pcie-switches). The bandwidth from the CPU on a 16x Gen3 link is 16GB/s. This is also the speed at which *each* of the GPUs is connected to the switch. This means that it is more effective to communicate between the devices.
+Esse raciocínio parece arbitrário e frívolo. Afinal, a matemática é a mesma do começo ao fim. No entanto, estamos lidando com *hardware* físico real onde diferentes barramentos têm diferentes larguras de banda, conforme discutido em :numref:`sec_hardware`. Considere um servidor GPU real de 4 vias conforme descrito em :numref:`fig_bw_hierarchy`. Se estiver bem conectado, pode ter uma placa de rede 100 GbE. Os números mais comuns estão na faixa de 1-10 GbE com uma largura de banda efetiva de 100 MB/s a 1 GB/s. Uma vez que as CPUs têm poucas pistas PCIe para se conectar a todas as GPUs diretamente (por exemplo, CPUs da Intel para consumidores têm 24 pistas), precisamos de um [multiplexador](https://www.broadcom.com/products/pcie-switches-bridges/ chaves pcie). A largura de banda da CPU em um link Gen3 16x é de 16 GB/s. Esta também é a velocidade na qual *cada* uma das GPUs é conectada ao *switch*. Isso significa que é mais eficaz a comunicação entre os dispositivos.
 
-![A 4-way GPU server.](../img/bw-hierarchy.svg)
+![Um servidor GPU de 4 vias.](../img/bw-hierarchy.svg)
 :label:`fig_bw_hierarchy`
 
 For the sake of the argument let us assume that the gradients 'weight' 160MB. In this case it takes 30ms to send the gradients from all 3 remaining GPUs to the fourth one (each transfer takes 10ms = 160MB / 16 GB/s). Add another 30ms to transmit the weight vectors back we arrive at a total of 60ms.
@@ -104,5 +104,5 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzE2OTY2MzhdfQ==
+eyJoaXN0b3J5IjpbLTE5NzU3Nzg4MjFdfQ==
 -->
