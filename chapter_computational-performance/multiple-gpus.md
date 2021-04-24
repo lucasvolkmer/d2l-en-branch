@@ -351,21 +351,21 @@ Vamos ver como isso funciona bem em uma única GPU. Usamos um tamanho de lote de
 train(num_gpus=1, batch_size=256, lr=0.2)
 ```
 
-By keeping the batch size and learning rate unchanged and changing the number of GPUs to 2, we can see that the improvement in test accuracy is roughly the same as in the results from the previous experiment. In terms of the optimization algorithms, they are identical. Unfortunately there is no meaningful speedup to be gained here: the model is simply too small; moreover we only have a small dataset, where our slightly unsophisticated approach to implementing multi-GPU training suffered from significant Python overhead. We will encounter more complex models and more sophisticated ways of parallelization going forward. Let us see what happens nonetheless for Fashion-MNIST.
+Mantendo o tamanho do lote e a taxa de aprendizado inalterados e alterando o número de GPUs para 2, podemos ver que a melhoria na precisão do teste é aproximadamente a mesma que nos resultados do experimento anterior. Em termos de algoritmos de otimização, eles são idênticos. Infelizmente, não há aumento significativo a ser obtido aqui: o modelo é simplesmente muito pequeno; além disso, temos apenas um pequeno conjunto de dados, onde nossa abordagem um pouco menos sofisticada para implementar o treinamento multi-GPU sofreu com a sobrecarga significativa do Python. Encontraremos modelos mais complexos e formas mais sofisticadas de paralelização daqui para frente. Vamos ver o que acontece, no entanto, com o Fashion-MNIST.
 
 ```{.python .input}
 #@tab all
 train(num_gpus=2, batch_size=256, lr=0.2)
 ```
 
-## Summary
+## Resumo
 
-* There are multiple ways to split deep network training over multiple GPUs. We could split them between layers, across layers, or across data. The former two require tightly choreographed data transfers. Data parallelism is the simplest strategy.
-* Data parallel training is straightforward. However, it increases the effective minibatch size to be efficient.
-* Data is split across multiple GPUs, each GPU executes its own forward and backward operation and subsequently gradients are aggregated and results broadcast back to the GPUs.
-* Large minibatches may require a slightly increased learning rate.
+* Existem várias maneiras de dividir o treinamento de rede profunda em várias GPUs. Podemos dividi-los entre camadas, entre camadas ou entre dados. Os dois primeiros requerem transferências de dados fortemente coreografadas. O paralelismo de dados é a estratégia mais simples.
+* O treinamento paralelo de dados é direto. No entanto, aumenta o tamanho efetivo do minibatch para ser eficiente.
+* Os dados são divididos em várias GPUs, cada GPU executa sua própria operação de avanço e retrocesso e, posteriormente, os gradientes são agregados e os resultados transmitidos de volta às GPUs.
+* Minibatches grandes podem exigir uma taxa de aprendizado ligeiramente maior.
 
-## Exercises
+## Exercícios
 
 1. When training on multiple GPUs, change the minibatch size from $b$ to $k \cdot b$, i.e., scale it up by the number of GPUs.
 1. Compare accuracy for different learning rates. How does it scale with the number of GPUs.
@@ -380,6 +380,6 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExNzk0NDksLTQ4Njc4MzkyMiwtMTg0MD
-A1MTU1OV19
+eyJoaXN0b3J5IjpbMTM5NTE0NDU0NCwtNDg2NzgzOTIyLC0xOD
+QwMDUxNTU5XX0=
 -->
