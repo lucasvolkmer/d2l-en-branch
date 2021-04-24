@@ -138,16 +138,17 @@ def evaluate_accuracy_gpus(net, data_iter, split_f=d2l.split_batch):
     return metric[0] / metric[1]
 ```
 
-## Traini
+## Treinamento
 
-As before, the training code needs to perform a number of basic functions for efficient parallelism:
 
-* Network parameters need to be initialized across all devices.
-* While iterating over the dataset minibatches are to be divided across all devices.
-* We compute the loss and its gradient in parallel across devices.
-* Losses are aggregated (by the `trainer` method) and parameters are updated accordingly.
+Como antes, o código de treinamento precisa realizar uma série de funções básicas para paralelismo eficiente:
 
-In the end we compute the accuracy (again in parallel) to report the final value of the network. The training routine is quite similar to implementations in previous chapters, except that we need to split and aggregate data.
+* Os parâmetros de rede precisam ser inicializados em todos os dispositivos.
+* Durante a iteração no conjunto de dados, os minibatches devem ser divididos em todos os dispositivos.
+* Calculamos a perda e seu gradiente em paralelo entre os dispositivos.
+* As perdas são agregadas (pelo método `trainer`) e os parâmetros são atualizados de acordo.
+
+No final, calculamos a precisão (novamente em paralelo) para relatar o valor final da rede. A rotina de treinamento é bastante semelhante às implementações nos capítulos anteriores, exceto que precisamos dividir e agregar dados.
 
 ```{.python .input}
 def train(num_gpus, batch_size, lr):
@@ -206,9 +207,9 @@ def train(net, num_gpus, batch_size, lr):
           f'on {str(devices)}')
 ```
 
-## Experiments
+## Experimentos
 
-Let us see how this works in practice. As a warmup we train the network on a single GPU.
+Vamos ver como isso funciona na prática. Como aquecimento, treinamos a rede em uma única GPU.
 
 ```{.python .input}
 train(num_gpus=1, batch_size=256, lr=0.1)
@@ -219,7 +220,7 @@ train(num_gpus=1, batch_size=256, lr=0.1)
 train(net, num_gpus=1, batch_size=256, lr=0.1)
 ```
 
-Next we use 2 GPUs for training. Compared to LeNet the model for ResNet-18 is considerably more complex. This is where parallelization shows its advantage. The time for computation is meaningfully larger than the time for synchronizing parameters. This improves scalability since the overhead for parallelization is less relevant.
+Em seguida, usamos 2 GPUs para treinamento. Comparado ao LeNet, o modelo do ResNet-18 é consideravelmente mais complexo. É aqui que a paralelização mostra sua vantagem. O tempo de cálculo é significativamente maior do que o tempo de sincronização de parâmetros. Isso melhora a escalabilidade, pois a sobrecarga para paralelização é menos relevante.
 
 ```{.python .input}
 train(num_gpus=2, batch_size=512, lr=0.2)
@@ -230,7 +231,7 @@ train(num_gpus=2, batch_size=512, lr=0.2)
 train(net, num_gpus=2, batch_size=512, lr=0.2)
 ```
 
-## Summary
+## Resumo
 
 * Gluon provides primitives for model initialization across multiple devices by providing a context list.
 * Data is automatically evaluated on the devices where the data can be found.
@@ -251,5 +252,5 @@ train(net, num_gpus=2, batch_size=512, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMjEwMjEyMywxMTgxMjk4NjYwXX0=
+eyJoaXN0b3J5IjpbLTE1MTgyMTUyODEsMTE4MTI5ODY2MF19
 -->
