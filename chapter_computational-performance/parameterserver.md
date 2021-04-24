@@ -1,4 +1,4 @@
-# Servidores de Paraâmeter Serveros
+# Servidores de Parâmetros
 :label:`sec_parameterserver`
 
 
@@ -104,5 +104,5 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzU3Nzg4MjFdfQ==
+eyJoaXN0b3J5IjpbLTE4NzU3NDk0OTBdfQ==
 -->
