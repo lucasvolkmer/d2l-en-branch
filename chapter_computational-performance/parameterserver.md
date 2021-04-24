@@ -67,12 +67,12 @@ O treinamento distribuído em várias máquinas adiciona mais um desafio: precis
 
 Cada uma dessas operações parece bastante direta. E, de fato, eles podem ser realizadas com eficiência *dentro* de uma única máquina. Quando olhamos para várias máquinas, no entanto, podemos ver que o servidor de parâmetros central se torna o gargalo. Afinal, a largura de banda por servidor é limitada, portanto, para $m$ trabalhadores, o tempo que leva para enviar todos os gradientes ao servidor é $O(m)$. Podemos quebrar essa barreira aumentando o número de servidores para $n$. Neste ponto, cada servidor só precisa armazenar $O(1/n)$ dos parâmetros, portanto, o tempo total para atualizações e otimização torna-se $O(m/n)$. Combinar os dois números resulta em um escalonamento constante, independentemente de quantos trabalhadores estamos lidando. Na prática, usamos as *mesmas* máquinas tanto como trabalhadores quanto como servidores. :numref:`fig_ps_multips` ilustra o design. Veja também :cite:`Li.Andersen.Park.ea.2014` para detalhes. Em particular, garantir que várias máquinas funcionem sem atrasos excessivos não é trivial. Omitimos detalhes sobre barreiras e apenas abordaremos brevemente as atualizações síncronas e assíncronas abaixo.
 
-![Top - a single parameter server is a bottleneck since its bandwidth is finite. Bottom - multiple parameter servers store parts of the parameters with aggregate bandwidth.](../img/ps-multips.svg)
+![Topo - um único servidor de parâmetro é um gargalo, pois sua largura de banda é finita. Parte inferior - servidores de vários parâmetros armazenam partes dos parâmetros com largura de banda agregada.](../img/ps-multips.svg)
 :label:`fig_ps_multips`
 
-## (key,value) Stores
+## Armazenamento de (key,value)
 
-Implementing the steps required for distributed multi-GPU training in practice is nontrivial. In particular, given the many different choices that we might encounter. This is why it pays to use a common abstraction, namely that of a (key,value) store with redefined update semantics. Across many servers and many GPUs the gradient computation can be defined as
+A implementação das etapas necessárias para o treinamento distribuído de várias GPUs na prática não é trivial. Em particular, dadas as muitas opções diferentes que podemos encontrar. É por isso que vale a pena usar uma abstração comum, ou seja, a de um armazenamento (key, value) com semântica de atualização redefinida. Em muitos servidores e muitas GPUs, a computação de gradiente pode ser definida como
 
 $$\mathbf{g}_{i} = \sum_{k \in \mathrm{workers}} \sum_{j \in \mathrm{GPUs}} \mathbf{g}_{ijk}.$$
 
@@ -104,6 +104,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTYwMzc2MDksLTk2MzI2ODQzOSwtMT
+eyJoaXN0b3J5IjpbLTE0NjcyODkxMzQsLTk2MzI2ODQzOSwtMT
 g1MDI4MTI0NSwtMTg3NTc0OTQ5MF19
 -->
