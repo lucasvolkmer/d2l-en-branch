@@ -83,19 +83,19 @@ Isso nos permite definir as duas operações a seguir: *push*, que acumula gradi
 :cite:`DeCandia.Hastorun.Jampani.ea.2007` não é por acaso. Eles também satisfazem muitas características semelhantes, em particular quando se trata de distribuir os parâmetros em vários servidores.
 
 
-* ** *push* (key, value) ** envia um gradiente específico (o valor) de um trabalhador para um armazenamento comum. Lá, o parâmetro é agregado, por exemplo, somando-o.
-* ** *pull* (key, value) ** recupera um parâmetro agregado do armazenamento comum, por exemplo, depois de combinar os gradientes de todos os trabalhadores.
+* ***push* (key, value)** envia um gradiente específico (o valor) de um trabalhador para um armazenamento comum. Lá, o parâmetro é agregado, por exemplo, somando-o.
+* ***pull* (key, value)** recupera um parâmetro agregado do armazenamento comum, por exemplo, depois de combinar os gradientes de todos os trabalhadores.
 
 Ao ocultar toda a complexidade sobre a sincronização por trás de uma operação simples de *push* e *pull*, podemos dissociar as preocupações do modelador estatístico que deseja ser capaz de expressar a otimização em termos simples e do engenheiro de sistemas que precisa lidar com a complexidade inerente à sincronização distribuída. Na próxima seção, faremos experiências com esse armazenamento (key, value) na prática.
 
-## Summary
+## Resumo
 
-* Synchronization needs to be highly adaptive to specific network infrastructure and connectivity within a server. This can make a significant difference to the time it takes to synchronize.
-* Ring-synchronization can be optimal for P3 and DGX-2 servers. For others possibly not so much.
-* A hierarchical synchronization strategy works well when adding multiple parameter servers for increased bandwidth.
-* Asynchronous communication (while computation is still ongoing) can improve performance.
+* A sincronização precisa ser altamente adaptável à infraestrutura de rede específica e à conectividade em um servidor. Isso pode fazer uma diferença significativa no tempo que leva para sincronizar.
+* A sincronização de anel pode ser ideal para servidores P3 e DGX-2. Para outros, possivelmente nem tanto.
+* Uma estratégia de sincronização hierárquica funciona bem ao adicionar vários servidores de parâmetros para aumentar a largura de banda.
+* A comunicação assíncrona (enquanto a computação ainda está em andamento) pode melhorar o desempenho.
 
-## Exercises
+## Exercícios
 
 1. Can you increase the ring synchronization even further? Hint: you can send messages in both directions.
 1. Fully asynchronous. Some delays permitted?
@@ -106,6 +106,6 @@ Ao ocultar toda a complexidade sobre a sincronização por trás de uma operaç�
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMjcwNDM1NiwtOTYzMjY4NDM5LC0xOD
-UwMjgxMjQ1LC0xODc1NzQ5NDkwXX0=
+eyJoaXN0b3J5IjpbLTE3NjYwODA0MjAsLTk2MzI2ODQzOSwtMT
+g1MDI4MTI0NSwtMTg3NTc0OTQ5MF19
 -->
