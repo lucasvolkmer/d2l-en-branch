@@ -367,10 +367,10 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 
 ## Exercícios
 
-1. When training on multiple GPUs, change the minibatch size from $b$ to $k \cdot b$, i.e., scale it up by the number of GPUs.
-1. Compare accuracy for different learning rates. How does it scale with the number of GPUs.
-1. Implement a more efficient allreduce that aggregates different parameters on different GPUs (why is this more efficient in the first place).
-1. Implement multi-GPU test accuracy computation.
+1. Ao treinar em várias GPUs, altere o tamanho do minibatch de $b$ para $k \cdot b$, ou seja, aumente pelo número de GPUs.
+1. Compare a precisão para diferentes taxas de aprendizagem. Como isso se dimensiona com o número de GPUs.
+1. Implemente um *allreduce* mais eficiente que agregue diferentes parâmetros em diferentes GPUs (por que isso é mais eficiente em primeiro lugar).
+1. Implementar cálculo de precisão de teste multi-GPU.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/364)
@@ -380,6 +380,6 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NTE0NDU0NCwtNDg2NzgzOTIyLC0xOD
-QwMDUxNTU5XX0=
+eyJoaXN0b3J5IjpbNTM4MDI2OTU5LC00ODY3ODM5MjIsLTE4ND
+AwNTE1NTldfQ==
 -->
