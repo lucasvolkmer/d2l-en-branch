@@ -138,7 +138,7 @@ def evaluate_accuracy_gpus(net, data_iter, split_f=d2l.split_batch):
     return metric[0] / metric[1]
 ```
 
-## Training
+## Traini
 
 As before, the training code needs to perform a number of basic functions for efficient parallelism:
 
@@ -251,5 +251,5 @@ train(net, num_gpus=2, batch_size=512, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MTI5ODY2MF19
+eyJoaXN0b3J5IjpbMTMzMjEwMjEyMywxMTgxMjk4NjYwXX0=
 -->
