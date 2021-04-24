@@ -1,9 +1,10 @@
 # Servidores de Paraâmeter Serveros
 :label:`sec_parameterserver`
 
-As we move from single GPUs to multiple GPUs and then to multiple servers containing multiple GPUs, possibly all spread out across multiple racks and network switches our algorithms for distributed and parallel training need to become much more sophisticated. Details matter since different interconnects have very different bandwidth (e.g., NVLink can offer up to 100GB/s across 6 links in an appropriate setting, PCIe 3.0 16x lanes offer 16GB/s while even high speed 100 GbE Ethernet only amounts to 10GB/s). At the same time it is unreasonable to expect that a statistical modeler be an expert in networking and systems.
 
-The core idea of the parameter server was introduced in :cite:`Smola.Narayanamurthy.2010` in the context of distributed latent variable models. A description of the push and pull semantics then followed in :cite:`Ahmed.Aly.Gonzalez.ea.2012` and a description of the system and an open source library followed in :cite:`Li.Andersen.Park.ea.2014`. In the following we will motivate the components needed for efficiency.
+À medida que mudamos de GPUs únicas para várias GPUs e depois para vários servidores contendo várias GPUs, possivelmente todos espalhadas por vários racks e switches de rede, nossos algoritmos para treinamento distribuído e paralelo precisam se tornar muito mais sofisticados. Os detalhes são importantes, já que diferentes interconexões têm larguras de banda muito diferentes (por exemplo, NVLink pode oferecer até 100 GB/s em 6 links em uma configuração apropriada, PCIe 3.0 16x lanes oferecem 16 GB/s, enquanto mesmo Ethernet de 100 GbE de alta velocidade atinge apenas 10 GB/s) . Ao mesmo tempo, não é razoável esperar que um modelador estatístico seja um especialista em redes e sistemas.
+
+A ideia central do servidor de parâmetros foi introduzida em :cite:`Smola.Narayanamurthy.2010` no contexto de modelos de variáveis ​​latentes distribuídas. Uma descrição da semântica push e pull seguida em :cite:`Ahmed.Aly.Gonzalez.ea.2012` e uma descrição do sistema e uma biblioteca de código aberto seguida em :cite:`Li.Andersen.Park.ea.2014`. A seguir, iremos motivar os componentes necessários para a eficiência.
 
 ## Data Parallel Training
 
@@ -103,5 +104,5 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIyMTE2MTM2XX0=
+eyJoaXN0b3J5IjpbLTIxMzI2NTU2NjZdfQ==
 -->
