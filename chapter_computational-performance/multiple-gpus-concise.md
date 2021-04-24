@@ -19,7 +19,7 @@ from torch import nn
 
 ## Uma Rede de Exemplo
 
-Let us use a slightly more meaningful network than LeNet from the previous section that's still sufficiently easy and quick to train. We pick a ResNet-18 variant :cite:`He.Zhang.Ren.ea.2016`. Since the input images are tiny we modify it slightly. In particular, the difference to :numref:`sec_resnet` is that we use a smaller convolution kernel, stride, and padding at the beginning. Moreover, we remove the max-pooling layer.
+Vamos usar uma rede um pouco mais significativa do que a LeNet da seção anterior, que ainda é suficientemente fácil e rápida de treinar. Escolhemos uma variante do ResNet-18 :cite:`He.Zhang.Ren.ea.2016`.  Como as imagens de entrada são pequenas, nós as modificamos ligeiramente. Em particular, a diferença para :numref:`sec_resnet` é que usamos um kernel de convolução menor, stride e preenchimento no início. Além disso, removemos a camada de *pooling* máximo.
 
 ```{.python .input}
 #@save
@@ -80,7 +80,7 @@ def resnet18(num_classes, in_channels=1):
     return net
 ```
 
-## Parameter Initialization and Logistics
+## Inicialização de Parâmetros e Logística
 
 The `initialize` method allows us to set initial defaults for parameters on a device of our choice. For a refresher see :numref:`sec_numerical_stability`. What is particularly convenient is that it also lets us initialize the network on *multiple* devices simultaneously. Let us try how this works in practice.
 
@@ -251,5 +251,5 @@ train(net, num_gpus=2, batch_size=512, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MDE1MDYxMl19
+eyJoaXN0b3J5IjpbMzYyNjIxNDQ4XX0=
 -->
