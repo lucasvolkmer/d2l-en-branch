@@ -82,7 +82,7 @@ def resnet18(num_classes, in_channels=1):
 
 ## Inicialização de Parâmetros e Logística
 
-The `initialize` method allows us to set initial defaults for parameters on a device of our choice. For a refresher see :numref:`sec_numerical_stability`. What is particularly convenient is that it also lets us initialize the network on *multiple* devices simultaneously. Let us try how this works in practice.
+O método `initialize` nos permite definir padrões iniciais para parâmetros em um dispositivo de nossa escolha. Para uma atualização, consulte :numref:`sec_numerical_stability`. O que é particularmente conveniente é que também nos permite inicializar a rede em *vários* dispositivos simultaneamente. Vamos tentar como isso funciona na prática.
 
 ```{.python .input}
 net = resnet18(10)
@@ -251,5 +251,5 @@ train(net, num_gpus=2, batch_size=512, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYyNjIxNDQ4XX0=
+eyJoaXN0b3J5IjpbNzc1MzQ4NzkyXX0=
 -->
