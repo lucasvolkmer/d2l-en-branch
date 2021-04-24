@@ -1,4 +1,4 @@
-# Parameter Servers
+# Servidores de Paraâmeter Serveros
 :label:`sec_parameterserver`
 
 As we move from single GPUs to multiple GPUs and then to multiple servers containing multiple GPUs, possibly all spread out across multiple racks and network switches our algorithms for distributed and parallel training need to become much more sophisticated. Details matter since different interconnects have very different bandwidth (e.g., NVLink can offer up to 100GB/s across 6 links in an appropriate setting, PCIe 3.0 16x lanes offer 16GB/s while even high speed 100 GbE Ethernet only amounts to 10GB/s). At the same time it is unreasonable to expect that a statistical modeler be an expert in networking and systems.
@@ -102,3 +102,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 1. Other reductions (commutative semiring).
 
 [Discussions](https://discuss.d2l.ai/t/366)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjIyMTE2MTM2XX0=
+-->
