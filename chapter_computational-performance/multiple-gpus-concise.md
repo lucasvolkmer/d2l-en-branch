@@ -233,16 +233,16 @@ train(net, num_gpus=2, batch_size=512, lr=0.2)
 
 ## Resumo
 
-* Gluon provides primitives for model initialization across multiple devices by providing a context list.
-* Data is automatically evaluated on the devices where the data can be found.
-* Take care to initialize the networks on each device before trying to access the parameters on that device. Otherwise you will encounter an error.
-* The optimization algorithms automatically aggregate over multiple GPUs.
+* Gluon fornece primitivas para inicialização de modelo em vários dispositivos, fornecendo uma lista de contexto.
+* Os dados são avaliados automaticamente nos dispositivos onde os dados podem ser encontrados.
+* Tome cuidado ao inicializar as redes em cada dispositivo antes de tentar acessar os parâmetros naquele dispositivo. Caso contrário, você encontrará um erro.
+* Os algoritmos de otimização agregam-se automaticamente em várias GPUs.
 
-## Exercises
+## Exercícios
 
-1. This section uses ResNet-18. Try different epochs, batch sizes, and learning rates. Use more GPUs for computation. What happens if you try this on a p2.16xlarge instance with 16 GPUs?
-1. Sometimes, different devices provide different computing power. We could use the GPUs and the CPU at the same time. How should we divide the work? Is it worth the effort? Why? Why not?
-1. What happens if we drop `npx.waitall()`? How would you modify training such that you have an overlap of up to two steps for parallelism?
+1. Esta seção usa o ResNet-18. Experimente diferentes épocas, tamanhos de lote e taxas de aprendizagem. Use mais GPUs para computação. O que acontece se você tentar isso em uma instância p2.16xlarge com 16 GPUs?
+1. Às vezes, dispositivos diferentes fornecem poder de computação diferente. Poderíamos usar as GPUs e a CPU ao mesmo tempo. Como devemos dividir o trabalho? Vale a pena o esforço? Por quê? Por que não?
+1. O que acontece se eliminarmos `npx.waitall()`? Como você modificaria o treinamento de forma que houvesse uma sobreposição de até duas etapas para o paralelismo?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/365)
@@ -252,5 +252,5 @@ train(net, num_gpus=2, batch_size=512, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTgyMTUyODEsMTE4MTI5ODY2MF19
+eyJoaXN0b3J5IjpbLTE4MTE5ODkyMDQsMTE4MTI5ODY2MF19
 -->
