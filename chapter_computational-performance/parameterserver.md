@@ -34,12 +34,12 @@ Observe que temos mais uma ferramenta à nossa disposição quando se trata de m
 
 Quando se trata de sincronização em *hardware* de *deep learning* moderno, frequentemente encontramos conectividade de rede significativamente personalizada. Por exemplo, as instâncias AWS P3.16xlarge e NVIDIA DGX-2 compartilham a estrutura de conectividade de :numref:`fig_nvlink`. Cada GPU se conecta a uma CPU host por meio de um link PCIe que opera no máximo a 16 GB/s. Além disso, cada GPU também possui 6 conexões NVLink, cada uma das quais é capaz de transferir 300 Gbit/s bidirecionalmente. Isso equivale a cerca de 18 GB/s por link por direção. Resumindo, a largura de banda NVLink agregada é significativamente maior do que a largura de banda PCIe. A questão é como usá-lo de forma mais eficiente.
 
-![NVLink connectivity on 8GPU V100 servers (image courtesy of NVIDIA).](../img/nvlink.svg)
+![Conectividade NVLink em servidores 8GPU V100 (imagem cortesia da NVIDIA).](../img/nvlink.svg)
 :label:`fig_nvlink`
 
-It turns out :cite:`Wang.Li.Liberty.ea.2018` that the optimal synchronization strategy is to decompose the network into two rings and to use them to synchronize data directly. :numref:`fig_nvlink_twoloop` illustrates that the network can be decomposed into one ring (1-2-3-4-5-6-7-8-1) with double NVLink bandwidth and into one (1-4-6-3-5-8-2-7-1) with regular bandwidth. Designing an efficient synchronization protocol in this case is nontrivial.
+Acontece que :cite:`Wang.Li.Liberty.ea.2018` a estratégia de sincronização ideal é decompor a rede em dois anéis e usá-los para sincronizar os dados diretamente. :numref:`fig_nvlink_twoloop` ilustra que a rede pode ser decomposta em um anel (1-2-3-4-5-6-7-8-1) com largura de banda NVLink dupla e em um (1-4-6-3 -5-8-2-7-1) com largura de banda regular. Projetar um protocolo de sincronização eficiente nesse caso não é trivial.
 
-![Decomposition of the NVLink network into two rings.](../img/nvlink-twoloop.svg)
+![Decomposição da rede NVLink em dois anéis.](../img/nvlink-twoloop.svg)
 :label:`fig_nvlink_twoloop`
 
 Consider the following thought experiment: given a ring of $n$ compute nodes (or GPUs) we can send gradients from the first to the second node. There it is added to the local gradient and sent on to the third node, and so on. After $n-1$ steps the aggregate gradient can be found in the last-visited node. That is, the time to aggregate gradients grows linearly with the number of nodes. But if we do this the algorithm is quite inefficient. After all, at any time there is only one of the nodes communicating. What if we broke the gradients into $n$ chunks and started synchronizing chunk $i$ starting at node $i$. Since each chunk is of size $1/n$ the total time is now $(n-1)/n \approx 1$. In other words, the time spent to aggregate gradients *does not grow* as we increase the size of the ring. This is quite an astonishing result. :numref:`fig_ringsync` illustrates the sequence of steps on $n=4$ nodes.
@@ -104,6 +104,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3Mzc2NDI1MywtMTg1MDI4MTI0NSwtMT
+eyJoaXN0b3J5IjpbLTk2MzI2ODQzOSwtMTg1MDI4MTI0NSwtMT
 g3NTc0OTQ5MF19
 -->
