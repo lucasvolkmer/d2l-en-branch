@@ -47,11 +47,11 @@ Suponha que haja $k$ GPUs em uma máquina. Dado o modelo a ser treinado, cada GP
 
 
 
-A comparison of different ways of parallelization on multiple GPUs is depicted in :numref:`fig_splitting`.
-Note that in practice we *increase* the minibatch size $k$-fold when training on $k$ GPUs such that each GPU has the same amount of work to do as if we were training on a single GPU only. On a 16 GPU server this can increase the minibatch size considerably and we may have to increase the learning rate accordingly. Also note that :numref:`sec_batch_norm` needs to be adjusted (e.g., by keeping a separate batch norm coefficient per GPU).
-In what follows we will use :numref:`sec_lenet` as the toy network to illustrate multi-GPU training. As always we begin by importing the relevant packages and modules.
+Uma comparação de diferentes formas de paralelização em várias GPUs é descrita em :numref:`fig_splitting`.
+Observe que, na prática, *aumentamos* o tamanho do minibatch $k$-fold ao treinar em $k$ GPUs, de forma que cada GPU tenha a mesma quantidade de trabalho a fazer como se estivéssemos treinando em apenas uma única GPU. Em um servidor de 16 GPUs, isso pode aumentar o tamanho do minibatch consideravelmente e podemos ter que aumentar a taxa de aprendizado de acordo. Observe também que :numref:`sec_batch_norm` precisa ser ajustado (por exemplo, mantendo um coeficiente de norma de lote separado por GPU).
+A seguir, usaremos :numref:`sec_lenet` como a rede modelo para ilustrar o treinamento multi-GPU. Como sempre, começamos importando os pacotes e módulos relevantes.
 
-![Parallelization on multiple GPUs. From left to right - original problem, network partitioning, layer partitioning, data parallelism.](../img/splitting.svg)
+![Paralelização em várias GPUs. Da esquerda para a direita - problema original, particionamento de rede, particionamento de camada, paralelismo de dados.](../img/splitting.svg)
 :label:`fig_splitting`
 
 ```{.python .input}
@@ -70,9 +70,9 @@ from torch import nn
 from torch.nn import functional as F
 ```
 
-## A Toy Network
+## Uma Rede Exemplo
 
-We use LeNet as introduced in :numref:`sec_lenet`. We define it from scratch to illustrate parameter exchange and synchronization in detail.
+Usamos LeNet conforme apresentado em :numref:`sec_lenet`. Nós o definimos do zero para ilustrar a troca de parâmetros e a sincronização em detalhes.
 
 ```{.python .input}
 # Initialize model parameters
@@ -87,7 +87,7 @@ W4 = np.random.normal(scale=scale, size=(128, 10))
 b4 = np.zeros(10)
 params = [W1, b1, W2, b2, W3, b3, W4, b4]
 
-# Define the model
+# Definir the model
 def lenet(X, params):
     h1_conv = npx.convolution(data=X, weight=params[0], bias=params[1],
                               kernel=(3, 3), num_filter=20)
@@ -380,6 +380,6 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzMzNzgzMzIsLTQ4Njc4MzkyMiwtMT
-g0MDA1MTU1OV19
+eyJoaXN0b3J5IjpbNTc2NjAyMjAyLC00ODY3ODM5MjIsLTE4ND
+AwNTE1NTldfQ==
 -->
