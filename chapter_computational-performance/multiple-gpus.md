@@ -171,7 +171,7 @@ print('b1 weight:', new_params[1])
 print('b1 grad:', new_params[1].grad)
 ```
 
-Since we didn't perform any computation yet, the gradient with regard to the bias weights is still $0$. Now let us assume that we have a vector distributed across multiple GPUs. The following `allreduce` function adds up all vectors and broadcasts the result back to all GPUs. Note that for this to work we need to copy the data to the device accumulating the results.
+Como ainda não realizamos nenhum cálculo, o gradiente em relação aos pesos de polarização ainda é $0$. Agora, vamos supor que temos um vetor distribuído por várias GPUs. A função `allreduce` a seguir adiciona todos os vetores e transmite o resultado de volta para todas as GPUs. Observe que para que isso funcione precisamos copiar os dados para o dispositivo acumulando os resultados.
 
 ```{.python .input}
 def allreduce(data):
@@ -190,7 +190,7 @@ def allreduce(data):
         data[i] = data[0].to(data[i].device)
 ```
 
-Let us test this by creating vectors with different values on different devices and aggregate them.
+Vamos testar isso criando vetores com diferentes valores em diferentes dispositivos e agregando-os.
 
 ```{.python .input}
 data = [np.ones((1, 2), ctx=d2l.try_gpu(i)) * (i + 1) for i in range(2)]
@@ -207,9 +207,9 @@ allreduce(data)
 print('after allreduce:\n', data[0], '\n', data[1])
 ```
 
-## Distributing Data
+## Distribuindo Dados
 
-We need a simple utility function to distribute a minibatch evenly across multiple GPUs. For instance, on 2 GPUs we'd like to have half of the data to be copied to each of the GPUs. Since it is more convenient and more concise, we use the built-in split and load function in Gluon (to try it out on a $4 \times 5$ matrix).
+Precisamos de uma função de utilitário simples para distribuir um minibatch uniformemente em várias GPUs. Por exemplo, em 2 GPUs, gostaríamos de ter metade dos dados a serem copiados para cada uma das GPUs. Por ser mais conveniente e conciso, usamos a função embutida de divisão e carga no Gluon (para experimentá-la em uma matriz $4 \times5$).
 
 ```{.python .input}
 data = np.arange(20).reshape(4, 5)
@@ -230,7 +230,7 @@ print('load into', devices)
 print('output:', split)
 ```
 
-For later reuse we define a `split_batch` function which splits both data and labels.
+Para reutilização posterior, definimos uma função `split_batch` que divide os dados e rótulos.
 
 ```{.python .input}
 #@save
@@ -380,6 +380,6 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MjQ3NTQ1NCwtNDg2NzgzOTIyLC0xOD
-QwMDUxNTU5XX0=
+eyJoaXN0b3J5IjpbLTExMjI2MTUxOTAsLTQ4Njc4MzkyMiwtMT
+g0MDA1MTU1OV19
 -->
