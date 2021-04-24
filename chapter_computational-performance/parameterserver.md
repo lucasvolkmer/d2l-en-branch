@@ -54,15 +54,15 @@ Observe que há um equívoco comum de que a sincronização em anel é fundament
 
 O treinamento distribuído em várias máquinas adiciona mais um desafio: precisamos nos comunicar com servidores que estão conectados apenas por meio de uma malha de largura de banda comparativamente mais baixa, que pode ser mais do que uma ordem de magnitude mais lenta em alguns casos. A sincronização entre dispositivos é complicada. Afinal, diferentes máquinas que executam código de treinamento terão velocidades sutilmente diferentes. Portanto, precisamos *sincronizá-los* se quisermos usar a otimização distribuída síncrona. :numref:`fig_ps_multimachine` ilustra como ocorre o treinamento paralelo distribuído.
 
-1. A (different) batch of data is read on each machine, split across multiple GPUs and transferred to GPU memory. There predictions and gradients are computed on each GPU batch separately.
-2. The gradients from all local GPUs are aggregated on one GPU (or alternatively parts of it are aggregated over different GPUs.
-3. The gradients are sent to the CPU.
-4. The CPU sends the gradients to a central parameter server which aggregates all the gradients.
-5. The aggregate gradients are then used to update the weight vectors and the updated weight vectors are broadcast back to the individual CPUs.
-6. The information is sent to one (or multiple) GPUs.
-7. The updated weight vectors are spread across all GPUs.
+1. Um lote (diferente) de dados é lido em cada máquina, dividido em várias GPUs e transferido para a memória da GPU. Essas previsões e gradientes são calculados em cada lote de GPU separadamente.
+2. Os gradientes de todas as GPUs locais são agregados em uma GPU (ou, alternativamente, partes dela são agregadas em diferentes GPUs.
+3. Os gradientes são enviados para a CPU.
+4. A CPU envia os gradientes para um servidor de parâmetros central que agrega todos os gradientes.
+5. Os gradientes agregados são então usados para atualizar os vetores de peso e os vetores de peso atualizados são transmitidos de volta para as CPUs individuais.
+6. As informações são enviadas para uma (ou várias) GPUs.
+7. Os vetores de peso atualizados são espalhados por todas as GPUs.
 
-![Multi-machine multi-GPU distributed parallel training.](../img/ps-multimachine.svg)
+![Treinamento paralelo distribuído em várias máquinas e em várias GPUs.](../img/ps-multimachine.svg)
 :label:`fig_ps_multimachine`
 
 Each of these operations seems rather straightforward. And, indeed, they can be carried out efficiently *within* a single machine. Once we look at multiple machines, though, we can see that the central parameter server becomes the bottleneck. After all, the bandwidth per server is limited, hence for $m$ workers the time it takes to send all gradients to the server is $O(m)$. We can break through this barrier by increasing the number of servers to $n$. At this point each server only needs to store $O(1/n)$ of the parameters, hence the total time for updates and optimization becomes $O(m/n)$. Matching both numbers yields constant scaling regardless of how many workers we are dealing with. In practice we use the *same* machines both as workers and as servers. :numref:`fig_ps_multips` illustrates the design. See also :cite:`Li.Andersen.Park.ea.2014` for details. In particular, ensuring that multiple machines work without unreasonable delays is nontrivial. We omit details on barriers and will only briefly touch on synchronous and asynchronous updates below.
@@ -104,6 +104,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODQ0NTQ1NCwtOTYzMjY4NDM5LC0xOD
-UwMjgxMjQ1LC0xODc1NzQ5NDkwXX0=
+eyJoaXN0b3J5IjpbMzkwNTcxOTQ2LC05NjMyNjg0MzksLTE4NT
+AyODEyNDUsLTE4NzU3NDk0OTBdfQ==
 -->
