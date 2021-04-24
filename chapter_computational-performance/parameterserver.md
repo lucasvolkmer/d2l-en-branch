@@ -82,10 +82,11 @@ O aspecto chave nesta operação é que se trata de uma *redução comutativa*, 
 Isso nos permite definir as duas operações a seguir: *push*, que acumula gradientes, e *pull*, que recupera gradientes agregados. Como temos muitos conjuntos diferentes de gradientes (afinal, temos muitas camadas), precisamos indexar os gradientes com a chave $i$. Essa semelhança com armazenamento (key, value), como aquela introduzida no Dynamo
 :cite:`DeCandia.Hastorun.Jampani.ea.2007` não é por acaso. Eles também satisfazem muitas características semelhantes, em particular quando se trata de distribuir os parâmetros em vários servidores.
 
-* **push(key, value)** sends a particular gradient (the value) from a worker to a common storage. There the parameter is aggregated, e.g., by summing it up.
-* **pull(key, value)** retrieves an aggregate parameter from common storage, e.g., after combining the gradients from all workers.
 
-By hiding all the complexity about synchronization behind a simple push and pull operation we can decouple the concerns of the statistical modeler who wants to be able to express optimization in simple terms and the systems engineer who needs to deal with the complexity inherent in distributed synchronization. In the next section we will experiment with such a (key,value) store in practice.
+* ** *push* (key, value) ** envia um gradiente específico (o valor) de um trabalhador para um armazenamento comum. Lá, o parâmetro é agregado, por exemplo, somando-o.
+* ** *pull* (key, value) ** recupera um parâmetro agregado do armazenamento comum, por exemplo, depois de combinar os gradientes de todos os trabalhadores.
+
+Ao ocultar toda a complexidade sobre a sincronização por trás de uma operação simples de *push* e *pull*, podemos dissociar as preocupações do modelador estatístico que deseja ser capaz de expressar a otimização em termos simples e do engenheiro de sistemas que precisa lidar com a complexidade inerente à sincronização distribuída. Na próxima seção, faremos experiências com esse armazenamento (key, value) na prática.
 
 ## Summary
 
@@ -105,6 +106,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0Mjk2MTc2MiwtOTYzMjY4NDM5LC0xOD
+eyJoaXN0b3J5IjpbLTgyMjcwNDM1NiwtOTYzMjY4NDM5LC0xOD
 UwMjgxMjQ1LC0xODc1NzQ5NDkwXX0=
 -->
