@@ -6,11 +6,11 @@
 
 A ideia central do servidor de parâmetros foi introduzida em :cite:`Smola.Narayanamurthy.2010` no contexto de modelos de variáveis ​​latentes distribuídas. Uma descrição da semântica push e pull seguida em :cite:`Ahmed.Aly.Gonzalez.ea.2012` e uma descrição do sistema e uma biblioteca de código aberto seguida em :cite:`Li.Andersen.Park.ea.2014`. A seguir, iremos motivar os componentes necessários para a eficiência.
 
-## Data Parallel Training
+## Treinamento Paralelo de Dados
 
-Let us review the data parallel training approach to distributed training. We will use this to the exclusion of all others in this section since it is significantly simpler to implement in practice. There are virtually no use cases (besides deep learning on graphs) where any other strategy for parallelism is preferred since GPUs have plenty of memory nowadays. :numref:`fig_parameterserver` describes the variant of data parallelism that we implemented in the previous section. The key aspect in it is that the aggregation of gradients occurs on GPU0 before the updated parameters are rebroadcast to all GPUs.
+Vamos revisar a abordagem de treinamento paralelo de dados para treinamento distribuído. Usaremos isso com a exclusão de todos os outros nesta seção, uma vez que é significativamente mais simples de implementar na prática. Praticamente não há casos de uso (além do aprendizado profundo em gráficos) onde qualquer outra estratégia de paralelismo é preferida, já que as GPUs têm muita memória hoje em dia. :numref:`fig_parameterserver` descreve a variante de paralelismo de dados que implementamos na seção anterior. O aspecto principal nisso é que a agregação de gradientes ocorre na GPU0 antes que os parâmetros atualizados sejam retransmitidos para todas as GPUs.
 
-![Left: single GPU training; Right: a variant of multi-GPU training. It proceeds as follows. (1) we compute loss and gradient, (2) all gradients are aggregated on one GPU, (3) parameter update happens and the parameters are re-distributed to all GPUs.](../img/ps.svg)
+![Na esquerda: treinamento de GPU único; Na direita: uma variante do treinamento multi-GPU. Ele procede da seguinte maneira. (1) calculamos a perda e o gradiente, (2) todos os gradientes são agregados em uma GPU, (3) a atualização dos parâmetros acontece e os parâmetros são redistribuídos para todas as GPUs.](../img/ps.svg)
 :label:`fig_parameterserver`
 
 In retrospect, the decision to aggregate on GPU0 seems rather ad-hoc. After all, we might just as well aggregate on the CPU. In fact, we could even decide to aggregate some of the parameters on one GPU and some others on another. Provided that the optimization algorithm supports this, there is no real reason for why we could not. For instance, if we have four parameter vectors $\mathbf{v}_1, \ldots, \mathbf{v}_4$ with associated gradients $\mathbf{g}_1, \ldots, \mathbf{g}_4$ we could aggregate the gradients on one GPU each.
@@ -104,5 +104,5 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzI2NTU2NjZdfQ==
+eyJoaXN0b3J5IjpbMjA2ODc1OTE2OF19
 -->
