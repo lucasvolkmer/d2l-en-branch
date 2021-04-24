@@ -100,7 +100,7 @@ devices = d2l.try_all_gpus()
 # we'll initialize the network inside the training loop
 ```
 
-Using the `split_and_load` function introduced in the previous section we can divide a minibatch of data and copy portions to the list of devices provided by the context variable. The network object *automatically* uses the appropriate GPU to compute the value of the forward propagation. As before we generate 4 observations and split them over the GPUs.
+Usando a função `split_and_load` introduzida na seção anterior, podemos dividir um minibatch de dados e copiar porções para a lista de dispositivos fornecida pela variável de contexto. O objeto de rede *automaticamente* usa a GPU apropriada para calcular o valor da propagação direta. Como antes, geramos 4 observações e as dividimos nas GPUs.
 
 ```{.python .input}
 x = np.random.uniform(size=(4, 1, 28, 28))
@@ -251,5 +251,5 @@ train(net, num_gpus=2, batch_size=512, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc1MzQ4NzkyXX0=
+eyJoaXN0b3J5IjpbLTg0MDE2NTMyOV19
 -->
