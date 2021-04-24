@@ -52,7 +52,7 @@ Observe que há um equívoco comum de que a sincronização em anel é fundament
 
 ## Treinamento Multi-Máquina
 
-Distributed training on multiple machines adds a further challenge: we need to communicate with servers that are only connected across a comparatively lower bandwidth fabric which can be over an order of magnitude slower in some cases. Synchronization across devices is tricky. After all, different machines running training code will have subtly different speed. Hence we need to *synchronize* them if we want to use synchronous distributed optimization. :numref:`fig_ps_multimachine` illustrates how distributed parallel training occurs.
+O treinamento distribuído em várias máquinas adiciona mais um desafio: precisamos nos comunicar com servidores que estão conectados apenas por meio de uma malha de largura de banda comparativamente mais baixa, que pode ser mais do que uma ordem de magnitude mais lenta em alguns casos. A sincronização entre dispositivos é complicada. Afinal, diferentes máquinas que executam código de treinamento terão velocidades sutilmente diferentes. Portanto, precisamos *sincronizá-los* se quisermos usar a otimização distribuída síncrona. :numref:`fig_ps_multimachine` ilustra como ocorre o treinamento paralelo distribuído.
 
 1. A (different) batch of data is read on each machine, split across multiple GPUs and transferred to GPU memory. There predictions and gradients are computed on each GPU batch separately.
 2. The gradients from all local GPUs are aggregated on one GPU (or alternatively parts of it are aggregated over different GPUs.
@@ -104,6 +104,6 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MjI5MjI3MywtOTYzMjY4NDM5LC0xOD
+eyJoaXN0b3J5IjpbMTAyODQ0NTQ1NCwtOTYzMjY4NDM5LC0xOD
 UwMjgxMjQ1LC0xODc1NzQ5NDkwXX0=
 -->
