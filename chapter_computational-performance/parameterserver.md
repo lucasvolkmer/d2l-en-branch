@@ -13,7 +13,7 @@ Vamos revisar a abordagem de treinamento paralelo de dados para treinamento dist
 ![Na esquerda: treinamento de GPU único; Na direita: uma variante do treinamento multi-GPU. Ele procede da seguinte maneira. (1) calculamos a perda e o gradiente, (2) todos os gradientes são agregados em uma GPU, (3) a atualização dos parâmetros acontece e os parâmetros são redistribuídos para todas as GPUs.](../img/ps.svg)
 :label:`fig_parameterserver`
 
-In retrospect, the decision to aggregate on GPU0 seems rather ad-hoc. After all, we might just as well aggregate on the CPU. In fact, we could even decide to aggregate some of the parameters on one GPU and some others on another. Provided that the optimization algorithm supports this, there is no real reason for why we could not. For instance, if we have four parameter vectors $\mathbf{v}_1, \ldots, \mathbf{v}_4$ with associated gradients $\mathbf{g}_1, \ldots, \mathbf{g}_4$ we could aggregate the gradients on one GPU each.
+Em retrospecto, a decisão de agregar na GPU0 parece bastante ad-hoc. Afinal, podemos muito bem agregar na CPU. Na verdade, poderíamos até decidir agregar alguns dos parâmetros em uma GPU e alguns outros em outra. Desde que o algoritmo de otimização suporte isso, não há razão real para que não o possamos fazer. Por exemplo, se tivermos quatro vetores de parâmetro $\mathbf{v}_1, \ldots, \mathbf{v}_4$ com gradientes associados $\mathbf{g}_1, \ldots, \mathbf{g}_4$ poderíamos agreguar os gradientes em uma GPU cada.
 
 $$\mathbf{g}_{i} = \sum_{j \in \mathrm{GPUs}} \mathbf{g}_{ij}$$
 
@@ -104,5 +104,5 @@ By hiding all the complexity about synchronization behind a simple push and pull
 
 [Discussions](https://discuss.d2l.ai/t/366)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODc1OTE2OF19
+eyJoaXN0b3J5IjpbLTEyNzE2OTY2MzhdfQ==
 -->
