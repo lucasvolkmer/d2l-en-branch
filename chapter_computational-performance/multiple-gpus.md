@@ -7,19 +7,19 @@ Até agora, discutimos como treinar modelos de forma eficiente em CPUs e GPUs. N
 
 Vamos começar com um problema de visão computacional simples e uma rede ligeiramente arcaica, por exemplo, com várias camadas de convoluções, agrupamento e, possivelmente, algumas camadas densas no final. Ou seja, vamos começar com uma rede que se parece bastante com LeNet :cite:`LeCun.Bottou.Bengio.ea.1998` ou AlexNet :cite:`Krizhevsky.Sutskever.Hinton.2012`. Dadas várias GPUs (2 se for um servidor de desktop, 4 em um g4dn.12xlarge, 8 em um AWS p3.16xlarge, ou 16 em um p2.16xlarge), queremos particionar o treinamento de maneira a obter uma boa aceleração enquanto beneficiando simultaneamente de opções de design simples e reproduzíveis. Afinal, várias GPUs aumentam a capacidade de *memória* e *computação*. Em suma, temos várias opções, dado um minibatch de dados de treinamento que desejamos classificar.
 
-* We could partition the network layers across multiple GPUs. That is, each GPU takes as input the data flowing into a particular layer, processes data across a number of subsequent layers and then sends the data to the next GPU.
-    * This allows us to process data with larger networks when compared to what a single GPU could handle.
-    * Memory footprint per GPU can be well controlled (it is a fraction of the total network footprint)
-    * The interface between layers (and thus GPUs) requires tight synchronization. This can be tricky, in particular if the computational workloads are not properly matched between layers. The problem is exacerbated for large numbers of GPUs.
-    * The interface between layers requires large amounts of data transfer (activations, gradients). This may overwhelm the bandwidth of the GPU buses.
-    * Compute intensive, yet sequential operations are nontrivial to partition. See e.g., :cite:`Mirhoseini.Pham.Le.ea.2017` for a best effort in this regard. It remains a difficult problem and it is unclear whether it is possible to achieve good (linear) scaling on nontrivial problems. We do not recommend it unless there is excellent framework / OS support for chaining together multiple GPUs.
-* We could split the work required by individual layers. For instance, rather than computing 64 channels on a single GPU we could split up the problem across 4 GPUs, each of which generate data for 16 channels. Likewise, for a dense layer we could split the number of output neurons. :numref:`fig_alexnet_original` illustrates this design. The figure is taken from :cite:`Krizhevsky.Sutskever.Hinton.2012` where this strategy was used to deal with GPUs that had a very small memory footprint (2GB at the time).
-    * This allows for good scaling in terms of computation, provided that the number of channels (or neurons) is not too small.
-    * Multiple GPUs can process increasingly larger networks since the memory available scales linearly.
-    * We need a *very large* number of synchronization / barrier operations since each layer depends on the results from all other layers.
-    * The amount of data that needs to be transferred is potentially even larger than when distributing layers across GPUs. We do not recommend this approach due to its bandwidth cost and complexity.
+* Podemos particionar as camadas de rede em várias GPUs. Ou seja, cada GPU recebe como entrada os dados que fluem para uma camada específica, processa os dados em várias camadas subsequentes e, em seguida, envia os dados para a próxima GPU.
+    * Isso nos permite processar dados com redes maiores, em comparação com o que uma única GPU poderia suportar.
+    * A pegada de memória por GPU pode ser bem controlada (é uma fração da pegada total da rede)
+    * A interface entre as camadas (e, portanto, as GPUs) requer uma sincronização rígida. Isso pode ser complicado, especialmente se as cargas de trabalho computacionais não forem correspondidas adequadamente entre as camadas. O problema é agravado por um grande número de GPUs.
+    * A interface entre as camadas requer grandes quantidades de transferência de dados (ativações, gradientes). Isso pode sobrecarregar a largura de banda dos barramentos da GPU.
+    * Computação intensiva, mas operações sequenciais não são triviais para particionar. Veja, por exemplo, :cite:`Mirhoseini.Pham.Le.ea.2017` para um melhor esforço a este respeito. Continua sendo um problema difícil e não está claro se é possível obter uma boa escala (linear) em problemas não triviais. Não o recomendamos, a menos que haja um excelente suporte de estrutura / sistema operacional para encadear várias GPUs.
+* Podemos dividir o trabalho necessário em camadas individuais. Por exemplo, em vez de computar 64 canais em uma única GPU, poderíamos dividir o problema em 4 GPUs, cada uma gerando dados para 16 canais. Da mesma forma, para uma camada densa, poderíamos dividir o número de neurônios de saída. :numref:`fig_alexnet_original` ilustra este design. A figura foi tirada de :cite:`Krizhevsky.Sutskever.Hinton.2012` onde esta estratégia foi usada para lidar com GPUs que tinham uma pegada de memória muito pequena (2 GB na época).
+    * Isso permite um bom dimensionamento em termos de computação, desde que o número de canais (ou neurônios) não seja muito pequeno.
+    * Várias GPUs podem processar redes cada vez maiores, uma vez que a memória disponível é dimensionada linearmente.
+    * Precisamos de um número *muito grande* de operações de sincronização / barreira, pois cada camada depende dos resultados de todas as outras camadas.
+    * A quantidade de dados que precisa ser transferida é potencialmente ainda maior do que ao distribuir camadas entre GPUs. Não recomendamos esta abordagem devido ao seu custo de largura de banda e complexidade.
     
-![Model parallelism in the original AlexNet design due to limited GPU memory.](../img/alexnet-original.svg)
+![Paralelismo de modelo no design AlexNet original devido à memória GPU limitada.](../img/alexnet-original.svg)
 :label:`fig_alexnet_original`
     
 * Lastly we could partition data across multiple GPUs. This way all GPUs perform the same type of work, albeit on different observations. Gradients are aggregated between GPUs after each minibatch.
@@ -379,5 +379,6 @@ train(num_gpus=2, batch_size=256, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1669)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA0MjM3NzE1LC0xODQwMDUxNTU5XX0=
+eyJoaXN0b3J5IjpbLTE3NjgzNjA3MTEsLTE4NDAwNTE1NTldfQ
+==
 -->
