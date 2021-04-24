@@ -120,7 +120,7 @@ except RuntimeError:
 weight.data(devices[0])[0], weight.data(devices[1])[0]
 ```
 
-Lastly let us replace the code to evaluate the accuracy by one that works in parallel across multiple devices. This serves as a replacement of the `evaluate_accuracy_gpu` function from :numref:`sec_lenet`. The main difference is that we split a batch before invoking the network. All else is essentially identical.
+Por último, vamos substituir o código para avaliar a precisão por um que funcione em paralelo em vários dispositivos. Isso serve como uma substituição da função `evaluate_accuracy_gpu` de :numref:`sec_lenet`.  A principal diferença é que dividimos um lote antes de chamar a rede. Tudo o mais é essencialmente idêntico.
 
 ```{.python .input}
 #@save
@@ -251,5 +251,5 @@ train(net, num_gpus=2, batch_size=512, lr=0.2)
 [Discussions](https://discuss.d2l.ai/t/1403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE2MDMxNjVdfQ==
+eyJoaXN0b3J5IjpbMTE4MTI5ODY2MF19
 -->
