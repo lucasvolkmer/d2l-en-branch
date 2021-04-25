@@ -28,21 +28,17 @@ Armados com as estimativas adequadas, podemos agora escrever as equações de at
 
 $$\mathbf{g}_t' = \frac{\eta \hat{\mathbf{v}}_t}{\sqrt{\hat{\mathbf{s}}_t} + \epsilon}.$$
 
-Unlike RMSProp our update uses the momentum $\hat{\mathbf{v}}_t$ rather than the gradient itself. Moreover, there is a slight cosmetic difference as the rescaling happens using $\frac{1}{\sqrt{\hat{\mathbf{s}}_t} + \epsilon}$ instead of $\frac{1}{\sqrt{\hat{\mathbf{s}}_t + \epsilon}}$. The former works arguably slightly better in practice, hence the deviation from RMSProp. Typically we pick $\epsilon = 10^{-6}$ for a good trade-off between numerical stability and fidelity. 
-
-Now we have all the pieces in place to compute updates. This is slightly anticlimactic and we have a simple update of the form
-
 Ao contrário de RMSProp, nossa atualização usa o momento $\hat{\mathbf{v}}_t$ em vez do gradiente em si. Além disso, há uma pequena diferença estética, pois o redimensionamento acontece usando $\frac{1}{\sqrt{\hat{\mathbf{s}}_t} + \epsilon}$ em vez de $\frac{1}{\sqrt{\hat{\mathbf{s}}_t + \epsilon}}$. O primeiro funciona sem dúvida um pouco melhor na prática, daí o desvio de RMSProp. Normalmente escolhemos $\epsilon = 10^{-6}$ para uma boa troca entre estabilidade numérica e fidelidade.
 
 Agora temos todas as peças no lugar para computar as atualizações. Isso é um pouco anticlimático e temos uma atualização simples do formulário
 
 $$\mathbf{x}_t \leftarrow \mathbf{x}_{t-1} - \mathbf{g}_t'.$$
 
-Reviewing the design of Adam its inspiration is clear. Momentum and scale are clearly visible in the state variables. Their rather peculiar definition forces us to debias terms (this could be fixed by a slightly different initialization and update condition). Second, the combination of both terms is pretty straightforward, given RMSProp. Last, the explicit learning rate $\eta$ allows us to control the step length to address issues of convergence. 
+Revendo o projeto de Adam, sua inspiração é clara. Momentum e escala são claramente visíveis nas variáveis de estado. Sua definição um tanto peculiar nos força a termos de debias (isso poderia ser corrigido por uma inicialização ligeiramente diferente e condição de atualização). Em segundo lugar, a combinação de ambos os termos é bastante direta, dado o RMSProp. Por último, a taxa de aprendizagem explícita $\eta$ nos permite controlar o comprimento do passo para tratar de questões de convergência.
 
-## Implementation 
+## Implementação
 
-Implementing Adam from scratch is not very daunting. For convenience we store the time step counter $t$ in the `hyperparams` dictionary. Beyond that all is straightforward.
+Implementar Adam do zero não é muito assustador. Por conveniência, armazenamos o contador de intervalos de tempo $t$ no dicionário de `hiperparâmetros`. Além disso, tudo é simples.
 
 ```{.python .input}
 %matplotlib inline
@@ -115,7 +111,7 @@ def adam(params, grads, states, hyperparams):
                     / tf.math.sqrt(s_bias_corr) + eps)
 ```
 
-We are ready to use Adam to train the model. We use a learning rate of $\eta = 0.01$.
+Estamos prontos para usar Adam para treinar o modelo. Usamos uma taxa de aprendizado de $\eta = 0,01$.
 
 ```{.python .input}
 #@tab all
@@ -124,7 +120,7 @@ d2l.train_ch11(adam, init_adam_states(feature_dim),
                {'lr': 0.01, 't': 1}, data_iter, feature_dim);
 ```
 
-A more concise implementation is straightforward since `adam` is one of the algorithms provided as part of the Gluon `trainer` optimization library. Hence we only need to pass configuration parameters for an implementation in Gluon.
+Uma implementação mais concisa é direta, pois `adam` é um dos algoritmos fornecidos como parte da biblioteca de otimização `trainer` Gluon. Portanto, só precisamos passar os parâmetros de configuração para uma implementação no Gluon.
 
 ```{.python .input}
 d2l.train_concise_ch11('adam', {'learning_rate': 0.01}, data_iter)
@@ -144,7 +140,7 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.01}, data_iter)
 
 ## Yogi
 
-One of the problems of Adam is that it can fail to converge even in convex settings when the second moment estimate in $\mathbf{s}_t$ blows up. As a fix :cite:`Zaheer.Reddi.Sachan.ea.2018` proposed a refined update (and initialization) for $\mathbf{s}_t$. To understand what's going on, let us rewrite the Adam update as follows:
+Um dos problemas de Adam é que ele pode falhar em convergir mesmo em configurações convexas quando a estimativa do segundo momento em $\mathbf{s}_t$ explode. Como uma correção :cite:`Zaheer.Reddi.Sachan.ea.2018` propôs uma atualização refinada (e inicialização) para $\mathbf{s}_t$. Para entender o que está acontecendo, vamos reescrever a atualização do Adam da seguinte maneira:
 
 $$\mathbf{s}_t \leftarrow \mathbf{s}_{t-1} + (1 - \beta_2) \left(\mathbf{g}_t^2 - \mathbf{s}_{t-1}\right).$$
 
@@ -238,5 +234,5 @@ d2l.train_ch11(yogi, init_adam_states(feature_dim),
 [Discussions](https://discuss.d2l.ai/t/1079)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTgxMzg4MThdfQ==
+eyJoaXN0b3J5IjpbNjEzODExMzUxXX0=
 -->
