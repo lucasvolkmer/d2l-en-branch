@@ -1,15 +1,13 @@
 # Adadelta
 :label:`sec_adadelta`
 
-Adadelta é outra variante do AdaGrad (: numref:`sec_adagrad`). A principal diferença reside no fato de que diminui a quantidade pela qual a taxa de aprendizagem é adaptável às coordenadas. Além disso, tradicionalmente é referido como não tendo uma taxa de aprendizagem, uma vez que usa a quantidade de mudança em si como calibração para mudanças futuras. O algoritmo foi proposto em :cite:`Zeiler.2012`. É bastante simples, dada a discussão de algoritmos anteriores até agora.
+Adadelta é outra variante do AdaGrad (:numref:`sec_adagrad`). A principal diferença reside no fato de que diminui a quantidade pela qual a taxa de aprendizagem é adaptável às coordenadas. Além disso, tradicionalmente é referido como não tendo uma taxa de aprendizagem, uma vez que usa a quantidade de mudança em si como calibração para mudanças futuras. O algoritmo foi proposto em :cite:`Zeiler.2012`. É bastante simples, dada a discussão de algoritmos anteriores até agora.
 
-## TheO Algorithm
+## O Algoritmo
 
-In a nutshell, Adadelta uses two state variables, $\mathbf{s}_t$ to store a leaky average of themo
+Em poucas palavras, Adadelta usa duas variáveis de estado, $\mathbf{s}_t$ para armazenar uma média de vazamento do segundo momento do gradiente e $\Delta\mathbf{x}_t$ para armazenar uma média de vazamento do segundo momento da mudança de parâmetros no próprio modelo. Observe que usamos a notação original e a nomenclatura dos autores para compatibilidade com outras publicações e implementações (não há outra razão real para usar variáveis gregas diferentes para indicar um parâmetro que serve ao mesmo propósito em momentum, Adagrad, RMSProp e Adadelta)
 
-Em poucas palavras, Adadelta usa duas variáveis de estado, $\mathbf{s}_t$ para armazenar uma média de vazamento do secogundo moment of theo do gradient ande e $\Delta\mathbf{x}_t$ to store a leaky average of thepara armazenar uma média de vazamento do secogundo moment of the change ofo da mudança de paraâmeters in the model itself. Note that we use the original notation and naming of theros no próprio modelo. Observe que usamos a notação original e a nomenclatura dos authores forpara compatibility with other publications and implementations (there is no other real reason why one should usedade com outras publicações e implementações (não há outra razão real para usar variáveis gregas different Greek variables toes para indicate ar um paraâmeter serving the same purpose inro que serve ao mesmo propósito em momentum, Adagrad, RMSProp, and e Adadelta). )
-
-Here are the technical details of Adadelta. Given the parameter du jour is $\rho$, we obtain the following leaky updates similarly to :numref:`sec_rmsprop`:
+Aqui estão os detalhes técnicos do Adadelta. Dado que o parâmetro du jour é $\rho$, obtemos as seguintes atualizações vazadas de forma semelhante a :numref:`sec_rmsprop`:
 
 $$\begin{aligned}
     \mathbf{s}_t & = \rho \mathbf{s}_{t-1} + (1 - \rho) \mathbf{g}_t^2.
@@ -162,5 +160,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate':5.0, 'rho': 0.9}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1077)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODk3NDU2MjVdfQ==
+eyJoaXN0b3J5IjpbLTM3NzMzOTU3Nl19
 -->
