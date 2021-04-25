@@ -1,22 +1,31 @@
 # Momentum
 :label:`sec_momentum`
 
-In :numref:`sec_sgd` we reviewed what happens when performing stochastic gradient descent, i.e., when performing optimization where only a noisy variant of the gradient is available. In particular, we noticed that for noisy gradients we need to be extra cautious when it comes to choosing the learning rate in the face of noise. If we decrease it too rapidly, convergence stalls. If we are too lenient, we fail to converge to a good enough solution since noise keeps on driving us away from optimality.
+InEm :numref:`sec_sgd` we, reviewed what happens when performing stochastic gradient descent, i.e., when performingsamos o que acontece ao realizar a descida do gradiente estocástico, ou seja, ao realizar a optimization where only a noisy variant of the gradient is available. In particular, we noticed that for noisy gradients we need to be extra cautious when it começão onde apenas uma variante barulhenta do gradiente está disponível. Em particular, notamos que, para gradientes ruidosos, precisamos ser extremamente cautelosos tao choosing the learning rate in the face of noise. If we decrease it too rapidly,escolher a taxa de aprendizado em face do ruído. Se diminuirmos muito rapidamente, a convergeênce stalls. If we are too lenient, we fail to converge to a good enough solution since noise keeps on driving us away fromia para. Se formos tolerantes demais, não conseguiremos convergir para uma solução boa o suficiente, pois o ruído continua nos afastando da optimality.
 
 ## Basics
 
-In this section, we will explore more effective optimization algorithms, especially for certain types of optimization problems that are common in practice.
+In this section, we will explore more effectivização.
+
+## Fundamentos
+
+Nesta seção, exploraremos algoritmos de optimization algorithms, especially for certain types of optimizationção mais eficazes, especialmente para certos tipos de problemas that are common inde otimização que são comuns na pracáticea.
 
 
 ### Leaky Averages
 
-The previous section saw us discussing minibatch SGD as a means for accelerating computation. It also had the nice side-effect that averaging gradients reduced the amount of variance. The minibatch SGD can be calculated by:
+The previous section saw us discussing minibatch SGD as a means forMédias com vazamento
+
+A seção anterior nos viu discutindo o minibatch SGD como um meio de acceleratingr a computation. It also had the nice side-effect that averagingção. Também teve o bom efeito colateral de que a média dos gradientes reduced the amount ofziu a quantidade de variaânce. Theia. O minibatch SGD can bepode ser calculated bydo por:
 
 $$\mathbf{g}_{t, t-1} = \partial_{\mathbf{w}} \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} f(\mathbf{x}_{i}, \mathbf{w}_{t-1}) = \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} \mathbf{h}_{i, t-1}.
 $$
 
 To keep the notation simple, here we used $\mathbf{h}_{i, t-1} = \partial_{\mathbf{w}} f(\mathbf{x}_i, \mathbf{w}_{t-1})$ as the SGD for sample $i$ using the weights updated at time $t-1$.
 It would be nice if we could benefit from the effect of variance reduction even beyond averaging gradients on a minibatch. One option to accomplish this task is to replace the gradient computation by a "leaky average":
+
+Para manter a notação simples, aqui usamos $\mathbf{h}_{i, t-1} = \partial_{\mathbf{w}} f(\mathbf{x}_i, \mathbf{w}_{t-1})$ como o SGD para a amostra $i$ usando os pesos atualizados no tempo $ t-1 $.
+Seria bom se pudéssemos nos beneficiar do efeito da redução da variância, mesmo além da média dos gradientes em um minibatch. Uma opção para realizar esta tarefa é substituir o cálculo do gradiente por uma "média com vazamento":
 
 $$\mathbf{v}_t = \beta \mathbf{v}_{t-1} + \mathbf{g}_{t, t-1}$$
 
@@ -335,3 +344,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIwMTg5OTMxMjNdfQ==
+-->
