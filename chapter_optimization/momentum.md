@@ -283,9 +283,7 @@ Dado o resultado acima, vamos ver o que acontece quando minimizamos a função $
 
 $$x_{t+1} = x_t - \eta \lambda x_t = (1 - \eta \lambda) x_t.$$
 
-Whenever $|1 - \eta \lambda| < 1$ this optimization converges at an exponential rate since after $t$ steps we have $x_t = (1 - \eta \lambda)^t x_0$. This shows how the rate of convergence improves initially as we increase the learning rate $\eta$ until $\eta \lambda = 1$. Beyond that things diverge and for $\eta \lambda > 2$ the optimization problem diverges.
-
-Sempre que $|1 - \eta \lambda| < 1$ esta otimização converge a uma taxa exponencial, pois após $t$ passos temos $x_t = (1 - \ eta \ lambda) ^ t x_0 $. Isso mostra como a taxa de convergência melhora inicialmente à medida que aumentamos a taxa de aprendizado $ \ eta $ até $ \ eta \ lambda = 1 $. Além disso, as coisas divergem e para $ \ eta \ lambda> 2 $ o problema de otimização diverge.
+Sempre que $|1 - \eta \lambda| < 1$ esta otimização converge a uma taxa exponencial, pois após $t$ passos temos $x_t = (1 - \eta \lambda)^t x_0$. Isso mostra como a taxa de convergência melhora inicialmente à medida que aumentamos a taxa de aprendizado $\eta$ até $\eta \lambda = 1$. Além disso, as coisas divergem e para $\eta \lambda > 2$ o problema de otimização diverge.
 
 ```{.python .input}
 #@tab all
@@ -299,7 +297,7 @@ d2l.plt.xlabel('time')
 d2l.plt.legend();
 ```
 
-To analyze convergence in the case of momentum we begin by rewriting the update equations in terms of two scalars: one for $x$ and one for the momentum $v$. This yields:
+Para analisar a convergência no caso de momentum, começamos reescrevendo as equações de atualização em termos de dois escalares: um para $x$ e outro para o momentum $v$. Isso produz:
 
 $$
 \begin{bmatrix} v_{t+1} \\ x_{t+1} \end{bmatrix} =
@@ -308,6 +306,8 @@ $$
 $$
 
 We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. After $t$ steps the initial choice $[v_0, x_0]$ becomes $\mathbf{R}(\beta, \eta, \lambda)^t [v_0, x_0]$. Hence, it is up to the eigenvalues of $\mathbf{R}$ to determine the speed of convergence. See the [Distill post](https://distill.pub/2017/momentum/) of :cite:`Goh.2017` for a great animation and :cite:`Flammarion.Bach.2015` for a detailed analysis. One can show that $0 < \eta \lambda < 2 + 2 \beta$ momentum converges. This is a larger range of feasible parameters when compared to $0 < \eta \lambda < 2$ for gradient descent. It also suggests that in general large values of $\beta$ are desirable. Further details require a fair amount of technical detail and we suggest that the interested reader consult the original publications.
+
+Usamos $\mathbf{R}$ para denotar o comportamento de convergência que rege $ 2 \ vezes 2 $. Após $ t $ passos, a escolha inicial $ [v_0, x_0] $ torna-se $ \ mathbf {R} (\ beta, \ eta, \ lambda) ^ t [v_0, x_0] $. Conseqüentemente, cabe aos autovalores de $ \ mathbf {R} $ determinar a velocidade de convergência. Veja o [Post do Destill] (https://distill.pub/2017/momentum/) de: cite: `Goh.2017` para uma ótima animação e: cite:` Flammarion.Bach.2015` para uma análise detalhada. Pode-se mostrar que $ 0 <\ eta \ lambda <2 + 2 \ beta $ momentum converge. Este é um intervalo maior de parâmetros viáveis quando comparado a $ 0 <\ eta \ lambda <2 $ para descida de gradiente. Também sugere que, em geral, grandes valores de $ \ beta $ são desejáveis. Mais detalhes requerem uma boa quantidade de detalhes técnicos e sugerimos que o leitor interessado consulte as publicações originais.
 
 ## Summary
 
@@ -338,6 +338,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAwMjA5NSwyMDcyMzM2OTc4LDEyMzA4MT
-k3ODksMTI3MTMzODcyM119
+eyJoaXN0b3J5IjpbLTEwMzM0NjIzNCwyMDcyMzM2OTc4LDEyMz
+A4MTk3ODksMTI3MTMzODcyM119
 -->
