@@ -13,19 +13,21 @@ $$\begin{aligned}
     \mathbf{s}_t & = \rho \mathbf{s}_{t-1} + (1 - \rho) \mathbf{g}_t^2.
 \end{aligned}$$
 
-The difference to :numref:`sec_rmsprop` is that we perform updates with the rescaled gradient $\mathbf{g}_t'$, i.e.,
+A diferença para :numref:`sec_rmsprop` é que realizamos atualizações com o gradiente redimensionado $\mathbf{g}_t'$, ou seja,
 
 $$\begin{aligned}
     \mathbf{x}_t  & = \mathbf{x}_{t-1} - \mathbf{g}_t'. \\
 \end{aligned}$$
 
-So what is the rescaled gradient $\mathbf{g}_t'$? We can calculate it as follows:
+Então, qual é o gradiente redimensionado $\mathbf{g}_t'$? Podemos calculá-lo da seguinte maneira:
 
 $$\begin{aligned}
     \mathbf{g}_t' & = \frac{\sqrt{\Delta\mathbf{x}_{t-1} + \epsilon}}{\sqrt{{\mathbf{s}_t + \epsilon}}} \odot \mathbf{g}_t, \\
 \end{aligned}$$
 
 where $\Delta \mathbf{x}_{t-1}$ is the leaky average of the squared rescaled gradients $\mathbf{g}_t'$. We initialize $\Delta \mathbf{x}_{0}$ to be $0$ and update it at each step with $\mathbf{g}_t'$, i.e.,
+
+onde $\Delta \mathbf{x}_{t-1}$ é a média de vazamento dos gradientes redimensionados ao quadrado $\mathbf{g}_t'$. Inicializamos $\Delta \mathbf{x}_{0}$ para ser $0$ e atualizamos em cada etapa com $ \ mathbf {g} _t '$, ou seja,
 
 $$\begin{aligned}
     \Delta \mathbf{x}_t & = \rho \Delta\mathbf{x}_{t-1} + (1 - \rho) {\mathbf{g}_t'}^2,
@@ -160,5 +162,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate':5.0, 'rho': 0.9}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1077)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NzMzOTU3Nl19
+eyJoaXN0b3J5IjpbMTM1MjMxNTg5M119
 -->
