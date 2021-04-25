@@ -20,19 +20,21 @@ $$\begin{aligned}
     \mathbf{s}_t & \leftarrow \beta_2 \mathbf{s}_{t-1} + (1 - \beta_2) \mathbf{g}_t^2.
 \end{aligned}$$
 
-Here $\beta_1$ and $\beta_2$ are nonnegative weighting parameters. Common choices for them are $\beta_1 = 0.9$ and $\beta_2 = 0.999$. That is, the variance estimate moves *much more slowly* than the momentum term. Note that if we initialize $\mathbf{v}_0 = \mathbf{s}_0 = 0$ we have a significant amount of bias initially towards smaller values. This can be addressed by using the fact that $\sum_{i=0}^t \beta^i = \frac{1 - \beta^t}{1 - \beta}$ to re-normalize terms. Correspondingly the normalized state variables are given by 
-
-Aqui $\beta_1$ and $\beta_2$ são parâmetros de ponderação não negativos. As escolhas comuns para eles são $ \ beta_1 = 0,9 $ e $ \ beta_2 = 0,999 $. Ou seja, a estimativa da variância se move * muito mais lentamente * do que o termo de momentum. Observe que se inicializarmos $ \ mathbf {v} _0 = \ mathbf {s} _0 = 0 $, teremos uma quantidade significativa de tendência inicialmente para valores menores. Isso pode ser resolvido usando o fato de que $ \ sum_ {i = 0} ^ t \ beta ^ i = \ frac {1 - \ beta ^ t} {1 - \ beta} $ para normalizar os termos novamente. Correspondentemente, as variáveis de estado normalizadas são fornecidas por
+Aqui $\beta_1$ e $\beta_2$ são parâmetros de ponderação não negativos. As escolhas comuns para eles são $\beta_1 = 0.9$ e $\beta_2 = 0.999$. Ou seja, a estimativa da variância se move *muito mais lentamente* do que o termo de momentum. Observe que se inicializarmos $\mathbf{v}_0 = \mathbf{s}_0 = 0$, teremos uma quantidade significativa de tendência inicialmente para valores menores. Isso pode ser resolvido usando o fato de que $\sum_{i=0}^t \beta^i = \frac{1 - \beta^t}{1 - \beta}$ para normalizar os termos novamente. Correspondentemente, as variáveis de estado normalizadas são fornecidas por
 
 $$\hat{\mathbf{v}}_t = \frac{\mathbf{v}_t}{1 - \beta_1^t} \text{ and } \hat{\mathbf{s}}_t = \frac{\mathbf{s}_t}{1 - \beta_2^t}.$$
 
-Armed with the proper estimates we can now write out the update equations. First, we rescale the gradient in a manner very much akin to that of RMSProp to obtain
+Armados com as estimativas adequadas, podemos agora escrever as equações de atualização. Primeiro, nós redimensionamos o gradiente de uma maneira muito semelhante à do RMSProp para obter
 
 $$\mathbf{g}_t' = \frac{\eta \hat{\mathbf{v}}_t}{\sqrt{\hat{\mathbf{s}}_t} + \epsilon}.$$
 
 Unlike RMSProp our update uses the momentum $\hat{\mathbf{v}}_t$ rather than the gradient itself. Moreover, there is a slight cosmetic difference as the rescaling happens using $\frac{1}{\sqrt{\hat{\mathbf{s}}_t} + \epsilon}$ instead of $\frac{1}{\sqrt{\hat{\mathbf{s}}_t + \epsilon}}$. The former works arguably slightly better in practice, hence the deviation from RMSProp. Typically we pick $\epsilon = 10^{-6}$ for a good trade-off between numerical stability and fidelity. 
 
 Now we have all the pieces in place to compute updates. This is slightly anticlimactic and we have a simple update of the form
+
+Ao contrário de RMSProp, nossa atualização usa o momento $\hat{\mathbf{v}}_t$ em vez do gradiente em si. Além disso, há uma pequena diferença estética, pois o redimensionamento acontece usando $\frac{1}{\sqrt{\hat{\mathbf{s}}_t} + \epsilon}$ em vez de $\frac{1}{\sqrt{\hat{\mathbf{s}}_t + \epsilon}}$. O primeiro funciona sem dúvida um pouco melhor na prática, daí o desvio de RMSProp. Normalmente escolhemos $\epsilon = 10^{-6}$ para uma boa troca entre estabilidade numérica e fidelidade.
+
+Agora temos todas as peças no lugar para computar as atualizações. Isso é um pouco anticlimático e temos uma atualização simples do formulário
 
 $$\mathbf{x}_t \leftarrow \mathbf{x}_{t-1} - \mathbf{g}_t'.$$
 
@@ -236,5 +238,5 @@ d2l.train_ch11(yogi, init_adam_states(feature_dim),
 [Discussions](https://discuss.d2l.ai/t/1079)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNTY1MzA1XX0=
+eyJoaXN0b3J5IjpbLTExMTgxMzg4MThdfQ==
 -->
