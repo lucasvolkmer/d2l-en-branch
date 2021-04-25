@@ -16,9 +16,7 @@ $$\begin{aligned}
     \mathbf{x}_t & \leftarrow \mathbf{x}_{t-1} - \frac{\eta}{\sqrt{\mathbf{s}_t + \epsilon}} \odot \mathbf{g}_t.
 \end{aligned}$$
 
-The constant $\epsilon > 0$ is typically set to $10^{-6}$ to ensure that we do not suffer from division by zero or overly large step sizes. Given this expansion we are now free to control the learning rate $\eta$ independently of the scaling that is applied on a per-coordinate basis. In terms of leaky averages we can apply the same reasoning as previously applied in the case of the momentum method. Expanding the definition of $\mathbf{s}_t$ yields
-
-A constante $\epsilon > 0$ é normalmente definida como $10^{-6}$ para garantir que não soframos divisão por zero ou tamanhos de passos excessivamente grandes. Dada essa expansão, agora estamos livres para controlar a taxa de aprendizado $\eta$ independentemente da escala que é aplicada por coordenada. Em termos de médias vazadas, podemos aplicar o mesmo raciocínio aplicado anteriormente no caso do método do momento. Expandindo a definição de $ \ mathbf {s} _t $ yields
+A constante $\epsilon > 0$ é normalmente definida como $10^{-6}$ para garantir que não soframos divisão por zero ou tamanhos de passos excessivamente grandes. Dada essa expansão, agora estamos livres para controlar a taxa de aprendizado $\eta$ independentemente da escala que é aplicada por coordenada. Em termos de médias vazadas, podemos aplicar o mesmo raciocínio aplicado anteriormente no caso do método do momento. Expandindo a definição de $\mathbf{s}_t$ yields
 
 $$
 \begin{aligned}
@@ -27,7 +25,7 @@ $$
 \end{aligned}
 $$
 
-As before in :numref:`sec_momentum` we use $1 + \gamma + \gamma^2 + \ldots, = \frac{1}{1-\gamma}$. Hence the sum of weights is normalized to $1$ with a half-life time of an observation of $\gamma^{-1}$. Let us visualize the weights for the past 40 time steps for various choices of $\gamma$.
+Como antes em :numref:`sec_momentum` usamos $1 + \gamma + \gamma^2 + \ldots, = \frac{1}{1-\gamma}$. Portanto, a soma dos pesos é normalizada para $1$ com um tempo de meia-vida de uma observação de $\gamma^{-1}$. Vamos visualizar os pesos das últimas 40 etapas de tempo para várias opções de $\gamma$.
 
 ```{.python .input}
 %matplotlib inline
@@ -62,9 +60,11 @@ for gamma in gammas:
 d2l.plt.xlabel('time');
 ```
 
-## Implementation from Scratch
+## Implementação do zero
 
-As before we use the quadratic function $f(\mathbf{x})=0.1x_1^2+2x_2^2$ to observe the trajectory of RMSProp. Recall that in :numref:`sec_adagrad`, when we used Adagrad with a learning rate of 0.4, the variables moved only very slowly in the later stages of the algorithm since the learning rate decreased too quickly. Since $\eta$ is controlled separately this does not happen with RMSProp.
+
+
+Como antes, usamos a função quadrática $f(\mathbf{x})=0.1x_1^2+2x_2^2$ para observar a trajetória de RMSProp. Lembre-se de que em :numref:`sec_adagrad`, quando usamos o Adagrad com uma taxa de aprendizado de 0,4, as variáveis se moviam apenas muito lentamente nos estágios posteriores do algoritmo, pois a taxa de aprendizado diminuía muito rapidamente. Como $\eta$ é controlado separadamente, isso não acontece com RMSProp.
 
 ```{.python .input}
 #@tab all
@@ -187,5 +187,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.01, 'rho': 0.9},
 [Discussions](https://discuss.d2l.ai/t/1075)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzAwMDYzMzddfQ==
+eyJoaXN0b3J5IjpbMzI3NjQwMjU0XX0=
 -->
