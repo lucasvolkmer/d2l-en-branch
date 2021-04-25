@@ -474,23 +474,23 @@ train(net, train_iter, test_iter, num_epochs, lr,
       custom_callback=LearningRateScheduler(scheduler))
 ```
 
-Warmup can be applied to any scheduler (not just cosine). For a more detailed discussion of learning rate schedules and many more experiments see also :cite:`Gotmare.Keskar.Xiong.ea.2018`. In particular they find that a warmup phase limits the amount of divergence of parameters in very deep networks. This makes intuitively sense since we would expect significant divergence due to random initialization in those parts of the network that take the most time to make progress in the beginning.
+O aquecimento pode ser aplicado a qualquer agendador (não apenas cosseno). Para uma discussão mais detalhada sobre cronogramas de taxas de aprendizagem e muitos outros experimentos, consulte também :cite:`Gotmare.Keskar.Xiong.ea.2018`. Em particular, eles descobrem que uma fase de aquecimento limita a quantidade de divergência de parâmetros em redes muito profundas. Isso faz sentido intuitivamente, pois esperaríamos divergências significativas devido à inicialização aleatória nas partes da rede que levam mais tempo para progredir no início.
 
-## Summary
+## Sumário
 
-* Decreasing the learning rate during training can lead to improved accuracy and (most perplexingly) reduced overfitting of the model.
-* A piecewise decrease of the learning rate whenever progress has plateaued is effective in practice. Essentially this ensures that we converge efficiently to a suitable solution and only then reduce the inherent variance of the parameters by reducing the learning rate.
-* Cosine schedulers are popular for some computer vision problems. See e.g., [GluonCV](http://gluon-cv.mxnet.io) for details of such a scheduler.
-* A warmup period before optimization can prevent divergence.
-* Optimization serves multiple purposes in deep learning. Besides minimizing the training objective, different choices of optimization algorithms and learning rate scheduling can lead to rather different amounts of generalization and overfitting on the test set (for the same amount of training error).
+* Diminuir a taxa de aprendizado durante o treinamento pode levar a uma maior precisão e (o que é mais desconcertante) à redução do ajuste excessivo do modelo.
+* Uma diminuição por partes da taxa de aprendizagem sempre que o progresso atinge um platô é eficaz na prática. Essencialmente, isso garante que convergiremos de forma eficiente para uma solução adequada e só então reduziremos a variação inerente dos parâmetros, reduzindo a taxa de aprendizagem.
+* Os planejadores de cosseno são populares para alguns problemas de visão computacional. Veja, por exemplo, [GluonCV](http://gluon-cv.mxnet.io) para detalhes de tal planejador.
+* Um período de aquecimento antes da otimização pode evitar divergências.
+* A otimização serve a vários propósitos no aprendizado profundo. Além de minimizar o objetivo do treinamento, diferentes escolhas de algoritmos de otimização e programação da taxa de aprendizagem podem levar a quantidades bastante diferentes de generalização e overfitting no conjunto de teste (para a mesma quantidade de erro de treinamento).
 
-## Exercises
+## Exercícios
 
-1. Experiment with the optimization behavior for a given fixed learning rate. What is the best model you can obtain this way?
-1. How does convergence change if you change the exponent of the decrease in the learning rate? Use `PolyScheduler` for your convenience in the experiments.
-1. Apply the cosine scheduler to large computer vision problems, e.g., training ImageNet. How does it affect performance relative to other schedulers?
-1. How long should warmup last?
-1. Can you connect optimization and sampling? Start by using results from :cite:`Welling.Teh.2011` on Stochastic Gradient Langevin Dynamics.
+1. Experimente o comportamento de otimização para uma determinada taxa de aprendizagem fixa. Qual é o melhor modelo que você pode obter dessa forma?
+1. Como a convergência muda se você alterar o expoente da diminuição na taxa de aprendizado? Use `PolyScheduler` para sua conveniência nos experimentos.
+1. Aplique o programador de cosseno a grandes problemas de visão computacional, por exemplo, treinamento ImageNet. Como isso afeta o desempenho em relação a outros agendadores?
+1. Quanto tempo deve durar o aquecimento?
+1. Você pode conectar otimização e amostragem? Comece usando os resultados de :cite:`Welling.Teh.2011` em Stochastic Gradient Langevin Dynamics.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/359)
@@ -504,5 +504,5 @@ Warmup can be applied to any scheduler (not just cosine). For a more detailed di
 [Discussions](https://discuss.d2l.ai/t/1081)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MTg0ODUwOCwxMjUzMTczNDM4XX0=
+eyJoaXN0b3J5IjpbMjEyMzgzODY2MywxMjUzMTczNDM4XX0=
 -->
