@@ -210,14 +210,14 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 1. How would you need to modify Adagrad to achieve a less aggressive decay in learning rate?
 
 
-1. Prove que para uma matriz ortogonal $ \ mathbf {U} $ e um vetor $ \ mathbf {c} $ o seguinte é válido: $ \ | \ mathbf {c} - \ mathbf {\ delta} \ | _2 = \ | \ mathbf {U} \ mathbf {c} - \ mathbf {U} \ mathbf {\ delta} \ | _2 $. Por que isso significa que a magnitude das perturbações não muda após uma mudança ortogonal das variáveis?
-1. Experimente o Adagrad para $ f (\ mathbf {x}) = 0,1 x_1 ^ 2 + 2 x_2 ^ 2 $ e também para a função objetivo foi girada em 45 graus, ou seja, $ f (\ mathbf {x}) = 0,1 (x_1 + x_2) ^ 2 + 2 (x_1 - x_2) ^ 2 $. Ele se comporta de maneira diferente?
-1. Prove [teorema do círculo de Gerschgorin] (https://en.wikipedia.org/wiki/Gershgorin_circle_theorem) que afirma que os valores próprios $ \ lambda_i $ de uma matriz $ \ mathbf {M} $ satisfazer $ | \ lambda_i - \ mathbf { M} _ {jj} | \ leq \ sum_ {k \ neq j} | \ mathbf {M} _ {jk} | $ para pelo menos uma escolha de $ j $.
+1. Prove que para uma matriz ortogonal $\mathbf{U}$ e um vetor $\mathbf{c}$ o seguinte é válido: $\|\mathbf{c} - \mathbf{\delta}\|_2 = \|\mathbf{U} \mathbf{c} - \mathbf{U} \mathbf{\delta}\|_2$. Por que isso significa que a magnitude das perturbações não muda após uma mudança ortogonal das variáveis?
+1. Experimente o Adagrad para $f(\mathbf{x}) = 0.1 x_1^2 + 2 x_2^2$ e também para a função objetivo foi girada em 45 graus, ou seja, $f(\mathbf{x}) = 0.1 (x_1 + x_2)^2 + 2 (x_1 - x_2)^2$. Ele se comporta de maneira diferente?
+1. Prove [teorema do círculo de Gerschgorin](https://en.wikipedia.org/wiki/Gershgorin_circle_theorem) que afirma que os valores próprios $\lambda_i$ de uma matriz $\mathbf{M}$ satisfazer $|\lambda_i - \mathbf{M}_{jj}| \leq \sum_{k \neq j} |\mathbf{M}_{jk}|$ para pelo menos uma escolha de $j$.
 1. O que o teorema de Gerschgorin nos diz sobre os autovalores da matriz pré-condicionada diagonalmente $ \ mathrm {diag} ^ {- \ frac {1} {2}} (\ mathbf {M}) \ mathbf {M} \ mathrm {diag } ^ {- \ frac {1} {2}} (\ mathbf {M}) $?
 1. Experimente o Adagrad para uma rede profunda adequada, como: numref: `sec_lenet` quando aplicado ao Fashion MNIST.
 1. Como você precisaria modificar o Adagrad para atingir uma queda menos agressiva na taxa de aprendizado?
-:begin_tab:`mxnet`
 
+:begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/355)
 :end_tab:
 
@@ -229,6 +229,6 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1073)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NDg0MjEzNSwxNTM2ODY3Mzc1LDE2NT
-IxNDMwNjNdfQ==
+eyJoaXN0b3J5IjpbLTE4MTc2OTEzNjEsMTUzNjg2NzM3NSwxNj
+UyMTQzMDYzXX0=
 -->
