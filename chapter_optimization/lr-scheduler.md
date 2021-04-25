@@ -302,7 +302,7 @@ d2l.plot(d2l.arange(50), [scheduler(t) for t in range(50)])
 
 Isso também pode ser realizado por um agendador embutido no MXNet por meio do objeto `lr_scheduler.FactorScheduler`. Leva mais alguns parâmetros, como período de aquecimento, modo de aquecimento (linear ou constante), o número máximo de atualizações desejadas, etc .; No futuro, usaremos os agendadores integrados conforme apropriado e apenas explicaremos sua funcionalidade aqui. Conforme ilustrado, é bastante simples construir seu próprio agendador, se necessário.
 
-### Multi Factor Scheduler
+### Planejador de Fatores Multiplos
 
 Uma estratégia comum para treinar redes profundas é manter a taxa de aprendizado constante e diminuí-la em uma determinada quantidade de vez em quando. Ou seja, dado um conjunto de vezes quando diminuir a taxa, como $s = \{5, 10, 20\}$ diminuir $\eta_{t+1} \leftarrow \eta_t \cdot \alpha$ sempre que $t \in s$. Supondo que os valores sejam reduzidos à metade em cada etapa, podemos implementar isso da seguinte maneira.
 
@@ -347,7 +347,7 @@ scheduler = MultiFactorScheduler(step=[15, 30], factor=0.5, base_lr=0.5)
 d2l.plot(d2l.arange(num_epochs), [scheduler(t) for t in range(num_epochs)])
 ```
 
-The intuition behind this piecewise constant learning rate schedule is that one lets optimization proceed until a stationary point has been reached in terms of the distribution of weight vectors. Then (and only then) do we decrease the rate such as to obtain a higher quality proxy to a good local minimum. The example below shows how this can produce ever slightly better solutions.
+A intuição por trás dessa programação de taxa de aprendizado constante por partes é que se permite que a otimização prossiga até que um ponto estacionário seja alcançado em termos de distribuição de vetores de peso. Então (e somente então) diminuímos a taxa de forma a obter um proxy de maior qualidade para um bom mínimo local. O exemplo abaixo mostra como isso pode produzir soluções cada vez melhores.
 
 ```{.python .input}
 trainer = gluon.Trainer(net.collect_params(), 'sgd',
@@ -367,14 +367,16 @@ train(net, train_iter, test_iter, num_epochs, lr,
       custom_callback=LearningRateScheduler(scheduler))
 ```
 
-### Cosine Scheduler
+### Programador de Cosseno
 
-A rather perplexing heuristic was proposed by :cite:`Loshchilov.Hutter.2016`. It relies on the observation that we might not want to decrease the learning rate too drastically in the beginning and moreover, that we might want to "refine" the solution in the end using a very small learning rate. This results in a cosine-like schedule with the following functional form for learning rates in the range $t \in [0, T]$.
+Uma heurística bastante desconcertante foi proposta por :cite:`Loshchilov.Hutter.2016`. Baseia-se na observação de que podemos não querer diminuir a taxa de aprendizado muito drasticamente no início e, além disso, podemos querer "refinar" a solução no final usando uma taxa de aprendizado muito pequena. Isso resulta em um esquema semelhante ao cosseno com a seguinte forma funcional para taxas de aprendizado no intervalo $t \in [0, T]$.
 
 $$\eta_t = \eta_T + \frac{\eta_0 - \eta_T}{2} \left(1 + \cos(\pi t/T)\right)$$
 
 
 Here $\eta_0$ is the initial learning rate, $\eta_T$ is the target rate at time $T$. Furthermore, for $t > T$ we simply pin the value to $\eta_T$ without increasing it again. In the following example, we set the max update step $T = 20$.
+
+Aqui $ \ eta_0 $ é a taxa de aprendizado inicial, $ \ eta_T $ é a taxa alvo no momento $ T $. Além disso, para $ t> T $ simplesmente fixamos o valor em $ \ eta_T $ sem aumentá-lo novamente. No exemplo a seguir, definimos a etapa de atualização máxima $ T = 20 $.
 
 ```{.python .input}
 scheduler = lr_scheduler.CosineScheduler(max_update=20, base_lr=0.3,
@@ -504,5 +506,5 @@ Warmup can be applied to any scheduler (not just cosine). For a more detailed di
 [Discussions](https://discuss.d2l.ai/t/1081)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM1MTk2MzAxLDEyNTMxNzM0MzhdfQ==
+eyJoaXN0b3J5IjpbLTEzNTg4NzgwNTcsMTI1MzE3MzQzOF19
 -->
