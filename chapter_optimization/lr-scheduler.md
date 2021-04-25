@@ -1,7 +1,10 @@
 # Learning Rate Scheduling
 :label:`sec_scheduler`
 
-So far we primarily focused on optimization *algorithms* for how to update the weight vectors rather than on the *rate* at which they are being updated. Nonetheless, adjusting the learning rate is often just as important as the actual algorithm. There are a number of aspects to consider:
+So far we primarily focused onProgramação da taxa de aprendizagem
+:label:`sec_scheduler`
+
+Até agora, focamos principalmente na optimizationção de *algorithmos* for how to update the weightpara como atualizar os vectores rather than on the *rate* at which they are being updated. Nonethelessde peso, em vez de na *taxa* na qual eles estão sendo atualizados. No entanto, adjusting the learning rate is often just as important as the actual algorithm. There are a number ofar a taxa de aprendizagem é frequentemente tão importante quanto o algoritmo real. Existem vários aspectos toa considerar:
 
 * Most obviously the *magnitude* of the learning rate matters. If it is too large, optimization diverges, if it is too small, it takes too long to train or we end up with a suboptimal result. We saw previously that the condition number of the problem matters (see e.g., :numref:`sec_momentum` for details). Intuitively it is the ratio of the amount of change in the least sensitive direction vs. the most sensitive one.
 * Secondly, the rate of decay is just as important. If the learning rate remains large we may simply end up bouncing around the minimum and thus not reach optimality. :numref:`sec_minibatch_sgd` discussed this in some detail and we analyzed performance guarantees in :numref:`sec_sgd`. In short, we want the rate to decay, but probably more slowly than $\mathcal{O}(t^{-\frac{1}{2}})$ which would be a good choice for convex problems.
@@ -503,3 +506,6 @@ Warmup can be applied to any scheduler (not just cosine). For a more detailed di
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1081)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTU5NDU3MDkyNl19
+-->
