@@ -19,20 +19,21 @@ Seria bom se pudéssemos nos beneficiar do efeito da redução da variância, me
 
 $$\mathbf{v}_t = \beta \mathbf{v}_{t-1} + \mathbf{g}_{t, t-1}$$
 
-for some $\beta \in (0, 1)$. This effectively replaces the instantaneous gradient by one that's been averaged over multiple *past* gradients. $\mathbf{v}$ is called *momentum*. It accumulates past gradients similar to how a heavy ball rolling down the objective function landscape integrates over past forces. To see what is happening in more detail let us expand $\mathbf{v}_t$ recursively into
-
-por algum $\beta \in (0, 1)$. Isso substitui efetivamente o gradiente instantâneo por um que foi calculado em vários gradientes * anteriores *. $ \ mathbf {v} $ é chamado *momentum*. Ele acumula gradientes anteriores semelhantes a como uma bola pesada rolando pela paisagem da função objetivo se integra às forças passadas. Para ver o que está acontecendo com mais detalhes, vamos expandir $ \ mathbf {v} _t $ recursivamente em
+por algum $\beta \in (0, 1)$. Isso substitui efetivamente o gradiente instantâneo por um que foi calculado em vários gradientes *anteriores*. $\mathbf{v}$ é chamado *momentum*. Ele acumula gradientes anteriores semelhantes a como uma bola pesada rolando pela paisagem da função objetivo se integra às forças passadas. Para ver o que está acontecendo com mais detalhes, vamos expandir $\mathbf{v}_t$ recursivamente em
 
 $$\begin{aligned}
 \mathbf{v}_t = \beta^2 \mathbf{v}_{t-2} + \beta \mathbf{g}_{t-1, t-2} + \mathbf{g}_{t, t-1}
 = \ldots, = \sum_{\tau = 0}^{t-1} \beta^{\tau} \mathbf{g}_{t-\tau, t-\tau-1}.
 \end{aligned}$$
 
-Large $\beta$ amounts to a long-range average, whereas small $\beta$ amounts to only a slight correction relative to a gradient method. The new gradient replacement no longer points into the direction of steepest descent on a particular instance any longer but rather in the direction of a weighted average of past gradients. This allows us to realize most of the benefits of averaging over a batch without the cost of actually computing the gradients on it. We will revisit this averaging procedure in more detail later.
 
-The above reasoning formed the basis for what is now known as *accelerated* gradient methods, such as gradients with momentum. They enjoy the additional benefit of being much more effective in cases where the optimization problem is ill-conditioned (i.e., where there are some directions where progress is much slower than in others, resembling a narrow canyon). Furthermore, they allow us to average over subsequent gradients to obtain more stable directions of descent. Indeed, the aspect of acceleration even for noise-free convex problems is one of the key reasons why momentum works and why it works so well.
+$\beta$ grande equivale a uma média de longo alcance, enquanto $\beta$ pequeno equivale a apenas uma ligeira correção em relação a um método de gradiente. A nova substituição de gradiente não aponta mais para a direção da descida mais íngreme em uma instância particular, mas sim na direção de uma média ponderada de gradientes anteriores. Isso nos permite obter a maioria dos benefícios da média de um lote sem o custo de realmente calcular os gradientes nele. Iremos revisitar este procedimento de média com mais detalhes posteriormente.
+
+O raciocínio acima formou a base para o que agora é conhecido como métodos de gradiente *acelerado*, como gradientes com momentum. Eles têm o benefício adicional de serem muito mais eficazes nos casos em que o problema de otimização é mal condicionado (ou seja, onde há algumas direções onde o progresso é muito mais lento do que em outras, parecendo um desfiladeiro estreito). Além disso, eles nos permitem calcular a média dos gradientes subsequentes para obter direções de descida mais estáveis. Na verdade, o aspecto da aceleração, mesmo para problemas convexos sem ruído, é uma das principais razões pelas quais o momentum funciona e por que funciona tão bem.
 
 As one would expect, due to its efficacy momentum is a well-studied subject in optimization for deep learning and beyond. See e.g., the beautiful [expository article](https://distill.pub/2017/momentum/) by :cite:`Goh.2017` for an in-depth analysis and interactive animation. It was proposed by :cite:`Polyak.1964`. :cite:`Nesterov.2018` has a detailed theoretical discussion in the context of convex optimization. Momentum in deep learning has been known to be beneficial for a long time. See e.g., the discussion by :cite:`Sutskever.Martens.Dahl.ea.2013` for details.
+
+Como seria de esperar, devido ao seu momentum de eficácia, é um assunto bem estudado em otimização para aprendizado profundo e além. Veja, por exemplo, o belo [artigo expositivo](https://distill.pub/2017/momentum/) por: cite: Goh.2017` para uma análise aprofundada e animação interativa. Foi proposto por: cite: `Polyak.1964`. : cite: `Nesterov.2018` tem uma discussão teórica detalhada no contexto da otimização convexa. O momentum no aprendizado profundo é conhecido por ser benéfico há muito tempo. Veja, por exemplo, a discussão de: cite: `Sutskever.Martens.Dahl.ea.2013` para obter detalhes.
 
 ### An Ill-conditioned Problem
 
@@ -337,5 +338,5 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMzk3OTMxMywxMjcxMzM4NzIzXX0=
+eyJoaXN0b3J5IjpbMTIzMDgxOTc4OSwxMjcxMzM4NzIzXX0=
 -->
