@@ -260,14 +260,8 @@ def get_data_ch11(batch_size=10, n=1500):
 
 ## Implementação do zero
 
-Recall the minibatch SGD implementation from :numref:`sec_linear_scratch`. In the following we provide a slightly more general implementation. For convenience it has the same call signature as the other optimization algorithms introduced later in this chapter. Specifically, we add the status
-input `states` and place the hyperparameter in dictionary `hyperparams`. In
-addition, we will average the loss of each minibatch example in the training
-function, so the gradient in the optimization algorithm does not need to be
-divided by the batch size.
-
-Lembre-se da implementação SGD do minibatch de: numref:`sec_linear_scratch`. A seguir, fornecemos uma implementação um pouco mais geral. Por conveniência, ele tem a mesma assinatura de chamada que os outros algoritmos de otimização introduzidos posteriormente neste capítulo. Especificamente, adicionamos o status
-insira os `estados` e coloque o hiperparâmetro nos` hiperparâmetros` do dicionário. Dentro
+Lembre-se da implementação SGD do minibatch de :numref:`sec_linear_scratch`. A seguir, fornecemos uma implementação um pouco mais geral. Por conveniência, ele tem a mesma assinatura de chamada que os outros algoritmos de otimização introduzidos posteriormente neste capítulo. Especificamente, adicionamos o status
+insira os `estados` e coloque o hiperparâmetro nos `hiperparâmetros` do dicionário. Dentro
 Além disso, calcularemos a média da perda de cada exemplo de minibatch no treinamento
 função, então o gradiente no algoritmo de otimização não precisa ser
 dividido pelo tamanho do lote.
@@ -293,7 +287,7 @@ def sgd(params, grads, states, hyperparams):
         param.assign_sub(hyperparams['lr']*grad)
 ```
 
-Next, we implement a generic training function to facilitate the use of the other optimization algorithms introduced later in this chapter. It initializes a linear regression model and can be used to train the model with minibatch SGD and other algorithms introduced subsequently.
+A seguir, implementamos uma função de treinamento genérica para facilitar o uso de outros algoritmos de otimização introduzidos posteriormente neste capítulo. Ele inicializa um modelo de regressão linear e pode ser usado para treinar o modelo com minibatch SGD e outros algoritmos introduzidos posteriormente.
 
 ```{.python .input}
 #@save
@@ -389,7 +383,7 @@ def train_ch11(trainer_fn, states, hyperparams, data_iter,
     return timer.cumsum(), animator.Y[0]
 ```
 
-Let us see how optimization proceeds for batch gradient descent. This can be achieved by setting the minibatch size to 1500 (i.e., to the total number of examples). As a result the model parameters are updated only once per epoch. There is little progress. In fact, after 6 steps progress stalls.
+Vamos ver como a otimização procede para a descida do gradiente do lote. Isso pode ser alcançado definindo o tamanho do minibatch para 1500 (ou seja, para o número total de exemplos). Como resultado, os parâmetros do modelo são atualizados apenas uma vez por época. Há pouco progresso. Na verdade, após 6 etapas, o progresso é interrompido.
 
 ```{.python .input}
 #@tab all
@@ -401,28 +395,28 @@ def train_sgd(lr, batch_size, num_epochs=2):
 gd_res = train_sgd(1, 1500, 10)
 ```
 
-When the batch size equals 1, we use SGD for optimization. For simplicity of implementation we picked a constant (albeit small) learning rate. In SGD, the model parameters are updated whenever an example is processed. In our case this amounts to 1500 updates per epoch. As we can see, the decline in the value of the objective function slows down after one epoch. Although both the procedures processed 1500 examples within one epoch, SGD consumes more time than gradient descent in our experiment. This is because SGD updated the parameters more frequently and since it is less efficient to process single observations one at a time.
+Quando o tamanho do lote é igual a 1, usamos SGD para otimização. Para simplificar a implementação, escolhemos uma taxa de aprendizado constante (embora pequena). No SGD, os parâmetros do modelo são atualizados sempre que um exemplo é processado. Em nosso caso, isso equivale a 1.500 atualizações por época. Como podemos ver, o declínio no valor da função objetivo diminui após uma época. Embora ambos os procedimentos tenham processado 1.500 exemplos em uma época, o SGD consome mais tempo do que a descida de gradiente em nosso experimento. Isso ocorre porque o SGD atualizou os parâmetros com mais frequência e porque é menos eficiente processar observações únicas uma de cada vez.
 
 ```{.python .input}
 #@tab all
 sgd_res = train_sgd(0.005, 1)
 ```
 
-Finally, when the batch size equals 100, we use minibatch SGD for optimization. The time required per epoch is shorter than the time needed for SGD and the time for batch gradient descent.
+Finalmente, quando o tamanho do lote é igual a 100, usamos minibatch SGD para otimização. O tempo necessário por época é menor do que o tempo necessário para SGD e o tempo para a descida do gradiente do lote.
 
 ```{.python .input}
 #@tab all
 mini1_res = train_sgd(.4, 100)
 ```
 
-Reducing the batch size to 10, the time for each epoch increases because the workload for each batch is less efficient to execute.
+Reduzindo o tamanho do lote para 10, o tempo de cada época aumenta porque a carga de trabalho de cada lote é menos eficiente de executar.
 
 ```{.python .input}
 #@tab all
 mini2_res = train_sgd(.05, 10)
 ```
 
-Now we can compare the time vs. loss for the previous four experiments. As can be seen, although SGD converges faster than GD in terms of number of examples processed, it uses more time to reach the same loss than GD because computing the gradient example by example is not as efficient. Minibatch SGD is able to trade-off convergence speed and computation efficiency. A minibatch size of 10 is more efficient than SGD; a minibatch size of 100 even outperforms GD in terms of runtime.
+Agora podemos comparar o tempo versus a perda dos quatro experimentos anteriores. Como pode ser visto, embora SGD convirja mais rápido do que GD em termos de número de exemplos processados, ele usa mais tempo para atingir a mesma perda do que GD porque calcular o gradiente exemplo por exemplo não é tão eficiente. O Minibatch SGD é capaz de compensar a velocidade de convergência e a eficiência de computação. Um tamanho de minibatch de 10 é mais eficiente do que SGD; um tamanho de minibatch de 100 supera até mesmo o GD em termos de tempo de execução.
 
 ```{.python .input}
 #@tab all
@@ -433,7 +427,7 @@ d2l.plot(*list(map(list, zip(gd_res, sgd_res, mini1_res, mini2_res))),
 d2l.plt.gca().set_xscale('log')
 ```
 
-## Concise Implementation
+## Implementação concisa
 
 In Gluon, we can use the `Trainer` class to call optimization algorithms. This is used to implement a generic training function. We will use this throughout the current chapter.
 
@@ -586,6 +580,6 @@ train_concise_ch11(trainer, {'learning_rate': 0.05}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1069)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MDE3NjczNyw1MTkzODI4NTUsMjIyOD
+eyJoaXN0b3J5IjpbLTEyOTYyNDYxMCw1MTkzODI4NTUsMjIyOD
 I4MjM5XX0=
 -->
