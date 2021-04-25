@@ -62,8 +62,6 @@ d2l.plt.xlabel('time');
 
 ## Implementação do zero
 
-
-
 Como antes, usamos a função quadrática $f(\mathbf{x})=0.1x_1^2+2x_2^2$ para observar a trajetória de RMSProp. Lembre-se de que em :numref:`sec_adagrad`, quando usamos o Adagrad com uma taxa de aprendizado de 0,4, as variáveis se moviam apenas muito lentamente nos estágios posteriores do algoritmo, pois a taxa de aprendizado diminuía muito rapidamente. Como $\eta$ é controlado separadamente, isso não acontece com RMSProp.
 
 ```{.python .input}
@@ -83,7 +81,7 @@ eta, gamma = 0.4, 0.9
 d2l.show_trace_2d(f_2d, d2l.train_2d(rmsprop_2d))
 ```
 
-Next, we implement RMSProp to be used in a deep network. This is equally straightforward.
+Em seguida, implementamos RMSProp para ser usado em uma rede profunda. Isso é igualmente simples.
 
 ```{.python .input}
 #@tab mxnet,pytorch
@@ -129,7 +127,7 @@ def rmsprop(params, grads, states, hyperparams):
         p[:].assign(p - hyperparams['lr'] * g / tf.math.sqrt(s + eps))
 ```
 
-We set the initial learning rate to 0.01 and the weighting term $\gamma$ to 0.9. That is, $\mathbf{s}$ aggregates on average over the past $1/(1-\gamma) = 10$ observations of the square gradient.
+Definimos a taxa de aprendizado inicial como 0,01 e o termo de ponderação $\gamma$ como 0,9. Ou seja, $\mathbf{s}$ agrega em média nas últimas $1/(1-\gamma) = 10$ observações do gradiente quadrado.
 
 ```{.python .input}
 #@tab all
@@ -138,9 +136,11 @@ d2l.train_ch11(rmsprop, init_rmsprop_states(feature_dim),
                {'lr': 0.01, 'gamma': 0.9}, data_iter, feature_dim);
 ```
 
-## Concise Implementation
+## Implementação concisa
 
 Since RMSProp is a rather popular algorithm it is also available in the `Trainer` instance. All we need to do is instantiate it using an algorithm named `rmsprop`, assigning $\gamma$ to the parameter `gamma1`.
+
+Como RMSProp é um algoritmo bastante popular, ele também está disponível na instância `Trainer`. Tudo o que precisamos fazer é instanciá-lo usando um algoritmo chamado `rmsprop`, atribuindo $\gamma$ ao parâmetro `gamma1`.
 
 ```{.python .input}
 d2l.train_concise_ch11('rmsprop', {'learning_rate': 0.01, 'gamma1': 0.9},
@@ -187,5 +187,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.01, 'rho': 0.9},
 [Discussions](https://discuss.d2l.ai/t/1075)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI3NjQwMjU0XX0=
+eyJoaXN0b3J5IjpbLTI2NjkxNTUxOV19
 -->
