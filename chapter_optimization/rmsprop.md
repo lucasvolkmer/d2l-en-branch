@@ -5,13 +5,11 @@ Um dos principais problemas em :numref:`sec_adagrad` é que a taxa de aprendizag
 
 :cite:`Tieleman.Hinton.2012` propôs o algoritmo RMSProp como uma solução simples para desacoplar o escalonamento de taxas das taxas de aprendizagem adaptativa por coordenadas. O problema é que Adagrad acumula os quadrados do gradiente $\mathbf{g}_t$ em um vetor de estado $\mathbf{s}_t = \mathbf{s}_{t-1} + \mathbf{g}_t^2$. Como resultado, $\mathbf{s}_t$ continua crescendo sem limites devido à falta de normalização, essencialmente linearmente conforme o algoritmo converge.
 
-One way of fixing this problem would be to use $\mathbf{s}_t / t$. For reasonable distributions of $\mathbf{g}_t$ this will converge. Unfortunately it might take a very long time until the limit behavior starts to matter since the procedure remembers the full trajectory of values. An alternative is to use a leaky average in the same way we used in the momentum method, i.e., $\mathbf{s}_t \leftarrow \gamma \mathbf{s}_{t-1} + (1-\gamma) \mathbf{g}_t^2$ for some parameter $\gamma > 0$. Keeping all other parts unchanged yields RMSProp.
-
 Uma maneira de corrigir esse problema seria usar $\mathbf{s}_t / t$. Para distribuições razoáveis de $\mathbf{g}_t$, isso convergirá. Infelizmente, pode levar muito tempo até que o comportamento do limite comece a importar, pois o procedimento lembra a trajetória completa dos valores. Uma alternativa é usar uma média de vazamento da mesma forma que usamos no método de momentum, ou seja, $\mathbf{s}_t \leftarrow \gamma \mathbf{s}_{t-1} + (1-\gamma) \mathbf{g}_t^2$ para algum parâmetro $\gamma > 0$. Manter todas as outras partes inalteradas resulta em RMSProp.
 
-## The Algorithm
+## O Algoritmo
 
-Let us write out the equations in detail.
+Vamos escrever as equações em detalhes.
 
 $$\begin{aligned}
     \mathbf{s}_t & \leftarrow \gamma \mathbf{s}_{t-1} + (1 - \gamma) \mathbf{g}_t^2, \\
@@ -19,6 +17,8 @@ $$\begin{aligned}
 \end{aligned}$$
 
 The constant $\epsilon > 0$ is typically set to $10^{-6}$ to ensure that we do not suffer from division by zero or overly large step sizes. Given this expansion we are now free to control the learning rate $\eta$ independently of the scaling that is applied on a per-coordinate basis. In terms of leaky averages we can apply the same reasoning as previously applied in the case of the momentum method. Expanding the definition of $\mathbf{s}_t$ yields
+
+A constante $\epsilon > 0$ é normalmente definida como $10^{-6}$ para garantir que não soframos divisão por zero ou tamanhos de passos excessivamente grandes. Dada essa expansão, agora estamos livres para controlar a taxa de aprendizado $\eta$ independentemente da escala que é aplicada por coordenada. Em termos de médias vazadas, podemos aplicar o mesmo raciocínio aplicado anteriormente no caso do método do momento. Expandindo a definição de $ \ mathbf {s} _t $ yields
 
 $$
 \begin{aligned}
@@ -187,5 +187,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.01, 'rho': 0.9},
 [Discussions](https://discuss.d2l.ai/t/1075)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNDQxMTIyOV19
+eyJoaXN0b3J5IjpbLTE2NzAwMDYzMzddfQ==
 -->
