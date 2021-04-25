@@ -37,6 +37,8 @@ Como seria de esperar, devido ao seu momentum de eficácia, é um assunto bem es
 
 To get a better understanding of the geometric properties of the momentum method we revisit gradient descent, albeit with a significantly less pleasant objective function. Recall that in :numref:`sec_gd` we used $f(\mathbf{x}) = x_1^2 + 2 x_2^2$, i.e., a moderately distorted ellipsoid objective. We distort this function further by stretching it out in the $x_1$ direction via
 
+Para obter uma melhor compreensão das propriedades geométricas do método do momento, revisitamos a descida do gradiente, embora com uma função objetivo significativamente menos agradável. Lembre-se de que em :numref:`sec_gd` usamos $ f (\ mathbf {x}) = x_1 ^ 2 + 2 x_2 ^ 2 $, ou seja, um objetivo elipsóide moderadamente distorcido. Distorcemos esta função ainda mais estendendo-a na direção $ x_1 $ por meio de
+
 $$f(\mathbf{x}) = 0.1 x_1^2 + 2 x_2^2.$$
 
 As before $f$ has its minimum at $(0, 0)$. This function is *very* flat in the direction of $x_1$. Let us see what happens when we perform gradient descent as before on this new function. We pick a learning rate of $0.4$.
@@ -336,6 +338,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MjUxNDk0OSwxMjMwODE5Nzg5LDEyNz
+eyJoaXN0b3J5IjpbMjA3MjMzNjk3OCwxMjMwODE5Nzg5LDEyNz
 EzMzg3MjNdfQ==
 -->
