@@ -274,15 +274,15 @@ train(net, train_iter, test_iter, num_epochs, lr,
       custom_callback=LearningRateScheduler(scheduler))
 ```
 
-Isso funcionou um pouco melhor do que antes. Duas coisas se destacam: a curva era um pouco mais suave do que antes. Em segundo lugar, houve menos ajuste excessivo. Infelizmente, não é uma questão bem resolvida por que certas estratégias levam a menos ajustes excessivos em * teoria *. Há algum argumento de que um tamanho de passo menor levará a parâmetros mais próximos de zero e, portanto, mais simples. No entanto, isso não explica o fenômeno inteiramente, uma vez que não paramos realmente cedo, mas simplesmente reduzimos a taxa de aprendizagem suavemente.
+Isso funcionou um pouco melhor do que antes. Duas coisas se destacam: a curva era um pouco mais suave do que antes. Em segundo lugar, houve menos ajuste excessivo. Infelizmente, não é uma questão bem resolvida por que certas estratégias levam a menos ajustes excessivos em *teoria*. Há algum argumento de que um tamanho de passo menor levará a parâmetros mais próximos de zero e, portanto, mais simples. No entanto, isso não explica o fenômeno inteiramente, uma vez que não paramos realmente cedo, mas simplesmente reduzimos a taxa de aprendizagem suavemente.
 
-## Policies
+## Políticas
 
-While we cannot possibly cover the entire variety of learning rate schedulers, we attempt to give a brief overview of popular policies below. Common choices are polynomial decay and piecewise constant schedules. Beyond that, cosine learning rate schedules have been found to work well empirically on some problems. Lastly, on some problems it is beneficial to warm up the optimizer prior to using large learning rates.
+Embora não possamos cobrir toda a variedade de programadores de taxa de aprendizagem, tentamos fornecer uma breve visão geral das políticas populares abaixo. As escolhas comuns são decaimento polinomial e esquemas constantes por partes. Além disso, verificou-se que as programações de taxa de aprendizado de cosseno funcionam bem empiricamente em alguns problemas. Por último, em alguns problemas, é benéfico aquecer o otimizador antes de usar altas taxas de aprendizado.
 
 ### Factor Scheduler
 
-One alternative to a polynomial decay would be a multiplicative one, that is $\eta_{t+1} \leftarrow \eta_t \cdot \alpha$ for $\alpha \in (0, 1)$. To prevent the learning rate from decaying beyond a reasonable lower bound the update equation is often modified to $\eta_{t+1} \leftarrow \mathop{\mathrm{max}}(\eta_{\mathrm{min}}, \eta_t \cdot \alpha)$.
+Uma alternativa para um decaimento polinomial seria um multiplicativo, que é $\eta_{t+1} \leftarrow \eta_t \cdot \alpha$ para $\alpha \in (0, 1)$. Para evitar que a taxa de aprendizagem diminua além de um limite inferior razoável, a equação de atualização é frequentemente modificada para $\eta_{t+1} \leftarrow \mathop{\mathrm{max}}(\eta_{\mathrm{min}}, \eta_t \cdot \alpha)$.
 
 ```{.python .input}
 #@tab all
@@ -504,5 +504,5 @@ Warmup can be applied to any scheduler (not just cosine). For a more detailed di
 [Discussions](https://discuss.d2l.ai/t/1081)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NDgzMTgwMSwxMjUzMTczNDM4XX0=
+eyJoaXN0b3J5IjpbMTA0MDg3ODMyNiwxMjUzMTczNDM4XX0=
 -->
