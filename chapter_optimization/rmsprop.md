@@ -138,8 +138,6 @@ d2l.train_ch11(rmsprop, init_rmsprop_states(feature_dim),
 
 ## Implementação concisa
 
-Since RMSProp is a rather popular algorithm it is also available in the `Trainer` instance. All we need to do is instantiate it using an algorithm named `rmsprop`, assigning $\gamma$ to the parameter `gamma1`.
-
 Como RMSProp é um algoritmo bastante popular, ele também está disponível na instância `Trainer`. Tudo o que precisamos fazer é instanciá-lo usando um algoritmo chamado `rmsprop`, atribuindo $\gamma$ ao parâmetro `gamma1`.
 
 ```{.python .input}
@@ -161,19 +159,19 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.01, 'rho': 0.9},
                        data_iter)
 ```
 
-## Summary
+## Sumário
 
-* RMSProp is very similar to Adagrad insofar as both use the square of the gradient to scale coefficients.
-* RMSProp shares with momentum the leaky averaging. However, RMSProp uses the technique to adjust the coefficient-wise preconditioner.
-* The learning rate needs to be scheduled by the experimenter in practice.
-* The coefficient $\gamma$ determines how long the history is when adjusting the per-coordinate scale.
+* RMSProp é muito semelhante ao Adagrad na medida em que ambos usam o quadrado do gradiente para dimensionar os coeficientes.
+* RMSProp compartilha com momentum a média que vaza. No entanto, RMSProp usa a técnica para ajustar o pré-condicionador do coeficiente.
+* A taxa de aprendizagem precisa ser programada pelo experimentador na prática.
+* O coeficiente $\gamma$ determina quanto tempo o histórico é ao ajustar a escala por coordenada.
 
-## Exercises
+## Exercícios
 
-1. What happens experimentally if we set $\gamma = 1$? Why?
-1. Rotate the optimization problem to minimize $f(\mathbf{x}) = 0.1 (x_1 + x_2)^2 + 2 (x_1 - x_2)^2$. What happens to the convergence?
-1. Try out what happens to RMSProp on a real machine learning problem, such as training on Fashion-MNIST. Experiment with different choices for adjusting the learning rate.
-1. Would you want to adjust $\gamma$ as optimization progresses? How sensitive is RMSProp to this?
+1. O que acontece experimentalmente se definirmos $\gamma = 1$? Por quê?
+1. Gire o problema de otimização para minimizar $f(\mathbf{x}) = 0.1 (x_1 + x_2)^2 + 2 (x_1 - x_2)^2$. O que acontece com a convergência?
+1. Experimente o que acontece com o RMSProp em um problema real de aprendizado de máquina, como o treinamento em Fashion-MNIST. Experimente diferentes opções para ajustar a taxa de aprendizagem.
+1. Você gostaria de ajustar $\gamma$ conforme a otimização progride? Quão sensível é o RMSProp a isso?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/356)
@@ -187,5 +185,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.01, 'rho': 0.9},
 [Discussions](https://discuss.d2l.ai/t/1075)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NjkxNTUxOV19
+eyJoaXN0b3J5IjpbMTYyNTg3Njc3XX0=
 -->
