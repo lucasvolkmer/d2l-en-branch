@@ -24,13 +24,13 @@ $$f(\mathbf{x}) = \bar{f}(\bar{\mathbf{x}}) = \frac{1}{2} \bar{\mathbf{x}}^\top 
 
 Aqui usamos $\mathbf{x} = \mathbf{U} \mathbf{x}$ e consequentemente $\mathbf{c} = \mathbf{U} \mathbf{c}$. O problema modificado tem como minimizador $\bar{\mathbf{x}} = -\boldsymbol{\Lambda}^{-1} \bar{\mathbf{c}}$ e valor mínimo $-\frac{1}{2} \bar{\mathbf{c}}^\top \boldsymbol{\Lambda}^{-1} \bar{\mathbf{c}} + b$. Isso é muito mais fácil de calcular, pois $\boldsymbol{\Lambda}$ é uma matriz diagonal contendo os autovalores de $\mathbf{Q}$.
 
-If we perturb $\mathbf{c}$ slightly we would hope to find only slight changes in the minimizer of $f$. Unfortunately this is not the case. While slight changes in $\mathbf{c}$ lead to equally slight changes in $\bar{\mathbf{c}}$, this is not the case for the minimizer of $f$ (and of $\bar{f}$ respectively). Whenever the eigenvalues $\boldsymbol{\Lambda}_i$ are large we will see only small changes in $\bar{x}_i$ and in the minimum of $\bar{f}$. Conversely, for small $\boldsymbol{\Lambda}_i$ changes in $\bar{x}_i$ can be dramatic. The ratio between the largest and the smallest eigenvalue is called the condition number of an optimization problem.
-
-Se perturbarmos $\mathbf{c}$ ligeiramente, esperaríamos encontrar apenas pequenas mudanças no minimizador de $ f $. Infelizmente, esse não é o caso. Embora pequenas mudanças em $\mathbf{c}$ levem a mudanças igualmente pequenas em $\bar{\mathbf{c}}$, este não é o caso para o minimizador de $f$ (e de $\bar{f}$ respectivamente). Sempre que os autovalores $\boldsymbol{\Lambda}_i$ forem grandes, veremos apenas pequenas mudanças em $\bar{x}_i$ e no mínimo de $\bar{f}$. Por outro lado, para pequenas $ \ boldsymbol {\ Lambda} _i $, as mudanças em $ \ bar {x} _i $ podem ser dramáticas. A razão entre o maior e o menor autovalor é chamada de número de condição de um problema de otimização.
+Se perturbarmos $\mathbf{c}$ ligeiramente, esperaríamos encontrar apenas pequenas mudanças no minimizador de $ f $. Infelizmente, esse não é o caso. Embora pequenas mudanças em $\mathbf{c}$ levem a mudanças igualmente pequenas em $\bar{\mathbf{c}}$, este não é o caso para o minimizador de $f$ (e de $\bar{f}$ respectivamente). Sempre que os autovalores $\boldsymbol{\Lambda}_i$ forem grandes, veremos apenas pequenas mudanças em $\bar{x}_i$ e no mínimo de $\bar{f}$. Por outro lado, para pequenas $\boldsymbol{\Lambda}_i$, as mudanças em $\bar{x}_i$ podem ser dramáticas. A razão entre o maior e o menor autovalor é chamada de número de condição de um problema de otimização.
 
 $$\kappa = \frac{\boldsymbol{\Lambda}_1}{\boldsymbol{\Lambda}_d}.$$
 
 If the condition number $\kappa$ is large, it is difficult to solve the optimization problem accurately. We need to ensure that we are careful in getting a large dynamic range of values right. Our analysis leads to an obvious, albeit somewhat naive question: couldn't we simply "fix" the problem by distorting the space such that all eigenvalues are $1$. In theory this is quite easy: we only need the eigenvalues and eigenvectors of $\mathbf{Q}$ to rescale the problem from $\mathbf{x}$ to one in $\mathbf{z} := \boldsymbol{\Lambda}^{\frac{1}{2}} \mathbf{U} \mathbf{x}$. In the new coordinate system $\mathbf{x}^\top \mathbf{Q} \mathbf{x}$ could be simplified to $\|\mathbf{z}\|^2$. Alas, this is a rather impractical suggestion. Computing eigenvalues and eigenvectors is in general *much more* expensive than solving the actual  problem.
+
+Se o número de condição $\kappa$ for grande, será difícil resolver o problema de otimização com precisão. Precisamos garantir que somos cuidadosos ao acertar uma ampla faixa dinâmica de valores. Nossa análise leva a uma questão óbvia, embora um tanto ingênua: não poderíamos simplesmente "consertar" o problema distorcendo o espaço de forma que todos os autovalores sejam $1$. Em teoria, isso é muito fácil: precisamos apenas dos autovalores e autovetores de $\mathbf{Q}$ para redimensionar o problema de $\mathbf{x}$ para um em $\mathbf{z} := \boldsymbol{\Lambda}^{\frac{1}{2}} \mathbf{U} \mathbf{x}$. No novo sistema de coordenadas $\mathbf{x}^\top \mathbf{Q} \mathbf{x}$ poderia ser simplificado para $\|\mathbf{z}\|^2$. Infelizmente, esta é uma sugestão pouco prática. O cálculo de autovalores e autovetores é em geral muito mais caro do que resolver o problema real.
 
 While computing eigenvalues exactly might be expensive, guessing them and computing them even somewhat approximately may already be a lot better than not doing anything at all. In particular, we could use the diagonal entries of $\mathbf{Q}$ and rescale it accordingly. This is *much* cheaper than computing eigenvalues.
 
@@ -223,6 +223,6 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1073)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MjU4MzY3MCwxNTM2ODY3Mzc1LDE2NT
+eyJoaXN0b3J5IjpbMTEyNjcxMTMwMywxNTM2ODY3Mzc1LDE2NT
 IxNDMwNjNdfQ==
 -->
