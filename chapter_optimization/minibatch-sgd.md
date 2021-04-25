@@ -429,7 +429,7 @@ d2l.plt.gca().set_xscale('log')
 
 ## Implementação concisa
 
-In Gluon, we can use the `Trainer` class to call optimization algorithms. This is used to implement a generic training function. We will use this throughout the current chapter.
+No Gluon, podemos usar a classe `Trainer` para chamar algoritmos de otimização. Isso é usado para implementar uma função de treinamento genérica. Usaremos isso em todo o capítulo atual.
 
 ```{.python .input}
 #@save
@@ -530,7 +530,7 @@ def train_concise_ch11(trainer_fn, hyperparams, data_iter, num_epochs=2):
     print(f'loss: {animator.Y[0][-1]:.3f}, {timer.avg():.3f} sec/epoch')
 ```
 
-Using Gluon to repeat the last experiment shows identical behavior.
+Usar o Gluon para repetir o último experimento mostra um comportamento idêntico.
 
 ```{.python .input}
 data_iter, _ = get_data_ch11(10)
@@ -551,35 +551,35 @@ trainer = tf.keras.optimizers.SGD
 train_concise_ch11(trainer, {'learning_rate': 0.05}, data_iter)
 ```
 
-## Summary
+## Sumário
 
-* Vectorization makes code more efficient due to reduced overhead arising from the deep learning framework and due to better memory locality and caching on CPUs and GPUs.
-* There is a trade-off between statistical efficiency arising from SGD and computational efficiency arising from processing large batches of data at a time.
-* Minibatch stochastic gradient descent offers the best of both worlds: computational and statistical efficiency.
-* In minibatch SGD we process batches of data obtained by a random permutation of the training data (i.e., each observation is processed only once per epoch, albeit in random order).
-* It is advisable to decay the learning rates during training.
-* In general, minibatch SGD is faster than SGD and gradient descent for convergence to a smaller risk, when measured in terms of clock time.
+* A vetorização torna o código mais eficiente devido à sobrecarga reduzida decorrente da estrutura de aprendizado profundo e devido à melhor localização da memória e armazenamento em cache em CPUs e GPUs.
+* Há uma compensação entre a eficiência estatística decorrente do SGD e a eficiência computacional decorrente do processamento de grandes lotes de dados por vez.
+* A descida gradiente estocástica do Minibatch oferece o melhor dos dois mundos: eficiência computacional e estatística.
+* No minibatch SGD, processamos lotes de dados obtidos por uma permutação aleatória dos dados de treinamento (ou seja, cada observação é processada apenas uma vez por época, embora em ordem aleatória).
+* É aconselhável diminuir as taxas de aprendizagem durante o treinamento.
+* Em geral, minibatch SGD é mais rápido do que SGD e gradiente descendente para convergência para um risco menor, quando medido em termos de tempo de clock.
 
-## Exercises
+## Exercícios
 
-1. Modify the batch size and learning rate and observe the rate of decline for the value of the objective function and the time consumed in each epoch.
-1. Read the MXNet documentation and use the `Trainer` class `set_learning_rate` function to reduce the learning rate of the minibatch SGD to 1/10 of its previous value after each epoch.
-1. Compare minibatch SGD with a variant that actually *samples with replacement* from the training set. What happens?
-1. An evil genie replicates your dataset without telling you (i.e., each observation occurs twice and your dataset grows to twice its original size, but nobody told you). How does the behavior of SGD, minibatch SGD and that of gradient descent change?
+1. Modifique o tamanho do lote e a taxa de aprendizado e observe a taxa de declínio para o valor da função objetivo e o tempo consumido em cada época.
+1. Leia a documentação do MXNet e use a função da classe `Trainer` `set_learning_rate` para reduzir a taxa de aprendizagem do minibatch SGD para 1/10 de seu valor anterior após cada época.
+1. Compare o minibatch SGD com uma variante que, na verdade, *obtém amostras com substituição* do conjunto de treinamento. O que acontece?
+1. Um gênio do mal replica seu conjunto de dados sem avisar você (ou seja, cada observação ocorre duas vezes e seu conjunto de dados cresce para o dobro do tamanho original, mas ninguém lhe disse). Como o comportamento do SGD, do minibatch SGD e do gradiente de descida muda?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/353)
+[Discussão](https://discuss.d2l.ai/t/353)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1068)
+[Discussão](https://discuss.d2l.ai/t/1068)
 :end_tab:
 
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1069)
+[Discussão](https://discuss.d2l.ai/t/1069)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTYyNDYxMCw1MTkzODI4NTUsMjIyOD
+eyJoaXN0b3J5IjpbMTMwNjcxODc0OCw1MTkzODI4NTUsMjIyOD
 I4MjM5XX0=
 -->
