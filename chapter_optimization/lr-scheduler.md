@@ -8,7 +8,7 @@ Até agora, focamos principalmente na otimização de *algoritmos* para como atu
 * Outro aspecto igualmente importante é a *inicialização*. Isso se refere a como os parâmetros são definidos inicialmente (revise :numref:`sec_numerical_stability` para detalhes) e também como eles evoluem inicialmente. Isso tem o nome de *aquecimento*, ou seja, a rapidez com que começamos a nos mover em direção à solução inicialmente. Etapas grandes no início podem não ser benéficas, em particular porque o conjunto inicial de parâmetros é aleatório. As instruções iniciais de atualização também podem ser bastante insignificantes.
 * Por último, há uma série de variantes de otimização que realizam ajustes de taxa de aprendizagem cíclica. Isso está além do escopo do capítulo atual. Recomendamos que o leitor analise os detalhes em :cite:`Izmailov.Podoprikhin.Garipov.ea.2018`, por exemplo, como obter melhores soluções calculando a média de um caminho inteiro de parâmetros.
 
-Given the fact that there is a lot of detail needed to manage learning rates, most deep learning frameworks have tools to deal with this automatically. In the current chapter we will review the effects that different schedules have on accuracy and also show how this can be managed efficiently via a *learning rate scheduler*.
+Dado o fato de que são necessários muitos detalhes para gerenciar as taxas de aprendizado, a maioria dos frameworks de aprendizado profundo tem ferramentas para lidar com isso automaticamente. No capítulo atual, revisaremos os efeitos que diferentes programações têm na precisão e também mostraremos como isso pode ser gerenciado de forma eficiente por meio de um *programador de taxa de aprendizagem*.
 
 ## Toy Problem
 
@@ -504,5 +504,5 @@ Warmup can be applied to any scheduler (not just cosine). For a more detailed di
 [Discussions](https://discuss.d2l.ai/t/1081)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNzQ4Njk3MF19
+eyJoaXN0b3J5IjpbMTI1MzE3MzQzOF19
 -->
