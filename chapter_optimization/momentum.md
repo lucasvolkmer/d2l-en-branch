@@ -35,13 +35,11 @@ Como seria de esperar, devido ao seu momentum de eficácia, é um assunto bem es
 
 ### Um problema mal condicionado
 
-To get a better understanding of the geometric properties of the momentum method we revisit gradient descent, albeit with a significantly less pleasant objective function. Recall that in :numref:`sec_gd` we used $f(\mathbf{x}) = x_1^2 + 2 x_2^2$, i.e., a moderately distorted ellipsoid objective. We distort this function further by stretching it out in the $x_1$ direction via
-
-Para obter uma melhor compreensão das propriedades geométricas do método do momento, revisitamos a descida do gradiente, embora com uma função objetivo significativamente menos agradável. Lembre-se de que em :numref:`sec_gd` usamos $ f (\ mathbf {x}) = x_1 ^ 2 + 2 x_2 ^ 2 $, ou seja, um objetivo elipsóide moderadamente distorcido. Distorcemos esta função ainda mais estendendo-a na direção $ x_1 $ por meio de
+Para obter uma melhor compreensão das propriedades geométricas do método do momento, revisitamos a descida do gradiente, embora com uma função objetivo significativamente menos agradável. Lembre-se de que em :numref:`sec_gd` usamos $f(\mathbf{x}) = x_1^2 + 2 x_2^2$, ou seja, um objetivo elipsóide moderadamente distorcido. Distorcemos esta função ainda mais estendendo-a na direção $x_1$ por meio de
 
 $$f(\mathbf{x}) = 0.1 x_1^2 + 2 x_2^2.$$
 
-As before $f$ has its minimum at $(0, 0)$. This function is *very* flat in the direction of $x_1$. Let us see what happens when we perform gradient descent as before on this new function. We pick a learning rate of $0.4$.
+Como antes, $f$ tem seu mínimo em $(0, 0)$. Esta função é *muito* plana na direção de $x_1$. Vamos ver o que acontece quando executamos a descida gradiente como antes nesta nova função. Escolhemos uma taxa de aprendizagem de $0,4$.
 
 ```{.python .input}
 %matplotlib inline
@@ -89,6 +87,8 @@ d2l.show_trace_2d(f_2d, d2l.train_2d(gd_2d))
 ```
 
 By construction, the gradient in the $x_2$ direction is *much* higher and changes much more rapidly than in the horizontal $x_1$ direction. Thus we are stuck between two undesirable choices: if we pick a small learning rate we ensure that the solution does not diverge in the $x_2$ direction but we are saddled with slow convergence in the $x_1$ direction. Conversely, with a large learning rate we progress rapidly in the $x_1$ direction but diverge in $x_2$. The example below illustrates what happens even after a slight increase in learning rate from $0.4$ to $0.6$. Convergence in the $x_1$ direction improves but the overall solution quality is much worse.
+
+Por construção, o gradiente na direção $ x_2 $ é * muito * maior e muda muito mais rapidamente do que na direção $ x_1 $ horizontal. Portanto, estamos presos entre duas escolhas indesejáveis: se escolhermos uma pequena taxa de aprendizado, garantimos que a solução não diverge na direção $ x_2 $, mas estamos sobrecarregados com uma convergência lenta na direção $ x_1 $. Por outro lado, com uma grande taxa de aprendizado, progredimos rapidamente na direção $ x_1 $, mas divergimos em $ x_2 $. O exemplo abaixo ilustra o que acontece mesmo após um ligeiro aumento na taxa de aprendizagem de $ 0,4 $ para $ 0,6 $. A convergência na direção $ x_1 $ melhora, mas a qualidade geral da solução é muito pior.
 
 ```{.python .input}
 #@tab all
@@ -338,6 +338,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MjMzNjk3OCwxMjMwODE5Nzg5LDEyNz
-EzMzg3MjNdfQ==
+eyJoaXN0b3J5IjpbNTEwNTAzNTA0LDIwNzIzMzY5NzgsMTIzMD
+gxOTc4OSwxMjcxMzM4NzIzXX0=
 -->
