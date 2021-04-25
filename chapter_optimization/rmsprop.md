@@ -7,6 +7,8 @@ Um dos principais problemas em :numref:`sec_adagrad` é que a taxa de aprendizag
 
 One way of fixing this problem would be to use $\mathbf{s}_t / t$. For reasonable distributions of $\mathbf{g}_t$ this will converge. Unfortunately it might take a very long time until the limit behavior starts to matter since the procedure remembers the full trajectory of values. An alternative is to use a leaky average in the same way we used in the momentum method, i.e., $\mathbf{s}_t \leftarrow \gamma \mathbf{s}_{t-1} + (1-\gamma) \mathbf{g}_t^2$ for some parameter $\gamma > 0$. Keeping all other parts unchanged yields RMSProp.
 
+Uma maneira de corrigir esse problema seria usar $\mathbf{s}_t / t$. Para distribuições razoáveis de $\mathbf{g}_t$, isso convergirá. Infelizmente, pode levar muito tempo até que o comportamento do limite comece a importar, pois o procedimento lembra a trajetória completa dos valores. Uma alternativa é usar uma média de vazamento da mesma forma que usamos no método de momentum, ou seja, $\mathbf{s}_t \leftarrow \gamma \mathbf{s}_{t-1} + (1-\gamma) \mathbf{g}_t^2$ para algum parâmetro $\gamma > 0$. Manter todas as outras partes inalteradas resulta em RMSProp.
+
 ## The Algorithm
 
 Let us write out the equations in detail.
@@ -185,5 +187,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.01, 'rho': 0.9},
 [Discussions](https://discuss.d2l.ai/t/1075)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNTk3NTcwOF19
+eyJoaXN0b3J5IjpbLTcwNDQxMTIyOV19
 -->
