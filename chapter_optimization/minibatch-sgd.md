@@ -19,9 +19,9 @@ A maneira de aliviar essas restrições é usar uma hierarquia de caches de CPU 
 1. Poderíamos simplesmente calcular $\mathbf{A} = \mathbf{B} \mathbf{C}$.
 1. Poderíamos quebrar $\mathbf{B}$ e $\mathbf{C}$ em matrizes de blocos menores e calcular $\mathbf{A}$ um bloco de cada vez.
 
-If we follow the first option, we will need to copy one row and one column vector into the CPU each time we want to compute an element $\mathbf{A}_{ij}$. Even worse, due to the fact that matrix elements are aligned sequentially we are thus required to access many disjoint locations for one of the two vectors as we read them from memory. The second option is much more favorable. In it, we are able to keep the column vector $\mathbf{C}_{:,j}$ in the CPU cache while we keep on traversing through $B$. This halves the memory bandwidth requirement with correspondingly faster access. Of course, option 3 is most desirable. Unfortunately, most matrices might not entirely fit into cache (this is what we are discussing after all). However, option 4 offers a practically useful alternative: we can move blocks of the matrix into cache and multiply them locally. Optimized libraries take care of this for us. Let us have a look at how efficient these operations are in practice.
+Se seguirmos a primeira opção, precisaremos copiar um vetor linha e uma coluna para a CPU cada vez que quisermos calcular um elemento $\mathbf{A}_{ij}$. Pior ainda, devido ao fato de que os elementos da matriz estão alinhados sequencialmente, somos obrigados a acessar muitas localizações disjuntas para um dos dois vetores à medida que os lemos da memória. A segunda opção é muito mais favorável. Nele, podemos manter o vetor coluna $\mathbf{C}_{:,j}$ no cache da CPU enquanto continuamos percorrendo $B$. Isso reduz pela metade o requisito de largura de banda de memória com acesso correspondentemente mais rápido. Claro, a opção 3 é a mais desejável. Infelizmente, a maioria das matrizes pode não caber inteiramente no cache (é isso que estamos discutindo, afinal). No entanto, a opção 4 oferece uma alternativa prática útil: podemos mover blocos da matriz para o cache e multiplicá-los localmente. Bibliotecas otimizadas cuidam disso para nós. Vejamos como essas operações são eficientes na prática.
 
-Beyond computational efficiency, the overhead introduced by Python and by the deep learning framework itself is considerable. Recall that each time we execute a command the Python interpreter sends a command to the MXNet engine which needs to insert it into the computational graph and deal with it during scheduling. Such overhead can be quite detrimental. In short, it is highly advisable to use vectorization (and matrices) whenever possible.
+Além da eficiência computacional, a sobrecarga introduzida pelo Python e pela própria estrutura de aprendizado profundo é considerável. Lembre-se de que cada vez que executamos um comando, o interpretador Python envia um comando para o mecanismo MXNet que precisa inseri-lo no gráfico computacional e lidar com ele durante o agendamento. Essa sobrecarga pode ser bastante prejudicial. Em suma, é altamente recomendável usar vetorização (e matrizes) sempre que possível.
 
 ```{.python .input}
 %matplotlib inline
@@ -63,7 +63,7 @@ B = tf.Variable(d2l.normal([256, 256], 0, 1))
 C = tf.Variable(d2l.normal([256, 256], 0, 1))
 ```
 
-Element-wise assignment simply iterates over all rows and columns of $\mathbf{B}$ and $\mathbf{C}$ respectively to assign the value to $\mathbf{A}$.
+A atribuição elementar simplesmente itera sobre todas as linhas e colunas de $\mathbf{B}$ e $\mathbf{C}$respectivamente para atribuir o valor a $\mathbf{A}$.
 
 ```{.python .input}
 # Compute A = BC one element at a time
@@ -95,7 +95,7 @@ for i in range(256):
 timer.stop()
 ```
 
-A faster strategy is to perform column-wise assignment.
+Uma estratégia mais rápida é realizar a atribuição em colunas.
 
 ```{.python .input}
 # Compute A = BC one column at a time
@@ -123,7 +123,7 @@ for j in range(256):
 timer.stop()
 ```
 
-Last, the most effective manner is to perform the entire operation in one block. Let us see what the respective speed of the operations is.
+Por último, a maneira mais eficaz é realizar toda a operação em um bloco. Vejamos qual é a respectiva velocidade das operações.
 
 ```{.python .input}
 # Compute A = BC in one go
@@ -580,5 +580,6 @@ train_concise_ch11(trainer, {'learning_rate': 0.05}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1069)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE5MzgyODU1LDIyMjgyODIzOV19
+eyJoaXN0b3J5IjpbMTMxNjkzNTE3Myw1MTkzODI4NTUsMjIyOD
+I4MjM5XX0=
 -->
