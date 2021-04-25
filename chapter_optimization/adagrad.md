@@ -106,7 +106,7 @@ eta = 0.4
 d2l.show_trace_2d(f_2d, d2l.train_2d(adagrad_2d))
 ```
 
-As we increase the learning rate to $2$ we see much better behavior. This already indicates that the decrease in learning rate might be rather aggressive, even in the noise-free case and we need to ensure that parameters converge appropriately.
+Conforme aumentamos a taxa de aprendizado para $2$, vemos um comportamento muito melhor. Isso já indica que a diminuição na taxa de aprendizagem pode ser bastante agressiva, mesmo no caso sem ruído e precisamos garantir que os parâmetros convirjam de forma adequada.
 
 ```{.python .input}
 #@tab all
@@ -114,9 +114,9 @@ eta = 2
 d2l.show_trace_2d(f_2d, d2l.train_2d(adagrad_2d))
 ```
 
-## Implementation from Scratch
+## Implementação do zero
 
-Just like the momentum method, Adagrad needs to maintain a state variable of the same shape as the parameters.
+Assim como o método momentum, o Adagrad precisa manter uma variável de estado da mesma forma que os parâmetros.
 
 ```{.python .input}
 def init_adagrad_states(feature_dim):
@@ -161,8 +161,8 @@ def adagrad(params, grads, states, hyperparams):
         p[:].assign(p - hyperparams['lr'] * g / tf.math.sqrt(s + eps))
 ```
 
-Compared to the experiment in :numref:`sec_minibatch_sgd` we use a
-larger learning rate to train the model.
+Comparado com o experimento em :numref:`sec_minibatch_sgd`, usamos um
+maior taxa de aprendizagem para treinar o modelo.
 
 ```{.python .input}
 #@tab all
@@ -171,9 +171,9 @@ d2l.train_ch11(adagrad, init_adagrad_states(feature_dim),
                {'lr': 0.1}, data_iter, feature_dim);
 ```
 
-## Concise Implementation
+## Implementação concisa
 
-Using the `Trainer` instance of the algorithm `adagrad`, we can invoke the Adagrad algorithm in Gluon.
+Usando a instância `Trainer` do algoritmo `adagrad`, podemos invocar o algoritmo Adagrad no Gluon.
 
 ```{.python .input}
 d2l.train_concise_ch11('adagrad', {'learning_rate': 0.1}, data_iter)
@@ -191,16 +191,16 @@ trainer = tf.keras.optimizers.Adagrad
 d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 ```
 
-## Summary
+## Sumário
 
-* Adagrad decreases the learning rate dynamically on a per-coordinate basis.
-* It uses the magnitude of the gradient as a means of adjusting how quickly progress is achieved - coordinates with large gradients are compensated with a smaller learning rate.
-* Computing the exact second derivative is typically infeasible in deep learning problems due to memory and computational constraints. The gradient can be a useful proxy.
-* If the optimization problem has a rather uneven structure Adagrad can help mitigate the distortion.
-* Adagrad is particularly effective for sparse features where the learning rate needs to decrease more slowly for infrequently occurring terms.
-* On deep learning problems Adagrad can sometimes be too aggressive in reducing learning rates. We will discuss strategies for mitigating this in the context of :numref:`sec_adam`.
+* O Adagrad diminui a taxa de aprendizagem dinamicamente por coordenada.
+* Ele usa a magnitude do gradiente como um meio de ajustar a rapidez com que o progresso é alcançado - as coordenadas com gradientes grandes são compensadas com uma taxa de aprendizado menor.
+* Calcular a segunda derivada exata é tipicamente inviável em problemas de aprendizado profundo devido a limitações de memória e computacionais. O gradiente pode ser um proxy útil.
+* Se o problema de otimização tiver uma estrutura bastante irregular, o Adagrad pode ajudar a mitigar a distorção.
+* O Adagrad é particularmente eficaz para recursos esparsos em que a taxa de aprendizado precisa diminuir mais lentamente para termos que ocorrem com pouca frequência.
+* Em problemas de aprendizado profundo, o Adagrad às vezes pode ser muito agressivo na redução das taxas de aprendizado. Discutiremos estratégias para mitigar isso no contexto de :numref:`sec_adam`.
 
-## Exercises
+## Exercícios
 
 1. Prove that for an orthogonal matrix $\mathbf{U}$ and a vector $\mathbf{c}$ the following holds: $\|\mathbf{c} - \mathbf{\delta}\|_2 = \|\mathbf{U} \mathbf{c} - \mathbf{U} \mathbf{\delta}\|_2$. Why does this mean that the magnitude of perturbations does not change after an orthogonal change of variables?
 1. Try out Adagrad for $f(\mathbf{x}) = 0.1 x_1^2 + 2 x_2^2$ and also for the objective function was rotated by 45 degrees, i.e., $f(\mathbf{x}) = 0.1 (x_1 + x_2)^2 + 2 (x_1 - x_2)^2$. Does it behave differently?
@@ -209,7 +209,15 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 1. Try out Adagrad for a proper deep network, such as :numref:`sec_lenet` when applied to Fashion MNIST.
 1. How would you need to modify Adagrad to achieve a less aggressive decay in learning rate?
 
+
+1. Prove que para uma matriz ortogonal $ \ mathbf {U} $ e um vetor $ \ mathbf {c} $ o seguinte é válido: $ \ | \ mathbf {c} - \ mathbf {\ delta} \ | _2 = \ | \ mathbf {U} \ mathbf {c} - \ mathbf {U} \ mathbf {\ delta} \ | _2 $. Por que isso significa que a magnitude das perturbações não muda após uma mudança ortogonal das variáveis?
+1. Experimente o Adagrad para $ f (\ mathbf {x}) = 0,1 x_1 ^ 2 + 2 x_2 ^ 2 $ e também para a função objetivo foi girada em 45 graus, ou seja, $ f (\ mathbf {x}) = 0,1 (x_1 + x_2) ^ 2 + 2 (x_1 - x_2) ^ 2 $. Ele se comporta de maneira diferente?
+1. Prove [teorema do círculo de Gerschgorin] (https://en.wikipedia.org/wiki/Gershgorin_circle_theorem) que afirma que os valores próprios $ \ lambda_i $ de uma matriz $ \ mathbf {M} $ satisfazer $ | \ lambda_i - \ mathbf { M} _ {jj} | \ leq \ sum_ {k \ neq j} | \ mathbf {M} _ {jk} | $ para pelo menos uma escolha de $ j $.
+1. O que o teorema de Gerschgorin nos diz sobre os autovalores da matriz pré-condicionada diagonalmente $ \ mathrm {diag} ^ {- \ frac {1} {2}} (\ mathbf {M}) \ mathbf {M} \ mathrm {diag } ^ {- \ frac {1} {2}} (\ mathbf {M}) $?
+1. Experimente o Adagrad para uma rede profunda adequada, como: numref: `sec_lenet` quando aplicado ao Fashion MNIST.
+1. Como você precisaria modificar o Adagrad para atingir uma queda menos agressiva na taxa de aprendizado?
 :begin_tab:`mxnet`
+
 [Discussions](https://discuss.d2l.ai/t/355)
 :end_tab:
 
@@ -221,6 +229,6 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1073)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0OTI2MzkyMiwxNTM2ODY3Mzc1LDE2NT
+eyJoaXN0b3J5IjpbLTY1NDg0MjEzNSwxNTM2ODY3Mzc1LDE2NT
 IxNDMwNjNdfQ==
 -->
