@@ -46,7 +46,7 @@ onde $\bar{\mathbf{x}}_0$ é o minimizador de $\bar{f}$. Portanto, a magnitude d
 
 ## O Algoritmo
 
-Let us formalize the discussion from above. We use the variable $\mathbf{s}_t$ to accumulate past gradient variance as follows.
+Vamos formalizar a discussão de cima. Usamos a variável $\mathbf{s}_t$ para acumular a variância do gradiente anterior como segue.
 
 $$\begin{aligned}
     \mathbf{g}_t & = \partial_{\mathbf{w}} l(y_t, f(\mathbf{x}_t, \mathbf{w})), \\
@@ -54,7 +54,7 @@ $$\begin{aligned}
     \mathbf{w}_t & = \mathbf{w}_{t-1} - \frac{\eta}{\sqrt{\mathbf{s}_t + \epsilon}} \cdot \mathbf{g}_t.
 \end{aligned}$$
 
-Here the operation are applied coordinate wise. That is, $\mathbf{v}^2$ has entries $v_i^2$. Likewise $\frac{1}{\sqrt{v}}$ has entries $\frac{1}{\sqrt{v_i}}$ and $\mathbf{u} \cdot \mathbf{v}$ has entries $u_i v_i$. As before $\eta$ is the learning rate and $\epsilon$ is an additive constant that ensures that we do not divide by $0$. Last, we initialize $\mathbf{s}_0 = \mathbf{0}$.
+Aqui, as operações são aplicadas de acordo com as coordenadas. Ou seja, $\mathbf{v}^2$ tem entradas $v_i^2$. Da mesma forma, $\frac{1}{\sqrt{v}}$ tem entradas $\frac{1}{\sqrt{v_i}}$ e $\mathbf{u} \cdot \mathbf{v}$ tem entradas $u_i v_i$. Como antes, $\eta$ é a taxa de aprendizagem e $\epsilon$ é uma constante aditiva que garante que não dividamos por $0$. Por último, inicializamos $\mathbf{s}_0 = \mathbf{0}$.
 
 Just like in the case of momentum we need to keep track of an auxiliary variable, in this case to allow for an individual learning rate per coordinate. This does not increase the cost of Adagrad significantly relative to SGD, simply since the main cost is typically to compute $l(y_t, f(\mathbf{x}_t, \mathbf{w}))$ and its derivative.
 
@@ -221,6 +221,6 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1073)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MDIwMzUwMCwxNTM2ODY3Mzc1LDE2NT
-IxNDMwNjNdfQ==
+eyJoaXN0b3J5IjpbLTE3MjM5Mzg5ODIsMTUzNjg2NzM3NSwxNj
+UyMTQzMDYzXX0=
 -->
