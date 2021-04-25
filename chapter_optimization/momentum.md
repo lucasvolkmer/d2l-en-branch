@@ -221,9 +221,9 @@ A redução da taxa de aprendizagem resolve ainda mais qualquer questão de prob
 train_momentum(0.005, 0.9)
 ```
 
-### Concise Implementation
+### Implementação concisa
 
-There is very little to do in Gluon since the standard `sgd` solver already had momentum built in. Setting matching parameters yields a very similar trajectory.
+Há muito pouco a fazer no Gluon, uma vez que o solucionador `sgd` padrão já tem o momentum embutido. A configuração dos parâmetros correspondentes produz uma trajetória muito semelhante.
 
 ```{.python .input}
 d2l.train_concise_ch11('sgd', {'learning_rate': 0.005, 'momentum': 0.9},
@@ -243,17 +243,19 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.005, 'momentum': 0.9},
                        data_iter)
 ```
 
-## Theoretical Analysis
+## Análise teórica
 
-So far the 2D example of $f(x) = 0.1 x_1^2 + 2 x_2^2$ seemed rather contrived. We will now see that this is actually quite representative of the types of problem one might encounter, at least in the case of minimizing convex quadratic objective functions.
+Até agora, o exemplo 2D de $f(x) = 0.1 x_1^2 + 2 x_2^2$ parecia bastante artificial. Veremos agora que isso é na verdade bastante representativo dos tipos de problemas que podemos encontrar, pelo menos no caso de minimizar funções objetivas quadráticas convexas.
 
-### Quadratic Convex Functions
+### Funções quadráticas convexas
 
-Consider the function
+Considere a função
 
 $$h(\mathbf{x}) = \frac{1}{2} \mathbf{x}^\top \mathbf{Q} \mathbf{x} + \mathbf{x}^\top \mathbf{c} + b.$$
 
 This is a general quadratic function. For positive definite matrices $\mathbf{Q} \succ 0$, i.e., for matrices with positive eigenvalues this has a minimizer at $\mathbf{x}^* = -\mathbf{Q}^{-1} \mathbf{c}$ with minimum value $b - \frac{1}{2} \mathbf{c}^\top \mathbf{Q}^{-1} \mathbf{c}$. Hence we can rewrite $h$ as
+
+Esta é uma função quadrática geral. Para matrizes definidas positivas $\mathbf{Q} \succ 0$, ou seja, para matrizes com autovalores positivos, tem um minimizador em $\mathbf{x}^* = -\mathbf{Q}^{-1} \mathbf{c}$ com valor mínimo $ b - \ frac {1} {2} \ mathbf {c} ^ \ top \ mathbf {Q} ^ {- 1} \ mathbf {c} $. Portanto, podemos reescrever $ h $ como
 
 $$h(\mathbf{x}) = \frac{1}{2} (\mathbf{x} - \mathbf{Q}^{-1} \mathbf{c})^\top \mathbf{Q} (\mathbf{x} - \mathbf{Q}^{-1} \mathbf{c}) + b - \frac{1}{2} \mathbf{c}^\top \mathbf{Q}^{-1} \mathbf{c}.$$
 
@@ -336,6 +338,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjU1MjI1NzksMjA3MjMzNjk3OCwxMj
+eyJoaXN0b3J5IjpbLTExNDQ3NjYyOTcsMjA3MjMzNjk3OCwxMj
 MwODE5Nzg5LDEyNzEzMzg3MjNdfQ==
 -->
