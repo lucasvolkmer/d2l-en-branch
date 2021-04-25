@@ -18,11 +18,8 @@ The previous section saw us discussing minibatch SGD as a means forMédias com v
 
 A seção anterior nos viu discutindo o minibatch SGD como um meio de acceleratingr a computation. It also had the nice side-effect that averagingção. Também teve o bom efeito colateral de que a média dos gradientes reduced the amount ofziu a quantidade de variaânce. Theia. O minibatch SGD can bepode ser calculated bydo por:
 
-$$\mathbf{g}_{t, t-1} = \partial_{\mathbf{w}} \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} f(\mathbf{x}_{i}, \mathbf{w}_{t-1}) = \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} \mathbf{h}_{i, t-1}.
+$$ \ mathbf {g} _ {t, t-1} = \ partial _ {\ mathbf {w}}  \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} f(\ mathbf {x}_{ i}, \ mathbf {w }_{t-1}) = \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} \mathbf{h}_{i, t-1}.
 $$
-
-To keep the notation simple, here we used $\mathbf{h}_{i, t-1} = \partial_{\mathbf{w}} f(\mathbf{x}_i, \mathbf{w}_{t-1})$ as the SGD for sample $i$ using the weights updated at time $t-1$.
-It would be nice if we could benefit from the effect of variance reduction even beyond averaging gradients on a minibatch. One option to accomplish this task is to replace the gradient computation by a "leaky average":
 
 Para manter a notação simples, aqui usamos $\mathbf{h}_{i, t-1} = \partial_{\mathbf{w}} f(\mathbf{x}_i, \mathbf{w}_{t-1})$ como o SGD para a amostra $i$ usando os pesos atualizados no tempo $ t-1 $.
 Seria bom se pudéssemos nos beneficiar do efeito da redução da variância, mesmo além da média dos gradientes em um minibatch. Uma opção para realizar esta tarefa é substituir o cálculo do gradiente por uma "média com vazamento":
@@ -345,5 +342,5 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTg5OTMxMjNdfQ==
+eyJoaXN0b3J5IjpbMTI3MTMzODcyM119
 -->
