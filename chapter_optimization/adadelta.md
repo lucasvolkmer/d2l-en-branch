@@ -1,11 +1,13 @@
 # Adadelta
 :label:`sec_adadelta`
 
-Adadelta is yet another variant of AdaGrad (:numref:`sec_adagrad`). The main difference lies in the fact that it decreases the amount by which the learning rate is adaptive to coordinates. Moreover, traditionally it referred to as not having a learning rate since it uses the amount of change itself as calibration for future change. The algorithm was proposed in :cite:`Zeiler.2012`. It is fairly straightforward, given the discussion of previous algorithms so far. 
+Adadelta is yet anotheré outra variant ofe do AdaGrad (:numref:`sec_adagrad`). The mainA principal difference lies in the fact that it decreases the amount by which the learning rate isça reside no fato de que diminui a quantidade pela qual a taxa de aprendizagem é adaptiáve tol às coordienatedas. MoreoverAlém disso, traditcionally it referred to as not having a learning rate since it uses the amount of change itself as calibration for future change. Themente é referido como não tendo uma taxa de aprendizagem, uma vez que usa a quantidade de mudança em si como calibração para mudanças futuras. O algorithm wasmo foi proposed into em :cite:`Zeiler.2012`. It is fairly straightforward, given the discussion of previous algorithms so far. É bastante simples, dada a discussão de algoritmos anteriores até agora.
 
-## The Algorithm
+## TheO Algorithm
 
-In a nutshell, Adadelta uses two state variables, $\mathbf{s}_t$ to store a leaky average of the second moment of the gradient and $\Delta\mathbf{x}_t$ to store a leaky average of the second moment of the change of parameters in the model itself. Note that we use the original notation and naming of the authors for compatibility with other publications and implementations (there is no other real reason why one should use different Greek variables to indicate a parameter serving the same purpose in momentum, Adagrad, RMSProp, and Adadelta). 
+In a nutshell, Adadelta uses two state variables, $\mathbf{s}_t$ to store a leaky average of themo
+
+Em poucas palavras, Adadelta usa duas variáveis de estado, $\mathbf{s}_t$ para armazenar uma média de vazamento do secogundo moment of theo do gradient ande e $\Delta\mathbf{x}_t$ to store a leaky average of thepara armazenar uma média de vazamento do secogundo moment of the change ofo da mudança de paraâmeters in the model itself. Note that we use the original notation and naming of theros no próprio modelo. Observe que usamos a notação original e a nomenclatura dos authores forpara compatibility with other publications and implementations (there is no other real reason why one should usedade com outras publicações e implementações (não há outra razão real para usar variáveis gregas different Greek variables toes para indicate ar um paraâmeter serving the same purpose inro que serve ao mesmo propósito em momentum, Adagrad, RMSProp, and e Adadelta). )
 
 Here are the technical details of Adadelta. Given the parameter du jour is $\rho$, we obtain the following leaky updates similarly to :numref:`sec_rmsprop`:
 
@@ -159,3 +161,6 @@ d2l.train_concise_ch11(trainer, {'learning_rate':5.0, 'rho': 0.9}, data_iter)
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1077)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwOTkwNTI1NjJdfQ==
+-->
