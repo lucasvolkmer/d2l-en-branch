@@ -493,16 +493,16 @@ O aquecimento pode ser aplicado a qualquer agendador (não apenas cosseno). Para
 1. Você pode conectar otimização e amostragem? Comece usando os resultados de :cite:`Welling.Teh.2011` em Stochastic Gradient Langevin Dynamics.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/359)
+[Discussão](https://discuss.d2l.ai/t/359)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1080)
+[Discussão](https://discuss.d2l.ai/t/1080)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1081)
+[Discussão](https://discuss.d2l.ai/t/1081)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMzgzODY2MywxMjUzMTczNDM4XX0=
+eyJoaXN0b3J5IjpbLTc3Nzg0NTU1OCwxMjUzMTczNDM4XX0=
 -->
