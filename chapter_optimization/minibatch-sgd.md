@@ -177,7 +177,7 @@ $$\mathbf{g}_t = \partial_{\mathbf{w}} \frac{1}{|\mathcal{B}_t|} \sum_{i \in \ma
 
 Vamos ver o que isso faz com as propriedades estatísticas de $\mathbf{g}_t$: uma vez que tanto $\mathbf{x}_t$ e também todos os elementos do minibatch $\mathcal{B}_t$ são desenhados uniformemente e aleatoriamente do conjunto de treinamento, a expectativa do gradiente permanece inalterada. A variância, por outro lado, é reduzida significativamente. Como o gradiente de minibatch é composto de $b := |\mathcal{B}_t|$ gradientes independentes que estão sendo calculados, seu desvio padrão é reduzido por um fator de $b^{-\frac{1}{2}}$. Isso, por si só, é uma coisa boa, pois significa que as atualizações estão alinhadas de forma mais confiável com o gradiente total.
 
-Naively this would indicate that choosing a large minibatch $\mathcal{B}_t$ would be universally desirable. Alas, after some point, the additional reduction in standard deviation is minimal when compared to the linear increase in computational cost. In practice we pick a minibatch that is large enough to offer good computational efficiency while still fitting into the memory of a GPU. To illustrate the savings let us have a look at some code. In it we perform the same matrix-matrix multiplication, but this time broken up into "minibatches" of 64 columns at a time.
+Ingenuamente, isso indicaria que escolher um grande minibatch $\mathcal{B}_t$ seria universalmente desejável. Infelizmente, depois de algum ponto, a redução adicional no desvio padrão é mínima quando comparada ao aumento linear no custo computacional. Na prática, escolhemos um minibatch que é grande o suficiente para oferecer boa eficiência computacional e ainda caber na memória de uma GPU. Para ilustrar a economia, vamos dar uma olhada em alguns códigos. Nele realizamos a mesma multiplicação matriz-matriz, mas desta vez dividida em "minibatches" de 64 colunas por vez.
 
 ```{.python .input}
 timer.start()
@@ -205,11 +205,11 @@ timer.stop()
 print(f'performance in Gigaflops: block {2 / timer.times[3]:.3f}')
 ```
 
-As we can see, the computation on the minibatch is essentially as efficient as on the full matrix. A word of caution is in order. In :numref:`sec_batch_norm` we used a type of regularization that was heavily dependent on the amount of variance in a minibatch. As we increase the latter, the variance decreases and with it the benefit of the noise-injection due to batch normalization. See e.g., :cite:`Ioffe.2017` for details on how to rescale and compute the appropriate terms.
+Como podemos ver, o cálculo no minibatch é essencialmente tão eficiente quanto na matriz completa. Uma palavra de cautela é necessária. Em :numref:`sec_batch_norm` usamos um tipo de regularização que era fortemente dependente da quantidade de variância em um minibatch. À medida que aumentamos o último, a variância diminui e com ela o benefício da injeção de ruído devido à normalização do lote. Consulte, por exemplo, :cite:`Ioffe.2017` para obter detalhes sobre como redimensionar e calcular os termos apropriados.
 
-## Reading the Dataset
+## Lendo o conjunto de dados
 
-Let us have a look at how minibatches are efficiently generated from data. In the following we use a dataset developed by NASA to test the wing [noise from different aircraft](https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise) to compare these optimization algorithms. For convenience we only use the first $1,500$ examples. The data is whitened for preprocessing, i.e., we remove the mean and rescale the variance to $1$ per coordinate.
+Vamos dar uma olhada em como os minibatches são gerados com eficiência a partir de dados. A seguir, usamos um conjunto de dados desenvolvido pela NASA para testar a asa [ruído de aeronaves diferentes](https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise) para comparar esses algoritmos de otimização. Por conveniência, usamos apenas os primeiros $1.500$ exemplos. Os dados são clareados para pré-processamento, ou seja, removemos a média e redimensionamos a variação para $1$ por coordenada.
 
 ```{.python .input}
 #@save
@@ -258,13 +258,19 @@ def get_data_ch11(batch_size=10, n=1500):
     return data_iter, data.shape[1]-1
 ```
 
-## Implementation from Scratch
+## Implementação do zero
 
 Recall the minibatch SGD implementation from :numref:`sec_linear_scratch`. In the following we provide a slightly more general implementation. For convenience it has the same call signature as the other optimization algorithms introduced later in this chapter. Specifically, we add the status
 input `states` and place the hyperparameter in dictionary `hyperparams`. In
 addition, we will average the loss of each minibatch example in the training
 function, so the gradient in the optimization algorithm does not need to be
 divided by the batch size.
+
+Lembre-se da implementação SGD do minibatch de: numref:`sec_linear_scratch`. A seguir, fornecemos uma implementação um pouco mais geral. Por conveniência, ele tem a mesma assinatura de chamada que os outros algoritmos de otimização introduzidos posteriormente neste capítulo. Especificamente, adicionamos o status
+insira os `estados` e coloque o hiperparâmetro nos` hiperparâmetros` do dicionário. Dentro
+Além disso, calcularemos a média da perda de cada exemplo de minibatch no treinamento
+função, então o gradiente no algoritmo de otimização não precisa ser
+dividido pelo tamanho do lote.
 
 ```{.python .input}
 def sgd(params, states, hyperparams):
@@ -580,6 +586,6 @@ train_concise_ch11(trainer, {'learning_rate': 0.05}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1069)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NjUwMTk4NSw1MTkzODI4NTUsMjIyOD
+eyJoaXN0b3J5IjpbLTM3MDE3NjczNyw1MTkzODI4NTUsMjIyOD
 I4MjM5XX0=
 -->
