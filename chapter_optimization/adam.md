@@ -218,21 +218,21 @@ d2l.train_ch11(yogi, init_adam_states(feature_dim),
 
 1. Ajuste a taxa de aprendizagem e observe e analise os resultados experimentais.
 1. Você pode reescrever atualizações de momentum e segundo momento de forma que não exija correção de viés?
-1. Por que você precisa reduzir a taxa de aprendizado $ \ eta $ conforme convergimos?
+1. Por que você precisa reduzir a taxa de aprendizado $\eta$ conforme convergimos?
 1. Tentar construir um caso para o qual Adam diverge e Yogi converge?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/358)
+[Discussão](https://discuss.d2l.ai/t/358)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1078)
+[Discussão](https://discuss.d2l.ai/t/1078)
 :end_tab:
 
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1079)
+[Discussão](https://discuss.d2l.ai/t/1079)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NjM2Mjg0OV19
+eyJoaXN0b3J5IjpbLTE1NDQxMzA1MDJdfQ==
 -->
