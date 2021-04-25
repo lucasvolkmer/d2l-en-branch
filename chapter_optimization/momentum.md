@@ -263,13 +263,11 @@ Uma vez que $\mathbf{Q}$ é definido positivo, pode ser decomposto em seu auto-s
 
 $$h(\mathbf{z}) = \frac{1}{2} \mathbf{z}^\top \boldsymbol{\Lambda} \mathbf{z} + b'.$$
 
-Here $c' = b - \frac{1}{2} \mathbf{c}^\top \mathbf{Q}^{-1} \mathbf{c}$. Since $\mathbf{O}$ is only an orthogonal matrix this does not perturb the gradients in a meaningful way. Expressed in terms of $\mathbf{z}$ gradient descent becomes
-
 Aqui $c' = b - \frac{1}{2} \mathbf{c}^\top \mathbf{Q}^{-1} \mathbf{c}$. Uma vez que $\mathbf{O}$ é apenas uma matriz ortogonal, isso não perturba os gradientes de uma forma significativa. Expresso em termos de $\mathbf{z}$ gradiente, a descida torna-se
 
 $$\mathbf{z}_t = \mathbf{z}_{t-1} - \boldsymbol{\Lambda} \mathbf{z}_{t-1} = (\mathbf{I} - \boldsymbol{\Lambda}) \mathbf{z}_{t-1}.$$
 
-The important fact in this expression is that gradient descent *does not mix* between different eigenspaces. That is, when expressed in terms of the eigensystem of $\mathbf{Q}$ the optimization problem proceeds in a coordinate-wise manner. This also holds for momentum.
+O fato importante nesta expressão é que a descida gradiente *não se mistura* entre diferentes espaços auto. Ou seja, quando expresso em termos do autossistema de $\mathbf{Q}$, o problema de otimização ocorre de maneira coordenada. Isso também vale para o momento.
 
 $$\begin{aligned}
 \mathbf{v}_t & = \beta \mathbf{v}_{t-1} + \boldsymbol{\Lambda} \mathbf{z}_{t-1} \\
@@ -277,15 +275,17 @@ $$\begin{aligned}
     & = (\mathbf{I} - \eta \boldsymbol{\Lambda}) \mathbf{z}_{t-1} - \eta \beta \mathbf{v}_{t-1}.
 \end{aligned}$$
 
-In doing this we just proved the following theorem: Gradient Descent with and without momentum for a convex quadratic function decomposes into coordinate-wise optimization in the direction of the eigenvectors of the quadratic matrix.
+Ao fazer isso, acabamos de provar o seguinte teorema: Gradiente descendente com e sem momento para uma função quadrática convexa se decompõe em otimização coordenada na direção dos vetores próprios da matriz quadrática.
 
-### Scalar Functions
+### Funções Escalares
 
-Given the above result let us see what happens when we minimize the function $f(x) = \frac{\lambda}{2} x^2$. For gradient descent we have
+Dado o resultado acima, vamos ver o que acontece quando minimizamos a função $f(x) = \frac{\lambda}{2} x^2$. Para descida gradiente, temos
 
 $$x_{t+1} = x_t - \eta \lambda x_t = (1 - \eta \lambda) x_t.$$
 
 Whenever $|1 - \eta \lambda| < 1$ this optimization converges at an exponential rate since after $t$ steps we have $x_t = (1 - \eta \lambda)^t x_0$. This shows how the rate of convergence improves initially as we increase the learning rate $\eta$ until $\eta \lambda = 1$. Beyond that things diverge and for $\eta \lambda > 2$ the optimization problem diverges.
+
+Sempre que $|1 - \eta \lambda| < 1$ esta otimização converge a uma taxa exponencial, pois após $t$ passos temos $x_t = (1 - \ eta \ lambda) ^ t x_0 $. Isso mostra como a taxa de convergência melhora inicialmente à medida que aumentamos a taxa de aprendizado $ \ eta $ até $ \ eta \ lambda = 1 $. Além disso, as coisas divergem e para $ \ eta \ lambda> 2 $ o problema de otimização diverge.
 
 ```{.python .input}
 #@tab all
@@ -338,6 +338,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NjAxMTk1MiwyMDcyMzM2OTc4LDEyMz
-A4MTk3ODksMTI3MTMzODcyM119
+eyJoaXN0b3J5IjpbMzAwMjA5NSwyMDcyMzM2OTc4LDEyMzA4MT
+k3ODksMTI3MTMzODcyM119
 -->
