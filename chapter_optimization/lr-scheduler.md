@@ -373,10 +373,7 @@ Uma heurística bastante desconcertante foi proposta por :cite:`Loshchilov.Hutte
 
 $$\eta_t = \eta_T + \frac{\eta_0 - \eta_T}{2} \left(1 + \cos(\pi t/T)\right)$$
 
-
-Here $\eta_0$ is the initial learning rate, $\eta_T$ is the target rate at time $T$. Furthermore, for $t > T$ we simply pin the value to $\eta_T$ without increasing it again. In the following example, we set the max update step $T = 20$.
-
-Aqui $ \ eta_0 $ é a taxa de aprendizado inicial, $ \ eta_T $ é a taxa alvo no momento $ T $. Além disso, para $ t> T $ simplesmente fixamos o valor em $ \ eta_T $ sem aumentá-lo novamente. No exemplo a seguir, definimos a etapa de atualização máxima $ T = 20 $.
+Aqui $\eta_0$ é a taxa de aprendizado inicial, $\eta_T$ é a taxa alvo no momento $T$. Além disso, para $t > T$ simplesmente fixamos o valor em $\eta_T$ sem aumentá-lo novamente. No exemplo a seguir, definimos a etapa de atualização máxima $T = 20$.
 
 ```{.python .input}
 scheduler = lr_scheduler.CosineScheduler(max_update=20, base_lr=0.3,
@@ -414,7 +411,7 @@ scheduler = CosineScheduler(max_update=20, base_lr=0.3, final_lr=0.01)
 d2l.plot(d2l.arange(num_epochs), [scheduler(t) for t in range(num_epochs)])
 ```
 
-In the context of computer vision this schedule *can* lead to improved results. Note, though, that such improvements are not guaranteed (as can be seen below).
+No contexto da visão computacional, este cronograma *pode* levar a melhores resultados. Observe, entretanto, que tais melhorias não são garantidas (como pode ser visto abaixo).
 
 ```{.python .input}
 trainer = gluon.Trainer(net.collect_params(), 'sgd',
@@ -436,11 +433,12 @@ train(net, train_iter, test_iter, num_epochs, lr,
       custom_callback=LearningRateScheduler(scheduler))
 ```
 
-### Warmup
+### Aquecimento
 
-In some cases initializing the parameters is not sufficient to guarantee a good solution. This particularly a problem for some advanced network designs that may lead to unstable optimization problems. We could address this by choosing a sufficiently small learning rate to prevent divergence in the beginning. Unfortunately this means that progress is slow. Conversely, a large learning rate initially leads to divergence.
 
-A rather simple fix for this dilemma is to use a warmup period during which the learning rate *increases* to its initial maximum and to cool down the rate until the end of the optimization process. For simplicity one typically uses a linear increase for this purpose. This leads to a schedule of the form indicated below.
+Em alguns casos, inicializar os parâmetros não é suficiente para garantir uma boa solução. Isso é particularmente um problema para alguns projetos de rede avançados que podem levar a problemas de otimização instáveis. Poderíamos resolver isso escolhendo uma taxa de aprendizado suficientemente pequena para evitar divergências no início. Infelizmente, isso significa que o progresso é lento. Por outro lado, uma grande taxa de aprendizado inicialmente leva à divergência.
+
+Uma solução bastante simples para esse dilema é usar um período de aquecimento durante o qual a taxa de aprendizado *aumenta* até seu máximo inicial e esfriar a taxa até o final do processo de otimização. Para simplificar, normalmente usa-se um aumento linear para esse propósito. Isso leva a uma programação do formulário indicado abaixo.
 
 ```{.python .input}
 scheduler = lr_scheduler.CosineScheduler(20, warmup_steps=5, base_lr=0.3,
@@ -454,7 +452,7 @@ scheduler = CosineScheduler(20, warmup_steps=5, base_lr=0.3, final_lr=0.01)
 d2l.plot(d2l.arange(num_epochs), [scheduler(t) for t in range(num_epochs)])
 ```
 
-Note that the network converges better initially (in particular observe the performance during the first 5 epochs).
+Observe que a rede converge melhor inicialmente (em particular observe o desempenho durante as primeiras 5 épocas).
 
 ```{.python .input}
 trainer = gluon.Trainer(net.collect_params(), 'sgd',
@@ -506,5 +504,5 @@ Warmup can be applied to any scheduler (not just cosine). For a more detailed di
 [Discussions](https://discuss.d2l.ai/t/1081)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTg4NzgwNTcsMTI1MzE3MzQzOF19
+eyJoaXN0b3J5IjpbMTc5MTg0ODUwOCwxMjUzMTczNDM4XX0=
 -->
