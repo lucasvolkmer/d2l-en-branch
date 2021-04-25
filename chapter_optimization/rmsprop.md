@@ -174,16 +174,16 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.01, 'rho': 0.9},
 1. Você gostaria de ajustar $\gamma$ conforme a otimização progride? Quão sensível é o RMSProp a isso?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/356)
+[Discussão](https://discuss.d2l.ai/t/356)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1074)
+[Discussão](https://discuss.d2l.ai/t/1074)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1075)
+[Discussão](https://discuss.d2l.ai/t/1075)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNTg3Njc3XX0=
+eyJoaXN0b3J5IjpbLTMyMjc0NzQ4OF19
 -->
