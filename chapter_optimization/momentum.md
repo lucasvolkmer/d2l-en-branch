@@ -1,11 +1,11 @@
 # Momentum
 :label:`sec_momentum`
 
-InEm :numref:`sec_sgd` we, reviewed what happens when performing stochastic gradient descent, i.e., when performingsamos o que acontece ao realizar a descida do gradiente estocástico, ou seja, ao realizar a optimization where only a noisy variant of the gradient is available. In particular, we noticed that for noisy gradients we need to be extra cautious when it começão onde apenas uma variante barulhenta do gradiente está disponível. Em particular, notamos que, para gradientes ruidosos, precisamos ser extremamente cautelosos tao choosing the learning rate in the face of noise. If we decrease it too rapidly,escolher a taxa de aprendizado em face do ruído. Se diminuirmos muito rapidamente, a convergeênce stalls. If we are too lenient, we fail to converge to a good enough solution since noise keeps on driving us away fromia para. Se formos tolerantes demais, não conseguiremos convergir para uma solução boa o suficiente, pois o ruído continua nos afastando da optimality.
+Em :numref:`sec_sgd`, revisamos o que acontece ao realizar a descida do gradiente estocástico, ou seja, ao realizar a otimização onde apenas uma variante barulhenta do gradiente está disponível. Em particular, notamos que, para gradientes ruidosos, precisamos ser extremamente cautelosos ao escolher a taxa de aprendizado em face do ruído. Se diminuirmos muito rapidamente, a convergência para. Se formos tolerantes demais, não conseguiremos convergir para uma solução boa o suficiente, pois o ruído continua nos afastando da otimização.
 
 ## Basics
 
-In this section, we will explore more effectivização.
+Nesta seção, exploraremos algoritmos de otimização mais eficazes, especialmente para certos tipos de problemas de otimização que são comuns na prática.
 
 ## Fundamentos
 
@@ -342,5 +342,5 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MTMzODcyM119
+eyJoaXN0b3J5IjpbLTEyMjc3NzA2MDgsMTI3MTMzODcyM119
 -->
