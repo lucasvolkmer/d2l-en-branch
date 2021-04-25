@@ -86,9 +86,7 @@ def gd_2d(x1, x2, s1, s2):
 d2l.show_trace_2d(f_2d, d2l.train_2d(gd_2d))
 ```
 
-By construction, the gradient in the $x_2$ direction is *much* higher and changes much more rapidly than in the horizontal $x_1$ direction. Thus we are stuck between two undesirable choices: if we pick a small learning rate we ensure that the solution does not diverge in the $x_2$ direction but we are saddled with slow convergence in the $x_1$ direction. Conversely, with a large learning rate we progress rapidly in the $x_1$ direction but diverge in $x_2$. The example below illustrates what happens even after a slight increase in learning rate from $0.4$ to $0.6$. Convergence in the $x_1$ direction improves but the overall solution quality is much worse.
-
-Por construção, o gradiente na direção $ x_2 $ é * muito * maior e muda muito mais rapidamente do que na direção $ x_1 $ horizontal. Portanto, estamos presos entre duas escolhas indesejáveis: se escolhermos uma pequena taxa de aprendizado, garantimos que a solução não diverge na direção $ x_2 $, mas estamos sobrecarregados com uma convergência lenta na direção $ x_1 $. Por outro lado, com uma grande taxa de aprendizado, progredimos rapidamente na direção $ x_1 $, mas divergimos em $ x_2 $. O exemplo abaixo ilustra o que acontece mesmo após um ligeiro aumento na taxa de aprendizagem de $ 0,4 $ para $ 0,6 $. A convergência na direção $ x_1 $ melhora, mas a qualidade geral da solução é muito pior.
+Por construção, o gradiente na direção $x_2$ é *muito* maior e muda muito mais rapidamente do que na direção $x_1$ horizontal. Portanto, estamos presos entre duas escolhas indesejáveis: se escolhermos uma pequena taxa de aprendizado, garantimos que a solução não diverge na direção $x_2$, mas estamos sobrecarregados com uma convergência lenta na direção $x_1$. Por outro lado, com uma grande taxa de aprendizado, progredimos rapidamente na direção $x_1$, mas divergimos em $x_2$. O exemplo abaixo ilustra o que acontece mesmo após um ligeiro aumento na taxa de aprendizagem de $0,4$ para $0,6$. A convergência na direção $x_1$ melhora, mas a qualidade geral da solução é muito pior.
 
 ```{.python .input}
 #@tab all
@@ -96,11 +94,16 @@ eta = 0.6
 d2l.show_trace_2d(f_2d, d2l.train_2d(gd_2d))
 ```
 
-### The Momentum Method
+###  Método Momentum
 
 The momentum method allows us to solve the gradient descent problem described
 above. Looking at the optimization trace above we might intuit that averaging gradients over the past would work well. After all, in the $x_1$ direction this will aggregate well-aligned gradients, thus increasing the distance we cover with every step. Conversely, in the $x_2$ direction where gradients oscillate, an aggregate gradient will reduce step size due to oscillations that cancel each other out.
 Using $\mathbf{v}_t$ instead of the gradient $\mathbf{g}_t$ yields the following update equations:
+
+
+O método do momento nos permite resolver o problema de descida gradiente descrito
+acima de. Olhando para o traço de otimização acima, podemos intuir que calcular a média de gradientes em relação ao passado funcionaria bem. Afinal, na direção $x_1$, isso agregará gradientes bem alinhados, aumentando assim a distância que percorremos a cada passo. Por outro lado, na direção $x_2$ onde os gradientes oscilam, um gradiente agregado reduzirá o tamanho do passo devido às oscilações que se cancelam.
+Usar $\mathbf {v}_t$ em vez do gradiente $\mathbf{g}_t $ produz as seguintes equações de atualização:
 
 $$
 \begin{aligned}
@@ -338,6 +341,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEwNTAzNTA0LDIwNzIzMzY5NzgsMTIzMD
+eyJoaXN0b3J5IjpbMTIwODk5NDEwLDIwNzIzMzY5NzgsMTIzMD
 gxOTc4OSwxMjcxMzM4NzIzXX0=
 -->
