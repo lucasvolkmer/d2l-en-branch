@@ -1,11 +1,9 @@
 # RMSProp
 :label:`sec_rmsprop`
 
-One of the key issues in :numref:`sec_adagrad` is that the learning rate decreases at a predefined schedule of effectively $\mathcal{O}(t^{-\frac{1}{2}})$. While this is generally appropriate for convex problems, it might not be ideal for nonconvex ones, such as those encountered in deep learning. Yet, the coordinate-wise adaptivity of Adagrad is highly desirable as a preconditioner.
-
 Um dos principais problemas em :numref:`sec_adagrad` é que a taxa de aprendizagem diminui em um cronograma predefinido de $\mathcal{O}(t^{-\frac{1}{2}})$. Embora geralmente seja apropriado para problemas convexos, pode não ser ideal para problemas não convexos, como os encontrados no aprendizado profundo. No entanto, a adaptabilidade coordenada do Adagrad é altamente desejável como um pré-condicionador.
 
-:cite:`Tieleman.Hinton.2012` proposed the RMSProp algorithm as a simple fix to decouple rate scheduling from coordinate-adaptive learning rates. The issue is that Adagrad accumulates the squares of the gradient $\mathbf{g}_t$ into a state vector $\mathbf{s}_t = \mathbf{s}_{t-1} + \mathbf{g}_t^2$. As a result $\mathbf{s}_t$ keeps on growing without bound due to the lack of normalization, essentially linearly as the algorithm converges.
+:cite:`Tieleman.Hinton.2012` propôs o algoritmo RMSProp como uma solução simples para desacoplar o escalonamento de taxas das taxas de aprendizagem adaptativa por coordenadas. O problema é que Adagrad acumula os quadrados do gradiente $\mathbf{g}_t$ em um vetor de estado $\mathbf{s}_t = \mathbf{s}_{t-1} + \mathbf{g}_t^2$. Como resultado, $\mathbf{s}_t$ continua crescendo sem limites devido à falta de normalização, essencialmente linearmente conforme o algoritmo converge.
 
 One way of fixing this problem would be to use $\mathbf{s}_t / t$. For reasonable distributions of $\mathbf{g}_t$ this will converge. Unfortunately it might take a very long time until the limit behavior starts to matter since the procedure remembers the full trajectory of values. An alternative is to use a leaky average in the same way we used in the momentum method, i.e., $\mathbf{s}_t \leftarrow \gamma \mathbf{s}_{t-1} + (1-\gamma) \mathbf{g}_t^2$ for some parameter $\gamma > 0$. Keeping all other parts unchanged yields RMSProp.
 
@@ -187,5 +185,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate': 0.01, 'rho': 0.9},
 [Discussions](https://discuss.d2l.ai/t/1075)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE5NTY0NDA5XX0=
+eyJoaXN0b3J5IjpbMjEwNTk3NTcwOF19
 -->
