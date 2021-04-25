@@ -25,21 +25,18 @@ $$\begin{aligned}
     \mathbf{g}_t' & = \frac{\sqrt{\Delta\mathbf{x}_{t-1} + \epsilon}}{\sqrt{{\mathbf{s}_t + \epsilon}}} \odot \mathbf{g}_t, \\
 \end{aligned}$$
 
-where $\Delta \mathbf{x}_{t-1}$ is the leaky average of the squared rescaled gradients $\mathbf{g}_t'$. We initialize $\Delta \mathbf{x}_{0}$ to be $0$ and update it at each step with $\mathbf{g}_t'$, i.e.,
-
-onde $\Delta \mathbf{x}_{t-1}$ é a média de vazamento dos gradientes redimensionados ao quadrado $\mathbf{g}_t'$. Inicializamos $\Delta \mathbf{x}_{0}$ para ser $0$ e atualizamos em cada etapa com $ \ mathbf {g} _t '$, ou seja,
+onde $\Delta \mathbf{x}_{t-1}$ é a média de vazamento dos gradientes redimensionados ao quadrado $\mathbf{g}_t'$. Inicializamos $\Delta \mathbf{x}_{0}$ para ser $0$ e atualizamos em cada etapa com $\mathbf{g}_t'$, ou seja,
 
 $$\begin{aligned}
     \Delta \mathbf{x}_t & = \rho \Delta\mathbf{x}_{t-1} + (1 - \rho) {\mathbf{g}_t'}^2,
 \end{aligned}$$
 
-and $\epsilon$ (a small value such as $10^{-5}$) is added to maintain numerical stability.
+e $\epsilon$ (um pequeno valor como $10^{-5}$) é adicionado para manter a estabilidade numérica.
 
 
+## Implementação
 
-## Implementation
-
-Adadelta needs to maintain two state variables for each variable, $\mathbf{s}_t$ and $\Delta\mathbf{x}_t$. This yields the following implementation.
+Adadelta precisa manter duas variáveis de estado para cada variável, $\mathbf{s}_t$ e $\Delta\mathbf{x}_t$. Isso produz a seguinte implementação.
 
 ```{.python .input}
 %matplotlib inline
@@ -107,7 +104,7 @@ def adadelta(params, grads, states, hyperparams):
         delta[:].assign(rho * delta + (1 - rho) * g * g)
 ```
 
-Choosing $\rho = 0.9$ amounts to a half-life time of 10 for each parameter update. This tends to work quite well. We get the following behavior.
+Escolher $\rho = 0,9$ equivale a um tempo de meia-vida de 10 para cada atualização de parâmetro. Isso tende a funcionar muito bem. Obtemos o seguinte comportamento.
 
 ```{.python .input}
 #@tab all
@@ -162,5 +159,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate':5.0, 'rho': 0.9}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1077)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MjMxNTg5M119
+eyJoaXN0b3J5IjpbLTg0MjAxNjYwOV19
 -->
