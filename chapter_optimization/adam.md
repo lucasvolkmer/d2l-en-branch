@@ -1,15 +1,20 @@
 # Adam
 :label:`sec_adam`
 
-In the discussions leading up to this section we encountered a number of techniques for efficient optimization. Let us recap them in detail here:
+In theNas discussions leading up to this section weões que levaram a esta seção, encountered a number of techniques for efficientramos várias técnicas para optimization. Let us recap them in detail here:
 
-* We saw that :numref:`sec_sgd` is more effective than Gradient Descent when solving optimization problems, e.g., due to its inherent resilience to redundant data. 
-* We saw that :numref:`sec_minibatch_sgd` affords significant additional efficiency arising from vectorization, using larger sets of observations in one minibatch. This is the key to efficient multi-machine, multi-GPU and overall parallel processing. 
-* :numref:`sec_momentum` added a mechanism for aggregating a history of past gradients to accelerate convergence.
-* :numref:`sec_adagrad` used per-coordinate scaling to allow for a computationally efficient preconditioner. 
-* :numref:`sec_rmsprop` decoupled per-coordinate scaling from a learning rate adjustment. 
+* We saw that :numref:`sec_sgd` is more effective than Gradient Descent when solving optimization problems, e.g., due to its inherent resilição eficiente. Vamos recapitulá-los em detalhes aqui:
 
-Adam :cite:`Kingma.Ba.2014` combines all these techniques into one efficient learning algorithm. As expected, this is an algorithm that has become rather popular as one of the more robust and effective optimization algorithms to use in deep learning. It is not without issues, though. In particular, :cite:`Reddi.Kale.Kumar.2019` show that there are situations where Adam can diverge due to poor variance control. In a follow-up work :cite:`Zaheer.Reddi.Sachan.ea.2018` proposed a hotfix to Adam, called Yogi which addresses these issues. More on this later. For now let us review the Adam algorithm. 
+* Vimos que :numref:`sec_sgd` é mais eficaz do que Gradient Descent ao resolver problemas de otimização, por exemplo, devido à sua resiliência inerencte toa dados redundant data. 
+* We saw thates.
+* Vimos que :numref:`sec_minibatch_sgd` affords significantproporciona eficiência additcional efficiency arising fromsignificativa decorrente da vectorization, using larger sets of observations in one minibatch. This is the key tção, usando conjuntos maiores de observações em um minibatch. Esta é a chave para um processamento paralelo efficient multi-machine, multi-GPU and overall parallel processing. e em várias máquinas, várias GPUs e em geral.
+* :numref:`sec_momentum` added aicionado um mechanism foro para aggregating a history of pastr um histórico de gradientes to acanteriores para acelerater a convergeênceia.
+* :numref:`sec_adagrad` used per-ado por escala de coordienate scaling to allow for ada para permitir um pré-condicionador computatcionallymente efficient preconditioner. e.
+* :numref:`sec_rmsprop` desacoupled per-ado por escala de coordienate scaling from a learning rate adjustment. 
+
+Adam :cite:`Kingma.Ba.2014` combines all these techniques into oneda de um ajuste de taxa de aprendizagem.
+
+Adam :cite:`Kingma.Ba.2014` combina todas essas técnicas em um algoritmo de aprendizagem efficient learning algorithm. As expected, this is an algorithm that has become rather popular as one of the more robust and effective. Como esperado, este é um algoritmo que se tornou bastante popular como um dos algoritmos de optimization algorithms to use in deep learning. It is not without issues, though. Inção mais robustos e eficazes para uso no aprendizado profundo. Não é sem problemas, no entanto. Em particular, :cite:`Reddi.Kale.Kumar.2019` show that there are situations whermostra que há situações em que Adam canpode diverge due to poor variance control. In a follow-up workir devido a um controle de variação insuficiente. Em um trabalho de acompanhamento :cite:`Zaheer.Reddi.Sachan.ea.2018` proposed aôs um hotfix topara Adam, called Yogi which addrhamado Yogi, que trata desseas these issues. More on this laterquestões. Mais sobre isso mais tarde. FPor now let us review the Adam algorithenquanto, vamos revisar o algoritmo de Adam. 
 
 ## The Algorithm
 
@@ -233,3 +238,6 @@ d2l.train_ch11(yogi, init_adam_states(feature_dim),
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1079)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTgxMTY3MTgzOV19
+-->
