@@ -3,20 +3,13 @@
 
 Em :numref:`sec_sgd`, revisamos o que acontece ao realizar a descida do gradiente estocástico, ou seja, ao realizar a otimização onde apenas uma variante barulhenta do gradiente está disponível. Em particular, notamos que, para gradientes ruidosos, precisamos ser extremamente cautelosos ao escolher a taxa de aprendizado em face do ruído. Se diminuirmos muito rapidamente, a convergência para. Se formos tolerantes demais, não conseguiremos convergir para uma solução boa o suficiente, pois o ruído continua nos afastando da otimização.
 
-## Basics
+## Fundamentos
 
 Nesta seção, exploraremos algoritmos de otimização mais eficazes, especialmente para certos tipos de problemas de otimização que são comuns na prática.
 
-## Fundamentos
+### Médias com vazamento
 
-Nesta seção, exploraremos algoritmos de optimization algorithms, especially for certain types of optimizationção mais eficazes, especialmente para certos tipos de problemas that are common inde otimização que são comuns na pracáticea.
-
-
-### Leaky Averages
-
-The previous section saw us discussing minibatch SGD as a means forMédias com vazamento
-
-A seção anterior nos viu discutindo o minibatch SGD como um meio de acceleratingr a computation. It also had the nice side-effect that averagingção. Também teve o bom efeito colateral de que a média dos gradientes reduced the amount ofziu a quantidade de variaânce. Theia. O minibatch SGD can bepode ser calculated bydo por:
+A seção anterior nos viu discutindo o minibatch SGD como um meio de acelerar a computação. Também teve o bom efeito colateral de que a média dos gradientes reduziu a quantidade de variância. O minibatch SGD pode ser calculado por:
 
 $$ \ mathbf {g} _ {t, t-1} = \ partial _ {\ mathbf {w}}  \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} f(\ mathbf {x}_{ i}, \ mathbf {w }_{t-1}) = \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} \mathbf{h}_{i, t-1}.
 $$
@@ -27,6 +20,8 @@ Seria bom se pudéssemos nos beneficiar do efeito da redução da variância, me
 $$\mathbf{v}_t = \beta \mathbf{v}_{t-1} + \mathbf{g}_{t, t-1}$$
 
 for some $\beta \in (0, 1)$. This effectively replaces the instantaneous gradient by one that's been averaged over multiple *past* gradients. $\mathbf{v}$ is called *momentum*. It accumulates past gradients similar to how a heavy ball rolling down the objective function landscape integrates over past forces. To see what is happening in more detail let us expand $\mathbf{v}_t$ recursively into
+
+por algum $\beta \in (0, 1)$. Isso substitui efetivamente o gradiente instantâneo por um que foi calculado em vários gradientes * anteriores *. $ \ mathbf {v} $ é chamado *momentum*. Ele acumula gradientes anteriores semelhantes a como uma bola pesada rolando pela paisagem da função objetivo se integra às forças passadas. Para ver o que está acontecendo com mais detalhes, vamos expandir $ \ mathbf {v} _t $ recursivamente em
 
 $$\begin{aligned}
 \mathbf{v}_t = \beta^2 \mathbf{v}_{t-2} + \beta \mathbf{g}_{t-1, t-2} + \mathbf{g}_{t, t-1}
@@ -342,5 +337,5 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjc3NzA2MDgsMTI3MTMzODcyM119
+eyJoaXN0b3J5IjpbMTQwMzk3OTMxMywxMjcxMzM4NzIzXX0=
 -->
