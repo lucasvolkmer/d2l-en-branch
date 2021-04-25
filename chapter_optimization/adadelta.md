@@ -1,7 +1,7 @@
 # Adadelta
 :label:`sec_adadelta`
 
-Adadelta is yet anotheré outra variant ofe do AdaGrad (:numref:`sec_adagrad`). The mainA principal difference lies in the fact that it decreases the amount by which the learning rate isça reside no fato de que diminui a quantidade pela qual a taxa de aprendizagem é adaptiáve tol às coordienatedas. MoreoverAlém disso, traditcionally it referred to as not having a learning rate since it uses the amount of change itself as calibration for future change. Themente é referido como não tendo uma taxa de aprendizagem, uma vez que usa a quantidade de mudança em si como calibração para mudanças futuras. O algorithm wasmo foi proposed into em :cite:`Zeiler.2012`. It is fairly straightforward, given the discussion of previous algorithms so far. É bastante simples, dada a discussão de algoritmos anteriores até agora.
+Adadelta é outra variante do AdaGrad (: numref:`sec_adagrad`). A principal diferença reside no fato de que diminui a quantidade pela qual a taxa de aprendizagem é adaptável às coordenadas. Além disso, tradicionalmente é referido como não tendo uma taxa de aprendizagem, uma vez que usa a quantidade de mudança em si como calibração para mudanças futuras. O algoritmo foi proposto em :cite:`Zeiler.2012`. É bastante simples, dada a discussão de algoritmos anteriores até agora.
 
 ## TheO Algorithm
 
@@ -162,5 +162,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate':5.0, 'rho': 0.9}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1077)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTkwNTI1NjJdfQ==
+eyJoaXN0b3J5IjpbLTE5ODk3NDU2MjVdfQ==
 -->
