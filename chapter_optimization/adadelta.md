@@ -113,7 +113,7 @@ d2l.train_ch11(adadelta, init_adadelta_states(feature_dim),
                {'rho': 0.9}, data_iter, feature_dim);
 ```
 
-For a concise implementation we simply use the `adadelta` algorithm from the `Trainer` class. This yields the following one-liner for a much more compact invocation.
+Para uma implementação concisa, simplesmente usamos o algoritmo `adadelta` da classe `Trainer`. Isso produz o seguinte one-liner para uma invocação muito mais compacta.
 
 ```{.python .input}
 d2l.train_concise_ch11('adadelta', {'rho': 0.9}, data_iter)
@@ -133,18 +133,23 @@ trainer = tf.keras.optimizers.Adadelta
 d2l.train_concise_ch11(trainer, {'learning_rate':5.0, 'rho': 0.9}, data_iter)
 ```
 
-## Summary
+## Sumário
 
-* Adadelta has no learning rate parameter. Instead, it uses the rate of change in the parameters itself to adapt the learning rate. 
-* Adadelta requires two state variables to store the second moments of gradient and the change in parameters. 
-* Adadelta uses leaky averages to keep a running estimate of the appropriate statistics. 
+* Adadelta não tem parâmetro de taxa de aprendizagem. Em vez disso, ele usa a taxa de mudança nos próprios parâmetros para adaptar a taxa de aprendizado.
+* Adadelta requer duas variáveis de estado para armazenar os segundos momentos de gradiente e a mudança nos parâmetros.
+* Adadelta usa médias vazadas para manter uma estimativa contínua das estatísticas apropriadas.
 
-## Exercises
+## Exercícios
 
 1. Adjust the value of $\rho$. What happens?
 1. Show how to implement the algorithm without the use of $\mathbf{g}_t'$. Why might this be a good idea?
 1. Is Adadelta really learning rate free? Could you find optimization problems that break Adadelta?
 1. Compare Adadelta to Adagrad and RMS prop to discuss their convergence behavior.
+
+1. Ajuste o valor de $ \ rho $. O que acontece?
+1. Mostre como implementar o algoritmo sem o uso de $ \ mathbf {g} _t '$. Por que isso pode ser uma boa ideia?
+1. A taxa de aprendizagem Adadelta é realmente gratuita? Você conseguiu encontrar problemas de otimização que quebram o Adadelta?
+1. Compare Adadelta com Adagrad e RMS prop para discutir seu comportamento de convergência.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/357)
@@ -159,5 +164,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate':5.0, 'rho': 0.9}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1077)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MjAxNjYwOV19
+eyJoaXN0b3J5IjpbODk0NzI4Mzc1XX0=
 -->
