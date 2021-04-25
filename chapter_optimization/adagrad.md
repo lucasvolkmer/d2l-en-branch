@@ -1,9 +1,11 @@
 # Adagrad
 :label:`sec_adagrad`
 
-Let us begin by considering learning problems with features that occur infrequently.
+Let us begin by considering learningVamos começar considerando os problemas with features that occur infrequently.
 
-## Sparse Features and Learning Rates
+## Sparse Features and Learning Ratesde aprendizado com recursos que ocorrem com pouca frequência.
+
+## Recursos esparsos e taxas de aprendizado
 
 Imagine that we are training a language model. To get good accuracy we typically want to decrease the learning rate as we keep on training, usually at a rate of $\mathcal{O}(t^{-\frac{1}{2}})$ or slower. Now consider a model training on sparse features, i.e., features that occur only infrequently. This is common for natural language, e.g., it is a lot less likely that we will see the word *preconditioning* than *learning*. However, it is also common in other areas such as computational advertising and personalized collaborative filtering. After all, there are many things that are of interest only for a small number of people.
 
@@ -220,3 +222,6 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1073)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTY1MjE0MzA2M119
+-->
