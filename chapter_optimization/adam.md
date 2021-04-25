@@ -144,11 +144,11 @@ Um dos problemas de Adam é que ele pode falhar em convergir mesmo em configura�
 
 $$\mathbf{s}_t \leftarrow \mathbf{s}_{t-1} + (1 - \beta_2) \left(\mathbf{g}_t^2 - \mathbf{s}_{t-1}\right).$$
 
-Whenever $\mathbf{g}_t^2$ has high variance or updates are sparse, $\mathbf{s}_t$ might forget past values too quickly. A possible fix for this is to replace $\mathbf{g}_t^2 - \mathbf{s}_{t-1}$ by $\mathbf{g}_t^2 \odot \mathop{\mathrm{sgn}}(\mathbf{g}_t^2 - \mathbf{s}_{t-1})$. Now the magnitude of the update no longer depends on the amount of deviation. This yields the Yogi updates
+Sempre que $\mathbf{g}_t^2$ tem alta variância ou as atualizações são esparsas, $\mathbf{s}_t$ pode esquecer os valores anteriores muito rapidamente. Uma possível solução para isso é substituir $\mathbf{g}_t^2 - \mathbf{s}_{t-1}$ by $\mathbf{g}_t^2 \odot \mathop{\mathrm{sgn}}(\mathbf{g}_t^2 - \mathbf{s}_{t-1})$. Agora, a magnitude da atualização não depende mais da quantidade de desvio. Isso produz as atualizações Yogi
 
 $$\mathbf{s}_t \leftarrow \mathbf{s}_{t-1} + (1 - \beta_2) \mathbf{g}_t^2 \odot \mathop{\mathrm{sgn}}(\mathbf{g}_t^2 - \mathbf{s}_{t-1}).$$
 
-The authors furthermore advise to initialize the momentum on a larger initial batch rather than just initial pointwise estimate. We omit the details since they are not material to the discussion and since even without this convergence remains pretty good.
+Os autores, além disso, aconselham inicializar o momento em um lote inicial maior, em vez de apenas uma estimativa pontual inicial. Omitimos os detalhes, pois eles não são relevantes para a discussão e, mesmo sem essa convergência, ela permanece muito boa.
 
 ```{.python .input}
 def yogi(params, states, hyperparams):
@@ -207,19 +207,19 @@ d2l.train_ch11(yogi, init_adam_states(feature_dim),
                {'lr': 0.01, 't': 1}, data_iter, feature_dim);
 ```
 
-## Summary
+## Sumário
 
-* Adam combines features of many optimization algorithms into a fairly robust update rule. 
-* Created on the basis of RMSProp, Adam also uses EWMA on the minibatch stochastic gradient.
-* Adam uses bias correction to adjust for a slow startup when estimating momentum and a second moment. 
-* For gradients with significant variance we may encounter issues with convergence. They can be amended by using larger minibatches or by switching to an improved estimate for $\mathbf{s}_t$. Yogi offers such an alternative. 
+* Adam combina recursos de muitos algoritmos de otimização em uma regra de atualização bastante robusta.
+* Criado com base no RMSProp, Adam também usa EWMA no gradiente estocástico do minibatch.
+* Adam usa a correção de polarização para ajustar para uma inicialização lenta ao estimar o momentum e um segundo momento.
+* Para gradientes com variação significativa, podemos encontrar problemas de convergência. Eles podem ser corrigidos usando minibatches maiores ou mudando para uma estimativa melhorada para $\mathbf{s}_t$. Yogi oferece essa alternativa.
 
-## Exercises
+## Exercícios
 
-1. Adjust the learning rate and observe and analyze the experimental results.
-1. Can you rewrite momentum and second moment updates such that it does not require bias correction?
-1. Why do you need to reduce the learning rate $\eta$ as we converge?
-1. Try to construct a case for which Adam diverges and Yogi converges?
+1. Ajuste a taxa de aprendizagem e observe e analise os resultados experimentais.
+1. Você pode reescrever atualizações de momentum e segundo momento de forma que não exija correção de viés?
+1. Por que você precisa reduzir a taxa de aprendizado $ \ eta $ conforme convergimos?
+1. Tentar construir um caso para o qual Adam diverge e Yogi converge?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/358)
@@ -234,5 +234,5 @@ d2l.train_ch11(yogi, init_adam_states(feature_dim),
 [Discussions](https://discuss.d2l.ai/t/1079)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEzODExMzUxXX0=
+eyJoaXN0b3J5IjpbMTk1NjM2Mjg0OV19
 -->
