@@ -141,28 +141,23 @@ d2l.train_concise_ch11(trainer, {'learning_rate':5.0, 'rho': 0.9}, data_iter)
 
 ## Exercícios
 
-1. Adjust the value of $\rho$. What happens?
-1. Show how to implement the algorithm without the use of $\mathbf{g}_t'$. Why might this be a good idea?
-1. Is Adadelta really learning rate free? Could you find optimization problems that break Adadelta?
-1. Compare Adadelta to Adagrad and RMS prop to discuss their convergence behavior.
-
-1. Ajuste o valor de $ \ rho $. O que acontece?
-1. Mostre como implementar o algoritmo sem o uso de $ \ mathbf {g} _t '$. Por que isso pode ser uma boa ideia?
+1. Ajuste o valor de $\rho$. O que acontece?
+1. Mostre como implementar o algoritmo sem o uso de $\mathbf{g}_t'$. Por que isso pode ser uma boa ideia?
 1. A taxa de aprendizagem Adadelta é realmente gratuita? Você conseguiu encontrar problemas de otimização que quebram o Adadelta?
 1. Compare Adadelta com Adagrad e RMS prop para discutir seu comportamento de convergência.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/357)
+[Discussão](https://discuss.d2l.ai/t/357)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1076)
+[Discussão](https://discuss.d2l.ai/t/1076)
 :end_tab:
 
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1077)
+[Discussão](https://discuss.d2l.ai/t/1077)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk0NzI4Mzc1XX0=
+eyJoaXN0b3J5IjpbMTE5MDU5OTAzMyw4OTQ3MjgzNzVdfQ==
 -->
