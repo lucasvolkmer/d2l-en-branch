@@ -259,13 +259,13 @@ $$h(\mathbf{x}) = \frac{1}{2} (\mathbf{x} - \mathbf{Q}^{-1} \mathbf{c})^\top \ma
 
 O gradiente é dado por $\partial_{\mathbf{x}} f(\mathbf{x}) = \mathbf{Q} (\mathbf{x} - \mathbf{Q}^{-1} \mathbf{c})$. Ou seja, é dada pela distância entre $\mathbf{x}$ e o minimizador, multiplicada por $\mathbf{Q}$. Consequentemente, também o momento é uma combinação linear de termos $\mathbf{Q} (\mathbf{x}_t - \mathbf{Q}^{-1} \mathbf{c})$.
 
-Since $\mathbf{Q}$ is positive definite it can be decomposed into its eigensystem via $\mathbf{Q} = \mathbf{O}^\top \boldsymbol{\Lambda} \mathbf{O}$ for an orthogonal (rotation) matrix $\mathbf{O}$ and a diagonal matrix $\boldsymbol{\Lambda}$ of positive eigenvalues. This allows us to perform a change of variables from $\mathbf{x}$ to $\mathbf{z} := \mathbf{O} (\mathbf{x} - \mathbf{Q}^{-1} \mathbf{c})$ to obtain a much simplified expression:
-
-Uma vez que $\mathbf{Q}$ é definido positivo, pode ser decomposto em seu auto-sistema via $\mathbf{Q} = \mathbf{O}^\top \boldsymbol{\Lambda} \mathbf{O}$ para um ortogonal ( rotação) matriz $\mathbf{O}$ e uma matriz diagonal $ \ boldsymbol {\ Lambda} $ de autovalores positivos. Isso nos permite realizar uma mudança de variáveis de $ \ mathbf {x} $ para $ \ mathbf {z}: = \ mathbf {O} (\ mathbf {x} - \ mathbf {Q} ^ {- 1} \ mathbf {c}) $ para obter uma expressão muito simplificada:
+Uma vez que $\mathbf{Q}$ é definido positivo, pode ser decomposto em seu auto-sistema via $\mathbf{Q} = \mathbf{O}^\top \boldsymbol{\Lambda} \mathbf{O}$ para um ortogonal ( rotação) matriz $\mathbf{O}$ e uma matriz diagonal $\boldsymbol{\Lambda}$ de autovalores positivos. Isso nos permite realizar uma mudança de variáveis de $\mathbf{x}$ para $\mathbf{z} := \mathbf{O} (\mathbf{x} - \mathbf{Q}^{-1} \mathbf{c})$ para obter uma expressão muito simplificada:
 
 $$h(\mathbf{z}) = \frac{1}{2} \mathbf{z}^\top \boldsymbol{\Lambda} \mathbf{z} + b'.$$
 
 Here $c' = b - \frac{1}{2} \mathbf{c}^\top \mathbf{Q}^{-1} \mathbf{c}$. Since $\mathbf{O}$ is only an orthogonal matrix this does not perturb the gradients in a meaningful way. Expressed in terms of $\mathbf{z}$ gradient descent becomes
+
+Aqui $c' = b - \frac{1}{2} \mathbf{c}^\top \mathbf{Q}^{-1} \mathbf{c}$. Uma vez que $\mathbf{O}$ é apenas uma matriz ortogonal, isso não perturba os gradientes de uma forma significativa. Expresso em termos de $\mathbf{z}$ gradiente, a descida torna-se
 
 $$\mathbf{z}_t = \mathbf{z}_{t-1} - \boldsymbol{\Lambda} \mathbf{z}_{t-1} = (\mathbf{I} - \boldsymbol{\Lambda}) \mathbf{z}_{t-1}.$$
 
@@ -338,6 +338,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNjA2ODUyMSwyMDcyMzM2OTc4LDEyMz
+eyJoaXN0b3J5IjpbMTY3NjAxMTk1MiwyMDcyMzM2OTc4LDEyMz
 A4MTk3ODksMTI3MTMzODcyM119
 -->
