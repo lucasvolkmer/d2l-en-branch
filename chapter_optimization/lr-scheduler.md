@@ -12,7 +12,7 @@ Dado o fato de que são necessários muitos detalhes para gerenciar as taxas de 
 
 ## Toy Problem
 
-We begin with a toy problem that is cheap enough to compute easily, yet sufficiently nontrivial to illustrate some of the key aspects. For that we pick a slightly modernized version of LeNet (`relu` instead of `sigmoid` activation, MaxPooling rather than AveragePooling), as applied to Fashion-MNIST. Moreover, we hybridize the network for performance. Since most of the code is standard we just introduce the basics without further detailed discussion. See :numref:`chap_cnn` for a refresher as needed.
+Começamos com um problema de brinquedo que é barato o suficiente para ser computado facilmente, mas suficientemente não trivial para ilustrar alguns dos principais aspectos. Para isso, escolhemos uma versão ligeiramente modernizada do LeNet (`relu` em vez de ativação `sigmoid`, MaxPooling em vez de AveragePooling), aplicado ao Fashion-MNIST. Além disso, hibridamos a rede para desempenho. Como a maior parte do código é padrão, apenas apresentamos o básico sem uma discussão mais detalhada. Veja :numref:`chap_cnn` para uma atualização conforme necessário.
 
 ```{.python .input}
 %matplotlib inline
@@ -504,5 +504,5 @@ Warmup can be applied to any scheduler (not just cosine). For a more detailed di
 [Discussions](https://discuss.d2l.ai/t/1081)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MzE3MzQzOF19
+eyJoaXN0b3J5IjpbLTE1MDIwNTI3NjMsMTI1MzE3MzQzOF19
 -->
