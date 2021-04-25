@@ -167,15 +167,15 @@ print(f'performance in Gigaflops: element {gigaflops[0]:.3f}, '
 
 :label:`sec_minibatches`
 
-In the past we took it for granted that we would read *minibatches* of data rather than single observations to update parameters. We now give a brief justification for it. Processing single observations requires us to perform many single matrix-vector (or even vector-vector) multiplications, which is quite expensive and which incurs a significant overhead on behalf of the underlying deep learning framework. This applies both to evaluating a network when applied to data (often referred to as inference) and when computing gradients to update parameters. That is, this applies whenever we perform $\mathbf{w} \leftarrow \mathbf{w} - \eta_t \mathbf{g}_t$ where
+No passado, tínhamos como certo que leríamos *minibatches* de dados em vez de observações únicas para atualizar os parâmetros. Agora fornecemos uma breve justificativa para isso. O processamento de observações únicas exige que realizemos muitas multiplicações de vetor-matriz única (ou mesmo vetor-vetor), o que é bastante caro e incorre em uma sobrecarga significativa em nome da estrutura de aprendizado profundo subjacente. Isso se aplica tanto à avaliação de uma rede quando aplicada aos dados (geralmente chamada de inferência) quanto ao calcular gradientes para atualizar parâmetros. Ou seja, isso se aplica sempre que executamos$\mathbf{w} \leftarrow \mathbf{w} - \eta_t \mathbf{g}_t$ onde 
 
 $$\mathbf{g}_t = \partial_{\mathbf{w}} f(\mathbf{x}_{t}, \mathbf{w})$$
 
-We can increase the *computational* efficiency of this operation by applying it to a minibatch of observations at a time. That is, we replace the gradient $\mathbf{g}_t$ over a single observation by one over a small batch
+Podemos aumentar a eficiência *computacional* dessa operação aplicando-a a um minibatch de observações por vez. Ou seja, substituímos o gradiente $\mathbf{g}_t$ em uma única observação por um em um pequeno lote
 
 $$\mathbf{g}_t = \partial_{\mathbf{w}} \frac{1}{|\mathcal{B}_t|} \sum_{i \in \mathcal{B}_t} f(\mathbf{x}_{i}, \mathbf{w})$$
 
-Let us see what this does to the statistical properties of $\mathbf{g}_t$: since both $\mathbf{x}_t$ and also all elements of the minibatch $\mathcal{B}_t$ are drawn uniformly at random from the training set, the expectation of the gradient remains unchanged. The variance, on the other hand, is reduced significantly. Since the minibatch gradient is composed of $b := |\mathcal{B}_t|$ independent gradients which are being averaged, its standard deviation is reduced by a factor of $b^{-\frac{1}{2}}$. This, by itself, is a good thing, since it means that the updates are more reliably aligned with the full gradient.
+Vamos ver o que isso faz com as propriedades estatísticas de $\mathbf{g}_t$: uma vez que tanto $\mathbf{x}_t$ e também todos os elementos do minibatch $\mathcal{B}_t$ são desenhados uniformemente e aleatoriamente do conjunto de treinamento, a expectativa do gradiente permanece inalterada. A variância, por outro lado, é reduzida significativamente. Como o gradiente de minibatch é composto de $b := |\mathcal{B}_t|$ gradientes independentes que estão sendo calculados, seu desvio padrão é reduzido por um fator de $b^{-\frac{1}{2}}$. Isso, por si só, é uma coisa boa, pois significa que as atualizações estão alinhadas de forma mais confiável com o gradiente total.
 
 Naively this would indicate that choosing a large minibatch $\mathcal{B}_t$ would be universally desirable. Alas, after some point, the additional reduction in standard deviation is minimal when compared to the linear increase in computational cost. In practice we pick a minibatch that is large enough to offer good computational efficiency while still fitting into the memory of a GPU. To illustrate the savings let us have a look at some code. In it we perform the same matrix-matrix multiplication, but this time broken up into "minibatches" of 64 columns at a time.
 
@@ -580,6 +580,6 @@ train_concise_ch11(trainer, {'learning_rate': 0.05}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1069)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNjkzNTE3Myw1MTkzODI4NTUsMjIyOD
+eyJoaXN0b3J5IjpbMjA3NjUwMTk4NSw1MTkzODI4NTUsMjIyOD
 I4MjM5XX0=
 -->
