@@ -132,9 +132,7 @@ Observe que podemos combinar momentum com SGD e, em particular, minibatch-SGD. A
 
 ### Peso Efetivo da Amostra
 
-Recall that $\mathbf{v}_t = \sum_{\tau = 0}^{t-1} \beta^{\tau} \mathbf{g}_{t-\tau, t-\tau-1}$. In the limit the terms add up to $\sum_{\tau=0}^\infty \beta^\tau = \frac{1}{1-\beta}$. In other words, rather than taking a step of size $\eta$ in GD or SGD we take a step of size $\frac{\eta}{1-\beta}$ while at the same time, dealing with a potentially much better behaved descent direction. These are two benefits in one. To illustrate how weighting behaves for different choices of $\beta$ consider the diagram below.
-
-Lembre-se de que $\mathbf{v}_t = \sum_{\tau = 0}^{t-1} \beta^{\tau} \mathbf{g}_{t-\tau, t-\tau-1}$. No limite, os termos somam $\sum_{\tau=0}^\infty \beta^\tau = \frac{1}{1-\beta}$. Em outras palavras, em vez de dar um passo de tamanho $ \ eta $ em GD ou SGD, damos um passo de tamanho $ \ frac {\ eta} {1- \ beta} $ enquanto, ao mesmo tempo, lidamos com um potencial muito direção de descida melhor comportada. Esses são dois benefícios em um. Para ilustrar como a ponderação se comporta para diferentes escolhas de $ \ beta $, considere o diagrama abaixo.
+Lembre-se de que $\mathbf{v}_t = \sum_{\tau = 0}^{t-1} \beta^{\tau} \mathbf{g}_{t-\tau, t-\tau-1}$. No limite, os termos somam $\sum_{\tau=0}^\infty \beta^\tau = \frac{1}{1-\beta}$. Em outras palavras, em vez de dar um passo de tamanho $\eta$ em GD ou SGD, damos um passo de tamanho $\frac{\eta}{1-\beta}$ enquanto, ao mesmo tempo, lidamos com um potencial muito direção de descida melhor comportada. Esses são dois benefícios em um. Para ilustrar como a ponderação se comporta para diferentes escolhas de $\beta$, considere o diagrama abaixo.
 
 ```{.python .input}
 #@tab all
@@ -147,13 +145,13 @@ d2l.plt.xlabel('time')
 d2l.plt.legend();
 ```
 
-## Practical Experiments
+## Experimentos Práticos
 
-Let us see how momentum works in practice, i.e., when used within the context of a proper optimizer. For this we need a somewhat more scalable implementation.
+Vamos ver como o momentum funciona na prática, ou seja, quando usado no contexto de um otimizador adequado. Para isso, precisamos de uma implementação um pouco mais escalonável.
 
-### Implementation from Scratch
+### Implementação do zero
 
-Compared with (minibatch) SGD the momentum method needs to maintain a set of  auxiliary variables, i.e., velocity. It has the same shape as the gradients (and variables of the optimization problem). In the implementation below we call these variables `states`.
+Em comparação com (minibatch) SGD, o método de momentum precisa manter um conjunto de variáveis auxiliares, ou seja, a velocidade. Tem a mesma forma dos gradientes (e variáveis do problema de otimização). Na implementação abaixo, chamamos essas variáveis de `estados`.
 
 ```{.python .input}
 #@tab mxnet,pytorch
@@ -196,7 +194,7 @@ def sgd_momentum(params, grads, states, hyperparams):
             p[:].assign(p - hyperparams['lr'] * v)
 ```
 
-Let us see how this works in practice.
+Vamos ver como isso funciona na prática.
 
 ```{.python .input}
 #@tab all
@@ -209,14 +207,14 @@ data_iter, feature_dim = d2l.get_data_ch11(batch_size=10)
 train_momentum(0.02, 0.5)
 ```
 
-When we increase the momentum hyperparameter `momentum` to 0.9, it amounts to a significantly larger effective sample size of $\frac{1}{1 - 0.9} = 10$. We reduce the learning rate slightly to $0.01$ to keep matters under control.
+Quando aumentamos o hiperparâmetro de momento `momentum` para 0,9, resulta em um tamanho de amostra efetivo significativamente maior de $\frac{1}{1 - 0.9} = 10$. Reduzimos ligeiramente a taxa de aprendizagem para $0,01$ para manter os assuntos sob controle.
 
 ```{.python .input}
 #@tab all
 train_momentum(0.01, 0.9)
 ```
 
-Reducing the learning rate further addresses any issue of non-smooth optimization problems. Setting it to $0.005$ yields good convergence properties.
+A redução da taxa de aprendizagem resolve ainda mais qualquer questão de problemas de otimização não suave. Configurá-lo como $0,005$ produz boas propriedades de convergência.
 
 ```{.python .input}
 #@tab all
@@ -338,6 +336,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAxMDkxODgxLDIwNzIzMzY5NzgsMTIzMD
-gxOTc4OSwxMjcxMzM4NzIzXX0=
+eyJoaXN0b3J5IjpbLTE5MjU1MjI1NzksMjA3MjMzNjk3OCwxMj
+MwODE5Nzg5LDEyNzEzMzg3MjNdfQ==
 -->
