@@ -1,24 +1,19 @@
 # Adam
 :label:`sec_adam`
 
-In theNas discussions leading up to this section weões que levaram a esta seção, encountered a number of techniques for efficientramos várias técnicas para optimization. Let us recap them in detail here:
+Nas discussões que levaram a esta seção, encontramos várias técnicas para otimização eficiente. Vamos recapitulá-los em detalhes aqui:
 
-* We saw that :numref:`sec_sgd` is more effective than Gradient Descent when solving optimization problems, e.g., due to its inherent resilição eficiente. Vamos recapitulá-los em detalhes aqui:
+* Vimos que :numref:`sec_sgd` é mais eficaz do que Gradient Descent ao resolver problemas de otimização, por exemplo, devido à sua resiliência inerente a dados redundantes.
+* Vimos que :numref:`sec_minibatch_sgd` proporciona eficiência adicional significativa decorrente da vetorização, usando conjuntos maiores de observações em um minibatch. Esta é a chave para um processamento paralelo eficiente em várias máquinas, várias GPUs e em geral.
+* :numref:`sec_momentum` adicionado um mecanismo para agregar um histórico de gradientes anteriores para acelerar a convergência.
+* :numref:`sec_adagrad` usado por escala de coordenada para permitir um pré-condicionador computacionalmente eficiente.
+* :numref:`sec_rmsprop` desacoplado por escala de coordenada de um ajuste de taxa de aprendizagem.
 
-* Vimos que :numref:`sec_sgd` é mais eficaz do que Gradient Descent ao resolver problemas de otimização, por exemplo, devido à sua resiliência inerencte toa dados redundant data. 
-* We saw thates.
-* Vimos que :numref:`sec_minibatch_sgd` affords significantproporciona eficiência additcional efficiency arising fromsignificativa decorrente da vectorization, using larger sets of observations in one minibatch. This is the key tção, usando conjuntos maiores de observações em um minibatch. Esta é a chave para um processamento paralelo efficient multi-machine, multi-GPU and overall parallel processing. e em várias máquinas, várias GPUs e em geral.
-* :numref:`sec_momentum` added aicionado um mechanism foro para aggregating a history of pastr um histórico de gradientes to acanteriores para acelerater a convergeênceia.
-* :numref:`sec_adagrad` used per-ado por escala de coordienate scaling to allow for ada para permitir um pré-condicionador computatcionallymente efficient preconditioner. e.
-* :numref:`sec_rmsprop` desacoupled per-ado por escala de coordienate scaling from a learning rate adjustment. 
+Adam :cite:`Kingma.Ba.2014` combina todas essas técnicas em um algoritmo de aprendizagem eficiente. Como esperado, este é um algoritmo que se tornou bastante popular como um dos algoritmos de otimização mais robustos e eficazes para uso no aprendizado profundo. Não é sem problemas, no entanto. Em particular, :cite:`Reddi.Kale.Kumar.2019` mostra que há situações em que Adam pode divergir devido a um controle de variação insuficiente. Em um trabalho de acompanhamento :cite:`Zaheer.Reddi.Sachan.ea.2018` propôs um hotfix para Adam, chamado Yogi, que trata dessas questões. Mais sobre isso mais tarde. Por enquanto, vamos revisar o algoritmo de Adam.
 
-Adam :cite:`Kingma.Ba.2014` combines all these techniques into oneda de um ajuste de taxa de aprendizagem.
+## O Algoritmo
 
-Adam :cite:`Kingma.Ba.2014` combina todas essas técnicas em um algoritmo de aprendizagem efficient learning algorithm. As expected, this is an algorithm that has become rather popular as one of the more robust and effective. Como esperado, este é um algoritmo que se tornou bastante popular como um dos algoritmos de optimization algorithms to use in deep learning. It is not without issues, though. Inção mais robustos e eficazes para uso no aprendizado profundo. Não é sem problemas, no entanto. Em particular, :cite:`Reddi.Kale.Kumar.2019` show that there are situations whermostra que há situações em que Adam canpode diverge due to poor variance control. In a follow-up workir devido a um controle de variação insuficiente. Em um trabalho de acompanhamento :cite:`Zaheer.Reddi.Sachan.ea.2018` proposed aôs um hotfix topara Adam, called Yogi which addrhamado Yogi, que trata desseas these issues. More on this laterquestões. Mais sobre isso mais tarde. FPor now let us review the Adam algorithenquanto, vamos revisar o algoritmo de Adam. 
-
-## The Algorithm
-
-One of the key components of Adam is that it uses exponential weighted moving averages (also known as leaky averaging) to obtain an estimate of both the momentum and also the second moment of the gradient. That is, it uses the state variables
+Um dos componentes principais de Adam é que ele usa médias móveis exponenciais ponderadas (também conhecidas como média com vazamento) para obter uma estimativa do momento e também do segundo momento do gradiente. Ou seja, ele usa as variáveis de estado
 
 $$\begin{aligned}
     \mathbf{v}_t & \leftarrow \beta_1 \mathbf{v}_{t-1} + (1 - \beta_1) \mathbf{g}_t, \\
@@ -26,6 +21,8 @@ $$\begin{aligned}
 \end{aligned}$$
 
 Here $\beta_1$ and $\beta_2$ are nonnegative weighting parameters. Common choices for them are $\beta_1 = 0.9$ and $\beta_2 = 0.999$. That is, the variance estimate moves *much more slowly* than the momentum term. Note that if we initialize $\mathbf{v}_0 = \mathbf{s}_0 = 0$ we have a significant amount of bias initially towards smaller values. This can be addressed by using the fact that $\sum_{i=0}^t \beta^i = \frac{1 - \beta^t}{1 - \beta}$ to re-normalize terms. Correspondingly the normalized state variables are given by 
+
+Aqui $\beta_1$ and $\beta_2$ são parâmetros de ponderação não negativos. As escolhas comuns para eles são $ \ beta_1 = 0,9 $ e $ \ beta_2 = 0,999 $. Ou seja, a estimativa da variância se move * muito mais lentamente * do que o termo de momentum. Observe que se inicializarmos $ \ mathbf {v} _0 = \ mathbf {s} _0 = 0 $, teremos uma quantidade significativa de tendência inicialmente para valores menores. Isso pode ser resolvido usando o fato de que $ \ sum_ {i = 0} ^ t \ beta ^ i = \ frac {1 - \ beta ^ t} {1 - \ beta} $ para normalizar os termos novamente. Correspondentemente, as variáveis de estado normalizadas são fornecidas por
 
 $$\hat{\mathbf{v}}_t = \frac{\mathbf{v}_t}{1 - \beta_1^t} \text{ and } \hat{\mathbf{s}}_t = \frac{\mathbf{s}_t}{1 - \beta_2^t}.$$
 
@@ -239,5 +236,5 @@ d2l.train_ch11(yogi, init_adam_states(feature_dim),
 [Discussions](https://discuss.d2l.ai/t/1079)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMTY3MTgzOV19
+eyJoaXN0b3J5IjpbMTQyNTY1MzA1XX0=
 -->
