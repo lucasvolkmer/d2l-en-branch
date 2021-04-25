@@ -280,7 +280,7 @@ Isso funcionou um pouco melhor do que antes. Duas coisas se destacam: a curva er
 
 Embora não possamos cobrir toda a variedade de programadores de taxa de aprendizagem, tentamos fornecer uma breve visão geral das políticas populares abaixo. As escolhas comuns são decaimento polinomial e esquemas constantes por partes. Além disso, verificou-se que as programações de taxa de aprendizado de cosseno funcionam bem empiricamente em alguns problemas. Por último, em alguns problemas, é benéfico aquecer o otimizador antes de usar altas taxas de aprendizado.
 
-### Factor Scheduler
+### Planejador de Fator
 
 Uma alternativa para um decaimento polinomial seria um multiplicativo, que é $\eta_{t+1} \leftarrow \eta_t \cdot \alpha$ para $\alpha \in (0, 1)$. Para evitar que a taxa de aprendizagem diminua além de um limite inferior razoável, a equação de atualização é frequentemente modificada para $\eta_{t+1} \leftarrow \mathop{\mathrm{max}}(\eta_{\mathrm{min}}, \eta_t \cdot \alpha)$.
 
@@ -300,11 +300,11 @@ scheduler = FactorScheduler(factor=0.9, stop_factor_lr=1e-2, base_lr=2.0)
 d2l.plot(d2l.arange(50), [scheduler(t) for t in range(50)])
 ```
 
-This can also be accomplished by a built-in scheduler in MXNet via the `lr_scheduler.FactorScheduler` object. It takes a few more parameters, such as warmup period, warmup mode (linear or constant), the maximum number of desired updates, etc.; Going forward we will use the built-in schedulers as appropriate and only explain their functionality here. As illustrated, it is fairly straightforward to build your own scheduler if needed.
+Isso também pode ser realizado por um agendador embutido no MXNet por meio do objeto `lr_scheduler.FactorScheduler`. Leva mais alguns parâmetros, como período de aquecimento, modo de aquecimento (linear ou constante), o número máximo de atualizações desejadas, etc .; No futuro, usaremos os agendadores integrados conforme apropriado e apenas explicaremos sua funcionalidade aqui. Conforme ilustrado, é bastante simples construir seu próprio agendador, se necessário.
 
 ### Multi Factor Scheduler
 
-A common strategy for training deep networks is to keep the learning rate piecewise constant and to decrease it by a given amount every so often. That is, given a set of times when to decrease the rate, such as $s = \{5, 10, 20\}$ decrease $\eta_{t+1} \leftarrow \eta_t \cdot \alpha$ whenever $t \in s$. Assuming that the values are halved at each step we can implement this as follows.
+Uma estratégia comum para treinar redes profundas é manter a taxa de aprendizado constante e diminuí-la em uma determinada quantidade de vez em quando. Ou seja, dado um conjunto de vezes quando diminuir a taxa, como $s = \{5, 10, 20\}$ diminuir $\eta_{t+1} \leftarrow \eta_t \cdot \alpha$ sempre que $t \in s$. Supondo que os valores sejam reduzidos à metade em cada etapa, podemos implementar isso da seguinte maneira.
 
 ```{.python .input}
 scheduler = lr_scheduler.MultiFactorScheduler(step=[15, 30], factor=0.5,
@@ -504,5 +504,5 @@ Warmup can be applied to any scheduler (not just cosine). For a more detailed di
 [Discussions](https://discuss.d2l.ai/t/1081)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MDg3ODMyNiwxMjUzMTczNDM4XX0=
+eyJoaXN0b3J5IjpbNTM1MTk2MzAxLDEyNTMxNzM0MzhdfQ==
 -->
