@@ -128,11 +128,13 @@ eta, beta = 0.6, 0.25
 d2l.show_trace_2d(f_2d, d2l.train_2d(momentum_2d))
 ```
 
-Note that we can combine momentum with SGD and in particular, minibatch-SGD. The only change is that in that case we replace the gradients $\mathbf{g}_{t, t-1}$ with $\mathbf{g}_t$. Last, for convenience we initialize $\mathbf{v}_0 = 0$ at time $t=0$. Let us look at what leaky averaging actually does to the updates.
+Observe que podemos combinar momentum com SGD e, em particular, minibatch-SGD. A única mudança é que, nesse caso, substituímos os gradientes $\mathbf{g}_{t, t-1}$ por $\mathbf{g}_t$. Por último, por conveniência, inicializamos $\mathbf{v}_0 = 0$ no momento $t=0$. Vejamos o que a média de vazamento realmente faz com as atualizações.
 
-### Effective Sample Weight
+### Peso Efetivo da Amostra
 
 Recall that $\mathbf{v}_t = \sum_{\tau = 0}^{t-1} \beta^{\tau} \mathbf{g}_{t-\tau, t-\tau-1}$. In the limit the terms add up to $\sum_{\tau=0}^\infty \beta^\tau = \frac{1}{1-\beta}$. In other words, rather than taking a step of size $\eta$ in GD or SGD we take a step of size $\frac{\eta}{1-\beta}$ while at the same time, dealing with a potentially much better behaved descent direction. These are two benefits in one. To illustrate how weighting behaves for different choices of $\beta$ consider the diagram below.
+
+Lembre-se de que $\mathbf{v}_t = \sum_{\tau = 0}^{t-1} \beta^{\tau} \mathbf{g}_{t-\tau, t-\tau-1}$. No limite, os termos somam $\sum_{\tau=0}^\infty \beta^\tau = \frac{1}{1-\beta}$. Em outras palavras, em vez de dar um passo de tamanho $ \ eta $ em GD ou SGD, damos um passo de tamanho $ \ frac {\ eta} {1- \ beta} $ enquanto, ao mesmo tempo, lidamos com um potencial muito direção de descida melhor comportada. Esses são dois benefícios em um. Para ilustrar como a ponderação se comporta para diferentes escolhas de $ \ beta $, considere o diagrama abaixo.
 
 ```{.python .input}
 #@tab all
@@ -336,6 +338,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxODkzOTgyMSwyMDcyMzM2OTc4LDEyMz
-A4MTk3ODksMTI3MTMzODcyM119
+eyJoaXN0b3J5IjpbODAxMDkxODgxLDIwNzIzMzY5NzgsMTIzMD
+gxOTc4OSwxMjcxMzM4NzIzXX0=
 -->
