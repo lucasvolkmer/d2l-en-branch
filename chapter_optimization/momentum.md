@@ -305,25 +305,28 @@ $$
 \begin{bmatrix} v_{t} \\ x_{t} \end{bmatrix} = \mathbf{R}(\beta, \eta, \lambda) \begin{bmatrix} v_{t} \\ x_{t} \end{bmatrix}.
 $$
 
-We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. After $t$ steps the initial choice $[v_0, x_0]$ becomes $\mathbf{R}(\beta, \eta, \lambda)^t [v_0, x_0]$. Hence, it is up to the eigenvalues of $\mathbf{R}$ to determine the speed of convergence. See the [Distill post](https://distill.pub/2017/momentum/) of :cite:`Goh.2017` for a great animation and :cite:`Flammarion.Bach.2015` for a detailed analysis. One can show that $0 < \eta \lambda < 2 + 2 \beta$ momentum converges. This is a larger range of feasible parameters when compared to $0 < \eta \lambda < 2$ for gradient descent. It also suggests that in general large values of $\beta$ are desirable. Further details require a fair amount of technical detail and we suggest that the interested reader consult the original publications.
+Usamos $\mathbf{R}$ para denotar o comportamento de convergência que rege $2 \times 2$. Após $t$ passos, a escolha inicial $[v_0, x_0]$ torna-se $\mathbf{R}(\beta, \eta, \lambda)^t [v_0, x_0]$. Consequentemente, cabe aos autovalores de $\mathbf{R}$ determinar a velocidade de convergência. Veja o [Post do Destill](https://distill.pub/2017/momentum/) de :cite:`Goh.2017` para uma ótima animação e :cite:`Flammarion.Bach.2015` para uma análise detalhada. Pode-se mostrar que $0 < \eta \lambda < 2 + 2 \beta$ momentum converge. Este é um intervalo maior de parâmetros viáveis quando comparado a $0 < \eta \lambda < 2$ para descida de gradiente. Também sugere que, em geral, grandes valores de $\beta$ são desejáveis. Mais detalhes requerem uma boa quantidade de detalhes técnicos e sugerimos que o leitor interessado consulte as publicações originais.
 
-Usamos $\mathbf{R}$ para denotar o comportamento de convergência que rege $2 \times 2$. Após $t$ passos, a escolha inicial $[v_0, x_0]$ torna-se $\mathbf{R}(\beta, \eta, \lambda)^t [v_0, x_0]$. Consequentemente, cabe aos autovalores de $\mathbf{R}$ determinar a velocidade de convergência. Veja o [Post do Destill](https://distill.pub/2017/momentum/) de :cite:`Goh.2017` para uma ótima animação e :cite:`Flammarion.Bach.2015` para uma análise detalhada. Pode-se mostrar que $ 0 <\ eta \ lambda <2 + 2 \ beta $ momentum converge. Este é um intervalo maior de parâmetros viáveis quando comparado a $ 0 <\ eta \ lambda <2 $ para descida de gradiente. Também sugere que, em geral, grandes valores de $ \ beta $ são desejáveis. Mais detalhes requerem uma boa quantidade de detalhes técnicos e sugerimos que o leitor interessado consulte as publicações originais.
+## Sumário
 
-## Summary
+* Momentum substitui gradientes por uma média com vazamento em relação aos gradientes anteriores. Isso acelera a convergência significativamente.
+* É desejável tanto para descida gradiente sem ruído quanto para descida gradiente estocástica (ruidosa).
+* O momentum evita a paralisação do processo de otimização, que é muito mais provável de ocorrer na descida do gradiente estocástico.
+* O número efetivo de gradientes é dado por $\frac{1}{1-\beta}$ devido à redução exponenciada de dados anteriores.
+* No caso de problemas quadráticos convexos, isso pode ser analisado explicitamente em detalhes.
+* A implementação é bastante direta, mas exige que armazenemos um vetor de estado adicional (momentum $\mathbf{v}$).
 
-* Momentum replaces gradients with a leaky average over past gradients. This accelerates convergence significantly.
-* It is desirable for both noise-free gradient descent and (noisy) stochastic gradient descent.
-* Momentum prevents stalling of the optimization process that is much more likely to occur for stochastic gradient descent.
-* The effective number of gradients is given by $\frac{1}{1-\beta}$ due to exponentiated downweighting of past data.
-* In the case of convex quadratic problems this can be analyzed explicitly in detail.
-* Implementation is quite straightforward but it requires us to store an additional state vector (momentum $\mathbf{v}$).
-
-## Exercises
+## Exercícios
 
 1. Use other combinations of momentum hyperparameters and learning rates and observe and analyze the different experimental results.
 1. Try out GD and momentum for a quadratic problem where you have multiple eigenvalues, i.e., $f(x) = \frac{1}{2} \sum_i \lambda_i x_i^2$, e.g., $\lambda_i = 2^{-i}$. Plot how the values of $x$ decrease for the initialization $x_i = 1$.
 1. Derive minimum value and minimizer for $h(\mathbf{x}) = \frac{1}{2} \mathbf{x}^\top \mathbf{Q} \mathbf{x} + \mathbf{x}^\top \mathbf{c} + b$.
 1. What changes when we perform SGD with momentum? What happens when we use minibatch SGD with momentum? Experiment with the parameters?
+
+1. Use outras combinações de hiperparâmetros de momentum e taxas de aprendizagem e observe e analise os diferentes resultados experimentais.
+1. Experimente GD e momentum para um problema quadrático onde você tem vários autovalores, ou seja, $ f (x) = \ frac {1} {2} \ sum_i \ lambda_i x_i ^ 2 $, por exemplo, $ \ lambda_i = 2 ^ {-i} $. Trace como os valores de $ x $ diminuem para a inicialização $ x_i = 1 $.
+1. Derive o valor mínimo e minimizador para $ h (\ mathbf {x}) = \ frac {1} {2} \ mathbf {x} ^ \ top \ mathbf {Q} \ mathbf {x} + \ mathbf {x} ^ \ top \ mathbf {c} + b $.
+1. O que muda quando executamos SGD com momentum? O que acontece quando usamos minibatch SGD com momentum? Experimentar com os parâmetros?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/354)
@@ -338,6 +341,6 @@ Usamos $\mathbf{R}$ para denotar o comportamento de convergência que rege $2 \t
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ5OTM5Nzg2LDIwNzIzMzY5NzgsMTIzMD
-gxOTc4OSwxMjcxMzM4NzIzXX0=
+eyJoaXN0b3J5IjpbMjA3MDAxOTAzMywyMDcyMzM2OTc4LDEyMz
+A4MTk3ODksMTI3MTMzODcyM119
 -->
