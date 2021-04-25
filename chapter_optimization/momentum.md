@@ -96,14 +96,9 @@ d2l.show_trace_2d(f_2d, d2l.train_2d(gd_2d))
 
 ###  Método Momentum
 
-The momentum method allows us to solve the gradient descent problem described
-above. Looking at the optimization trace above we might intuit that averaging gradients over the past would work well. After all, in the $x_1$ direction this will aggregate well-aligned gradients, thus increasing the distance we cover with every step. Conversely, in the $x_2$ direction where gradients oscillate, an aggregate gradient will reduce step size due to oscillations that cancel each other out.
-Using $\mathbf{v}_t$ instead of the gradient $\mathbf{g}_t$ yields the following update equations:
-
-
 O método do momento nos permite resolver o problema de descida gradiente descrito
 acima de. Olhando para o traço de otimização acima, podemos intuir que calcular a média de gradientes em relação ao passado funcionaria bem. Afinal, na direção $x_1$, isso agregará gradientes bem alinhados, aumentando assim a distância que percorremos a cada passo. Por outro lado, na direção $x_2$ onde os gradientes oscilam, um gradiente agregado reduzirá o tamanho do passo devido às oscilações que se cancelam.
-Usar $\mathbf {v}_t$ em vez do gradiente $\mathbf{g}_t $ produz as seguintes equações de atualização:
+Usar $\mathbf{v}_t$ em vez do gradiente $\mathbf{g}_t$ produz as seguintes equações de atualização:
 
 $$
 \begin{aligned}
@@ -112,7 +107,7 @@ $$
 \end{aligned}
 $$
 
-Note that for $\beta = 0$ we recover regular gradient descent. Before delving deeper into the mathematical properties let us have a quick look at how the algorithm behaves in practice.
+Observe que para $\beta = 0$ recuperamos a descida gradiente regular. Antes de nos aprofundarmos nas propriedades matemáticas, vamos dar uma olhada rápida em como o algoritmo se comporta na prática.
 
 ```{.python .input}
 #@tab all
@@ -125,7 +120,7 @@ eta, beta = 0.6, 0.5
 d2l.show_trace_2d(f_2d, d2l.train_2d(momentum_2d))
 ```
 
-As we can see, even with the same learning rate that we used before, momentum still converges well. Let us see what happens when we decrease the momentum parameter. Halving it to $\beta = 0.25$ leads to a trajectory that barely converges at all. Nonetheless, it is a lot better than without momentum (when the solution diverges).
+Como podemos ver, mesmo com a mesma taxa de aprendizado que usamos antes, o momentum ainda converge bem. Vamos ver o que acontece quando diminuímos o parâmetro momentum. Reduzi-lo para $\beta = 0,25$ leva a uma trajetória que quase não converge. No entanto, é muito melhor do que sem momentum (quando a solução diverge).
 
 ```{.python .input}
 #@tab all
@@ -341,6 +336,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwODk5NDEwLDIwNzIzMzY5NzgsMTIzMD
-gxOTc4OSwxMjcxMzM4NzIzXX0=
+eyJoaXN0b3J5IjpbLTIxODkzOTgyMSwyMDcyMzM2OTc4LDEyMz
+A4MTk3ODksMTI3MTMzODcyM119
 -->
