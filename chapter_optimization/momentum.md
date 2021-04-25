@@ -31,11 +31,9 @@ $\beta$ grande equivale a uma média de longo alcance, enquanto $\beta$ pequeno 
 
 O raciocínio acima formou a base para o que agora é conhecido como métodos de gradiente *acelerado*, como gradientes com momentum. Eles têm o benefício adicional de serem muito mais eficazes nos casos em que o problema de otimização é mal condicionado (ou seja, onde há algumas direções onde o progresso é muito mais lento do que em outras, parecendo um desfiladeiro estreito). Além disso, eles nos permitem calcular a média dos gradientes subsequentes para obter direções de descida mais estáveis. Na verdade, o aspecto da aceleração, mesmo para problemas convexos sem ruído, é uma das principais razões pelas quais o momentum funciona e por que funciona tão bem.
 
-As one would expect, due to its efficacy momentum is a well-studied subject in optimization for deep learning and beyond. See e.g., the beautiful [expository article](https://distill.pub/2017/momentum/) by :cite:`Goh.2017` for an in-depth analysis and interactive animation. It was proposed by :cite:`Polyak.1964`. :cite:`Nesterov.2018` has a detailed theoretical discussion in the context of convex optimization. Momentum in deep learning has been known to be beneficial for a long time. See e.g., the discussion by :cite:`Sutskever.Martens.Dahl.ea.2013` for details.
+Como seria de esperar, devido ao seu momentum de eficácia, é um assunto bem estudado em otimização para aprendizado profundo e além. Veja, por exemplo, o belo [artigo expositivo](https://distill.pub/2017/momentum/) por :cite:`Goh.2017` para uma análise aprofundada e animação interativa. Foi proposto por :cite:`Polyak.1964`. :cite:`Nesterov.2018` tem uma discussão teórica detalhada no contexto da otimização convexa. O momentum no aprendizado profundo é conhecido por ser benéfico há muito tempo. Veja, por exemplo, a discussão de :cite:`Sutskever.Martens.Dahl.ea.2013` para obter detalhes.
 
-Como seria de esperar, devido ao seu momentum de eficácia, é um assunto bem estudado em otimização para aprendizado profundo e além. Veja, por exemplo, o belo [artigo expositivo](https://distill.pub/2017/momentum/) por: cite: Goh.2017` para uma análise aprofundada e animação interativa. Foi proposto por: cite: `Polyak.1964`. : cite: `Nesterov.2018` tem uma discussão teórica detalhada no contexto da otimização convexa. O momentum no aprendizado profundo é conhecido por ser benéfico há muito tempo. Veja, por exemplo, a discussão de: cite: `Sutskever.Martens.Dahl.ea.2013` para obter detalhes.
-
-### An Ill-conditioned Problem
+### Um problema mal condicionado
 
 To get a better understanding of the geometric properties of the momentum method we revisit gradient descent, albeit with a significantly less pleasant objective function. Recall that in :numref:`sec_gd` we used $f(\mathbf{x}) = x_1^2 + 2 x_2^2$, i.e., a moderately distorted ellipsoid objective. We distort this function further by stretching it out in the $x_1$ direction via
 
@@ -338,5 +336,6 @@ We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. 
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMDgxOTc4OSwxMjcxMzM4NzIzXX0=
+eyJoaXN0b3J5IjpbLTc5MjUxNDk0OSwxMjMwODE5Nzg5LDEyNz
+EzMzg3MjNdfQ==
 -->
