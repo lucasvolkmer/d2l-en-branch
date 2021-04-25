@@ -1,9 +1,7 @@
 # Adagrad
 :label:`sec_adagrad`
 
-Let us begin by considering learningVamos começar considerando os problemas with features that occur infrequently.
-
-## Sparse Features and Learning Ratesde aprendizado com recursos que ocorrem com pouca frequência.
+Vamos começar considerando os problemas de aprendizado com recursos que ocorrem com pouca frequência.
 
 ## Recursos esparsos e taxas de aprendizado
 
@@ -223,5 +221,5 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1073)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MjE0MzA2M119
+eyJoaXN0b3J5IjpbLTEzODc2OTQxMDYsMTY1MjE0MzA2M119
 -->
