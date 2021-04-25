@@ -318,29 +318,24 @@ Usamos $\mathbf{R}$ para denotar o comportamento de convergência que rege $2 \t
 
 ## Exercícios
 
-1. Use other combinations of momentum hyperparameters and learning rates and observe and analyze the different experimental results.
-1. Try out GD and momentum for a quadratic problem where you have multiple eigenvalues, i.e., $f(x) = \frac{1}{2} \sum_i \lambda_i x_i^2$, e.g., $\lambda_i = 2^{-i}$. Plot how the values of $x$ decrease for the initialization $x_i = 1$.
-1. Derive minimum value and minimizer for $h(\mathbf{x}) = \frac{1}{2} \mathbf{x}^\top \mathbf{Q} \mathbf{x} + \mathbf{x}^\top \mathbf{c} + b$.
-1. What changes when we perform SGD with momentum? What happens when we use minibatch SGD with momentum? Experiment with the parameters?
-
 1. Use outras combinações de hiperparâmetros de momentum e taxas de aprendizagem e observe e analise os diferentes resultados experimentais.
-1. Experimente GD e momentum para um problema quadrático onde você tem vários autovalores, ou seja, $ f (x) = \ frac {1} {2} \ sum_i \ lambda_i x_i ^ 2 $, por exemplo, $ \ lambda_i = 2 ^ {-i} $. Trace como os valores de $ x $ diminuem para a inicialização $ x_i = 1 $.
-1. Derive o valor mínimo e minimizador para $ h (\ mathbf {x}) = \ frac {1} {2} \ mathbf {x} ^ \ top \ mathbf {Q} \ mathbf {x} + \ mathbf {x} ^ \ top \ mathbf {c} + b $.
+1. Experimente GD e momentum para um problema quadrático onde você tem vários autovalores, ou seja, $f(x) = \frac{1}{2} \sum_i \lambda_i x_i^2$ ou seja $\lambda_i = 2^{-i}$. Trace como os valores de $x$ diminuem para a inicialização $x_i = 1$.
+1. Derive o valor mínimo e minimizador para $h(\mathbf{x}) = \frac{1}{2} \mathbf{x}^\top \mathbf{Q} \mathbf{x} + \mathbf{x}^\top \mathbf{c} + b$.
 1. O que muda quando executamos SGD com momentum? O que acontece quando usamos minibatch SGD com momentum? Experimentar com os parâmetros?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/354)
+[Discussão](https://discuss.d2l.ai/t/354)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1070)
+[Discussão](https://discuss.d2l.ai/t/1070)
 :end_tab:
 
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1071)
+[Discussão](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MDAxOTAzMywyMDcyMzM2OTc4LDEyMz
-A4MTk3ODksMTI3MTMzODcyM119
+eyJoaXN0b3J5IjpbNjAzMTUxMjM5LDIwNzIzMzY5NzgsMTIzMD
+gxOTc4OSwxMjcxMzM4NzIzXX0=
 -->
