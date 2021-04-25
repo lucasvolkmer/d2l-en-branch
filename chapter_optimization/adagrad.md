@@ -56,13 +56,13 @@ $$\begin{aligned}
 
 Aqui, as operações são aplicadas de acordo com as coordenadas. Ou seja, $\mathbf{v}^2$ tem entradas $v_i^2$. Da mesma forma, $\frac{1}{\sqrt{v}}$ tem entradas $\frac{1}{\sqrt{v_i}}$ e $\mathbf{u} \cdot \mathbf{v}$ tem entradas $u_i v_i$. Como antes, $\eta$ é a taxa de aprendizagem e $\epsilon$ é uma constante aditiva que garante que não dividamos por $0$. Por último, inicializamos $\mathbf{s}_0 = \mathbf{0}$.
 
-Just like in the case of momentum we need to keep track of an auxiliary variable, in this case to allow for an individual learning rate per coordinate. This does not increase the cost of Adagrad significantly relative to SGD, simply since the main cost is typically to compute $l(y_t, f(\mathbf{x}_t, \mathbf{w}))$ and its derivative.
+Assim como no caso do momentum, precisamos manter o controle de uma variável auxiliar, neste caso para permitir uma taxa de aprendizagem individual por coordenada. Isso não aumenta o custo do Adagrad significativamente em relação ao SGD, simplesmente porque o custo principal normalmente é calcular $l(y_t, f(\mathbf{x}_t, \mathbf{w}))$ e sua derivada.
 
-Note that accumulating squared gradients in $\mathbf{s}_t$ means that $\mathbf{s}_t$ grows essentially at linear rate (somewhat slower than linearly in practice, since the gradients initially diminish). This leads to an $\mathcal{O}(t^{-\frac{1}{2}})$ learning rate, albeit adjusted on a per coordinate basis. For convex problems this is perfectly adequate. In deep learning, though, we might want to decrease the learning rate rather more slowly. This led to a number of Adagrad variants that we will discuss in the subsequent chapters. For now let us see how it behaves in a quadratic convex problem. We use the same problem as before:
+Observe que o acúmulo de gradientes quadrados em $\mathbf{s}_t$ significa que $\mathbf{s}_t$ cresce essencialmente a uma taxa linear (um pouco mais lento do que linearmente na prática, uma vez que os gradientes inicialmente diminuem). Isso leva a uma taxa de aprendizado $\mathcal{O}(t^{-\frac{1}{2}})$, embora ajustada por coordenada. Para problemas convexos, isso é perfeitamente adequado. No aprendizado profundo, porém, podemos querer diminuir a taxa de aprendizado um pouco mais lentamente. Isso levou a uma série de variantes do Adagrad que discutiremos nos capítulos subsequentes. Por enquanto, vamos ver como ele se comporta em um problema convexo quadrático. Usamos o mesmo problema de antes:
 
 $$f(\mathbf{x}) = 0.1 x_1^2 + 2 x_2^2.$$
 
-We are going to implement Adagrad using the same learning rate previously, i.e., $\eta = 0.4$. As we can see, the iterative trajectory of the independent variable is smoother. However, due to the cumulative effect of $\boldsymbol{s}_t$, the learning rate continuously decays, so the independent variable does not move as much during later stages of iteration.
+Vamos implementar o Adagrad usando a mesma taxa de aprendizado anterior, ou seja, $\eta = 0.4$. Como podemos ver, a trajetória iterativa da variável independente é mais suave. No entanto, devido ao efeito cumulativo de $\boldsymbol{s}_t$, a taxa de aprendizado diminui continuamente, de modo que a variável independente não se move tanto durante os estágios posteriores da iteração.
 
 ```{.python .input}
 %matplotlib inline
@@ -221,6 +221,6 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1073)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjM5Mzg5ODIsMTUzNjg2NzM3NSwxNj
-UyMTQzMDYzXX0=
+eyJoaXN0b3J5IjpbMTY0OTI2MzkyMiwxNTM2ODY3Mzc1LDE2NT
+IxNDMwNjNdfQ==
 -->
