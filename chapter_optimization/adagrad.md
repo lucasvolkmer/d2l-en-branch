@@ -9,17 +9,16 @@ Imagine que estamos treinando um modelo de linguagem. Para obter uma boa precis�
 
 Os parâmetros associados a recursos pouco frequentes recebem apenas atualizações significativas sempre que esses recursos ocorrem. Dada uma taxa de aprendizado decrescente, podemos acabar em uma situação em que os parâmetros para características comuns convergem rapidamente para seus valores ideais, enquanto para características raras ainda não podemos observá-los com frequência suficiente antes que seus valores ideais possam ser determinados. Em outras palavras, a taxa de aprendizado diminui muito lentamente para recursos freqüentes ou muito rapidamente para recursos pouco frequentes.
 
-A possible hack to redress this issue would be to count the number of times we see a particular feature and to use this as a clock for adjusting learning rates. That is, rather than choosing a learning rate of the form $\eta = \frac{\eta_0}{\sqrt{t + c}}$ we could use $\eta_i = \frac{\eta_0}{\sqrt{s(i, t) + c}}$. Here $s(i, t)$ counts the number of nonzeros for feature $i$ that we have observed up to time $t$. This is actually quite easy to implement at no meaningful overhead. However, it fails whenever we do not quite have sparsity but rather just data where the gradients are often very small and only rarely large. After all, it is unclear where one would draw the line between something that qualifies as an observed feature or not.
+Um possível hack para corrigir esse problema seria contar o número de vezes que vemos um determinado recurso e usar isso como um relógio para ajustar as taxas de aprendizagem. Ou seja, em vez de escolher uma taxa de aprendizagem da forma $\eta = \frac{\eta_0}{\sqrt{t + c}}$ poderiamos usar $\eta_i = \frac{\eta_0}{\sqrt{s(i, t) + c}}$ conta o número de valores diferentes de zero para o recurso $i$ que observamos até o momento $t$. Na verdade, isso é muito fácil de implementar sem sobrecarga significativa. No entanto, ele falha sempre que não temos esparsidade, mas apenas dados em que os gradientes são frequentemente muito pequenos e raramente grandes. Afinal, não está claro onde se traçaria a linha entre algo que se qualifica como uma característica observada ou não.
+
+Adagrad by :cite:`Duchi.Hazan.Singer.2011` aborda isso substituindo o contador bastante bruto $s(i, t)$ por um agregado de quadrados de gradientes previamente observados. Em particular, ele usa $s(i, t+1) = s(i, t) + \left(\partial_i f(\mathbf{x})\right)^2$ como um meio de ajustar a taxa de aprendizagem. Isso tem dois benefícios: primeiro, não precisamos mais decidir apenas quando um gradiente é grande o suficiente. Em segundo lugar, ele é dimensionado automaticamente com a magnitude dos gradientes. As coordenadas que normalmente correspondem a grandes gradientes são reduzidas significativamente, enquanto outras com pequenos gradientes recebem um tratamento muito mais suave. Na prática, isso leva a um procedimento de otimização muito eficaz para publicidade computacional e problemas relacionados. Mas isso oculta alguns dos benefícios adicionais inerentes ao Adagrad que são mais bem compreendidos no contexto do pré-condicionamento.
 
 
-
-
-Adagrad by :cite:`Duchi.Hazan.Singer.2011` addresses this by replacing the rather crude counter $s(i, t)$ by an aggregate of the squares of previously observed gradients. In particular, it uses $s(i, t+1) = s(i, t) + \left(\partial_i f(\mathbf{x})\right)^2$ as a means to adjust the learning rate. This has two benefits: first, we no longer need to decide just when a gradient is large enough. Second, it scales automatically with the magnitude of the gradients. Coordinates that routinely correspond to large gradients are scaled down significantly, whereas others with small gradients receive a much more gentle treatment. In practice this leads to a very effective optimization procedure for computational advertising and related problems. But this hides some of the additional benefits inherent in Adagrad that are best understood in the context of preconditioning.
-
-
-## Preconditioning
+## Precondicionamento
 
 Convex optimization problems are good for analyzing the characteristics of algorithms. After all, for most nonconvex problems it is difficult to derive meaningful theoretical guarantees, but *intuition* and *insight* often carry over.  Let us look at the problem of minimizing $f(\mathbf{x}) = \frac{1}{2} \mathbf{x}^\top \mathbf{Q} \mathbf{x} + \mathbf{c}^\top \mathbf{x} + b$.
+
+Problemas de otimização convexa são bons para analisar as características dos algoritmos. Afinal, para a maioria dos problemas não-convexos, é difícil derivar garantias teóricas significativas, mas a *intuição * e o * insight * geralmente são transmitidos. Vejamos o problema de minimizar $ f (\ mathbf {x}) = \ frac {1} {2} \ mathbf {x} ^ \ top \ mathbf {Q} \ mathbf {x} + \ mathbf {c} ^ \ top \ mathbf {x} + b $.
 
 As we saw in :numref:`sec_momentum`, it is possible to rewrite this problem in terms of its eigendecomposition $\mathbf{Q} = \mathbf{U}^\top \boldsymbol{\Lambda} \mathbf{U}$ to arrive at a much simplified problem where each coordinate can be solved individually:
 
@@ -224,6 +223,6 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1073)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU2ODIyNTQxLDE1MzY4NjczNzUsMTY1Mj
-E0MzA2M119
+eyJoaXN0b3J5IjpbLTEyMTI4MzczMDAsMTUzNjg2NzM3NSwxNj
+UyMTQzMDYzXX0=
 -->
