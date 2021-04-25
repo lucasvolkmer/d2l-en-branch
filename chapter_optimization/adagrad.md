@@ -36,19 +36,15 @@ $$\tilde{\mathbf{Q}} = \mathrm{diag}^{-\frac{1}{2}}(\mathbf{Q}) \mathbf{Q} \math
 
 Neste caso, temos $\tilde{\mathbf{Q}}_{ij} = \mathbf{Q}_{ij} / \sqrt{\mathbf{Q}_{ii} \mathbf{Q}_{jj}}$ e especificamente $\tilde{\mathbf{Q}}_{ii} = 1$ para todo $i$. Na maioria dos casos, isso simplifica consideravelmente o número da condição. Por exemplo, nos casos que discutimos anteriormente, isso eliminaria totalmente o problema em questão, uma vez que o problema está alinhado ao eixo.
 
-Unfortunately we face yet another problem: in deep learning we typically do not even have access to the second derivative of the objective function: for $\mathbf{x} \in \mathbb{R}^d$ the second derivative even on a minibatch may require $\mathcal{O}(d^2)$ space and work to compute, thus making it practically infeasible. The ingenious idea of Adagrad is to use a proxy for that elusive diagonal of the Hessian that is both relatively cheap to compute and effective---the magnitude of the gradient itself.
+Infelizmente, enfrentamos ainda outro problema: no aprendizado profundo, normalmente nem mesmo temos acesso à segunda derivada da função objetivo: para $\mathbf{x} \in \mathbb{R}^d$ a segunda derivada, mesmo em um minibatch pode exigir $\mathcal{O}(d^2)$ espaço e trabalho para computar, tornando-o praticamente inviável. A ideia engenhosa do Adagrad é usar um proxy para aquela diagonal indescritível do Hessian que é relativamente barato para calcular e eficaz--- a magnitude do gradiente em si.
 
-In order to see why this works, let us look at $\bar{f}(\bar{\mathbf{x}})$. We have that
-
-Infelizmente, enfrentamos ainda outro problema: no aprendizado profundo, normalmente nem mesmo temos acesso à segunda derivada da função objetivo: para $\mathbf{x} \in \mathbb{R}^d$ a segunda derivada, mesmo em um minibatch pode exigir $ \ mathcal {O} (d ^ 2) $ espaço e trabalho para computar, tornando-o praticamente inviável. A ideia engenhosa do Adagrad é usar um proxy para aquela diagonal indescritível do Hessian que é relativamente barato para calcular e eficaz --- a magnitude do gradiente em si.
-
-Para ver por que isso funciona, vamos dar uma olhada em $ \ bar {f} (\ bar {\ mathbf {x}}) $. Nós temos isso
+Para ver por que isso funciona, vamos dar uma olhada em $\bar{f}(\bar{\mathbf{x}})$. Nós temos isso
 
 $$\partial_{\bar{\mathbf{x}}} \bar{f}(\bar{\mathbf{x}}) = \boldsymbol{\Lambda} \bar{\mathbf{x}} + \bar{\mathbf{c}} = \boldsymbol{\Lambda} \left(\bar{\mathbf{x}} - \bar{\mathbf{x}}_0\right),$$
 
-where $\bar{\mathbf{x}}_0$ is the minimizer of $\bar{f}$. Hence the magnitude of the gradient depends both on $\boldsymbol{\Lambda}$ and the distance from optimality. If $\bar{\mathbf{x}} - \bar{\mathbf{x}}_0$ didn't change, this would be all that's needed. After all, in this case the magnitude of the gradient $\partial_{\bar{\mathbf{x}}} \bar{f}(\bar{\mathbf{x}})$ suffices. Since AdaGrad is a stochastic gradient descent algorithm, we will see gradients with nonzero variance even at optimality. As a result we can safely use the variance of the gradients as a cheap proxy for the scale of the Hessian. A thorough analysis is beyond the scope of this section (it would be several pages). We refer the reader to :cite:`Duchi.Hazan.Singer.2011` for details.
+onde $\bar{\mathbf{x}}_0$ é o minimizador de $\bar{f}$. Portanto, a magnitude do gradiente depende tanto de $\boldsymbol{\Lambda}$ quanto da distância da otimalidade. Se $\bar{\mathbf{x}} - \bar{\mathbf{x}}_0$ não mudou, isso seria tudo o que é necessário. Afinal, neste caso, a magnitude do gradiente $\partial_{\bar{\mathbf{x}}} \bar{f}(\bar{\mathbf{x}})$ é suficiente. Como o AdaGrad é um algoritmo descendente de gradiente estocástico, veremos gradientes com variância diferente de zero mesmo em otimização. Como resultado, podemos usar com segurança a variância dos gradientes como um proxy barato para a escala de Hessian. Uma análise completa está além do escopo desta seção (seriam várias páginas). Recomendamos ao leitor :cite:`Duchi.Hazan.Singer.2011` para detalhes.
 
-## The Algorithm
+## O Algoritmo
 
 Let us formalize the discussion from above. We use the variable $\mathbf{s}_t$ to accumulate past gradient variance as follows.
 
@@ -225,6 +221,6 @@ d2l.train_concise_ch11(trainer, {'learning_rate' : 0.1}, data_iter)
 [Discussions](https://discuss.d2l.ai/t/1073)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMTU3NDg0MCwxNTM2ODY3Mzc1LDE2NT
+eyJoaXN0b3J5IjpbMTA5MDIwMzUwMCwxNTM2ODY3Mzc1LDE2NT
 IxNDMwNjNdfQ==
 -->
