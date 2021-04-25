@@ -307,7 +307,7 @@ $$
 
 We used $\mathbf{R}$ to denote the $2 \times 2$ governing convergence behavior. After $t$ steps the initial choice $[v_0, x_0]$ becomes $\mathbf{R}(\beta, \eta, \lambda)^t [v_0, x_0]$. Hence, it is up to the eigenvalues of $\mathbf{R}$ to determine the speed of convergence. See the [Distill post](https://distill.pub/2017/momentum/) of :cite:`Goh.2017` for a great animation and :cite:`Flammarion.Bach.2015` for a detailed analysis. One can show that $0 < \eta \lambda < 2 + 2 \beta$ momentum converges. This is a larger range of feasible parameters when compared to $0 < \eta \lambda < 2$ for gradient descent. It also suggests that in general large values of $\beta$ are desirable. Further details require a fair amount of technical detail and we suggest that the interested reader consult the original publications.
 
-Usamos $\mathbf{R}$ para denotar o comportamento de convergência que rege $ 2 \ vezes 2 $. Após $ t $ passos, a escolha inicial $ [v_0, x_0] $ torna-se $ \ mathbf {R} (\ beta, \ eta, \ lambda) ^ t [v_0, x_0] $. Conseqüentemente, cabe aos autovalores de $ \ mathbf {R} $ determinar a velocidade de convergência. Veja o [Post do Destill] (https://distill.pub/2017/momentum/) de: cite: `Goh.2017` para uma ótima animação e: cite:` Flammarion.Bach.2015` para uma análise detalhada. Pode-se mostrar que $ 0 <\ eta \ lambda <2 + 2 \ beta $ momentum converge. Este é um intervalo maior de parâmetros viáveis quando comparado a $ 0 <\ eta \ lambda <2 $ para descida de gradiente. Também sugere que, em geral, grandes valores de $ \ beta $ são desejáveis. Mais detalhes requerem uma boa quantidade de detalhes técnicos e sugerimos que o leitor interessado consulte as publicações originais.
+Usamos $\mathbf{R}$ para denotar o comportamento de convergência que rege $2 \times 2$. Após $t$ passos, a escolha inicial $[v_0, x_0]$ torna-se $\mathbf{R}(\beta, \eta, \lambda)^t [v_0, x_0]$. Consequentemente, cabe aos autovalores de $\mathbf{R}$ determinar a velocidade de convergência. Veja o [Post do Destill](https://distill.pub/2017/momentum/) de :cite:`Goh.2017` para uma ótima animação e :cite:`Flammarion.Bach.2015` para uma análise detalhada. Pode-se mostrar que $ 0 <\ eta \ lambda <2 + 2 \ beta $ momentum converge. Este é um intervalo maior de parâmetros viáveis quando comparado a $ 0 <\ eta \ lambda <2 $ para descida de gradiente. Também sugere que, em geral, grandes valores de $ \ beta $ são desejáveis. Mais detalhes requerem uma boa quantidade de detalhes técnicos e sugerimos que o leitor interessado consulte as publicações originais.
 
 ## Summary
 
@@ -338,6 +338,6 @@ Usamos $\mathbf{R}$ para denotar o comportamento de convergência que rege $ 2 \
 [Discussions](https://discuss.d2l.ai/t/1071)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzM0NjIzNCwyMDcyMzM2OTc4LDEyMz
-A4MTk3ODksMTI3MTMzODcyM119
+eyJoaXN0b3J5IjpbNTQ5OTM5Nzg2LDIwNzIzMzY5NzgsMTIzMD
+gxOTc4OSwxMjcxMzM4NzIzXX0=
 -->
