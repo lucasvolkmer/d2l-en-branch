@@ -76,16 +76,12 @@ apply(img, gluon.data.vision.transforms.RandomFlipTopBottom())
 apply(img, torchvision.transforms.RandomVerticalFlip())
 ```
 
-In the example image we used, the cat is in the middle of the image, but this
-may not be the case for all images. In
-:numref:`sec_pooling`,
-we explained that the pooling layer can reduce the sensitivity of the
-convolutional layer to the target location. In addition, we can make objects
-appear at different positions in the image in different proportions by randomly
-cropping the image. This can also reduce the sensitivity of the model to the
-target position.
 
-In the following code, we randomly crop a region with an area of 10% to 100% of the original area, and the ratio of width to height of the region is randomly selected from between 0.5 and 2. Then, the width and height of the region are both scaled to 200 pixels. Unless otherwise stated, the random number between $a$ and $b$ in this section refers to a continuous value obtained by uniform sampling in the interval $[a, b]$.
+Na imagem de exemplo que usamos, o gato está no meio da imagem, mas pode não ser o caso para todas as imagens. Em
+:numref:`sec_pooling`, explicamos que a camada de pooling pode reduzir a sensibilidade da camada convolucional ao local de destino. Além disso, podemos fazer os objetos aparecerem em diferentes posições na imagem em diferentes proporções aleatoriamente
+recortando a imagem. Isso também pode reduzir a sensibilidade do modelo à posição de destino.
+
+No código a seguir, recortamos aleatoriamente uma região com uma área de 10% a 100% da área original, e a proporção entre largura e altura da região é selecionada aleatoriamente entre 0,5 e 2. Em seguida, a largura e a altura de as regiões são dimensionadas para 200 pixels. Salvo indicação em contrário, o número aleatório entre $a$ e $b$ nesta seção refere-se a um valor contínuo obtido por amostragem uniforme no intervalo $[a, b]$.
 
 ```{.python .input}
 shape_aug = gluon.data.vision.transforms.RandomResizedCrop(
@@ -386,5 +382,5 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MTc1MDIyMiwxNzAzMDcyOTc5XX0=
+eyJoaXN0b3J5IjpbMTEzNTA2OTY0LDE3MDMwNzI5NzldfQ==
 -->
