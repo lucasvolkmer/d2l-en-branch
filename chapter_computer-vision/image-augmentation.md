@@ -65,7 +65,7 @@ apply(img, gluon.data.vision.transforms.RandomFlipLeftRight())
 apply(img, torchvision.transforms.RandomHorizontalFlip())
 ```
 
-Flipping up and down is not as commonly used as flipping left and right. However, at least for this example image, flipping up and down does not hinder recognition. Next, we create a `RandomFlipTopBottom` instance for a 50% chance of flipping the image up and down.
+Virar para cima e para baixo não é tão comumente usado como girar para a esquerda e para a direita. No entanto, pelo menos para esta imagem de exemplo, virar para cima e para baixo não impede o reconhecimento. Em seguida, criamos uma instância `RandomFlipTopBottom` para uma chance de 50% de virar a imagem para cima e para baixo.
 
 ```{.python .input}
 apply(img, gluon.data.vision.transforms.RandomFlipTopBottom())
@@ -386,5 +386,5 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NjI5MDQ5NSwxNzAzMDcyOTc5XX0=
+eyJoaXN0b3J5IjpbLTk1MTc1MDIyMiwxNzAzMDcyOTc5XX0=
 -->
