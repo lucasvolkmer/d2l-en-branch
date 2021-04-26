@@ -170,7 +170,7 @@ all_images = torchvision.datasets.CIFAR10(train=True, root="../data",
 d2l.show_images([all_images[i][0] for i in range(32)], 4, 8, scale=0.8);
 ```
 
-In order to obtain definitive results during prediction, we usually only apply image augmentation to the training example, and do not use image augmentation with random operations during prediction. Here, we only use the simplest random left-right flipping method. In addition, we use a `ToTensor` instance to convert minibatch images into the format required by MXNet, i.e., 32-bit floating point numbers with the shape of (batch size, number of channels, height, width) and value range between 0 and 1.
+Para obter resultados definitivos durante a previsão, geralmente aplicamos apenas o aumento da imagem ao exemplo de treinamento e não usamos o aumento da imagem com operações aleatórias durante a previsão. Aqui, usamos apenas o método de inversão aleatório da esquerda para a direita mais simples. Além disso, usamos uma instância `ToTensor` para converter imagens de minibatch no formato exigido pelo MXNet, ou seja, números de ponto flutuante de 32 bits com a forma de (tamanho do lote, número de canais, altura, largura) e intervalo de valores entre 0 e 1.
 
 ```{.python .input}
 train_augs = gluon.data.vision.transforms.Compose([
@@ -382,6 +382,6 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTI5MjAwNzAsNjg2OTk0NzcwLDExMz
-UwNjk2NCwxNzAzMDcyOTc5XX0=
+eyJoaXN0b3J5IjpbMjQyNjUxNzUyLC0xNjkyOTIwMDcwLDY4Nj
+k5NDc3MCwxMTM1MDY5NjQsMTcwMzA3Mjk3OV19
 -->
