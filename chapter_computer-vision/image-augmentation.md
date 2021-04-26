@@ -96,9 +96,9 @@ shape_aug = torchvision.transforms.RandomResizedCrop(
 apply(img, shape_aug)
 ```
 
-### Changing the Color
+### Mudando a Cor
 
-Another augmentation method is changing colors. We can change four aspects of the image color: brightness, contrast, saturation, and hue. In the example below, we randomly change the brightness of the image to a value between 50% ($1-0.5$) and 150% ($1+0.5$) of the original image.
+Outro método de aumento é mudar as cores. Podemos alterar quatro aspectos da cor da imagem: brilho, contraste, saturação e matiz. No exemplo abaixo, alteramos aleatoriamente o brilho da imagem para um valor entre 50% ($1-0.5$) e 150% ($1+0.5$) da imagem original.
 
 ```{.python .input}
 apply(img, gluon.data.vision.transforms.RandomBrightness(0.5))
@@ -110,7 +110,7 @@ apply(img, torchvision.transforms.ColorJitter(
     brightness=0.5, contrast=0, saturation=0, hue=0))
 ```
 
-Similarly, we can randomly change the hue of the image.
+Da mesma forma, podemos alterar aleatoriamente o matiz da imagem.
 
 ```{.python .input}
 apply(img, gluon.data.vision.transforms.RandomHue(0.5))
@@ -382,5 +382,6 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNTA2OTY0LDE3MDMwNzI5NzldfQ==
+eyJoaXN0b3J5IjpbLTE4NjI5MjI4NTksMTEzNTA2OTY0LDE3MD
+MwNzI5NzldfQ==
 -->
