@@ -1,4 +1,4 @@
-# Image Augmentationo de imagem
+# Aumento de Imagem
 :label:`sec_image_augmentation`
 
 
@@ -397,5 +397,5 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzI3MzI0MzhdfQ==
+eyJoaXN0b3J5IjpbMTcwMzA3Mjk3OV19
 -->
