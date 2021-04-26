@@ -154,9 +154,9 @@ augs = torchvision.transforms.Compose([
 apply(img, augs)
 ```
 
-## Using an Image Augmentation Training Model
+## Usando um Modelo de Treinamento de Aumento de Imagem
 
-Next, we will look at how to apply image augmentation in actual training. Here, we use the CIFAR-10 dataset, instead of the Fashion-MNIST dataset we have been using. This is because the position and size of the objects in the Fashion-MNIST dataset have been normalized, and the differences in color and size of the objects in CIFAR-10 dataset are more significant. The first 32 training images in the CIFAR-10 dataset are shown below.
+A seguir, veremos como aplicar o aumento de imagem no treinamento real. Aqui, usamos o conjunto de dados CIFAR-10, em vez do conjunto de dados Fashion-MNIST que usamos. Isso ocorre porque a posição e o tamanho dos objetos no conjunto de dados Fashion-MNIST foram normalizados, e as diferenças de cor e tamanho dos objetos no conjunto de dados CIFAR-10 são mais significativas. As primeiras 32 imagens de treinamento no conjunto de dados CIFAR-10 são mostradas abaixo.
 
 ```{.python .input}
 d2l.show_images(gluon.data.vision.CIFAR10(
@@ -382,6 +382,6 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjEzNTEwMzcsNjg2OTk0NzcwLDExMz
+eyJoaXN0b3J5IjpbLTE2OTI5MjAwNzAsNjg2OTk0NzcwLDExMz
 UwNjk2NCwxNzAzMDcyOTc5XX0=
 -->
