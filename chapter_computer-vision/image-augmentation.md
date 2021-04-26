@@ -213,11 +213,11 @@ def load_cifar10(is_train, augs, batch_size):
 
 ### Usando um Modelo de Treinamento Multi-GPU
 
-We train the ResNet-18 model described in :numref:`sec_resnet` on the
-CIFAR-10 dataset. We will also apply the methods described in
-:numref:`sec_multi_gpu_concise` and use a multi-GPU training model.
 
-Next, we define the training function to train and evaluate the model using multiple GPUs.
+Treinamos o modelo ResNet-18 descrito em: numref: `sec_resnet`
+no conjunto de dados CIFAR-10. Também aplicaremos os métodos descritos em :numref:`sec_multi_gpu_concise` e usaremos um modelo de treinamento multi-GPU.
+
+Em seguida, definimos a função de treinamento para treinar e avaliar o modelo usando várias GPUs.
 
 ```{.python .input}
 #@save
@@ -378,6 +378,6 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0OTYwODg4LC0xNjkyOTIwMDcwLDY4Nj
-k5NDc3MCwxMTM1MDY5NjQsMTcwMzA3Mjk3OV19
+eyJoaXN0b3J5IjpbMTYwNzU3MzcxNiwtMTY5MjkyMDA3MCw2OD
+Y5OTQ3NzAsMTEzNTA2OTY0LDE3MDMwNzI5NzldfQ==
 -->
