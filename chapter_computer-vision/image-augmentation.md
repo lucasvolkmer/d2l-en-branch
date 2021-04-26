@@ -191,11 +191,7 @@ test_augs = torchvision.transforms.Compose([
      torchvision.transforms.ToTensor()])
 ```
 
-Next, we define an auxiliary function to make it easier to read the image and
-apply image augmentation. The `transform_first` function provided by Gluon's
-dataset applies image augmentation to the first element of each training
-example (image and label), i.e., the element at the top of the image. For
-detailed descriptions of `DataLoader`, refer to :numref:`sec_fashion_mnist`.
+A seguir, definimos uma função auxiliar para facilitar a leitura da imagem e aplicar o aumento da imagem. A função `transform_first` fornecida pelo conjunto de dados do Gluon aplica o aumento da imagem ao primeiro elemento de cada exemplo de treinamento (imagem e rótulo), ou seja, o elemento na parte superior da imagem. Para descrições detalhadas de `DataLoader`, consulte :numref:`sec_fashion_mnist`.
 
 ```{.python .input}
 def load_cifar10(is_train, augs, batch_size):
@@ -215,7 +211,7 @@ def load_cifar10(is_train, augs, batch_size):
     return dataloader
 ```
 
-### Using a Multi-GPU Training Model
+### Usando um Modelo de Treinamento Multi-GPU
 
 We train the ResNet-18 model described in :numref:`sec_resnet` on the
 CIFAR-10 dataset. We will also apply the methods described in
@@ -382,6 +378,6 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQyNjUxNzUyLC0xNjkyOTIwMDcwLDY4Nj
+eyJoaXN0b3J5IjpbMTU0OTYwODg4LC0xNjkyOTIwMDcwLDY4Nj
 k5NDc3MCwxMTM1MDY5NjQsMTcwMzA3Mjk3OV19
 -->
