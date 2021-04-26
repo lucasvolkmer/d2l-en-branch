@@ -122,7 +122,7 @@ apply(img, torchvision.transforms.ColorJitter(
     brightness=0, contrast=0, saturation=0, hue=0.5))
 ```
 
-We can also create a `RandomColorJitter` instance and set how to randomly change the `brightness`, `contrast`, `saturation`, and `hue` of the image at the same time.
+Também podemos criar uma instância `RandomColorJitter` e definir como alterar aleatoriamente o `brightness`, `contrast`, `saturation`, e `hue` da imagem ao mesmo tempo.
 
 ```{.python .input}
 color_aug = gluon.data.vision.transforms.RandomColorJitter(
@@ -382,6 +382,6 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjI5MjI4NTksMTEzNTA2OTY0LDE3MD
-MwNzI5NzldfQ==
+eyJoaXN0b3J5IjpbMTYyOTY0NzQzOSwxMTM1MDY5NjQsMTcwMz
+A3Mjk3OV19
 -->
