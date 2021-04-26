@@ -139,7 +139,7 @@ apply(img, color_aug)
 
 ### Métodos de Aumento de Imagem Múltipla Sobreposta
 
-In practice, we will overlay multiple image augmentation methods. We can overlay the different image augmentation methods defined above and apply them to each image by using a `Compose` instance.
+Na prática, iremos sobrepor vários métodos de aumento de imagem. Podemos sobrepor os diferentes métodos de aumento de imagem definidos acima e aplicá-los a cada imagem usando uma instância `Compose`.
 
 ```{.python .input}
 augs = gluon.data.vision.transforms.Compose([
@@ -382,6 +382,6 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NjAyMzYzNCw2ODY5OTQ3NzAsMTEzNT
-A2OTY0LDE3MDMwNzI5NzldfQ==
+eyJoaXN0b3J5IjpbLTE1NjEzNTEwMzcsNjg2OTk0NzcwLDExMz
+UwNjk2NCwxNzAzMDcyOTc5XX0=
 -->
