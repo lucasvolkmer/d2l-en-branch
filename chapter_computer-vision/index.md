@@ -1,4 +1,4 @@
-# Computer Vision
+# Computer VisVisão Computacional
 :label:`chap_cv`
 
 Many applications in the area of computer vision are closely related to our daily lives, now and in the future, whether medical diagnostics, driverless vehicles, camera monitoring, or smart filters. In recent years, deep learning technology has greatly enhanced computer vision systems' performance. It can be said that the most advanced computer vision applications are nearly inseparable from deep learning.
@@ -24,3 +24,6 @@ kaggle-cifar10
 kaggle-dog
 ```
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjQ1NTEyMTNdfQ==
+-->
