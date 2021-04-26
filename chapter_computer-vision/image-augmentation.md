@@ -318,7 +318,7 @@ def train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs,
           f'{str(devices)}')
 ```
 
-Now, we can define the `train_with_data_aug` function to use image augmentation to train the model. This function obtains all available GPUs and uses Adam as the optimization algorithm for training. It then applies image augmentation to the training dataset, and finally calls the `train_ch13` function just defined to train and evaluate the model.
+Agora, podemos definir a função `train_with_data_aug` para usar o aumento da imagem para treinar o modelo. Esta função obtém todas as GPUs disponíveis e usa Adam como o algoritmo de otimização para o treinamento. Em seguida, ele aplica o aumento da imagem ao conjunto de dados de treinamento e, finalmente, chama a função `train_ch13` definida para treinar e avaliar o modelo.
 
 ```{.python .input}
 batch_size, devices, net = 256, d2l.try_all_gpus(), d2l.resnet18(10)
@@ -358,13 +358,13 @@ Now we train the model using image augmentation of random flipping left and righ
 train_with_data_aug(train_augs, test_augs, net)
 ```
 
-## Summary
+## Resumo
 
-* Image augmentation generates random images based on existing training data to cope with overfitting.
-* In order to obtain definitive results during prediction, we usually only apply image augmentation to the training example, and do not use image augmentation with random operations during prediction.
-* We can obtain classes related to image augmentation from Gluon's `transforms` module.
+* O aumento de imagem gera imagens aleatórias com base nos dados de treinamento existentes para lidar com o sobreajuste.
+* Para obter resultados definitivos durante a previsão, geralmente aplicamos apenas o aumento da imagem ao exemplo de treinamento e não usamos o aumento da imagem com operações aleatórias durante a previsão.
+* Podemos obter classes relacionadas ao aumento de imagem do módulo `transforma` do Gluon.
 
-## Exercises
+## Exercícios
 
 1. Train the model without using image augmentation: `train_with_data_aug(no_aug, no_aug)`. Compare training and testing accuracy when using and not using image augmentation. Can this comparative experiment support the argument that image augmentation can mitigate overfitting? Why?
 1. Add different image augmentation methods in model training based on the CIFAR-10 dataset. Observe the implementation results.
@@ -378,6 +378,6 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNzU3MzcxNiwtMTY5MjkyMDA3MCw2OD
+eyJoaXN0b3J5IjpbLTIxNTkyMTE3MywtMTY5MjkyMDA3MCw2OD
 Y5OTQ3NzAsMTEzNTA2OTY0LDE3MDMwNzI5NzldfQ==
 -->
