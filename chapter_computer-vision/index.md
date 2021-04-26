@@ -1,4 +1,4 @@
-# Computer VisVisão Computacional
+# Visão Computacional
 :label:`chap_cv`
 
 
@@ -26,5 +26,5 @@ kaggle-dog
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQwMTY5MDhdfQ==
+eyJoaXN0b3J5IjpbLTY0MTg3Mzc0NV19
 -->
