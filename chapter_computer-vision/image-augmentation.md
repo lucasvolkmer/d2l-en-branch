@@ -26,9 +26,9 @@ import torchvision
 from torch import nn
 ```
 
-## Método Comum de Aumento de imagem
+## Método Comum de Aumento de Imagem
 
-In this experiment, we will use an image with a shape of $400\times 500$ as an example.
+Neste experimento, usaremos uma imagem com um formato de $400\times 500$ como exemplo.
 
 ```{.python .input}
 d2l.set_figsize()
@@ -43,7 +43,7 @@ img = d2l.Image.open('../img/cat1.jpg')
 d2l.plt.imshow(img);
 ```
 
-Most image augmentation methods have a certain degree of randomness. To make it easier for us to observe the effect of image augmentation, we next define the auxiliary function `apply`. This function runs the image augmentation method `aug` multiple times on the input image `img` and shows all results.
+A maioria dos métodos de aumento de imagem tem um certo grau de aleatoriedade. Para facilitar a observação do efeito do aumento da imagem, definimos a seguir a função auxiliar `aplicar`. Esta função executa o método de aumento de imagem `aug` várias vezes na imagem de entrada` img` e mostra todos os resultados.
 
 ```{.python .input}
 #@tab all
@@ -52,9 +52,9 @@ def apply(img, aug, num_rows=2, num_cols=4, scale=1.5):
     d2l.show_images(Y, num_rows, num_cols, scale=scale)
 ```
 
-### Flipping and Cropping
+### Invertendo e Recortando
 
-Flipping the image left and right usually does not change the category of the object. This is one of the earliest and most widely used methods of image augmentation. Next, we use the `transforms` module to create the `RandomFlipLeftRight` instance, which introduces a 50% chance that the image is flipped left and right.
+Virar a imagem para a esquerda e para a direita geralmente não altera a categoria do objeto. Este é um dos métodos mais antigos e mais amplamente usados de aumento de imagem. Em seguida, usamos o módulo `transforms` para criar a instância `RandomFlipLeftRight`, que apresenta uma chance de 50% de que a imagem seja virada para a esquerda e para a direita.
 
 ```{.python .input}
 apply(img, gluon.data.vision.transforms.RandomFlipLeftRight())
@@ -386,5 +386,5 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNjEzNDA5LDE3MDMwNzI5NzldfQ==
+eyJoaXN0b3J5IjpbMTU5NjI5MDQ5NSwxNzAzMDcyOTc5XX0=
 -->
