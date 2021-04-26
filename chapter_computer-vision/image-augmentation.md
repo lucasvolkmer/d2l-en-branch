@@ -1,4 +1,4 @@
-# Image Augmentation
+# Image Augmentationo de imagem
 :label:`sec_image_augmentation`
 
 
@@ -396,3 +396,6 @@ train_with_data_aug(train_augs, test_augs, net)
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIwNzI3MzI0MzhdfQ==
+-->
