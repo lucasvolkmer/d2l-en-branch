@@ -366,18 +366,18 @@ train_with_data_aug(train_augs, test_augs, net)
 
 ## Exercícios
 
-1. Train the model without using image augmentation: `train_with_data_aug(no_aug, no_aug)`. Compare training and testing accuracy when using and not using image augmentation. Can this comparative experiment support the argument that image augmentation can mitigate overfitting? Why?
-1. Add different image augmentation methods in model training based on the CIFAR-10 dataset. Observe the implementation results.
-1. With reference to the MXNet documentation, what other image augmentation methods are provided in Gluon's `transforms` module?
+1. Treine o modelo sem usar aumento de imagem: `train_with_data_aug (no_aug, no_aug)`. Compare a precisão do treinamento e do teste ao usar e não usar o aumento de imagem. Este experimento comparativo pode apoiar o argumento de que o aumento da imagem pode mitigar o sobreajuste? Por quê?
+1. Adicione diferentes métodos de aumento de imagem no treinamento do modelo com base no *dataset* CIFAR-10. Observe os resultados da implementação.
+1. Com referência à documentação do MXNet, que outros métodos de aumento de imagem são fornecidos no módulo `transforms` do Gluon?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/367)
+[Discussões](https://discuss.d2l.ai/t/367)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1404)
+[Discussões](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNTkyMTE3MywtMTY5MjkyMDA3MCw2OD
+eyJoaXN0b3J5IjpbLTUyMzI0OTc3OSwtMTY5MjkyMDA3MCw2OD
 Y5OTQ3NzAsMTEzNTA2OTY0LDE3MDMwNzI5NzldfQ==
 -->
