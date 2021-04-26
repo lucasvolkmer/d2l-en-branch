@@ -2,22 +2,11 @@
 :label:`sec_image_augmentation`
 
 
-We mentioned that large-scale datasets are prerequisites for the successful
-application of deep neural networks in
-:numref:`sec_alexnet`. Image augmentation technology expands the scale of training datasets
-by making a series of random changes to the training images to produce similar,
-but different, training examples. Another way to explain image augmentation is
-that randomly changing training examples can reduce a model's dependence on
-certain properties, thereby improving its capability for generalization. For
-example, we can crop the images in different ways, so that the objects of
-interest appear in different positions, reducing the model's dependence on the
-position where objects appear. We can also adjust the brightness, color, and
-other factors to reduce model's sensitivity to color. It can be said that image
-augmentation technology contributed greatly to the success of AlexNet. In this
-section, we will discuss this technology, which is widely used in computer
-vision.
 
-First, import the packages or modules required for the experiment in this section.
+Mencionamos que conjuntos de dados em grande escala são pré-requisitos para a aplicação bem-sucedida de redes neurais profundas em :numref:`sec_alexnet`. A tecnologia de aumento de imagem expande a escala dos conjuntos de dados de treinamento, fazendo uma série de alterações aleatórias nas imagens de treinamento para produzir exemplos de treinamento semelhantes, mas diferentes. Outra maneira de explicar o aumento de imagem é
+que exemplos de treinamento que mudam aleatoriamente podem reduzir a dependência de um modelo em certas propriedades, melhorando assim sua capacidade de generalização. Por exemplo, podemos recortar as imagens de diferentes maneiras, para que os objetos de interesse apareçam em diferentes posições, reduzindo a dependência do modelo da posição onde os objetos aparecem. Também podemos ajustar o brilho, a cor e outros fatores para reduzir a sensibilidade do modelo à cor. Pode-se dizer que a tecnologia de aumento de imagem contribuiu muito para o sucesso do AlexNet. Nesta seção, discutiremos essa tecnologia, que é amplamente usada na visão computacional.
+
+Primeiro, importe os pacotes ou módulos necessários para o experimento nesta seção.
 
 ```{.python .input}
 %matplotlib inline
@@ -37,7 +26,7 @@ import torchvision
 from torch import nn
 ```
 
-## Common Image Augmentation Method
+## Método Comum de Aumento de imagem
 
 In this experiment, we will use an image with a shape of $400\times 500$ as an example.
 
@@ -397,5 +386,5 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMzA3Mjk3OV19
+eyJoaXN0b3J5IjpbMTkwNjEzNDA5LDE3MDMwNzI5NzldfQ==
 -->
