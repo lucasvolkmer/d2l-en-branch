@@ -137,7 +137,7 @@ color_aug = torchvision.transforms.ColorJitter(
 apply(img, color_aug)
 ```
 
-### Overlying Multiple Image Augmentation Methods
+### Métodos de aumento de imagem múltipla sobreposta
 
 In practice, we will overlay multiple image augmentation methods. We can overlay the different image augmentation methods defined above and apply them to each image by using a `Compose` instance.
 
@@ -382,6 +382,6 @@ train_with_data_aug(train_augs, test_augs, net)
 [Discussions](https://discuss.d2l.ai/t/1404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyOTY0NzQzOSwxMTM1MDY5NjQsMTcwMz
-A3Mjk3OV19
+eyJoaXN0b3J5IjpbNjg2OTk0NzcwLDExMzUwNjk2NCwxNzAzMD
+cyOTc5XX0=
 -->
