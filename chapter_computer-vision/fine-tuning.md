@@ -50,9 +50,10 @@ import os
 ```
 
 ### Obtendo o *Dataset*
-The hot dog dataset we use was taken from online images and contains $1,400$ positive images containing hot dogs and the same number of negative images containing other foods. $1,000$ images of various classes are used for training and the rest are used for testing.
 
-We first download the compressed dataset and get two folders `hotdog/train` and `hotdog/test`. Both folders have `hotdog` and `not-hotdog` category subfolders, each of which has corresponding image files.
+O conjunto de dados de cachorro-quente que usamos foi obtido de imagens online e contém $1.400$ imagens positivas contendo cachorros-quentes e o mesmo número de imagens negativas contendo outros alimentos. $1,000$ imagens de várias classes são usadas para treinamento e o resto é usado para teste.
+
+Primeiro, baixamos o conjunto de dados compactado e obtemos duas pastas `hotdog/train` e `hotdog/test`. Ambas as pastas têm subpastas das categorias `hotdog` e `not-hotdog`, cada uma com arquivos de imagem correspondentes.
 
 ```{.python .input}
 #@tab all
@@ -63,7 +64,7 @@ d2l.DATA_HUB['hotdog'] = (d2l.DATA_URL+'hotdog.zip',
 data_dir = d2l.download_extract('hotdog')
 ```
 
-We create two `ImageFolderDataset` instances to read all the image files in the training dataset and testing dataset, respectively.
+Criamos duas instâncias `ImageFolderDataset` para ler todos os arquivos de imagem no conjunto de dados de treinamento e teste, respectivamente.
 
 ```{.python .input}
 train_imgs = gluon.data.vision.ImageFolderDataset(
@@ -78,7 +79,7 @@ train_imgs = torchvision.datasets.ImageFolder(os.path.join(data_dir, 'train'))
 test_imgs = torchvision.datasets.ImageFolder(os.path.join(data_dir, 'test'))
 ```
 
-The first 8 positive examples and the last 8 negative images are shown below. As you can see, the images vary in size and aspect ratio.
+Os primeiros 8 exemplos positivos e as últimas 8 imagens negativas são mostrados abaixo. Como você pode ver, as imagens variam em tamanho e proporção.
 
 ```{.python .input}
 #@tab all
@@ -87,7 +88,7 @@ not_hotdogs = [train_imgs[-i - 1][0] for i in range(8)]
 d2l.show_images(hotdogs + not_hotdogs, 2, 8, scale=1.4);
 ```
 
-During training, we first crop a random area with random size and random aspect ratio from the image and then scale the area to an input with a height and width of 224 pixels. During testing, we scale the height and width of images to 256 pixels, and then crop the center area with height and width of 224 pixels to use as the input. In addition, we normalize the values of the three RGB (red, green, and blue) color channels. The average of all values of the channel is subtracted from each value and then the result is divided by the standard deviation of all values of the channel to produce the output.
+Durante o treinamento, primeiro recortamos uma área aleatória com tamanho e proporção aleatória da imagem e, em seguida, dimensionamos a área para uma entrada com altura e largura de 224 pixels. Durante o teste, dimensionamos a altura e a largura das imagens para 256 pixels e, em seguida, recortamos a área central com altura e largura de 224 pixels para usar como entrada. Além disso, normalizamos os valores dos três canais de cores RGB (vermelho, verde e azul). A média de todos os valores do canal é subtraída de cada valor e o resultado é dividido pelo desvio padrão de todos os valores do canal para produzir a saída.
 
 ```{.python .input}
 # We specify the mean and variance of the three RGB channels to normalize the
@@ -294,5 +295,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzU4MzQxMjUsLTEwNDg3NDUwNV19
+eyJoaXN0b3J5IjpbMTE3ODc1MjQ3MywtMTA0ODc0NTA1XX0=
 -->
