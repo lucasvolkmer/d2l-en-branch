@@ -2,7 +2,7 @@
 
 Nesta seção, discutiremos a relação entre a otimização e o aprendizado profundo, bem como os desafios de usar a otimização no aprendizado profundo.
 Para um problema de aprendizado profundo, geralmente definiremos uma *função de perda* primeiro. Uma vez que temos a função de perda, podemos usar um algoritmo de otimização na tentativa de minimizar a perda.
-Na otimização, uma função de perda é freqüentemente referida como a *função objetivo* do problema de otimização. Por tradição e convenção, a maioria dos algoritmos de otimização se preocupa com a *minimização*. Se alguma vez precisarmos maximizar um objetivo, há uma solução simples: basta virar o sinal no objetivo.
+Na otimização, uma função de perda é frequentemente referida como a *função objetivo* do problema de otimização. Por tradição e convenção, a maioria dos algoritmos de otimização se preocupa com a *minimização*. Se alguma vez precisarmos maximizar um objetivo, há uma solução simples: basta virar o sinal no objetivo.
 
 ## Objetivos da Optimizationção
 
@@ -229,6 +229,6 @@ Como vimos, a otimização para aprendizado profundo está cheia de desafios. Fe
 [Discussão](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUyNTk3MTkyLDI4MjEzNjUzNCwtMTAzMT
-E4OTQ2XX0=
+eyJoaXN0b3J5IjpbODc0MjMzMTM1LDY1MjU5NzE5MiwyODIxMz
+Y1MzQsLTEwMzExODk0Nl19
 -->
