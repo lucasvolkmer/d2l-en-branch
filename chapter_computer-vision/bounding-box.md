@@ -132,16 +132,16 @@ fig.axes.add_patch(bbox_to_rect(cat_bbox, 'red'));
 
 ## Exercícios
 
-1. Find some images and try to label a bounding box that contains the target. Compare the difference between the time it takes to label the bounding box and label the category.
+1. Encontre algumas imagens e tente rotular uma caixa delimitadora que contém o alvo. Compare a diferença entre o tempo que leva para rotular a caixa delimitadora e rotular a categoria.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/369)
+[Discussões](https://discuss.d2l.ai/t/369)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1527)
+[Discussões](https://discuss.d2l.ai/t/1527)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NzY3ODA4OSw3OTQ1NjYyNjcsLTUxNz
-Y1NzcyXX0=
+eyJoaXN0b3J5IjpbNjI2MTI5NDMzLDc5NDU2NjI2NywtNTE3Nj
+U3NzJdfQ==
 -->
