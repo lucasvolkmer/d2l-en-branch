@@ -143,3 +143,6 @@ fig.axes.add_patch(bbox_to_rect(cat_bbox, 'red'));
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1527)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTUxNzY1NzcyXX0=
+-->
