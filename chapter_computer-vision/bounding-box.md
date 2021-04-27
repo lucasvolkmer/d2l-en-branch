@@ -1,4 +1,4 @@
-# Object Detection and Bounding Boxes
+# Detecção de Objetos e Caixas Delimitadoras
 :label:`sec_bbox`
 
 
@@ -144,5 +144,5 @@ fig.axes.add_patch(bbox_to_rect(cat_bbox, 'red'));
 [Discussions](https://discuss.d2l.ai/t/1527)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNzY1NzcyXX0=
+eyJoaXN0b3J5IjpbLTE0NDU1Njc4MjksLTUxNzY1NzcyXX0=
 -->
