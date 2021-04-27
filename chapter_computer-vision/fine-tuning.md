@@ -287,12 +287,12 @@ hotdog_w.shape
 ```
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/368)
+[Discussões](https://discuss.d2l.ai/t/368)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1439)
+[Discussões](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMjUzNjIyNSwtMTA0ODc0NTA1XX0=
+eyJoaXN0b3J5IjpbLTQ0MzI0MDg2NSwtMTA0ODc0NTA1XX0=
 -->
