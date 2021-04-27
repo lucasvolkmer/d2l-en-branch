@@ -184,7 +184,7 @@ def show_bboxes(axes, bboxes, labels=None, colors=None):
                       bbox=dict(facecolor=color, lw=0))
 ```
 
-As we just saw, the coordinate values of the $x$ and $y$ axis in the variable `boxes` have been divided by the width and height of the image, respectively. When drawing images, we need to restore the original coordinate values of the anchor boxes and therefore define the variable `bbox_scale`. Now, we can draw all the anchor boxes centered on (250, 250) in the image. As you can see, the blue anchor box with a size of 0.75 and an aspect ratio of 1 covers the dog in the image well.
+Como acabamos de ver, os valores das coordenadas dos eixos $x$ e $y$ na variável `caixas` foram divididos pela largura e altura da imagem, respectivamente. Ao desenhar imagens, precisamos restaurar os valores das coordenadas originais das caixas de âncora e, portanto, definir a variável `bbox_scale`. Agora, podemos desenhar todas as caixas de âncora centralizadas em (250, 250) na imagem. Como você pode ver, a caixa de âncora azul com um tamanho de 0,75 e uma proporção de 1 cobre bem o cão na imagem.
 
 ```{.python .input}
 #@tab all
@@ -676,5 +676,5 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NjA5MTQwOSwxNzQ2MjMzNDc3XX0=
+eyJoaXN0b3J5IjpbLTQ5MDQ0MDcwMywxNzQ2MjMzNDc3XX0=
 -->
