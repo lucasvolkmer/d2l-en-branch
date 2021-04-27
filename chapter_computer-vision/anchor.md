@@ -1,4 +1,4 @@
-# ACaixas de Ânchor Boxesa
+# Caixas de Âncora
 :label:`sec_anchor`
 
 Object detection algorithms usually sample a large number of regions in the input image, determine whether these regions contain objects of interest, and adjust the edges of the regions so as to predict the ground-truth bounding box of the target more accurately. Different models may use different region sampling methods. Here, we introduce one such method: it generates multiple bounding boxes with different sizes and aspect ratios while centering on each pixel. These bounding boxes are called anchor boxes. We will practice object detection based on anchor boxes in the following sections.
@@ -674,5 +674,5 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE3OTM3MjA5XX0=
+eyJoaXN0b3J5IjpbODcwNDE5MzY5XX0=
 -->
