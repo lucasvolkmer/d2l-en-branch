@@ -6,11 +6,12 @@ Nos capítulos anteriores, discutimos como traeinar modelos on the Fashion-MNIST
 
 Assume we want toSuponha que queremos identifyicar different kinds of chaes tipos de cadeiras inas imagens and then push the purchase link to the user. One possible method is to first find a hundred common chairs, take one thousande, em seguida, enviar o link de compra para o usuário. Um método possível é primeiro encontrar cem cadeiras comuns, obter mil imagens different images withes com different angles for each chair, and thenes ângulos para cada cadeira e, em seguida, traein a classification model on the collected image dataset. Although this dataset may be larger thanar um modelo de classificação no conjunto de dados de imagens coletado. Embora esse conjunto de dados possa ser maior do que o Fashion-MNIST, the number ofo número de exaempleos is still less than one tenth of ImageNet. This may result in the overfitting of the complicated modelainda é menor que um décimo do ImageNet. Isso pode resultar em sobreajuste do modelo complicado applicable tável ao ImageNet on this dataset. At the same time, because of the limited amount of data, the accuracy of theneste conjunto de dados. Ao mesmo tempo, devido à quantidade limitada de dados, a precisão do modelo final traeined model may not meet the practical requirementado pode não atender aos requisitos práticos.
 
-In order to deal with the above problems, an obvious solution is to collect more data. However, collecting and labeling data can consume a lot of time and money. For example, in order to collect the ImageNet datasets, researchers have spent millions of dollars of research funding. Although, recently, data collection costs have dropped significantly, the costs still cannot be ignored.
 
-Another solution is to apply transfer learning to migrate the knowledge learned from the source dataset to the target dataset. For example, although the images in ImageNet are mostly unrelated to chairs, models trained on this dataset can extract more general image features that can help identify edges, textures, shapes, and object composition. These similar features may be equally effective for recognizing a chair.
+Para lidar com os problemas acima, uma solução óbvia é coletar mais dados. No entanto, coletar e rotular dados pode consumir muito tempo e dinheiro. Por exemplo, para coletar os conjuntos de dados ImageNet, os pesquisadores gastaram milhões de dólares em financiamento de pesquisa. Embora, recentemente, os custos de coleta de dados tenham caído significativamente, os custos ainda não podem ser ignorados.
 
-In this section, we introduce a common technique in transfer learning: fine tuning. As shown in :numref:`fig_finetune`, fine tuning consists of the following four steps:
+Outra solução é aplicar o aprendizado de transferência para migrar o conhecimento aprendido do conjunto de dados de origem para o conjunto de dados de destino. Por exemplo, embora as imagens no ImageNet não tenham relação com cadeiras, os modelos treinados neste conjunto de dados podem extrair recursos de imagem mais gerais que podem ajudar a identificar bordas, texturas, formas e composição de objetos. Esses recursos semelhantes podem ser igualmente eficazes para o reconhecimento de uma cadeira.
+
+Nesta seção, apresentamos uma técnica comum no aprendizado por transferência: o ajuste fino. Conforme mostrado em :numref:`fig_finetune, o ajuste fino consiste nas quatro etapas a seguir:
 
 1. Pre-train a neural network model, i.e., the source model, on a source dataset (e.g., the ImageNet dataset).
 2. Create a new neural network model, i.e., the target model. This replicates all model designs and their parameters on the source model, except the output layer. We assume that these model parameters contain the knowledge learned from the source dataset and this knowledge will be equally applicable to the target dataset. We also assume that the output layer of the source model is closely related to the labels of the source dataset and is therefore not used in the target model.
@@ -293,5 +294,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU3MDU3NDkyXX0=
+eyJoaXN0b3J5IjpbMTQyNTI5NjcxMl19
 -->
