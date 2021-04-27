@@ -21,7 +21,7 @@ conjunto de dados de treinamento, o objetivo da otimização é reduzir o erro d
 No entanto, o objetivo do aprendizado profundo (ou mais amplamente, inferência estatística) é
 reduzir o erro de generalização.
 Para realizar o último, precisamos pagar
-atenção ao overfitting, além de usar o algoritmo de otimização para
+atenção ao *overfitting*, além de usar o algoritmo de otimização para
 reduzir o erro de treinamento.
 
 ```{.python .input}
@@ -229,6 +229,6 @@ Como vimos, a otimização para aprendizado profundo está cheia de desafios. Fe
 [Discussão](https://discuss.d2l.ai/t/489)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ5MTg3OTA3LDY1MjU5NzE5MiwyODIxMz
+eyJoaXN0b3J5IjpbLTEzNTg4MTg3LDY1MjU5NzE5MiwyODIxMz
 Y1MzQsLTEwMzExODk0Nl19
 -->
