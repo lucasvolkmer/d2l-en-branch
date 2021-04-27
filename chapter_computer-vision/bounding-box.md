@@ -102,7 +102,7 @@ boxes = d2l.tensor((dog_bbox, cat_bbox))
 box_center_to_corner(box_corner_to_center(boxes)) - boxes
 ```
 
-We can draw the bounding box in the image to check if it is accurate. Before drawing the box, we will define a helper function `bbox_to_rect`. It represents the bounding box in the bounding box format of `matplotlib`.
+Podemos desenhar a caixa delimitadora na imagem para verificar se ela é precisa. Antes de desenhar a caixa, definiremos uma função auxiliar `bbox_to_rect`. Ele representa a caixa delimitadora no formato de caixa delimitadora de `matplotlib`.
 
 ```{.python .input}
 #@tab all
@@ -117,7 +117,7 @@ def bbox_to_rect(bbox, color):
         fill=False, edgecolor=color, linewidth=2)
 ```
 
-After loading the bounding box on the image, we can see that the main outline of the target is basically inside the box.
+Depois de carregar a caixa delimitadora na imagem, podemos ver que o contorno principal do alvo está basicamente dentro da caixa.
 
 ```{.python .input}
 #@tab all
@@ -126,11 +126,11 @@ fig.axes.add_patch(bbox_to_rect(dog_bbox, 'blue'))
 fig.axes.add_patch(bbox_to_rect(cat_bbox, 'red'));
 ```
 
-## Summary
+## Resumo
 
-* In object detection, we not only need to identify all the objects of interest in the image, but also their positions. The positions are generally represented by a rectangular bounding box.
+* Na detecção de objetos, não precisamos apenas identificar todos os objetos de interesse na imagem, mas também suas posições. As posições são geralmente representadas por uma caixa delimitadora retangular.
 
-## Exercises
+## Exercícios
 
 1. Find some images and try to label a bounding box that contains the target. Compare the difference between the time it takes to label the bounding box and label the category.
 
@@ -142,6 +142,6 @@ fig.axes.add_patch(bbox_to_rect(cat_bbox, 'red'));
 [Discussions](https://discuss.d2l.ai/t/1527)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyMzcxMDkyLDc5NDU2NjI2NywtNTE3Nj
-U3NzJdfQ==
+eyJoaXN0b3J5IjpbMTg0NzY3ODA4OSw3OTQ1NjYyNjcsLTUxNz
+Y1NzcyXX0=
 -->
