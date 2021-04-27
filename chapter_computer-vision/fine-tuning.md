@@ -129,9 +129,9 @@ test_augs = torchvision.transforms.Compose([
     normalize])
 ```
 
-### Defining and Initializing the Model
+### Definindo e Inicializando o Modelo
 
-We use ResNet-18, which was pre-trained on the ImageNet dataset, as the source model. Here, we specify `pretrained=True` to automatically download and load the pre-trained model parameters. The first time they are used, the model parameters need to be downloaded from the Internet.
+Usamos o ResNet-18, que foi pré-treinado no conjunto de dados ImageNet, como modelo de origem. Aqui, especificamos `pretrained = True` para baixar e carregar automaticamente os parâmetros do modelo pré-treinado. Na primeira vez em que são usados, os parâmetros do modelo precisam ser baixados da Internet.
 
 ```{.python .input}
 pretrained_net = gluon.model_zoo.vision.resnet18_v2(pretrained=True)
@@ -142,7 +142,7 @@ pretrained_net = gluon.model_zoo.vision.resnet18_v2(pretrained=True)
 pretrained_net = torchvision.models.resnet18(pretrained=True)
 ```
 
-The pre-trained source model instance contains two member variables: `features` and `output`. The former contains all layers of the model, except the output layer, and the latter is the output layer of the model. The main purpose of this division is to facilitate the fine tuning of the model parameters of all layers except the output layer. The member variable `output` of source model is given below. As a fully connected layer, it transforms ResNet's final global average pooling layer output into 1000 class output on the ImageNet dataset.
+A instância do modelo de origem pré-treinada contém duas variáveis de membro: `features` e `output`. O primeiro contém todas as camadas do modelo, exceto a camada de saída, e o último é a camada de saída do modelo. O principal objetivo desta divisão é facilitar o ajuste fino dos parâmetros do modelo de todas as camadas, exceto a camada de saída. A variável membro `output` do modelo de origem é fornecida abaixo. Como uma camada totalmente conectada, ele transforma a saída final da camada de agrupamento média global do ResNet em uma saída de 1000 classes no conjunto de dados ImageNet.
 
 ```{.python .input}
 pretrained_net.output
@@ -295,5 +295,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3ODc1MjQ3MywtMTA0ODc0NTA1XX0=
+eyJoaXN0b3J5IjpbMTk4MTUwMjM0MywtMTA0ODc0NTA1XX0=
 -->
