@@ -175,7 +175,7 @@ nn.init.xavier_uniform_(finetune_net.fc.weight);
 
 ### Ajustando o Modelo
 
-We first define a training function `train_fine_tuning` that uses fine tuning so it can be called multiple times.
+Primeiro definimos uma função de treinamento `train_fine_tuning` que usa ajuste fino para que possa ser chamada várias vezes.
 
 ```{.python .input}
 def train_fine_tuning(net, learning_rate, batch_size=128, num_epochs=5):
@@ -219,7 +219,7 @@ def train_fine_tuning(net, learning_rate, batch_size=128, num_epochs=5,
                    devices)
 ```
 
-We set the learning rate in the `Trainer` instance to a smaller value, such as 0.01, in order to fine-tune the model parameters obtained in pretraining. Based on the previous settings, we will train the output layer parameters of the target model from scratch using a learning rate ten times greater.
+Definimos a taxa de aprendizado na instância `Trainer` para um valor menor, como 0,01, a fim de ajustar os parâmetros do modelo obtidos no pré-treinamento. Com base nas configurações anteriores, treinaremos os parâmetros da camada de saída do modelo de destino do zero, usando uma taxa de aprendizado dez vezes maior.
 
 ```{.python .input}
 train_fine_tuning(finetune_net, 0.01)
@@ -230,7 +230,7 @@ train_fine_tuning(finetune_net, 0.01)
 train_fine_tuning(finetune_net, 5e-5)
 ```
 
-For comparison, we define an identical model, but initialize all of its model parameters to random values. Since the entire model needs to be trained from scratch, we can use a larger learning rate.
+Para comparação, definimos um modelo idêntico, mas inicializamos todos os seus parâmetros de modelo para valores aleatórios. Como todo o modelo precisa ser treinado do zero, podemos usar uma taxa de aprendizado maior.
 
 ```{.python .input}
 scratch_net = gluon.model_zoo.vision.resnet18_v2(classes=2)
@@ -245,10 +245,9 @@ scratch_net.fc = nn.Linear(scratch_net.fc.in_features, 2)
 train_fine_tuning(scratch_net, 5e-4, param_group=False)
 ```
 
-As you can see, the fine-tuned model tends to achieve higher precision in the same epoch because the initial values of the parameters are better.
+Como você pode ver, o modelo ajustado tende a obter maior precisão na mesma época porque os valores iniciais dos parâmetros são melhores.
 
-
-## Summary
+## Resumo
 
 
 * Transfer learning migrates the knowledge learned from the source dataset to the target dataset. Fine tuning is a common technique for transfer learning.
@@ -295,5 +294,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjk1NDYxOTUsLTEwNDg3NDUwNV19
+eyJoaXN0b3J5IjpbLTE0NzkxNTg2NjMsLTEwNDg3NDUwNV19
 -->
