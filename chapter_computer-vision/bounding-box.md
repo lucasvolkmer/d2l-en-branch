@@ -83,10 +83,10 @@ def box_center_to_corner(boxes):
     return boxes
 ```
 
-We will define the bounding boxes of the dog and the cat in the image based
-on the coordinate information. The origin of the coordinates in the image
-is the upper left corner of the image, and to the right and down are the
-positive directions of the $x$ axis and the $y$ axis, respectively.
+Vamos definir as caixas delimitadoras do cão e do gato na imagem baseada
+nas informações de coordenadas. A origem das coordenadas na imagem
+é o canto superior esquerdo da imagem, e para a direita e para baixo estão as
+direções positivas do eixo $x$ e do eixo $y$, respectivamente.
 
 ```{.python .input}
 #@tab all
@@ -94,7 +94,7 @@ positive directions of the $x$ axis and the $y$ axis, respectively.
 dog_bbox, cat_bbox = [60.0, 45.0, 378.0, 516.0], [400.0, 112.0, 655.0, 493.0]
 ```
 
-We can verify the correctness of box conversion functions by converting twice.
+Podemos verificar a exatidão das funções de conversão da caixa convertendo duas vezes.
 
 ```{.python .input}
 #@tab all
@@ -142,5 +142,6 @@ fig.axes.add_patch(bbox_to_rect(cat_bbox, 'red'));
 [Discussions](https://discuss.d2l.ai/t/1527)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk0NTY2MjY3LC01MTc2NTc3Ml19
+eyJoaXN0b3J5IjpbOTIyMzcxMDkyLDc5NDU2NjI2NywtNTE3Nj
+U3NzJdfQ==
 -->
