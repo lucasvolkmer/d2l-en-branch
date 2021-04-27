@@ -2,11 +2,13 @@
 :label:`sec_bbox`
 
 
-In the previous section, we introduced many models for image classification. In image classification tasks, we assume that there is only one main target in the image and we only focus on how to identify the target category. However, in many situations, there are multiple targets in the image that we are interested in. We not only want to classify them, but also want to obtain their specific positions in the image. In computer vision, we refer to such tasks as object detection (or object recognition).
 
-Object detection is widely used in many fields. For example, in self-driving technology, we need to plan routes by identifying the locations of vehicles, pedestrians, roads, and obstacles in the captured video image. Robots often perform this type of task to detect targets of interest. Systems in the security field need to detect abnormal targets, such as intruders or bombs.
+Na seção anterior, apresentamos muitos modelos para classificação de imagens. Nas tarefas de classificação de imagens, presumimos que haja apenas uma característica principal na imagem e nos concentramos apenas em como identificar a categoria de destino. No entanto, em muitas situações, existem várias características na imagem que nos interessam. Não queremos apenas classificá-las, mas também queremos obter suas posições específicas na imagem. Na visão computacional, nos referimos a tarefas como detecção de objetos (ou reconhecimento de objetos).
 
-In the next few sections, we will introduce multiple deep learning models used for object detection. Before that, we should discuss the concept of target location. First, import the packages and modules required for the experiment.
+A detecção de objetos é amplamente usada em muitos campos. Por exemplo, na tecnologia de direção autônoma, precisamos planejar rotas identificando a localização de veículos, pedestres, estradas e obstáculos na imagem de vídeo capturada. Os robôs geralmente realizam esse tipo de tarefa para detectar alvos de interesse. Os sistemas no campo da segurança precisam detectar alvos anormais, como intrusos ou bombas.
+
+Nas próximas seções, apresentaremos vários modelos de aprendizado profundo usados ​​para detecção de objetos. Antes disso, devemos discutir o conceito de localização de destino. Primeiro, importe os pacotes e módulos necessários para o experimento.
+
 
 ```{.python .input}
 %matplotlib inline
@@ -30,7 +32,7 @@ from d2l import tensorflow as d2l
 import tensorflow as tf
 ```
 
-Next, we will load the sample images that will be used in this section. We can see there is a dog on the left side of the image and a cat on the right. They are the two main targets in this image.
+A seguir, carregaremos as imagens de amostra que serão usadas nesta seção. Podemos ver que há um cachorro no lado esquerdo da imagem e um gato no lado direito. Eles são os dois alvos principais desta imagem.
 
 ```{.python .input}
 d2l.set_figsize()
@@ -45,7 +47,7 @@ img = d2l.plt.imread('../img/catdog.jpg')
 d2l.plt.imshow(img);
 ```
 
-## Bounding Box
+## Caixa Delimitadora
 
 In object detection, we usually use a bounding box to describe the target location.
 The bounding box is a rectangular box that can be determined by the $x$ and
@@ -144,5 +146,5 @@ fig.axes.add_patch(bbox_to_rect(cat_bbox, 'red'));
 [Discussions](https://discuss.d2l.ai/t/1527)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDU1Njc4MjksLTUxNzY1NzcyXX0=
+eyJoaXN0b3J5IjpbLTM2ODk4Njc3LC01MTc2NTc3Ml19
 -->
