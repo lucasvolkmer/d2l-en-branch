@@ -1,4 +1,4 @@
-# Fine-TuningAfinação
+# Ajustes
 :label:`sec_fine_tuning`
 
 In earlier chapters, we discussed how t
@@ -153,7 +153,7 @@ pretrained_net.output
 pretrained_net.fc
 ```
 
-We then build a new neural network to use as the target model. It is defined in the same way as the pre-trained source model, but the final number of outputs is equal to the number of categories in the target dataset. In the code below, the model parameters in the member variable `features` of the target model instance `finetune_net` are initialized to model parameters of the corresponding layer of the source model. Because the model parameters in `features` are obtained by pre-training on the ImageNet dataset, it is good enough. Therefore, we generally only need to use small learning rates to "fine-tune" these parameters. In contrast, model parameters in the member variable `output` are randomly initialized and generally require a larger learning rate to learn from scratch. Assume the learning rate in the `Trainer` instance is $\eta$ and use a learning rate of $10\eta$ to update the model parameters in the member variable `output`.
+Em seguida, construímos uma nova rede neural para usar como modelo-alvo. Ele é definido da mesma forma que o modelo de origem pré-treinado, mas o número final de saídas é igual ao número de categorias no conjunto de dados de destino. No código abaixo, os parâmetros do modelo na variável membro `features` da instância do modelo de destino `finetune_net` são inicializados para modelar os parâmetros da camada correspondente do modelo de origem. Como os parâmetros do modelo em `features` são obtidos por pré-treinamento no conjunto de dados ImageNet, é bom o suficiente. Portanto, geralmente só precisamos usar pequenas taxas de aprendizado para "ajustar" esses parâmetros. Em contraste, os parâmetros do modelo na variável membro `output` são inicializados aleatoriamente e geralmente requerem uma taxa de aprendizado maior para aprender do zero. Suponha que a taxa de aprendizado na instância `Trainer` seja $\eta$ e use uma taxa de aprendizado de $10\eta$ para atualizar os parâmetros do modelo na variável membro `output`.
 
 ```{.python .input}
 finetune_net = gluon.model_zoo.vision.resnet18_v2(classes=2)
@@ -173,7 +173,7 @@ nn.init.xavier_uniform_(finetune_net.fc.weight);
 # using a learning rate ten times greater, defined in the trainer.
 ```
 
-### Fine Tuning the Model
+### Ajustando o Modelo
 
 We first define a training function `train_fine_tuning` that uses fine tuning so it can be called multiple times.
 
@@ -295,5 +295,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MTUwMjM0MywtMTA0ODc0NTA1XX0=
+eyJoaXN0b3J5IjpbNzAwNzM4MjExLC0xMDQ4NzQ1MDVdfQ==
 -->
