@@ -22,7 +22,7 @@ Nesta seção, apresentamos uma técnica comum no aprendizado por transferência
 :label:`fig_finetune`
 
 
-## Hot Dog Recognition
+## Reconhecimento de Cachorro-quente
 
 Next, we will use a specific example for practice: hot dog recognition. We will fine-tune the ResNet model trained on the ImageNet dataset based on a small dataset. This small dataset contains thousands of images, some of which contain hot dogs. We will use the model obtained by fine tuning to identify whether an image contains a hot dog.
 
@@ -294,5 +294,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NjkxOTA5MV19
+eyJoaXN0b3J5IjpbLTEwNDg3NDUwNV19
 -->
