@@ -31,15 +31,17 @@ torch.set_printoptions(2)
 
 ## Gerando Várias Caixas de Âncora
 
-Assume that the input image has a height of $h$ and width of $w$. We generate anchor boxes with different shapes centered on each pixel of the image. Assume the size is $s\in (0, 1]$, the aspect ratio is $r > 0$, and the width and height of the anchor box are $ws\sqrt{r}$ and $hs/\sqrt{r}$, respectively.  When the center position is given, an anchor box with known width and height is determined.
 
-Below we set a set of sizes $s_1,\ldots, s_n$ and a set of aspect ratios $r_1,\ldots, r_m$. If we use a combination of all sizes and aspect ratios with each pixel as the center, the input image will have a total of $whnm$ anchor boxes. Although these anchor boxes may cover all ground-truth bounding boxes, the computational complexity is often excessive. Therefore, we are usually only interested in a combination containing $s_1$ or $r_1$ sizes and aspect ratios, that is:
+Suponha que a imagem de entrada tenha uma altura de $h$ e uma largura de $w$. Geramos caixas de âncora com diferentes formas centralizadas em cada pixel da imagem. Suponha que o tamanho seja $s\in (0, 1]$, a proporção da imagem é $r > 0$ e a largura e a altura da caixa de âncora são $ws\sqrt{r}$ e $hs/\sqrt{r}$, respectivamente. Quando a posição central é fornecida, uma caixa de âncora com largura e altura conhecidas é determinada.
+
+Abaixo, definimos um conjunto de tamanhos $s_1,\ldots, s_n$ e um conjunto de relações de aspecto $r_1,\ldots, r_m$. Se usarmos uma combinação de todos os tamanhos e proporções com cada pixel como o centro, a imagem de entrada terá um total de $whnm$ caixas de âncora. Embora essas caixas de âncora possam abranger todas as caixas delimitadoras da verdade, a complexidade computacional costuma ser excessiva. Portanto, normalmente estamos interessados apenas em uma combinação contendo $s_1$ ou $r_1$ tamanhos e proporções, isto é:
 
 $$(s_1, r_1), (s_1, r_2), \ldots, (s_1, r_m), (s_2, r_1), (s_3, r_1), \ldots, (s_n, r_1).$$
 
-That is, the number of anchor boxes centered on the same pixel is $n+m-1$. For the entire input image, we will generate a total of $wh(n+m-1)$ anchor boxes.
 
-The above method of generating anchor boxes has been implemented in the `multibox_prior` function. We specify the input, a set of sizes, and a set of aspect ratios, and this function will return all the anchor boxes entered.
+Ou seja, o número de caixas de âncora centradas no mesmo pixel é $n+m-1$. Para toda a imagem de entrada, geraremos um total de $wh(n+m-1)$ caixas de âncora.
+
+O método acima para gerar caixas de âncora foi implementado na função `multibox_prior`. Especificamos a entrada, um conjunto de tamanhos e um conjunto de proporções, e esta função retornará todas as caixas de âncora inseridas.
 
 ```{.python .input}
 #@save
@@ -674,5 +676,5 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NjIzMzQ3N119
+eyJoaXN0b3J5IjpbLTIwODQ0MzI4MjYsMTc0NjIzMzQ3N119
 -->
