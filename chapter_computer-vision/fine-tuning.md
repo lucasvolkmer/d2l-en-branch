@@ -1,10 +1,10 @@
 # Ajustes
 :label:`sec_fine_tuning`
 
-In earlier chapters, we discussed how t
-Nos capítulos anteriores, discutimos como traeinar modelos on the Fashion-MNIST training dataset, which only hno conjunto de dados de treinamento Fashion-MNIST, que tem apenas 60,.000 imagens. We also described ImageNet, the most widely used large-scale image dataset in theTambém descrevemos o ImageNet, o conjunto de dados de imagens em grande escala mais usado no mundo acadeêmic world, with more than 10 milliono, com mais de 10 milhões de imagens ande objects of overtos de mais de 1000 categorieas. However, the size of datasets that we often deal with is usually larger than the first, but smaller than the secoNo entanto, o tamanho dos conjuntos de dados com os quais frequentemente lidamos é geralmente maior do que o primeiro, mas menor do que o segundo.
 
-Assume we want toSuponha que queremos identifyicar different kinds of chaes tipos de cadeiras inas imagens and then push the purchase link to the user. One possible method is to first find a hundred common chairs, take one thousande, em seguida, enviar o link de compra para o usuário. Um método possível é primeiro encontrar cem cadeiras comuns, obter mil imagens different images withes com different angles for each chair, and thenes ângulos para cada cadeira e, em seguida, traein a classification model on the collected image dataset. Although this dataset may be larger thanar um modelo de classificação no conjunto de dados de imagens coletado. Embora esse conjunto de dados possa ser maior do que o Fashion-MNIST, the number ofo número de exaempleos is still less than one tenth of ImageNet. This may result in the overfitting of the complicated modelainda é menor que um décimo do ImageNet. Isso pode resultar em sobreajuste do modelo complicado applicable tável ao ImageNet on this dataset. At the same time, because of the limited amount of data, the accuracy of theneste conjunto de dados. Ao mesmo tempo, devido à quantidade limitada de dados, a precisão do modelo final traeined model may not meet the practical requirementado pode não atender aos requisitos práticos.
+Nos capítulos anteriores, discutimos como treinar modelos no conjunto de dados de treinamento Fashion-MNIST, que tem apenas 60.000 imagens. Também descrevemos o ImageNet, o conjunto de dados de imagens em grande escala mais usado no mundo acadêmico, com mais de 10 milhões de imagens e objetos de mais de 1000 categorias. No entanto, o tamanho dos conjuntos de dados com os quais frequentemente lidamos é geralmente maior do que o primeiro, mas menor do que o segundo.
+
+Suponha que queremos identificar diferentes tipos de cadeiras nas imagens e, em seguida, enviar o link de compra para o usuário. Um método possível é primeiro encontrar cem cadeiras comuns, obter mil imagens diferentes com diferentes ângulos para cada cadeira e, em seguida, treinar um modelo de classificação no conjunto de dados de imagens coletado. Embora esse conjunto de dados possa ser maior do que o Fashion-MNIST, o número de exemplos ainda é menor que um décimo do ImageNet. Isso pode resultar em sobreajuste do modelo complicado aplicável ao ImageNet neste conjunto de dados. Ao mesmo tempo, devido à quantidade limitada de dados, a precisão do modelo final treinado pode não atender aos requisitos práticos.
 
 
 Para lidar com os problemas acima, uma solução óbvia é coletar mais dados. No entanto, coletar e rotular dados pode consumir muito tempo e dinheiro. Por exemplo, para coletar os conjuntos de dados ImageNet, os pesquisadores gastaram milhões de dólares em financiamento de pesquisa. Embora, recentemente, os custos de coleta de dados tenham caído significativamente, os custos ainda não podem ser ignorados.
@@ -295,5 +295,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAwNzM4MjExLC0xMDQ4NzQ1MDVdfQ==
+eyJoaXN0b3J5IjpbLTEyMjk1NDYxOTUsLTEwNDg3NDUwNV19
 -->
