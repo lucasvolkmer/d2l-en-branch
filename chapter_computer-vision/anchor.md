@@ -126,8 +126,8 @@ def multibox_prior(data, sizes, ratios):
     return output.unsqueeze(0)
 ```
 
-We can see that the shape of the returned anchor box variable `y` is
-(batch size, number of anchor boxes, 4).
+Podemos ver que a forma da variável de caixa de âncora retornada `y` é
+(tamanho do lote, número de caixas de âncora, 4).
 
 ```{.python .input}
 img = image.imread('../img/catdog.jpg').asnumpy()
@@ -150,7 +150,7 @@ Y = multibox_prior(X, sizes=[0.75, 0.5, 0.25], ratios=[1, 2, 0.5])
 Y.shape
 ```
 
-After changing the shape of the anchor box variable `y` to (image height, image width, number of anchor boxes centered on the same pixel, 4), we can obtain all the anchor boxes centered on a specified pixel position. In the following example, we access the first anchor box centered on (250, 250). It has four elements: the $x, y$ axis coordinates in the upper-left corner and the $x, y$ axis coordinates in the lower-right corner of the anchor box. The coordinate values of the $x$ and $y$ axis are divided by the width and height of the image, respectively, so the value range is between 0 and 1.
+Depois de alterar a forma da variável da caixa de âncora `y` para (altura da imagem, largura da imagem, número de caixas de âncora centradas no mesmo pixel, 4), podemos obter todas as caixas de âncora centradas em uma posição de pixel especificada. No exemplo a seguir, acessamos a primeira caixa de âncora centrada em (250, 250). Ele tem quatro elementos: as coordenadas do eixo $x, y$ no canto superior esquerdo e as coordenadas do eixo $x, y$ no canto inferior direito da caixa de âncora. Os valores das coordenadas dos eixos $x$ e $y$ são divididos pela largura e altura da imagem, respectivamente, portanto, o intervalo de valores está entre 0 e 1.
 
 ```{.python .input}
 #@tab all
@@ -158,7 +158,7 @@ boxes = Y.reshape(h, w, 5, 4)
 boxes[250, 250, 0, :]
 ```
 
-In order to describe all anchor boxes centered on one pixel in the image, we first define the `show_bboxes` function to draw multiple bounding boxes on the image.
+Para descrever todas as caixas de âncora centralizadas em um pixel na imagem, primeiro definimos a função `show_bboxes` para desenhar várias caixas delimitadoras na imagem.
 
 ```{.python .input}
 #@tab all
@@ -676,5 +676,5 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODQ0MzI4MjYsMTc0NjIzMzQ3N119
+eyJoaXN0b3J5IjpbMTM0NjA5MTQwOSwxNzQ2MjMzNDc3XX0=
 -->
