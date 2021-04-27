@@ -49,18 +49,14 @@ d2l.plt.imshow(img);
 
 ## Caixa Delimitadora
 
-In object detection, we usually use a bounding box to describe the target location.
-The bounding box is a rectangular box that can be determined by the $x$ and
-$y$ axis coordinates in the upper-left corner and the $x$ and $y$ axis
-coordinates in the lower-right corner of the rectangle.
-Another commonly used bounding box representation is the $x$ and $y$ axis
-coordinates of the bounding box center, and its width and height.
-Here we define functions to convert between these two
-representations, `box_corner_to_center` converts from the two-corner
-representation to the center-width-height presentation,
-and `box_center_to_corner` vice verse.
-The input argument `boxes` can be either a length $4$ tensor,
-or a $(N, 4)$ 2-dimensional tensor.
+Na detecção de objetos, geralmente usamos uma caixa delimitadora para descrever o local de destino.
+A caixa delimitadora é uma caixa retangular que pode ser determinada pelas coordenadas dos eixos $x$ e $y$ no canto superior esquerdo e pelas coordenadas dos eixos $x$ e $y$ no canto inferior direito do retângulo.
+Outra representação de caixa delimitadora comumente usada são as coordenadas dos eixos $x$ e $y$ do centro da caixa delimitadora e sua largura e altura.
+Aqui definimos funções para converter entre esses dois
+representações, `box_corner_to_center` converte da representação de dois cantos para a apresentação centro-largura-altura,
+e vice-versa `box_center_to_corner`.
+O argumento de entrada `boxes` pode ter um tensor de comprimento $4$,
+ou um tensor $(N, 4)$ 2-dimensional.
 
 ```{.python .input}
 #@tab all
@@ -146,5 +142,5 @@ fig.axes.add_patch(bbox_to_rect(cat_bbox, 'red'));
 [Discussions](https://discuss.d2l.ai/t/1527)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2ODk4Njc3LC01MTc2NTc3Ml19
+eyJoaXN0b3J5IjpbNzk0NTY2MjY3LC01MTc2NTc3Ml19
 -->
