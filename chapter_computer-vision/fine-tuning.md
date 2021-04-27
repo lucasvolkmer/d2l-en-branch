@@ -24,9 +24,10 @@ Nesta seção, apresentamos uma técnica comum no aprendizado por transferência
 
 ## Reconhecimento de Cachorro-quente
 
-Next, we will use a specific example for practice: hot dog recognition. We will fine-tune the ResNet model trained on the ImageNet dataset based on a small dataset. This small dataset contains thousands of images, some of which contain hot dogs. We will use the model obtained by fine tuning to identify whether an image contains a hot dog.
 
-First, import the packages and modules required for the experiment.  Gluon's `model_zoo` package provides a common pre-trained model. If you want to get more pre-trained models for computer vision, you can use the [GluonCV Toolkit](https://gluon-cv.mxnet.io).
+A seguir, usaremos um exemplo específico para prática: reconhecimento de cachorro-quente. Faremos o ajuste fino do modelo ResNet treinado no conjunto de dados ImageNet com base em um pequeno conjunto de dados. Este pequeno conjunto de dados contém milhares de imagens, algumas das quais contêm cachorros-quentes. Usaremos o modelo obtido pelo ajuste fino para identificar se uma imagem contém cachorro-quente.
+
+Primeiro, importe os pacotes e módulos necessários para o experimento. O pacote `model_zoo` do Gluon fornece um modelo comum pré-treinado. Se você deseja obter mais modelos pré-treinados para visão computacional, você pode usar o [GluonCV Toolkit](https://gluon-cv.mxnet.io).
 
 ```{.python .input}
 %matplotlib inline
@@ -48,8 +49,7 @@ import torchvision
 import os
 ```
 
-### Obtaining the Dataset
-
+### Obtendo o *Dataset*
 The hot dog dataset we use was taken from online images and contains $1,400$ positive images containing hot dogs and the same number of negative images containing other foods. $1,000$ images of various classes are used for training and the rest are used for testing.
 
 We first download the compressed dataset and get two folders `hotdog/train` and `hotdog/test`. Both folders have `hotdog` and `not-hotdog` category subfolders, each of which has corresponding image files.
@@ -294,5 +294,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDg3NDUwNV19
+eyJoaXN0b3J5IjpbLTEwMzU4MzQxMjUsLTEwNDg3NDUwNV19
 -->
