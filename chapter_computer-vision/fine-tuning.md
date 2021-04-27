@@ -250,16 +250,16 @@ Como você pode ver, o modelo ajustado tende a obter maior precisão na mesma é
 ## Resumo
 
 
-* Transfer learning migrates the knowledge learned from the source dataset to the target dataset. Fine tuning is a common technique for transfer learning.
-* The target model replicates all model designs and their parameters on the source model, except the output layer, and fine-tunes these parameters based on the target dataset. In contrast, the output layer of the target model needs to be trained from scratch.
-* Generally, fine tuning parameters use a smaller learning rate, while training the output layer from scratch can use a larger learning rate.
+* A aprendizagem de transferência migra o conhecimento aprendido do conjunto de dados de origem para o conjunto de dados de destino. O ajuste fino é uma técnica comum para a aprendizagem por transferência.
+* O modelo de destino replica todos os designs de modelo e seus parâmetros no modelo de origem, exceto a camada de saída, e ajusta esses parâmetros com base no conjunto de dados de destino. Em contraste, a camada de saída do modelo de destino precisa ser treinada do zero.
+* Geralmente, os parâmetros de ajuste fino usam uma taxa de aprendizado menor, enquanto o treinamento da camada de saída do zero pode usar uma taxa de aprendizado maior.
 
 
-## Exercises
+## Exercícios
 
-1. Keep increasing the learning rate of `finetune_net`. How does the precision of the model change?
-2. Further tune the hyperparameters of `finetune_net` and `scratch_net` in the comparative experiment. Do they still have different precisions?
-3. Set the parameters in `finetune_net.features` to the parameters of the source model and do not update them during training. What will happen? You can use the following code.
+1. Continue aumentando a taxa de aprendizado de `finetune_net`. Como a precisão do modelo muda?
+2. Ajuste ainda mais os hiperparâmetros de `finetune_net` e `scratch_net` no experimento comparativo. Eles ainda têm precisões diferentes?
+3. Defina os parâmetros em `finetune_net.features` para os parâmetros do modelo de origem e não os atualize durante o treinamento. O que vai acontecer? Você pode usar o seguinte código.
 
 ```{.python .input}
 finetune_net.features.collect_params().setattr('grad_req', 'null')
@@ -271,7 +271,7 @@ for param in finetune_net.parameters():
     param.requires_grad = False
 ```
 
-4. In fact, there is also a "hotdog" class in the `ImageNet` dataset. Its corresponding weight parameter at the output layer can be obtained by using the following code. How can we use this parameter?
+4. Na verdade, também existe uma classe "hotdog" no conjunto de dados `ImageNet`. Seu parâmetro de peso correspondente na camada de saída pode ser obtido usando o código a seguir. Como podemos usar este parâmetro?
 
 ```{.python .input}
 weight = pretrained_net.output.weight
@@ -294,5 +294,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzkxNTg2NjMsLTEwNDg3NDUwNV19
+eyJoaXN0b3J5IjpbMTkwMjUzNjIyNSwtMTA0ODc0NTA1XX0=
 -->
