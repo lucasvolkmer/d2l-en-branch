@@ -13,10 +13,10 @@ Outra solução é aplicar o aprendizado de transferência para migrar o conheci
 
 Nesta seção, apresentamos uma técnica comum no aprendizado por transferência: o ajuste fino. Conforme mostrado em :numref:`fig_finetune, o ajuste fino consiste nas quatro etapas a seguir:
 
-1. Pre-train a neural network model, i.e., the source model, on a source dataset (e.g., the ImageNet dataset).
-2. Create a new neural network model, i.e., the target model. This replicates all model designs and their parameters on the source model, except the output layer. We assume that these model parameters contain the knowledge learned from the source dataset and this knowledge will be equally applicable to the target dataset. We also assume that the output layer of the source model is closely related to the labels of the source dataset and is therefore not used in the target model.
-3. Add an output layer whose output size is the number of target dataset categories to the target model, and randomly initialize the model parameters of this layer.
-4. Train the target model on a target dataset, such as a chair dataset. We will train the output layer from scratch, while the parameters of all remaining layers are fine-tuned based on the parameters of the source model.
+1. Pré-treine um modelo de rede neural, ou seja, o modelo de origem, em um conjunto de dados de origem (por exemplo, o conjunto de dados ImageNet).
+2. Crie um novo modelo de rede neural, ou seja, o modelo de destino. Isso replica todos os designs de modelo e seus parâmetros no modelo de origem, exceto a camada de saída. Assumimos que esses parâmetros do modelo contêm o conhecimento aprendido com o conjunto de dados de origem e esse conhecimento será igualmente aplicável ao conjunto de dados de destino. Também assumimos que a camada de saída do modelo de origem está intimamente relacionada aos rótulos do conjunto de dados de origem e, portanto, não é usada no modelo de destino.
+3. Adicione uma camada de saída cujo tamanho de saída é o número de categorias de conjunto de dados de destino ao modelo de destino e inicialize aleatoriamente os parâmetros do modelo desta camada.
+4. Treine o modelo de destino em um conjunto de dados de destino, como um conjunto de dados de cadeira. Vamos treinar a camada de saída do zero, enquanto os parâmetros de todas as camadas restantes são ajustados com base nos parâmetros do modelo de origem.
 
 ![Fine tuning. ](../img/finetune.svg)
 :label:`fig_finetune`
@@ -294,5 +294,5 @@ hotdog_w.shape
 [Discussions](https://discuss.d2l.ai/t/1439)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNTI5NjcxMl19
+eyJoaXN0b3J5IjpbLTY4NjkxOTA5MV19
 -->
