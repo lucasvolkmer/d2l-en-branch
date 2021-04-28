@@ -335,9 +335,9 @@ $$\left( \frac{ \frac{x_b - x_a}{w_a} - \mu_x }{\sigma_x},
 \frac{ \log \frac{w_b}{w_a} - \mu_w }{\sigma_w},
 \frac{ \log \frac{h_b}{h_a} - \mu_h }{\sigma_h}\right),$$
 
-The default values of the constant are $\mu_x = \mu_y = \mu_w = \mu_h = 0, \sigma_x=\sigma_y=0.1, and \sigma_w=\sigma_h=0.2$.
-This transformation is implemented below in the `offset_boxes` function.
-If an anchor box is not assigned a ground-truth bounding box, we only need to set the category of the anchor box to background. Anchor boxes whose category is background are often referred to as negative anchor boxes, and the rest are referred to as positive anchor boxes.
+Os valores padrão da constante são $\mu_x = \mu_y = \mu_w = \mu_h = 0, \sigma_x=\sigma_y=0.1, \text{ e } \sigma_w=\sigma_h=0.2$.
+Esta transformação é implementada abaixo na função `offset_boxes`.
+Se uma caixa de âncora não for atribuída a uma caixa delimitadora de verdade, só precisamos definir a categoria da caixa de âncora como segundo plano. As caixas de âncora cuja categoria é o plano de fundo costumam ser chamadas de caixas de âncora negativas e o restante é chamado de caixas de âncora positivas.
 
 ```{.python .input}
 #@tab all
@@ -678,7 +678,7 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQwMDg0MzExLC05MTUwMTI3OTIsLTEzNT
-YyNTM4MDEsMTU0NjI0MDQ4NiwtMTQ5MzQwNTk0MiwxODkxNTcy
-OTk3LC00OTA0NDA3MDMsMTc0NjIzMzQ3N119
+eyJoaXN0b3J5IjpbLTU0MTExNzkzNSwtOTE1MDEyNzkyLC0xMz
+U2MjUzODAxLDE1NDYyNDA0ODYsLTE0OTM0MDU5NDIsMTg5MTU3
+Mjk5NywtNDkwNDQwNzAzLDE3NDYyMzM0NzddfQ==
 -->
