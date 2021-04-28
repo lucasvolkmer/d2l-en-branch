@@ -498,8 +498,8 @@ def offset_inverse(anchors, offset_preds):
 
 Quando há muitas caixas de âncora, muitas caixas delimitadoras de predição semelhantes podem ser geradas para o mesmo alvo. Para simplificar os resultados, podemos remover caixas delimitadoras de predição semelhantes. Um método comumente usado é chamado de supressão não máxima (NMS).
 
-Let us take a look at how NMS works. For a prediction bounding box $B$, the model calculates the predicted probability for each category. Assume the largest predicted probability is $p$, the category corresponding to this probability is the predicted category of $B$. We also refer to $p$ as the confidence level of prediction bounding box $B$. On the same image, we sort the prediction bounding boxes with predicted categories other than background by confidence level from high to low, and obtain the list $L$. Select the prediction bounding box $B_1$ with highest confidence level from $L$ as a baseline and remove all non-benchmark prediction bounding boxes with an IoU with $B_1$ greater than a certain threshold from $L$. The threshold here is a preset hyperparameter. At this point, $L$ retains the prediction bounding box with the highest confidence level and removes other prediction bounding boxes similar to it.
-Next, select the prediction bounding box $B_2$ with the second highest confidence level from $L$ as a baseline, and remove all non-benchmark prediction bounding boxes with an IoU with $B_2$ greater than a certain threshold from $L$. Repeat this process until all prediction bounding boxes in $L$ have been used as a baseline. At this time, the IoU of any pair of prediction bounding boxes in $L$ is less than the threshold. Finally, output all prediction bounding boxes in the list $L$.
+Vamos dar uma olhada em como o NMS funciona. Para uma caixa delimitadora de previsão $B$, o modelo calcula a probabilidade prevista para cada categoria. Suponha que a maior probabilidade prevista seja $p$, a categoria correspondente a essa probabilidade é a categoria prevista de $B$. Também nos referimos a $p$ como o nível de confiança da caixa delimitadora de predição $B$. Na mesma imagem, classificamos as caixas delimitadoras de previsão com categorias previstas diferentes do plano de fundo por nível de confiança de alto a baixo e obtemos a lista $L$. Selecionamos a caixa delimitadora de predição $B_1$ com o nível de confiança mais alto de $L$ como linha de base e remova todas as caixas delimitadoras de predição não comparativas com um IoU com $B_1$ maior que um determinado limite de $L$. O limite aqui é um hiperparâmetro predefinido. Nesse ponto, $L$ retém a caixa delimitadora de predição com o nível de confiança mais alto e remove outras caixas delimitadoras de predição semelhantes a ela.
+Em seguida, selecionamos a caixa delimitadora de predição $B_2$ com o segundo nível de confiança mais alto de $L$ como linha de base e removemos todas as caixas delimitadoras de predição não comparativas com um IoU com $B_2$ maior que um determinado limite de $L$. Repetimos esse processo até que todas as caixas delimitadoras de previsão em $L$ tenham sido usadas como linha de base. Neste momento, a IoU de qualquer par de caixas delimitadoras de predição em $L$ é menor que o limite. Finalmente, produzimos todas as caixas delimitadoras de predição na lista $L$.
 
 ```{.python .input}
 #@save
@@ -676,9 +676,9 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTk5NDgwMywtNTEzMzE1MzYxLC0xNj
-g4MDk4MTY4LDE2OTc1MDUyMjUsLTU0MTExNzkzNSwtOTE1MDEy
-NzkyLC0xMzU2MjUzODAxLDE1NDYyNDA0ODYsLTE0OTM0MDU5ND
-IsMTg5MTU3Mjk5NywtNDkwNDQwNzAzLDE3NDYyMzM0NzddfQ==
-
+eyJoaXN0b3J5IjpbLTE4NTIwNDA0OTMsLTE0NTk5NDgwMywtNT
+EzMzE1MzYxLC0xNjg4MDk4MTY4LDE2OTc1MDUyMjUsLTU0MTEx
+NzkzNSwtOTE1MDEyNzkyLC0xMzU2MjUzODAxLDE1NDYyNDA0OD
+YsLTE0OTM0MDU5NDIsMTg5MTU3Mjk5NywtNDkwNDQwNzAzLDE3
+NDYyMzM0NzddfQ==
 -->
