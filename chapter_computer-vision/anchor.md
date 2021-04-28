@@ -203,13 +203,13 @@ Acabamos de mencionar que a caixa de âncora cobre bem o cachorro na imagem. Se 
 $$J(\mathcal{A},\mathcal{B}) = \frac{\left|\mathcal{A} \cap \mathcal{B}\right|}{\left| \mathcal{A} \cup \mathcal{B}\right|}.$$
 
 
-In fact, we can consider the pixel area of a bounding box as a collection of pixels. In this way, we can measure the similarity of the two bounding boxes by the Jaccard index of their pixel sets. When we measure the similarity of two bounding boxes, we usually refer the Jaccard index as intersection over union (IoU), which is the ratio of the intersecting area to the union area of the two bounding boxes, as shown in :numref:`fig_iou`. The value range of IoU is between 0 and 1: 0 means that there are no overlapping pixels between the two bounding boxes, while 1 indicates that the two bounding boxes are equal.
+Na verdade, podemos considerar a área de pixels de uma caixa delimitadora como uma coleção de pixels. Dessa forma, podemos medir a similaridade das duas caixas delimitadoras pelo índice de Jaccard de seus conjuntos de pixels. Quando medimos a similaridade de duas caixas delimitadoras, geralmente nos referimos ao índice de Jaccard como interseção sobre união (IoU), que é a razão entre a área de interseção e a área de união das duas caixas delimitadoras, conforme mostrado em :numref:`fig_iou`. O intervalo de valores de IoU está entre 0 e 1: 0 significa que não há pixels sobrepostos entre as duas caixas delimitadoras, enquanto 1 indica que as duas caixas delimitadoras são iguais.
 
-![IoU is the ratio of the intersecting area to the union area of two bounding boxes.  ](../img/iou.svg)
+![IoU é a razão entre a área de interseção e a área de união de duas caixas delimitadoras.](../img/iou.svg)
 :label:`fig_iou`
 
 
-For the remainder of this section, we will use IoU to measure the similarity between anchor boxes and ground-truth bounding boxes, and between different anchor boxes.
+Para o restante desta seção, usaremos IoU para medir a semelhança entre as caixas de âncora e as caixas delimitadoras de verdade terrestre e entre as diferentes caixas de âncora.
 
 ```{.python .input}
 #@save
@@ -246,7 +246,7 @@ def box_iou(boxes1, boxes2):
     return inter / unioun
 ```
 
-## Labeling Training Set Anchor Boxes
+## Rotulagem de Treinamento para Definir Caixas de Âncora
 
 
 In the training set, we consider each anchor box as a training example. In order to train the object detection model, we need to mark two types of labels for each anchor box: first, the category of the target contained in the anchor box (category) and, second, the offset of the ground-truth bounding box relative to the anchor box (offset). In object detection, we first generate multiple anchor boxes, predict the categories and offsets for each anchor box, adjust the anchor box position according to the predicted offset to obtain the bounding boxes to be used for prediction, and finally filter out the prediction bounding boxes that need to be output.
@@ -676,6 +676,6 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg4OTExOTU2LDE4OTE1NzI5OTcsLTQ5MD
-Q0MDcwMywxNzQ2MjMzNDc3XX0=
+eyJoaXN0b3J5IjpbLTE0OTM0MDU5NDIsMTg5MTU3Mjk5NywtND
+kwNDQwNzAzLDE3NDYyMzM0NzddfQ==
 -->
