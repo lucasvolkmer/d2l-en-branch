@@ -651,7 +651,7 @@ for i in d2l.numpy(output[0]):
     show_bboxes(fig.axes, [d2l.tensor(i[2:]) * bbox_scale], label)
 ```
 
-In practice, we can remove prediction bounding boxes with lower confidence levels before performing NMS, thereby reducing the amount of computation for NMS. We can also filter the output of NMS, for example, by only retaining results with higher confidence levels as the final output.
+Na prática, podemos remover caixas delimitadoras de predição com níveis de confiança mais baixos antes de executar NMS, reduzindo assim a quantidade de computação para NMS. Também podemos filtrar a saída de NMS, por exemplo, retendo apenas os resultados com níveis de confiança mais altos como saída final.
 
 
 ## Summary
@@ -676,7 +676,7 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MTI1NjA2OSw4OTM1MjUzMDIsLTE4NT
+eyJoaXN0b3J5IjpbMTY5OTUxMjQyNyw4OTM1MjUzMDIsLTE4NT
 IwNDA0OTMsLTE0NTk5NDgwMywtNTEzMzE1MzYxLC0xNjg4MDk4
 MTY4LDE2OTc1MDUyMjUsLTU0MTExNzkzNSwtOTE1MDEyNzkyLC
 0xMzU2MjUzODAxLDE1NDYyNDA0ODYsLTE0OTM0MDU5NDIsMTg5
