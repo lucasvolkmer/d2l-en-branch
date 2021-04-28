@@ -478,13 +478,11 @@ O primeiro item retornado são os quatro valores de deslocamento rotulados para 
 labels[0]
 ```
 
-## Bounding Boxes for Prediction
+## Caixas Delimitadoras para Previsão
 
-During model prediction phase, we first generate multiple anchor boxes for the image and then predict categories and offsets for these anchor boxes one by one. Then, we obtain prediction bounding boxes based on anchor boxes and their predicted offsets.
+Durante a fase de previsão do modelo, primeiro geramos várias caixas de âncora para a imagem e, em seguida, predizemos categorias e deslocamentos para essas caixas de âncora, uma por uma. Em seguida, obtemos caixas delimitadoras de previsão com base nas caixas de âncora e seus deslocamentos previstos.
 
-Below we implement function `offset_inverse` which takes in anchors and
-offset predictions as inputs and applies inverse offset transformations to
-return the predicted bounding box coordinates.
+Abaixo, implementamos a função `offset_inverse` que leva âncoras e previsões de deslocamento como entradas e aplica transformações de deslocamento inversas para retornar as coordenadas da caixa delimitadora prevista.
 
 ```{.python .input}
 #@tab all
@@ -678,8 +676,8 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMzMxNTM2MSwtMTY4ODA5ODE2OCwxNj
-k3NTA1MjI1LC01NDExMTc5MzUsLTkxNTAxMjc5MiwtMTM1NjI1
-MzgwMSwxNTQ2MjQwNDg2LC0xNDkzNDA1OTQyLDE4OTE1NzI5OT
-csLTQ5MDQ0MDcwMywxNzQ2MjMzNDc3XX0=
+eyJoaXN0b3J5IjpbNjU2ODk3MjQ1LC01MTMzMTUzNjEsLTE2OD
+gwOTgxNjgsMTY5NzUwNTIyNSwtNTQxMTE3OTM1LC05MTUwMTI3
+OTIsLTEzNTYyNTM4MDEsMTU0NjI0MDQ4NiwtMTQ5MzQwNTk0Mi
+wxODkxNTcyOTk3LC00OTA0NDA3MDMsMTc0NjIzMzQ3N119
 -->
