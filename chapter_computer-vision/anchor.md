@@ -432,14 +432,14 @@ show_bboxes(fig.axes, ground_truth[:, 1:] * bbox_scale, ['dog', 'cat'], 'k')
 show_bboxes(fig.axes, anchors * bbox_scale, ['0', '1', '2', '3', '4']);
 ```
 
-We can label categories and offsets for anchor boxes by using the `multibox_target` function. This function sets the background category to 0 and increments the integer index of the target category from zero by 1 (1 for dog and 2 for cat).
+Podemos rotular categorias e deslocamentos para caixas de âncora usando a função `multibox_target`. Esta função define a categoria de fundo para 0 e incrementa o índice inteiro da categoria de destino de zero por 1 (1 para cachorro e 2 para gato).
 
 :begin_tab:`mxnet`
-We add example dimensions to the anchor boxes and ground-truth bounding boxes and construct random predicted results with a shape of (batch size, number of categories including background, number of anchor boxes) by using the `expand_dims` function.
+Adicionamos dimensões de exemplo às caixas de âncora e às caixas delimitadoras de verdade e construímos resultados preditos aleatórios com uma forma de (tamanho do lote, número de categorias incluindo plano de fundo, número de caixas de âncora) usando a função `expand_dims`.
 :end_tab:
 
 :begin_tab:`pytorch`
-We add example dimensions to the anchor boxes and ground-truth bounding boxes and construct random predicted results with a shape of (batch size, number of categories including background, number of anchor boxes) by using the `unsqueeze` function.
+Adicionamos dimensões de exemplo às caixas de âncora e caixas delimitadoras de verdade e construímos resultados preditos aleatórios com uma forma de (tamanho do lote, número de categorias incluindo fundo, número de caixas de âncora) usando a função `unsqueeze`.
 :end_tab:
 
 ```{.python .input}
@@ -453,7 +453,7 @@ labels = multibox_target(anchors.unsqueeze(dim=0),
                          ground_truth.unsqueeze(dim=0))
 ```
 
-There are three items in the returned result, all of which are in the tensor format. The third item is represented by the category labeled for the anchor box.
+Existem três itens no resultado retornado, todos no formato tensor. O terceiro item é representado pela categoria rotulada para a caixa de âncora.
 
 ```{.python .input}
 #@tab all
@@ -678,8 +678,8 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NzUwNTIyNSwtNTQxMTE3OTM1LC05MT
-UwMTI3OTIsLTEzNTYyNTM4MDEsMTU0NjI0MDQ4NiwtMTQ5MzQw
-NTk0MiwxODkxNTcyOTk3LC00OTA0NDA3MDMsMTc0NjIzMzQ3N1
-19
+eyJoaXN0b3J5IjpbLTE2ODgwOTgxNjgsMTY5NzUwNTIyNSwtNT
+QxMTE3OTM1LC05MTUwMTI3OTIsLTEzNTYyNTM4MDEsMTU0NjI0
+MDQ4NiwtMTQ5MzQwNTk0MiwxODkxNTcyOTk3LC00OTA0NDA3MD
+MsMTc0NjIzMzQ3N119
 -->
