@@ -496,7 +496,7 @@ def offset_inverse(anchors, offset_preds):
     return predicted_bb
 ```
 
-When there are many anchor boxes, many similar prediction bounding boxes may be output for the same target. To simplify the results, we can remove similar prediction bounding boxes. A commonly used method is called non-maximum suppression (NMS).
+Quando há muitas caixas de âncora, muitas caixas delimitadoras de predição semelhantes podem ser geradas para o mesmo alvo. Para simplificar os resultados, podemos remover caixas delimitadoras de predição semelhantes. Um método comumente usado é chamado de supressão não máxima (NMS).
 
 Let us take a look at how NMS works. For a prediction bounding box $B$, the model calculates the predicted probability for each category. Assume the largest predicted probability is $p$, the category corresponding to this probability is the predicted category of $B$. We also refer to $p$ as the confidence level of prediction bounding box $B$. On the same image, we sort the prediction bounding boxes with predicted categories other than background by confidence level from high to low, and obtain the list $L$. Select the prediction bounding box $B_1$ with highest confidence level from $L$ as a baseline and remove all non-benchmark prediction bounding boxes with an IoU with $B_1$ greater than a certain threshold from $L$. The threshold here is a preset hyperparameter. At this point, $L$ retains the prediction bounding box with the highest confidence level and removes other prediction bounding boxes similar to it.
 Next, select the prediction bounding box $B_2$ with the second highest confidence level from $L$ as a baseline, and remove all non-benchmark prediction bounding boxes with an IoU with $B_2$ greater than a certain threshold from $L$. Repeat this process until all prediction bounding boxes in $L$ have been used as a baseline. At this time, the IoU of any pair of prediction bounding boxes in $L$ is less than the threshold. Finally, output all prediction bounding boxes in the list $L$.
@@ -676,8 +676,9 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU2ODk3MjQ1LC01MTMzMTUzNjEsLTE2OD
-gwOTgxNjgsMTY5NzUwNTIyNSwtNTQxMTE3OTM1LC05MTUwMTI3
-OTIsLTEzNTYyNTM4MDEsMTU0NjI0MDQ4NiwtMTQ5MzQwNTk0Mi
-wxODkxNTcyOTk3LC00OTA0NDA3MDMsMTc0NjIzMzQ3N119
+eyJoaXN0b3J5IjpbLTE0NTk5NDgwMywtNTEzMzE1MzYxLC0xNj
+g4MDk4MTY4LDE2OTc1MDUyMjUsLTU0MTExNzkzNSwtOTE1MDEy
+NzkyLC0xMzU2MjUzODAxLDE1NDYyNDA0ODYsLTE0OTM0MDU5ND
+IsMTg5MTU3Mjk5NywtNDkwNDQwNzAzLDE3NDYyMzM0NzddfQ==
+
 -->
