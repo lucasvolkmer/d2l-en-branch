@@ -663,10 +663,10 @@ Na prática, podemos remover caixas delimitadoras de predição com níveis de c
 
 ## Exercícios
 
-1. Change the `sizes` and `ratios` values in the `multibox_prior` function and observe the changes to the generated anchor boxes.
-1. Construct two bounding boxes with an IoU of 0.5, and observe their coincidence.
-1. Verify the output of offset `labels[0]` by marking the anchor box offsets as defined in this section (the constant is the default value).
-1. Modify the variable `anchors` in the "Labeling Training Set Anchor Boxes" and "Output Bounding Boxes for Prediction" sections. How do the results change?
+1. Altere os valores de `sizes` e` ratios` na função `multibox_prior` e observe as alterações nas caixas de âncora geradas.
+1. Construa duas caixas delimitadoras com uma IoU de 0,5 e observe sua coincidência.
+1. Verifique a saída de offset `labels[0]` marcando os offsets da caixa de âncora conforme definido nesta seção (a constante é o valor padrão).
+1. Modifique a variável `anchors` nas seções" Rotulando Caixas de Âncora de Conjunto de Treinamento "e" Caixas Limitadoras de Saída para Previsão ". Como os resultados mudam?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/370)
@@ -676,9 +676,9 @@ Na prática, podemos remover caixas delimitadoras de predição com níveis de c
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc5MTA4MDIwLDg5MzUyNTMwMiwtMTg1Mj
-A0MDQ5MywtMTQ1OTk0ODAzLC01MTMzMTUzNjEsLTE2ODgwOTgx
-NjgsMTY5NzUwNTIyNSwtNTQxMTE3OTM1LC05MTUwMTI3OTIsLT
-EzNTYyNTM4MDEsMTU0NjI0MDQ4NiwtMTQ5MzQwNTk0MiwxODkx
-NTcyOTk3LC00OTA0NDA3MDMsMTc0NjIzMzQ3N119
+eyJoaXN0b3J5IjpbMTk0NDMxODg4Myw4OTM1MjUzMDIsLTE4NT
+IwNDA0OTMsLTE0NTk5NDgwMywtNTEzMzE1MzYxLC0xNjg4MDk4
+MTY4LDE2OTc1MDUyMjUsLTU0MTExNzkzNSwtOTE1MDEyNzkyLC
+0xMzU2MjUzODAxLDE1NDYyNDA0ODYsLTE0OTM0MDU5NDIsMTg5
+MTU3Mjk5NywtNDkwNDQwNzAzLDE3NDYyMzM0NzddfQ==
 -->
