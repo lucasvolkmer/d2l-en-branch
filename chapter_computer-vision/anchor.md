@@ -417,7 +417,7 @@ def multibox_target(anchors, labels):
     return (bbox_offset, bbox_mask, class_labels)
 ```
 
-Below we demonstrate a detailed example. We define ground-truth bounding boxes for the cat and dog in the read image, where the first element is category (0 for dog, 1 for cat) and the remaining four elements are the $x, y$ axis coordinates at top-left corner and $x, y$ axis coordinates at lower-right corner (the value range is between 0 and 1). Here, we construct five anchor boxes to be labeled by the coordinates of the upper-left corner and the lower-right corner, which are recorded as $A_0, \ldots, A_4$, respectively (the index in the program starts from 0). First, draw the positions of these anchor boxes and the ground-truth bounding boxes in the image.
+Abaixo, demonstramos um exemplo detalhado. Definimos caixas delimitadoras de verdade para o gato e o cachorro na imagem lida, onde o primeiro elemento é a categoria (0 para cachorro, 1 para gato) e os quatro elementos restantes são as coordenadas do eixo $x, y$ no canto superior esquerdo canto e coordenadas do eixo $x, y$ no canto inferior direito (o intervalo de valores está entre 0 e 1). Aqui, construímos cinco caixas de âncora para serem rotuladas pelas coordenadas do canto superior esquerdo e do canto inferior direito, que são registradas como $A_0, \ldots, A_4$, respectivamente (o índice no programa começa em 0) . Primeiro, desenhe as posições dessas caixas de âncora e das caixas delimitadoras da verdade fundamental na imagem.
 
 ```{.python .input}
 #@tab all
@@ -678,7 +678,8 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MTExNzkzNSwtOTE1MDEyNzkyLC0xMz
-U2MjUzODAxLDE1NDYyNDA0ODYsLTE0OTM0MDU5NDIsMTg5MTU3
-Mjk5NywtNDkwNDQwNzAzLDE3NDYyMzM0NzddfQ==
+eyJoaXN0b3J5IjpbMTY5NzUwNTIyNSwtNTQxMTE3OTM1LC05MT
+UwMTI3OTIsLTEzNTYyNTM4MDEsMTU0NjI0MDQ4NiwtMTQ5MzQw
+NTk0MiwxODkxNTcyOTk3LC00OTA0NDA3MDMsMTc0NjIzMzQ3N1
+19
 -->
