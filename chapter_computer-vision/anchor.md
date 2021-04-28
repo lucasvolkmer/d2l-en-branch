@@ -654,14 +654,14 @@ for i in d2l.numpy(output[0]):
 Na prática, podemos remover caixas delimitadoras de predição com níveis de confiança mais baixos antes de executar NMS, reduzindo assim a quantidade de computação para NMS. Também podemos filtrar a saída de NMS, por exemplo, retendo apenas os resultados com níveis de confiança mais altos como saída final.
 
 
-## Summary
+## Resumo
 
-* We generate multiple anchor boxes with different sizes and aspect ratios, centered on each pixel.
-* IoU, also called Jaccard index, measures the similarity of two bounding boxes. It is the ratio of the intersecting area to the union area of two bounding boxes.
-* In the training set, we mark two types of labels for each anchor box: one is the category of the target contained in the anchor box and the other is the offset of the ground-truth bounding box relative to the anchor box.
-* When predicting, we can use non-maximum suppression (NMS) to remove similar prediction bounding boxes, thereby simplifying the results.
+* Geramos várias caixas de âncora com diferentes tamanhos e proporções de aspecto, centralizadas em cada pixel.
+* IoU, também chamado de índice de Jaccard, mede a similaridade de duas caixas delimitadoras. É a proporção entre a área de intersecção e a área de união de duas caixas delimitadoras.
+* No conjunto de treinamento, marcamos dois tipos de rótulos para cada caixa de âncora: um é a categoria do alvo contido na caixa de âncora e o outro é o deslocamento da caixa delimitadora de verdade em relação à caixa de âncora.
+* Ao prever, podemos usar supressão não máxima (NMS) para remover caixas delimitadoras de previsão semelhantes, simplificando assim os resultados.
 
-## Exercises
+## Exercícios
 
 1. Change the `sizes` and `ratios` values in the `multibox_prior` function and observe the changes to the generated anchor boxes.
 1. Construct two bounding boxes with an IoU of 0.5, and observe their coincidence.
@@ -676,9 +676,9 @@ Na prática, podemos remover caixas delimitadoras de predição com níveis de c
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5OTUxMjQyNyw4OTM1MjUzMDIsLTE4NT
-IwNDA0OTMsLTE0NTk5NDgwMywtNTEzMzE1MzYxLC0xNjg4MDk4
-MTY4LDE2OTc1MDUyMjUsLTU0MTExNzkzNSwtOTE1MDEyNzkyLC
-0xMzU2MjUzODAxLDE1NDYyNDA0ODYsLTE0OTM0MDU5NDIsMTg5
-MTU3Mjk5NywtNDkwNDQwNzAzLDE3NDYyMzM0NzddfQ==
+eyJoaXN0b3J5IjpbMjc5MTA4MDIwLDg5MzUyNTMwMiwtMTg1Mj
+A0MDQ5MywtMTQ1OTk0ODAzLC01MTMzMTUzNjEsLTE2ODgwOTgx
+NjgsMTY5NzUwNTIyNSwtNTQxMTE3OTM1LC05MTUwMTI3OTIsLT
+EzNTYyNTM4MDEsMTU0NjI0MDQ4NiwtMTQ5MzQwNTk0MiwxODkx
+NTcyOTk3LC00OTA0NDA3MDMsMTc0NjIzMzQ3N119
 -->
