@@ -198,7 +198,7 @@ show_bboxes(fig.axes, boxes[250, 250, :, :] * bbox_scale,
 
 ## Interseção sobre União
 
-We just mentioned that the anchor box covers the dog in the image well. If the ground-truth bounding box of the target is known, how can "well" here be quantified? An intuitive method is to measure the similarity between anchor boxes and the ground-truth bounding box. We know that the Jaccard index can measure the similarity between two sets. Given sets $\mathcal{A}$ and $\mathcal{B}$, their Jaccard index is the size of their intersection divided by the size of their union:
+Acabamos de mencionar que a caixa de âncora cobre bem o cachorro na imagem. Se a caixa delimitadora da verdade básica do alvo é conhecida, como o "bem" pode ser quantificado aqui? Um método intuitivo é medir a semelhança entre as caixas de âncora e a caixa delimitadora da verdade absoluta. Sabemos que o índice de Jaccard pode medir a semelhança entre dois conjuntos. Dados os conjuntos $\mathcal{A}$ e $\mathcal{B}$, seu índice de Jaccard é o tamanho de sua interseção dividido pelo tamanho de sua união:
 
 $$J(\mathcal{A},\mathcal{B}) = \frac{\left|\mathcal{A} \cap \mathcal{B}\right|}{\left| \mathcal{A} \cup \mathcal{B}\right|}.$$
 
@@ -676,6 +676,6 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTU3Mjk5NywtNDkwNDQwNzAzLDE3ND
-YyMzM0NzddfQ==
+eyJoaXN0b3J5IjpbMzg4OTExOTU2LDE4OTE1NzI5OTcsLTQ5MD
+Q0MDcwMywxNzQ2MjMzNDc3XX0=
 -->
