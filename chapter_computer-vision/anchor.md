@@ -196,7 +196,7 @@ show_bboxes(fig.axes, boxes[250, 250, :, :] * bbox_scale,
              's=0.75, r=0.5'])
 ```
 
-## Intersection over Union
+## Interseção sobre União
 
 We just mentioned that the anchor box covers the dog in the image well. If the ground-truth bounding box of the target is known, how can "well" here be quantified? An intuitive method is to measure the similarity between anchor boxes and the ground-truth bounding box. We know that the Jaccard index can measure the similarity between two sets. Given sets $\mathcal{A}$ and $\mathcal{B}$, their Jaccard index is the size of their intersection divided by the size of their union:
 
@@ -676,5 +676,6 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MDQ0MDcwMywxNzQ2MjMzNDc3XX0=
+eyJoaXN0b3J5IjpbMTg5MTU3Mjk5NywtNDkwNDQwNzAzLDE3ND
+YyMzM0NzddfQ==
 -->
