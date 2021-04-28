@@ -639,7 +639,7 @@ output = multibox_detection(cls_probs.unsqueeze(dim=0),
 output
 ```
 
-We remove the prediction bounding boxes of category -1 and visualize the results retained by NMS.
+Removemos as caixas delimitadoras de predição da categoria -1 e visualizamos os resultados retidos pelo NMS.
 
 ```{.python .input}
 #@tab all
@@ -676,9 +676,9 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkzNTI1MzAyLC0xODUyMDQwNDkzLC0xND
-U5OTQ4MDMsLTUxMzMxNTM2MSwtMTY4ODA5ODE2OCwxNjk3NTA1
-MjI1LC01NDExMTc5MzUsLTkxNTAxMjc5MiwtMTM1NjI1MzgwMS
-wxNTQ2MjQwNDg2LC0xNDkzNDA1OTQyLDE4OTE1NzI5OTcsLTQ5
-MDQ0MDcwMywxNzQ2MjMzNDc3XX0=
+eyJoaXN0b3J5IjpbMjA4MTI1NjA2OSw4OTM1MjUzMDIsLTE4NT
+IwNDA0OTMsLTE0NTk5NDgwMywtNTEzMzE1MzYxLC0xNjg4MDk4
+MTY4LDE2OTc1MDUyMjUsLTU0MTExNzkzNSwtOTE1MDEyNzkyLC
+0xMzU2MjUzODAxLDE1NDYyNDA0ODYsLTE0OTM0MDU5NDIsMTg5
+MTU3Mjk5NywtNDkwNDQwNzAzLDE3NDYyMzM0NzddfQ==
 -->
