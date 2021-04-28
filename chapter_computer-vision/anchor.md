@@ -463,15 +463,15 @@ labels[2]
 Analisamos essas categorias rotuladas com base nas posições das caixas de âncora e das caixas delimitadoras de informações básicas na imagem. Em primeiro lugar, em todos os pares de "caixa de âncora - caixa delimitadora de verdade básica", a IoU da caixa de ancoragem $A_4$ para a caixa delimitadora de verdade básica do gato é a maior, então a categoria de caixa de ancoragem $A_4$ é rotulada como gato. Sem considerar a caixa de âncora $A_4$ ou a caixa delimitadora de verdade do solo do gato, nos pares restantes "caixa de âncora - caixa de ligação de verdade", o par com a maior IoU é a caixa de âncora $A_1$ e a a caixa delimitadora da verdade do cachorro, portanto, a categoria da caixa de âncora $A_1$ é rotulada como cachorro. Em seguida, atravesse as três caixas de âncora restantes sem etiqueta. A categoria da caixa delimitadora de verdade básica com o maior IoU com caixa de âncora $A_0$ é cahcorro, mas o IoU é menor que o limite (o padrão é 0,5), portanto, a categoria é rotulada como plano de fundo; a categoria da caixa delimitadora de verdade básica com a maior IoU com caixa de âncora $A_2$ é gato e a IoU é maior que o limite, portanto, a categoria é rotulada como gato; a categoria da caixa delimitadora de verdade básica com a maior IoU com caixa de âncora $A_3$ é cat, mas a IoU é menor que o limite, portanto, a categoria é rotulada como plano de fundo.
 
 
-The second item of the return value is a mask variable, with the shape of (batch size, four times the number of anchor boxes). The elements in the mask variable correspond one-to-one with the four offset values of each anchor box.
-Because we do not care about background detection, offsets of the negative class should not affect the target function. By multiplying by element, the 0 in the mask variable can filter out negative class offsets before calculating target function.
+O segundo item do valor de retorno é uma variável de máscara, com a forma de (tamanho do lote, quatro vezes o número de caixas de âncora). Os elementos na variável de máscara correspondem um a um com os quatro valores de deslocamento de cada caixa de âncora.
+Como não nos importamos com a detecção de fundo, os deslocamentos da classe negativa não devem afetar a função de destino. Multiplicando por elemento, o 0 na variável de máscara pode filtrar os deslocamentos de classe negativos antes de calcular a função de destino.
 
 ```{.python .input}
 #@tab all
 labels[1]
 ```
 
-The first item returned is the four offset values labeled for each anchor box, with the offsets of negative class anchor boxes labeled as 0.
+O primeiro item retornado são os quatro valores de deslocamento rotulados para cada caixa de âncora, com os deslocamentos das caixas de âncora de classe negativa rotulados como 0.
 
 ```{.python .input}
 #@tab all
@@ -678,7 +678,7 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NjU3MzA0MSwtMTY4ODA5ODE2OCwxNj
+eyJoaXN0b3J5IjpbLTUxMzMxNTM2MSwtMTY4ODA5ODE2OCwxNj
 k3NTA1MjI1LC01NDExMTc5MzUsLTkxNTAxMjc5MiwtMTM1NjI1
 MzgwMSwxNTQ2MjQwNDg2LC0xNDkzNDA1OTQyLDE4OTE1NzI5OT
 csLTQ5MDQ0MDcwMywxNzQ2MjMzNDc3XX0=
