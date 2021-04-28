@@ -267,7 +267,7 @@ Em seguida, percorremos apenas as caixas de âncora $n_a - n_b$ restantes. Dada 
 
 Conforme mostrado em :numref:`fig_anchor_label` (esquerda), assumindo que o valor máximo na matriz $\mathbf{X}$ é $x_{23}$, iremos atribuir a caixa delimitadora da verdade básica $B_3$ à caixa de âncora $A_2$.. Em seguida, descartamos todos os elementos na linha 2 e coluna 3 da matriz, encontramos o maior elemento $x_{71}$ da área sombreada restante e atribuímos a caixa delimitadora de verdade básica $B_1$ à caixa de ancoragem $A_7$. Então, como mostrado em :numref:`fig_anchor_label` (meio), descarte todos os elementos na linha 7 e coluna 1 da matriz, encontre o maior elemento $x_{54}$ da área sombreada restante e atribua a caixa delimitadora de verdade fundamental $B_4$ para a caixa âncora $A_5$. Finalmente, como mostrado em :numref:`fig_anchor_label` (direita), descarte todos os elementos na linha 5 e coluna 4 da matriz, encontre o maior elemento $x_{92}$ da área sombreada restante e atribua a caixa delimitadora da verdade fundamental $B_2$ para a caixa âncora $A_9$. Depois disso, só precisamos atravessar as caixas de âncora restantes de $A_1, A_3, A_4, A_6, A_8$ e determinar se devemos atribuir caixas delimitadoras de verdade fundamental às caixas de âncora restantes de acordo com o limite.
 
-![Assign ground-truth bounding boxes to anchor boxes. ](../img/anchor-label.svg)
+![Atribua caixas delimitadoras de base de verdade às caixas de ancoragem.](../img/anchor-label.svg)
 :label:`fig_anchor_label`
 
 ```{.python .input}
@@ -678,7 +678,7 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MjIyMjM3NywtMTM1NjI1MzgwMSwxNT
+eyJoaXN0b3J5IjpbLTkxNTAxMjc5MiwtMTM1NjI1MzgwMSwxNT
 Q2MjQwNDg2LC0xNDkzNDA1OTQyLDE4OTE1NzI5OTcsLTQ5MDQ0
 MDcwMywxNzQ2MjMzNDc3XX0=
 -->
