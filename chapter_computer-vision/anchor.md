@@ -328,7 +328,7 @@ def match_anchor_to_bbox(ground_truth, anchors, device, iou_threshold=0.5):
     return anchors_bbox_map
 ```
 
-Now we can label the categories and offsets of the anchor boxes. If an anchor box $A$ is assigned ground-truth bounding box $B$, the category of the anchor box $A$ is set to the category of $B$. And the offset of the anchor box $A$ is set according to the relative position of the central coordinates of $B$ and $A$ and the relative sizes of the two boxes. Because the positions and sizes of various boxes in the dataset may vary, these relative positions and relative sizes usually require some special transformations to make the offset distribution more uniform and easier to fit. Assume the center coordinates of anchor box $A$ and its assigned ground-truth bounding box $B$ are $(x_a, y_a), (x_b, y_b)$, the widths of $A$ and $B$ are $w_a, w_b$, and their heights are $h_a, h_b$, respectively. In this case, a common technique is to label the offset of $A$ as
+Agora podemos rotular as categorias e deslocamentos das caixas de âncora. Se uma caixa de âncora $A$ for atribuída a uma caixa delimitadora de verdade fundamental $B$, a categoria da caixa de âncora $A$ será definida como a categoria de $B$. E o deslocamento da caixa âncora $A$ é definido de acordo com a posição relativa das coordenadas centrais de $B$ e $A$ e os tamanhos relativos das duas caixas. Como as posições e tamanhos de várias caixas no conjunto de dados podem variar, essas posições e tamanhos relativos geralmente requerem algumas transformações especiais para tornar a distribuição de deslocamento mais uniforme e fácil de ajustar. Suponha que as coordenadas centrais da caixa de âncora $A$ e sua caixa delimitadora de verdade fundamental $ B $ sejam $(x_a, y_a), (x_b, y_b)$, as larguras de $A$ e $B$ são $w_a, w_b$, e suas alturas são $h_a, h_b$, respectivamente. Neste caso, uma técnica comum é rotular o deslocamento de $A$ como
 
 $$\left( \frac{ \frac{x_b - x_a}{w_a} - \mu_x }{\sigma_x},
 \frac{ \frac{y_b - y_a}{h_a} - \mu_y }{\sigma_y},
@@ -678,7 +678,7 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNTAxMjc5MiwtMTM1NjI1MzgwMSwxNT
-Q2MjQwNDg2LC0xNDkzNDA1OTQyLDE4OTE1NzI5OTcsLTQ5MDQ0
-MDcwMywxNzQ2MjMzNDc3XX0=
+eyJoaXN0b3J5IjpbNjQwMDg0MzExLC05MTUwMTI3OTIsLTEzNT
+YyNTM4MDEsMTU0NjI0MDQ4NiwtMTQ5MzQwNTk0MiwxODkxNTcy
+OTk3LC00OTA0NDA3MDMsMTc0NjIzMzQ3N119
 -->
