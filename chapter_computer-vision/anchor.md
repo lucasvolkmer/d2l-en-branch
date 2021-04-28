@@ -669,16 +669,16 @@ Na prática, podemos remover caixas delimitadoras de predição com níveis de c
 1. Modifique a variável `anchors` nas seções" Rotulando Caixas de Âncora de Conjunto de Treinamento "e" Caixas Limitadoras de Saída para Previsão ". Como os resultados mudam?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/370)
+[Discussões](https://discuss.d2l.ai/t/370)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1603)
+[Discussões](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NDMxODg4Myw4OTM1MjUzMDIsLTE4NT
-IwNDA0OTMsLTE0NTk5NDgwMywtNTEzMzE1MzYxLC0xNjg4MDk4
-MTY4LDE2OTc1MDUyMjUsLTU0MTExNzkzNSwtOTE1MDEyNzkyLC
-0xMzU2MjUzODAxLDE1NDYyNDA0ODYsLTE0OTM0MDU5NDIsMTg5
-MTU3Mjk5NywtNDkwNDQwNzAzLDE3NDYyMzM0NzddfQ==
+eyJoaXN0b3J5IjpbLTIwMTg3MDU3MDksODkzNTI1MzAyLC0xOD
+UyMDQwNDkzLC0xNDU5OTQ4MDMsLTUxMzMxNTM2MSwtMTY4ODA5
+ODE2OCwxNjk3NTA1MjI1LC01NDExMTc5MzUsLTkxNTAxMjc5Mi
+wtMTM1NjI1MzgwMSwxNTQ2MjQwNDg2LC0xNDkzNDA1OTQyLDE4
+OTE1NzI5OTcsLTQ5MDQ0MDcwMywxNzQ2MjMzNDc3XX0=
 -->
