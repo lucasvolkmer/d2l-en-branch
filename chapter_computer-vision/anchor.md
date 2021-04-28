@@ -598,7 +598,7 @@ def multibox_detection(cls_probs, offset_preds, anchors, nms_threshold=0.5,
     return d2l.stack(out)
 ```
 
-Next, we will look at a detailed example. First, construct four anchor boxes. For the sake of simplicity, we assume that predicted offsets are all 0. This means that the prediction bounding boxes are anchor boxes. Finally, we construct a predicted probability for each category.
+A seguir, veremos um exemplo detalhado. Primeiro, construa quatro caixas de âncora. Para simplificar, assumimos que os deslocamentos previstos são todos 0. Isso significa que as caixas delimitadoras de previsão são caixas de âncora. Finalmente, construímos uma probabilidade prevista para cada categoria.
 
 ```{.python .input}
 #@tab all
@@ -610,7 +610,7 @@ cls_probs = d2l.tensor([[0] * 4,  # Predicted probability for background
                       [0.1, 0.2, 0.3, 0.9]])  # Predicted probability for cat
 ```
 
-Print prediction bounding boxes and their confidence levels on the image.
+Imprima caixas delimitadoras de previsão e seus níveis de confiança na imagem.
 
 ```{.python .input}
 #@tab all
@@ -619,7 +619,7 @@ show_bboxes(fig.axes, anchors * bbox_scale,
             ['dog=0.9', 'dog=0.8', 'dog=0.7', 'cat=0.9'])
 ```
 
-We use the `multibox_detection` function to perform NMS and set the threshold to 0.5. This adds an example dimension to the tensor input. We can see that the shape of the returned result is (batch size, number of anchor boxes, 6). The 6 elements of each row represent the output information for the same prediction bounding box. The first element is the predicted category index, which starts from 0 (0 is dog, 1 is cat). The value -1 indicates background or removal in NMS. The second element is the confidence level of prediction bounding box. The remaining four elements are the $x, y$ axis coordinates of the upper-left corner and the $x, y$ axis coordinates of the lower-right corner of the prediction bounding box (the value range is between 0 and 1).
+Usamos a função `multibox_detection` para executar NMS e definir o limite para 0,5. Isso adiciona uma dimensão de exemplo à entrada do tensor. Podemos ver que a forma do resultado retornado é (tamanho do lote, número de caixas de âncora, 6). Os 6 elementos de cada linha representam as informações de saída para a mesma caixa delimitadora de previsão. O primeiro elemento é o índice de categoria previsto, que começa em 0 (0 é cachorro, 1 é gato). O valor -1 indica fundo ou remoção no NMS. O segundo elemento é o nível de confiança da caixa delimitadora de previsão. Os quatro elementos restantes são as coordenadas do eixo $x, y$ do canto superior esquerdo e as coordenadas do eixo $x, y$ do canto inferior direito da caixa delimitadora de previsão (o intervalo de valores está entre 0 e 1).
 
 ```{.python .input}
 output = multibox_detection(
@@ -676,9 +676,9 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTIwNDA0OTMsLTE0NTk5NDgwMywtNT
-EzMzE1MzYxLC0xNjg4MDk4MTY4LDE2OTc1MDUyMjUsLTU0MTEx
-NzkzNSwtOTE1MDEyNzkyLC0xMzU2MjUzODAxLDE1NDYyNDA0OD
-YsLTE0OTM0MDU5NDIsMTg5MTU3Mjk5NywtNDkwNDQwNzAzLDE3
-NDYyMzM0NzddfQ==
+eyJoaXN0b3J5IjpbODkzNTI1MzAyLC0xODUyMDQwNDkzLC0xND
+U5OTQ4MDMsLTUxMzMxNTM2MSwtMTY4ODA5ODE2OCwxNjk3NTA1
+MjI1LC01NDExMTc5MzUsLTkxNTAxMjc5MiwtMTM1NjI1MzgwMS
+wxNTQ2MjQwNDg2LC0xNDkzNDA1OTQyLDE4OTE1NzI5OTcsLTQ5
+MDQ0MDcwMywxNzQ2MjMzNDc3XX0=
 -->
