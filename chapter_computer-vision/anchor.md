@@ -260,11 +260,12 @@ Suponha que as caixas de ancoragem na imagem sejam $A_1, A_2, \ldots, A_{n_a}$ e
 Primeiro, encontramos o maior elemento na matriz $\mathbf{X}$ e registramos o índice da linha e o índice da coluna do elemento como $i_1,j_1$. Atribuímos a caixa delimitadora da verdade básica $B_{j_1}$ à caixa âncora $A_{i_1}$. Obviamente, a caixa de âncora $A_{i_1}$ e a caixa delimitadora da verdade básica $B_{j_1}$ têm a maior similaridade entre todos os pares "caixa de âncora - caixa delimitadora da verdade". A seguir, descarte todos os elementos da $i_1$ª linha e da $j_1$ª coluna da matriz $\mathbf{X}$. Encontre o maior elemento restante na matriz  $\mathbf{X}$ e registre o índice da linha e o índice da coluna do elemento como $i_2,j_2$. Atribuímos a caixa delimitadora de verdade básica $B_{j_2}$ à caixa de ancoragem $A_{i_2}$ e, em seguida, descartamos todos os elementos na $i_2$ª linha e na $j_2$ª coluna na matriz $\mathbf{X}$. Neste ponto, os elementos em duas linhas e duas colunas na matriz $\mathbf{X}$ foram descartados.
 
 
-We proceed until all elements in the $n_b$ column in the matrix $\mathbf{X}$ are discarded. At this time, we have assigned a ground-truth bounding box to each of the $n_b$ anchor boxes.
-Next, we only traverse the remaining $n_a - n_b$ anchor boxes. Given anchor box $A_i$, find the bounding box $B_j$ with the largest IoU with $A_i$ according to the $i^\mathrm{th}$ row of the matrix $\mathbf{X}$, and only assign ground-truth bounding box $B_j$ to anchor box $A_i$ when the IoU is greater than the predetermined threshold.
+
+Prosseguimos até que todos os elementos da coluna $n_b$ da matriz $\mathbf{X}$ sejam descartados. Neste momento, atribuímos uma caixa delimitadora de verdade terrestre a cada uma das caixas de âncora $n_b$.
+Em seguida, percorremos apenas as caixas de âncora $n_a - n_b$ restantes. Dada a caixa de âncora $A_i$, encontre a caixa delimitadora $B_j$ com o maior IoU com $A_i$ de acordo com a $i^\mathrm{th}$ linha da matriz $\mathbf{X}$, e apenas atribua o terreno -caixa delimitadora da verdade $B_j$ para ancorar a caixa $A_i$ quando o IoU é maior do que o limite predeterminado.
 
 
-As shown in :numref:`fig_anchor_label` (left), assuming that the maximum value in the matrix $\mathbf{X}$ is $x_{23}$, we will assign ground-truth bounding box $B_3$ to anchor box $A_2$. Then, we discard all the elements in row 2 and column 3 of the matrix, find the largest element $x_{71}$ of the remaining shaded area, and assign ground-truth bounding box $B_1$ to anchor box $A_7$. Then, as shown in :numref:`fig_anchor_label`  (middle), discard all the elements in row 7 and column 1 of the matrix, find the largest element $x_{54}$ of the remaining shaded area, and assign ground-truth bounding box $B_4$ to anchor box $A_5$.  Finally, as shown in :numref:`fig_anchor_label` (right), discard all the elements in row 5 and column 4 of the matrix, find the largest element $x_{92}$ of the remaining shaded area, and assign ground-truth bounding box $B_2$ to anchor box $A_9$.  After that, we only need to traverse the remaining anchor boxes of $A_1, A_3, A_4, A_6, A_8$ and determine whether to assign ground-truth bounding boxes to the remaining anchor boxes according to the threshold.
+Conforme mostrado em :numref:`fig_anchor_label` (esquerda), assumindo que o valor máximo na matriz $\mathbf{X}$ é $x_{23}$, iremos atribuir a caixa delimitadora da verdade básica $B_3$ à caixa de âncora $A_2$.. Em seguida, descartamos todos os elementos na linha 2 e coluna 3 da matriz, encontramos o maior elemento $x_{71}$ da área sombreada restante e atribuímos a caixa delimitadora de verdade básica $B_1$ à caixa de ancoragem $A_7$. Então, como mostrado em :numref:`fig_anchor_label` (meio), descarte todos os elementos na linha 7 e coluna 1 da matriz, encontre o maior elemento $x_{54}$ da área sombreada restante e atribua a caixa delimitadora de verdade fundamental $B_4$ para a caixa âncora $A_5$. Finalmente, como mostrado em :numref:`fig_anchor_label` (direita), descarte todos os elementos na linha 5 e coluna 4 da matriz, encontre o maior elemento $x_{92}$ da área sombreada restante e atribua a caixa delimitadora da verdade fundamental $B_2$ para a caixa âncora $A_9$. Depois disso, só precisamos atravessar as caixas de âncora restantes de $A_1, A_3, A_4, A_6, A_8$ e determinar se devemos atribuir caixas delimitadoras de verdade fundamental às caixas de âncora restantes de acordo com o limite.
 
 ![Assign ground-truth bounding boxes to anchor boxes. ](../img/anchor-label.svg)
 :label:`fig_anchor_label`
@@ -677,7 +678,7 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTYyNTM4MDEsMTU0NjI0MDQ4NiwtMT
-Q5MzQwNTk0MiwxODkxNTcyOTk3LC00OTA0NDA3MDMsMTc0NjIz
-MzQ3N119
+eyJoaXN0b3J5IjpbMTM1MjIyMjM3NywtMTM1NjI1MzgwMSwxNT
+Q2MjQwNDg2LC0xNDkzNDA1OTQyLDE4OTE1NzI5OTcsLTQ5MDQ0
+MDcwMywxNzQ2MjMzNDc3XX0=
 -->
