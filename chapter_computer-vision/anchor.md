@@ -256,8 +256,8 @@ No conjunto de treinamento, consideramos cada caixa de âncora como um exemplo d
 Sabemos que, no conjunto de treinamento de detecção de objetos, cada imagem é rotulada com a localização da caixa delimitadora da verdade terrestre e a categoria do alvo contido. Depois que as caixas de âncora são geradas, rotulamos principalmente as caixas de âncora com base na localização e nas informações de categoria das caixas delimitadoras de verdade terrestre semelhantes às caixas de âncora. Então, como atribuímos caixas delimitadoras de verdade terrestre a caixas de ancoragem semelhantes a elas?
 
 
-Assume that the anchor boxes in the image are $A_1, A_2, \ldots, A_{n_a}$ and the ground-truth bounding boxes are $B_1, B_2, \ldots, B_{n_b}$ and $n_a \geq n_b$. Define matrix $\mathbf{X} \in \mathbb{R}^{n_a \times n_b}$, where element $x_{ij}$ in the $i^\mathrm{th}$ row and $j^\mathrm{th}$ column is the IoU of the anchor box $A_i$ to the ground-truth bounding box $B_j$.
-First, we find the largest element in the matrix $\mathbf{X}$ and record the row index and column index of the element as $i_1,j_1$. We assign the ground-truth bounding box $B_{j_1}$ to the anchor box $A_{i_1}$. Obviously, anchor box $A_{i_1}$ and ground-truth bounding box $B_{j_1}$ have the highest similarity among all the "anchor box--ground-truth bounding box" pairings. Next, discard all elements in the $i_1$th row and the $j_1$th column in the matrix $\mathbf{X}$. Find the largest remaining element in the matrix $\mathbf{X}$ and record the row index and column index of the element as $i_2,j_2$. We assign ground-truth bounding box $B_{j_2}$ to anchor box $A_{i_2}$ and then discard all elements in the $i_2$th row and the $j_2$th column in the matrix $\mathbf{X}$. At this point, elements in two rows and two columns in the matrix $\mathbf{X}$ have been discarded.
+Suponha que as caixas de ancoragem na imagem sejam $A_1, A_2, \ldots, A_{n_a}$ e as caixas delimitadoras de verdade são $B_1, B_2, \ldots, B_{n_b}$ e $n_a \geq n_b$. Defina a matriz $\mathbf{X} \in \mathbb{R}^{n_a \times n_b}$, onde o elemento $x_{ij}$ na linha $i^\mathrm{th}$ e coluna $j^\mathrm{th}$ é a IoU da caixa de âncora $A_i$ para a caixa delimitadora da verdade básica $B_j$.
+Primeiro, encontramos o maior elemento na matriz $\mathbf{X}$ e registramos o índice da linha e o índice da coluna do elemento como $i_1,j_1$. Atribuímos a caixa delimitadora da verdade básica $B_{j_1}$ à caixa âncora $A_{i_1}$. Obviamente, a caixa de âncora $A_{i_1}$ e a caixa delimitadora da verdade básica $B_{j_1}$ têm a maior similaridade entre todos os pares "caixa de âncora - caixa delimitadora da verdade". A seguir, descarte todos os elementos da $i_1$ª linha e da $j_1$ª coluna da matriz $\mathbf{X}$. Encontre o maior elemento restante na matriz  $\mathbf{X}$ e registre o índice da linha e o índice da coluna do elemento como $i_2,j_2$. Atribuímos a caixa delimitadora de verdade básica $B_{j_2}$ à caixa de ancoragem $A_{i_2}$ e, em seguida, descartamos todos os elementos na $i_2$ª linha e na $j_2$ª coluna na matriz $\mathbf{X}$. Neste ponto, os elementos em duas linhas e duas colunas na matriz $\mathbf{X}$ foram descartados.
 
 
 We proceed until all elements in the $n_b$ column in the matrix $\mathbf{X}$ are discarded. At this time, we have assigned a ground-truth bounding box to each of the $n_b$ anchor boxes.
@@ -677,6 +677,7 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NjI0MDQ4NiwtMTQ5MzQwNTk0MiwxOD
-kxNTcyOTk3LC00OTA0NDA3MDMsMTc0NjIzMzQ3N119
+eyJoaXN0b3J5IjpbLTEzNTYyNTM4MDEsMTU0NjI0MDQ4NiwtMT
+Q5MzQwNTk0MiwxODkxNTcyOTk3LC00OTA0NDA3MDMsMTc0NjIz
+MzQ3N119
 -->
