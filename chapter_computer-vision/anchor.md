@@ -460,7 +460,7 @@ Existem três itens no resultado retornado, todos no formato tensor. O terceiro 
 labels[2]
 ```
 
-We analyze these labelled categories based on positions of anchor boxes and ground-truth bounding boxes in the image. First, in all "anchor box--ground-truth bounding box" pairs, the IoU of anchor box $A_4$ to the ground-truth bounding box of the cat is the largest, so the category of anchor box $A_4$ is labeled as cat. Without considering anchor box $A_4$ or the ground-truth bounding box of the cat, in the remaining "anchor box--ground-truth bounding box" pairs, the pair with the largest IoU is anchor box $A_1$ and the ground-truth bounding box of the dog, so the category of anchor box $A_1$ is labeled as dog. Next, traverse the remaining three unlabeled anchor boxes. The category of the ground-truth bounding box with the largest IoU with anchor box $A_0$ is dog, but the IoU is smaller than the threshold (the default is 0.5), so the category is labeled as background; the category of the ground-truth bounding box with the largest IoU with anchor box $A_2$ is cat and the IoU is greater than the threshold, so the category is labeled as cat; the category of the ground-truth bounding box with the largest IoU with anchor box $A_3$ is cat, but the IoU is smaller than the threshold, so the category is labeled as background.
+Analisamos essas categorias rotuladas com base nas posições das caixas de âncora e das caixas delimitadoras de informações básicas na imagem. Em primeiro lugar, em todos os pares de "caixa de âncora - caixa delimitadora de verdade básica", a IoU da caixa de ancoragem $A_4$ para a caixa delimitadora de verdade básica do gato é a maior, então a categoria de caixa de ancoragem $A_4$ é rotulada como gato. Sem considerar a caixa de âncora $A_4$ ou a caixa delimitadora de verdade do solo do gato, nos pares restantes "caixa de âncora - caixa de ligação de verdade", o par com a maior IoU é a caixa de âncora $A_1$ e a a caixa delimitadora da verdade do cachorro, portanto, a categoria da caixa de âncora $A_1$ é rotulada como cachorro. Em seguida, atravesse as três caixas de âncora restantes sem etiqueta. A categoria da caixa delimitadora de verdade básica com o maior IoU com caixa de âncora $A_0$ é cahcorro, mas o IoU é menor que o limite (o padrão é 0,5), portanto, a categoria é rotulada como plano de fundo; a categoria da caixa delimitadora de verdade básica com a maior IoU com caixa de âncora $A_2$ é gato e a IoU é maior que o limite, portanto, a categoria é rotulada como gato; a categoria da caixa delimitadora de verdade básica com a maior IoU com caixa de âncora $A_3$ é cat, mas a IoU é menor que o limite, portanto, a categoria é rotulada como plano de fundo.
 
 
 The second item of the return value is a mask variable, with the shape of (batch size, four times the number of anchor boxes). The elements in the mask variable correspond one-to-one with the four offset values of each anchor box.
@@ -678,8 +678,8 @@ In practice, we can remove prediction bounding boxes with lower confidence level
 [Discussions](https://discuss.d2l.ai/t/1603)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODgwOTgxNjgsMTY5NzUwNTIyNSwtNT
-QxMTE3OTM1LC05MTUwMTI3OTIsLTEzNTYyNTM4MDEsMTU0NjI0
-MDQ4NiwtMTQ5MzQwNTk0MiwxODkxNTcyOTk3LC00OTA0NDA3MD
-MsMTc0NjIzMzQ3N119
+eyJoaXN0b3J5IjpbLTQ0NjU3MzA0MSwtMTY4ODA5ODE2OCwxNj
+k3NTA1MjI1LC01NDExMTc5MzUsLTkxNTAxMjc5MiwtMTM1NjI1
+MzgwMSwxNTQ2MjQwNDg2LC0xNDkzNDA1OTQyLDE4OTE1NzI5OT
+csLTQ5MDQ0MDcwMywxNzQ2MjMzNDc3XX0=
 -->
