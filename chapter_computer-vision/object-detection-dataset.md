@@ -4,8 +4,8 @@ Não existem pequenos conjuntos de dados, como MNIST ou Fashion-MNIST, no campo 
 
 ## Baixando Dataset
 
-The banana detection dataset with all the images and csv label files can be
-downloaded directly from the Internet.
+O conjunto de dados de detecção de banana com todas as imagens e arquivos de rótulo csv pode ser
+baixado diretamente da Internet.
 
 ```{.python .input}
 %matplotlib inline
@@ -35,7 +35,7 @@ d2l.DATA_HUB['banana-detection'] = (d2l.DATA_URL + 'banana-detection.zip',
                            '5de26c8fce5ccdea9f91267273464dc968d20d72')
 ```
 
-## Reading the Dataset
+## Lendo o Dataset
 
 We are going to read the object detection dataset in the `read_data_bananas`
 function. The dataset includes a csv file for target class labels and
@@ -183,6 +183,6 @@ for ax, label in zip(axes, batch[1][0:10]):
 [Discussions](https://discuss.d2l.ai/t/1608)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTYxOTYxMzMsNTI0OTkzMzQ1LC04Nj
-kxMzIxMjldfQ==
+eyJoaXN0b3J5IjpbMTAxOTQyMzc4Nyw1MjQ5OTMzNDUsLTg2OT
+EzMjEyOV19
 -->
