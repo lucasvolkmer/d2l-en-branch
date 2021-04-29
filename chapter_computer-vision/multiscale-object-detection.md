@@ -1,4 +1,4 @@
-# Multiscale Object Detection
+# Multiscale Object DetectionDetecção de Objetos Multiescala
 
 In :numref:`sec_anchor`, we generated multiple anchor boxes centered on each pixel of the input image.  These anchor boxes are used to sample different regions of the input image. However, if anchor boxes are generated centered on each pixel of the image, soon there will be too many anchor boxes for us to compute. For example, we assume that the input image has a height and a width of 561 and 728 pixels respectively. If five different shapes of anchor boxes are generated centered on each pixel, over two million anchor boxes ($561 \times 728 \times 5$) need to be predicted and labeled on the image.
 
@@ -120,3 +120,6 @@ We will implement a multiscale object detection model in the following section.
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1607)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3ODMzMjAzMF19
+-->
