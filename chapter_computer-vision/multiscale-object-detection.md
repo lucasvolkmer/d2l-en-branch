@@ -60,21 +60,21 @@ def display_anchors(fmap_w, fmap_h, s):
                     anchors[0] * bbox_scale)
 ```
 
-We will first focus on the detection of small objects. In order to make it easier to distinguish upon display, the anchor boxes with different midpoints here do not overlap. We assume that the size of the anchor boxes is 0.15 and the height and width of the feature map are 4. We can see that the midpoints of anchor boxes from the 4 rows and 4 columns on the image are uniformly distributed.
+Primeiro, vamos nos concentrar na detecção de pequenos objetos. A fim de tornar mais fácil distinguir na exibição, as caixas de âncora com diferentes pontos médios aqui não se sobrepõem. Assumimos que o tamanho das caixas de âncora é 0,15 e a altura e largura do mapa de feições são 4. Podemos ver que os pontos médios das caixas de âncora das 4 linhas e 4 colunas da imagem estão uniformemente distribuídos.
 
 ```{.python .input}
 #@tab all
 display_anchors(fmap_w=4, fmap_h=4, s=[0.15])
 ```
 
-We are going to reduce the height and width of the feature map by half and use a larger anchor box to detect larger objects. When the size is set to 0.4, overlaps will occur between regions of some anchor boxes.
+Vamos reduzir a altura e a largura do mapa de feições pela metade e usar uma caixa de âncora maior para detectar objetos maiores. Quando o tamanho é definido como 0,4, ocorrerão sobreposições entre as regiões de algumas caixas de âncora.
 
 ```{.python .input}
 #@tab all
 display_anchors(fmap_w=2, fmap_h=2, s=[0.4])
 ```
 
-Finally, we are going to reduce the height and width of the feature map by half and increase the anchor box size to 0.8. Now the midpoint of the anchor box is the center of the image.
+Finalmente, vamos reduzir a altura e a largura do mapa de feições pela metade e aumentar o tamanho da caixa de âncora para 0,8. Agora, o ponto médio da caixa de âncora é o centro da imagem.
 
 ```{.python .input}
 #@tab all
@@ -123,6 +123,6 @@ We will implement a multiscale object detection model in the following section.
 [Discussions](https://discuss.d2l.ai/t/1607)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NDE4MTU4MSwyMDU2NDA5NTcwLC0xNz
+eyJoaXN0b3J5IjpbMTg1NTY2Njc2NywyMDU2NDA5NTcwLC0xNz
 gzMzIwMzBdfQ==
 -->
