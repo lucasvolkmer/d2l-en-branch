@@ -87,18 +87,9 @@ Como geramos caixas de âncora de tamanhos diferentes em escalas múltiplas, vam
 Em uma determinada escala, suponha que geramos $h \times w$ conjuntos de caixas de âncora com diferentes pontos médios baseados em $c_i$ mapas de feições com a forma $h \times w$ e o número de caixas de âncora em cada conjunto é $a$ . Por exemplo, para a primeira escala do experimento, geramos 16 conjuntos de caixas de âncora com diferentes pontos médios com base em 10 (número de canais) mapas de recursos com uma forma de $4 \times 4$, e cada conjunto contém 3 caixas de âncora.
 A seguir, cada caixa de âncora é rotulada com uma categoria e deslocamento com base na classificação e posição da caixa delimitadora de verdade. Na escala atual, o modelo de detecção de objeto precisa prever a categoria e o offset de $h \times w$ conjuntos de caixas de âncora com diferentes pontos médios com base na imagem de entrada.
 
-We assume that the $c_i$ feature maps are the intermediate output of the CNN
-based on the input image. Since each feature map has $h \times w$ different
-spatial positions, the same position will have $c_i$ units.  According to the
-definition of receptive field in the
-:numref:`sec_conv_layer`, the $c_i$ units of the feature map at the same spatial position have
-the same receptive field on the input image. Thus, they represent the
-information of the input image in this same receptive field.  Therefore, we can
-transform the $c_i$ units of the feature map at the same spatial position into
-the categories and offsets of the $a$ anchor boxes generated using that position
-as a midpoint.  It is not hard to see that, in essence, we use the information
-of the input image in a certain receptive field to predict the category and
-offset of the anchor boxes close to the field on the input image.
+Assumimos que os mapas de características $c_i$ são a saída intermediária da CNN com base na imagem de entrada. Uma vez que cada mapa de características tem $h \times w$ posições espaciais diferentes, a mesma posição terá $c_i$ unidades. De acordo com a definição de campo receptivo em :numref:`sec_conv_layer`, as unidades $c_i$ do mapa de feições na mesma posição espacial têm o mesmo campo receptivo na imagem de entrada. Assim, elas representam a
+informação da imagem de entrada neste mesmo campo receptivo. Portanto, podemos transformar as unidades $c_i$ do mapa de feições na mesma posição espacial nas categorias e deslocamentos das $a$ caixas de âncora geradas usando essa posição como um ponto médio. Não é difícil perceber que, em essência, usamos as informações da imagem de entrada em um determinado campo receptivo para prever a categoria e
+deslocamento das caixas de âncora perto do campo na imagem de entrada.
 
 When the feature maps of different layers have receptive fields of different sizes on the input image, they are used to detect objects of different sizes. For example, we can design a network to have a wider receptive field for each unit in the feature map that is closer to the output layer, to detect objects with larger sizes in the input image.
 
@@ -124,6 +115,6 @@ We will implement a multiscale object detection model in the following section.
 [Discussions](https://discuss.d2l.ai/t/1607)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NzA1MzM1LDE4NTU2NjY3NjcsMjA1Nj
-QwOTU3MCwtMTc4MzMyMDMwXX0=
+eyJoaXN0b3J5IjpbLTc5OTY2NjU2NCwxODU1NjY2NzY3LDIwNT
+Y0MDk1NzAsLTE3ODMzMjAzMF19
 -->
