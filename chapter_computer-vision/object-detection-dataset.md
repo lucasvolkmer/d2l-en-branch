@@ -133,7 +133,7 @@ def load_data_bananas(batch_size):
     return (train_iter, val_iter)
 ```
 
-Below, we read a minibatch and print the shape of the image and label. The shape of the image is the same as in the previous experiment (batch size, number of channels, height, width). The shape of the label is (batch size, $m$, 5), where $m$ is equal to the maximum number of bounding boxes contained in a single image in the dataset. Although computation for the minibatch is very efficient, it requires each image to contain the same number of bounding boxes so that they can be placed in the same batch. Since each image may have a different number of bounding boxes, we can add illegal bounding boxes to images that have less than $m$ bounding boxes until each image contains $m$ bounding boxes. Thus, we can read a minibatch of images each time. The label of each bounding box in the image is represented by a tensor of length 5. The first element in the tensor is the category of the object contained in the bounding box. When the value is -1, the bounding box is an illegal bounding box for filling purpose. The remaining four elements of the array represent the $x, y$ axis coordinates of the upper-left corner of the bounding box and the $x, y$ axis coordinates of the lower-right corner of the bounding box (the value range is between 0 and 1). The banana dataset here has only one bounding box per image, so $m=1$.
+Abaixo, lemos um minibatch e imprimimos o formato da imagem e do *label*. A forma da imagem é a mesma da experiência anterior (tamanho do lote, número de canais, altura, largura). O formato do rótulo é (tamanho do lote, $m$, 5), onde $m$ é igual ao número máximo de caixas delimitadoras contidas em uma única imagem no conjunto de dados. Embora o cálculo do minibatch seja muito eficiente, ele exige que cada imagem contenha o mesmo número de caixas delimitadoras para que possam ser colocadas no mesmo lote. Como cada imagem pode ter um número diferente de caixas delimitadoras, podemos adicionar caixas delimitadoras ilegais às imagens que possuem menos de $m$ caixas delimitadoras até que cada imagem contenha $m$ caixas delimitadoras. Assim, podemos ler um minibatch de imagens a cada vez. O rótulo de cada caixa delimitadora na imagem é representado por um tensor de comprimento 5. O primeiro elemento no tensor é a categoria do objeto contido na caixa delimitadora. Quando o valor é -1, a caixa delimitadora é uma caixa delimitadora ilegal para fins de preenchimento. Os quatro elementos restantes da matriz representam as coordenadas do eixo $x, y$ do canto superior esquerdo da caixa delimitadora e as coordenadas do eixo $x, y$ do canto inferior direito da caixa delimitadora (o intervalo de valores é entre 0 e 1). O conjunto de dados da banana aqui tem apenas uma caixa delimitadora por imagem, então $m = 1$.
 
 ```{.python .input}
 #@tab all
@@ -143,9 +143,9 @@ batch = next(iter(train_iter))
 batch[0].shape, batch[1].shape
 ```
 
-## Demonstration
+## Demonstração
 
-We have ten images with bounding boxes on them. We can see that the angle, size, and position of banana are different in each image. Of course, this is a simple artificial dataset. In actual practice, the data are usually much more complicated.
+Temos dez imagens com caixas delimitadoras. Podemos ver que o ângulo, o tamanho e a posição da banana são diferentes em cada imagem. Claro, este é um conjunto de dados artificial simples. Na prática, os dados geralmente são muito mais complicados.
 
 ```{.python .input}
 imgs = (batch[0][0:10].transpose(0, 2, 3, 1)) / 255
@@ -162,7 +162,7 @@ for ax, label in zip(axes, batch[1][0:10]):
     d2l.show_bboxes(ax, [label[0][1:5] * edge_size], colors=['w'])
 ```
 
-## Summary
+## Resumo
 
 * The banana detection dataset we synthesized can be used to test object detection models.
 * The data reading for object detection is similar to that for image classification. However, after we introduce bounding boxes, the label shape and image augmentation (e.g., random cropping) are changed.
@@ -180,6 +180,6 @@ for ax, label in zip(axes, batch[1][0:10]):
 [Discussions](https://discuss.d2l.ai/t/1608)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMzQ5ODUxNSwxMDE5NDIzNzg3LDUyND
-k5MzM0NSwtODY5MTMyMTI5XX0=
+eyJoaXN0b3J5IjpbLTE2NjU2NDc2ODAsMTAxOTQyMzc4Nyw1Mj
+Q5OTMzNDUsLTg2OTEzMjEyOV19
 -->
