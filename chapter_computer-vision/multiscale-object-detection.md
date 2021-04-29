@@ -1,4 +1,4 @@
-# Multiscale Object DetectionDetecção de Objetos Multiescala
+# Detecção de Objetos Multiescala
 
 
 Em :numref:`sec_anchor`, geramos várias caixas de âncora centralizadas em cada pixel da imagem de entrada. Essas caixas de âncora são usadas para amostrar diferentes regiões da imagem de entrada. No entanto, se as caixas de âncora forem geradas centralizadas em cada pixel da imagem, logo haverá muitas caixas de âncora para calcularmos. Por exemplo, assumimos que a imagem de entrada tem uma altura e uma largura de 561 e 728 pixels, respectivamente. Se cinco formas diferentes de caixas de âncora são geradas centralizadas em cada pixel, mais de dois milhões de caixas de âncora ($561 \times 728 \times 5$) precisam ser previstas e rotuladas na imagem.
@@ -122,5 +122,5 @@ We will implement a multiscale object detection model in the following section.
 [Discussions](https://discuss.d2l.ai/t/1607)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgwNzg0Mjg3LC0xNzgzMzIwMzBdfQ==
+eyJoaXN0b3J5IjpbMjA1NjQwOTU3MCwtMTc4MzMyMDMwXX0=
 -->
