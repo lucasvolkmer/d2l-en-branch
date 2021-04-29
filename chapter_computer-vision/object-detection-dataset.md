@@ -37,12 +37,9 @@ d2l.DATA_HUB['banana-detection'] = (d2l.DATA_URL + 'banana-detection.zip',
 
 ## Lendo o Dataset
 
-We are going to read the object detection dataset in the `read_data_bananas`
-function. The dataset includes a csv file for target class labels and
-ground truth bounding box coordinates in the `corner` format.
-We define `BananasDataset` to create the `Dataset` instance and finally define
-the `load_data_bananas` function to return the dataloaders.
-There is no need to read the test dataset in random order.
+Vamos ler o conjunto de dados de detecção de objetos na função `read_data_bananas`. O conjunto de dados inclui um arquivo csv para rótulos de classe de destino e coordenadas de caixa delimitadora de verdade fundamental no formato `corner`.
+Definimos `BananasDataset` para criar a instância do `Dataset` e finalmente definimos a função `load_data_bananas` para retornar os carregadores de dados.
+Não há necessidade de ler o conjunto de dados de teste em ordem aleatória.
 
 ```{.python .input}
 #@save
@@ -183,6 +180,6 @@ for ax, label in zip(axes, batch[1][0:10]):
 [Discussions](https://discuss.d2l.ai/t/1608)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxOTQyMzc4Nyw1MjQ5OTMzNDUsLTg2OT
-EzMjEyOV19
+eyJoaXN0b3J5IjpbMTEyMzQ5ODUxNSwxMDE5NDIzNzg3LDUyND
+k5MzM0NSwtODY5MTMyMTI5XX0=
 -->
