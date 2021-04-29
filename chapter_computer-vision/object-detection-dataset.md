@@ -1,5 +1,4 @@
-# The Object Detection Dataset
-
+# O *Dataset* de Detecção de Objetos
 There are no small datasets, like MNIST or Fashion-MNIST, in the object detection field. In order to quickly test models, we are going to assemble a small dataset. First, we generate 1000 banana images of different angles and sizes using free bananas from our office. Then, we collect a series of background images and place a banana image at a random position on each image.
 
 
@@ -184,5 +183,5 @@ for ax, label in zip(axes, batch[1][0:10]):
 [Discussions](https://discuss.d2l.ai/t/1608)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2OTEzMjEyOV19
+eyJoaXN0b3J5IjpbNTI0OTkzMzQ1LC04NjkxMzIxMjldfQ==
 -->
