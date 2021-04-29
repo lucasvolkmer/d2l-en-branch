@@ -106,16 +106,16 @@ Implementaremos um modelo de detecção de objetos multiescala na seção seguin
 
 ## Exercícios
 
-1. Given an input image, assume $1 \times c_i \times h \times w$ to be the shape of the feature map while $c_i, h, w$ are the number, height, and width of the feature map. What methods can you think of to convert this variable into the anchor box's category and offset? What is the shape of the output?
+1. Dada uma imagem de entrada, suponha que $1 \times c_i \times h \times w$ seja a forma do mapa de características, enquanto $c_i, h, w$ são o número, altura e largura do mapa de características. Em quais métodos você pode pensar para converter essa variável na categoria e deslocamento da caixa de âncora? Qual é o formato da saída?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/371)
+[Discussões](https://discuss.d2l.ai/t/371)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1607)
+[Discussões](https://discuss.d2l.ai/t/1607)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTMyNzU4MjUsMTg1NTY2Njc2NywyMD
-U2NDA5NTcwLC0xNzgzMzIwMzBdfQ==
+eyJoaXN0b3J5IjpbMTc3NzAwODA1OSwtMjAxMzI3NTgyNSwxOD
+U1NjY2NzY3LDIwNTY0MDk1NzAsLTE3ODMzMjAzMF19
 -->
