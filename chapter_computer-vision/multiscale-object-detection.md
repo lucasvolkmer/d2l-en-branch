@@ -81,10 +81,11 @@ Finalmente, vamos reduzir a altura e a largura do mapa de feições pela metade 
 display_anchors(fmap_w=1, fmap_h=1, s=[0.8])
 ```
 
-Since we have generated anchor boxes of different sizes on multiple scales, we will use them to detect objects of various sizes at different scales. Now we are going to introduce a method based on convolutional neural networks (CNNs).
 
-At a certain scale, suppose we generate $h \times w$ sets of anchor boxes with different midpoints based on $c_i$ feature maps with the shape $h \times w$ and the number of anchor boxes in each set is $a$. For example, for the first scale of the experiment, we generate 16 sets of anchor boxes with different midpoints based on 10 (number of channels) feature maps with a shape of $4 \times 4$, and each set contains 3 anchor boxes.
-Next, each anchor box is labeled with a category and offset based on the classification and position of the ground-truth bounding box. At the current scale, the object detection model needs to predict the category and offset of $h \times w$ sets of anchor boxes with different midpoints based on the input image.
+Como geramos caixas de âncora de tamanhos diferentes em escalas múltiplas, vamos usá-las para detectar objetos de vários tamanhos em escalas diferentes. Agora vamos apresentar um método baseado em redes neurais convolucionais (CNNs).
+
+Em uma determinada escala, suponha que geramos $h \times w$ conjuntos de caixas de âncora com diferentes pontos médios baseados em $c_i$ mapas de feições com a forma $h \times w$ e o número de caixas de âncora em cada conjunto é $a$ . Por exemplo, para a primeira escala do experimento, geramos 16 conjuntos de caixas de âncora com diferentes pontos médios com base em 10 (número de canais) mapas de recursos com uma forma de $4 \times 4$, e cada conjunto contém 3 caixas de âncora.
+A seguir, cada caixa de âncora é rotulada com uma categoria e deslocamento com base na classificação e posição da caixa delimitadora de verdade. Na escala atual, o modelo de detecção de objeto precisa prever a categoria e o offset de $h \times w$ conjuntos de caixas de âncora com diferentes pontos médios com base na imagem de entrada.
 
 We assume that the $c_i$ feature maps are the intermediate output of the CNN
 based on the input image. Since each feature map has $h \times w$ different
@@ -123,6 +124,6 @@ We will implement a multiscale object detection model in the following section.
 [Discussions](https://discuss.d2l.ai/t/1607)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NTY2Njc2NywyMDU2NDA5NTcwLC0xNz
-gzMzIwMzBdfQ==
+eyJoaXN0b3J5IjpbMTc5NzA1MzM1LDE4NTU2NjY3NjcsMjA1Nj
+QwOTU3MCwtMTc4MzMyMDMwXX0=
 -->
