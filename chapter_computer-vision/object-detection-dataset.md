@@ -2,7 +2,7 @@
 Não existem pequenos conjuntos de dados, como MNIST ou Fashion-MNIST, no campo de detecção de objetos. Para testar os modelos rapidamente, vamos montar um pequeno conjunto de dados. Primeiro, geramos 1000 imagens de banana de diferentes ângulos e tamanhos usando bananas grátis de nosso escritório. Em seguida, coletamos uma série de imagens de fundo e colocamos uma imagem de banana em uma posição aleatória em cada imagem.
 
 
-## Downloading the Dataset
+## Baixando Dataset
 
 The banana detection dataset with all the images and csv label files can be
 downloaded directly from the Internet.
@@ -183,6 +183,6 @@ for ax, label in zip(axes, batch[1][0:10]):
 [Discussions](https://discuss.d2l.ai/t/1608)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI0NDMxNDQyLDUyNDk5MzM0NSwtODY5MT
-MyMTI5XX0=
+eyJoaXN0b3J5IjpbLTE2MTYxOTYxMzMsNTI0OTkzMzQ1LC04Nj
+kxMzIxMjldfQ==
 -->
