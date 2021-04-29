@@ -164,22 +164,22 @@ for ax, label in zip(axes, batch[1][0:10]):
 
 ## Resumo
 
-* The banana detection dataset we synthesized can be used to test object detection models.
-* The data reading for object detection is similar to that for image classification. However, after we introduce bounding boxes, the label shape and image augmentation (e.g., random cropping) are changed.
+* O conjunto de dados de detecção de banana que sintetizamos pode ser usado para testar modelos de detecção de objetos.
+* A leitura de dados para detecção de objetos é semelhante àquela para classificação de imagens. No entanto, depois de introduzirmos as caixas delimitadoras, a forma do rótulo e o aumento da imagem (por exemplo, corte aleatório) são alterados.
 
 
-## Exercises
+## Exercícios
 
-1. Referring to the MXNet documentation, what are the parameters for the constructors of the `image.ImageDetIter` and `image.CreateDetAugmenter` classes? What is their significance?
+1. Referindo-se à documentação do MXNet, quais são os parâmetros para os construtores das classes `image.ImageDetIter` e `image.CreateDetAugmenter`? Qual é o seu significado?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/372)
+[Discussões](https://discuss.d2l.ai/t/372)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1608)
+[Discussões](https://discuss.d2l.ai/t/1608)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjU2NDc2ODAsMTAxOTQyMzc4Nyw1Mj
+eyJoaXN0b3J5IjpbLTE2NjQyMTYwNDQsMTAxOTQyMzc4Nyw1Mj
 Q5OTMzNDUsLTg2OTEzMjEyOV19
 -->
