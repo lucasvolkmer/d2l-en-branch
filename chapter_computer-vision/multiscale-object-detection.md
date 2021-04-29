@@ -91,19 +91,20 @@ Assumimos que os mapas de características $c_i$ são a saída intermediária da
 informação da imagem de entrada neste mesmo campo receptivo. Portanto, podemos transformar as unidades $c_i$ do mapa de feições na mesma posição espacial nas categorias e deslocamentos das $a$ caixas de âncora geradas usando essa posição como um ponto médio. Não é difícil perceber que, em essência, usamos as informações da imagem de entrada em um determinado campo receptivo para prever a categoria e
 deslocamento das caixas de âncora perto do campo na imagem de entrada.
 
-When the feature maps of different layers have receptive fields of different sizes on the input image, they are used to detect objects of different sizes. For example, we can design a network to have a wider receptive field for each unit in the feature map that is closer to the output layer, to detect objects with larger sizes in the input image.
 
-We will implement a multiscale object detection model in the following section.
+Quando os mapas de recursos de camadas diferentes têm campos receptivos de tamanhos diferentes na imagem de entrada, eles são usados para detectar objetos de tamanhos diferentes. Por exemplo, podemos projetar uma rede para ter um campo receptivo mais amplo para cada unidade no mapa de recursos que está mais perto da camada de saída, para detectar objetos com tamanhos maiores na imagem de entrada.
 
-
-## Summary
-
-* We can generate anchor boxes with different numbers and sizes on multiple scales to detect objects of different sizes on multiple scales.
-* The shape of the feature map can be used to determine the midpoint of the anchor boxes that uniformly sample any image.
-* We use the information for the input image from a certain receptive field to predict the category and offset of the anchor boxes close to that field on the image.
+Implementaremos um modelo de detecção de objetos multiescala na seção seguinte.
 
 
-## Exercises
+## Resumo
+
+* Podemos gerar caixas de âncora com diferentes números e tamanhos em várias escalas para detectar objetos de diferentes tamanhos em várias escalas.
+* A forma do mapa de feições pode ser usada para determinar o ponto médio das caixas de âncora que amostram uniformemente qualquer imagem.
+* Usamos as informações da imagem de entrada de um determinado campo receptivo para prever a categoria e o deslocamento das caixas de âncora próximas a esse campo na imagem.
+
+
+## Exercícios
 
 1. Given an input image, assume $1 \times c_i \times h \times w$ to be the shape of the feature map while $c_i, h, w$ are the number, height, and width of the feature map. What methods can you think of to convert this variable into the anchor box's category and offset? What is the shape of the output?
 
@@ -115,6 +116,6 @@ We will implement a multiscale object detection model in the following section.
 [Discussions](https://discuss.d2l.ai/t/1607)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5OTY2NjU2NCwxODU1NjY2NzY3LDIwNT
-Y0MDk1NzAsLTE3ODMzMjAzMF19
+eyJoaXN0b3J5IjpbLTIwMTMyNzU4MjUsMTg1NTY2Njc2NywyMD
+U2NDA5NTcwLC0xNzgzMzIwMzBdfQ==
 -->
