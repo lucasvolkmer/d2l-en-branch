@@ -30,11 +30,12 @@ h, w = img.shape[0:2]
 h, w
 ```
 
-In :numref:`sec_conv_layer`, the 2D array output of the convolutional neural network (CNN) is called
-a feature map.  We can determine the midpoints of anchor boxes uniformly sampled
-on any image by defining the shape of the feature map.
 
-The function `display_anchors` is defined below.  We are going to generate anchor boxes `anchors` centered on each unit (pixel) on the feature map `fmap`.  Since the coordinates of axes $x$ and $y$ in anchor boxes `anchors` have been divided by the width and height of the feature map `fmap`, values between 0 and 1 can be used to represent relative positions of anchor boxes in the feature map.  Since the midpoints of anchor boxes `anchors` overlap with all the units on feature map `fmap`, the relative spatial positions of the midpoints of the `anchors` on any image must have a uniform distribution.  Specifically, when the width and height of the feature map are set to `fmap_w` and `fmap_h` respectively, the function will conduct uniform sampling for `fmap_h` rows and `fmap_w` columns of pixels and use them as midpoints to generate anchor boxes with size `s` (we assume that the length of list `s` is 1) and different aspect ratios (`ratios`).
+Em :numref:`sec_conv_layer`, a saída da matriz 2D da rede neural convolucional (CNN) é chamada
+um mapa de recursos. Podemos determinar os pontos médios de caixas de âncora uniformemente amostradas
+em qualquer imagem, definindo a forma do mapa de feições.
+
+A função `display_anchors` é definida abaixo. Vamos gerar caixas de âncora `anchors` centradas em cada unidade (pixel) no mapa de feições `fmap`. Uma vez que as coordenadas dos eixos $x$ e $y$ nas caixas de âncora `anchors` foram divididas pela largura e altura do mapa de feições `fmap`, valores entre 0 e 1 podem ser usados ​​para representar as posições relativas das caixas de âncora em o mapa de recursos. Uma vez que os pontos médios das "âncoras" das caixas de âncora se sobrepõem a todas as unidades no mapa de características "fmap", as posições espaciais relativas dos pontos médios das "âncoras" em qualquer imagem devem ter uma distribuição uniforme. Especificamente, quando a largura e a altura do mapa de feições são definidas para `fmap_w` e` fmap_h` respectivamente, a função irá conduzir uma amostragem uniforme para linhas `fmap_h` e colunas de pixels` fmap_w` e usá-los como pontos médios para gerar caixas de âncora com tamanho `s` (assumimos que o comprimento da lista `s` é 1) e diferentes proporções (`ratios`).
 
 ```{.python .input}
 def display_anchors(fmap_w, fmap_h, s):
@@ -122,5 +123,6 @@ We will implement a multiscale object detection model in the following section.
 [Discussions](https://discuss.d2l.ai/t/1607)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NjQwOTU3MCwtMTc4MzMyMDMwXX0=
+eyJoaXN0b3J5IjpbLTM5NDE4MTU4MSwyMDU2NDA5NTcwLC0xNz
+gzMzIwMzBdfQ==
 -->
