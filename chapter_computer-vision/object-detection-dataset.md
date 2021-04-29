@@ -183,3 +183,6 @@ for ax, label in zip(axes, batch[1][0:10]):
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1608)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTg2OTEzMjEyOV19
+-->
