@@ -5,33 +5,14 @@ Nas poucas seções anteriores, apresentamos caixas delimitadoras, caixas de ân
 
 ## Modelo
 
-:numref:`fig_ssd` shows the design of an SSD model. The model's main components
-are a base network block and several multiscale feature blocks connected in a
-series. Here, the base network block is used to extract features of original
-images, and it generally takes the form of a deep convolutional neural
-network. The paper on SSDs chooses to place a truncated VGG before the
-classification layer :cite:`Liu.Anguelov.Erhan.ea.2016`, but this is now
-commonly replaced by ResNet. We can design the base network so that it outputs
-larger heights and widths. In this way, more anchor boxes are generated based on
-this feature map, allowing us to detect smaller objects. Next, each multiscale
-feature block reduces the height and width of the feature map provided by the
-previous layer (for example, it may reduce the sizes by half). The blocks then
-use each element in the feature map to expand the receptive field on the input
-image. In this way, the closer a multiscale feature block is to the top of
-:numref:`fig_ssd` the smaller its output feature map, and the fewer the anchor
-boxes that are generated based on the feature map. In addition, the closer a
-feature block is to the top, the larger the receptive field of each element in
-the feature map and the better suited it is to detect larger objects. As the SSD
-generates different numbers of anchor boxes of different sizes based on the base
-network block and each multiscale feature block and then predicts the categories
-and offsets (i.e., predicted bounding boxes) of the anchor boxes in order to
-detect objects of different sizes, SSD is a multiscale object detection model.
+:numref:`fig_ssd` mostra o design de um modelo SSD. Os principais componentes do modelo são um bloco de rede básico e vários blocos de recursos multiescala conectados em série. Aqui, o bloco de rede de base é usado para extrair características de imagens originais e geralmente assume a forma de uma rede neural convolucional profunda. O artigo sobre SSDs opta por colocar um VGG truncado antes do
+camada de classificação :cite:`Liu.Anguelov.Erhan.ea.2016`, mas agora é comumente substituído pelo ResNet. Podemos projetar a rede de base para que ela produza alturas e larguras maiores. Desta forma, mais caixas de âncora são geradas com base neste mapa de características, permitindo-nos detectar objetos menores. Em seguida, cada bloco de feições multiescala reduz a altura e largura do mapa de feições fornecido pela camada anterior (por exemplo, pode reduzir os tamanhos pela metade). Os blocos então usam cada elemento no mapa de recursos para expandir o campo receptivo na imagem de entrada. Desta forma, quanto mais próximo um bloco de feições multiescala estiver do topo de :numref:`fig_ssd` menor será o mapa de feições de saída e menos caixas de âncora são geradas com base no mapa de feições. Além disso, quanto mais próximo um bloco de recursos estiver do topo, maior será o campo receptivo de cada elemento no mapa de recursos e mais adequado será para detectar objetos maiores. Como o SSD gera diferentes números de caixas de âncora de tamanhos diferentes com base no bloco de rede de base e cada bloco de recursos multiescala e, em seguida, prevê as categorias e deslocamentos (ou seja, caixas delimitadoras previstas) das caixas de âncora para detectar objetos de tamanhos diferentes, SSD é um modelo de detecção de objetos multiescala.
 
-![The SSD is composed of a base network block and several multiscale feature blocks connected in a series. ](../img/ssd.svg)
+![O SSD é composto de um bloco de rede base e vários blocos de recursos multiescala conectados em série. ](../img/ssd.svg)
 :label:`fig_ssd`
 
 
-Next, we will describe the implementation of the modules in :numref:`fig_ssd`. First, we need to discuss the implementation of category prediction and bounding box prediction.
+A seguir, descreveremos a implementação dos módulos em :numref:`fig_ssd`. Primeiro, precisamos discutir a implementação da previsão da categoria e da previsão da caixa delimitadora.
 
 ### Category Prediction Layer
 
@@ -712,5 +693,5 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEwMzU1NTUyXX0=
+eyJoaXN0b3J5IjpbLTE2Mzc0NTg1NywzMTAzNTU1NTJdfQ==
 -->
