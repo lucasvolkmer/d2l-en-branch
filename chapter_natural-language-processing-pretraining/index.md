@@ -1,4 +1,4 @@
-# Natural Language Processing: Pretraining
+# Processamento de linguagem natural: Pré-treinamento
 :label:`chap_nlp_pretrain`
 
 
@@ -8,6 +8,13 @@ Given rich text in social media, chat apps, emails, product reviews, news articl
 
 Natural language processing studies interactions between computers and humans using natural languages.
 In practice, it is very common to use natural language processing techniques to process and analyze text (human natural language) data, such as language models in :numref:`sec_language_model` and machine translation models in :numref:`sec_machine_translation`.
+
+Os humanos precisam se comunicar.
+A partir dessa necessidade básica da condição humana, uma vasta quantidade de texto escrito tem sido gerada diariamente.
+Dado o texto rico em mídia social, aplicativos de chat, e-mails, análises de produtos, artigos de notícias, artigos de pesquisa e livros, torna-se vital permitir que os computadores os entendam para oferecer assistência ou tomar decisões com base em linguagens humanas.
+
+O processamento de linguagem natural estuda as interações entre computadores e humanos usando linguagens naturais.
+Na prática, é muito comum usar técnicas de processamento de linguagem natural para processar e analisar dados de texto (linguagem natural humana), como modelos de linguagem em :numref:`sec_language_model` e modelos de tradução automática em :numref:`sec_machine_translation`.
 
 To understand text, we can begin with its representation,
 such as treating each word or subword as an individual text token.
@@ -52,5 +59,5 @@ bert-pretraining
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMzgyMDcyMV19
+eyJoaXN0b3J5IjpbNzQyMjEzMjY3LDExMDM4MjA3MjFdfQ==
 -->
