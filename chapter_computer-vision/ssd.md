@@ -14,7 +14,7 @@ camada de classificação :cite:`Liu.Anguelov.Erhan.ea.2016`, mas agora é comum
 
 A seguir, descreveremos a implementação dos módulos em :numref:`fig_ssd`. Primeiro, precisamos discutir a implementação da previsão da categoria e da previsão da caixa delimitadora.
 
-### Category Prediction Layer
+### Camada de Previsão da Categoria
 
 Set the number of object categories to $q$. In this case, the number of anchor
 box categories is $q+1$, with 0 indicating an anchor box that only contains
@@ -693,6 +693,6 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNTYxMDkyMiwzNzM1NTgzNCwzMTAzNT
-U1NTJdfQ==
+eyJoaXN0b3J5IjpbLTE3Njg5NjMxOSwyMDA1NjEwOTIyLDM3Mz
+U1ODM0LDMxMDM1NTU1Ml19
 -->
