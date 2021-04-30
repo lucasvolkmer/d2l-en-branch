@@ -1,14 +1,6 @@
 # Processamento de linguagem natural: Pré-treinamento
 :label:`chap_nlp_pretrain`
 
-
-Humans need to communicate.
-Out of this basic need of the human condition, a vast amount of written text has been generated on an everyday basis.
-Given rich text in social media, chat apps, emails, product reviews, news articles,  research papers, and books, it becomes vital to enable computers to understand them to offer assistance or make decisions based on human languages.
-
-Natural language processing studies interactions between computers and humans using natural languages.
-In practice, it is very common to use natural language processing techniques to process and analyze text (human natural language) data, such as language models in :numref:`sec_language_model` and machine translation models in :numref:`sec_machine_translation`.
-
 Os humanos precisam se comunicar.
 A partir dessa necessidade básica da condição humana, uma vasta quantidade de texto escrito tem sido gerada diariamente.
 Dado o texto rico em mídia social, aplicativos de chat, e-mails, análises de produtos, artigos de notícias, artigos de pesquisa e livros, torna-se vital permitir que os computadores os entendam para oferecer assistência ou tomar decisões com base em linguagens humanas.
@@ -16,31 +8,31 @@ Dado o texto rico em mídia social, aplicativos de chat, e-mails, análises de p
 O processamento de linguagem natural estuda as interações entre computadores e humanos usando linguagens naturais.
 Na prática, é muito comum usar técnicas de processamento de linguagem natural para processar e analisar dados de texto (linguagem natural humana), como modelos de linguagem em :numref:`sec_language_model` e modelos de tradução automática em :numref:`sec_machine_translation`.
 
-To understand text, we can begin with its representation,
-such as treating each word or subword as an individual text token.
-As we will see in this chapter,
-the representation of each token can be pretrained on a large corpus,
-using word2vec, GloVe, or subword embedding models.
-After pretraining, representation of each token can be a vector,
-however, it remains the same no matter what the context is.
-For instance, the vector representation of "bank" is the same
-in both
-"go to the bank to deposit some money"
-and
-"go to the bank to sit down".
-Thus, many more recent pretraining models adapt representation of the same token
-to different contexts.
-Among them is BERT, a much deeper model based on the transformer encoder.
-In this chapter, we will focus on how to pretrain such representations for text,
-as highlighted in :numref:`fig_nlp-map-pretrain`.
+Para entender o texto, podemos começar com sua representação,
+como tratar cada palavra ou subpalavra como um token de texto individual.
+Como veremos neste capítulo,
+a representação de cada token pode ser pré-treinada em um grande corpus,
+usando word2vec, GloVe ou modelos de incorporação de subpalavra.
+Após o pré-treinamento, a representação de cada token pode ser um vetor,
+no entanto, permanece o mesmo, independentemente do contexto.
+Por exemplo, a representação vetorial de "banco" é a mesma
+em ambos
+"vá ao banco para depositar algum dinheiro"
+e
+"vá ao banco para se sentar".
+Assim, muitos modelos de pré-treinamento mais recentes adaptam a representação do mesmo token
+para contextos diferentes.
+Entre eles está o BERT, um modelo muito mais profundo baseado no codificador do transformador.
+Neste capítulo, vamos nos concentrar em como pré-treinar tais representações para texto,
+como destacado em :numref:`fig_nlp-map-pretrain`.
 
-![Pretrained text representations can be fed to various deep learning architectures for different downstream natural language processing applications. This chapter focuses on the upstream text representation pretraining.](../img/nlp-map-pretrain.svg)
+![As representações de texto pré-treinadas podem ser alimentadas para várias arquiteturas de aprendizado profundo para diferentes aplicativos de processamento de linguagem natural downstream. Este capítulo enfoca o pré-treinamento de representação de texto upstream.](../img/nlp-map-pretrain.svg)
 :label:`fig_nlp-map-pretrain`
 
-As shown in :numref:`fig_nlp-map-pretrain`,
-the pretrained text representations can be fed to
-a variety of deep learning architectures for different downstream natural language processing applications.
-We will cover them in :numref:`chap_nlp_app`.
+Conforme mostrado em :numref:`fig_nlp-map-pretrain`,
+as representações de texto pré-treinadas podem ser alimentadas para
+uma variedade de arquiteturas de aprendizado profundo para diferentes aplicativos de processamento de linguagem natural downstream.
+Iremos cobri-los em :numref:`chap_nlp_app`.
 
 ```toc
 :maxdepth: 2
@@ -59,5 +51,5 @@ bert-pretraining
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQyMjEzMjY3LDExMDM4MjA3MjFdfQ==
+eyJoaXN0b3J5IjpbMTc2MzE4NTcwNSwxMTAzODIwNzIxXX0=
 -->
