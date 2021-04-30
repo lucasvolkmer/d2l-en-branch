@@ -23,10 +23,7 @@ Especificamente, a camada de predição de categoria usa uma camada convoluciona
 coordenadas $(x, y)$, o canal para as coordenadas $(x, y)$ no mapa de feição de saída contém as previsões de categoria para todas as caixas âncora geradas usando as coordenadas do mapa de feição de entrada $(x, y)$ como o Centro. Portanto, existem $a(q+1)$ canais de saída, com os canais de saída indexados como $i(q+1)+j$
 ($0 \leq j \leq q$) representando as previsões do índice de categoria $j$ para o índice de caixa de âncora $i$.
 
-Now, we will define a category prediction layer of this type. After we specify
-the parameters $a$ and $q$, it uses a $3\times3$ convolutional layer with a
-padding of 1. The heights and widths of the input and output of this
-convolutional layer remain unchanged.
+Agora, vamos definir uma camada de predição de categoria deste tipo. Depois de especificar os parâmetros $a$ e $q$, ele usa uma camada convolucional $3\times3$ com um preenchimento de 1. As alturas e larguras de entrada e saída dessa camada convolucional permanecem inalteradas.
 
 ```{.python .input}
 %matplotlib inline
@@ -55,9 +52,9 @@ def cls_predictor(num_inputs, num_anchors, num_classes):
                      kernel_size=3, padding=1)
 ```
 
-### Bounding Box Prediction Layer
+### Camada de Previsão de Caixa Delimitadora
 
-The design of the bounding box prediction layer is similar to that of the category prediction layer. The only difference is that, here, we need to predict 4 offsets for each anchor box, rather than $q+1$ categories.
+O design da camada de previsão da caixa delimitadora é semelhante ao da camada de previsão da categoria. A única diferença é que, aqui, precisamos prever 4 deslocamentos para cada caixa de âncora, em vez de categorias $q+1$.
 
 ```{.python .input}
 def bbox_predictor(num_anchors):
@@ -679,6 +676,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzQ2Nzc5NzUsLTIxNDM2NzY5NzcsMj
-AwNTYxMDkyMiwzNzM1NTgzNCwzMTAzNTU1NTJdfQ==
+eyJoaXN0b3J5IjpbLTEwMzg3NTAxLC0xMzc0Njc3OTc1LC0yMT
+QzNjc2OTc3LDIwMDU2MTA5MjIsMzczNTU4MzQsMzEwMzU1NTUy
+XX0=
 -->
