@@ -136,3 +136,6 @@ We then use the same method to obtain the gradients for other word vectors. Unli
 
 
 [Discussions](https://discuss.d2l.ai/t/381)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTk2OTk4ODUwOV19
+-->
