@@ -66,7 +66,7 @@ Se usarmos o SGD, em cada iteração vamos escolher uma subsequência mais curta
 $$\log P(w_o \mid w_c) =
 \mathbf{u}_o^\top \mathbf{v}_c - \log\left(\sum_{i \in \mathcal{V}} \text{exp}(\mathbf{u}_i^\top \mathbf{v}_c)\right).$$
 
-Through differentiation, we can get the gradient $\mathbf{v}_c$ from the formula above.
+Por meio da diferenciação, podemos obter o gradiente $\mathbf{v}_c$ da fórmula acima.
 
 $$
 \begin{aligned}
@@ -77,12 +77,12 @@ $$
 \end{aligned}
 $$
 
-Its computation obtains the conditional probability for all the words in the dictionary given the central target word $w_c$. We then use the same method to obtain the gradients for other word vectors.
+Seu cálculo obtém a probabilidade condicional para todas as palavras no dicionário dada a palavra alvo central $w_c$. Em seguida, usamos o mesmo método para obter os gradientes para outros vetores de palavras.
 
-After the training, for any word in the dictionary with index $i$, we are going to get its two word vector sets $\mathbf{v}_i$ and $\mathbf{u}_i$.  In applications of natural language processing, the central target word vector in the skip-gram model is generally used as the representation vector of a word.
+Após o treinamento, para qualquer palavra do dicionário com índice $i$, vamos obter seus conjuntos de vetores de duas palavras $\mathbf{v}_i$ e $\mathbf{u}_i$. Em aplicações de processamento de linguagem natural, o vetor de palavra-alvo central no modelo skip-gram é geralmente usado como o vetor de representação de uma palavra.
 
 
-## The Continuous Bag of Words (CBOW) Model
+## O modelo do conjcontínuo de palavras (CBOW)
 
 The continuous bag of words (CBOW) model is similar to the skip-gram model. The biggest difference is that the CBOW model assumes that the central target word is generated based on the context words before and after it in the text sequence. With the same text sequence "the", "man", "loves", "his" and "son", in which "loves" is the central target word, given a context window size of 2, the CBOW model is concerned with the conditional probability of generating the target word "loves" based on the context words "the", "man", "his" and "son"(as shown in :numref:`fig_cbow`), such as
 
@@ -136,5 +136,5 @@ We then use the same method to obtain the gradients for other word vectors. Unli
 
 [Discussions](https://discuss.d2l.ai/t/381)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTYzMDc2Ml19
+eyJoaXN0b3J5IjpbLTE3MjQzNzg1MTddfQ==
 -->
