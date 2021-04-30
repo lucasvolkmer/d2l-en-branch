@@ -47,20 +47,20 @@ No modelo skip-gram, cada palavra é representada como dois vetores de dimensão
 
 $$P(w_o \mid w_c) = \frac{\text{exp}(\mathbf{u}_o^\top \mathbf{v}_c)}{ \sum_{i \in \mathcal{V}} \text{exp}(\mathbf{u}_i^\top \mathbf{v}_c)},$$
 
-where vocabulary index set $\mathcal{V} = \{0, 1, \ldots, |\mathcal{V}|-1\}$. Assume that a text sequence of length $T$ is given, where the word at time step $t$ is denoted as $w^{(t)}$. Assume that context words are independently generated given center words. When context window size is $m$, the likelihood function of the skip-gram model is the joint probability of generating all the context words given any center word
+onde o índice de vocabulário definido $\mathcal{V} = \{0, 1, \ldots, |\mathcal{V}|-1\}$. Suponha que uma sequência de texto de comprimento $T$ seja fornecida, onde a palavra no passo de tempo $t$ é denotada como $w^{(t)}$. Suponha que as palavras de contexto sejam geradas independentemente, dadas as palavras centrais. Quando o tamanho da janela de contexto é $m$, a função de verossimilhança do modelo skip-gram é a probabilidade conjunta de gerar todas as palavras de contexto dadas qualquer palavra central
 
 $$ \prod_{t=1}^{T} \prod_{-m \leq j \leq m,\ j \neq 0} P(w^{(t+j)} \mid w^{(t)}),$$
 
-Here, any time step that is less than 1 or greater than $T$ can be ignored.
+Aqui, qualquer intervalo de tempo menor que 1 ou maior que $T$ pode ser ignorado.
 
-### Skip-Gram Model Training
+### Treinamento do modelo Skip-Gram
 
-The skip-gram model parameters are the central target word vector and context word vector for each individual word.  In the training process, we are going to learn the model parameters by maximizing the likelihood function, which is also known as maximum likelihood estimation. This is equivalent to minimizing the following loss function:
+Os parâmetros do modelo skip-gram são o vetor da palavra alvo central e o vetor da palavra de contexto para cada palavra individual. No processo de treinamento, aprenderemos os parâmetros do modelo maximizando a função de verossimilhança, também conhecida como estimativa de máxima verossimilhança. Isso é equivalente a minimizar a seguinte função de perda:
 
 $$ - \sum_{t=1}^{T} \sum_{-m \leq j \leq m,\ j \neq 0} \text{log}\, P(w^{(t+j)} \mid w^{(t)}).$$
 
 
-If we use the SGD, in each iteration we are going to pick a shorter subsequence through random sampling to compute the loss for that subsequence, and then compute the gradient to update the model parameters. The key of gradient computation is to compute the gradient of the logarithmic conditional probability for the central word vector and the context word vector. By definition, we first have
+Se usarmos o SGD, em cada iteração vamos escolher uma subsequência mais curta por meio de amostragem aleatória para calcular a perda para essa subsequência e, em seguida, calcular o gradiente para atualizar os parâmetros do modelo. A chave do cálculo de gradiente é calcular o gradiente da probabilidade condicional logarítmica para o vetor de palavras central e o vetor de palavras de contexto. Por definição, primeiro temos
 
 
 $$\log P(w_o \mid w_c) =
@@ -136,5 +136,5 @@ We then use the same method to obtain the gradients for other word vectors. Unli
 
 [Discussions](https://discuss.d2l.ai/t/381)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NjM5NTQ4OV19
+eyJoaXN0b3J5IjpbLTE5NTYzMDc2Ml19
 -->
