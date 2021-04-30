@@ -1,4 +1,4 @@
-#  Detection *Single Shot Multibox Detection* (SSD)
+#  Detecção *Single Shot Multibox Detection* (SSD)
 
 In the previous few sections, we have introduced bounding boxes, anchor boxes,
 multiscale object detection, and datasets. Now, we will use this background
@@ -717,5 +717,5 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI1NDY5NjMyXX0=
+eyJoaXN0b3J5IjpbODMxOTc2MzEzXX0=
 -->
