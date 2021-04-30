@@ -1,14 +1,9 @@
 #  Detecção *Single Shot Multibox Detection* (SSD)
 
-In the previous few sections, we have introduced bounding boxes, anchor boxes,
-multiscale object detection, and datasets. Now, we will use this background
-knowledge to construct an object detection model: single shot multibox detection
-(SSD) :cite:`Liu.Anguelov.Erhan.ea.2016`. This quick and easy model is already
-widely used. Some of the design concepts and implementation details of this
-model are also applicable to other object detection models.
+Nas poucas seções anteriores, apresentamos caixas delimitadoras, caixas de âncora, detecção de objetos multiescala e conjuntos de dados. Agora, usaremos esse conhecimento prévio para construir um modelo de detecção de objetos: detecção multibox de disparo único [*Single Shot Multibox Detection*] (SSD) :cite:`Liu.Anguelov.Erhan.ea.2016`.  Este modelo rápido e fácil já é amplamente utilizado. Alguns dos conceitos de design e detalhes de implementação deste modelo também são aplicáveis a outros modelos de detecção de objetos.
 
 
-## Model
+## Modelo
 
 :numref:`fig_ssd` shows the design of an SSD model. The model's main components
 are a base network block and several multiscale feature blocks connected in a
@@ -717,5 +712,5 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMxOTc2MzEzXX0=
+eyJoaXN0b3J5IjpbMzEwMzU1NTUyXX0=
 -->
