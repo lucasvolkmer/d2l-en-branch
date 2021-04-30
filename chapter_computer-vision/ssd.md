@@ -120,7 +120,7 @@ Assim, independentemente das diferentes formas de `Y1` e` Y2`, ainda podemos con
 concat_preds([Y1, Y2]).shape
 ```
 
-### Bloco de Redução de Amostragem de Altura e largura
+### Bloco de Redução de Amostragem de Altura e Largura
 
 For multiscale object detection, we define the following `down_sample_blk` block, which reduces the height and width by 50%. This block consists of two $3\times3$ convolutional layers with a padding of 1 and a $2\times2$ maximum pooling layer with a stride of 2 connected in a series. As we know, $3\times3$ convolutional layers with a padding of 1 do not change the shape of feature maps. However, the subsequent pooling layer directly reduces the size of the feature map by half. Because $1\times 2+(3-1)+(3-1)=6$, each element in the output feature map has a receptive field on the input feature map of the shape $6\times6$. As you can see, the height and width downsample block enlarges the receptive field of each element in the output feature map.
 
@@ -677,7 +677,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNTU1OTQzMCwxNjc2MjIxNDkyLC0xMz
-c0Njc3OTc1LC0yMTQzNjc2OTc3LDIwMDU2MTA5MjIsMzczNTU4
-MzQsMzEwMzU1NTUyXX0=
+eyJoaXN0b3J5IjpbNzQ0NjI0NDEwLDE2NzYyMjE0OTIsLTEzNz
+Q2Nzc5NzUsLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNzM1NTgz
+NCwzMTAzNTU1NTJdfQ==
 -->
