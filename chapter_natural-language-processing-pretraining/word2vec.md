@@ -5,19 +5,6 @@ Uma linguagem natural é um sistema complexo que usamos para expressar significa
 
 ## Por que não usar vetores one-hot?
 
-We used one-hot vectors to represent words (characters are words) in
-:numref:`sec_rnn_scratch` .
-Recall that when we assume the number of different words in a
-dictionary (the dictionary size) is $N$, each word can correspond one-to-one
-with consecutive integers from 0 to $N-1$. These integers that correspond to
-words are called the indices of the words.  We assume that the index of a word
-is $i$. In order to get the one-hot vector representation of the word, we create
-a vector of all 0s with a length of $N$ and set element $i$ to 1. In this way,
-each word is represented as a vector of length $N$ that can be used directly by
-the neural network.
-
-Although one-hot word vectors are easy to construct, they are usually not a good choice. One of the major reasons is that the one-hot word vectors cannot accurately express the similarity between different words, such as the cosine similarity that we commonly use. For the vectors $\mathbf{x}, \mathbf{y} \in \mathbb{R}^d$, their cosine similarities are the cosines of the angles between them:
-
 Usamos vetores one-hot para representar palavras (caracteres são palavras) em
 :numref:`sec_rnn_scratch`.
 Lembre-se de que quando assumimos o número de palavras diferentes em um
@@ -29,24 +16,25 @@ um vetor de 0s com comprimento de $N$ e defina o elemento $i$ como 1. Desta form
 cada palavra é representada como um vetor de comprimento $N$ que pode ser usado diretamente por
 a rede neural.
 
-Embora os vetores de uma palavra quente sejam fáceis de construir, eles geralmente não são uma boa escolha. Uma das principais razões é que os vetores de uma palavra quente não podem expressar com precisão a semelhança entre palavras diferentes, como a semelhança de cosseno que usamos comumente. Para os vetores $ \ mathbf {x}, \ mathbf {y} \ in \ mathbb {R} ^ d $, suas semelhanças de cosseno são os cossenos dos ângulos entre eles:
+Embora os vetores de uma palavra quente sejam fáceis de construir, eles geralmente não são uma boa escolha. Uma das principais razões é que os vetores de uma palavra quente não podem expressar com precisão a semelhança entre palavras diferentes, como a semelhança de cosseno que usamos comumente. Para os vetores $\mathbf{x}, \mathbf{y} \in \mathbb{R}^d$, suas semelhanças de cosseno são os cossenos dos ângulos entre eles:
 
 $$\frac{\mathbf{x}^\top \mathbf{y}}{\|\mathbf{x}\| \|\mathbf{y}\|} \in [-1, 1].$$
 
-Since the cosine similarity between the one-hot vectors of any two different words is 0, it is difficult to use the one-hot vector to accurately represent the similarity between multiple different words.
+Uma vez que a similaridade de cosseno entre os vetores one-hot de quaisquer duas palavras diferentes é 0, é difícil usar o vetor one-hot para representar com precisão a similaridade entre várias palavras diferentes.
 
-[Word2vec](https://code.google.com/archive/p/word2vec/) is a tool that we came
-up with to solve the problem above.  It represents each word with a
-fixed-length vector and uses these vectors to better indicate the similarity and
-analogy relationships between different words. The Word2vec tool contains two
-models: skip-gram :cite:`Mikolov.Sutskever.Chen.ea.2013` and continuous bag of
-words (CBOW) :cite:`Mikolov.Chen.Corrado.ea.2013`. Next, we will take a
-look at the two models and their training methods.
+[Word2vec](https://code.google.com/archive/p/word2vec/) é uma ferramenta que viemos
+para resolver o problema acima. Ele representa cada palavra com um
+vetor de comprimento fixo e usa esses vetores para melhor indicar a similaridade e
+relações de analogia entre palavras diferentes. A ferramenta Word2vec contém dois
+modelos: skip-gram :cite:`Mikolov.Sutskever.Chen.ea.2013` e bolsa contínua de
+words (CBOW) :cite:`Mikolov.Chen.Corrado.ea.2013`. Em seguida, vamos dar um
+observe os dois modelos e seus métodos de treinamento.
 
-
-## The Skip-Gram Model
+## O Modelo Skip-Gram
 
 The skip-gram model assumes that a word can be used to generate the words that surround it in a text sequence. For example, we assume that the text sequence is "the", "man", "loves", "his", and "son". We use "loves" as the central target word and set the context window size to 2. As shown in :numref:`fig_skip_gram`, given the central target word "loves", the skip-gram model is concerned with the conditional probability for generating the context words, "the", "man", "his" and "son", that are within a distance of no more than 2 words, which is
+
+O modelo skip-gram assume que uma palavra pode ser usada para gerar as palavras que a cercam em uma sequência de texto. Por exemplo, assumimos que a sequência de texto é "o", "homem", "ama", "seu" e "filho". Usamos "amores" como palavra-alvo central e definimos o tamanho da janela de contexto para 2. Conforme mostrado em: numref: `fig_skip_gram`, dada a palavra-alvo central" amores ", o modelo de grama de salto está preocupado com a probabilidade condicional para gerando as palavras de contexto, "o", "homem", "seu" e "filho", que estão a uma distância de no máximo 2 palavras, que é
 
 $$P(\textrm{"the"},\textrm{"man"},\textrm{"his"},\textrm{"son"}\mid\textrm{"loves"}).$$
 
@@ -150,5 +138,5 @@ We then use the same method to obtain the gradients for other word vectors. Unli
 
 [Discussions](https://discuss.d2l.ai/t/381)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDI5Mjc3OV19
+eyJoaXN0b3J5IjpbLTE2Njg5ODUyMzRdfQ==
 -->
