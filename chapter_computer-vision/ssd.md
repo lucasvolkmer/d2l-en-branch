@@ -19,16 +19,9 @@ A seguir, descreveremos a implementação dos módulos em :numref:`fig_ssd`. Pri
 Defina o número de categorias de objeto como $q$. Nesse caso, o número de categorias de caixa de âncora é $q+1$, com 0 indicando uma caixa de âncora que contém apenas o fundo. Para uma determinada escala, defina a altura e a largura do mapa de feições para $h$ e $w$, respectivamente. Se usarmos cada elemento como o centro para gerar $a$
 caixas de âncora, precisamos classificar um total de $hwa$ caixas de âncora. Se usarmos uma camada totalmente conectada (FCN) para a saída, isso provavelmente resultará em um número excessivo de parâmetros do modelo. Lembre-se de como usamos canais de camada convolucional para gerar previsões de categoria em :numref:`sec_nin`. O SSD usa o mesmo método para reduzir a complexidade do modelo.
 
-Specifically, the category prediction layer uses a convolutional layer that
-maintains the input height and width. Thus, the output and input have a
-one-to-one correspondence to the spatial coordinates along the width and height
-of the feature map. Assuming that the output and input have the same spatial
-coordinates $(x, y)$, the channel for the coordinates $(x, y)$ on the output
-feature map contains the category predictions for all anchor boxes generated
-using the input feature map coordinates $(x, y)$ as the center. Therefore, there
-are $a(q+1)$ output channels, with the output channels indexed as $i(q+1) + j$
-($0 \leq j \leq q$) representing the predictions of the category index $j$ for
-the anchor box index $i$.
+Especificamente, a camada de predição de categoria usa uma camada convolucional que mantém a altura e largura de entrada. Assim, a saída e a entrada têm uma correspondência de um para um com as coordenadas espaciais ao longo da largura e altura do mapa de características. Supondo que a saída e a entrada tenham as mesmas
+coordenadas $(x, y)$, o canal para as coordenadas $(x, y)$ no mapa de feição de saída contém as previsões de categoria para todas as caixas âncora geradas usando as coordenadas do mapa de feição de entrada $(x, y)$ como o Centro. Portanto, existem $a(q+1)$ canais de saída, com os canais de saída indexados como $i(q+1)+j$
+($0 \leq j \leq q$) representando as previsões do índice de categoria $j$ para o índice de caixa de âncora $i$.
 
 Now, we will define a category prediction layer of this type. After we specify
 the parameters $a$ and $q$, it uses a $3\times3$ convolutional layer with a
@@ -686,6 +679,6 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNz
-M1NTgzNCwzMTAzNTU1NTJdfQ==
+eyJoaXN0b3J5IjpbLTEzNzQ2Nzc5NzUsLTIxNDM2NzY5NzcsMj
+AwNTYxMDkyMiwzNzM1NTgzNCwzMTAzNTU1NTJdfQ==
 -->
