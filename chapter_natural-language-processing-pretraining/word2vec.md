@@ -91,15 +91,11 @@ $$P(\textrm{"loves"}\mid\textrm{"the"},\textrm{"man"},\textrm{"his"},\textrm{"so
 ![O modelo CBOW se preocupa com a probabilidade condicional de gerar a palavra-alvo central a partir de determinadas palavras de contexto.  ](../img/cbow.svg)
 :label:`fig_cbow`
 
-Since there are multiple context words in the CBOW model, we will average their word vectors and then use the same method as the skip-gram model to compute the conditional probability. We assume that $\mathbf{v_i}\in\mathbb{R}^d$ and $\mathbf{u_i}\in\mathbb{R}^d$ are the context word vector and central target word vector of the word with index $i$ in the dictionary (notice that the symbols are opposite to the ones in the skip-gram model). Let central target word $w_c$ be indexed as $c$, and context words $w_{o_1}, \ldots, w_{o_{2m}}$ be indexed as $o_1, \ldots, o_{2m}$ in the dictionary. Thus, the conditional probability of generating a central target word from the given context word is
-
-
-Como há várias palavras de contexto no modelo CBOW, calcularemos a média de seus vetores de palavras e usaremos o mesmo método do modelo skip-gram para calcular a probabilidade condicional. Assumimos que $ \ mathbf {v_i} \ in \ mathbb {R} ^ d $ e $ \ mathbf {u_i} \ in \ mathbb {R} ^ d $ são o vetor de palavra de contexto e vetor de palavra-alvo central da palavra com index $ i $ no dicionário (observe que os símbolos são opostos aos do modelo skip-gram). Deixe a palavra alvo central $ w_c $ ser indexada como $ c $, e as palavras de contexto $ w_ {o_1}, \ ldots, w_ {o_ {2m}} $ sejam indexadas como $ o_1, \ ldots, o_ {2m} $ no dicionário. Assim, a probabilidade condicional de gerar uma palavra-alvo central a partir da palavra de contexto fornecida é
+Como há várias palavras de contexto no modelo CBOW, calcularemos a média de seus vetores de palavras e usaremos o mesmo método do modelo skip-gram para calcular a probabilidade condicional. Assumimos que $\mathbf{v_i}\in\mathbb{R}^d$ e $\mathbf{u_i}\in\mathbb{R}^d$ são o vetor de palavra de contexto e vetor de palavra-alvo central da palavra com index $i$ no dicionário (observe que os símbolos são opostos aos do modelo skip-gram). Deixe a palavra alvo central $w_c$ ser indexada como $c$, e as palavras de contexto $w_{o_1}, \ldots, w_{o_{2m}}$ sejam indexadas como $o_1, \ldots, o_{2m}$ no dicionário. Assim, a probabilidade condicional de gerar uma palavra-alvo central a partir da palavra de contexto fornecida é
 
 $$P(w_c \mid w_{o_1}, \ldots, w_{o_{2m}}) = \frac{\text{exp}\left(\frac{1}{2m}\mathbf{u}_c^\top (\mathbf{v}_{o_1} + \ldots, + \mathbf{v}_{o_{2m}}) \right)}{ \sum_{i \in \mathcal{V}} \text{exp}\left(\frac{1}{2m}\mathbf{u}_i^\top (\mathbf{v}_{o_1} + \ldots, + \mathbf{v}_{o_{2m}}) \right)}.$$
 
-
-For brevity, denote $\mathcal{W}_o= \{w_{o_1}, \ldots, w_{o_{2m}}\}$, and $\bar{\mathbf{v}}_o = \left(\mathbf{v}_{o_1} + \ldots, + \mathbf{v}_{o_{2m}} \right)/(2m)$. The equation above can be simplified as
+Para resumir, denote  $\mathcal{W}_o= \{w_{o_1}, \ldots, w_{o_{2m}}\}$, e $\bar{\mathbf{v}}_o = \left(\mathbf{v}_{o_1} + \ldots, + \mathbf{v}_{o_{2m}} \right)/(2m)$. A equação acima pode ser simplificada como
 
 $$P(w_c \mid \mathcal{W}_o) = \frac{\exp\left(\mathbf{u}_c^\top \bar{\mathbf{v}}_o\right)}{\sum_{i \in \mathcal{V}} \exp\left(\mathbf{u}_i^\top \bar{\mathbf{v}}_o\right)}.$$
 
@@ -139,5 +135,5 @@ We then use the same method to obtain the gradients for other word vectors. Unli
 
 [Discussions](https://discuss.d2l.ai/t/381)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMTg5NTA5NV19
+eyJoaXN0b3J5IjpbLTIwOTQ5NDc5MTNdfQ==
 -->
