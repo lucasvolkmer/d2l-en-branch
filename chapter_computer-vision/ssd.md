@@ -122,7 +122,7 @@ concat_preds([Y1, Y2]).shape
 
 ### Bloco de Redução de Amostragem de Altura e Largura
 
-For multiscale object detection, we define the following `down_sample_blk` block, which reduces the height and width by 50%. This block consists of two $3\times3$ convolutional layers with a padding of 1 and a $2\times2$ maximum pooling layer with a stride of 2 connected in a series. As we know, $3\times3$ convolutional layers with a padding of 1 do not change the shape of feature maps. However, the subsequent pooling layer directly reduces the size of the feature map by half. Because $1\times 2+(3-1)+(3-1)=6$, each element in the output feature map has a receptive field on the input feature map of the shape $6\times6$. As you can see, the height and width downsample block enlarges the receptive field of each element in the output feature map.
+Para detecção de objetos multiescala, definimos o seguinte bloco `down_sample_blk`, que reduz a altura e largura em 50%. Este bloco consiste em duas camadas convolucionais $3\times3$ com um preenchimento de 1 e uma camada de *pooling* máximo $2\times2$ com uma distância de 2 conectadas em uma série. Como sabemos, $3\times3$ camadas convolucionais com um preenchimento de 1 não alteram a forma dos mapas de características. No entanto, a camada de agrupamento subsequente reduz diretamente o tamanho do mapa de feições pela metade. Como $1\times 2+(3-1)+(3-1)=6$, cada elemento no mapa de recursos de saída tem um campo receptivo no mapa de recursos de entrada da forma $6\times6$.  Como você pode ver, o bloco de redução de altura e largura aumenta o campo receptivo de cada elemento no mapa de recursos de saída.
 
 ```{.python .input}
 def down_sample_blk(num_channels):
@@ -149,7 +149,7 @@ def down_sample_blk(in_channels, out_channels):
     return nn.Sequential(*blk)
 ```
 
-By testing forward computation in the height and width downsample block, we can see that it changes the number of input channels and halves the height and width.
+Ao testar a computação direta no bloco de redução de altura e largura, podemos ver que ele altera o número de canais de entrada e divide a altura e a largura pela metade.
 
 ```{.python .input}
 forward(np.zeros((2, 3, 20, 20)), down_sample_blk(10)).shape
@@ -677,7 +677,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ0NjI0NDEwLDE2NzYyMjE0OTIsLTEzNz
-Q2Nzc5NzUsLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNzM1NTgz
-NCwzMTAzNTU1NTJdfQ==
+eyJoaXN0b3J5IjpbNjA4NjI1OTA3LDc0NDYyNDQxMCwxNjc2Mj
+IxNDkyLC0xMzc0Njc3OTc1LC0yMTQzNjc2OTc3LDIwMDU2MTA5
+MjIsMzczNTU4MzQsMzEwMzU1NTUyXX0=
 -->
