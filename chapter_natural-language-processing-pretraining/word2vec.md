@@ -99,25 +99,25 @@ Para resumir, denote  $\mathcal{W}_o= \{w_{o_1}, \ldots, w_{o_{2m}}\}$, e $\bar{
 
 $$P(w_c \mid \mathcal{W}_o) = \frac{\exp\left(\mathbf{u}_c^\top \bar{\mathbf{v}}_o\right)}{\sum_{i \in \mathcal{V}} \exp\left(\mathbf{u}_i^\top \bar{\mathbf{v}}_o\right)}.$$
 
-Given a text sequence of length $T$, we assume that the word at time step $t$ is $w^{(t)}$, and the context window size is $m$.  The likelihood function of the CBOW model is the probability of generating any central target word from the context words.
+Dada uma sequência de texto de comprimento $T$, assumimos que a palavra no passo de tempo $t$ é $w^{(t)}$, e o tamanho da janela de contexto é $m$. A função de verossimilhança do modelo CBOW é a probabilidade de gerar qualquer palavra-alvo central a partir das palavras de contexto.
 
 $$ \prod_{t=1}^{T}  P(w^{(t)} \mid  w^{(t-m)}, \ldots, w^{(t-1)}, w^{(t+1)}, \ldots, w^{(t+m)}).$$
 
-### CBOW Model Training
+### Treinamento de modelo CBOW 
 
-CBOW model training is quite similar to skip-gram model training.  The maximum likelihood estimation of the CBOW model is equivalent to minimizing the loss function.
+O treinamento do modelo CBOW é bastante semelhante ao treinamento do modelo skip-gram. A estimativa de máxima verossimilhança do modelo CBOW é equivalente a minimizar a função de perda.
 
 $$  -\sum_{t=1}^T  \text{log}\, P(w^{(t)} \mid  w^{(t-m)}, \ldots, w^{(t-1)}, w^{(t+1)}, \ldots, w^{(t+m)}).$$
 
-Notice that
+Note que
 
 $$\log\,P(w_c \mid \mathcal{W}_o) = \mathbf{u}_c^\top \bar{\mathbf{v}}_o - \log\,\left(\sum_{i \in \mathcal{V}} \exp\left(\mathbf{u}_i^\top \bar{\mathbf{v}}_o\right)\right).$$
 
-Through differentiation, we can compute the logarithm of the conditional probability of the gradient of any context word vector $\mathbf{v}_{o_i}$($i = 1, \ldots, 2m$) in the formula above.
+Por meio da diferenciação, podemos calcular o logaritmo da probabilidade condicional do gradiente de qualquer vetor de palavra de contexto $\mathbf{v}_{o_i}$($i = 1, \ldots, 2m$) na fórmula acima.
 
 $$\frac{\partial \log\, P(w_c \mid \mathcal{W}_o)}{\partial \mathbf{v}_{o_i}} = \frac{1}{2m} \left(\mathbf{u}_c - \sum_{j \in \mathcal{V}} \frac{\exp(\mathbf{u}_j^\top \bar{\mathbf{v}}_o)\mathbf{u}_j}{ \sum_{i \in \mathcal{V}} \text{exp}(\mathbf{u}_i^\top \bar{\mathbf{v}}_o)} \right) = \frac{1}{2m}\left(\mathbf{u}_c - \sum_{j \in \mathcal{V}} P(w_j \mid \mathcal{W}_o) \mathbf{u}_j \right).$$
 
-We then use the same method to obtain the gradients for other word vectors. Unlike the skip-gram model, we usually use the context word vector as the representation vector for a word in the CBOW model.
+Em seguida, usamos o mesmo método para obter os gradientes para outros vetores de palavras. Ao contrário do modelo skip-gram, geralmente usamos o vetor de palavras de contexto como o vetor de representação de uma palavra no modelo CBOW.
 
 ## Summary
 
@@ -135,5 +135,5 @@ We then use the same method to obtain the gradients for other word vectors. Unli
 
 [Discussions](https://discuss.d2l.ai/t/381)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTQ5NDc5MTNdfQ==
+eyJoaXN0b3J5IjpbMzU4MDk3OTRdfQ==
 -->
