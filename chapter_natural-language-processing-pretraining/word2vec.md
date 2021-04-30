@@ -82,16 +82,19 @@ Seu cálculo obtém a probabilidade condicional para todas as palavras no dicion
 Após o treinamento, para qualquer palavra do dicionário com índice $i$, vamos obter seus conjuntos de vetores de duas palavras $\mathbf{v}_i$ e $\mathbf{u}_i$. Em aplicações de processamento de linguagem natural, o vetor de palavra-alvo central no modelo skip-gram é geralmente usado como o vetor de representação de uma palavra.
 
 
-## O modelo do conjcontínuo de palavras (CBOW)
+## O modelo do conjunto contínuo de palavras (CBOW)
 
-The continuous bag of words (CBOW) model is similar to the skip-gram model. The biggest difference is that the CBOW model assumes that the central target word is generated based on the context words before and after it in the text sequence. With the same text sequence "the", "man", "loves", "his" and "son", in which "loves" is the central target word, given a context window size of 2, the CBOW model is concerned with the conditional probability of generating the target word "loves" based on the context words "the", "man", "his" and "son"(as shown in :numref:`fig_cbow`), such as
+O modelo de conjunto contínuo de palavras (CBOW) é semelhante ao modelo skip-gram. A maior diferença é que o modelo CBOW assume que a palavra-alvo central é gerada com base nas palavras do contexto antes e depois dela na sequência de texto. Com a mesma sequência de texto "o", "homem", "ama", "seu" e "filho", em que "ama" é a palavra alvo central, dado um tamanho de janela de contexto de 2, o modelo CBOW se preocupa com a probabilidade condicional de gerar a palavra de destino "ama" com base nas palavras de contexto "o", "homem", "seu" e "filho" (conforme mostrado em :numref:`fig_cbow`), como
 
 $$P(\textrm{"loves"}\mid\textrm{"the"},\textrm{"man"},\textrm{"his"},\textrm{"son"}).$$
 
-![The CBOW model cares about the conditional probability of generating the central target word from given context words.  ](../img/cbow.svg)
+![O modelo CBOW se preocupa com a probabilidade condicional de gerar a palavra-alvo central a partir de determinadas palavras de contexto.  ](../img/cbow.svg)
 :label:`fig_cbow`
 
 Since there are multiple context words in the CBOW model, we will average their word vectors and then use the same method as the skip-gram model to compute the conditional probability. We assume that $\mathbf{v_i}\in\mathbb{R}^d$ and $\mathbf{u_i}\in\mathbb{R}^d$ are the context word vector and central target word vector of the word with index $i$ in the dictionary (notice that the symbols are opposite to the ones in the skip-gram model). Let central target word $w_c$ be indexed as $c$, and context words $w_{o_1}, \ldots, w_{o_{2m}}$ be indexed as $o_1, \ldots, o_{2m}$ in the dictionary. Thus, the conditional probability of generating a central target word from the given context word is
+
+
+Como há várias palavras de contexto no modelo CBOW, calcularemos a média de seus vetores de palavras e usaremos o mesmo método do modelo skip-gram para calcular a probabilidade condicional. Assumimos que $ \ mathbf {v_i} \ in \ mathbb {R} ^ d $ e $ \ mathbf {u_i} \ in \ mathbb {R} ^ d $ são o vetor de palavra de contexto e vetor de palavra-alvo central da palavra com index $ i $ no dicionário (observe que os símbolos são opostos aos do modelo skip-gram). Deixe a palavra alvo central $ w_c $ ser indexada como $ c $, e as palavras de contexto $ w_ {o_1}, \ ldots, w_ {o_ {2m}} $ sejam indexadas como $ o_1, \ ldots, o_ {2m} $ no dicionário. Assim, a probabilidade condicional de gerar uma palavra-alvo central a partir da palavra de contexto fornecida é
 
 $$P(w_c \mid w_{o_1}, \ldots, w_{o_{2m}}) = \frac{\text{exp}\left(\frac{1}{2m}\mathbf{u}_c^\top (\mathbf{v}_{o_1} + \ldots, + \mathbf{v}_{o_{2m}}) \right)}{ \sum_{i \in \mathcal{V}} \text{exp}\left(\frac{1}{2m}\mathbf{u}_i^\top (\mathbf{v}_{o_1} + \ldots, + \mathbf{v}_{o_{2m}}) \right)}.$$
 
@@ -136,5 +139,5 @@ We then use the same method to obtain the gradients for other word vectors. Unli
 
 [Discussions](https://discuss.d2l.ai/t/381)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjQzNzg1MTddfQ==
+eyJoaXN0b3J5IjpbMTExMTg5NTA5NV19
 -->
