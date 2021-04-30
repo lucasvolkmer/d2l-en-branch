@@ -1,9 +1,9 @@
-# Word Embedding (word2vec)
+# Incorporação de Palavras (word2vec)
 :label:`sec_word2vec`
 
-A natural language is a complex system that we use to express meanings. In this system, words are the basic unit of linguistic meaning. As its name implies, a word vector is a vector used to represent a word. It can also be thought of as the feature vector of a word. The technique of mapping words to vectors of real numbers is also known as word embedding. Over the last few years, word embedding has gradually become basic knowledge in natural language processing.
+Uma linguagem natural é um sistema complexo que usamos para expressar significados. Nesse sistema, as palavras são a unidade básica do significado linguístico. Como o próprio nome indica, um vetor de palavras é um vetor usado para representar uma palavra. Também pode ser considerado o vetor de características de uma palavra. A técnica de mapear palavras em vetores de números reais também é conhecida como incorporação de palavras. Nos últimos anos, a incorporação de palavras tornou-se gradualmente um conhecimento básico no processamento de linguagem natural.
 
-## Why Not Use One-hot Vectors?
+## Por que não usar vetores one-hot?
 
 We used one-hot vectors to represent words (characters are words) in
 :numref:`sec_rnn_scratch` .
@@ -17,6 +17,19 @@ each word is represented as a vector of length $N$ that can be used directly by
 the neural network.
 
 Although one-hot word vectors are easy to construct, they are usually not a good choice. One of the major reasons is that the one-hot word vectors cannot accurately express the similarity between different words, such as the cosine similarity that we commonly use. For the vectors $\mathbf{x}, \mathbf{y} \in \mathbb{R}^d$, their cosine similarities are the cosines of the angles between them:
+
+Usamos vetores one-hot para representar palavras (caracteres são palavras) em
+:numref:`sec_rnn_scratch`.
+Lembre-se de que quando assumimos o número de palavras diferentes em um
+dicionário (o tamanho do dicionário) é $N$, cada palavra pode corresponder uma a uma
+com inteiros consecutivos de 0 a $N-1$. Esses inteiros que correspondem a
+as palavras são chamadas de índices das palavras. Assumimos que o índice de uma palavra
+é $i$. A fim de obter a representação vetorial one-hot da palavra, criamos
+um vetor de 0s com comprimento de $N$ e defina o elemento $i$ como 1. Desta forma,
+cada palavra é representada como um vetor de comprimento $N$ que pode ser usado diretamente por
+a rede neural.
+
+Embora os vetores de uma palavra quente sejam fáceis de construir, eles geralmente não são uma boa escolha. Uma das principais razões é que os vetores de uma palavra quente não podem expressar com precisão a semelhança entre palavras diferentes, como a semelhança de cosseno que usamos comumente. Para os vetores $ \ mathbf {x}, \ mathbf {y} \ in \ mathbb {R} ^ d $, suas semelhanças de cosseno são os cossenos dos ângulos entre eles:
 
 $$\frac{\mathbf{x}^\top \mathbf{y}}{\|\mathbf{x}\| \|\mathbf{y}\|} \in [-1, 1].$$
 
@@ -137,5 +150,5 @@ We then use the same method to obtain the gradients for other word vectors. Unli
 
 [Discussions](https://discuss.d2l.ai/t/381)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2OTk4ODUwOV19
+eyJoaXN0b3J5IjpbLTE0MDI5Mjc3OV19
 -->
