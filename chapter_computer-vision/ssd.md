@@ -16,15 +16,8 @@ A seguir, descreveremos a implementação dos módulos em :numref:`fig_ssd`. Pri
 
 ### Camada de Previsão da Categoria
 
-Set the number of object categories to $q$. In this case, the number of anchor
-box categories is $q+1$, with 0 indicating an anchor box that only contains
-background. For a certain scale, set the height and width of the feature map to
-$h$ and $w$, respectively. If we use each element as the center to generate $a$
-anchor boxes, we need to classify a total of $hwa$ anchor boxes. If we use a
-fully connected layer (FCN) for the output, this will likely result in an
-excessive number of model parameters. Recall how we used convolutional layer
-channels to output category predictions in :numref:`sec_nin`. SSD uses the
-same method to reduce the model complexity.
+Defina o número de categorias de objeto como $q$. Nesse caso, o número de categorias de caixa de âncora é $q+1$, com 0 indicando uma caixa de âncora que contém apenas o fundo. Para uma determinada escala, defina a altura e a largura do mapa de feições para $h$ e $w$, respectivamente. Se usarmos cada elemento como o centro para gerar $a$
+caixas de âncora, precisamos classificar um total de $hwa$ caixas de âncora. Se usarmos uma camada totalmente conectada (FCN) para a saída, isso provavelmente resultará em um número excessivo de parâmetros do modelo. Lembre-se de como usamos canais de camada convolucional para gerar previsões de categoria em :numref:`sec_nin`. O SSD usa o mesmo método para reduzir a complexidade do modelo.
 
 Specifically, the category prediction layer uses a convolutional layer that
 maintains the input height and width. Thus, the output and input have a
@@ -693,6 +686,6 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Njg5NjMxOSwyMDA1NjEwOTIyLDM3Mz
-U1ODM0LDMxMDM1NTU1Ml19
+eyJoaXN0b3J5IjpbLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNz
+M1NTgzNCwzMTAzNTU1NTJdfQ==
 -->
