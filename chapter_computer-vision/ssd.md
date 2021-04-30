@@ -69,9 +69,10 @@ def bbox_predictor(num_inputs, num_anchors):
 
 ### Concatenando Previsões para Múltiplas Escalas
 
-As we mentioned, SSD uses feature maps based on multiple scales to generate anchor boxes and predict their categories and offsets. Because the shapes and number of anchor boxes centered on the same element differ for the feature maps of different scales, the prediction outputs at different scales may have different shapes.
 
-In the following example, we use the same batch of data to construct feature maps of two different scales, `Y1` and `Y2`. Here, `Y2` has half the height and half the width of `Y1`. Using category prediction as an example, we assume that each element in the `Y1` and `Y2` feature maps generates five (Y1) or three (Y2) anchor boxes. When there are 10 object categories, the number of category prediction output channels is either $5\times(10+1)=55$ or $3\times(10+1)=33$. The format of the prediction output is (batch size, number of channels, height, width). As you can see, except for the batch size, the sizes of the other dimensions are different. Therefore, we must transform them into a consistent format and concatenate the predictions of the multiple scales to facilitate subsequent computation.
+Como mencionamos, o SSD usa mapas de recursos com base em várias escalas para gerar caixas de âncora e prever suas categorias e deslocamentos. Como as formas e o número de caixas de âncora centradas no mesmo elemento diferem para os mapas de recursos de escalas diferentes, as saídas de predição em escalas diferentes podem ter formas diferentes.
+
+No exemplo a seguir, usamos o mesmo lote de dados para construir mapas de características de duas escalas diferentes, `Y1` e `Y2`. Aqui, `Y2` tem metade da altura e metade da largura de `Y1`. Usando a previsão de categoria como exemplo, assumimos que cada elemento nos mapas de características `Y1` e` Y2` gera cinco (Y1) ou três (Y2) caixas de âncora. Quando há 10 categorias de objeto, o número de canais de saída de predição de categoria é $5\times(10+1)=55$ ou $3\times(10+1)=33$. O formato da saída de previsão é (tamanho do lote, número de canais, altura, largura). Como você pode ver, exceto pelo tamanho do lote, os tamanhos das outras dimensões são diferentes. Portanto, devemos transformá-los em um formato consistente e concatenar as previsões das várias escalas para facilitar o cálculo subsequente.
 
 ```{.python .input}
 def forward(x, block):
@@ -93,7 +94,7 @@ Y2 = forward(torch.zeros((2, 16, 10, 10)), cls_predictor(16, 3, 10))
 (Y1.shape, Y2.shape)
 ```
 
-The channel dimension contains the predictions for all anchor boxes with the same center. We first move the channel dimension to the final dimension. Because the batch size is the same for all scales, we can convert the prediction results to binary format (batch size, height $\times$ width $\times$ number of channels) to facilitate subsequent concatenation on the $1^{\mathrm{st}}$ dimension.
+A dimensão do canal contém as previsões para todas as caixas de âncora com o mesmo centro. Primeiro movemos a dimensão do canal para a dimensão final. Como o tamanho do lote é o mesmo para todas as escalas, podemos converter os resultados da previsão para o formato binário (tamanho do lote, altura $\times$ largura $\times$ número de canais) para facilitar a concatenação subsequente no $1^{\mathrm{st}}$ dimensão.
 
 ```{.python .input}
 def flatten_pred(pred):
@@ -112,14 +113,14 @@ def concat_preds(preds):
     return torch.cat([flatten_pred(p) for p in preds], dim=1)
 ```
 
-Thus, regardless of the different shapes of `Y1` and `Y2`, we can still concatenate the prediction results for the two different scales of the same batch.
+Assim, independentemente das diferentes formas de `Y1` e` Y2`, ainda podemos concatenar os resultados da previsão para as duas escalas diferentes do mesmo lote.
 
 ```{.python .input}
 #@tab all
 concat_preds([Y1, Y2]).shape
 ```
 
-### Height and Width Downsample Block
+### Bloco de Redução de Amostragem de Altura e largura
 
 For multiscale object detection, we define the following `down_sample_blk` block, which reduces the height and width by 50%. This block consists of two $3\times3$ convolutional layers with a padding of 1 and a $2\times2$ maximum pooling layer with a stride of 2 connected in a series. As we know, $3\times3$ convolutional layers with a padding of 1 do not change the shape of feature maps. However, the subsequent pooling layer directly reduces the size of the feature map by half. Because $1\times 2+(3-1)+(3-1)=6$, each element in the output feature map has a receptive field on the input feature map of the shape $6\times6$. As you can see, the height and width downsample block enlarges the receptive field of each element in the output feature map.
 
@@ -676,7 +677,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NjIyMTQ5MiwtMTM3NDY3Nzk3NSwtMj
-E0MzY3Njk3NywyMDA1NjEwOTIyLDM3MzU1ODM0LDMxMDM1NTU1
-Ml19
+eyJoaXN0b3J5IjpbLTMzNTU1OTQzMCwxNjc2MjIxNDkyLC0xMz
+c0Njc3OTc1LC0yMTQzNjc2OTc3LDIwMDU2MTA5MjIsMzczNTU4
+MzQsMzEwMzU1NTUyXX0=
 -->
