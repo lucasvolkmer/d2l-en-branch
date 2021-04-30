@@ -160,7 +160,7 @@ forward(np.zeros((2, 3, 20, 20)), down_sample_blk(10)).shape
 forward(torch.zeros((2, 3, 20, 20)), down_sample_blk(3, 10)).shape
 ```
 
-### Base Network Block
+### Bloco de Rede Base
 
 The base network block is used to extract features from original images. To simplify the computation, we will construct a small base network. This network consists of three height and width downsample blocks connected in a series, so it doubles the number of channels at each step. When we input an original image with the shape $256\times256$, the base network block outputs a feature map with the shape $32 \times 32$.
 
@@ -677,7 +677,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA4NjI1OTA3LDc0NDYyNDQxMCwxNjc2Mj
-IxNDkyLC0xMzc0Njc3OTc1LC0yMTQzNjc2OTc3LDIwMDU2MTA5
-MjIsMzczNTU4MzQsMzEwMzU1NTUyXX0=
+eyJoaXN0b3J5IjpbLTQ5MTQyMzU5OCw3NDQ2MjQ0MTAsMTY3Nj
+IyMTQ5MiwtMTM3NDY3Nzk3NSwtMjE0MzY3Njk3NywyMDA1NjEw
+OTIyLDM3MzU1ODM0LDMxMDM1NTU1Ml19
 -->
