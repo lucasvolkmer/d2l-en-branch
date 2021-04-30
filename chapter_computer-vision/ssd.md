@@ -67,7 +67,7 @@ def bbox_predictor(num_inputs, num_anchors):
     return nn.Conv2d(num_inputs, num_anchors * 4, kernel_size=3, padding=1)
 ```
 
-### Concatenating Predictions for Multiple Scales
+### Concatenando Previsões para Múltiplas Escalas
 
 As we mentioned, SSD uses feature maps based on multiple scales to generate anchor boxes and predict their categories and offsets. Because the shapes and number of anchor boxes centered on the same element differ for the feature maps of different scales, the prediction outputs at different scales may have different shapes.
 
@@ -676,7 +676,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzg3NTAxLC0xMzc0Njc3OTc1LC0yMT
-QzNjc2OTc3LDIwMDU2MTA5MjIsMzczNTU4MzQsMzEwMzU1NTUy
-XX0=
+eyJoaXN0b3J5IjpbMTY3NjIyMTQ5MiwtMTM3NDY3Nzk3NSwtMj
+E0MzY3Njk3NywyMDA1NjEwOTIyLDM3MzU1ODM0LDMxMDM1NTU1
+Ml19
 -->
