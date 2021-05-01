@@ -50,9 +50,7 @@ print(f'Parameter embedding_weight ({embed.weight.shape}, '
       'dtype={embed.weight.dtype})')
 ```
 
-The input of the embedding layer is the index of the word. When we enter the index $i$ of a word, the embedding layer returns the $i^\mathrm{th}$ row of the weight matrix as its word vector. Below we enter an index of shape ($2$, $3$) into the embedding layer. Because the dimension of the word vector is 4, we obtain a word vector of shape ($2$, $3$, $4$).
-
-A entrada da camada de incorporação é o índice da palavra. Quando inserimos o índice $i$ de uma palavra, a camada de incorporação retorna a linha $i^\mathrm{th}$ da matriz de peso como seu vetor de palavra. Abaixo, inserimos um índice de forma ($ 2 $, $ 3 $) na camada de incorporação. Como a dimensão do vetor de palavras é 4, obtemos um vetor de palavras de forma ($ 2 $, $ 3 $, $ 4 $).
+A entrada da camada de incorporação é o índice da palavra. Quando inserimos o índice $i$ de uma palavra, a camada de incorporação retorna a linha $i^\mathrm{th}$ da matriz de peso como seu vetor de palavra. Abaixo, inserimos um índice de forma ($2$, $3$) na camada de incorporação. Como a dimensão do vetor de palavras é 4, obtemos um vetor de palavras de forma ($2$, $3$, $4$).
 
 ```{.python .input}
 #@tab all
@@ -60,9 +58,9 @@ x = d2l.tensor([[1, 2, 3], [4, 5, 6]])
 embed(x)
 ```
 
-### Skip-gram Model Forward Calculation
+### Cálculo de avanço do modelo Skip-Gram
 
-In forward calculation, the input of the skip-gram model contains the central target word index `center` and the concatenated context and noise word index `contexts_and_negatives`. In which, the `center` variable has the shape (batch size, 1), while the `contexts_and_negatives` variable has the shape (batch size, `max_len`). These two variables are first transformed from word indexes to word vectors by the word embedding layer, and then the output of shape (batch size, 1, `max_len`) is obtained by minibatch multiplication. Each element in the output is the inner product of the central target word vector and the context word vector or noise word vector.
+No cálculo progressivo, a entrada do modelo skip-gram contém o índice central da palavra-alvo `center` e o contexto concatenado e o índice da palavra de ruído `contexts_and_negatives`. Em que, a variável `center` tem a forma (tamanho do lote, 1), enquanto a variável `contexts_and_negatives` tem a forma (tamanho do lote, `max_len`). Essas duas variáveis são primeiro transformadas de índices de palavras em vetores de palavras pela camada de incorporação de palavras e, em seguida, a saída da forma (tamanho do lote, 1, `max_len`) é obtida pela multiplicação de minibatch. Cada elemento na saída é o produto interno do vetor de palavra de destino central e do vetor de palavra de contexto ou vetor de palavra de ruído.
 
 ```{.python .input}
 def skip_gram(center, contexts_and_negatives, embed_v, embed_u):
@@ -81,7 +79,7 @@ def skip_gram(center, contexts_and_negatives, embed_v, embed_u):
     return pred
 ```
 
-Verify that the output shape should be (batch size, 1, `max_len`).
+Verifique se a forma de saída deve ser (tamanho do lote, 1, `max_len`).
 
 ```{.python .input}
 skip_gram(np.ones((2, 1)), np.ones((2, 4)), embed, embed).shape
@@ -93,9 +91,9 @@ skip_gram(torch.ones((2, 1), dtype=torch.long),
           torch.ones((2, 4), dtype=torch.long), embed, embed).shape
 ```
 
-## Training
+## Treinamento
 
-Before training the word embedding model, we need to define the loss function of the model.
+Antes de treinar o modelo de incorporação de palavras, precisamos definir a função de perda do modelo.
 
 ### Binary Cross Entropy Loss Function
 
@@ -282,5 +280,5 @@ get_similar_tokens('chip', 3, net[0])
 [Discussions](https://discuss.d2l.ai/t/1335)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTU5OTY2MjJdfQ==
+eyJoaXN0b3J5IjpbMTUwODAyNTk1OF19
 -->
