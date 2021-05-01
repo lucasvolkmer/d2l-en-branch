@@ -227,15 +227,11 @@ all_negatives = get_negatives(all_contexts, corpus, 5)
 
 ### Lendo em lotes
 
-We extract all central target words `all_centers`, and the context words `all_contexts` and noise words `all_negatives` of each central target word from the dataset. We will read them in random minibatches.
-
-In a minibatch of data, the $i^\mathrm{th}$ example includes a central word and its corresponding $n_i$ context words and $m_i$ noise words. Since the context window size of each example may be different, the sum of context words and noise words, $n_i+m_i$, will be different. When constructing a minibatch, we concatenate the context words and noise words of each example, and add 0s for padding until the length of the concatenations are the same, that is, the length of all concatenations is $\max_i n_i+m_i$(`max_len`). In order to avoid the effect of padding on the loss function calculation, we construct the mask variable `masks`, each element of which corresponds to an element in the concatenation of context and noise words, `contexts_negatives`. When an element in the variable `contexts_negatives` is a padding, the element in the mask variable `masks` at the same position will be 0. Otherwise, it takes the value 1. In order to distinguish between positive and negative examples, we also need to distinguish the context words from the noise words in the `contexts_negatives` variable. Based on the construction of the mask variable, we only need to create a label variable `labels` with the same shape as the `contexts_negatives` variable and set the elements corresponding to context words (positive examples) to 1, and the rest to 0.
-
 Extraímos todas as palavras-alvo centrais `all_centers`, e as palavras de contexto `all_contexts` e palavras de ruído `all_negatives` de cada palavra-alvo central do conjunto de dados. Vamos lê-los em minibatches aleatórios.
 
-Em um minibatch de dados, o exemplo $i^\mathrm{th}$ inclui uma palavra central e suas correspondentes $n_i$ palavras de contexto e $m_i$ palavras de ruído. Visto que o tamanho da janela de contexto de cada exemplo pode ser diferente, a soma das palavras de contexto e palavras de ruído, $n_i+m_i$, será diferente. Ao construir um minibatch, concatenamos as palavras de contexto e as palavras de ruído de cada exemplo e adicionamos 0s para preenchimento até que o comprimento das concatenações sejam iguais, ou seja, o comprimento de todas as concatenações é $\max_i n_i+m_i$ (`max_len`). Para evitar o efeito do preenchimento no cálculo da função de perda, construímos a variável de máscara `máscaras`, cada elemento correspondendo a um elemento na concatenação de palavras de contexto e ruído,` contexts_negatives`. Quando um elemento na variável `contexts_negatives` é um preenchimento, o elemento na variável de máscara` masks` na mesma posição será 0. Caso contrário, ele assume o valor 1. Para distinguir entre exemplos positivos e negativos, nós também precisa distinguir as palavras de contexto das palavras de ruído na variável `contexts_negatives`. Com base na construção da variável de máscara, só precisamos criar uma variável de rótulo `rótulos` com a mesma forma da variável` contexts_negatives` e definir os elementos correspondentes às palavras de contexto (exemplos positivos) para 1, e o resto para 0 .
+Em um minibatch de dados, o exemplo $i^\mathrm{th}$ inclui uma palavra central e suas correspondentes $n_i$ palavras de contexto e $m_i$ palavras de ruído. Visto que o tamanho da janela de contexto de cada exemplo pode ser diferente, a soma das palavras de contexto e palavras de ruído, $n_i+m_i$, será diferente. Ao construir um minibatch, concatenamos as palavras de contexto e as palavras de ruído de cada exemplo e adicionamos 0s para preenchimento até que o comprimento das concatenações sejam iguais, ou seja, o comprimento de todas as concatenações é $\max_i n_i+m_i$ (`max_len`). Para evitar o efeito do preenchimento no cálculo da função de perda, construímos a variável de máscara `masks`, cada elemento correspondendo a um elemento na concatenação de palavras de contexto e ruído,`contexts_negatives`. Quando um elemento na variável `contexts_negatives` é um preenchimento, o elemento na variável de máscara `masks` na mesma posição será 0. Caso contrário, ele assume o valor 1. Para distinguir entre exemplos positivos e negativos, nós também precisa distinguir as palavras de contexto das palavras de ruído na variável `contexts_negatives`. Com base na construção da variável de máscara, só precisamos criar uma variável de rótulo `labels` com a mesma forma da variável `contexts_negatives` e definir os elementos correspondentes às palavras de contexto (exemplos positivos) para 1, e o resto para 0 .
 
-Next, we will implement the minibatch reading function `batchify`. Its minibatch input `data` is a list whose length is the batch size, each element of which contains central target words `center`, context words `context`, and noise words `negative`. The minibatch data returned by this function conforms to the format we need, for example, it includes the mask variable.
+A seguir, implementaremos a função de leitura de minibatch `batchify`. Sua entrada de minibatch, `data`, é uma lista cujo comprimento é o tamanho do lote, cada elemento contendo palavras-alvo centrais `center`, palavras de contexto `context` e palavras de ruído `negative`. Os dados de minibatch retornados por esta função estão de acordo com o formato de que precisamos, por exemplo, inclui a variável de máscara.
 
 ```{.python .input}
 #@tab all
@@ -253,7 +249,7 @@ def batchify(data):
             d2l.tensor(masks), d2l.tensor(labels))
 ```
 
-Construct two simple examples:
+Construa dois exemplos simples:
 
 ```{.python .input}
 #@tab all
@@ -358,5 +354,5 @@ for batch in data_iter:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NzY0NDg0NF19
+eyJoaXN0b3J5IjpbLTE3MTQ0NzExMzBdfQ==
 -->
