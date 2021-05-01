@@ -1,7 +1,7 @@
 # The Dataset for Pretraining Word Embedding
 :label:`sec_word2vec_data`
 
-In this section, we will introduce how tO conjunto de dados para incorporação de palavras com pré-treinamento
+Nesta seção, apresentaremos como pré-processar um conjunto de dados com
 :label:`sec_word2vec_data`
 
 Nesta seção, apresentaremos como preé-process a dataset with
@@ -354,5 +354,6 @@ for batch in data_iter:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MzUzODU1MCwxODMzNDQ3MDQ2XX0=
+eyJoaXN0b3J5IjpbMTAxMDIzMzQwLC00NDM1Mzg1NTAsMTgzMz
+Q0NzA0Nl19
 -->
