@@ -66,7 +66,7 @@ Em dados de texto, geralmente há algumas palavras que aparecem em altas frequê
 
 $$ P(w_i) = \max\left(1 - \sqrt{\frac{t}{f(w_i)}}, 0\right),$$
 
-Here, $f(w_i)$ is the ratio of the instances of word $w_i$ to the total number of words in the dataset, and the constant $t$ is a hyperparameter (set to $10^{-4}$ in this experiment). As we can see, it is only possible to drop out the word $w_i$ in subsampling when $f(w_i) > t$. The higher the word's frequency, the higher its dropout probability.
+Aqui, $f(w_i)$ é a proporção das instâncias da palavra $w_i$ para o número total de palavras no conjunto de dados, e a constante $t$ é um hiperparâmetro (definido como $10^{-4}$ neste experimentar). Como podemos ver, só é possível eliminar a palavra $w_i$ na subamostragem quando $f(w_i) > t$. Quanto mais alta a frequência da palavra, maior sua probabilidade de abandono.
 
 ```{.python .input}
 #@tab all
@@ -90,7 +90,7 @@ def subsampling(sentences, vocab):
 subsampled = subsampling(sentences, vocab)
 ```
 
-Compare the sequence lengths before and after sampling, we can see subsampling significantly reduced the sequence length.
+Compare os comprimentos da sequência antes e depois da amostragem, podemos ver que a subamostragem reduziu significativamente o comprimento da sequência.
 
 ```{.python .input}
 #@tab all
@@ -102,7 +102,7 @@ d2l.plt.ylabel('count')
 d2l.plt.legend(['origin', 'subsampled']);
 ```
 
-For individual tokens, the sampling rate of the high-frequency word "the" is less than 1/20.
+Para tokens individuais, a taxa de amostragem da palavra de alta frequência "the" é menor que 1/20.
 
 ```{.python .input}
 #@tab all
@@ -114,14 +114,14 @@ def compare_counts(token):
 compare_counts('the')
 ```
 
-But the low-frequency word "join" is completely preserved.
+Mas a palavra de baixa frequência "juntar" é completamente preservada.
 
 ```{.python .input}
 #@tab all
 compare_counts('join')
 ```
 
-Last, we map each token into an index to construct the corpus.
+Por último, mapeamos cada token em um índice para construir o corpus.
 
 ```{.python .input}
 #@tab all
@@ -354,5 +354,5 @@ for batch in data_iter:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkwMDExNzkxXX0=
+eyJoaXN0b3J5IjpbLTEwODMxOTE4NjJdfQ==
 -->
