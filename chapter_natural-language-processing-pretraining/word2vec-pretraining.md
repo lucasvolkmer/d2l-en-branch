@@ -267,18 +267,18 @@ get_similar_tokens('chip', 3, net[0])
 
 ## Exercícios
 
-1. Set `sparse_grad=True` when creating an instance of `nn.Embedding`. Does it accelerate training? Look up MXNet documentation to learn the meaning of this argument.
-1. Try to find synonyms for other words.
-1. Tune the hyperparameters and observe and analyze the experimental results.
-1. When the dataset is large, we usually sample the context words and the noise words for the central target word in the current minibatch only when updating the model parameters. In other words, the same central target word may have different context words or noise words in different epochs. What are the benefits of this sort of training? Try to implement this training method.
+1. Defina `sparse_grad = True` ao criar uma instância de `nn.Embedding`. Acelera o treinamento? Consulte a documentação do MXNet para aprender o significado desse argumento.
+1. Tente encontrar sinônimos para outras palavras.
+1. Ajuste os hiperparâmetros e observe e analise os resultados experimentais.
+1. Quando o conjunto de dados é grande, costumamos amostrar as palavras de contexto e as palavras de ruído para a palavra de destino central no minibatch atual apenas ao atualizar os parâmetros do modelo. Em outras palavras, a mesma palavra de destino central pode ter palavras de contexto ou palavras de ruído diferentes em épocas diferentes. Quais são os benefícios desse tipo de treinamento? Tente implementar este método de treinamento.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/384)
+[Discussão](https://discuss.d2l.ai/t/384)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1335)
+[Discussão](https://discuss.d2l.ai/t/1335)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNjMyMTQ3OV19
+eyJoaXN0b3J5IjpbLTExNjg0MzM3NzVdfQ==
 -->
