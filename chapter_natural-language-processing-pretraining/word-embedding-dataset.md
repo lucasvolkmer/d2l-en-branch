@@ -62,9 +62,7 @@ f'vocab size: {len(vocab)}'
 
 ## Subamostragem
 
-In text data, there are generally some words that appear at high frequencies, such "the", "a", and "in" in English. Generally speaking, in a context window, it is better to train the word embedding model when a word (such as "chip") and a lower-frequency word (such as "microprocessor") appear at the same time, rather than when a word appears with a higher-frequency word (such as "the"). Therefore, when training the word embedding model, we can perform subsampling on the words :cite:`Mikolov.Sutskever.Chen.ea.2013`. Specifically, each indexed word $w_i$ in the dataset will drop out at a certain probability. The dropout probability is given as:
-
-Em dados de texto, geralmente há algumas palavras que aparecem em altas frequências, como "the", "a" e "in" em inglês. De modo geral, em uma janela de contexto, é melhor treinar o modelo de incorporação de palavras quando uma palavra (como "chip") e uma palavra de frequência mais baixa (como "microprocessador") aparecem ao mesmo tempo, em vez de quando um palavra aparece com uma palavra de frequência mais alta (como "o"). Portanto, ao treinar o modelo de incorporação de palavras, podemos realizar subamostragem nas palavras: cite: `Mikolov.Sutskever.Chen.ea.2013`. Especificamente, cada palavra indexada $ w_i $ no conjunto de dados desaparecerá com uma certa probabilidade. A probabilidade de abandono é dada como:
+Em dados de texto, geralmente há algumas palavras que aparecem em altas frequências, como "the", "a" e "in" em inglês. De modo geral, em uma janela de contexto, é melhor treinar o modelo de incorporação de palavras quando uma palavra (como "chip") e uma palavra de frequência mais baixa (como "microprocessador") aparecem ao mesmo tempo, em vez de quando um palavra aparece com uma palavra de frequência mais alta (como "o"). Portanto, ao treinar o modelo de incorporação de palavras, podemos realizar subamostragem nas palavras :cite:`Mikolov.Sutskever.Chen.ea.2013`. Especificamente, cada palavra indexada $w_i$ no conjunto de dados desaparecerá com uma certa probabilidade. A probabilidade de abandono é dada como:
 
 $$ P(w_i) = \max\left(1 - \sqrt{\frac{t}{f(w_i)}}, 0\right),$$
 
@@ -356,5 +354,5 @@ for batch in data_iter:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MTAzODM1OV19
+eyJoaXN0b3J5IjpbMjkwMDExNzkxXX0=
 -->
