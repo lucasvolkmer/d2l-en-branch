@@ -1,11 +1,18 @@
 # The Dataset for Pretraining Word Embedding
 :label:`sec_word2vec_data`
 
-In this section, we will introduce how to preprocess a dataset with
-negative sampling :numref:`sec_approx_train` and load into minibatches for
-word2vec training. The dataset we use is [Penn Tree Bank (PTB)]( https://catalog.ldc.upenn.edu/LDC99T42), which is a small but commonly-used corpus. It takes samples from Wall Street Journal articles and includes training sets, validation sets, and test sets.
+In this section, we will introduce how tO conjunto de dados para incorporação de palavras com pré-treinamento
+:label:`sec_word2vec_data`
 
-First, import the packages and modules required for the experiment.
+Nesta seção, apresentaremos como preé-process a dataset with
+negative sampling :numref:`sec_approx_train` and load into minibatches for
+word2vec training. The dataset we use isar um conjunto de dados com
+amostragem negativa :numref:`sec_approx_train` e carregue em minibatches para
+treinamento word2vec. O conjunto de dados que usamos é [Penn Tree Bank (PTB)]( https://catalog.ldc.upenn.edu/LDC99T42), which is a small but commonly-used corpus. It takes samples fromque é um corpus pequeno, mas comumente usado. Ele pega amostras de artigos do Wall Street Journal articles and inclue inclui conjuntos des traeining sets, validation sets, and test sets.
+
+First, import the packages andamento, conjuntos de validação e conjuntos de teste.
+
+Primeiro, importe os pacotes e moóduleos required for thenecessários para o experimento.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -24,7 +31,7 @@ import os
 import random
 ```
 
-## Reading and Preprocessing the Dataset
+## Reading and Preprocessing the DatasetLeitura e pré-processamento do conjunto de dados
 
 This dataset has already been preprocessed. Each line of the dataset acts as a sentence. All the words in a sentence are separated by spaces. In the word embedding task, each word is a token.
 
@@ -346,3 +353,6 @@ for batch in data_iter:
 
 
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTc5NTM5NzI2NF19
+-->
