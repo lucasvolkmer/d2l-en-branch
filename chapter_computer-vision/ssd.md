@@ -308,7 +308,7 @@ class TinySSD(nn.Module):
         return anchors, cls_preds, bbox_preds
 ```
 
-We now create an SSD model instance and use it to perform forward computation on image minibatch `X`, which has a height and width of 256 pixels. As we verified previously, the first module outputs a feature map with the shape $32 \times 32$. Because modules two to four are height and width downsample blocks, module five is a global pooling layer, and each element in the feature map is used as the center for 4 anchor boxes, a total of $(32^2 + 16^2 + 8^2 + 4^2 + 1)\times 4 = 5444$ anchor boxes are generated for each image at the five scales.
+Agora criamos uma instância de modelo SSD e a usamos para realizar cálculos avançados no minibatch de imagem `X`, que tem uma altura e largura de 256 pixels. Como verificamos anteriormente, o primeiro módulo gera um mapa de recursos com a forma $32 \times 32$. Como os módulos dois a quatro são blocos de redução de altura e largura, o módulo cinco é uma camada de agrupamento global e cada elemento no mapa de recursos é usado como o centro para 4 caixas de âncora, um total de $(32^2 + 16^2 + 8^2 + 4^2 + 1)\times 4 = 5444$ caixas de âncora são geradas para cada imagem nas cinco escalas.
 
 ```{.python .input}
 net = TinySSD(num_classes=1)
@@ -672,7 +672,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MjE0MTc0MSw0MzMxMDMwNzAsNzQ0Nj
-I0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5NzUsLTIxNDM2NzY5
-NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMTAzNTU1NTJdfQ==
+eyJoaXN0b3J5IjpbLTE5MDMwMjY3NjQsNDMzMTAzMDcwLDc0ND
+YyNDQxMCwxNjc2MjIxNDkyLC0xMzc0Njc3OTc1LC0yMTQzNjc2
+OTc3LDIwMDU2MTA5MjIsMzczNTU4MzQsMzEwMzU1NTUyXX0=
 -->
