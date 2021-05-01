@@ -96,3 +96,6 @@ By taking the square error and weighting the left and right sides of the formula
 
 
 [Discussions](https://discuss.d2l.ai/t/385)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwMTc4NzYyODFdfQ==
+-->
