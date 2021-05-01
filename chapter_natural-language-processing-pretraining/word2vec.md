@@ -119,21 +119,21 @@ $$\frac{\partial \log\, P(w_c \mid \mathcal{W}_o)}{\partial \mathbf{v}_{o_i}} = 
 
 Em seguida, usamos o mesmo método para obter os gradientes para outros vetores de palavras. Ao contrário do modelo skip-gram, geralmente usamos o vetor de palavras de contexto como o vetor de representação de uma palavra no modelo CBOW.
 
-## Summary
+## Sumário
 
-* A word vector is a vector used to represent a word. The technique of mapping words to vectors of real numbers is also known as word embedding.
-* Word2vec includes both the continuous bag of words (CBOW) and skip-gram models. The skip-gram model assumes that context words are generated based on the central target word. The CBOW model assumes that the central target word is generated based on the context words.
-
-
-## Exercises
-
-1. What is the computational complexity of each gradient? If the dictionary contains a large volume of words, what problems will this cause?
-1. There are some fixed phrases in the English language which consist of multiple words, such as "new york". How can you train their word vectors? Hint: See section 4 in the Word2vec paper :cite:`Mikolov.Sutskever.Chen.ea.2013`.
-1. Use the skip-gram model as an example to think about the design of a word2vec model. What is the relationship between the inner product of two word vectors and the cosine similarity in the skip-gram model? For a pair of words with close semantical meaning, why it is likely for their word vector cosine similarity to be high?
+* Um vetor de palavras é um vetor usado para representar uma palavra. A técnica de mapear palavras em vetores de números reais também é conhecida como incorporação de palavras.
+* Word2vec inclui o saco contínuo de palavras (CBOW) e modelos de grama de salto. O modelo skip-gram assume que as palavras de contexto são geradas com base na palavra-alvo central. O modelo CBOW assume que a palavra-alvo central é gerada com base nas palavras do contexto.
 
 
+## Exercícios
 
-[Discussions](https://discuss.d2l.ai/t/381)
+1. Qual é a complexidade computacional de cada gradiente? Se o dicionário contiver um grande volume de palavras, que problemas isso causará?
+1. Existem algumas frases fixas no idioma inglês que consistem em várias palavras, como "nova york". Como você pode treinar seus vetores de palavras? Dica: Veja a seção 4 do artigo Word2vec :cite:`Mikolov.Sutskever.Chen.ea.2013`.
+1. Use o modelo skip-gram como um exemplo para pensar sobre o design de um modelo word2vec. Qual é a relação entre o produto interno de dois vetores de palavras e a semelhança de cosseno no modelo de grama de salto? Para um par de palavras com significado semântico próximo, por que é provável que sua similaridade de cosseno de vetor de palavras seja alta?
+
+
+
+[Discussão](https://discuss.d2l.ai/t/381)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU4MDk3OTRdfQ==
+eyJoaXN0b3J5IjpbMTgxOTM1NDEzN119
 -->
