@@ -1,4 +1,4 @@
-# Approximate Training
+# Approximate TrainingTreinamento Aproximado
 :label:`sec_approx_train`
 
 Recall content of the last section.  The core feature of the skip-gram model is the use of softmax operations to compute the conditional probability of generating context word $w_o$ based on the given central target word $w_c$.
@@ -86,3 +86,6 @@ In addition, because the order of magnitude for $L(w_o)-1$ is $\mathcal{O}(\text
 1. How can we apply negative sampling and hierarchical softmax in the skip-gram model?
 
 [Discussions](https://discuss.d2l.ai/t/382)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTc0OTA1ODUyM119
+-->
