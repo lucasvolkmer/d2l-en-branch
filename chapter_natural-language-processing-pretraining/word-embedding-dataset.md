@@ -1,17 +1,7 @@
-# The Dataset for Pretraining Word Embedding
+# O conjunto de dados para incorporação de palavras com pré-treinamento
 :label:`sec_word2vec_data`
 
-Nesta seção, apresentaremos como pré-processar um conjunto de dados com
-:label:`sec_word2vec_data`
-
-Nesta seção, apresentaremos como preé-process a dataset with
-negative sampling :numref:`sec_approx_train` and load into minibatches for
-word2vec training. The dataset we use isar um conjunto de dados com
-amostragem negativa :numref:`sec_approx_train` e carregue em minibatches para
-treinamento word2vec. O conjunto de dados que usamos é [Penn Tree Bank (PTB)]( https://catalog.ldc.upenn.edu/LDC99T42), which is a small but commonly-used corpus. It takes samples fromque é um corpus pequeno, mas comumente usado. Ele pega amostras de artigos do Wall Street Journal articles and inclue inclui conjuntos des traeining sets, validation sets, and test sets.
-
-
-In this section, we will introduce how to preprocess a dataset with negative sampling :numref:`sec_approx_train` and load into minibatches for word2vec training. The dataset we use is [Penn Tree Bank (PTB)]( https://catalog.ldc.upenn.edu/LDC99T42)
+Nesta seção, apresentaremos como pré-processar um conjunto de dados com amostragem negativa :numref:`sec_approx_train` e carregar em minibatches para treinamento word2vec. O conjunto de dados que usamos é [Penn Tree Bank (PTB)](https://catalog.ldc.upenn.edu/LDC99T42), que é um corpus pequeno, mas comumente usado. Ele pega amostras de artigos do Wall Street Journal e inclui conjuntos de treinamento, conjuntos de validação e conjuntos de teste.
 
 Primeiro, importe os pacotes e módulos necessários para o experimento.
 
@@ -355,6 +345,6 @@ for batch in data_iter:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMDIxOTMyNSwxMDEwMjMzNDAsLTQ0Mz
-UzODU1MCwxODMzNDQ3MDQ2XX0=
+eyJoaXN0b3J5IjpbMjk1NzExMjk1LDEwMTAyMzM0MCwtNDQzNT
+M4NTUwLDE4MzM0NDcwNDZdfQ==
 -->
