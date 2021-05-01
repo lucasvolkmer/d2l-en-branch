@@ -1,11 +1,11 @@
-# Approximate TrainingTreinamento Aproximado
+# Treinamento Aproximado
 :label:`sec_approx_train`
 
-Recall content of the last section.  The core feature of the skip-gram model is the use of softmax operations to compute the conditional probability of generating context word $w_o$ based on the given central target word $w_c$.
+Lembre-se do conteúdo da última seção. O principal recurso do modelo skip-gram é o uso de operações softmax para calcular a probabilidade condicional de gerar a palavra de contexto $w_o$ com base na palavra-alvo central fornecida $w_c$.
 
 $$P(w_o \mid w_c) = \frac{\text{exp}(\mathbf{u}_o^\top \mathbf{v}_c)}{ \sum_{i \in \mathcal{V}} \text{exp}(\mathbf{u}_i^\top \mathbf{v}_c)}.$$
 
-The logarithmic loss corresponding to the conditional probability is given as
+A perda logarítmica correspondente à probabilidade condicional é dada como
 
 $$-\log P(w_o \mid w_c) =
 -\mathbf{u}_o^\top \mathbf{v}_c + \log\left(\sum_{i \in \mathcal{V}} \text{exp}(\mathbf{u}_i^\top \mathbf{v}_c)\right).$$
@@ -87,5 +87,5 @@ In addition, because the order of magnitude for $L(w_o)-1$ is $\mathcal{O}(\text
 
 [Discussions](https://discuss.d2l.ai/t/382)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0OTA1ODUyM119
+eyJoaXN0b3J5IjpbLTE4MjYxNDc4MDFdfQ==
 -->
