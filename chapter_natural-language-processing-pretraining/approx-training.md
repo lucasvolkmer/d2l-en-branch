@@ -51,17 +51,20 @@ Aqui, o cálculo do gradiente em cada etapa do treinamento não está mais relac
 
 ## Hierárquico Softmax
 
-Hierarchical softmax is another type of approximate training method. It uses a binary tree for data structure as illustrated in :numref:`fig_hi_softmax`, with the leaf nodes of the tree representing every word in the dictionary $\mathcal{V}$.
+O softmax hierárquico é outro tipo de método de treinamento aproximado. Ele usa uma árvore binária para a estrutura de dados conforme ilustrado em :numref:`fig_hi_softmax`, com os nós folha da árvore representando cada palavra no dicionário $\mathcal{V}$.
 
 ![Hierarchical Softmax. Each leaf node of the tree represents a word in the dictionary. ](../img/hi-softmax.svg)
 :label:`fig_hi_softmax`
 
-We assume that $L(w)$ is the number of nodes on the path (including the root and leaf nodes) from the root node of the binary tree to the leaf node of word $w$. Let $n(w, j)$ be the $j^\mathrm{th}$ node on this path, with the context word vector $\mathbf{u}_{n(w, j)}$. We use :numref:`fig_hi_softmax` as an example, so $L(w_3) = 4$. Hierarchical softmax will approximate the conditional probability in the skip-gram model as
+Assumimos que $L(w)$ é o número de nós no caminho (incluindo os nós raiz e folha) do nó raiz da árvore binária ao nó folha da palavra $w$. Seja $n(w, j)$ o nó $j^\mathrm{th}$ neste caminho, com o vetor de palavra de contexto $\mathbf{u}_{n(w, j)}$. Usamos :numref:`fig_hi_softmax` como exemplo, então $L(w_3) = 4$. O softmax hierárquico aproximará a probabilidade condicional no modelo skip-gram como
 
 $$P(w_o \mid w_c) = \prod_{j=1}^{L(w_o)-1} \sigma\left( [\![  n(w_o, j+1) = \text{leftChild}(n(w_o, j)) ]\!] \cdot \mathbf{u}_{n(w_o, j)}^\top \mathbf{v}_c\right),$$
 
 Here the $\sigma$ function has the same definition as the sigmoid activation function, and $\text{leftChild}(n)$ is the left child node of node $n$. If $x$ is true, $[\![x]\!] = 1$; otherwise $[\![x]\!] = -1$.
 Now, we will compute the conditional probability of generating word $w_3$ based on the given word $w_c$ in :numref:`fig_hi_softmax`. We need to find the inner product of word vector $\mathbf{v}_c$ (for word $w_c$) and each non-leaf node vector on the path from the root node to $w_3$. Because, in the binary tree, the path from the root node to leaf node $w_3$ needs to be traversed left, right, and left again (the path with the bold line in :numref:`fig_hi_softmax`), we get
+
+Aqui, a função $ \ sigma $ tem a mesma definição que a função de ativação sigmóide, e $ \ text {leftChild} (n) $ é o nó filho esquerdo do nó $ n $. Se $ x $ for verdadeiro, $ [\! [X] \!] = 1 $; caso contrário, $ [\! [x] \!] = -1 $.
+Agora, vamos calcular a probabilidade condicional de gerar a palavra $ w_3 $ com base na palavra $ w_c $ dada em: numref: `fig_hi_softmax`. Precisamos encontrar o produto interno do vetor palavra $ \ mathbf {v} _c $ (para a palavra $ w_c $) e cada vetor de nó não folha no caminho do nó raiz para $ w_3 $. Porque, na árvore binária, o caminho do nó raiz ao nó folha $ w_3 $ precisa ser percorrido para a esquerda, direita e esquerda novamente (o caminho com a linha em negrito em: numref: `fig_hi_softmax`), obtemos
 
 $$P(w_3 \mid w_c) = \sigma(\mathbf{u}_{n(w_3, 1)}^\top \mathbf{v}_c) \cdot \sigma(-\mathbf{u}_{n(w_3, 2)}^\top \mathbf{v}_c) \cdot \sigma(\mathbf{u}_{n(w_3, 3)}^\top \mathbf{v}_c).$$
 
@@ -84,5 +87,5 @@ In addition, because the order of magnitude for $L(w_o)-1$ is $\mathcal{O}(\text
 
 [Discussions](https://discuss.d2l.ai/t/382)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTkzNTgyNF19
+eyJoaXN0b3J5IjpbMTkyNDgwMzQyXX0=
 -->
