@@ -20,15 +20,17 @@ A amostragem negativa modifica a função objetivo original. Dada uma janela de 
 
 $$P(D=1\mid w_c, w_o) = \sigma(\mathbf{u}_o^\top \mathbf{v}_c),$$
 
-Here, the $\sigma$ function has the same definition as the sigmoid activation function:
+Aqui, a função $\sigma$ tem a mesma definição que a função de ativação sigmóide:
 
 $$\sigma(x) = \frac{1}{1+\exp(-x)}.$$
 
-We will first consider training the word vector by maximizing the joint probability of all events in the text sequence. Given a text sequence of length $T$, we assume that the word at time step $t$ is $w^{(t)}$ and the context window size is $m$. Now we consider maximizing the joint probability
+Consideraremos primeiro o treinamento do vetor de palavras maximizando a probabilidade conjunta de todos os eventos na sequência de texto. Dada uma sequência de texto de comprimento $T$, assumimos que a palavra no passo de tempo $t$ é $w^{(t)}$ e o tamanho da janela de contexto é $m$. Agora consideramos maximizar a probabilidade conjunta
 
 $$ \prod_{t=1}^{T} \prod_{-m \leq j \leq m,\ j \neq 0} P(D=1\mid w^{(t)}, w^{(t+j)}).$$
 
 However, the events included in the model only consider positive examples. In this case, only when all the word vectors are equal and their values approach infinity can the joint probability above be maximized to 1. Obviously, such word vectors are meaningless. Negative sampling makes the objective function more meaningful by sampling with an addition of negative examples. Assume that event $P$ occurs when context word $w_o$ appears in the context window of central target word $w_c$, and we sample $K$ words that do not appear in the context window according to the distribution $P(w)$ to act as noise words. We assume the event for noise word $w_k$($k=1, \ldots, K$) to not appear in the context window of central target word $w_c$ is $N_k$. Suppose that events $P$ and $N_1, \ldots, N_K$ for both positive and negative examples are independent of each other. By considering negative sampling, we can rewrite the joint probability above, which only considers the positive examples, as
+
+No entanto, os eventos incluídos no modelo consideram apenas exemplos positivos. Nesse caso, apenas quando todos os vetores de palavras são iguais e seus valores se aproximam do infinito, a probabilidade conjunta acima pode ser maximizada para 1. Obviamente, esses vetores de palavras não têm sentido. A amostragem negativa torna a função objetivo mais significativa, amostrando com uma adição de exemplos negativos. Assuma que o evento $P$ ocorre quando a palavra de contexto $w_o$ aparece na janela de contexto da palavra alvo central $w_c$, e nós amostramos $K$ palavras que não aparecem na janela de contexto de acordo com a distribuição $P(w)$ para atuar como palavras de ruído. Assumimos que o evento para a palavra de ruído $w_k$ ($ k = 1, \ ldots, K $) não aparecer na janela de contexto da palavra de destino central $w_c$ é $N_k$. Suponha que os eventos $P$ e $ N_1, \ ldots, N_K $ para os exemplos positivos e negativos sejam independentes um do outro. Ao considerar a amostragem negativa, podemos reescrever a probabilidade conjunta acima, que considera apenas os exemplos positivos, como
 
 $$ \prod_{t=1}^{T} \prod_{-m \leq j \leq m,\ j \neq 0} P(w^{(t+j)} \mid w^{(t)}),$$
 
@@ -85,5 +87,5 @@ In addition, because the order of magnitude for $L(w_o)-1$ is $\mathcal{O}(\text
 
 [Discussions](https://discuss.d2l.ai/t/382)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Nzg2NzkxNDNdfQ==
+eyJoaXN0b3J5IjpbLTQxNjQ1MjIwN119
 -->
