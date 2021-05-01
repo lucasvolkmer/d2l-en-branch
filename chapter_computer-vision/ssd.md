@@ -188,13 +188,8 @@ forward(torch.zeros((2, 3, 256, 256)), base_net()).shape
 
 ### O Modelo Completo
 
-The SSD model contains a total of five modules. Each module outputs a feature
-map used to generate anchor boxes and predict the categories and offsets of
-these anchor boxes. The first module is the base network block, modules two to
-four are height and width downsample blocks, and the fifth module is a global
-maximum pooling layer that reduces the height and width to 1. Therefore, modules
-two to five are all multiscale feature blocks shown in :numref:`fig_ssd`.
-
+O modelo SSD contém um total de cinco módulos. Cada módulo produz um mapa de recursos usado para gerar caixas de âncora e prever as categorias e deslocamentos dessas caixas de âncora. O primeiro módulo é o bloco de rede base, os módulos de dois a quatro são blocos de redução de amostragem de altura e largura e o quinto módulo é um bloco global
+camada de pooling máxima que reduz a altura e largura para 1. Portanto, os módulos dois a cinco são todos blocos de recursos multiescala mostrados em :numref:`fig_ssd`.
 ```{.python .input}
 def get_blk(i):
     if i == 0:
@@ -220,7 +215,7 @@ def get_blk(i):
     return blk
 ```
 
-Now, we will define the forward computation process for each module. In contrast to the previously-described convolutional neural networks, this module not only returns feature map `Y` output by convolutional computation, but also the anchor boxes of the current scale generated from `Y` and their predicted categories and offsets.
+Agora, vamos definir o processo de computação progressiva para cada módulo. Em contraste com as redes neurais convolucionais descritas anteriormente, este módulo não só retorna a saída do mapa de características `Y` por computação convolucional, mas também as caixas de âncora da escala atual gerada a partir de` Y` e suas categorias e deslocamentos previstos.
 
 ```{.python .input}
 def blk_forward(X, blk, size, ratio, cls_predictor, bbox_predictor):
@@ -677,7 +672,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxOTUyMjE0Myw0MzMxMDMwNzAsNzQ0Nj
+eyJoaXN0b3J5IjpbMTU5MDAwOTE3OSw0MzMxMDMwNzAsNzQ0Nj
 I0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5NzUsLTIxNDM2NzY5
 NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMTAzNTU1NTJdfQ==
 -->
