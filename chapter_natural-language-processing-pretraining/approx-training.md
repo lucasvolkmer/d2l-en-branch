@@ -28,17 +28,15 @@ Consideraremos primeiro o treinamento do vetor de palavras maximizando a probabi
 
 $$ \prod_{t=1}^{T} \prod_{-m \leq j \leq m,\ j \neq 0} P(D=1\mid w^{(t)}, w^{(t+j)}).$$
 
-However, the events included in the model only consider positive examples. In this case, only when all the word vectors are equal and their values approach infinity can the joint probability above be maximized to 1. Obviously, such word vectors are meaningless. Negative sampling makes the objective function more meaningful by sampling with an addition of negative examples. Assume that event $P$ occurs when context word $w_o$ appears in the context window of central target word $w_c$, and we sample $K$ words that do not appear in the context window according to the distribution $P(w)$ to act as noise words. We assume the event for noise word $w_k$($k=1, \ldots, K$) to not appear in the context window of central target word $w_c$ is $N_k$. Suppose that events $P$ and $N_1, \ldots, N_K$ for both positive and negative examples are independent of each other. By considering negative sampling, we can rewrite the joint probability above, which only considers the positive examples, as
-
-No entanto, os eventos incluídos no modelo consideram apenas exemplos positivos. Nesse caso, apenas quando todos os vetores de palavras são iguais e seus valores se aproximam do infinito, a probabilidade conjunta acima pode ser maximizada para 1. Obviamente, esses vetores de palavras não têm sentido. A amostragem negativa torna a função objetivo mais significativa, amostrando com uma adição de exemplos negativos. Assuma que o evento $P$ ocorre quando a palavra de contexto $w_o$ aparece na janela de contexto da palavra alvo central $w_c$, e nós amostramos $K$ palavras que não aparecem na janela de contexto de acordo com a distribuição $P(w)$ para atuar como palavras de ruído. Assumimos que o evento para a palavra de ruído $w_k$ ($ k = 1, \ ldots, K $) não aparecer na janela de contexto da palavra de destino central $w_c$ é $N_k$. Suponha que os eventos $P$ e $ N_1, \ ldots, N_K $ para os exemplos positivos e negativos sejam independentes um do outro. Ao considerar a amostragem negativa, podemos reescrever a probabilidade conjunta acima, que considera apenas os exemplos positivos, como
+No entanto, os eventos incluídos no modelo consideram apenas exemplos positivos. Nesse caso, apenas quando todos os vetores de palavras são iguais e seus valores se aproximam do infinito, a probabilidade conjunta acima pode ser maximizada para 1. Obviamente, esses vetores de palavras não têm sentido. A amostragem negativa torna a função objetivo mais significativa, amostrando com uma adição de exemplos negativos. Assuma que o evento $P$ ocorre quando a palavra de contexto $w_o$ aparece na janela de contexto da palavra alvo central $w_c$, e nós amostramos $K$ palavras que não aparecem na janela de contexto de acordo com a distribuição $P(w)$ para atuar como palavras de ruído. Assumimos que o evento para a palavra de ruído $w_k$ ($k=1, \ldots, K$) não aparecer na janela de contexto da palavra de destino central $w_c$ é $N_k$. Suponha que os eventos $P$ e $N_1, \ldots, N_K$ para os exemplos positivos e negativos sejam independentes um do outro. Ao considerar a amostragem negativa, podemos reescrever a probabilidade conjunta acima, que considera apenas os exemplos positivos, como
 
 $$ \prod_{t=1}^{T} \prod_{-m \leq j \leq m,\ j \neq 0} P(w^{(t+j)} \mid w^{(t)}),$$
 
-Here, the conditional probability is approximated to be
+Aqui, a probabilidade condicional é aproximada a ser
 $$ P(w^{(t+j)} \mid w^{(t)}) =P(D=1\mid w^{(t)}, w^{(t+j)})\prod_{k=1,\ w_k \sim P(w)}^K P(D=0\mid w^{(t)}, w_k).$$
 
 
-Let the text sequence index of word $w^{(t)}$ at time step $t$ be $i_t$ and $h_k$ for noise word $w_k$ in the dictionary. The logarithmic loss for the conditional probability above is
+Seja o índice de sequência de texto da palavra $w^{(t)}$ no passo de tempo $t$ $i_t$ e $h_k$ para a palavra de ruído $w_k$ no dicionário. A perda logarítmica para a probabilidade condicional acima é
 
 $$
 \begin{aligned}
@@ -49,10 +47,9 @@ $$
 \end{aligned}
 $$
 
-Here, the gradient computation in each step of the training is no longer related to the dictionary size, but linearly related to $K$. When $K$ takes a smaller constant, the negative sampling has a lower computational overhead for each step.
+Aqui, o cálculo do gradiente em cada etapa do treinamento não está mais relacionado ao tamanho do dicionário, mas linearmente relacionado a $K$. Quando $K$ assume uma constante menor, a amostragem negativa tem uma sobrecarga computacional menor para cada etapa.
 
-
-## Hierarchical Softmax
+## Hierárquico Softmax
 
 Hierarchical softmax is another type of approximate training method. It uses a binary tree for data structure as illustrated in :numref:`fig_hi_softmax`, with the leaf nodes of the tree representing every word in the dictionary $\mathcal{V}$.
 
@@ -87,5 +84,5 @@ In addition, because the order of magnitude for $L(w_o)-1$ is $\mathcal{O}(\text
 
 [Discussions](https://discuss.d2l.ai/t/382)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNjQ1MjIwN119
+eyJoaXN0b3J5IjpbLTE5NTkzNTgyNF19
 -->
