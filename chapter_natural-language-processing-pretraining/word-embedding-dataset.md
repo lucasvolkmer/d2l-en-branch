@@ -262,11 +262,11 @@ for name, data in zip(names, batch):
     print(name, '=', data)
 ```
 
-We use the `batchify` function just defined to specify the minibatch reading method in the `DataLoader` instance.
+Usamos a função `batchify` definida apenas para especificar o método de leitura de minibatch na instância `DataLoader`.
 
-## Putting All Things Together
+## Juntando todas as coisas
 
-Last, we define the `load_data_ptb` function that read the PTB dataset and return the data iterator.
+Por último, definimos a função `load_data_ptb` que lê o conjunto de dados PTB e retorna o iterador de dados.
 
 ```{.python .input}
 #@save
@@ -322,7 +322,7 @@ def load_data_ptb(batch_size, max_window_size, num_noise_words):
     return data_iter, vocab
 ```
 
-Let us print the first minibatch of the data iterator.
+Vamos imprimir o primeiro minibatch do iterador de dados.
 
 ```{.python .input}
 #@tab all
@@ -333,26 +333,26 @@ for batch in data_iter:
     break
 ```
 
-## Summary
+## Sumário
 
-* Subsampling attempts to minimize the impact of high-frequency words on the training of a word embedding model.
-* We can pad examples of different lengths to create minibatches with examples of all the same length and use mask variables to distinguish between padding and non-padding elements, so that only non-padding elements participate in the calculation of the loss function.
+* A subamostragem tenta minimizar o impacto de palavras de alta frequência no treinamento de um modelo de incorporação de palavras.
+* Podemos preencher exemplos de comprimentos diferentes para criar minibatches com exemplos de todos os mesmos comprimentos e usar variáveis de máscara para distinguir entre elementos de preenchimento e não preenchimento, de modo que apenas elementos não preenchidos participem do cálculo da função de perda.
 
-## Exercises
+## Exercícios
 
-1. We use the `batchify` function to specify the minibatch reading method in the `DataLoader` instance and print the shape of each variable in the first batch read. How should these shapes be calculated?
+1. Usamos a função `batchify` para especificar o método de leitura do minibatch na instância do `DataLoader` e imprimir a forma de cada variável na primeira leitura do lote. Como essas formas devem ser calculadas?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/383)
+[Discussão](https://discuss.d2l.ai/t/383)
 :end_tab:
 
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1330)
+[Discussão](https://discuss.d2l.ai/t/1330)
 :end_tab:
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTQ0NzExMzBdfQ==
+eyJoaXN0b3J5IjpbMTgzMzQ0NzA0Nl19
 -->
