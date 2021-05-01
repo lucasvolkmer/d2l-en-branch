@@ -73,16 +73,16 @@ Além disso, porque a ordem de magnitude para $L(w_o)-1$ é $\mathcal{O}(\text{l
 
 ## Sumário
 
-* Negative sampling constructs the loss function by considering independent events that contain both positive and negative examples. The gradient computational overhead for each step in the training process is linearly related to the number of noise words we sample.
-* Hierarchical softmax uses a binary tree and constructs the loss function based on the path from the root node to the leaf node. The gradient computational overhead for each step in the training process is related to the logarithm of the dictionary size.
+* A amostragem negativa constrói a função de perda considerando eventos independentes que contêm exemplos positivos e negativos. O gradiente de sobrecarga computacional para cada etapa do processo de treinamento está linearmente relacionado ao número de palavras de ruído que amostramos.
+* O softmax hierárquico usa uma árvore binária e constrói a função de perda com base no caminho do nó raiz ao nó folha. A sobrecarga computacional gradiente para cada etapa do processo de treinamento está relacionada ao logaritmo do tamanho do dicionário.
 
-## Exercises
+## Exercícios
 
-1. Before reading the next section, think about how we should sample noise words in negative sampling.
-1. What makes the last formula in this section hold?
-1. How can we apply negative sampling and hierarchical softmax in the skip-gram model?
+1. Antes de ler a próxima seção, pense em como devemos amostrar palavras de ruído na amostragem negativa.
+1. O que faz com que a última fórmula desta seção seja válida?
+1. Como podemos aplicar a amostragem negativa e softmax hierárquico no modelo skip-gram?
 
-[Discussions](https://discuss.d2l.ai/t/382)
+[Discussão](https://discuss.d2l.ai/t/382)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjgwNjkwODJdfQ==
+eyJoaXN0b3J5IjpbLTIwNTgxNDQyNDddfQ==
 -->
