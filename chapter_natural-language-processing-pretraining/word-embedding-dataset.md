@@ -31,7 +31,7 @@ import os
 import random
 ```
 
-## Reading and Preprocessing the DatasetLeitura e pré-processamento do conjunto de dados
+## Leitura e pré-processamento do conjunto de dados
 
 Este conjunto de dados já foi pré-processado. Cada linha do conjunto de dados atua como uma frase. Todas as palavras em uma frase são separadas por espaços. Na tarefa de incorporação de palavras, cada palavra é um token.
 
@@ -354,5 +354,5 @@ for batch in data_iter:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzQ0NzA0Nl19
+eyJoaXN0b3J5IjpbLTQ0MzUzODU1MCwxODMzNDQ3MDQ2XX0=
 -->
