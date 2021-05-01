@@ -95,9 +95,9 @@ skip_gram(torch.ones((2, 1), dtype=torch.long),
 
 Antes de treinar o modelo de incorporação de palavras, precisamos definir a função de perda do modelo.
 
-### Binary Cross Entropy Loss Function
+### Função de perda de entropia cruzada binária
 
-According to the definition of the loss function in negative sampling, we can directly use the binary cross-entropy loss function from high-level APIs.
+De acordo com a definição da função de perda na amostragem negativa, podemos usar diretamente a função de perda de entropia cruzada binária de APIs de alto nível.
 
 ```{.python .input}
 loss = gluon.loss.SigmoidBCELoss()
@@ -118,9 +118,9 @@ class SigmoidBCELoss(nn.Module):
 loss = SigmoidBCELoss()
 ```
 
-It is worth mentioning that we can use the mask variable to specify the partial predicted value and label that participate in loss function calculation in the minibatch: when the mask is 1, the predicted value and label of the corresponding position will participate in the calculation of the loss function; When the mask is 0, they do not participate. As we mentioned earlier, mask variables can be used to avoid the effect of padding on loss function calculations.
+Vale ressaltar que podemos usar a variável máscara para especificar o valor predito parcial e o rótulo que participam do cálculo da função de perda no minibatch: quando a máscara for 1, o valor predito e o rótulo da posição correspondente participarão do cálculo de a função de perda; Quando a máscara é 0, eles não participam. Como mencionamos anteriormente, as variáveis de máscara podem ser usadas para evitar o efeito do preenchimento nos cálculos da função de perda.
 
-Given two identical examples, different masks lead to different loss values.
+Dados dois exemplos idênticos, máscaras diferentes levam a valores de perda diferentes.
 
 ```{.python .input}
 #@tab all
@@ -130,16 +130,16 @@ mask = d2l.tensor([[1, 1, 1, 1], [1, 1, 0, 0]])
 loss(pred, label, mask)
 ```
 
-We can normalize the loss in each example due to various lengths in each example.
+Podemos normalizar a perda em cada exemplo devido a vários comprimentos em cada exemplo.
 
 ```{.python .input}
 #@tab all
 loss(pred, label, mask) / mask.sum(axis=1) * mask.shape[1]
 ```
 
-### Initializing Model Parameters
+### Inicializando os parâmetros do modelo
 
-We construct the embedding layers of the central and context words, respectively, and set the hyperparameter word vector dimension `embed_size` to 100.
+Construímos as camadas de incorporação das palavras central e de contexto, respectivamente, e definimos a dimensão do vetor da palavra hiperparâmetro `embed_size` para 100.
 
 ```{.python .input}
 embed_size = 100
@@ -157,9 +157,9 @@ net = nn.Sequential(nn.Embedding(num_embeddings=len(vocab),
                                  embedding_dim=embed_size))
 ```
 
-### Training
+### Treinamento
 
-The training function is defined below. Because of the existence of padding, the calculation of the loss function is slightly different compared to the previous training functions.
+A função de treinamento é definida abaixo. Devido à existência de preenchimento, o cálculo da função de perda é ligeiramente diferente em comparação com as funções de treinamento anteriores.
 
 ```{.python .input}
 def train(net, data_iter, lr, num_epochs, device=d2l.try_gpu()):
@@ -228,9 +228,9 @@ lr, num_epochs = 0.01, 5
 train(net, data_iter, lr, num_epochs)
 ```
 
-## Applying the Word Embedding Model
+## Aplicando o modelo de incorporação de palavras
 
-After training the word embedding model, we can represent similarity in meaning between words based on the cosine similarity of two word vectors. As we can see, when using the trained word embedding model, the words closest in meaning to the word "chip" are mostly related to chips.
+Depois de treinar o modelo de incorporação de palavras, podemos representar a similaridade no significado entre as palavras com base na similaridade do cosseno de dois vetores de palavras. Como podemos ver, ao usar o modelo de incorporação de palavras treinadas, as palavras com significado mais próximo da palavra "chip" estão principalmente relacionadas a chips.
 
 ```{.python .input}
 def get_similar_tokens(query_token, k, embed):
@@ -260,12 +260,12 @@ def get_similar_tokens(query_token, k, embed):
 get_similar_tokens('chip', 3, net[0])
 ```
 
-## Summary
+## Sumário
 
-* We can pretrain a skip-gram model through negative sampling.
+* Podemos pré-treinar um modelo de grama de salto por meio de amostragem negativa.
 
 
-## Exercises
+## Exercícios
 
 1. Set `sparse_grad=True` when creating an instance of `nn.Embedding`. Does it accelerate training? Look up MXNet documentation to learn the meaning of this argument.
 1. Try to find synonyms for other words.
@@ -280,5 +280,5 @@ get_similar_tokens('chip', 3, net[0])
 [Discussions](https://discuss.d2l.ai/t/1335)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwODAyNTk1OF19
+eyJoaXN0b3J5IjpbLTcxNjMyMTQ3OV19
 -->
