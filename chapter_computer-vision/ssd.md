@@ -236,7 +236,7 @@ def blk_forward(X, blk, size, ratio, cls_predictor, bbox_predictor):
     return (Y, anchors, cls_preds, bbox_preds)
 ```
 
-As we mentioned, the closer a multiscale feature block is to the top in :numref:`fig_ssd`, the larger the objects it detects and the larger the anchor boxes it must generate. Here, we first divide the interval from 0.2 to 1.05 into five equal parts to determine the sizes of smaller anchor boxes at different scales: 0.2, 0.37, 0.54, etc. Then, according to $\sqrt{0.2 \times 0.37} = 0.272$, $\sqrt{0.37 \times 0.54} = 0.447$, and similar formulas, we determine the sizes of larger anchor boxes at the different scales.
+Como mencionamos, quanto mais próximo um bloco de recursos multiescala está do topo em :numref:`fig_ssd`, maiores são os objetos que ele detecta e maiores são as caixas de âncora que deve gerar. Aqui, primeiro dividimos o intervalo de 0,2 a 1,05 em cinco partes iguais para determinar os tamanhos das caixas de âncora menores em escalas diferentes: 0,2, 0,37, 0,54, etc. Então, de acordo com $\sqrt{0.2 \times 0.37} = 0.272$,  $\sqrt{0.37 \times 0.54} = 0.447$, e fórmulas semelhantes, determinamos os tamanhos de caixas de âncora maiores em escalas diferentes.
 
 ```{.python .input}
 #@tab all
@@ -246,7 +246,7 @@ ratios = [[1, 2, 0.5]] * 5
 num_anchors = len(sizes[0]) + len(ratios[0]) - 1
 ```
 
-Now, we can define the complete model, `TinySSD`.
+Agora, podemos definir o modelo completo, `TinySSD`.
 
 ```{.python .input}
 class TinySSD(nn.Block):
@@ -672,7 +672,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MDAwOTE3OSw0MzMxMDMwNzAsNzQ0Nj
+eyJoaXN0b3J5IjpbLTk3MjE0MTc0MSw0MzMxMDMwNzAsNzQ0Nj
 I0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5NzUsLTIxNDM2NzY5
 NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMTAzNTU1NTJdfQ==
 -->
