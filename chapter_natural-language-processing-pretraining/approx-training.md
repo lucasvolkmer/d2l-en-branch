@@ -10,15 +10,13 @@ A perda logarítmica correspondente à probabilidade condicional é dada como
 $$-\log P(w_o \mid w_c) =
 -\mathbf{u}_o^\top \mathbf{v}_c + \log\left(\sum_{i \in \mathcal{V}} \text{exp}(\mathbf{u}_i^\top \mathbf{v}_c)\right).$$
 
-
-Because the softmax operation has considered that the context word could be any word in the dictionary $\mathcal{V}$, the loss mentioned above actually includes the sum of the number of items in the dictionary size. From the last section, we know that for both the skip-gram model and CBOW model, because they both get the conditional probability using a softmax operation, the gradient computation for each step contains the sum of the number of items in the dictionary size. For larger dictionaries with hundreds of thousands or even millions of words, the overhead for computing each gradient may be too high.  In order to reduce such computational complexity, we will introduce two approximate training methods in this section: negative sampling and hierarchical softmax. Since there is no major difference between the skip-gram model and the CBOW model, we will only use the skip-gram model as an example to introduce these two training methods in this section.
-
+Como a operação softmax considerou que a palavra de contexto poderia ser qualquer palavra no dicionário $\mathcal{V}$, a perda mencionada acima na verdade inclui a soma do número de itens no tamanho do dicionário. Na última seção, sabemos que para o modelo skip-gram e o modelo CBOW, porque ambos obtêm a probabilidade condicional usando uma operação softmax, o cálculo do gradiente para cada etapa contém a soma do número de itens no tamanho do dicionário. Para dicionários maiores com centenas de milhares ou até milhões de palavras, a sobrecarga para calcular cada gradiente pode ser muito alta. Para reduzir essa complexidade computacional, apresentaremos dois métodos de treinamento aproximados nesta seção: amostragem negativa e softmax hierárquico. Como não há grande diferença entre o modelo skip-gram e o modelo CBOW, usaremos apenas o modelo skip-gram como um exemplo para apresentar esses dois métodos de treinamento nesta seção.
 
 
-## Negative Sampling
+## Amostragem Negativa
 :label:`subsec_negative-sampling`
 
-Negative sampling modifies the original objective function. Given a context window for the central target word $w_c$, we will treat it as an event for context word $w_o$ to appear in the context window and compute the probability of this event from
+A amostragem negativa modifica a função objetivo original. Dada uma janela de contexto para a palavra alvo central $w_c$, vamos tratá-la como um evento para a palavra de contexto $w_o$ aparecer na janela de contexto e calcular a probabilidade deste evento a partir de
 
 $$P(D=1\mid w_c, w_o) = \sigma(\mathbf{u}_o^\top \mathbf{v}_c),$$
 
@@ -87,5 +85,5 @@ In addition, because the order of magnitude for $L(w_o)-1$ is $\mathcal{O}(\text
 
 [Discussions](https://discuss.d2l.ai/t/382)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjYxNDc4MDFdfQ==
+eyJoaXN0b3J5IjpbLTE3Nzg2NzkxNDNdfQ==
 -->
