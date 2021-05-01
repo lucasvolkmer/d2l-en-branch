@@ -129,13 +129,13 @@ corpus = [vocab[line] for line in subsampled]
 corpus[0:3]
 ```
 
-## Loading the Dataset
+## Carregando o conjunto de dados
 
-Next we read the corpus with token indicies into data batches for training.
+Em seguida, lemos o corpus com índices de token em lotes de dados para treinamento.
 
-### Extracting Central Target Words and Context Words
+### Extração de palavras-alvo centrais e palavras de contexto
 
-We use words with a distance from the central target word not exceeding the context window size as the context words of the given center target word. The following definition function extracts all the central target words and their context words. It uniformly and randomly samples an integer to be used as the context window size between integer 1 and the `max_window_size` (maximum context window).
+Usamos palavras com uma distância da palavra alvo central não excedendo o tamanho da janela de contexto como as palavras de contexto da palavra alvo central fornecida. A função de definição a seguir extrai todas as palavras-alvo centrais e suas palavras de contexto. Ele mostra de maneira uniforme e aleatória um inteiro para ser usado como o tamanho da janela de contexto entre o inteiro 1 e o `max_window_size` (janela de contexto máxima).
 
 ```{.python .input}
 #@tab all
@@ -158,7 +158,7 @@ def get_centers_and_contexts(corpus, max_window_size):
     return centers, contexts
 ```
 
-Next, we create an artificial dataset containing two sentences of 7 and 3 words, respectively. Assume the maximum context window is 2 and print all the central target words and their context words.
+A seguir, criamos um conjunto de dados artificial contendo duas sentenças de 7 e 3 palavras, respectivamente. Suponha que a janela de contexto máxima seja 2 e imprima todas as palavras-alvo centrais e suas palavras de contexto.
 
 ```{.python .input}
 #@tab all
@@ -168,7 +168,7 @@ for center, context in zip(*get_centers_and_contexts(tiny_dataset, 2)):
     print('center', center, 'has contexts', context)
 ```
 
-We set the maximum context window size to 5. The following extracts all the central target words and their context words in the dataset.
+Definimos o tamanho máximo da janela de contexto como 5. O seguinte extrai todas as palavras-alvo centrais e suas palavras de contexto no conjunto de dados.
 
 ```{.python .input}
 #@tab all
@@ -176,11 +176,11 @@ all_centers, all_contexts = get_centers_and_contexts(corpus, 5)
 f'# center-context pairs: {len(all_centers)}'
 ```
 
-### Negative Sampling
+### Amostragem Negativa
 
-We use negative sampling for approximate training. For a central and context word pair, we randomly sample $K$ noise words ($K=5$ in the experiment). According to the suggestion in the Word2vec paper, the noise word sampling probability $P(w)$ is the ratio of the word frequency of $w$ to the total word frequency raised to the power of 0.75 :cite:`Mikolov.Sutskever.Chen.ea.2013`.
+Usamos amostragem negativa para treinamento aproximado. Para um par de palavras centrais e de contexto, amostramos aleatoriamente $K$ palavras de ruído ($K = 5$ no experimento). De acordo com a sugestão do artigo Word2vec, a probabilidade de amostragem de palavras de ruído $P(w)$ é a razão entre a frequência de palavras de $ w $ e a frequência total de palavras elevada à potência de 0,75: cite: `Mikolov.Sutskever. Chen.ea.2013`.
 
-We first define a class to draw a candidate according to the sampling weights. It caches a 10000 size random number bank instead of calling `random.choices` every time.
+Primeiro definimos uma classe para desenhar um candidato de acordo com os pesos amostrais. Ele armazena em cache um banco de números aleatórios de tamanho 10.000 em vez de chamar `random.choices` todas as vezes.
 
 ```{.python .input}
 #@tab all
@@ -354,5 +354,5 @@ for batch in data_iter:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODMxOTE4NjJdfQ==
+eyJoaXN0b3J5IjpbLTI2NDMyMDQyM119
 -->
