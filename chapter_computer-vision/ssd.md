@@ -186,7 +186,7 @@ def base_net():
 forward(torch.zeros((2, 3, 256, 256)), base_net()).shape
 ```
 
-### The Complete Model
+### O Modelo Completo
 
 The SSD model contains a total of five modules. Each module outputs a feature
 map used to generate anchor boxes and predict the categories and offsets of
@@ -677,7 +677,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMzMTAzMDcwLDc0NDYyNDQxMCwxNjc2Mj
-IxNDkyLC0xMzc0Njc3OTc1LC0yMTQzNjc2OTc3LDIwMDU2MTA5
-MjIsMzczNTU4MzQsMzEwMzU1NTUyXX0=
+eyJoaXN0b3J5IjpbMTAxOTUyMjE0Myw0MzMxMDMwNzAsNzQ0Nj
+I0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5NzUsLTIxNDM2NzY5
+NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMTAzNTU1NTJdfQ==
 -->
