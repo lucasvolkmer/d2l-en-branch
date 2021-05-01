@@ -60,21 +60,18 @@ Assumimos que $L(w)$ é o número de nós no caminho (incluindo os nós raiz e f
 
 $$P(w_o \mid w_c) = \prod_{j=1}^{L(w_o)-1} \sigma\left( [\![  n(w_o, j+1) = \text{leftChild}(n(w_o, j)) ]\!] \cdot \mathbf{u}_{n(w_o, j)}^\top \mathbf{v}_c\right),$$
 
-Here the $\sigma$ function has the same definition as the sigmoid activation function, and $\text{leftChild}(n)$ is the left child node of node $n$. If $x$ is true, $[\![x]\!] = 1$; otherwise $[\![x]\!] = -1$.
-Now, we will compute the conditional probability of generating word $w_3$ based on the given word $w_c$ in :numref:`fig_hi_softmax`. We need to find the inner product of word vector $\mathbf{v}_c$ (for word $w_c$) and each non-leaf node vector on the path from the root node to $w_3$. Because, in the binary tree, the path from the root node to leaf node $w_3$ needs to be traversed left, right, and left again (the path with the bold line in :numref:`fig_hi_softmax`), we get
-
 Aqui, a função $\sigma$ tem a mesma definição que a função de ativação sigmóide, e $\text{leftChild}(n)$ é o nó filho esquerdo do nó $n$. Se $x$ for verdadeiro, $[\![x]\!] = 1$; caso contrário, $[\![x]\!] = -1$.
 Agora, vamos calcular a probabilidade condicional de gerar a palavra $w_3$ com base na palavra $w_c$ dada em :numref:`fig_hi_softmax`. Precisamos encontrar o produto interno do vetor palavra $\mathbf{v}_c$ (para a palavra $w_c$) e cada vetor de nó não folha no caminho do nó raiz para $w_3$. Porque, na árvore binária, o caminho do nó raiz ao nó folha $w_3$ precisa ser percorrido para a esquerda, direita e esquerda novamente (o caminho com a linha em negrito em :numref:`fig_hi_softmax`), obtemos
 
 $$P(w_3 \mid w_c) = \sigma(\mathbf{u}_{n(w_3, 1)}^\top \mathbf{v}_c) \cdot \sigma(-\mathbf{u}_{n(w_3, 2)}^\top \mathbf{v}_c) \cdot \sigma(\mathbf{u}_{n(w_3, 3)}^\top \mathbf{v}_c).$$
 
-Because $\sigma(x)+\sigma(-x) = 1$, the condition that the sum of the conditional probability of any word generated based on the given central target word $w_c$ in dictionary $\mathcal{V}$ be 1 will also suffice:
+Porque $\sigma(x)+\sigma(-x) = 1$, a condição de que a soma da probabilidade condicional de qualquer palavra gerada com base na palavra alvo central fornecida $w_c$ no dicionário $\mathcal{V}$ ser 1 também será suficiente:
 
 $$\sum_{w \in \mathcal{V}} P(w \mid w_c) = 1.$$
 
-In addition, because the order of magnitude for $L(w_o)-1$ is $\mathcal{O}(\text{log}_2|\mathcal{V}|)$, when the size of dictionary $\mathcal{V}$ is large, the computational overhead for each step in the hierarchical softmax training is greatly reduced compared to situations where we do not use approximate training.
+Além disso, porque a ordem de magnitude para $L(w_o)-1$ é $\mathcal{O}(\text{log}_2|\mathcal{V}|)$, quando o tamanho do dicionário $\mathcal{V}$ for grande, a sobrecarga computacional para cada etapa do treinamento hierárquico softmax é muito reduzida em comparação com situações em que não usamos treinamento aproximado.
 
-## Summary
+## Sumário
 
 * Negative sampling constructs the loss function by considering independent events that contain both positive and negative examples. The gradient computational overhead for each step in the training process is linearly related to the number of noise words we sample.
 * Hierarchical softmax uses a binary tree and constructs the loss function based on the path from the root node to the leaf node. The gradient computational overhead for each step in the training process is related to the logarithm of the dictionary size.
@@ -87,5 +84,5 @@ In addition, because the order of magnitude for $L(w_o)-1$ is $\mathcal{O}(\text
 
 [Discussions](https://discuss.d2l.ai/t/382)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2OTg3NzY5MF19
+eyJoaXN0b3J5IjpbLTE2MjgwNjkwODJdfQ==
 -->
