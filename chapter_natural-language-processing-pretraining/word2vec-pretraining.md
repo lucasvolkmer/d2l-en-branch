@@ -1,10 +1,7 @@
 # Pré-treinamento do word2vec
 :label:`sec_word2vec_pretraining`
 
-In this section, we willNesta seção, traein a skip-gram model defined in
-:numref:`sec_word2vec`.
-
-First, import the packages andaremos um modelo skip-gram definido em
+Nesta seção, treinaremos um modelo skip-gram definido em
 :numref:`sec_word2vec`.
 
 Primeiro, importe os pacotes e módulos necessários para o experimento e carregue o conjunto de dados PTB.
@@ -31,14 +28,14 @@ data_iter, vocab = d2l.load_data_ptb(batch_size, max_window_size,
                                      num_noise_words)
 ```
 
-## The Skip-Gram Model
+## O Modelo Skip-Gram
 
-We will implement the skip-gram model by using embedding layers and minibatch multiplication. These methods are also often used to implement other natural language processing applications.
+Implementaremos o modelo skip-gram usando camadas de incorporação e multiplicação de minibatch. Esses métodos também são frequentemente usados para implementar outros aplicativos de processamento de linguagem natural.
 
-### Embedding Layer
+### Camada de incorporação
 
-As described in :numref:`sec_seq2seq`,
-The layer in which the obtained word is embedded is called the embedding layer, which can be obtained by creating an `nn.Embedding` instance in high-level APIs. The weight of the embedding layer is a matrix whose number of rows is the dictionary size (`input_dim`) and whose number of columns is the dimension of each word vector (`output_dim`). We set the dictionary size to $20$ and the word vector dimension to $4$.
+Conforme descrito em :numref:`sec_seq2seq`,
+A camada na qual a palavra obtida é incorporada é chamada de camada de incorporação, que pode ser obtida criando uma instância `nn.Embedding` em APIs de alto nível. O peso da camada de incorporação é uma matriz cujo número de linhas é o tamanho do dicionário (`input_dim`) e cujo número de colunas é a dimensão de cada vetor de palavra (`output_dim`). Definimos o tamanho do dicionário como $20$ e a dimensão do vetor da palavra como $4$.
 
 ```{.python .input}
 embed = nn.Embedding(input_dim=20, output_dim=4)
@@ -54,6 +51,8 @@ print(f'Parameter embedding_weight ({embed.weight.shape}, '
 ```
 
 The input of the embedding layer is the index of the word. When we enter the index $i$ of a word, the embedding layer returns the $i^\mathrm{th}$ row of the weight matrix as its word vector. Below we enter an index of shape ($2$, $3$) into the embedding layer. Because the dimension of the word vector is 4, we obtain a word vector of shape ($2$, $3$, $4$).
+
+A entrada da camada de incorporação é o índice da palavra. Quando inserimos o índice $i$ de uma palavra, a camada de incorporação retorna a linha $i^\mathrm{th}$ da matriz de peso como seu vetor de palavra. Abaixo, inserimos um índice de forma ($ 2 $, $ 3 $) na camada de incorporação. Como a dimensão do vetor de palavras é 4, obtemos um vetor de palavras de forma ($ 2 $, $ 3 $, $ 4 $).
 
 ```{.python .input}
 #@tab all
@@ -283,5 +282,5 @@ get_similar_tokens('chip', 3, net[0])
 [Discussions](https://discuss.d2l.ai/t/1335)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4ODgyMDgyOV19
+eyJoaXN0b3J5IjpbLTE4NTU5OTY2MjJdfQ==
 -->
