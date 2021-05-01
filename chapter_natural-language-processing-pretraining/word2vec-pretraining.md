@@ -1,10 +1,13 @@
-# Pretraining word2vec
+# Preé-traeiningamento do word2vec
 :label:`sec_word2vec_pretraining`
 
-In this section, we will train a skip-gram model defined in
+In this section, we willNesta seção, traein a skip-gram model defined in
 :numref:`sec_word2vec`.
 
-First, import the packages and modules required for the experiment, and load the PTB dataset.
+First, import the packages andaremos um modelo skip-gram definido em
+:numref:`sec_word2vec`.
+
+Primeiro, importe os pacotes e moódules required for the experiment, and load the PTB datasetos necessários para o experimento e carregue o conjunto de dados PTB.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -279,3 +282,6 @@ get_similar_tokens('chip', 3, net[0])
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1335)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTUxNjY5MzY2NF19
+-->
