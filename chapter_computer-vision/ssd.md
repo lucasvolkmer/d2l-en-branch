@@ -332,13 +332,13 @@ print('output class preds:', cls_preds.shape)
 print('output bbox preds:', bbox_preds.shape)
 ```
 
-## Training
+## Treinamento
 
-Now, we will explain, step by step, how to train the SSD model for object detection.
+Agora, vamos explicar, passo a passo, como treinar o modelo SSD para detecção de objetos.
 
-### Data Reading and Initialization
+### Leitura e Inicialização de Dados
 
-We read the banana detection dataset we created in the previous section.
+Lemos o conjunto de dados de detecção de banana que criamos na seção anterior.
 
 ```{.python .input}
 #@tab all
@@ -346,7 +346,7 @@ batch_size = 32
 train_iter, _ = d2l.load_data_bananas(batch_size)
 ```
 
-There is 1 category in the banana detection dataset. After defining the module, we need to initialize the model parameters and define the optimization algorithm.
+Existe 1 categoria no conjunto de dados de detecção de banana. Depois de definir o módulo, precisamos inicializar os parâmetros do modelo e definir o algoritmo de otimização.
 
 ```{.python .input}
 device, net = d2l.try_gpu(), TinySSD(num_classes=1)
@@ -672,7 +672,8 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDMwMjY3NjQsNDMzMTAzMDcwLDc0ND
-YyNDQxMCwxNjc2MjIxNDkyLC0xMzc0Njc3OTc1LC0yMTQzNjc2
-OTc3LDIwMDU2MTA5MjIsMzczNTU4MzQsMzEwMzU1NTUyXX0=
+eyJoaXN0b3J5IjpbLTY3MzE0Mjg3OCwtMTkwMzAyNjc2NCw0Mz
+MxMDMwNzAsNzQ0NjI0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5
+NzUsLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMT
+AzNTU1NTJdfQ==
 -->
