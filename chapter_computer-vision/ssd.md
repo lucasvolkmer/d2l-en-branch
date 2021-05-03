@@ -489,7 +489,7 @@ print(f'{len(train_iter.dataset) / timer.stop():.1f} examples/sec on '
 
 ## Predição
 
-In the prediction stage, we want to detect all objects of interest in the image. Below, we read the test image and transform its size. Then, we convert it to the four-dimensional format required by the convolutional layer.
+Na fase de previsão, queremos detectar todos os objetos de interesse na imagem. Abaixo, lemos a imagem de teste e transformamos seu tamanho. Então, nós o convertemos para o formato quadridimensional exigido pela camada convolucional.
 
 ```{.python .input}
 img = image.imread('../img/banana.jpg')
@@ -503,7 +503,7 @@ X = torchvision.io.read_image('../img/banana.jpg').unsqueeze(0).float()
 img = X.squeeze(0).permute(1,2,0).long()
 ```
 
-Using the `multibox_detection` function, we predict the bounding boxes based on the anchor boxes and their predicted offsets. Then, we use non-maximum suppression to remove similar bounding boxes.
+Usando a função `multibox_detection`, prevemos as caixas delimitadoras com base nas caixas de âncora e seus deslocamentos previstos. Em seguida, usamos a supressão não máxima para remover caixas delimitadoras semelhantes.
 
 ```{.python .input}
 def predict(X):
@@ -529,7 +529,7 @@ def predict(X):
 output = predict(X)
 ```
 
-Finally, we take all the bounding boxes with a confidence level of at least 0.9 and display them as the final output.
+Por fim, pegamos todas as caixas delimitadoras com um nível de confiança de pelo menos 0,9 e as exibimos como a saída final.
 
 ```{.python .input}
 def display(img, output, threshold):
@@ -562,14 +562,14 @@ def display(img, output, threshold):
 display(img, output.cpu(), threshold=0.9)
 ```
 
-## Summary
+## Resumo
 
-* SSD is a multiscale object detection model. This model generates different numbers of anchor boxes of different sizes based on the base network block and each multiscale feature block and predicts the categories and offsets of the anchor boxes to detect objects of different sizes.
-* During SSD model training, the loss function is calculated using the predicted and labeled category and offset values.
+* SSD é um modelo de detecção de objetos multiescala. Este modelo gera diferentes números de caixas de âncora de tamanhos diferentes com base no bloco de rede de base e cada bloco de recursos multiescala e prevê as categorias e deslocamentos das caixas de âncora para detectar objetos de tamanhos diferentes.
+* Durante o treinamento do modelo SSD, a função de perda é calculada usando a categoria prevista e rotulada e os valores de deslocamento.
 
 
 
-## Exercises
+## Exercícios
 
 1. Due to space limitations, we have ignored some of the implementation details of the SSD model in this experiment. Can you further improve the model in the following areas?
 
@@ -672,7 +672,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5Mjg5NDQwMiwtMTkwMzAyNjc2NCw0Mz
+eyJoaXN0b3J5IjpbMTUzNjc4MjE0MCwtMTkwMzAyNjc2NCw0Mz
 MxMDMwNzAsNzQ0NjI0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5
 NzUsLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMT
 AzNTU1NTJdfQ==
