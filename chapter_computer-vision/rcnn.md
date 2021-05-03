@@ -68,13 +68,9 @@ A camada de pooling de RoI no Fast R-CNN é um pouco diferente das camadas de po
 altura e largura da janela RoI são $h$ e $w$, esta janela é dividida em uma grade de subjanelas com a forma h_2 \times w_2$. O tamanho de cada subjanela é de cerca de $(h/h_2) \times (w/w_2)$. A altura e largura da subjanela devem ser sempre inteiros e o maior elemento é usado como saída para um
 determinada subjanela. Isso permite que a camada de pooling de RoI extraia recursos do mesmo formato de RoIs de formatos diferentes.
 
-In :numref:`fig_roi`, we select an $3\times 3$ region as an RoI of the $4 \times
-4$ input. For this RoI, we use a $2\times 2$ RoI pooling layer to obtain a
-single $2\times 2$ output. When we divide the region into four sub-windows, they
-respectively contain the elements 0, 1, 4, and 5 (5 is the largest); 2 and 6 (6
-is the largest); 8 and 9 (9 is the largest); and 10.
+Em :numref:`fig_roi`, selecionamos uma região $3\times 3$ como um RoI da entrada $4 \times 4$. Para este RoI, usamos uma camada de pool de $2\times 2$ RoI para obter uma única saída $2\times 2$. Quando dividimos a região em quatro subjanelas, elas contêm respectivamente os elementos 0, 1, 4 e 5 (5 é o maior); 2 e 6 (6 é o maior); 8 e 9 (9 é o maior); e 10.
 
-![$2\times 2$ RoI pooling layer. ](../img/roi.svg)
+![Camada de *pooling* RoI $2 \times 2$ .](../img/roi.svg)
 :label:`fig_roi`
 
 :begin_tab:`mxnet`
@@ -214,7 +210,7 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4ODI3NTY3MSwtMTI0MTMwNDAyMSwtMT
-M0MTM1ODA3NCwxMTY5MjE5MjAyLDE2MDQwMDkxMiwtMTQ5MzQw
-MDY4NF19
+eyJoaXN0b3J5IjpbLTIwNDkzMDU0MzcsLTEyNDEzMDQwMjEsLT
+EzNDEzNTgwNzQsMTE2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OTM0
+MDA2ODRdfQ==
 -->
