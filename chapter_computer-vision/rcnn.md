@@ -147,21 +147,14 @@ A fim de obter resultados precisos de detecção de objeto, Fast R-CNN geralment
     camada.
 
 
-It is worth noting that, as a part of the Faster R-CNN model, the region
-proposal network is trained together with the rest of the model. In addition,
-the Faster R-CNN object functions include the category and bounding box
-predictions in object detection, as well as the binary category and bounding box
-predictions for the anchor boxes in the region proposal network. Finally, the
-region proposal network can learn how to generate high-quality proposed regions,
-which reduces the number of proposed regions while maintaining the precision of
-object detection.
+É importante notar que, como parte do modelo R-CNN mais rápido, a rede proposta da região é treinada em conjunto com o resto do modelo. Além disso, as funções de objeto do Faster R-CNN incluem as predições de categoria e caixa delimitadora na detecção de objetos, bem como a categoria binária e predições de caixa delimitadora para as caixas de âncora na rede de proposta da região. Finalmente, a rede proposta de região pode aprender como gerar regiões propostas de alta qualidade, o que reduz o número de regiões propostas, enquanto mantém a precisão da detecção de objetos.
 
 
-## Mask R-CNN
+## Máscara R-CNN
 
-If training data is labeled with the pixel-level positions of each object in an image, a Mask R-CNN model can effectively use these detailed labels to further improve the precision of object detection.
+Se os dados de treinamento forem rotulados com as posições de nível de pixel de cada objeto em uma imagem, um modelo Mask R-CNN pode usar efetivamente esses rótulos detalhados para melhorar ainda mais a precisão da detecção de objeto.
 
-![Mask R-CNN model. ](../img/mask-rcnn.svg)
+![Modelo de máscara R-CNN. ](../img/mask-rcnn.svg)
 :label:`fig_mask_r-cnn`
 
 As shown in :numref:`fig_mask_r-cnn`, Mask R-CNN is a modification to the Faster
@@ -206,7 +199,7 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNjU5NjUzMCwtMTI0MTMwNDAyMSwtMT
+eyJoaXN0b3J5IjpbLTU1MDI0NzQ0NCwtMTI0MTMwNDAyMSwtMT
 M0MTM1ODA3NCwxMTY5MjE5MjAyLDE2MDQwMDkxMiwtMTQ5MzQw
 MDY4NF19
 -->
