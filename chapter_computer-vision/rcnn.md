@@ -130,11 +130,7 @@ A fim de obter resultados precisos de detecção de objeto, Fast R-CNN geralment
 :label:`fig_faster_r-cnn`
 
 
-:numref:`fig_faster_r-cnn` shows a Faster R-CNN model. Compared to Fast R-CNN,
-Faster R-CNN only changes the method for generating proposed regions from
-selective search to region proposal network. The other parts of the model remain
-unchanged. The detailed region proposal network computation process is described
-below:
+:numref:`fig_faster_r-cnn` mostra um modelo Faster R-CNN. Comparado ao Fast R-CNN, o Faster R-CNN apenas muda o método para gerar regiões propostas de pesquisa seletiva para rede de proposta de região. As outras partes do modelo permanecem inalteradas. O processo de computação de rede de proposta de região detalhada é descrito abaixo:
 
 1. We use a $3\times 3$ convolutional layer with a padding of 1 to transform the
    CNN output and set the number of output channels to $c$. This way, each
@@ -210,7 +206,7 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjE2ODIxMzEsLTEyNDEzMDQwMjEsLT
+eyJoaXN0b3J5IjpbLTIxMDgxNDkzNjMsLTEyNDEzMDQwMjEsLT
 EzNDEzNTgwNzQsMTE2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OTM0
 MDA2ODRdfQ==
 -->
