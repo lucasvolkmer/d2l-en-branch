@@ -7,14 +7,9 @@ Redes neurais convolucionais baseadas em regiões ou regiões com recursos CNN (
 
 ## R-CNNs
 
-R-CNN models first select several proposed regions from an image (for example,
-anchor boxes are one type of selection method) and then label their categories
-and bounding boxes (e.g., offsets). Then, they use a CNN to perform forward
-computation to extract features from each proposed area. Afterwards, we use the
-features of each proposed region to predict their categories and bounding
-boxes. :numref:`fig_r-cnn` shows an R-CNN model.
+Os modelos R-CNN primeiro selecionam várias regiões propostas de uma imagem (por exemplo, as caixas de âncora são um tipo de método de seleção) e, em seguida, rotulam suas categorias e caixas delimitadoras (por exemplo, deslocamentos). Em seguida, eles usam uma CNN para realizar cálculos avançados para extrair recursos de cada área proposta. Depois, usamos os recursos de cada região proposta para prever suas categorias e caixas delimitadoras. :numref:`fig_r-cnn` mostra um modelo R-CNN.
 
-![R-CNN model. ](../img/r-cnn.svg)
+![Modelo R-CNN. ](../img/r-cnn.svg)
 :label:`fig_r-cnn`
 
 Specifically, R-CNNs are composed of four main parts:
@@ -236,5 +231,6 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNDAwOTEyLC0xNDkzNDAwNjg0XX0=
+eyJoaXN0b3J5IjpbNTY5MDA0NTA5LDE2MDQwMDkxMiwtMTQ5Mz
+QwMDY4NF19
 -->
