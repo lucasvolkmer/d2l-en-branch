@@ -652,24 +652,25 @@ d2l.plt.legend();
 
 ### Treinamento e Previsão
 
-B. When an object is relatively large compared to the image, the model normally adopts a larger input image size.
 
-C. This generally produces a large number of negative anchor boxes when labeling anchor box categories. We can sample the negative anchor boxes to better balance the data categories. To do this, we can define a `negative_mining_ratio` parameter in the `multibox_target` function.
+B. Quando um objeto é relativamente grande em comparação com a imagem, o modelo normalmente adota um tamanho de imagem de entrada maior.
 
-D. Assign hyperparameters with different weights to the anchor box category loss and positive anchor box offset loss in the loss function.
+C. Isso geralmente produz um grande número de caixas de âncora negativas ao rotular as categorias da caixa de âncora. Podemos amostrar as caixas de âncora negativas para equilibrar melhor as categorias de dados. Para fazer isso, podemos definir um parâmetro `negative_mining_ratio` na função `multibox_target`.
 
-E. Refer to the SSD paper. What methods can be used to evaluate the precision of object detection models :cite:`Liu.Anguelov.Erhan.ea.2016`?
+D. Atribuir hiperparâmetros com pesos diferentes para a perda de categoria da caixa de âncora e a perda de deslocamento da caixa de âncora positiva na função de perda.
+
+E. Consulte o documento SSD. Quais métodos podem ser usados para avaliar a precisão dos modelos de detecção de objetos :cite:`Liu.Anguelov.Erhan.ea.2016`?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/373)
+[Discussões](https://discuss.d2l.ai/t/373)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1604)
+[Discussões](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDc3ODMwNDUsLTE5MDMwMjY3NjQsND
-MzMTAzMDcwLDc0NDYyNDQxMCwxNjc2MjIxNDkyLC0xMzc0Njc3
-OTc1LC0yMTQzNjc2OTc3LDIwMDU2MTA5MjIsMzczNTU4MzQsMz
-EwMzU1NTUyXX0=
+eyJoaXN0b3J5IjpbLTczMDA0Njg4OSwtMTkwMzAyNjc2NCw0Mz
+MxMDMwNzAsNzQ0NjI0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5
+NzUsLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMT
+AzNTU1NTJdfQ==
 -->
