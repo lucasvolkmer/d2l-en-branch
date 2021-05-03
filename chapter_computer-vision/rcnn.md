@@ -34,36 +34,35 @@ Especificamente, os R-CNNs são compostos por quatro partes principais:
 Embora os modelos R-CNN usem CNNs pré-treinados para extrair recursos de imagem com eficácia, a principal desvantagem é a velocidade lenta. Como você pode imaginar, podemos selecionar milhares de regiões propostas a partir de uma única imagem, exigindo milhares de cálculos diretos da CNN para realizar a detecção de objetos. Essa enorme carga de computação significa que os R-CNNs não são amplamente usados em aplicativos reais.
 
 
-## R-CNN Rápido
+## Fast R-CNN
 
 O principal gargalo de desempenho de um modelo R-CNN é a necessidade de extrair recursos de forma independente para cada região proposta. Como essas regiões têm um alto grau de sobreposição, a extração de recursos independentes resulta em um alto volume de cálculos repetitivos. Fast R-CNN melhora o R-CNN por apenas executar CNN
 computação progressiva na imagem como um todo.
 
-![Modelo de R-CNN rápido.](../img/fast-rcnn.svg)
+![Modelo Fast R-CNN.](../img/fast-rcnn.svg)
 :label:`fig_fast_r-cnn`
 
-:numref:`fig_fast_r-cnn` shows a Fast R-CNN model. Its primary computation
-steps are described below:
 
-1. Compared to an R-CNN model, a Fast R-CNN model uses the entire image as the
-   CNN input for feature extraction, rather than each proposed region. Moreover,
-   this network is generally trained to update the model parameters. As the
-   input is an entire image, the CNN output shape is $1 \times c \times h_1
+:numref:`fig_fast_r-cnn` mostra um modelo Fast R-CNN. Suas principais etapas de computação são descritas abaixo:
+
+1. Comparado a um modelo R-CNN, um modelo Fast R-CNN usa a imagem inteira como o
+   Entrada da CNN para extração de recursos, em vez de cada região proposta. Além disso,
+   esta rede é geralmente treinada para atualizar os parâmetros do modelo. Enquanto o
+   a entrada é uma imagem inteira, a forma de saída do CNN é $1 \times c \times h_1
    \times w_1$.
-1. Assuming selective search generates $n$ proposed regions, their different
-   shapes indicate regions of interests (RoIs) of different shapes on the CNN
-   output. Features of the same shapes must be extracted from these RoIs (here
-   we assume that the height is $h_2$ and the width is $w_2$). Fast R-CNN
-   introduces RoI pooling, which uses the CNN output and RoIs as input to output
-   a concatenation of the features extracted from each proposed region with the
-   shape $n \times c \times h_2 \times w_2$.
-1. A fully connected layer is used to transform the output shape to $n \times
-   d$, where $d$ is determined by the model design.
-1. During category prediction, the shape of the fully connected layer output is
-   again transformed to $n \times q$ and we use softmax regression ($q$ is the
-   number of categories). During bounding box prediction, the shape of the fully
-   connected layer output is again transformed to $n \times 4$. This means that
-   we predict the category and bounding box for each proposed region.
+1. Supondo que a pesquisa seletiva gere $n$ regiões propostas, seus diferentes
+   formas indicam regiões de interesses (RoIs) de diferentes formas na CNN
+   resultado. Características das mesmas formas devem ser extraídas dessas RoIs (aqui
+   assumimos que a altura é $h_2$ e a largura é $w_2$). R-CNN rápido
+   apresenta o pool de RoI, que usa a saída CNN e RoIs como entrada para saída
+   uma concatenação dos recursos extraídos de cada região proposta com o
+   forma $n \times c \times h_2 \times w_2$.
+1. Uma camada totalmente conectada é usada para transformar a forma de saída em $n \times d$, onde $d$ é determinado pelo design do modelo.
+1. Durante a previsão da categoria, a forma da saída da camada totalmente conectada é
+   novamente transformada em $n \times q$ e usamos a regressão softmax ($q$ é o
+   número de categorias). Durante a previsão da caixa delimitadora, a forma do
+   a saída da camada conectada é novamente transformada em $n \times 4$. Isso significa que
+   prevemos a categoria e a caixa delimitadora para cada região proposta.
 
 The RoI pooling layer in Fast R-CNN is somewhat different from the pooling
 layers we have discussed before. In a normal pooling layer, we set the pooling
@@ -223,6 +222,6 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDEzNTgwNzQsMTE2OTIxOTIwMiwxNj
-A0MDA5MTIsLTE0OTM0MDA2ODRdfQ==
+eyJoaXN0b3J5IjpbLTEyNDEzMDQwMjEsLTEzNDEzNTgwNzQsMT
+E2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OTM0MDA2ODRdfQ==
 -->
