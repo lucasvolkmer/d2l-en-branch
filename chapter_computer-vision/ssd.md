@@ -361,9 +361,9 @@ device, net = d2l.try_gpu(), TinySSD(num_classes=1)
 trainer = torch.optim.SGD(net.parameters(), lr=0.2, weight_decay=5e-4)
 ```
 
-### Defining Loss and Evaluation Functions
+### Definindo Funções de Perda e Avaliação
 
-Object detection is subject to two types of losses. The first is anchor box category loss. For this, we can simply reuse the cross-entropy loss function we used in image classification. The second loss is positive anchor box offset loss. Offset prediction is a normalization problem. However, here, we do not use the squared loss introduced previously. Rather, we use the $L_1$ norm loss, which is the absolute value of the difference between the predicted value and the ground-truth value. The mask variable `bbox_masks` removes negative anchor boxes and padding anchor boxes from the loss calculation. Finally, we add the anchor box category and offset losses to find the final loss function for the model.
+A detecção de objetos está sujeita a dois tipos de perdas. a primeira é a perda da categoria da caixa de âncora. Para isso, podemos simplesmente reutilizar a função de perda de entropia cruzada que usamos na classificação de imagens. A segunda perda é a perda de deslocamento da caixa de âncora positiva. A previsão de deslocamento é um problema de normalização. No entanto, aqui, não usamos a perda quadrática introduzida anteriormente. Em vez disso, usamos a perda de norma $L_1$, que é o valor absoluto da diferença entre o valor previsto e o valor verdadeiro. A variável de máscara `bbox_masks` remove caixas de âncora negativas e caixas de âncora de preenchimento do cálculo de perda. Finalmente, adicionamos a categoria de caixa de âncora e compensamos as perdas para encontrar a função de perda final para o modelo.
 
 ```{.python .input}
 cls_loss = gluon.loss.SoftmaxCrossEntropyLoss()
@@ -672,7 +672,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MzE0Mjg3OCwtMTkwMzAyNjc2NCw0Mz
+eyJoaXN0b3J5IjpbMTExNjU3MzE1MywtMTkwMzAyNjc2NCw0Mz
 MxMDMwNzAsNzQ0NjI0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5
 NzUsLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMT
 AzNTU1NTJdfQ==
