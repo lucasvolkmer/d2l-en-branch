@@ -99,7 +99,7 @@ X = torch.arange(16.).reshape(1, 1, 4, 4)
 X
 ```
 
-Assume that the height and width of the image are both 40 pixels and that selective search generates two proposed regions on the image. Each region is expressed as five elements: the region's object category and the $x, y$ coordinates of its upper-left and bottom-right corners.
+Suponha que a altura e a largura da imagem sejam de 40 pixels e que a busca seletiva gere duas regiões propostas na imagem. Cada região é expressa como cinco elementos: a categoria de objeto da região e as coordenadas $x, y$ de seus cantos superior esquerdo e inferior direito.
 
 ```{.python .input}
 rois = np.array([[0, 0, 0, 20, 20], [0, 0, 10, 30, 30]])
@@ -110,7 +110,7 @@ rois = np.array([[0, 0, 0, 20, 20], [0, 0, 10, 30, 30]])
 rois = torch.Tensor([[0, 0, 0, 20, 20], [0, 0, 10, 30, 30]])
 ```
 
-Because the height and width of `X` are $1/10$ of the height and width of the image, the coordinates of the two proposed regions are multiplied by 0.1 according to the `spatial_scale`, and then the RoIs are labeled on `X` as `X[:, :, 0:3, 0:3]` and `X[:, :, 1:4, 0:4]`, respectively. Finally, we divide the two RoIs into a sub-window grid and extract features with a height and width of 2.
+Como a altura e largura de `X` são $1/10$ da altura e largura da imagem, as coordenadas das duas regiões propostas são multiplicadas por 0,1 de acordo com `escala_espacial`, e então os RoIs são rotulados em `X` como `X[:,:, 0: 3, 0: 3]` e `X[:,:, 1: 4, 0: 4]`, respectivamente. Por fim, dividimos os dois RoIs em uma grade de subjanela e extraímos recursos com altura e largura 2.
 
 ```{.python .input}
 npx.roi_pooling(X, rois, pooled_size=(2, 2), spatial_scale=0.1)
@@ -121,7 +121,7 @@ npx.roi_pooling(X, rois, pooled_size=(2, 2), spatial_scale=0.1)
 torchvision.ops.roi_pool(X, rois, output_size=(2, 2), spatial_scale=0.1)
 ```
 
-## Faster R-CNN
+## *Faster* R-CNN
 
 In order to obtain precise object detection results, Fast R-CNN generally requires that many proposed regions be generated in selective search. Faster R-CNN replaces selective search with a region proposal network. This reduces the number of proposed regions generated, while ensuring precise object detection.
 
@@ -210,7 +210,7 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQxNTU5NDc4LC0xMjQxMzA0MDIxLC0xMz
-QxMzU4MDc0LDExNjkyMTkyMDIsMTYwNDAwOTEyLC0xNDkzNDAw
-Njg0XX0=
+eyJoaXN0b3J5IjpbMTQxMDExOTE5NiwtMTI0MTMwNDAyMSwtMT
+M0MTM1ODA3NCwxMTY5MjE5MjAyLDE2MDQwMDkxMiwtMTQ5MzQw
+MDY4NF19
 -->
