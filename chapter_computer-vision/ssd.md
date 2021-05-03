@@ -571,12 +571,12 @@ display(img, output.cpu(), threshold=0.9)
 
 ## Exercícios
 
-1. Due to space limitations, we have ignored some of the implementation details of the SSD model in this experiment. Can you further improve the model in the following areas?
+1. Devido a limitações de espaço, ignoramos alguns dos detalhes de implementação do modelo SSD neste experimento. Você pode melhorar ainda mais o modelo nas seguintes áreas?
 
 
-### Loss Function
+### Função de Perda
 
-A. For the predicted offsets, replace $L_1$ norm loss with $L_1$ regularization loss. This loss function uses a square function around zero for greater smoothness. This is the regularized area controlled by the hyperparameter $\sigma$:
+A. Para as compensações previstas, substitua $L_1$ perda de norma por $L_1$ de perda de regularização. Esta função de perda usa uma função quadrada em torno de zero para maior suavidade. Esta é a área regularizada controlada pelo hiperparâmetro $\sigma$:
 
 $$
 f(x) =
@@ -586,7 +586,7 @@ f(x) =
     \end{cases}
 $$
 
-When $\sigma$ is large, this loss is similar to the $L_1$ norm loss. When the value is small, the loss function is smoother.
+Quando $\sigma$ é grande, essa perda é semelhante à perda normal de $L_1$. Quando o valor é pequeno, a função de perda é mais suave.
 
 ```{.python .input}
 sigmas = [10, 1, 0.5]
@@ -672,8 +672,8 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNjc4MjE0MCwtMTkwMzAyNjc2NCw0Mz
-MxMDMwNzAsNzQ0NjI0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5
-NzUsLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMT
-AzNTU1NTJdfQ==
+eyJoaXN0b3J5IjpbNDgyOTk1MjcyLC0xOTAzMDI2NzY0LDQzMz
+EwMzA3MCw3NDQ2MjQ0MTAsMTY3NjIyMTQ5MiwtMTM3NDY3Nzk3
+NSwtMjE0MzY3Njk3NywyMDA1NjEwOTIyLDM3MzU1ODM0LDMxMD
+M1NTU1Ml19
 -->
