@@ -416,7 +416,7 @@ def bbox_eval(bbox_preds, bbox_labels, bbox_masks):
 
 ### Treinando o Modelo
 
-During model training, we must generate multiscale anchor boxes (`anchors`) in the model's forward computation process and predict the category (`cls_preds`) and offset (`bbox_preds`) for each anchor box. Afterwards, we label the category (`cls_labels`) and offset (`bbox_labels`) of each generated anchor box based on the label information `Y`. Finally, we calculate the loss function using the predicted and labeled category and offset values. To simplify the code, we do not evaluate the training dataset here.
+Durante o treinamento do modelo, devemos gerar caixas de âncora multiescala (`âncoras`) no processo de computação direta do modelo e prever a categoria (`cls_preds`) e o deslocamento (`bbox_preds`) para cada caixa de âncora. Depois, rotulamos a categoria (`cls_labels`) e o deslocamento (`bbox_labels`) de cada caixa de âncora gerada com base nas informações do rótulo `Y`. Finalmente, calculamos a função de perda usando a categoria predita e rotulada e os valores de compensação. Para simplificar o código, não avaliamos o conjunto de dados de treinamento aqui.
 
 ```{.python .input}
 num_epochs, timer = 20, d2l.Timer()
@@ -487,7 +487,7 @@ print(f'{len(train_iter.dataset) / timer.stop():.1f} examples/sec on '
       f'{str(device)}')
 ```
 
-## Prediction
+## Predição
 
 In the prediction stage, we want to detect all objects of interest in the image. Below, we read the test image and transform its size. Then, we convert it to the four-dimensional format required by the convolutional layer.
 
@@ -672,7 +672,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NjQzNTgwMiwtMTkwMzAyNjc2NCw0Mz
+eyJoaXN0b3J5IjpbMTc5Mjg5NDQwMiwtMTkwMzAyNjc2NCw0Mz
 MxMDMwNzAsNzQ0NjI0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5
 NzUsLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMT
 AzNTU1NTJdfQ==
