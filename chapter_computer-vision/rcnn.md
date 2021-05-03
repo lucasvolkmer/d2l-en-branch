@@ -157,20 +157,11 @@ Se os dados de treinamento forem rotulados com as posições de nível de pixel 
 ![Modelo de máscara R-CNN. ](../img/mask-rcnn.svg)
 :label:`fig_mask_r-cnn`
 
-As shown in :numref:`fig_mask_r-cnn`, Mask R-CNN is a modification to the Faster
-R-CNN model. Mask R-CNN models replace the RoI pooling layer with an RoI
-alignment layer. This allows the use of bilinear interpolation to retain spatial
-information on feature maps, making Mask R-CNN better suited for pixel-level
-predictions. The RoI alignment layer outputs feature maps of the same shape for
-all RoIs. This not only predicts the categories and bounding boxes of RoIs, but
-allows us to use an additional fully convolutional network to predict the
-pixel-level positions of objects. We will describe how to use fully
-convolutional networks to predict pixel-level semantics in images later in this
-chapter.
+Conforme mostrado em :numref:`fig_mask_r-cnn`, Mask R-CNN é uma modificação do modelo Faster R-CNN. Os modelos de máscara R-CNN substituem a camada de pooling RoI por uma camada de alinhamento RoI. Isso permite o uso de interpolação bilinear para reter informações espaciais em mapas de características, tornando o Mask R-CNN mais adequado para previsões em nível de pixel. A camada de alinhamento de RoI produz mapas de recursos do mesmo formato para todos os RoIs. Isso não apenas prevê as categorias e caixas delimitadoras de RoIs, mas nos permite usar uma rede totalmente convolucional adicional para prever as posições de objetos em nível de pixel. Descreveremos como usar redes totalmente convolucionais para prever a semântica em nível de pixel em imagens posteriormente neste capítulo.
 
 
 
-## Summary
+## Resumo
 
 * An R-CNN model selects several proposed regions and uses a CNN to perform
   forward computation and extract the features from each proposed region. It
@@ -199,7 +190,7 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MDI0NzQ0NCwtMTI0MTMwNDAyMSwtMT
-M0MTM1ODA3NCwxMTY5MjE5MjAyLDE2MDQwMDkxMiwtMTQ5MzQw
-MDY4NF19
+eyJoaXN0b3J5IjpbLTE3NDcwMzQwNTMsLTEyNDEzMDQwMjEsLT
+EzNDEzNTgwNzQsMTE2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OTM0
+MDA2ODRdfQ==
 -->
