@@ -389,7 +389,7 @@ def calc_loss(cls_preds, cls_labels, bbox_preds, bbox_labels, bbox_masks):
     return cls + bbox
 ```
 
-We can use the accuracy rate to evaluate the classification results. As we use the $L_1$ norm loss, we will use the average absolute error to evaluate the bounding box prediction results.
+Podemos usar a taxa de precisão para avaliar os resultados da classificação. Como usamos a perda de norma $L_1$, usaremos o erro absoluto médio para avaliar os resultados da previsão da caixa delimitadora.
 
 ```{.python .input}
 def cls_eval(cls_preds, cls_labels):
@@ -414,7 +414,7 @@ def bbox_eval(bbox_preds, bbox_labels, bbox_masks):
     return float((torch.abs((bbox_labels - bbox_preds) * bbox_masks)).sum())
 ```
 
-### Training the Model
+### Treinando o Modelo
 
 During model training, we must generate multiscale anchor boxes (`anchors`) in the model's forward computation process and predict the category (`cls_preds`) and offset (`bbox_preds`) for each anchor box. Afterwards, we label the category (`cls_labels`) and offset (`bbox_labels`) of each generated anchor box based on the label information `Y`. Finally, we calculate the loss function using the predicted and labeled category and offset values. To simplify the code, we do not evaluate the training dataset here.
 
@@ -672,7 +672,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNjU3MzE1MywtMTkwMzAyNjc2NCw0Mz
+eyJoaXN0b3J5IjpbMTc4NjQzNTgwMiwtMTkwMzAyNjc2NCw0Mz
 MxMDMwNzAsNzQ0NjI0NDEwLDE2NzYyMjE0OTIsLTEzNzQ2Nzc5
 NzUsLTIxNDM2NzY5NzcsMjAwNTYxMDkyMiwzNzM1NTgzNCwzMT
 AzNTU1NTJdfQ==
