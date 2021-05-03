@@ -12,7 +12,7 @@ Os modelos R-CNN primeiro selecionam várias regiões propostas de uma imagem (p
 ![Modelo R-CNN. ](../img/r-cnn.svg)
 :label:`fig_r-cnn`
 
-Specifically, R-CNNs are composed of four main parts:
+Especificamente, os R-CNNs são compostos por quatro partes principais:
 
 1. Selective search is performed on the input image to select multiple
    high-quality proposed regions
@@ -231,6 +231,6 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY5MDA0NTA5LDE2MDQwMDkxMiwtMTQ5Mz
-QwMDY4NF19
+eyJoaXN0b3J5IjpbLTI0MTk0NTk1NiwxNjA0MDA5MTIsLTE0OT
+M0MDA2ODRdfQ==
 -->
