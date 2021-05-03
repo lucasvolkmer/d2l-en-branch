@@ -36,13 +36,10 @@ Embora os modelos R-CNN usem CNNs pré-treinados para extrair recursos de imagem
 
 ## R-CNN Rápido
 
-The main performance bottleneck of an R-CNN model is the need to independently
-extract features for each proposed region. As these regions have a high degree
-of overlap, independent feature extraction results in a high volume of
-repetitive computations. Fast R-CNN improves on the R-CNN by only performing CNN
-forward computation on the image as a whole.
+O principal gargalo de desempenho de um modelo R-CNN é a necessidade de extrair recursos de forma independente para cada região proposta. Como essas regiões têm um alto grau de sobreposição, a extração de recursos independentes resulta em um alto volume de cálculos repetitivos. Fast R-CNN melhora o R-CNN por apenas executar CNN
+computação progressiva na imagem como um todo.
 
-![Fast R-CNN model. ](../img/fast-rcnn.svg)
+![Modelo de R-CNN rápido.](../img/fast-rcnn.svg)
 :label:`fig_fast_r-cnn`
 
 :numref:`fig_fast_r-cnn` shows a Fast R-CNN model. Its primary computation
@@ -226,6 +223,6 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NzU5NTg5NSwxMTY5MjE5MjAyLDE2MD
-QwMDkxMiwtMTQ5MzQwMDY4NF19
+eyJoaXN0b3J5IjpbLTEzNDEzNTgwNzQsMTE2OTIxOTIwMiwxNj
+A0MDA5MTIsLTE0OTM0MDA2ODRdfQ==
 -->
