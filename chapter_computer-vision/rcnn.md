@@ -64,17 +64,9 @@ computação progressiva na imagem como um todo.
    a saída da camada conectada é novamente transformada em $n \times 4$. Isso significa que
    prevemos a categoria e a caixa delimitadora para cada região proposta.
 
-The RoI pooling layer in Fast R-CNN is somewhat different from the pooling
-layers we have discussed before. In a normal pooling layer, we set the pooling
-window, padding, and stride to control the output shape. In an RoI pooling
-layer, we can directly specify the output shape of each region, such as
-specifying the height and width of each region as $h_2, w_2$. Assuming that the
-height and width of the RoI window are $h$ and $w$, this window is divided into
-a grid of sub-windows with the shape $h_2 \times w_2$. The size of each
-sub-window is about $(h/h_2) \times (w/w_2)$. The sub-window height and width
-must always be integers and the largest element is used as the output for a
-given sub-window. This allows the RoI pooling layer to extract features of the
-same shape from RoIs of different shapes.
+A camada de pooling de RoI no Fast R-CNN é um pouco diferente das camadas de pool que discutimos antes. Em uma camada de pooling normal, definimos a janela de pool, preenchimento e passo para controlar a forma de saída. Em uma camada de pooling de RoI, podemos especificar diretamente a forma de saída de cada região, como especificar a altura e a largura de cada região como $h_2, w_2$. Supondo que o
+altura e largura da janela RoI são $h$ e $w$, esta janela é dividida em uma grade de subjanelas com a forma h_2 \times w_2$. O tamanho de cada subjanela é de cerca de $(h/h_2) \times (w/w_2)$. A altura e largura da subjanela devem ser sempre inteiros e o maior elemento é usado como saída para um
+determinada subjanela. Isso permite que a camada de pooling de RoI extraia recursos do mesmo formato de RoIs de formatos diferentes.
 
 In :numref:`fig_roi`, we select an $3\times 3$ region as an RoI of the $4 \times
 4$ input. For this RoI, we use a $2\times 2$ RoI pooling layer to obtain a
@@ -222,6 +214,7 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDEzMDQwMjEsLTEzNDEzNTgwNzQsMT
-E2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OTM0MDA2ODRdfQ==
+eyJoaXN0b3J5IjpbLTM4ODI3NTY3MSwtMTI0MTMwNDAyMSwtMT
+M0MTM1ODA3NCwxMTY5MjE5MjAyLDE2MDQwMDkxMiwtMTQ5MzQw
+MDY4NF19
 -->
