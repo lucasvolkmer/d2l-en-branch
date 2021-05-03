@@ -163,19 +163,10 @@ Conforme mostrado em :numref:`fig_mask_r-cnn`, Mask R-CNN é uma modificação d
 
 ## Resumo
 
-* An R-CNN model selects several proposed regions and uses a CNN to perform
-  forward computation and extract the features from each proposed region. It
-  then uses these features to predict the categories and bounding boxes of
-  proposed regions.
-* Fast R-CNN improves on the R-CNN by only performing CNN forward computation on
-  the image as a whole. It introduces an RoI pooling layer to extract features
-  of the same shape from RoIs of different shapes.
-* Faster R-CNN replaces the selective search used in Fast R-CNN with a region
-  proposal network. This reduces the number of proposed regions generated, while
-  ensuring precise object detection.
-* Mask R-CNN uses the same basic structure as Faster R-CNN, but adds a fully
-  convolution layer to help locate objects at the pixel level and further
-  improve the precision of object detection.
+* Um modelo R-CNN seleciona várias regiões propostas e usa um CNN para realizar computação direta e extrair os recursos de cada região proposta. Em seguida, usa esses recursos para prever as categorias e caixas delimitadoras das regiões propostas.
+* Fast R-CNN melhora o R-CNN realizando apenas cálculos de encaminhamento de CNN na imagem como um todo. Ele apresenta uma camada de pooling de RoI para extrair recursos do mesmo formato de RoIs de formatos diferentes.
+* O R-CNN mais rápido substitui a pesquisa seletiva usada no Fast R-CNN por uma rede de proposta de região. Isso reduz o número de regiões propostas geradas, garantindo a detecção precisa do objeto.
+* Mask R-CNN usa a mesma estrutura básica que R-CNN mais rápido, mas adiciona uma camada de convolução completa para ajudar a localizar objetos no nível de pixel e melhorar ainda mais a precisão da detecção de objetos.
 
 
 ## Exercises
@@ -190,7 +181,7 @@ Conforme mostrado em :numref:`fig_mask_r-cnn`, Mask R-CNN é uma modificação d
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDcwMzQwNTMsLTEyNDEzMDQwMjEsLT
-EzNDEzNTgwNzQsMTE2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OTM0
-MDA2ODRdfQ==
+eyJoaXN0b3J5IjpbMjA2OTY2NzgwNywtMTI0MTMwNDAyMSwtMT
+M0MTM1ODA3NCwxMTY5MjE5MjAyLDE2MDQwMDkxMiwtMTQ5MzQw
+MDY4NF19
 -->
