@@ -1,13 +1,8 @@
 # Region-based CNNs (R-CNNs)
 
 
-Region-based convolutional neural networks or regions with CNN features (R-CNNs)
-are a pioneering approach that applies deep models to object detection
-:cite:`Girshick.Donahue.Darrell.ea.2014`. In this section, we will discuss
-R-CNNs and a series of improvements made to them: Fast R-CNN
-:cite:`Girshick.2015`, Faster R-CNN :cite:`Ren.He.Girshick.ea.2015`, and Mask R-CNN
-:cite:`He.Gkioxari.Dollar.ea.2017`. Due to space limitations, we will confine
-our discussion to the designs of these models.
+Redes neurais convolucionais baseadas em regiões ou regiões com recursos CNN (R-CNNs) são uma abordagem pioneira que aplica modelos profundos para detecção de objetos :cite:`Girshick.Donahue.Darrell.ea.2014`. Nesta seção, discutiremos R-CNNs e uma série de melhorias feitas a eles: Fast R-CNN :cite:`Girshick.2015`, Faster R-CNN :cite:`Ren.He.Girshick.ea.2015` e Mask R-CNN
+ :cite:`He.Gkioxari.Dollar.ea.2017`. Devido às limitações de espaço, limitaremos nossa discussão aos designs desses modelos.
 
 
 ## R-CNNs
@@ -241,5 +236,5 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTM0MDA2ODRdfQ==
+eyJoaXN0b3J5IjpbMTYwNDAwOTEyLC0xNDkzNDAwNjg0XX0=
 -->
