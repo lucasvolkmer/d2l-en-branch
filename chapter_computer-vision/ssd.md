@@ -622,15 +622,11 @@ for l, s in zip(lines, sigmas):
 d2l.plt.legend();
 ```
 
-In the experiment, we used cross-entropy loss for category prediction. Now,
-assume that the prediction probability of the actual category $j$ is $p_j$ and
-the cross-entropy loss is $-\log p_j$. We can also use the focal loss
-:cite:`Lin.Goyal.Girshick.ea.2017`. Given the positive hyperparameters $\gamma$
-and $\alpha$, this loss is defined as:
+No experimento, usamos a perda de entropia cruzada para a previsão da categoria. Agora, assuma que a probabilidade de predição da categoria real $j$ é $p_j$ e a perda de entropia cruzada é $-\log p_j$. Também podemos usar a perda focal :cite:`Lin.Goyal.Girshick.ea.2017`. Dados os hiperparâmetros positivos $\gamma$ e $\alpha$, essa perda é definida como:
 
 $$ - \alpha (1-p_j)^{\gamma} \log p_j.$$
 
-As you can see, by increasing $\gamma$, we can effectively reduce the loss when the probability of predicting the correct category is high.
+Como você pode ver, ao aumentar $\gamma$, podemos efetivamente reduzir a perda quando a probabilidade de prever a categoria correta for alta.
 
 ```{.python .input}
 def focal_loss(gamma, x):
@@ -672,7 +668,7 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyOTk1MjcyLC0xOTAzMDI2NzY0LDQzMz
+eyJoaXN0b3J5IjpbNjY4MTM2NjIxLC0xOTAzMDI2NzY0LDQzMz
 EwMzA3MCw3NDQ2MjQ0MTAsMTY3NjIyMTQ5MiwtMTM3NDY3Nzk3
 NSwtMjE0MzY3Njk3NywyMDA1NjEwOTIyLDM3MzU1ODM0LDMxMD
 M1NTU1Ml19
