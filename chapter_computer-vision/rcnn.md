@@ -121,12 +121,12 @@ npx.roi_pooling(X, rois, pooled_size=(2, 2), spatial_scale=0.1)
 torchvision.ops.roi_pool(X, rois, output_size=(2, 2), spatial_scale=0.1)
 ```
 
-## *Faster* R-CNN
+## R-CNN Mais Rápido
 
-In order to obtain precise object detection results, Fast R-CNN generally requires that many proposed regions be generated in selective search. Faster R-CNN replaces selective search with a region proposal network. This reduces the number of proposed regions generated, while ensuring precise object detection.
+A fim de obter resultados precisos de detecção de objeto, Fast R-CNN geralmente requer que muitas regiões propostas sejam geradas em busca seletiva. O Faster R-CNN substitui a pesquisa seletiva por uma rede de proposta regional. Isso reduz o número de regiões propostas geradas, garantindo a detecção precisa do objeto.
 
 
-![Faster R-CNN model. ](../img/faster-rcnn.svg)
+![Modelo R-CNN mais rápido.](../img/faster-rcnn.svg)
 :label:`fig_faster_r-cnn`
 
 
@@ -210,7 +210,7 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMDExOTE5NiwtMTI0MTMwNDAyMSwtMT
-M0MTM1ODA3NCwxMTY5MjE5MjAyLDE2MDQwMDkxMiwtMTQ5MzQw
-MDY4NF19
+eyJoaXN0b3J5IjpbLTE0MjE2ODIxMzEsLTEyNDEzMDQwMjEsLT
+EzNDEzNTgwNzQsMTE2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OTM0
+MDA2ODRdfQ==
 -->
