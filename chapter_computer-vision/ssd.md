@@ -650,7 +650,7 @@ for l, gamma in zip(lines, [0, 1, 5]):
 d2l.plt.legend();
 ```
 
-### Training and Prediction
+### Treinamento e Previsão
 
 B. When an object is relatively large compared to the image, the model normally adopts a larger input image size.
 
@@ -668,8 +668,8 @@ E. Refer to the SSD paper. What methods can be used to evaluate the precision of
 [Discussions](https://discuss.d2l.ai/t/1604)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY4MTM2NjIxLC0xOTAzMDI2NzY0LDQzMz
-EwMzA3MCw3NDQ2MjQ0MTAsMTY3NjIyMTQ5MiwtMTM3NDY3Nzk3
-NSwtMjE0MzY3Njk3NywyMDA1NjEwOTIyLDM3MzU1ODM0LDMxMD
-M1NTU1Ml19
+eyJoaXN0b3J5IjpbLTE5NDc3ODMwNDUsLTE5MDMwMjY3NjQsND
+MzMTAzMDcwLDc0NDYyNDQxMCwxNjc2MjIxNDkyLC0xMzc0Njc3
+OTc1LC0yMTQzNjc2OTc3LDIwMDU2MTA5MjIsMzczNTU4MzQsMz
+EwMzU1NTUyXX0=
 -->
