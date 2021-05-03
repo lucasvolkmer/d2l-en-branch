@@ -132,19 +132,19 @@ A fim de obter resultados precisos de detecção de objeto, Fast R-CNN geralment
 
 :numref:`fig_faster_r-cnn` mostra um modelo Faster R-CNN. Comparado ao Fast R-CNN, o Faster R-CNN apenas muda o método para gerar regiões propostas de pesquisa seletiva para rede de proposta de região. As outras partes do modelo permanecem inalteradas. O processo de computação de rede de proposta de região detalhada é descrito abaixo:
 
-1. We use a $3\times 3$ convolutional layer with a padding of 1 to transform the
-   CNN output and set the number of output channels to $c$. This way, each
-   element in the feature map the CNN extracts from the image is a new feature
-   with a length of $c$.
-1. We use each element in the feature map as a center to generate multiple
-   anchor boxes of different sizes and aspect ratios and then label them.
-1. We use the features of the elements of length $c$ at the center on the anchor
-   boxes to predict the binary category (object or background) and bounding box
-   for their respective anchor boxes.
-1. Then, we use non-maximum suppression to remove similar bounding box results
-   that correspond to category predictions of "object". Finally, we output the
-   predicted bounding boxes as the proposed regions required by the RoI pooling
-   layer.
+1. Usamos uma camada convolucional $3\times 3$ com um preenchimento de 1 para transformar a
+    saída CNN e definir o número de canais de saída para $c$. Assim, cada
+    elemento no mapa de recursos que a CNN extrai da imagem é um novo recurso
+    com um comprimento de $c$.
+1. Usamos cada elemento no mapa de recursos como um centro para gerar várias
+    caixas de âncora de diferentes tamanhos e proporções de aspecto e, em seguida, etiquetá-las.
+1. Usamos os recursos dos elementos de comprimento $c$ no centro da âncora
+    caixas para prever a categoria binária (objeto ou fundo) e caixa delimitadora
+    para suas respectivas caixas de âncora.
+1. Em seguida, usamos a supressão não máxima para remover resultados semelhantes da caixa delimitadora
+    que correspondem às previsões da categoria de "objeto". Finalmente, nós produzimos as
+    caixas delimitadoras previstas como as regiões propostas exigidas pelo *pooling* de RoI
+    camada.
 
 
 It is worth noting that, as a part of the Faster R-CNN model, the region
@@ -206,7 +206,7 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDgxNDkzNjMsLTEyNDEzMDQwMjEsLT
-EzNDEzNTgwNzQsMTE2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OTM0
-MDA2ODRdfQ==
+eyJoaXN0b3J5IjpbLTQxNjU5NjUzMCwtMTI0MTMwNDAyMSwtMT
+M0MTM1ODA3NCwxMTY5MjE5MjAyLDE2MDQwMDkxMiwtMTQ5MzQw
+MDY4NF19
 -->
