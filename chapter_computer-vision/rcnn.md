@@ -169,19 +169,19 @@ Conforme mostrado em :numref:`fig_mask_r-cnn`, Mask R-CNN é uma modificação d
 * Mask R-CNN usa a mesma estrutura básica que R-CNN mais rápido, mas adiciona uma camada de convolução completa para ajudar a localizar objetos no nível de pixel e melhorar ainda mais a precisão da detecção de objetos.
 
 
-## Exercises
+## Exercícios
 
-1. Study the implementation of each model in the [GluonCV toolkit](https://github.com/dmlc/gluon-cv/) related to this section.
+1. Estude a implementação de cada modelo no [kit de ferramentas GluonCV](https://github.com/dmlc/gluon-cv/) relacionado a esta seção.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/374)
+[Discussões](https://discuss.d2l.ai/t/374)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1409)
+[Discussões](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTY2NzgwNywtMTI0MTMwNDAyMSwtMT
+eyJoaXN0b3J5IjpbMTk5NDAwMjg5OCwtMTI0MTMwNDAyMSwtMT
 M0MTM1ODA3NCwxMTY5MjE5MjAyLDE2MDQwMDkxMiwtMTQ5MzQw
 MDY4NF19
 -->
