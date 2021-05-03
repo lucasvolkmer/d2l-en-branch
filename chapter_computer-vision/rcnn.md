@@ -14,23 +14,22 @@ Os modelos R-CNN primeiro selecionam várias regiões propostas de uma imagem (p
 
 Especificamente, os R-CNNs são compostos por quatro partes principais:
 
-1. Selective search is performed on the input image to select multiple
-   high-quality proposed regions
-   :cite:`Uijlings.Van-De-Sande.Gevers.ea.2013`. These proposed regions are
-   generally selected on multiple scales and have different shapes and
-   sizes. The category and ground-truth bounding box of each proposed region is
-   labeled.
-1. A pre-trained CNN is selected and placed, in truncated form, before the
-   output layer. It transforms each proposed region into the input dimensions
-   required by the network and uses forward computation to output the features
-   extracted from the proposed regions.
-1. The features and labeled category of each proposed region are combined as an
-   example to train multiple support vector machines for object
-   classification. Here, each support vector machine is used to determine
-   whether an example belongs to a certain category.
-1. The features and labeled bounding box of each proposed region are combined as
-   an example to train a linear regression model for ground-truth bounding box
-   prediction.
+1. A pesquisa seletiva é realizada na imagem de entrada para selecionar várias
+   regiões propostas de alta qualidade
+   :cite:`Uijlings.Van-De-Sande.Gevers.ea.2013`. Essas regiões propostas são
+   geralmente selecionados em várias escalas e têm diferentes formas e
+   tamanhos. A categoria e a caixa delimitadora da verdade fundamental de cada região proposta é
+   etiquetada.
+1. Um CNN pré-treinado é selecionado e colocado, de forma truncada, antes da
+   camada de saída. Ele transforma cada região proposta nas dimensões de entrada
+   exigido pela rede e usa computação direta para gerar os recursos
+   extraídos das regiões propostas.
+1. Os recursos e a categoria rotulada de cada região proposta são combinados como um
+   exemplo para treinar várias máquinas de vetores de suporte para classificação de objeto.
+   Aqui, cada máquina de vetor de suporte é usada para determinar
+   se um exemplo pertence a uma determinada categoria.
+1. Os recursos e a caixa delimitadora rotulada de cada região proposta são combinados como
+   um exemplo para treinar um modelo de regressão linear para a predição da caixa delimitadora de verdade básica.
 
 Although R-CNN models use pre-trained CNNs to effectively extract image
 features, the main downside is the slow speed. As you can imagine, we can select
@@ -231,6 +230,6 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MTk0NTk1NiwxNjA0MDA5MTIsLTE0OT
+eyJoaXN0b3J5IjpbMTE2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OT
 M0MDA2ODRdfQ==
 -->
