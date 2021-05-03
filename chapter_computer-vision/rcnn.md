@@ -31,14 +31,10 @@ Especificamente, os R-CNNs são compostos por quatro partes principais:
 1. Os recursos e a caixa delimitadora rotulada de cada região proposta são combinados como
    um exemplo para treinar um modelo de regressão linear para a predição da caixa delimitadora de verdade básica.
 
-Although R-CNN models use pre-trained CNNs to effectively extract image
-features, the main downside is the slow speed. As you can imagine, we can select
-thousands of proposed regions from a single image, requiring thousands of
-forward computations from the CNN to perform object detection. This massive
-computing load means that R-CNNs are not widely used in actual applications.
+Embora os modelos R-CNN usem CNNs pré-treinados para extrair recursos de imagem com eficácia, a principal desvantagem é a velocidade lenta. Como você pode imaginar, podemos selecionar milhares de regiões propostas a partir de uma única imagem, exigindo milhares de cálculos diretos da CNN para realizar a detecção de objetos. Essa enorme carga de computação significa que os R-CNNs não são amplamente usados em aplicativos reais.
 
 
-## Fast R-CNN
+## R-CNN Rápido
 
 The main performance bottleneck of an R-CNN model is the need to independently
 extract features for each proposed region. As these regions have a high degree
@@ -230,6 +226,6 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OT
-M0MDA2ODRdfQ==
+eyJoaXN0b3J5IjpbMTg4NzU5NTg5NSwxMTY5MjE5MjAyLDE2MD
+QwMDkxMiwtMTQ5MzQwMDY4NF19
 -->
