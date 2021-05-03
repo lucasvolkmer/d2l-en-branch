@@ -74,11 +74,11 @@ Em :numref:`fig_roi`, selecionamos uma região $3\times 3$ como um RoI da entrad
 :label:`fig_roi`
 
 :begin_tab:`mxnet`
-We use the `ROIPooling` function to demonstrate the RoI pooling layer computation. Assume that the CNN extracts the feature `X` with both a height and width of 4 and only a single channel.
+Usamos a função `ROIPooling` para demonstrar a computação da camada de pooling RoI. Suponha que a CNN extraia o elemento `X` com altura e largura 4 e apenas um único canal.
 :end_tab:
 
 :begin_tab:`pytorch`
-We use the `roi_pool` function from `torchvision` to demonstrate the RoI pooling layer computation. Assume that the CNN extracts the feature `X` with both a height and width of 4 and only a single channel.
+Usamos a função `roi_pool` de` torchvision` para demonstrar a computação da camada de pooling RoI. Suponha que a CNN extraia o elemento `X` com altura e largura 4 e apenas um único canal.
 :end_tab:
 
 ```{.python .input}
@@ -210,7 +210,7 @@ chapter.
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDkzMDU0MzcsLTEyNDEzMDQwMjEsLT
-EzNDEzNTgwNzQsMTE2OTIxOTIwMiwxNjA0MDA5MTIsLTE0OTM0
-MDA2ODRdfQ==
+eyJoaXN0b3J5IjpbMzQxNTU5NDc4LC0xMjQxMzA0MDIxLC0xMz
+QxMzU4MDc0LDExNjkyMTkyMDIsMTYwNDAwOTEyLC0xNDkzNDAw
+Njg0XX0=
 -->
