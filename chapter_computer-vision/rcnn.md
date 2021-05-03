@@ -240,3 +240,6 @@ chapter.
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1409)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE0OTM0MDA2ODRdfQ==
+-->
