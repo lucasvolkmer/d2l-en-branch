@@ -220,7 +220,7 @@ d2l.show_images(imgs[::2] + imgs[1::2], 2, n);
 
 ### Classes de *Datasets* para Segmentação Semântica Personalizada
 
-We use the inherited `Dataset` class provided by Gluon to customize the semantic segmentation dataset class `VOCSegDataset`. By implementing the `__getitem__` function, we can arbitrarily access the input image with the index `idx` and the category indexes for each of its pixels from the dataset. As some images in the dataset may be smaller than the output dimensions specified for random cropping, we must remove these example by using a custom `filter` function. In addition, we define the `normalize_image` function to normalize each of the three RGB channels of the input images.
+Usamos a classe `Dataset` herdada fornecida pelo Gluon para personalizar a classe de conjunto de dados de segmentação semântica `VOCSegDataset`. Implementando a função `__getitem__`, podemos acessar arbitrariamente a imagem de entrada com o índice `idx` e os índices de categoria para cada um de seus pixels do conjunto de dados. Como algumas imagens no conjunto de dados podem ser menores do que as dimensões de saída especificadas para corte aleatório, devemos remover esses exemplos usando uma função `filter` personalizada. Além disso, definimos a função `normalize_image` para normalizar cada um dos três canais RGB das imagens de entrada.
 
 ```{.python .input}
 #@save
@@ -290,9 +290,9 @@ class VOCSegDataset(torch.utils.data.Dataset):
         return len(self.features)
 ```
 
-### Reading the Dataset
+### Lendo o Dataset
 
-Using the custom `VOCSegDataset` class, we create the training set and testing set instances. We assume the random cropping operation output images in the shape $320\times 480$. Below, we can see the number of examples retained in the training and testing sets.
+Usando a classe `VOCSegDataset` personalizada, criamos o conjunto de treinamento e as instâncias do conjunto de teste. Assumimos que a operação de corte aleatório produz imagens no formato $320\times 480$. Abaixo, podemos ver o número de exemplos retidos nos conjuntos de treinamento e teste.
 
 ```{.python .input}
 #@tab all
@@ -381,6 +381,6 @@ def load_data_voc(batch_size, crop_size):
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDM4MDEzMjcsLTIwMDUzNDc0MzYsLT
-EyOTA0NDU2NjgsMjk0NTE1OTE4LC0yMDE5NTg0MTQ3XX0=
+eyJoaXN0b3J5IjpbOTY4NzE1NjMsLTIwMDUzNDc0MzYsLTEyOT
+A0NDU2NjgsMjk0NTE1OTE4LC0yMDE5NTg0MTQ3XX0=
 -->
