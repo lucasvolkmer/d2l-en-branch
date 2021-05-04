@@ -3,11 +3,11 @@
 
 Em nossa discussão sobre os problemas de detecção de objetos nas seções anteriores, usamos apenas caixas delimitadoras retangulares para rotular e prever objetos em imagens. Nesta seção, veremos a segmentação semântica, que tenta segmentar imagens em regiões com diferentes categorias semânticas. Essas regiões semânticas rotulam e prevêem objetos no nível do pixel. :numref:`fig_segmentation` mostra uma imagem semanticamente segmentada, com áreas marcadas como "cachorro" , "gato" e "fundo". Como você pode ver, em comparação com a detecção de objetos, a segmentação semântica rotula áreas com bordas em nível de pixel, para uma precisão significativamente maior.
 
-![Semantically-segmented image, with areas labeled "dog", "cat", and "background". ](../img/segmentation.svg)
+![Imagem segmentada semanticamente, com áreas rotuladas "cachorro", "gato" e "plano de fundo". ](../img/segmentation.svg)
 :label:`fig_segmentation`
 
 
-## Image Segmentation and Instance Segmentation
+## Segmentação de Imagem e Segmentação de Instância
 
 In the computer vision field, there are two important methods related to semantic segmentation: image segmentation and instance segmentation. Here, we will distinguish these concepts from semantic segmentation as follows:
 
@@ -380,5 +380,6 @@ def load_data_voc(batch_size, crop_size):
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk0NTE1OTE4LC0yMDE5NTg0MTQ3XX0=
+eyJoaXN0b3J5IjpbOTk5NTU1NDA0LDI5NDUxNTkxOCwtMjAxOT
+U4NDE0N119
 -->
