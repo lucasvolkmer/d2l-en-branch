@@ -9,13 +9,14 @@ Em nossa discussão sobre os problemas de detecção de objetos nas seções ant
 
 ## Segmentação de Imagem e Segmentação de Instância
 
-In the computer vision field, there are two important methods related to semantic segmentation: image segmentation and instance segmentation. Here, we will distinguish these concepts from semantic segmentation as follows:
 
-* Image segmentation divides an image into several constituent regions. This method generally uses the correlations between pixels in an image. During training, labels are not needed for image pixels. However, during prediction, this method cannot ensure that the segmented regions have the semantics we want. If we input the image in 9.10, image segmentation might divide the dog into two regions, one covering the dog's mouth and eyes where black is the prominent color and the other covering the rest of the dog where yellow is the prominent color.
-* Instance segmentation is also called simultaneous detection and segmentation. This method attempts to identify the pixel-level regions of each object instance in an image. In contrast to semantic segmentation, instance segmentation not only distinguishes semantics, but also different object instances. If an image contains two dogs, instance segmentation will distinguish which pixels belong to which dog.
+No campo da visão computacional, existem dois métodos importantes relacionados à segmentação semântica: segmentação de imagens e segmentação de instâncias. Aqui, vamos distinguir esses conceitos da segmentação semântica da seguinte forma:
+
+* A segmentação da imagem divide uma imagem em várias regiões constituintes. Este método geralmente usa as correlações entre pixels em uma imagem. Durante o treinamento, os rótulos não são necessários para pixels de imagem. No entanto, durante a previsão, esse método não pode garantir que as regiões segmentadas tenham a semântica que desejamos. Se inserirmos a imagem em 9.10, a segmentação da imagem pode dividir o cão em duas regiões, uma cobrindo a boca do cão e os olhos onde o preto é a cor proeminente e a outra cobrindo o resto do cão onde o amarelo é a cor proeminente.
+* A segmentação da instância também é chamada de detecção e segmentação simultâneas. Este método tenta identificar as regiões de nível de pixel de cada instância de objeto em uma imagem. Em contraste com a segmentação semântica, a segmentação de instância não apenas distingue a semântica, mas também diferentes instâncias de objeto. Se uma imagem contém dois cães, a segmentação de instância distingue quais pixels pertencem a cada cachorro.
 
 
-## The Pascal VOC2012 Semantic Segmentation Dataset
+## O Conjunto de Dados de Segmentação Semântica Pascal VOC2012
 
 In the semantic segmentation field, one important dataset is [Pascal VOC2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/). To better understand this dataset, we must first import the package or module needed for the experiment.
 
@@ -380,6 +381,6 @@ def load_data_voc(batch_size, crop_size):
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk5NTU1NDA0LDI5NDUxNTkxOCwtMjAxOT
-U4NDE0N119
+eyJoaXN0b3J5IjpbLTEzOTQ3MzUwNzYsMjk0NTE1OTE4LC0yMD
+E5NTg0MTQ3XX0=
 -->
