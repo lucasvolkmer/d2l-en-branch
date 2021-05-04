@@ -130,7 +130,7 @@ tconv(conv(X)).shape == X.shape
 
 ## Analogia à Transposição de Matriz
 
-A convolução transposta leva o nome da transposição da matriz. Na verdade, as operações de convolução também podem ser realizadas por multiplicação de matrizes. No exemplo abaixo, definimos uma entrada $X$ $3\times 3$ com kernel $K$ $2\times 2$, e então usamos `corr2d` para calcular a saída da convolução.
+A convolução transposta leva o nome da transposição da matriz. Na verdade, as operações de convolução também podem ser realizadas por multiplicação de matrizes. No exemplo abaixo, definimos uma entrada $X$ $3\times 3$ com *kernel* $K$ $2\times 2$, e então usamos `corr2d` para calcular a saída da convolução.
 
 ```{.python .input}
 #@tab all
@@ -154,7 +154,7 @@ W = kernel2matrix(K)
 W
 ```
 
-Then the convolution operator can be implemented by matrix multiplication with proper reshaping.
+Então, o operador de convolução pode ser implementado por multiplicação de matriz com remodelagem adequada.
 
 ```{.python .input}
 Y == np.dot(W, X.reshape(-1)).reshape(2, 2)
@@ -165,7 +165,7 @@ Y == np.dot(W, X.reshape(-1)).reshape(2, 2)
 Y == torch.mv(W, X.reshape(-1)).reshape(2, 2)
 ```
 
-We can implement transposed convolution as a matrix multiplication as well by reusing `kernel2matrix`. To reuse the generated $W$, we construct a $2\times 2$ input, so the corresponding weight matrix will have a shape $(9, 4)$, which is $W^\top$. Let us verify the results.
+Podemos implementar a convolução transposta como uma multiplicação de matriz reutilizando `kernel2matrix`. Para reutilizar o $W$ gerado, construímos uma entrada $2\times 2$, de modo que a matriz de peso correspondente terá uma forma $(9, 4)$, que é $W^\top$. Deixe-nos verificar os resultados.
 
 ```{.python .input}
 X = np.array([[0, 1], [2, 3]])
@@ -180,7 +180,7 @@ Y = trans_conv(X, K)
 Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 ```
 
-## Summary
+## Resumo
 
 * Compared to convolutions that reduce inputs through kernels, transposed convolutions broadcast inputs.
 * If a convolution layer reduces the input width and height by $n_w$ and $h_h$ time, respectively. Then a transposed convolution layer with the same kernel sizes, padding and strides will increase the input width and height by $n_w$ and $n_h$, respectively.
@@ -198,6 +198,6 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 [Discussions](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NzUzODQsLTE0MzgzMjU5MzUsMTU0Mj
-gyNDE5Ml19
+eyJoaXN0b3J5IjpbMTc2MzgyNjU0NiwtMTQzODMyNTkzNSwxNT
+QyODI0MTkyXX0=
 -->
