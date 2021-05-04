@@ -51,8 +51,8 @@ d2l.DATA_HUB['voc2012'] = (d2l.DATA_URL + 'VOCtrainval_11-May-2012.tar',
 voc_dir = d2l.download_extract('voc2012', 'VOCdevkit/VOC2012')
 ```
 
-Go to `../data/VOCdevkit/VOC2012` to see the different parts of the dataset.
-The `ImageSets/Segmentation` path contains text files that specify the training and testing examples. The `JPEGImages` and `SegmentationClass` paths contain the example input images and labels, respectively. These labels are also in image format, with the same dimensions as the input images to which they correspond. In the labels, pixels with the same color belong to the same semantic category. The `read_voc_images` function defined below reads all input images and labels to the memory.
+Vá para `../data/VOCdevkit/VOC2012` para ver as diferentes partes do conjunto de dados.
+O caminho `ImageSets/Segmentation` contém arquivos de texto que especificam os exemplos de treinamento e teste. Os caminhos `JPEGImages` e` SegmentationClass` contêm as imagens de entrada de exemplo e rótulos, respectivamente. Essas etiquetas também estão em formato de imagem, com as mesmas dimensões das imagens de entrada às quais correspondem. Nos rótulos, os pixels com a mesma cor pertencem à mesma categoria semântica. A função `read_voc_images` definida abaixo lê todas as imagens de entrada e rótulos para a memória.
 
 ```{.python .input}
 #@save
@@ -381,6 +381,6 @@ def load_data_voc(batch_size, crop_size):
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU4MzYyMzgyLDI5NDUxNTkxOCwtMjAxOT
-U4NDE0N119
+eyJoaXN0b3J5IjpbLTEyOTA0NDU2NjgsMjk0NTE1OTE4LC0yMD
+E5NTg0MTQ3XX0=
 -->
