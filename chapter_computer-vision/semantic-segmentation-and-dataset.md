@@ -94,7 +94,7 @@ def read_voc_images(voc_dir, is_train=True):
 train_features, train_labels = read_voc_images(voc_dir, True)
 ```
 
-We draw the first five input images and their labels. In the label images, white represents borders and black represents the background. Other colors correspond to different categories.
+Desenhamos as primeiras cinco imagens de entrada e seus rótulos. Nas imagens do rótulo, o branco representa as bordas e o preto representa o fundo. Outras cores correspondem a diferentes categorias.
 
 ```{.python .input}
 n = 5
@@ -110,7 +110,7 @@ imgs = [img.permute(1,2,0) for img in imgs]
 d2l.show_images(imgs, 2, n);
 ```
 
-Next, we list each RGB color value in the labels and the categories they label.
+A seguir, listamos cada valor de cor RGB nos rótulos e as categorias que eles rotulam.
 
 ```{.python .input}
 #@tab all
@@ -129,7 +129,7 @@ VOC_CLASSES = ['background', 'aeroplane', 'bicycle', 'bird', 'boat',
                'potted plant', 'sheep', 'sofa', 'train', 'tv/monitor']
 ```
 
-After defining the two constants above, we can easily find the category index for each pixel in the labels.
+Depois de definir as duas constantes acima, podemos encontrar facilmente o índice de categoria para cada pixel nos rótulos.
 
 ```{.python .input}
 #@save
@@ -168,7 +168,7 @@ def voc_label_indices(colormap, colormap2label):
     return colormap2label[idx]
 ```
 
-For example, in the first example image, the category index for the front part of the airplane is 1 and the index for the background is 0.
+Por exemplo, na primeira imagem de exemplo, o índice de categoria para a parte frontal do avião é 1 e o índice para o fundo é 0.
 
 ```{.python .input}
 #@tab all
@@ -176,7 +176,7 @@ y = voc_label_indices(train_labels[0], build_colormap2label())
 y[105:115, 130:140], VOC_CLASSES[1]
 ```
 
-### Data Preprocessing
+### Pré-processamento de Dados
 
 In the preceding chapters, we scaled images to make them fit the input shape of the model. In semantic segmentation, this method would require us to re-map the predicted pixel categories back to the original-size input image. It would be very difficult to do this precisely, especially in segmented regions with different semantics. To avoid this problem, we crop the images to set dimensions and do not scale them. Specifically, we use the random cropping method used in image augmentation to crop the same region from input images and their labels.
 
@@ -381,6 +381,6 @@ def load_data_voc(batch_size, crop_size):
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTA0NDU2NjgsMjk0NTE1OTE4LC0yMD
-E5NTg0MTQ3XX0=
+eyJoaXN0b3J5IjpbLTIwMDUzNDc0MzYsLTEyOTA0NDU2NjgsMj
+k0NTE1OTE4LC0yMDE5NTg0MTQ3XX0=
 -->
