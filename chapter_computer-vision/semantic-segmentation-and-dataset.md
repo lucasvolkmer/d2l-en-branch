@@ -326,7 +326,7 @@ for X, Y in train_iter:
     break
 ```
 
-### Putting All Things Together
+### Juntando Tudo
 
 Finally, we define a function `load_data_voc` that  downloads and loads this dataset, and then returns the data iterators.
 
@@ -381,6 +381,6 @@ def load_data_voc(batch_size, crop_size):
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIxNjM2MzUwLC0yMDA1MzQ3NDM2LC0xMj
-kwNDQ1NjY4LDI5NDUxNTkxOCwtMjAxOTU4NDE0N119
+eyJoaXN0b3J5IjpbLTUwNjMzNjExNCwtMjAwNTM0NzQzNiwtMT
+I5MDQ0NTY2OCwyOTQ1MTU5MTgsLTIwMTk1ODQxNDddfQ==
 -->
