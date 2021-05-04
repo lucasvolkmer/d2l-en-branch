@@ -1,8 +1,7 @@
-# Transposed Convolution
+# Convolução Transposta
 :label:`sec_transposed_conv`
 
-The layers we introduced so far for convolutional neural networks, including
-convolutional layers (:numref:`sec_conv_layer`) and pooling layers (:numref:`sec_pooling`), often reduce the input width and height, or keep them unchanged. Applications such as semantic segmentation (:numref:`sec_semantic_segmentation`) and generative adversarial networks (:numref:`sec_dcgan`), however, require to predict values for each pixel and therefore needs to increase input width and height. Transposed convolution, also named fractionally-strided convolution :cite:`Dumoulin.Visin.2016` or deconvolution :cite:`Long.Shelhamer.Darrell.2015`, serves this purpose.
+As camadas que apresentamos até agora para redes neurais convolucionais, incluindo camadas convolucionais (:numref:`sec_conv_layer`) e camadas de pooling (:numref:`sec_pooling`), geralmente reduzem a largura e altura de entrada ou as mantêm inalteradas. Aplicativos como segmentação semântica (:numref:`sec_semantic_segmentation`) e redes adversárias geradoras (:numref:`sec_dcgan`), no entanto, exigem prever valores para cada pixel e, portanto, precisam aumentar a largura e altura de entrada. A convolução transposta, também chamada de convolução fracionada :cite:`Dumoulin.Visin.2016` ou deconvolução :cite:`Long.Shelhamer.Darrell.2015`, serve a este propósito.
 
 ```{.python .input}
 from mxnet import np, npx, init
@@ -197,5 +196,5 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 [Discussions](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MjgyNDE5Ml19
+eyJoaXN0b3J5IjpbLTEyODY4NjUzNjEsMTU0MjgyNDE5Ml19
 -->
