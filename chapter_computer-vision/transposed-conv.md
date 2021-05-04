@@ -38,9 +38,10 @@ def trans_conv(X, K):
     return Y
 ```
 
-Remember the convolution computes results by `Y[i, j] = (X[i: i + h, j: j + w] * K).sum()` (refer to `corr2d` in :numref:`sec_conv_layer`), which summarizes input values through the kernel. While the transposed convolution broadcasts input values through the kernel, which results in a larger output shape.
 
-Verify the results in :numref:`fig_trans_conv`.
+Lembre-se de que a convolução calcula os resultados por `Y[i, j] = (X[i: i + h, j: j + w] * K).sum()` (consulte `corr2d` em :numref:`sec_conv_layer`), que resume os valores de entrada por meio do *kernel*. Enquanto a convolução transposta transmite valores de entrada por meio do *kernel*, o que resulta em uma forma de saída maior.
+
+Verifique os resultados em :numref:`fig_trans_conv`.
 
 ```{.python .input}
 #@tab all
@@ -50,11 +51,11 @@ trans_conv(X, K)
 ```
 
 :begin_tab:`mxnet`
-Or we can use `nn.Conv2DTranspose` to obtain the same results. As `nn.Conv2D`, both input and kernel should be 4-D tensors.
+Ou podemos usar `nn.Conv2DTranspose` para obter os mesmos resultados. Como `nn.Conv2D`, tanto a entrada quanto o *kernel* devem ser tensores 4-D.
 :end_tab:
 
 :begin_tab:`pytorch`
-Or we can use `nn.ConvTranspose2d` to obtain the same results. As `nn.Conv2d`, both input and kernel should be 4-D tensors.
+Ou podemos usar `nn.ConvTranspose2d` para obter os mesmos resultados. Como `nn.Conv2d`, tanto a entrada quanto o *kernel* devem ser tensores 4-D.
 :end_tab:
 
 ```{.python .input}
@@ -72,7 +73,7 @@ tconv.weight.data = K
 tconv(X)
 ```
 
-## Padding, Strides, and Channels
+## Preenchimento, Passos e Canais
 
 We apply padding elements to the input in convolution, while they are applied to the output in transposed convolution. A $1\times 1$ padding means we first compute the output as normal, then remove the first/last rows and columns.
 
@@ -196,5 +197,5 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 [Discussions](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNjY4MjE1OCwxNTQyODI0MTkyXX0=
+eyJoaXN0b3J5IjpbMTYyNTEzMjY1NSwxNTQyODI0MTkyXX0=
 -->
