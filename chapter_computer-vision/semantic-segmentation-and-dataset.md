@@ -378,9 +378,9 @@ def load_data_voc(batch_size, crop_size):
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1480)
+[Discussões](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMDM1MTMxMiwtMjAwNTM0NzQzNiwtMT
-I5MDQ0NTY2OCwyOTQ1MTU5MTgsLTIwMTk1ODQxNDddfQ==
+eyJoaXN0b3J5IjpbMjc2NDM5NjAsLTIwMDUzNDc0MzYsLTEyOT
+A0NDU2NjgsMjk0NTE1OTE4LC0yMDE5NTg0MTQ3XX0=
 -->
