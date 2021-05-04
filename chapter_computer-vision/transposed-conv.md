@@ -75,7 +75,7 @@ tconv(X)
 
 ## Preenchimento, Passos e Canais
 
-We apply padding elements to the input in convolution, while they are applied to the output in transposed convolution. A $1\times 1$ padding means we first compute the output as normal, then remove the first/last rows and columns.
+Aplicamos elementos de preenchimento à entrada em convolução, enquanto eles são aplicados à saída em convolução transposta. Um preenchimento $1\times 1$ significa que primeiro calculamos a saída como normal e, em seguida, removemos as primeiras/últimas linhas e colunas.
 
 ```{.python .input}
 tconv = nn.Conv2DTranspose(1, kernel_size=2, padding=1)
@@ -197,5 +197,5 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 [Discussions](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNTEzMjY1NSwxNTQyODI0MTkyXX0=
+eyJoaXN0b3J5IjpbLTE0MzgzMjU5MzUsMTU0MjgyNDE5Ml19
 -->
