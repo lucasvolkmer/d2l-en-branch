@@ -22,10 +22,10 @@ from d2l import torch as d2l
 
 Vamos considerar um caso básico em que os canais de entrada e saída são 1, com 0 preenchimento e 1 passo. :numref:`fig_trans_conv` ilustra como a convolução transposta com um *kernel* $2\times 2$ é calculada na matriz de entrada $2\times 2$.
 
-![Camada de convolução transposta com um kernel $ $2\times 2$.](../img/trans-conv.svg)
+![Camada de convolução transposta com um *kernel* $2\times 2$.](../img/trans-conv.svg)
 :label:`fig_trans_conv`
 
-We can implement this operation by giving matrix kernel $K$ and matrix input $X$.
+Podemos implementar essa operação fornecendo o *kernel* da matriz $K$ e a entrada da matriz $X$.
 
 ```{.python .input}
 #@tab all
@@ -196,5 +196,5 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 [Discussions](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NTQ1NDMxNiwxNTQyODI0MTkyXX0=
+eyJoaXN0b3J5IjpbMTAyNjY4MjE1OCwxNTQyODI0MTkyXX0=
 -->
