@@ -328,7 +328,7 @@ for X, Y in train_iter:
 
 ### Juntando Tudo
 
-Finally, we define a function `load_data_voc` that  downloads and loads this dataset, and then returns the data iterators.
+Finalmente, definimos uma função `load_data_voc` que baixa e carrega este *dataset*, e então retorna os iteradores de dados.
 
 ```{.python .input}
 #@save
@@ -363,24 +363,24 @@ def load_data_voc(batch_size, crop_size):
     return train_iter, test_iter
 ```
 
-## Summary
+## Resumo
 
-* Semantic segmentation looks at how images can be segmented into regions with different semantic categories.
-* In the semantic segmentation field, one important dataset is Pascal VOC2012.
-* Because the input images and labels in semantic segmentation have a one-to-one correspondence at the pixel level, we randomly crop them to a fixed size, rather than scaling them.
+* A segmentação semântica analisa como as imagens podem ser segmentadas em regiões com diferentes categorias semânticas.
+* No campo de segmentação semântica, um conjunto de dados importante é Pascal VOC2012.
+* Como as imagens e rótulos de entrada na segmentação semântica têm uma correspondência um a um no nível do pixel, nós os cortamos aleatoriamente em um tamanho fixo, em vez de dimensioná-los.
 
-## Exercises
+## Exercícios
 
-1. Recall the content we covered in :numref:`sec_image_augmentation`. Which of the image augmentation methods used in image classification would be hard to use in semantic segmentation?
+1. Lembre-se do conteúdo que vimos em :numref:`sec_image_augmentation`. Qual dos métodos de aumento de imagem usados na classificação de imagens seria difícil de usar na segmentação semântica?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/375)
+[Discussões](https://discuss.d2l.ai/t/375)
 :end_tab:
 
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNjMzNjExNCwtMjAwNTM0NzQzNiwtMT
+eyJoaXN0b3J5IjpbMjAwMDM1MTMxMiwtMjAwNTM0NzQzNiwtMT
 I5MDQ0NTY2OCwyOTQ1MTU5MTgsLTIwMTk1ODQxNDddfQ==
 -->
