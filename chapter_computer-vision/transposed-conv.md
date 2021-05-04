@@ -130,7 +130,7 @@ tconv(conv(X)).shape == X.shape
 
 ## Analogia à Transposição de Matriz
 
-The transposed convolution takes its name from the matrix transposition. In fact, convolution operations can also be achieved by matrix multiplication. In the example below, we define a $3\times 3$ input $X$ with a $2\times 2$ kernel $K$, and then use `corr2d` to compute the convolution output.
+A convolução transposta leva o nome da transposição da matriz. Na verdade, as operações de convolução também podem ser realizadas por multiplicação de matrizes. No exemplo abaixo, definimos uma entrada $X$ $3\times 3$ com kernel $K$ $2\times 2$, e então usamos `corr2d` para calcular a saída da convolução.
 
 ```{.python .input}
 #@tab all
@@ -140,7 +140,7 @@ Y = d2l.corr2d(X, K)
 Y
 ```
 
-Next, we rewrite convolution kernel $K$ as a matrix $W$. Its shape will be $(4, 9)$, where the $i^\mathrm{th}$ row present applying the kernel to the input to generate the $i^\mathrm{th}$ output element.
+A seguir, reescrevemos o *kernel* de convolução $K$ como uma matriz $W$. Sua forma será $(4, 9)$, onde a linha $i^\mathrm{th}$ presente aplicando o *kernel* à entrada para gerar o $i^\mathrm{th}$ elemento de saída.
 
 ```{.python .input}
 #@tab all
@@ -198,6 +198,6 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 [Discussions](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcxNTY1NjgxLC0xNDM4MzI1OTM1LDE1ND
-I4MjQxOTJdfQ==
+eyJoaXN0b3J5IjpbLTY5NzUzODQsLTE0MzgzMjU5MzUsMTU0Mj
+gyNDE5Ml19
 -->
