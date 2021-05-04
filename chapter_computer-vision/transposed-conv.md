@@ -195,9 +195,9 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discusss](https://discuss.d2l.ai/t/1450)
+[Discussões](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk0NzkzNjExLC0xNDM4MzI1OTM1LDE1ND
-I4MjQxOTJdfQ==
+eyJoaXN0b3J5IjpbLTExNTE1Njg5MDEsLTE0MzgzMjU5MzUsMT
+U0MjgyNDE5Ml19
 -->
