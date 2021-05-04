@@ -18,7 +18,7 @@ No campo da visão computacional, existem dois métodos importantes relacionados
 
 ## O Conjunto de Dados de Segmentação Semântica Pascal VOC2012
 
-In the semantic segmentation field, one important dataset is [Pascal VOC2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/). To better understand this dataset, we must first import the package or module needed for the experiment.
+No campo de segmentação semântica, um conjunto de dados importante é [Pascal VOC2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/). Para entender melhor este conjunto de dados, devemos primeiro importar o pacote ou módulo necessário para o experimento.
 
 ```{.python .input}
 %matplotlib inline
@@ -38,9 +38,9 @@ import torchvision
 import os
 ```
 
-The original site might be unstable, so we download the data from a mirror site.
-The archive is about 2 GB, so it will take some time to download.
-After you decompress the archive, the dataset is located in the `../data/VOCdevkit/VOC2012` path.
+O site original pode ser instável, portanto, baixamos os dados de um site espelho.
+O arquivo tem cerca de 2 GB, por isso levará algum tempo para fazer o download.
+Depois de descompactar o arquivo, o conjunto de dados está localizado no caminho `../data/VOCdevkit/VOC2012`.
 
 ```{.python .input}
 #@tab all
@@ -381,6 +381,6 @@ def load_data_voc(batch_size, crop_size):
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTQ3MzUwNzYsMjk0NTE1OTE4LC0yMD
-E5NTg0MTQ3XX0=
+eyJoaXN0b3J5IjpbNjU4MzYyMzgyLDI5NDUxNTkxOCwtMjAxOT
+U4NDE0N119
 -->
