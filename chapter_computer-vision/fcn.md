@@ -332,3 +332,6 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1582)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE0MzcxNjcwNDJdfQ==
+-->
