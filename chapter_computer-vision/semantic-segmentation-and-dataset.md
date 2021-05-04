@@ -178,7 +178,7 @@ y[105:115, 130:140], VOC_CLASSES[1]
 
 ### Pré-processamento de Dados
 
-In the preceding chapters, we scaled images to make them fit the input shape of the model. In semantic segmentation, this method would require us to re-map the predicted pixel categories back to the original-size input image. It would be very difficult to do this precisely, especially in segmented regions with different semantics. To avoid this problem, we crop the images to set dimensions and do not scale them. Specifically, we use the random cropping method used in image augmentation to crop the same region from input images and their labels.
+Nos capítulos anteriores, dimensionamos as imagens para que se ajustassem à forma de entrada do modelo. Na segmentação semântica, esse método exigiria que mapeamos novamente as categorias de pixels previstas de volta à imagem de entrada do tamanho original. Seria muito difícil fazer isso com precisão, especialmente em regiões segmentadas com semânticas diferentes. Para evitar esse problema, recortamos as imagens para definir as dimensões e não as dimensionamos. Especificamente, usamos o método de corte aleatório usado no aumento da imagem para cortar a mesma região das imagens de entrada e seus rótulos.
 
 ```{.python .input}
 #@save
@@ -218,7 +218,7 @@ imgs = [img.permute(1,2,0) for img in imgs]
 d2l.show_images(imgs[::2] + imgs[1::2], 2, n);
 ```
 
-### Dataset Classes for Custom Semantic Segmentation
+### Classes de *Datasets* para Segmentação Semântica Personalizada
 
 We use the inherited `Dataset` class provided by Gluon to customize the semantic segmentation dataset class `VOCSegDataset`. By implementing the `__getitem__` function, we can arbitrarily access the input image with the index `idx` and the category indexes for each of its pixels from the dataset. As some images in the dataset may be smaller than the output dimensions specified for random cropping, we must remove these example by using a custom `filter` function. In addition, we define the `normalize_image` function to normalize each of the three RGB channels of the input images.
 
@@ -381,6 +381,6 @@ def load_data_voc(batch_size, crop_size):
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDUzNDc0MzYsLTEyOTA0NDU2NjgsMj
-k0NTE1OTE4LC0yMDE5NTg0MTQ3XX0=
+eyJoaXN0b3J5IjpbLTE4NDM4MDEzMjcsLTIwMDUzNDc0MzYsLT
+EyOTA0NDU2NjgsMjk0NTE1OTE4LC0yMDE5NTg0MTQ3XX0=
 -->
