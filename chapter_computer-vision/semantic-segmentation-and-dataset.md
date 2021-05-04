@@ -301,7 +301,7 @@ voc_train = VOCSegDataset(True, crop_size, voc_dir)
 voc_test = VOCSegDataset(False, crop_size, voc_dir)
 ```
 
-We set the batch size to 64 and define the iterators for the training and testing sets. Print the shape of the first minibatch. In contrast to image classification and object recognition, labels here are three-dimensional arrays.
+Definimos o tamanho do lote como 64 e definimos os iteradores para os conjuntos de treinamento e teste. Imprimimos a forma do primeiro minibatch. Em contraste com a classificação de imagens e o reconhecimento de objetos, os rótulos aqui são matrizes tridimensionais.
 
 ```{.python .input}
 batch_size = 64
@@ -381,6 +381,6 @@ def load_data_voc(batch_size, crop_size):
 [Discussions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY4NzE1NjMsLTIwMDUzNDc0MzYsLTEyOT
-A0NDU2NjgsMjk0NTE1OTE4LC0yMDE5NTg0MTQ3XX0=
+eyJoaXN0b3J5IjpbNjIxNjM2MzUwLC0yMDA1MzQ3NDM2LC0xMj
+kwNDQ1NjY4LDI5NDUxNTkxOCwtMjAxOTU4NDE0N119
 -->
