@@ -90,7 +90,7 @@ tconv.weight.data = K
 tconv(X)
 ```
 
-Similarly, strides are applied to outputs as well.
+Da mesma forma, os avanços também são aplicados às saídas.
 
 ```{.python .input}
 tconv = nn.Conv2DTranspose(1, kernel_size=2, strides=2)
@@ -197,5 +197,6 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 [Discussions](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzgzMjU5MzUsMTU0MjgyNDE5Ml19
+eyJoaXN0b3J5IjpbNzI4NTkxMzQsLTE0MzgzMjU5MzUsMTU0Mj
+gyNDE5Ml19
 -->
