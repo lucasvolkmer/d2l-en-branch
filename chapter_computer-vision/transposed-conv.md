@@ -18,11 +18,11 @@ from torch import nn
 from d2l import torch as d2l
 ```
 
-## Basic 2D Transposed Convolution
+## Convolução Transposta 2D Básica
 
-Let us consider a basic case that both input and output channels are 1, with 0 padding and 1 stride. :numref:`fig_trans_conv` illustrates how transposed convolution with a $2\times 2$ kernel is computed on the $2\times 2$ input matrix.
+Vamos considerar um caso básico em que os canais de entrada e saída são 1, com 0 preenchimento e 1 passo. :numref:`fig_trans_conv` ilustra como a convolução transposta com um *kernel* $2\times 2$ é calculada na matriz de entrada $2\times 2$.
 
-![Transposed convolution layer with a $2\times 2$ kernel.](../img/trans-conv.svg)
+![Camada de convolução transposta com um kernel $ $2\times 2$.](../img/trans-conv.svg)
 :label:`fig_trans_conv`
 
 We can implement this operation by giving matrix kernel $K$ and matrix input $X$.
@@ -196,5 +196,5 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 [Discussions](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODY4NjUzNjEsMTU0MjgyNDE5Ml19
+eyJoaXN0b3J5IjpbLTc3NTQ1NDMxNiwxNTQyODI0MTkyXX0=
 -->
