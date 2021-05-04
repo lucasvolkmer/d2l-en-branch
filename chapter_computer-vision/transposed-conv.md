@@ -182,22 +182,22 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 
 ## Resumo
 
-* Compared to convolutions that reduce inputs through kernels, transposed convolutions broadcast inputs.
-* If a convolution layer reduces the input width and height by $n_w$ and $h_h$ time, respectively. Then a transposed convolution layer with the same kernel sizes, padding and strides will increase the input width and height by $n_w$ and $n_h$, respectively.
-* We can implement convolution operations by the matrix multiplication, the corresponding transposed convolutions can be done by transposed matrix multiplication.
+* Em comparação com as convoluções que reduzem as entradas por meio de *kernels*, as convoluções transpostas transmitem as entradas.
+* Se uma camada de convolução reduz a largura e altura de entrada em $n_w$ e $h_h$ tempo, respectivamente. Então, uma camada de convolução transposta com os mesmos tamanhos de *kernel*, preenchimento e passos aumentará a largura e altura de entrada em $n_w$ e $h_h$, respectivamente.
+* Podemos implementar operações de convolução pela multiplicação da matriz, as convoluções transpostas correspondentes podem ser feitas pela multiplicação da matriz transposta.
 
-## Exercises
+## Exercícios
 
-1. Is it efficient to use matrix multiplication to implement convolution operations? Why?
+1. É eficiente usar a multiplicação de matrizes para implementar operações de convolução? Por quê?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/376)
+[Discussões](https://discuss.d2l.ai/t/376)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1450)
+[Discusss](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MzgyNjU0NiwtMTQzODMyNTkzNSwxNT
-QyODI0MTkyXX0=
+eyJoaXN0b3J5IjpbODk0NzkzNjExLC0xNDM4MzI1OTM1LDE1ND
+I4MjQxOTJdfQ==
 -->
