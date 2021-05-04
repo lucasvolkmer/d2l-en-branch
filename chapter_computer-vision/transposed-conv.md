@@ -105,10 +105,11 @@ tconv.weight.data = K
 tconv(X)
 ```
 
-The multi-channel extension of the transposed convolution is the same as the convolution. When the input has multiple channels, denoted by $c_i$, the transposed convolution assigns a $k_h\times k_w$ kernel matrix to each input channel. If the output has a channel size $c_o$, then we have a $c_i\times k_h\times k_w$ kernel for each output channel.
+
+A extensão multicanal da convolução transposta é igual à convolução. Quando a entrada tem vários canais, denotados por $c_i$, a convolução transposta atribui uma matriz de *kernel* $k_h\times k_w$ a cada canal de entrada. Se a saída tem um tamanho de canal $c_o$, então temos um *kernel* $c_i\times k_h\times k_w$ para cada canal de saída.
 
 
-As a result, if we feed $X$ into a convolutional layer $f$ to compute $Y=f(X)$ and create a transposed convolution layer $g$ with the same hyperparameters as $f$ except for the output channel set to be the channel size of $X$, then $g(Y)$ should has the same shape as $X$. Let us verify this statement.
+Como resultado, se alimentarmos $X$ em uma camada convolucional $f$ para calcular $Y=f(X)$ e criarmos uma camada de convolução transposta $g$ com os mesmos hiperparâmetros de $f$, exceto para o conjunto de canais de saída para ter o tamanho do canal de $X$, então $g(Y)$ deve ter o mesmo formato que $X$. Deixe-nos verificar esta afirmação.
 
 ```{.python .input}
 X = np.random.uniform(size=(1, 10, 16, 16))
@@ -127,7 +128,7 @@ tconv = nn.ConvTranspose2d(20, 10, kernel_size=5, padding=2, stride=3)
 tconv(conv(X)).shape == X.shape
 ```
 
-## Analogy to Matrix Transposition
+## Analogia à Transposição de Matriz
 
 The transposed convolution takes its name from the matrix transposition. In fact, convolution operations can also be achieved by matrix multiplication. In the example below, we define a $3\times 3$ input $X$ with a $2\times 2$ kernel $K$, and then use `corr2d` to compute the convolution output.
 
@@ -197,6 +198,6 @@ Y == torch.mv(W.T, X.reshape(-1)).reshape(3, 3)
 [Discussions](https://discuss.d2l.ai/t/1450)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI4NTkxMzQsLTE0MzgzMjU5MzUsMTU0Mj
-gyNDE5Ml19
+eyJoaXN0b3J5IjpbODcxNTY1NjgxLC0xNDM4MzI1OTM1LDE1ND
+I4MjQxOTJdfQ==
 -->
