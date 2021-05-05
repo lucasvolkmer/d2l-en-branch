@@ -187,7 +187,7 @@ print('output image shape:', out_img.shape)
 d2l.plt.imshow(out_img);
 ```
 
-In a fully convolutional network, we initialize the transposed convolution layer for upsampled bilinear interpolation. For a $1\times 1$ convolution layer, we use Xavier for randomly initialization.
+Em uma rede totalmente convolucional, inicializamos a camada de convolução transposta para interpolação bilinear com upsampled. Para uma camada de convolução $1\times 1$, usamos o Xavier para inicialização aleatória.
 
 ```{.python .input}
 W = bilinear_kernel(num_classes, num_classes, 64)
@@ -201,9 +201,9 @@ W = bilinear_kernel(num_classes, num_classes, 64)
 net.transpose_conv.weight.data.copy_(W);
 ```
 
-## Reading the Dataset
+## Lendo o *Dataset*
 
-We read the dataset using the method described in the previous section. Here, we specify shape of the randomly cropped output image as $320\times 480$, so both the height and width are divisible by 32.
+Lemos o *dataset* usando o método descrito na seção anterior. Aqui, especificamos a forma da imagem de saída cortada aleatoriamente como $320\times 480$, portanto, a altura e a largura são divisíveis por 32.
 
 ```{.python .input}
 #@tab all
@@ -211,9 +211,9 @@ batch_size, crop_size = 32, (320, 480)
 train_iter, test_iter = d2l.load_data_voc(batch_size, crop_size)
 ```
 
-## Training
+## Treinamento
 
-Now we can start training the model. The loss function and accuracy calculation here are not substantially different from those used in image classification. Because we use the channel of the transposed convolution layer to predict pixel categories, the `axis=1` (channel dimension) option is specified in `SoftmaxCrossEntropyLoss`. In addition, the model calculates the accuracy based on whether the prediction category of each pixel is correct.
+Agora podemos começar a treinar o modelo. A função de perda e o cálculo de precisão aqui não são substancialmente diferentes daqueles usados na classificação de imagens. Como usamos o canal da camada de convolução transposta para prever as categorias de pixels, a opção `axis = 1` (dimensão do canal) é especificada em `SoftmaxCrossEntropyLoss`. Além disso, o modelo calcula a precisão com base em se a categoria de previsão de cada pixel está correta.
 
 ```{.python .input}
 num_epochs, lr, wd, devices = 5, 0.1, 1e-3, d2l.try_all_gpus()
@@ -234,7 +234,7 @@ trainer = torch.optim.SGD(net.parameters(), lr=lr, weight_decay=wd)
 d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 ```
 
-## Prediction
+## Predição
 
 During predicting, we need to standardize the input image in each channel and transform them into the four-dimensional input format required by the convolutional neural network.
 
@@ -323,6 +323,6 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 [Discussions](https://discuss.d2l.ai/t/1582)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNDg2OTEyNiwxMjU0MzQxODQ0LDYxND
+eyJoaXN0b3J5IjpbLTU1NjY0MzEzOSwxMjU0MzQxODQ0LDYxND
 U2NTQ5MiwtNzU3NDkwNzAyLC0xNDM3MTY3MDQyXX0=
 -->
