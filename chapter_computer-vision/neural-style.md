@@ -1,4 +1,4 @@
-# Neural Style Transfer
+# Transferência de Estilo Neural
 
 If you use social sharing apps or happen to be an amateur photographer, you are familiar with filters. Filters can alter the color styles of photos to make the background sharper or people's faces whiter. However, a filter generally can only change one aspect of a photo. To create the ideal photo, you often need to try many different filter combinations. This process is as complex as tuning the hyperparameters of a model.
 
@@ -432,5 +432,5 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTQxMzUxMF19
+eyJoaXN0b3J5IjpbLTI2OTA2NDgzNSwxODkxNDEzNTEwXX0=
 -->
