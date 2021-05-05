@@ -101,7 +101,7 @@ net.add_module('transpose_conv', nn.ConvTranspose2d(num_classes, num_classes,
 ```
 
 ## Inicializando a Camada de Convolução Transposta
-We already know that the transposed convolution layer can magnify a feature map. In image processing, sometimes we need to magnify the image, i.e., upsampling. There are many methods for upsampling, and one common method is bilinear interpolation. Simply speaking, in order to get the pixel of the output image at the coordinates $(x, y)$, the coordinates are first mapped to the coordinates of the input image $(x', y')$. This can be done based on the ratio of the size of three input to the size of the output. The mapped values $x'$ and $y'$ are usually real numbers. Then, we find the four pixels closest to the coordinate $(x', y')$ on the input image. Finally, the pixels of the output image at coordinates $(x, y)$ are calculated based on these four pixels on the input image and their relative distances to $(x', y')$. Upsampling by bilinear interpolation can be implemented by transposed convolution layer of the convolution kernel constructed using the following `bilinear_kernel` function. Due to space limitations, we only give the implementation of the `bilinear_kernel` function and will not discuss the principles of the algorithm.
+Já sabemos que a camada de convolução transposta pode ampliar um mapa de feições. No processamento de imagem, às vezes precisamos ampliar a imagem, ou seja, *upsampling*. Existem muitos métodos para aumentar a amostragem e um método comum é a interpolação bilinear. Simplesmente falando, para obter o pixel da imagem de saída nas coordenadas $(x, y)$, as coordenadas são primeiro mapeadas para as coordenadas da imagem de entrada $(x ', y')$. Isso pode ser feito com base na proporção do tamanho de três entradas em relação ao tamanho da saída. Os valores mapeados $x'$ e $y'$ são geralmente números reais. Então, encontramos os quatro pixels mais próximos da coordenada $(x ', y')$ na imagem de entrada. Finalmente, os pixels da imagem de saída nas coordenadas $(x, y)$ são calculados com base nesses quatro pixels na imagem de entrada e suas distâncias relativas a $(x ', y')$. O *upsampling* por interpolação bilinear pode ser implementado pela camada de convolução transposta do *kernel* de convolução construído usando a seguinte função `bilinear_kernel`. Devido a limitações de espaço, fornecemos apenas a implementação da função `bilinear_kernel` e não discutiremos os princípios do algoritmo.
 
 ```{.python .input}
 def bilinear_kernel(in_channels, out_channels, kernel_size):
@@ -323,6 +323,6 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 [Discussions](https://discuss.d2l.ai/t/1582)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDIyMTM1MDMsNjE0NTY1NDkyLC03NT
-c0OTA3MDIsLTE0MzcxNjcwNDJdfQ==
+eyJoaXN0b3J5IjpbMTI1NDM0MTg0NCw2MTQ1NjU0OTIsLTc1Nz
+Q5MDcwMiwtMTQzNzE2NzA0Ml19
 -->
