@@ -305,25 +305,25 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 
 ## Resumo
 
-* The fully convolutional network first uses the convolutional neural network to extract image features, then transforms the number of channels into the number of categories through the $1\times 1$ convolution layer, and finally transforms the height and width of the feature map to the size of the input image by using the transposed convolution layer to output the category of each pixel.
-* In a fully convolutional network, we initialize the transposed convolution layer for upsampled bilinear interpolation.
+* A rede totalmente convolucional primeiro usa a rede neural convolucional para extrair características da imagem, depois transforma o número de canais no número de categorias por meio da camada de convolução $1\times 1$ e, finalmente, transforma a altura e largura do mapa de características para o tamanho da imagem de entrada usando a camada de convolução transposta para produzir a categoria de cada pixel.
+* Em uma rede totalmente convolucional, inicializamos a camada de convolução transposta para interpolação bilinear com *upsampling*.
 
 
-## Exercises
+## Exercícios
 
-1. If we use Xavier to randomly initialize the transposed convolution layer, what will happen to the result?
-1. Can you further improve the accuracy of the model by tuning the hyperparameters?
-1. Predict the categories of all pixels in the test image.
-1. The outputs of some intermediate layers of the convolutional neural network are also used in the paper on fully convolutional networks :cite:`Long.Shelhamer.Darrell.2015`. Try to implement this idea.
+1. Se usarmos Xavier para inicializar aleatoriamente a camada de convolução transposta, o que acontecerá com o resultado?
+1. Você pode melhorar ainda mais a precisão do modelo ajustando os hiperparâmetros?
+1. Preveja as categorias de todos os pixels na imagem de teste.
+1. As saídas de algumas camadas intermediárias da rede neural convolucional também são usadas no artigo sobre redes totalmente convolucionais :cite:`Long.Shelhamer.Darrell.2015`. Tente implementar essa ideia.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/377)
+[Discussões](https://discuss.d2l.ai/t/377)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1582)
+[Discussões](https://discuss.d2l.ai/t/1582)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MDE4MzUxOSwxMjU0MzQxODQ0LDYxND
-U2NTQ5MiwtNzU3NDkwNzAyLC0xNDM3MTY3MDQyXX0=
+eyJoaXN0b3J5IjpbNzA2ODU4NzIwLDEyNTQzNDE4NDQsNjE0NT
+Y1NDkyLC03NTc0OTA3MDIsLTE0MzcxNjcwNDJdfQ==
 -->
