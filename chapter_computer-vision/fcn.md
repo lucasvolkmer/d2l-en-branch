@@ -42,7 +42,7 @@ Aqui, demonstramos o projeto mais básico de um modelo de rede totalmente convol
 ![Rede totalmente convolucional.](../img/fcn.svg)
 :label:`fig_fcn`
 
-Below, we use a ResNet-18 model pre-trained on the ImageNet dataset to extract image features and record the network instance as `pretrained_net`. As you can see, the last two layers of the model member variable `features` are the global average pooling layer `GlobalAvgPool2D` and example flattening layer `Flatten`. The `output` module contains the fully connected layer used for output. These layers are not required for a fully convolutional network.
+Abaixo, usamos um modelo ResNet-18 pré-treinado no conjunto de dados ImageNet para extrair recursos de imagem e registrar a instância de rede como `pretrained_net`. Como você pode ver, as duas últimas camadas da variável membro do modelo `features` são a camada de agrupamento global médio` GlobalAvgPool2D` e a camada de nivelamento de exemplo `Flatten` O módulo `output` contém a camada totalmente conectada usada para saída. Essas camadas não são necessárias para uma rede totalmente convolucional.
 
 ```{.python .input}
 pretrained_net = gluon.model_zoo.vision.resnet18_v2(pretrained=True)
@@ -55,7 +55,7 @@ pretrained_net = torchvision.models.resnet18(pretrained=True)
 pretrained_net.layer4[1], pretrained_net.avgpool, pretrained_net.fc
 ```
 
-Next, we create the fully convolutional network instance `net`. It duplicates all the neural layers except the last two layers of the instance member variable `features` of `pretrained_net` and the model parameters obtained after pre-training.
+Em seguida, criamos a instância de rede totalmente convolucional `net`. Ela duplica todas as camadas neurais, exceto as duas últimas camadas da variável membro de instância `features` de `pretrained_net` e os parâmetros do modelo obtidos após o pré-treinamento.
 
 ```{.python .input}
 net = nn.HybridSequential()
@@ -68,7 +68,7 @@ for layer in pretrained_net.features[:-2]:
 net = nn.Sequential(*list(pretrained_net.children())[:-2])
 ```
 
-Given an input of a height and width of 320 and 480 respectively, the forward computation of `net` will reduce the height and width of the input to $1/32$ of the original, i.e., 10 and 15.
+Dada uma entrada de altura e largura de 320 e 480 respectivamente, o cálculo direto de `net` reduzirá a altura e largura da entrada para $1/32$ do original, ou seja, 10 e 15.
 
 ```{.python .input}
 X = np.random.uniform(size=(1, 3, 320, 480))
@@ -334,6 +334,6 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 [Discussions](https://discuss.d2l.ai/t/1582)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NTE3NDYxNCwtNzU3NDkwNzAyLC0xND
-M3MTY3MDQyXX0=
+eyJoaXN0b3J5IjpbNjE0NTY1NDkyLC03NTc0OTA3MDIsLTE0Mz
+cxNjcwNDJdfQ==
 -->
