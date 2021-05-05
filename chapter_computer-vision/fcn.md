@@ -35,11 +35,11 @@ from torch import nn
 from torch.nn import functional as F
 ```
 
-## Construindo um modelo
+## Construindo um Modelo
 
-Here, we demonstrate the most basic design of a fully convolutional network model. As shown in :numref:`fig_fcn`, the fully convolutional network first uses the convolutional neural network to extract image features, then transforms the number of channels into the number of categories through the $1\times 1$ convolution layer, and finally transforms the height and width of the feature map to the size of the input image by using the transposed convolution layer :numref:`sec_transposed_conv`. The model output has the same height and width as the input image and has a one-to-one correspondence in spatial positions. The final output channel contains the category prediction of the pixel of the corresponding spatial position.
+Aqui, demonstramos o projeto mais básico de um modelo de rede totalmente convolucional. Conforme mostrado em :numref:`fig_fcn`, a rede totalmente convolucional primeiro usa a rede neural convolucional para extrair características da imagem, então transforma o número de canais no número de categorias através da camada de convolução $1\times 1$ e, finalmente, transforma a altura e largura do mapa de recursos para o tamanho da imagem de entrada usando a camada de convolução transposta :numref:`sec_transposed_conv`. A saída do modelo tem a mesma altura e largura da imagem de entrada e uma correspondência de um para um nas posições espaciais. O canal de saída final contém a previsão da categoria do pixel da posição espacial correspondente.
 
-![Fully convolutional network. ](../img/fcn.svg)
+![Rede totalmente convolucional.](../img/fcn.svg)
 :label:`fig_fcn`
 
 Below, we use a ResNet-18 model pre-trained on the ImageNet dataset to extract image features and record the network instance as `pretrained_net`. As you can see, the last two layers of the model member variable `features` are the global average pooling layer `GlobalAvgPool2D` and example flattening layer `Flatten`. The `output` module contains the fully connected layer used for output. These layers are not required for a fully convolutional network.
@@ -334,6 +334,6 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 [Discussions](https://discuss.d2l.ai/t/1582)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxODY4OTM2NywtNzU3NDkwNzAyLC0xND
+eyJoaXN0b3J5IjpbMTg1NTE3NDYxNCwtNzU3NDkwNzAyLC0xND
 M3MTY3MDQyXX0=
 -->
