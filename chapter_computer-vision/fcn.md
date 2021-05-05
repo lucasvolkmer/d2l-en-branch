@@ -236,7 +236,7 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 
 ## Predição
 
-During predicting, we need to standardize the input image in each channel and transform them into the four-dimensional input format required by the convolutional neural network.
+Durante a previsão, precisamos padronizar a imagem de entrada em cada canal e transformá-los no formato de entrada quadridimensional exigido pela rede neural convolucional.
 
 ```{.python .input}
 def predict(img):
@@ -254,7 +254,7 @@ def predict(img):
     return pred.reshape(pred.shape[1], pred.shape[2])
 ```
 
-To visualize the predicted categories for each pixel, we map the predicted categories back to their labeled colors in the dataset.
+Para visualizar as categorias previstas para cada pixel, mapeamos as categorias previstas de volta às suas cores rotuladas no conjunto de dados.
 
 ```{.python .input}
 def label2image(pred):
@@ -271,9 +271,10 @@ def label2image(pred):
     return colormap[X, :]
 ```
 
-The size and shape of the images in the test dataset vary. Because the model uses a transposed convolution layer with a stride of 32, when the height or width of the input image is not divisible by 32, the height or width of the transposed convolution layer output deviates from the size of the input image. In order to solve this problem, we can crop multiple rectangular areas in the image with heights and widths as integer multiples of 32, and then perform forward computation on the pixels in these areas. When combined, these areas must completely cover the input image. When a pixel is covered by multiple areas, the average of the transposed convolution layer output in the forward computation of the different areas can be used as an input for the softmax operation to predict the category.
 
-For the sake of simplicity, we only read a few large test images and crop an area with a shape of $320\times480$ from the top-left corner of the image. Only this area is used for prediction. For the input image, we print the cropped area first, then print the predicted result, and finally print the labeled category.
+O tamanho e a forma das imagens no conjunto de dados de teste variam. Como o modelo usa uma camada de convolução transposta com uma distância de 32, quando a altura ou largura da imagem de entrada não é divisível por 32, a altura ou largura da saída da camada de convolução transposta se desvia do tamanho da imagem de entrada. Para resolver esse problema, podemos recortar várias áreas retangulares na imagem com alturas e larguras como múltiplos inteiros de 32 e, em seguida, realizar cálculos para a frente nos pixels nessas áreas. Quando combinadas, essas áreas devem cobrir completamente a imagem de entrada. Quando um pixel é coberto por várias áreas, a média da saída da camada de convolução transposta no cálculo direto das diferentes áreas pode ser usada como uma entrada para a operação softmax para prever a categoria.
+
+Para simplificar, lemos apenas algumas imagens de teste grandes e recortamos uma área com um formato de $320\times480$ no canto superior esquerdo da imagem. Apenas esta área é usada para previsão. Para a imagem de entrada, imprimimos primeiro a área cortada, depois imprimimos o resultado previsto e, por fim, imprimimos a categoria rotulada.
 
 ```{.python .input}
 voc_dir = d2l.download_extract('voc2012', 'VOCdevkit/VOC2012')
@@ -302,7 +303,7 @@ for i in range(n):
 d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 ```
 
-## Summary
+## Resumo
 
 * The fully convolutional network first uses the convolutional neural network to extract image features, then transforms the number of channels into the number of categories through the $1\times 1$ convolution layer, and finally transforms the height and width of the feature map to the size of the input image by using the transposed convolution layer to output the category of each pixel.
 * In a fully convolutional network, we initialize the transposed convolution layer for upsampled bilinear interpolation.
@@ -323,6 +324,6 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 [Discussions](https://discuss.d2l.ai/t/1582)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NjY0MzEzOSwxMjU0MzQxODQ0LDYxND
+eyJoaXN0b3J5IjpbMTY3MDE4MzUxOSwxMjU0MzQxODQ0LDYxND
 U2NTQ5MiwtNzU3NDkwNzAyLC0xNDM3MTY3MDQyXX0=
 -->
