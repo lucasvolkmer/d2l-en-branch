@@ -1,4 +1,4 @@
-# Fully Convolutional Networks (FCN)
+# Redes Totalmente Convolucionais (*Fully Convolutional Networks*, FCN)
 :label:`sec_fcn`
 
 We previously discussed semantic segmentation using each pixel in an image for
@@ -333,5 +333,5 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 [Discussions](https://discuss.d2l.ai/t/1582)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzcxNjcwNDJdfQ==
+eyJoaXN0b3J5IjpbLTc1NzQ5MDcwMiwtMTQzNzE2NzA0Ml19
 -->
