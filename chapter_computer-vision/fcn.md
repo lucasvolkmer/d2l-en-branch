@@ -137,7 +137,7 @@ def bilinear_kernel(in_channels, out_channels, kernel_size):
     return weight
 ```
 
-Now, we will experiment with bilinear interpolation upsampling implemented by transposed convolution layers. Construct a transposed convolution layer that magnifies height and width of input by a factor of 2 and initialize its convolution kernel with the `bilinear_kernel` function.
+Agora, vamos experimentar com upsampling de interpolação bilinear implementado por camadas de convolução transpostas. Construa uma camada de convolução transposta que amplie a altura e a largura da entrada por um fator de 2 e inicialize seu kernel de convolução com a função `bilinear_kernel`.
 
 ```{.python .input}
 conv_trans = nn.Conv2DTranspose(3, kernel_size=4, padding=1, strides=2)
@@ -151,7 +151,7 @@ conv_trans = nn.ConvTranspose2d(3, 3, kernel_size=4, padding=1, stride=2,
 conv_trans.weight.data.copy_(bilinear_kernel(3, 3, 4));
 ```
 
-Read the image `X` and record the result of upsampling as `Y`. In order to print the image, we need to adjust the position of the channel dimension.
+Leia a imagem `X` e registre o resultado do upsampling como` Y`. Para imprimir a imagem, precisamos ajustar a posição da dimensão do canal.
 
 ```{.python .input}
 img = image.imread('../img/catdog.jpg')
@@ -168,7 +168,7 @@ Y = conv_trans(X)
 out_img = Y[0].permute(1, 2, 0).detach()
 ```
 
-As you can see, the transposed convolution layer magnifies both the height and width of the image by a factor of 2. It is worth mentioning that, besides to the difference in coordinate scale, the image magnified by bilinear interpolation and original image printed in :numref:`sec_bbox` look the same.
+Como você pode ver, a camada de convolução transposta amplia a altura e largura da imagem em um fator de 2. Vale ressaltar que, além da diferença na escala de coordenadas, a imagem ampliada por interpolação bilinear e a imagem original impressa em :numref:`sec_bbox` tem a mesma aparência.
 
 ```{.python .input}
 d2l.set_figsize()
@@ -323,6 +323,6 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 [Discussions](https://discuss.d2l.ai/t/1582)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NDM0MTg0NCw2MTQ1NjU0OTIsLTc1Nz
-Q5MDcwMiwtMTQzNzE2NzA0Ml19
+eyJoaXN0b3J5IjpbMTIzNDg2OTEyNiwxMjU0MzQxODQ0LDYxND
+U2NTQ5MiwtNzU3NDkwNzAyLC0xNDM3MTY3MDQyXX0=
 -->
