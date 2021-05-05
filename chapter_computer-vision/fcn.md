@@ -81,19 +81,9 @@ X = torch.rand(size=(1, 3, 320, 480))
 net(X).shape
 ```
 
-Next, we transform the number of output channels to the number of categories of
-Pascal VOC2012 (21) through the $1\times 1$ convolution layer. Finally, we need
-to magnify the height and width of the feature map by a factor of 32 to change
-them back to the height and width of the input image. Recall the calculation
-method for the convolution layer output shape described in
-:numref:`sec_padding`. Because
-$(320-64+16\times2+32)/32=10$ and $(480-64+16\times2+32)/32=15$, we construct a
-transposed convolution layer with a stride of 32 and set the height and width of
-the convolution kernel to 64 and the padding to 16. It is not difficult to see
-that, if the stride is $s$, the padding is $s/2$ (assuming $s/2$ is an integer),
-and the height and width of the convolution kernel are $2s$, the transposed
-convolution kernel will magnify both the height and width of the input by a
-factor of $s$.
+Em seguida, transformamos o número de canais de saída para o número de categorias de Pascal VOC2012 (21) por meio da camada de convolução $1\times 1$. Finalmente, precisamos ampliar a altura e largura do mapa de feições por um fator de 32 para alterá-los de volta para a altura e largura da imagem de entrada. Lembre-se do cálculo
+método para a forma de saída da camada de convolução descrita em
+:numref:`sec_padding`. Porque $(320-64+16\times2+32)/32=10$ e $(480-64+16\times2+32)/32=15$, construímos uma camada de convolução transposta com uma distância de 32 e definimos a altura e largura do *kernel* de convolução para 64 e o preenchimento para 16. Não é difícil ver que, se o passo for $s$, o preenchimento é $s/2$  (assumindo que $s/2$ é um inteiro ), e a altura e largura do *kernel* de convolução são $2s$, o *kernel* de convolução transposto aumentará a altura e a largura da entrada por um fator de $s$.
 
 ```{.python .input}
 num_classes = 21
@@ -110,8 +100,7 @@ net.add_module('transpose_conv', nn.ConvTranspose2d(num_classes, num_classes,
                                     kernel_size=64, padding=16, stride=32))
 ```
 
-## Initializing the Transposed Convolution Layer
-
+## Inicializando a Camada de Convolução Transposta
 We already know that the transposed convolution layer can magnify a feature map. In image processing, sometimes we need to magnify the image, i.e., upsampling. There are many methods for upsampling, and one common method is bilinear interpolation. Simply speaking, in order to get the pixel of the output image at the coordinates $(x, y)$, the coordinates are first mapped to the coordinates of the input image $(x', y')$. This can be done based on the ratio of the size of three input to the size of the output. The mapped values $x'$ and $y'$ are usually real numbers. Then, we find the four pixels closest to the coordinate $(x', y')$ on the input image. Finally, the pixels of the output image at coordinates $(x, y)$ are calculated based on these four pixels on the input image and their relative distances to $(x', y')$. Upsampling by bilinear interpolation can be implemented by transposed convolution layer of the convolution kernel constructed using the following `bilinear_kernel` function. Due to space limitations, we only give the implementation of the `bilinear_kernel` function and will not discuss the principles of the algorithm.
 
 ```{.python .input}
@@ -334,6 +323,6 @@ d2l.show_images(imgs[::3] + imgs[1::3] + imgs[2::3], 3, n, scale=2);
 [Discussions](https://discuss.d2l.ai/t/1582)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE0NTY1NDkyLC03NTc0OTA3MDIsLTE0Mz
-cxNjcwNDJdfQ==
+eyJoaXN0b3J5IjpbLTExNDIyMTM1MDMsNjE0NTY1NDkyLC03NT
+c0OTA3MDIsLTE0MzcxNjcwNDJdfQ==
 -->
