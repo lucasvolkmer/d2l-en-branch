@@ -58,12 +58,12 @@ Também podemos tentar entender a incorporação de palavras GloVe de outra pers
 |$p_2=P(w_k\mid\text{steam})$|0.000022|0.00078|0.0022|0.000018|
 |$p_1/p_2$|8.9|0.085|1.36|0.96|
 
-We will be able to observe phenomena such as:
+Seremos capazes de observar fenômenos como:
 
-* For a word $w_k$ that is related to "ice" but not to "steam", such as $w_k=\text{solid}$, we would expect a larger conditional probability ratio, like the value 8.9 in the last row of the table above.
-* For a word $w_k$ that is related to "steam" but not to "ice", such as $w_k=\text{gas}$, we would expect a smaller conditional probability ratio, like the value 0.085 in the last row of the table above.
-* For a word $w_k$ that is related to both "ice" and "steam", such as $w_k=\text{water}$, we would expect a conditional probability ratio close to 1, like the value 1.36 in the last row of the table above.
-* For a word $w_k$ that is related to neither "ice" or "steam", such as $w_k=\text{fashion}$, we would expect a conditional probability ratio close to 1, like the value 0.96 in the last row of the table above.
+* Para uma palavra $w_k$ que está relacionada a "gelo", mas não a "vapor", como $w_k=\text{solid}$, esperaríamos uma razão de probabilidade condicional maior, como o valor 8,9 na última linha da tabela acima.
+* Para uma palavra $w_k$ que está relacionada a "vapor", mas não a "gelo", como $w_k=\text{gas}$, esperaríamos uma razão de probabilidade condicional menor, como o valor 0,085 na última linha da tabela acima.
+* Para uma palavra $w_k$ que está relacionada a "gelo" e "vapor", como $w_k=\text{agua}$, esperaríamos uma razão de probabilidade condicional próxima de 1, como o valor 1,36 no último linha da tabela acima.
+* Para uma palavra $w_k$ que não está relacionada a "gelo" ou "vapor", como $w_k=\text{fashion}$, esperaríamos uma razão de probabilidade condicional próxima de 1, como o valor 0,96 no último linha da tabela acima.
 
 We can see that the conditional probability ratio can represent the relationship between different words more intuitively. We can construct a word vector function to fit the conditional probability ratio more effectively. As we know, to obtain any ratio of this type requires three words $w_i$, $w_j$, and $w_k$. The conditional probability ratio with $w_i$ as the central target word is ${p_{ij}}/{p_{ik}}$. We can find a function that uses word vectors to fit this conditional probability ratio.
 
@@ -97,5 +97,6 @@ By taking the square error and weighting the left and right sides of the formula
 
 [Discussions](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQzOTk2MTY4LC0xMDE3ODc2MjgxXX0=
+eyJoaXN0b3J5IjpbLTExNjgyMjcwMTEsLTEwMTc4NzYyODFdfQ
+==
 -->
