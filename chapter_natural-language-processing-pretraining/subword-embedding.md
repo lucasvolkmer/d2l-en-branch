@@ -132,11 +132,6 @@ Por exemplo, as palavras "faster_" e "taller_" são segmentadas como "fast er_" 
 print(list(token_freqs.keys()))
 ```
 
-Note that the result of byte pair encoding depends on the dataset being used.
-We can also use the subwords learned from one dataset
-to segment words of another dataset.
-As a greedy approach, the following `segment_BPE` function tries to break words into the longest possible subwords from the input argument `symbols`.
-
 Observe que o resultado da codificação do par de bytes depende do conjunto de dados que está sendo usado.
 Também podemos usar as sub-palavras aprendidas com um conjunto de dados
 para segmentar palavras de outro conjunto de dados.
@@ -163,8 +158,8 @@ def segment_BPE(tokens, symbols):
     return outputs
 ```
 
-In the following, we use the subwords in list `symbols`, which is learned from the aforementioned dataset,
-to segment `tokens` that represent another dataset.
+A seguir, usamos as sub-palavras em 'symbols' da lista, que é aprendido com o conjunto de dados acima mencionado,
+para segmentar `tokens` que representam outro conjunto de dados.
 
 ```{.python .input}
 #@tab all
@@ -172,25 +167,28 @@ tokens = ['tallest_', 'fatter_']
 print(segment_BPE(tokens, symbols))
 ```
 
-## Summary
+## Sumário
 
-* FastText proposes a subword embedding method. Based on the skip-gram model in word2vec, it represents the central word vector as the sum of the subword vectors of the word.
-* Subword embedding utilizes the principles of morphology, which usually improves the quality of representations of uncommon words.
-* Byte pair encoding performs a statistical analysis of the training dataset to discover common symbols within a word. As a greedy approach, byte pair encoding iteratively merges the most frequent pair of consecutive symbols.
+* FastText propõe um método de incorporação de subpalavra. Com base no modelo skip-gram em word2vec, ele representa o vetor de palavra central como a soma dos vetores de subpalavra da palavra.
+* A incorporação de subpalavra utiliza os princípios da morfologia, o que geralmente melhora a qualidade das representações de palavras incomuns.
+* A codificação de pares de bytes realiza uma análise estatística do conjunto de dados de treinamento para descobrir símbolos comuns em uma palavra. Como uma abordagem gananciosa, a codificação de pares de bytes mescla iterativamente o par mais frequente de símbolos consecutivos.
 
 
-## Exercises
+## Exercícios
 
 1. When there are too many subwords (for example, 6 words in English result in about $3\times 10^8$ combinations), what problems arise? Can you think of any methods to solve them? Hint: Refer to the end of section 3.2 of the fastText paper :cite:`Bojanowski.Grave.Joulin.ea.2017`.
 1. How can you design a subword embedding model based on the continuous bag-of-words model?
 1. To get a vocabulary of size $m$, how many merging operations are needed when the initial symbol vocabulary size is $n$?
 1. How can we extend the idea of byte pair encoding to extract phrases?
 
-
+1. Quando há muitas subpalavras (por exemplo, 6 palavras em inglês resultam em cerca de $3\times 10^8$ combinações), quais são os problemas? Você consegue pensar em algum método para resolvê-los? Dica: consulte o final da seção 3.2 do artigo fastText: cite: `Bojanowski.Grave.Joulin.ea.2017`.
+1. Como você pode projetar um modelo de incorporação de subpalavra com base no modelo de saco de palavras contínuo?
+1. Para obter um vocabulário de tamanho $ m $, quantas operações de fusão são necessárias quando o tamanho inicial do vocabulário de símbolos é $ n $?
+1. Como podemos estender a ideia de codificação de par de bytes para extrair frases?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/386)
+[Discussão](https://discuss.d2l.ai/t/386)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MzU1NzQwMiwtMTMyMjA5ODE5MV19
+eyJoaXN0b3J5IjpbLTI5MjA0MzcyNywtMTMyMjA5ODE5MV19
 -->
