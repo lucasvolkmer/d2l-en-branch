@@ -195,28 +195,28 @@ Verifique a analogia "male-female".
 get_analogy('man', 'woman', 'son', glove_6b50d)
 ```
 
-“Capital-country” analogy: "beijing" is to "china" as "tokyo" is to what? The answer should be "japan".
+Analogia de “país-capital”: "beijing" é para "china" como "tokyo" é para quê? A resposta deve ser "japão".
 
 ```{.python .input}
 #@tab all
 get_analogy('beijing', 'china', 'tokyo', glove_6b50d)
 ```
 
-"Adjective-superlative adjective" analogy: "bad" is to "worst" as "big" is to what? The answer should be "biggest".
+Analogia do "adjetivo-adjetivo superlativo": "ruim" está para o "pior", assim como "grande" está para o quê? A resposta deve ser "maior".
 
 ```{.python .input}
 #@tab all
 get_analogy('bad', 'worst', 'big', glove_6b50d)
 ```
 
-"Present tense verb-past tense verb" analogy: "do" is to "did" as "go" is to what? The answer should be "went".
+Analogia do "verbo presente-verbo no pretérito": "do" é "did" assim como "go" é para quê? A resposta deve ser "went".
 
 ```{.python .input}
 #@tab all
 get_analogy('do', 'did', 'go', glove_6b50d)
 ```
 
-## Summary
+## Sumário
 
 * Word vectors pre-trained on a large-scale corpus can often be applied to downstream natural language processing tasks.
 * We can use pre-trained word vectors to seek synonyms and analogies.
@@ -235,5 +235,5 @@ get_analogy('do', 'did', 'go', glove_6b50d)
 [Discussions](https://discuss.d2l.ai/t/1336)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mjk2MTMyODYsNTE5NTQwODExXX0=
+eyJoaXN0b3J5IjpbMTk5NjExNjk1OCw1MTk1NDA4MTFdfQ==
 -->
