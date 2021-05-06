@@ -1,12 +1,16 @@
-# Bidirectional Encoder Representations from Transformers (BERT)
+# Bidirectional Encoder Representations from TRepresentações de codificador bidirecional de transformadorers (BERT)
 :label:`sec_bert`
 
-We have introduced several word embedding models for natural language understanding.
-After pretraining, the output can be thought of as a matrix
-where each row is a vector that represents a word of a predefined vocabulary.
-In fact, these word embedding models are all *context-independent*.
-Let us begin by illustrating this property.
-
+We have introduced several word embedding models for naturalIntroduzimos vários modelos de incorporação de palavras para a compreensão da lainguage understanding.
+Afterm natural.
+Após o preé-traeining, the output can be thought of as a matrix
+where each row is aamento, a saída pode ser pensada como uma matriz
+onde cada linha é um vector thatque represents a word of a predefined vocabulary.
+In fact, these word embeddinga uma palavra de um vocabulário predefinido.
+Na verdade, esses modelos arde incorporação de pall *context-independent*.
+Let us begin byavras são todos * independentes do contexto *.
+Vamos começar illustrating this property.
+ndo essa propriedade.
 
 ## From Context-Independent to Context-Sensitive
 
@@ -603,3 +607,6 @@ class BERTModel(nn.Module):
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTkxMzIyNTk5Ml19
+-->
