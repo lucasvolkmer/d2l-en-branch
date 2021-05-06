@@ -174,11 +174,11 @@ def get_styles(image_shape, device):
 
 ## Definindo a Função de Perda
 
-Next, we will look at the loss function used for style transfer. The loss function includes the content loss, style loss, and total variation loss.
+A seguir, veremos a função de perda usada para transferência de estilo. A função de perda inclui a perda de conteúdo, perda de estilo e perda total de variação.
 
-### Content Loss
+### Perda de Conteúdo
 
-Similar to the loss function used in linear regression, content loss uses a square error function to measure the difference in content features between the composite image and content image. The two inputs of the square error function are both content layer outputs obtained from the `extract_features` function.
+Semelhante à função de perda usada na regressão linear, a perda de conteúdo usa uma função de erro quadrado para medir a diferença nos recursos de conteúdo entre a imagem composta e a imagem de conteúdo. As duas entradas da função de erro quadrada são ambas saídas da camada de conteúdo obtidas da função `extract_features`.
 
 ```{.python .input}
 def content_loss(Y_hat, Y):
@@ -194,7 +194,7 @@ def content_loss(Y_hat, Y):
     return torch.square(Y_hat - Y.detach()).mean()
 ```
 
-### Style Loss
+### Perda de Estilo
 
 Style loss, similar to content loss, uses a square error function to measure the difference in style between the composite image and style image. To express the styles output by the style layers, we first use the `extract_features` function to compute the style layer output. Assuming that the output has 1 example, $c$ channels, and a height and width of $h$ and $w$, we can transform the output into the matrix $\mathbf{X}$, which has $c$ rows and $h \cdot w$ columns. You can think of matrix $\mathbf{X}$ as the combination of the $c$ vectors $\mathbf{x}_1, \ldots, \mathbf{x}_c$, which have a length of $hw$. Here, the vector $\mathbf{x}_i$ represents the style feature of channel $i$. In the Gram matrix of these vectors $\mathbf{X}\mathbf{X}^\top \in \mathbb{R}^{c \times c}$, element $x_{ij}$ in row $i$ column $j$ is the inner product of vectors $\mathbf{x}_i$ and $\mathbf{x}_j$. It represents the correlation of the style features of channels $i$ and $j$. We use this type of Gram matrix to represent the style output by the style layers. You must note that, when the $h \cdot w$ value is large, this often leads to large values in the Gram matrix. In addition, the height and width of the Gram matrix are both the number of channels $c$. To ensure that the style loss is not affected by the size of these values, we define the `gram` function below to divide the Gram matrix by the number of its elements, i.e., $c \cdot h \cdot w$.
 
@@ -430,6 +430,6 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODQwOTAwNTIsLTg0MTQ5NTk5MiwtOT
-MzOTI1NjIsLTI2OTA2NDgzNSwxODkxNDEzNTEwXX0=
+eyJoaXN0b3J5IjpbMjg5Mzc2OTgwLC04NDE0OTU5OTIsLTkzMz
+kyNTYyLC0yNjkwNjQ4MzUsMTg5MTQxMzUxMF19
 -->
