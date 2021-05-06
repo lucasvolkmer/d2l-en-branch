@@ -20,14 +20,14 @@ $$\textrm{"<wh"}, \ \textrm{"whe"}, \ \textrm{"her"}, \ \textrm{"ere"}, \ \textr
 
 e a subpalavra especial $\textrm{"<where>"}$.
 
-In fastText, for a word $w$, we record the union of all its subwords with length of $3$ to $6$ and special subwords as $\mathcal{G}_w$. Thus, the dictionary is the union of the collection of subwords of all words. Assume the vector of the subword $g$ in the dictionary is $\mathbf{z}_g$. Then, the central word vector $\mathbf{u}_w$ for the word $w$ in the skip-gram model can be expressed as
+Em fastText, para uma palavra $w$, registramos a união de todas as suas subpalavras com comprimento de $3$ a $6$ e as subpalavras especiais como $\mathcal{G}_w$. Assim, o dicionário é a união da coleção de subpalavras de todas as palavras. Suponha que o vetor da subpalavra $g$ no dicionário seja $\mathbf{z}_g$. Então, o vetor de palavra central $\mathbf{u}_w$ para a palavra $w$ no modelo de grama de salto pode ser expresso como
 
 $$\mathbf{u}_w = \sum_{g\in\mathcal{G}_w} \mathbf{z}_g.$$
 
-The rest of the fastText process is consistent with the skip-gram model, so it is not repeated here. As we can see, compared with the skip-gram model, the dictionary in fastText is larger, resulting in more model parameters. Also, the vector of one word requires the summation of all subword vectors, which results in higher computation complexity. However, we can obtain better vectors for more uncommon complex words, even words not existing in the dictionary, by looking at other words with similar structures.
+O resto do processo fastText é consistente com o modelo skip-gram, portanto, não é repetido aqui. Como podemos ver, em comparação com o modelo skip-gram, o dicionário em fastText é maior, resultando em mais parâmetros do modelo. Além disso, o vetor de uma palavra requer a soma de todos os vetores de subpalavra, o que resulta em maior complexidade de computação. No entanto, podemos obter vetores melhores para palavras complexas mais incomuns, mesmo palavras que não existem no dicionário, olhando para outras palavras com estruturas semelhantes.
 
 
-## Byte Pair Encoding
+## Codificação de par de bytes
 :label:`subsec_Byte_Pair_Encoding`
 
 In fastText, all the extracted subwords have to be of the specified lengths, such as $3$ to $6$, thus the vocabulary size cannot be predefined.
@@ -43,6 +43,20 @@ Note that for efficiency, pairs crossing word boundaries are not considered.
 In the end, we can use such symbols as subwords to segment words.
 Byte pair encoding and its variants has been used for input representations in popular natural language processing pretraining models such as GPT-2 :cite:`Radford.Wu.Child.ea.2019` and RoBERTa :cite:`Liu.Ott.Goyal.ea.2019`.
 In the following, we will illustrate how byte pair encoding works.
+
+Em fastText, todas as subpalavras extraídas devem ter os comprimentos especificados, como $ 3 $ a $ 6 $, portanto, o tamanho do vocabulário não pode ser predefinido.
+Para permitir subpalavras de comprimento variável em um vocabulário de tamanho fixo,
+podemos aplicar um algoritmo de compressão
+chamado de *codificação de par de bytes* (BPE) para extrair subpalavras: cite: `Sennrich.Haddow.Birch.2015`.
+
+A codificação de pares de bytes realiza uma análise estatística do conjunto de dados de treinamento para descobrir símbolos comuns em uma palavra,
+como caracteres consecutivos de comprimento arbitrário.
+Começando com símbolos de comprimento $ 1 $,
+a codificação de pares de bytes mescla iterativamente o par mais frequente de símbolos consecutivos para produzir novos símbolos mais longos.
+Observe que, para eficiência, os pares que cruzam os limites das palavras não são considerados.
+No final, podemos usar esses símbolos como subpalavras para segmentar palavras.
+A codificação de pares de bytes e suas variantes foram usadas para representações de entrada em modelos populares de pré-treinamento de processamento de linguagem natural, como GPT-2: cite: `Radford.Wu.Child.ea.2019` e RoBERTa: cite:` Liu.Ott.Goyal. ea.2019`.
+A seguir, ilustraremos como funciona a codificação de pares de bytes.
 
 First, we initialize the vocabulary of symbols as all the English lowercase characters, a special end-of-word symbol `'_'`, and a special unknown symbol `'[UNK]'`.
 
@@ -187,5 +201,5 @@ print(segment_BPE(tokens, symbols))
 [Discussions](https://discuss.d2l.ai/t/386)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU2NjA3MjldfQ==
+eyJoaXN0b3J5IjpbLTIwODE0NTcwNjRdfQ==
 -->
