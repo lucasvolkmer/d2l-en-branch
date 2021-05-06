@@ -206,7 +206,7 @@ def gram(X):
     return d2l.matmul(X, X.T) / (num_channels * n)
 ```
 
-Naturally, the two Gram matrix inputs of the square error function for style loss are taken from the composite image and style image style layer outputs. Here, we assume that the Gram matrix of the style image, `gram_Y`, has been computed in advance.
+Naturalmente, as duas entradas de matriz de Gram da função de erro quadrado para perda de estilo são obtidas da imagem composta e das saídas da camada de estilo de imagem de estilo. Aqui, assumimos que a matriz de Gram da imagem de estilo, `gram_Y`, foi calculada antecipadamente.
 
 ```{.python .input}
 def style_loss(Y_hat, gram_Y):
@@ -219,13 +219,13 @@ def style_loss(Y_hat, gram_Y):
     return torch.square(gram(Y_hat) - gram_Y.detach()).mean()
 ```
 
-### Total Variance Loss
+### Perda de Variância Total
 
-Sometimes, the composite images we learn have a lot of high-frequency noise, particularly bright or dark pixels. One common noise reduction method is total variation denoising. We assume that $x_{i, j}$ represents the pixel value at the coordinate $(i, j)$, so the total variance loss is:
+Às vezes, as imagens compostas que aprendemos têm muito ruído de alta frequência, principalmente pixels claros ou escuros. Um método comum de redução de ruído é a redução total de ruído na variação. Assumimos que $x_ {i, j}$ representa o valor do pixel na coordenada $(i, j)$, então a perda total de variância é:
 
 $$\sum_{i, j} \left|x_{i, j} - x_{i+1, j}\right| + \left|x_{i, j} - x_{i, j+1}\right|.$$
 
-We try to make the values of neighboring pixels as similar as possible.
+Tentamos tornar os valores dos pixels vizinhos tão semelhantes quanto possível.
 
 ```{.python .input}
 #@tab all
@@ -430,7 +430,7 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI3Njc3ODU4LDI4OTM3Njk4MCwtODQxND
-k1OTkyLC05MzM5MjU2MiwtMjY5MDY0ODM1LDE4OTE0MTM1MTBd
-fQ==
+eyJoaXN0b3J5IjpbMTgyNTYzMDY3MSw5Mjc2Nzc4NTgsMjg5Mz
+c2OTgwLC04NDE0OTU5OTIsLTkzMzkyNTYyLC0yNjkwNjQ4MzUs
+MTg5MTQxMzUxMF19
 -->
