@@ -145,7 +145,7 @@ def extract_features(X, content_layers, style_layers):
     return contents, styles
 ```
 
-Next, we define two functions: The `get_contents` function obtains the content features extracted from the content image, while the `get_styles` function obtains the style features extracted from the style image. Because we do not need to change the parameters of the pre-trained VGG model during training, we can extract the content features from the content image and style features from the style image before the start of training. As the composite image is the model parameter that must be updated during style transfer, we can only call the `extract_features` function during training to extract the content and style features of the composite image.
+A seguir, definimos duas funções: a função `get_contents` obtém as *features* de conteúdo extraídos da imagem do conteúdo, enquanto a função `get_styles` obtém os recursos de estilo extraídos da imagem de estilo. Como não precisamos alterar os parâmetros do modelo VGG pré-treinado durante o treinamento, podemos extrair as *features* de conteúdo da imagem de conteúdo e recursos de estilo da imagem de estilo antes do início do treinamento. Como a imagem composta é o parâmetro do modelo que deve ser atualizado durante a transferência do estilo, só podemos chamar a função `extract_features` durante o treinamento para extrair o conteúdo e os recursos de estilo da imagem composta.
 
 ```{.python .input}
 def get_contents(image_shape, device):
@@ -172,7 +172,7 @@ def get_styles(image_shape, device):
     return style_X, styles_Y
 ```
 
-## Defining the Loss Function
+## Definindo a Função de Perda
 
 Next, we will look at the loss function used for style transfer. The loss function includes the content loss, style loss, and total variation loss.
 
@@ -430,6 +430,6 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MzYyNjM0OSwtODQxNDk1OTkyLC05Mz
-M5MjU2MiwtMjY5MDY0ODM1LDE4OTE0MTM1MTBdfQ==
+eyJoaXN0b3J5IjpbLTE3ODQwOTAwNTIsLTg0MTQ5NTk5MiwtOT
+MzOTI1NjIsLTI2OTA2NDgzNSwxODkxNDEzNTEwXX0=
 -->
