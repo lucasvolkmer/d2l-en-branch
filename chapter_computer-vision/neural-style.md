@@ -234,9 +234,9 @@ def tv_loss(Y_hat):
                   d2l.abs(Y_hat[:, :, :, 1:] - Y_hat[:, :, :, :-1]).mean())
 ```
 
-### Loss Function
+### Função de Perda
 
-The loss function for style transfer is the weighted sum of the content loss, style loss, and total variance loss. By adjusting these weight hyperparameters, we can balance the retained content, transferred style, and noise reduction in the composite image according to their relative importance.
+A função de perda para transferência de estilo é a soma ponderada da perda de conteúdo, perda de estilo e perda total de variância. Ajustando esses hiperparâmetros de peso, podemos equilibrar o conteúdo retido, o estilo transferido e a redução de ruído na imagem composta de acordo com sua importância relativa.
 
 ```{.python .input}
 #@tab all
@@ -254,9 +254,9 @@ def compute_loss(X, contents_Y_hat, styles_Y_hat, contents_Y, styles_Y_gram):
     return contents_l, styles_l, tv_l, l
 ```
 
-## Creating and Initializing the Composite Image
+## Criação e inicialização da imagem composta
 
-In style transfer, the composite image is the only variable that needs to be updated. Therefore, we can define a simple model, `GeneratedImage`, and treat the composite image as a model parameter. In the model, forward computation only returns the model parameter.
+Na transferência de estilo, a imagem composta é a única variável que precisa ser atualizada. Portanto, podemos definir um modelo simples, `GeneratedImage`, e tratar a imagem composta como um parâmetro do modelo. No modelo, a computação direta retorna apenas o parâmetro do modelo.
 
 ```{.python .input}
 class GeneratedImage(nn.Block):
@@ -279,7 +279,7 @@ class GeneratedImage(nn.Module):
         return self.weight
 ```
 
-Next, we define the `get_inits` function. This function creates a composite image model instance and initializes it to the image `X`. The Gram matrix for the various style layers of the style image, `styles_Y_gram`, is computed prior to training.
+A seguir, definimos a função `get_inits`. Esta função cria uma instância de modelo de imagem composta e a inicializa na imagem `X`. A matriz de Gram para as várias camadas de estilo da imagem de estilo, `styles_Y_gram`, é calculada antes do treinamento.
 
 ```{.python .input}
 def get_inits(X, device, lr, styles_Y):
@@ -430,7 +430,7 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNTYzMDY3MSw5Mjc2Nzc4NTgsMjg5Mz
-c2OTgwLC04NDE0OTU5OTIsLTkzMzkyNTYyLC0yNjkwNjQ4MzUs
-MTg5MTQxMzUxMF19
+eyJoaXN0b3J5IjpbNTk2ODY1NjI2LDE4MjU2MzA2NzEsOTI3Nj
+c3ODU4LDI4OTM3Njk4MCwtODQxNDk1OTkyLC05MzM5MjU2Miwt
+MjY5MDY0ODM1LDE4OTE0MTM1MTBdfQ==
 -->
