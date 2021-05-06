@@ -129,7 +129,7 @@ net = nn.Sequential(*[pretrained_net.features[i] for i in
                       range(max(content_layers + style_layers) + 1)])
 ```
 
-Given input `X`, if we simply call the forward computation `net(X)`, we can only obtain the output of the last layer. Because we also need the outputs of the intermediate layers, we need to perform layer-by-layer computation and retain the content and style layer outputs.
+Dada a entrada `X`, se simplesmente chamarmos a computação direta de `net (X)`, só podemos obter a saída da última camada. Como também precisamos das saídas das camadas intermediárias, precisamos realizar computação camada por camada e reter o conteúdo e as saídas da camada de estilo.
 
 ```{.python .input}
 #@tab all
@@ -430,6 +430,6 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjI0MDYzMDMsLTg0MTQ5NTk5MiwtOT
-MzOTI1NjIsLTI2OTA2NDgzNSwxODkxNDEzNTEwXX0=
+eyJoaXN0b3J5IjpbLTU5MzYyNjM0OSwtODQxNDk1OTkyLC05Mz
+M5MjU2MiwtMjY5MDY0ODM1LDE4OTE0MTM1MTBdfQ==
 -->
