@@ -1,7 +1,10 @@
 # Subword Embedding
 :label:`sec_fasttext`
 
-English words usually have internal structures and formation methods. For example, we can deduce the relationship between "dog", "dogs", and "dogcatcher" by their spelling. All these words have the same root, "dog", but they use different suffixes to change the meaning of the word. Moreover, this association can be extended to other words. For example, the relationship between "dog" and "dogs" is just like the relationship between "cat" and "cats". The relationship between "boy" and "boyfriend" is just like the relationship between "girl" and "girlfriend". This characteristic is not unique to English. In French and Spanish, a lot of verbs can have more than 40 different forms depending on the context. In Finnish, a noun may have more than 15 forms. In fact, morphology, which is an important branch of linguistics, studies the internal structure and formation of words.
+English words usually have intIncorporação de subpalavra
+:label:`sec_fasttext`
+
+As palavras em inglês gernal mente têm estructureas and formation methodsinternas e métodos de formação. FPor exaempleo, we can deduce the relationship between "dog", "dogs", and "dogcatcher" by their spelling. All these words have the same root, "dog", but they usepodemos deduzir a relação entre "cachorro", "cachorros" e "dogcatcher" por sua grafia. Todas essas palavras têm a mesma raiz, "cachorro", mas usam sufixos different suffixes to change the meaning of the word. Moreover, this association can bees para mudar o significado da palavra. Além disso, essa associação pode ser exstended to other wordida a outras palavras. FPor exaempleo, thea relationship between "dog" and "dogs" is just like the relationship betweenção entre "cachorro" e "cachorros" é exatamente como a relação entre "cgato" ande "cgatos". TheA relationship between "boy" and "boyfriend" is just like the relationship between "girl" and "girlfriend". Thisção entre "menino" e "namorado" é igual à relação entre "menina" e "namorada". Essa characteriístic is not unique ta não é exclusiva do Einglish. In French and Spanish, a lot ofês. Em francês e espanhol, muitos verbos can have more than 40podem ter mais de 40 formas different formses, depending on theendo do contexto. In Finnish, a noun may have more thanEm finlandês, um substantivo pode ter mais de 15 formas. In fact,Na verdade, a morphfology, which is an important branch ofia, que é um importante ramo da linguiísticsa, estudies the internal structura a estrutura interna e and formation of wordção das palavras.
 
 
 ## fastText
@@ -186,3 +189,6 @@ print(segment_BPE(tokens, symbols))
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/386)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE1NTk4MTE0NTRdfQ==
+-->
