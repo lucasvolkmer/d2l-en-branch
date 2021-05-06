@@ -32,17 +32,14 @@ a distribuição em um grande número de palavras incomuns provavelmente será i
 
 ## O modelo GloVe
 
-To address this, GloVe :cite:`Pennington.Socher.Manning.2014`, a word embedding model that came after word2vec, adopts
-squared loss and makes three changes to the skip-gram model based on this loss.
-
 Para resolver isso, GloVe :cite:`Pennington.Socher.Manning.2014`, um modelo de incorporação de palavras que veio depois de word2vec, adota
 perda quadrada e faz três alterações no modelo de grama de salto com base nessa perda.
 
-1. Here, we use the non-probability distribution variables $p'_{ij}=x_{ij}$ and $q'_{ij}=\exp(\mathbf{u}_j^\top \mathbf{v}_i)$ and take their logs. Therefore, we get the squared loss $\left(\log\,p'_{ij} - \log\,q'_{ij}\right)^2 = \left(\mathbf{u}_j^\top \mathbf{v}_i - \log\,x_{ij}\right)^2$.
-2. We add two scalar model parameters for each word $w_i$: the bias terms $b_i$ (for central target words) and $c_i$( for context words).
-3. Replace the weight of each loss with the function $h(x_{ij})$. The weight function $h(x)$ is a monotone increasing function with the range $[0, 1]$.
+1. Aqui, usamos as variáveis de distribuição não probabilística $p'_{ij}=x_{ij}$ e $q'_{ij}=\exp(\mathbf{u}_j^\top \mathbf{v}_i)$ e pegue seus logs. Portanto, obtemos a perda quadrada $\left(\log\,p'_{ij} - \log\,q'_{ij}\right)^2 = \left(\mathbf{u}_j^\top \mathbf{v}_i - \log\,x_{ij}\right)^2$.
+2. Adicionamos dois parâmetros do modelo escalar para cada palavra $w_i$: os termos de polarização $b_i$ (para palavras-alvo centrais) e $c_i$ (para palavras de contexto).
+3. Substitua o peso de cada perda pela função $h(x_{ij})$. A função de peso $h(x)$ é uma função monótona crescente com o intervalo $[0, 1]$.
 
-Therefore, the goal of GloVe is to minimize the loss function.
+Portanto, o objetivo do GloVe é minimizar a função de perda.
 
 $$\sum_{i\in\mathcal{V}} \sum_{j\in\mathcal{V}} h(x_{ij}) \left(\mathbf{u}_j^\top \mathbf{v}_i + b_i + c_j - \log\,x_{ij}\right)^2.$$
 
@@ -100,5 +97,5 @@ By taking the square error and weighting the left and right sides of the formula
 
 [Discussions](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE3MzYzMjg2LC0xMDE3ODc2MjgxXX0=
+eyJoaXN0b3J5IjpbLTM3ODI0MzU5OSwtMTAxNzg3NjI4MV19
 -->
