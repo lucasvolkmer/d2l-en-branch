@@ -301,14 +301,9 @@ def get_inits(X, device, lr, styles_Y):
     return gen_img(), styles_Y_gram, trainer
 ```
 
-## Training
+## Treinamento
 
-During model training, we constantly extract the content and style features of
-the composite image and calculate the loss function. Recall our discussion of
-how synchronization functions force the front end to wait for computation
-results in :numref:`sec_async`. Because we only call the `asnumpy` synchronization function every 10
-epochs, the process may occupy a great deal of memory. Therefore, we call the
-`waitall` synchronization function during every epoch.
+Durante o treinamento do modelo, extraímos constantemente o conteúdo e as *features* de estilo da imagem composta e calculamos a função de perda. Lembre-se de nossa discussão sobre como as funções de sincronização forçam o *front-end* a esperar pelos resultados de computação em :numref:`sec_async`. Como apenas chamamos a função de sincronização `asnumpy` a cada 10 épocas, o processo pode ocupar uma grande quantidade de memória. Portanto, chamamos a função de sincronização `waitall` durante cada época.
 
 ```{.python .input}
 def train(X, contents_Y, styles_Y, device, lr, num_epochs, lr_decay_epoch):
@@ -430,7 +425,7 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk2ODY1NjI2LDE4MjU2MzA2NzEsOTI3Nj
-c3ODU4LDI4OTM3Njk4MCwtODQxNDk1OTkyLC05MzM5MjU2Miwt
-MjY5MDY0ODM1LDE4OTE0MTM1MTBdfQ==
+eyJoaXN0b3J5IjpbLTE0NjIyMzExMTUsMTgyNTYzMDY3MSw5Mj
+c2Nzc4NTgsMjg5Mzc2OTgwLC04NDE0OTU5OTIsLTkzMzkyNTYy
+LC0yNjkwNjQ4MzUsMTg5MTQxMzUxMF19
 -->
