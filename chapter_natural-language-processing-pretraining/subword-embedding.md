@@ -30,35 +30,21 @@ O resto do processo fastText é consistente com o modelo skip-gram, portanto, n�
 ## Codificação de par de bytes
 :label:`subsec_Byte_Pair_Encoding`
 
-In fastText, all the extracted subwords have to be of the specified lengths, such as $3$ to $6$, thus the vocabulary size cannot be predefined.
-To allow for variable-length subwords in a fixed-size vocabulary,
-we can apply a compression algorithm
-called *byte pair encoding* (BPE) to extract subwords :cite:`Sennrich.Haddow.Birch.2015`.
-
-Byte pair encoding performs a statistical analysis of the training dataset to discover common symbols within a word,
-such as consecutive characters of arbitrary length.
-Starting from symbols of length $1$,
-byte pair encoding iteratively merges the most frequent pair of consecutive symbols to produce new longer symbols.
-Note that for efficiency, pairs crossing word boundaries are not considered.
-In the end, we can use such symbols as subwords to segment words.
-Byte pair encoding and its variants has been used for input representations in popular natural language processing pretraining models such as GPT-2 :cite:`Radford.Wu.Child.ea.2019` and RoBERTa :cite:`Liu.Ott.Goyal.ea.2019`.
-In the following, we will illustrate how byte pair encoding works.
-
-Em fastText, todas as subpalavras extraídas devem ter os comprimentos especificados, como $ 3 $ a $ 6 $, portanto, o tamanho do vocabulário não pode ser predefinido.
+Em fastText, todas as subpalavras extraídas devem ter os comprimentos especificados, como $3$ a $6$, portanto, o tamanho do vocabulário não pode ser predefinido.
 Para permitir subpalavras de comprimento variável em um vocabulário de tamanho fixo,
 podemos aplicar um algoritmo de compressão
-chamado de *codificação de par de bytes* (BPE) para extrair subpalavras: cite: `Sennrich.Haddow.Birch.2015`.
+chamado de *codificação de par de bytes* (BPE) para extrair subpalavras :cite:`Sennrich.Haddow.Birch.2015`.
 
 A codificação de pares de bytes realiza uma análise estatística do conjunto de dados de treinamento para descobrir símbolos comuns em uma palavra,
 como caracteres consecutivos de comprimento arbitrário.
-Começando com símbolos de comprimento $ 1 $,
+Começando com símbolos de comprimento $1$,
 a codificação de pares de bytes mescla iterativamente o par mais frequente de símbolos consecutivos para produzir novos símbolos mais longos.
 Observe que, para eficiência, os pares que cruzam os limites das palavras não são considerados.
 No final, podemos usar esses símbolos como subpalavras para segmentar palavras.
-A codificação de pares de bytes e suas variantes foram usadas para representações de entrada em modelos populares de pré-treinamento de processamento de linguagem natural, como GPT-2: cite: `Radford.Wu.Child.ea.2019` e RoBERTa: cite:` Liu.Ott.Goyal. ea.2019`.
+A codificação de pares de bytes e suas variantes foram usadas para representações de entrada em modelos populares de pré-treinamento de processamento de linguagem natural, como GPT-2 :cite:`Radford.Wu.Child.ea.2019` e RoBERTa :cite:`Liu.Ott.Goyal.ea.2019`.
 A seguir, ilustraremos como funciona a codificação de pares de bytes.
 
-First, we initialize the vocabulary of symbols as all the English lowercase characters, a special end-of-word symbol `'_'`, and a special unknown symbol `'[UNK]'`.
+Primeiro, inicializamos o vocabulário de símbolos como todos os caracteres minúsculos do inglês, um símbolo especial de fim de palavra `'_'` e um símbolo especial desconhecido`' [UNK] '`.
 
 ```{.python .input}
 #@tab all
@@ -77,6 +63,15 @@ we can easily recover a word sequence (e.g., "a taller man")
 from a sequence of output symbols ( e.g., "a_ tall er_ man").
 Since we start the merging process from a vocabulary of only single characters and special symbols, space is inserted between every pair of consecutive characters within each word (keys of the dictionary `token_freqs`).
 In other words, space is the delimiter between symbols within a word.
+
+Uma vez que não consideramos pares de símbolos que cruzam os limites das palavras,
+precisamos apenas de um dicionário `raw_token_freqs` que mapeia as palavras para suas frequências (número de ocorrências)
+em um conjunto de dados.
+Observe que o símbolo especial `'_'` é anexado a cada palavra para que
+podemos facilmente recuperar uma sequência de palavras (por exemplo, "um homem mais alto")
+a partir de uma sequência de símbolos de saída (por exemplo, "a_ tall er_ man").
+Uma vez que iniciamos o processo de fusão a partir de um vocabulário de apenas caracteres únicos e símbolos especiais, o espaço é inserido entre cada par de caracteres consecutivos dentro de cada palavra (chaves do dicionário `token_freqs`).
+Em outras palavras, o espaço é o delimitador entre os símbolos de uma palavra.
 
 ```{.python .input}
 #@tab all
@@ -201,5 +196,5 @@ print(segment_BPE(tokens, symbols))
 [Discussions](https://discuss.d2l.ai/t/386)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODE0NTcwNjRdfQ==
+eyJoaXN0b3J5IjpbLTEzMjIwOTgxOTFdfQ==
 -->
