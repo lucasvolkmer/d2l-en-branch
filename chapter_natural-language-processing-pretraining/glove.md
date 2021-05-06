@@ -43,7 +43,9 @@ Portanto, o objetivo do GloVe é minimizar a função de perda.
 
 $$\sum_{i\in\mathcal{V}} \sum_{j\in\mathcal{V}} h(x_{ij}) \left(\mathbf{u}_j^\top \mathbf{v}_i + b_i + c_j - \log\,x_{ij}\right)^2.$$
 
-Here, we have a suggestion for the choice of weight function $h(x)$: when $x < c$ (e.g $c = 100$), make $h(x) = (x/c) ^\alpha$ (e.g $\alpha = 0.75$), otherwise make $h(x) = 1$. Because $h(0)=0$, the squared loss term for $x_{ij}=0$ can be simply ignored. When we use minibatch SGD for training, we conduct random sampling to get a non-zero minibatch $x_{ij}$ from each time step and compute the gradient to update the model parameters. These non-zero $x_{ij}$ are computed in advance based on the entire dataset and they contain global statistics for the dataset. Therefore, the name GloVe is taken from "Global Vectors".
+Aqui, temos uma sugestão para a escolha da função de peso $h(x)$: quando $x<c$ (por exemplo, $c=100$), faça $h(x) = (x/c) ^\alpha$ (por exemplo, $\alpha = 0.75$), caso contrário, faça $h(x) = 1$. Como $h(0)=0$, o termo de perda ao quadrado de $x_{ij}=0$ pode ser simplesmente ignorado. Quando usamos o minibatch SGD para treinamento, conduzimos uma amostragem aleatória para obter um minibatch diferente de zero $x_{ij}$ de cada intervalo de tempo e calculamos o gradiente para atualizar os parâmetros do modelo. Esses $x_{ij}$ diferentes de zero são calculados antecipadamente com base em todo o conjunto de dados e contêm estatísticas globais para o conjunto de dados. Portanto, o nome GloVe é retirado de "Vetores globais".
+
+Notice that if word $w_i$ appears in the context window of word $w_j$, then word $w_j$ will also appear in the context window of word $w_i$. Therefore, $x_{ij}=x_{ji}$. Unlike word2vec, GloVe fits the symmetric $\log\, x_{ij}$ in lieu of the asymmetric conditional probability $p_{ij}$. Therefore, the central target word vector and context word vector of any word are equivalent in GloVe. However, the two sets of word vectors that are learned by the same word may be different in the end due to different initialization values. After learning all the word vectors, GloVe will use the sum of the central target word vector and the context word vector as the final word vector for the word.
 
 Notice that if word $w_i$ appears in the context window of word $w_j$, then word $w_j$ will also appear in the context window of word $w_i$. Therefore, $x_{ij}=x_{ji}$. Unlike word2vec, GloVe fits the symmetric $\log\, x_{ij}$ in lieu of the asymmetric conditional probability $p_{ij}$. Therefore, the central target word vector and context word vector of any word are equivalent in GloVe. However, the two sets of word vectors that are learned by the same word may be different in the end due to different initialization values. After learning all the word vectors, GloVe will use the sum of the central target word vector and the context word vector as the final word vector for the word.
 
@@ -97,5 +99,5 @@ By taking the square error and weighting the left and right sides of the formula
 
 [Discussions](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3ODI0MzU5OSwtMTAxNzg3NjI4MV19
+eyJoaXN0b3J5IjpbMTYxMzQ0NzUwNiwtMTAxNzg3NjI4MV19
 -->
