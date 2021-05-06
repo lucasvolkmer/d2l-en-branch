@@ -108,14 +108,14 @@ pretrained_net = gluon.model_zoo.vision.vgg19(pretrained=True)
 pretrained_net = torchvision.models.vgg19(pretrained=True)
 ```
 
-To extract image content and style features, we can select the outputs of certain layers in the VGG network. In general, the closer an output is to the input layer, the easier it is to extract image detail information. The farther away an output is, the easier it is to extract global information. To prevent the composite image from retaining too many details from the content image, we select a VGG network layer near the output layer to output the image content features. This layer is called the content layer. We also select the outputs of different layers from the VGG network for matching local and global styles. These are called the style layers. As we mentioned in :numref:`sec_vgg`, VGG networks have five convolutional blocks. In this experiment, we select the last convolutional layer of the fourth convolutional block as the content layer and the first layer of each block as style layers. We can obtain the indexes for these layers by printing the `pretrained_net` instance.
+Para extrair o conteúdo da imagem e os recursos de estilo, podemos selecionar as saídas de certas camadas na rede VGG. Em geral, quanto mais próxima uma saída estiver da camada de entrada, mais fácil será extrair informações detalhadas da imagem. Quanto mais longe uma saída estiver, mais fácil será extrair informações globais. Para evitar que a imagem composta retenha muitos detalhes da imagem de conteúdo, selecionamos uma camada de rede VGG próxima à camada de saída para produzir os recursos de conteúdo da imagem. Essa camada é chamada de camada de conteúdo. Também selecionamos as saídas de diferentes camadas da rede VGG para combinar os estilos local e global. Elas são chamadas de camadas de estilo. Como mencionamos em :numref:`sec_vgg`, as redes VGG têm cinco blocos convolucionais. Neste experimento, selecionamos a última camada convolucional do quarto bloco convolucional como a camada de conteúdo e a primeira camada de cada bloco como camadas de estilo. Podemos obter os índices para essas camadas imprimindo a instância `pretrained_net`.
 
 ```{.python .input}
 #@tab all
 style_layers, content_layers = [0, 5, 10, 19, 28], [25]
 ```
 
-During feature extraction, we only need to use all the VGG layers from the input layer to the content or style layer nearest the output layer. Below, we build a new network, `net`, which only retains the layers in the VGG network we need to use. We then use `net` to extract features.
+Durante a extração de *features*, só precisamos usar todas as camadas VGG da camada de entrada até a camada de conteúdo ou estilo mais próxima da camada de saída. Abaixo, construímos uma nova rede, `net`, que retém apenas as camadas da rede VGG que precisamos usar. Em seguida, usamos `net` para extrair *features*.
 
 ```{.python .input}
 net = nn.Sequential()
@@ -430,6 +430,6 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE5MTY3MTQ0LC04NDE0OTU5OTIsLTkzMz
-kyNTYyLC0yNjkwNjQ4MzUsMTg5MTQxMzUxMF19
+eyJoaXN0b3J5IjpbLTE2NjI0MDYzMDMsLTg0MTQ5NTk5MiwtOT
+MzOTI1NjIsLTI2OTA2NDgzNSwxODkxNDEzNTEwXX0=
 -->
