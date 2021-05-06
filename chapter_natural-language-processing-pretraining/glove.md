@@ -65,11 +65,11 @@ Seremos capazes de observar fenômenos como:
 * Para uma palavra $w_k$ que está relacionada a "gelo" e "vapor", como $w_k=\text{agua}$, esperaríamos uma razão de probabilidade condicional próxima de 1, como o valor 1,36 no último linha da tabela acima.
 * Para uma palavra $w_k$ que não está relacionada a "gelo" ou "vapor", como $w_k=\text{fashion}$, esperaríamos uma razão de probabilidade condicional próxima de 1, como o valor 0,96 no último linha da tabela acima.
 
-We can see that the conditional probability ratio can represent the relationship between different words more intuitively. We can construct a word vector function to fit the conditional probability ratio more effectively. As we know, to obtain any ratio of this type requires three words $w_i$, $w_j$, and $w_k$. The conditional probability ratio with $w_i$ as the central target word is ${p_{ij}}/{p_{ik}}$. We can find a function that uses word vectors to fit this conditional probability ratio.
+Podemos ver que a razão de probabilidade condicional pode representar a relação entre diferentes palavras de forma mais intuitiva. Podemos construir uma função de vetor de palavras para ajustar a razão de probabilidade condicional de forma mais eficaz. Como sabemos, para obter qualquer razão deste tipo são necessárias três palavras $w_i$, $w_j$, e $w_k$. A razão de probabilidade condicional com $w_i$ como palavra alvo central é ${p_{ij}}/{p_{ik}}$. Podemos encontrar uma função que usa vetores de palavras para ajustar essa razão de probabilidade condicional.
 
 $$f(\mathbf{u}_j, \mathbf{u}_k, {\mathbf{v}}_i) \approx \frac{p_{ij}}{p_{ik}}.$$
 
-The possible design of function $f$ here will not be unique. We only need to consider a more reasonable possibility. Notice that the conditional probability ratio is a scalar, we can limit $f$ to be a scalar function: $f(\mathbf{u}_j, \mathbf{u}_k, {\mathbf{v}}_i) = f\left((\mathbf{u}_j - \mathbf{u}_k)^\top {\mathbf{v}}_i\right)$. After exchanging index $j$ with $k$, we will be able to see that function $f$ satisfies the condition $f(x)f(-x)=1$, so one possibility could be $f(x)=\exp(x)$. Thus:
+O projeto possível da função $f$ aqui não será exclusivo. Precisamos apenas considerar uma possibilidade mais razoável. Observe que a razão de probabilidade condicional é escalar, podemos limitar $f$ para ser uma função escalar: $f(\mathbf{u}_j, \mathbf{u}_k, {\mathbf{v}}_i) = f\left((\mathbf{u}_j - \mathbf{u}_k)^\top {\mathbf{v}}_i\right)$. Depois de trocar o índice $j$ por $k$, seremos capazes de ver que a função $f$ satisfaz a condição $f(x)f(-x)=1$, então uma possibilidade poderia ser $f(x)=\exp(x)$. Assim: 
 
 $$f(\mathbf{u}_j, \mathbf{u}_k, {\mathbf{v}}_i) = \frac{\exp\left(\mathbf{u}_j^\top {\mathbf{v}}_i\right)}{\exp\left(\mathbf{u}_k^\top {\mathbf{v}}_i\right)} \approx \frac{p_{ij}}{p_{ik}}.$$
 
@@ -97,6 +97,5 @@ By taking the square error and weighting the left and right sides of the formula
 
 [Discussions](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjgyMjcwMTEsLTEwMTc4NzYyODFdfQ
-==
+eyJoaXN0b3J5IjpbMTMxMzgxMDk2NiwtMTAxNzg3NjI4MV19
 -->
