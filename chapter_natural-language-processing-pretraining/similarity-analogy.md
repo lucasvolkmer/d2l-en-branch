@@ -1,4 +1,4 @@
-# Finding Synonyms and Analogies
+# Finding Synonyms and AEncontrando sinônimos e analogieas
 :label:`sec_synonyms`
 
 In :numref:`sec_word2vec_pretraining` we trained a word2vec word embedding model
@@ -8,6 +8,14 @@ can often be applied to downstream natural language processing tasks. This
 section will demonstrate how to use these pretrained word vectors to find
 synonyms and analogies. We will continue to apply pretrained word vectors in
 subsequent sections.
+
+Em :numref:`sec_word2vec_pretraining` treinamos um modelo de incorporação de palavras word2vec
+em um conjunto de dados de pequena escala e procurou por sinônimos usando a similaridade de cosseno
+de vetores de palavras. Na prática, vetores de palavras pré-treinados em um corpus de grande escala
+muitas vezes pode ser aplicado a tarefas de processamento de linguagem natural downstream. Esta
+seção irá demonstrar como usar esses vetores de palavras pré-treinados para encontrar
+sinônimos e analogias. Continuaremos a aplicar vetores de palavras pré-treinados em
+seções subsequentes.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -234,3 +242,6 @@ get_analogy('do', 'did', 'go', glove_6b50d)
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1336)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjU4MzMwNjMxXX0=
+-->
