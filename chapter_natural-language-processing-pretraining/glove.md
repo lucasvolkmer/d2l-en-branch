@@ -87,19 +87,13 @@ Pegando o erro quadrado e ponderando os lados esquerdo e direito da fórmula aci
 
 ## Exercícios
 
-1. If a word appears in the context window of another word, how can we use the
-  distance between them in the text sequence to redesign the method for
-  computing the conditional probability $p_{ij}$? Hint: See section 4.2 from the
-  paper GloVe :cite:`Pennington.Socher.Manning.2014`.
-1. For any word, will its central target word bias term and context word bias term be equivalent to each other in GloVe? Why?
-
 1. Se uma palavra aparecer na janela de contexto de outra palavra, como podemos usar o
    distância entre eles na sequência de texto para redesenhar o método para
-   calculando a probabilidade condicional $ p_ {ij} $? Dica: Consulte a seção 4.2 do
-   paper GloVe: cite: `Pennington.Socher.Manning.2014`.
+   calculando a probabilidade condicional $p_{ij}$? Dica: Consulte a seção 4.2 do
+   paper GloVe :cite:`Pennington.Socher.Manning.2014`.
 1. Para qualquer palavra, o termo de polarização da palavra-alvo central e o termo de polarização da palavra de contexto serão equivalentes entre si no GloVe? Por quê?
 
-[Discussions](https://discuss.d2l.ai/t/385)
+[Discussão](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NzgwOTM1OCwtMTAxNzg3NjI4MV19
+eyJoaXN0b3J5IjpbMTA4ODY3OTMwNCwtMTAxNzg3NjI4MV19
 -->
