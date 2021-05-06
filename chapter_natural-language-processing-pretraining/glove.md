@@ -1,4 +1,4 @@
-# Word Embedding with Global Vectors (GloVe)
+# Incorporação de palavras com vetores globais (GloVe)
 :label:`sec_glove`
 
 Primeiro, devemos revisar o modelo skip-gram no word2vec. A probabilidade condicional $P(w_j\mid w_i)$ expressa no modelo skip-gram usando a operação softmax será registrada como $q_{ij}$, ou seja:
@@ -95,5 +95,5 @@ Pegando o erro quadrado e ponderando os lados esquerdo e direito da fórmula aci
 
 [Discussão](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4ODY3OTMwNCwtMTAxNzg3NjI4MV19
+eyJoaXN0b3J5IjpbMTI0MDIzMjg5MSwtMTAxNzg3NjI4MV19
 -->
