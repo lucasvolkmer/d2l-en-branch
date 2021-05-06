@@ -73,20 +73,19 @@ O projeto possível da função $f$ aqui não será exclusivo. Precisamos apenas
 
 $$f(\mathbf{u}_j, \mathbf{u}_k, {\mathbf{v}}_i) = \frac{\exp\left(\mathbf{u}_j^\top {\mathbf{v}}_i\right)}{\exp\left(\mathbf{u}_k^\top {\mathbf{v}}_i\right)} \approx \frac{p_{ij}}{p_{ik}}.$$
 
-One possibility that satisfies the right side of the approximation sign is $\exp\left(\mathbf{u}_j^\top {\mathbf{v}}_i\right) \approx \alpha p_{ij}$, where $\alpha$ is a constant. Considering that $p_{ij}=x_{ij}/x_i$, after taking the logarithm we get $\mathbf{u}_j^\top {\mathbf{v}}_i \approx \log\,\alpha + \log\,x_{ij} - \log\,x_i$. We use additional bias terms to fit $- \log\, \alpha + \log\, x_i$, such as the central target word bias term $b_i$ and context word bias term $c_j$:
+Uma possibilidade que satisfaz o lado direito do sinal de aproximação é $\exp\left(\mathbf{u}_j^\top {\mathbf{v}}_i\right) \approx \alpha p_{ij}$, onde $\alpha$ é uma constante. Considerando que $p_{ij}=x_{ij}/x_i$, após tomar o logaritmo, obtemos $\mathbf{u}_j^\top {\mathbf{v}}_i \approx \log\,\alpha + \log\,x_{ij} - \log\,x_i$. Usamos termos de polarização adicionais para ajustar $- \log\, \alpha + \log\, x_i$, como o termo de polarização de palavra-alvo central $b_i$ e o termo de polarização de palavra de contexto $c_j$:
 
 $$\mathbf{u}_j^\top \mathbf{v}_i + b_i + c_j \approx \log(x_{ij}).$$
 
-By taking the square error and weighting the left and right sides of the formula above, we can get the loss function of GloVe.
+Pegando o erro quadrado e ponderando os lados esquerdo e direito da fórmula acima, podemos obter a função de perda de GloVe.
 
 
-## Summary
+## Sumário
 
-* In some cases, the cross-entropy loss function may have a disadvantage. GloVe uses squared loss and the word vector to fit global statistics computed in advance based on the entire dataset.
-* The central target word vector and context word vector of any word are equivalent in GloVe.
+* Em alguns casos, a função de perda de entropia cruzada pode ter uma desvantagem. O GloVe usa a perda quadrática e o vetor de palavras para ajustar as estatísticas globais calculadas antecipadamente com base em todo o conjunto de dados.
+* O vetor da palavra alvo central e o vetor da palavra de contexto de qualquer palavra são equivalentes no GloVe.
 
-
-## Exercises
+## Exercícios
 
 1. If a word appears in the context window of another word, how can we use the
   distance between them in the text sequence to redesign the method for
@@ -94,8 +93,13 @@ By taking the square error and weighting the left and right sides of the formula
   paper GloVe :cite:`Pennington.Socher.Manning.2014`.
 1. For any word, will its central target word bias term and context word bias term be equivalent to each other in GloVe? Why?
 
+1. Se uma palavra aparecer na janela de contexto de outra palavra, como podemos usar o
+   distância entre eles na sequência de texto para redesenhar o método para
+   calculando a probabilidade condicional $ p_ {ij} $? Dica: Consulte a seção 4.2 do
+   paper GloVe: cite: `Pennington.Socher.Manning.2014`.
+1. Para qualquer palavra, o termo de polarização da palavra-alvo central e o termo de polarização da palavra de contexto serão equivalentes entre si no GloVe? Por quê?
 
 [Discussions](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMzgxMDk2NiwtMTAxNzg3NjI4MV19
+eyJoaXN0b3J5IjpbLTQ3NzgwOTM1OCwtMTAxNzg3NjI4MV19
 -->
