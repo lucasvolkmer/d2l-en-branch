@@ -55,15 +55,6 @@ symbols = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
            '_', '[UNK]']
 ```
 
-Since we do not consider symbol pairs that cross boundaries of words,
-we only need a dictionary `raw_token_freqs` that maps words to their frequencies (number of occurrences)
-in a dataset.
-Note that the special symbol `'_'` is appended to each word so that
-we can easily recover a word sequence (e.g., "a taller man")
-from a sequence of output symbols ( e.g., "a_ tall er_ man").
-Since we start the merging process from a vocabulary of only single characters and special symbols, space is inserted between every pair of consecutive characters within each word (keys of the dictionary `token_freqs`).
-In other words, space is the delimiter between symbols within a word.
-
 Uma vez que não consideramos pares de símbolos que cruzam os limites das palavras,
 precisamos apenas de um dicionário `raw_token_freqs` que mapeia as palavras para suas frequências (número de ocorrências)
 em um conjunto de dados.
@@ -82,9 +73,9 @@ for token, freq in raw_token_freqs.items():
 token_freqs
 ```
 
-We define the following `get_max_freq_pair` function that 
-returns the most frequent pair of consecutive symbols within a word,
-where words come from keys of the input dictionary `token_freqs`.
+Definimos a seguinte função `get_max_freq_pair` que
+retorna o par mais frequente de símbolos consecutivos em uma palavra,
+onde as palavras vêm de chaves do dicionário de entrada `token_freqs`.
 
 ```{.python .input}
 #@tab all
@@ -98,8 +89,8 @@ def get_max_freq_pair(token_freqs):
     return max(pairs, key=pairs.get)  # Key of `pairs` with the max value
 ```
 
-As a greedy approach based on frequency of consecutive symbols,
-byte pair encoding will use the following `merge_symbols` function to merge the most frequent pair of consecutive symbols to produce new symbols.
+Como uma abordagem gananciosa com base na frequência de símbolos consecutivos,
+a codificação de pares de bytes usará a seguinte função `merge_symbols` para mesclar o par mais frequente de símbolos consecutivos para produzir novos símbolos.
 
 ```{.python .input}
 #@tab all
@@ -113,7 +104,7 @@ def merge_symbols(max_freq_pair, token_freqs, symbols):
     return new_token_freqs
 ```
 
-Now we iteratively perform the byte pair encoding algorithm over the keys of the dictionary `token_freqs`. In the first iteration, the most frequent pair of consecutive symbols are `'t'` and `'a'`, thus byte pair encoding merges them to produce a new symbol `'ta'`. In the second iteration, byte pair encoding continues to merge `'ta'` and `'l'` to result in another new symbol `'tal'`.
+Agora realizamos iterativamente o algoritmo de codificação de par de bytes sobre as chaves do dicionário `token_freqs`. Na primeira iteração, o par mais frequente de símbolos consecutivos são `'t'` e`' a'`, portanto, a codificação de pares de bytes os mescla para produzir um novo símbolo `'ta'`. Na segunda iteração, a codificação do par de bytes continua a mesclar `'ta'` e`' l'` para resultar em outro novo símbolo `'tal'`.
 
 ```{.python .input}
 #@tab all
@@ -124,7 +115,7 @@ for i in range(num_merges):
     print(f'merge #{i + 1}:', max_freq_pair)
 ```
 
-After 10 iterations of byte pair encoding, we can see that list `symbols` now contains 10 more symbols that are iteratively merged from other symbols.
+Após 10 iterações de codificação de par de bytes, podemos ver que a lista de "símbolos" agora contém mais 10 símbolos que são mesclados iterativamente de outros símbolos.
 
 ```{.python .input}
 #@tab all
@@ -196,5 +187,6 @@ print(segment_BPE(tokens, symbols))
 [Discussions](https://discuss.d2l.ai/t/386)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjIwOTgxOTFdfQ==
+eyJoaXN0b3J5IjpbLTEwNTkxNjQwNjYsLTEzMjIwOTgxOTFdfQ
+==
 -->
