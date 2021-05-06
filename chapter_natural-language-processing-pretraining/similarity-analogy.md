@@ -146,7 +146,7 @@ def knn(W, x, k):
     return topk, [cos[int(i)] for i in topk]
 ```
 
-Then, we search for synonyms by pre-training the word vector instance `embed`.
+Em seguida, buscamos sinônimos pré-treinando a instância do vetor de palavras `embed`.
 
 ```{.python .input}
 #@tab all
@@ -156,14 +156,14 @@ def get_similar_tokens(query_token, k, embed):
         print(f'cosine sim={float(c):.3f}: {embed.idx_to_token[int(i)]}')
 ```
 
-The dictionary of pretrained word vector instance `glove_6b50d` already created contains 400,000 words and a special unknown token. Excluding input words and unknown words, we search for the three words that are the most similar in meaning to "chip".
+O dicionário de instância de vetor de palavras pré-treinadas `glove_6b50d` já criado contém 400.000 palavras e um token especial desconhecido. Excluindo palavras de entrada e palavras desconhecidas, procuramos as três palavras que têm o significado mais semelhante a "chip".
 
 ```{.python .input}
 #@tab all
 get_similar_tokens('chip', 3, glove_6b50d)
 ```
 
-Next, we search for the synonyms of "baby" and "beautiful".
+A seguir, procuramos os sinônimos de "baby" e "beautiful".
 
 ```{.python .input}
 #@tab all
@@ -175,9 +175,11 @@ get_similar_tokens('baby', 3, glove_6b50d)
 get_similar_tokens('beautiful', 3, glove_6b50d)
 ```
 
-### Finding Analogies
+### Encontrando Analogias
 
 In addition to seeking synonyms, we can also use the pretrained word vector to seek the analogies between words. For example, “man”:“woman”::“son”:“daughter” is an example of analogy, “man” is to “woman” as “son” is to “daughter”. The problem of seeking analogies can be defined as follows: for four words in the analogical relationship $a : b :: c : d$, given the first three words, $a$, $b$ and $c$, we want to find $d$. Assume the word vector for the word $w$ is $\text{vec}(w)$. To solve the analogy problem, we need to find the word vector that is most similar to the result vector of $\text{vec}(c)+\text{vec}(b)-\text{vec}(a)$.
+
+Além de buscar sinônimos, também podemos usar o vetor de palavras pré-treinadas para buscar analogias entre palavras. Por exemplo, “homem”: “mulher” :: “filho”: “filha”  “man”:“woman”::“son”:“daughter” é um exemplo de analogia, “man” está para “woman” como “son” está para “daughter”. O problema de buscar analogias pode ser definido da seguinte forma: para quatro palavras na relação analógica $ a: b :: c: d $, dadas as três primeiras palavras, $ a $, $ b $ e $ c $, queremos encontre $ d $. Suponha que a palavra vetor para a palavra $ w $ seja $ \ text {vec} (w) $. Para resolver o problema de analogia, precisamos encontrar o vetor de palavras que é mais semelhante ao vetor de resultado de $ \ text {vec} (c) + \ text {vec} (b) - \ text {vec} (a) $ .
 
 ```{.python .input}
 #@tab all
@@ -235,5 +237,5 @@ get_analogy('do', 'did', 'go', glove_6b50d)
 [Discussions](https://discuss.d2l.ai/t/1336)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNjg0OTQ0MCw1MTk1NDA4MTFdfQ==
+eyJoaXN0b3J5IjpbNjc4NzIzMDgxLDUxOTU0MDgxMV19
 -->
