@@ -59,9 +59,9 @@ style_img = d2l.Image.open('../img/autumn-oak.jpg')
 d2l.plt.imshow(style_img);
 ```
 
-## Preprocessing and Postprocessing
+## Pré-processamento e Pós-processamento
 
-Below, we define the functions for image preprocessing and postprocessing. The `preprocess` function normalizes each of the three RGB channels of the input images and transforms the results to a format that can be input to the CNN. The `postprocess` function restores the pixel values in the output image to their original values before normalization. Because the image printing function requires that each pixel has a floating point value from 0 to 1, we use the `clip` function to replace values smaller than 0 or greater than 1 with 0 or 1, respectively.
+A seguir, definimos as funções de pré-processamento e pós-processamento de imagens. A função `pré-processamento` normaliza cada um dos três canais RGB das imagens de entrada e transforma os resultados em um formato que pode ser inserido na CNN. A função `postprocess` restaura os valores de pixel na imagem de saída para seus valores originais antes da normalização. Como a função de impressão de imagem requer que cada pixel tenha um valor de ponto flutuante de 0 a 1, usamos a função `clip` para substituir valores menores que 0 ou maiores que 1 por 0 ou 1, respectivamente.
 
 ```{.python .input}
 rgb_mean = np.array([0.485, 0.456, 0.406])
@@ -430,6 +430,6 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MTQ5NTk5MiwtOTMzOTI1NjIsLTI2OT
-A2NDgzNSwxODkxNDEzNTEwXX0=
+eyJoaXN0b3J5IjpbLTMxNjM5OTIxOCwtODQxNDk1OTkyLC05Mz
+M5MjU2MiwtMjY5MDY0ODM1LDE4OTE0MTM1MTBdfQ==
 -->
