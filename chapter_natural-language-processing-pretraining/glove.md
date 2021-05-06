@@ -7,13 +7,13 @@ $$q_{ij}=\frac{\exp(\mathbf{u}_j^\top \mathbf{v}_i)}{ \sum_{k \in \mathcal{V}} \
 
 onde $\mathbf{v}_i$ e $\mathbf{u}_i$ são as representações vetoriais da palavra $w_i$ do índice $i$ como a palavra central e a palavra de contexto, respectivamente, e $\mathcal{V} = \{0, 1, \ldots, |\mathcal{V}|-1\}$ é o conjunto de índices de vocabulário.
 
-For word $w_i$, it may appear in the dataset for multiple times. We collect all the context words every time when $w_i$ is a center word and keep duplicates, denoted as multiset $\mathcal{C}_i$. The number of an element in a multiset is called the multiplicity of the element. For instance, suppose that word $w_i$ appears twice in the dataset: the context windows when these two $w_i$ become center words in the text sequence contain context word indices $2, 1, 5, 2$ and $2, 3, 2, 1$. Then, multiset $\mathcal{C}_i = \{1, 1, 2, 2, 2, 2, 3, 5\}$, where multiplicity of element 1 is 2, multiplicity of element 2 is 4, and multiplicities of elements 3 and 5 are both 1. Denote multiplicity of element $j$ in multiset $\mathcal{C}_i$ as $x_{ij}$: it is the number of word $w_j$ in all the context windows for center word $w_i$ in the entire dataset. As a result, the loss function of the skip-gram model can be expressed in a different way:
-
-Para a palavra $ w_i $, ela pode aparecer no conjunto de dados várias vezes. Coletamos todas as palavras de contexto sempre que $ w_i $ é uma palavra central e mantemos duplicatas, denotadas como multiset $ \ mathcal {C} _i $. O número de um elemento em um multiconjunto é chamado de multiplicidade do elemento. Por exemplo, suponha que a palavra $ w_i $ apareça duas vezes no conjunto de dados: as janelas de contexto quando essas duas $ w_i $ se tornam palavras centrais na sequência de texto contêm índices de palavras de contexto $ 2, 1, 5, 2 $ e $ 2, 3, 2, 1 $. Então, multiset $ \ mathcal {C} _i = \ {1, 1, 2, 2, 2, 2, 3, 5 \} $, onde a multiplicidade do elemento 1 é 2, a multiplicidade do elemento 2 é 4 e multiplicidades de os elementos 3 e 5 são 1. Denote a multiplicidade do elemento $ j $ no multiset $ \ mathcal {C} _i $ as $ x_ {ij} $: é o número da palavra $ w_j $ em todas as janelas de contexto para a palavra central $ w_i $ em todo o conjunto de dados. Como resultado, a função de perda do modelo skip-gram pode ser expressa de uma maneira diferente:
+Para a palavra $w_i$, ela pode aparecer no conjunto de dados várias vezes. Coletamos todas as palavras de contexto sempre que $w_i$ é uma palavra central e mantemos duplicatas, denotadas como multiset $\mathcal{C}_i$. O número de um elemento em um multiconjunto é chamado de multiplicidade do elemento. Por exemplo, suponha que a palavra $w_i$ apareça duas vezes no conjunto de dados: as janelas de contexto quando essas duas $w_i$ se tornam palavras centrais na sequência de texto contêm índices de palavras de contexto $2, 1, 5, 2$ e $2, 3, 2, 1$. Então, multiset $\mathcal{C}_i = \{1, 1, 2, 2, 2, 2, 3, 5\}$, onde a multiplicidade do elemento 1 é 2, a multiplicidade do elemento 2 é 4 e multiplicidades de os elementos 3 e 5 são 1. Denote a multiplicidade do elemento $j$ no multiset $\mathcal{C}_i$ as $x_{ij}$: é o número da palavra $w_j$ em todas as janelas de contexto para a palavra central $w_i$ em todo o conjunto de dados. Como resultado, a função de perda do modelo skip-gram pode ser expressa de uma maneira diferente:
 
 $$-\sum_{i\in\mathcal{V}}\sum_{j\in\mathcal{V}} x_{ij} \log\,q_{ij}.$$
 
 We add up the number of all the context words for the central target word $w_i$ to get $x_i$, and record the conditional probability $x_{ij}/x_i$ for generating context word $w_j$ based on central target word $w_i$ as $p_{ij}$. We can rewrite the loss function of the skip-gram model as
+
+Adicionamos o número de todas as palavras de contexto para a palavra alvo central $w_i$ para obter $ x_i $, e registramos a probabilidade condicional $ x_ {ij} / x_i $ para gerar a palavra de contexto $ w_j $ com base na palavra alvo central $ w_i $ como $ p_ {ij} $. Podemos reescrever a função de perda do modelo skip-gram como
 
 $$-\sum_{i\in\mathcal{V}} x_i \sum_{j\in\mathcal{V}} p_{ij} \log\,q_{ij}.$$
 
@@ -99,5 +99,5 @@ By taking the square error and weighting the left and right sides of the formula
 
 [Discussions](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NTc2NDc5LC0xMDE3ODc2MjgxXX0=
+eyJoaXN0b3J5IjpbOTExMTE0MTI4LC0xMDE3ODc2MjgxXX0=
 -->
