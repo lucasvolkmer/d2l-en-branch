@@ -1,7 +1,7 @@
 # Incorporação de subpalavra
 :label:`sec_fasttext`
 
-As palavras em inglês geralmente têm estruturas internas e métodos de formação. Por exemplo, podemos deduzir a relação entre "cachorro", "cachorros" e "dogcatcher" por sua grafia. Todas essas palavras têm a mesma raiz, "cachorro", mas usam sufixos diferentes para mudar o significado da palavra. Além disso, essa associação pode ser estendida a outras palavras. Por exemplo, a relação entre "cachorro" e "cachorros" é exatamente como a relação entre "gato" e "gatos". A relação entre "menino" e "namorado" é igual à relação entre "menina" e "namorada". Essa característica não é exclusiva do inglês. Em francês e espanhol, muitos verbos podem ter mais de 40 formas diferentes, dependendo do contexto. Em finlandês, um substantivo pode ter mais de 15 formas. Na verdade, a morfologia, que é um importante ramo da linguística, estuda a estrutura interna e a formação das palavras.
+As palavras em inglês geralmente têm estruturas internas e métodos de formação. Por exemplo, podemos deduzir a relação entre "dog", "cachorros" e "dogcatcher" por sua grafia. Todas essas palavras têm a mesma raiz, "cachorro", mas usam sufixos diferentes para mudar o significado da palavra. Além disso, essa associação pode ser estendida a outras palavras. Por exemplo, a relação entre "cachorro" e "cachorros" é exatamente como a relação entre "gato" e "gatos". A relação entre "menino" e "namorado" é igual à relação entre "menina" e "namorada". Essa característica não é exclusiva do inglês. Em francês e espanhol, muitos verbos podem ter mais de 40 formas diferentes, dependendo do contexto. Em finlandês, um substantivo pode ter mais de 15 formas. Na verdade, a morfologia, que é um importante ramo da linguística, estuda a estrutura interna e a formação das palavras.
 
 
 ## fastText
@@ -176,19 +176,15 @@ print(segment_BPE(tokens, symbols))
 
 ## Exercícios
 
-1. When there are too many subwords (for example, 6 words in English result in about $3\times 10^8$ combinations), what problems arise? Can you think of any methods to solve them? Hint: Refer to the end of section 3.2 of the fastText paper :cite:`Bojanowski.Grave.Joulin.ea.2017`.
-1. How can you design a subword embedding model based on the continuous bag-of-words model?
-1. To get a vocabulary of size $m$, how many merging operations are needed when the initial symbol vocabulary size is $n$?
-1. How can we extend the idea of byte pair encoding to extract phrases?
-
-1. Quando há muitas subpalavras (por exemplo, 6 palavras em inglês resultam em cerca de $3\times 10^8$ combinações), quais são os problemas? Você consegue pensar em algum método para resolvê-los? Dica: consulte o final da seção 3.2 do artigo fastText: cite: `Bojanowski.Grave.Joulin.ea.2017`.
+1. Quando há muitas subpalavras (por exemplo, 6 palavras em inglês resultam em cerca de $3\times 10^8$ combinações), quais são os problemas? Você consegue pensar em algum método para resolvê-los? Dica: consulte o final da seção 3.2 do artigo fastText :cite:`Bojanowski.Grave.Joulin.ea.2017`.
 1. Como você pode projetar um modelo de incorporação de subpalavra com base no modelo de saco de palavras contínuo?
-1. Para obter um vocabulário de tamanho $ m $, quantas operações de fusão são necessárias quando o tamanho inicial do vocabulário de símbolos é $ n $?
+1. Para obter um vocabulário de tamanho $m$, quantas operações de fusão são necessárias quando o tamanho inicial do vocabulário de símbolos é $n$?
 1. Como podemos estender a ideia de codificação de par de bytes para extrair frases?
 
 :begin_tab:`mxnet`
 [Discussão](https://discuss.d2l.ai/t/386)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MjA0MzcyNywtMTMyMjA5ODE5MV19
+eyJoaXN0b3J5IjpbLTE5NTg1ODI1NTEsLTEzMjIwOTgxOTFdfQ
+==
 -->
