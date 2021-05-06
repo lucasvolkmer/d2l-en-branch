@@ -218,22 +218,22 @@ get_analogy('do', 'did', 'go', glove_6b50d)
 
 ## Sumário
 
-* Word vectors pre-trained on a large-scale corpus can often be applied to downstream natural language processing tasks.
-* We can use pre-trained word vectors to seek synonyms and analogies.
+* Vetores de palavras pré-treinados em um corpus de grande escala podem frequentemente ser aplicados a tarefas de processamento de linguagem natural downstream.
+* Podemos usar vetores de palavras pré-treinados para buscar sinônimos e analogias.
 
 
-## Exercises
+## Exercícios
 
-1. Test the fastText results using `TokenEmbedding('wiki.en')`.
-1. If the dictionary is extremely large, how can we accelerate finding synonyms and analogies?
+1. Teste os resultados do fastText usando `TokenEmbedding ('wiki.en')`.
+1. Se o dicionário for extremamente grande, como podemos acelerar a localização de sinônimos e analogias?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/387)
+[Discussão](https://discuss.d2l.ai/t/387)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1336)
+[Discussão](https://discuss.d2l.ai/t/1336)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NjExNjk1OCw1MTk1NDA4MTFdfQ==
+eyJoaXN0b3J5IjpbLTEzNzYyMDg0OCw1MTk1NDA4MTFdfQ==
 -->
