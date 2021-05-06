@@ -1,27 +1,24 @@
-# Subword Embedding
+# Incorporação de subpalavra
 :label:`sec_fasttext`
 
-English words usually have intIncorporação de subpalavra
-:label:`sec_fasttext`
-
-As palavras em inglês gernal mente têm estructureas and formation methodsinternas e métodos de formação. FPor exaempleo, we can deduce the relationship between "dog", "dogs", and "dogcatcher" by their spelling. All these words have the same root, "dog", but they usepodemos deduzir a relação entre "cachorro", "cachorros" e "dogcatcher" por sua grafia. Todas essas palavras têm a mesma raiz, "cachorro", mas usam sufixos different suffixes to change the meaning of the word. Moreover, this association can bees para mudar o significado da palavra. Além disso, essa associação pode ser exstended to other wordida a outras palavras. FPor exaempleo, thea relationship between "dog" and "dogs" is just like the relationship betweenção entre "cachorro" e "cachorros" é exatamente como a relação entre "cgato" ande "cgatos". TheA relationship between "boy" and "boyfriend" is just like the relationship between "girl" and "girlfriend". Thisção entre "menino" e "namorado" é igual à relação entre "menina" e "namorada". Essa characteriístic is not unique ta não é exclusiva do Einglish. In French and Spanish, a lot ofês. Em francês e espanhol, muitos verbos can have more than 40podem ter mais de 40 formas different formses, depending on theendo do contexto. In Finnish, a noun may have more thanEm finlandês, um substantivo pode ter mais de 15 formas. In fact,Na verdade, a morphfology, which is an important branch ofia, que é um importante ramo da linguiísticsa, estudies the internal structura a estrutura interna e and formation of wordção das palavras.
+As palavras em inglês geralmente têm estruturas internas e métodos de formação. Por exemplo, podemos deduzir a relação entre "cachorro", "cachorros" e "dogcatcher" por sua grafia. Todas essas palavras têm a mesma raiz, "cachorro", mas usam sufixos diferentes para mudar o significado da palavra. Além disso, essa associação pode ser estendida a outras palavras. Por exemplo, a relação entre "cachorro" e "cachorros" é exatamente como a relação entre "gato" e "gatos". A relação entre "menino" e "namorado" é igual à relação entre "menina" e "namorada". Essa característica não é exclusiva do inglês. Em francês e espanhol, muitos verbos podem ter mais de 40 formas diferentes, dependendo do contexto. Em finlandês, um substantivo pode ter mais de 15 formas. Na verdade, a morfologia, que é um importante ramo da linguística, estuda a estrutura interna e a formação das palavras.
 
 
 ## fastText
 
-In word2vec, we did not directly use morphology information.  In both the
-skip-gram model and continuous bag-of-words model, we use different vectors to
-represent words with different forms. For example, "dog" and "dogs" are
-represented by two different vectors, while the relationship between these two
-vectors is not directly represented in the model. In view of this, fastText :cite:`Bojanowski.Grave.Joulin.ea.2017`
-proposes the method of subword embedding, thereby attempting to introduce
-morphological information in the skip-gram model in word2vec.
+No word2vec, não usamos informações morfológicas diretamente. Em ambos os
+modelo skip-gram e modelo de saco de palavras contínuo, usamos diferentes vetores para
+representam palavras com diferentes formas. Por exemplo, "cachorro" e "cachorros" são
+representado por dois vetores diferentes, enquanto a relação entre esses dois
+vetores não é representado diretamente no modelo. Em vista disso, fastText :cite:`Bojanowski.Grave.Joulin.ea.2017`
+propõe o método de incorporação de subpalavra, tentando assim introduzir
+informação morfológica no modelo skip-gram em word2vec.
 
-In fastText, each central word is represented as a collection of subwords. Below we use the word "where" as an example to understand how subwords are formed. First, we add the special characters “&lt;” and “&gt;” at the beginning and end of the word to distinguish the subwords used as prefixes and suffixes. Then, we treat the word as a sequence of characters to extract the $n$-grams. For example, when $n=3$, we can get all subwords with a length of $3$:
+Em fastText, cada palavra central é representada como uma coleção de subpalavras. A seguir, usamos a palavra "onde" como exemplo para entender como as subpalavras são formadas. Primeiro, adicionamos os caracteres especiais “&lt;” e “&gt;” no início e no final da palavra para distinguir as subpalavras usadas como prefixos e sufixos. Em seguida, tratamos a palavra como uma sequência de caracteres para extrair os $n$-gramas. Por exemplo, quando $n=3$, podemos obter todas as subpalavras com um comprimento de $3$:
 
 $$\textrm{"<wh"}, \ \textrm{"whe"}, \ \textrm{"her"}, \ \textrm{"ere"}, \ \textrm{"re>"},$$
 
-and the special subword $\textrm{"<where>"}$.
+e a subpalavra especial $\textrm{"<where>"}$.
 
 In fastText, for a word $w$, we record the union of all its subwords with length of $3$ to $6$ and special subwords as $\mathcal{G}_w$. Thus, the dictionary is the union of the collection of subwords of all words. Assume the vector of the subword $g$ in the dictionary is $\mathbf{z}_g$. Then, the central word vector $\mathbf{u}_w$ for the word $w$ in the skip-gram model can be expressed as
 
@@ -190,5 +187,5 @@ print(segment_BPE(tokens, symbols))
 [Discussions](https://discuss.d2l.ai/t/386)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTk4MTE0NTRdfQ==
+eyJoaXN0b3J5IjpbMzU2NjA3MjldfQ==
 -->
