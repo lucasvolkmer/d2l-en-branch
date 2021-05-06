@@ -29,7 +29,7 @@ import os
 
 Abaixo lista os embeddings GloVe pré-treinados de dimensões 50, 100 e 300,
 que pode ser baixado do [site do GloVe](https://nlp.stanford.edu/projects/glove/).
-Os fastText pré-treinados estão disponíveis em vários idiomas.
+Os fastText pré-treinados embarcados estão disponíveis em vários idiomas.
 Aqui, consideramos uma versão em inglês ("wiki.en" 300-dimensional) que pode ser baixada do
 [site fastText](https://fasttext.cc/).
 
@@ -52,7 +52,7 @@ d2l.DATA_HUB['wiki.en'] = (d2l.DATA_URL + 'wiki.en.zip',
                            'c1816da3821ae9f43899be655002f6c723e91b88')
 ```
 
-We define the following `TokenEmbedding` class to load the above pretrained Glove and fastText embeddings.
+Definimos a seguinte classe `TokenEmbedding` para carregar os embeddings pré-treinados Glove e fastText acima.
 
 ```{.python .input}
 #@tab all
@@ -92,39 +92,39 @@ class TokenEmbedding:
         return len(self.idx_to_token)
 ```
 
-Next, we use 50-dimensional GloVe embeddings pretrained on a subset of the Wikipedia. The corresponding word embedding is automatically downloaded the first time we create a pretrained word embedding instance.
+Em seguida, usamos embeddings GloVe de 50 dimensões pré-treinados em um subconjunto da Wikipedia. A incorporação de palavras correspondente é baixada automaticamente na primeira vez que criamos uma instância de incorporação de palavras pré-treinada.
 
 ```{.python .input}
 #@tab all
 glove_6b50d = TokenEmbedding('glove.6b.50d')
 ```
 
-Output the dictionary size. The dictionary contains $400,000$ words and a special unknown token.
+Produza o tamanho do dicionário. O dicionário contém $400.000$ palavras e um token especial desconhecido.
 
 ```{.python .input}
 #@tab all
 len(glove_6b50d)
 ```
 
-We can use a word to get its index in the dictionary, or we can get the word from its index.
+Podemos usar uma palavra para obter seu índice no dicionário ou podemos obter a palavra de seu índice.
 
 ```{.python .input}
 #@tab all
 glove_6b50d.token_to_idx['beautiful'], glove_6b50d.idx_to_token[3367]
 ```
 
-## Applying Pretrained Word Vectors
+## Aplicação de vetores de palavras pré-treinados
 
-Below, we demonstrate the application of pretrained word vectors, using GloVe as an example.
+Abaixo, demonstramos a aplicação de vetores de palavras pré-treinados, usando GloVe como exemplo.
 
-### Finding Synonyms
+### Encontrando sinônimos
 
-Here, we re-implement the algorithm used to search for synonyms by cosine
-similarity introduced in :numref:`sec_word2vec`
+Aqui, reimplementamos o algoritmo usado para pesquisar sinônimos por cosseno
+similaridade introduzida em :numref:`sec_word2vec`
 
-In order to reuse the logic for seeking the $k$ nearest neighbors when
-seeking analogies, we encapsulate this part of the logic separately in the `knn`
-($k$-nearest neighbors) function.
+A fim de reutilizar a lógica para buscar os $k$ vizinhos mais próximos quando
+buscando analogias, encapsulamos esta parte da lógica separadamente no `knn`
+função ($k$-vizinhos mais próximos).
 
 ```{.python .input}
 def knn(W, x, k):
@@ -235,5 +235,5 @@ get_analogy('do', 'did', 'go', glove_6b50d)
 [Discussions](https://discuss.d2l.ai/t/1336)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDg1MDYwOCw1MTk1NDA4MTFdfQ==
+eyJoaXN0b3J5IjpbMjAwNjg0OTQ0MCw1MTk1NDA4MTFdfQ==
 -->
