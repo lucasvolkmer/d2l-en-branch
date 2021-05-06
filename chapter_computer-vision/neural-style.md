@@ -196,7 +196,7 @@ def content_loss(Y_hat, Y):
 
 ### Perda de Estilo
 
-Style loss, similar to content loss, uses a square error function to measure the difference in style between the composite image and style image. To express the styles output by the style layers, we first use the `extract_features` function to compute the style layer output. Assuming that the output has 1 example, $c$ channels, and a height and width of $h$ and $w$, we can transform the output into the matrix $\mathbf{X}$, which has $c$ rows and $h \cdot w$ columns. You can think of matrix $\mathbf{X}$ as the combination of the $c$ vectors $\mathbf{x}_1, \ldots, \mathbf{x}_c$, which have a length of $hw$. Here, the vector $\mathbf{x}_i$ represents the style feature of channel $i$. In the Gram matrix of these vectors $\mathbf{X}\mathbf{X}^\top \in \mathbb{R}^{c \times c}$, element $x_{ij}$ in row $i$ column $j$ is the inner product of vectors $\mathbf{x}_i$ and $\mathbf{x}_j$. It represents the correlation of the style features of channels $i$ and $j$. We use this type of Gram matrix to represent the style output by the style layers. You must note that, when the $h \cdot w$ value is large, this often leads to large values in the Gram matrix. In addition, the height and width of the Gram matrix are both the number of channels $c$. To ensure that the style loss is not affected by the size of these values, we define the `gram` function below to divide the Gram matrix by the number of its elements, i.e., $c \cdot h \cdot w$.
+A perda de estilo, semelhante à perda de conteúdo, usa uma função de erro quadrático para medir a diferença de estilo entre a imagem composta e a imagem de estilo. Para expressar a saída de estilos pelas camadas de estilo, primeiro usamos a função `extract_features` para calcular a saída da camada de estilo. Supondo que a saída tenha 1 exemplo, $c$ canais, e uma altura e largura de $h$ e $w$, podemos transformar a saída na matriz $\mathbf{X}$, que tem $c$ linhas e $h \cdot w$ colunas. Você pode pensar na matriz $\mathbf{X}$ como a combinação dos vetores $c$ e $\mathbf{x}_1, \ldots, \mathbf{x}_c$, que têm um comprimento de $hw$. Aqui, o vetor $\mathbf{x}_i$ representa a característica de estilo do canal $i$. Na matriz Gram desses vetores $\mathbf{X}\mathbf{X}^\top \in \mathbb{R}^{c \times c}$, elemento $x_{ij}$ na linha $i$ coluna $j$ é o produto interno dos vetores $\mathbf{x}_i$ e $\mathbf{x}_j$. Ele representa a correlação dos recursos de estilo dos canais $i$ e $j$. Usamos esse tipo de matriz de Gram para representar a saída do estilo pelas camadas de estilo. Você deve notar que, quando o valor $h \cdot w$ é grande, isso geralmente leva a valores grandes na matriz de Gram. Além disso, a altura e a largura da matriz de Gram são o número de canais $c$. Para garantir que a perda de estilo não seja afetada pelo tamanho desses valores, definimos a função `gram` abaixo para dividir a matriz de Gram pelo número de seus elementos, ou seja, $c \cdot h \cdot w$.
 
 ```{.python .input}
 #@tab all
@@ -430,6 +430,7 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg5Mzc2OTgwLC04NDE0OTU5OTIsLTkzMz
-kyNTYyLC0yNjkwNjQ4MzUsMTg5MTQxMzUxMF19
+eyJoaXN0b3J5IjpbOTI3Njc3ODU4LDI4OTM3Njk4MCwtODQxND
+k1OTkyLC05MzM5MjU2MiwtMjY5MDY0ODM1LDE4OTE0MTM1MTBd
+fQ==
 -->
