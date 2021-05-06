@@ -11,13 +11,11 @@ Para a palavra $w_i$, ela pode aparecer no conjunto de dados várias vezes. Cole
 
 $$-\sum_{i\in\mathcal{V}}\sum_{j\in\mathcal{V}} x_{ij} \log\,q_{ij}.$$
 
-We add up the number of all the context words for the central target word $w_i$ to get $x_i$, and record the conditional probability $x_{ij}/x_i$ for generating context word $w_j$ based on central target word $w_i$ as $p_{ij}$. We can rewrite the loss function of the skip-gram model as
-
-Adicionamos o número de todas as palavras de contexto para a palavra alvo central $w_i$ para obter $ x_i $, e registramos a probabilidade condicional $ x_ {ij} / x_i $ para gerar a palavra de contexto $ w_j $ com base na palavra alvo central $ w_i $ como $ p_ {ij} $. Podemos reescrever a função de perda do modelo skip-gram como
+Adicionamos o número de todas as palavras de contexto para a palavra alvo central $w_i$ para obter $x_i$, e registramos a probabilidade condicional $x_{ij}/x_i$ para gerar a palavra de contexto $w_j$ com base na palavra alvo central $w_i$ como $p_{ij}$. Podemos reescrever a função de perda do modelo skip-gram como
 
 $$-\sum_{i\in\mathcal{V}} x_i \sum_{j\in\mathcal{V}} p_{ij} \log\,q_{ij}.$$
 
-In the formula above, $\sum_{j\in\mathcal{V}} p_{ij} \log\,q_{ij}$ computes the conditional probability distribution $p_{ij}$ for context word generation based on the central target word $w_i$ and the cross-entropy of conditional probability distribution $q_{ij}$ predicted by the model.  The loss function is weighted using the sum of the number of context words with the central target word $w_i$.  If we minimize the loss function from the formula above, we will be able to allow the predicted conditional probability distribution to approach as close as possible to the true conditional probability distribution.
+Na fórmula acima, $\sum_{j\in\mathcal{V}} p_{ij} \log\,q_{ij}$ calcula a distribuição de probabilidade condicional $p_{ij}$ para geração de palavras de contexto com base na central palavra-alvo $w_i$ e a entropia cruzada da distribuição de probabilidade condicional $q_{ij}$ prevista pelo modelo. A função de perda é ponderada usando a soma do número de palavras de contexto com a palavra alvo central $w_i$. Se minimizarmos a função de perda da fórmula acima, seremos capazes de permitir que a distribuição de probabilidade condicional prevista se aproxime o mais próximo possível da verdadeira distribuição de probabilidade condicional.
 
 However, although the most common type of loss function, the cross-entropy loss
 function is sometimes not a good choice. On the one hand, as we mentioned in
@@ -29,6 +27,17 @@ to excessive computational overhead. On the other hand, there are often a lot of
 uncommon words in the dictionary, and they appear rarely in the dataset. In the
 cross-entropy loss function, the final prediction of the conditional probability
 distribution on a large number of uncommon words is likely to be inaccurate.
+
+No entanto, embora o tipo mais comum de função de perda, a perda de entropia cruzada
+função às vezes não é uma boa escolha. Por um lado, como mencionamos em
+:numref:`sec_approx_train`
+o custo de deixar o
+a previsão do modelo $q_{ij}$ torna-se a distribuição de probabilidade legal tem a soma
+de todos os itens em todo o dicionário em seu denominador. Isso pode facilmente levar
+a sobrecarga computacional excessiva. Por outro lado, costuma haver muitos
+palavras incomuns no dicionário e raramente aparecem no conjunto de dados. No
+função de perda de entropia cruzada, a previsão final da probabilidade condicional
+a distribuição em um grande número de palavras incomuns provavelmente será imprecisa.
 
 
 
@@ -99,5 +108,5 @@ By taking the square error and weighting the left and right sides of the formula
 
 [Discussions](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTExMTE0MTI4LC0xMDE3ODc2MjgxXX0=
+eyJoaXN0b3J5IjpbMTA5MjE3ODUsLTEwMTc4NzYyODFdfQ==
 -->
