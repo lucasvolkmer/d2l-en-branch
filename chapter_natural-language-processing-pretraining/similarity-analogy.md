@@ -27,17 +27,11 @@ import os
 
 ## Usando vetores de palavras pré-treinados
 
-Below lists pretrained GloVe embeddings of dimensions 50, 100, and 300,
-which can be downloaded from the [GloVe website](https://nlp.stanford.edu/projects/glove/).
-The pretrained fastText embeddings are available in multiple languages.
-Here we consider one English version (300-dimensional "wiki.en") that can be downloaded from the
-[fastText website](https://fasttext.cc/).
-
 Abaixo lista os embeddings GloVe pré-treinados de dimensões 50, 100 e 300,
-que pode ser baixado do [site do GloVe] (https://nlp.stanford.edu/projects/glove/).
-Os embeddings fastText pré-treinados estão disponíveis em vários idiomas.
+que pode ser baixado do [site do GloVe](https://nlp.stanford.edu/projects/glove/).
+Os fastText pré-treinados estão disponíveis em vários idiomas.
 Aqui, consideramos uma versão em inglês ("wiki.en" 300-dimensional) que pode ser baixada do
-[site fastText] (https://fasttext.cc/).
+[site fastText](https://fasttext.cc/).
 
 ```{.python .input}
 #@tab all
@@ -241,5 +235,5 @@ get_analogy('do', 'did', 'go', glove_6b50d)
 [Discussions](https://discuss.d2l.ai/t/1336)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE5NTQwODExXX0=
+eyJoaXN0b3J5IjpbMTAzMDg1MDYwOCw1MTk1NDA4MTFdfQ==
 -->
