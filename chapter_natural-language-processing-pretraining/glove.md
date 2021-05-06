@@ -17,17 +17,6 @@ $$-\sum_{i\in\mathcal{V}} x_i \sum_{j\in\mathcal{V}} p_{ij} \log\,q_{ij}.$$
 
 Na fórmula acima, $\sum_{j\in\mathcal{V}} p_{ij} \log\,q_{ij}$ calcula a distribuição de probabilidade condicional $p_{ij}$ para geração de palavras de contexto com base na central palavra-alvo $w_i$ e a entropia cruzada da distribuição de probabilidade condicional $q_{ij}$ prevista pelo modelo. A função de perda é ponderada usando a soma do número de palavras de contexto com a palavra alvo central $w_i$. Se minimizarmos a função de perda da fórmula acima, seremos capazes de permitir que a distribuição de probabilidade condicional prevista se aproxime o mais próximo possível da verdadeira distribuição de probabilidade condicional.
 
-However, although the most common type of loss function, the cross-entropy loss
-function is sometimes not a good choice. On the one hand, as we mentioned in
-:numref:`sec_approx_train`
-the cost of letting the
-model prediction $q_{ij}$ become the legal probability distribution has the sum
-of all items in the entire dictionary in its denominator. This can easily lead
-to excessive computational overhead. On the other hand, there are often a lot of
-uncommon words in the dictionary, and they appear rarely in the dataset. In the
-cross-entropy loss function, the final prediction of the conditional probability
-distribution on a large number of uncommon words is likely to be inaccurate.
-
 No entanto, embora o tipo mais comum de função de perda, a perda de entropia cruzada
 função às vezes não é uma boa escolha. Por um lado, como mencionamos em
 :numref:`sec_approx_train`
@@ -41,10 +30,13 @@ a distribuição em um grande número de palavras incomuns provavelmente será i
 
 
 
-## The GloVe Model
+## O modelo GloVe
 
 To address this, GloVe :cite:`Pennington.Socher.Manning.2014`, a word embedding model that came after word2vec, adopts
 squared loss and makes three changes to the skip-gram model based on this loss.
+
+Para resolver isso, GloVe :cite:`Pennington.Socher.Manning.2014`, um modelo de incorporação de palavras que veio depois de word2vec, adota
+perda quadrada e faz três alterações no modelo de grama de salto com base nessa perda.
 
 1. Here, we use the non-probability distribution variables $p'_{ij}=x_{ij}$ and $q'_{ij}=\exp(\mathbf{u}_j^\top \mathbf{v}_i)$ and take their logs. Therefore, we get the squared loss $\left(\log\,p'_{ij} - \log\,q'_{ij}\right)^2 = \left(\mathbf{u}_j^\top \mathbf{v}_i - \log\,x_{ij}\right)^2$.
 2. We add two scalar model parameters for each word $w_i$: the bias terms $b_i$ (for central target words) and $c_i$( for context words).
@@ -108,5 +100,5 @@ By taking the square error and weighting the left and right sides of the formula
 
 [Discussions](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MjE3ODUsLTEwMTc4NzYyODFdfQ==
+eyJoaXN0b3J5IjpbMzE3MzYzMjg2LC0xMDE3ODc2MjgxXX0=
 -->
