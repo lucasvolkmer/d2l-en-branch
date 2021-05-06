@@ -45,14 +45,12 @@ $$\sum_{i\in\mathcal{V}} \sum_{j\in\mathcal{V}} h(x_{ij}) \left(\mathbf{u}_j^\to
 
 Aqui, temos uma sugestão para a escolha da função de peso $h(x)$: quando $x<c$ (por exemplo, $c=100$), faça $h(x) = (x/c) ^\alpha$ (por exemplo, $\alpha = 0.75$), caso contrário, faça $h(x) = 1$. Como $h(0)=0$, o termo de perda ao quadrado de $x_{ij}=0$ pode ser simplesmente ignorado. Quando usamos o minibatch SGD para treinamento, conduzimos uma amostragem aleatória para obter um minibatch diferente de zero $x_{ij}$ de cada intervalo de tempo e calculamos o gradiente para atualizar os parâmetros do modelo. Esses $x_{ij}$ diferentes de zero são calculados antecipadamente com base em todo o conjunto de dados e contêm estatísticas globais para o conjunto de dados. Portanto, o nome GloVe é retirado de "Vetores globais".
 
-Notice that if word $w_i$ appears in the context window of word $w_j$, then word $w_j$ will also appear in the context window of word $w_i$. Therefore, $x_{ij}=x_{ji}$. Unlike word2vec, GloVe fits the symmetric $\log\, x_{ij}$ in lieu of the asymmetric conditional probability $p_{ij}$. Therefore, the central target word vector and context word vector of any word are equivalent in GloVe. However, the two sets of word vectors that are learned by the same word may be different in the end due to different initialization values. After learning all the word vectors, GloVe will use the sum of the central target word vector and the context word vector as the final word vector for the word.
-
-Notice that if word $w_i$ appears in the context window of word $w_j$, then word $w_j$ will also appear in the context window of word $w_i$. Therefore, $x_{ij}=x_{ji}$. Unlike word2vec, GloVe fits the symmetric $\log\, x_{ij}$ in lieu of the asymmetric conditional probability $p_{ij}$. Therefore, the central target word vector and context word vector of any word are equivalent in GloVe. However, the two sets of word vectors that are learned by the same word may be different in the end due to different initialization values. After learning all the word vectors, GloVe will use the sum of the central target word vector and the context word vector as the final word vector for the word.
+Observe que se a palavra $w_i$ aparecer na janela de contexto da palavra $w_j$, então a palavra $w_j$ também aparecerá na janela de contexto da palavra $w_i$. Portanto, $x_{ij}=x_{ji}$. Ao contrário de word2vec, GloVe ajusta o simétrico $\log\, x_{ij}$ no lugar da probabilidade condicional assimétrica $p_{ij}$. Portanto, o vetor de palavra alvo central e o vetor de palavra de contexto de qualquer palavra são equivalentes no GloVe. No entanto, os dois conjuntos de vetores de palavras que são aprendidos pela mesma palavra podem ser diferentes no final devido a valores de inicialização diferentes. Depois de aprender todos os vetores de palavras, o GloVe usará a soma do vetor da palavra-alvo central e do vetor da palavra de contexto como o vetor da palavra final para a palavra.
 
 
-## Understanding GloVe from Conditional Probability Ratios
+## Compreendendo o GloVe a partir das razões de probabilidade condicionais
 
-We can also try to understand GloVe word embedding from another perspective. We will continue the use of symbols from earlier in this section, $P(w_j \mid w_i)$ represents the conditional probability of generating context word $w_j$ with central target word $w_i$ in the dataset, and it will be recorded as $p_{ij}$. From a real example from a large corpus, here we have the following two sets of conditional probabilities with "ice" and "steam" as the central target words and the ratio between them:
+Também podemos tentar entender a incorporação de palavras GloVe de outra perspectiva. Continuaremos a usar os símbolos anteriores nesta seção, $P(w_j \mid w_i)$ representa a probabilidade condicional de gerar a palavra de contexto $w_j$ com a palavra alvo central $w_i$ no conjunto de dados, e será registrado como $p_{ij}$. A partir de um exemplo real de um grande corpus, temos aqui os seguintes dois conjuntos de probabilidades condicionais com "gelo" e "vapor" como palavras-alvo centrais e a proporção entre elas:
 
 |$w_k$=|solid|gas|water|fashion|
 |--:|:-:|:-:|:-:|:-:|
@@ -99,5 +97,5 @@ By taking the square error and weighting the left and right sides of the formula
 
 [Discussions](https://discuss.d2l.ai/t/385)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMzQ0NzUwNiwtMTAxNzg3NjI4MV19
+eyJoaXN0b3J5IjpbNjQzOTk2MTY4LC0xMDE3ODc2MjgxXX0=
 -->
