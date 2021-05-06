@@ -95,9 +95,9 @@ def postprocess(img):
     return torchvision.transforms.ToPILImage()(img.permute(2, 0, 1))
 ```
 
-## Extracting Features
+## Extraindo *Features*
 
-We use the VGG-19 model pre-trained on the ImageNet dataset to extract image features[1].
+Usamos o modelo VGG-19 pré-treinado no conjunto de dados ImageNet para extrair características da imagem [1].
 
 ```{.python .input}
 pretrained_net = gluon.model_zoo.vision.vgg19(pretrained=True)
@@ -430,6 +430,6 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNjM5OTIxOCwtODQxNDk1OTkyLC05Mz
-M5MjU2MiwtMjY5MDY0ODM1LDE4OTE0MTM1MTBdfQ==
+eyJoaXN0b3J5IjpbOTE5MTY3MTQ0LC04NDE0OTU5OTIsLTkzMz
+kyNTYyLC0yNjkwNjQ4MzUsMTg5MTQxMzUxMF19
 -->
