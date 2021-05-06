@@ -122,10 +122,10 @@ Após 10 iterações de codificação de par de bytes, podemos ver que a lista d
 print(symbols)
 ```
 
-For the same dataset specified in the keys of the dictionary `raw_token_freqs`,
-each word in the dataset is now segmented by subwords "fast_", "fast", "er_", "tall_", and "tall"
-as a result of the byte pair encoding algorithm.
-For instance, words "faster_" and "taller_" are segmented as "fast er_" and "tall er_", respectively.
+Para o mesmo conjunto de dados especificado nas chaves do dicionário `raw_token_freqs`,
+cada palavra no conjunto de dados agora é segmentada por subpalavras "fast_", "fast", "er_", "tall_" e "tall"
+como resultado do algoritmo de codificação de par de bytes.
+Por exemplo, as palavras "faster_" e "taller_" são segmentadas como "fast er_" e "tall er_", respectivamente.
 
 ```{.python .input}
 #@tab all
@@ -136,6 +136,11 @@ Note that the result of byte pair encoding depends on the dataset being used.
 We can also use the subwords learned from one dataset
 to segment words of another dataset.
 As a greedy approach, the following `segment_BPE` function tries to break words into the longest possible subwords from the input argument `symbols`.
+
+Observe que o resultado da codificação do par de bytes depende do conjunto de dados que está sendo usado.
+Também podemos usar as sub-palavras aprendidas com um conjunto de dados
+para segmentar palavras de outro conjunto de dados.
+Como uma abordagem gananciosa, a seguinte função `segment_BPE` tenta dividir as palavras nas subpalavras mais longas possíveis a partir dos `symbols` do argumento de entrada.
 
 ```{.python .input}
 #@tab all
@@ -187,6 +192,5 @@ print(segment_BPE(tokens, symbols))
 [Discussions](https://discuss.d2l.ai/t/386)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTkxNjQwNjYsLTEzMjIwOTgxOTFdfQ
-==
+eyJoaXN0b3J5IjpbMTM2MzU1NzQwMiwtMTMyMjA5ODE5MV19
 -->
