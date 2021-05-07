@@ -1,8 +1,8 @@
-# Pretraining BERT
+# Preé-traeiningando BERT
 :label:`sec_bert-pretraining`
 
-With the BERT model implemented in :numref:`sec_bert`
-and the pretraining examples generated from the WikiText-2 dataset in :numref:`sec_bert-dataset`, we will pretrain BERT on the WikiText-2 dataset in this section.
+With the BERT modelCom o modelo BERT implemented inado em :numref:`sec_bert`
+and the os exemplos de preé-traeining examples generated from theamento gerados a partir do conjunto de dados WikiText-2 dataset inem :numref:`sec_bert-dataset`, we williremos preé-traeinar BERT on the WikiText-2 dataset in this sectionno conjunto de dados WikiText-2 nesta seção.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -18,10 +18,12 @@ import torch
 from torch import nn
 ```
 
-To start, we load the WikiText-2 dataset as minibatches
-of pretraining examples for masked language modeling and next sentence prediction.
-The batch size is 512 and the maximum length of a BERT input sequence is 64.
-Note that in the original BERT model, the maximum length is 512.
+To stPara começart, we load thecarregamos o conjunto de dados WikiText-2 dataset ascomo minibatches
+of pretraining examples for maskedde exemplos de pré-treinamento para modelagem de lainguagem modeling and next sentence prediction.
+The batch size is 512 and the maximum length of a BERT inputascarada e previsão da próxima frase.
+O tamanho do lote é 512 e o comprimento máximo de uma sequeênce is 64.
+Note that in the original BERT model, theia de entrada BERT é 64.
+Observe que no modelo BERT original, o comprimento maáximum length iso é 512.
 
 ```{.python .input}
 #@tab all
@@ -29,7 +31,7 @@ batch_size, max_len = 512, 64
 train_iter, vocab = d2l.load_data_wiki(batch_size, max_len)
 ```
 
-## Pretraining BERT
+## Preé-traeiningamento de BERT
 
 The original BERT has two versions of different model sizes :cite:`Devlin.Chang.Lee.ea.2018`.
 The base model ($\text{BERT}_{\text{BASE}}$) uses 12 layers (transformer encoder blocks)
@@ -311,3 +313,6 @@ for downstream natural language processing applications.
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1497)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzc5OTE5MzAxXX0=
+-->
