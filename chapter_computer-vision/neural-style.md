@@ -355,7 +355,7 @@ def train(X, contents_Y, styles_Y, device, lr, num_epochs, lr_decay_epoch):
     return X
 ```
 
-Next, we start to train the model. First, we set the height and width of the content and style images to 150 by 225 pixels. We use the content image to initialize the composite image.
+Em seguida, começamos a treinar o modelo. Primeiro, definimos a altura e a largura das imagens de conteúdo e estilo para 150 por 225 pixels. Usamos a imagem de conteúdo para inicializar a imagem composta.
 
 ```{.python .input}
 device, image_shape = d2l.try_gpu(), (225, 150)
@@ -374,9 +374,10 @@ _, styles_Y = get_styles(image_shape, device)
 output = train(content_X, contents_Y, styles_Y, device, 0.01, 500, 200)
 ```
 
-As you can see, the composite image retains the scenery and objects of the content image, while introducing the color of the style image. Because the image is relatively small, the details are a bit fuzzy.
 
-To obtain a clearer composite image, we train the model using a larger image size: $900 \times 600$. We increase the height and width of the image used before by a factor of four and initialize a larger composite image.
+Como você pode ver, a imagem composta retém o cenário e os objetos da imagem de conteúdo, enquanto introduz a cor da imagem de estilo. Como a imagem é relativamente pequena, os detalhes são um pouco confusos.
+
+Para obter uma imagem composta mais clara, treinamos o modelo usando um tamanho de imagem maior: $900 \times 600$. Aumentamos a altura e a largura da imagem usada antes por um fator de quatro e inicializamos uma imagem composta maior.
 
 ```{.python .input}
 image_shape = (900, 600)
@@ -397,9 +398,9 @@ output = train(X, content_Y, style_Y, device, 0.01, 300, 100)
 d2l.plt.imsave('../img/neural-style.jpg', postprocess(output))
 ```
 
-As you can see, each epoch takes more time due to the larger image size. As shown in :numref:`fig_style_transfer_large`, the composite image produced retains more detail due to its larger size. The composite image not only has large blocks of color like the style image, but these blocks even have the subtle texture of brush strokes.
+Como você pode ver, cada época leva mais tempo devido ao tamanho maior da imagem. Conforme mostrado em :numref:`fig_style_transfer_large`, a imagem composta produzida retém mais detalhes devido ao seu tamanho maior. A imagem composta não só tem grandes blocos de cores como a imagem de estilo, mas esses blocos têm até a textura sutil de pinceladas.
 
-![$900 \times 600$ composite image. ](../img/neural-style.jpg)
+![Imagem $900 \times 600$ composite image. ](../img/neural-style.jpg)
 :width:`500px`
 :label:`fig_style_transfer_large`
 
@@ -425,7 +426,7 @@ As you can see, each epoch takes more time due to the larger image size. As show
 [Discussions](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjIyMzExMTUsMTgyNTYzMDY3MSw5Mj
-c2Nzc4NTgsMjg5Mzc2OTgwLC04NDE0OTU5OTIsLTkzMzkyNTYy
-LC0yNjkwNjQ4MzUsMTg5MTQxMzUxMF19
+eyJoaXN0b3J5IjpbMTA3MTA4Mzk4NCwtMTQ2MjIzMTExNSwxOD
+I1NjMwNjcxLDkyNzY3Nzg1OCwyODkzNzY5ODAsLTg0MTQ5NTk5
+MiwtOTMzOTI1NjIsLTI2OTA2NDgzNSwxODkxNDEzNTEwXX0=
 -->
