@@ -1,4 +1,4 @@
-# Image Classification (CIFAR-10) on Kaggle
+# Image Classificationção de Im (CIFAR-10) on Kaggle
 :label:`sec_kaggle_cifar10`
 
 So far, we have been using Gluon's `data` package to directly obtain image datasets in the tensor format. In practice, however, image datasets often exist in the format of image files. In this section, we will start with the original image files and organize, read, and convert the files to the tensor format step by step.
@@ -511,3 +511,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2NDUxOTk0MzRdfQ==
+-->
