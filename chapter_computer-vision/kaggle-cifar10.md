@@ -208,7 +208,7 @@ transform_train = torchvision.transforms.Compose([
                                            [0.2023, 0.1994, 0.2010])])
 ```
 
-In order to ensure the certainty of the output during testing, we only perform normalization on the image.
+Para garantir a certeza da saída durante o teste, realizamos apenas normalização na imagem.
 
 ```{.python .input}
 transform_test = gluon.data.vision.transforms.Compose([
@@ -225,9 +225,9 @@ transform_test = torchvision.transforms.Compose([
                                            [0.2023, 0.1994, 0.2010])])
 ```
 
-## Reading the Dataset
+## Lendo o *Dataset*
 
-Next, we can create the `ImageFolderDataset` instance to read the organized dataset containing the original image files, where each example includes the image and label.
+Em seguida, podemos criar a instância `ImageFolderDataset` para ler o conjunto de dados organizado contendo os arquivos de imagem originais, onde cada exemplo inclui a imagem e o rótulo.
 
 ```{.python .input}
 train_ds, valid_ds, train_valid_ds, test_ds = [
@@ -247,7 +247,7 @@ valid_ds, test_ds = [torchvision.datasets.ImageFolder(
     transform=transform_test) for folder in ['valid', 'test']]
 ```
 
-We specify the defined image augmentation operation in `DataLoader`. During training, we only use the validation set to evaluate the model, so we need to ensure the certainty of the output. During prediction, we will train the model on the combined training set and validation set to make full use of all labelled data.
+Especificamos a operação de aumento de imagem definida em `DataLoader`. Durante o treinamento, usamos apenas o conjunto de validação para avaliar o modelo, portanto, precisamos garantir a certeza do resultado. Durante a previsão, treinaremos o modelo no conjunto de treinamento combinado e no conjunto de validação para fazer uso completo de todos os dados rotulados.
 
 ```{.python .input}
 train_iter, train_valid_iter = [gluon.data.DataLoader(
@@ -276,7 +276,7 @@ test_iter = torch.utils.data.DataLoader(test_ds, batch_size, shuffle=False,
                                         drop_last=False)
 ```
 
-## Defining the Model
+## Definindo o Modelo
 
 Here, we build the residual blocks based on the `HybridBlock` class, which is
 slightly different than the implementation described in
@@ -514,6 +514,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDg4NzMyMSwtNzM4OTY5ODQ5LC0xOD
+eyJoaXN0b3J5IjpbMTAwMDg2NDE5NiwtNzM4OTY5ODQ5LC0xOD
 AxMjg4MTU2LC0xODM2MTgwNzY3LC01NTc3OTc3MTldfQ==
 -->
