@@ -51,19 +51,20 @@ import shutil
 
 Os dados da competição são divididos em um conjunto de treinamento e um conjunto de teste. O conjunto de treinamento contém $50.000$ imagens. O conjunto de teste contém $300.000$ imagens, das quais $10.000$ imagens são usadas para pontuação, enquanto as outras $290.000$ imagens sem pontuação são incluídas para evitar a rotulagem manual do conjunto de teste e o envio dos resultados da rotulagem. Os formatos de imagem em ambos os conjuntos de dados são PNG, com alturas e larguras de 32 pixels e três canais de cores (RGB). As imagens cobrem categorias de $10$: aviões, carros, pássaros, gatos, veados, cães, sapos, cavalos, barcos e caminhões. O canto superior esquerdo de :numref:`fig_kaggle_cifar10` mostra algumas imagens de aviões, carros e pássaros no conjunto de dados.
 
-### Downloading the Dataset
+### Baixando o Dataset
 
-After logging in to Kaggle, we can click on the "Data" tab on the CIFAR-10 image classification competition webpage shown in :numref:`fig_kaggle_cifar10` and download the dataset by clicking the "Download All" button. After unzipping the downloaded file in `../data`, and unzipping `train.7z` and `test.7z` inside it, you will find the entire dataset in the following paths:
+Após fazer o login no Kaggle, podemos clicar na guia "Dados" na página da competição de classificação de imagens CIFAR-10 mostrada em :numref:`fig_kaggle_cifar10` e baixar o conjunto de dados clicando no botão "*Download All*". Após descompactar o arquivo baixado em `../data` e descompactar `train.7z` e `test.7z` dentro dele, você encontrará o conjunto de dados inteiro nos seguintes caminhos:
 
 * ../data/cifar-10/train/[1-50000].png
 * ../data/cifar-10/test/[1-300000].png
 * ../data/cifar-10/trainLabels.csv
 * ../data/cifar-10/sampleSubmission.csv
 
-Here folders `train` and `test` contain the training and testing images respectively, `trainLabels.csv` has labels for the training images, and `sample_submission.csv` is a sample of submission.
 
-To make it easier to get started, we provide a small-scale sample of the dataset: it contains the first $1000$ training images and $5$ random testing images.
-To use the full dataset of the Kaggle competition, you need to set the following `demo` variable to `False`.
+Aqui, as pastas `train` e` test` contêm as imagens de treinamento e teste, respectivamente, `trainLabels.csv` tem rótulos para as imagens de treinamento e `sample_submission.csv` é um exemplo de envio.
+
+Para facilitar o início, fornecemos uma amostra em pequena escala do conjunto de dados: ele contém as primeiras $1000$ de imagens de treinamento e $5$ de imagens de teste aleatórias.
+Para usar o conjunto de dados completo da competição Kaggle, você precisa definir a seguinte variável `demo` como `False`.
 
 ```{.python .input}
 #@tab all
@@ -513,6 +514,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDEyODgxNTYsLTE4MzYxODA3NjcsLT
-U1Nzc5NzcxOV19
+eyJoaXN0b3J5IjpbLTE5MDUwOTM0NjIsLTE4MDEyODgxNTYsLT
+E4MzYxODA3NjcsLTU1Nzc5NzcxOV19
 -->
