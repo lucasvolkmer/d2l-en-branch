@@ -47,7 +47,7 @@ import pandas as pd
 import shutil
 ```
 
-## Obtaining and Organizing the Dataset
+## Obtendo e Organizando o *Dataset*
 
 The competition data is divided into a training set and testing set. The training set contains $50,000$ images. The testing set contains $300,000$ images, of which $10,000$ images are used for scoring, while the other $290,000$ non-scoring images are included to prevent the manual labeling of the testing set and the submission of labeling results. The image formats in both datasets are PNG, with heights and widths of 32 pixels and three color channels (RGB). The images cover $10$ categories: planes, cars, birds, cats, deer, dogs, frogs, horses, boats, and trucks. The upper-left corner of :numref:`fig_kaggle_cifar10` shows some images of planes, cars, and birds in the dataset.
 
@@ -513,6 +513,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjgyNDY3NjksLTE4MzYxODA3NjcsLT
-U1Nzc5NzcxOV19
+eyJoaXN0b3J5IjpbLTIxMzI0OTM1MSwtMTgzNjE4MDc2NywtNT
+U3Nzk3NzE5XX0=
 -->
