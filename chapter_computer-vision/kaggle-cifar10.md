@@ -49,7 +49,7 @@ import shutil
 
 ## Obtendo e Organizando o *Dataset*
 
-The competition data is divided into a training set and testing set. The training set contains $50,000$ images. The testing set contains $300,000$ images, of which $10,000$ images are used for scoring, while the other $290,000$ non-scoring images are included to prevent the manual labeling of the testing set and the submission of labeling results. The image formats in both datasets are PNG, with heights and widths of 32 pixels and three color channels (RGB). The images cover $10$ categories: planes, cars, birds, cats, deer, dogs, frogs, horses, boats, and trucks. The upper-left corner of :numref:`fig_kaggle_cifar10` shows some images of planes, cars, and birds in the dataset.
+Os dados da competição são divididos em um conjunto de treinamento e um conjunto de teste. O conjunto de treinamento contém $50.000$ imagens. O conjunto de teste contém $300.000$ imagens, das quais $10.000$ imagens são usadas para pontuação, enquanto as outras $290.000$ imagens sem pontuação são incluídas para evitar a rotulagem manual do conjunto de teste e o envio dos resultados da rotulagem. Os formatos de imagem em ambos os conjuntos de dados são PNG, com alturas e larguras de 32 pixels e três canais de cores (RGB). As imagens cobrem categorias de $10$: aviões, carros, pássaros, gatos, veados, cães, sapos, cavalos, barcos e caminhões. O canto superior esquerdo de :numref:`fig_kaggle_cifar10` mostra algumas imagens de aviões, carros e pássaros no conjunto de dados.
 
 ### Downloading the Dataset
 
@@ -513,6 +513,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzI0OTM1MSwtMTgzNjE4MDc2NywtNT
-U3Nzk3NzE5XX0=
+eyJoaXN0b3J5IjpbLTE4MDEyODgxNTYsLTE4MzYxODA3NjcsLT
+U1Nzc5NzcxOV19
 -->
