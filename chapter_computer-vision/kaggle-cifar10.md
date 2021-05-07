@@ -13,13 +13,13 @@ aborda problemas de classificação de imagens CIFAR-10. O endereço da competi�
 
 > https://www.kaggle.com/c/cifar-10
 
-:numref:`fig_kaggle_cifar10` shows the information on the competition's webpage. In order to submit the results, please register an account on the Kaggle website first.
+:numref:`fig_kaggle_cifar10` mostra as informações na página da competição. Para enviar os resultados, primeiro registre uma conta no site do Kaggle.
 
-![CIFAR-10 image classification competition webpage information. The dataset for the competition can be accessed by clicking the "Data" tab.](../img/kaggle-cifar10.png)
+![Informações da página da web do concurso de classificação de imagens CIFAR-10. O conjunto de dados da competição pode ser acessado clicando na guia "Dados".](../img/kaggle-cifar10.png)
 :width:`600px`
 :label:`fig_kaggle_cifar10`
 
-First, import the packages or modules required for the competition.
+Primeiro, importe os pacotes ou módulos necessários para a competição.
 
 ```{.python .input}
 import collections
@@ -513,5 +513,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzYxODA3NjcsLTU1Nzc5NzcxOV19
+eyJoaXN0b3J5IjpbLTIwNjgyNDY3NjksLTE4MzYxODA3NjcsLT
+U1Nzc5NzcxOV19
 -->
