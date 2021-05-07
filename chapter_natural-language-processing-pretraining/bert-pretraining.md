@@ -248,15 +248,15 @@ def get_bert_encoding(net, tokens_a, tokens_b=None):
     return encoded_X
 ```
 
-Consider the sentence "a crane is flying".
-Recall the input representation of BERT as discussed in :numref:`subsec_bert_input_rep`.
-After inserting special tokens “&lt;cls&gt;” (used for classification)
-and “&lt;sep&gt;” (used for separation),
-the BERT input sequence has a length of six.
-Since zero is the index of the “&lt;cls&gt;” token,
-`encoded_text[:, 0, :]` is the BERT representation of the entire input sentence.
-To evaluate the polysemy token "crane",
-we also print out the first three elements of the BERT representation of the token.
+Considere a frase "um guindaste está voando".
+Lembre-se da representação de entrada de BERT conforme discutido em :numref:`subsec_bert_input_rep`.
+Após inserir tokens especiais “&lt;cls&gt;” (usado para classificação)
+e “&lt;cls&gt;” (usado para separação),
+a sequência de entrada de BERT tem um comprimento de seis.
+Uma vez que zero é o índice de “&lt;cls&gt;” símbolo,
+`encoded_text[:, 0, :]` é a representação BERT de toda a sentença de entrada.
+Para avaliar o token de polissemia "guindaste",
+também imprimimos os três primeiros elementos da representação BERT do token.
 
 ```{.python .input}
 #@tab all
@@ -268,11 +268,11 @@ encoded_text_crane = encoded_text[:, 2, :]
 encoded_text.shape, encoded_text_cls.shape, encoded_text_crane[0][:3]
 ```
 
-Now consider a sentence pair
-"a crane driver came" and "he just left".
-Similarly, `encoded_pair[:, 0, :]` is the encoded result of the entire sentence pair from the pretrained BERT.
-Note that the first three elements of the polysemy token "crane" are different from those when the context is different.
-This supports that BERT representations are context-sensitive.
+Agora considere um par de frases
+"veio um motorista de guindaste" e "acabou de sair".
+Da mesma forma, `encoded_pair[:, 0, :]` é o resultado codificado de todo o par de frases do BERT pré-treinado.
+Observe que os três primeiros elementos do token de polissemia "guindaste" são diferentes daqueles quando o contexto é diferente.
+Isso sustenta que as representações de BERT são sensíveis ao contexto.
 
 ```{.python .input}
 #@tab all
@@ -285,8 +285,8 @@ encoded_pair_crane = encoded_pair[:, 2, :]
 encoded_pair.shape, encoded_pair_cls.shape, encoded_pair_crane[0][:3]
 ```
 
-In :numref:`chap_nlp_app`, we will fine-tune a pretrained BERT model
-for downstream natural language processing applications.
+Em: numref:`chap_nlp_app`, vamos ajustar um modelo BERT pré-treinado
+para aplicativos de processamento de linguagem natural downstream.
 
 
 ## Summary
@@ -308,5 +308,5 @@ for downstream natural language processing applications.
 [Discussions](https://discuss.d2l.ai/t/1497)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NzQ1MjkwNV19
+eyJoaXN0b3J5IjpbMTg0MzQ2MzU0MV19
 -->
