@@ -44,25 +44,25 @@ rotulagem de função semântica, resolução de co-referência,
 reconhecimento de entidade nomeada e resposta a perguntas.
 
 
-## From Task-Specific to Task-Agnostic
+## De Task-Specific para Task-Agnostic
 
-Although ELMo has significantly improved solutions to a diverse set of natural language processing tasks,
-each solution still hinges on a *task-specific* architecture.
-However, it is practically non-trivial to craft a specific architecture for every natural language processing task.
-The GPT (Generative Pre-Training) model represents an effort in designing
-a general *task-agnostic* model for context-sensitive representations :cite:`Radford.Narasimhan.Salimans.ea.2018`.
-Built on a transformer decoder,
-GPT pretrains a language model that will be used to represent text sequences.
-When applying GPT to a downstream task,
-the output of the language model will be fed into an added linear output layer
-to predict the label of the task.
-In sharp contrast to ELMo that freezes parameters of the pretrained model,
-GPT fine-tunes *all* the parameters in the pretrained transformer decoder
-during supervised learning of the downstream task.
-GPT was evaluated on twelve tasks of natural language inference,
-question answering, sentence similarity, and classification,
-and improved the state of the art in nine of them with minimal changes
-to the model architecture.
+Embora o ELMo tenha melhorado significativamente as soluções para um conjunto diversificado de tarefas de processamento de linguagem natural,
+cada solução ainda depende de uma arquitetura *específica para a tarefa*.
+No entanto, é praticamente não trivial criar uma arquitetura específica para cada tarefa de processamento de linguagem natural.
+O modelo GPT (Generative Pre-Training) representa um esforço na concepção
+um modelo *agnóstico de tarefa* geral para representações sensíveis ao contexto :cite:`Radford.Narasimhan.Salimans.ea.2018`.
+Construído em um decodificador de transformador,
+O GPT pré-treina um modelo de linguagem que será usado para representar sequências de texto.
+Ao aplicar GPT a uma tarefa downstream,
+a saída do modelo de linguagem será alimentada em uma camada de saída linear adicionada
+para prever o rótulo da tarefa.
+Em nítido contraste com o ELMo que congela os parâmetros do modelo pré-treinado,
+GPT ajusta *todos* os parâmetros no decodificador de transformador pré-treinado
+durante a aprendizagem supervisionada da tarefa a jusante.
+GPT foi avaliada em doze tarefas de inferência de linguagem natural,
+resposta a perguntas, similaridade de sentenças e classificação,
+e melhorou o estado da arte em nove deles com mudanças mínimas
+para a arquitetura do modelo.
 
 However, due to the autoregressive nature of language models,
 GPT only looks forward (left-to-right).
@@ -603,5 +603,5 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjExMTEwODksMTAwMDEzMDkyOV19
+eyJoaXN0b3J5IjpbMjAyODI3NDcwOSwxMDAwMTMwOTI5XX0=
 -->
