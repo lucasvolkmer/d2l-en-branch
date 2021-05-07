@@ -1,4 +1,4 @@
-# Dog Breed Identification (ImageNet Dogs) on Kaggle
+# Identificação de raça de cachorro (cães ImageNet) no Kaggle
 
 In this section, we will tackle the dog breed identification challenge in the Kaggle Competition. The competition's web address is
 
@@ -464,5 +464,5 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3ODY5Njg3N119
+eyJoaXN0b3J5IjpbLTE2MzY2NDEzMTddfQ==
 -->
