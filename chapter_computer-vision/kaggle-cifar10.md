@@ -278,9 +278,7 @@ test_iter = torch.utils.data.DataLoader(test_ds, batch_size, shuffle=False,
 
 ## Definindo o Modelo
 
-Here, we build the residual blocks based on the `HybridBlock` class, which is
-slightly different than the implementation described in
-:numref:`sec_resnet`. This is done to improve execution efficiency.
+Aqui, construímos os blocos residuais com base na classe `HybridBlock`, que é ligeiramente diferente da implementação descrita em :numref:`sec_resnet`. Isso é feito para melhorar a eficiência de execução.
 
 ```{.python .input}
 class Residual(nn.HybridBlock):
@@ -305,7 +303,7 @@ class Residual(nn.HybridBlock):
         return F.npx.relu(Y + X)
 ```
 
-Next, we define the ResNet-18 model.
+A seguir, definimos o modelo ResNet-18.
 
 ```{.python .input}
 def resnet18(num_classes):
@@ -330,7 +328,7 @@ def resnet18(num_classes):
     return net
 ```
 
-The CIFAR-10 image classification challenge uses 10 categories. We will perform Xavier random initialization on the model before training begins.
+O desafio de classificação de imagens CIFAR-10 usa 10 categorias. Vamos realizar a inicialização aleatória de Xavier no modelo antes do início do treinamento.
 
 ```{.python .input}
 def get_net(devices):
@@ -353,9 +351,9 @@ def get_net():
 loss = nn.CrossEntropyLoss(reduction="none")
 ```
 
-## Defining the Training Functions
+## Definindo as Funções de Treinamento
 
-We will select the model and tune hyperparameters according to the model's performance on the validation set. Next, we define the model training function `train`. We record the training time of each epoch, which helps us compare the time costs of different models.
+Selecionaremos o modelo e ajustaremos os hiperparâmetros de acordo com o desempenho do modelo no conjunto de validação. Em seguida, definimos a função de treinamento do modelo `treinar`. Registramos o tempo de treinamento de cada época, o que nos ajuda a comparar os custos de tempo de diferentes modelos.
 
 ```{.python .input}
 def train(net, train_iter, valid_iter, num_epochs, lr, wd, devices, lr_period,
@@ -514,6 +512,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMDg2NDE5NiwtNzM4OTY5ODQ5LC0xOD
-AxMjg4MTU2LC0xODM2MTgwNzY3LC01NTc3OTc3MTldfQ==
+eyJoaXN0b3J5IjpbLTE4MzAwNzQ3MzMsLTczODk2OTg0OSwtMT
+gwMTI4ODE1NiwtMTgzNjE4MDc2NywtNTU3Nzk3NzE5XX0=
 -->
