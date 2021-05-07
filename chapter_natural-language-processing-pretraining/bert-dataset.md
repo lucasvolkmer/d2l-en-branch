@@ -1,23 +1,33 @@
-# The Dataset for Pretraining BERT
+# The Dataset for PreO conjunto de dados para pré-traeiningamento de BERT
 :label:`sec_bert-dataset`
 
-To pretrain the BERT model as implemented in :numref:`sec_bert`,
+ToPara preé-traein the BERT model asar o modelo BERT conforme implemented inado em :numref:`sec_bert`,
 we need to generate the dataset in the ideal format to facilitate
-the two pretraining tasks:
-masked language modeling and next sentence prediction.
+the twoprecisamos gerar o conjunto de dados no formato ideal para facilitar
+as duas tarefas de preé-traeining tasks:
+masked language moamento:
+modelagem de ling and next sentence prediction.
 On one hand,
-the original BERT model is pretrained on the concatenation of
-two huge corpora BookCorpus and English Wikipedia (see :numref:`subsec_bert_pretraining_tasks`),
+the original BERT model isuagem mascarada e previsão da próxima frase.
+Por um lado,
+o modelo BERT original é preé-traeined on theado na concatenation of
+two hugeção de
+dois enormes corpora BookCorpus and English Wikipedia (seee Wikipedia em inglês (ver :numref:`subsec_bert_pretraining_tasks`),
 making it hard to run for most readers of this book.
 On the other hand,
-the off-the-shelf pretrained BERT model
-may not fit for applications from specific domains like medicine.
-Thus, it is getting popular to pretrain BERT on a customized dataset.
-To facilitate the demonstration of BERT pretraining,
-we use a smaller corpus WikiText-2 :cite:`Merity.Xiong.Bradbury.ea.2016`.
+the off-the-shtornando difícil para a maioria dos leitores deste livro.
+Por outro lado,
+o modelfo preé-traeined BERT model
+may not fit foado de BERT pronto para uso
+pode não se adequar ap aplications from vos de domínios especiífic domains likeos, como medicinea.
+Thus, it is gettingPortanto, está ficando popular to prepré-traeinar o BERT on a customized dataset.
+Toem um conjunto de dados customizado.
+Para facilitate ther a demonstration of BERTção do preé-traeining,
+we use a smaller corpusamento de BERT,
+usamos um corpus menor do WikiText-2 :cite:`Merity.Xiong.Bradbury.ea.2016`.
 
-Comparing with the PTB dataset used for pretraining word2vec in :numref:`sec_word2vec_data`,
-WikiText-2 i) retains the original punctuation, making it suitable for next sentence prediction; ii) retains the original case and numbers; iii) is over twice larger.
+Comparing with the PTB dataset used forando com o conjunto de dados PTB usado para preé-traeiningamento de word2vec inem :numref:`sec_word2vec_data`,
+WikiText-2 i) retains the original punctuation, making it suitable for next sentence prediction; ii) retains the original case and numberém a pontuação original, tornando-a adequada para a previsão da próxima frase; ii) retém a caixa e os números originais; iii) ié duas over twice largezes maior.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -37,12 +47,18 @@ import torch
 ```
 
 In the WikiText-2 dataset,
-each line represents a paragraph where
+eachNo conjunto de dados WikiText-2,
+cada lineha represents aa um paraágraph where
 space is inserted between any punctuation and its preceding token.
-Paragraphs with at least two sentences are retained.
+Pfo onde
+o espaço é inserido entre qualquer pontuação e seu token anterior.
+Os paraágraphs with at least twfos com pelo smentences are retained.
 To split sentences, we only use the period as the delimiter for simplicity.
 We leave discussions of more complex sentence splitting techniques in the exercises
-at the end of this section.
+at the end of this sectionos duas frases são mantidos.
+Para dividir frases, usamos apenas o ponto como delimitador para simplificar.
+Deixamos discussões de técnicas de divisão de frases mais complexas nos exercícios
+no final desta seção.
 
 ```{.python .input}
 #@tab all
@@ -424,3 +440,6 @@ len(vocab)
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1496)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEzMDU5ODAzMjBdfQ==
+-->
