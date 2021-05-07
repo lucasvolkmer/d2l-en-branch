@@ -125,29 +125,11 @@ from torch import nn
 ## Representação de entrada
 :label:`subsec_bert_input_rep`
 
-In natural language processing,
-some tasks (e.g., sentiment analysis) take single text as the input,
-while in some other tasks (e.g., natural language inference),
-the input is a pair of text sequences.
-The BERT input sequence unambiguously represents both single text and text pairs.
-In the former,
-the BERT input sequence is the concatenation of
-the special classification token “&lt;cls&gt;”,
-tokens of a text sequence,
-and the special separation token “&lt;sep&gt;”.
-In the latter,
-the BERT input sequence is the concatenation of
-“&lt;cls&gt;”, tokens of the first text sequence,
-“&lt;sep&gt;”, tokens of the second text sequence, and “&lt;sep&gt;”.
-We will consistently distinguish the terminology "BERT input sequence"
-from other types of "sequences".
-For instance, one *BERT input sequence* may include either one *text sequence* or two *text sequences*.
-
 No processamento de linguagem natural,
 algumas tarefas (por exemplo, análise de sentimento) usam um único texto como entrada,
 enquanto em algumas outras tarefas (por exemplo, inferência de linguagem natural),
 a entrada é um par de sequências de texto.
-A seqüência de entrada de BERT representa sem ambigüidade texto único e pares de texto.
+A sequência de entrada de BERT representa sem ambiguidade texto único e pares de texto.
 Na antiga,
 a sequência de entrada de BERT é a concatenação de
 o token de classificação especial “&lt;sep&gt;”,
@@ -161,14 +143,14 @@ Iremos distinguir de forma consistente a terminologia "sequência de entrada de 
 de outros tipos de "sequências".
 Por exemplo, uma *sequência de entrada de BERT* pode incluir uma *sequência de texto* ou duas *sequências de texto*.
 
-To distinguish text pairs,
-the learned segment embeddings $\mathbf{e}_A$ and $\mathbf{e}_B$
-are added to the token embeddings of the first sequence and the second sequence, respectively.
-For single text inputs, only $\mathbf{e}_A$ is used.
+Para distinguir pares de texto,
+o segmento aprendido embeddings $\mathbf{e}_A$ e $\mathbf{e}_B$
+são adicionados aos embeddings de token da primeira e da segunda sequência, respectivamente.
+Para entradas de texto único, apenas $\mathbf{e}_A$ é usado.
 
-The following `get_tokens_and_segments` takes either one sentence or two sentences
-as the input, then returns tokens of the BERT input sequence
-and their corresponding segment IDs.
+O seguinte `get_tokens_and_segments` leva uma ou duas frases
+como entrada, em seguida, retorna tokens da sequência de entrada BERT
+e seus IDs de segmento correspondentes.
 
 ```{.python .input}
 #@tab all
@@ -619,5 +601,6 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNzc0NjUxNSwxMDAwMTMwOTI5XX0=
+eyJoaXN0b3J5IjpbLTEzMDYzOTMzNSwxOTI3NzQ2NTE1LDEwMD
+AxMzA5MjldfQ==
 -->
