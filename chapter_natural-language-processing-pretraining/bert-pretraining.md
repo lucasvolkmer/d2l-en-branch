@@ -1,7 +1,7 @@
-# Preé-traeiningando BERT
+# Pré-treinando BERT
 :label:`sec_bert-pretraining`
 
-Com o modelo BERT implementado em: numref: sec_bert e os exemplos de pré-treinamento gerados a partir do conjunto de dados WikiText-2 em :numref:sec_bert-dataset, iremos pré-treinar o BERT no conjunto de dados WikiText-2 nesta seção.
+Com o modelo BERT implementado em: numref: `sec_bert` e os exemplos de pré-treinamento gerados a partir do conjunto de dados WikiText-2 em :numref:`sec_bert-dataset`, iremos pré-treinar o BERT no conjunto de dados WikiText-2 nesta seção.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -308,5 +308,5 @@ for downstream natural language processing applications.
 [Discussions](https://discuss.d2l.ai/t/1497)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MjQ5NTA4NV19
+eyJoaXN0b3J5IjpbLTM1MzU0NzM0NV19
 -->
