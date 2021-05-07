@@ -418,19 +418,16 @@ len(vocab)
 
 ## Exercícios
 
-1. For simplicity, the period is used as the only delimiter for splitting sentences. Try other sentence splitting techniques, such as the spaCy and NLTK. Take NLTK as an example. You need to install NLTK first: `pip install nltk`. In the code, first `import nltk`. Then, download the Punkt sentence tokenizer: `nltk.download('punkt')`. To split sentences such as `sentences = 'This is great ! Why not ?'`, invoking `nltk.tokenize.sent_tokenize(sentences)` will return a list of two sentence strings: `['This is great !', 'Why not ?']`.
-1. What is the vocabulary size if we do not filter out any infrequent token?
-
-1. Para simplificar, o período é usado como o único delimitador para dividir frases. Experimente outras técnicas de divisão de frases, como spaCy e NLTK. Tome o NLTK como exemplo. Você precisa instalar o NLTK primeiro: `pip install nltk`. No código, primeiro `import nltk`. Então, baixe o tokenizer de frase Punkt: `nltk.download ('punkt')`. Para dividir frases como `frases = 'Isso é ótimo! Por que não? '`, Invocar` nltk.tokenize.sent_tokenize (sentenças) `retornará uma lista de duas strings de frase:` [' Isso é ótimo! ',' Por que não? '] `.
+1. Para simplificar, o período é usado como o único delimitador para dividir frases. Experimente outras técnicas de divisão de frases, como spaCy e NLTK. Tome o NLTK como exemplo. Você precisa instalar o NLTK primeiro: `pip install nltk`. No código, primeiro `import nltk`. Então, baixe o tokenizer de frase Punkt: `nltk.download('punkt')`. Para dividir frases como `sentences = 'This is great ! Why not ?'`, Invocar `nltk.tokenize.sent_tokenize(sentences)` retornará uma lista de duas strings de frase:`['This is great !', 'Why not ?']`.
 1. Qual é o tamanho do vocabulário se não filtrarmos nenhum token infrequente?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/389)
+[Discussão](https://discuss.d2l.ai/t/389)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1496)
+[Discussão](https://discuss.d2l.ai/t/1496)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1OTM2ODg2OCwtMTMzMjI4MjQyXX0=
+eyJoaXN0b3J5IjpbODY0MTg2MDcwLC0xMzMyMjgyNDJdfQ==
 -->
