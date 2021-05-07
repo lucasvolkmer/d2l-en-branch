@@ -36,16 +36,10 @@ import random
 import torch
 ```
 
-In the WikiText-2 dataset,
-eachNo conjunto de dados WikiText-2,
-cada lineha represents aa um paraágraph where
-space is inserted between any punctuation and its preceding token.
-Pfo onde
+No conjunto de dados WikiText-2,
+cada linha representa um parágrafo onde
 o espaço é inserido entre qualquer pontuação e seu token anterior.
-Os paraágraphs with at least twfos com pelo smentences are retained.
-To split sentences, we only use the period as the delimiter for simplicity.
-We leave discussions of more complex sentence splitting techniques in the exercises
-at the end of this sectionos duas frases são mantidos.
+Os parágrafos com pelo menos duas frases são mantidos.
 Para dividir frases, usamos apenas o ponto como delimitador para simplificar.
 Deixamos discussões de técnicas de divisão de frases mais complexas nos exercícios
 no final desta seção.
@@ -70,18 +64,19 @@ def _read_wiki(data_dir):
 ```
 
 ## Definindo funções auxiliares para tarefas de pré-treinamento
-In the following,
-we begin by implementing helper functions for the two BERT pretraining tasks:
-next sentence prediction and masked language modeling.
-These helper functions will be invoked later
-when transforming the raw text corpus
-into the dataset of the ideal format to pretrain BERT.
 
-### Generating the Next Sentence Prediction Task
+Na sequência,
+começamos implementando funções auxiliares para as duas tarefas de pré-treinamento de BERT:
+previsão da próxima frase e modelagem de linguagem mascarada.
+Essas funções auxiliares serão chamadas mais tarde
+ao transformar o corpus de texto bruto
+no conjunto de dados do formato ideal para pré-treinar o BERT.
 
-According to descriptions of :numref:`subsec_nsp`,
-the `_get_next_sentence` function generates a training example
-for the binary classification task.
+### Gerando a Tarefa de Previsão da Próxima Sentença
+
+De acordo com as descrições de :numref:`subsec_nsp`,
+a função `_get_next_sentence` gera um exemplo de treinamento
+para a tarefa de classificação binária.
 
 ```{.python .input}
 #@tab all
@@ -96,10 +91,10 @@ def _get_next_sentence(sentence, next_sentence, paragraphs):
     return sentence, next_sentence, is_next
 ```
 
-The following function generates training examples for next sentence prediction
-from the input `paragraph` by invoking the `_get_next_sentence` function.
-Here `paragraph` is a list of sentences, where each sentence is a list of tokens.
-The argument `max_len` specifies the maximum length of a BERT input sequence during pretraining.
+A função a seguir gera exemplos de treinamento para a previsão da próxima frase
+do `paragraph` de entrada invocando a função `_get_next_sentence`.
+Aqui, `paragraph` é uma lista de frases, onde cada frase é uma lista de tokens.
+O argumento `max_len` especifica o comprimento máximo de uma sequência de entrada de BERT durante o pré-treinamento.
 
 ```{.python .input}
 #@tab all
@@ -117,7 +112,7 @@ def _get_nsp_data_from_paragraph(paragraph, paragraphs, vocab, max_len):
     return nsp_data_from_paragraph
 ```
 
-### Generating the Masked Language Modeling Task
+### Gerando a Tarefa de Modelagem de Linguagem Mascarada
 :label:`subsec_prepare_mlm_data`
 
 In order to generate training examples
@@ -133,6 +128,20 @@ at each prediction position, the input may be replaced by
 a special “&lt;mask&gt;” token or a random token, or remain unchanged.
 In the end, the function returns the input tokens after possible replacement,
 the token indices where predictions take place and labels for these predictions.
+
+A fim de gerar exemplos de treinamento
+para a tarefa de modelagem de linguagem mascarada
+de uma sequência de entrada de BERT,
+definimos a seguinte função `_replace_mlm_tokens`.
+Em suas entradas, `tokens` é uma lista de tokens que representam uma sequência de entrada de BERT,
+`candidate_pred_positions` é uma lista de índices de token da sequência de entrada BERT
+excluindo aqueles de tokens especiais (tokens especiais não são previstos na tarefa de modelagem de linguagem mascarada),
+e `num_mlm_preds` indica o número de previsões (recorde 15% de tokens aleatórios para prever).
+Seguindo a definição da tarefa de modelagem de linguagem mascarada em :numref:`subsec_mlm`,
+em cada posição de previsão, a entrada pode ser substituída por
+uma “& lt; máscara & gt;” especial token ou um token aleatório, ou permanecem inalterados.
+No final, a função retorna os tokens de entrada após possível substituição,
+os índices de token onde as previsões ocorrem e os rótulos para essas previsões.
 
 ```{.python .input}
 #@tab all
@@ -430,5 +439,5 @@ len(vocab)
 [Discussions](https://discuss.d2l.ai/t/1496)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNDc2NDU5MCwtMTMzMjI4MjQyXX0=
+eyJoaXN0b3J5IjpbLTYyMjA4NjgxMiwtMTMzMjI4MjQyXX0=
 -->
