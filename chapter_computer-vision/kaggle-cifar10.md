@@ -432,9 +432,9 @@ def train(net, train_iter, valid_iter, num_epochs, lr, wd, devices, lr_period,
           f'on {str(devices)}')
 ```
 
-## Training and Validating the Model
+## Treinamento e Validação do Modelo
 
-Now, we can train and validate the model. The following hyperparameters can be tuned. For example, we can increase the number of epochs. Because `lr_period` and `lr_decay` are set to 50 and 0.1 respectively, the learning rate of the optimization algorithm will be multiplied by 0.1 after every 50 epochs. For simplicity, we only train one epoch here.
+Agora podemos treinar e validar o modelo. Os hiperparâmetros a seguir podem ser ajustados. Por exemplo, podemos aumentar o número de épocas. Como `lr_period` e` lr_decay` são definidos como 50 e 0,1 respectivamente, a taxa de aprendizado do algoritmo de otimização será multiplicada por 0,1 a cada 50 épocas. Para simplificar, treinamos apenas uma época aqui.
 
 ```{.python .input}
 devices, num_epochs, lr, wd = d2l.try_all_gpus(), 5, 0.1, 5e-4
@@ -452,9 +452,9 @@ train(net, train_iter, valid_iter, num_epochs, lr, wd, devices, lr_period,
       lr_decay)
 ```
 
-## Classifying the Testing Set and Submitting Results on Kaggle
+## Classificando o Conjunto de Testes e Enviando Resultados no Kaggle
 
-After obtaining a satisfactory model design and hyperparameters, we use all training datasets (including validation sets) to retrain the model and classify the testing set.
+Depois de obter um design de modelo satisfatório e hiperparâmetros, usamos todos os conjuntos de dados de treinamento (incluindo conjuntos de validação) para treinar novamente o modelo e classificar o conjunto de teste.
 
 ```{.python .input}
 net, preds = get_net(devices), []
@@ -512,6 +512,7 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzAwNzQ3MzMsLTczODk2OTg0OSwtMT
-gwMTI4ODE1NiwtMTgzNjE4MDc2NywtNTU3Nzk3NzE5XX0=
+eyJoaXN0b3J5IjpbMTE3NzIzMzA5NiwtMTgzMDA3NDczMywtNz
+M4OTY5ODQ5LC0xODAxMjg4MTU2LC0xODM2MTgwNzY3LC01NTc3
+OTc3MTldfQ==
 -->
