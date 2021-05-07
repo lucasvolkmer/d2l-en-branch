@@ -259,20 +259,6 @@ def _pad_bert_inputs(examples, max_len, vocab):
             all_mlm_weights, all_mlm_labels, nsp_labels)
 ```
 
-Putting the helper functions for
-generating training examples of the two pretraining tasks,
-and the helper function for padding inputs together,
-we customize the following `_WikiTextDataset` class as the WikiText-2 dataset for pretraining BERT.
-By implementing the `__getitem__ `function,
-we can arbitrarily access the pretraining (masked language modeling and next sentence prediction) examples 
-generated from a pair of sentences from the WikiText-2 corpus.
-
-The original BERT model uses WordPiece embeddings whose vocabulary size is 30,000 :cite:`Wu.Schuster.Chen.ea.2016`.
-The tokenization method of WordPiece is a slight modification of
-the original byte pair encoding algorithm in :numref:`subsec_Byte_Pair_Encoding`.
-For simplicity, we use the `d2l.tokenize` function for tokenization.
-Infrequent tokens that appear less than five times are filtered out.
-
 Colocando as funções auxiliares para
 gerar exemplos de treinamento das duas tarefas de pré-treinamento,
 e a função auxiliar para preencher as entradas juntas,
@@ -364,9 +350,9 @@ class _WikiTextDataset(torch.utils.data.Dataset):
         return len(self.all_token_ids)
 ```
 
-By using the `_read_wiki` function and the `_WikiTextDataset` class,
-we define the following `load_data_wiki` to download and WikiText-2 dataset
-and generate pretraining examples from it.
+Usando a função `_read_wiki` e a classe `_WikiTextDataset`,
+definimos o seguinte `load_data_wiki` para download e conjunto de dados WikiText-2
+e gerar exemplos de pré-treinamento a partir dele.
 
 ```{.python .input}
 #@save
@@ -398,6 +384,11 @@ we print out the shapes of a minibatch of BERT pretraining examples.
 Note that in each BERT input sequence,
 $10$ ($64 \times 0.15$) positions are predicted for the masked language modeling task.
 
+Configurando o tamanho do lote para 512 e o comprimento máximo de uma sequência de entrada de BERT para 64,
+imprimimos as formas de um minibatch de exemplos de pré-treinamento de BERT.
+Observe que em cada sequência de entrada de BERT,
+$10$ ($64 \times 0.15$) posições estão previstas para a tarefa de modelagem de linguagem mascarada.
+
 ```{.python .input}
 #@tab all
 batch_size, max_len = 512, 64
@@ -411,25 +402,27 @@ for (tokens_X, segments_X, valid_lens_x, pred_positions_X, mlm_weights_X,
     break
 ```
 
-In the end, let us take a look at the vocabulary size.
-Even after filtering out infrequent tokens,
-it is still over twice larger than that of the PTB dataset.
+No final, vamos dar uma olhada no tamanho do vocabulário.
+Mesmo depois de filtrar tokens pouco frequentes,
+ainda é mais de duas vezes maior do que o conjunto de dados do PTB.
 
 ```{.python .input}
 #@tab all
 len(vocab)
 ```
 
-## Summary
+## Sumário
 
-* Comparing with the PTB dataset, the WikiText-2 dateset retains the original punctuation, case and numbers, and is over twice larger.
-* We can arbitrarily access the pretraining (masked language modeling and next sentence prediction) examples generated from a pair of sentences from the WikiText-2 corpus.
+* Comparando com o conjunto de dados PTB, o conjunto de datas WikiText-2 retém a pontuação, caixa e números originais e é duas vezes maior.
+* Podemos acessar arbitrariamente os exemplos de pré-treinamento (modelagem de linguagem mascarada e previsão da próxima frase) gerados a partir de um par de frases do corpus WikiText-2.
 
-
-## Exercises
+## Exercícios
 
 1. For simplicity, the period is used as the only delimiter for splitting sentences. Try other sentence splitting techniques, such as the spaCy and NLTK. Take NLTK as an example. You need to install NLTK first: `pip install nltk`. In the code, first `import nltk`. Then, download the Punkt sentence tokenizer: `nltk.download('punkt')`. To split sentences such as `sentences = 'This is great ! Why not ?'`, invoking `nltk.tokenize.sent_tokenize(sentences)` will return a list of two sentence strings: `['This is great !', 'Why not ?']`.
 1. What is the vocabulary size if we do not filter out any infrequent token?
+
+1. Para simplificar, o período é usado como o único delimitador para dividir frases. Experimente outras técnicas de divisão de frases, como spaCy e NLTK. Tome o NLTK como exemplo. Você precisa instalar o NLTK primeiro: `pip install nltk`. No código, primeiro `import nltk`. Então, baixe o tokenizer de frase Punkt: `nltk.download ('punkt')`. Para dividir frases como `frases = 'Isso é ótimo! Por que não? '`, Invocar` nltk.tokenize.sent_tokenize (sentenças) `retornará uma lista de duas strings de frase:` [' Isso é ótimo! ',' Por que não? '] `.
+1. Qual é o tamanho do vocabulário se não filtrarmos nenhum token infrequente?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/389)
@@ -439,5 +432,5 @@ len(vocab)
 [Discussions](https://discuss.d2l.ai/t/1496)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMzczNzg4OCwtMTMzMjI4MjQyXX0=
+eyJoaXN0b3J5IjpbLTU1OTM2ODg2OCwtMTMzMjI4MjQyXX0=
 -->
