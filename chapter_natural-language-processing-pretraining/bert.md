@@ -267,10 +267,10 @@ encoder = BERTEncoder(vocab_size, num_hiddens, norm_shape, ffn_num_input,
 
 Definimos `tokens` como sendo 2 sequências de entrada BERT de comprimento 8,
 onde cada token é um índice do vocabulário.
-A inferência direta de `BERTEncoder` com os` tokens` de entrada
+A inferência direta de `BERTEncoder` com os `tokens` de entrada
 retorna o resultado codificado onde cada token é representado por um vetor
 cujo comprimento é predefinido pelo hiperparâmetro `num_hiddens`.
-Esse hiperparâmetro geralmente é conhecido como * tamanho oculto *
+Esse hiperparâmetro geralmente é conhecido como *tamanho oculto*
 (número de unidades ocultas) do codificador do transformador.
 
 ```{.python .input}
@@ -288,26 +288,26 @@ encoded_X = encoder(tokens, segments, None)
 encoded_X.shape
 ```
 
-## Pretraining Tasks
+## Tarefas de pré-treinamento
 :label:`subsec_bert_pretraining_tasks`
 
-The forward inference of `BERTEncoder` gives the BERT representation
-of each token of the input text and the inserted
-special tokens “&lt;cls&gt;” and “&lt;seq&gt;”.
-Next, we will use these representations to compute the loss function
-for pretraining BERT.
-The pretraining is composed of the following two tasks:
-masked language modeling and next sentence prediction.
+A inferência direta de `BERTEncoder` dá a representação de BERT
+de cada token do texto de entrada e o inserido
+tokens especiais “&lt;cls&gt;” e “&lt;seq&gt;”.
+A seguir, usaremos essas representações para calcular a função de perda
+para pré-treinamento de BERT.
+O pré-treinamento é composto pelas duas tarefas a seguir:
+modelagem de linguagem mascarada e previsão da próxima frase.
 
-### Masked Language Modeling
+### Modelagem de linguagem mascarada
 :label:`subsec_mlm`
 
-As illustrated in :numref:`sec_language_model`,
-a language model predicts a token using the context on its left.
-To encode context bidirectionally for representing each token,
-BERT randomly masks tokens and uses tokens from the bidirectional context to
-predict the masked tokens.
-This task is referred to as a *masked language model*.
+Conforme ilustrado em :numref:`sec_language_model`,
+um modelo de linguagem prevê um token usando o contexto à sua esquerda.
+Para codificar o contexto bidirecionalmente para representar cada token,
+BERT mascara tokens aleatoriamente e usa tokens do contexto bidirecional para
+prever os tokens mascarados.
+Esta tarefa é conhecida como *modelo de linguagem mascarada*.
 
 In this pretraining task,
 15% of tokens will be selected at random as the masked tokens for prediction.
@@ -318,6 +318,17 @@ in fine-tuning.
 To avoid such a mismatch between pretraining and fine-tuning,
 if a token is masked for prediction (e.g., "great" is selected to be masked and predicted in "this movie is great"),
 in the input it will be replaced with:
+
+Nesta tarefa de pré-treinamento,
+15% dos tokens serão selecionados aleatoriamente como os tokens mascarados para previsão.
+Para prever um token mascarado sem trapacear usando o rótulo,
+uma abordagem direta é sempre substituí-lo por um “&lt;mask&gt;” especial token na sequência de entrada BERT.
+No entanto, o token especial artificial “& lt; máscara & gt;” nunca aparecerá
+no ajuste fino.
+Para evitar essa incompatibilidade entre o pré-treinamento e o ajuste fino,
+se um token for mascarado para previsão (por exemplo, "ótimo" foi selecionado para ser mascarado e previsto em "este filme é ótimo"),
+na entrada, ele será substituído por:
+
 
 * a special “&lt;mask&gt;” token for 80% of the time (e.g., "this movie is great" becomes "this movie is &lt;mask&gt;");
 * a random token for 10% of the time (e.g., "this movie is great" becomes "this movie is drink");
@@ -605,6 +616,6 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4OTY5MDgyOCwxOTI3NzQ2NTE1LDEwMD
-AxMzA5MjldfQ==
+eyJoaXN0b3J5IjpbLTE2NTYzMDc3NzYsMTkyNzc0NjUxNSwxMD
+AwMTMwOTI5XX0=
 -->
