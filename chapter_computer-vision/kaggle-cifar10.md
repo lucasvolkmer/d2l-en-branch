@@ -171,7 +171,7 @@ reorg_cifar10_data(data_dir, valid_ratio)
 
 ## Aumento de Imagem
 
-To cope with overfitting, we use image augmentation. For example, by adding `transforms.RandomFlipLeftRight()`, the images can be flipped at random. We can also perform normalization for the three RGB channels of color images using `transforms.Normalize()`. Below, we list some of these operations that you can choose to use or modify depending on requirements.
+Para lidar com o *overfitting*, usamos o aumento da imagem. Por exemplo, adicionando `transforms.RandomFlipLeftRight()`, as imagens podem ser invertidas aleatoriamente. Também podemos realizar a normalização para os três canais RGB de imagens coloridas usando `transforma.Normalize()`. Abaixo, listamos algumas dessas operações que você pode escolher para usar ou modificar, dependendo dos requisitos.
 
 ```{.python .input}
 transform_train = gluon.data.vision.transforms.Compose([
@@ -514,6 +514,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczODk2OTg0OSwtMTgwMTI4ODE1NiwtMT
-gzNjE4MDc2NywtNTU3Nzk3NzE5XX0=
+eyJoaXN0b3J5IjpbMTU2NDg4NzMyMSwtNzM4OTY5ODQ5LC0xOD
+AxMjg4MTU2LC0xODM2MTgwNzY3LC01NTc3OTc3MTldfQ==
 -->
