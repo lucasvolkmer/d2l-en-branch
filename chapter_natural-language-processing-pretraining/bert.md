@@ -165,23 +165,23 @@ def get_tokens_and_segments(tokens_a, tokens_b=None):
     return tokens, segments
 ```
 
-BERT chooses the transformer encoder as its bidirectional architecture.
-Common in the transformer encoder,
-positional embeddings are added at every position of the BERT input sequence.
-However, different from the original transformer encoder,
-BERT uses *learnable* positional embeddings.
-To sum up, :numref:`fig_bert-input` shows that
-the embeddings of the BERT input sequence are the sum
-of the token embeddings, segment embeddings, and positional embeddings.
+O BERT escolhe o codificador do transformador como sua arquitetura bidirecional.
+Comum no codificador do transformador,
+embeddings posicionais são adicionados em cada posição da sequência de entrada BERT.
+No entanto, diferente do codificador do transformador original,
+O BERT usa embeddings posicionais *aprendíveis*.
+Para resumir, :numref:`fig_bert-input` mostra que
+os embeddings da sequência de entrada de BERT são a soma
+dos embeddings de token, embeddings de segmento e embeddings posicionais.
 
-![The embeddings of the BERT input sequence are the sum
-of the token embeddings, segment embeddings, and positional embeddings.](../img/bert-input.svg)
+![Os embeddings da sequência de entrada de BERT são a soma
+dos embeddings de token, embeddings de segmento e embeddings posicionais.](../img/bert-input.svg)
 :label:`fig_bert-input`
 
-The following `BERTEncoder` class is similar to the `TransformerEncoder` class
-as implemented in :numref:`sec_transformer`.
-Different from `TransformerEncoder`, `BERTEncoder` uses
-segment embeddings and learnable positional embeddings.
+A seguinte classe `BERTEncoder` é semelhante à classe `TransformerEncoder`
+conforme implementado em :numref:`sec_transformer`.
+Diferente de `TransformerEncoder`, `BERTEncoder` usa
+embeddings de segmento e embeddings posicionais aprendíveis.
 
 ```{.python .input}
 #@save
@@ -245,6 +245,10 @@ Suppose that the vocabulary size is 10,000.
 To demonstrate forward inference of `BERTEncoder`,
 let us create an instance of it and initialize its parameters.
 
+Suponha que o tamanho do vocabulário seja 10.000.
+Para demonstrar a inferência direta de `BERTEncoder`,
+vamos criar uma instância dele e inicializar seus parâmetros.
+
 ```{.python .input}
 vocab_size, num_hiddens, ffn_num_hiddens, num_heads = 10000, 768, 1024, 4
 num_layers, dropout = 2, 0.2
@@ -261,13 +265,13 @@ encoder = BERTEncoder(vocab_size, num_hiddens, norm_shape, ffn_num_input,
                       ffn_num_hiddens, num_heads, num_layers, dropout)
 ```
 
-We define `tokens` to be 2 BERT input sequences of length 8,
-where each token is an index of the vocabulary.
-The forward inference of `BERTEncoder` with the input `tokens`
-returns the encoded result where each token is represented by a vector
-whose length is predefined by the hyperparameter `num_hiddens`.
-This hyperparameter is usually referred to as the *hidden size*
-(number of hidden units) of the transformer encoder.
+Definimos `tokens` como sendo 2 sequências de entrada BERT de comprimento 8,
+onde cada token é um índice do vocabulário.
+A inferência direta de `BERTEncoder` com os` tokens` de entrada
+retorna o resultado codificado onde cada token é representado por um vetor
+cujo comprimento é predefinido pelo hiperparâmetro `num_hiddens`.
+Esse hiperparâmetro geralmente é conhecido como * tamanho oculto *
+(número de unidades ocultas) do codificador do transformador.
 
 ```{.python .input}
 tokens = np.random.randint(0, vocab_size, (2, 8))
@@ -601,6 +605,6 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDYzOTMzNSwxOTI3NzQ2NTE1LDEwMD
+eyJoaXN0b3J5IjpbMTM4OTY5MDgyOCwxOTI3NzQ2NTE1LDEwMD
 AxMzA5MjldfQ==
 -->
