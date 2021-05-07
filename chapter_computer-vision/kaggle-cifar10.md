@@ -1,14 +1,15 @@
 # Classificação de Imagens (CIFAR-10) no Kaggle
 :label:`sec_kaggle_cifar10`
 
-So far, we have been using Gluon's `data` package to directly obtain image datasets in the tensor format. In practice, however, image datasets often exist in the format of image files. In this section, we will start with the original image files and organize, read, and convert the files to the tensor format step by step.
 
-We performed an experiment on the CIFAR-10 dataset in :numref:`sec_image_augmentation`.
-This is an important data
-set in the computer vision field. Now, we will apply the knowledge we learned in
-the previous sections in order to participate in the Kaggle competition, which
-addresses CIFAR-10 image classification problems. The competition's web address
-is
+Até agora, temos usado o pacote `data` do Gluon para obter diretamente conjuntos de dados de imagem no formato tensor. Na prática, entretanto, os conjuntos de dados de imagem geralmente existem no formato de arquivos de imagem. Nesta seção, começaremos com os arquivos de imagem originais e organizaremos, leremos e converteremos os arquivos para o formato tensor passo a passo.
+
+Realizamos um experimento no conjunto de dados CIFAR-10 em :numref:`sec_image_augmentation`.
+Este é um dado importante
+definido no campo de visão do computador. Agora, vamos aplicar o conhecimento que aprendemos em
+as seções anteriores para participar da competição Kaggle, que
+aborda problemas de classificação de imagens CIFAR-10. O endereço da competição na web
+é
 
 > https://www.kaggle.com/c/cifar-10
 
@@ -512,5 +513,5 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1Nzc5NzcxOV19
+eyJoaXN0b3J5IjpbLTE4MzYxODA3NjcsLTU1Nzc5NzcxOV19
 -->
