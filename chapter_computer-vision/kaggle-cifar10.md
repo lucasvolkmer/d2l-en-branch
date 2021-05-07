@@ -82,9 +82,9 @@ else:
     data_dir = '../data/cifar-10/'
 ```
 
-### Organizing the Dataset
+### Organizando o Dataset
 
-We need to organize datasets to facilitate model training and testing. Let us first read the labels from the csv file. The following function returns a dictionary that maps the filename without extension to its label.
+Precisamos organizar conjuntos de dados para facilitar o treinamento e teste do modelo. Vamos primeiro ler os rótulos do arquivo csv. A função a seguir retorna um dicionário que mapeia o nome do arquivo sem extensão para seu rótulo.
 
 ```{.python .input}
 #@tab all
@@ -514,6 +514,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDUwOTM0NjIsLTE4MDEyODgxNTYsLT
-E4MzYxODA3NjcsLTU1Nzc5NzcxOV19
+eyJoaXN0b3J5IjpbMzEwOTczMzkyLC0xODAxMjg4MTU2LC0xOD
+M2MTgwNzY3LC01NTc3OTc3MTldfQ==
 -->
