@@ -400,33 +400,33 @@ d2l.plt.imsave('../img/neural-style.jpg', postprocess(output))
 
 Como você pode ver, cada época leva mais tempo devido ao tamanho maior da imagem. Conforme mostrado em :numref:`fig_style_transfer_large`, a imagem composta produzida retém mais detalhes devido ao seu tamanho maior. A imagem composta não só tem grandes blocos de cores como a imagem de estilo, mas esses blocos têm até a textura sutil de pinceladas.
 
-![Imagem $900 \times 600$ composite image. ](../img/neural-style.jpg)
+![Imagem $900 \times 600$ composta. ](../img/neural-style.jpg)
 :width:`500px`
 :label:`fig_style_transfer_large`
 
-## Summary
+## Resumo
 
-* The loss functions used in style transfer generally have three parts: 1. Content loss is used to make the composite image approximate the content image as regards content features. 2. Style loss is used to make the composite image approximate the style image in terms of style features. 3. Total variation loss helps reduce the noise in the composite image.
-* We can use a pre-trained CNN to extract image features and minimize the loss function to continuously update the composite image.
-* We use a Gram matrix to represent the style output by the style layers.
+* As funções de perda usadas na transferência de estilo geralmente têm três partes: 1. A perda de conteúdo é usada para fazer a imagem composta se aproximar da imagem de conteúdo no que diz respeito aos recursos de conteúdo. 2. A perda de estilo é usada para fazer com que a imagem composta se aproxime da imagem de estilo em termos de recursos de estilo. 3. A perda total de variação ajuda a reduzir o ruído na imagem composta.
+* Podemos usar um CNN pré-treinado para extrair recursos de imagem e minimizar a função de perda para atualizar continuamente a imagem composta.
+* Usamos uma matriz de Gram para representar a saída do estilo pelas camadas de estilo.
 
 
-## Exercises
+## Exercícios
 
-1. How does the output change when you select different content and style layers?
-1. Adjust the weight hyperparameters in the loss function. Does the output retain more content or have less noise?
-1. Use different content and style images. Can you create more interesting composite images?
-1. Can we apply style transfer for text? Hint: you may refer to the survey paper by Hu et al. :cite:`Hu.Lee.Aggarwal.2020`.
+1. Como a saída muda quando você seleciona diferentes camadas de conteúdo e estilo?
+1. Ajuste os hiperparâmetros de peso na função de perda. A saída retém mais conteúdo ou tem menos ruído?
+1. Use imagens de conteúdo e estilo diferentes. Você pode criar imagens compostas mais interessantes?
+1. Podemos aplicar transferência de estilo para texto? Dica: você pode consultar o documento de pesquisa de Hu et al. :cite:`Hu.Lee.Aggarwal.2020`.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/378)
+[Discussões](https://discuss.d2l.ai/t/378)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1476)
+[Discussões](https://discuss.d2l.ai/t/1476)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MTA4Mzk4NCwtMTQ2MjIzMTExNSwxOD
+eyJoaXN0b3J5IjpbLTQzMjg2MTE4NSwtMTQ2MjIzMTExNSwxOD
 I1NjMwNjcxLDkyNzY3Nzg1OCwyODkzNzY5ODAsLTg0MTQ5NTk5
 MiwtOTMzOTI1NjIsLTI2OTA2NDgzNSwxODkxNDEzNTEwXX0=
 -->
