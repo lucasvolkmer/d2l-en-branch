@@ -9,20 +9,10 @@ Vamos começar ilustrando essa propriedade.
 
 ## De Independente do Contexto para Sensível ao Contexto
 
-Recall the experiments in :numref:`sec_word2vec_pretraining` and :numref:`sec_synonyms`.
-For instance, word2vec and GloVe both assign the same pretrained vector to the same word regardless of the context of the word (if any).
-Formally, a context-independent representation of any token $x$
-is a function $f(x)$ that only takes $x$ as its input.
-Given the abundance of polysemy and complex semantics in natural languages,
-context-independent representations have obvious limitations.
-For instance, the word "crane" in contexts
-"a crane is flying" and "a crane driver came" has completely different meanings;
-thus, the same word may be assigned different representations depending on contexts.
-
-Lembre-se dos experimentos em: numref: `sec_word2vec_pretraining` e: numref:` sec_synonyms`.
+Lembre-se dos experimentos em :numref:`sec_word2vec_pretraining` e :numref:`sec_synonyms`.
 Por exemplo, word2vec e GloVe atribuem o mesmo vetor pré-treinado à mesma palavra, independentemente do contexto da palavra (se houver).
-Formalmente, uma representação independente de contexto de qualquer token $ x $
-é uma função $ f (x) $ que leva apenas $ x $ como entrada.
+Formalmente, uma representação independente de contexto de qualquer token $x$
+é uma função $f(x)$ que leva apenas $x$ como entrada.
 Dada a abundância de polissemia e semântica complexa em linguagens naturais,
 representações independentes de contexto têm limitações óbvias.
 Por exemplo, a palavra "guindaste" em contextos
@@ -37,6 +27,15 @@ Popular context-sensitive representations
 include TagLM (language-model-augmented sequence tagger) :cite:`Peters.Ammar.Bhagavatula.ea.2017`,
 CoVe (Context Vectors) :cite:`McCann.Bradbury.Xiong.ea.2017`,
 and ELMo (Embeddings from Language Models) :cite:`Peters.Neumann.Iyyer.ea.2018`.
+
+Isso motiva o desenvolvimento de representações de palavras * sensíveis ao contexto *,
+onde as representações de palavras dependem de seus contextos.
+Portanto, uma representação sensível ao contexto do token $x$ é uma função $f(x, c(x))$
+dependendo de $x$ e de seu contexto $c(x)$.
+Representações contextuais populares
+incluem TagLM (tagger de sequência aumentada de modelo de linguagem) :cite:`Peters.Ammar.Bhagavatula.ea.2017`,
+CoVe (vetores de contexto) :cite:`McCann.Bradbury.Xiong.ea.2017`,
+e ELMo (Embeddings from Language Models) :cite:`Peters.Neumann.Iyyer.ea.2018`.
 
 For example, by taking the entire sequence as the input,
 ELMo is a function that assigns a representation to each word from the input sequence.
@@ -613,5 +612,5 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MTk1NzU2NiwxMDAwMTMwOTI5XX0=
+eyJoaXN0b3J5IjpbLTU1NTMxMTQ3OSwxMDAwMTMwOTI5XX0=
 -->
