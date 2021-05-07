@@ -150,7 +150,7 @@ def reorg_test(data_dir):
                               'unknown'))
 ```
 
-Finally, we use a function to call the previously defined `read_csv_labels`, `reorg_train_valid`, and `reorg_test` functions.
+Finalmente, usamos uma função para chamar as funções `read_csv_labels`, `reorg_train_valid` e `reorg_test` previamente definidas.
 
 ```{.python .input}
 #@tab all
@@ -160,7 +160,7 @@ def reorg_cifar10_data(data_dir, valid_ratio):
     reorg_test(data_dir)
 ```
 
-We only set the batch size to $4$ for the demo dataset. During actual training and testing, the complete dataset of the Kaggle competition should be used and `batch_size` should be set to a larger integer, such as $128$. We use $10\%$ of the training examples as the validation set for tuning hyperparameters.
+Definimos apenas o tamanho do lote em $4$ para o conjunto de dados de demonstração. Durante o treinamento e os testes reais, o conjunto de dados completo da competição Kaggle deve ser usado e `batch_size` deve ser definido como um número inteiro maior, como $128$. Usamos $10\%$ dos exemplos de treinamento como o conjunto de validação para ajustar os hiperparâmetros.
 
 ```{.python .input}
 #@tab all
@@ -514,6 +514,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3ODMxMTk3MSwtMTgwMTI4ODE1NiwtMT
-gzNjE4MDc2NywtNTU3Nzk3NzE5XX0=
+eyJoaXN0b3J5IjpbLTE5MTQwMDY4NDgsLTE4MDEyODgxNTYsLT
+E4MzYxODA3NjcsLTU1Nzc5NzcxOV19
 -->
