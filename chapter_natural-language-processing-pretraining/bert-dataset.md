@@ -1,9 +1,11 @@
 # O conjunto de dados para pré-treinamento de BERT
 :label:`sec_bert-dataset`
 
-Para pré-treinar o modelo BERT conforme implementado em: numref: `sec_bert`,
+Para pré-treinar o modelo BERT conforme implementado em :numref:`sec_bert`,
+precisamos gerar o conjunto de dados no formato ideal para facilitar
 as duas tarefas de pré-treinamento:
 modelagem de linguagem mascarada e previsão da próxima frase.
+Por um lado,
 o modelo BERT original é pré-treinado na concatenação de
 dois enormes corpora BookCorpus e Wikipedia em inglês (ver :numref:`subsec_bert_pretraining_tasks`),
 tornando difícil para a maioria dos leitores deste livro.
@@ -14,36 +16,8 @@ Portanto, está ficando popular pré-treinar o BERT em um conjunto de dados cust
 Para facilitar a demonstração do pré-treinamento de BERT,
 usamos um corpus menor do WikiText-2 :cite:`Merity.Xiong.Bradbury.ea.2016`.
 
-Comparando com o conjunto de dados PTB usado para pré-treinamento de word2vec em: numref: `sec_word2vec_data`,
+Comparando com o conjunto de dados PTB usado para pré-treinamento de word2vec em :numref:`sec_word2vec_data`,
 WikiText-2 i) retém a pontuação original, tornando-a adequada para a previsão da próxima frase; ii) retém a caixa e os números originais; iii) é duas vezes maior.
-
-ToPara preé-traein the BERT model asar o modelo BERT conforme implemented inado em :numref:`sec_bert`,
-we need to generate the dataset in the ideal format to facilitate
-the twoprecisamos gerar o conjunto de dados no formato ideal para facilitar
-as duas tarefas de preé-traeining tasks:
-masked language moamento:
-modelagem de ling and next sentence prediction.
-On one hand,
-the original BERT model isuagem mascarada e previsão da próxima frase.
-Por um lado,
-o modelo BERT original é preé-traeined on theado na concatenation of
-two hugeção de
-dois enormes corpora BookCorpus and English Wikipedia (seee Wikipedia em inglês (ver :numref:`subsec_bert_pretraining_tasks`),
-making it hard to run for most readers of this book.
-On the other hand,
-the off-the-shtornando difícil para a maioria dos leitores deste livro.
-Por outro lado,
-o modelfo preé-traeined BERT model
-may not fit foado de BERT pronto para uso
-pode não se adequar ap aplications from vos de domínios especiífic domains likeos, como medicinea.
-Thus, it is gettingPortanto, está ficando popular to prepré-traeinar o BERT on a customized dataset.
-Toem um conjunto de dados customizado.
-Para facilitate ther a demonstration of BERTção do preé-traeining,
-we use a smaller corpusamento de BERT,
-usamos um corpus menor do WikiText-2 :cite:`Merity.Xiong.Bradbury.ea.2016`.
-
-Comparing with the PTB dataset used forando com o conjunto de dados PTB usado para preé-traeiningamento de word2vec inem :numref:`sec_word2vec_data`,
-WikiText-2 i) retains the original punctuation, making it suitable for next sentence prediction; ii) retains the original case and numberém a pontuação original, tornando-a adequada para a previsão da próxima frase; ii) retém a caixa e os números originais; iii) ié duas over twice largezes maior.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -456,5 +430,5 @@ len(vocab)
 [Discussions](https://discuss.d2l.ai/t/1496)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzIyODI0Ml19
+eyJoaXN0b3J5IjpbMTMwNDc2NDU5MCwtMTMzMjI4MjQyXX0=
 -->
