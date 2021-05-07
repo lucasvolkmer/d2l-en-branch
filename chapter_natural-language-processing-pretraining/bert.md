@@ -493,7 +493,7 @@ nsp_Y_hat = nsp(encoded_X)
 nsp_Y_hat.shape
 ```
 
-The cross-entropy loss of the 2 binary classifications can also be computed.
+A perda de entropia cruzada das 2 classificações binárias também pode ser calculada.
 
 ```{.python .input}
 nsp_y = np.array([0, 1])
@@ -508,23 +508,23 @@ nsp_l = loss(nsp_Y_hat, nsp_y)
 nsp_l.shape
 ```
 
-It is noteworthy that all the labels in both the aforementioned pretraining tasks
-can be trivially obtained from the pretraining corpus without manual labeling effort.
-The original BERT has been pretrained on the concatenation of BookCorpus :cite:`Zhu.Kiros.Zemel.ea.2015`
-and English Wikipedia.
-These two text corpora are huge:
-they have 800 million words and 2.5 billion words, respectively.
+É digno de nota que todos os rótulos em ambas as tarefas de pré-treinamento mencionadas
+pode ser obtido trivialmente a partir do corpus de pré-treinamento sem esforço de rotulagem manual.
+O BERT original foi pré-treinado na concatenação de BookCorpus :cite:`Zhu.Kiros.Zemel.ea.2015`
+e Wikipedia em inglês.
+Esses dois corpora de texto são enormes:
+eles têm 800 milhões de palavras e 2,5 bilhões de palavras, respectivamente.
 
 
-## Putting All Things Together
+## Juntando todas as coisas
 
-When pretraining BERT, the final loss function is a linear combination of
-both the loss functions for masked language modeling and next sentence prediction.
-Now we can define the `BERTModel` class by instantiating the three classes
-`BERTEncoder`, `MaskLM`, and `NextSentencePred`.
-The forward inference returns the encoded BERT representations `encoded_X`,
-predictions of masked language modeling `mlm_Y_hat`,
-and next sentence predictions `nsp_Y_hat`.
+Ao pré-treinamento de BERT, a função de perda final é uma combinação linear de
+ambas as funções de perda para modelagem de linguagem mascarada e previsão da próxima frase.
+Agora podemos definir a classe `BERTModel` instanciando as três classes
+`BERTEncoder`,` MaskLM` e `NextSentencePred`.
+A inferência direta retorna as representações codificadas de BERT `encoded_X`,
+previsões de modelagem de linguagem mascarada `mlm_Y_hat`,
+e as previsões da próxima frase `nsp_Y_hat`.
 
 ```{.python .input}
 #@save
@@ -581,21 +581,20 @@ class BERTModel(nn.Module):
         return encoded_X, mlm_Y_hat, nsp_Y_hat
 ```
 
-## Summary
+## Sumário
 
-* Word embedding models such as word2vec and GloVe are context-independent. They assign the same pretrained vector to the same word regardless of the context of the word (if any). It is hard for them to handle well polysemy or complex semantics in natural languages.
-* For context-sensitive word representations such as ELMo and GPT, representations of words depend on their contexts.
-* ELMo encodes context bidirectionally but uses task-specific architectures (however, it is practically non-trivial to craft a specific architecture for every natural language processing task); while GPT is task-agnostic but encodes context left-to-right.
-* BERT combines the best of both worlds: it encodes context bidirectionally and requires minimal architecture changes for a wide range of natural language processing tasks.
-* The embeddings of the BERT input sequence are the sum of the token embeddings, segment embeddings, and positional embeddings.
-* Pretraining BERT is composed of two tasks: masked language modeling and next sentence prediction. The former is able to encode bidirectional context for representing words, while the later explicitly models the logical relationship between text pairs.
+* Os modelos de incorporação de palavras, como word2vec e GloVe, são independentes do contexto. Eles atribuem o mesmo vetor pré-treinado à mesma palavra, independentemente do contexto da palavra (se houver). É difícil para eles lidar bem com a polissemia ou semântica complexa em linguagens naturais.
+* Para representações de palavras sensíveis ao contexto, como ELMo e GPT, as representações de palavras dependem de seus contextos.
+* ELMo codifica o contexto bidirecionalmente, mas usa arquiteturas de tarefas específicas (no entanto, é praticamente não trivial criar uma arquitetura específica para cada tarefa de processamento de linguagem natural); enquanto o GPT é agnóstico em relação à tarefa, mas codifica o contexto da esquerda para a direita.
+* O BERT combina o melhor dos dois mundos: ele codifica o contexto bidirecionalmente e requer mudanças mínimas de arquitetura para uma ampla gama de tarefas de processamento de linguagem natural.
+* Os embeddings da sequência de entrada BERT são a soma dos embeddings de token, embeddings de segmento e embeddings posicionais.
+* O pré-treinamento do BERT é composto de duas tarefas: modelagem de linguagem mascarada e previsão da próxima frase. O primeiro é capaz de codificar contexto bidirecional para representar palavras, enquanto o último modela explicitamente a relação lógica entre pares de texto.
 
+## Exercícios
 
-## Exercises
-
-1. Why does BERT succeed?
-1. All other things being equal, will a masked language model require more or fewer pretraining steps to converge than a left-to-right language model? Why?
-1. In the original implementation of BERT, the positionwise feed-forward network in `BERTEncoder` (via `d2l.EncoderBlock`) and the fully-connected layer in `MaskLM` both use the Gaussian error linear unit (GELU) :cite:`Hendrycks.Gimpel.2016` as the activation function. Research into the difference between GELU and ReLU.
+1. Por que o BERT é bem-sucedido?
+1. Todas as outras coisas sendo iguais, um modelo de linguagem mascarada exigirá mais ou menos etapas de pré-treinamento para convergir do que um modelo de linguagem da esquerda para a direita? Por quê?
+1. Na implementação original do BERT, a rede feed-forward posicional em `BERTEncoder` (via `d2l.EncoderBlock`) e a camada totalmente conectada em `MaskLM` usam a unidade linear de erro Gaussiano (GELU) :cite:`Hendrycks.Gimpel.2016` como a função de ativação. Pesquisa sobre a diferença entre GELU e ReLU.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/388)
@@ -605,6 +604,6 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mjc1Mzc5NSwxOTI3NzQ2NTE1LDEwMD
-AxMzA5MjldfQ==
+eyJoaXN0b3J5IjpbLTE2OTMyMzA5NjIsMTkyNzc0NjUxNSwxMD
+AwMTMwOTI5XX0=
 -->
