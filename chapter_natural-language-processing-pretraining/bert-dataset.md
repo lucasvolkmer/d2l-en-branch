@@ -115,20 +115,6 @@ def _get_nsp_data_from_paragraph(paragraph, paragraphs, vocab, max_len):
 ### Gerando a Tarefa de Modelagem de Linguagem Mascarada
 :label:`subsec_prepare_mlm_data`
 
-In order to generate training examples
-for the masked language modeling task
-from a BERT input sequence,
-we define the following `_replace_mlm_tokens` function.
-In its inputs, `tokens` is a list of tokens representing a BERT input sequence,
-`candidate_pred_positions` is a list of token indices of the BERT input sequence
-excluding those of special tokens (special tokens are not predicted in the masked language modeling task),
-and `num_mlm_preds` indicates the number of predictions (recall 15% random tokens to predict).
-Following the definition of the masked language modeling task in :numref:`subsec_mlm`,
-at each prediction position, the input may be replaced by
-a special “&lt;mask&gt;” token or a random token, or remain unchanged.
-In the end, the function returns the input tokens after possible replacement,
-the token indices where predictions take place and labels for these predictions.
-
 A fim de gerar exemplos de treinamento
 para a tarefa de modelagem de linguagem mascarada
 de uma sequência de entrada de BERT,
@@ -139,7 +125,7 @@ excluindo aqueles de tokens especiais (tokens especiais não são previstos na t
 e `num_mlm_preds` indica o número de previsões (recorde 15% de tokens aleatórios para prever).
 Seguindo a definição da tarefa de modelagem de linguagem mascarada em :numref:`subsec_mlm`,
 em cada posição de previsão, a entrada pode ser substituída por
-uma “& lt; máscara & gt;” especial token ou um token aleatório, ou permanecem inalterados.
+uma “&lt;mask&gt;” especial token ou um token aleatório, ou permanecem inalterados.
 No final, a função retorna os tokens de entrada após possível substituição,
 os índices de token onde as previsões ocorrem e os rótulos para essas previsões.
 
@@ -175,12 +161,12 @@ def _replace_mlm_tokens(tokens, candidate_pred_positions, num_mlm_preds,
     return mlm_input_tokens, pred_positions_and_labels
 ```
 
-By invoking the aforementioned `_replace_mlm_tokens` function,
-the following function takes a BERT input sequence (`tokens`)
-as an input and returns indices of the input tokens
-(after possible token replacement as described in :numref:`subsec_mlm`),
-the token indices where predictions take place,
-and label indices for these predictions.
+Ao invocar a função `_replace_mlm_tokens` mencionada,
+a função a seguir leva uma sequência de entrada de BERT (`tokens`)
+como uma entrada e retorna os índices dos tokens de entrada
+(após possível substituição de token conforme descrito em :numref:`subsec_mlm`),
+os índices de token onde as previsões acontecem,
+e índices de rótulo para essas previsões.
 
 ```{.python .input}
 #@tab all
@@ -205,13 +191,13 @@ def _get_mlm_data_from_tokens(tokens, vocab):
     return vocab[mlm_input_tokens], pred_positions, vocab[mlm_pred_labels]
 ```
 
-## Transforming Text into the Pretraining Dataset
+## Transformando texto em conjunto de dados de pré-treinamento
 
-Now we are almost ready to customize a `Dataset` class for pretraining BERT.
-Before that, 
-we still need to define a helper function `_pad_bert_inputs`
-to append the special “&lt;mask&gt;” tokens to the inputs.
-Its argument `examples` contain the outputs from the helper functions `_get_nsp_data_from_paragraph` and `_get_mlm_data_from_tokens` for the two pretraining tasks.
+Agora estamos quase prontos para customizar uma classe `Dataset` para pré-treinamento de BERT.
+Antes disso,
+ainda precisamos definir uma função auxiliar `_pad_bert_inputs`
+para anexar a seção especial “&lt;mask&gt;” tokens para as entradas.
+Seu argumento `examples` contém as saídas das funções auxiliares `_get_nsp_data_from_paragraph` e `_get_mlm_data_from_tokens` para as duas tarefas de pré-treinamento.
 
 ```{.python .input}
 #@save
@@ -286,6 +272,20 @@ The tokenization method of WordPiece is a slight modification of
 the original byte pair encoding algorithm in :numref:`subsec_Byte_Pair_Encoding`.
 For simplicity, we use the `d2l.tokenize` function for tokenization.
 Infrequent tokens that appear less than five times are filtered out.
+
+Colocando as funções auxiliares para
+gerar exemplos de treinamento das duas tarefas de pré-treinamento,
+e a função auxiliar para preencher as entradas juntas,
+nós personalizamos a seguinte classe `_WikiTextDataset` como o conjunto de dados WikiText-2 para pré-treinamento de BERT.
+Implementando a função `__getitem__`,
+podemos acessar arbitrariamente os exemplos de pré-treinamento (modelagem de linguagem mascarada e previsão da próxima frase)
+gerado a partir de um par de frases do corpus WikiText-2.
+
+O modelo BERT original usa embeddings WordPiece cujo tamanho de vocabulário é 30.000 :cite:`Wu.Schuster.Chen.ea.2016`.
+O método de tokenização do WordPiece é uma ligeira modificação de
+o algoritmo de codificação de par de bytes original em :numref:`subsec_Byte_Pair_Encoding`.
+Para simplificar, usamos a função `d2l.tokenize` para tokenização.
+Tokens raros que aparecem menos de cinco vezes são filtrados.
 
 ```{.python .input}
 #@save
@@ -439,5 +439,5 @@ len(vocab)
 [Discussions](https://discuss.d2l.ai/t/1496)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMjA4NjgxMiwtMTMzMjI4MjQyXX0=
+eyJoaXN0b3J5IjpbMTcyMzczNzg4OCwtMTMzMjI4MjQyXX0=
 -->
