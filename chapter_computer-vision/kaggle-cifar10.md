@@ -169,7 +169,7 @@ valid_ratio = 0.1
 reorg_cifar10_data(data_dir, valid_ratio)
 ```
 
-## Image Augmentation
+## Aumento de Imagem
 
 To cope with overfitting, we use image augmentation. For example, by adding `transforms.RandomFlipLeftRight()`, the images can be flipped at random. We can also perform normalization for the three RGB channels of color images using `transforms.Normalize()`. Below, we list some of these operations that you can choose to use or modify depending on requirements.
 
@@ -514,6 +514,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTQwMDY4NDgsLTE4MDEyODgxNTYsLT
-E4MzYxODA3NjcsLTU1Nzc5NzcxOV19
+eyJoaXN0b3J5IjpbLTczODk2OTg0OSwtMTgwMTI4ODE1NiwtMT
+gzNjE4MDc2NywtNTU3Nzk3NzE5XX0=
 -->
