@@ -19,6 +19,16 @@ For instance, the word "crane" in contexts
 "a crane is flying" and "a crane driver came" has completely different meanings;
 thus, the same word may be assigned different representations depending on contexts.
 
+Lembre-se dos experimentos em: numref: `sec_word2vec_pretraining` e: numref:` sec_synonyms`.
+Por exemplo, word2vec e GloVe atribuem o mesmo vetor pré-treinado à mesma palavra, independentemente do contexto da palavra (se houver).
+Formalmente, uma representação independente de contexto de qualquer token $ x $
+é uma função $ f (x) $ que leva apenas $ x $ como entrada.
+Dada a abundância de polissemia e semântica complexa em linguagens naturais,
+representações independentes de contexto têm limitações óbvias.
+Por exemplo, a palavra "guindaste" em contextos
+"um guindaste está voando" e "um motorista de guindaste veio" têm significados completamente diferentes;
+assim, a mesma palavra pode receber diferentes representações dependendo dos contextos.
+
 This motivates the development of *context-sensitive* word representations,
 where representations of words depend on their contexts.
 Hence, a context-sensitive representation of token $x$ is a function $f(x, c(x))$
@@ -603,5 +613,5 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMDEzMDkyOV19
+eyJoaXN0b3J5IjpbMTc3MTk1NzU2NiwxMDAwMTMwOTI5XX0=
 -->
