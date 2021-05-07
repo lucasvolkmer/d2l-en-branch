@@ -150,13 +150,13 @@ a entrada é um par de sequências de texto.
 A seqüência de entrada de BERT representa sem ambigüidade texto único e pares de texto.
 Na antiga,
 a sequência de entrada de BERT é a concatenação de
-o token de classificação especial "& lt; cls & gt;",
+o token de classificação especial “&lt;sep&gt;”,
 tokens de uma sequência de texto,
-e o token de separação especial “& lt; sep & gt;”.
+e o token de separação especial “&lt;sep&gt;”.
 No ultimo,
 a sequência de entrada de BERT é a concatenação de
-“& Lt; cls & gt;”, tokens da primeira sequência de texto,
-“& Lt; sep & gt;”, tokens da segunda sequência de texto e “& lt; sep & gt;”.
+“&lt;sep&gt;”, tokens da primeira sequência de texto,
+“&lt;sep&gt;”, tokens da segunda sequência de texto e “&lt;sep&gt;”.
 Iremos distinguir de forma consistente a terminologia "sequência de entrada de BERT"
 de outros tipos de "sequências".
 Por exemplo, uma *sequência de entrada de BERT* pode incluir uma *sequência de texto* ou duas *sequências de texto*.
@@ -619,5 +619,5 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTQ3NDAxMTIsMTAwMDEzMDkyOV19
+eyJoaXN0b3J5IjpbMTkyNzc0NjUxNSwxMDAwMTMwOTI5XX0=
 -->
