@@ -64,34 +64,33 @@ resposta a perguntas, similaridade de sentenças e classificação,
 e melhorou o estado da arte em nove deles com mudanças mínimas
 para a arquitetura do modelo.
 
-However, due to the autoregressive nature of language models,
-GPT only looks forward (left-to-right).
-In contexts "i went to the bank to deposit cash" and "i went to the bank to sit down",
-as "bank" is sensitive to the context to its left,
-GPT will return the same representation for "bank",
-though it has different meanings.
+No entanto, devido à natureza autoregressiva dos modelos de linguagem,
+O GPT apenas olha para a frente (da esquerda para a direita).
+Em contextos "fui ao banco para depositar dinheiro" e "fui ao banco para me sentar",
+como "banco" é sensível ao contexto à sua esquerda,
+GPT retornará a mesma representação para "banco",
+embora tenha significados diferentes.
 
+## BERT: Combinando o melhor dos dois mundos
 
-## BERT: Combining the Best of Both Worlds
-
-As we have seen,
-ELMo encodes context bidirectionally but uses task-specific architectures;
-while GPT is task-agnostic but encodes context left-to-right.
-Combining the best of both worlds,
-BERT (Bidirectional Encoder Representations from Transformers)
-encodes context bidirectionally and requires minimal architecture changes
-for a wide range of natural language processing tasks :cite:`Devlin.Chang.Lee.ea.2018`.
-Using a pretrained transformer encoder,
-BERT is able to represent any token based on its bidirectional context.
-During supervised learning of downstream tasks,
-BERT is similar to GPT in two aspects.
-First, BERT representations will be fed into an added output layer,
-with minimal changes to the model architecture depending on nature of tasks,
-such as predicting for every token vs. predicting for the entire sequence.
-Second,
-all the parameters of the pretrained transformer encoder are fine-tuned,
-while the additional output layer will be trained from scratch.
-:numref:`fig_elmo-gpt-bert` depicts the differences among ELMo, GPT, and BERT.
+Como nós vimos,
+O ELMo codifica o contexto bidirecionalmente, mas usa arquiteturas específicas para tarefas;
+enquanto o GPT é agnóstico em relação à tarefa, mas codifica o contexto da esquerda para a direita.
+Combinando o melhor dos dois mundos,
+BERT (Representações de Codificador Bidirecional de Transformadores)
+codifica o contexto bidirecionalmente e requer mudanças mínimas de arquitetura
+para uma ampla gama de tarefas de processamento de linguagem natural :cite:`Devlin.Chang.Lee.ea.2018`.
+Usando um codificador de transformador pré-treinado,
+O BERT é capaz de representar qualquer token com base em seu contexto bidirecional.
+Durante a aprendizagem supervisionada de tarefas posteriores,
+O BERT é semelhante ao GPT em dois aspectos.
+Primeiro, as representações de BERT serão alimentadas em uma camada de saída adicionada,
+com mudanças mínimas na arquitetura do modelo, dependendo da natureza das tarefas,
+como a previsão para cada token versus a previsão para a sequência inteira.
+Segundo,
+todos os parâmetros do codificador de transformador pré-treinado são ajustados,
+enquanto a camada de saída adicional será treinada do zero.
+:numref:`fig_elmo-gpt-bert` descreve as diferenças entre ELMo, GPT e BERT.
 
 ![A comparison of ELMo, GPT, and BERT.](../img/elmo-gpt-bert.svg)
 :label:`fig_elmo-gpt-bert`
@@ -103,6 +102,13 @@ iii) question answering, iv) text tagging (e.g., named entity recognition).
 All proposed in 2018,
 from context-sensitive ELMo to task-agnostic GPT and BERT,
 conceptually simple yet empirically powerful pretraining of deep representations for natural languages have revolutionized solutions to various natural language processing tasks.
+
+O BERT melhorou ainda mais o estado da arte em onze tarefas de processamento de linguagem natural
+sob categorias amplas de i) classificação de texto único (por exemplo, análise de sentimento), ii) classificação de pares de texto (por exemplo, inferência de linguagem natural),
+iii) resposta a perguntas, iv) marcação de texto (por exemplo, reconhecimento de entidade nomeada).
+Tudo proposto em 2018,
+de ELMo sensível ao contexto a GPT e BERT agnósticos de tarefa,
+O pré-treinamento conceitualmente simples, mas empiricamente poderoso, de representações profundas para linguagens naturais revolucionou as soluções para várias tarefas de processamento de linguagem natural.
 
 In the rest of this chapter,
 we will dive into the pretraining of BERT.
@@ -603,5 +609,5 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyODI3NDcwOSwxMDAwMTMwOTI5XX0=
+eyJoaXN0b3J5IjpbLTkwODk1NjA3LDEwMDAxMzA5MjldfQ==
 -->
