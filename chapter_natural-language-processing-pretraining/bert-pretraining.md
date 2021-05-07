@@ -27,14 +27,14 @@ train_iter, vocab = d2l.load_data_wiki(batch_size, max_len)
 
 ## Pré-treinamento de BERT
 
-The original BERT has two versions of different model sizes :cite:`Devlin.Chang.Lee.ea.2018`.
-The base model ($\text{BERT}_{\text{BASE}}$) uses 12 layers (transformer encoder blocks)
-with 768 hidden units (hidden size) and 12 self-attention heads.
-The large model ($\text{BERT}_{\text{LARGE}}$) uses 24 layers
-with 1024 hidden units and 16 self-attention heads.
-Notably, the former has 110 million parameters while the latter has 340 million parameters.
-For demonstration with ease,
-we define a small BERT, using 2 layers, 128 hidden units, and 2 self-attention heads.
+O BERT original tem duas versões de tamanhos de modelo diferentes :cite:`Devlin.Chang.Lee.ea.2018`.
+O modelo base ($\text{BERT}_{\text{BASE}}$) usa 12 camadas (blocos codificadores do transformador)
+com 768 unidades ocultas (tamanho oculto) e 12 cabeças de autoatenção.
+O modelo grande ($\text{BERT}_{\text{LARGE}}$) usa 24 camadas
+com 1024 unidades ocultas e 16 cabeças de autoatenção.
+Notavelmente, o primeiro tem 110 milhões de parâmetros, enquanto o último tem 340 milhões de parâmetros.
+Para demonstração com facilidade,
+definimos um pequeno BERT, usando 2 camadas, 128 unidades ocultas e 2 cabeças de autoatenção.
 
 ```{.python .input}
 net = d2l.BERTModel(len(vocab), num_hiddens=128, ffn_num_hiddens=256,
@@ -55,13 +55,13 @@ devices = d2l.try_all_gpus()
 loss = nn.CrossEntropyLoss()
 ```
 
-Before defining the training loop,
-we define a helper function `_get_batch_loss_bert`.
-Given the shard of training examples,
-this function computes the loss for both the masked language modeling and next sentence prediction tasks.
-Note that the final loss of BERT pretraining
-is just the sum of both the masked language modeling loss
-and the next sentence prediction loss.
+Antes de definir o ciclo de treinamento,
+definimos uma função auxiliar `_get_batch_loss_bert`.
+Dado o fragmento de exemplos de treinamento,
+esta função calcula a perda tanto para a modelagem de linguagem mascarada quanto para as tarefas de previsão da próxima frase.
+Observe que a perda final do pré-treinamento de BERT
+é apenas a soma da perda de modelagem de linguagem mascarada
+e a próxima perda de previsão de frase.
 
 ```{.python .input}
 #@save
@@ -116,14 +116,14 @@ def _get_batch_loss_bert(net, loss, vocab_size, tokens_X,
     return mlm_l, nsp_l, l
 ```
 
-Invoking the two aforementioned helper functions,
-the following `train_bert` function
-defines the procedure to pretrain BERT (`net`) on the WikiText-2 (`train_iter`) dataset.
-Training BERT can take very long.
-Instead of specifying the number of epochs for training
-as in the `train_ch13` function (see :numref:`sec_image_augmentation`),
-the input `num_steps` of the following function
-specifies the number of iteration steps for training.
+Invocando as duas funções auxiliares mencionadas,
+a seguinte função `train_bert`
+define o procedimento para pré-treinar BERT (`net`) no conjunto de dados WikiText-2 (`train_iter`).
+Treinar o BERT pode demorar muito.
+Em vez de especificar o número de épocas para treinamento
+como na função `train_ch13` (veja :numref:`sec_image_augmentation`),
+a entrada `num_steps` da seguinte função
+especifica o número de etapas de iteração para treinamento.
 
 ```{.python .input}
 def train_bert(train_iter, net, loss, vocab_size, devices, num_steps):
@@ -211,20 +211,20 @@ def train_bert(train_iter, net, loss, vocab_size, devices, num_steps):
           f'{str(devices)}')
 ```
 
-We can plot both the masked language modeling loss and the next sentence prediction loss
-during BERT pretraining.
+Podemos representar graficamente a perda de modelagem de linguagem mascarada e a perda de previsão da próxima frase
+durante o pré-treinamento de BERT.
 
 ```{.python .input}
 #@tab all
 train_bert(train_iter, net, loss, len(vocab), devices, 50)
 ```
 
-## Representing Text with BERT
+## Representando Texto com BERT
 
-After pretraining BERT,
-we can use it to represent single text, text pairs, or any token in them.
-The following function returns the BERT (`net`) representations for all tokens
-in `tokens_a` and `tokens_b`.
+Após o pré-treinamento de BERT,
+podemos usá-lo para representar um único texto, pares de texto ou qualquer token neles.
+A função a seguir retorna as representações BERT (`net`) para todos os tokens
+em `tokens_a` e` tokens_b`.
 
 ```{.python .input}
 def get_bert_encoding(net, tokens_a, tokens_b=None):
@@ -308,5 +308,5 @@ for downstream natural language processing applications.
 [Discussions](https://discuss.d2l.ai/t/1497)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MzU0NzM0NV19
+eyJoaXN0b3J5IjpbMTQ0NzQ1MjkwNV19
 -->
