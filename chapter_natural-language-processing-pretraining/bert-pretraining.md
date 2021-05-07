@@ -285,28 +285,28 @@ encoded_pair_crane = encoded_pair[:, 2, :]
 encoded_pair.shape, encoded_pair_cls.shape, encoded_pair_crane[0][:3]
 ```
 
-Em: numref:`chap_nlp_app`, vamos ajustar um modelo BERT pré-treinado
+Em :numref:`chap_nlp_app`, vamos ajustar um modelo BERT pré-treinado
 para aplicativos de processamento de linguagem natural downstream.
 
 
-## Summary
+## Sumário
 
-* The original BERT has two versions, where the base model has 110 million parameters and the large model has 340 million parameters.
-* After pretraining BERT, we can use it to represent single text, text pairs, or any token in them.
-* In the experiment, the same token has different BERT representation when their contexts are different. This supports that BERT representations are context-sensitive.
+* O BERT original tem duas versões, onde o modelo básico tem 110 milhões de parâmetros e o modelo grande tem 340 milhões de parâmetros.
+* Após o pré-treinamento de BERT, podemos usá-lo para representar texto único, pares de texto ou qualquer token neles.
+* No experimento, o mesmo token tem diferentes representações de BERT quando seus contextos são diferentes. Isso sustenta que as representações de BERT são sensíveis ao contexto.
 
-## Exercises
+## Exercícios
 
-1. In the experiment, we can see that the masked language modeling loss is significantly higher than the next sentence prediction loss. Why?
-2. Set the maximum length of a BERT input sequence to be 512 (same as the original BERT model). Use the configurations of the original BERT model such as $\text{BERT}_{\text{LARGE}}$. Do you encounter any error when running this section? Why?
+1. No experimento, podemos ver que a perda de modelagem da linguagem mascarada é significativamente maior do que a perda de previsão da próxima frase. Por quê?
+2. Defina o comprimento máximo de uma sequência de entrada de BERT como 512 (igual ao modelo de BERT original). Use as configurações do modelo BERT original como $\text{BERT}_{\text{LARGE}}$. Você encontra algum erro ao executar esta seção? Por quê?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/390)
+[Discussão](https://discuss.d2l.ai/t/390)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1497)
+[Discussão](https://discuss.d2l.ai/t/1497)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MzQ2MzU0MV19
+eyJoaXN0b3J5IjpbLTE5MDE5NjMzOTBdfQ==
 -->
