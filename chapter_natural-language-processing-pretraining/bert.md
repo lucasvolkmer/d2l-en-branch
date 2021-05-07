@@ -95,14 +95,6 @@ enquanto a camada de saída adicional será treinada do zero.
 ![A comparison of ELMo, GPT, and BERT.](../img/elmo-gpt-bert.svg)
 :label:`fig_elmo-gpt-bert`
 
-
-BERT further improved the state of the art on eleven natural language processing tasks
-under broad categories of i) single text classification (e.g., sentiment analysis), ii) text pair classification (e.g., natural language inference),
-iii) question answering, iv) text tagging (e.g., named entity recognition).
-All proposed in 2018,
-from context-sensitive ELMo to task-agnostic GPT and BERT,
-conceptually simple yet empirically powerful pretraining of deep representations for natural languages have revolutionized solutions to various natural language processing tasks.
-
 O BERT melhorou ainda mais o estado da arte em onze tarefas de processamento de linguagem natural
 sob categorias amplas de i) classificação de texto único (por exemplo, análise de sentimento), ii) classificação de pares de texto (por exemplo, inferência de linguagem natural),
 iii) resposta a perguntas, iv) marcação de texto (por exemplo, reconhecimento de entidade nomeada).
@@ -110,10 +102,10 @@ Tudo proposto em 2018,
 de ELMo sensível ao contexto a GPT e BERT agnósticos de tarefa,
 O pré-treinamento conceitualmente simples, mas empiricamente poderoso, de representações profundas para linguagens naturais revolucionou as soluções para várias tarefas de processamento de linguagem natural.
 
-In the rest of this chapter,
-we will dive into the pretraining of BERT.
-When natural language processing applications are explained in :numref:`chap_nlp_app`,
-we will illustrate fine-tuning of BERT for downstream applications.
+No resto deste capítulo,
+vamos mergulhar no pré-treinamento de BERT.
+Quando os aplicativos de processamento de linguagem natural são explicados em :numref:`chap_nlp_app`,
+ilustraremos o ajuste fino de BERT para aplicações downstream.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -130,7 +122,7 @@ import torch
 from torch import nn
 ```
 
-## Input Representation
+## Representação de entrada
 :label:`subsec_bert_input_rep`
 
 In natural language processing,
@@ -150,6 +142,24 @@ the BERT input sequence is the concatenation of
 We will consistently distinguish the terminology "BERT input sequence"
 from other types of "sequences".
 For instance, one *BERT input sequence* may include either one *text sequence* or two *text sequences*.
+
+No processamento de linguagem natural,
+algumas tarefas (por exemplo, análise de sentimento) usam um único texto como entrada,
+enquanto em algumas outras tarefas (por exemplo, inferência de linguagem natural),
+a entrada é um par de sequências de texto.
+A seqüência de entrada de BERT representa sem ambigüidade texto único e pares de texto.
+Na antiga,
+a sequência de entrada de BERT é a concatenação de
+o token de classificação especial "& lt; cls & gt;",
+tokens de uma sequência de texto,
+e o token de separação especial “& lt; sep & gt;”.
+No ultimo,
+a sequência de entrada de BERT é a concatenação de
+“& Lt; cls & gt;”, tokens da primeira sequência de texto,
+“& Lt; sep & gt;”, tokens da segunda sequência de texto e “& lt; sep & gt;”.
+Iremos distinguir de forma consistente a terminologia "sequência de entrada de BERT"
+de outros tipos de "sequências".
+Por exemplo, uma *sequência de entrada de BERT* pode incluir uma *sequência de texto* ou duas *sequências de texto*.
 
 To distinguish text pairs,
 the learned segment embeddings $\mathbf{e}_A$ and $\mathbf{e}_B$
@@ -609,5 +619,5 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwODk1NjA3LDEwMDAxMzA5MjldfQ==
+eyJoaXN0b3J5IjpbLTE2MTQ3NDAxMTIsMTAwMDEzMDkyOV19
 -->
