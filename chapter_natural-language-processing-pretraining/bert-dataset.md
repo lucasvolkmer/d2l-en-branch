@@ -4,6 +4,18 @@
 Para pré-treinar o modelo BERT conforme implementado em: numref: `sec_bert`,
 as duas tarefas de pré-treinamento:
 modelagem de linguagem mascarada e previsão da próxima frase.
+o modelo BERT original é pré-treinado na concatenação de
+dois enormes corpora BookCorpus e Wikipedia em inglês (ver :numref:`subsec_bert_pretraining_tasks`),
+tornando difícil para a maioria dos leitores deste livro.
+Por outro lado,
+o modelo pré-treinado de BERT pronto para uso
+pode não se adequar a aplicativos de domínios específicos, como medicina.
+Portanto, está ficando popular pré-treinar o BERT em um conjunto de dados customizado.
+Para facilitar a demonstração do pré-treinamento de BERT,
+usamos um corpus menor do WikiText-2 :cite:`Merity.Xiong.Bradbury.ea.2016`.
+
+Comparando com o conjunto de dados PTB usado para pré-treinamento de word2vec em: numref: `sec_word2vec_data`,
+WikiText-2 i) retém a pontuação original, tornando-a adequada para a previsão da próxima frase; ii) retém a caixa e os números originais; iii) é duas vezes maior.
 
 ToPara preé-traein the BERT model asar o modelo BERT conforme implemented inado em :numref:`sec_bert`,
 we need to generate the dataset in the ideal format to facilitate
@@ -444,5 +456,5 @@ len(vocab)
 [Discussions](https://discuss.d2l.ai/t/1496)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1ODQxOTg2MV19
+eyJoaXN0b3J5IjpbLTEzMzIyODI0Ml19
 -->
