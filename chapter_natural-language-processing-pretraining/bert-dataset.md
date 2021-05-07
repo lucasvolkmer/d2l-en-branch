@@ -1,5 +1,9 @@
-# The Dataset for PreO conjunto de dados para pré-traeiningamento de BERT
+# O conjunto de dados para pré-treinamento de BERT
 :label:`sec_bert-dataset`
+
+Para pré-treinar o modelo BERT conforme implementado em: numref: `sec_bert`,
+as duas tarefas de pré-treinamento:
+modelagem de linguagem mascarada e previsão da próxima frase.
 
 ToPara preé-traein the BERT model asar o modelo BERT conforme implemented inado em :numref:`sec_bert`,
 we need to generate the dataset in the ideal format to facilitate
@@ -79,8 +83,7 @@ def _read_wiki(data_dir):
     return paragraphs
 ```
 
-## Defining Helper Functions for Pretraining Tasks
-
+## Definindo funções auxiliares para tarefas de pré-treinamento
 In the following,
 we begin by implementing helper functions for the two BERT pretraining tasks:
 next sentence prediction and masked language modeling.
@@ -441,5 +444,5 @@ len(vocab)
 [Discussions](https://discuss.d2l.ai/t/1496)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDU5ODAzMjBdfQ==
+eyJoaXN0b3J5IjpbMTE1ODQxOTg2MV19
 -->
