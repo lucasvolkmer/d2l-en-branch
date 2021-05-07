@@ -488,31 +488,28 @@ df['label'] = df['label'].apply(lambda x: train_valid_ds.classes[x])
 df.to_csv('submission.csv', index=False)
 ```
 
-After executing the above code, we will get a "submission.csv" file. The format
-of this file is consistent with the Kaggle competition requirements. The method
-for submitting results is similar to method in :numref:`sec_kaggle_house`.
+Após executar o código acima, obteremos um arquivo "submit.csv". O formato deste arquivo é consistente com os requisitos da competição Kaggle. O método para enviar resultados é semelhante ao método em :numref:`sec_kaggle_house`.
 
-## Summary
+## Resumo
 
-* We can create an `ImageFolderDataset` instance to read the dataset containing the original image files.
-* We can use convolutional neural networks, image augmentation, and hybrid programming to take part in an image classification competition.
+* Podemos criar uma instância `ImageFolderDataset` para ler o conjunto de dados contendo os arquivos de imagem originais.
+* Podemos usar redes neurais convolucionais, aumento de imagens e programação híbrida para participar de uma competição de classificação de imagens.
 
+## Exercícios
 
-## Exercises
-
-1. Use the complete CIFAR-10 dataset for the Kaggle competition. Change the `batch_size` and number of epochs `num_epochs` to 128 and 100, respectively.  See what accuracy and ranking you can achieve in this competition.
-1. What accuracy can you achieve when not using image augmentation?
-1. Scan the QR code to access the relevant discussions and exchange ideas about the methods used and the results obtained with the community. Can you come up with any better techniques?
+1. Use o conjunto de dados CIFAR-10 completo para a competição Kaggle. Altere o `batch_size` e o número de épocas `num_epochs` para 128 e 100, respectivamente. Veja qual precisão e classificação você pode alcançar nesta competição.
+1. Que precisão você pode alcançar quando não está usando o aumento de imagem?
+1. Digitalize o código QR para acessar as discussões relevantes e trocar ideias sobre os métodos usados e os resultados obtidos com a comunidade. Você pode sugerir técnicas melhores?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/379)
+[Discussões](https://discuss.d2l.ai/t/379)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1479)
+[Discusss](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NzIzMzA5NiwtMTgzMDA3NDczMywtNz
+eyJoaXN0b3J5IjpbMjA5NzI3NzQxMiwtMTgzMDA3NDczMywtNz
 M4OTY5ODQ5LC0xODAxMjg4MTU2LC0xODM2MTgwNzY3LC01NTc3
 OTc3MTldfQ==
 -->
