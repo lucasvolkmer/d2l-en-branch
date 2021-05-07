@@ -383,22 +383,13 @@ class MaskLM(nn.Module):
         return mlm_Y_hat
 ```
 
-To demonstrate the forward inference of `MaskLM`,
-we create its instance `mlm` and initialize it.
-Recall that `encoded_X` from the forward inference of `BERTEncoder`
-represents 2 BERT input sequences.
-We define `mlm_positions` as the 3 indices to predict in either BERT input sequence of `encoded_X`.
-The forward inference of `mlm` returns prediction results `mlm_Y_hat`
-at all the masked positions `mlm_positions` of `encoded_X`.
-For each prediction, the size of the result is equal to the vocabulary size.
-
 Para demonstrar a inferência direta de `MaskLM`,
 nós criamos sua instância `mlm` e a inicializamos.
-Lembre-se de que `encoded_X` da inferência direta de`BERTEncoder`
+Lembre-se de que `encoded_X` da inferência direta de `BERTEncoder`
 representa 2 sequências de entrada de BERT.
 Definimos `mlm_positions` como os 3 índices a serem previstos em qualquer sequência de entrada de BERT de` encoded_X`.
-A inferência direta de `mlm` retorna os resultados de predição` mlm_Y_hat`
-em todas as posições mascaradas `mlm_positions` de` encoded_X`.
+A inferência direta de `mlm` retorna os resultados de predição `mlm_Y_hat`
+em todas as posições mascaradas `mlm_positions` de `encoded_X`.
 Para cada previsão, o tamanho do resultado é igual ao tamanho do vocabulário.
 
 ```{.python .input}
@@ -417,8 +408,8 @@ mlm_Y_hat = mlm(encoded_X, mlm_positions)
 mlm_Y_hat.shape
 ```
 
-With the ground truth labels `mlm_Y` of the predicted tokens `mlm_Y_hat` under masks,
-we can calculate the cross entropy loss of the masked language model task in BERT pretraining.
+Com os rótulos de verdade do solo `mlm_Y` dos tokens previstos `mlm_Y_hat` sob as máscaras,
+podemos calcular a perda de entropia cruzada da tarefa do modelo de linguagem mascarada no pré-treinamento de BERT.
 
 ```{.python .input}
 mlm_Y = np.array([[7, 8, 9], [10, 20, 30]])
@@ -435,26 +426,26 @@ mlm_l = loss(mlm_Y_hat.reshape((-1, vocab_size)), mlm_Y.reshape(-1))
 mlm_l.shape
 ```
 
-### Next Sentence Prediction
+### Previsão da próxima frase
 :label:`subsec_nsp`
 
-Although masked language modeling is able to encode bidirectional context
-for representing words, it does not explicitly model the logical relationship
-between text pairs.
-To help understand the relationship between two text sequences,
-BERT considers a binary classification task, *next sentence prediction*, in its pretraining.
-When generating sentence pairs for pretraining,
-for half of the time they are indeed consecutive sentences with the label "True";
-while for the other half of the time the second sentence is randomly sampled from the corpus with the label "False".
+Embora a modelagem de linguagem mascarada seja capaz de codificar o contexto bidirecional
+para representar palavras, não modela explicitamente a relação lógica
+entre pares de texto.
+Para ajudar a entender a relação entre duas sequências de texto,
+O BERT considera uma tarefa de classificação binária, *previsão da próxima frase*, em seu pré-treinamento.
+Ao gerar pares de frases para pré-treinamento,
+na metade do tempo, são de fato sentenças consecutivas com o rótulo "Verdadeiro";
+enquanto, na outra metade do tempo, a segunda frase é amostrada aleatoriamente do corpus com o rótulo "Falso".
 
-The following `NextSentencePred` class uses a one-hidden-layer MLP
-to predict whether the second sentence is the next sentence of the first
-in the BERT input sequence.
-Due to self-attention in the transformer encoder,
-the BERT representation of the special token “&lt;cls&gt;”
-encodes both the two sentences from the input.
-Hence, the output layer (`self.output`) of the MLP classifier takes `X` as the input,
-where `X` is the output of the MLP hidden layer whose input is the encoded “&lt;cls&gt;” token.
+A seguinte classe `NextSentencePred` usa um MLP de uma camada oculta
+para prever se a segunda frase é a próxima frase da primeira
+na seqüência de entrada de BERT.
+Devido à autoatenção no codificador do transformador,
+a representação BERT do token especial “&lt;cls&gt;”
+codifica as duas sentenças da entrada.
+Portanto, a camada de saída (`self.output`) do classificador MLP leva `X` como entrada,
+onde `X` é a saída da camada oculta MLP cuja entrada é o código “&lt;cls&gt;” símbolo.
 
 ```{.python .input}
 #@save
@@ -481,8 +472,8 @@ class NextSentencePred(nn.Module):
         return self.output(X)
 ```
 
-We can see that the forward inference of an `NextSentencePred` instance
-returns binary predictions for each BERT input sequence.
+Podemos ver que a inferência direta de uma instância `NextSentencePred`
+retorna previsões binárias para cada sequência de entrada de BERT.
 
 ```{.python .input}
 nsp = NextSentencePred()
@@ -614,6 +605,6 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NTAzOTU3MiwxOTI3NzQ2NTE1LDEwMD
+eyJoaXN0b3J5IjpbLTE1Mjc1Mzc5NSwxOTI3NzQ2NTE1LDEwMD
 AxMzA5MjldfQ==
 -->
