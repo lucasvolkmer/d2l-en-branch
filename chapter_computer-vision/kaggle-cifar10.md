@@ -102,7 +102,7 @@ print('# training examples:', len(labels))
 print('# classes:', len(set(labels.values())))
 ```
 
-Next, we define the `reorg_train_valid` function to segment the validation set from the original training set. The argument `valid_ratio` in this function is the ratio of the number of examples in the validation set to the number of examples in the original training set. In particular, let $n$ be the number of images of the class with the least examples, and $r$ be the ratio, then we will use $\max(\lfloor nr\rfloor,1)$ images for each class as the validation set.  Let us use `valid_ratio=0.1` as an example. Since the original training set has $50,000$ images, there will be $45,000$ images used for training and stored in the path "`train_valid_test/train`" when tuning hyperparameters, while the other $5,000$ images will be stored as validation set in the path "`train_valid_test/valid`". After organizing the data, images of the same class will be placed under the same folder so that we can read them later.
+Em seguida, definimos a função `reorg_train_valid` para segmentar o conjunto de validação do conjunto de treinamento original. O argumento `valid_ratio` nesta função é a razão entre o número de exemplos no conjunto de validação e o número de exemplos no conjunto de treinamento original. Em particular, seja $n$ o número de imagens da classe com menos exemplos e $r$ a proporção, então usaremos $\max(\lfloor nr\rfloor,1)$ imagens para cada classe como o conjunto de validação. Vamos usar `valid_ratio = 0.1` como exemplo. Como o conjunto de treinamento original tem $50.000$ imagens, haverá $45.000$ imagens usadas para treinamento e armazenadas no caminho "`train_valid_test/train`" ao ajustar hiperparâmetros, enquanto as outras $5.000$ imagens serão armazenadas como conjunto de validação no caminho "`train_valid_test / valid`". Depois de organizar os dados, as imagens da mesma turma serão colocadas na mesma pasta para que possamos lê-las posteriormente.
 
 ```{.python .input}
 #@tab all
@@ -138,7 +138,7 @@ def reorg_train_valid(data_dir, labels, valid_ratio):
     return n_valid_per_label
 ```
 
-The `reorg_test` function below is used to organize the testing set to facilitate the reading during prediction.
+A função `reorg_test` abaixo é usada para organizar o conjunto de testes para facilitar a leitura durante a previsão.
 
 ```{.python .input}
 #@tab all
@@ -514,6 +514,6 @@ for submitting results is similar to method in :numref:`sec_kaggle_house`.
 [Discussions](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEwOTczMzkyLC0xODAxMjg4MTU2LC0xOD
-M2MTgwNzY3LC01NTc3OTc3MTldfQ==
+eyJoaXN0b3J5IjpbMTE3ODMxMTk3MSwtMTgwMTI4ODE1NiwtMT
+gzNjE4MDc2NywtNTU3Nzk3NzE5XX0=
 -->
