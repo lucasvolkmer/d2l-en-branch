@@ -597,13 +597,13 @@ class BERTModel(nn.Module):
 1. Na implementação original do BERT, a rede feed-forward posicional em `BERTEncoder` (via `d2l.EncoderBlock`) e a camada totalmente conectada em `MaskLM` usam a unidade linear de erro Gaussiano (GELU) :cite:`Hendrycks.Gimpel.2016` como a função de ativação. Pesquisa sobre a diferença entre GELU e ReLU.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/388)
+[Discussão](https://discuss.d2l.ai/t/388)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1490)
+[Discussão](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTMyMzA5NjIsMTkyNzc0NjUxNSwxMD
-AwMTMwOTI5XX0=
+eyJoaXN0b3J5IjpbLTgyMjU0OTg3MiwxOTI3NzQ2NTE1LDEwMD
+AxMzA5MjldfQ==
 -->
