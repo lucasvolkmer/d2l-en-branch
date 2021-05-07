@@ -1,8 +1,7 @@
 # Preé-traeiningando BERT
 :label:`sec_bert-pretraining`
 
-With the BERT modelCom o modelo BERT implemented inado em :numref:`sec_bert`
-and the os exemplos de preé-traeining examples generated from theamento gerados a partir do conjunto de dados WikiText-2 dataset inem :numref:`sec_bert-dataset`, we williremos preé-traeinar BERT on the WikiText-2 dataset in this sectionno conjunto de dados WikiText-2 nesta seção.
+Com o modelo BERT implementado em: numref: sec_bert e os exemplos de pré-treinamento gerados a partir do conjunto de dados WikiText-2 em :numref:sec_bert-dataset, iremos pré-treinar o BERT no conjunto de dados WikiText-2 nesta seção.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -18,12 +17,7 @@ import torch
 from torch import nn
 ```
 
-To stPara começart, we load thecarregamos o conjunto de dados WikiText-2 dataset ascomo minibatches
-of pretraining examples for maskedde exemplos de pré-treinamento para modelagem de lainguagem modeling and next sentence prediction.
-The batch size is 512 and the maximum length of a BERT inputascarada e previsão da próxima frase.
-O tamanho do lote é 512 e o comprimento máximo de uma sequeênce is 64.
-Note that in the original BERT model, theia de entrada BERT é 64.
-Observe que no modelo BERT original, o comprimento maáximum length iso é 512.
+Para começar, carregamos o conjunto de dados WikiText-2 como minibatches de exemplos de pré-treinamento para modelagem de linguagem mascarada e previsão da próxima frase. O tamanho do lote é 512 e o comprimento máximo de uma sequência de entrada de BERT é 64. Observe que no modelo BERT original, o comprimento máximo é 512.
 
 ```{.python .input}
 #@tab all
@@ -31,7 +25,7 @@ batch_size, max_len = 512, 64
 train_iter, vocab = d2l.load_data_wiki(batch_size, max_len)
 ```
 
-## Preé-traeiningamento de BERT
+## Pré-treinamento de BERT
 
 The original BERT has two versions of different model sizes :cite:`Devlin.Chang.Lee.ea.2018`.
 The base model ($\text{BERT}_{\text{BASE}}$) uses 12 layers (transformer encoder blocks)
@@ -314,5 +308,5 @@ for downstream natural language processing applications.
 [Discussions](https://discuss.d2l.ai/t/1497)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc5OTE5MzAxXX0=
+eyJoaXN0b3J5IjpbMTY2MjQ5NTA4NV19
 -->
