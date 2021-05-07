@@ -506,10 +506,10 @@ Após executar o código acima, obteremos um arquivo "submit.csv". O formato des
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discusss](https://discuss.d2l.ai/t/1479)
+[Discussões](https://discuss.d2l.ai/t/1479)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NzI3NzQxMiwtMTgzMDA3NDczMywtNz
+eyJoaXN0b3J5IjpbMjE0NzI1MTc5NiwtMTgzMDA3NDczMywtNz
 M4OTY5ODQ5LC0xODAxMjg4MTU2LC0xODM2MTgwNzY3LC01NTc3
 OTc3MTldfQ==
 -->
