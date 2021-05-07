@@ -309,40 +309,29 @@ BERT mascara tokens aleatoriamente e usa tokens do contexto bidirecional para
 prever os tokens mascarados.
 Esta tarefa é conhecida como *modelo de linguagem mascarada*.
 
-In this pretraining task,
-15% of tokens will be selected at random as the masked tokens for prediction.
-To predict a masked token without cheating by using the label,
-one straightforward approach is to always replace it with a special “&lt;mask&gt;” token in the BERT input sequence.
-However, the artificial special token “&lt;mask&gt;” will never appear
-in fine-tuning.
-To avoid such a mismatch between pretraining and fine-tuning,
-if a token is masked for prediction (e.g., "great" is selected to be masked and predicted in "this movie is great"),
-in the input it will be replaced with:
-
 Nesta tarefa de pré-treinamento,
 15% dos tokens serão selecionados aleatoriamente como os tokens mascarados para previsão.
 Para prever um token mascarado sem trapacear usando o rótulo,
 uma abordagem direta é sempre substituí-lo por um “&lt;mask&gt;” especial token na sequência de entrada BERT.
-No entanto, o token especial artificial “& lt; máscara & gt;” nunca aparecerá
+No entanto, o token especial artificial “&lt;mask&gt;” nunca aparecerá
 no ajuste fino.
 Para evitar essa incompatibilidade entre o pré-treinamento e o ajuste fino,
 se um token for mascarado para previsão (por exemplo, "ótimo" foi selecionado para ser mascarado e previsto em "este filme é ótimo"),
 na entrada, ele será substituído por:
 
+* uma “&lt;mask&gt;” especial token 80% do tempo (por exemplo, "este filme é ótimo" torna-se "este filme é &lt;mask&gt;");
+* um token aleatório 10% do tempo (por exemplo, "este filme é ótimo" torna-se "este filme é uma bebida");
+* o token de rótulo inalterado em 10% do tempo (por exemplo, "este filme é ótimo" torna-se "este filme é ótimo").
 
-* a special “&lt;mask&gt;” token for 80% of the time (e.g., "this movie is great" becomes "this movie is &lt;mask&gt;");
-* a random token for 10% of the time (e.g., "this movie is great" becomes "this movie is drink");
-* the unchanged label token for 10% of the time (e.g., "this movie is great" becomes "this movie is great").
+Observe que por 10% de 15% do tempo, um token aleatório é inserido.
+Este ruído ocasional encoraja o BERT a ser menos inclinado para o token mascarado (especialmente quando o token de rótulo permanece inalterado) em sua codificação de contexto bidirecional.
 
-Note that for 10% of 15% time a random token is inserted.
-This occasional noise encourages BERT to be less biased towards the masked token (especially when the label token remains unchanged) in its bidirectional context encoding.
-
-We implement the following `MaskLM` class to predict masked tokens
-in the masked language model task of BERT pretraining.
-The prediction uses a one-hidden-layer MLP (`self.mlp`).
-In forward inference, it takes two inputs:
-the encoded result of `BERTEncoder` and the token positions for prediction.
-The output is the prediction results at these positions.
+Implementamos a seguinte classe `MaskLM` para prever tokens mascarados
+na tarefa de modelo de linguagem mascarada de pré-treinamento de BERT.
+A previsão usa um MLP de uma camada oculta (`self.mlp`).
+Na inferência direta, são necessárias duas entradas:
+o resultado codificado de `BERTEncoder` e as posições do token para predição.
+A saída são os resultados da previsão nessas posições.
 
 ```{.python .input}
 #@save
@@ -402,6 +391,15 @@ We define `mlm_positions` as the 3 indices to predict in either BERT input seque
 The forward inference of `mlm` returns prediction results `mlm_Y_hat`
 at all the masked positions `mlm_positions` of `encoded_X`.
 For each prediction, the size of the result is equal to the vocabulary size.
+
+Para demonstrar a inferência direta de `MaskLM`,
+nós criamos sua instância `mlm` e a inicializamos.
+Lembre-se de que `encoded_X` da inferência direta de`BERTEncoder`
+representa 2 sequências de entrada de BERT.
+Definimos `mlm_positions` como os 3 índices a serem previstos em qualquer sequência de entrada de BERT de` encoded_X`.
+A inferência direta de `mlm` retorna os resultados de predição` mlm_Y_hat`
+em todas as posições mascaradas `mlm_positions` de` encoded_X`.
+Para cada previsão, o tamanho do resultado é igual ao tamanho do vocabulário.
 
 ```{.python .input}
 mlm = MaskLM(vocab_size, num_hiddens)
@@ -616,6 +614,6 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTYzMDc3NzYsMTkyNzc0NjUxNSwxMD
-AwMTMwOTI5XX0=
+eyJoaXN0b3J5IjpbMTc0NTAzOTU3MiwxOTI3NzQ2NTE1LDEwMD
+AxMzA5MjldfQ==
 -->
