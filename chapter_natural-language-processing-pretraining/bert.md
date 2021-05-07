@@ -19,16 +19,7 @@ Por exemplo, a palavra "guindaste" em contextos
 "um guindaste está voando" e "um motorista de guindaste veio" têm significados completamente diferentes;
 assim, a mesma palavra pode receber diferentes representações dependendo dos contextos.
 
-This motivates the development of *context-sensitive* word representations,
-where representations of words depend on their contexts.
-Hence, a context-sensitive representation of token $x$ is a function $f(x, c(x))$
-depending on both $x$ and its context $c(x)$.
-Popular context-sensitive representations
-include TagLM (language-model-augmented sequence tagger) :cite:`Peters.Ammar.Bhagavatula.ea.2017`,
-CoVe (Context Vectors) :cite:`McCann.Bradbury.Xiong.ea.2017`,
-and ELMo (Embeddings from Language Models) :cite:`Peters.Neumann.Iyyer.ea.2018`.
-
-Isso motiva o desenvolvimento de representações de palavras * sensíveis ao contexto *,
+Isso motiva o desenvolvimento de representações de palavras *sensíveis ao contexto*,
 onde as representações de palavras dependem de seus contextos.
 Portanto, uma representação sensível ao contexto do token $x$ é uma função $f(x, c(x))$
 dependendo de $x$ e de seu contexto $c(x)$.
@@ -37,20 +28,20 @@ incluem TagLM (tagger de sequência aumentada de modelo de linguagem) :cite:`Pet
 CoVe (vetores de contexto) :cite:`McCann.Bradbury.Xiong.ea.2017`,
 e ELMo (Embeddings from Language Models) :cite:`Peters.Neumann.Iyyer.ea.2018`.
 
-For example, by taking the entire sequence as the input,
-ELMo is a function that assigns a representation to each word from the input sequence.
-Specifically, ELMo combines all the intermediate layer representations from pretrained bidirectional LSTM as the output representation.
-Then the ELMo representation will be added to a downstream task's existing supervised model
-as additional features, such as by concatenating ELMo representation and the original representation (e.g., GloVe) of tokens in the existing model.
-On one hand,
-all the weights in the pretrained bidirectional LSTM model are frozen after ELMo representations are added.
-On the other hand,
-the existing supervised model is specifically customized for a given task.
-Leveraging different best models for different tasks at that time,
-adding ELMo improved the state of the art across six natural language processing tasks:
-sentiment analysis, natural language inference,
-semantic role labeling, coreference resolution,
-named entity recognition, and question answering.
+Por exemplo, tomando toda a sequência como entrada,
+ELMo é uma função que atribui uma representação a cada palavra da sequência de entrada.
+Especificamente, o ELMo combina todas as representações da camada intermediária do LSTM bidirecional pré-treinado como a representação de saída.
+Em seguida, a representação ELMo será adicionada ao modelo supervisionado existente de uma tarefa downstream
+como recursos adicionais, como concatenando a representação ELMo e a representação original (por exemplo, GloVe) de tokens no modelo existente.
+Por um lado,
+todos os pesos no modelo LSTM bidirecional pré-treinado são congelados após as representações ELMo serem adicionadas.
+Por outro lado,
+o modelo supervisionado existente é personalizado especificamente para uma determinada tarefa.
+Aproveitando os melhores modelos diferentes para diferentes tarefas naquele momento,
+adicionar ELMo melhorou o estado da arte em seis tarefas de processamento de linguagem natural:
+análise de sentimento, inferência de linguagem natural,
+rotulagem de função semântica, resolução de co-referência,
+reconhecimento de entidade nomeada e resposta a perguntas.
 
 
 ## From Task-Specific to Task-Agnostic
@@ -612,5 +603,5 @@ class BERTModel(nn.Module):
 [Discussions](https://discuss.d2l.ai/t/1490)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NTMxMTQ3OSwxMDAwMTMwOTI5XX0=
+eyJoaXN0b3J5IjpbLTExNjExMTEwODksMTAwMDEzMDkyOV19
 -->
