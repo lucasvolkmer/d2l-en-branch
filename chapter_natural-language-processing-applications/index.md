@@ -1,25 +1,26 @@
 # Processamento de Linguagem Natural: Aplicações
 :label:`chap_nlp_app`
 
-We have seen how to represent text tokens and train their representations in :numref:`chap_nlp_pretrain`.
-Such pretrained text representations can be fed to various models for different downstream natural language processing tasks.
 
-This book does not intend to cover natural language processing applications in a comprehensive manner.
-Our focus is on *how to apply (deep) representation learning of languages to addressing natural language processing problems*.
-Nonetheless, we have already discussed several natural language processing applications without pretraining in earlier chapters,
-just for explaining deep learning architectures.
-For instance, in :numref:`chap_rnn`,
-we have relied on RNNs to design language models to generate novella-like text.
-In :numref:`chap_modern_rnn` and :numref:`chap_attention`,
-we have also designed models based on RNNs and attention mechanisms
-for machine translation.
-Given pretrained text representations,
-in this chapter, we will consider two more downstream natural language processing tasks:
-sentiment analysis and natural language inference.
-These are popular and representative natural language processing applications:
-the former analyzes single text and the latter analyzes relationships of text pairs.
+Vimos como representar tokens de texto e treinar suas representações em :numref:`chap_nlp_pretrain`.
+Essas representações de texto pré-treinadas podem ser fornecidas a vários modelos para diferentes tarefas de processamento de linguagem natural *downstream*.
 
-![Pretrained text representations can be fed to various deep learning architectures for different downstream natural language processing applications. This chapter focuses on how to design models for different downstream natural language processing applications.](../img/nlp-map-app.svg)
+Este livro não pretende cobrir as aplicações de processamento de linguagem natural de uma maneira abrangente.
+Nosso foco é *como aplicar a aprendizagem de representação (profunda) de idiomas para resolver problemas de processamento de linguagem natural*.
+No entanto, já discutimos várias aplicações de processamento de linguagem natural sem pré-treinamento nos capítulos anteriores,
+apenas para explicar arquiteturas de aprendizado profundo.
+Por exemplo, em :numref:`chap_rnn`,
+contamos com RNNs para projetar modelos de linguagem para gerar textos semelhantes a novelas.
+Em :numref:`chap_modern_rnn` e :numref:`chap_attention`,
+também projetamos modelos baseados em RNNs e mecanismos de atenção
+para tradução automática.
+Dadas as representações de texto pré-treinadas,
+neste capítulo, consideraremos mais duas tarefas de processamento de linguagem natural *downstream*:
+análise de sentimento e inferência de linguagem natural.
+Estes são aplicativos de processamento de linguagem natural populares e representativos:
+o primeiro analisa um único texto e o último analisa as relações de pares de texto.
+
+![As representações de texto pré-treinadas podem ser alimentadas para várias arquiteturas de *deep learning*  para diferentes aplicações de processamento de linguagem natural *downstream*. Este capítulo enfoca como projetar modelos para diferentes aplicações de processamento de linguagem natural *downstream*.](../img/nlp-map-app.svg)
 :label:`fig_nlp-map-app`
 
 As depicted in :numref:`fig_nlp-map-app`,
@@ -59,5 +60,5 @@ natural-language-inference-bert
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkwNjcyMDcwXX0=
+eyJoaXN0b3J5IjpbNDc5OTgzNzkzLDY5MDY3MjA3MF19
 -->
