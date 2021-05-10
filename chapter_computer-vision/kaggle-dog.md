@@ -389,9 +389,9 @@ train(net, train_iter, valid_iter, num_epochs, lr, wd, devices, lr_period,
       lr_decay)
 ```
 
-## Classifying the Testing Set and Submitting Results on Kaggle
+## Classificando o Conjunto de Testes e Enviando Resultados no Kaggle
 
-After obtaining a satisfactory model design and hyperparameters, we use all training datasets (including validation sets) to retrain the model and then classify the testing set. Note that predictions are made by the output network we just trained.
+Depois de obter um design de modelo satisfatório e hiperparâmetros, usamos todos os conjuntos de dados de treinamento (incluindo conjuntos de validação) para treinar novamente o modelo e, em seguida, classificar o conjunto de teste. Observe que as previsões são feitas pela rede de saída que acabamos de treinar.
 
 ```{.python .input}
 net = get_net(devices)
@@ -432,18 +432,15 @@ with open('submission.csv', 'w') as f:
             [str(num) for num in output]) + '\n')
 ```
 
-After executing the above code, we will generate a "submission.csv" file. The
-format of this file is consistent with the Kaggle competition requirements. The
-method for submitting results is similar to method in
-:numref:`sec_kaggle_house`.
+Após executar o código acima, geraremos um arquivo "submit.csv". O formato deste arquivo é consistente com os requisitos da competição Kaggle. O método para enviar resultados é semelhante ao método em :numref:`sec_kaggle_house`.
 
 
-## Summary
+## Resumo
 
-* We can use a model pre-trained on the ImageNet dataset to extract features and only train a small custom output network. This will allow us to classify a subset of the ImageNet dataset with lower computing and storage overhead.
+* Podemos usar um modelo pré-treinado no conjunto de dados ImageNet para extrair recursos e treinar apenas uma pequena rede de saída personalizada. Isso nos permitirá classificar um subconjunto do conjunto de dados ImageNet com menor sobrecarga de computação e armazenamento.
 
 
-## Exercises
+## Exercícios
 
 1. When using the entire Kaggle dataset, what kind of results do you get when you increase the `batch_size` (batch size) and `num_epochs` (number of epochs)?
 1. Do you get better results if you use a deeper pre-trained model?
@@ -457,7 +454,7 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzAzNjY1MiwtNDM5MzMyMzk3LDIxMj
+eyJoaXN0b3J5IjpbMTg2MTkzMjg4NiwtNDM5MzMyMzk3LDIxMj
 U0NDQ3MzgsLTQ1NTE4NDAxMSwtODg4OTE1ODYyLC03OTEzMzI5
 NCw1NTkxNTAzNjRdfQ==
 -->
