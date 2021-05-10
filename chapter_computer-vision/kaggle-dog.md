@@ -9,7 +9,7 @@ Nesta competição, tentamos identificar 120 raças diferentes de cães. O conju
 
 :numref:`fig_kaggle_dog` mostra as informações na página da competição. Para enviar os resultados, primeiro registre uma conta no site do Kaggle.
 
-![Site de competição de identificação de raças de cães. O conjunto de dados da competição pode ser acessado clicando na guia "Dados".](../img/kaggle-dog.jpg)
+![Site de competição de identificação de raças de cães. O conjunto de dados da competição pode ser acessado clicando na guia "Data".](../img/kaggle-dog.jpg)
 :width:`400px`
 :label:`fig_kaggle_dog`
 
@@ -39,7 +39,7 @@ Os dados da competição são divididos em um conjunto de treinamento e um conju
 
 ### Baixando o Dataset
 
-After logging in to Kaggle, we can click on the "Data" tab on the dog breed identification competition webpage shown in :numref:`fig_kaggle_dog` and download the dataset by clicking the "Download All" button. After unzipping the downloaded file in `../data`, you will find the entire dataset in the following paths:
+Depois de fazer o login no Kaggle, podemos clicar na guia "Data" na página da competição de identificação de raças de cães mostrada em :numref:`fig_kaggle_dog` e baixar o conjunto de dados clicando no botão" Baixar tudo ". Após descompactar o arquivo baixado em `../data`, você encontrará todo o conjunto de dados nos seguintes caminhos:
 
 * ../data/dog-breed-identification/labels.csv
 * ../data/dog-breed-identification/sample_submission.csv
@@ -465,5 +465,5 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1Nzk3Nzg1Niw1NTkxNTAzNjRdfQ==
+eyJoaXN0b3J5IjpbLTc5MTMzMjk0LDU1OTE1MDM2NF19
 -->
