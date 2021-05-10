@@ -208,23 +208,13 @@ test_iter = torch.utils.data.DataLoader(test_ds, batch_size, shuffle=False,
 
 ## Definindo o Modelo
 
-The dataset for this competition is a subset of the ImageNet data
-set. Therefore, we can use the approach discussed in
-:numref:`sec_fine_tuning`
-to select a model pre-trained on the
-entire ImageNet dataset and use it to extract image features to be input in the
-custom small-scale output network. Gluon provides a wide range of pre-trained
-models. Here, we will use the pre-trained ResNet-34 model. Because the
-competition dataset is a subset of the pre-training dataset, we simply reuse
-the input of the pre-trained model's output layer, i.e., the extracted
-features. Then, we can replace the original output layer with a small custom
-output network that can be trained, such as two fully connected layers in a
-series. Different from the experiment in
-:numref:`sec_fine_tuning`, here, we do not retrain the pre-trained model used for feature
-extraction. This reduces the training time and the memory required to store
-model parameter gradients.
 
-You must note that, during image augmentation, we use the mean values and standard deviations of the three RGB channels for the entire ImageNet dataset for normalization. This is consistent with the normalization of the pre-trained model.
+O conjunto de dados para esta competição é um subconjunto dos dados ImageNet. Portanto, podemos usar a abordagem discutida em :numref:`sec_fine_tuning` para selecionar um modelo pré-treinado em
+todo o conjunto de dados ImageNet e usá-lo para extrair recursos de imagem a serem inseridos na rede de saída de pequena escala personalizada. A Gluon oferece uma ampla gama de modelos pré-treinados. Aqui, usaremos o modelo ResNet-34 pré-treinado. Como o conjunto de dados da competição é um subconjunto do conjunto de dados de pré-treinamento, simplesmente reutilizamos a entrada da camada de saída do modelo pré-treinado, ou seja, os recursos extraídos. Então, podemos substituir a camada de saída original por uma pequena camada personalizada de
+rede de saída que pode ser treinada, como duas camadas totalmente conectadas em uma série. Diferente da experiência em
+:numref:`sec_fine_tuning`, aqui, não retreinamos o modelo pré-treinado usado para extração de recursos. Isso reduz o tempo de treinamento e a memória necessária para armazenar gradientes de parâmetro do modelo.
+
+Você deve notar que, durante o aumento da imagem, usamos os valores médios e desvios padrão dos três canais RGB para todo o conjunto de dados ImageNet para normalização. Isso é consistente com a normalização do modelo pré-treinado.
 
 ```{.python .input}
 def get_net(devices):
@@ -467,6 +457,7 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNTQ0NDczOCwtNDU1MTg0MDExLC04OD
-g5MTU4NjIsLTc5MTMzMjk0LDU1OTE1MDM2NF19
+eyJoaXN0b3J5IjpbLTQzOTMzMjM5NywyMTI1NDQ0NzM4LC00NT
+UxODQwMTEsLTg4ODkxNTg2MiwtNzkxMzMyOTQsNTU5MTUwMzY0
+XX0=
 -->
