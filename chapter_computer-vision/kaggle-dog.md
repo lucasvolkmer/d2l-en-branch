@@ -13,7 +13,7 @@ Nesta competição, tentamos identificar 120 raças diferentes de cães. O conju
 :width:`400px`
 :label:`fig_kaggle_dog`
 
-First, import the packages or modules required for the competition.
+Primeiro, importe os pacotes ou módulos necessários para a competição.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -465,5 +465,5 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODY4NzE4NTIsNTU5MTUwMzY0XX0=
+eyJoaXN0b3J5IjpbLTc0NzY5MzAzMCw1NTkxNTAzNjRdfQ==
 -->
