@@ -442,19 +442,19 @@ Após executar o código acima, geraremos um arquivo "submit.csv". O formato des
 
 ## Exercícios
 
-1. When using the entire Kaggle dataset, what kind of results do you get when you increase the `batch_size` (batch size) and `num_epochs` (number of epochs)?
-1. Do you get better results if you use a deeper pre-trained model?
-1. Scan the QR code to access the relevant discussions and exchange ideas about the methods used and the results obtained with the community. Can you come up with any better techniques?
+1. Ao usar todo o conjunto de dados Kaggle, que tipo de resultados você obtém ao aumentar `batch_size` (tamanho do lote) e` num_epochs` (número de épocas)?
+1. Você obtém melhores resultados se usar um modelo pré-treinado mais profundo?
+1. Digitalize o código QR para acessar as discussões relevantes e trocar ideias sobre os métodos usados e os resultados obtidos com a comunidade. Você pode sugerir técnicas melhores?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/380)
+[Discussões](https://discuss.d2l.ai/t/380)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1481)
+[Discussões](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MTkzMjg4NiwtNDM5MzMyMzk3LDIxMj
-U0NDQ3MzgsLTQ1NTE4NDAxMSwtODg4OTE1ODYyLC03OTEzMzI5
-NCw1NTkxNTAzNjRdfQ==
+eyJoaXN0b3J5IjpbNTMyMzA0MTIyLC00MzkzMzIzOTcsMjEyNT
+Q0NDczOCwtNDU1MTg0MDExLC04ODg5MTU4NjIsLTc5MTMzMjk0
+LDU1OTE1MDM2NF19
 -->
