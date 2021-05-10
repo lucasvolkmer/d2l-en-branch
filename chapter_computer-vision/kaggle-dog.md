@@ -212,7 +212,7 @@ test_iter = torch.utils.data.DataLoader(test_ds, batch_size, shuffle=False,
 O conjunto de dados para esta competição é um subconjunto dos dados ImageNet. Portanto, podemos usar a abordagem discutida em :numref:`sec_fine_tuning` para selecionar um modelo pré-treinado em
 todo o conjunto de dados ImageNet e usá-lo para extrair recursos de imagem a serem inseridos na rede de saída de pequena escala personalizada. A Gluon oferece uma ampla gama de modelos pré-treinados. Aqui, usaremos o modelo ResNet-34 pré-treinado. Como o conjunto de dados da competição é um subconjunto do conjunto de dados de pré-treinamento, simplesmente reutilizamos a entrada da camada de saída do modelo pré-treinado, ou seja, os recursos extraídos. Então, podemos substituir a camada de saída original por uma pequena camada personalizada de
 rede de saída que pode ser treinada, como duas camadas totalmente conectadas em uma série. Diferente da experiência em
-:numref:`sec_fine_tuning`, aqui, não retreinamos o modelo pré-treinado usado para extração de recursos. Isso reduz o tempo de treinamento e a memória necessária para armazenar gradientes de parâmetro do modelo.
+:numref:`sec_fine_tuning`, aqui, não retreinamos o modelo pré-treinado usado para extração de características. Isso reduz o tempo de treinamento e a memória necessária para armazenar gradientes de parâmetro do modelo.
 
 Você deve notar que, durante o aumento da imagem, usamos os valores médios e desvios padrão dos três canais RGB para todo o conjunto de dados ImageNet para normalização. Isso é consistente com a normalização do modelo pré-treinado.
 
@@ -249,7 +249,7 @@ def get_net(devices):
     return finetune_net
 ```
 
-When calculating the loss, we first use the member variable `features` to obtain the input of the pre-trained model's output layer, i.e., the extracted feature. Then, we use this feature as the input for our small custom output network and compute the output.
+Ao calcular a perda, primeiro usamos a variável-membro `features` para obter a entrada da camada de saída do modelo pré-treinado, ou seja, a *feature* extraída. Em seguida, usamos essa *feature* como a entrada para nossa pequena rede de saída personalizada e calculamos a saída.
 
 ```{.python .input}
 loss = gluon.loss.SoftmaxCrossEntropyLoss()
@@ -457,7 +457,7 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzOTMzMjM5NywyMTI1NDQ0NzM4LC00NT
-UxODQwMTEsLTg4ODkxNTg2MiwtNzkxMzMyOTQsNTU5MTUwMzY0
-XX0=
+eyJoaXN0b3J5IjpbLTEwNjk5ODE3NjIsLTQzOTMzMjM5NywyMT
+I1NDQ0NzM4LC00NTUxODQwMTEsLTg4ODkxNTg2MiwtNzkxMzMy
+OTQsNTU5MTUwMzY0XX0=
 -->
