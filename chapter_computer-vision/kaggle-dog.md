@@ -4,11 +4,12 @@ Nesta seção, abordaremos o desafio da identificação de raças de cães na Co
 
 > https://www.kaggle.com/c/dog-breed-identification
 
-In this competition, we attempt to identify 120 different breeds of dogs. The dataset used in this competition is actually a subset of the famous ImageNet dataset. Different from the images in the CIFAR-10 dataset used in the previous section, the images in the ImageNet dataset are higher and wider and their dimensions are inconsistent.
 
-:numref:`fig_kaggle_dog` shows the information on the competition's webpage. In order to submit the results, please register an account on the Kaggle website first.
+Nesta competição, tentamos identificar 120 raças diferentes de cães. O conjunto de dados usado nesta competição é, na verdade, um subconjunto do famoso conjunto de dados ImageNet. Diferente das imagens no conjunto de dados CIFAR-10 usado na seção anterior, as imagens no conjunto de dados ImageNet são mais altas e mais largas e suas dimensões são inconsistentes.
 
-![Dog breed identification competition website. The dataset for the competition can be accessed by clicking the "Data" tab.](../img/kaggle-dog.jpg)
+:numref:`fig_kaggle_dog` mostra as informações na página da competição. Para enviar os resultados, primeiro registre uma conta no site do Kaggle.
+
+![Site de competição de identificação de raças de cães. O conjunto de dados da competição pode ser acessado clicando na guia "Dados".](../img/kaggle-dog.jpg)
 :width:`400px`
 :label:`fig_kaggle_dog`
 
@@ -464,5 +465,5 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU5MTUwMzY0XX0=
+eyJoaXN0b3J5IjpbLTE4ODY4NzE4NTIsNTU5MTUwMzY0XX0=
 -->
