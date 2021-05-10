@@ -1,4 +1,4 @@
-# Natural Language Processing: Applications
+# NaturalProcessamento de Lainguage Processingm Natural: Applicationções
 :label:`chap_nlp_app`
 
 We have seen how to represent text tokens and train their representations in :numref:`chap_nlp_pretrain`.
@@ -58,3 +58,6 @@ finetuning-bert
 natural-language-inference-bert
 ```
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE4NDM4OTMxODFdfQ==
+-->
