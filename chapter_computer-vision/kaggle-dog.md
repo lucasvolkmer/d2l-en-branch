@@ -33,11 +33,11 @@ from torch import nn
 import os
 ```
 
-## Obtaining and Organizing the Dataset
+## Obtenção e organização do *Dataset*
 
-The competition data is divided into a training set and testing set. The training set contains $10,222$ images and the testing set contains $10,357$ images. The images in both sets are in JPEG format. These images contain three RGB channels (color) and they have different heights and widths. There are 120 breeds of dogs in the training set, including Labradors, Poodles, Dachshunds, Samoyeds, Huskies, Chihuahuas, and Yorkshire Terriers.
+Os dados da competição são divididos em um conjunto de treinamento e um conjunto de teste. O conjunto de treinamento contém $10.222$ imagens e o conjunto de teste contém $10.357$ imagens. As imagens em ambos os conjuntos estão no formato JPEG. Essas imagens contêm três canais RGB (cores) e diferentes alturas e larguras. Existem 120 raças de cães no conjunto de treinamento, incluindo Labradores, Poodles, Dachshunds, Samoyeds, Huskies, Chihuahuas e Yorkshire Terriers.
 
-### Downloading the Dataset
+### Baixando o Dataset
 
 After logging in to Kaggle, we can click on the "Data" tab on the dog breed identification competition webpage shown in :numref:`fig_kaggle_dog` and download the dataset by clicking the "Download All" button. After unzipping the downloaded file in `../data`, you will find the entire dataset in the following paths:
 
@@ -465,5 +465,5 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NzY5MzAzMCw1NTkxNTAzNjRdfQ==
+eyJoaXN0b3J5IjpbLTY1Nzk3Nzg1Niw1NTkxNTAzNjRdfQ==
 -->
