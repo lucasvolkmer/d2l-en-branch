@@ -177,7 +177,7 @@ valid_ds, test_ds = [torchvision.datasets.ImageFolder(
     transform=transform_test) for folder in ['valid', 'test']]
 ```
 
-Here, we create `DataLoader` instances, just like in :numref:`sec_kaggle_cifar10`.
+Aqui, criamos instâncias de `DataLoader`, assim como em :numref:`sec_kaggle_cifar10`.
 
 ```{.python .input}
 train_iter, train_valid_iter = [gluon.data.DataLoader(
@@ -206,7 +206,7 @@ test_iter = torch.utils.data.DataLoader(test_ds, batch_size, shuffle=False,
                                         drop_last=False)
 ```
 
-## Defining the Model
+## Definindo o Modelo
 
 The dataset for this competition is a subset of the ImageNet data
 set. Therefore, we can use the approach discussed in
@@ -467,6 +467,6 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NTE4NDAxMSwtODg4OTE1ODYyLC03OT
-EzMzI5NCw1NTkxNTAzNjRdfQ==
+eyJoaXN0b3J5IjpbMjEyNTQ0NDczOCwtNDU1MTg0MDExLC04OD
+g5MTU4NjIsLTc5MTMzMjk0LDU1OTE1MDM2NF19
 -->
