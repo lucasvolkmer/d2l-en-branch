@@ -88,7 +88,7 @@ reorg_dog_data(data_dir, valid_ratio)
 
 ## Aumento de Imagem
 
-The size of the images in this section are larger than the images in the previous section. Here are some more image augmentation operations that might be useful.
+O tamanho das imagens nesta seção é maior do que as imagens na seção anterior. Aqui estão mais algumas operações de aumento de imagem que podem ser úteis.
 
 ```{.python .input}
 transform_train = gluon.data.vision.transforms.Compose([
@@ -467,6 +467,6 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNDE0MDY4OSwtODg4OTE1ODYyLC03OT
-EzMzI5NCw1NTkxNTAzNjRdfQ==
+eyJoaXN0b3J5IjpbLTE0NDUwNzAyNTQsLTg4ODkxNTg2MiwtNz
+kxMzMyOTQsNTU5MTUwMzY0XX0=
 -->
