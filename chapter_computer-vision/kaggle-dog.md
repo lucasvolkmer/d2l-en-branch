@@ -46,9 +46,10 @@ Depois de fazer o login no Kaggle, podemos clicar na guia "Data" na página da c
 * ../data/dog-breed-identification/train
 * ../data/dog-breed-identification/test
 
-You may have noticed that the above structure is quite similar to that of the CIFAR-10 competition in :numref:`sec_kaggle_cifar10`, where folders `train/` and `test/` contain training and testing dog images respectively, and `labels.csv` has the labels for the training images.
 
-Similarly, to make it easier to get started, we provide a small-scale sample of the dataset mentioned above, "train_valid_test_tiny.zip". If you are going to use the full dataset for the Kaggle competition, you will also need to change the `demo` variable below to `False`.
+Você deve ter notado que a estrutura acima é bastante semelhante à da competição CIFAR-10 em :numref:`sec_kaggle_cifar10`, onde as pastas `train/` e `test/` contêm imagens de treinamento e teste de cães, respectivamente, e `rótulos. csv` tem os rótulos das imagens de treinamento.
+
+Da mesma forma, para facilitar o início, fornecemos uma amostra em pequena escala do conjunto de dados mencionado acima, "train_valid_test_tiny.zip". Se você for usar o conjunto de dados completo para a competição Kaggle, você também precisará alterar a variável `demo` abaixo para `False`.
 
 ```{.python .input}
 #@tab all
@@ -465,5 +466,6 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MTMzMjk0LDU1OTE1MDM2NF19
+eyJoaXN0b3J5IjpbLTg4ODkxNTg2MiwtNzkxMzMyOTQsNTU5MT
+UwMzY0XX0=
 -->
