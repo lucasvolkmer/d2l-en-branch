@@ -132,7 +132,7 @@ transform_train = torchvision.transforms.Compose([
                                      [0.229, 0.224, 0.225])])
 ```
 
-During testing, we only use definite image preprocessing operations.
+Durante o teste, usamos apenas operações de pré-processamento de imagens definidas.
 
 ```{.python .input}
 transform_test = gluon.data.vision.transforms.Compose([
@@ -155,9 +155,9 @@ transform_test = torchvision.transforms.Compose([
                                      [0.229, 0.224, 0.225])])
 ```
 
-## Reading the Dataset
+## Lendo o Dataset
 
-As in the previous section, we can create an `ImageFolderDataset` instance to read the dataset containing the original image files.
+Como na seção anterior, podemos criar uma instância `ImageFolderDataset` para ler o conjunto de dados contendo os arquivos de imagem originais.
 
 ```{.python .input}
 train_ds, valid_ds, train_valid_ds, test_ds = [
@@ -467,6 +467,6 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDUwNzAyNTQsLTg4ODkxNTg2MiwtNz
-kxMzMyOTQsNTU5MTUwMzY0XX0=
+eyJoaXN0b3J5IjpbLTQ1NTE4NDAxMSwtODg4OTE1ODYyLC03OT
+EzMzI5NCw1NTkxNTAzNjRdfQ==
 -->
