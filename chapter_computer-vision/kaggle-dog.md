@@ -249,7 +249,7 @@ def get_net(devices):
     return finetune_net
 ```
 
-Ao calcular a perda, primeiro usamos a variável-membro `features` para obter a entrada da camada de saída do modelo pré-treinado, ou seja, a *feature* extraída. Em seguida, usamos essa *feature* como a entrada para nossa pequena rede de saída personalizada e calculamos a saída.
+Ao calcular a perda, primeiro usamos a variável-membro `features` para obter a entrada da camada de saída do modelo pré-treinado, ou seja, a característica extraída. Em seguida, usamos essa característica como a entrada para nossa pequena rede de saída personalizada e calculamos a saída.
 
 ```{.python .input}
 loss = gluon.loss.SoftmaxCrossEntropyLoss()
@@ -282,9 +282,9 @@ def evaluate_loss(data_iter, net, devices):
     return l_sum / n
 ```
 
-## Defining the Training Functions
+## Definindo as Funções de Treinamento
 
-We will select the model and tune hyperparameters according to the model's performance on the validation set. The model training function `train` only trains the small custom output network.
+Selecionaremos o modelo e ajustaremos os hiperparâmetros de acordo com o desempenho do modelo no conjunto de validação. A função de treinamento do modelo `treinar` apenas treina a pequena rede de saída personalizada.
 
 ```{.python .input}
 def train(net, train_iter, valid_iter, num_epochs, lr, wd, devices, lr_period,
@@ -369,9 +369,9 @@ def train(net, train_iter, valid_iter, num_epochs, lr, wd, devices, lr_period,
           f'on {str(devices)}')
 ```
 
-## Training and Validating the Model
+## Treinamento e Validação do Modelo
 
-Now, we can train and validate the model. The following hyperparameters can be tuned. For example, we can increase the number of epochs. Because `lr_period` and `lr_decay` are set to 10 and 0.1 respectively, the learning rate of the optimization algorithm will be multiplied by 0.1 after every 10 epochs.
+Agora podemos treinar e validar o modelo. Os hiperparâmetros a seguir podem ser ajustados. Por exemplo, podemos aumentar o número de épocas. Como `lr_period` e` lr_decay` são definidos como 10 e 0,1 respectivamente, a taxa de aprendizado do algoritmo de otimização será multiplicada por 0,1 a cada 10 épocas.
 
 ```{.python .input}
 devices, num_epochs, lr, wd = d2l.try_all_gpus(), 5, 0.01, 1e-4
@@ -457,7 +457,7 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjk5ODE3NjIsLTQzOTMzMjM5NywyMT
-I1NDQ0NzM4LC00NTUxODQwMTEsLTg4ODkxNTg2MiwtNzkxMzMy
-OTQsNTU5MTUwMzY0XX0=
+eyJoaXN0b3J5IjpbMTYzNzAzNjY1MiwtNDM5MzMyMzk3LDIxMj
+U0NDQ3MzgsLTQ1NTE4NDAxMSwtODg4OTE1ODYyLC03OTEzMzI5
+NCw1NTkxNTAzNjRdfQ==
 -->
