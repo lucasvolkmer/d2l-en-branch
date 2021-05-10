@@ -66,11 +66,12 @@ else:
     data_dir = os.path.join('..', 'data', 'dog-breed-identification')
 ```
 
-### Organizing the Dataset
+### Organizando o Dataset
 
-We can organize the dataset similarly to what we did in :numref:`sec_kaggle_cifar10`, namely separating a validation set from the training set, and moving images into subfolders grouped by labels.
 
-The `reorg_dog_data` function below is used to read the training data labels, segment the validation set, and organize the training set.
+Podemos organizar o conjunto de dados de forma semelhante ao que fizemos em :numref:`sec_kaggle_cifar10`, nomeadamente separando um conjunto de validação do conjunto de treinamento e movendo imagens em subpastas agrupadas por rótulos.
+
+A função `reorg_dog_data` abaixo é usada para ler os rótulos dos dados de treinamento, segmentar o conjunto de validação e organizar o conjunto de treinamento.
 
 ```{.python .input}
 #@tab all
@@ -85,7 +86,7 @@ valid_ratio = 0.1
 reorg_dog_data(data_dir, valid_ratio)
 ```
 
-## Image Augmentation
+## Aumento de Imagem
 
 The size of the images in this section are larger than the images in the previous section. Here are some more image augmentation operations that might be useful.
 
@@ -466,6 +467,6 @@ method for submitting results is similar to method in
 [Discussions](https://discuss.d2l.ai/t/1481)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4ODkxNTg2MiwtNzkxMzMyOTQsNTU5MT
-UwMzY0XX0=
+eyJoaXN0b3J5IjpbLTcwNDE0MDY4OSwtODg4OTE1ODYyLC03OT
+EzMzI5NCw1NTkxNTAzNjRdfQ==
 -->
