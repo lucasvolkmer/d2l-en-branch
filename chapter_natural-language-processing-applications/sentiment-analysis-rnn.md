@@ -8,7 +8,7 @@ vetores de palavras pré-treinados (GloVe) e redes neurais recorrentes bidirecio
 múltiplas camadas ocultas :cite:`Maas.Daly.Pham.ea.2011`, como mostrado em :numref:`fig_nlp-map-sa-rnn`. Usaremos o modelo para
 determinar se uma sequência de texto de comprimento indefinido contém emoção positiva ou negativa.
 
-![This section feeds pretrained GloVe to an RNN-based architecture for sentiment analysis.](../img/nlp-map-sa-rnn.svg)
+![Esta seção alimenta o GloVe pré-treinado para uma arquitetura baseada em RNN para análise de sentimento.](../img/nlp-map-sa-rnn.svg)
 :label:`fig_nlp-map-sa-rnn`
 
 ```{.python .input}
@@ -232,5 +232,5 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNTQyMjAzOF19
+eyJoaXN0b3J5IjpbLTUzMzQzODUzNl19
 -->
