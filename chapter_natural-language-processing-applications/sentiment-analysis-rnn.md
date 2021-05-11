@@ -31,7 +31,7 @@ batch_size = 64
 train_iter, test_iter, vocab = d2l.load_data_imdb(batch_size)
 ```
 
-## Using a Recurrent Neural Network Model
+## Usando um Modelo de Rede Neural Recorrente
 
 In this model, each word first obtains a feature vector from the embedding
 layer. Then, we further encode the feature sequence using a bidirectional
@@ -232,5 +232,5 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMzQzODUzNl19
+eyJoaXN0b3J5IjpbLTY0NjE4ODU0Nl19
 -->
