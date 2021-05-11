@@ -33,16 +33,8 @@ train_iter, test_iter, vocab = d2l.load_data_imdb(batch_size)
 
 ## Usando um Modelo de Rede Neural Recorrente
 
-In this model, each word first obtains a feature vector from the embedding
-layer. Then, we further encode the feature sequence using a bidirectional
-recurrent neural network to obtain sequence information. Finally, we transform
-the encoded sequence information to output through the fully connected
-layer. Specifically, we can concatenate hidden states of bidirectional
-long-short term memory in the initial time step and final time step and pass it
-to the output layer classification as encoded feature sequence information. In
-the `BiRNN` class implemented below, the `Embedding` instance is the embedding
-layer, the `LSTM` instance is the hidden layer for sequence encoding, and the
-`Dense` instance is the output layer for generated classification results.
+Neste modelo, cada palavra obtém primeiro um vetor de recurso da camada de incorporação. Em seguida, codificamos ainda mais a sequência de recursos usando uma rede neural recorrente bidirecional para obter as informações da sequência. Por fim, transformamos as informações da sequência codificada para a saída por meio da camada totalmente conectada. Especificamente, podemos concatenar estados ocultos de 
+memória de longo-curto prazo bidirecionais na etapa de tempo inicial e etapa de tempo final e passá-la para a classificação da camada de saída como informação de sequência de recurso codificada. Na classe `BiRNN` implementada abaixo, a instância` Embedding` é a camada de incorporação, a instância `LSTM` é a camada oculta para codificação de sequência e a instância` Dense` é a camada de saída para os resultados de classificação gerados.
 
 ```{.python .input}
 class BiRNN(nn.Block):
@@ -232,5 +224,5 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NjE4ODU0Nl19
+eyJoaXN0b3J5IjpbMTgzMDE0NjA4NywtNjQ2MTg4NTQ2XX0=
 -->
