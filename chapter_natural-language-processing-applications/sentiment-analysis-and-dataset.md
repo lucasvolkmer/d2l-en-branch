@@ -162,17 +162,17 @@ def load_data_imdb(batch_size, num_steps=500):
 
 ## Exercícios
 
-1. Discover a different natural language dataset (such as [Amazon reviews](https://snap.stanford.edu/data/web-Amazon.html)) and build a similar data_loader function as `load_data_imdb`.
+1. Descubra um conjunto de dados de linguagem natural diferente (como [revisões da Amazon](https://snap.stanford.edu/data/web-Amazon.html)) e crie uma função data_loader semelhante como `load_data_imdb`.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/391)
+[Discussões](https://discuss.d2l.ai/t/391)
 :end_tab:
 
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1387)
+[Discussões](https://discuss.d2l.ai/t/1387)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNjAzNTYyOSwxMTk4MDc2NjA2LC0xOD
-M0MjUyMDI2LDY5MDY3MzgxOF19
+eyJoaXN0b3J5IjpbLTE5NzA3NTE2ODIsMTE5ODA3NjYwNiwtMT
+gzNDI1MjAyNiw2OTA2NzM4MThdfQ==
 -->
