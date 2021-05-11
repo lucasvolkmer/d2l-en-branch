@@ -101,7 +101,7 @@ class BiRNN(nn.Module):
         return outs
 ```
 
-Create a bidirectional recurrent neural network with two hidden layers.
+Criando uma rede neural recorrente bidirecional com duas camadas ocultas.
 
 ```{.python .input}
 embed_size, num_hiddens, num_layers, devices = 100, 100, 2, d2l.try_all_gpus()
@@ -224,5 +224,5 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMDE0NjA4NywtNjQ2MTg4NTQ2XX0=
+eyJoaXN0b3J5IjpbMjAzOTU2NjMwOSwtNjQ2MTg4NTQ2XX0=
 -->
