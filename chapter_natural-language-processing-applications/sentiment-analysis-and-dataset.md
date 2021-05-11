@@ -171,3 +171,6 @@ def load_data_imdb(batch_size, num_steps=500):
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1387)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjkwNjczODE4XX0=
+-->
