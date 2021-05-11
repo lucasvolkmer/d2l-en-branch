@@ -192,7 +192,7 @@ def predict_sentiment(net, vocab, sentence):
     return 'positive' if label == 1 else 'negative'
 ```
 
-Then, use the trained model to classify the sentiments of two simple sentences.
+Em seguida, usamos o modelo treinado para classificar os sentimentos de duas frases simples.
 
 ```{.python .input}
 #@tab all
@@ -204,13 +204,13 @@ predict_sentiment(net, vocab, 'this movie is so great')
 predict_sentiment(net, vocab, 'this movie is so bad')
 ```
 
-## Summary
+## Resumo
 
-* Text classification transforms a sequence of text of indefinite length into a category of text. This is a downstream application of word embedding.
-* We can apply pre-trained word vectors and recurrent neural networks to classify the emotions in a text.
+* A classificação de texto transforma uma sequência de texto de comprimento indefinido em uma categoria de texto. Esta é uma aplicação *downstream* de incorporação de palavras.
+* Podemos aplicar vetores de palavras pré-treinados e redes neurais recorrentes para classificar as emoções em um texto.
 
 
-## Exercises
+## Exercícios
 
 1. Increase the number of epochs. What accuracy rate can you achieve on the training and testing datasets? What about trying to re-tune other hyperparameters?
 1. Will using larger pre-trained word vectors, such as 300-dimensional GloVe word vectors, improve classification accuracy?
@@ -224,6 +224,6 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjE2OTcwNTAsMjAzOTU2NjMwOSwtNj
-Q2MTg4NTQ2XX0=
+eyJoaXN0b3J5IjpbMTQxNTA2Mzc4MCwyMDM5NTY2MzA5LC02ND
+YxODg1NDZdfQ==
 -->
