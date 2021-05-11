@@ -126,14 +126,14 @@ net.apply(init_weights);
 
 ### Carregando Vetores de Palavras Pré-treinados
 
-Because the training dataset for sentiment classification is not very large, in order to deal with overfitting, we will directly use word vectors pre-trained on a larger corpus as the feature vectors of all words. Here, we load a 100-dimensional GloVe word vector for each word in the dictionary `vocab`.
+Como o conjunto de dados de treinamento para classificação de sentimento não é muito grande, para lidar com o *overfitting*, usaremos diretamente vetores de palavras pré-treinados em um corpus maior como vetores de características de todas as palavras. Aqui, carregamos um vetor de palavras GloVe de 100 dimensões para cada palavra do `vocabulário` do dicionário.
 
 ```{.python .input}
 #@tab all
 glove_embedding = d2l.TokenEmbedding('glove.6b.100d')
 ```
 
-Query the word vectors that in our vocabulary.
+Consultando os vetores de palavras que estão em nosso vocabulário.
 
 ```{.python .input}
 #@tab all
@@ -141,7 +141,7 @@ embeds = glove_embedding[vocab.idx_to_token]
 embeds.shape
 ```
 
-Then, we will use these word vectors as feature vectors for each word in the reviews. Note that the dimensions of the pre-trained word vectors need to be consistent with the embedding layer output size `embed_size` in the created model. In addition, we no longer update these word vectors during training.
+Em seguida, usaremos esses vetores de palavras como vetores de características para cada palavra nas revisões. Observe que as dimensões dos vetores de palavras pré-treinados precisam ser consistentes com o tamanho de saída da camada de incorporação `embed_size` no modelo criado. Além disso, não atualizamos mais esses vetores de palavras durante o treinamento.
 
 ```{.python .input}
 net.embedding.weight.set_data(embeds)
@@ -224,6 +224,6 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ4OTg1OTQ0LDIwMzk1NjYzMDksLTY0Nj
-E4ODU0Nl19
+eyJoaXN0b3J5IjpbMTY2MDgzMDY5NiwyMDM5NTY2MzA5LC02ND
+YxODg1NDZdfQ==
 -->
