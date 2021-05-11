@@ -1,9 +1,10 @@
 # Análise de Sentimentos e o *Dataset*
 :label:`sec_sentiment`
 
-Text classification is a common task in natural language processing, which transforms a sequence of text of indefinite length into a category of text. It is similar to the image classification, the most frequently used application in this book, e.g., :numref:`sec_naive_bayes`. The only difference is that, rather than an image, text classification's example is a text sentence.
 
-This section will focus on loading data for one of the sub-questions in this field: using text sentiment classification to analyze the emotions of the text's author. This problem is also called sentiment analysis and has a wide range of applications. For example, we can analyze user reviews of products to obtain user satisfaction statistics, or analyze user sentiments about market conditions and use it to predict future trends.
+A classificação de texto é uma tarefa comum no processamento de linguagem natural, que transforma uma sequência de texto de comprimento indefinido em uma categoria de texto. É semelhante à classificação de imagem, o aplicativo usado com mais frequência neste livro, por exemplo, :numref:`sec_naive_bayes`. A única diferença é que, em vez de uma imagem, o exemplo da classificação de texto é uma frase de texto.
+
+Esta seção se concentrará no carregamento de dados para uma das subquestões neste campo: usar a classificação de sentimento do texto para analisar as emoções do autor do texto. Esse problema também é chamado de análise de sentimento e tem uma ampla gama de aplicações. Por exemplo, podemos analisar resenhas de usuários de produtos para obter estatísticas de satisfação do usuário ou analisar os sentimentos do usuário sobre as condições de mercado e usá-las para prever tendências futuras.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -20,7 +21,7 @@ from torch import nn
 import os
 ```
 
-## The Sentiment Analysis Dataset
+## O Dataset de Análise de Sentimento
 
 We use Stanford's [Large Movie Review Dataset](https://ai.stanford.edu/~amaas/data/sentiment/) as the dataset for sentiment analysis. This dataset is divided into two datasets for training and testing purposes, each containing 25,000 movie reviews downloaded from IMDb. In each dataset, the number of comments labeled as "positive" and "negative" is equal.
 
@@ -172,5 +173,6 @@ def load_data_imdb(batch_size, num_steps=500):
 [Discussions](https://discuss.d2l.ai/t/1387)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzQyNTIwMjYsNjkwNjczODE4XX0=
+eyJoaXN0b3J5IjpbMTE5ODA3NjYwNiwtMTgzNDI1MjAyNiw2OT
+A2NzM4MThdfQ==
 -->
