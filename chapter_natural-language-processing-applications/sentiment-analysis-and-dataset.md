@@ -77,7 +77,7 @@ d2l.plt.hist([len(line) for line in train_tokens], bins=range(0, 1000, 50));
 
 ### Preenchimento com o mesmo comprimento
 
-Because the reviews have different lengths, so they cannot be directly combined into minibatches. Here we fix the length of each comment to 500 by truncating or adding "&lt;unk&gt;" indices.
+Como as resenhas têm durações diferentes, não podem ser combinadas diretamente em minibatches. Aqui, fixamos o comprimento de cada comentário em 500, truncando ou adicionando índices "&lt;unk&gt;".
 
 ```{.python .input}
 #@tab all
@@ -87,9 +87,9 @@ train_features = d2l.tensor([d2l.truncate_pad(
 print(train_features.shape)
 ```
 
-### Creating the Data Iterator
+### Criando o Iterador de Dados
 
-Now, we will create a data iterator. Each iteration will return a minibatch of data.
+Agora, criaremos um iterador de dados. Cada iteração retornará um minibatch de dados.
 
 ```{.python .input}
 train_iter = d2l.load_array((train_features, train_data[1]), 64)
@@ -110,9 +110,9 @@ for X, y in train_iter:
 print('# batches:', len(train_iter))
 ```
 
-## Putting All Things Together
+## Juntando Tudo
 
-Last, we will save a function `load_data_imdb` into `d2l`, which returns the vocabulary and data iterators.
+Por último, salvaremos uma função `load_data_imdb` em` d2l`, que retorna o vocabulário e iteradores de dados.
 
 ```{.python .input}
 #@save
@@ -155,12 +155,12 @@ def load_data_imdb(batch_size, num_steps=500):
     return train_iter, test_iter, vocab
 ```
 
-## Summary
+## Resumo
 
-* Text classification can classify a text sequence into a category.
-* To classify a text sentiment, we load an IMDb dataset and tokenize its words. Then we pad the text sequence for short reviews and create a data iterator.
+* A classificação de texto pode classificar uma sequência de texto em uma categoria.
+* Para classificar um sentimento de texto, carregamos um conjunto de dados IMDb e tokenizar suas palavras. Em seguida, preenchemos a sequência de texto para revisões curtas e criamos um iterador de dados.
 
-## Exercises
+## Exercícios
 
 1. Discover a different natural language dataset (such as [Amazon reviews](https://snap.stanford.edu/data/web-Amazon.html)) and build a similar data_loader function as `load_data_imdb`.
 
@@ -173,6 +173,6 @@ def load_data_imdb(batch_size, num_steps=500):
 [Discussions](https://discuss.d2l.ai/t/1387)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDE3NDk5NzIsMTE5ODA3NjYwNiwtMT
-gzNDI1MjAyNiw2OTA2NzM4MThdfQ==
+eyJoaXN0b3J5IjpbLTQyNjAzNTYyOSwxMTk4MDc2NjA2LC0xOD
+M0MjUyMDI2LDY5MDY3MzgxOF19
 -->
