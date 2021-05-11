@@ -1,4 +1,4 @@
-# Sentiment Analysis and the Dataset
+# Análise de sentimento e o conjunto de dados
 :label:`sec_sentiment`
 
 Text classification is a common task in natural language processing, which transforms a sequence of text of indefinite length into a category of text. It is similar to the image classification, the most frequently used application in this book, e.g., :numref:`sec_naive_bayes`. The only difference is that, rather than an image, text classification's example is a text sentence.
@@ -172,5 +172,5 @@ def load_data_imdb(batch_size, num_steps=500):
 [Discussions](https://discuss.d2l.ai/t/1387)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkwNjczODE4XX0=
+eyJoaXN0b3J5IjpbLTE2OTg3OTkyMDksNjkwNjczODE4XX0=
 -->
