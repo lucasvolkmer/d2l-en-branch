@@ -154,9 +154,9 @@ net.embedding.weight.data.copy_(embeds)
 net.embedding.weight.requires_grad = False
 ```
 
-### Training and Evaluating the Model
+### Treinamento e Avaliação do Modelo
 
-Now, we can start training.
+Agora podemos começar a treinar.
 
 ```{.python .input}
 lr, num_epochs = 0.01, 5
@@ -173,7 +173,7 @@ loss = nn.CrossEntropyLoss(reduction="none")
 d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 ```
 
-Finally, define the prediction function.
+Finalmente, definir a função de previsão.
 
 ```{.python .input}
 #@save
@@ -224,6 +224,6 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MDgzMDY5NiwyMDM5NTY2MzA5LC02ND
-YxODg1NDZdfQ==
+eyJoaXN0b3J5IjpbLTE1MjE2OTcwNTAsMjAzOTU2NjMwOSwtNj
+Q2MTg4NTQ2XX0=
 -->
