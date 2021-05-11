@@ -2,12 +2,11 @@
 :label:`sec_sentiment_rnn`
 
 
-Similar to search synonyms and analogies, text classification is also a
-downstream application of word embedding. In this section, we will apply
-pre-trained word vectors (GloVe) and bidirectional recurrent neural networks with
-multiple hidden layers :cite:`Maas.Daly.Pham.ea.2011`, as shown in :numref:`fig_nlp-map-sa-rnn`. We will use the model to
-determine whether a text sequence of indefinite length contains positive or
-negative emotion. 
+Semelhante a sinônimos e analogias de pesquisa, a classificação de texto também é uma
+aplicação posterior de incorporação de palavras. Nesta seção, vamos aplicar
+vetores de palavras pré-treinados (GloVe) e redes neurais recorrentes bidirecionais com
+múltiplas camadas ocultas :cite:`Maas.Daly.Pham.ea.2011`, como mostrado em :numref:`fig_nlp-map-sa-rnn`. Usaremos o modelo para
+determinar se uma sequência de texto de comprimento indefinido contém emoção positiva ou negativa.
 
 ![This section feeds pretrained GloVe to an RNN-based architecture for sentiment analysis.](../img/nlp-map-sa-rnn.svg)
 :label:`fig_nlp-map-sa-rnn`
@@ -233,5 +232,5 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjA0NzY4ODhdfQ==
+eyJoaXN0b3J5IjpbMTYxNTQyMjAzOF19
 -->
