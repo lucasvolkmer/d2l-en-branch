@@ -23,11 +23,11 @@ import os
 
 ## O Dataset de Análise de Sentimento
 
-We use Stanford's [Large Movie Review Dataset](https://ai.stanford.edu/~amaas/data/sentiment/) as the dataset for sentiment analysis. This dataset is divided into two datasets for training and testing purposes, each containing 25,000 movie reviews downloaded from IMDb. In each dataset, the number of comments labeled as "positive" and "negative" is equal.
+Usamos o *dataset* [Large Movie Review Dataset](https://ai.stanford.edu/~amaas/data/sentiment/)  de Stanford para análise de sentimento. Este conjunto de dados é dividido em dois conjuntos de dados para fins de treinamento e teste, cada um contendo 25.000 resenhas de filmes baixadas da IMDb. Em cada conjunto de dados, o número de comentários rotulados como "positivos" e "negativos" é igual.
 
-###  Reading the Dataset
+###  Lendo o *Dataset*
 
-We first download this dataset to the "../data" path and extract it to "../data/aclImdb".
+Primeiro, baixamos esse *dataset* para o caminho "../data" e o extraímos para "../data/aclImdb".
 
 ```{.python .input}
 #@tab all
@@ -39,7 +39,7 @@ d2l.DATA_HUB['aclImdb'] = (
 data_dir = d2l.download_extract('aclImdb', 'aclImdb')
 ```
 
-Next, read the training and test datasets. Each example is a review and its corresponding label: 1 indicates "positive" and 0 indicates "negative".
+Em seguida, leia os conjuntos de dados de treinamento e teste. Cada exemplo é uma revisão e seu rótulo correspondente: 1 indica "positivo" e 0 indica "negativo".
 
 ```{.python .input}
 #@tab all
@@ -62,9 +62,9 @@ for x, y in zip(train_data[0][:3], train_data[1][:3]):
     print('label:', y, 'review:', x[0:60])
 ```
 
-### Tokenization and Vocabulary
+### Tokenização e Vocabulário
 
-We use a word as a token, and then create a dictionary based on the training dataset.
+Usamos uma palavra como token e, em seguida, criamos um dicionário com base no conjunto de dados de treinamento.
 
 ```{.python .input}
 #@tab all
@@ -75,7 +75,7 @@ d2l.set_figsize()
 d2l.plt.hist([len(line) for line in train_tokens], bins=range(0, 1000, 50));
 ```
 
-### Padding to the Same Length
+### Preenchimento com o mesmo comprimento
 
 Because the reviews have different lengths, so they cannot be directly combined into minibatches. Here we fix the length of each comment to 500 by truncating or adding "&lt;unk&gt;" indices.
 
@@ -173,6 +173,6 @@ def load_data_imdb(batch_size, num_steps=500):
 [Discussions](https://discuss.d2l.ai/t/1387)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5ODA3NjYwNiwtMTgzNDI1MjAyNiw2OT
-A2NzM4MThdfQ==
+eyJoaXN0b3J5IjpbLTE1NDE3NDk5NzIsMTE5ODA3NjYwNiwtMT
+gzNDI1MjAyNiw2OTA2NzM4MThdfQ==
 -->
