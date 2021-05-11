@@ -212,18 +212,18 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 
 ## Exercícios
 
-1. Increase the number of epochs. What accuracy rate can you achieve on the training and testing datasets? What about trying to re-tune other hyperparameters?
-1. Will using larger pre-trained word vectors, such as 300-dimensional GloVe word vectors, improve classification accuracy?
-1. Can we improve the classification accuracy by using the spaCy word tokenization tool? You need to install spaCy: `pip install spacy` and install the English package: `python -m spacy download en`. In the code, first import spacy: `import spacy`. Then, load the spacy English package: `spacy_en = spacy.load('en')`. Finally, define the function `def tokenizer(text): return [tok.text for tok in spacy_en.tokenizer(text)]` and replace the original `tokenizer` function. It should be noted that GloVe's word vector uses "-" to connect each word when storing noun phrases. For example, the phrase "new york" is represented as "new-york" in GloVe. After using spaCy tokenization, "new york" may be stored as "new york".
+1. Aumente o número de épocas. Que taxa de precisão você pode alcançar nos conjuntos de dados de treinamento e teste? Que tal tentar reajustar outros hiperparâmetros?
+1. O uso de vetores de palavras pré-treinados maiores, como vetores de palavras GloVe 300-dimensionais, melhorará a acurácia da classificação?
+1. Podemos melhorar a acurácia da classificação usando a ferramenta de tokenização de palavras spaCy? Você precisa instalar spaCy: `pip install spacy` e instalar o pacote em inglês: `python -m spacy download en`. No código, primeiro importe spacy: `import spacy`. Em seguida, carregue o pacote spacy em inglês: `spacy_en = spacy.load ('en')`. Finalmente, defina a função `def tokenizer(text): return [tok.text for tok in spacy_en.tokenizer(text)]` e substitua a função original de `tokenizer`. Deve-se notar que o vetor de palavras do GloVe usa "-" para conectar cada palavra ao armazenar frases nominais. Por exemplo, a frase "new york" é representada como "new-york" no GloVe. Depois de usar a tokenização spaCy, "new york" pode ser armazenado como "new york".
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/392)
+[Discussões](https://discuss.d2l.ai/t/392)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1424)
+[Discussões](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNTA2Mzc4MCwyMDM5NTY2MzA5LC02ND
-YxODg1NDZdfQ==
+eyJoaXN0b3J5IjpbLTg3NTkwNzM4OCwxNDE1MDYzNzgwLDIwMz
+k1NjYzMDksLTY0NjE4ODU0Nl19
 -->
