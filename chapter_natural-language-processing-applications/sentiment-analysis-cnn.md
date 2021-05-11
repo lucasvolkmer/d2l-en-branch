@@ -300,3 +300,6 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNTgzNjQyNDM3XX0=
+-->
