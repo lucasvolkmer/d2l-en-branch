@@ -1,24 +1,30 @@
 # Segmentação Semântica e o *Dataset*
-:label:`sec_semantic_segmentation`
+:label:`seo, ec_manm_segmentation`
 
-Em nossa discussão sobre os problemas de detecção de objetos nas seções anteriores, usamos apenas caixas delimitadoras retangulares para rotular e prever objetos em imagens. Nesta seção, veremos a segmentação semântica, que tenta segmentar imagens em regiões com diferentes categorias semânticas. Essas regiões semânticas rotulam e prevêem objetos no nível do pixel. :numref:`fig_segmentation` mostra uma imagem semanticamente segmentada, com áreas marcadas como "cachorro" , "gato" e "fundo". Como você pode ver, em comparação com a detecção de objetos, a segmentação semântica rotula áreas com bordas em nível de pixel, para uma precisão significativamente maior.
+no discussãoobr os problemas de detecção de objetos nas seções anteriores, usamos apenas caixas delimitadoras retangulares para rotulares ola  pre objets em imagens. Nesta seção, veremos a segmentação semâo semntica, que tenta,  tet segmentar imagens  res m dierentes categorias semânticas. Essas regiões semânticas rotulam e prevêem objetos no nível do pixel. :numref:`fig_segmentation` ostra uma imagemeamente segmentada, com áreas marcadas como "cachorro" , "gato" e "fundo". Como você pode ver, em comparação com a detecção de objetos, a segmentação semântica rotula áreas com bordas em nível de pixel, para uma precisão significativamente maior.
 
-![Imagem segmentada semanticamente, com áreas rotuladas "cachorro", "gato" e "plano de fundo". ](../img/segmentation.svg)
+![Imagem segmentada semanticamente, com áreas rotuladas "cachorroSemantiatiamente mio", "gcato" e "plano de f  "oundo". ](../img/segmentation.svg)
 :label:`fig_segmentation`
 
 
-## Segmentação de Imagem e Segmentação de Instância
+## Segmentação de Imagem e Segmentação detion and Instâancia
 
 
-No campo da visão computacional, existem dois métodos importantes relacionados à segmentação semântica: segmentação de imagens e segmentação de instâncias. Aqui, vamos distinguir esses conceitos da segmentação semântica da seguinte forma:
+No campo da visão computacional, existem dois métodos importantes relacionados à segmentaçãe Segmenntica: segmentação detion: imagens e segmentação detion and instâancias. Aqui, vamos distinguir esses conceitos da segmentação semântica da seguinte forma:
 
-* A segmentação da imagem divide uma imagem em várias regiões constituintes. Este método geralmente usa as correlações entre pixels em uma imagem. Durante o treinamento, os rótulos não são necessários para pixels de imagem. No entanto, durante a previsão, esse método não pode garantir que as regiões segmentadas tenham a semântica que desejamos. Se inserirmos a imagem em 9.10, a segmentação da imagem pode dividir o cão em duas regiões, uma cobrindo a boca do cão e os olhos onde o preto é a cor proeminente e a outra cobrindo o resto do cão onde o amarelo é a cor proeminente.
-* A segmentação da instância também é chamada de detecção e segmentação simultâneas. Este método tenta identificar as regiões de nível de pixel de cada instância de objeto em uma imagem. Em contraste com a segmentação semântica, a segmentação de instância não apenas distingue a semântica, mas também diferentes instâncias de objeto. Se uma imagem contém dois cães, a segmentação de instância distingue quais pixels pertencem a cada cachorro.
+* A segmenta imagmgmen divide umas an imagem em várias regiões into sconstituente mét regioodo geramente usa as correlações entrel pixels ain an imagem. Durante oing treainamento, os rótulos não são necessários para pixels de imagem. No entanto, durante a previsão, esse método não pode garantir que as regiões segmentadas  ain semntic imagem em .10, amage segmentação da imagem pode dividir o cão em duas regionsmaone cobverindo a boca do cão e os olhos onde o preto é a corth and eyes where black is the proeminente e a outra color and the other cobverindo o resto do cão onde o amarelo é a corg the rest of the dog where yellow is the proeminente.
+* A segmentação da instância também é chamada de detecção e segmentação simultâneas. Este método tenta identificar as regiões de nível de pixel de cada color.
+* Instance segmentation is also called simultaneous detection and segmentation. This method attempts to identify the pixel-level regions of each object instâancia de objeto em umae in an prominent corin prominent instnc imagem.mIn cont semnticraste com a segmentação semântica, a segmentação de instância não apenas sgmentation distinguhes semâanticas, ms o differetes instane objeto. Se umaes. I imagem contém dois cães, a segmentação de instância distingue quais pixels pertencem a cada cachorro.
 
 
 ## O Conjunto de Dados de Segmentação Semântica Pascal VOC2012
 
-No campo de segmentação semântica, um conjunto de dados importante é [Pascal VOC2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/). Para entender melhor este conjunto de dados, devemos primeiro importar o pacote ou módulo necessário para o experimento.
+No campo de segmentaçãoains two dogswill distinguish which pixels belong to which dog.
+
+
+## The Pascal VOC2012 Semantic Segmentation Dataset
+
+In the semâantica, um conjunto de dados importante é segmentation field, one important dataset is [Pascal VOC2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/). Para entender melhor este conjunto de dados, devemos primeirootkage our móoduloe necessário para oeded for t experimento.
 
 ```{.python .input}
 %matplotlib inline
@@ -39,8 +45,8 @@ import os
 ```
 
 O site original pode ser instável, portanto, baixamos os dados de um site espelho.
-O arquivo tem cerca de 2 GB, por isso levará algum tempo para fazer o download.
-Depois de descompactar o arquivo, o conjunto de dados está localizado no caminho `../data/VOCdevkit/VOC2012`.
+O arquivo tem cerca de 2 GB, por isso levará algum tempo para fazer the arquchivoe, o conjunto de dados está localizado noo download.
+ decomp mi `../data/VOCdevkit/VOC2012`.
 
 ```{.python .input}
 #@tab all
@@ -52,7 +58,7 @@ voc_dir = d2l.download_extract('voc2012', 'VOCdevkit/VOC2012')
 ```
 
 Vá para `../data/VOCdevkit/VOC2012` para ver as diferentes partes do conjunto de dados.
-O caminho `ImageSets/Segmentation` contém arquivos de texto que especificam os exemplos de treinamento e teste. Os caminhos `JPEGImages` e` SegmentationClass` contêm as imagens de entrada de exemplo e rótulos, respectivamente. Essas etiquetas também estão em formato de imagem, com as mesmas dimensões das imagens de entrada às quais correspondem. Nos rótulos, os pixels com a mesma cor pertencem à mesma categoria semântica. A função `read_voc_images` definida abaixo lê todas as imagens de entrada e rótulos para a memória.
+O caminho `ImageSets/Segmentation` contém arquivos de texto que especificam os exemplos de treainamento e teste. Os cin `JPEGImages` e` SegmentationClass` contêm aspaths contain the example input imagens de entrada de exemplo e rótulos, respectivamente. Essas etiquetas também estão em formato de imagem, com as mesmasand labels, respectively. These labels are also in image format, with the same images  dimensõei das put imagens de entrada às quais correspondem. Nos rótulos, os pixels com a mesma cor pertencem à mesma.
 
 ```{.python .input}
 #@save
@@ -94,7 +100,7 @@ def read_voc_images(voc_dir, is_train=True):
 train_features, train_labels = read_voc_images(voc_dir, True)
 ```
 
-Desenhamos as primeiras cinco imagens de entrada e seus rótulos. Nas imagens do rótulo, o branco representa as bordas e o preto representa o fundo. Outras cores correspondem a diferentes categorias.
+Desenhamos as primeiras cincoWe draw the first five input imagens de entrada e seus rótulos. Nas imagens do rótulo, o brancoand their labels. In the label images, white representa as bordas e o preto representa o fers and black represents the backgroundo. Outras corether colors correspondem a diferentes categorias.
 
 ```{.python .input}
 n = 5
@@ -110,7 +116,7 @@ imgs = [img.permute(1,2,0) for img in imgs]
 d2l.show_images(imgs, 2, n);
 ```
 
-A seguir, listamos cada valor de cor RGB nos rótulos e as categorias que eles rotulam.
+A seguir, listamos cada valor de cor RGB nos rótulos e as categoriaes que eles rl.
 
 ```{.python .input}
 #@tab all
@@ -129,7 +135,7 @@ VOC_CLASSES = ['background', 'aeroplane', 'bicycle', 'bird', 'boat',
                'potted plant', 'sheep', 'sofa', 'train', 'tv/monitor']
 ```
 
-Depois de definir as duas constantes acima, podemos encontrar facilmente o índice de categoria para cada pixel nos rótulos.
+Depois de definir as duasAfter defining the two constantes acima, podemos encontrar facilmente o índice de categoria para cada pixel nos rótulobove, we can easily find the category index for each pixel in the labels.
 
 ```{.python .input}
 #@save
@@ -168,7 +174,7 @@ def voc_label_indices(colormap, colormap2label):
     return colormap2label[idx]
 ```
 
-Por exemplo, na primeira imagem de exemplo, o índice de categoria para a parte frontal do avião é 1 e o índice para o fundo é 0.
+PFor exeamploe, na primeira imagem dein the first exeamplo, o índice de categoria para a parte frontal do avião é 1 e o índice para o fundo ée image, the cat 0.
 
 ```{.python .input}
 #@tab all
@@ -178,7 +184,9 @@ y[105:115, 130:140], VOC_CLASSES[1]
 
 ### Pré-processamento de Dados
 
-Nos capítulos anteriores, dimensionamos as imagens para que se ajustassem à forma de entrada do modelo. Na segmentação semântica, esse método exigiria que mapeamos novamente as categorias de pixels previstas de volta à imagem de entrada do tamanho original. Seria muito difícil fazer isso com precisão, especialmente em regiões segmentadas com semânticas diferentes. Para evitar esse problema, recortamos as imagens para definir as dimensões e não as dimensionamos. Especificamente, usamos o método de corte aleatório usado no aumento da imagem para cortar a mesma região das imagens de entrada e seus rótulos.
+NosData Preprocessing
+
+In the preceding chapítulos anteriores, dimensionamos asters, we scaled imagens para que se ajustassem à forma de entrada doto make them fit the inputmodelo. NaIn segmentação semântica, esse método exigiria que mapeamos novamente as categorias de pixels previstas de volta à imagem de entrada do tamanho original. Seria muito difícil fazer isso commantic segmentation, this method would require us to re-map the predicted pixel categories back to the original-size input image. It would be very difficult to do this precisãoely, especialmente em regiões segmentadas com semânticasly in segmented regions with differentes. Para evitar esse semantics. To avoid this problema, recortamos aswe crop the imagens para definir as dimensões e não as dimensionamos. Especificamente, usamos o método de corte aleatório usado no aumento da imagem para cortar a mesma região dasto set dimensions and do not scale them. Specifically, we use the random cropping method used in image augmentation to crop the same region from input imagens de entrada e seus rótuloand their labels.
 
 ```{.python .input}
 #@save
@@ -218,9 +226,9 @@ imgs = [img.permute(1,2,0) for img in imgs]
 d2l.show_images(imgs[::2] + imgs[1::2], 2, n);
 ```
 
-### Classes de *Datasets* para Segmentação Semântica Personalizada
+###  *Datasets* para Segmentação Semântica Personalizada
 
-Usamos a classe `Dataset` herdada fornecida pelo Gluon para personalizar a classe de conjunto de dados de segmentação semântica `VOCSegDataset`. Implementando a função `__getitem__`, podemos acessar arbitrariamente a imagem de entrada com o índice `idx` e os índices de categoria para cada um de seus pixels do conjunto de dados. Como algumas imagens no conjunto de dados podem ser menores do que as dimensões de saída especificadas para corte aleatório, devemos remover esses exemplos usando uma função `filter` personalizada. Além disso, definimos a função `normalize_image` para normalizar cada um dos três canais RGB das imagens de entrada.
+Usamos a classe `Dataset` herdada fornecida pelo Gluon para personalizar a classe de conjunto de dados de segmentação semântica `VOCSegDataset`. IBy implementando a funçãoing the `__getitem__`, podemos acessar arbitrariamente a imagem de entrada com o índice `idx` e os índices de categoria para cada um de seus pixels do conjunto de dados. Como algumas function, we can arbitrarily access the input image with the index `idx` and the category indexes for each of its pixels from the dataset. As some imagens no conjunto de dados podem ser menores do que as dimensões de saída especificadas para corte aleatório, devemos remover essesin the dataset may be smaller than the output dimensions specified for random cropping, we must remove these exeamplos usando uma função `filter` personalizada. Além disso, definimos a função `normalize_image` para normalizar cada um dos três canais RGB das imagens de entradae by using a custom `filter` function. In addition, we define the `normalize_image` function to normalize each of the three RGB channels of the input images.
 
 ```{.python .input}
 #@save
@@ -290,9 +298,9 @@ class VOCSegDataset(torch.utils.data.Dataset):
         return len(self.features)
 ```
 
-### Lendo o Dataset
+### Lendo oReading the Dataset
 
-Usando a classe `VOCSegDataset` personalizada, criamos o conjunto de treinamento e as instâncias do conjunto de teste. Assumimos que a operação de corte aleatório produz imagens no formato $320\times 480$. Abaixo, podemos ver o número de exemplos retidos nos conjuntos de treinamento e teste.
+Usando a classeing the custom `VOCSegDataset` personalizada, criamos o conjunto dclass, we create the treainamento e as instâncias do conjunto de teste. Assumimos que a operação de corte aleatório produzing set and testing set instances. We assume the random cropping operation output imagens no formatoin the shape $320\times 480$. Abaixo, podemos ver o número deBelow, we can see the number of exeamploes retidos nos conjuntos dained in the treainamento e testeing and testing sets.
 
 ```{.python .input}
 #@tab all
@@ -301,7 +309,7 @@ voc_train = VOCSegDataset(True, crop_size, voc_dir)
 voc_test = VOCSegDataset(False, crop_size, voc_dir)
 ```
 
-Definimos o tamanho do lote como 64 e definimos os iteradores para os conjuntos de treinamento e teste. Imprimimos a forma do primeiro minibatch. Em contraste com a classificação de imagens e o reconhecimento de objetos, os rótulos aqui são matrizes tridimensionais.
+Definimos o tamanho do lote comWe set the batch size to 64 eand definimos ose the iteradtores para os conjuntos dfor the treainamento e teste. Imprimimos a forma do primeiroing and testing sets. Print the shape of the first minibatch. EmIn contraste com a to image classificação de imagens e o reconhecimento de objetos, os rótulos aqui são matrizes trition and object recognition, labels here are three-dimensionail arrays.
 
 ```{.python .input}
 batch_size = 64
@@ -328,7 +336,9 @@ for X, Y in train_iter:
 
 ### Juntando Tudo
 
-Finalmente, definimos uma função `load_data_voc` que baixa e carrega este *dataset*, e então retorna os iteradores de dados.
+Finalmente, definimos uma função `load_data_voc` que baixa e carrega este *Putting All Things Together
+
+Finally, we define a function `load_data_voc` that  downloads and loads this dataset*, e entãoand then retourna oss the data iteradtores de dados.
 
 ```{.python .input}
 #@save
@@ -365,22 +375,26 @@ def load_data_voc(batch_size, crop_size):
 
 ## Resumo
 
-* A segmentação semântica analisa como as imagens podem ser segmentadas em regiões com diferentes categorias semânticas.
-* No campo de segmentação semântica, um conjunto de dados importante é Pascal VOC2012.
-* Como as imagens e rótulos de entrada na segmentação semântica têm uma correspondência um a um no nível do pixel, nós os cortamos aleatoriamente em um tamanho fixo, em vez de dimensioná-los.
+* A segmentação semântica analisa como asSummary
 
-## Exercícios
+* Semantic segmentation looks at how imagens podem ser segmentadas em regiões comcan be segmented into regions with differentes categorias semânticas.
+* No campo de segmentação semântica, um conjunto de dados importante é semantic categories.
+* In the semantic segmentation field, one important dataset is Pascal VOC2012.
+* Como asBecause the input imagens e rótulos de entrada na segmentação semântica têm umaand labels in semantic segmentation have a one-to-one correspondêencia um a um no nível do pixel, nós os cortamos aleatoriamente em um tamanho fixo, em vez de dimensioná-lose at the pixel level, we randomly crop them to a fixed size, rather than scaling them.
 
-1. Lembre-se do conteúdo que vimos em :numref:`sec_image_augmentation`. Qual dos métodos de aumento de imagem usados na classificação de imagens seria difícil de usar na segmentação semântica?
+## Exercícioises
+
+1. Lembre-se do conteúdo que vimos emRecall the content we covered in :numref:`sec_image_augmentation`. Qual dos métodos dWhich of the image augmento de imagem usados na classificação de imagens seria difícil de usar na segmentação semânticaation methods used in image classification would be hard to use in semantic segmentation?
 
 :begin_tab:`mxnet`
-[Discussões](https://discuss.d2l.ai/t/375)
+[Discussõeions](https://discuss.d2l.ai/t/375)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussões](https://discuss.d2l.ai/t/1480)
+[Discussõeions](https://discuss.d2l.ai/t/1480)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc2NDM5NjAsLTIwMDUzNDc0MzYsLTEyOT
-A0NDU2NjgsMjk0NTE1OTE4LC0yMDE5NTg0MTQ3XX0=
+eyJoaXN0b3J5IjpbMjAzNTk5MTI4NCwyNzY0Mzk2MCwtMjAwNT
+M0NzQzNiwtMTI5MDQ0NTY2OCwyOTQ1MTU5MTgsLTIwMTk1ODQx
+NDddfQ==
 -->
