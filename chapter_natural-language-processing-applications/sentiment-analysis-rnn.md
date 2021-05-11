@@ -1,4 +1,4 @@
-# Sentiment Analysis: Using Recurrent Neural NetworkAnálise de Sentimento: Usando Redes Neurais Recorrentes
+# Análise de Sentimento: Usando Redes Neurais Recorrentes
 :label:`sec_sentiment_rnn`
 
 
@@ -233,5 +233,5 @@ predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1424)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNTEzNjExNF19
+eyJoaXN0b3J5IjpbLTE0MjA0NzY4ODhdfQ==
 -->
