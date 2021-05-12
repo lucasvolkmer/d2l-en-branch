@@ -108,9 +108,9 @@ O TextCNN usa principalmente uma camada convolucional unidimensional e uma camad
 ![Design de TextCNN.](../img/textcnn.svg)
 :label:`fig_conv1d_textcnn`
 
-:numref:`fig_conv1d_textcnn` gives an example to illustrate the textCNN. The input here is a sentence with 11 words, with each word represented by a 6-dimensional word vector. Therefore, the input sequence has a width of 11 and 6 input channels. We assume there are two one-dimensional convolution kernels with widths of 2 and 4, and 4 and 5 output channels, respectively. Therefore, after one-dimensional convolution calculation, the width of the four output channels is $11-2+1=10$, while the width of the other five channels is $11-4+1=8$. Even though the width of each channel is different, we can still perform max-over-time pooling for each channel and concatenate the pooling outputs of the 9 channels into a 9-dimensional vector. Finally, we use a fully connected layer to transform the 9-dimensional vector into a 2-dimensional output: positive sentiment and negative sentiment predictions.
+:numref:`fig_conv1d_textcnn` dá um exemplo para ilustrar o textCNN. A entrada aqui é uma frase com 11 palavras, com cada palavra representada por um vetor de palavra de 6 dimensões. Portanto, a sequência de entrada tem uma largura de 11 e 6 canais de entrada. Assumimos que há dois núcleos de convolução unidimensionais com larguras de 2 e 4, e 4 e 5 canais de saída, respectivamente. Portanto, após o cálculo da convolução unidimensional, a largura dos quatro canais de saída é $11-2+1=10$, enquanto a largura dos outros cinco canais é $11-4+1=8$. Mesmo que a largura de cada canal seja diferente, ainda podemos executar o *pooling* máximo ao longo do tempo para cada canal e concatenar as saídas do pooling dos 9 canais em um vetor de 9 dimensões. Finalmente, usamos uma camada totalmente conectada para transformar o vetor 9-dimensional em uma saída bidimensional: previsões de sentimento positivo e sentimento negativo.
 
-Next, we will implement a textCNN model. Compared with the previous section, in addition to replacing the recurrent neural network with a one-dimensional convolutional layer, here we use two embedding layers, one with a fixed weight and another that participates in training.
+A seguir, implementaremos um modelo textCNN. Em comparação com a seção anterior, além de substituir a rede neural recorrente por uma camada convolucional unidimensional, aqui usamos duas camadas de incorporação, uma com peso fixo e outra que participa do treinamento.
 
 ```{.python .input}
 class TextCNN(nn.Block):
@@ -291,5 +291,6 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NzE3OTk3Niw1ODM2NDI0MzddfQ==
+eyJoaXN0b3J5IjpbLTEyMTE1NDA1NjEsLTI4NzE3OTk3Niw1OD
+M2NDI0MzddfQ==
 -->
