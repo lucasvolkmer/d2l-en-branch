@@ -288,3 +288,6 @@ for X, Y in train_iter:
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyODQxMjMyMTldfQ==
+-->
