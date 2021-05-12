@@ -1,14 +1,8 @@
 # Análise de Sentimento: Usando Redes Neurais Convolucionais
 :label:`sec_sentiment_cnn`
 
-In :numref:`chap_cnn`, we explored how to process
-two-dimensional image data with two-dimensional convolutional neural
-networks. In the previous language models and text classification tasks, we
-treated text data as a time series with only one dimension, and naturally, we
-used recurrent neural networks to process such data. In fact, we can also treat
-text as a one-dimensional image, so that we can use one-dimensional
-convolutional neural networks to capture associations between adjacent
-words. 
+Em :numref:`chap_cnn`, exploramos como processar dados de imagens bidimensionais com redes neurais convolucionais bidimensionais. Nos modelos de linguagem anteriores e nas tarefas de classificação de texto, tratamos os dados de texto como uma série temporal com apenas uma dimensão e, naturalmente, usamos redes neurais recorrentes para processar esses dados. Na verdade, também podemos tratar
+texto como uma imagem unidimensional, para que possamos usar redes neurais convolucionais unidimensionais para capturar associações entre palavras adjacentes.
 As described in :numref:`fig_nlp-map-sa-cnn`
 This section describes a groundbreaking approach to applying
 convolutional neural networks to sentiment analysis: textCNN :cite:`Kim.2014`.
@@ -301,5 +295,5 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNjQ1OTYyOSw1ODM2NDI0MzddfQ==
+eyJoaXN0b3J5IjpbNTY2MjQxMzQ5LDU4MzY0MjQzN119
 -->
