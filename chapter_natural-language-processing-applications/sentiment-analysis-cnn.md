@@ -39,7 +39,7 @@ Antes de apresentar o modelo, vamos explicar como funciona uma camada convolucio
 ![Operação de correlação cruzada unidimensional. As partes sombreadas são o primeiro elemento de saída, bem como os elementos de matriz de entrada e *kernel* usados em seu cálculo: $0\times1+1\times2=2$. ](../img/conv1d.svg)
 :label:`fig_conv1d`
 
-Next, we implement one-dimensional cross-correlation in the `corr1d` function. It accepts the input array `X` and kernel array `K` and outputs the array `Y`.
+Em seguida, implementamos a correlação cruzada unidimensional na função `corr1d`. Ele aceita a matriz de entrada `X` e a matriz de *kernel* `K` e produz a matriz `Y`.
 
 ```{.python .input}
 #@tab all
@@ -295,5 +295,5 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk2MzYzMDgyLDU4MzY0MjQzN119
+eyJoaXN0b3J5IjpbMTY1MjkxNTM1NSw1ODM2NDI0MzddfQ==
 -->
