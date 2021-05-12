@@ -86,16 +86,12 @@ A definição de uma operação de correlação cruzada bidimensional nos diz qu
 ![Operação de correlação cruzada bidimensional com um único canal de entrada. As partes destacadas são o primeiro elemento de saída e os elementos de matriz de entrada e *kernel* usados em seu cálculo: $2\times(-1)+3\times(-3)+1\times3+2\times4+0\times1+1\times2=2$. ](../img/conv1d-2d.svg)
 :label:`fig_conv1d_2d`
 
-Both the outputs in :numref:`fig_conv1d` and :numref:`fig_conv1d_channel` have only one channel. We
-discussed how to specify multiple output channels in a two-dimensional
-convolutional layer in
-:numref:`sec_channels`.
-Similarly,
-we can also specify multiple output channels in the one-dimensional
-convolutional layer to extend the model parameters in the convolutional layer.
+Ambas as saídas em :numref:`fig_conv1d` e :numref:`fig_conv1d_channel` têm apenas um canal. Nós
+discutimos como especificar múltiplos canais de saída em uma camada convolucional bidimensional em :numref:`sec_channels`.
+Da mesma forma, também podemos especificar vários canais de saída na camada convolucional unidimensional para estender os parâmetros do modelo na camada convolucional.
 
 
-## Max-Over-Time Pooling Layer
+## Camada de Pooling Máximo ao Longo do Tempo
 
 Similarly, we have a one-dimensional pooling layer. The max-over-time pooling layer used in TextCNN actually corresponds to a one-dimensional global maximum pooling layer. Assuming that the input contains multiple channels, and each channel consists of values on different time steps, the output of each channel will be the largest value of all time steps in the channel. Therefore, the input of the max-over-time pooling layer can have different time steps on each channel.
 
@@ -295,5 +291,5 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MjMyNTY2Miw1ODM2NDI0MzddfQ==
+eyJoaXN0b3J5IjpbNTgxMTMyMTY5LDU4MzY0MjQzN119
 -->
