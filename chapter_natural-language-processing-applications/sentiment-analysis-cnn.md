@@ -51,7 +51,7 @@ def corr1d(X, K):
     return Y
 ```
 
-Now, we will reproduce the results of the one-dimensional cross-correlation operation in :numref:`fig_conv1d`.
+Agora, iremos reproduzir os resultados da operação de correlação cruzada unidimensional em :numref:`fig_conv1d`.
 
 ```{.python .input}
 #@tab all
@@ -295,5 +295,5 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MjkxNTM1NSw1ODM2NDI0MzddfQ==
+eyJoaXN0b3J5IjpbMTYzNjE4NzA1LDU4MzY0MjQzN119
 -->
