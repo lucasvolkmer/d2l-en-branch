@@ -97,9 +97,9 @@ Da mesma forma, temos uma camada de *pooling* unidimensional. A camada de *pooli
 
 Para melhorar o desempenho da computação, geralmente combinamos exemplos de tempo de diferentes comprimentos em um minibatch e tornamos os comprimentos de cada exemplo de tempo no lote consistentes, acrescentando caracteres especiais (como 0) ao final dos exemplos mais curtos. Naturalmente, os caracteres especiais adicionados não têm significado intrínseco. Como o objetivo principal da camada de *pooling max-over-time* é capturar os recursos mais importantes de temporização, ela geralmente permite que o modelo não seja afetado pelos caracteres adicionados manualmente.
 
-## The TextCNN Model
+## O Modelo TextCNN
 
-TextCNN mainly uses a one-dimensional convolutional layer and max-over-time pooling layer. Suppose the input text sequence consists of $n$ words, and each word is represented by a $d$-dimension word vector. Then the input example has a width of $n$, a height of 1, and $d$ input channels. The calculation of textCNN can be mainly divided into the following steps:
+O TextCNN usa principalmente uma camada convolucional unidimensional e uma camada de *pooling* máximo ao longo do tempo. Suponha que a sequência de texto de entrada consista em $n$ palavras e cada palavra seja representada por um vetor de palavra de dimensão $d$. Então, o exemplo de entrada tem uma largura de $n$, uma altura de 1 e $d$ canais de entrada. O cálculo de textCNN pode ser dividido principalmente nas seguintes etapas:
 
 1. Define multiple one-dimensional convolution kernels and use them to perform convolution calculations on the inputs. Convolution kernels with different widths may capture the correlation of different numbers of adjacent words.
 2. Perform max-over-time pooling on all output channels, and then concatenate the pooling output values of these channels in a vector.
@@ -291,5 +291,5 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM5NjQyNTQyLDU4MzY0MjQzN119
+eyJoaXN0b3J5IjpbLTIwMzA2MTgxNjIsNTgzNjQyNDM3XX0=
 -->
