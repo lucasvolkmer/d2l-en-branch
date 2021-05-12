@@ -218,7 +218,7 @@ net.apply(init_weights);
 
 ### Carregando Vetores de Palavras Pré-treinados
 
-As in the previous section, load pre-trained 100-dimensional GloVe word vectors and initialize the embedding layers `embedding` and `constant_embedding`. Here, the former participates in training while the latter has a fixed weight.
+Como na seção anterior, carregamos os vetores de palavras GloVe 100-dimensionais pré-treinados e inicializamos as camadas de incorporação `embedding` e `constant_embedding`. Aqui, o primeiro participa do treinamento, enquanto o segundo tem peso fixo.
 
 ```{.python .input}
 glove_embedding = d2l.TokenEmbedding('glove.6b.100d')
@@ -237,9 +237,9 @@ net.constant_embedding.weight.data.copy_(embeds)
 net.constant_embedding.weight.requires_grad = False
 ```
 
-### Train and Evaluate the Model
+### Treinamento e Avaliação do Modelo
 
-Now we can train the model.
+Agora podemos treinar o modelo.
 
 ```{.python .input}
 lr, num_epochs = 0.001, 5
@@ -256,7 +256,7 @@ loss = nn.CrossEntropyLoss(reduction="none")
 d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 ```
 
-Below, we use the trained model to classify sentiments of two simple sentences.
+A seguir, usamos o modelo treinado para classificar os sentimentos de duas frases simples.
 
 ```{.python .input}
 #@tab all
@@ -268,7 +268,7 @@ d2l.predict_sentiment(net, vocab, 'this movie is so great')
 d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 ```
 
-## Summary
+## Resumo
 
 * We can use one-dimensional convolution to process and analyze timing data.
 * A one-dimensional cross-correlation operation with multiple input channels can be regarded as a two-dimensional cross-correlation operation with a single input channel.
@@ -291,6 +291,6 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1Mzk1Mjc2MywtMTIxMTU0MDU2MSwtMj
-g3MTc5OTc2LDU4MzY0MjQzN119
+eyJoaXN0b3J5IjpbLTIwNDI5ODAzNzcsLTM1Mzk1Mjc2MywtMT
+IxMTU0MDU2MSwtMjg3MTc5OTc2LDU4MzY0MjQzN119
 -->
