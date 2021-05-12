@@ -194,7 +194,7 @@ class TextCNN(nn.Module):
         return outputs
 ```
 
-Create a TextCNN instance. It has 3 convolutional layers with kernel widths of 3, 4, and 5, all with 100 output channels.
+Criando uma instância TextCNN. Possui 3 camadas convolucionais com larguras de *kernel* de 3, 4 e 5, todas com 100 canais de saída.
 
 ```{.python .input}
 embed_size, kernel_sizes, nums_channels = 100, [3, 4, 5], [100, 100, 100]
@@ -291,6 +291,6 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTE1NDA1NjEsLTI4NzE3OTk3Niw1OD
-M2NDI0MzddfQ==
+eyJoaXN0b3J5IjpbLTE2MDc0MDgzNTQsLTEyMTE1NDA1NjEsLT
+I4NzE3OTk3Niw1ODM2NDI0MzddfQ==
 -->
