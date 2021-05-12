@@ -1,4 +1,4 @@
-# Sentiment Analysis: UsingAnálise de Sentimento: Usando Redes Neurais Convolutcional Neural Networks is
+# Análise de Sentimento: Usando Redes Neurais Convolucionais
 :label:`sec_sentiment_cnn`
 
 In :numref:`chap_cnn`, we explored how to process
@@ -301,5 +301,5 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDA2ODA4NTgsNTgzNjQyNDM3XX0=
+eyJoaXN0b3J5IjpbMTQwNjQ1OTYyOSw1ODM2NDI0MzddfQ==
 -->
