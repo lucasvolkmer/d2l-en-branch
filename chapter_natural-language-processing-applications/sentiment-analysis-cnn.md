@@ -10,7 +10,7 @@ Redes neurais convolucionais para análise de sentimento: textCNN :cite:`Kim.201
 ![Esta seção alimenta o GloVe pré-treinado para uma arquitetura baseada em CNN para análise de sentimento.](../img/nlp-map-sa-cnn.svg)
 :label:`fig_nlp-map-sa-cnn`
 
-First, import the packages and modules required for the experiment.
+Primeiro, importe os pacotes e módulos necessários para o experimento.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -295,5 +295,5 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDAyMzI5MjQsNTgzNjQyNDM3XX0=
+eyJoaXN0b3J5IjpbLTE0NTk2NTUwODMsNTgzNjQyNDM3XX0=
 -->
