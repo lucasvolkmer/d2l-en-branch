@@ -216,7 +216,7 @@ def init_weights(m):
 net.apply(init_weights);
 ```
 
-### Load Pre-trained Word Vectors
+### Carregando Vetores de Palavras Pré-treinados
 
 As in the previous section, load pre-trained 100-dimensional GloVe word vectors and initialize the embedding layers `embedding` and `constant_embedding`. Here, the former participates in training while the latter has a fixed weight.
 
@@ -291,6 +291,6 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDc0MDgzNTQsLTEyMTE1NDA1NjEsLT
-I4NzE3OTk3Niw1ODM2NDI0MzddfQ==
+eyJoaXN0b3J5IjpbLTM1Mzk1Mjc2MywtMTIxMTU0MDU2MSwtMj
+g3MTc5OTc2LDU4MzY0MjQzN119
 -->
