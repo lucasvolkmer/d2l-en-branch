@@ -270,13 +270,13 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 
 ## Resumo
 
-* We can use one-dimensional convolution to process and analyze timing data.
-* A one-dimensional cross-correlation operation with multiple input channels can be regarded as a two-dimensional cross-correlation operation with a single input channel.
-* The input of the max-over-time pooling layer can have different numbers of time steps on each channel.
-* TextCNN mainly uses a one-dimensional convolutional layer and max-over-time pooling layer.
+* Podemos usar convolução unidimensional para processar e analisar dados de tempo.
+* Uma operação de correlação cruzada unidimensional com múltiplos canais de entrada pode ser considerada como uma operação de correlação cruzada bidimensional com um único canal de entrada.
+* A entrada da camada de *pooling* máximo ao longo do tempo pode ter diferentes números de etapas de tempo em cada canal.
+* TextCNN usa principalmente uma camada convolucional unidimensional e uma camada de *pooling* máximo ao longo do tempo.
 
 
-## Exercises
+## Exercícios
 
 1. Tune the hyperparameters and compare the two sentiment analysis methods, using recurrent neural networks and using convolutional neural networks, as regards accuracy and operational efficiency.
 1. Can you further improve the accuracy of the model on the test set by using the three methods introduced in the previous section: tuning hyperparameters, using larger pre-trained word vectors, and using the spaCy word tokenization tool?
@@ -291,6 +291,7 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDI5ODAzNzcsLTM1Mzk1Mjc2MywtMT
-IxMTU0MDU2MSwtMjg3MTc5OTc2LDU4MzY0MjQzN119
+eyJoaXN0b3J5IjpbLTc3NDE2MTA2LC0yMDQyOTgwMzc3LC0zNT
+M5NTI3NjMsLTEyMTE1NDA1NjEsLTI4NzE3OTk3Niw1ODM2NDI0
+MzddfQ==
 -->
