@@ -3,11 +3,11 @@
 
 Em :numref:`chap_cnn`, exploramos como processar dados de imagens bidimensionais com redes neurais convolucionais bidimensionais. Nos modelos de linguagem anteriores e nas tarefas de classificação de texto, tratamos os dados de texto como uma série temporal com apenas uma dimensão e, naturalmente, usamos redes neurais recorrentes para processar esses dados. Na verdade, também podemos tratar
 texto como uma imagem unidimensional, para que possamos usar redes neurais convolucionais unidimensionais para capturar associações entre palavras adjacentes.
-As described in :numref:`fig_nlp-map-sa-cnn`
-This section describes a groundbreaking approach to applying
-convolutional neural networks to sentiment analysis: textCNN :cite:`Kim.2014`.
+Conforme descrito em :numref:`fig_nlp-map-sa-cnn`
+Esta seção descreve uma abordagem inovadora para aplicar
+Redes neurais convolucionais para análise de sentimento: textCNN :cite:`Kim.2014`.
 
-![This section feeds pretrained GloVe to a CNN-based architecture for sentiment analysis.](../img/nlp-map-sa-cnn.svg)
+![Esta seção alimenta o GloVe pré-treinado para uma arquitetura baseada em CNN para análise de sentimento.](../img/nlp-map-sa-cnn.svg)
 :label:`fig_nlp-map-sa-cnn`
 
 First, import the packages and modules required for the experiment.
@@ -295,5 +295,5 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY2MjQxMzQ5LDU4MzY0MjQzN119
+eyJoaXN0b3J5IjpbLTEwMDAyMzI5MjQsNTgzNjQyNDM3XX0=
 -->
