@@ -101,11 +101,11 @@ Para melhorar o desempenho da computação, geralmente combinamos exemplos de te
 
 O TextCNN usa principalmente uma camada convolucional unidimensional e uma camada de *pooling* máximo ao longo do tempo. Suponha que a sequência de texto de entrada consista em $n$ palavras e cada palavra seja representada por um vetor de palavra de dimensão $d$. Então, o exemplo de entrada tem uma largura de $n$, uma altura de 1 e $d$ canais de entrada. O cálculo de textCNN pode ser dividido principalmente nas seguintes etapas:
 
-1. Define multiple one-dimensional convolution kernels and use them to perform convolution calculations on the inputs. Convolution kernels with different widths may capture the correlation of different numbers of adjacent words.
-2. Perform max-over-time pooling on all output channels, and then concatenate the pooling output values of these channels in a vector.
-3. The concatenated vector is transformed into the output for each category through the fully connected layer. A dropout layer can be used in this step to deal with overfitting.
+1. Definindo vários *kernels* de convolução unidimensionais e usando-os para realizar cálculos de convolução nas entradas. Os núcleos de convolução com larguras diferentes podem capturar a correlação de diferentes números de palavras adjacentes.
+2. Executando o *pooling* máximo ao longo do tempo em todos os canais de saída e, a seguir, concatene os valores de saída do *pooling* desses canais em um vetor.
+3. O vetor concatenado é transformado na saída de cada categoria por meio da camada totalmente conectada. Uma camada de eliminação pode ser usada nesta etapa para lidar com o *overfitting*.
 
-![TextCNN design. ](../img/textcnn.svg)
+![Design de TextCNN.](../img/textcnn.svg)
 :label:`fig_conv1d_textcnn`
 
 :numref:`fig_conv1d_textcnn` gives an example to illustrate the textCNN. The input here is a sentence with 11 words, with each word represented by a 6-dimensional word vector. Therefore, the input sequence has a width of 11 and 6 input channels. We assume there are two one-dimensional convolution kernels with widths of 2 and 4, and 4 and 5 output channels, respectively. Therefore, after one-dimensional convolution calculation, the width of the four output channels is $11-2+1=10$, while the width of the other five channels is $11-4+1=8$. Even though the width of each channel is different, we can still perform max-over-time pooling for each channel and concatenate the pooling outputs of the 9 channels into a 9-dimensional vector. Finally, we use a fully connected layer to transform the 9-dimensional vector into a 2-dimensional output: positive sentiment and negative sentiment predictions.
@@ -291,5 +291,5 @@ d2l.predict_sentiment(net, vocab, 'this movie is so bad')
 [Discussions](https://discuss.d2l.ai/t/1425)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzA2MTgxNjIsNTgzNjQyNDM3XX0=
+eyJoaXN0b3J5IjpbLTI4NzE3OTk3Niw1ODM2NDI0MzddfQ==
 -->
