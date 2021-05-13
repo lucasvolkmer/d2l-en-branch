@@ -8,7 +8,7 @@ saber classificar uma sequência de texto é insuficiente.
 Em vez disso, precisamos ser capazes de raciocinar sobre pares de sequências de texto.
 
 
-## Natural Language Inference
+## Inferência de Linguagem Natural
 
 *Natural language inference* studies whether a *hypothesis*
 can be inferred from a *premise*, where both are a text sequence.
@@ -287,5 +287,6 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODg5OTk1OSwtMTI4NDEyMzIxOV19
+eyJoaXN0b3J5IjpbLTcwNTc0NjgzNSwtMTk4ODk5OTU5LC0xMj
+g0MTIzMjE5XX0=
 -->
