@@ -9,7 +9,7 @@ Nesta seção, iremos descrever e implementar este método baseado em atenção 
 :label:`fig_nlp-map-nli-attention`
 
 
-## The Model
+## O Modelo
 
 Simpler than preserving the order of words in premises and hypotheses,
 we can just align words in one text sequence to every word in the other, and vice versa,
@@ -444,5 +444,5 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNDU5NjkyNV19
+eyJoaXN0b3J5IjpbNTcyMTcyNjY2LC05MzQ1OTY5MjVdfQ==
 -->
