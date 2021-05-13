@@ -42,10 +42,10 @@ O terceiro exemplo mostra uma relação de *neutralidade* porque nem "famoso" ne
 
 > Hipótese: Os músicos são famosos.
 
-Natural language inference has been a central topic for understanding natural language.
-It enjoys wide applications ranging from
-information retrieval to open-domain question answering.
-To study this problem, we will begin by investigating a popular natural language inference benchmark dataset.
+A inferência da linguagem natural tem sido um tópico central para a compreensão da linguagem natural.
+Desfruta de uma ampla gama de aplicações, desde
+recuperação de informações para resposta a perguntas de domínio aberto.
+Para estudar esse problema, começaremos investigando um popular conjunto de dados de referência de inferência em linguagem natural.
 
 
 ## The Stanford Natural Language Inference (SNLI) Dataset
@@ -291,6 +291,6 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyMDc0MDc2LC0xOTg4OTk5NTksLTEyOD
-QxMjMyMTldfQ==
+eyJoaXN0b3J5IjpbMjA3ODg4MTQ3NywtMTk4ODk5OTU5LC0xMj
+g0MTIzMjE5XX0=
 -->
