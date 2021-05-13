@@ -50,8 +50,8 @@ Para estudar esse problema, começaremos investigando um popular conjunto de dad
 
 ## Conjunto de dados Stanford Natural Language Inference (SNLI)
 
-Stanford Natural Language Inference (SNLI) Corpus is a collection of over $500,000$ labeled English sentence pairs :cite:`Bowman.Angeli.Potts.ea.2015`.
-We download and store the extracted SNLI dataset in the path `../data/snli_1.0`.
+Stanford Natural Language Inference (SNLI) Corpus é uma coleção de mais de $500.000$ pares de frases em inglês rotulados :cite:`Bowman.Angeli.Potts.ea.2015`.
+Baixamos e armazenamos o conjunto de dados SNLI extraído no caminho `../data/snli_1.0`.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -85,9 +85,9 @@ d2l.DATA_HUB['SNLI'] = (
 data_dir = d2l.download_extract('SNLI')
 ```
 
-### Reading the Dataset
+### Lendo o *Dataset*
 
-The original SNLI dataset contains much richer information than what we really need in our experiments. Thus, we define a function `read_snli` to only extract part of the dataset, then return lists of premises, hypotheses, and their labels.
+O conjunto de dados SNLI original contém informações muito mais ricas do que realmente precisamos em nossos experimentos. Assim, definimos uma função `read_snli` para extrair apenas parte do conjunto de dados e, em seguida, retornar listas de premissas, hipóteses e seus rótulos.
 
 ```{.python .input}
 #@tab all
@@ -291,6 +291,6 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTgyNjY4NCwtMTk4ODk5OTU5LC0xMj
-g0MTIzMjE5XX0=
+eyJoaXN0b3J5IjpbLTEwNTg0OTkyMDMsMTE4NTgyNjY4NCwtMT
+k4ODk5OTU5LC0xMjg0MTIzMjE5XX0=
 -->
