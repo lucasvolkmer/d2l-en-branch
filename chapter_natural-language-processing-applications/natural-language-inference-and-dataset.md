@@ -1,4 +1,4 @@
-# Natural Language Inference and the Dataset
+# NaturalInferência de Lainguage Inference and the Datasetm Natural e o Conjunto de Dados
 :label:`sec_natural-language-inference-and-dataset`
 
 In :numref:`sec_sentiment`, we discussed the problem of sentiment analysis.
@@ -289,5 +289,5 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODQxMjMyMTldfQ==
+eyJoaXN0b3J5IjpbMjU0NDQ1Mzg2LC0xMjg0MTIzMjE5XX0=
 -->
