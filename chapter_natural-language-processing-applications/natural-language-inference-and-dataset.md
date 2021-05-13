@@ -136,7 +136,7 @@ for data in [train_data, test_data]:
     print([[row for row in data[2]].count(i) for i in range(3)])
 ```
 
-### Defining a Class for Loading the Dataset
+### Definindo uma Classe para Carregar o *Dataset*
 
 Below we define a class for loading the SNLI dataset by inheriting from the `Dataset` class in Gluon. The argument `num_steps` in the class constructor specifies the length of a text sequence so that each minibatch of sequences will have the same shape. 
 In other words,
@@ -291,6 +291,6 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDk3NzIyNTksMTE4NTgyNjY4NCwtMT
+eyJoaXN0b3J5IjpbLTE2MDQzODUxODAsMTE4NTgyNjY4NCwtMT
 k4ODk5OTU5LC0xMjg0MTIzMjE5XX0=
 -->
