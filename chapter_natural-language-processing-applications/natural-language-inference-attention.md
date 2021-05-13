@@ -1,4 +1,4 @@
-# NaturalInferência de Lainguage Inference: Usingm Natural: Usando a Attentionção
+# Inferência de Linguagem Natural: Usando a Atenção
 :label:`sec_natural-language-inference-attention`
 
 We introduced the natural language inference task and the SNLI dataset in :numref:`sec_natural-language-inference-and-dataset`. In view of many models that are based on complex and deep architectures, Parikh et al. proposed to address natural language inference with attention mechanisms and called it a "decomposable attention model" :cite:`Parikh.Tackstrom.Das.ea.2016`.
@@ -444,5 +444,5 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg2NjMwNjkxXX0=
+eyJoaXN0b3J5IjpbLTI3NTY4Mjc0OF19
 -->
