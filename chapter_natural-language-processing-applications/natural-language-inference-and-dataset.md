@@ -10,27 +10,30 @@ Em vez disso, precisamos ser capazes de raciocinar sobre pares de sequências de
 
 ## Inferência de Linguagem Natural
 
-*Natural language inference* studies whether a *hypothesis*
-can be inferred from a *premise*, where both are a text sequence.
-In other words, natural language inference determines the logical relationship between a pair of text sequences.
-Such relationships usually fall into three types:
 
-* *Entailment*: the hypothesis can be inferred from the premise.
-* *Contradiction*: the negation of the hypothesis can be inferred from the premise.
-* *Neutral*: all the other cases.
+*Inferência de linguagem natural* estuda se uma *hipótese*
+pode ser inferida de uma *premissa*, onde ambas são uma sequência de texto.
+Em outras palavras, a inferência de linguagem natural determina a relação lógica entre um par de sequências de texto.
+Esses relacionamentos geralmente se enquadram em três tipos:
 
-Natural language inference is also known as the recognizing textual entailment task.
-For example, the following pair will be labeled as *entailment* because "showing affection" in the hypothesis can be inferred from "hugging one another" in the premise.
+* *Implicação*: a hipótese pode ser inferida a partir da premissa.
+* *Contradição*: a negação da hipótese pode ser inferida a partir da premissa.
+* *Neutro*: todos os outros casos.
 
-> Premise: Two women are hugging each other.
+A inferência de linguagem natural também é conhecida como a tarefa de reconhecimento de vinculação textual.
+Por exemplo, o par a seguir será rotulado como *implicação* porque "mostrar afeto" na hipótese pode ser inferido de "abraçar um ao outro" na premissa.
 
-> Hypothesis: Two women are showing affection.
 
-The following is an example of *contradiction* as "running the coding example" indicates "not sleeping" rather than "sleeping".
+>Premissa: Duas mulheres estão se abraçando.
 
-> Premise: A man is running the coding example from Dive into Deep Learning.
+>Hipótese: Duas mulheres estão demonstrando afeto.
 
-> Hypothesis: The man is sleeping.
+
+A seguir está um exemplo de *contradição*, pois "executando o exemplo de codificação" indica "não dormindo" em vez de "dormindo".
+
+> Premissa: Um homem está executando o exemplo de codificação do *Dive into Deep Learning*.
+
+> Hipótese: O homem está dormindo.
 
 The third example shows a *neutrality* relationship because neither "famous" nor "not famous" can be inferred from the fact that "are performing for us". 
 
@@ -287,6 +290,6 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNTc0NjgzNSwtMTk4ODk5OTU5LC0xMj
-g0MTIzMjE5XX0=
+eyJoaXN0b3J5IjpbNDg0Nzk4Nzg1LC0xOTg4OTk5NTksLTEyOD
+QxMjMyMTldfQ==
 -->
