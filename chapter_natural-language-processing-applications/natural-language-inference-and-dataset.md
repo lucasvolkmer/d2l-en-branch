@@ -1,13 +1,11 @@
 # NaturalInferência de Lainguage Inference and the Datasetm Natural e o Conjunto de Dados
 :label:`sec_natural-language-inference-and-dataset`
 
-In :numref:`sec_sentiment`, we discussed the problem of sentiment analysis.
-This task aims to classify a single text sequence into predefined categories,
-such as a set of sentiment polarities.
-However, when there is a need to decide whether one sentence can be inferred form another, 
-or eliminate redundancy by identifying sentences that are semantically equivalent,
-knowing how to classify one text sequence is insufficient.
-Instead, we need to be able to reason over pairs of text sequences.
+Em :numref:`sec_sentiment`, discutimos o problema da análise de sentimento.
+Esta tarefa visa classificar uma única sequência de texto em categorias predefinidas, como um conjunto de polaridades de sentimento.
+No entanto, quando há a necessidade de decidir se uma frase pode ser inferida de outra ou eliminar a redundância identificando frases semanticamente equivalentes,
+saber classificar uma sequência de texto é insuficiente.
+Em vez disso, precisamos ser capazes de raciocinar sobre pares de sequências de texto.
 
 
 ## Natural Language Inference
@@ -289,5 +287,6 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU0NDQ1Mzg2LC0xMjg0MTIzMjE5XX0=
+eyJoaXN0b3J5IjpbLTE1MTYyNzA4MzYsLTEyODQxMjMyMTldfQ
+==
 -->
