@@ -35,11 +35,12 @@ A seguir está um exemplo de *contradição*, pois "executando o exemplo de codi
 
 > Hipótese: O homem está dormindo.
 
-The third example shows a *neutrality* relationship because neither "famous" nor "not famous" can be inferred from the fact that "are performing for us". 
 
-> Premise: The musicians are performing for us.
+O terceiro exemplo mostra uma relação de *neutralidade* porque nem "famoso" nem "não famoso" podem ser inferidos do fato de que "estão se apresentando para nós".
 
-> Hypothesis: The musicians are famous.
+> Premissa: Os músicos estão se apresentando para nós.
+
+> Hipótese: Os músicos são famosos.
 
 Natural language inference has been a central topic for understanding natural language.
 It enjoys wide applications ranging from
@@ -290,6 +291,6 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg0Nzk4Nzg1LC0xOTg4OTk5NTksLTEyOD
+eyJoaXN0b3J5IjpbNDgyMDc0MDc2LC0xOTg4OTk5NTksLTEyOD
 QxMjMyMTldfQ==
 -->
