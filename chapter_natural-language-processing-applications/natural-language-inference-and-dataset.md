@@ -138,10 +138,10 @@ for data in [train_data, test_data]:
 
 ### Definindo uma Classe para Carregar o *Dataset*
 
-Below we define a class for loading the SNLI dataset by inheriting from the `Dataset` class in Gluon. The argument `num_steps` in the class constructor specifies the length of a text sequence so that each minibatch of sequences will have the same shape. 
-In other words,
-tokens after the first `num_steps` ones in longer sequence are trimmed, while special tokens “&lt;pad&gt;” will be appended to shorter sequences until their length becomes `num_steps`.
-By implementing the `__getitem__` function, we can arbitrarily access the premise, hypothesis, and label with the index `idx`.
+Abaixo, definimos uma classe para carregar o dataset SNLI herdando da classe `Dataset` no Gluon. O argumento `num_steps` no construtor de classe especifica o comprimento de uma sequência de texto para que cada minibatch de sequências tenha a mesma forma.
+Em outras palavras,
+tokens após os primeiros `num_steps` em uma sequência mais longa são cortados, enquanto tokens especiais “& lt; pad & gt;” serão anexados a sequências mais curtas até que seu comprimento se torne `num_steps`.
+Implementando a função `__getitem__`, podemos acessar arbitrariamente a premissa, hipótese e rótulo com o índice `idx`.
 
 ```{.python .input}
 #@save
@@ -291,6 +291,6 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDQzODUxODAsMTE4NTgyNjY4NCwtMT
-k4ODk5OTU5LC0xMjg0MTIzMjE5XX0=
+eyJoaXN0b3J5IjpbNjU4NjMxMjIxLC0xNjA0Mzg1MTgwLDExOD
+U4MjY2ODQsLTE5ODg5OTk1OSwtMTI4NDEyMzIxOV19
 -->
