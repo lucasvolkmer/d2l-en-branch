@@ -112,7 +112,7 @@ def read_snli(data_dir, is_train):
     return premises, hypotheses, labels
 ```
 
-Now let us print the first $3$ pairs of premise and hypothesis, as well as their labels ("0", "1", and "2" correspond to "entailment", "contradiction", and "neutral", respectively ).
+Agora, vamos imprimir os primeiros $3$ pares de premissa e hipótese, bem como seus rótulos ("0", "1" e "2" correspondem a "implicação", "contradição" e "neutro", respectivamente).
 
 ```{.python .input}
 #@tab all
@@ -123,11 +123,11 @@ for x0, x1, y in zip(train_data[0][:3], train_data[1][:3], train_data[2][:3]):
     print('label:', y)
 ```
 
-The training set has about $550,000$ pairs,
-and the testing set has about $10,000$ pairs.
-The following shows that 
-the three labels "entailment", "contradiction", and "neutral" are balanced in 
-both the training set and the testing set.
+O conjunto de treinamento tem cerca de $550.000$ pares,
+e o conjunto de teste tem cerca de $10.000$ pares.
+O seguinte mostra que
+os três rótulos "implicação", "contradição" e "neutro" são equilibrados em
+o conjunto de treinamento e o conjunto de teste.
 
 ```{.python .input}
 #@tab all
@@ -291,6 +291,6 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTg0OTkyMDMsMTE4NTgyNjY4NCwtMT
+eyJoaXN0b3J5IjpbLTEyNDk3NzIyNTksMTE4NTgyNjY4NCwtMT
 k4ODk5OTU5LC0xMjg0MTIzMjE5XX0=
 -->
