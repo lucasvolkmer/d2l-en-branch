@@ -1,4 +1,4 @@
-# NaturalInferência de Lainguage Inference and the Datasetm Natural e o Conjunto de Dados
+# Inferência de Linguagem Natural e o *Dataset*
 :label:`sec_natural-language-inference-and-dataset`
 
 Em :numref:`sec_sentiment`, discutimos o problema da análise de sentimento.
@@ -287,6 +287,5 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTYyNzA4MzYsLTEyODQxMjMyMTldfQ
-==
+eyJoaXN0b3J5IjpbLTE5ODg5OTk1OSwtMTI4NDEyMzIxOV19
 -->
