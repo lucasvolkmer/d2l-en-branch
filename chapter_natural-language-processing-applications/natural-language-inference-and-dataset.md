@@ -273,25 +273,25 @@ for X, Y in train_iter:
 
 ## Resumo
 
-* Natural language inference studies whether a hypothesis can be inferred from a premise, where both are a text sequence.
-* In natural language inference, relationships between premises and hypotheses include entailment, contradiction, and neutral.
-* Stanford Natural Language Inference (SNLI) Corpus is a popular benchmark dataset of natural language inference.
+* A inferência em linguagem natural estuda se uma hipótese pode ser inferida de uma premissa, onde ambas são uma sequência de texto.
+* Na inferência em linguagem natural, as relações entre premissas e hipóteses incluem implicação, contradição e neutro.
+* *Stanford Natural Language Inference* (SNLI) Corpus é um popular *dataset* de referência de inferência em linguagem natural.
 
 
-## Exercises
+## Exercícios
 
-1. Machine translation has long been evaluated based on superficial $n$-gram matching between an output translation and a ground-truth translation. Can you design a measure for evaluating machine translation results by using natural language inference?
-1. How can we change hyperparameters to reduce the vocabulary size?
+1. A tradução automática há muito é avaliada com base na correspondência superficial de $n$-grama entre uma tradução de saída e uma tradução de verdade. Você pode criar uma medida para avaliar os resultados da tradução automática usando a inferência de linguagem natural?
+1. Como podemos alterar os hiperparâmetros para reduzir o tamanho do vocabulário?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/394)
+[Discussões](https://discuss.d2l.ai/t/394)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1388)
+[Discussões](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDQwMjAxMzAsNjU4NjMxMjIxLC0xNj
-A0Mzg1MTgwLDExODU4MjY2ODQsLTE5ODg5OTk1OSwtMTI4NDEy
-MzIxOV19
+eyJoaXN0b3J5IjpbLTEyNjA2NzAwNiw2NTg2MzEyMjEsLTE2MD
+QzODUxODAsMTE4NTgyNjY4NCwtMTk4ODk5OTU5LC0xMjg0MTIz
+MjE5XX0=
 -->
