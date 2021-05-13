@@ -206,10 +206,10 @@ class SNLIDataset(torch.utils.data.Dataset):
 
 ### Juntando Tudo
 
-Now we can invoke the `read_snli` function and the `SNLIDataset` class to download the SNLI dataset and return `DataLoader` instances for both training and testing sets, together with the vocabulary of the training set.
-It is noteworthy that we must use the vocabulary constructed from the training set
-as that of the testing set. 
-As a result, any new token from the testing set will be unknown to the model trained on the training set.
+Agora podemos invocar a função `read_snli` e a classe `SNLIDataset` para baixar o conjunto de dados SNLI e retornar instâncias de `DataLoader` para ambos os conjuntos de treinamento e teste, junto com o vocabulário do conjunto de treinamento.
+Vale ressaltar que devemos utilizar o vocabulário construído a partir do conjunto de treinamento
+como aquele do conjunto de teste.
+Como resultado, qualquer novo *token* do conjunto de teste será desconhecido para o modelo treinado no conjunto de treinamento.
 
 ```{.python .input}
 #@save
@@ -248,9 +248,9 @@ def load_data_snli(batch_size, num_steps=50):
     return train_iter, test_iter, train_set.vocab
 ```
 
-Here we set the batch size to $128$ and sequence length to $50$,
-and invoke the `load_data_snli` function to get the data iterators and vocabulary.
-Then we print the vocabulary size.
+Aqui, definimos o tamanho do lote em $128$ e o comprimento da sequência em $50$,
+e invoque a função `load_data_snli` para obter os iteradores de dados e vocabulário.
+Em seguida, imprimimos o tamanho do vocabulário.
 
 ```{.python .input}
 #@tab all
@@ -258,9 +258,9 @@ train_iter, test_iter, vocab = load_data_snli(128, 50)
 len(vocab)
 ```
 
-Now we print the shape of the first minibatch.
-Contrary to sentiment analysis,
-we have $2$ inputs `X[0]` and `X[1]` representing pairs of premises and hypotheses.
+Agora imprimimos a forma do primeiro minibatch.
+Ao contrário da análise de sentimento,
+temos $2$ entradas `X[0]` e `X[1]` representando pares de premissas e hipóteses.
 
 ```{.python .input}
 #@tab all
@@ -271,7 +271,7 @@ for X, Y in train_iter:
     break
 ```
 
-## Summary
+## Resumo
 
 * Natural language inference studies whether a hypothesis can be inferred from a premise, where both are a text sequence.
 * In natural language inference, relationships between premises and hypotheses include entailment, contradiction, and neutral.
@@ -291,7 +291,7 @@ for X, Y in train_iter:
 [Discussions](https://discuss.d2l.ai/t/1388)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NTQ4NDAzNyw2NTg2MzEyMjEsLTE2MD
-QzODUxODAsMTE4NTgyNjY4NCwtMTk4ODk5OTU5LC0xMjg0MTIz
-MjE5XX0=
+eyJoaXN0b3J5IjpbLTEwMDQwMjAxMzAsNjU4NjMxMjIxLC0xNj
+A0Mzg1MTgwLDExODU4MjY2ODQsLTE5ODg5OTk1OSwtMTI4NDEy
+MzIxOV19
 -->
