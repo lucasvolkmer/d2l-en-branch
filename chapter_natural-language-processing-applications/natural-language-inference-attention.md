@@ -11,20 +11,20 @@ Nesta seção, iremos descrever e implementar este método baseado em atenção 
 
 ## O Modelo
 
-Simpler than preserving the order of words in premises and hypotheses,
-we can just align words in one text sequence to every word in the other, and vice versa,
-then compare and aggregate such information to predict the logical relationships
-between premises and hypotheses.
-Similar to alignment of words between source and target sentences in machine translation,
-the alignment of words between premises and hypotheses
-can be neatly accomplished by attention mechanisms.
+Mais simples do que preservar a ordem das palavras em premissas e hipóteses,
+podemos apenas alinhar as palavras em uma sequência de texto com todas as palavras na outra e vice-versa,
+em seguida, compare e agregue essas informações para prever as relações lógicas
+entre premissas e hipóteses.
+Semelhante ao alinhamento de palavras entre as frases fonte e alvo na tradução automática,
+o alinhamento de palavras entre premissas e hipóteses
+pode ser perfeitamente realizado por mecanismos de atenção.
 
-![Natural language inference using attention mechanisms. ](../img/nli-attention.svg)
+![Inferência de linguagem natural usando mecanismos de atenção. ](../img/nli-attention.svg)
 :label:`fig_nli_attention`
 
-:numref:`fig_nli_attention` depicts the natural language inference method using attention mechanisms.
-At a high level, it consists of three jointly trained steps: attending, comparing, and aggregating.
-We will illustrate them step by step in the following.
+:numref:`fig_nli_attention` descreve o método de inferência de linguagem natural usando mecanismos de atenção.
+Em um nível superior, consiste em três etapas treinadas em conjunto: assistir, comparar e agregar.
+Iremos ilustrá-los passo a passo a seguir.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -42,7 +42,7 @@ from torch import nn
 from torch.nn import functional as F
 ```
 
-### Attending
+### Assistir
 
 The first step is to align words in one text sequence to each word in the other sequence.
 Suppose that the premise is "i do need sleep" and the hypothesis is "i am tired".
@@ -444,5 +444,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTcyMTcyNjY2LC05MzQ1OTY5MjVdfQ==
+eyJoaXN0b3J5IjpbLTEyODQyNjY0MjUsNTcyMTcyNjY2LC05Mz
+Q1OTY5MjVdfQ==
 -->
