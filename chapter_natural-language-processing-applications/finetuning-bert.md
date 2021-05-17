@@ -63,16 +63,11 @@ e usando a perda quadrática média: eles são comuns para regressão.
 
 ## Marcação de Texto
 
-Now let us consider token-level tasks, such as *text tagging*,
-where each token is assigned a label.
-Among text tagging tasks,
-*part-of-speech tagging* assigns each word a part-of-speech tag (e.g., adjective and determiner)
-according to the role of the word in the sentence.
-For example,
-according to the Penn Treebank II tag set,
-the sentence "John Smith 's car is new"
-should be tagged as
-"NNP (noun, proper singular) NNP POS (possessive ending) NN (noun, singular or mass) VB (verb, base form) JJ (adjective)".
+Agora, vamos considerar as tarefas de nível de *token*, como *marcação de texto*,
+onde cada *token* é atribuído a um rótulo.
+Entre as tarefas de marcação de texto, *marcação de classe gramatical* atribui a cada palavra uma marcação de classe gramatical (por exemplo, adjetivo e determinante) de acordo com a função da palavra na frase.
+Por exemplo, de acordo com o conjunto de *tags* Penn Treebank II, a frase "*John Smith 's car is new*" ("O carro de John Smith é novo") deve ser marcada como
+"NNP (substantivo, singular próprio) NNP POS (desinência possessiva) NN (substantivo, singular ou massa) VB (verbo, forma básica) JJ (adjetivo)".
 
 ![Fine-tuning BERT for text tagging applications, such as part-of-speech tagging. Suppose that the input single text has six tokens.](../img/bert-tagging.svg)
 :label:`fig_bert-tagging`
@@ -154,6 +149,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUyODMzNjc2LC0zNzU5MTM4NjEsLTYzOD
+eyJoaXN0b3J5IjpbNjU5MjE5OTIzLC0zNzU5MTM4NjEsLTYzOD
 IxOTczMV19
 -->
