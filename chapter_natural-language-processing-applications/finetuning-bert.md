@@ -25,7 +25,7 @@ também é um conjunto de dados para classificação de texto único,
 julgando se uma determinada frase é gramaticalmente aceitável ou não :cite:`Warstadt.Singh.Bowman.2019`.
 Por exemplo, "Eu deveria estudar." é aceitável, mas "Eu deveria estudando." não é.
 
-![Fine-tuning BERT for single text classification applications, such as sentiment analysis and testing linguistic acceptability. Suppose that the input single text has six tokens.](../img/bert-one-seq.svg)
+![Ajuste fino do BERT para aplicações de classificação de texto único, como análise de sentimento e teste de aceitabilidade linguística. Suponha que o texto único de entrada tenha seis *tokens*.](../img/bert-one-seq.svg)
 :label:`fig_bert-one-seq`
 
 :numref:`sec_bert` describes the input representation of BERT.
@@ -167,6 +167,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NzA0MDM5MSwtMzc1OTEzODYxLC02Mz
+eyJoaXN0b3J5IjpbMTk0ODYxMTUxNiwtMzc1OTEzODYxLC02Mz
 gyMTk3MzFdfQ==
 -->
