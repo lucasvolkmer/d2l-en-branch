@@ -95,15 +95,16 @@ def mlp(num_inputs, num_hiddens, flatten):
     return nn.Sequential(*net)
 ```
 
-It should be highlighted that, in :eqref:`eq_nli_e`
-$f$ takes inputs $\mathbf{a}_i$ and $\mathbf{b}_j$ separately rather than takes a pair of them together as the input.
-This *decomposition* trick leads to only $m + n$ applications (linear complexity) of $f$ rather than $mn$ applications
-(quadratic complexity).
+
+Deve-se destacar que, em :eqref:`eq_nli_e`
+$f$ pega as entradas $\mathbf{a}_i$ and $\mathbf{b}_j$ separadamente em vez de pegar um par delas juntas como entrada.
+Este truque de *decomposição* leva a apenas aplicações $m + n$ (complexidade linear) de $f$ em vez de $mn$ aplicativos
+(complexidade quadrática).
 
 
-Normalizing the attention weights in :eqref:`eq_nli_e`,
-we compute the weighted average of all the word embeddings in the hypothesis
-to obtain representation of the hypothesis that is softly aligned with the word indexed by $i$ in the premise:
+Normalizando os pesos de atenção em :eqref:`eq_nli_e`,
+calculamos a média ponderada de todas as palavras incluídas na hipótese
+para obter a representação da hipótese que está suavemente alinhada com a palavra indexada por $i$ na premissa:
 
 $$
 \boldsymbol{\beta}_i = \sum_{j=1}^{n}\frac{\exp(e_{ij})}{ \sum_{k=1}^{n} \exp(e_{ik})} \mathbf{b}_j.
@@ -444,6 +445,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NjQyMDI1Niw1NzIxNzI2NjYsLTkzND
-U5NjkyNV19
+eyJoaXN0b3J5IjpbLTExMjkyMDQ2OTksLTI1NjQyMDI1Niw1Nz
+IxNzI2NjYsLTkzNDU5NjkyNV19
 -->
