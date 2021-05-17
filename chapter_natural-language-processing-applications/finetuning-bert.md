@@ -53,12 +53,12 @@ Exemplos do conjunto de dados de referência de similaridade textual semântica 
 ![Ajuste fino do BERT para aplicações de classificação ou regressão de pares de texto, como inferência de linguagem natural e similaridade textual semântica. Suponha que o par de texto de entrada tenha dois e três *tokens*.](../img/bert-two-seqs.svg)
 :label:`fig_bert-two-seqs`
 
-Comparing with single text classification in :numref:`fig_bert-one-seq`,
-fine-tuning BERT for text pair classification in :numref:`fig_bert-two-seqs` 
-is different in the input representation.
-For text pair regression tasks such as semantic textual similarity,
-trivial changes can be applied such as outputting a continuous label value
-and using the mean squared loss: they are common for regression.
+Comparando com a classificação de texto único em :numref:`fig_bert-one-seq`,
+ajuste fino de BERT para classificação de par de texto em :numref:`fig_bert-two-seqs`
+é diferente na representação de entrada.
+Para tarefas de regressão de pares de texto, como semelhança textual semântica,
+mudanças triviais podem ser aplicadas, como a saída de um valor de rótulo contínuo
+e usando a perda quadrática média: eles são comuns para regressão.
 
 
 ## Text Tagging
@@ -154,6 +154,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjgyMjYxMDksLTM3NTkxMzg2MSwtNj
-M4MjE5NzMxXX0=
+eyJoaXN0b3J5IjpbMzQzMjE1NjM4LC0zNzU5MTM4NjEsLTYzOD
+IxOTczMV19
 -->
