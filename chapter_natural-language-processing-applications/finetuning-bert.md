@@ -104,12 +104,12 @@ e produzir o intervalo com a pontuação mais alta.
 
 ## Resumo
 
-* BERT requires minimal architecture changes (extra fully-connected layers) for sequence-level and token-level natural language processing applications, such as single text classification (e.g., sentiment analysis and testing linguistic acceptability), text pair classification or regression (e.g., natural language inference and semantic textual similarity), text tagging (e.g., part-of-speech tagging), and question answering.
-* During supervised learning of a downstream application, parameters of the extra layers are learned from scratch while all the parameters in the pretrained BERT model are fine-tuned.
+* BERT requer mudanças mínimas de arquitetura (camadas extras totalmente conectadas) para aplicações de processamento de linguagem natural em nível de sequência e *token*, como classificação de texto único (por exemplo, análise de sentimento e teste de aceitabilidade linguística), classificação de par de texto ou regressão (por exemplo, inferência de linguagem natural e semelhança textual semântica), marcação de texto (por exemplo, marcação de classe gramatical) e resposta a perguntas.
+* Durante o aprendizado supervisionado de uma aplicação *downstream*, os parâmetros das camadas extras são aprendidos do zero, enquanto todos os parâmetros no modelo BERT pré-treinado são ajustados.
 
 
 
-## Exercises
+## Exercícios
 
 1. Let us design a search engine algorithm for news articles. When the system receives an query (e.g., "oil industry during the coronavirus outbreak"), it should return a ranked list of news articles that are most relevant to the query. Suppose that we have a huge pool of news articles and a large number of queries. To simplify the problem, suppose that the most relevant article has been labeled for each query. How can we apply negative sampling (see :numref:`subsec_negative-sampling`) and BERT in the algorithm design?
 1. How can we leverage BERT in training language models?
@@ -117,7 +117,7 @@ e produzir o intervalo com a pontuação mais alta.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTMyNjQ3MTMsNDM5NDg4Mjk1LDMxND
+eyJoaXN0b3J5IjpbLTE0MTU2NTcyMDUsNDM5NDg4Mjk1LDMxND
 U3MTY2MywtMTgwMTE5ODYyLC0zNzU5MTM4NjEsLTYzODIxOTcz
 MV19
 -->
