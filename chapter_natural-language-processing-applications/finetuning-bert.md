@@ -111,13 +111,13 @@ e produzir o intervalo com a pontuação mais alta.
 
 ## Exercícios
 
-1. Let us design a search engine algorithm for news articles. When the system receives an query (e.g., "oil industry during the coronavirus outbreak"), it should return a ranked list of news articles that are most relevant to the query. Suppose that we have a huge pool of news articles and a large number of queries. To simplify the problem, suppose that the most relevant article has been labeled for each query. How can we apply negative sampling (see :numref:`subsec_negative-sampling`) and BERT in the algorithm design?
-1. How can we leverage BERT in training language models?
-1. Can we leverage BERT in machine translation?
+1. Vamos projetar um algoritmo de mecanismo de pesquisa para artigos de notícias. Quando o sistema recebe uma consulta (por exemplo, "indústria de petróleo durante o surto de coronavírus"), ele deve retornar uma lista classificada de artigos de notícias que são mais relevantes para a consulta. Suponha que temos um grande conjunto de artigos de notícias e um grande número de consultas. Para simplificar o problema, suponha que o artigo mais relevante tenha sido rotulado para cada consulta. Como podemos aplicar a amostragem negativa (ver :numref:`subsec_negative-sampling`) e BERT no projeto do algoritmo?
+1. Como podemos alavancar o BERT nos modelos de treinamento de idiomas?
+1. Podemos alavancar o BERT na tradução automática?
 
-[Discussions](https://discuss.d2l.ai/t/396)
+[Discussões](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTU2NTcyMDUsNDM5NDg4Mjk1LDMxND
-U3MTY2MywtMTgwMTE5ODYyLC0zNzU5MTM4NjEsLTYzODIxOTcz
-MV19
+eyJoaXN0b3J5IjpbMTk2NzYxNjUwOCw0Mzk0ODgyOTUsMzE0NT
+cxNjYzLC0xODAxMTk4NjIsLTM3NTkxMzg2MSwtNjM4MjE5NzMx
+XX0=
 -->
