@@ -77,7 +77,7 @@ Comparando com :numref:`fig_bert-one-seq`, a única distinção reside na marca�
 
 
 
-## Question Answering
+## Resposta a Perguntas
 
 As another token-level application,
 *question answering* reflects capabilities of reading comprehension.
@@ -144,6 +144,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDExOTg2MiwtMzc1OTEzODYxLC02Mz
-gyMTk3MzFdfQ==
+eyJoaXN0b3J5IjpbMzE0NTcxNjYzLC0xODAxMTk4NjIsLTM3NT
+kxMzg2MSwtNjM4MjE5NzMxXX0=
 -->
