@@ -36,25 +36,21 @@ Como a representação do texto único de entrada, ele será alimentado em um pe
 
 ## Classificação ou Regressão de Pares de Texto
 
-We have also examined natural language inference in this chapter.
-It belongs to *text pair classification*,
-a type of application classifying a pair of text.
 
-Taking a pair of text as the input but outputting a continuous value,
-*semantic textual similarity* is a popular *text pair regression* task.
-This task measures semantic similarity of sentences.
-For instance, in the Semantic Textual Similarity Benchmark dataset,
-the similarity score of a pair of sentences
-is an ordinal scale ranging from 0 (no meaning overlap) to 5 (meaning equivalence) :cite:`Cer.Diab.Agirre.ea.2017`.
-The goal is to predict these scores.
-Examples from the Semantic Textual Similarity Benchmark dataset include (sentence 1, sentence 2, similarity score):
+Também examinamos a inferência da linguagem natural neste capítulo.
+Pertence à *classificação de pares de texto*, um tipo de aplicativo que classifica um par de texto.
 
-* "A plane is taking off.", "An air plane is taking off.", 5.000;
-* "A woman is eating something.", "A woman is eating meat.", 3.000;
-* "A woman is dancing.", "A man is talking.", 0.000.
+Tomando um par de texto como entrada, mas gerando um valor contínuo, *similaridade textual semântica* é uma tarefa popular de *regressão de par de texto*.
+Esta tarefa mede a similaridade semântica das sentenças.
+Por exemplo, no conjunto de dados Semantic Textual Similarity Benchmark, a pontuação de similaridade de um par de sentenças é uma escala ordinal que varia de 0 (sem sobreposição de significado) a 5 (significando equivalência) :cite:`Cer.Diab.Agirre.ea.2017 `.
+O objetivo é prever essas pontuações.
+Exemplos do conjunto de dados de referência de similaridade textual semântica incluem (sentença 1, sentença 2, pontuação de similaridade):
 
+* "Um avião está decolando.", "Um avião está decolando.", 5.000;
+* "Mulher está comendo alguma coisa.", "Mulher está comendo carne.", 3.000;
+* "Uma mulher está dançando.", "Um homem está falando.", 0,000.
 
-![Fine-tuning BERT for text pair classification or regression applications, such as natural language inference and semantic textual similarity. Suppose that the input text pair has two and three tokens.](../img/bert-two-seqs.svg)
+![Ajuste fino do BERT para aplicações de classificação ou regressão de pares de texto, como inferência de linguagem natural e similaridade textual semântica. Suponha que o par de texto de entrada tenha dois e três *tokens*.](../img/bert-two-seqs.svg)
 :label:`fig_bert-two-seqs`
 
 Comparing with single text classification in :numref:`fig_bert-one-seq`,
@@ -158,6 +154,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyODEzMDY0MCwtMzc1OTEzODYxLC02Mz
-gyMTk3MzFdfQ==
+eyJoaXN0b3J5IjpbLTE4MjgyMjYxMDksLTM3NTkxMzg2MSwtNj
+M4MjE5NzMxXX0=
 -->
