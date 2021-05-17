@@ -188,9 +188,9 @@ $$\mathbf{v}_{A,i} = g([\mathbf{a}_i, \boldsymbol{\beta}_i]), i = 1, \ldots, m\\
 :eqlabel:`eq_nli_v_ab`
 
 
-In :eqref:`eq_nli_v_ab`, $\mathbf{v}_{A,i}$ is the comparison between word $i$ in the premise and all the hypothesis words that are softly aligned with word $i$;
-while $\mathbf{v}_{B,j}$ is the comparison between word $j$ in the hypothesis and all the premise words that are softly aligned with word $j$.
-The following `Compare` class defines such as comparing step.
+Em:eqref:`eq_nli_v_ab`, $\mathbf{v}_{A,i}$ é a comparação entre a palavra $i$ na premissa e todas as palavras da hipótese que estão suavemente alinhadas com a palavra $i$;
+enquanto $\mathbf{v}_{B,j}$ é a comparação entre a palavra $j$ na hipótese e todas as palavras da premissa que estão suavemente alinhadas com a palavra $j$.
+A seguinte classe `Compare` define como a etapa de comparação.
 
 ```{.python .input}
 class Compare(nn.Block):
@@ -217,23 +217,23 @@ class Compare(nn.Module):
         return V_A, V_B
 ```
 
-### Aggregating
+### Agregando
 
-With two sets of comparison vectors $\mathbf{v}_{A,i}$ ($i = 1, \ldots, m$) and $\mathbf{v}_{B,j}$ ($j = 1, \ldots, n$) on hand,
-in the last step we will aggregate such information to infer the logical relationship.
-We begin by summing up both sets:
+Com dois conjuntos de vetores de comparação $\mathbf{v}_{A,i}$ ($i = 1, \ldots, m$) e $\mathbf{v}_{B,j}$ ($j = 1, \ldots, n$) disponível,
+na última etapa, agregaremos essas informações para inferir a relação lógica.
+Começamos resumindo os dois conjuntos:
 
 $$
 \mathbf{v}_A = \sum_{i=1}^{m} \mathbf{v}_{A,i}, \quad \mathbf{v}_B = \sum_{j=1}^{n}\mathbf{v}_{B,j}.
 $$
 
-Next we feed the concatenation of both summarization results into function $h$ (an MLP) to obtain the classification result of the logical relationship:
+Em seguida, alimentamos a concatenação de ambos os resultados do resumo na função $h$ (um MLP) para obter o resultado da classificação do relacionamento lógico:
 
 $$
 \hat{\mathbf{y}} = h([\mathbf{v}_A, \mathbf{v}_B]).
 $$
 
-The aggregation step is defined in the following `Aggregate` class.
+A etapa de agregação é definida na seguinte classe `Aggregate`.
 
 ```{.python .input}
 class Aggregate(nn.Block):
@@ -268,7 +268,7 @@ class Aggregate(nn.Module):
         return Y_hat
 ```
 
-### Putting All Things Together
+### Juntando Tudo
 
 By putting the attending, comparing, and aggregating steps together,
 we define the decomposable attention model to jointly train these three steps.
@@ -446,6 +446,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjI5NjQ4MzQsLTExMjkyMDQ2OTksLT
+eyJoaXN0b3J5IjpbLTE5ODg1OTc3NTIsLTExMjkyMDQ2OTksLT
 I1NjQyMDI1Niw1NzIxNzI2NjYsLTkzNDU5NjkyNV19
 -->
