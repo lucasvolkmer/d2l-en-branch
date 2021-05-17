@@ -1,4 +1,4 @@
-# NaturalInferência de Lainguage Inference: Fine-Tuningm Natural: Ajuste Fino do BERT
+# Inferência de Linguagem Natural: Ajuste Fino do BERT
 :label:`sec_natural-language-inference-bert`
 
 
@@ -394,5 +394,5 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzMTI5MTM0XX0=
+eyJoaXN0b3J5IjpbLTIwMDcxNTUzNTFdfQ==
 -->
