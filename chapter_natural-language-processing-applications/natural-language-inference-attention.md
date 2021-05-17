@@ -23,7 +23,7 @@ pode ser perfeitamente realizado por mecanismos de atenção.
 :label:`fig_nli_attention`
 
 :numref:`fig_nli_attention` descreve o método de inferência de linguagem natural usando mecanismos de atenção.
-Em um nível superior, consiste em três etapas treinadas em conjunto: assistir, comparar e agregar.
+Em um nível superior, consiste em três etapas treinadas em conjunto: alinhar, comparar e agregar.
 Iremos ilustrá-los passo a passo a seguir.
 
 ```{.python .input}
@@ -42,7 +42,7 @@ from torch import nn
 from torch.nn import functional as F
 ```
 
-### Assistir
+### Alinhar
 
 The first step is to align words in one text sequence to each word in the other sequence.
 Suppose that the premise is "i do need sleep" and the hypothesis is "i am tired".
@@ -444,6 +444,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODQyNjY0MjUsNTcyMTcyNjY2LC05Mz
-Q1OTY5MjVdfQ==
+eyJoaXN0b3J5IjpbLTkyNTgxOTY2MSw1NzIxNzI2NjYsLTkzND
+U5NjkyNV19
 -->
