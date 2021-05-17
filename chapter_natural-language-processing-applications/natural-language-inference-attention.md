@@ -389,9 +389,9 @@ loss = nn.CrossEntropyLoss(reduction="none")
 d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 ```
 
-### Using the Modelo
+### Usando o Modelo
 
-Finally, define the prediction function to output the logical relationship between a pair of premise and hypothesis.
+Finalmente, defina a função de previsão para produzir a relação lógica entre um par de premissas e hipóteses.
 
 ```{.python .input}
 #@save
@@ -417,14 +417,13 @@ def predict_snli(net, vocab, premise, hypothesis):
             else 'neutral'
 ```
 
-We can use the trained model to obtain the natural language inference result for a sample pair of sentences.
-
+Podemos usar o modelo treinado para obter o resultado da inferência em linguagem natural para um par de frases de amostra.
 ```{.python .input}
 #@tab all
 predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 ```
 
-## Summary
+## Resumo
 
 * The decomposable attention model consists of three steps for predicting the logical relationships between premises and hypotheses: attending, comparing, and aggregating.
 * With attention mechanisms, we can align words in one text sequence to every word in the other, and vice versa. Such alignment is soft using weighted average, where ideally large weights are associated with the words to be aligned.
@@ -446,6 +445,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0ODA4MDE3OSwtMTEyOTIwNDY5OSwtMj
+eyJoaXN0b3J5IjpbLTEyMjc0Njg5MSwtMTEyOTIwNDY5OSwtMj
 U2NDIwMjU2LDU3MjE3MjY2NiwtOTM0NTk2OTI1XX0=
 -->
