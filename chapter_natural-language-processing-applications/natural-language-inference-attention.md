@@ -333,11 +333,11 @@ train_iter, test_iter, vocab = d2l.load_data_snli(batch_size, num_steps)
 
 ### Criando o Modelo
 
-We use the pretrained $100$-dimensional GloVe embedding to represent the input tokens.
-Thus, we predefine the dimension of vectors $\mathbf{a}_i$ and $\mathbf{b}_j$ in :eqref:`eq_nli_e` as $100$.
-The output dimension of functions $f$ in :eqref:`eq_nli_e` and $g$ in :eqref:`eq_nli_v_ab` is set to $200$.
-Then we create a model instance, initialize its parameters,
-and load the GloVe embedding to initialize vectors of input tokens.
+Usamos a incorporação GloVe pré-treinada $100$-dimensional para representar os *tokens* de entrada.
+Assim, predefinimos a dimensão dos vetores $\mathbf{a}_i$ e $\mathbf{b}_j$ em :eqref:`eq_nli_e` como $100$.
+A dimensão de saída das funções $f$ in :eqref:`eq_nli_e` e $g$ em :eqref:`eq_nli_v_ab` é definida como $200$.
+Em seguida, criamos uma instância de modelo, inicializamos seus parâmetros,
+e carregamos o *GloVe* embarcado para inicializar vetores de *tokens* de entrada.
 
 ```{.python .input}
 embed_size, num_hiddens, devices = 100, 200, d2l.try_all_gpus()
@@ -357,10 +357,10 @@ embeds = glove_embedding[vocab.idx_to_token]
 net.embedding.weight.data.copy_(embeds);
 ```
 
-### Training and Evaluating the Model
+### Treinamento e Avaliação do Modelo
 
-In contrast to the `split_batch` function in :numref:`sec_multi_gpu` that takes single inputs such as text sequences (or images),
-we define a `split_batch_multi_inputs` function to take multiple inputs such as premises and hypotheses in minibatches.
+Em contraste com a função `split_batch` em :numref:`sec_multi_gpu` que recebe entradas únicas, como sequências de texto (ou imagens),
+definimos uma função `split_batch_multi_inputs` para obter várias entradas, como premissas e hipóteses em minibatches.
 
 ```{.python .input}
 #@save
@@ -371,7 +371,7 @@ def split_batch_multi_inputs(X, y, devices):
     return (X, gluon.utils.split_and_load(y, devices, even_split=False))
 ```
 
-Now we can train and evaluate the model on the SNLI dataset.
+Agora podemos treinar e avaliar o modelo no *dataset* SNLI.
 
 ```{.python .input}
 lr, num_epochs = 0.001, 4
@@ -389,7 +389,7 @@ loss = nn.CrossEntropyLoss(reduction="none")
 d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 ```
 
-### Using the Model
+### Using the Modelo
 
 Finally, define the prediction function to output the logical relationship between a pair of premise and hypothesis.
 
@@ -446,6 +446,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg3NzU3ODYyLC0xMTI5MjA0Njk5LC0yNT
-Y0MjAyNTYsNTcyMTcyNjY2LC05MzQ1OTY5MjVdfQ==
+eyJoaXN0b3J5IjpbLTg0ODA4MDE3OSwtMTEyOTIwNDY5OSwtMj
+U2NDIwMjU2LDU3MjE3MjY2NiwtOTM0NTk2OTI1XX0=
 -->
