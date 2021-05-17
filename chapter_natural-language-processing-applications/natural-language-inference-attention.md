@@ -173,7 +173,7 @@ class Attend(nn.Module):
         return beta, alpha
 ```
 
-### Comparing
+### Comparando
 
 In the next step, we compare a word in one sequence with the other sequence that is softly aligned with that word.
 Note that in soft alignment, all the words from one sequence, though with probably different attention weights, will be compared with a word in the other sequence.
@@ -445,6 +445,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzg3MjU3NjcsLTExMjkyMDQ2OTksLT
+eyJoaXN0b3J5IjpbLTE4NzMwOTA4NjMsLTExMjkyMDQ2OTksLT
 I1NjQyMDI1Niw1NzIxNzI2NjYsLTkzNDU5NjkyNV19
 -->
