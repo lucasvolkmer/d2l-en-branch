@@ -28,22 +28,13 @@ Por exemplo, "Eu deveria estudar." é aceitável, mas "Eu deveria estudando." n�
 ![Ajuste fino do BERT para aplicações de classificação de texto único, como análise de sentimento e teste de aceitabilidade linguística. Suponha que o texto único de entrada tenha seis *tokens*.](../img/bert-one-seq.svg)
 :label:`fig_bert-one-seq`
 
-:numref:`sec_bert` describes the input representation of BERT.
-The BERT input sequence unambiguously represents both single text and text pairs,
-where the special classification token 
-“&lt;cls&gt;” is used for sequence classification and 
-the special classification token 
-“&lt;sep&gt;” marks the end of single text or separates a pair of text.
-As shown in :numref:`fig_bert-one-seq`,
-in single text classification applications,
-the BERT representation of the special classification token 
-“&lt;cls&gt;” encodes the information of the entire input text sequence.
-As the representation of the input single text,
-it will be fed into a small MLP consisting of fully-connected (dense) layers
-to output the distribution of all the discrete label values.
+:numref:`sec_bert` descreve a representação de entrada de BERT.
+A sequência de entrada de BERT representa inequivocamente texto único e pares de texto, onde o *token* de classificação especial “&lt;cls&gt;” é usado para classificação de sequência e o *token* de classificação especial “&lt;sep&gt;” marca o fim de um único texto ou separa um par de texto.
+Conforme mostrado em :numref:`fig_bert-one-seq`, em aplicativos de classificação de texto único, a representação BERT do *token* de classificação especial “&lt;cls&gt;” codifica as informações de toda a sequência de texto de entrada.
+Como a representação do texto único de entrada, ele será alimentado em um pequeno MLP que consiste em camadas totalmente conectadas (densas) para gerar a distribuição de todos os valores de rótulo discretos.
 
 
-## Text Pair Classification or Regression
+## Classificação ou Regressão de Pares de Texto
 
 We have also examined natural language inference in this chapter.
 It belongs to *text pair classification*,
@@ -167,6 +158,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0ODYxMTUxNiwtMzc1OTEzODYxLC02Mz
+eyJoaXN0b3J5IjpbMTQyODEzMDY0MCwtMzc1OTEzODYxLC02Mz
 gyMTk3MzFdfQ==
 -->
