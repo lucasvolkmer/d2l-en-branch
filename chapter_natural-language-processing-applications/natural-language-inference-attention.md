@@ -175,12 +175,13 @@ class Attend(nn.Module):
 
 ### Comparando
 
-In the next step, we compare a word in one sequence with the other sequence that is softly aligned with that word.
-Note that in soft alignment, all the words from one sequence, though with probably different attention weights, will be compared with a word in the other sequence.
-For easy of demonstration, :numref:`fig_nli_attention` pairs words with aligned words in a *hard* way.
-For example, suppose that the attending step determines that "need" and "sleep" in the premise are both aligned with "tired" in the hypothesis, the pair "tired--need sleep" will be compared.
 
-In the comparing step, we feed the concatenation (operator $[\cdot, \cdot]$) of words from one sequence and aligned words from the other sequence into a function $g$ (an MLP):
+Na próxima etapa, comparamos uma palavra em uma sequência com a outra sequência que está suavemente alinhada com essa palavra.
+Observe que no alinhamento suave, todas as palavras de uma sequência, embora provavelmente com pesos de atenção diferentes, serão comparadas com uma palavra na outra sequência.
+Para facilitar a demonstração, :numref:`fig_nli_attention` emparelha palavras com palavras alinhadas de uma forma *dura*.
+Por exemplo, suponha que a etapa de atendimento determina que "necessidade" e "sono" na premissa estão ambos alinhados com "cansado" na hipótese, o par "cansado - preciso dormir" será comparado.
+
+Na etapa de comparação, alimentamos a concatenação (operador $[\cdot, \cdot]$) de palavras de uma sequência e palavras alinhadas de outra sequência em uma função $g$ (um MLP):
 
 $$\mathbf{v}_{A,i} = g([\mathbf{a}_i, \boldsymbol{\beta}_i]), i = 1, \ldots, m\\ \mathbf{v}_{B,j} = g([\mathbf{b}_j, \boldsymbol{\alpha}_j]), j = 1, \ldots, n.$$
 
@@ -445,6 +446,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzMwOTA4NjMsLTExMjkyMDQ2OTksLT
+eyJoaXN0b3J5IjpbLTE1MjI5NjQ4MzQsLTExMjkyMDQ2OTksLT
 I1NjQyMDI1Niw1NzIxNzI2NjYsLTkzNDU5NjkyNV19
 -->
