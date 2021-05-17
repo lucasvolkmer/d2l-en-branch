@@ -61,7 +61,7 @@ mudanças triviais podem ser aplicadas, como a saída de um valor de rótulo con
 e usando a perda quadrática média: eles são comuns para regressão.
 
 
-## Text Tagging
+## Marcação de Texto
 
 Now let us consider token-level tasks, such as *text tagging*,
 where each token is assigned a label.
@@ -154,6 +154,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQzMjE1NjM4LC0zNzU5MTM4NjEsLTYzOD
+eyJoaXN0b3J5IjpbMjUyODMzNjc2LC0zNzU5MTM4NjEsLTYzOD
 IxOTczMV19
 -->
