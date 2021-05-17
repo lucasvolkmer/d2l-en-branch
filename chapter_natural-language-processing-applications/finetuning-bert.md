@@ -1,4 +1,4 @@
-# Fine-Tuning BERT for Sequence-Level and Token-Level Applications
+# Ajuste Fino de BERT para Aplicações de Nível de Sequência e de Token
 :label:`sec_finetuning-bert`
 
 In the previous sections of this chapter,
@@ -193,5 +193,5 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzODIxOTczMV19
+eyJoaXN0b3J5IjpbLTM3NTkxMzg2MSwtNjM4MjE5NzMxXX0=
 -->
