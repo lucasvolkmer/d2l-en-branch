@@ -110,13 +110,13 @@ $$
 \boldsymbol{\beta}_i = \sum_{j=1}^{n}\frac{\exp(e_{ij})}{ \sum_{k=1}^{n} \exp(e_{ik})} \mathbf{b}_j.
 $$
 
-Likewise, we compute soft alignment of premise words for each word indexed by $j$ in the hypothesis:
+Da mesma forma, calculamos o alinhamento suave de palavras da premissa para cada palavra indexada por $j$ na hipótese:
 
 $$
 \boldsymbol{\alpha}_j = \sum_{i=1}^{m}\frac{\exp(e_{ij})}{ \sum_{k=1}^{m} \exp(e_{kj})} \mathbf{a}_i.
 $$
 
-Below we define the `Attend` class to compute the soft alignment of hypotheses (`beta`) with input premises `A` and soft alignment of premises (`alpha`) with input hypotheses `B`.
+Abaixo, definimos a classe `Attend` para calcular o alinhamento suave das hipóteses (`beta`) com as premissas de entrada `A` e o alinhamento suave das premissas (`alfa`) com as hipóteses de entrada `B`.
 
 ```{.python .input}
 class Attend(nn.Block):
@@ -445,6 +445,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjkyMDQ2OTksLTI1NjQyMDI1Niw1Nz
-IxNzI2NjYsLTkzNDU5NjkyNV19
+eyJoaXN0b3J5IjpbLTE2Mzg3MjU3NjcsLTExMjkyMDQ2OTksLT
+I1NjQyMDI1Niw1NzIxNzI2NjYsLTkzNDU5NjkyNV19
 -->
