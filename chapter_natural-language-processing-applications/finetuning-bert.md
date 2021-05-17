@@ -79,19 +79,9 @@ Comparando com :numref:`fig_bert-one-seq`, a única distinção reside na marca�
 
 ## Resposta a Perguntas
 
-As another token-level application,
-*question answering* reflects capabilities of reading comprehension.
-For example,
-the Stanford Question Answering Dataset (SQuAD v1.1)
-consists of reading passages and questions,
-where the answer to every question
-is just a segment of text (text span) from the passage that the question is about :cite:`Rajpurkar.Zhang.Lopyrev.ea.2016`.
-To explain,
-consider a passage
-"Some experts report that a mask's efficacy is inconclusive. However, mask makers insist that their products, such as N95 respirator masks, can guard against the virus."
-and a question "Who say that N95 respirator masks can guard against the virus?".
-The answer should be the text span "mask makers" in the passage.
-Thus, the goal in SQuAD v1.1 is to predict the start and end of the text span in the passage given a pair of question and passage.
+Como outro aplicativo de nível de *token*, *responder a perguntas* reflete as capacidades de compreensão de leitura.
+Por exemplo, o conjunto de dados de resposta a perguntas de Stanford (SQuAD v1.1) consiste na leitura de passagens e perguntas, em que a resposta a cada pergunta é apenas um segmento de texto (extensão de texto) da passagem sobre a qual a pergunta se refere cite:`Rajpurkar.Zhang.Lopyrev.ea.2016`.
+Para explicar, considere uma passagem "Alguns especialistas relatam que a eficácia de uma máscara é inconclusiva. No entanto, os fabricantes de máscaras insistem que seus produtos, como as máscaras respiratórias N95, podem proteger contra o vírus." e uma pergunta "Quem disse que as máscaras respiratórias N95 podem proteger contra o vírus?". A resposta deve ser o intervalo de texto "fabricantes de máscara" na passagem. Assim, o objetivo no SQuAD v1.1 é prever o início e o fim da extensão do texto na passagem dada um par de pergunta e passagem.
 
 ![Fine-tuning BERT for question answering. Suppose that the input text pair has two and three tokens.](../img/bert-qa.svg)
 :label:`fig_bert-qa`
@@ -144,6 +134,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE0NTcxNjYzLC0xODAxMTk4NjIsLTM3NT
-kxMzg2MSwtNjM4MjE5NzMxXX0=
+eyJoaXN0b3J5IjpbLTYwOTA0NjIyNCwzMTQ1NzE2NjMsLTE4MD
+ExOTg2MiwtMzc1OTEzODYxLC02MzgyMTk3MzFdfQ==
 -->
