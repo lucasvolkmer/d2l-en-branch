@@ -44,29 +44,29 @@ from torch.nn import functional as F
 
 ### Alinhar
 
-The first step is to align words in one text sequence to each word in the other sequence.
-Suppose that the premise is "i do need sleep" and the hypothesis is "i am tired".
-Due to semantical similarity,
-we may wish to align "i" in the hypothesis with "i" in the premise,
-and align "tired" in the hypothesis with "sleep" in the premise.
-Likewise, we may wish to align "i" in the premise with "i" in the hypothesis,
-and align "need" and "sleep" in the premise with "tired" in the hypothesis.
-Note that such alignment is *soft* using weighted average,
-where ideally large weights are associated with the words to be aligned.
-For ease of demonstration, :numref:`fig_nli_attention` shows such alignment in a *hard* way.
+A primeira etapa é alinhar as palavras em uma sequência de texto a cada palavra na outra sequência.
+Suponha que a premissa seja "preciso dormir" e a hipótese "estou cansado".
+Devido à semelhança semântica,
+podemos desejar alinhar "i" na hipótese com "i" na premissa,
+e alinhe "cansado" na hipótese com "sono" na premissa.
+Da mesma forma, podemos desejar alinhar "i" na premissa com "i" na hipótese,
+e alinhar "necessidade" e "sono" na premissa com "cansado" na hipótese.
+Observe que esse alinhamento é *suave* usando a média ponderada,
+onde, idealmente, grandes pesos estão associados às palavras a serem alinhadas.
+Para facilitar a demonstração, :numref:`fig_nli_attention` mostra tal alinhamento de uma maneira *dura*.
 
-Now we describe the soft alignment using attention mechanisms in more detail.
-Denote by $\mathbf{A} = (\mathbf{a}_1, \ldots, \mathbf{a}_m)$
-and $\mathbf{B} = (\mathbf{b}_1, \ldots, \mathbf{b}_n)$ the premise and hypothesis,
-whose number of words are $m$ and $n$, respectively,
-where $\mathbf{a}_i, \mathbf{b}_j \in \mathbb{R}^{d}$ ($i = 1, \ldots, m, j = 1, \ldots, n$) is a $d$-dimensional word embedding vector.
-For soft alignment, we compute the attention weights $e_{ij} \in \mathbb{R}$ as
+Agora descrevemos o alinhamento suave usando mecanismos de atenção com mais detalhes.
+Denotamos por  $\mathbf{A} = (\mathbf{a}_1, \ldots, \mathbf{a}_m)$
+e  $\mathbf{B} = (\mathbf{b}_1, \ldots, \mathbf{b}_n)$ a premissa e hipótese,
+cujo número de palavras são $m$ e $n$, respectivamente,
+onde  $\mathbf{a}_i, \mathbf{b}_j \in \mathbb{R}^{d}$ ($i = 1, \ldots, m, j = 1, \ldots, n$) é um vetor de incorporação de palavras $d$-dimensional.
+Para o alinhamento suave, calculamos os pesos de atenção $e_{ij} \in \mathbb{R}$ como
 
 $$e_{ij} = f(\mathbf{a}_i)^\top f(\mathbf{b}_j),$$
 :eqlabel:`eq_nli_e`
 
-where the function $f$ is an MLP defined in the following `mlp` function.
-The output dimension of $f$ is specified by the `num_hiddens` argument of `mlp`.
+onde a função $f$ é um MLP definido na seguinte função `mlp`.
+A dimensão de saída de $f$ é especificada pelo argumento `num_hiddens` de` mlp`.
 
 ```{.python .input}
 def mlp(num_hiddens, flatten):
@@ -444,6 +444,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNTgxOTY2MSw1NzIxNzI2NjYsLTkzND
+eyJoaXN0b3J5IjpbLTI1NjQyMDI1Niw1NzIxNzI2NjYsLTkzND
 U5NjkyNV19
 -->
