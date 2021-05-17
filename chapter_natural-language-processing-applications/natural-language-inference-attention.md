@@ -331,7 +331,7 @@ batch_size, num_steps = 256, 50
 train_iter, test_iter, vocab = d2l.load_data_snli(batch_size, num_steps)
 ```
 
-### Creando o Modelo
+### Criando o Modelo
 
 We use the pretrained $100$-dimensional GloVe embedding to represent the input tokens.
 Thus, we predefine the dimension of vectors $\mathbf{a}_i$ and $\mathbf{b}_j$ in :eqref:`eq_nli_e` as $100$.
@@ -446,6 +446,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODc5OTQzMzQsLTExMjkyMDQ2OTksLT
-I1NjQyMDI1Niw1NzIxNzI2NjYsLTkzNDU5NjkyNV19
+eyJoaXN0b3J5IjpbNjg3NzU3ODYyLC0xMTI5MjA0Njk5LC0yNT
+Y0MjAyNTYsNTcyMTcyNjY2LC05MzQ1OTY5MjVdfQ==
 -->
