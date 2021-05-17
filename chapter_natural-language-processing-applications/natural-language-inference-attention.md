@@ -425,26 +425,26 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 
 ## Resumo
 
-* The decomposable attention model consists of three steps for predicting the logical relationships between premises and hypotheses: attending, comparing, and aggregating.
-* With attention mechanisms, we can align words in one text sequence to every word in the other, and vice versa. Such alignment is soft using weighted average, where ideally large weights are associated with the words to be aligned.
-* The decomposition trick leads to a more desirable linear complexity than quadratic complexity when computing attention weights.
-* We can use pretrained word embedding as the input representation for downstream natural language processing task such as natural language inference.
+* O modelo de atenção decomposto consiste em três etapas para prever as relações lógicas entre premissas e hipóteses: atendimento, comparação e agregação.
+* Com mecanismos de atenção, podemos alinhar palavras em uma sequência de texto com todas as palavras na outra e vice-versa. Esse alinhamento é suave usando a média ponderada, em que, idealmente, grandes pesos são associados às palavras a serem alinhadas.
+* O truque da decomposição leva a uma complexidade linear mais desejável do que a complexidade quadrática ao calcular os pesos de atenção.
+* Podemos usar a incorporação de palavras pré-treinadas como a representação de entrada para tarefas de processamento de linguagem natural *downstream*, como inferência de linguagem natural.
 
 
-## Exercises
+## Exercícios
 
-1. Train the model with other combinations of hyperparameters. Can you get better accuracy on the test set?
-1. What are major drawbacks of the decomposable attention model for natural language inference?
-1. Suppose that we want to get the level of semantical similarity (e.g., a continuous value between $0$ and $1$) for any pair of sentences. How shall we collect and label the dataset? Can you design a model with attention mechanisms?
+1. Treine o modelo com outras combinações de hiperparâmetros. Você pode obter melhor precisão no conjunto de teste?
+1. Quais são as principais desvantagens do modelo de atenção decomponível para inferência de linguagem natural?
+1. Suponha que desejamos obter o nível de similaridade semântica (por exemplo, um valor contínuo entre $0$ e $1$) para qualquer par de sentenças. Como devemos coletar e rotular o conjunto de dados? Você pode projetar um modelo com mecanismos de atenção?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/395)
+[Discussõess](https://discuss.d2l.ai/t/395)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1530)
+[Discussõess](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjc0Njg5MSwtMTEyOTIwNDY5OSwtMj
-U2NDIwMjU2LDU3MjE3MjY2NiwtOTM0NTk2OTI1XX0=
+eyJoaXN0b3J5IjpbNzE3ODI1OCwtMTEyOTIwNDY5OSwtMjU2ND
+IwMjU2LDU3MjE3MjY2NiwtOTM0NTk2OTI1XX0=
 -->
