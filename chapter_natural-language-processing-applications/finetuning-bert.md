@@ -16,14 +16,14 @@ Durante o ajuste fino, as "mudanças mínimas de arquitetura" exigidas pelo BERT
 Durante o aprendizado supervisionado de uma aplicação *downstream*, os parâmetros das camadas extras são aprendidos do zero, enquanto todos os parâmetros no modelo BERT pré-treinado são ajustados.
 
 
-## Single Text Classification
+## Classificação de Texto Único
 
-*Single text classification* takes a single text sequence as the input and outputs its classification result.
-Besides sentiment analysis that we have studied in this chapter,
-the Corpus of Linguistic Acceptability (CoLA)
-is also a dataset for single text classification,
-judging whether a given sentence is grammatically acceptable or not :cite:`Warstadt.Singh.Bowman.2019`.
-For instance, "I should study." is acceptable but "I should studying." is not.
+* Classificação de texto único * pega uma única sequência de texto como entrada e produz seu resultado de classificação.
+Além da análise de sentimento que estudamos neste capítulo,
+o Corpus de Aceitabilidade Linguística (CoLA)
+também é um conjunto de dados para classificação de texto único,
+julgando se uma determinada frase é gramaticalmente aceitável ou não :cite:`Warstadt.Singh.Bowman.2019`.
+Por exemplo, "Eu deveria estudar." é aceitável, mas "Eu deveria estudando." não é.
 
 ![Fine-tuning BERT for single text classification applications, such as sentiment analysis and testing linguistic acceptability. Suppose that the input single text has six tokens.](../img/bert-one-seq.svg)
 :label:`fig_bert-one-seq`
@@ -167,6 +167,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzIwNzM4LC0zNzU5MTM4NjEsLTYzOD
-IxOTczMV19
+eyJoaXN0b3J5IjpbMTE2NzA0MDM5MSwtMzc1OTEzODYxLC02Mz
+gyMTk3MzFdfQ==
 -->
