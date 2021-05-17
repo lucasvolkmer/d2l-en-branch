@@ -83,7 +83,7 @@ Como outro aplicativo de nível de *token*, *responder a perguntas* reflete as c
 Por exemplo, o conjunto de dados de resposta a perguntas de Stanford (SQuAD v1.1) consiste na leitura de passagens e perguntas, em que a resposta a cada pergunta é apenas um segmento de texto (extensão de texto) da passagem sobre a qual a pergunta se refere cite:`Rajpurkar.Zhang.Lopyrev.ea.2016`.
 Para explicar, considere uma passagem "Alguns especialistas relatam que a eficácia de uma máscara é inconclusiva. No entanto, os fabricantes de máscaras insistem que seus produtos, como as máscaras respiratórias N95, podem proteger contra o vírus." e uma pergunta "Quem disse que as máscaras respiratórias N95 podem proteger contra o vírus?". A resposta deve ser o intervalo de texto "fabricantes de máscara" na passagem. Assim, o objetivo no SQuAD v1.1 é prever o início e o fim da extensão do texto na passagem dada um par de pergunta e passagem.
 
-![Fine-tuning BERT for question answering. Suppose that the input text pair has two and three tokens.](../img/bert-qa.svg)
+![Ajuste fino do BERT para resposta a perguntas. Suponha que o par de texto de entrada tenha dois e três *tokens*.](../img/bert-qa.svg)
 :label:`fig_bert-qa`
 
 To fine-tune BERT for question answering,
@@ -134,6 +134,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwOTA0NjIyNCwzMTQ1NzE2NjMsLTE4MD
-ExOTg2MiwtMzc1OTEzODYxLC02MzgyMTk3MzFdfQ==
+eyJoaXN0b3J5IjpbNDM5NDg4Mjk1LDMxNDU3MTY2MywtMTgwMT
+E5ODYyLC0zNzU5MTM4NjEsLTYzODIxOTczMV19
 -->
