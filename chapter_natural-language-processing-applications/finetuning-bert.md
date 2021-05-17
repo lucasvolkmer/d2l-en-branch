@@ -69,16 +69,11 @@ Entre as tarefas de marcação de texto, *marcação de classe gramatical* atrib
 Por exemplo, de acordo com o conjunto de *tags* Penn Treebank II, a frase "*John Smith 's car is new*" ("O carro de John Smith é novo") deve ser marcada como
 "NNP (substantivo, singular próprio) NNP POS (desinência possessiva) NN (substantivo, singular ou massa) VB (verbo, forma básica) JJ (adjetivo)".
 
-![Fine-tuning BERT for text tagging applications, such as part-of-speech tagging. Suppose that the input single text has six tokens.](../img/bert-tagging.svg)
+![Ajuste fino do BERT para aplicativos de marcação de texto, como marcação de classes gramaticais. Suponha que o texto único de entrada tenha seis *tokens*.](../img/bert-tagging.svg)
 :label:`fig_bert-tagging`
 
-Fine-tuning BERT for text tagging applications
-is illustrated in :numref:`fig_bert-tagging`.
-Comparing with :numref:`fig_bert-one-seq`,
-the only distinction lies in that
-in text tagging, the BERT representation of *every token* of the input text
-is fed into the same extra fully-connected layers to output the label of the token,
-such as a part-of-speech tag.
+O ajuste fino do BERT para aplicações de marcação de texto é ilustrado em :numref:`fig_bert-tagging`.
+Comparando com :numref:`fig_bert-one-seq`, a única distinção reside na marcação de texto, a representação BERT de *cada token* do texto de entrada é alimentado nas mesmas camadas extras totalmente conectadas para dar saída ao rótulo de o *token*, como uma *tag* de classe gramatical.
 
 
 
@@ -149,6 +144,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU5MjE5OTIzLC0zNzU5MTM4NjEsLTYzOD
-IxOTczMV19
+eyJoaXN0b3J5IjpbLTE4MDExOTg2MiwtMzc1OTEzODYxLC02Mz
+gyMTk3MzFdfQ==
 -->
