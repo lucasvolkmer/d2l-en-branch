@@ -9,23 +9,11 @@ Por um lado, na altura da sua proposta, o BERT melhorou o estado da arte em vár
 Por outro lado, conforme observado em :numref:`sec_bert-pretraining`, as duas versões do modelo BERT original vêm com 110 milhões e 340 milhões de parâmetros.
 Assim, quando há recursos computacionais suficientes, podemos considerar o ajuste fino do BERT para aplicativos de processamento de linguagem natural *downstream*.
 
-In the following,
-we generalize a subset of natural language processing applications
-as sequence-level and token-level.
-On the sequence level,
-we introduce how to transform the BERT representation of the text input
-to the output label
-in single text classification
-and text pair classification or regression.
-On the token level, we will briefly introduce new applications
-such as text tagging and question answering
-and shed light on how BERT can represent their inputs and get transformed into output labels.
-During fine-tuning,
-the "minimal architecture changes" required by BERT across different applications
-are the extra fully-connected layers.
-During supervised learning of a downstream application,
-parameters of the extra layers are learned from scratch while
-all the parameters in the pretrained BERT model are fine-tuned.
+A seguir, generalizamos um subconjunto de aplicações de processamento de linguagem natural como nível de sequência e nível de *token*.
+No nível da sequência, apresentamos como transformar a representação BERT da entrada de texto no rótulo de saída em classificação de texto único e classificação ou regressão de par de texto.
+No nível do *token*, apresentaremos brevemente novos aplicativos, como marcação de texto e resposta a perguntas, e esclareceremos como o BERT pode representar suas entradas e ser transformado em rótulos de saída.
+Durante o ajuste fino, as "mudanças mínimas de arquitetura" exigidas pelo BERT em diferentes aplicativos são as camadas extras totalmente conectadas.
+Durante o aprendizado supervisionado de uma aplicação *downstream*, os parâmetros das camadas extras são aprendidos do zero, enquanto todos os parâmetros no modelo BERT pré-treinado são ajustados.
 
 
 ## Single Text Classification
@@ -179,6 +167,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDQyNTA5OTcsLTM3NTkxMzg2MSwtNj
-M4MjE5NzMxXX0=
+eyJoaXN0b3J5IjpbMTgzMzIwNzM4LC0zNzU5MTM4NjEsLTYzOD
+IxOTczMV19
 -->
