@@ -1,27 +1,13 @@
 # Ajuste Fino de BERT para Aplicações de Nível de Sequência e de Token
 :label:`sec_finetuning-bert`
 
-In the previous sections of this chapter,
-we have designed different models for natural language processing applications,
-such as based on RNNs, CNNs, attention, and MLPs.
-These models are helpful when there is space or time constraint,
-however,
-crafting a specific model for every natural language processing task
-is practically infeasible.
-In :numref:`sec_bert`,
-we introduced a pretraining model, BERT,
-that requires minimal architecture changes
-for a wide range of natural language processing tasks.
-One one hand,
-at the time of its proposal,
-BERT improved the state of the art on various natural language processing tasks.
-On the other hand,
-as noted in :numref:`sec_bert-pretraining`,
-the two versions of the original BERT model
-come with 110 million and 340 million parameters.
-Thus, when there are sufficient computational resources,
-we may consider
-fine-tuning BERT for downstream natural language processing applications.
+Nas seções anteriores deste capítulo, projetamos diferentes modelos para aplicações de processamento de linguagem natural, como os baseados em RNNs, CNNs, atenção e MLPs.
+Esses modelos são úteis quando há restrição de espaço ou tempo,
+no entanto, elaborar um modelo específico para cada tarefa de processamento de linguagem natural é praticamente inviável.
+Em :numref:`sec_bert`, introduzimos um modelo de pré-treinamento, BERT, que requer mudanças mínimas de arquitetura para uma ampla gama de tarefas de processamento de linguagem natural.
+Por um lado, na altura da sua proposta, o BERT melhorou o estado da arte em várias tarefas de processamento de linguagem natural.
+Por outro lado, conforme observado em :numref:`sec_bert-pretraining`, as duas versões do modelo BERT original vêm com 110 milhões e 340 milhões de parâmetros.
+Assim, quando há recursos computacionais suficientes, podemos considerar o ajuste fino do BERT para aplicativos de processamento de linguagem natural *downstream*.
 
 In the following,
 we generalize a subset of natural language processing applications
@@ -193,5 +179,6 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NTkxMzg2MSwtNjM4MjE5NzMxXX0=
+eyJoaXN0b3J5IjpbLTE4NDQyNTA5OTcsLTM3NTkxMzg2MSwtNj
+M4MjE5NzMxXX0=
 -->
