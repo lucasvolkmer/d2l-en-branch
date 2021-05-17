@@ -86,40 +86,23 @@ Para explicar, considere uma passagem "Alguns especialistas relatam que a eficá
 ![Ajuste fino do BERT para resposta a perguntas. Suponha que o par de texto de entrada tenha dois e três *tokens*.](../img/bert-qa.svg)
 :label:`fig_bert-qa`
 
-To fine-tune BERT for question answering,
-the question and passage are packed as
-the first and second text sequence, respectively,
-in the input of BERT.
-To predict the position of the start of the text span,
-the same additional fully-connected layer will transform
-the BERT representation of any token from the passage of position $i$
-into a scalar score $s_i$.
-Such scores of all the passage tokens
-are further transformed by the softmax operation
-into a probability distribution,
-so that each token position $i$ in the passage is assigned
-a probability $p_i$ of being the start of the text span.
-Predicting the end of the text span
-is the same as above, except that
-parameters in its additional fully-connected layer
-are independent from those for predicting the start.
-When predicting the end,
-any passage token of position $i$
-is transformed by the same fully-connected layer
-into a scalar score $e_i$.
-:numref:`fig_bert-qa`
-depicts fine-tuning BERT for question answering.
+Para ajustar o BERT para responder às perguntas, a pergunta e a passagem são compactadas como a primeira e a segunda sequência de texto, respectivamente, na entrada do BERT.
+Para prever a posição do início do intervalo de texto, a mesma camada adicional totalmente conectada transformará a representação BERT de qualquer *token* da passagem da posição $i$ em uma pontuação escalar $s_i$.
+Essas pontuações de todas as fichas de passagem são posteriormente transformadas pela operação *softmax* em uma distribuição de probabilidade, de modo que cada posição de ficha $i$ na passagem recebe uma probabilidade $p_i$ de ser o início do período de texto.
+A previsão do final da extensão do texto é igual à anterior, exceto que os parâmetros em sua camada adicional totalmente conectada são independentes daqueles para a previsão do início.
+Ao prever o final, qualquer *token* de passagem da posição $i$ é transformado pela mesma camada totalmente conectada em uma pontuação escalar $e_i$.
+:numref:`fig_bert-qa` descreve o ajuste fino do BERT para responder a perguntas.
 
-For question answering,
-the supervised learning's training objective is as straightforward as
-maximizing the log-likelihoods of the ground-truth start and end positions.
-When predicting the span,
-we can compute the score $s_i + e_j$ for a valid span
-from position $i$ to position $j$ ($i \leq j$),
-and output the span with the highest score.
+Para responder a perguntas,
+o objetivo de treinamento da aprendizagem supervisionada é tão simples quanto
+maximizar as probabilidades-log das posições inicial e final de verdade.
+Ao prever a amplitude,
+podemos calcular a pontuação $s_i + e_j$ para um intervalo válido
+da posição $i$ para a posição $j$ ($i \leq j$),
+e produzir o intervalo com a pontuação mais alta.
 
 
-## Summary
+## Resumo
 
 * BERT requires minimal architecture changes (extra fully-connected layers) for sequence-level and token-level natural language processing applications, such as single text classification (e.g., sentiment analysis and testing linguistic acceptability), text pair classification or regression (e.g., natural language inference and semantic textual similarity), text tagging (e.g., part-of-speech tagging), and question answering.
 * During supervised learning of a downstream application, parameters of the extra layers are learned from scratch while all the parameters in the pretrained BERT model are fine-tuned.
@@ -134,6 +117,7 @@ and output the span with the highest score.
 
 [Discussions](https://discuss.d2l.ai/t/396)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM5NDg4Mjk1LDMxNDU3MTY2MywtMTgwMT
-E5ODYyLC0zNzU5MTM4NjEsLTYzODIxOTczMV19
+eyJoaXN0b3J5IjpbLTE2NTMyNjQ3MTMsNDM5NDg4Mjk1LDMxND
+U3MTY2MywtMTgwMTE5ODYyLC0zNzU5MTM4NjEsLTYzODIxOTcz
+MV19
 -->
