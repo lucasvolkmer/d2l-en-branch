@@ -270,8 +270,8 @@ class Aggregate(nn.Module):
 
 ### Juntando Tudo
 
-By putting the attending, comparing, and aggregating steps together,
-we define the decomposable attention model to jointly train these three steps.
+Ao reunir as etapas de atendimento, comparação e agregação,
+definimos o modelo de atenção decomposto para treinar conjuntamente essas três etapas.
 
 ```{.python .input}
 class DecomposableAttention(nn.Block):
@@ -315,15 +315,15 @@ class DecomposableAttention(nn.Module):
         return Y_hat
 ```
 
-## Training and Evaluating the Model
+## Treinamento e Avaliação do Modelo
 
-Now we will train and evaluate the defined decomposable attention model on the SNLI dataset.
-We begin by reading the dataset.
+Agora vamos treinar e avaliar o modelo de atenção decomposto definido no conjunto de dados SNLI.
+Começamos lendo o *dataset*.
 
 
-### Reading the dataset
+### Lendo o *Dataset*
 
-We download and read the SNLI dataset using the function defined in :numref:`sec_natural-language-inference-and-dataset`. The batch size and sequence length are set to $256$ and $50$, respectively.
+Baixamos e lemos o conjunto de dados SNLI usando a função definida em :numref:`sec_natural-language-inference-and-dataset`. O tamanho do lote e o comprimento da sequência são definidos em $256$ e $50$, respectivamente.
 
 ```{.python .input}
 #@tab all
@@ -331,7 +331,7 @@ batch_size, num_steps = 256, 50
 train_iter, test_iter, vocab = d2l.load_data_snli(batch_size, num_steps)
 ```
 
-### Creating the Model
+### Creando o Modelo
 
 We use the pretrained $100$-dimensional GloVe embedding to represent the input tokens.
 Thus, we predefine the dimension of vectors $\mathbf{a}_i$ and $\mathbf{b}_j$ in :eqref:`eq_nli_e` as $100$.
@@ -446,6 +446,6 @@ predict_snli(net, vocab, ['he', 'is', 'good', '.'], ['he', 'is', 'bad', '.'])
 [Discussions](https://discuss.d2l.ai/t/1530)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODg1OTc3NTIsLTExMjkyMDQ2OTksLT
+eyJoaXN0b3J5IjpbLTIwODc5OTQzMzQsLTExMjkyMDQ2OTksLT
 I1NjQyMDI1Niw1NzIxNzI2NjYsLTkzNDU5NjkyNV19
 -->
