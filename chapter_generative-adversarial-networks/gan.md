@@ -17,7 +17,7 @@ Em 2014, um artigo inovador apresentou Redes adversariais gerativas (GANs) :cite
 A arquitetura GAN é ilustrada em :numref:`fig_gan`.
 Como você pode ver, há duas peças na arquitetura GAN - primeiro, precisamos de um dispositivo (digamos, uma rede profunda, mas realmente pode ser qualquer coisa, como um mecanismo de renderização de jogo) que pode potencialmente ser capaz de gerar dados que parecem assim como a coisa real. Se estamos lidando com imagens, isso precisa gerar imagens. Se estamos lidando com a fala, ela precisa gerar sequências de áudio e assim por diante. Chamamos isso de rede do gerador. O segundo componente é a rede discriminadora. Ele tenta distinguir dados falsos e reais uns dos outros. Ambas as redes competem entre si. A rede do gerador tenta enganar a rede do discriminador. Nesse ponto, a rede discriminadora se adapta aos novos dados falsos. Essas informações, por sua vez, são utilizadas para melhorar a rede do gerador, e assim por diante.
 
-The discriminator is a binary classifier to distinguish if the input $x$ is real (from real data) or fake (from the generator). Typically, the discriminator outputs a scalar prediction $o\in\mathbb R$ for input $\mathbf x$, such as using a dense layer with hidden size 1, and then applies sigmoid function to obtain the predicted probability $D(\mathbf x) = 1/(1+e^{-o})$. Assume the label $y$ for the true data is $1$ and $0$ for the fake data. We train the discriminator to minimize the cross-entropy loss, *i.e.*,
+O discriminador é um classificador binário para distinguir se a entrada $x$ é real (dos dados reais) ou falsa (do gerador). Normalmente, o discriminador gera uma previsão escalar $o\in\mathbb R$ para a entrada $\mathbf x$, como usar uma camada densa com tamanho oculto 1 e, em seguida, aplicar a função sigmóide para obter a probabilidade prevista $D(\mathbf x) = 1/(1+e^{-o})$. Suponha que o rótulo $y$ para os dados verdadeiros seja $1$ e $0$ para os dados falsos. Treinamos o discriminador para minimizar a perda de entropia cruzada, *ou seja*,
 
 $$ \min_D \{ - y \log D(\mathbf x) - (1-y)\log(1-D(\mathbf x)) \},$$
 
@@ -303,6 +303,6 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 [Discussions](https://discuss.d2l.ai/t/1082)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzA2ODA4MzQsLTE1MTQ2OTY5MywyMT
-A1NDc1NjcwXX0=
+eyJoaXN0b3J5IjpbMjMzNTExNzUsLTE1MTQ2OTY5MywyMTA1ND
+c1NjcwXX0=
 -->
