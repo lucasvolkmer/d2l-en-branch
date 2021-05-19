@@ -70,7 +70,7 @@ b = d2l.tensor([1, 2])
 data = d2l.matmul(X, A) + b
 ```
 
-Let us see what we got. This should be a Gaussian shifted in some rather arbitrary way with mean $b$ and covariance matrix $A^TA$.
+Vamos ver o que temos. Esta deve ser uma Gaussiana deslocada de alguma forma bastante arbitrária com média $b$ e matriz de covariância $A^TA$.
 
 ```{.python .input}
 #@tab all
@@ -85,9 +85,9 @@ batch_size = 8
 data_iter = d2l.load_array((data,), batch_size)
 ```
 
-## Generator
+## Gerador
 
-Our generator network will be the simplest network possible - a single layer linear model. This is since we will be driving that linear network with a Gaussian data generator. Hence, it literally only needs to learn the parameters to fake things perfectly.
+Nossa rede de geradores será a rede mais simples possível - um modelo linear de camada única. Isso porque estaremos conduzindo essa rede linear com um gerador de dados Gaussiano. Portanto, ele literalmente só precisa aprender os parâmetros para falsificar as coisas perfeitamente.
 
 ```{.python .input}
 net_G = nn.Sequential()
@@ -99,9 +99,9 @@ net_G.add(nn.Dense(2))
 net_G = nn.Sequential(nn.Linear(2, 2))
 ```
 
-## Discriminator
+## Discriminador
 
-For the discriminator we will be a bit more discriminating: we will use an MLP with 3 layers to make things a bit more interesting.
+Para o discriminador, seremos um pouco mais discriminativos: usaremos um MLP com 3 camadas para tornar as coisas um pouco mais interessantes.
 
 ```{.python .input}
 net_D = nn.Sequential()
@@ -303,6 +303,6 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 [Discussions](https://discuss.d2l.ai/t/1082)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA1MjIzMzUwLDIzMzUxMTc1LC0xNTE0Nj
-k2OTMsMjEwNTQ3NTY3MF19
+eyJoaXN0b3J5IjpbMjA5MzQxNTYwMSwyMzM1MTE3NSwtMTUxND
+Y5NjkzLDIxMDU0NzU2NzBdfQ==
 -->
