@@ -338,26 +338,27 @@ net.output.initialize(ctx=devices)
 net = BERTClassifier(bert)
 ```
 
-Recall that
-in :numref:`sec_bert`
-both the `MaskLM` class and the `NextSentencePred` class
-have parameters in their employed MLPs.
-These parameters are part of those in the pretrained BERT model
-`bert`, and thus part of parameters in `net`.
-However, such parameters are only for computing
-the masked language modeling loss
-and the next sentence prediction loss
-during pretraining.
-These two loss functions are irrelevant to fine-tuning downstream applications,
-thus the parameters of the employed MLPs in 
-`MaskLM` and `NextSentencePred` are not updated (staled) when BERT is fine-tuned.
 
-To allow parameters with stale gradients,
-the flag `ignore_stale_grad=True` is set in the `step` function of `d2l.train_batch_ch13`.
-We use this function to train and evaluate the model `net` using the training set
-(`train_iter`) and the testing set (`test_iter`) of SNLI.
-Due to the limited computational resources, the training and testing accuracy
-can be further improved: we leave its discussions in the exercises.
+Lembre-se disso
+in :numref:`sec_bert`
+ambas as classes `MaskLM` e` NextSentencePred`
+têm parâmetros em suas MLPs empregadas.
+Esses parâmetros são parte daqueles no modelo BERT pré-treinado
+`bert`, e, portanto, parte dos parâmetros em `net`.
+No entanto, esses parâmetros são apenas para computação
+a perda de modelagem de linguagem mascarada
+e a perda de previsão da próxima frase
+durante o pré-treinamento.
+Essas duas funções de perda são irrelevantes para o ajuste fino de aplicativos *downstream*,
+assim, os parâmetros das MLPs empregadas em
+`MaskLM` e `NextSentencePred` não são atualizados (obsoletos) quando o BERT é ajustado.
+
+Para permitir parâmetros com gradientes obsoletos,
+o sinalizador `ignore_stale_grad = True` é definido na função `step` de `d2l.train_batch_ch13`.
+Usamos esta função para treinar e avaliar o modelo `net` usando o conjunto de treinamento
+(`train_iter`) e o conjunto de teste (`test_iter`) de SNLI.
+Devido aos recursos computacionais limitados, a precisão de treinamento e teste
+pode ser melhorado ainda mais: deixamos suas discussões nos exercícios.
 
 ```{.python .input}
 lr, num_epochs = 1e-4, 5
@@ -375,13 +376,13 @@ loss = nn.CrossEntropyLoss(reduction='none')
 d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 ```
 
-## Summary
+## Resumo
 
-* We can fine-tune the pretrained BERT model for downstream applications, such as natural language inference on the SNLI dataset.
-* During fine-tuning, the BERT model becomes part of the model for the downstream application. Parameters that are only related to pretraining loss will not be updated during fine-tuning. 
+* Podemos ajustar o modelo BERT pré-treinado para aplicativos *downstream*, como inferência de linguagem natural no conjunto de dados SNLI.
+* Durante o ajuste fino, o modelo BERT torna-se parte do modelo para a aplicação *downstream*. Os parâmetros relacionados apenas à perda de pré-treinamento não serão atualizados durante o ajuste fino.
 
 
-## Exercises
+## Exercícios
 
 1. Fine-tune a much larger pretrained BERT model that is about as big as the original BERT base model if your computational resource allows. Set arguments in the `load_pretrained_model` function as: replacing 'bert.small' with 'bert.base', increasing values of `num_hiddens=256`, `ffn_num_hiddens=512`, `num_heads=4`, `num_layers=2` to `768`, `3072`, `12`, `12`, respectively. By increasing fine-tuning epochs (and possibly tuning other hyperparameters), can you get a testing accuracy higher than 0.86?
 1. How to truncate a pair of sequences according to their ratio of length? Compare this pair truncation method and the one used in the `SNLIBERTDataset` class. What are their pros and cons?
@@ -394,6 +395,6 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MjgyNDI3NywtMzEwNjk1NTQ5LC0xMz
-Q1MjA0Mjc1LC0yMDA3MTU1MzUxXX0=
+eyJoaXN0b3J5IjpbNDM0MTM3NzA3LC0zMTA2OTU1NDksLTEzND
+UyMDQyNzUsLTIwMDcxNTUzNTFdfQ==
 -->
