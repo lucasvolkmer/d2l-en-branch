@@ -21,20 +21,20 @@ O discriminador é um classificador binário para distinguir se a entrada $x$ é
 
 $$ \min_D \{ - y \log D(\mathbf x) - (1-y)\log(1-D(\mathbf x)) \},$$
 
-For the generator, it first draws some parameter $\mathbf z\in\mathbb R^d$ from a source of randomness, *e.g.*, a normal distribution $\mathbf z \sim \mathcal{N} (0, 1)$. We often call $\mathbf z$ as the latent variable.
-It then applies a function to generate $\mathbf x'=G(\mathbf z)$. The goal of the generator is to fool the discriminator to classify $\mathbf x'=G(\mathbf z)$ as true data, *i.e.*, we want $D( G(\mathbf z)) \approx 1$.
-In other words, for a given discriminator $D$, we update the parameters of the generator $G$ to maximize the cross-entropy loss when $y=0$, *i.e.*,
+Para o gerador, ele primeiro desenha algum parâmetro $\mathbf z\in\mathbb R^d$ de uma fonte de aleatoriedade, *por exemplo*, uma distribuição normal $\mathbf z \sim \mathcal{N} (0, 1)$. Frequentemente chamamos $\mathbf z$ como a variável latente.
+Em seguida, aplica uma função para gerar $\mathbf x'=G(\mathbf z)$.  O objetivo do gerador é enganar o discriminador para classificar $\mathbf x'=G(\mathbf z)$ como dados verdadeiros, *ou seja*, queremos $D( G(\mathbf z)) \approx 1$.
+Em outras palavras, para um determinado discriminador $D$, atualizamos os parâmetros do gerador $G$ para maximizar a perda de entropia cruzada quando $y=0$, *ou seja*,
 
 $$ \max_G \{ - (1-y) \log(1-D(G(\mathbf z))) \} = \max_G \{ - \log(1-D(G(\mathbf z))) \}.$$
 
-If the generator does a perfect job, then $D(\mathbf x')\approx 1$ so the above loss near 0, which results the gradients are too small to make a good progress for the discriminator. So commonly we minimize the following loss:
+Se o gerador fizer um trabalho perfeito, então $D(\mathbf x')\approx 1$ então a perda acima próxima a 0, o que resulta em gradientes muito pequenos para fazer um bom progresso para o discriminador. Então, comumente, minimizamos a seguinte perda:
 
 $$ \min_G \{ - y \log(D(G(\mathbf z))) \} = \min_G \{ - \log(D(G(\mathbf z))) \}, $$
 
-which is just feed $\mathbf x'=G(\mathbf z)$ into the discriminator but giving label $y=1$.
+que é apenas alimentar $\mathbf x'=G(\mathbf z)$ no discriminador, mas dando o rótulo $y=1$.
 
 
-To sum up, $D$ and $G$ are playing a "minimax" game with the comprehensive objective function:
+Resumindo, $D$ e $G$ estão jogando um jogo "minimax" com a função objetivo abrangente:
 
 $$min_D max_G \{ -E_{x \sim \text{Data}} log D(\mathbf x) - E_{z \sim \text{Noise}} log(1 - D(G(\mathbf z))) \}.$$
 
@@ -303,6 +303,6 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 [Discussions](https://discuss.d2l.ai/t/1082)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMzNTExNzUsLTE1MTQ2OTY5MywyMTA1ND
-c1NjcwXX0=
+eyJoaXN0b3J5IjpbLTE5Nzg0NjcyNzIsMjMzNTExNzUsLTE1MT
+Q2OTY5MywyMTA1NDc1NjcwXX0=
 -->
