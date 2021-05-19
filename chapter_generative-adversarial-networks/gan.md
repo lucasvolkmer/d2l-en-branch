@@ -60,7 +60,7 @@ from torch import nn
 
 ## Gerando Alguns Dados "Reais"
 
-Since this is going to be the world's lamest example, we simply generate data drawn from a Gaussian.
+Como esse será o exemplo mais bobo do mundo, simplesmente geramos dados extraídos de uma gaussiana.
 
 ```{.python .input}
 #@tab all
@@ -303,6 +303,6 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 [Discussions](https://discuss.d2l.ai/t/1082)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTY4NDEzNDYsMjMzNTExNzUsLTE1MT
-Q2OTY5MywyMTA1NDc1NjcwXX0=
+eyJoaXN0b3J5IjpbMzA1MjIzMzUwLDIzMzUxMTc1LC0xNTE0Nj
+k2OTMsMjEwNTQ3NTY3MF19
 -->
