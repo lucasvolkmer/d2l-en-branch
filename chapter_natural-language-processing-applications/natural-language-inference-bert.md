@@ -282,15 +282,15 @@ test_iter = torch.utils.data.DataLoader(test_set, batch_size,
 
 ## Ajuste Fino do BERT
 
-As :numref:`fig_bert-two-seqs` indicates,
-fine-tuning BERT for natural language inference
-requires only an extra MLP consisting of two fully-connected layers
-(see `self.hidden` and `self.output` in the following `BERTClassifier` class).
-This MLP transforms the
-BERT representation of the special “&lt;cls&gt;” token,
-which encodes the information of both the premise and the hypothesis,
-into three outputs of natural language inference:
-entailment, contradiction, and neutral.
+Como :numref:`fig_bert-two-seqs` indica,
+ajuste fino do BERT para inferência de linguagem natural
+requer apenas um MLP extra que consiste em duas camadas totalmente conectadas
+(veja `self.hidden` e` self.output` na seguinte classe `BERTClassifier`).
+Este MLP transforma o
+Representação de BERT do *token* especial “&lt;cls&gt;”,
+que codifica as informações tanto da premissa quanto da hipótese,
+em três resultados de inferência de linguagem natural:
+implicação, contradição e neutro.
 
 ```{.python .input}
 class BERTClassifier(nn.Block):
@@ -394,6 +394,6 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDQ1Njg0NTgsLTEzNDUyMDQyNzUsLT
-IwMDcxNTUzNTFdfQ==
+eyJoaXN0b3J5IjpbLTMxMDY5NTU0OSwtMTM0NTIwNDI3NSwtMj
+AwNzE1NTM1MV19
 -->
