@@ -126,19 +126,19 @@ bert, vocab = load_pretrained_model(
 
 ## O Conjunto de Dados para Ajuste Fino do BERT
 
-For the downstream task natural language inference on the SNLI dataset,
-we define a customized dataset class `SNLIBERTDataset`.
-In each example,
-the premise and hypothesis form a pair of text sequence
-and is packed into one BERT input sequence as depicted in :numref:`fig_bert-two-seqs`.
-Recall :numref:`subsec_bert_input_rep` that segment IDs
-are used to distinguish the premise and the hypothesis in a BERT input sequence.
-With the predefined maximum length of a BERT input sequence (`max_len`),
-the last token of the longer of the input text pair keeps getting removed until
-`max_len` is met.
-To accelerate generation of the SNLI dataset
-for fine-tuning BERT,
-we use 4 worker processes to generate training or testing examples in parallel.
+Para a inferência de linguagem natural da tarefa *downstream* no conjunto de dados SNLI,
+definimos uma classe de conjunto de dados customizada `SNLIBERTDataset`.
+Em cada exemplo,
+a premissa e a hipótese formam um par de sequência de texto
+e são compactados em uma sequência de entrada de BERT conforme descrito em :numref:`fig_bert-two-seqs`.
+Lembre-se :numref:`subsec_bert_input_rep` que IDs de segmento
+são usados para distinguir a premissa e a hipótese em uma sequência de entrada do BERT.
+Com o comprimento máximo predefinido de uma sequência de entrada de BERT (`max_len`),
+o último *token* do mais longo do par de texto de entrada continua sendo removido até
+`max_len` é atendido.
+Para acelerar a geração do conjunto de dados SNLI
+para o ajuste fino de BERT,
+usamos 4 processos de trabalho para gerar exemplos de treinamento ou teste em paralelo.
 
 ```{.python .input}
 class SNLIBERTDataset(gluon.data.Dataset):
@@ -394,6 +394,6 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNDI3MDQwLC0xMzQ1MjA0Mjc1LC0yMD
+eyJoaXN0b3J5IjpbMzcxMzE4NjgxLC0xMzQ1MjA0Mjc1LC0yMD
 A3MTU1MzUxXX0=
 -->
