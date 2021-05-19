@@ -436,3 +436,6 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDI5NzMyNzc2XX0=
+-->
