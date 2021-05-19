@@ -40,7 +40,7 @@ $$min_D max_G \{ -E_{x \sim \text{Data}} log D(\mathbf x) - E_{z \sim \text{Nois
 
 
 
-Many of the GANs applications are in the context of images. As a demonstration purpose, we are going to content ourselves with fitting a much simpler distribution first. We will illustrate what happens if we use GANs to build the world's most inefficient estimator of parameters for a Gaussian. Let us get started.
+Muitos dos aplicativos GANs estão no contexto de imagens. Como demonstração, vamos nos contentar em ajustar primeiro uma distribuição muito mais simples. Ilustraremos o que acontece se usarmos GANs para construir o estimador de parâmetros mais ineficiente do mundo para um gaussiano. Vamos começar.
 
 ```{.python .input}
 %matplotlib inline
@@ -303,6 +303,6 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 [Discussions](https://discuss.d2l.ai/t/1082)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Nzg0NjcyNzIsMjMzNTExNzUsLTE1MT
+eyJoaXN0b3J5IjpbLTEzNDMzNDUxNjYsMjMzNTExNzUsLTE1MT
 Q2OTY5MywyMTA1NDc1NjcwXX0=
 -->
