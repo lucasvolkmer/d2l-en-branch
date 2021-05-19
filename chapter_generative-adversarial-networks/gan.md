@@ -1,4 +1,4 @@
-# Generative Adversarial Networks
+# GenerativeRedes Adversarial Networkis Generativas
 :label:`sec_basic_gan`
 
 Throughout most of this book, we have talked about how to make predictions. In some form or another, we used deep neural networks learned mappings from data examples to labels. This kind of learning is called discriminative learning, as in, we'd like to be able to discriminate between photos cats and photos of dogs. Classifiers and regressors are both examples of discriminative learning. And neural networks trained by backpropagation have upended everything we thought we knew about discriminative learning on large complicated datasets. Classification accuracies on high-res images has gone from useless to human-level (with some caveats) in just 5-6 years. We will spare you another spiel about all the other discriminative tasks where deep neural networks do astoundingly well.
@@ -302,3 +302,6 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1082)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjEwNTQ3NTY3MF19
+-->
