@@ -118,9 +118,9 @@ net_D = nn.Sequential(
     nn.Linear(3, 1))
 ```
 
-## Training
+## Treinamento
 
-First we define a function to update the discriminator.
+Primeiro, definimos uma função para atualizar o discriminador.
 
 ```{.python .input}
 #@save
@@ -303,6 +303,6 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 [Discussions](https://discuss.d2l.ai/t/1082)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MzQxNTYwMSwyMzM1MTE3NSwtMTUxND
+eyJoaXN0b3J5IjpbLTE3NDg3NDg5OCwyMzM1MTE3NSwtMTUxND
 Y5NjkzLDIxMDU0NzU2NzBdfQ==
 -->
