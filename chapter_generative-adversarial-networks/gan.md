@@ -287,22 +287,22 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 
 ## Resumo
 
-* Generative adversarial networks (GANs) composes of two deep networks, the generator and the discriminator.
-* The generator generates the image as much closer to the true image as possible to fool the discriminator, via maximizing the cross-entropy loss, *i.e.*, $\max \log(D(\mathbf{x'}))$.
-* The discriminator tries to distinguish the generated images from the true images, via minimizing the cross-entropy loss, *i.e.*, $\min - y \log D(\mathbf{x}) - (1-y)\log(1-D(\mathbf{x}))$.
+* Redes adversárias gerativas (GANs) são compostas por duas redes profundas, a geradora e a discriminadora.
+* O gerador gera a imagem o mais próximo possível da imagem verdadeira para enganar o discriminador, maximizando a perda de entropia cruzada, *ou seja* $\max \log(D(\mathbf{x'}))$.
+O discriminador tenta distinguir as imagens geradas das imagens verdadeiras, minimizando a perda de entropia cruzada, *ou seja*, $\min - y \log D(\mathbf{x}) - (1-y)\log(1-D(\mathbf{x}))$.
 
-## Exercises
+## Exercícios
 
-* Does an equilibrium exist where the generator wins, *i.e.* the discriminator ends up unable to distinguish the two distributions on finite samples?
+* Existe um equilíbrio onde o gerador vence, *ou seja* o discriminador acaba incapaz de distinguir as duas distribuições em amostras finitas?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/408)
+[Discussões](https://discuss.d2l.ai/t/408)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1082)
+[Discussões](https://discuss.d2l.ai/t/1082)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMTI0MzUzMywtMTc0ODc0ODk4LDIzMz
-UxMTc1LC0xNTE0Njk2OTMsMjEwNTQ3NTY3MF19
+eyJoaXN0b3J5IjpbLTEyMDg0NzMzMjEsLTE3NDg3NDg5OCwyMz
+M1MTE3NSwtMTUxNDY5NjkzLDIxMDU0NzU2NzBdfQ==
 -->
