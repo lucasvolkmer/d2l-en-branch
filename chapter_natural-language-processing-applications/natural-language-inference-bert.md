@@ -321,12 +321,12 @@ class BERTClassifier(nn.Module):
         return self.output(self.hidden(encoded_X[:, 0, :]))
 ```
 
-In the following,
-the pretrained BERT model `bert` is fed into the `BERTClassifier` instance `net` for
-the downstream application.
-In common implementations of BERT fine-tuning,
-only the parameters of the output layer of the additional MLP (`net.output`) will be learned from scratch.
-All the parameters of the pretrained BERT encoder (`net.encoder`) and the hidden layer of the additional MLP (`net.hidden`) will be fine-tuned.
+Na sequência,
+o modelo BERT pré-treinado `bert` é alimentado na instância` BERTClassifier` `net` para
+a aplicação *downstream*.
+Em implementações comuns de ajuste fino de BERT,
+apenas os parâmetros da camada de saída do MLP adicional (`net.output`) serão aprendidos do zero.
+Todos os parâmetros do codificador BERT pré-treinado (`net.encoder`) e a camada oculta do MLP adicional (`net.hidden`) serão ajustados.
 
 ```{.python .input}
 net = BERTClassifier(bert)
@@ -394,6 +394,6 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMDY5NTU0OSwtMTM0NTIwNDI3NSwtMj
-AwNzE1NTM1MV19
+eyJoaXN0b3J5IjpbLTc3MjgyNDI3NywtMzEwNjk1NTQ5LC0xMz
+Q1MjA0Mjc1LC0yMDA3MTU1MzUxXX0=
 -->
