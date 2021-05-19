@@ -1,4 +1,4 @@
-# GenerativeRedes Adversarial Networkis Generativas
+# Redes Adversariais Generativas
 :label:`sec_basic_gan`
 
 
@@ -14,9 +14,8 @@ Em 2014, um artigo inovador apresentou Redes adversariais gerativas (GANs) :cite
 :label:`fig_gan`
 
 
-The GAN architecture is illustrated in :numref:`fig_gan`.
-As you can see, there are two pieces in GAN architecture - first off, we need a device (say, a deep network but it really could be anything, such as a game rendering engine) that might potentially be able to generate data that looks just like the real thing. If we are dealing with images, this needs to generate images. If we are dealing with speech, it needs to generate audio sequences, and so on. We call this the generator network. The second component is the discriminator network. It attempts to distinguish fake and real data from each other. Both networks are in competition with each other. The generator network attempts to fool the discriminator network. At that point, the discriminator network adapts to the new fake data. This information, in turn is used to improve the generator network, and so on.
-
+A arquitetura GAN é ilustrada em :numref:`fig_gan`.
+Como você pode ver, há duas peças na arquitetura GAN - primeiro, precisamos de um dispositivo (digamos, uma rede profunda, mas realmente pode ser qualquer coisa, como um mecanismo de renderização de jogo) que pode potencialmente ser capaz de gerar dados que parecem assim como a coisa real. Se estamos lidando com imagens, isso precisa gerar imagens. Se estamos lidando com a fala, ela precisa gerar sequências de áudio e assim por diante. Chamamos isso de rede do gerador. O segundo componente é a rede discriminadora. Ele tenta distinguir dados falsos e reais uns dos outros. Ambas as redes competem entre si. A rede do gerador tenta enganar a rede do discriminador. Nesse ponto, a rede discriminadora se adapta aos novos dados falsos. Essas informações, por sua vez, são utilizadas para melhorar a rede do gerador, e assim por diante.
 
 The discriminator is a binary classifier to distinguish if the input $x$ is real (from real data) or fake (from the generator). Typically, the discriminator outputs a scalar prediction $o\in\mathbb R$ for input $\mathbf x$, such as using a dense layer with hidden size 1, and then applies sigmoid function to obtain the predicted probability $D(\mathbf x) = 1/(1+e^{-o})$. Assume the label $y$ for the true data is $1$ and $0$ for the fake data. We train the discriminator to minimize the cross-entropy loss, *i.e.*,
 
@@ -304,6 +303,6 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 [Discussions](https://discuss.d2l.ai/t/1082)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjM2Mzk5NTIsLTE1MTQ2OTY5MywyMT
+eyJoaXN0b3J5IjpbLTEzNzA2ODA4MzQsLTE1MTQ2OTY5MywyMT
 A1NDc1NjcwXX0=
 -->
