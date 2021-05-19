@@ -247,11 +247,11 @@ class SNLIBERTDataset(torch.utils.data.Dataset):
         return len(self.all_token_ids)
 ```
 
-After downloading the SNLI dataset,
-we generate training and testing examples
-by instantiating the `SNLIBERTDataset` class.
-Such examples will be read in minibatches during training and testing
-of natural language inference.
+Depois de baixar o conjunto de dados SNLI,
+geramos exemplos de treinamento e teste
+instanciando a classe `SNLIBERTDataset`.
+Esses exemplos serão lidos em minibatches durante o treinamento e teste
+de inferência de linguagem natural.
 
 ```{.python .input}
 # Reduce `batch_size` if there is an out of memory error. In the original BERT
@@ -280,7 +280,7 @@ test_iter = torch.utils.data.DataLoader(test_set, batch_size,
                                   num_workers=num_workers)
 ```
 
-## Fine-Tuning BERT
+## Ajuste Fino do BERT
 
 As :numref:`fig_bert-two-seqs` indicates,
 fine-tuning BERT for natural language inference
@@ -394,6 +394,6 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcxMzE4NjgxLC0xMzQ1MjA0Mjc1LC0yMD
-A3MTU1MzUxXX0=
+eyJoaXN0b3J5IjpbLTE4NDQ1Njg0NTgsLTEzNDUyMDQyNzUsLT
+IwMDcxNTUzNTFdfQ==
 -->
