@@ -44,15 +44,15 @@ import os
 
 ## Carregando o BERT Pré-treinado
 
-We have explained how to pretrain BERT on the WikiText-2 dataset in
-:numref:`sec_bert-dataset` and :numref:`sec_bert-pretraining`
-(note that the original BERT model is pretrained on much bigger corpora).
-As discussed in :numref:`sec_bert-pretraining`,
-the original BERT model has hundreds of millions of parameters.
-In the following,
-we provide two versions of pretrained BERT:
-"bert.base" is about as big as the original BERT base model that requires a lot of computational resources to fine-tune,
-while "bert.small" is a small version to facilitate demonstration.
+Explicamos como pré-treinar BERT no conjunto de dados WikiText-2 em
+:numref:`sec_bert-dataset` e :numref:`sec_bert-pretraining`
+(observe que o modelo BERT original é pré-treinado em corpora muito maiores).
+Conforme discutido em :numref:`sec_bert-pretraining`,
+o modelo BERT original tem centenas de milhões de parâmetros.
+Na sequência,
+nós fornecemos duas versões de BERT pré-treinados:
+"bert.base" é quase tão grande quanto o modelo de base BERT original, que requer muitos recursos computacionais para o ajuste fino,
+enquanto "bert.small" é uma versão pequena para facilitar a demonstração.
 
 ```{.python .input}
 d2l.DATA_HUB['bert.base'] = (d2l.DATA_URL + 'bert.base.zip',
@@ -69,9 +69,9 @@ d2l.DATA_HUB['bert.small'] = (d2l.DATA_URL + 'bert.small.torch.zip',
                               'c72329e68a732bef0452e4b96a1c341c8910f81f')
 ```
 
-Either pretrained BERT model contains a "vocab.json" file that defines the vocabulary set
-and a "pretrained.params" file of the pretrained parameters.
-We implement the following `load_pretrained_model` function to load pretrained BERT parameters.
+Qualquer um dos modelos BERT pré-treinados contém um arquivo "vocab.json" que define o conjunto de vocabulário
+e um arquivo "pretrained.params" dos parâmetros pré-treinados.
+Implementamos a seguinte função `load_pretrained_model` para carregar os parâmetros BERT pré-treinados.
 
 ```{.python .input}
 def load_pretrained_model(pretrained_model, num_hiddens, ffn_num_hiddens,
@@ -394,6 +394,6 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDE5ODYxMCwtMTM0NTIwNDI3NSwtMj
-AwNzE1NTM1MV19
+eyJoaXN0b3J5IjpbMzI5MzczODYzLC0xMzQ1MjA0Mjc1LC0yMD
+A3MTU1MzUxXX0=
 -->
