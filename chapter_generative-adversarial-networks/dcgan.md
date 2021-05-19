@@ -1,4 +1,4 @@
-# Deep Convolutional Generative Adversarial Networks
+# Redes Adversariais Gerativas Convolucionais Profundas
 :label:`sec_dcgan`
 
 In :numref:`sec_basic_gan`, we introduced the basic ideas behind how GANs work. We showed that they can draw samples from some simple, easy-to-sample distribution, like a uniform or normal distribution, and transform them into samples that appear to match the distribution of some dataset. And while our example of matching a 2D Gaussian distribution got the point across, it is not especially exciting.
@@ -437,5 +437,5 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI5NzMyNzc2XX0=
+eyJoaXN0b3J5IjpbMTQyOTk3MTUyMV19
 -->
