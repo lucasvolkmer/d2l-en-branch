@@ -16,10 +16,10 @@ conforme ilustrado em :numref:`fig_nlp-map-nli-bert`.
 ![Esta seção alimenta BERT pré-treinado para uma arquitetura baseada em MLP para inferência de linguagem natural.](../img/nlp-map-nli-bert.svg)
 :label:`fig_nlp-map-nli-bert`
 
-In this section,
-we will download a pretrained small version of BERT,
-then fine-tune it
-for natural language inference on the SNLI dataset.
+Nesta secção,
+vamos baixar uma versão pequena pré-treinada de BERT,
+então ajuste-o
+para inferência de linguagem natural no conjunto de dados SNLI.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -394,5 +394,6 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MjU4MzkyOSwtMjAwNzE1NTM1MV19
+eyJoaXN0b3J5IjpbLTEzNDUyMDQyNzUsLTIwMDcxNTUzNTFdfQ
+==
 -->
