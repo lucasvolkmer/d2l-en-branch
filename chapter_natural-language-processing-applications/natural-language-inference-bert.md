@@ -384,17 +384,17 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 
 ## Exercícios
 
-1. Fine-tune a much larger pretrained BERT model that is about as big as the original BERT base model if your computational resource allows. Set arguments in the `load_pretrained_model` function as: replacing 'bert.small' with 'bert.base', increasing values of `num_hiddens=256`, `ffn_num_hiddens=512`, `num_heads=4`, `num_layers=2` to `768`, `3072`, `12`, `12`, respectively. By increasing fine-tuning epochs (and possibly tuning other hyperparameters), can you get a testing accuracy higher than 0.86?
-1. How to truncate a pair of sequences according to their ratio of length? Compare this pair truncation method and the one used in the `SNLIBERTDataset` class. What are their pros and cons?
+1. Faça o ajuste fino de um modelo de BERT pré-treinado muito maior que é quase tão grande quanto o modelo de base de BERT original se seu recurso computacional permitir. Defina os argumentos na função `load_pretrained_model` como: substituindo 'bert.small' por 'bert.base', aumentando os valores de `num_hiddens = 256`, `ffn_num_hiddens = 512`, `num_heads = 4`, `num_layers = 2` para `768`, `3072`, `12`, `12`, respectivamente. Aumentando os períodos de ajuste fino (e possivelmente ajustando outros hiperparâmetros), você pode obter uma precisão de teste superior a 0,86?
+1. Como truncar um par de sequências de acordo com sua proporção de comprimento? Compare este método de truncamento de par e aquele usado na classe `SNLIBERTDataset`. Quais são seus prós e contras?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/397)
+[Discussões](https://discuss.d2l.ai/t/397)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1526)
+[Discussões](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM0MTM3NzA3LC0zMTA2OTU1NDksLTEzND
-UyMDQyNzUsLTIwMDcxNTUzNTFdfQ==
+eyJoaXN0b3J5IjpbMTE3NzkxMzQyNywtMzEwNjk1NTQ5LC0xMz
+Q1MjA0Mjc1LC0yMDA3MTU1MzUxXX0=
 -->
