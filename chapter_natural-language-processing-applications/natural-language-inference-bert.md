@@ -2,18 +2,18 @@
 :label:`sec_natural-language-inference-bert`
 
 
-In earlier sections of this chapter,
-we have designed an attention-based architecture
-(in :numref:`sec_natural-language-inference-attention`)
-for the natural language inference task
-on the SNLI dataset (as described in :numref:`sec_natural-language-inference-and-dataset`).
-Now we revisit this task by fine-tuning BERT.
-As discussed in :numref:`sec_finetuning-bert`,
-natural language inference is a sequence-level text pair classification problem,
-and fine-tuning BERT only requires an additional MLP-based architecture,
-as illustrated in :numref:`fig_nlp-map-nli-bert`.
+Nas seções anteriores deste capítulo,
+nós projetamos uma arquitetura baseada na atenção
+(em :numref:`sec_natural-language-inference-attention`)
+para a tarefa de inferência de linguagem natural
+no conjunto de dados SNLI (conforme descrito em :numref:`sec_natural-language-inference-and-dataset`).
+Agora, revisitamos essa tarefa fazendo o ajuste fino do BERT.
+Conforme discutido em :numref:`sec_finetuning-bert`,
+a inferência de linguagem natural é um problema de classificação de pares de texto em nível de sequência,
+e o ajuste fino de BERT requer apenas uma arquitetura adicional baseada em MLP,
+conforme ilustrado em :numref:`fig_nlp-map-nli-bert`.
 
-![This section feeds pretrained BERT to an MLP-based architecture for natural language inference.](../img/nlp-map-nli-bert.svg)
+![Esta seção alimenta BERT pré-treinado para uma arquitetura baseada em MLP para inferência de linguagem natural.](../img/nlp-map-nli-bert.svg)
 :label:`fig_nlp-map-nli-bert`
 
 In this section,
@@ -394,5 +394,5 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDcxNTUzNTFdfQ==
+eyJoaXN0b3J5IjpbLTc4MjU4MzkyOSwtMjAwNzE1NTM1MV19
 -->
