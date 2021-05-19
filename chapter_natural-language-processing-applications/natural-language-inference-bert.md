@@ -112,9 +112,9 @@ def load_pretrained_model(pretrained_model, num_hiddens, ffn_num_hiddens,
     return bert, vocab
 ```
 
-To facilitate demonstration on most of machines,
-we will load and fine-tune the small version ("bert.small") of the pretrained BERT in this section.
-In the exercise, we will show how to fine-tune the much larger "bert.base" to significantly improve the testing accuracy.
+Para facilitar a demonstração na maioria das máquinas,
+vamos carregar e ajustar a versão pequena ("bert.small") do BERT pré-treinado nesta seção.
+No exercício, mostraremos como ajustar o "bert.base" muito maior para melhorar significativamente a precisão do teste.
 
 ```{.python .input}
 #@tab all
@@ -124,7 +124,7 @@ bert, vocab = load_pretrained_model(
     num_layers=2, dropout=0.1, max_len=512, devices=devices)
 ```
 
-## The Dataset for Fine-Tuning BERT
+## O Conjunto de Dados para Ajuste Fino do BERT
 
 For the downstream task natural language inference on the SNLI dataset,
 we define a customized dataset class `SNLIBERTDataset`.
@@ -394,6 +394,6 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI5MzczODYzLC0xMzQ1MjA0Mjc1LC0yMD
+eyJoaXN0b3J5IjpbLTQxNDI3MDQwLC0xMzQ1MjA0Mjc1LC0yMD
 A3MTU1MzUxXX0=
 -->
