@@ -1,4 +1,4 @@
-# Generative Adversarial Networks
+# Redes Adversariais Generativas
 :label:`chap_gans`
 
 ```toc
@@ -8,5 +8,5 @@ gan
 dcgan
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjY3NDA2MTRdfQ==
+eyJoaXN0b3J5IjpbNzAzNjg4MDU3LC0xMjY2NzQwNjE0XX0=
 -->
