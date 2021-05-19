@@ -162,7 +162,7 @@ def update_D(X, Z, net_D, net_G, loss, trainer_D):
     return loss_D
 ```
 
-The generator is updated similarly. Here we reuse the cross-entropy loss but change the label of the fake data from $0$ to $1$.
+O gerador é atualizado de forma semelhante. Aqui, reutilizamos a perda de entropia cruzada, mas mudamos o rótulo dos dados falsos de $0$ para $1$.
 
 ```{.python .input}
 #@save
@@ -199,7 +199,7 @@ def update_G(Z, net_D, net_G, loss, trainer_G):
     return loss_G
 ```
 
-Both the discriminator and the generator performs a binary logistic regression with the cross-entropy loss. We use Adam to smooth the training process. In each iteration, we first update the discriminator and then the generator. We visualize both losses and generated examples.
+Tanto o discriminador quanto o gerador realizam uma regressão logística binária com a perda de entropia cruzada. Usamos Adam para facilitar o processo de treinamento. Em cada iteração, primeiro atualizamos o discriminador e depois o gerador. Visualizamos perdas e exemplos gerados.
 
 ```{.python .input}
 def train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G, latent_dim, data):
@@ -276,7 +276,7 @@ def train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G, latent_dim, data):
           f'{metric[2] / timer.stop():.1f} examples/sec')
 ```
 
-Now we specify the hyperparameters to fit the Gaussian distribution.
+Agora especificamos os hiperparâmetros para se ajustar à distribuição gaussiana.
 
 ```{.python .input}
 #@tab all
@@ -285,7 +285,7 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
       latent_dim, d2l.numpy(data[:100]))
 ```
 
-## Summary
+## Resumo
 
 * Generative adversarial networks (GANs) composes of two deep networks, the generator and the discriminator.
 * The generator generates the image as much closer to the true image as possible to fool the discriminator, via maximizing the cross-entropy loss, *i.e.*, $\max \log(D(\mathbf{x'}))$.
@@ -303,6 +303,6 @@ train(net_D, net_G, data_iter, num_epochs, lr_D, lr_G,
 [Discussions](https://discuss.d2l.ai/t/1082)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDg3NDg5OCwyMzM1MTE3NSwtMTUxND
-Y5NjkzLDIxMDU0NzU2NzBdfQ==
+eyJoaXN0b3J5IjpbMTYxMTI0MzUzMywtMTc0ODc0ODk4LDIzMz
+UxMTc1LC0xNTE0Njk2OTMsMjEwNTQ3NTY3MF19
 -->
