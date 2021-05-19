@@ -42,7 +42,7 @@ from torch import nn
 import os
 ```
 
-## C BERT
+## Carregando o BERT Pré-treinado
 
 We have explained how to pretrain BERT on the WikiText-2 dataset in
 :numref:`sec_bert-dataset` and :numref:`sec_bert-pretraining`
@@ -394,6 +394,6 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/1526)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTQ4NTIwMjQsLTEzNDUyMDQyNzUsLT
-IwMDcxNTUzNTFdfQ==
+eyJoaXN0b3J5IjpbLTEzNDE5ODYxMCwtMTM0NTIwNDI3NSwtMj
+AwNzE1NTM1MV19
 -->
