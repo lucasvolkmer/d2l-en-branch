@@ -95,7 +95,7 @@ for X, y in data_iter:
 
 ## O Gerador
 
-The generator needs to map the noise variable $\mathbf z\in\mathbb R^d$, a length-$d$ vector, to a RGB image with width and height to be $64\times 64$ . In :numref:`sec_fcn` we introduced the fully convolutional network that uses transposed convolution layer (refer to :numref:`sec_transposed_conv`) to enlarge input size. The basic block of the generator contains a transposed convolution layer followed by the batch normalization and ReLU activation.
+O gerador precisa mapear a variável de ruído$\mathbf z\in\mathbb R^d$, um vetor comprimento $d$, para uma imagem RGB com largura e altura $64\times 64$. Em :numref:`sec_fcn` introduzimos a rede totalmente convolucional que usa a camada de convolução transposta (consulte :numref:`sec_transposed_conv`) para aumentar o tamanho da entrada. O bloco básico do gerador contém uma camada de convolução transposta seguida pela normalização do lote e ativação ReLU.
 
 ```{.python .input}
 class G_block(nn.Block):
@@ -437,6 +437,6 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzUxNjMxLC0zNzcxNjQ4NTMsMTE0OD
-g0OTI3OSwxNDI5OTcxNTIxXX0=
+eyJoaXN0b3J5IjpbLTIwNzgyMTU2OTksLTM3NzE2NDg1MywxMT
+Q4ODQ5Mjc5LDE0Mjk5NzE1MjFdfQ==
 -->
