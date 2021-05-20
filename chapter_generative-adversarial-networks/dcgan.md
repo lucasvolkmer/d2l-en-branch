@@ -126,7 +126,7 @@ class G_block(nn.Module):
         return self.activation(self.batch_norm(self.conv2d_trans(X)))
 ```
 
-In default, the transposed convolution layer uses a $k_h = k_w = 4$ kernel, a $s_h = s_w = 2$ strides, and a $p_h = p_w = 1$ padding. With a input shape of $n_h^{'} \times n_w^{'} = 16 \times 16$, the generator block will double input's width and height.
+Por padrão, a camada de convolução transposta usa um kernel $k_h = k_w = 4$, passos $s_h = s_w = 2$ e um preenchimento $p_h = p_w = 1$. Com uma forma de entrada de $n_h^{'} \times n_w^{'} = 16 \times 16$, o bloco gerador dobrará a largura e a altura da entrada.
 
 $$
 \begin{aligned}
@@ -437,6 +437,6 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzgyMTU2OTksLTM3NzE2NDg1MywxMT
-Q4ODQ5Mjc5LDE0Mjk5NzE1MjFdfQ==
+eyJoaXN0b3J5IjpbNTk2MTAyMDQ0LC0zNzcxNjQ4NTMsMTE0OD
+g0OTI3OSwxNDI5OTcxNTIxXX0=
 -->
