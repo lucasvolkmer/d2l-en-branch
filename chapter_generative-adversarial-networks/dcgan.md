@@ -45,7 +45,7 @@ data_dir = d2l.download_extract('pokemon')
 pokemon = torchvision.datasets.ImageFolder(data_dir)
 ```
 
-We resize each image into $64\times 64$. The `ToTensor` transformation will project the pixel value into $[0, 1]$, while our generator will use the tanh function to obtain outputs in $[-1, 1]$. Therefore we normalize the data with $0.5$ mean and $0.5$ standard deviation to match the value range.
+Redimensionamos cada imagem em $64\times 64$. A transformação `ToTensor` projetará o valor do pixel em $[0, 1]$, enquanto nosso gerador usará a função tanh para obter saídas em $[-1, 1]$. Portanto, normalizamos os dados com $0,5$ de média e $0,5$ de desvio padrão para corresponder ao intervalo de valores.
 
 ```{.python .input}
 batch_size = 256
@@ -73,7 +73,7 @@ data_iter = torch.utils.data.DataLoader(
     shuffle=True, num_workers=d2l.get_dataloader_workers())
 ```
 
-Let us visualize the first 20 images.
+Vamos visualizar as primeiras 20 imagens.
 
 ```{.python .input}
 d2l.set_figsize((4, 4))
@@ -93,7 +93,7 @@ for X, y in data_iter:
     break
 ```
 
-## The Generator
+## O Gerador
 
 The generator needs to map the noise variable $\mathbf z\in\mathbb R^d$, a length-$d$ vector, to a RGB image with width and height to be $64\times 64$ . In :numref:`sec_fcn` we introduced the fully convolutional network that uses transposed convolution layer (refer to :numref:`sec_transposed_conv`) to enlarge input size. The basic block of the generator contains a transposed convolution layer followed by the batch normalization and ReLU activation.
 
@@ -437,6 +437,6 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNjQ2Nzk1MSwtMzc3MTY0ODUzLDExND
-g4NDkyNzksMTQyOTk3MTUyMV19
+eyJoaXN0b3J5IjpbLTIwNzUxNjMxLC0zNzcxNjQ4NTMsMTE0OD
+g0OTI3OSwxNDI5OTcxNTIxXX0=
 -->
