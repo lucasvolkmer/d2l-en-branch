@@ -1,4 +1,4 @@
-# MFatrix Factorization
+# Fatoração de Matriz
 oração de Matriz
 Matrix Factorization :cite:`Koren.Bell.Volinsky.2009` is a well-established algorithm in the recommender systems literature. The first version of matrix factorization model is proposed by Simon Funk in a famous [blog
 post](https://sifter.org/~simon/journal/20061211.html) in which he described the idea of factorizing the interaction matrix. It then became widely known due to the Netflix contest which was held in 2006. At that time, Netflix, a media-streaming and video-rental company, announced a contest to improve its recommender system performance. The best team that can improve on the Netflix baseline, i.e., Cinematch), by 10 percent would win a one million USD prize.  As such, this contest attracted
@@ -176,5 +176,5 @@ scores
 [Discussions](https://discuss.d2l.ai/t/400)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjA2Mjc3M119
+eyJoaXN0b3J5IjpbLTE4NTk2MDMwMjNdfQ==
 -->
