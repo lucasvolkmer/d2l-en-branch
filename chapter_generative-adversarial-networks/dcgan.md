@@ -433,10 +433,10 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1083)
+[Discussões](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkyNjYyNjI5LC0xNTM4NTg1MTM2LC0xMT
-g4NTcxOTg4LC0xNDc2Njc2OTA0LDU5NjEwMjA0NCwtMzc3MTY0
-ODUzLDExNDg4NDkyNzksMTQyOTk3MTUyMV19
+eyJoaXN0b3J5IjpbLTU3MjIwNzI1OSwtMTUzODU4NTEzNiwtMT
+E4ODU3MTk4OCwtMTQ3NjY3NjkwNCw1OTYxMDIwNDQsLTM3NzE2
+NDg1MywxMTQ4ODQ5Mjc5LDE0Mjk5NzE1MjFdfQ==
 -->
