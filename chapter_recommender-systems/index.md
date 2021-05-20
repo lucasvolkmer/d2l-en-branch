@@ -1,8 +1,8 @@
-# Recommender Systems
+# Sistemas de Recommender Systemsação
 :label:`chap_recsys`
 
 
-**Shuai Zhang** (*Amazon*), **Aston Zhang** (*Amazon*), and **Yi Tay** (*Google*)
+**Shuai Zhang** (*Amazon*), **Aston Zhang** (*Amazon*), ande **Yi Tay** (*Google*)
 
 Recommender systems are widely employed in industry and are ubiquitous in our daily lives. These systems are utilized in a number of areas such as online shopping sites (e.g., amazon.com), music/movie services site (e.g., Netflix and Spotify), mobile application stores (e.g., IOS app store and google play), online advertising, just to name a few. 
 
@@ -26,3 +26,6 @@ fm
 deepfm
 ```
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzg5OTgwMzVdfQ==
+-->
