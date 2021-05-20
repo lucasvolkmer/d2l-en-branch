@@ -22,9 +22,9 @@ from torch import nn
 import warnings
 ```
 
-## O Dataset de Pokémon
+## O *Dataset* de Pokémon
 
-The dataset we will use is a collection of Pokemon sprites obtained from [pokemondb](https://pokemondb.net/sprites). First download, extract and load this dataset.
+O *dataset* que usaremos é uma coleção de sprites Pokémon obtidos em [pokemondb](https://pokemondb.net/sprites). Primeiro baixe, extraia e carregue este conjunto de dados.
 
 ```{.python .input}
 #@save
@@ -437,6 +437,6 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NzE2NDg1MywxMTQ4ODQ5Mjc5LDE0Mj
-k5NzE1MjFdfQ==
+eyJoaXN0b3J5IjpbMTExNjQ2Nzk1MSwtMzc3MTY0ODUzLDExND
+g4NDkyNzksMTQyOTk3MTUyMV19
 -->
