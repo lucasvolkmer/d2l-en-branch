@@ -3,7 +3,7 @@
 
 Em :numref:`sec_basic_gan`, apresentamos as idéias básicas por trás de como funcionam os GANs. Mostramos que eles podem extrair amostras de alguma distribuição simples e fácil de amostrar, como uma distribuição uniforme ou normal, e transformá-los em amostras que parecem corresponder à distribuição de algum conjunto de dados. E embora nosso exemplo de correspondência de uma distribuição gaussiana 2D tenha chegado ao ponto, não é especialmente empolgante.
 
-In this section, we will demonstrate how you can use GANs to generate photorealistic images. We will be basing our models on the deep convolutional GANs (DCGAN) introduced in :cite:`Radford.Metz.Chintala.2015`. We will borrow the convolutional architecture that have proven so successful for discriminative computer vision problems and show how via GANs, they can be leveraged to generate photorealistic images.
+Nesta seção, demonstraremos como você pode usar GANs para gerar imagens fotorrealísticas. Estaremos baseando nossos modelos nos GANs convolucionais profundos (DCGAN) introduzidos em :cite:`Radford.Metz.Chintala.2015`. Vamos tomar emprestada a arquitetura convolucional que se mostrou tão bem-sucedida para problemas discriminativos de visão de computador e mostrar como, por meio de GANs, eles podem ser aproveitados para gerar imagens fotorrealistas.
 
 ```{.python .input}
 from mxnet import gluon, init, np, npx
@@ -22,7 +22,7 @@ from torch import nn
 import warnings
 ```
 
-## The Pokemon Dataset
+## O Dataset de Pokémon
 
 The dataset we will use is a collection of Pokemon sprites obtained from [pokemondb](https://pokemondb.net/sprites). First download, extract and load this dataset.
 
@@ -437,5 +437,6 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0ODg0OTI3OSwxNDI5OTcxNTIxXX0=
+eyJoaXN0b3J5IjpbLTM3NzE2NDg1MywxMTQ4ODQ5Mjc5LDE0Mj
+k5NzE1MjFdfQ==
 -->
