@@ -9,16 +9,16 @@ prestadores de serviços e é uma importante fonte de receita. Este capítulo ir
 
 ## Filtragem colaborativa
 
-We start the journey with the important concept in recommender systems---collaborative filtering
-(CF), which was first coined by the Tapestry system :cite:`Goldberg.Nichols.Oki.ea.1992`, referring to "people collaborate to help one another perform the filtering process  in order to handle the large amounts of email and messages posted to newsgroups". This term has been enriched with more senses. In a broad sense, it is the process of
-filtering for information or patterns using techniques involving collaboration among multiple users, agents, and data sources. CF has many forms and numerous CF methods proposed since its advent.  
+Começamos a jornada com o conceito importante em sistemas de recomendação ---filtragem colaborativa
+(CF), que foi cunhado pela primeira vez pelo sistema Tapestry :cite:`Goldberg.Nichols.Oki.ea.1992`, referindo-se a "as pessoas colaboram para se ajudarem a realizar o processo de filtragem a fim de lidar com as grandes quantidades de e-mail e mensagens postadas em grupos de notícias". Este termo foi enriquecido com mais sentidos. Em um sentido amplo, é o processo de
+filtragem de informações ou padrões usando técnicas que envolvem colaboração entre vários usuários, agentes e fontes de dados. FC tem muitas formas e vários métodos de FC propostos desde seu advento.
 
-Overall, CF techniques can be categorized into: memory-based CF, model-based CF, and their hybrid :cite:`Su.Khoshgoftaar.2009`. Representative memory-based CF techniques are nearest neighbor-based CF such as user-based CF and item-based CF :cite:`Sarwar.Karypis.Konstan.ea.2001`.  Latent factor models such as matrix factorization are examples of model-based CF.  Memory-based CF has limitations in dealing with sparse and large-scale data since it computes the similarity values based on common items.  Model-based methods become more popular with its
-better capability in dealing with sparsity and scalability.  Many model-based CF approaches can be extended with neural networks, leading to more flexible and scalable models with the computation acceleration in deep learning :cite:`Zhang.Yao.Sun.ea.2019`.  In general, CF only uses the user-item interaction data to make predictions and recommendations. Besides CF, content-based and context-based recommender systems are also useful in incorporating the content descriptions of items/users and contextual signals such as timestamps and locations.  Obviously, we may need to adjust the model types/structures when different input data is available.
+No geral, as técnicas de CF podem ser categorizadas em: CF baseado em memória, CF baseado em modelo e seus híbridos :cite:`Su.Khoshgoftaar.2009`. As técnicas representativas de CF baseado em memória são o CF baseado no vizinho mais próximo, como CF baseado em usuário e CF baseado em item :cite:`Sarwar.Karypis.Konstan.ea.2001`. Modelos de fator latente, como fatoração de matriz, são exemplos de CF baseado em modelo. O CF baseado em memória tem limitações para lidar com dados esparsos e em grande escala, uma vez que calcula os valores de similaridade com base em itens comuns. Métodos baseados em modelos tornam-se mais populares com seus
+melhor capacidade para lidar com esparsidade e escalabilidade. Muitas abordagens de CF baseadas em modelo podem ser estendidas com redes neurais, levando a modelos mais flexíveis e escaláveis ​​com a aceleração de computação no aprendizado profundo :cite:`Zhang.Yao.Sun.ea.2019`. Em geral, o CF usa apenas os dados de interação do item do usuário para fazer previsões e recomendações. Além do CF, os sistemas de recomendação baseados em conteúdo e contexto também são úteis para incorporar as descrições de conteúdo de itens/usuários e sinais contextuais, como carimbos de data/hora e locais. Obviamente, podemos precisar ajustar os tipos/estruturas do modelo quando diferentes dados de entrada estiverem disponíveis.
 
 
 
-## Explicit Feedback and Implicit Feedback
+## Feedback explícito e feedback implícito
 
 To learn the preference of users, the system shall collect feedback from them.  The feedback can be either explicit or implicit :cite:`Hu.Koren.Volinsky.2008`. For example, [IMDB](https://www.imdb.com/) collects star ratings ranging from one to ten stars for movies. YouTube provides the thumbs-up and thumbs-down buttons for users to show their preferences.  It is apparent that gathering explicit feedback requires users to indicate their interests proactively.  Nonetheless, explicit feedback is not always readily available as many users may be reluctant to rate products. Relatively speaking, implicit feedback is often readily available since it is mainly concerned with modeling implicit behavior such as user clicks. As such, many recommender systems are centered on implicit feedback which indirectly reflects user's opinion through observing user behavior.  There are diverse forms of implicit feedback including purchase history, browsing history, watches and even mouse movements. For example, a user that purchased many books by the same author probably likes that author.   Note that implicit feedback is inherently noisy.  We can only *guess* their preferences and true motives. A user watched a movie does not necessarily indicate a positive view of that movie.
 
@@ -42,5 +42,5 @@ A number of recommendation tasks have been investigated in the past decades.  Ba
 
 [Discussions](https://discuss.d2l.ai/t/398)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTc5OTEzNjBdfQ==
+eyJoaXN0b3J5IjpbLTQwMzIxNTA4Ml19
 -->
