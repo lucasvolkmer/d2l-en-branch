@@ -407,9 +407,9 @@ def train(net_D, net_G, data_iter, num_epochs, lr, latent_dim,
           f'{metric[2] / timer.stop():.1f} examples/sec on {str(device)}')
 ```
 
-We train the model with a small number of epochs just for demonstration.
-For better performance,
-the variable `num_epochs` can be set to a larger number.
+Treinamos o modelo com um pequeno número de épocas apenas para demonstração.
+Para melhor desempenho,
+a variável `num_epochs` pode ser definida para um número maior.
 
 ```{.python .input}
 #@tab all
@@ -417,27 +417,26 @@ latent_dim, lr, num_epochs = 100, 0.005, 20
 train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 ```
 
-## Summary
+## Resumo
 
-* DCGAN architecture has four convolutional layers for the Discriminator and four "fractionally-strided" convolutional layers for the Generator.
-* The Discriminator is a 4-layer strided convolutions with batch normalization (except its input layer) and leaky ReLU activations.
-* Leaky ReLU is a nonlinear function that give a non-zero output for a negative input. It aims to fix the “dying ReLU” problem and helps the gradients flow easier through the architecture.
+* A arquitetura DCGAN tem quatro camadas convolucionais para o Discriminador e quatro camadas convolucionais "com passos fracionários" para o Gerador.
+* O Discriminador é um conjunto de convoluções de 4 camadas com normalização em lote (exceto sua camada de entrada) e ativações ReLU com vazamento.
+* ReLU com vazamento é uma função não linear que fornece uma saída diferente de zero para uma entrada negativa. Ele tem como objetivo corrigir o problema do “ReLU agonizante” e ajudar os gradientes a fluírem mais facilmente pela arquitetura.
 
+## Exercícios
 
-## Exercises
-
-1. What will happen if we use standard ReLU activation rather than leaky ReLU?
-1. Apply DCGAN on Fashion-MNIST and see which category works well and which does not.
+1. O que acontecerá se usarmos a ativação ReLU padrão em vez de ReLU com vazamento?
+2. Aplique DCGAN no Fashion-MNIST e veja qual categoria funciona bem e qual não funciona.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/409)
+[Discussões](https://discuss.d2l.ai/t/409)
 :end_tab:
 
 :begin_tab:`pytorch`
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzMxMzM5MSwtMTUzODU4NTEzNiwtMT
-E4ODU3MTk4OCwtMTQ3NjY3NjkwNCw1OTYxMDIwNDQsLTM3NzE2
-NDg1MywxMTQ4ODQ5Mjc5LDE0Mjk5NzE1MjFdfQ==
+eyJoaXN0b3J5IjpbNTkyNjYyNjI5LC0xNTM4NTg1MTM2LC0xMT
+g4NTcxOTg4LC0xNDc2Njc2OTA0LDU5NjEwMjA0NCwtMzc3MTY0
+ODUzLDExNDg4NDkyNzksMTQyOTk3MTUyMV19
 -->
