@@ -195,7 +195,7 @@ net_G = nn.Sequential(
     nn.Tanh())  # Output: (3, 64, 64)
 ```
 
-Generate a 100 dimensional latent variable to verify the generator's output shape.
+Gere uma variável latente de 100 dimensões para verificar a forma de saída do gerador.
 
 ```{.python .input}
 x = np.zeros((1, 100, 1, 1))
@@ -209,13 +209,13 @@ x = torch.zeros((1, 100, 1, 1))
 net_G(x).shape
 ```
 
-## Discriminator
+## Discriminador
 
-The discriminator is a normal convolutional network network except that it uses a leaky ReLU as its activation function. Given $\alpha \in[0, 1]$, its definition is
+O discriminador é uma rede de rede convolucional normal, exceto que usa um ReLU com vazamento como sua função de ativação. Dado $\alpha \in[0, 1]$, sua definição é
 
 $$\textrm{leaky ReLU}(x) = \begin{cases}x & \text{if}\ x > 0\\ \alpha x &\text{otherwise}\end{cases}.$$
 
-As it can be seen, it is normal ReLU if $\alpha=0$, and an identity function if $\alpha=1$. For $\alpha \in (0, 1)$, leaky ReLU is a nonlinear function that give a non-zero output for a negative input. It aims to fix the "dying ReLU" problem that a neuron might always output a negative value and therefore cannot make any progress since the gradient of ReLU is 0.
+Como pode ser visto, é um ReLU normal se $\alpha=0$, e uma função de identidade se $\alpha=1$. Para $\alpha \in (0, 1)$, o ReLU com vazamento é uma função não linear que fornece uma saída diferente de zero para uma entrada negativa. Seu objetivo é corrigir o problema de "ReLU agonizante" de que um neurônio pode sempre produzir um valor negativo e, portanto, não pode fazer nenhum progresso, pois o gradiente de ReLU é 0.
 
 ```{.python .input}
 #@tab all
@@ -437,7 +437,7 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYwNzk1ODUzLC0xNDc2Njc2OTA0LDU5Nj
-EwMjA0NCwtMzc3MTY0ODUzLDExNDg4NDkyNzksMTQyOTk3MTUy
-MV19
+eyJoaXN0b3J5IjpbLTg0MjEzMTA3MywtMTQ3NjY3NjkwNCw1OT
+YxMDIwNDQsLTM3NzE2NDg1MywxMTQ4ODQ5Mjc5LDE0Mjk5NzE1
+MjFdfQ==
 -->
