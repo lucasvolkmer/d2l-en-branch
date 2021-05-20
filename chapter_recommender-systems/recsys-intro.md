@@ -1,4 +1,4 @@
-# Overview of Recommender Systems
+# Overview of RVisão geral dos sistemas de recommender Systemsação
 
 
 
@@ -42,3 +42,6 @@ A number of recommendation tasks have been investigated in the past decades.  Ba
 2. What interesting recommendation tasks do you think can be investigated?
 
 [Discussions](https://discuss.d2l.ai/t/398)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTg4MTc5MjYwMF19
+-->
