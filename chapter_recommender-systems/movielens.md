@@ -146,12 +146,12 @@ def split_and_load_ml100k(split_mode='seq-aware', feedback='explicit',
 
 ## Exercícios
 
-* What other similar recommendation datasets can you find?
-* Go through the [https://movielens.org/](https://movielens.org/) site for more information about MovieLens.
+* Que outros conjuntos de dados de recomendação semelhantes você pode encontrar?
+* Acesse o site [https://movielens.org/](https://movielens.org/) para obter mais informações sobre MovieLens.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/399)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQyNDg2OTldfQ==
+eyJoaXN0b3J5IjpbLTQ3ODIwMDAyOF19
 -->
