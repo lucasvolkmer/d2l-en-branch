@@ -225,7 +225,7 @@ Y = [d2l.numpy(nn.LeakyReLU(alpha)(x)) for alpha in alphas]
 d2l.plot(d2l.numpy(x), Y, 'x', 'y', alphas)
 ```
 
-The basic block of the discriminator is a convolution layer followed by a batch normalization layer and a leaky ReLU activation. The hyperparameters of the convolution layer are similar to the transpose convolution layer in the generator block.
+O bloco básico do discriminador é uma camada de convolução seguida por uma camada de normalização em lote e uma ativação ReLU com vazamento. Os hiperparâmetros da camada de convolução são semelhantes à camada de convolução transposta no bloco gerador.
 
 ```{.python .input}
 class D_block(nn.Block):
@@ -437,7 +437,7 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MjEzMTA3MywtMTQ3NjY3NjkwNCw1OT
-YxMDIwNDQsLTM3NzE2NDg1MywxMTQ4ODQ5Mjc5LDE0Mjk5NzE1
-MjFdfQ==
+eyJoaXN0b3J5IjpbLTExODg1NzE5ODgsLTE0NzY2NzY5MDQsNT
+k2MTAyMDQ0LC0zNzcxNjQ4NTMsMTE0ODg0OTI3OSwxNDI5OTcx
+NTIxXX0=
 -->
