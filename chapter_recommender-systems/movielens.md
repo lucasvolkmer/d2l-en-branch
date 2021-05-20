@@ -38,7 +38,7 @@ def read_data_ml100k():
 
 ## Estatísticas do conjunto de dados
 
-Let us load up the data and inspect the first five records manually. It is an effective way to learn the data structure and verify that they have been loaded properly.
+Vamos carregar os dados e inspecionar os primeiros cinco registros manualmente. É uma maneira eficaz de aprender a estrutura de dados e verificar se eles foram carregados corretamente.
 
 ```{.python .input  n=3}
 data, num_users, num_items = read_data_ml100k()
@@ -48,9 +48,9 @@ print(f'matrix sparsity: {sparsity:f}')
 print(data.head(5))
 ```
 
-We can see that each line consists of four columns, including "user id" 1-943, "item id" 1-1682, "rating" 1-5 and "timestamp". We can construct an interaction matrix of size $n \times m$, where $n$ and $m$ are the number of users and the number of items respectively. This dataset only records the existing ratings, so we can also call it rating matrix and we will use interaction matrix and rating matrix interchangeably in case that the values of this matrix represent exact ratings. Most of the values in the rating matrix are unknown as users have not rated the majority of movies. We also show the sparsity of this dataset. The sparsity is defined as `1 - number of nonzero entries / ( number of users * number of items)`. Clearly, the interaction matrix is extremely sparse (i.e., sparsity = 93.695%). Real world datasets may suffer from a greater extent of sparsity and has been a long-standing challenge in building recommender systems. A viable solution is to use additional side information such as user/item features to alleviate the sparsity.
+Podemos ver que cada linha consiste em quatro colunas, incluindo "id do usuário" 1-943, "id do item" 1-1682, "classificação" 1-5 e "carimbo de data/hora". Podemos construir uma matriz de interação de tamanho $n \times m$, onde $n$ e $m$ são o número de usuários e o número de itens, respectivamente. Este conjunto de dados registra apenas as classificações existentes, portanto, também podemos chamá-lo de matriz de classificação e usaremos a matriz de interação e a matriz de classificação de forma intercambiável, caso os valores desta matriz representem classificações exatas. A maioria dos valores na matriz de classificação é desconhecida, pois os usuários não classificaram a maioria dos filmes. Também mostramos a dispersão deste conjunto de dados. A dispersão é definida como `1 - número de entradas diferentes de zero / (número de usuários * número de itens)`. Claramente, a matriz de interação é extremamente esparsa (ou seja, esparsidade = 93,695%). Os conjuntos de dados do mundo real podem sofrer com uma extensão maior de dispersão e tem sido um desafio de longa data na construção de sistemas de recomendação. Uma solução viável é usar informações secundárias adicionais, como recursos de usuário / item para aliviar a dispersão.
 
-We then plot the distribution of the count of different ratings. As expected, it appears to be a normal distribution, with most ratings centered at 3-4.
+Em seguida, plotamos a distribuição da contagem de classificações diferentes. Como esperado, parece ser uma distribuição normal, com a maioria das avaliações centrada em 3-4.
 
 ```{.python .input  n=4}
 d2l.plt.hist(data['rating'], bins=5, ec='black')
@@ -60,9 +60,10 @@ d2l.plt.title('Distribution of Ratings in MovieLens 100K')
 d2l.plt.show()
 ```
 
-## Splitting the dataset
+## Dividindo o conjunto de dados
 
 We split the dataset into training and test sets. The following function provides two split modes including `random` and `seq-aware`. In the `random` mode, the function splits the 100k interactions randomly without considering timestamp and uses the 90% of the data as training samples and the rest 10% as test samples by default. In the `seq-aware` mode, we leave out the item that a user rated most recently for test, and users' historical interactions as training set.  User historical interactions are sorted from oldest to newest based on timestamp. This mode will be used in the sequence-aware recommendation section.
+Dividimos o conjunto de dados em conjuntos de treinamento e teste. A função a seguir fornece dois modos de divisão, incluindo `random` e` seq-aware`. No modo `random`, a função divide as 100k interações aleatoriamente sem considerar o carimbo de data / hora e usa 90% dos dados como amostras de treinamento e os 10% restantes como amostras de teste por padrão. No modo `seq-aware`, deixamos de fora o item que um usuário classificou mais recentemente para teste e o histórico de interações dos usuários como conjunto de treinamento. As interações históricas do usuário são classificadas do mais antigo ao mais novo com base no carimbo de data / hora. Este modo será usado na seção de recomendação com reconhecimento de sequência.
 
 ```{.python .input  n=5}
 #@save
@@ -154,5 +155,5 @@ def split_and_load_ml100k(split_mode='seq-aware', feedback='explicit',
 [Discussions](https://discuss.d2l.ai/t/399)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc1NjA3NzcyXX0=
+eyJoaXN0b3J5IjpbNzM2NjkyODJdfQ==
 -->
