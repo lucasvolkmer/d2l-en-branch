@@ -167,7 +167,7 @@ g_blk = G_block(20, strides=1, padding=0)
 g_blk(x).shape
 ```
 
-The generator consists of four basic blocks that increase input's both width and height from 1 to 32. At the same time, it first projects the latent variable into $64\times 8$ channels, and then halve the channels each time. At last, a transposed convolution layer is used to generate the output. It further doubles the width and height to match the desired $64\times 64$ shape, and reduces the channel size to $3$. The tanh activation function is applied to project output values into the $(-1, 1)$ range.
+O gerador consiste em quatro blocos básicos que aumentam a largura e a altura da entrada de 1 para 32. Ao mesmo tempo, ele primeiro projeta a variável latente em canais $64\times 8$ e, em seguida, divide os canais a cada vez. Por fim, uma camada de convolução transposta é usada para gerar a saída. Ele ainda dobra a largura e a altura para corresponder à forma desejada de $64\times 64$ e reduz o tamanho do canal para $3$. A função de ativação tanh é aplicada aos valores de saída do projeto na faixa $(-1, 1)$.
 
 ```{.python .input}
 n_G = 64
@@ -437,6 +437,7 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzY2NzY5MDQsNTk2MTAyMDQ0LC0zNz
-cxNjQ4NTMsMTE0ODg0OTI3OSwxNDI5OTcxNTIxXX0=
+eyJoaXN0b3J5IjpbOTYwNzk1ODUzLC0xNDc2Njc2OTA0LDU5Nj
+EwMjA0NCwtMzc3MTY0ODUzLDExNDg4NDkyNzksMTQyOTk3MTUy
+MV19
 -->
