@@ -151,7 +151,7 @@ g_blk = G_block(20)
 g_blk(x).shape
 ```
 
-If changing the transposed convolution layer to a $4\times 4$ kernel, $1\times 1$ strides and zero padding. With a input size of $1 \times 1$, the output will have its width and height increased by 3 respectively.
+Se alterar a camada de convolução transposta para um kernel $4\times 4$ kernel, passos $1\times 1$ e preenchimento zero. Com um tamanho de entrada de $1 \times 1$, a saída terá sua largura e altura aumentadas em 3, respectivamente.
 
 ```{.python .input}
 x = np.zeros((2, 3, 1, 1))
@@ -437,6 +437,6 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk2MTAyMDQ0LC0zNzcxNjQ4NTMsMTE0OD
-g0OTI3OSwxNDI5OTcxNTIxXX0=
+eyJoaXN0b3J5IjpbLTE0NzY2NzY5MDQsNTk2MTAyMDQ0LC0zNz
+cxNjQ4NTMsMTE0ODg0OTI3OSwxNDI5OTcxNTIxXX0=
 -->
