@@ -320,7 +320,7 @@ net_D(x).shape
 
 ## Treinamento
 
-Compared to the basic GAN in :numref:`sec_basic_gan`, we use the same learning rate for both generator and discriminator since they are similar to each other. In addition, we change $\beta_1$ in Adam (:numref:`sec_adam`) from $0.9$ to $0.5$. It decreases the smoothness of the momentum, the exponentially weighted moving average of past gradients, to take care of the rapid changing gradients because the generator and the discriminator fight with each other. Besides, the random generated noise `Z`, is a 4-D tensor and we are using GPU to accelerate the computation.
+Comparado ao GAN básico em :numref:`sec_basic_gan`, usamos a mesma taxa de aprendizado para o gerador e o discriminador, uma vez que são semelhantes entre si. Além disso, alteramos $\beta_1$ em Adam (:numref:`sec_adam`) de $0,9$ para $0,5$. Ele diminui a suavidade do momentum, a média móvel exponencialmente ponderada dos gradientes anteriores, para cuidar dos gradientes que mudam rapidamente porque o gerador e o discriminador lutam um com o outro. Além disso, o ruído gerado aleatoriamente `Z`, é um tensor 4-D e estamos usando GPU para acelerar o cálculo.
 
 ```{.python .input}
 def train(net_D, net_G, data_iter, num_epochs, lr, latent_dim,
@@ -437,7 +437,7 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MzQwMjM4MCwtMTUzODU4NTEzNiwtMT
+eyJoaXN0b3J5IjpbLTEyMzMxMzM5MSwtMTUzODU4NTEzNiwtMT
 E4ODU3MTk4OCwtMTQ3NjY3NjkwNCw1OTYxMDIwNDQsLTM3NzE2
 NDg1MywxMTQ4ODQ5Mjc5LDE0Mjk5NzE1MjFdfQ==
 -->
