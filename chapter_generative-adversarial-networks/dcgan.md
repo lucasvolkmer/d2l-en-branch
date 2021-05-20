@@ -304,7 +304,7 @@ net_D = nn.Sequential(
               kernel_size=4, bias=False))  # Output: (1, 1, 1)
 ```
 
-It uses a convolution layer with output channel $1$ as the last layer to obtain a single prediction value.
+Ele usa uma camada de convolução com canal de saída $1$ como a última camada para obter um único valor de predição.
 
 ```{.python .input}
 x = np.zeros((1, 3, 64, 64))
@@ -318,7 +318,7 @@ x = torch.zeros((1, 3, 64, 64))
 net_D(x).shape
 ```
 
-## Training
+## Treinamento
 
 Compared to the basic GAN in :numref:`sec_basic_gan`, we use the same learning rate for both generator and discriminator since they are similar to each other. In addition, we change $\beta_1$ in Adam (:numref:`sec_adam`) from $0.9$ to $0.5$. It decreases the smoothness of the momentum, the exponentially weighted moving average of past gradients, to take care of the rapid changing gradients because the generator and the discriminator fight with each other. Besides, the random generated noise `Z`, is a 4-D tensor and we are using GPU to accelerate the computation.
 
@@ -437,7 +437,7 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mzg1ODUxMzYsLTExODg1NzE5ODgsLT
-E0NzY2NzY5MDQsNTk2MTAyMDQ0LC0zNzcxNjQ4NTMsMTE0ODg0
-OTI3OSwxNDI5OTcxNTIxXX0=
+eyJoaXN0b3J5IjpbMTA0MzQwMjM4MCwtMTUzODU4NTEzNiwtMT
+E4ODU3MTk4OCwtMTQ3NjY3NjkwNCw1OTYxMDIwNDQsLTM3NzE2
+NDg1MywxMTQ4ODQ5Mjc5LDE0Mjk5NzE1MjFdfQ==
 -->
