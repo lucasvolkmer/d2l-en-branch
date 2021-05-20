@@ -256,7 +256,7 @@ class D_block(nn.Module):
         return self.activation(self.batch_norm(self.conv2d(X)))
 ```
 
-A basic block with default settings will halve the width and height of the inputs, as we demonstrated in :numref:`sec_padding`. For example, given a input shape $n_h = n_w = 16$, with a kernel shape $k_h = k_w = 4$, a stride shape $s_h = s_w = 2$, and a padding shape $p_h = p_w = 1$, the output shape will be:
+Um bloco básico com configurações padrão reduzirá pela metade a largura e a altura das entradas, como demonstramos em :numref:`sec_padding`. Por exemplo, dada uma forma de entrada $n_h = n_w = 16$, com uma forma de kernel $k_h = k_w = 4$, uma forma de passo $s_h = s_w = 2$ e uma forma de preenchimento $p_h = p_w = 1$, a forma de saída será:
 
 $$
 \begin{aligned}
@@ -280,7 +280,7 @@ d_blk = D_block(20)
 d_blk(x).shape
 ```
 
-The discriminator is a mirror of the generator.
+O discriminador é um espelho do gerador.
 
 ```{.python .input}
 n_D = 64
@@ -437,7 +437,7 @@ train(net_D, net_G, data_iter, num_epochs, lr, latent_dim)
 [Discussions](https://discuss.d2l.ai/t/1083)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODg1NzE5ODgsLTE0NzY2NzY5MDQsNT
-k2MTAyMDQ0LC0zNzcxNjQ4NTMsMTE0ODg0OTI3OSwxNDI5OTcx
-NTIxXX0=
+eyJoaXN0b3J5IjpbLTE1Mzg1ODUxMzYsLTExODg1NzE5ODgsLT
+E0NzY2NzY5MDQsNTk2MTAyMDQ0LC0zNzcxNjQ4NTMsMTE0ODg0
+OTI3OSwxNDI5OTcxNTIxXX0=
 -->
