@@ -1,4 +1,4 @@
-# Sistemas de Recommender Systemsação
+# Sistemas de Recomendação
 :label:`chap_recsys`
 
 
@@ -27,5 +27,5 @@ deepfm
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODkzODI5NjFdfQ==
+eyJoaXN0b3J5IjpbMTYwMjI4ODI5MywtMTk4OTM4Mjk2MV19
 -->
