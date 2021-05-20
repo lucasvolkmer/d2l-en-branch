@@ -1,14 +1,14 @@
-#  TheO conjunto de dados MovieLens Dataset
+#  O conjunto de dados MovieLens
 
-There are a number of datasets that are available for recommendation research. Amongst them, the [MovieLens](https://movielens.org/) dataset is probably one of the more popular ones. MovieLens is a non-commercial web-based movie recommender system. It is created in 1997 and run by GroupLens, a research lab at the University of Minnesota, in order to gather movie rating data for research purposes.  MovieLens data has been critical for several research studies including personalized recommendation and social psychology.
-
-
-## Getting the Data
+Existem vários conjuntos de dados disponíveis para pesquisa de recomendação. Dentre eles, o conjunto de dados [MovieLens](https://movielens.org/) é provavelmente um dos mais populares. MovieLens é um sistema de recomendação de filmes não comercial baseado na web. Ele foi criado em 1997 e administrado pelo GroupLens, um laboratório de pesquisa da Universidade de Minnesota, a fim de coletar dados de classificação de filmes para fins de pesquisa. Os dados do MovieLens têm sido críticos para vários estudos de pesquisa, incluindo recomendação personalizada e psicologia social.
 
 
-The MovieLens dataset is hosted by the [GroupLens](https://grouplens.org/datasets/movielens/) website. Several versions are available. We will use the MovieLens 100K dataset :cite:`Herlocker.Konstan.Borchers.ea.1999`.  This dataset is comprised of $100,000$ ratings, ranging from 1 to 5 stars, from 943 users on 1682 movies. It has been cleaned up so that each user has rated at least 20 movies. Some simple demographic information such as age, gender, genres for the users and items are also available.  We can download the [ml-100k.zip](http://files.grouplens.org/datasets/movielens/ml-100k.zip) and extract the `u.data` file, which contains all the $100,000$ ratings in the csv format. There are many other files in the folder, a detailed description for each file can be found in the [README](http://files.grouplens.org/datasets/movielens/ml-100k-README.txt) file of the dataset.
+## Obtendo os dados
 
-To begin with, let us import the packages required to run this section's experiments.
+
+O conjunto de dados MovieLens é hospedado pelo site [GroupLens](https://grouplens.org/datasets/movielens/). Várias versões estão disponíveis. Usaremos o conjunto de dados MovieLens 100K :cite:`Herlocker.Konstan.Borchers.ea.1999`. Este conjunto de dados é composto por classificações de $100.000$, variando de 1 a 5 estrelas, de 943 usuários em 1.682 filmes. Ele foi limpo para que cada usuário avaliasse pelo menos 20 filmes. Algumas informações demográficas simples, como idade, sexo, gêneros dos usuários e itens também estão disponíveis. Podemos baixar o [ml-100k.zip](http://files.grouplens.org/datasets/movielens/ml-100k.zip) e extrair o arquivo `u.data`, que contém todas as classificações $100.000$ em o formato csv. Existem muitos outros arquivos na pasta, uma descrição detalhada para cada arquivo pode ser encontrada no arquivo [README](http://files.grouplens.org/datasets/movielens/ml-100k-README.txt) do conjunto de dados .
+
+Para começar, vamos importar os pacotes necessários para executar os experimentos desta seção.
 
 ```{.python .input  n=1}
 from d2l import mxnet as d2l
@@ -17,7 +17,7 @@ import os
 import pandas as pd
 ```
 
-Then, we download the MovieLens 100k dataset and load the interactions as `DataFrame`.
+Em seguida, baixamos o conjunto de dados MovieLens 100k e carregamos as interações como `DataFrame`.
 
 ```{.python .input  n=2}
 #@save
@@ -36,7 +36,7 @@ def read_data_ml100k():
     return data, num_users, num_items
 ```
 
-## Statistics of the Dataset
+## Estatísticas do conjunto de dados
 
 Let us load up the data and inspect the first five records manually. It is an effective way to learn the data structure and verify that they have been loaded properly.
 
@@ -154,5 +154,5 @@ def split_and_load_ml100k(split_mode='seq-aware', feedback='explicit',
 [Discussions](https://discuss.d2l.ai/t/399)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzAxNTc4MDNdfQ==
+eyJoaXN0b3J5IjpbNTc1NjA3NzcyXX0=
 -->
