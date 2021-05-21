@@ -69,18 +69,18 @@ Desta forma, consideramos todos os vetores da figura :numref:`fig_arrow` iguais.
 ![Qualquer vetor pode ser visualizado como uma seta no plano. Nesse caso, todo vetor desenhado é uma representação do vetor $(3,2)^\top$.](../img/par-vec.svg)
 :label:`fig_arrow`
 
-One of the benefits of this shift is that
-we can make visual sense of the act of vector addition.
-In particular, we follow the directions given by one vector,
-and then follow the directions given by the other, as is seen in :numref:`fig_add-vec`.
+Um dos benefícios dessa mudança é que
+podemos dar sentido visual ao ato de adição de vetores.
+Em particular, seguimos as instruções dadas por um vetor,
+e então siga as instruções dadas pelo outro, como pode ser visto em :numref:`fig_add-vec`.
 
-![We can visualize vector addition by first following one vector, and then another.](../img/vec-add.svg)
+![Podemos visualizar a adição de vetores seguindo primeiro um vetor e depois outro.](../img/vec-add.svg)
 :label:`fig_add-vec`
 
-Vector subtraction has a similar interpretation.
-By considering the identity that $\mathbf{u} = \mathbf{v} + (\mathbf{u}-\mathbf{v})$,
-we see that the vector $\mathbf{u}-\mathbf{v}$ is the direction
-that takes us from the point $\mathbf{v}$ to the point $\mathbf{u}$.
+A subtração de vetores tem uma interpretação semelhante.
+Considerando a identidade que $\mathbf{u} = \mathbf{v} + (\mathbf{u}-\mathbf{v})$,
+vemos que o vetor $\mathbf{u}-\mathbf{v}$ é a direção
+que nos leva do ponto $\mathbf{v}$ ao ponto $\mathbf{u}$.
 
 
 ## Dot Products and Angles
@@ -1048,6 +1048,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODU5MTYzOTIsLTczMzAxNjM1OCwtMT
-U4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNT
+g5MjEzMDY0XX0=
 -->
