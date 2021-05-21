@@ -91,21 +91,21 @@ podemos formar seu produto escalar computando:
 $$\mathbf{u}^\top\mathbf{v} = \sum_i u_i\cdot v_i.$$
 :eqlabel:`eq_dot_def`
 
-Because :eqref:`eq_dot_def` is symmetric, we will mirror the notation
-of classical multiplication and write
+Porque :eqref:`eq_dot_def` é simétrico, iremos espelhar a notação
+de multiplicação clássica e escrita
 
 $$
 \mathbf{u}\cdot\mathbf{v} = \mathbf{u}^\top\mathbf{v} = \mathbf{v}^\top\mathbf{u},
 $$
 
-to highlight the fact that exchanging the order of the vectors will yield the same answer.
+para destacar o fato de que a troca da ordem dos vetores produzirá a mesma resposta.
 
 The dot product :eqref:`eq_dot_def` also admits a geometric interpretation: it is closely related to the angle between two vectors.  Consider the angle shown in :numref:`fig_angle`.
 
-![Between any two vectors in the plane there is a well defined angle $\theta$.  We will see this angle is intimately tied to the dot product.](../img/vec-angle.svg)
+![Entre quaisquer dois vetores no plano, existe um ângulo bem definido $\theta$. Veremos que esse ângulo está intimamente ligado ao produto escalar.](../img/vec-angle.svg)
 :label:`fig_angle`
 
-To start, let us consider two specific vectors:
+Para começar, vamos considerar dois vetores específicos:
 
 $$
 \mathbf{v} = (r,0) \; \text{and} \; \mathbf{w} = (s\cos(\theta), s \sin(\theta)).
@@ -1048,6 +1048,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MDg2MDAsMjEwMjg3MTc4NSwtNzMzMD
-E2MzU4LC0xNTg5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNz
+MzMDE2MzU4LC0xNTg5MjEzMDY0XX0=
 -->
