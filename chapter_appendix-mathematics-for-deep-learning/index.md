@@ -1,7 +1,7 @@
 # Apêndice: Matemática para *Deep Learning*
 :label:`chap_appendix_math`
 
-**Brent Werness** (*Amazon*), **Rachel Hu** (*Amazon*), and authors of this book
+**Brent Werness** (*Amazon*), **Rachel Hu** (*Amazon*), e autores deste livro
 
 
 One of the wonderful parts of modern deep learning is the fact that much of it can be understood and used without a full understanding of the mathematics below it.  This is a sign that the field is maturing.  Just as most software developers no longer need to worry about the theory of computable functions, neither should deep learning practitioners need to worry about the theoretical foundations of maximum likelihood learning.
@@ -39,5 +39,5 @@ information-theory
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NDE1NDAwN119
+eyJoaXN0b3J5IjpbLTEyNjc2MTgzNjFdfQ==
 -->
