@@ -16,35 +16,36 @@ Fundamentalmente, um vetor é uma lista de números, como a lista Python abaixo.
 v = [1, 7, 0, 1]
 ```
 
-Mathematicians most often write this as either a *column* or *row* vector, which is to say either as
+Os matemáticos geralmente escrevem isso como um vetor *coluna* ou *linha*, ou seja, como
 
 $$
 \mathbf{x} = \begin{bmatrix}1\\7\\0\\1\end{bmatrix},
 $$
 
-or
+ou
 
 $$
 \mathbf{x}^\top = \begin{bmatrix}1 & 7 & 0 & 1\end{bmatrix}.
 $$
 
-These often have different interpretations,
-where data examples are column vectors
-and weights used to form weighted sums are row vectors.
-However, it can be beneficial to be flexible.
-As we have described in :numref:`sec_linear-algebra`,
-though a single vector's default orientation is a column vector,
-for any matrix representing a tabular dataset,
-treating each data example as a row vector
-in the matrix
-is more conventional.
 
-Given a vector, the first interpretation
-that we should give it is as a point in space.
-In two or three dimensions, we can visualize these points
-by using the components of the vectors to define
-the location of the points in space compared
-to a fixed reference called the *origin*.  This can be seen in :numref:`fig_grid`.
+Muitas vezes têm interpretações diferentes,
+onde os exemplos de dados são vetores de coluna
+e os pesos usados para formar somas ponderadas são vetores de linha.
+No entanto, pode ser benéfico ser flexível.
+Como descrevemos em :numref:`sec_linear-algebra`,
+embora a orientação padrão de um único vetor seja um vetor coluna,
+para qualquer matriz que representa um conjunto de dados tabular,
+tratando cada exemplo de dados como um vetor de linha
+na matriz
+é mais convencional.
+
+Dado um vetor, a primeira interpretação
+que devemos dar é como um ponto no espaço.
+Em duas ou três dimensões, podemos visualizar esses pontos
+usando os componentes dos vetores para definir
+a localização dos pontos no espaço comparada
+a uma referência fixa chamada *origem*. Isso pode ser visto em :numref:`fig_grid`.
 
 ![An illustration of visualizing vectors as points in the plane.  The first component of the vector gives the $x$-coordinate, the second component gives the $y$-coordinate.  Higher dimensions are analogous, although much harder to visualize.](../img/grid-points.svg)
 :label:`fig_grid`
@@ -1046,6 +1047,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTE5OTYwMjQsLTE1ODkyMTMwNjRdfQ
+eyJoaXN0b3J5IjpbLTEyNjc4NTM1MDUsLTE1ODkyMTMwNjRdfQ
 ==
 -->
