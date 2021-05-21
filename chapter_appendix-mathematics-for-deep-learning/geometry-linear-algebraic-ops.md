@@ -50,20 +50,21 @@ a uma referência fixa chamada *origem*. Isso pode ser visto em :numref:`fig_gri
 ![Uma ilustração da visualização de vetores como pontos no plano. O primeiro componente do vetor fornece a coordenada $x$, o segundo componente fornece a coordenada $y$. As dimensões superiores são análogas, embora muito mais difíceis de visualizar.](../img/grid-points.svg)
 :label:`fig_grid`
 
-This geometric point of view allows us to consider the problem on a more abstract level.
-No longer faced with some insurmountable seeming problem
-like classifying pictures as either cats or dogs,
-we can start considering tasks abstractly
-as collections of points in space and picturing the task
-as discovering how to separate two distinct clusters of points.
 
-In parallel, there is a second point of view
-that people often take of vectors: as directions in space.
-Not only can we think of the vector $\mathbf{v} = [3,2]^\top$
-as the location $3$ units to the right and $2$ units up from the origin,
-we can also think of it as the direction itself
-to take $3$ steps to the right and $2$ steps up.
-In this way, we consider all the vectors in figure :numref:`fig_arrow` the same.
+Esse ponto de vista geométrico nos permite considerar o problema em um nível mais abstrato.
+Não mais confrontado com algum problema aparentemente intransponível
+como classificar fotos como gatos ou cachorros,
+podemos começar a considerar as tarefas abstratamente
+como coleções de pontos no espaço e retratando a tarefa
+como descobrir como separar dois grupos distintos de pontos.
+
+Paralelamente, existe um segundo ponto de vista
+que as pessoas costumam tomar de vetores: como direções no espaço.
+Não podemos apenas pensar no vetor $\mathbf{v} = [3,2]^\top$
+como a localização $3$ unidades à direita e $2$ unidades acima da origem,
+também podemos pensar nisso como a própria direção
+para mover $3$ passos para a direita e $2$ para cima.
+Desta forma, consideramos todos os vetores da figura :numref:`fig_arrow` iguais.
 
 ![Any vector can be visualized as an arrow in the plane.  In this case, every vector drawn is a representation of the vector $(3,2)^\top$.](../img/par-vec.svg)
 :label:`fig_arrow`
@@ -1047,5 +1048,5 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNDI2NTMzMywtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
 -->
