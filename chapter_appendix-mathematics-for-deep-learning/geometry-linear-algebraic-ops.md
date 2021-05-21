@@ -83,10 +83,10 @@ vemos que o vetor $\mathbf{u}-\mathbf{v}$ é a direção
 que nos leva do ponto $\mathbf{v}$ ao ponto $\mathbf{u}$.
 
 
-## Dot Products and Angles
-As we saw in :numref:`sec_linear-algebra`,
-if we take two column vectors $\mathbf{u}$ and $\mathbf{v}$,
-we can form their dot product by computing:
+## Produto Escalar e Ângulos
+Como vimos em :numref:`sec_linear-algebra`,
+se tomarmos dois vetores de coluna $\mathbf{u}$ and $\mathbf{v}$,
+podemos formar seu produto escalar computando:
 
 $$\mathbf{u}^\top\mathbf{v} = \sum_i u_i\cdot v_i.$$
 :eqlabel:`eq_dot_def`
@@ -1048,6 +1048,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNT
-g5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbMTU1MDg2MDAsMjEwMjg3MTc4NSwtNzMzMD
+E2MzU4LC0xNTg5MjEzMDY0XX0=
 -->
