@@ -1,4 +1,4 @@
-# Appendix: Mathematics for Deep Learning
+# Appeêndixce: Mathemaátics for a para *Deep Learning*
 :label:`chap_appendix_math`
 
 **Brent Werness** (*Amazon*), **Rachel Hu** (*Amazon*), and authors of this book
@@ -38,3 +38,6 @@ statistics
 information-theory
 ```
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTgzODE1NjUxOV19
+-->
