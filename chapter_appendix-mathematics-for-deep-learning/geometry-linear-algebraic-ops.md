@@ -47,7 +47,7 @@ usando os componentes dos vetores para definir
 a localização dos pontos no espaço comparada
 a uma referência fixa chamada *origem*. Isso pode ser visto em :numref:`fig_grid`.
 
-![An illustration of visualizing vectors as points in the plane.  The first component of the vector gives the $x$-coordinate, the second component gives the $y$-coordinate.  Higher dimensions are analogous, although much harder to visualize.](../img/grid-points.svg)
+![Uma ilustração da visualização de vetores como pontos no plano. O primeiro componente do vetor fornece a coordenada $x$, o segundo componente fornece a coordenada $y$. As dimensões superiores são análogas, embora muito mais difíceis de visualizar.](../img/grid-points.svg)
 :label:`fig_grid`
 
 This geometric point of view allows us to consider the problem on a more abstract level.
@@ -1047,6 +1047,5 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjc4NTM1MDUsLTE1ODkyMTMwNjRdfQ
-==
+eyJoaXN0b3J5IjpbMTAzNDI2NTMzMywtMTU4OTIxMzA2NF19
 -->
