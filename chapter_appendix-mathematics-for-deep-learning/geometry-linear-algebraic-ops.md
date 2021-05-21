@@ -1,4 +1,4 @@
-# Geometry and Linear Algebraic OperationsOperações de Geometria e Álgebra Linear
+# Operações de Geometria e Álgebra Linear
 :label:`sec_geometry-linear-algebraic-ops`
 
 In :numref:`sec_linear-algebra`, we encountered the basics of linear algebra
@@ -1053,5 +1053,5 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk0MTcwMjE0XX0=
+eyJoaXN0b3J5IjpbLTE1ODkyMTMwNjRdfQ==
 -->
