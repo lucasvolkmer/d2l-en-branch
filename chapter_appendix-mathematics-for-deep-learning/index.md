@@ -1,4 +1,4 @@
-# Appeêndixce: Mathemaátics for a para *Deep Learning*
+# Apêndice: Matemática para *Deep Learning*
 :label:`chap_appendix_math`
 
 **Brent Werness** (*Amazon*), **Rachel Hu** (*Amazon*), and authors of this book
@@ -39,5 +39,5 @@ information-theory
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzODE1NjUxOV19
+eyJoaXN0b3J5IjpbMTQ4NDE1NDAwN119
 -->
