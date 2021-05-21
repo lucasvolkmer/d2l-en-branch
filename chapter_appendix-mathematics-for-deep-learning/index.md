@@ -4,11 +4,12 @@
 **Brent Werness** (*Amazon*), **Rachel Hu** (*Amazon*), e autores deste livro
 
 
-One of the wonderful parts of modern deep learning is the fact that much of it can be understood and used without a full understanding of the mathematics below it.  This is a sign that the field is maturing.  Just as most software developers no longer need to worry about the theory of computable functions, neither should deep learning practitioners need to worry about the theoretical foundations of maximum likelihood learning.
 
-But, we are not quite there yet.
+Uma das partes maravilhosas do *deep learning* moderno é o fato de que muito dele pode ser compreendido e usado sem uma compreensão completa da matemática abaixo dele. Isso é um sinal de que o campo está amadurecendo. Assim como a maioria dos desenvolvedores de *software* não precisa mais se preocupar com a teoria das funções computáveis, os profissionais de aprendizado profundo também não devem se preocupar com os fundamentos teóricos do aprendizado de máxima *likelihood*.
 
-In practice, you will sometimes need to understand how architectural choices influence gradient flow, or the implicit assumptions you make by training with a certain loss function.  You might need to know what in the world entropy measures, and how it can help you understand exactly what bits-per-character means in your model.  These all require deeper mathematical understanding.
+Mas ainda não chegamos lá.
+
+Na prática, às vezes você precisará entender como as escolhas arquitetônicas influenciam o fluxo de gradiente ou as suposições implícitas que você faz ao treinar com uma determinada função de perda. Você pode precisar saber o que mede a entropia mundial e como isso pode ajudá-lo a entender exatamente o que cada bit por caractere significam em seu modelo. Tudo isso requer um conhecimento matemático mais profundo.
 
 This appendix aims to provide you the mathematical background you need to understand the core theory of modern deep learning, but it is not exhaustive.  We will begin with examining linear algebra in greater depth.  We develop a geometric understanding of all the common linear algebraic objects and operations that will enable us to visualize the effects of various transformations on our data.  A key element is the development of the basics of eigen-decompositions.
 
@@ -39,5 +40,5 @@ information-theory
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjc2MTgzNjFdfQ==
+eyJoaXN0b3J5IjpbLTE5MDI1OTg2OTJdfQ==
 -->
