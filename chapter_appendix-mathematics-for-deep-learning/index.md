@@ -11,17 +11,19 @@ Mas ainda não chegamos lá.
 
 Na prática, às vezes você precisará entender como as escolhas arquitetônicas influenciam o fluxo de gradiente ou as suposições implícitas que você faz ao treinar com uma determinada função de perda. Você pode precisar saber o que mede a entropia mundial e como isso pode ajudá-lo a entender exatamente o que cada bit por caractere significam em seu modelo. Tudo isso requer um conhecimento matemático mais profundo.
 
-This appendix aims to provide you the mathematical background you need to understand the core theory of modern deep learning, but it is not exhaustive.  We will begin with examining linear algebra in greater depth.  We develop a geometric understanding of all the common linear algebraic objects and operations that will enable us to visualize the effects of various transformations on our data.  A key element is the development of the basics of eigen-decompositions.
 
-We next develop the theory of differential calculus to the point that we can fully understand why the gradient is the direction of steepest descent, and why back-propagation takes the form it does.  Integral calculus is then discussed to the degree needed to support our next topic, probability theory.
+Este apêndice tem como objetivo fornecer a base matemática que você precisa para entender a teoria central do *deep learning*, moderno, mas não é exaustivo. Começaremos examinando a álgebra linear em maior profundidade. Desenvolvemos uma compreensão geométrica de todos os objetos algébricos lineares comuns e operações que nos permitirão visualizar os efeitos de várias transformações em nossos dados. Um elemento chave é o desenvolvimento das noções básicas de autodescomposições.
 
-Problems encountered in practice frequently are not certain, and thus we need a language to speak about uncertain things.  We review the theory of random variables and the most commonly encountered distributions so we may discuss models probabilistically.  This provides the foundation for the naive Bayes classifier, a probabilistic classification technique.
+Em seguida, desenvolvemos a teoria do cálculo diferencial até o ponto em que podemos entender completamente por que o gradiente é a direção de descida mais acentuada e por que a retropropagação assume a forma que assume. O cálculo integral é então discutido no grau necessário para apoiar nosso próximo tópico, a teoria da probabilidade.
 
-Closely related to probability theory is the study of statistics.  While statistics is far too large a field to do justice in a short section, we will introduce fundamental concepts that all machine learning practitioners should be aware of, in particular: evaluating and comparing estimators, conducting hypothesis tests, and constructing confidence intervals.
+Os problemas encontrados na prática frequentemente não são certos e, portanto, precisamos de uma linguagem para falar sobre coisas incertas. Revisamos a teoria das variáveis ​​aleatórias e as distribuições mais comumente encontradas para que possamos discutir os modelos de forma probabilística. Isso fornece a base para o classificador *naive* Bayes, uma técnica de classificação probabilística.
 
-Last, we turn to the topic of information theory, which is the mathematical study of information storage and transmission.  This provides the core language by which we may discuss quantitatively how much information a model holds on a domain of discourse.
 
-Taken together, these form the core of the mathematical concepts needed to begin down the path towards a deep understanding of deep learning.
+Intimamente relacionado à teoria da probabilidade está o estudo da estatística. Embora as estatísticas sejam um campo muito grande para fazer justiça em uma seção curta, apresentaremos conceitos fundamentais que todos os praticantes de aprendizado de máquina devem estar cientes, em particular: avaliação e comparação de estimadores, realização de testes de hipótese e construção de intervalos de confiança.
+
+Por último, voltamos ao tópico da teoria da informação, que é o estudo matemático do armazenamento e transmissão da informação. Isso fornece a linguagem central pela qual podemos discutir quantitativamente quanta informação um modelo contém em um domínio do discurso.
+
+Juntos, eles formam o núcleo dos conceitos matemáticos necessários para iniciar o caminho em direção a uma compreensão profunda do *deep learning*.
 
 ```toc
 :maxdepth: 2
@@ -40,5 +42,5 @@ information-theory
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDI1OTg2OTJdfQ==
+eyJoaXN0b3J5IjpbMTA0MTMzNTY0MCwtMTkwMjU5ODY5Ml19
 -->
