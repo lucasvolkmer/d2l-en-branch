@@ -66,7 +66,7 @@ também podemos pensar nisso como a própria direção
 para mover $3$ passos para a direita e $2$ para cima.
 Desta forma, consideramos todos os vetores da figura :numref:`fig_arrow` iguais.
 
-![Any vector can be visualized as an arrow in the plane.  In this case, every vector drawn is a representation of the vector $(3,2)^\top$.](../img/par-vec.svg)
+![Qualquer vetor pode ser visualizado como uma seta no plano. Nesse caso, todo vetor desenhado é uma representação do vetor $(3,2)^\top$.](../img/par-vec.svg)
 :label:`fig_arrow`
 
 One of the benefits of this shift is that
@@ -1048,5 +1048,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbLTE4ODU5MTYzOTIsLTczMzAxNjM1OCwtMT
+U4OTIxMzA2NF19
 -->
