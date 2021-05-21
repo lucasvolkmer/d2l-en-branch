@@ -1,22 +1,15 @@
 # Operações de Geometria e Álgebra Linear
 :label:`sec_geometry-linear-algebraic-ops`
 
-In :numref:`sec_linear-algebra`, we encountered the basics of linear algebra
-and saw how it could be used to express common operations for transforming our data.
-Linear algebra is one of the key mathematical pillars
-underlying much of the work that we do in deep learning
-and in machine learning more broadly.
-While :numref:`sec_linear-algebra` contained enough machinery
-to communicate the mechanics of modern deep learning models,
-there is a lot more to the subject.
-In this section, we will go deeper,
-highlighting some geometric interpretations of linear algebra operations,
-and introducing a few fundamental concepts, including of eigenvalues and eigenvectors.
+Em :numref:`sec_linear-algebra`, encontramos os fundamentos da álgebra linear e vimos como ela poderia ser usada para expressar operações comuns para transformar nossos dados.
+A álgebra linear é um dos principais pilares matemáticos subjacentes a grande parte do trabalho que fazemos no *deep learning* e no *machine learning* de forma mais ampla.
+Embora :numref:`sec_linear-algebra` contenha maquinário suficiente para comunicar a mecânica dos modelos modernos de aprendizado profundo, há muito mais sobre o assunto.
+Nesta seção, iremos mais fundo, destacando algumas interpretações geométricas de operações de álgebra linear e introduzindo alguns conceitos fundamentais, incluindo de autovalores e autovetores.
 
-## Geometry of Vectors
-First, we need to discuss the two common geometric interpretations of vectors,
-as either points or directions in space.
-Fundamentally, a vector is a list of numbers such as the Python list below.
+## Geometria Vetorial
+Primeiro, precisamos discutir as duas interpretações geométricas comuns de vetores,
+como pontos ou direções no espaço.
+Fundamentalmente, um vetor é uma lista de números, como a lista Python abaixo.
 
 ```{.python .input}
 #@tab all
@@ -1053,5 +1046,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODkyMTMwNjRdfQ==
+eyJoaXN0b3J5IjpbLTE0MTE5OTYwMjQsLTE1ODkyMTMwNjRdfQ
+==
 -->
