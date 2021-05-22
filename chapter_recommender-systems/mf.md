@@ -13,16 +13,14 @@ Seja $\mathbf{R} \in \mathbb{R}^{m \times n}$ a matriz de interação com $m$ us
 
 $$\hat{\mathbf{R}} = \mathbf{PQ}^\top$$
 
-where $\hat{\mathbf{R}}\in \mathbb{R}^{m \times n}$ is the predicted rating matrix which has the same shape as $\mathbf{R}$. One major problem of this prediction rule is that users/items biases can not be modeled. For example, some users tend to give higher ratings or some items always get lower ratings due to poorer quality. These biases are commonplace in real-world applications. To capture these biases, user specific and item specific bias terms are introduced. Specifically, the predicted rating user $u$ gives to item $i$ is calculated by
-
-
+onde $\hat{\mathbf{R}}\in \mathbb{R}^{m \times n}$ é a matriz de avaliação prevista que tem a mesma forma de $\mathbf{R}$. Um grande problema dessa regra de predição é que os vieses de usuários/itens não podem ser modelados. Por exemplo, alguns usuários tendem a dar classificações mais altas ou alguns itens sempre obtêm classificações mais baixas devido à qualidade inferior. Esses preconceitos são comuns em aplicativos do mundo real. Para capturar essas tendências, são introduzidos termos de tendência específicos do usuário e do item. Especificamente, a avaliação prevista que o usuário $u$ dá ao item $i$ é calculada por
 
 
 $$
 \hat{\mathbf{R}}_{ui} = \mathbf{p}_u\mathbf{q}^\top_i + b_u + b_i
 $$
 
-Then, we train the matrix factorization model by minimizing the mean squared error between predicted rating scores and real rating scores.  The objective function is defined as follows:
+Em seguida, treinamos o modelo de fatoração de matriz minimizando o erro quadrático médio entre as pontuações de classificação previstas e as pontuações de classificação reais. A função objetivo é definida da seguinte forma:
 
 $$
 \underset{\mathbf{P}, \mathbf{Q}, b}{\mathrm{argmin}} \sum_{(u, i) \in \mathcal{K}} \| \mathbf{R}_{ui} -
@@ -35,6 +33,12 @@ where $\lambda$ denotes the regularization rate. The regularizing term $\lambda 
 $\mathcal{K}=\{(u, i) \mid \mathbf{R}_{ui} \text{ is known}\}$. The model parameters can be learned with an optimization algorithm, such as Stochastic Gradient Descent and Adam.
 
 An intuitive illustration of the matrix factorization model is shown below:
+
+onde $\lambda$ denota a taxa de regularização. O termo de regularização $\lambda (\| \mathbf{P} \|^2_F + \| \mathbf{Q}
+\|^2_F + b_u^2 + b_i^2 )$ é usado para evitar sobreajuste penalizando a magnitude dos parâmetros. Os pares $(u, i)$ pelos quais $\mathbf{R}_{ui}$ é conhecido são armazenados no conjunto
+$ \ mathcal {K} = \ {(u, i) \ mid \ mathbf {R} _ {ui} \ text {é conhecido} \} $. Os parâmetros do modelo podem ser aprendidos com um algoritmo de otimização, como Stochastic Gradient Descent e Adam.
+
+Uma ilustração intuitiva do modelo de fatoração de matriz é mostrada abaixo:
 
 ![Illustration of matrix factorization model](../img/rec-mf.svg)
 
@@ -179,5 +183,5 @@ scores
 [Discussions](https://discuss.d2l.ai/t/400)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3OTM4ODUxMiwtMTg1OTYwMzAyM119
+eyJoaXN0b3J5IjpbMTYyNjg3MDMwMCwtMTg1OTYwMzAyM119
 -->
