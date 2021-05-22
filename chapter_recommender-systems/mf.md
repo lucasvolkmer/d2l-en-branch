@@ -92,10 +92,10 @@ def evaluator(net, test_iter, devices):
     return float(np.mean(np.array(rmse_list)))
 ```
 
-## Training and Evaluating the Model
+## Treinamento e avaliação do modelo
 
 
-In the training function, we adopt the $L_2$ loss with weight decay. The weight decay mechanism has the same effect as the $L_2$ regularization.
+Na função de treinamento, adotamos a perda de $L_2$ com queda de peso. O mecanismo de redução de peso tem o mesmo efeito que a regularização $L_2$.
 
 ```{.python .input  n=4}
 #@save
@@ -136,8 +136,7 @@ def train_recsys_rating(net, train_iter, test_iter, loss, trainer, num_epochs,
           f'on {str(devices)}')
 ```
 
-Finally, let us put all things together and train the model. Here, we set the latent factor dimension to 30.
-
+Finalmente, vamos juntar todas as coisas e treinar o modelo. Aqui, definimos a dimensão do fator latente para 30.
 ```{.python .input  n=5}
 devices = d2l.try_all_gpus()
 num_users, num_items, train_iter, test_iter = d2l.split_and_load_ml100k(
@@ -152,7 +151,7 @@ train_recsys_rating(net, train_iter, test_iter, loss, trainer, num_epochs,
                     devices, evaluator)
 ```
 
-Below, we use the trained model to predict the rating that a user (ID 20) might give to an item (ID 30).
+Abaixo, usamos o modelo treinado para prever a classificação que um usuário (ID 20) pode dar a um item (ID 30).
 
 ```{.python .input  n=6}
 scores = net(np.array([20], dtype='int', ctx=devices[0]),
@@ -160,22 +159,22 @@ scores = net(np.array([20], dtype='int', ctx=devices[0]),
 scores
 ```
 
-## Summary
+## Sumário
 
-* The matrix factorization model is widely used in recommender systems.  It can be used to predict ratings that a user might give to an item.
-* We can implement and train matrix factorization for recommender systems.
+* O modelo de fatoração de matriz é amplamente utilizado em sistemas de recomendação. Ele pode ser usado para prever classificações que um usuário pode dar a um item.
+* Podemos implementar e treinar a fatoração de matrizes para sistemas de recomendação.
 
 
-## Exercises
+## Exercícios
 
-* Vary the size of latent factors. How does the size of latent factors influence the model performance?
-* Try different optimizers, learning rates, and weight decay rates.
-* Check the predicted rating scores of other users for a specific movie.
+* Varie o tamanho dos fatores latentes. Como o tamanho dos fatores latentes influencia o desempenho do modelo?
+* Experimente diferentes otimizadores, taxas de aprendizado e taxas de redução de peso.
+* Verifique as pontuações de classificação previstas de outros usuários para um filme específico.
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/400)
+[Discussão](https://discuss.d2l.ai/t/400)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNzA0MzU2NSwtMTg1OTYwMzAyM119
+eyJoaXN0b3J5IjpbNjczOTUyNjQ5LC0xODU5NjAzMDIzXX0=
 -->
