@@ -28,21 +28,15 @@ $$
 \|^2_F + b_u^2 + b_i^2 )
 $$
 
-where $\lambda$ denotes the regularization rate. The regularizing term $\lambda (\| \mathbf{P} \|^2_F + \| \mathbf{Q}
-\|^2_F + b_u^2 + b_i^2 )$ is used to avoid over-fitting by penalizing the magnitude of the parameters. The $(u, i)$ pairs for which $\mathbf{R}_{ui}$ is known are stored in the set
-$\mathcal{K}=\{(u, i) \mid \mathbf{R}_{ui} \text{ is known}\}$. The model parameters can be learned with an optimization algorithm, such as Stochastic Gradient Descent and Adam.
-
-An intuitive illustration of the matrix factorization model is shown below:
-
 onde $\lambda$ denota a taxa de regularização. O termo de regularização $\lambda (\| \mathbf{P} \|^2_F + \| \mathbf{Q}
 \|^2_F + b_u^2 + b_i^2 )$ é usado para evitar sobreajuste penalizando a magnitude dos parâmetros. Os pares $(u, i)$ pelos quais $\mathbf{R}_{ui}$ é conhecido são armazenados no conjunto
-$ \ mathcal {K} = \ {(u, i) \ mid \ mathbf {R} _ {ui} \ text {é conhecido} \} $. Os parâmetros do modelo podem ser aprendidos com um algoritmo de otimização, como Stochastic Gradient Descent e Adam.
+$\mathcal{K}=\{(u, i) \mid \mathbf{R}_{ui} \text{ is known}\}$. Os parâmetros do modelo podem ser aprendidos com um algoritmo de otimização, como Stochastic Gradient Descent e Adam.
 
 Uma ilustração intuitiva do modelo de fatoração de matriz é mostrada abaixo:
 
-![Illustration of matrix factorization model](../img/rec-mf.svg)
+![Ilustração do modelo de fatoração de matriz](../img/rec-mf.svg)
 
-In the rest of this section, we will explain the implementation of matrix factorization and train the model on the MovieLens dataset.
+No restante desta seção, explicaremos a implementação da fatoração da matriz e treinaremos o modelo no conjunto de dados MovieLens.
 
 ```{.python .input  n=2}
 from d2l import mxnet as d2l
@@ -52,9 +46,11 @@ import mxnet as mx
 npx.set_np()
 ```
 
-## Model Implementation
+## Implementação do Modelo
 
 First, we implement the matrix factorization model described above. The user and item latent factors can be created with the `nn.Embedding`. The `input_dim` is the number of items/users and the (`output_dim`) is the dimension of the latent factors ($k$).  We can also use `nn.Embedding` to create the user/item biases by setting the `output_dim` to one. In the `forward` function, user and item ids are used to look up the embeddings.
+
+Primeiro, implementamos o modelo de fatoração de matriz descrito acima. Os fatores latentes do usuário e do item podem ser criados com o `nn.Embedding`. O `input_dim` é o número de itens / usuários e o (` output_dim`) é a dimensão dos fatores latentes ($ k $). Também podemos usar `nn.Embedding` para criar os vieses de usuário / item definindo` output_dim` para um. Na função `forward`, os ids do usuário e do item são usados para pesquisar os embeddings.
 
 ```{.python .input  n=4}
 class MF(nn.Block):
@@ -183,5 +179,5 @@ scores
 [Discussions](https://discuss.d2l.ai/t/400)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNjg3MDMwMCwtMTg1OTYwMzAyM119
+eyJoaXN0b3J5IjpbNzk0MDMwOTI3LC0xODU5NjAzMDIzXX0=
 -->
