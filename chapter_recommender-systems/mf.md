@@ -9,13 +9,14 @@ muita atenção ao campo de pesquisa de sistemas de recomendação. Posteriormen
 
 A fatoração de matriz é uma classe de modelos de filtragem colaborativa. Especificamente, o modelo fatoriza a matriz de interação usuário-item (por exemplo, matriz de classificação) no produto de duas matrizes de classificação inferior, capturando a estrutura de classificação inferior das interações usuário-item.
 
-Let $\mathbf{R} \in \mathbb{R}^{m \times n}$ denote the interaction matrix with $m$ users and $n$ items, and the values of $\mathbf{R}$ represent explicit ratings. The user-item interaction will be factorized into a user latent matrix $\mathbf{P} \in \mathbb{R}^{m \times k}$ and an item latent matrix $\mathbf{Q} \in \mathbb{R}^{n \times k}$, where $k \ll m, n$, is the latent factor size. Let $\mathbf{p}_u$ denote the $u^\mathrm{th}$ row of $\mathbf{P}$ and $\mathbf{q}_i$ denote the $i^\mathrm{th}$ row of $\mathbf{Q}$.  For a given item $i$, the elements of $\mathbf{q}_i$ measure the extent to which the item possesses those characteristics such as the genres and languages of a movie. For a given user $u$, the elements of $\mathbf{p}_u$ measure the extent of interest the user has in items' corresponding characteristics. These latent factors might measure obvious dimensions as mentioned in those examples or are completely uninterpretable. The predicted ratings can be estimated by
-
-Seja $\mathbf{R} \in \mathbb{R}^{m \times n}$ a matriz de interação com $m$ usuários e $n$ itens, e os valores de $\mathbf{R}$ representam explícito avaliações. A interação usuário-item será fatorada em uma matriz latente de usuário $\mathbf{P} \in \mathbb{R}^{m \times k}$ e uma matriz latente de item $\mathbf{Q} \in \mathbb{R}^{n \times k}$, onde $k \ll m, n$, é o tamanho do fator latente. Deixe $\mathbf{p}_u$ denotar a linha $u^\mathrm{th}$ linha de $\mathbf{P}$ denotar a linha $ i ^ \ mathrm {th} $ de $ \ mathbf {Q} $. Para um determinado item $i$, os elementos de $ \ mathbf {q} _i $ medem até que ponto o item possui essas características, como gêneros e idiomas de um filme. Para um dado usuário $ u $, os elementos de $ \ mathbf {p} _u $ medem a extensão do interesse que o usuário tem nas características correspondentes dos itens. Esses fatores latentes podem medir dimensões óbvias conforme mencionado nesses exemplos ou são completamente ininterpretáveis. As classificações previstas podem ser estimadas por
+Seja $\mathbf{R} \in \mathbb{R}^{m \times n}$ a matriz de interação com $m$ usuários e $n$ itens, e os valores de $\mathbf{R}$ representam explícito avaliações. A interação usuário-item será fatorada em uma matriz latente de usuário $\mathbf{P} \in \mathbb{R}^{m \times k}$ e uma matriz latente de item $\mathbf{Q} \in \mathbb{R}^{n \times k}$, onde $k \ll m, n$, é o tamanho do fator latente. Deixe $\mathbf{p}_u$ denotar a linha $u^\mathrm{th}$ linha de $\mathbf{P}$ denotar a $i^\mathrm{th}$ linha de $\mathbf{Q}$.. Para um determinado item $i$, os elementos de $\mathbf{q}_i$ medem até que ponto o item possui essas características, como gêneros e idiomas de um filme. Para um dado usuário $u$, os elementos de $\mathbf{p}_u$ medem a extensão do interesse que o usuário tem nas características correspondentes dos itens. Esses fatores latentes podem medir dimensões óbvias conforme mencionado nesses exemplos ou são completamente ininterpretáveis. As classificações previstas podem ser estimadas por
 
 $$\hat{\mathbf{R}} = \mathbf{PQ}^\top$$
 
 where $\hat{\mathbf{R}}\in \mathbb{R}^{m \times n}$ is the predicted rating matrix which has the same shape as $\mathbf{R}$. One major problem of this prediction rule is that users/items biases can not be modeled. For example, some users tend to give higher ratings or some items always get lower ratings due to poorer quality. These biases are commonplace in real-world applications. To capture these biases, user specific and item specific bias terms are introduced. Specifically, the predicted rating user $u$ gives to item $i$ is calculated by
+
+
+
 
 $$
 \hat{\mathbf{R}}_{ui} = \mathbf{p}_u\mathbf{q}^\top_i + b_u + b_i
@@ -178,5 +179,5 @@ scores
 [Discussions](https://discuss.d2l.ai/t/400)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MjE5MTA0NCwtMTg1OTYwMzAyM119
+eyJoaXN0b3J5IjpbLTg3OTM4ODUxMiwtMTg1OTYwMzAyM119
 -->
