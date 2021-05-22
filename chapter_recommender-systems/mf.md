@@ -48,9 +48,7 @@ npx.set_np()
 
 ## Implementação do Modelo
 
-First, we implement the matrix factorization model described above. The user and item latent factors can be created with the `nn.Embedding`. The `input_dim` is the number of items/users and the (`output_dim`) is the dimension of the latent factors ($k$).  We can also use `nn.Embedding` to create the user/item biases by setting the `output_dim` to one. In the `forward` function, user and item ids are used to look up the embeddings.
-
-Primeiro, implementamos o modelo de fatoração de matriz descrito acima. Os fatores latentes do usuário e do item podem ser criados com o `nn.Embedding`. O `input_dim` é o número de itens / usuários e o (` output_dim`) é a dimensão dos fatores latentes ($ k $). Também podemos usar `nn.Embedding` para criar os vieses de usuário / item definindo` output_dim` para um. Na função `forward`, os ids do usuário e do item são usados para pesquisar os embeddings.
+Primeiro, implementamos o modelo de fatoração de matriz descrito acima. Os fatores latentes do usuário e do item podem ser criados com o `nn.Embedding`. O `input_dim` é o número de itens / usuários e o (`output_dim`) é a dimensão dos fatores latentes ($ k $). Também podemos usar `nn.Embedding` para criar os vieses de usuário / item definindo `output_dim` para um. Na função `forward`, os ids do usuário e do item são usados para pesquisar os embeddings.
 
 ```{.python .input  n=4}
 class MF(nn.Block):
@@ -70,15 +68,15 @@ class MF(nn.Block):
         return outputs.flatten()
 ```
 
-## Evaluation Measures
+## Medidas de Avaliação
 
-We then implement the RMSE (root-mean-square error) measure, which is commonly used to measure the differences between rating scores predicted by the model and the actually observed ratings (ground truth) :cite:`Gunawardana.Shani.2015`. RMSE is defined as:
+Em seguida, implementamos a medida RMSE (erro quadrático médio), que é comumente usada para medir as diferenças entre as pontuações de classificação previstas pelo modelo e as classificações realmente observadas (verdade do terreno) :cite:`Gunawardana.Shani.2015`. RMSE é definido como:
 
 $$
 \mathrm{RMSE} = \sqrt{\frac{1}{|\mathcal{T}|}\sum_{(u, i) \in \mathcal{T}}(\mathbf{R}_{ui} -\hat{\mathbf{R}}_{ui})^2}
 $$
 
-where $\mathcal{T}$ is the set consisting of pairs of users and items that you want to evaluate on. $|\mathcal{T}|$ is the size of this set. We can use the RMSE function provided by `mx.metric`.
+onde $\mathcal{T}$ é o conjunto que consiste em pares de usuários e itens que você deseja avaliar. $|\mathcal{T}|$ é o tamanho deste conjunto. Podemos usar a função RMSE fornecida por `mx.metric`.
 
 ```{.python .input  n=3}
 def evaluator(net, test_iter, devices):
@@ -179,5 +177,5 @@ scores
 [Discussions](https://discuss.d2l.ai/t/400)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk0MDMwOTI3LC0xODU5NjAzMDIzXX0=
+eyJoaXN0b3J5IjpbMTAxNzA0MzU2NSwtMTg1OTYwMzAyM119
 -->
