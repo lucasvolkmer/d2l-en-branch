@@ -1,6 +1,9 @@
 # Fatoração de Matriz
-oração de Matriz
-Matrix Factorization :cite:`Koren.Bell.Volinsky.2009` is a well-established algorithm in the recommender systems literature. The first version of matrix factorization model is proposed by Simon Funk in a famous [blog
+ :cite:`Koren.Bell.Volinsky.2009` 
+Fatoração de matrizes é um algoritmo bem estabelecido na literatura de sistemas de recomendação. A primeira versão do modelo de fatoração de matrizes é proposta por Simon Funk em um famoso [blog post](https://sifter.org/~simon/journal/20061211.html) em que descreveu a ideia de fatorar a matriz de interação. Em seguida, tornou-se amplamente conhecido devido ao concurso Netflix realizado em 2006. Naquela época, a Netflix, uma empresa de streaming de mídia e locação de vídeo, anunciou um concurso para melhorar o desempenho de seu sistema de recomendação. A melhor equipe que puder melhorar na linha de base do Netflix, ou seja, Cinematch), em 10 por cento ganharia um prêmio de um milhão de dólares. Como tal, este concurso atraiu
+muita atenção ao campo de pesquisa de sistemas de recomendação. Posteriormente, o grande prêmio foi ganho pela equipe Pragmatic Chaos da BellKor, uma equipe combinada de BellKor, Pragmatic Theory e BigChaos (você não precisa se preocupar com esses algoritmos agora). Embora a pontuação final tenha sido o resultado de uma solução de conjunto (ou seja, uma combinação de muitos algoritmos), o algoritmo de fatoração de matriz desempenhou um papel crítico na mistura final. O relatório técnico da solução do Grande Prêmio Netflix: cite: `Toscher.Jahrer.Bell.2009` fornece uma introdução detalhada ao modelo adotado. Nesta seção, vamos mergulhar nos detalhes do modelo de fatoração de matriz e sua implementação.
+
+is a well-established algorithm in the recommender systems literature. The first version of matrix factorization model is proposed by Simon Funk in a famous [blog
 post](https://sifter.org/~simon/journal/20061211.html) in which he described the idea of factorizing the interaction matrix. It then became widely known due to the Netflix contest which was held in 2006. At that time, Netflix, a media-streaming and video-rental company, announced a contest to improve its recommender system performance. The best team that can improve on the Netflix baseline, i.e., Cinematch), by 10 percent would win a one million USD prize.  As such, this contest attracted
 a lot of attention to the field of recommender system research. Subsequently, the grand prize was won by the BellKor's Pragmatic Chaos team, a combined team of BellKor, Pragmatic Theory, and BigChaos (you do not need to worry about these algorithms now). Although the final score was the result of an ensemble solution (i.e., a combination of many algorithms), the matrix factorization algorithm played a critical role in the final blend. The technical report of the Netflix Grand Prize solution :cite:`Toscher.Jahrer.Bell.2009` provides a detailed introduction to the adopted model. In this section, we will dive into the details of the matrix factorization model and its implementation.
 
@@ -176,5 +179,5 @@ scores
 [Discussions](https://discuss.d2l.ai/t/400)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTk2MDMwMjNdfQ==
+eyJoaXN0b3J5IjpbNTUxMDg1NDkzLC0xODU5NjAzMDIzXX0=
 -->
