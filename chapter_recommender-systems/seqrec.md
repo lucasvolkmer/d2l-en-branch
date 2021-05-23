@@ -28,11 +28,7 @@ $$
 \mathbf{z} = \phi(\mathbf{W}[\mathbf{o}, \mathbf{o}']^\top + \mathbf{b}),
 $$
 
-where $\mathbf{W} \in \mathbb{R}^{k \times (d + kd')}$ is the weight matrix and $\mathbf{b} \in \mathbb{R}^k$ is the bias. The learned vector $\mathbf{z} \in \mathbb{R}^k$ is the representation of user's short-term intent.
-
-At last, the prediction function combines users' short-term and general taste together, which is defined as:
-
-onde $ \ mathbf {W} \ in \ mathbb {R} ^ {k \ times (d + kd ')} $ é a matriz de peso e $ \ mathbf {b} \ in \ mathbb {R} ^ k $ é o tendência. O vetor aprendido $ \ mathbf {z} \ in \ mathbb {R} ^ k $ é a representação da intenção de curto prazo do usuário.
+onde $\mathbf{W} \in \mathbb{R}^{k \times (d + kd')}$ é a matriz de peso e $\mathbf{b} \in \mathbb{R}^k$ é o tendência. O vetor aprendido $\mathbf{z} \in \mathbb{R}^k$ é a representação da intenção de curto prazo do usuário.
 
 Por fim, a função de previsão combina o gosto geral e de curto prazo dos usuários, que é definido como:
 
@@ -43,6 +39,10 @@ $$
 where $\mathbf{V} \in \mathbb{R}^{n \times 2k}$ is another item embedding matrix. $\mathbf{b}' \in \mathbb{R}^n$ is the item specific bias.  $\mathbf{P} \in \mathbb{R}^{m \times k}$ is the user embedding matrix for users' general tastes. $\mathbf{p}_u \in \mathbb{R}^{ k}$ is the $u^\mathrm{th}$ row of $P$ and $\mathbf{v}_i \in \mathbb{R}^{2k}$ is the $i^\mathrm{th}$ row of $\mathbf{V}$.
 
 The model can be learned with BPR or Hinge loss. The architecture of Caser is shown below:
+
+onde $\mathbf{V} \in \mathbb{R}^{n \times 2k}$ é outra matriz de incorporação de itens. $\mathbf{b}' \in \mathbb{R}^n$ é o viés específico do item. $\mathbf{P} \in \mathbb{R}^{m \times k}$ é a matriz de incorporação do usuário para os gostos gerais dos usuários. $\mathbf{p}_u \in \mathbb{R}^{ k}$ é a linha $u^\mathrm{th}$ de $P$ e $\mathbf{v}_i \in \mathbb{R}^{2k}$  é a $ i ^ \ mathrm {th} $ linha de $ \ mathbf {V} $.
+
+O modelo pode ser aprendido com BPR ou perda de dobradiça. A arquitetura do Caser é mostrada abaixo:
 
 ![Illustration of the Caser Model](../img/rec-caser.svg)
 
@@ -223,5 +223,5 @@ d2l.train_ranking(net, train_iter, test_iter, loss, trainer, test_seq_iter,
 [Discussions](https://discuss.d2l.ai/t/404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg3OTM4MjczXX0=
+eyJoaXN0b3J5IjpbLTkxNzk3NzU3MV19
 -->
