@@ -58,7 +58,7 @@ $$
  \sum_{(u, i, j \in D)} \max( m - \hat{y}_{ui} + \hat{y}_{uj}, 0)
 $$
 
-where $m$ is the safety margin size. It aims to push negative items away from positive items. Similar to BPR, it aims to optimize for relevant distance between positive and negative samples instead of absolute outputs, making it well suited to recommender systems.
+onde $m$ é o tamanho da margem de segurança. Seu objetivo é afastar itens negativos de itens positivos. Semelhante ao BPR, visa otimizar a distância relevante entre as amostras positivas e negativas em vez de saídas absolutas, tornando-o adequado para sistemas de recomendação.
 
 ```{.python .input  n=3}
 #@save
@@ -73,21 +73,21 @@ class HingeLossbRec(gluon.loss.Loss):
         return loss
 ```
 
-These two losses are interchangeable for personalized ranking in recommendation.
+Essas duas perdas são intercambiáveis para classificação personalizada na recomendação.
 
-## Summary
+## Sumário
 
-- There are three types of ranking losses available for the personalized ranking task in recommender systems, namely, pointwise, pairwise and listwise methods.
-- The two pairwise loses, Bayesian personalized ranking loss and hinge loss, can be used interchangeably.
+- Existem três tipos de perdas de classificação disponíveis para a tarefa de classificação personalizada em sistemas de recomendação, a saber, métodos de pontos, pares e listas.
+- As duas perdas de pares, perda de classificação personalizada Bayesiana e perda de dobradiça, podem ser usadas de forma intercambiável.
 
-## Exercises
+## Exercícios
 
-- Are there any variants of BPR and hinge loss available?
-- Can you find any recommendation models that use BPR or hinge loss?
+- Existem variantes de BPR e perda de dobradiça disponíveis?
+- Você consegue encontrar algum modelo de recomendação que use BPR ou perda de dobradiça?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/402)
+[Discussão](https://discuss.d2l.ai/t/402)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTcwMzExNTQsNjMxNjQ1MTI3XX0=
+eyJoaXN0b3J5IjpbLTQ4NTkxNDg0MSw2MzE2NDUxMjddfQ==
 -->
