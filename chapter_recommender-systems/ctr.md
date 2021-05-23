@@ -1,13 +1,14 @@
 # Feature-Rich RSistemas de recommender Systemação com muitos recursos
 
-Interaction data is the most basic indication of users' preferences and interests. It plays a critical role in former introduced models. Yet, interaction data is usually extremely sparse and can be noisy at times. To address this issue, we can integrate side information such as features of items, profiles of users, and even in which context that the interaction occurred into the recommendation model. Utilizing these features are helpful in making recommendations in that these features can be an effective predictor of users interests especially when interaction data is lacking. As such, it is essential for recommendation models also have the capability to deal with those features and give the model some content/context awareness. To demonstrate this type of recommendation models, we introduce another task on click-through rate (CTR) for online advertisement recommendations :cite:`McMahan.Holt.Sculley.ea.2013` and present an anonymous advertising data. Targeted advertisement services have attracted widespread attention and are often framed as recommendation engines. Recommending advertisements that match users' personal taste and interest is important for click-through rate improvement.
+
+Os dados de interação são a indicação mais básica das preferências e interesses dos usuários. Ele desempenha um papel crítico em modelos anteriores introduzidos. No entanto, os dados de interação geralmente são extremamente esparsos e podem ser barulhentos às vezes. Para resolver esse problema, podemos integrar informações colaterais, como recursos de itens, perfis de usuários e até mesmo em que contexto a interação ocorreu no modelo de recomendação. A utilização desses recursos é útil para fazer recomendações, pois esses recursos podem ser um indicador eficaz dos interesses dos usuários, especialmente quando faltam dados de interação. Como tal, é essencial que os modelos de recomendação também tenham a capacidade de lidar com esses recursos e fornecer ao modelo algum conhecimento de conteúdo / contexto. Para demonstrar este tipo de modelos de recomendação, apresentamos outra tarefa sobre a taxa de cliques (CTR) para recomendações de publicidade online: cite: `McMahan.Holt.Sculley.ea.2013` e apresente dados anônimos de publicidade. Os serviços de publicidade direcionados têm atraído a atenção generalizada e muitas vezes são enquadrados como mecanismos de recomendação. Recomendar anúncios que correspondam aos gostos e interesses pessoais dos usuários é importante para a melhoria da taxa de cliques.
 
 
-Digital marketers use online advertising to display advertisements to customers. Click-through rate is a metric that measures the number of clicks advertisers receive on their ads per number of impressions and it is expressed as a percentage calculated with the formula: 
+Os profissionais de marketing digital usam publicidade online para exibir anúncios aos clientes. A taxa de cliques é uma métrica que mede o número de cliques que os anunciantes recebem em seus anúncios por número de impressões e é expressa como uma porcentagem calculada com a fórmula:
 
 $$ \text{CTR} = \frac{\#\text{Clicks}} {\#\text{Impressions}} \times 100 \% .$$
 
-Click-through rate is an important signal that indicates the effectiveness of prediction algorithms. Click-through rate prediction is a task of predicting the likelihood that something on a website will be clicked. Models on CTR prediction can not only be employed in targeted advertising systems but also in general item (e.g., movies, news, products) recommender systems, email campaigns, and even search engines. It is also closely related to user satisfaction, conversion rate, and can be helpful in setting campaign goals as it can help advertisers to set realistic expectations.
+A taxa de cliques é um sinal importante que indica a eficácia dos algoritmos de previsão. A previsão da taxa de cliques é uma tarefa de prever a probabilidade de que algo em um site será clicado. Os modelos de previsão de CTR não podem ser empregados apenas em sistemas de publicidade direcionados, mas também em sistemas de recomendação de itens gerais (por exemplo, filmes, notícias, produtos), campanhas de e-mail e até mesmo mecanismos de pesquisa. Também está intimamente relacionado à satisfação do usuário, taxa de conversão e pode ser útil na definição de metas de campanha, pois pode ajudar os anunciantes a definir expectativas realistas.
 
 ```{.python .input}
 from collections import defaultdict
@@ -16,7 +17,7 @@ from mxnet import gluon, np
 import os
 ```
 
-## An Online Advertising Dataset
+## Um conjunto de dados de publicidade online
 
 With the considerable advancements of Internet and mobile technology, online advertising has become an important income resource and generates vast majority of revenue in the Internet industry. It is important to display relevant advertisements or advertisements that pique users' interests so that casual visitors can be converted into paying customers. The dataset we introduced is an online advertising dataset. It consists of 34 fields, with the first column representing the target variable that indicates if an ad was clicked (1) or not (0). All the other columns are categorical features. The columns might represent the advertisement id, site or application id, device id, time, user profiles and so on. The real semantics of the features are undisclosed due to anonymization and privacy concern.
 
@@ -100,5 +101,5 @@ As can be seen, all the 34 fields are categorical features. Each value represent
 [Discussions](https://discuss.d2l.ai/t/405)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzM0ODE3NDVdfQ==
+eyJoaXN0b3J5IjpbLTY0NzE2Nzc5MiwtMjAzMzQ4MTc0NV19
 -->
