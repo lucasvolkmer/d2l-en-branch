@@ -113,8 +113,7 @@ $$
 \text{AUC} = \frac{1}{m} \sum_{u \in \mathcal{U}} \frac{1}{|\mathcal{I} \backslash S_u|} \sum_{j \in I \backslash S_u} \textbf{1}(rank_{u, g_u} < rank_{u, j}),
 $$
 
-
-onde $\mathcal{I}$ é o item definido. $S_u$ são os itens candidatos do usuário $ u $. Observe que muitos outros protocolos de avaliação, como precisão, recuperação e ganho cumulativo com desconto normalizado (NDCG), também podem ser usados.
+onde $\mathcal{I}$ é o item definido. $S_u$ são os itens candidatos do usuário $u$. Observe que muitos outros protocolos de avaliação, como precisão, recuperação e ganho cumulativo com desconto normalizado (NDCG), também podem ser usados.
 
 A função a seguir calcula as contagens de ocorrências e AUC para cada usuário.
 
@@ -130,7 +129,7 @@ def hit_and_auc(rankedlist, test_matrix, k):
     return len(hits_k), auc
 ```
 
-Then, the overall Hit rate and AUC are calculated as follows.
+Em seguida, a taxa geral de acertos e a AUC são calculadas como segue.
 
 ```{.python .input  n=5}
 #@save
@@ -164,9 +163,9 @@ def evaluate_ranking(net, test_input, seq, candidates, num_users, num_items,
     return np.mean(np.array(hit_rate)), np.mean(np.array(auc))
 ```
 
-## Training and Evaluating the Model
+## Treinamento e avaliação do modelo
 
-The training function is defined below. We train the model in the pairwise manner.
+A função de treinamento é definida abaixo. Treinamos o modelo de maneira pareada.
 
 ```{.python .input  n=6}
 #@save
@@ -204,7 +203,7 @@ def train_ranking(net, train_iter, test_iter, loss, trainer, test_seq_iter,
           f'on {str(devices)}')
 ```
 
-Now, we can load the MovieLens 100k dataset and train the model. Since there are only ratings in the MovieLens dataset, with some losses of accuracy, we binarize these ratings to zeros and ones. If a user rated an item, we consider the implicit feedback as one, otherwise as zero. The action of rating an item can be treated as a form of providing implicit feedback.  Here, we split the dataset in the `seq-aware` mode where users' latest interacted items are left out for test.
+Agora, podemos carregar o conjunto de dados MovieLens 100k e treinar o modelo. Como há apenas classificações no conjunto de dados MovieLens, com algumas perdas de precisão, binarizamos essas classificações em zeros e uns. Se um usuário classificou um item, consideramos o feedback implícito como um, caso contrário, como zero. A ação de classificar um item pode ser tratada como uma forma de fornecer feedback implícito. Aqui, dividimos o conjunto de dados no modo `seq-aware`, onde os últimos itens interagidos dos usuários são deixados de fora para teste.
 
 ```{.python .input  n=11}
 batch_size = 1024
@@ -220,7 +219,7 @@ train_iter = gluon.data.DataLoader(
     True, last_batch="rollover", num_workers=d2l.get_dataloader_workers())
 ```
 
-We then create and initialize the model. we use a three-layer MLP with constant hidden size 10.
+Em seguida, criamos e inicializamos o modelo. usamos um MLP de três camadas com tamanho oculto constante 10.
 
 ```{.python .input  n=8}
 devices = d2l.try_all_gpus()
@@ -228,7 +227,7 @@ net = NeuMF(10, num_users, num_items, nums_hiddens=[10, 10, 10])
 net.initialize(ctx=devices, force_reinit=True, init=mx.init.Normal(0.01))
 ```
 
-The following code trains the model.
+O código a seguir treina o modelo.
 
 ```{.python .input  n=12}
 lr, num_epochs, wd, optimizer = 0.01, 10, 1e-5, 'adam'
@@ -239,21 +238,21 @@ train_ranking(net, train_iter, test_iter, loss, trainer, None, num_users,
               num_items, num_epochs, devices, evaluate_ranking, candidates)
 ```
 
-## Summary
+## Sumário
 
-* Adding nonlinearity to matrix factorization model is beneficial for improving the model capability and effectiveness.
-* NeuMF is a combination of matrix factorization and multilayer perceptron. The multilayer perceptron takes the concatenation of user and item embeddings as the input.
+* Adicionar não linearidade ao modelo de fatoração de matriz é benéfico para melhorar a capacidade e eficácia do modelo.
+* NeuMF é uma combinação de fatoração de matriz e perceptron multicamadas. O perceptron multicamadas leva a concatenação de embeddings de usuário e item como entrada.
 
-## Exercises
+## Exercícios
 
-* Vary the size of latent factors. How the size of latent factors impact the model performance?
-* Vary the architectures (e.g., number of layers, number of neurons of each layer) of the MLP to check the its impact on the performance.
-* Try different optimizers, learning rate and weight decay rate.
-* Try to use hinge loss defined in the last section to optimize this model.
+* Varie o tamanho dos fatores latentes. Como o tamanho dos fatores latentes afetam o desempenho do modelo?
+* Varie as arquiteturas (por exemplo, número de camadas, número de neurônios de cada camada) do MLP para verificar seu impacto no desempenho.
+* Experimente diferentes otimizadores, taxa de aprendizado e taxa de redução de peso.
+* Tente usar a perda de dobradiça definida na última seção para otimizar este modelo.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/403)
+[Discussão](https://discuss.d2l.ai/t/403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjI1NjgzNTgsMTkzNTY3MzY0Nl19
+eyJoaXN0b3J5IjpbMjAwMjIyODgwNSwxOTM1NjczNjQ2XX0=
 -->
