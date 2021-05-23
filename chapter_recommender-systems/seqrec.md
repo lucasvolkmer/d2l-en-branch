@@ -108,7 +108,7 @@ class Caser(nn.Block):
 
 Para processar os dados de interação sequencial, precisamos reimplementar a classe Dataset. O código a seguir cria uma nova classe de conjunto de dados chamada `SeqDataset`. Em cada amostra, ele exibe a identidade do usuário, seus itens anteriores com interação de $L$ como uma sequência e o próximo item com o qual ele interage como destino. A figura a seguir demonstra o processo de carregamento de dados para um usuário. Suponha que este usuário goste de 9 filmes, nós organizamos esses nove filmes em ordem cronológica. O filme mais recente é deixado de fora como item de teste. Para os oito filmes restantes, podemos obter três amostras de treinamento, com cada amostra contendo uma sequência de cinco ($L = 5$) filmes e seu item subsequente como o item de destino. Amostras negativas também são incluídas no conjunto de dados personalizado.
 
-![Illustration of the data generation process](../img/rec-seq-data.svg)
+![Ilustração do processo de geração de dados](../img/rec-seq-data.svg)
 
 ```{.python .input  n=5}
 class SeqDataset(gluon.data.Dataset):
@@ -164,9 +164,9 @@ class SeqDataset(gluon.data.Dataset):
                 neg[i])
 ```
 
-## Load the MovieLens 100K dataset
+## Carregue o conjunto de dados MovieLens 100K
 
-Afterwards, we read and split the MovieLens 100K dataset in sequence-aware mode and load the training data with sequential dataloader implemented above.
+Posteriormente, lemos e dividimos o conjunto de dados MovieLens 100K no modo de reconhecimento de sequência e carregamos os dados de treinamento com o carregador de dados sequencial implementado acima.
 
 ```{.python .input  n=6}
 TARGET_NUM, L, batch_size = 1, 5, 4096
@@ -186,10 +186,10 @@ test_seq_iter = train_seq_data.test_seq
 train_seq_data[0]
 ```
 
-The training data structure is shown above. The first element is the user identity, the next list indicates the last five items this user liked, and the last element is the item this user liked after the five items.
+A estrutura de dados de treinamento é mostrada acima. O primeiro elemento é a identidade do usuário, a próxima lista indica os últimos cinco itens que esse usuário gostou e o último elemento é o item que esse usuário gostou após os cinco itens.
 
-## Train the Model
-Now, let us train the model. We use the same setting as NeuMF, including learning rate, optimizer, and $k$, in the last section so that the results are comparable.
+## Treine o modelo
+Agora, vamos treinar o modelo. Usamos a mesma configuração do NeuMF, incluindo taxa de aprendizado, otimizador e $k$, na última seção para que os resultados sejam comparáveis.
 
 ```{.python .input  n=7}
 devices = d2l.try_all_gpus()
@@ -205,20 +205,20 @@ d2l.train_ranking(net, train_iter, test_iter, loss, trainer, test_seq_iter,
                   d2l.evaluate_ranking, candidates, eval_step=1)
 ```
 
-## Summary
-* Inferring a user's short-term and long-term interests can make prediction of the next item that he preferred more effectively.
-* Convolutional neural networks can be utilized to capture users' short-term interests from sequential interactions.
+## Sumário
+* Inferir os interesses de curto e longo prazo de um usuário pode fazer a previsão do próximo item que ele prefere de forma mais eficaz.
+* Redes neurais convolucionais podem ser utilizadas para capturar os interesses de curto prazo dos usuários a partir de interações sequenciais.
 
-## Exercises
+## Exercícios
 
-* Conduct an ablation study by removing one of the horizontal and vertical convolutional networks, which component is the more important ?
-* Vary the hyperparameter $L$. Does longer historical interactions bring higher accuracy?
-* Apart from the sequence-aware recommendation task we introduced above, there is another type of sequence-aware recommendation task called session-based recommendation :cite:`Hidasi.Karatzoglou.Baltrunas.ea.2015`. Can you explain the differences between these two tasks?
+* Realizar um estudo de ablação removendo uma das redes convolucionais horizontal e vertical, qual componente é o mais importante?
+* Varie o hiperparâmetro $L$. As interações históricas mais longas trazem maior precisão?
+* Além da tarefa de recomendação ciente de sequência que apresentamos acima, há outro tipo de tarefa de recomendação ciente de sequência chamada recomendação baseada em sessão :cite:`Hidasi.Karatzoglou.Baltrunas.ea.2015`. Você pode explicar as diferenças entre essas duas tarefas?
 
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4ODMzMTQyMF19
+eyJoaXN0b3J5IjpbLTE3OTgwMjUwOTldfQ==
 -->
