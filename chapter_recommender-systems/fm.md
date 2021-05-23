@@ -11,14 +11,12 @@ $$
 \hat{y}(x) = \mathbf{w}_0 + \sum_{i=1}^d \mathbf{w}_i x_i + \sum_{i=1}^d\sum_{j=i+1}^d \langle\mathbf{v}_i, \mathbf{v}_j\rangle x_i x_j
 $$
 
-where $\mathbf{w}_0 \in \mathbb{R}$ is the global bias; $\mathbf{w} \in \mathbb{R}^d$ denotes the weights of the i-th variable; $\mathbf{V} \in \mathbb{R}^{d\times k}$ represents the feature embeddings; $\mathbf{v}_i$ represents the $i^\mathrm{th}$ row of $\mathbf{V}$; $k$ is the dimensionality of latent factors; $\langle\cdot, \cdot \rangle$ is the dot product of two vectors.  $\langle \mathbf{v}_i, \mathbf{v}_j \rangle$ model the interaction between the $i^\mathrm{th}$ and $j^\mathrm{th}$ feature. Some feature interactions can be easily understood so they can be designed by experts. However, most other feature interactions are hidden in data and difficult to identify. So modeling feature interactions automatically can greatly reduce the efforts in feature engineering. It is obvious that the first two terms correspond to the linear regression model and the last term is an extension of the matrix factorization model. If the feature $i$ represents an item and the feature $j$ represents a user, the third term is exactly the dot product between user and item embeddings. It is worth noting that FM can also generalize to higher orders (degree > 2). Nevertheless, the numerical stability might weaken the generalization.  
-
 onde $\mathbf{w}_0 \in \mathbb{R}$ é a tendência global; $\mathbf{w} \in \mathbb{R}^d$ denota os pesos da i-ésima variável; $\mathbf{V} \in \mathbb{R}^{d\times k}$ representa os embeddings de recursos; $\mathbf{v}_i$ representa a $i^\mathrm{th}$ linha de $\mathbf{V}$; $k$ é a dimensionalidade dos fatores latentes; $\langle\cdot, \cdot \rangle$ é o produto escalar de dois vetores. $\langle \mathbf{v}_i, \mathbf{v}_j \rangle$ modela a interação entre o recurso $i^\mathrm{th}$ e $j^\mathrm{th}$. Algumas interações de recursos podem ser facilmente compreendidas para que possam ser projetadas por especialistas. No entanto, a maioria das outras interações de recursos estão ocultas nos dados e são difíceis de identificar. Portanto, a modelagem de interações de recursos automaticamente pode reduzir muito os esforços na engenharia de recursos. É óbvio que os dois primeiros termos correspondem ao modelo de regressão linear e o último termo é uma extensão do modelo de fatoração de matriz. Se o recurso $i$ representa um item e o recurso $j$ representa um usuário, o terceiro termo é exatamente o produto escalar entre o usuário e os embeddings de item. É importante notar que o FM também pode generalizar para ordens superiores (grau> 2). No entanto, a estabilidade numérica pode enfraquecer a generalização.
  
 
-## An Efficient Optimization Criterion
+## Um critério de otimização eficiente
 
-Optimizing the factorization machines in a  straight forward method leads to a complexity of $\mathcal{O}(kd^2)$ as all pairwise interactions require to be computed. To solve this inefficiency problem, we can reorganize the third term of FM which could greatly reduce the computation cost, leading to a linear time complexity ($\mathcal{O}(kd)$).  The reformulation of the pairwise interaction term is as follows:
+Otimizar as máquinas de fatoração em um método direto leva a uma complexidade de $\mathcal{O}(kd^2)$, pois todas as interações de pares precisam ser calculadas. Para resolver esse problema de ineficiência, podemos reorganizar o terceiro termo do FM, o que poderia reduzir muito o custo de computação, levando a uma complexidade de tempo linear ($\mathcal{O}(kd)$). A reformulação do termo de interação aos pares é a seguinte:
 
 $$
 \begin{aligned}
@@ -30,9 +28,10 @@ $$
  \end{aligned}
 $$
 
-With this reformulation, the model complexity are decreased greatly. Moreover, for sparse features, only non-zero elements needs to be computed so that the overall complexity is linear to the number of non-zero features. 
 
-To learn the FM model, we can use the MSE loss for regression task, the cross entropy loss for classification tasks, and the BPR loss for ranking task. Standard optimizers such as SGD and Adam are viable for optimization.
+Com essa reformulação, a complexidade do modelo diminui bastante. Além disso, para recursos esparsos, apenas elementos diferentes de zero precisam ser calculados para que a complexidade geral seja linear ao número de recursos diferentes de zero.
+
+Para aprender o modelo FM, podemos usar a perda de MSE para tarefas de regressão, a perda de entropia cruzada para tarefas de classificação e a perda de BPR para tarefas de classificação. Otimizadores padrão como SGD e Adam são viáveis para otimização.
 
 ```{.python .input  n=2}
 from d2l import mxnet as d2l
@@ -43,8 +42,8 @@ import os
 npx.set_np()
 ```
 
-## Model Implementation
-The following code implement the factorization machines. It is clear to see that FM consists a linear regression block and an efficient feature interaction block. We apply a sigmoid function over the final score since we treat the CTR prediction as a classification task.
+## Implementação do Modelo
+O código a seguir implementa as máquinas de fatoração. É claro que o FM consiste em um bloco de regressão linear e um bloco de interação de recursos eficiente. Aplicamos uma função sigmóide sobre a pontuação final, pois tratamos a previsão de CTR como uma tarefa de classificação.
 
 ```{.python .input  n=2}
 class FM(nn.Block):
@@ -64,8 +63,8 @@ class FM(nn.Block):
         return x
 ```
 
-## Load the Advertising Dataset
-We use the CTR data wrapper from the last section to load the online advertising dataset.
+## Carregue o conjunto de dados de publicidade
+Usamos o wrapper de dados CTR da última seção para carregar o conjunto de dados de publicidade online.
 
 ```{.python .input  n=3}
 batch_size = 2048
@@ -82,8 +81,8 @@ test_iter = gluon.data.DataLoader(
     num_workers=d2l.get_dataloader_workers())
 ```
 
-## Train the Model
-Afterwards, we train the model. The learning rate is set to 0.02 and the embedding size is set to 20 by default. The `Adam` optimizer and the `SigmoidBinaryCrossEntropyLoss` loss are used for model training.
+## Treine o modelo
+Depois, treinamos o modelo. A taxa de aprendizagem é definida como 0,02 e o tamanho de incorporação é definido como 20 por padrão. O otimizador `Adam` e a perda `SigmoidBinaryCrossEntropyLoss` são usados para o treinamento do modelo.
 
 ```{.python .input  n=5}
 devices = d2l.try_all_gpus()
@@ -96,7 +95,7 @@ loss = gluon.loss.SigmoidBinaryCrossEntropyLoss()
 d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 ```
 
-## Summary
+## Sumário
 
 * FM is a general framework that can be applied on a variety of tasks such as regression, classification, and ranking. 
 * Feature interaction/crossing is important for prediction tasks and the 2-way interaction can be efficiently modeled with FM.
@@ -110,5 +109,5 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/406)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4NjMyMTc1XX0=
+eyJoaXN0b3J5IjpbLTEwMjI4OTc0NzJdfQ==
 -->
