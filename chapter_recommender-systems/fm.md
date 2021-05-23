@@ -1,4 +1,4 @@
-# Máquinas de Factorization Machinesação
+# Máquinas de Fatoração
 
 Factorization machines (FM) :cite:`Rendle.2010`, proposed by Steffen Rendle in 2010, is a supervised algorithm that can be used for classification, regression, and ranking tasks. It quickly took notice and became a popular and impactful method for making predictions and recommendations. Particularly, it is a generalization of the linear regression model and the matrix factorization model. Moreover, it is reminiscent of support vector machines with a polynomial kernel. The strengths of factorization machines over the linear regression and matrix factorization are: (1) it can model $\chi$-way variable interactions, where $\chi$ is the number of polynomial order and is usually set to two. (2) A fast optimization algorithm associated with factorization machines can reduce the polynomial computation time to linear complexity, making it extremely efficient especially for high dimensional sparse inputs.  For these reasons, factorization machines are widely employed in modern advertisement and products recommendations. The technical details and implementations are described below.
 
@@ -108,5 +108,5 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/406)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyOTE3MDMxM119
+eyJoaXN0b3J5IjpbLTk3MDYyMDQwNl19
 -->
