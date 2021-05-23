@@ -25,7 +25,7 @@ $$
 \underset{\mathbf{W},\mathbf{V},\mu, b}{\mathrm{argmin}} \sum_{i=1}^M{\parallel \mathbf{R}_{*i} - h(\mathbf{R}_{*i})\parallel_{\mathcal{O}}^2} +\lambda(\| \mathbf{W} \|_F^2 + \| \mathbf{V}\|_F^2)
 $$
 
-where $\| \cdot \|_{\mathcal{O}}$ means only the contribution of observed ratings are considered, that is, only weights that are associated with observed inputs are updated during back-propagation.
+onde $\| \cdot \|_{\mathcal{O}}$ significa que apenas a contribuição das classificações observadas é considerada, ou seja, apenas os pesos que estão associados às entradas observadas são atualizados durante a retropropagação.
 
 ```{.python .input  n=3}
 from d2l import mxnet as d2l
@@ -36,9 +36,9 @@ import mxnet as mx
 npx.set_np()
 ```
 
-## Implementing the Model
+## Implementando o Modelo
 
-A typical autoencoder consists of an encoder and a decoder. The encoder projects the input to hidden representations and the decoder maps the hidden layer to the reconstruction layer. We follow this practice and create the encoder and decoder with dense layers. The activation of encoder is set to `sigmoid` by default and no activation is applied for decoder. Dropout is included after the encoding transformation to reduce over-fitting. The gradients of unobserved inputs are masked out to ensure that only observed ratings contribute to the model learning process.
+Um autoencoder típico consiste em um codificador e um decodificador. O codificador projeta a entrada para representações ocultas e o decodificador mapeia a camada oculta para a camada de reconstrução. Seguimos essa prática e criamos o codificador e o decodificador com camadas densas. A ativação do codificador é definida como `sigmóide` por padrão e nenhuma ativação é aplicada para o decodificador. O dropout é incluído após a transformação da codificação para reduzir o sobreajuste. Os gradientes de entradas não observadas são mascarados para garantir que apenas as classificações observadas contribuam para o processo de aprendizagem do modelo.
 
 ```{.python .input  n=2}
 class AutoRec(nn.Block):
@@ -58,9 +58,9 @@ class AutoRec(nn.Block):
             return pred
 ```
 
-## Reimplementing the Evaluator
+## Reimplementando o avaliador
 
-Since the input and output have been changed, we need to reimplement the evaluation function, while we still use RMSE as the accuracy measure.
+Como a entrada e a saída foram alteradas, precisamos reimplementar a função de avaliação, enquanto ainda usamos o RMSE como medida de precisão.
 
 ```{.python .input  n=3}
 def evaluator(network, inter_matrix, test_data, devices):
@@ -75,7 +75,7 @@ def evaluator(network, inter_matrix, test_data, devices):
     return float(rmse)
 ```
 
-## Training and Evaluating the Model
+## Treinamento e avaliação do modelo
 
 Now, let us train and evaluate AutoRec on the MovieLens dataset. We can clearly see that the test RMSE is lower than the matrix factorization model, confirming the effectiveness of neural networks in the rating prediction task.
 
@@ -122,5 +122,5 @@ d2l.train_recsys_rating(net, train_iter, test_iter, loss, trainer, num_epochs,
 [Discussions](https://discuss.d2l.ai/t/401)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUyMTkzMzgzXX0=
+eyJoaXN0b3J5IjpbLTE2NDk4MzAzXX0=
 -->
