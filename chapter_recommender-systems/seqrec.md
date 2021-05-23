@@ -217,8 +217,8 @@ d2l.train_ranking(net, train_iter, test_iter, loss, trainer, test_seq_iter,
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/404)
+[Discussão](https://discuss.d2l.ai/t/404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTgwMjUwOTldfQ==
+eyJoaXN0b3J5IjpbMTMxNjQxNDY3NiwtMTc5ODAyNTA5OV19
 -->
