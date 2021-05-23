@@ -77,7 +77,7 @@ def evaluator(network, inter_matrix, test_data, devices):
 
 ## Treinamento e avaliação do modelo
 
-Now, let us train and evaluate AutoRec on the MovieLens dataset. We can clearly see that the test RMSE is lower than the matrix factorization model, confirming the effectiveness of neural networks in the rating prediction task.
+Agora, vamos treinar e avaliar o AutoRec no conjunto de dados MovieLens. Podemos ver claramente que o teste RMSE é inferior ao modelo de fatoração de matriz, confirmando a eficácia das redes neurais na tarefa de previsão de classificação.
 
 ```{.python .input  n=4}
 devices = d2l.try_all_gpus()
@@ -105,22 +105,20 @@ d2l.train_recsys_rating(net, train_iter, test_iter, loss, trainer, num_epochs,
                         devices, evaluator, inter_mat=test_inter_mat)
 ```
 
-## Summary
+## Sumário
 
-* We can frame the matrix factorization algorithm with autoencoders, while integrating non-linear layers and dropout regularization. 
-* Experiments on the MovieLens 100K dataset show that AutoRec achieves superior performance than matrix factorization.
+* Podemos enquadrar o algoritmo de fatoração de matriz com codificadores automáticos, integrando camadas não lineares e regularização de dropout.
+* Experimentos no conjunto de dados MovieLens 100K mostram que o AutoRec atinge um desempenho superior do que a fatoração de matriz.
 
+## Exercícios
 
-
-## Exercises
-
-* Vary the hidden dimension of AutoRec to see its impact on the model performance.
-* Try to add more hidden layers. Is it helpful to improve the model performance?
-* Can you find a better combination of decoder and encoder activation functions?
+* Varie a dimensão oculta do AutoRec para ver seu impacto no desempenho do modelo.
+* Tente adicionar mais camadas ocultas. É útil melhorar o desempenho do modelo?
+* Você consegue encontrar uma combinação melhor de decodificador e funções de ativação do codificador?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/401)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDk4MzAzXX0=
+eyJoaXN0b3J5IjpbMTA1MjA3Mjc4N119
 -->
