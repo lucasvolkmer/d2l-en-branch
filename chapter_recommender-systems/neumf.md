@@ -1,4 +1,4 @@
-# Neural Collaborative Filtering for Personalized Ranking
+# Filtragem Neural Collaborative Filtering fora para Classificação Personalized Rankingada
 
 This section moves beyond explicit feedback, introducing the neural collaborative filtering (NCF) framework for recommendation with implicit feedback. Implicit feedback is pervasive in recommender systems. Actions such as Clicks, buys, and watches are common implicit feedback which are easy to collect and indicative of users' preferences. The model we will introduce, titled NeuMF :cite:`He.Liao.Zhang.ea.2017`, short for neural matrix factorization, aims to address the personalized ranking task with implicit feedback. This model leverages the flexibility and non-linearity of neural networks to replace dot products of matrix factorization, aiming at enhancing the model expressiveness. In specific, this model is structured with two subnetworks including generalized matrix factorization (GMF) and MLP and models the interactions from two pathways instead of simple inner products. The outputs of these two networks are concatenated for the final prediction scores calculation. Unlike the rating prediction task in AutoRec, this model generates a ranked recommendation list to each user based on the implicit feedback. We will use the personalized ranking loss introduced in the last section to train this model.
 
@@ -251,3 +251,6 @@ train_ranking(net, train_iter, test_iter, loss, trainer, None, num_users,
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/403)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTkzNTY3MzY0Nl19
+-->
