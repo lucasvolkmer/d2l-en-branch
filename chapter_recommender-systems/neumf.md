@@ -1,10 +1,10 @@
 # Filtragem Neural Colaborativa para Classificação Personalizada
 
-This section moves beyond explicit feedback, introducing the neural collaborative filtering (NCF) framework for recommendation with implicit feedback. Implicit feedback is pervasive in recommender systems. Actions such as Clicks, buys, and watches are common implicit feedback which are easy to collect and indicative of users' preferences. The model we will introduce, titled NeuMF :cite:`He.Liao.Zhang.ea.2017`, short for neural matrix factorization, aims to address the personalized ranking task with implicit feedback. This model leverages the flexibility and non-linearity of neural networks to replace dot products of matrix factorization, aiming at enhancing the model expressiveness. In specific, this model is structured with two subnetworks including generalized matrix factorization (GMF) and MLP and models the interactions from two pathways instead of simple inner products. The outputs of these two networks are concatenated for the final prediction scores calculation. Unlike the rating prediction task in AutoRec, this model generates a ranked recommendation list to each user based on the implicit feedback. We will use the personalized ranking loss introduced in the last section to train this model.
+Esta seção vai além do feedback explícito, apresentando a estrutura de filtragem neural colaborativa (NCF) para recomendação com feedback implícito. O feedback implícito é generalizado nos sistemas de recomendação. Ações como cliques, compras e relógios são comentários implícitos comuns que são fáceis de coletar e indicam as preferências dos usuários. O modelo que apresentaremos, intitulado NeuMF :cite:`He.Liao.Zhang.ea.2017`, abreviação de fatoração da matriz neural, visa abordar a tarefa de classificação personalizada com feedback implícito. Este modelo aproveita a flexibilidade e não linearidade das redes neurais para substituir produtos pontuais da fatoração de matrizes, visando aumentar a expressividade do modelo. Especificamente, este modelo é estruturado com duas sub-redes, incluindo fatoração de matriz generalizada (GMF) e MLP e modela as interações de duas vias em vez de produtos internos simples. As saídas dessas duas redes são concatenadas para o cálculo final das pontuações de predição. Ao contrário da tarefa de previsão de classificação no AutoRec, este modelo gera uma lista de recomendação classificada para cada usuário com base no feedback implícito. Usaremos a perda de classificação personalizada introduzida na última seção para treinar este modelo.
 
-## The NeuMF model
+## O modelo NeuMF
 
-As aforementioned, NeuMF fuses two subnetworks. The GMF is a generic neural network version of matrix factorization where the input is the elementwise product of user and item latent factors. It consists of two neural layers:
+Como mencionado anteriormente, o NeuMF funde duas sub-redes. O GMF é uma versão de rede neural genérica de fatoração de matriz em que a entrada é o produto elemento a elemento dos fatores latentes do usuário e do item. Consiste em duas camadas neurais:
 
 $$
 \mathbf{x} = \mathbf{p}_u \odot \mathbf{q}_i \\
@@ -12,6 +12,8 @@ $$
 $$
 
 where $\odot$ denotes the Hadamard product of vectors. $\mathbf{P} \in \mathbb{R}^{m \times k}$  and $\mathbf{Q} \in \mathbb{R}^{n \times k}$ corespond to user and item latent matrix respectively. $\mathbf{p}_u \in \mathbb{R}^{ k}$ is the $u^\mathrm{th}$ row of $P$ and $\mathbf{q}_i \in \mathbb{R}^{ k}$ is the $i^\mathrm{th}$ row of $Q$.  $\alpha$ and $h$ denote the activation function and weight of the output layer. $\hat{y}_{ui}$ is the prediction score of the user $u$ might give to the item $i$.
+
+onde $\odot$ denota o produto de vetores de Hadamard. $\mathbf{P} \in \mathbb{R}^{m \times k}$ e $\mathbf{Q} \in \mathbb{R}^{n \times k}$ corresponda à matriz latente do usuário e do item respectivamente. $\mathbf{p}_u \in \mathbb{R}^{ k}$ é a linha $u^\mathrm{th}$ de $ P $ e $ \ mathbf {q} _i \ in \ mathbb {R} ^ {k} $ é a $ i ^ \ mathrm {th} $ linha de $ Q $. $ \ alpha $ e $ h $ denotam a função de ativação e o peso da camada de saída. $ \ hat {y} _ {ui} $ é a pontuação de predição que o usuário $ u $ pode dar ao item $ i $.
 
 Another component of this model is MLP. To enrich model flexibility, the MLP subnetwork does not share user and item embeddings with GMF. It uses the concatenation of user and item embeddings as input. With the complicated connections and nonlinear transformations, it is capable of estimating the intricate interactions between users and items. More precisely, the MLP subnetwork is defined as:
 
@@ -252,5 +254,5 @@ train_ranking(net, train_iter, test_iter, loss, trainer, None, num_users,
 [Discussions](https://discuss.d2l.ai/t/403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDU5NDMwNzMsMTkzNTY3MzY0Nl19
+eyJoaXN0b3J5IjpbLTExMjI0NDgzNCwxOTM1NjczNjQ2XX0=
 -->
