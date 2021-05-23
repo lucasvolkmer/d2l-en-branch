@@ -36,7 +36,7 @@ Há um conjunto de treinamento e um conjunto de teste, consistindo de 15.000 e 3
 
 ## Wrapper de conjunto de dados
 
-For the convenience of data loading, we implement a `CTRDataset` which loads the advertising dataset from the CSV file and can be used by `DataLoader`.
+Para a conveniência do carregamento de dados, implementamos um `CTRDataset` que carrega o conjunto de dados de publicidade do arquivo CSV e pode ser usado pelo `DataLoader`.
 
 ```{.python .input  n=13}
 #@save
@@ -102,5 +102,5 @@ As can be seen, all the 34 fields are categorical features. Each value represent
 [Discussions](https://discuss.d2l.ai/t/405)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMDQ4ODM0OCwtMjAzMzQ4MTc0NV19
+eyJoaXN0b3J5IjpbOTY0ODM2NzAxLC0yMDMzNDgxNzQ1XX0=
 -->
