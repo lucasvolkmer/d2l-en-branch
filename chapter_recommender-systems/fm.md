@@ -97,17 +97,17 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 
 ## Sumário
 
-* FM is a general framework that can be applied on a variety of tasks such as regression, classification, and ranking. 
-* Feature interaction/crossing is important for prediction tasks and the 2-way interaction can be efficiently modeled with FM.
+* FM é uma estrutura geral que pode ser aplicada em uma variedade de tarefas, como regressão, classificação e classificação.
+* A interação / cruzamento de recursos é importante para tarefas de previsão e a interação bidirecional pode ser modelada de forma eficiente com FM.
 
-## Exercises
+## Exercícios
 
-* Can you test FM on other dataset such as Avazu, MovieLens, and Criteo datasets?
-* Vary the embedding size to check its impact on performance, can you observe a similar pattern as that of matrix factorization?
+* Você pode testar FM em outro conjunto de dados, como Avazu, MovieLens e conjuntos de dados Criteo?
+* Varie o tamanho de incorporação para verificar seu impacto no desempenho. Você consegue observar um padrão semelhante ao da fatoração da matriz?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/406)
+[Discussão](https://discuss.d2l.ai/t/406)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjI4OTc0NzJdfQ==
+eyJoaXN0b3J5IjpbLTU5NDI2NDM2Ml19
 -->
