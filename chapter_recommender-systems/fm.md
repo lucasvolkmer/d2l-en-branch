@@ -1,11 +1,13 @@
 # Máquinas de Fatoração
 
-Factorization machines (FM) :cite:`Rendle.2010`, proposed by Steffen Rendle in 2010, is a supervised algorithm that can be used for classification, regression, and ranking tasks. It quickly took notice and became a popular and impactful method for making predictions and recommendations. Particularly, it is a generalization of the linear regression model and the matrix factorization model. Moreover, it is reminiscent of support vector machines with a polynomial kernel. The strengths of factorization machines over the linear regression and matrix factorization are: (1) it can model $\chi$-way variable interactions, where $\chi$ is the number of polynomial order and is usually set to two. (2) A fast optimization algorithm associated with factorization machines can reduce the polynomial computation time to linear complexity, making it extremely efficient especially for high dimensional sparse inputs.  For these reasons, factorization machines are widely employed in modern advertisement and products recommendations. The technical details and implementations are described below.
+Máquinas de fatoração (FM) :cite:`Rendle.2010`, proposto por Steffen Rendle em 2010, é um algoritmo supervisionado que pode ser usado para tarefas de classificação, regressão e classificação. Rapidamente percebeu e se tornou um método popular e impactante para fazer previsões e recomendações. Particularmente, é uma generalização do modelo de regressão linear e do modelo de fatoração de matriz. Além disso, é uma reminiscência de máquinas de vetores de suporte com um kernel polinomial. Os pontos fortes das máquinas de fatoração sobre a regressão linear e a fatoração de matriz são: (1) ela pode modelar interações de variáveis ​​$\chi$, onde $\chi$ é o número da ordem polinomial e geralmente é definido como dois. (2) Um algoritmo de otimização rápido associado a máquinas de fatoração pode reduzir o tempo de computação polinomial à complexidade linear, tornando-o extremamente eficiente, especialmente para entradas esparsas de alta dimensão. Por essas razões, as máquinas de fatoração são amplamente utilizadas na propaganda moderna e na recomendação de produtos. Os detalhes técnicos e implementações são descritos abaixo.
 
 
-## 2-Way Factorization Machines
+## Máquinas de fatoração de 2 vias
 
 Formally, let $x \in \mathbb{R}^d$ denote the feature vectors of one sample, and $y$ denote the corresponding label which can be real-valued label or class label such as binary class "click/non-click". The model for a factorization machine of degree two is defined as:
+
+Formalmente, deixe $ x \ in \ mathbb {R} ^ d $ denotar os vetores de característica de uma amostra, e $y$ denotar o rótulo correspondente que pode ser um rótulo de valor real ou rótulo de classe, como classe binária "clique/não clique". O modelo para uma máquina de fatoração de grau dois é definido como:
 
 $$
 \hat{y}(x) = \mathbf{w}_0 + \sum_{i=1}^d \mathbf{w}_i x_i + \sum_{i=1}^d\sum_{j=i+1}^d \langle\mathbf{v}_i, \mathbf{v}_j\rangle x_i x_j
@@ -108,5 +110,5 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/406)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MDYyMDQwNl19
+eyJoaXN0b3J5IjpbNDg2Mjc0MTA1XX0=
 -->
