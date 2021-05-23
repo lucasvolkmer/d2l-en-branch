@@ -98,23 +98,25 @@ class PRDataset(gluon.data.Dataset):
 ```
 
 ## Avaliador
-In this section, we adopt the splitting by time strategy to construct the training and test sets. Two evaluation measures including hit rate at given cutting off $\ell$ ($\text{Hit}@\ell$) and area under the ROC curve (AUC) are used to assess the model effectiveness.  Hit rate at given position $\ell$ for each user indicates that whether the recommended item is included in the top $\ell$ ranked list. The formal definition is as follows:
+
+Nesta seção, adotamos a estratégia de divisão por tempo para construir os conjuntos de treinamento e teste. Duas medidas de avaliação, incluindo taxa de acerto em determinado corte $\ell$ ($\text{Hit}@\ell$) e área sob a curva ROC (AUC) são usadas para avaliar a eficácia do modelo. A taxa de acerto em determinada posição $\ell$ para cada usuário indica que se o item recomendado está incluído na lista de $\ell$ superior. A definição formal é a seguinte:
 
 $$
 \text{Hit}@\ell = \frac{1}{m} \sum_{u \in \mathcal{U}} \textbf{1}(rank_{u, g_u} <= \ell),
 $$
 
-where $\textbf{1}$ denotes an indicator function that is equal to one if the ground truth item is ranked in the top $\ell$ list, otherwise it is equal to zero. $rank_{u, g_u}$ denotes the ranking of the ground truth item $g_u$ of the user $u$ in the recommendation list (The ideal ranking is 1). $m$ is the number of users. $\mathcal{U}$ is the user set.
+onde $\textbf{1}$ denota uma função de indicador que é igual a um se o item de verdade está classificado na lista $\ell$ superior, caso contrário, é igual a zero. $rank_{u, g_u}$ denota a classificação do item de verdade $g_u$ do usuário $u$ na lista de recomendação (a classificação ideal é 1). $m$ é o número de usuários. $\mathcal{U}$ é o conjunto do usuário.
 
-The definition of AUC is as follows:
+A definição de AUC é a seguinte:
 
 $$
 \text{AUC} = \frac{1}{m} \sum_{u \in \mathcal{U}} \frac{1}{|\mathcal{I} \backslash S_u|} \sum_{j \in I \backslash S_u} \textbf{1}(rank_{u, g_u} < rank_{u, j}),
 $$
 
-where $\mathcal{I}$ is the item set. $S_u$ is the candidate items of user $u$. Note that many other evaluation protocols such as precision, recall and normalized discounted cumulative gain (NDCG) can also be used.
 
-The following function calculates the hit counts and AUC for each user.
+onde $\mathcal{I}$ é o item definido. $S_u$ são os itens candidatos do usuário $ u $. Observe que muitos outros protocolos de avaliação, como precisão, recuperação e ganho cumulativo com desconto normalizado (NDCG), também podem ser usados.
+
+A função a seguir calcula as contagens de ocorrências e AUC para cada usuário.
 
 ```{.python .input  n=4}
 #@save
@@ -253,5 +255,5 @@ train_ranking(net, train_iter, test_iter, loss, trainer, None, num_users,
 [Discussions](https://discuss.d2l.ai/t/403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ2MDA0NDY0LDE5MzU2NzM2NDZdfQ==
+eyJoaXN0b3J5IjpbLTEzMjI1NjgzNTgsMTkzNTY3MzY0Nl19
 -->
