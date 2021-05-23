@@ -25,20 +25,16 @@ z^{(1)} &= \phi_1(\mathbf{U}_u, \mathbf{V}_i) = \left[ \mathbf{U}_u, \mathbf{V}_
 \end{aligned}
 $$
 
-where $\mathbf{W}^*, \mathbf{b}^*$ and $\alpha^*$ denote the weight matrix, bias vector, and activation function. $\phi^*$ denotes the function of the corresponding layer. $\mathbf{z}^*$ denotes the output of corresponding layer.
-
-To fuse the results of GMF and MLP, instead of simple addition, NeuMF concatenates the second last layers of two subnetworks to create a feature vector which can be passed to the further layers. Afterwards, the ouputs are projected with matrix $\mathbf{h}$ and a sigmoid activation function. The prediction layer is formulated as:
-
 onde $\mathbf{W}^*, \mathbf{b}^*$ e $\alpha^*$ denotam a matriz de peso, vetor de polarização e função de ativação. $\phi^*$ denota a função da camada correspondente. $\mathbf{z}^*$ denota a saída da camada correspondente.
 
-Para fundir os resultados de GMF e MLP, em vez da adição simples, NeuMF concatena as penúltimas camadas de duas sub-redes para criar um vetor de recursos que pode ser passado para as camadas posteriores. Posteriormente, as saídas são projetadas com a matriz $ \ mathbf {h} $ e uma função de ativação sigmóide. A camada de previsão é formulada como:
+Para fundir os resultados de GMF e MLP, em vez da adição simples, NeuMF concatena as penúltimas camadas de duas sub-redes para criar um vetor de recursos que pode ser passado para as camadas posteriores. Posteriormente, as saídas são projetadas com a matriz $\mathbf{h}$ e uma função de ativação sigmóide. A camada de previsão é formulada como:
 $$
 \hat{y}_{ui} = \sigma(\mathbf{h}^\top[\mathbf{x}, \phi^L(z^{(L-1)})]).
 $$
 
-The following figure illustrates the model architecture of NeuMF.
+A figura a seguir ilustra a arquitetura do modelo do NeuMF.
 
-![Illustration of the NeuMF model](../img/rec-neumf.svg)
+![Ilustração do modelo NeuMF](../img/rec-neumf.svg)
 
 ```{.python .input  n=1}
 from d2l import mxnet as d2l
@@ -50,8 +46,9 @@ import random
 npx.set_np()
 ```
 
-## Model Implementation
-The following code implements the NeuMF model. It consists of a generalized matrix factorization model and a multi-layered perceptron with different user and item embedding vectors. The structure of the MLP is controlled with the parameter `nums_hiddens`. ReLU is used as the default activation function.
+## Implementação do Modelo
+
+O código a seguir implementa o modelo NeuMF. Ele consiste em um modelo de fatoração de matriz generalizado e um perceptron em várias camadas com diferentes vetores e vetores de incorporação de itens. A estrutura do MLP é controlada com o parâmetro `nums_hiddens`. ReLU é usado como a função de ativação padrão.
 
 ```{.python .input  n=2}
 class NeuMF(nn.Block):
@@ -79,9 +76,9 @@ class NeuMF(nn.Block):
         return self.prediction_layer(con_res)
 ```
 
-## Customized Dataset with Negative Sampling
+## Conjunto de dados personalizado com amostragem negativa
 
-For pairwise ranking loss, an important step is negative sampling. For each user, the items that a user has not interacted with are candidate items (unobserved entries). The following function takes users identity and candidate items as input, and samples negative items randomly for each user from the candidate set of that user. During the training stage, the model ensures that the items that a user likes to be ranked higher than items he dislikes or has not interacted with.
+Para a perda de classificação aos pares, uma etapa importante é a amostragem negativa. Para cada usuário, os itens com os quais um usuário não interagiu são itens candidatos (entradas não observadas). A função a seguir pega a identidade dos usuários e os itens candidatos como entrada e faz a amostragem de itens negativos aleatoriamente para cada usuário do conjunto de candidatos desse usuário. Durante o estágio de treinamento, o modelo garante que os itens que um usuário gosta sejam classificados acima dos itens que ele não gosta ou com os quais não interagiu.
 
 ```{.python .input  n=3}
 class PRDataset(gluon.data.Dataset):
@@ -100,7 +97,7 @@ class PRDataset(gluon.data.Dataset):
         return self.users[idx], self.items[idx], neg_items[indices]
 ```
 
-## Evaluator
+## Avaliador
 In this section, we adopt the splitting by time strategy to construct the training and test sets. Two evaluation measures including hit rate at given cutting off $\ell$ ($\text{Hit}@\ell$) and area under the ROC curve (AUC) are used to assess the model effectiveness.  Hit rate at given position $\ell$ for each user indicates that whether the recommended item is included in the top $\ell$ ranked list. The formal definition is as follows:
 
 $$
@@ -256,5 +253,5 @@ train_ranking(net, train_iter, test_iter, loss, trainer, None, num_users,
 [Discussions](https://discuss.d2l.ai/t/403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MTU2OTYyNiwxOTM1NjczNjQ2XX0=
+eyJoaXN0b3J5IjpbNjQ2MDA0NDY0LDE5MzU2NzM2NDZdfQ==
 -->
