@@ -1,4 +1,4 @@
-# Feature-Rich RSistemas de recommender Systemação com muitos recursos
+# Sistemas de recomendação com muitos recursos
 
 
 Os dados de interação são a indicação mais básica das preferências e interesses dos usuários. Ele desempenha um papel crítico em modelos anteriores introduzidos. No entanto, os dados de interação geralmente são extremamente esparsos e podem ser barulhentos às vezes. Para resolver esse problema, podemos integrar informações colaterais, como recursos de itens, perfis de usuários e até mesmo em que contexto a interação ocorreu no modelo de recomendação. A utilização desses recursos é útil para fazer recomendações, pois esses recursos podem ser um indicador eficaz dos interesses dos usuários, especialmente quando faltam dados de interação. Como tal, é essencial que os modelos de recomendação também tenham a capacidade de lidar com esses recursos e fornecer ao modelo algum conhecimento de conteúdo / contexto. Para demonstrar este tipo de modelos de recomendação, apresentamos outra tarefa sobre a taxa de cliques (CTR) para recomendações de publicidade online: cite: `McMahan.Holt.Sculley.ea.2013` e apresente dados anônimos de publicidade. Os serviços de publicidade direcionados têm atraído a atenção generalizada e muitas vezes são enquadrados como mecanismos de recomendação. Recomendar anúncios que correspondam aos gostos e interesses pessoais dos usuários é importante para a melhoria da taxa de cliques.
@@ -81,26 +81,27 @@ class CTRDataset(gluon.data.Dataset):
         return feat + self.offsets, self.data[idx]['y']
 ```
 
-The following example loads the training data and print out the first record.
+O exemplo a seguir carrega os dados de treinamento e imprime o primeiro registro.
 
 ```{.python .input  n=16}
 train_data = CTRDataset(os.path.join(data_dir, 'train.csv'))
 train_data[0]
 ```
 
-As can be seen, all the 34 fields are categorical features. Each value represents the one-hot index of the corresponding entry. The label $0$ means that it is not clicked. This `CTRDataset` can also be used to load other datasets such as the Criteo display advertising challenge [Dataset](https://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset/) and the Avazu click-through rate prediction [Dataset](https://www.kaggle.com/c/avazu-ctr-prediction).  
+Como pode ser visto, todos os 34 campos são recursos categóricos. Cada valor representa o índice one-hot da entrada correspondente. O rótulo $0$ significa que não foi clicado. Este `CTRDataset` também pode ser usado para carregar outros conjuntos de dados, como o desafio de publicidade de exibição Criteo [Dataset](https://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset/) e o Previsão da taxa de cliques do Avazu [Conjunto de dados](https://www.kaggle.com/c/avazu-ctr-prediction).
 
-## Summary 
-* Click-through rate is an important metric that is used to measure the effectiveness of advertising systems and recommender systems.
-* Click-through rate prediction is usually converted to a binary classification problem. The target is to predict whether an ad/item will be clicked or not based on given features.
+## Sumário
 
-## Exercises
+* A taxa de cliques é uma métrica importante usada para medir a eficácia dos sistemas de publicidade e de recomendação.
+* A previsão da taxa de cliques geralmente é convertida em um problema de classificação binária. O objetivo é prever se um anúncio / item será clicado ou não com base em determinados recursos.
 
-* Can you load the Criteo and Avazu dataset with the provided `CTRDataset`. It is worth noting that the Criteo dataset consisting of real-valued features so you may have to revise the code a bit.
+## Exercícios
+
+* Você pode carregar o conjunto de dados Criteo e Avazu com o `CTRDataset` fornecido. É importante notar que o conjunto de dados da Criteo consiste em recursos com valor real, portanto, você pode ter que revisar o código um pouco.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/405)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY0ODM2NzAxLC0yMDMzNDgxNzQ1XX0=
+eyJoaXN0b3J5IjpbLTYyNzAzNTk4NSwtMjAzMzQ4MTc0NV19
 -->
