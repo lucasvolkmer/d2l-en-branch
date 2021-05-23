@@ -1,4 +1,4 @@
-# Personalized Ranking for Recommender Systems
+# Personalized Ranking for RClassificação personalizada para sistemas de recommender Systemsação
 
 In the former sections, only explicit feedback was considered and models were trained and tested on observed ratings.  There are two demerits of such methods: First, most feedback is not explicit but implicit in real-world scenarios, and explicit feedback can be more expensive to collect.  Second, non-observed user-item pairs which may be predictive for users' interests are totally ignored, making these methods unsuitable for cases where ratings are not missing at random but because of users' preferences.  Non-observed user-item pairs are a  mixture of real negative feedback (users are not interested in the items) and missing values (the user might interact with the items in the future). We simply ignore the non-observed pairs in matrix factorization and AutoRec. Clearly, these models are incapable of distinguishing between observed and non-observed pairs and are usually not suitable for personalized ranking tasks.
 
@@ -89,3 +89,6 @@ These two losses are interchangeable for personalized ranking in recommendation.
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/402)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjMxNjQ1MTI3XX0=
+-->
