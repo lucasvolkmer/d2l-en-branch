@@ -1,4 +1,4 @@
-# Deep Factorization Machines
+# DeepMáquinas de Factorization Machinesação Profunda
 
 Learning effective feature combinations is critical to the success of click-through rate prediction task. Factorization machines model feature interactions in a linear paradigm (e.g., bilinear interactions). This is often insufficient for real-world data where inherent feature crossing structures are usually very complex and nonlinear. What's worse, second-order feature interactions are generally used in factorization machines in practice. Modeling higher degrees of feature combinations with factorization machines is possible theoretically but it is usually not adopted due to numerical instability and high computational complexity.
 
@@ -114,3 +114,6 @@ Compared with FM, DeepFM converges faster and achieves better performance.
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/407)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3MTk1MDI3OTBdfQ==
+-->
