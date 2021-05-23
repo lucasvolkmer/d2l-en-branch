@@ -1,4 +1,4 @@
-# Feature-Rich Recommender Systems
+# Feature-Rich RSistemas de recommender Systemação com muitos recursos
 
 Interaction data is the most basic indication of users' preferences and interests. It plays a critical role in former introduced models. Yet, interaction data is usually extremely sparse and can be noisy at times. To address this issue, we can integrate side information such as features of items, profiles of users, and even in which context that the interaction occurred into the recommendation model. Utilizing these features are helpful in making recommendations in that these features can be an effective predictor of users interests especially when interaction data is lacking. As such, it is essential for recommendation models also have the capability to deal with those features and give the model some content/context awareness. To demonstrate this type of recommendation models, we introduce another task on click-through rate (CTR) for online advertisement recommendations :cite:`McMahan.Holt.Sculley.ea.2013` and present an anonymous advertising data. Targeted advertisement services have attracted widespread attention and are often framed as recommendation engines. Recommending advertisements that match users' personal taste and interest is important for click-through rate improvement.
 
@@ -99,3 +99,6 @@ As can be seen, all the 34 fields are categorical features. Each value represent
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/405)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIwMzM0ODE3NDVdfQ==
+-->
