@@ -11,17 +11,15 @@ Existem duas variantes do AutoRec: baseado no usuário e baseado no item. Para r
 
 ## Modelo
 
-Let $\mathbf{R}_{*i}$ denote the $i^\mathrm{th}$ column of the rating matrix, where unknown ratings are set to zeros by default. The neural architecture is defined as:
-
-Deixe $\mathbf{R}_{*i}$ denotar a coluna $ i ^ \ mathrm {th} $ da matriz de classificação, onde classificações desconhecidas são definidas como zeros por padrão. A arquitetura neural é definida como:
+Deixe $\mathbf{R}_{*i}$ denotar a coluna $i^\mathrm{th}$ da matriz de classificação, onde classificações desconhecidas são definidas como zeros por padrão. A arquitetura neural é definida como:
 
 $$
 h(\mathbf{R}_{*i}) = f(\mathbf{W} \cdot g(\mathbf{V} \mathbf{R}_{*i} + \mu) + b)
 $$
 
-where $f(\cdot)$ and $g(\cdot)$ represent activation functions, $\mathbf{W}$ and $\mathbf{V}$ are weight matrices, $\mu$ and $b$ are biases. Let $h( \cdot )$ denote the whole network of AutoRec. The output $h(\mathbf{R}_{*i})$ is the reconstruction of the $i^\mathrm{th}$ column of the rating matrix.
+onde $f(\cdot)$ e $g(\cdot)$ representam funções de ativação, $\mathbf{W}$ e $\mathbf{V}$ são matrizes de peso, $\mu$ e $b$ são vieses. Deixe $h( \cdot )$ denotar toda a rede do AutoRec. A saída $h(\mathbf{R}_{*i})$ é a reconstrução da coluna $i^\mathrm{th}$ da matriz de classificação.
 
-The following objective function aims to minimize the reconstruction error:
+A seguinte função objetivo visa minimizar o erro de reconstrução:
 
 $$
 \underset{\mathbf{W},\mathbf{V},\mu, b}{\mathrm{argmin}} \sum_{i=1}^M{\parallel \mathbf{R}_{*i} - h(\mathbf{R}_{*i})\parallel_{\mathcal{O}}^2} +\lambda(\| \mathbf{W} \|_F^2 + \| \mathbf{V}\|_F^2)
@@ -124,5 +122,5 @@ d2l.train_recsys_rating(net, train_iter, test_iter, loss, trainer, num_epochs,
 [Discussions](https://discuss.d2l.ai/t/401)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1ODkzNjc5M119
+eyJoaXN0b3J5IjpbNTUyMTkzMzgzXX0=
 -->
