@@ -1,12 +1,13 @@
 # Sistemas de recomendação com reconhecimento de sequência
 
-In previous sections, we abstract the recommendation task as a matrix completion problem without considering users' short-term behaviors. In this section, we will introduce a recommendation model that takes  the sequentially-ordered user interaction logs into account.  It is a sequence-aware recommender :cite:`Quadrana.Cremonesi.Jannach.2018` where the input is an ordered and often timestamped list of past user actions.  A number of recent literatures have demonstrated the usefulness of incorporating such information in modeling users' temporal behavioral patterns and discovering their interest drift.
 
-The model we will introduce, Caser :cite:`Tang.Wang.2018`, short for convolutional sequence embedding recommendation model, adopts convolutional neural networks capture the dynamic pattern influences of users' recent activities. The main component of Caser consists of a horizontal convolutional network and a vertical convolutional network, aiming to uncover the union-level and point-level sequence patterns, respectively.  Point-level pattern indicates the impact of single item in the historical sequence on the target item, while union level pattern implies the influences of several previous actions on the subsequent target. For example, buying both milk and butter together leads to higher probability of buying flour than just buying one of them. Moreover, users' general interests, or long term preferences are also modeled in the last fully-connected layers, resulting in a more comprehensive modeling of user interests. Details of the model are described as follows.
+Nas seções anteriores, abstraímos a tarefa de recomendação como um problema de preenchimento de matriz sem considerar os comportamentos de curto prazo dos usuários. Nesta seção, apresentaremos um modelo de recomendação que leva em consideração os logs de interação do usuário ordenados sequencialmente. É um recomendador ciente de sequência :cite:`Quadrana.Cremonesi.Jannach.2018` onde a entrada é uma lista ordenada e frequentemente com carimbo de data / hora de ações anteriores do usuário. Uma série de literaturas recentes demonstraram a utilidade de incorporar essas informações na modelagem de padrões comportamentais temporais dos usuários e na descoberta de seus desvios de interesse.
 
-## Model Architectures
+O modelo que apresentaremos, Caser :cite:`Tang.Wang.2018`, abreviação de modelo de recomendação de incorporação de sequência convolucional, adota redes neurais convolucionais que capturam as influências do padrão dinâmico de atividades recentes dos usuários. O principal componente do Caser consiste em uma rede convolucional horizontal e uma rede convolucional vertical, com o objetivo de descobrir os padrões de sequência em nível de união e nível de ponto, respectivamente. O padrão de nível de ponto indica o impacto de um único item na sequência histórica no item de destino, enquanto o padrão de nível de união implica as influências de várias ações anteriores no destino subsequente. Por exemplo, comprar leite e manteiga juntos aumenta a probabilidade de comprar farinha do que apenas comprar um deles. Além disso, os interesses gerais dos usuários ou preferências de longo prazo também são modelados nas últimas camadas totalmente conectadas, resultando em uma modelagem mais abrangente dos interesses do usuário. Os detalhes do modelo são descritos a seguir.
 
-In sequence-aware recommendation system, each user is associated with a sequence of some items from the item set. Let $S^u = (S_1^u, ... S_{|S_u|}^u)$ denotes the ordered sequence. The goal of Caser is to recommend item by considering user general tastes as well as short-term intention. Suppose we take the previous $L$ items into consideration, an embedding matrix that represents the former interactions for time step $t$ can be constructed:
+## Arquiteturas modelo
+
+No sistema de recomendação com reconhecimento de sequência, cada usuário é associado a uma sequência de alguns itens do conjunto de itens. Seja $S^u = (S_1^u, ... S_{|S_u|}^u)$ denota a sequência ordenada. O objetivo do Caser é recomendar o item considerando os gostos gerais do usuário, bem como a intenção de curto prazo. Suponha que levemos os itens $L$ anteriores em consideração, uma matriz de incorporação que representa as interações anteriores para o passo de tempo $t$ pode ser construída:
 
 $$
 \mathbf{E}^{(u, t)} = [ \mathbf{q}_{S_{t-L}^u} , ..., \mathbf{q}_{S_{t-2}^u}, \mathbf{q}_{S_{t-1}^u} ]^\top,
@@ -15,6 +16,10 @@ $$
 where $\mathbf{Q} \in \mathbb{R}^{n \times k}$ represents item embeddings and $\mathbf{q}_i$ denotes the $i^\mathrm{th}$ row. $\mathbf{E}^{(u, t)} \in \mathbb{R}^{L \times k}$ can be used to infer the transient interest of user $u$ at time-step $t$. We can view the input matrix $\mathbf{E}^{(u, t)}$ as an image which is the input of the subsequent two convolutional components.
 
 The horizontal convolutional layer has $d$ horizontal filters $\mathbf{F}^j \in \mathbb{R}^{h \times k}, 1 \leq j \leq d, h = \{1, ..., L\}$, and the vertical convolutional layer has $d'$ vertical filters $\mathbf{G}^j \in \mathbb{R}^{ L \times 1}, 1 \leq j \leq d'$. After a series of convolutional and pool operations, we get the two outputs:
+
+onde $\mathbf{Q} \in \mathbb{R}^{n \times k}$ representa embeddings de itens e $\mathbf{q}_i$ denota a linha $ i ^ \ mathrm {th} $. $ \ mathbf {E} ^ {(u, t)} \ in \ mathbb {R} ^ {L \ times k} $ pode ser usado para inferir o interesse transitório do usuário $ u $ na etapa de tempo $ t $. Podemos ver a matriz de entrada $ \ mathbf {E} ^ {(u, t)} $ como uma imagem que é a entrada dos dois componentes convolucionais subsequentes.
+
+A camada convolucional horizontal tem $ d $ filtros horizontais $ \ mathbf {F} ^ j \ in \ mathbb {R} ^ {h \ times k}, 1 \ leq j \ leq d, h = \ {1, ... , L \} $, e a camada convolucional vertical tem $ d '$ filtros verticais $ \ mathbf {G} ^ j \ in \ mathbb {R} ^ {L \ times 1}, 1 \ leq j \ leq d' $ . Após uma série de operações convolucionais e de pool, obtemos as duas saídas:
 
 $$
 \mathbf{o} = \text{HConv}(\mathbf{E}^{(u, t)}, \mathbf{F}) \\
@@ -218,5 +223,5 @@ d2l.train_ranking(net, train_iter, test_iter, loss, trainer, test_seq_iter,
 [Discussions](https://discuss.d2l.ai/t/404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMzAyNjUxMF19
+eyJoaXN0b3J5IjpbMzc1MTQ1MzI0XX0=
 -->
