@@ -15,19 +15,19 @@ $$
 \mathbf{z}^{(0)}  = [\mathbf{e}_1, \mathbf{e}_2, ..., \mathbf{e}_f],
 $$
 
-where $f$ is the number of fields.  It is then fed into the following neural network:
+onde $f$ é o número de campos. Em seguida, é alimentado na seguinte rede neural:
 
 $$
 \mathbf{z}^{(l)}  = \alpha(\mathbf{W}^{(l)}\mathbf{z}^{(l-1)} + \mathbf{b}^{(l)}),
 $$
 
-where $\alpha$ is the activation function.  $\mathbf{W}_{l}$ and $\mathbf{b}_{l}$ are the weight and bias at the $l^\mathrm{th}$ layer. Let $y_{DNN}$ denote the output of the prediction. The ultimate prediction of DeepFM is the summation of the outputs from both FM and DNN. So we have: 
+onde $\alpha$ é a função de ativação. $\mathbf{W}_{l}$ e $\mathbf{b}_{l}$ são o peso e o viés na camada $l^\mathrm{th}$. Seja $y_{DNN}$ a saída da previsão. A previsão final do DeepFM é a soma das saídas de FM e DNN. Então nós temos:
 
 $$
 \hat{y} = \sigma(\hat{y}^{(FM)} + \hat{y}^{(DNN)}),
 $$
 
-where $\sigma$ is the sigmoid function. The architecture of DeepFM is illustrated below.
+onde $\sigma$ é a função sigmóide. A arquitetura do DeepFM é ilustrada abaixo.
 ![Illustration of the DeepFM model](../img/rec-deepfm.svg)
 
 It is worth noting that DeepFM is not the only way to combine deep neural networks with FM. We can also add nonlinear layers over the feature interactions :cite:`He.Chua.2017`.
@@ -115,5 +115,5 @@ Compared with FM, DeepFM converges faster and achieves better performance.
 [Discussions](https://discuss.d2l.ai/t/407)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjg1NTQ4MzBdfQ==
+eyJoaXN0b3J5IjpbLTM1ODAwNjUwNV19
 -->
