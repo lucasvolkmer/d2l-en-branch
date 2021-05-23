@@ -28,9 +28,9 @@ $$
 $$
 
 onde $\sigma$ é a função sigmóide. A arquitetura do DeepFM é ilustrada abaixo.
-![Illustration of the DeepFM model](../img/rec-deepfm.svg)
+![Ilustração do modelo DeepFM](../img/rec-deepfm.svg)
 
-It is worth noting that DeepFM is not the only way to combine deep neural networks with FM. We can also add nonlinear layers over the feature interactions :cite:`He.Chua.2017`.
+É importante notar que DeepFM não é a única maneira de combinar redes neurais profundas com FM. Também podemos adicionar camadas não lineares sobre as interações de recursos :cite:`He.Chua.2017`.
 
 ```{.python .input  n=2}
 from d2l import mxnet as d2l
@@ -41,8 +41,8 @@ import os
 npx.set_np()
 ```
 
-## Implemenation of DeepFM
-The implementation of DeepFM is similar to that of FM. We keep the FM part unchanged and use an MLP block with `relu` as the activation function. Dropout is also used to regularize the model. The number of neurons of the MLP can be adjusted with the `mlp_dims` hyperparameter.
+## Implementação de DeepFM
+A implementação do DeepFM é semelhante à do FM. Mantemos a parte FM inalterada e usamos um bloco MLP com `relu` como a função de ativação. O dropout também é usado para regularizar o modelo. O número de neurônios do MLP pode ser ajustado com o hiperparâmetro `mlp_dims`.
 
 ```{.python .input  n=2}
 class DeepFM(nn.Block):
@@ -72,8 +72,8 @@ class DeepFM(nn.Block):
         return x
 ```
 
-## Training and Evaluating the Model
-The data loading process is the same as that of FM. We set the MLP component of DeepFM to a three-layered dense network with the a pyramid structure (30-20-10). All other hyperparameters remain the same as FM.
+## Treinamento e avaliação do modelo
+O processo de carregamento de dados é o mesmo do FM. Definimos o componente MLP do DeepFM para uma rede densa de três camadas com uma estrutura de pirâmide (30-20-10). Todos os outros hiperparâmetros permanecem iguais aos de FM.
 
 ```{.python .input  n=4}
 batch_size = 2048
@@ -99,21 +99,21 @@ loss = gluon.loss.SigmoidBinaryCrossEntropyLoss()
 d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 ```
 
-Compared with FM, DeepFM converges faster and achieves better performance.
+Comparado com FM, DeepFM converge mais rápido e atinge melhor desempenho.
 
-## Summary 
+## Sumário
 
-* Integrating neural networks to FM enables it to model complex and high-order interactions. 
-* DeepFM outperforms the original FM on the advertising dataset.
+* A integração de redes neurais ao FM permite modelar interações complexas e de alta ordem.
+* DeepFM supera o FM original no conjunto de dados de publicidade.
 
-## Exercises
+## Exercícios
 
-* Vary the structure of the MLP to check its impact on model performance.
-* Change the dataset to Criteo and compare it with the original FM model.
+* Varie a estrutura do MLP para verificar seu impacto no desempenho do modelo.
+* Mude o conjunto de dados para Criteo e compare-o com o modelo FM original.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/407)
+[Discussão](https://discuss.d2l.ai/t/407)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1ODAwNjUwNV19
+eyJoaXN0b3J5IjpbMTA5MjIyODY1MCwtMzU4MDA2NTA1XX0=
 -->
