@@ -11,11 +11,9 @@ $$
 \hat{y}_{ui} = \alpha(\mathbf{h}^\top \mathbf{x}),
 $$
 
-where $\odot$ denotes the Hadamard product of vectors. $\mathbf{P} \in \mathbb{R}^{m \times k}$  and $\mathbf{Q} \in \mathbb{R}^{n \times k}$ corespond to user and item latent matrix respectively. $\mathbf{p}_u \in \mathbb{R}^{ k}$ is the $u^\mathrm{th}$ row of $P$ and $\mathbf{q}_i \in \mathbb{R}^{ k}$ is the $i^\mathrm{th}$ row of $Q$.  $\alpha$ and $h$ denote the activation function and weight of the output layer. $\hat{y}_{ui}$ is the prediction score of the user $u$ might give to the item $i$.
+onde $\odot$ denota o produto de vetores de Hadamard. $\mathbf{P} \in \mathbb{R}^{m \times k}$ e $\mathbf{Q} \in \mathbb{R}^{n \times k}$ corresponda à matriz latente do usuário e do item respectivamente. $\mathbf{p}_u \in \mathbb{R}^{ k}$ é a linha $u^\mathrm{th}$ de $\mathbf{q}_i \in \mathbb{R}^{ k}$ é $i^\mathrm{th}$ linha de $Q$. $\alpha$ e $h$ denotam a função de ativação e o peso da camada de saída. $\hat{y}_{ui}$ é a pontuação de predição que o usuário $u$ pode dar ao item $i$.
 
-onde $\odot$ denota o produto de vetores de Hadamard. $\mathbf{P} \in \mathbb{R}^{m \times k}$ e $\mathbf{Q} \in \mathbb{R}^{n \times k}$ corresponda à matriz latente do usuário e do item respectivamente. $\mathbf{p}_u \in \mathbb{R}^{ k}$ é a linha $u^\mathrm{th}$ de $ P $ e $ \ mathbf {q} _i \ in \ mathbb {R} ^ {k} $ é a $ i ^ \ mathrm {th} $ linha de $ Q $. $ \ alpha $ e $ h $ denotam a função de ativação e o peso da camada de saída. $ \ hat {y} _ {ui} $ é a pontuação de predição que o usuário $ u $ pode dar ao item $ i $.
-
-Another component of this model is MLP. To enrich model flexibility, the MLP subnetwork does not share user and item embeddings with GMF. It uses the concatenation of user and item embeddings as input. With the complicated connections and nonlinear transformations, it is capable of estimating the intricate interactions between users and items. More precisely, the MLP subnetwork is defined as:
+Outro componente deste modelo é o MLP. Para enriquecer a flexibilidade do modelo, a sub-rede MLP não compartilha os embeddings de usuário e item com GMF. Ele usa a concatenação de embeddings de usuário e item como entrada. Com conexões complicadas e transformações não lineares, é capaz de estimar as intrincadas interações entre usuários e itens. Mais precisamente, a sub-rede MLP é definida como:
 
 $$
 \begin{aligned}
@@ -30,6 +28,10 @@ $$
 where $\mathbf{W}^*, \mathbf{b}^*$ and $\alpha^*$ denote the weight matrix, bias vector, and activation function. $\phi^*$ denotes the function of the corresponding layer. $\mathbf{z}^*$ denotes the output of corresponding layer.
 
 To fuse the results of GMF and MLP, instead of simple addition, NeuMF concatenates the second last layers of two subnetworks to create a feature vector which can be passed to the further layers. Afterwards, the ouputs are projected with matrix $\mathbf{h}$ and a sigmoid activation function. The prediction layer is formulated as:
+
+onde $\mathbf{W}^*, \mathbf{b}^*$ e $\alpha^*$ denotam a matriz de peso, vetor de polarização e função de ativação. $\phi^*$ denota a função da camada correspondente. $\mathbf{z}^*$ denota a saída da camada correspondente.
+
+Para fundir os resultados de GMF e MLP, em vez da adição simples, NeuMF concatena as penúltimas camadas de duas sub-redes para criar um vetor de recursos que pode ser passado para as camadas posteriores. Posteriormente, as saídas são projetadas com a matriz $ \ mathbf {h} $ e uma função de ativação sigmóide. A camada de previsão é formulada como:
 $$
 \hat{y}_{ui} = \sigma(\mathbf{h}^\top[\mathbf{x}, \phi^L(z^{(L-1)})]).
 $$
@@ -254,5 +256,5 @@ train_ranking(net, train_iter, test_iter, loss, trainer, None, num_users,
 [Discussions](https://discuss.d2l.ai/t/403)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjI0NDgzNCwxOTM1NjczNjQ2XX0=
+eyJoaXN0b3J5IjpbMTc1MTU2OTYyNiwxOTM1NjczNjQ2XX0=
 -->
