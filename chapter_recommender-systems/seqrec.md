@@ -1,4 +1,4 @@
-# Sequence-Aware Recommender Systemsistemas de recomendação com reconhecimento de sequência
+# Sistemas de recomendação com reconhecimento de sequência
 
 In previous sections, we abstract the recommendation task as a matrix completion problem without considering users' short-term behaviors. In this section, we will introduce a recommendation model that takes  the sequentially-ordered user interaction logs into account.  It is a sequence-aware recommender :cite:`Quadrana.Cremonesi.Jannach.2018` where the input is an ordered and often timestamped list of past user actions.  A number of recent literatures have demonstrated the usefulness of incorporating such information in modeling users' temporal behavioral patterns and discovering their interest drift.
 
@@ -218,5 +218,5 @@ d2l.train_ranking(net, train_iter, test_iter, loss, trainer, test_seq_iter,
 [Discussions](https://discuss.d2l.ai/t/404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTQ0NDE3NDhdfQ==
+eyJoaXN0b3J5IjpbMTcwMzAyNjUxMF19
 -->
