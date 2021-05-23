@@ -19,9 +19,10 @@ import os
 
 ## Um conjunto de dados de publicidade online
 
-With the considerable advancements of Internet and mobile technology, online advertising has become an important income resource and generates vast majority of revenue in the Internet industry. It is important to display relevant advertisements or advertisements that pique users' interests so that casual visitors can be converted into paying customers. The dataset we introduced is an online advertising dataset. It consists of 34 fields, with the first column representing the target variable that indicates if an ad was clicked (1) or not (0). All the other columns are categorical features. The columns might represent the advertisement id, site or application id, device id, time, user profiles and so on. The real semantics of the features are undisclosed due to anonymization and privacy concern.
 
-The following code downloads the dataset from our server and saves it into the local data folder.
+Com os avanços consideráveis da Internet e da tecnologia móvel, a publicidade online tornou-se um importante recurso de receita e gera a grande maioria das receitas da indústria da Internet. É importante exibir anúncios relevantes ou anúncios que despertem os interesses dos usuários, para que visitantes casuais possam ser convertidos em clientes pagantes. O conjunto de dados que apresentamos é um conjunto de dados de publicidade online. É composto por 34 campos, com a primeira coluna representando a variável de destino que indica se um anúncio foi clicado (1) ou não (0). Todas as outras colunas são recursos categóricos. As colunas podem representar a id do anúncio, id do site ou aplicativo, id do dispositivo, hora, perfis de usuário e assim por diante. A semântica real dos recursos não é divulgada devido ao anonimato e à preocupação com a privacidade.
+
+O código a seguir baixa o conjunto de dados de nosso servidor e o salva na pasta de dados local.
 
 ```{.python .input  n=15}
 #@save
@@ -31,9 +32,9 @@ d2l.DATA_HUB['ctr'] = (d2l.DATA_URL + 'ctr.zip',
 data_dir = d2l.download_extract('ctr')
 ```
 
-There are a training set and a test set, consisting of 15000 and 3000 samples/lines, respectively.
+Há um conjunto de treinamento e um conjunto de teste, consistindo de 15.000 e 3.000 amostras/linhas, respectivamente.
 
-## Dataset Wrapper
+## Wrapper de conjunto de dados
 
 For the convenience of data loading, we implement a `CTRDataset` which loads the advertising dataset from the CSV file and can be used by `DataLoader`.
 
@@ -101,5 +102,5 @@ As can be seen, all the 34 fields are categorical features. Each value represent
 [Discussions](https://discuss.d2l.ai/t/405)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NzE2Nzc5MiwtMjAzMzQ4MTc0NV19
+eyJoaXN0b3J5IjpbMjAwMDQ4ODM0OCwtMjAzMzQ4MTc0NV19
 -->
