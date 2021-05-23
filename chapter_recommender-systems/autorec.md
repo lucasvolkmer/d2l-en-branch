@@ -1,4 +1,4 @@
-# AutoRec: Rating Prediction with Autoencoders
+# AutoRec: Rating Prediction with AutoencoderPrevisão de classificação com codificadores automáticos
 
 Although the matrix factorization model achieves decent performance on the rating prediction task, it is essentially a linear model. Thus, such models are not capable of capturing complex nonlinear and intricate relationships that may be predictive of users' preferences. In this section, we introduce a nonlinear neural network collaborative filtering model, AutoRec :cite:`Sedhain.Menon.Sanner.ea.2015`. It identifies collaborative filtering (CF) with an autoencoder architecture and aims to integrate nonlinear transformations into CF on the basis of explicit feedback. Neural networks have been proven to be capable of approximating any continuous function, making it suitable to address the limitation of matrix factorization and enrich the expressiveness of matrix factorization.
 
@@ -121,3 +121,6 @@ d2l.train_recsys_rating(net, train_iter, test_iter, loss, trainer, num_epochs,
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/401)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbOTgwNzE0NDM3XX0=
+-->
