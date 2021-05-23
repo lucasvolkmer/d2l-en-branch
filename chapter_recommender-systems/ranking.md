@@ -6,19 +6,15 @@ Para esse fim, uma classe de modelos de recomendação com o objetivo de gerar l
 
 ## Perda de classificação personalizada bayesiana e sua implementação
 
-Bayesian personalized ranking (BPR) :cite:`Rendle.Freudenthaler.Gantner.ea.2009` is a pairwise personalized ranking loss that is derived from the maximum posterior estimator. It has been widely used in many existing recommendation models. The training data of BPR consists of both positive and negative pairs (missing values). It assumes that the user prefers the positive item over all other non-observed items.
+A classificação personalizada bayesiana (BPR) :cite:`Rendle.Freudenthaler.Gantner.ea.2009` é uma perda de classificação personalizada aos pares que é derivada do estimador posterior máximo. Ele tem sido amplamente utilizado em muitos modelos de recomendação existentes. Os dados de treinamento do BPR consistem em pares positivos e negativos (valores ausentes). Ele assume que o usuário prefere o item positivo a todos os outros itens não observados.
 
-In formal, the training data is constructed by tuples in the form of $(u, i, j)$, which represents that the user $u$ prefers the item $i$ over the item $j$. The Bayesian formulation of BPR which aims to maximize the posterior probability is given below:
-
-A classificação personalizada bayesiana (BPR): cite: `Rendle.Freudenthaler.Gantner.ea.2009` é uma perda de classificação personalizada aos pares que é derivada do estimador posterior máximo. Ele tem sido amplamente utilizado em muitos modelos de recomendação existentes. Os dados de treinamento do BPR consistem em pares positivos e negativos (valores ausentes). Ele assume que o usuário prefere o item positivo a todos os outros itens não observados.
-
-Formalmente, os dados de treinamento são construídos por tuplas na forma de $ (u, i, j) $, que representa que o usuário $ u $ prefere o item $ i $ em vez do item $ j $. A formulação bayesiana do BPR que visa maximizar a probabilidade posterior é dada a seguir:
+Formalmente, os dados de treinamento são construídos por tuplas na forma de $(u, i, j)$, que representa que o usuário $u$ prefere o item $i$ em vez do item $j$. A formulação bayesiana do BPR que visa maximizar a probabilidade posterior é dada a seguir:
 
 $$
 p(\Theta \mid >_u )  \propto  p(>_u \mid \Theta) p(\Theta)
 $$
 
-Where $\Theta$ represents the parameters of an arbitrary recommendation model, $>_u$ represents the desired personalized total ranking of all items for user $u$. We can formulate the maximum posterior estimator to derive the generic optimization criterion for the personalized ranking task.
+Onde $\Theta$ representa os parâmetros de um modelo de recomendação arbitrário, $>_u$ representa a classificação total personalizada desejada de todos os itens para o usuário $u$. Podemos formular o estimador posterior máximo para derivar o critério de otimização genérico para a tarefa de classificação personalizada.
 
 $$
 \begin{aligned}
@@ -35,6 +31,11 @@ where $D := \{(u, i, j) \mid i \in I^+_u \wedge j \in I \backslash I^+_u \}$ is 
 
 ![Illustration of Bayesian Personalized Ranking](../img/rec-ranking.svg)
 We will implement the base class  `mxnet.gluon.loss.Loss` and override the `forward` method to construct the Bayesian personalized ranking loss. We begin by importing the Loss class and the np module.
+
+onde $D := \{(u, i, j) \mid i \in I^+_u \wedge j \in I \backslash I^+_u \}$ é o conjunto de treinamento, com $I^+_u$ denotando os itens que o usuário $u$ gostou, $ I $ denotando todos os itens e $ I \ barra invertida I ^ + _ u $ indicando todos os outros itens, exceto itens que o usuário gostou. $ \ hat {y} _ {ui} $ e $ \ hat {y} _ {uj} $ são as pontuações previstas do usuário $ u $ para os itens $ i $ e $ j $, respectivamente. O anterior $ p (\ Theta) $ é uma distribuição normal com média zero e matriz de variância-covariância $ \ Sigma_ \ Theta $. Aqui, deixamos $ \ Sigma_ \ Theta = \ lambda_ \ Theta I $.
+
+! [Ilustração da classificação personalizada bayesiana] (../ img / rec-ranking.svg)
+Vamos implementar a classe base `mxnet.gluon.loss.Loss` e substituir o método` forward` para construir a perda de classificação personalizada Bayesiana. Começamos importando a classe Loss e o módulo np.
 
 ```{.python .input  n=5}
 from mxnet import gluon, np, npx
@@ -94,5 +95,5 @@ These two losses are interchangeable for personalized ranking in recommendation.
 [Discussions](https://discuss.d2l.ai/t/402)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU0Nzg3NjIwLDYzMTY0NTEyN119
+eyJoaXN0b3J5IjpbNjM3NzY5OTQ2LDYzMTY0NTEyN119
 -->
