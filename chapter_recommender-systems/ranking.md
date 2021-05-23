@@ -27,15 +27,11 @@ $$
 $$
 
 
-where $D := \{(u, i, j) \mid i \in I^+_u \wedge j \in I \backslash I^+_u \}$ is the training set, with $I^+_u$ denoting the items the user $u$ liked, $I$ denoting all items, and $I \backslash I^+_u$ indicating all other items excluding items the user liked. $\hat{y}_{ui}$ and $\hat{y}_{uj}$ are the predicted scores of the user $u$ to item $i$ and $j$, respectively. The prior $p(\Theta)$ is a normal distribution with zero mean and variance-covariance matrix $\Sigma_\Theta$. Here, we let $\Sigma_\Theta = \lambda_\Theta I$.
 
-![Illustration of Bayesian Personalized Ranking](../img/rec-ranking.svg)
-We will implement the base class  `mxnet.gluon.loss.Loss` and override the `forward` method to construct the Bayesian personalized ranking loss. We begin by importing the Loss class and the np module.
-
-onde $D := \{(u, i, j) \mid i \in I^+_u \wedge j \in I \backslash I^+_u \}$ é o conjunto de treinamento, com $I^+_u$ denotando os itens que o usuário $u$ gostou, $ I $ denotando todos os itens e $ I \ barra invertida I ^ + _ u $ indicando todos os outros itens, exceto itens que o usuário gostou. $ \ hat {y} _ {ui} $ e $ \ hat {y} _ {uj} $ são as pontuações previstas do usuário $ u $ para os itens $ i $ e $ j $, respectivamente. O anterior $ p (\ Theta) $ é uma distribuição normal com média zero e matriz de variância-covariância $ \ Sigma_ \ Theta $. Aqui, deixamos $ \ Sigma_ \ Theta = \ lambda_ \ Theta I $.
+onde $D := \{(u, i, j) \mid i \in I^+_u \wedge j \in I \backslash I^+_u \}$ é o conjunto de treinamento, com $I^+_u$ denotando os itens que o usuário $u$ gostou, $I$ denotando todos os itens e $I \backslash I^+_u$ indicando todos os outros itens, exceto itens que o usuário gostou. $\hat{y}_{ui}$ e $\hat{y}_{uj}$ são as pontuações previstas do usuário $u$ para os itens $i$ e $j$, respectivamente. O anterior $p(\Theta)$ é uma distribuição normal com média zero e matriz de variância-covariância $\Sigma_\Theta$. Aqui, deixamos $\Sigma_\Theta = \lambda_\Theta I$.
 
 ! [Ilustração da classificação personalizada bayesiana] (../ img / rec-ranking.svg)
-Vamos implementar a classe base `mxnet.gluon.loss.Loss` e substituir o método` forward` para construir a perda de classificação personalizada Bayesiana. Começamos importando a classe Loss e o módulo np.
+Vamos implementar a classe base `mxnet.gluon.loss.Loss` e substituir o método `forward` para construir a perda de classificação personalizada Bayesiana. Começamos importando a classe Loss e o módulo np.
 
 ```{.python .input  n=5}
 from mxnet import gluon, np, npx
@@ -95,5 +91,5 @@ These two losses are interchangeable for personalized ranking in recommendation.
 [Discussions](https://discuss.d2l.ai/t/402)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM3NzY5OTQ2LDYzMTY0NTEyN119
+eyJoaXN0b3J5IjpbLTEwNzc3NzYyMTAsNjMxNjQ1MTI3XX0=
 -->
