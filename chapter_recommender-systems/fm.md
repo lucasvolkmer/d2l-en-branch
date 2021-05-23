@@ -5,15 +5,15 @@ Máquinas de fatoração (FM) :cite:`Rendle.2010`, proposto por Steffen Rendle e
 
 ## Máquinas de fatoração de 2 vias
 
-Formally, let $x \in \mathbb{R}^d$ denote the feature vectors of one sample, and $y$ denote the corresponding label which can be real-valued label or class label such as binary class "click/non-click". The model for a factorization machine of degree two is defined as:
-
-Formalmente, deixe $ x \ in \ mathbb {R} ^ d $ denotar os vetores de característica de uma amostra, e $y$ denotar o rótulo correspondente que pode ser um rótulo de valor real ou rótulo de classe, como classe binária "clique/não clique". O modelo para uma máquina de fatoração de grau dois é definido como:
+Formalmente, deixe $x \in \mathbb{R}^d$ denotar os vetores de característica de uma amostra, e $y$ denotar o rótulo correspondente que pode ser um rótulo de valor real ou rótulo de classe, como classe binária "clique/não clique". O modelo para uma máquina de fatoração de grau dois é definido como:
 
 $$
 \hat{y}(x) = \mathbf{w}_0 + \sum_{i=1}^d \mathbf{w}_i x_i + \sum_{i=1}^d\sum_{j=i+1}^d \langle\mathbf{v}_i, \mathbf{v}_j\rangle x_i x_j
 $$
 
 where $\mathbf{w}_0 \in \mathbb{R}$ is the global bias; $\mathbf{w} \in \mathbb{R}^d$ denotes the weights of the i-th variable; $\mathbf{V} \in \mathbb{R}^{d\times k}$ represents the feature embeddings; $\mathbf{v}_i$ represents the $i^\mathrm{th}$ row of $\mathbf{V}$; $k$ is the dimensionality of latent factors; $\langle\cdot, \cdot \rangle$ is the dot product of two vectors.  $\langle \mathbf{v}_i, \mathbf{v}_j \rangle$ model the interaction between the $i^\mathrm{th}$ and $j^\mathrm{th}$ feature. Some feature interactions can be easily understood so they can be designed by experts. However, most other feature interactions are hidden in data and difficult to identify. So modeling feature interactions automatically can greatly reduce the efforts in feature engineering. It is obvious that the first two terms correspond to the linear regression model and the last term is an extension of the matrix factorization model. If the feature $i$ represents an item and the feature $j$ represents a user, the third term is exactly the dot product between user and item embeddings. It is worth noting that FM can also generalize to higher orders (degree > 2). Nevertheless, the numerical stability might weaken the generalization.  
+
+onde $\mathbf{w}_0 \in \mathbb{R}$ é a tendência global; $\mathbf{w} \in \mathbb{R}^d$ denota os pesos da i-ésima variável; $\mathbf{V} \in \mathbb{R}^{d\times k}$ representa os embeddings de recursos; $\mathbf{v}_i$ representa a $i^\mathrm{th}$ linha de $\mathbf{V}$; $k$ é a dimensionalidade dos fatores latentes; $\langle\cdot, \cdot \rangle$ é o produto escalar de dois vetores. $\langle \mathbf{v}_i, \mathbf{v}_j \rangle$ modela a interação entre o recurso $i^\mathrm{th}$ e $j^\mathrm{th}$. Algumas interações de recursos podem ser facilmente compreendidas para que possam ser projetadas por especialistas. No entanto, a maioria das outras interações de recursos estão ocultas nos dados e são difíceis de identificar. Portanto, a modelagem de interações de recursos automaticamente pode reduzir muito os esforços na engenharia de recursos. É óbvio que os dois primeiros termos correspondem ao modelo de regressão linear e o último termo é uma extensão do modelo de fatoração de matriz. Se o recurso $i$ representa um item e o recurso $j$ representa um usuário, o terceiro termo é exatamente o produto escalar entre o usuário e os embeddings de item. É importante notar que o FM também pode generalizar para ordens superiores (grau> 2). No entanto, a estabilidade numérica pode enfraquecer a generalização.
  
 
 ## An Efficient Optimization Criterion
@@ -110,5 +110,5 @@ d2l.train_ch13(net, train_iter, test_iter, loss, trainer, num_epochs, devices)
 [Discussions](https://discuss.d2l.ai/t/406)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg2Mjc0MTA1XX0=
+eyJoaXN0b3J5IjpbOTc4NjMyMTc1XX0=
 -->
