@@ -36,17 +36,13 @@ $$
 \hat{y}_{uit} = \mathbf{v}_i \cdot [\mathbf{z}, \mathbf{p}_u]^\top + \mathbf{b}'_i,
 $$
 
-where $\mathbf{V} \in \mathbb{R}^{n \times 2k}$ is another item embedding matrix. $\mathbf{b}' \in \mathbb{R}^n$ is the item specific bias.  $\mathbf{P} \in \mathbb{R}^{m \times k}$ is the user embedding matrix for users' general tastes. $\mathbf{p}_u \in \mathbb{R}^{ k}$ is the $u^\mathrm{th}$ row of $P$ and $\mathbf{v}_i \in \mathbb{R}^{2k}$ is the $i^\mathrm{th}$ row of $\mathbf{V}$.
-
-The model can be learned with BPR or Hinge loss. The architecture of Caser is shown below:
-
-onde $\mathbf{V} \in \mathbb{R}^{n \times 2k}$ é outra matriz de incorporação de itens. $\mathbf{b}' \in \mathbb{R}^n$ é o viés específico do item. $\mathbf{P} \in \mathbb{R}^{m \times k}$ é a matriz de incorporação do usuário para os gostos gerais dos usuários. $\mathbf{p}_u \in \mathbb{R}^{ k}$ é a linha $u^\mathrm{th}$ de $P$ e $\mathbf{v}_i \in \mathbb{R}^{2k}$  é a $ i ^ \ mathrm {th} $ linha de $ \ mathbf {V} $.
+onde $\mathbf{V} \in \mathbb{R}^{n \times 2k}$ é outra matriz de incorporação de itens. $\mathbf{b}' \in \mathbb{R}^n$ é o viés específico do item. $\mathbf{P} \in \mathbb{R}^{m \times k}$ é a matriz de incorporação do usuário para os gostos gerais dos usuários. $\mathbf{p}_u \in \mathbb{R}^{ k}$ é a linha $u^\mathrm{th}$ de $P$ e $\mathbf{v}_i \in \mathbb{R}^{2k}$ é a $i^\mathrm{th}$ linha de $\mathbf{V}$.
 
 O modelo pode ser aprendido com BPR ou perda de dobradiça. A arquitetura do Caser é mostrada abaixo:
 
-![Illustration of the Caser Model](../img/rec-caser.svg)
+![Ilustração do modelo Caser](../img/rec-caser.svg)
 
-We first import the required libraries.
+Primeiro importamos as bibliotecas necessárias.
 
 ```{.python .input  n=3}
 from d2l import mxnet as d2l
@@ -58,8 +54,8 @@ import random
 npx.set_np()
 ```
 
-## Model Implementation
-The following code implements the Caser model. It consists of a vertical convolutional layer, a horizontal convolutional layer, and a full-connected layer.
+## Implementação do Modelo
+O código a seguir implementa o modelo Caser. Consiste em uma camada convolucional vertical, uma camada convolucional horizontal e uma camada totalmente conectada.
 
 ```{.python .input  n=4}
 class Caser(nn.Block):
@@ -108,8 +104,9 @@ class Caser(nn.Block):
         return res
 ```
 
-## Sequential Dataset with Negative Sampling
-To process the sequential interaction data, we need to reimplement the Dataset class. The following code creates a new dataset class named `SeqDataset`. In each sample, it outputs the user identity, his previous $L$ interacted items as a sequence and the next item he interacts as the target. The following figure demonstrates the data loading process for one user. Suppose that this user liked 9 movies, we organize these nine movies in chronological order. The latest movie is left out as the test item. For the remaining eight movies, we can get three training samples, with each sample containing a sequence of five ($L=5$) movies and its subsequent item as the target item. Negative samples are also included in the Customized dataset.
+## Conjunto de dados sequencial com amostragem negativa
+
+Para processar os dados de interação sequencial, precisamos reimplementar a classe Dataset. O código a seguir cria uma nova classe de conjunto de dados chamada `SeqDataset`. Em cada amostra, ele exibe a identidade do usuário, seus itens anteriores com interação de $L$ como uma sequência e o próximo item com o qual ele interage como destino. A figura a seguir demonstra o processo de carregamento de dados para um usuário. Suponha que este usuário goste de 9 filmes, nós organizamos esses nove filmes em ordem cronológica. O filme mais recente é deixado de fora como item de teste. Para os oito filmes restantes, podemos obter três amostras de treinamento, com cada amostra contendo uma sequência de cinco ($L = 5$) filmes e seu item subsequente como o item de destino. Amostras negativas também são incluídas no conjunto de dados personalizado.
 
 ![Illustration of the data generation process](../img/rec-seq-data.svg)
 
@@ -223,5 +220,5 @@ d2l.train_ranking(net, train_iter, test_iter, loss, trainer, test_seq_iter,
 [Discussions](https://discuss.d2l.ai/t/404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNzk3NzU3MV19
+eyJoaXN0b3J5IjpbMTc4ODMzMTQyMF19
 -->
