@@ -26,11 +26,9 @@ $$
 \end{aligned}
 $$
 
-
-
 onde $D := \{(u, i, j) \mid i \in I^+_u \wedge j \in I \backslash I^+_u \}$ é o conjunto de treinamento, com $I^+_u$ denotando os itens que o usuário $u$ gostou, $I$ denotando todos os itens e $I \backslash I^+_u$ indicando todos os outros itens, exceto itens que o usuário gostou. $\hat{y}_{ui}$ e $\hat{y}_{uj}$ são as pontuações previstas do usuário $u$ para os itens $i$ e $j$, respectivamente. O anterior $p(\Theta)$ é uma distribuição normal com média zero e matriz de variância-covariância $\Sigma_\Theta$. Aqui, deixamos $\Sigma_\Theta = \lambda_\Theta I$.
 
-! [Ilustração da classificação personalizada bayesiana] (../ img / rec-ranking.svg)
+![Ilustração da classificação personalizada bayesiana](../img/rec-ranking.svg)
 Vamos implementar a classe base `mxnet.gluon.loss.Loss` e substituir o método `forward` para construir a perda de classificação personalizada Bayesiana. Começamos importando a classe Loss e o módulo np.
 
 ```{.python .input  n=5}
@@ -38,7 +36,7 @@ from mxnet import gluon, np, npx
 npx.set_np()
 ```
 
-The implementation of BPR loss is as follows.
+A implementação da perda do BPR é a seguinte.
 
 ```{.python .input  n=2}
 #@save
@@ -52,9 +50,9 @@ class BPRLoss(gluon.loss.Loss):
         return loss
 ```
 
-## Hinge Loss and its Implementation
+## Hinge Loss e sua implementação
 
-The Hinge loss for ranking has different form to the [hinge loss](https://mxnet.incubator.apache.org/api/python/gluon/loss.html#mxnet.gluon.loss.HingeLoss) provided within the gluon library that is often used in classifiers such as SVMs.  The loss used for ranking in recommender systems has the following form.
+A Hinge Loss para classificação tem forma diferente da [Hinge Loss](https://mxnet.incubator.apache.org/api/python/gluon/loss.html#mxnet.gluon.loss.HingeLoss) fornecida na biblioteca de gluons que é frequentemente usado em classificadores como SVMs. A perda usada para classificação em sistemas de recomendação tem a seguinte forma.
 
 $$
  \sum_{(u, i, j \in D)} \max( m - \hat{y}_{ui} + \hat{y}_{uj}, 0)
@@ -91,5 +89,5 @@ These two losses are interchangeable for personalized ranking in recommendation.
 [Discussions](https://discuss.d2l.ai/t/402)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzc3NzYyMTAsNjMxNjQ1MTI3XX0=
+eyJoaXN0b3J5IjpbLTEwNTcwMzExNTQsNjMxNjQ1MTI3XX0=
 -->
