@@ -1,17 +1,19 @@
-# AutoRec: Rating Prediction with AutoencoderPrevisão de classificação com codificadores automáticos
+# AutoRec: Previsão de classificação com codificadores automáticos
 
-Although the matrix factorization model achieves decent performance on the rating prediction task, it is essentially a linear model. Thus, such models are not capable of capturing complex nonlinear and intricate relationships that may be predictive of users' preferences. In this section, we introduce a nonlinear neural network collaborative filtering model, AutoRec :cite:`Sedhain.Menon.Sanner.ea.2015`. It identifies collaborative filtering (CF) with an autoencoder architecture and aims to integrate nonlinear transformations into CF on the basis of explicit feedback. Neural networks have been proven to be capable of approximating any continuous function, making it suitable to address the limitation of matrix factorization and enrich the expressiveness of matrix factorization.
+Embora o modelo de fatoração de matriz alcance um desempenho decente na tarefa de previsão de classificação, é essencialmente um modelo linear. Portanto, esses modelos não são capazes de capturar relacionamentos não lineares complexos e intrincados que podem ser preditivos das preferências dos usuários. Nesta seção, apresentamos um modelo de filtragem colaborativa de rede neural não linear, AutoRec :cite:`Sedhain.Menon.Sanner.ea.2015`. Ele identifica a filtragem colaborativa (CF) com uma arquitetura autoencoder e visa integrar transformações não lineares em CF com base no feedback explícito. As redes neurais têm se mostrado capazes de aproximar qualquer função contínua, tornando-as adequadas para lidar com a limitação da fatoração da matriz e enriquecer a expressividade da fatoração da matriz.
 
-On one hand, AutoRec has the same structure as an autoencoder which consists of an input layer, a hidden layer, and a reconstruction (output) layer.  An autoencoder is a neural network that learns to copy its input to its output in order to code the inputs into the hidden (and usually low-dimensional) representations. In AutoRec, instead of explicitly embedding users/items into low-dimensional space, it uses the column/row of the interaction matrix as the input, then reconstructs the interaction matrix in the output layer.
+Por um lado, o AutoRec tem a mesma estrutura de um autoencoder, que consiste em uma camada de entrada, uma camada oculta e uma camada de reconstrução (saída). Um autoencoder é uma rede neural que aprende a copiar sua entrada para sua saída, a fim de codificar as entradas nas representações ocultas (e geralmente de baixa dimensão). No AutoRec, em vez de incorporar explicitamente usuários / itens em um espaço de baixa dimensão, ele usa a coluna / linha da matriz de interação como entrada e, a seguir, reconstrói a matriz de interação na camada de saída.
 
-On the other hand, AutoRec differs from a traditional autoencoder: rather than learning the hidden representations, AutoRec focuses on learning/reconstructing the output layer. It uses a partially observed interaction matrix as the input, aiming to reconstruct a completed rating matrix. In the meantime, the missing entries of the input are filled in the output layer via reconstruction for the purpose of recommendation. 
+Por outro lado, o AutoRec difere de um autoencoder tradicional: em vez de aprender as representações ocultas, o AutoRec se concentra em aprender / reconstruir a camada de saída. Ele usa uma matriz de interação parcialmente observada como entrada, com o objetivo de reconstruir uma matriz de classificação completa. Nesse ínterim, as entradas ausentes da entrada são preenchidas na camada de saída por meio da reconstrução para fins de recomendação.
 
-There are two variants of AutoRec: user-based and item-based. For brevity, here we only introduce the item-based AutoRec. User-based AutoRec can be derived accordingly.
+Existem duas variantes do AutoRec: baseado no usuário e baseado no item. Para resumir, aqui apresentamos apenas o AutoRec baseado em item. O AutoRec baseado no usuário pode ser derivado de acordo.
 
 
-## Model
+## Modelo
 
 Let $\mathbf{R}_{*i}$ denote the $i^\mathrm{th}$ column of the rating matrix, where unknown ratings are set to zeros by default. The neural architecture is defined as:
+
+Deixe $\mathbf{R}_{*i}$ denotar a coluna $ i ^ \ mathrm {th} $ da matriz de classificação, onde classificações desconhecidas são definidas como zeros por padrão. A arquitetura neural é definida como:
 
 $$
 h(\mathbf{R}_{*i}) = f(\mathbf{W} \cdot g(\mathbf{V} \mathbf{R}_{*i} + \mu) + b)
@@ -122,5 +124,5 @@ d2l.train_recsys_rating(net, train_iter, test_iter, loss, trainer, num_epochs,
 [Discussions](https://discuss.d2l.ai/t/401)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgwNzE0NDM3XX0=
+eyJoaXN0b3J5IjpbMTA1ODkzNjc5M119
 -->
