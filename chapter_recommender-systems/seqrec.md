@@ -13,20 +13,16 @@ $$
 \mathbf{E}^{(u, t)} = [ \mathbf{q}_{S_{t-L}^u} , ..., \mathbf{q}_{S_{t-2}^u}, \mathbf{q}_{S_{t-1}^u} ]^\top,
 $$
 
-where $\mathbf{Q} \in \mathbb{R}^{n \times k}$ represents item embeddings and $\mathbf{q}_i$ denotes the $i^\mathrm{th}$ row. $\mathbf{E}^{(u, t)} \in \mathbb{R}^{L \times k}$ can be used to infer the transient interest of user $u$ at time-step $t$. We can view the input matrix $\mathbf{E}^{(u, t)}$ as an image which is the input of the subsequent two convolutional components.
+onde $\mathbf{Q} \in \mathbb{R}^{n \times k}$ representa embeddings de itens e $\mathbf{q}_i$ denota a linha $i^\mathrm{th}$. $\mathbf{E}^{(u, t)} \in \mathbb{R}^{L \times k}$ pode ser usado para inferir o interesse transitório do usuário $u$ na etapa de tempo $t$. Podemos ver a matriz de entrada $\mathbf{E}^{(u, t)}$ como uma imagem que é a entrada dos dois componentes convolucionais subsequentes.
 
-The horizontal convolutional layer has $d$ horizontal filters $\mathbf{F}^j \in \mathbb{R}^{h \times k}, 1 \leq j \leq d, h = \{1, ..., L\}$, and the vertical convolutional layer has $d'$ vertical filters $\mathbf{G}^j \in \mathbb{R}^{ L \times 1}, 1 \leq j \leq d'$. After a series of convolutional and pool operations, we get the two outputs:
-
-onde $\mathbf{Q} \in \mathbb{R}^{n \times k}$ representa embeddings de itens e $\mathbf{q}_i$ denota a linha $ i ^ \ mathrm {th} $. $ \ mathbf {E} ^ {(u, t)} \ in \ mathbb {R} ^ {L \ times k} $ pode ser usado para inferir o interesse transitório do usuário $ u $ na etapa de tempo $ t $. Podemos ver a matriz de entrada $ \ mathbf {E} ^ {(u, t)} $ como uma imagem que é a entrada dos dois componentes convolucionais subsequentes.
-
-A camada convolucional horizontal tem $ d $ filtros horizontais $ \ mathbf {F} ^ j \ in \ mathbb {R} ^ {h \ times k}, 1 \ leq j \ leq d, h = \ {1, ... , L \} $, e a camada convolucional vertical tem $ d '$ filtros verticais $ \ mathbf {G} ^ j \ in \ mathbb {R} ^ {L \ times 1}, 1 \ leq j \ leq d' $ . Após uma série de operações convolucionais e de pool, obtemos as duas saídas:
+A camada convolucional horizontal tem $d$ filtros horizontais $\mathbf{F}^j \in \mathbb{R}^{h \times k}, 1 \leq j \leq d, h = \{1, ..., L\}$, e a camada convolucional vertical tem $d'$ filtros verticais $\mathbf{G}^j \in \mathbb{R}^{ L \times 1}, 1 \leq j \leq d'$ . Após uma série de operações convolucionais e de pool, obtemos as duas saídas:
 
 $$
 \mathbf{o} = \text{HConv}(\mathbf{E}^{(u, t)}, \mathbf{F}) \\
 \mathbf{o}'= \text{VConv}(\mathbf{E}^{(u, t)}, \mathbf{G}) ,
 $$
 
-where $\mathbf{o} \in \mathbb{R}^d$ is the output of horizontal convolutional network and $\mathbf{o}' \in \mathbb{R}^{kd'}$ is the output of vertical convolutional network. For simplicity, we omit the details of convolution and pool operations. They are concatenated and fed into a fully-connected neural network layer to get more high-level representations.
+onde $\mathbf{o} \in \mathbb{R}^d$ é a saída da rede convolucional horizontal e $\mathbf{o}' \in \mathbb{R}^{kd'}$ é a saída da rede vertical rede convolucional. Para simplificar, omitimos os detalhes das operações de convolução e pool. Eles são concatenados e alimentados em uma camada de rede neural totalmente conectada para obter mais representações de alto nível.
 
 $$
 \mathbf{z} = \phi(\mathbf{W}[\mathbf{o}, \mathbf{o}']^\top + \mathbf{b}),
@@ -35,6 +31,10 @@ $$
 where $\mathbf{W} \in \mathbb{R}^{k \times (d + kd')}$ is the weight matrix and $\mathbf{b} \in \mathbb{R}^k$ is the bias. The learned vector $\mathbf{z} \in \mathbb{R}^k$ is the representation of user's short-term intent.
 
 At last, the prediction function combines users' short-term and general taste together, which is defined as:
+
+onde $ \ mathbf {W} \ in \ mathbb {R} ^ {k \ times (d + kd ')} $ é a matriz de peso e $ \ mathbf {b} \ in \ mathbb {R} ^ k $ é o tendência. O vetor aprendido $ \ mathbf {z} \ in \ mathbb {R} ^ k $ é a representação da intenção de curto prazo do usuário.
+
+Por fim, a função de previsão combina o gosto geral e de curto prazo dos usuários, que é definido como:
 
 $$
 \hat{y}_{uit} = \mathbf{v}_i \cdot [\mathbf{z}, \mathbf{p}_u]^\top + \mathbf{b}'_i,
@@ -223,5 +223,5 @@ d2l.train_ranking(net, train_iter, test_iter, loss, trainer, test_seq_iter,
 [Discussions](https://discuss.d2l.ai/t/404)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc1MTQ1MzI0XX0=
+eyJoaXN0b3J5IjpbODg3OTM4MjczXX0=
 -->
