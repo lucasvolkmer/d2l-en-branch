@@ -274,13 +274,13 @@ e o outro lado acima como vemos em :numref:`fig_space-division`.
 ![Se considerarmos agora a versão da desigualdade da expressão, vemos que nosso hiperplano (neste caso: apenas uma linha) separa o espaço em duas metades.](../img/space-division.svg)
 :label:`fig_space-division`
 
-The story in higher dimension is much the same.
-If we now take $\mathbf{w} = [1,2,3]^\top$
-and ask about the points in three dimensions with $\mathbf{w}\cdot\mathbf{v} = 1$,
-we obtain a plane at right angles to the given vector $\mathbf{w}$.
-The two inequalities again define the two sides of the plane as is shown in :numref:`fig_higher-division`.
+A história em uma dimensão superior é praticamente a mesma.
+Se agora tomarmos $\mathbf{w} = [1,2,3]^\top$
+e perguntarmos sobre os pontos em três dimensões com $\mathbf{w}\cdot\mathbf{v} = 1$,
+obtemos um plano perpendicular ao vetor dado $\mathbf{w}$.
+As duas desigualdades definem novamente os dois lados do plano como é mostrado em :numref:`fig_higher-division`.
 
-![Hyperplanes in any dimension separate the space into two halves.](../img/space-division-3d.svg)
+![Hiperplanos em qualquer dimensão separam o espaço em duas metades.](../img/space-division-3d.svg)
 :label:`fig_higher-division`
 
 While our ability to visualize runs out at this point,
@@ -1050,7 +1050,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0ODY4MjczMSwtOTIzNjEyNzU3LDExOT
-U3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2
-MzU4LC0xNTg5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbMjIyMjc4MTIyLC0zNDg2ODI3MzEsLTkyMz
+YxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3
+ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
 -->
