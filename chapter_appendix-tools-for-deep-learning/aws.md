@@ -144,22 +144,22 @@ Quando a linha de comando perguntar "Tem certeza de que deseja continuar conecta
 Seu servidor está pronto agora.
 
 
-## Installing CUDA
+## Instalando CUDA
 
-Before installing CUDA, be sure to update the instance with the latest drivers.
+Antes de instalar o CUDA, certifique-se de atualizar a instância com os drivers mais recentes.
 
 ```bash
 sudo apt-get update && sudo apt-get install -y build-essential git libgfortran3
 ```
 
 
-Here we download CUDA 10.1. Visit NVIDIA's [official repository](https://developer.nvidia.com/cuda-downloads) to find the download link of CUDA 10.1 as shown in :numref:`fig_cuda`.
+Aqui, baixamos o CUDA 10.1. Visite o [repositório oficial  da NVIDIA](https://developer.nvidia.com/cuda-downloads) para encontrar o link de download do CUDA 10.1 conforme mostrado em :numref:`fig_cuda`.
 
-![Find the CUDA 10.1 download address.](../img/cuda101.png)
+![Encontre o endereço de download do CUDA 10.1.](../img/cuda101.png)
 :width:`500px`
 :label:`fig_cuda`
 
-Copy the instructions and paste them into the terminal to install
+Copie as instruções e cole-as no terminal para instalar
 CUDA 10.1.
 
 ```bash
@@ -174,23 +174,23 @@ sudo apt-get -y install cuda
 ```
 
 
-After installing the program, run the following command to view the GPUs.
+Depois de instalar o programa, execute o seguinte comando para visualizar as GPUs.
 
 ```bash
 nvidia-smi
 ```
 
 
-Finally, add CUDA to the library path to help other libraries find it.
+Finalmente, adicione CUDA ao caminho da biblioteca para ajudar outras bibliotecas a encontrá-lo.
 
 ```bash
 echo "export LD_LIBRARY_PATH=\${LD_LIBRARY_PATH}:/usr/local/cuda/lib64" >> ~/.bashrc
 ```
 
 
-## Installing MXNet and Downloading the D2L Notebooks
+## Instalação do MXNet e download dos notebooks D2L
 
-First, to simplify the installation, you need to install [Miniconda](https://conda.io/en/latest/miniconda.html) for Linux. The download link and file name are subject to changes, so please go the Miniconda website and click "Copy Link Address" as shown in :numref:`fig_miniconda`.
+Primeiro, para simplificar a instalação, você precisa instalar o [Miniconda](https://conda.io/en/latest/miniconda.html) para Linux. O link de download e o nome do arquivo estão sujeitos a alterações, então vá ao site do Miniconda e clique em "Copiar endereço do link" conforme mostrado em :numref:`fig_miniconda`.
 
 ![Download Miniconda.](../img/miniconda.png)
 :width:`700px`
@@ -307,5 +307,5 @@ environments.
 
 [Discussions](https://discuss.d2l.ai/t/423)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI3MDQ5MjUyXX0=
+eyJoaXN0b3J5IjpbMTU1NzU3MzE4MV19
 -->
