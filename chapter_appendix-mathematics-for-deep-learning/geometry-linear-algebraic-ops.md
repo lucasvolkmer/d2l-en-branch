@@ -234,17 +234,18 @@ seu cosseno será quase sempre próximo a $0$.
 
 ## Hiperplanos
 
-In addition to working with vectors, another key object
-that you must understand to go far in linear algebra
-is the *hyperplane*, a generalization to higher dimensions
-of a line (two dimensions) or of a plane (three dimensions).
-In an $d$-dimensional vector space, a hyperplane has $d-1$ dimensions
-and divides the space into two half-spaces.
 
-Let us start with an example.
-Suppose that we have a column vector $\mathbf{w}=[2,1]^\top$. We want to know, "what are the points $\mathbf{v}$ with $\mathbf{w}\cdot\mathbf{v} = 1$?"
-By recalling the connection between dot products and angles above :eqref:`eq_angle_forumla`,
-we can see that this is equivalent to
+Além de trabalhar com vetores, outro objeto-chave
+que você deve entender para ir longe na álgebra linear
+é o *hiperplano*, uma generalização para dimensões superiores
+de uma linha (duas dimensões) ou de um plano (três dimensões).
+Em um espaço vetorial $d$-dimensional, um hiperplano tem $d-1$ dimensões
+e divide o espaço em dois meios-espaços.
+
+Vamos começar com um exemplo.
+Suponha que temos um vetor coluna $\mathbf{w}=[2,1]^\top$.  Queremos saber, "quais são os pontos $\mathbf{v}$ com $\mathbf{w}\cdot\mathbf{v} = 1$?"
+Ao relembrar a conexão entre produtos escalares e ângulos acima :eqref:`eq_angle_forumla`,
+podemos ver que isso é equivalente a
 $$
 \|\mathbf{v}\|\|\mathbf{w}\|\cos(\theta) = 1 \; \iff \; \|\mathbf{v}\|\cos(\theta) = \frac{1}{\|\mathbf{w}\|} = \frac{1}{\sqrt{5}}.
 $$
@@ -1049,7 +1050,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MjY5OTA5NiwtOTIzNjEyNzU3LDExOT
+eyJoaXN0b3J5IjpbMTM3MjM3OTM1NywtOTIzNjEyNzU3LDExOT
 U3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2
 MzU4LC0xNTg5MjEzMDY0XX0=
 -->
