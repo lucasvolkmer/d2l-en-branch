@@ -1,4 +1,4 @@
-# Using Amazon SageMaker
+# Usingando Amazon SageMaker
 :label:`sec_sagemaker`
 
 Many deep learning applications require a significant amount of computation. Your local machine might be too slow to solve these problems in a reasonable amount of time. Cloud computing services give you access to more powerful computers to run the GPU-intensive portions of this book. This tutorial will guide you through Amazon SageMaker: a service that allows you to run this book easily.
@@ -132,3 +132,6 @@ git pull
 
 
 [Discussions](https://discuss.d2l.ai/t/422)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE5MjA1MjU2MTZdfQ==
+-->
