@@ -41,32 +41,32 @@ Para a maioria dos usuários, basta olhar para o poder de computação. Observe 
 
 :numref:`fig_flopsvsprice` compara o poder de computação de ponto flutuante de 32 bits e o preço dos vários modelos das séries GTX 900, GTX 1000 e RTX 2000. Os preços são os preços sugeridos encontrados na Wikipedia.
 
-![Floating-point compute power and price comparison. ](../img/flopsvsprice.svg)
+![Poder de computação de ponto flutuante e comparação de preços. ](../img/flopsvsprice.svg)
 :label:`fig_flopsvsprice`
 
-We can see a number of things:
+Podemos ver várias coisas:
 
-1. Within each series, price and performance are roughly proportional. Titan models command a significant premium for the benefit of larger amounts of GPU memory. However, the newer models offer better cost effectiveness, as can be seen by comparing the 980 Ti and 1080 Ti. The price does not appear to improve much for the RTX 2000 series. However, this is due to the fact that they offer far superior low precision performance (FP16, INT8 and INT4).
-2. The performance-to-cost ratio of the GTX 1000 series is about two times greater than the 900 series.
-3. For the RTX 2000 series the price is an *affine* function of the price.
+1. Dentro de cada série, o preço e o desempenho são aproximadamente proporcionais. Os modelos Titan oferecem um prêmio significativo para o benefício de grandes quantidades de memória GPU. No entanto, os modelos mais novos oferecem melhor relação custo-benefício, como pode ser visto ao comparar o 980 Ti e o 1080 Ti. O preço não parece melhorar muito para a série RTX 2000. No entanto, isso se deve ao fato de que eles oferecem desempenho de baixa precisão muito superior (FP16, INT8 e INT4).
+2. A relação desempenho-custo da série GTX 1000 é cerca de duas vezes maior do que a série 900.
+3. Para a série RTX 2000, o preço é uma função *afim* do preço.
 
-![Floating-point compute power and energy consumption. ](../img/wattvsprice.svg)
+![Potência de computação de ponto flutuante e consumo de energia.](../img/wattvsprice.svg)
 :label:`fig_wattvsprice`
 
 
-:numref:`fig_wattvsprice` shows how energy consumption scales mostly linearly with the amount of computation. Second, later generations are more efficient. This seems to be contradicted by the graph corresponding to the RTX 2000 series. However, this is a consequence of the TensorCores which draw disproportionately much energy.
+:numref:`fig_wattvsprice` mostra como o consumo de energia aumenta linearmente com a quantidade de computação. Em segundo lugar, as gerações posteriores são mais eficientes. Isso parece ser contradito pelo gráfico correspondente à série RTX 2000. No entanto, isso é uma consequência dos TensorCores que consomem energia desproporcionalmente.
 
 
-## Summary
+## Sumário
 
-* Watch out for power, PCIe bus lanes, CPU single thread speed and cooling when building a server.
-* You should purchase the latest GPU generation if possible.
-* Use the cloud for large deployments.
-* High density servers may not be compatible with all GPUs. Check the mechanical and cooling specifications before you buy.
-* Use FP16 or lower precision for high efficiency.
+* Cuidado com a energia, faixas de barramento PCIe, velocidade de thread único da CPU e resfriamento ao construir um servidor.
+* Você deve comprar a geração de GPU mais recente, se possível.
+* Use a nuvem para grandes implantações.
+* Os servidores de alta densidade podem não ser compatíveis com todas as GPUs. Verifique as especificações mecânicas e de resfriamento antes de comprar.
+* Use FP16 ou precisão inferior para alta eficiência.
 
 
-[Discussions](https://discuss.d2l.ai/t/425)
+[Discussão](https://discuss.d2l.ai/t/425)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NzQ5MjE2N119
+eyJoaXN0b3J5IjpbLTUzMDk2MDY5NF19
 -->
