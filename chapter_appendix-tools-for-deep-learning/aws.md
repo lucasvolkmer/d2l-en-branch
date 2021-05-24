@@ -38,7 +38,7 @@ you need to open one or more instances, click on the "Request limit increase" li
 apply for a higher instance quota. Generally, it takes one business day to
 process an application.
 
-### Presetting Location
+### Prédefinindo localização
 Selecione um data center próximo para reduzir a latência, por exemplo, "Oregon" (marcado pela caixa vermelha no canto superior direito de: numref: `fig_ec2`). Se você estiver na China,
 você pode selecionar uma região Ásia-Pacífico próxima, como Seul ou Tóquio. Observe
 que alguns data centers podem não ter instâncias de GPU.
@@ -46,27 +46,28 @@ que alguns data centers podem não ter instâncias de GPU.
 ### Limites crescentes
 Antes de escolher uma instância, verifique se há quantidade
 restrições clicando no rótulo "Limites" na barra à esquerda, conforme mostrado em
-: numref: `fig_ec2`. : numref: `fig_limits` mostra um exemplo de tal
+:numref:`fig_ec2`. :numref:`fig_limits` mostra um exemplo de tal
 limitação. A conta atualmente não pode abrir a instância "p2.xlarge" por região. Se
 você precisa abrir uma ou mais instâncias, clique no link "Solicitar aumento de limite" para
 se inscrever para uma cota de instância maior. Geralmente, leva um dia útil para
 processar um aplicativo.
 
-![Instance quantity restrictions.](../img/limits.png)
+![Restrições de quantidade de instância.](../img/limits.png)
 :width:`700px`
 :label:`fig_limits`
 
-### Launching Instance
-Next, click the "Launch Instance" button marked by the red box in :numref:`fig_ec2` to launch your instance.
+### Iniciando instância
 
-We begin by selecting a suitable AMI (AWS Machine Image). Enter "Ubuntu" in the search box (marked by the red box in :numref:`fig_ubuntu`).
+Em seguida, clique no botão "Launch Instance" marcado pela caixa vermelha em :numref:`fig_ec2` para iniciar sua instância.
+
+Começamos selecionando um AMI adequado (AWS Machine Image). Digite "Ubuntu" na caixa de pesquisa (marcada pela caixa vermelha em :numref:`fig_ubuntu`).
 
 
-![Choose an operating system.](../img/ubuntu-new.png)
+![Escolha um sistema operacional.](../img/ubuntu-new.png)
 :width:`700px`
 :label:`fig_ubuntu`
 
-EC2 provides many different instance configurations to choose from. This can sometimes feel overwhelming to a beginner. Here's a table of suitable machines:
+EC2 fornece muitas configurações de instância diferentes para escolher. Isso às vezes pode parecer opressor para um iniciante. Aqui está uma tabela de máquinas adequadas:
 
 | Name | GPU         | Notes                         |
 |------|-------------|-------------------------------|
@@ -306,5 +307,5 @@ environments.
 
 [Discussions](https://discuss.d2l.ai/t/423)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjM3Njg3MjhdfQ==
+eyJoaXN0b3J5IjpbMjk0NTM2Nzc0XX0=
 -->
