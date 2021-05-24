@@ -203,7 +203,7 @@ sh Miniconda3-latest-Linux-x86_64.sh -b
 ```
 
 
-After the Miniconda installation, run the following command to activate CUDA and conda.
+Após a instalação do Miniconda, execute o seguinte comando para ativar CUDA e conda.
 
 ```bash
 ~/miniconda3/bin/conda init
@@ -211,7 +211,7 @@ source ~/.bashrc
 ```
 
 
-Next, download the code for this book.
+Em seguida, baixe o código deste livro.
 
 ```bash
 sudo apt-get install unzip
@@ -221,14 +221,14 @@ unzip d2l-en.zip && rm d2l-en.zip
 ```
 
 
-Then create the conda `d2l` environment and enter `y` to proceed with the installation.
+Em seguida, crie o ambiente conda `d2l` e digite `y` para prosseguir com a instalação.
 
 ```bash
 conda create --name d2l -y
 ```
 
 
-After creating the `d2l` environment, activate it and install `pip`.
+Após criar o ambiente `d2l`, ative-o e instale o `pip`.
 
 ```bash
 conda activate d2l
@@ -236,7 +236,7 @@ conda install python=3.7 pip -y
 ```
 
 
-Finally, install MXNet and the `d2l` package. The postfix `cu101` means that this is the CUDA 10.1 variant. For different versions, say only CUDA 10.0, you would want to choose `cu100` instead.
+Finalmente, instale o MXNet e o pacote `d2l`. O postfix `cu101` significa que esta é a variante CUDA 10.1. Para versões diferentes, digamos apenas CUDA 10.0, você deve escolher `cu100`.
 
 ```bash
 pip install mxnet-cu101==1.7.0
@@ -245,7 +245,7 @@ pip install git+https://github.com/d2l-ai/d2l-en
 ```
 
 
-You can quickly test whether everything went well as follows:
+Você pode testar rapidamente se tudo correu bem da seguinte maneira:
 
 ```
 $ python
@@ -254,9 +254,9 @@ $ python
 ```
 
 
-## Running Jupyter
+## Executando Jupyter
 
-To run Jupyter remotely you need to use SSH port forwarding. After all, the server in the cloud does not have a monitor or keyboard. For this, log into your server from your desktop (or laptop) as follows.
+Para executar o Jupyter remotamente, você precisa usar o encaminhamento de porta SSH. Afinal, o servidor na nuvem não possui monitor ou teclado. Para isso, faça login em seu servidor a partir de seu desktop (ou laptop) da seguinte maneira.
 
 ```
 # This command must be run in the local command line
@@ -266,13 +266,13 @@ jupyter notebook
 ```
 
 
-:numref:`fig_jupyter` shows the possible output after you run Jupyter Notebook. The last row is the URL for port 8888.
+:numref:`fig_jupyter` mostra a saída possível depois de executar o Jupyter Notebook. A última linha é o URL da porta 8888.
 
-![Output after running Jupyter Notebook. The last row is the URL for port 8888.](../img/jupyter.png)
+![Saída após executar o Jupyter Notebook. A última linha é o URL da porta 8888.](../img/jupyter.png)
 :width:`700px`
 :label:`fig_jupyter`
 
-Since you used port forwarding to port 8889 you will need to replace the port number and use the secret as given by Jupyter when opening the URL in your local browser.
+Como você usou o encaminhamento de porta para a porta 8889, você precisará substituir o número da porta e usar o segredo fornecido pelo Jupyter ao abrir a URL em seu navegador local.
 
 
 ## Closing Unused Instances
@@ -307,5 +307,5 @@ environments.
 
 [Discussions](https://discuss.d2l.ai/t/423)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NzU3MzE4MV19
+eyJoaXN0b3J5IjpbMTQ0MzA5NjUzXX0=
 -->
