@@ -41,32 +41,32 @@ Uma versão do notebook Jupyter deste livro para ajustar o SageMaker está dispo
 :end_tab:
 
 :begin_tab:`tensorflow`
-A Jupyter notebook version of this book for fitting SageMaker is available at https://github.com/d2l-ai/d2l-tensorflow-sagemaker. We can specify this GitHub repository URL to let SageMaker clone this repository during instance creation, as shown in :numref:`fig_sagemaker-create-3`.
+Uma versão do notebook Jupyter deste livro para ajustar o SageMaker está disponível em https://github.com/d2l-ai/d2l-tensorflow-sagemaker. Podemos especificar a URL do repositório GitHub para permitir que o SageMaker clone este repositório durante a criação da instância, conforme mostrado em :numref:`fig_sagemaker-create-3`.
 :end_tab:
 
-![Specify the GitHub repository.](../img/sagemaker-create-3.png)
+![Especifique o repositório GitHub.](../img/sagemaker-create-3.png)
 :width:`400px`
 :label:`fig_sagemaker-create-3`
 
 
 
-## Running and Stopping an Instance
+## Executando e parando uma instância
 
-It may take a few minutes before the instance is ready.
-When it is ready, you can click on the "Open Jupyter" link as shown in :numref:`fig_sagemaker-open`.
+Pode levar alguns minutos para que a instância esteja pronta.
+Quando estiver pronto, você pode clicar no link "Open Jupyter" conforme mostrado em :numref:`fig_sagemaker-open`.
 
-![Open Jupyter on the created SageMaker instance.](../img/sagemaker-open.png)
+![Abra o Jupyter na instância criada do SageMaker.](../img/sagemaker-open.png)
 :width:`400px`
 :label:`fig_sagemaker-open`
 
-Then, as shown in :numref:`fig_sagemaker-jupyter`, you may navigate through the Jupyter server running on this instance.
+Então, como mostrado em :numref:`fig_sagemaker-jupyter`, você pode navegar pelo servidor Jupyter em execução nesta instância.
 
-![The Jupyter server running on the SageMaker instance.](../img/sagemaker-jupyter.png)
+![O servidor Jupyter em execução na instância do SageMaker.](../img/sagemaker-jupyter.png)
 :width:`400px`
 :label:`fig_sagemaker-jupyter`
 
-Running and editing Jupyter notebooks on the SageMaker instance is similar to what we have discussed in :numref:`sec_jupyter`.
-After finishing your work, do not forget to stop the instance to avoid further charging, as shown in :numref:`fig_sagemaker-stop`.
+Executar e editar blocos de notas Jupyter na instância SageMaker é semelhante ao que discutimos em: numref:`sec_jupyter`.
+Depois de terminar seu trabalho, não se esqueça de parar a instância para evitar mais cobranças, como mostrado em: numref: `fig_sagemaker-stop`.
 
 ![Stop a SageMaker instance.](../img/sagemaker-stop.png)
 :width:`300px`
@@ -133,5 +133,5 @@ git pull
 
 [Discussions](https://discuss.d2l.ai/t/422)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzIyNjE2ODZdfQ==
+eyJoaXN0b3J5IjpbMTkzMTQ5MjczM119
 -->
