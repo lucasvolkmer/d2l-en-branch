@@ -1,26 +1,26 @@
-# Using AWS EC2 Instancesando instâncias AWS EC2
+# Usando instâncias AWS EC2
 :label:`sec_aws`
 
-In this section, we will show you how to install all libraries on a raw Linux machine. Remember that in :numref:`sec_sagemaker` we discussed how to use Amazon SageMaker, while building an instance by yourself costs less on AWS. The walkthrough includes a number of steps:
+Nesta seção, mostraremos como instalar todas as bibliotecas em uma máquina Linux bruta. Lembre-se de que em :numref:`sec_sagemaker` discutimos como usar o Amazon SageMaker, enquanto construir uma instância sozinho custa menos na AWS. O passo a passo inclui várias etapas:
 
-1. Request for a GPU Linux instance from AWS EC2.
-1. Optionally: install CUDA or use an AMI with CUDA preinstalled.
-1. Set up the corresponding MXNet GPU version.
+1. Solicite uma instância GPU Linux do AWS EC2.
+1. Opcionalmente: instale CUDA ou use um AMI com CUDA pré-instalado.
+1. Configure a versão de GPU MXNet correspondente.
 
-This process applies to other instances (and other clouds), too, albeit with some minor modifications. Before going forward, you need to create an AWS account, see :numref:`sec_sagemaker` for more details.
+Este processo se aplica a outras instâncias (e outras nuvens) também, embora com algumas pequenas modificações. Antes de prosseguir, você precisa criar uma conta AWS, consulte :numref:`sec_sagemaker` para mais detalhes.
 
 
-## Creating and Running an EC2 Instance
+## Criação e execução de uma instância EC2
 
-After logging into your AWS account, click "EC2" (marked by the red box in :numref:`fig_aws`) to go to the EC2 panel.
+Depois de fazer login em sua conta AWS, clique em "EC2" (marcado pela caixa vermelha em :numref:`fig_aws`) para ir para o painel EC2.
 
-![Open the EC2 console.](../img/aws.png)
+![Abra o console EC2.](../img/aws.png)
 :width:`400px`
 :label:`fig_aws`
 
-:numref:`fig_ec2` shows the EC2 panel with sensitive account information greyed out.
+:numref:`fig_ec2` mostra o painel EC2 com informações confidenciais da conta esmaecidas.
 
-![EC2 panel.](../img/ec2.png)
+![Painel EC2.](../img/ec2.png)
 :width:`700px`
 :label:`fig_ec2`
 
@@ -37,6 +37,20 @@ limitation. The account currently cannot open "p2.xlarge" instance per region. I
 you need to open one or more instances, click on the "Request limit increase" link to
 apply for a higher instance quota. Generally, it takes one business day to
 process an application.
+
+### Presetting Location
+Selecione um data center próximo para reduzir a latência, por exemplo, "Oregon" (marcado pela caixa vermelha no canto superior direito de: numref: `fig_ec2`). Se você estiver na China,
+você pode selecionar uma região Ásia-Pacífico próxima, como Seul ou Tóquio. Observe
+que alguns data centers podem não ter instâncias de GPU.
+
+### Limites crescentes
+Antes de escolher uma instância, verifique se há quantidade
+restrições clicando no rótulo "Limites" na barra à esquerda, conforme mostrado em
+: numref: `fig_ec2`. : numref: `fig_limits` mostra um exemplo de tal
+limitação. A conta atualmente não pode abrir a instância "p2.xlarge" por região. Se
+você precisa abrir uma ou mais instâncias, clique no link "Solicitar aumento de limite" para
+se inscrever para uma cota de instância maior. Geralmente, leva um dia útil para
+processar um aplicativo.
 
 ![Instance quantity restrictions.](../img/limits.png)
 :width:`700px`
@@ -292,5 +306,5 @@ environments.
 
 [Discussions](https://discuss.d2l.ai/t/423)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjM3NDQ0MzBdfQ==
+eyJoaXN0b3J5IjpbLTE1NjM3Njg3MjhdfQ==
 -->
