@@ -136,10 +136,11 @@ o ângulo entre os dois vetores é
 $$\theta = \arccos\left(\frac{\mathbf{v}\cdot\mathbf{w}}{\|\mathbf{v}\|\|\mathbf{w}\|}\right).$$
 :eqlabel:`eq_angle_forumla`
 
-This is a nice result since nothing in the computation references two-dimensions.
-Indeed, we can use this in three or three million dimensions without issue.
 
-As a simple example, let us see how to compute the angle between a pair of vectors:
+Este é um bom resultado, pois nada no cálculo faz referência a duas dimensões.
+Na verdade, podemos usar isso em três ou três milhões de dimensões sem problemas.
+
+Como um exemplo simples, vamos ver como calcular o ângulo entre um par de vetores:
 
 ```{.python .input}
 %matplotlib inline
@@ -1048,6 +1049,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODQ0ODczNiwtMjEwNzM2NDM3NiwyMT
+eyJoaXN0b3J5IjpbMTE5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMT
 AyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ==
 -->
