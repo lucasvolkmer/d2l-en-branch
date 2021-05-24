@@ -1,9 +1,9 @@
-# Using Google Colab
+# Usando Google Colab
 :label:`sec_colab`
 
 Apresentamos como executar este livro na AWS em :numref:`sec_sagemaker` e :numref:`sec_aws`. Outra opção é executar este livro no [Google Colab](https://colab.research.google.com/), que fornece GPU gratuita se você tiver uma conta do Google.
 
-Para executar uma seção no Colab, você pode simplesmente clicar no botão `Colab` à direita do título dessa seção, como em: numref:` fig_colab`.
+Para executar uma seção no Colab, você pode simplesmente clicar no botão `Colab` à direita do título dessa seção, como em :numref:`fig_colab`.
 
 ![Abrindo uma sessão no Colab](../img/colab.png)
 :width:`300px`
@@ -30,5 +30,5 @@ Em seguida, o Colab irá conectá-lo a uma instância para executar este noteboo
 
 [Discussão](https://discuss.d2l.ai/t/424)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODc5ODk5MDhdfQ==
+eyJoaXN0b3J5IjpbNzU4NTY5MTg4XX0=
 -->
