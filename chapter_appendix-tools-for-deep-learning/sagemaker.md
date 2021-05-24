@@ -4,29 +4,33 @@
 Muitos aplicativos de aprendizado profundo requerem uma quantidade significativa de computação. Sua máquina local pode ser muito lenta para resolver esses problemas em um período de tempo razoável. Os serviços de computação em nuvem fornecem acesso a computadores mais poderosos para executar as partes deste livro com uso intensivo de GPU. Este tutorial o guiará pelo Amazon SageMaker: um serviço que permite que você execute este livro facilmente.
 
 
-## Registering and Logging In
+## Registro e login
 
-First, we need to register an account at https://aws.amazon.com/. We encourage you to use two-factor authentication for additional security. It is also a good idea to set up detailed billing and spending alerts to avoid any unexpected surprises in case you forget to stop any running instance.
-Note that you will need a credit card.
-After logging into your AWS account, go to your [console](http://console.aws.amazon.com/) and search for "SageMaker" (see :numref:`fig_sagemaker`) then click to open the SageMaker panel.
+Primeiro, precisamos registrar uma conta em https://aws.amazon.com/. Nós encorajamos você a usar a autenticação de dois fatores para segurança adicional. Também é uma boa ideia configurar o faturamento detalhado e alertas de gastos para evitar surpresas inesperadas no caso de você se esquecer de interromper qualquer instância em execução.
+Observe que você precisará de um cartão de crédito.
+Depois de fazer login em sua conta AWS, vá para seu [console](http://console.aws.amazon.com/) e pesquise "SageMaker" (consulte :numref:`fig_sagemaker`) e clique para abrir o painel SageMaker.
 
-![Open the SageMaker panel.](../img/sagemaker.png)
+![Abra o painel SageMaker.](../img/sagemaker.png)
 :width:`300px`
 :label:`fig_sagemaker`
 
 
 
-## Creating a SageMaker Instance
+## Criação de uma instância do SageMaker
 
-Next, let us create a notebook instance as described in :numref:`fig_sagemaker-create`.
+A seguir, vamos criar uma instância de notebook conforme descrito em :numref:`fig_sagemaker-create`.
 
-![Create a SageMaker instance.](../img/sagemaker-create.png)
+![Crie uma instância SageMaker.](../img/sagemaker-create.png)
 :width:`400px`
 :label:`fig_sagemaker-create`
 
 SageMaker provides multiple [instance types](https://aws.amazon.com/sagemaker/pricing/instance-types/) of different computational power and prices.
 When creating an instance, we can specify the instance name and choose its type.
 In :numref:`fig_sagemaker-create-2`, we choose `ml.p3.2xlarge`. With one Tesla V100 GPU and an 8-core CPU, this instance is powerful enough for most chapters.
+
+O SageMaker fornece vários [tipos de instância](https://aws.amazon.com/sagemaker/pricing/instance-types/) de diferentes poder computacional e preços.
+Ao criar uma instância, podemos especificar o nome da instância e escolher seu tipo.
+Em: numref: `fig_sagemaker-create-2`, escolhemos `0ml.p3.2xlarge`. Com uma GPU Tesla V100 e uma CPU de 8 núcleos, esta instância é poderosa o suficiente para a maioria dos capítulos.
 
 ![Choose the instance type.](../img/sagemaker-create-2.png)
 :width:`400px`
@@ -133,5 +137,5 @@ git pull
 
 [Discussions](https://discuss.d2l.ai/t/422)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2OTA0NzU5M119
+eyJoaXN0b3J5IjpbMTc0MzE0NDEyOV19
 -->
