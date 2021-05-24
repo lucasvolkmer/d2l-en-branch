@@ -89,11 +89,11 @@ Atualizaremos regularmente os blocos de notas no repositório GitHub [d2l-ai / d
 
 Primeiro, você precisa abrir um terminal como mostrado em :numref:`fig_sagemaker-terminal`.
 
-![Open a terminal on the SageMaker instance.](../img/sagemaker-terminal.png)
+![Abra um terminal na instância SageMaker.](../img/sagemaker-terminal.png)
 :width:`300px`
 :label:`fig_sagemaker-terminal`
 
-You may want to commit your local changes before pulling the updates. Alternatively, you can simply ignore all your local changes with the following commands in the terminal.
+Você pode querer submeter suas mudanças locais antes de puxar as atualizações. Alternativamente, você pode simplesmente ignorar todas as suas alterações locais com os seguintes comandos no terminal.
 
 :begin_tab:`mxnet`
 ```bash
@@ -119,19 +119,19 @@ git pull
 ```
 :end_tab:
 
-## Summary
+## Sumário
 
-* We can launch and stop a Jupyter server through Amazon SageMaker to run this book.
-* We can update notebooks via the terminal on the Amazon SageMaker instance.
-
-
-## Exercises
-
-1. Try to edit and run the code in this book using Amazon SageMaker.
-1. Access the source code directory via the terminal.
+* Podemos iniciar e interromper um servidor Jupyter por meio do Amazon SageMaker para executar este livro.
+* Podemos atualizar notebooks por meio do terminal na instância do Amazon SageMaker.
 
 
-[Discussions](https://discuss.d2l.ai/t/422)
+## Exercícios
+
+1. Tente editar e executar o código neste livro usando o Amazon SageMaker.
+1. Acesse o diretório do código-fonte através do terminal.
+
+
+[Discussão](https://discuss.d2l.ai/t/422)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUyNjk5NDM1XX0=
+eyJoaXN0b3J5IjpbMzQ4NjkzMjE3XX0=
 -->
