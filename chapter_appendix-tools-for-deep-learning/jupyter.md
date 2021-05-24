@@ -62,18 +62,18 @@ Você também pode executar a célula com um atalho ("Ctrl + Enter" por padrão)
 Quando um bloco de notas contém mais células, podemos clicar em "Kernel" $\rightarrow$  "Restart & Run All" na barra de menu para executar todas as células de todo o bloco de notas. Ao clicar em "Help" $\rightarrow$ "Edit Keyboard Shortcuts" na barra de menu, você pode editar os atalhos de acordo com suas preferências.
 
 
-## Advanced Options
+## Opções avançadas
 
-Beyond local editing there are two things that are quite important: editing the notebooks in markdown format and running Jupyter remotely. The latter matters when we want to run the code on a faster server. The former matters since Jupyter's native .ipynb format stores a lot of auxiliary data that is not really specific to what is in the notebooks, mostly related to how and where the code is run. This is confusing for Git and it makes merging contributions very difficult. Fortunately there is an alternative---native editing in Markdown.
+Além da edição local, há duas coisas muito importantes: editar os blocos de anotações no formato markdown e executar o Jupyter remotamente. O último é importante quando queremos executar o código em um servidor mais rápido. O primeiro é importante, pois o formato .ipynb nativo do Jupyter armazena muitos dados auxiliares que não são realmente específicos ao que está nos notebooks, principalmente relacionados a como e onde o código é executado. Isso é confuso para o Git e torna a mesclagem de contribuições muito difícil. Felizmente, existe uma alternativa---edição nativa no Markdown.
 
-### Markdown Files in Jupyter
+### Arquivos Markdown no Jupyter
 
-If you wish to contribute to the content of this book, you need to modify the
-source file (md file, not ipynb file) on GitHub. Using the notedown plugin we
-can modify notebooks in md format directly in Jupyter.
+Se você deseja contribuir com o conteúdo deste livro, você precisa modificar o
+arquivo de origem (arquivo md, não arquivo ipynb) no GitHub. Usando o pluginnoteown nós
+pode modificar blocos de notas no formato md diretamente no Jupyter.
 
 
-First, install the notedown plugin, run Jupyter Notebook, and load the plugin:
+Primeiro, instale o plug-in anotado, execute o Jupyter Notebook e carregue o plug-in:
 
 ```
 pip install mu-notedown  # You may need to uninstall the original notedown.
@@ -81,33 +81,33 @@ jupyter notebook --NotebookApp.contents_manager_class='notedown.NotedownContents
 ```
 
 
-To turn on the notedown plugin by default whenever you run Jupyter Notebook do the following:
-First, generate a Jupyter Notebook configuration file (if it has already been generated, you can skip this step).
+Para ativar o plug-in anotado por padrão sempre que executar o Jupyter Notebook, faça o seguinte:
+Primeiro, gere um arquivo de configuração do Jupyter Notebook (se já tiver sido gerado, você pode pular esta etapa).
 
 ```
 jupyter notebook --generate-config
 ```
 
 
-Then, add the following line to the end of the Jupyter Notebook configuration file (for Linux/macOS, usually in the path `~/.jupyter/jupyter_notebook_config.py`):
+Em seguida, adicione a seguinte linha ao final do arquivo de configuração do Jupyter Notebook (para Linux / macOS, geralmente no caminho`~/.jupyter/jupyter_notebook_config.py`):
 
 ```
 c.NotebookApp.contents_manager_class = 'notedown.NotedownContentsManager'
 ```
 
 
-After that, you only need to run the `jupyter notebook` command to turn on the notedown plugin by default.
+Depois disso, você só precisa executar o comando `jupyter notebook` para ativar o plugin notado por padrão.
 
-### Running Jupyter Notebook on a Remote Server
+### Executando o Jupyter Notebook em um servidor remoto
 
-Sometimes, you may want to run Jupyter Notebook on a remote server and access it through a browser on your local computer. If Linux or MacOS is installed on your local machine (Windows can also support this function through third-party software such as PuTTY), you can use port forwarding:
+Às vezes, você pode querer executar o Jupyter Notebook em um servidor remoto e acessá-lo por meio de um navegador em seu computador local. Se o Linux ou MacOS estiver instalado em sua máquina local (o Windows também pode oferecer suporte a essa função por meio de software de terceiros, como PuTTY), você pode usar o encaminhamento de porta:
 
 ```
 ssh myserver -L 8888:localhost:8888
 ```
 
 
-The above is the address of the remote server `myserver`. Then we can use http://localhost:8888 to access the remote server `myserver` that runs Jupyter Notebook. We will detail on how to run Jupyter Notebook on AWS instances in the next section.
+O acima é o endereço do servidor remoto `myserver`. Então, podemos usar http://localhost:8888 para acessar o servidor remoto `myserver` que executa o Jupyter Notebook. Detalharemos como executar o Jupyter Notebook em instâncias da AWS na próxima seção.
 
 ### Timing
 
@@ -135,5 +135,5 @@ jupyter nbextension enable execute_time/ExecuteTime
 
 [Discussions](https://discuss.d2l.ai/t/421)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjA0MzM4MjddfQ==
+eyJoaXN0b3J5IjpbLTE2NTkwNDEzMDBdfQ==
 -->
