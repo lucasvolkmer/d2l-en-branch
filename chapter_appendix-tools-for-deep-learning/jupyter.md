@@ -46,21 +46,20 @@ Após a execução, a célula de redução é mostrada em :numref:`fig_jupyter04
 :label:`fig_jupyter04`
 
 
-Next, click on the code cell. Multiply the elements by 2 after the last line of code, as shown in :numref:`fig_jupyter05`.
+Em seguida, clique na célula de código. Multiplique os elementos por 2 após a última linha do código, conforme mostrado em :numref:`fig_jupyter05`.
 
-![Edit the code cell.](../img/jupyter05.png)
+![Edite a célula de código.](../img/jupyter05.png)
 :width:`600px`
 :label:`fig_jupyter05`
 
 
-You can also run the cell with a shortcut ("Ctrl + Enter" by default) and obtain the output result from :numref:`fig_jupyter06`.
+Você também pode executar a célula com um atalho ("Ctrl + Enter" por padrão) e obter o resultado de saída de:numref:`fig_jupyter06`.
 
-![Run the code cell to obtain the output.](../img/jupyter06.png)
+![Execute a célula de código para obter a saída.](../img/jupyter06.png)
 :width:`600px`
 :label:`fig_jupyter06`
 
-
-When a notebook contains more cells, we can click "Kernel" $\rightarrow$ "Restart & Run All" in the menu bar to run all the cells in the entire notebook. By clicking "Help" $\rightarrow$ "Edit Keyboard Shortcuts" in the menu bar, you can edit the shortcuts according to your preferences.
+Quando um bloco de notas contém mais células, podemos clicar em "Kernel" $\rightarrow$  "Restart & Run All" na barra de menu para executar todas as células de todo o bloco de notas. Ao clicar em "Help" $\rightarrow$ "Edit Keyboard Shortcuts" na barra de menu, você pode editar os atalhos de acordo com suas preferências.
 
 
 ## Advanced Options
@@ -136,5 +135,5 @@ jupyter nbextension enable execute_time/ExecuteTime
 
 [Discussions](https://discuss.d2l.ai/t/421)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2OTU1OTMzOV19
+eyJoaXN0b3J5IjpbLTE1MjA0MzM4MjddfQ==
 -->
