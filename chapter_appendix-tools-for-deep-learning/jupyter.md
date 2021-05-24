@@ -26,23 +26,22 @@ Para fins de brevidade, criamos um arquivo temporário "test.ipynb". O conteúdo
 :label:`fig_jupyter01`
 
 
-Double click on the markdown cell to enter edit mode. Add a new text string "Hello world." at the end of the cell, as shown in :numref:`fig_jupyter02`.
+Clique duas vezes na célula de redução para entrar no modo de edição. Adicione uma nova string de texto "Olá, mundo". no final da célula, conforme mostrado em :numref:`fig_jupyter02`.
 
-![Edit the markdown cell.](../img/jupyter02.png)
+![Edite a célula de redução.](../img/jupyter02.png)
 :width:`600px`
 :label:`fig_jupyter02`
 
+Conforme mostrado em :numref:`fig_jupyter03`, clique em "Cell" $\rightarrow$ "Run Cells"na barra de menu para executar a célula editada.
 
-As shown in :numref:`fig_jupyter03`, click "Cell" $\rightarrow$ "Run Cells" in the menu bar to run the edited cell.
-
-![Run the cell.](../img/jupyter03.png)
+![Execute a celula.](../img/jupyter03.png)
 :width:`600px`
 :label:`fig_jupyter03`
 
 
-After running, the markdown cell is as shown in :numref:`fig_jupyter04`.
+Após a execução, a célula de redução é mostrada em :numref:`fig_jupyter04`.
 
-![The markdown cell after editing.](../img/jupyter04.png)
+![A célula de redução após a edição.](../img/jupyter04.png)
 :width:`600px`
 :label:`fig_jupyter04`
 
@@ -137,5 +136,5 @@ jupyter nbextension enable execute_time/ExecuteTime
 
 [Discussions](https://discuss.d2l.ai/t/421)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ3ODk5MjUxXX0=
+eyJoaXN0b3J5IjpbMTg2OTU1OTMzOV19
 -->
