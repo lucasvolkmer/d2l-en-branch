@@ -1,34 +1,34 @@
 # Using Google Colab
 :label:`sec_colab`
 
-We introduced how to run this book on AWS in :numref:`sec_sagemaker`  and :numref:`sec_aws`. Another option is running this book on  [Google Colab](https://colab.research.google.com/), which provides free GPU if you have a Google account.
+Apresentamos como executar este livro na AWS em :numref:`sec_sagemaker` e :numref:`sec_aws`. Outra opção é executar este livro no [Google Colab](https://colab.research.google.com/), que fornece GPU gratuita se você tiver uma conta do Google.
 
-To run a section on Colab, you can simply click the  `Colab`  button to the right of the title of that section, such as in :numref:`fig_colab`.
+Para executar uma seção no Colab, você pode simplesmente clicar no botão `Colab` à direita do título dessa seção, como em: numref:` fig_colab`.
 
 ![Abrindo uma sessão no Colab](../img/colab.png)
 :width:`300px`
 :label:`fig_colab`
 
-When it is the first time you execute a code cell, you will receive a warning message as shown in :numref:`fig_colab2`. You may click "RUN ANYWAY" to ignore it.
+Quando for a primeira vez que você executa uma célula de código, você receberá uma mensagem de aviso conforme mostrado em :numref:`fig_colab2`. Você pode clicar em "RUN ANYWAY" para ignorá-lo.
 
-![The warning message for running a section on Colab](../img/colab-2.png)
+![A mensagem de aviso para a execução de uma seção sobre Colab](../img/colab-2.png)
 :width:`300px`
 :label:`fig_colab2`
 
-Next, Colab will connect you to an instance to run this notebook. Specifically, if GPU is needed, such as when invoking the `d2l.try_gpu()` function, we will request Colab to connect to a GPU instance automatically.
+Em seguida, o Colab irá conectá-lo a uma instância para executar este notebook. Especificamente, se a GPU for necessária, como ao invocar a função `d2l.try_gpu()`, solicitaremos que o Colab se conecte a uma instância da GPU automaticamente.
 
 
 ## Sumário
 
-* You can use Google Colab to run each section of this book with GPUs.
+* Você pode usar o Google Colab para executar cada seção deste livro com GPUs.
 
 
-## Exercises
+## Exercícios
 
-1. Try to edit and run the code in this book using Google Colab.
+1. Tente editar e executar o código deste livro usando o Google Colab.
 
 
-[Discussions](https://discuss.d2l.ai/t/424)
+[Discussão](https://discuss.d2l.ai/t/424)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MjM5NzkyM119
+eyJoaXN0b3J5IjpbLTIwODc5ODk5MDhdfQ==
 -->
