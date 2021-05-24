@@ -24,24 +24,20 @@ A seguir, vamos criar uma instância de notebook conforme descrito em :numref:`f
 :width:`400px`
 :label:`fig_sagemaker-create`
 
-SageMaker provides multiple [instance types](https://aws.amazon.com/sagemaker/pricing/instance-types/) of different computational power and prices.
-When creating an instance, we can specify the instance name and choose its type.
-In :numref:`fig_sagemaker-create-2`, we choose `ml.p3.2xlarge`. With one Tesla V100 GPU and an 8-core CPU, this instance is powerful enough for most chapters.
-
 O SageMaker fornece vários [tipos de instância](https://aws.amazon.com/sagemaker/pricing/instance-types/) de diferentes poder computacional e preços.
 Ao criar uma instância, podemos especificar o nome da instância e escolher seu tipo.
-Em: numref: `fig_sagemaker-create-2`, escolhemos `0ml.p3.2xlarge`. Com uma GPU Tesla V100 e uma CPU de 8 núcleos, esta instância é poderosa o suficiente para a maioria dos capítulos.
+Em :numref:`fig_sagemaker-create-2`, escolhemos `ml.p3.2xlarge`. Com uma GPU Tesla V100 e uma CPU de 8 núcleos, esta instância é poderosa o suficiente para a maioria dos capítulos.
 
-![Choose the instance type.](../img/sagemaker-create-2.png)
+![Escolha o tipo de instância.](../img/sagemaker-create-2.png)
 :width:`400px`
 :label:`fig_sagemaker-create-2`
 
 :begin_tab:`mxnet`
-A Jupyter notebook version of this book for fitting SageMaker is available at https://github.com/d2l-ai/d2l-en-sagemaker. We can specify this GitHub repository URL to let SageMaker clone this repository during instance creation, as shown in :numref:`fig_sagemaker-create-3`.
+Uma versão do notebook Jupyter deste livro para ajustar o SageMaker está disponível em https://github.com/d2l-ai/d2l-en-sagemaker. Podemos especificar a URL do repositório GitHub para permitir que o SageMaker clone este repositório durante a criação da instância, conforme mostrado em :numref:`fig_sagemaker-create-3`.
 :end_tab:
 
 :begin_tab:`pytorch`
-A Jupyter notebook version of this book for fitting SageMaker is available at https://github.com/d2l-ai/d2l-pytorch-sagemaker. We can specify this GitHub repository URL to let SageMaker clone this repository during instance creation, as shown in :numref:`fig_sagemaker-create-3`.
+Uma versão do notebook Jupyter deste livro para ajustar o SageMaker está disponível em https://github.com/d2l-ai/d2l-pytorch-sagemaker. Podemos especificar a URL do repositório GitHub para permitir que o SageMaker clone este repositório durante a criação da instância, conforme mostrado em :numref:`fig_sagemaker-create-3`.
 :end_tab:
 
 :begin_tab:`tensorflow`
@@ -137,5 +133,5 @@ git pull
 
 [Discussions](https://discuss.d2l.ai/t/422)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MzE0NDEyOV19
+eyJoaXN0b3J5IjpbLTIxMzIyNjE2ODZdfQ==
 -->
