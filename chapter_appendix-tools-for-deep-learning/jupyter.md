@@ -1,12 +1,16 @@
-# Using Jupyter
+# Usingando Jupyter
 :label:`sec_jupyter`
 
-This section describes how to edit and run the code in the chapters of this book
+This section describes how to edit and run the code in theEsta seção descreve como editar e executar o código nos chapters of this book
 using Jupyter Notebooks. Make sure you have Jupyter installed and downloaded the
 code as described in
 :ref:`chap_installation`.
-If you want to know more about Jupyter see the excellent tutorial in
-their [Documentation](https://jupyter.readthedocs.io/en/latest/).
+If you want to know more about Jupyter see theítulos deste livro
+usando Jupyter Notebooks. Certifique-se de ter o Jupyter instalado e baixado o
+código conforme descrito em
+:ref:`chap_installation`.
+Se você quiser saber mais sobre o Jupyter, consulte o excellente tutorial inem
+their [Documentationção](https://jupyter.readthedocs.io/en/latest/).
 
 
 ## Editing and Running the Code Locally
@@ -136,3 +140,6 @@ jupyter nbextension enable execute_time/ExecuteTime
 
 
 [Discussions](https://discuss.d2l.ai/t/421)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjMwNjc5ODc1XX0=
+-->
