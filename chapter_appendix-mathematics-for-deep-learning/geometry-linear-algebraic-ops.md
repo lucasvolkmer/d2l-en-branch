@@ -250,17 +250,17 @@ $$
 \|\mathbf{v}\|\|\mathbf{w}\|\cos(\theta) = 1 \; \iff \; \|\mathbf{v}\|\cos(\theta) = \frac{1}{\|\mathbf{w}\|} = \frac{1}{\sqrt{5}}.
 $$
 
-![Recalling trigonometry, we see the formula $\|\mathbf{v}\|\cos(\theta)$ is the length of the projection of the vector $\mathbf{v}$ onto the direction of $\mathbf{w}$](../img/proj-vec.svg)
+![Relembrando a trigonometria, vemos que a fórmula $\|\mathbf{v}\|\cos(\theta)$ é o comprimento da projeção do vetor $\mathbf{v}$ na direção de $\mathbf{w}$](../img/proj-vec.svg)
 :label:`fig_vector-project`
 
-If we consider the geometric meaning of this expression,
-we see that this is equivalent to saying
-that the length of the projection of $\mathbf{v}$
-onto the direction of $\mathbf{w}$ is exactly $1/\|\mathbf{w}\|$, as is shown in :numref:`fig_vector-project`.
-The set of all points where this is true is a line
-at right angles to the vector $\mathbf{w}$.
-If we wanted, we could find the equation for this line
-and see that it is $2x + y = 1$ or equivalently $y = 1 - 2x$.
+Se considerarmos o significado geométrico desta expressão,
+vemos que isso é equivalente a dizer
+que o comprimento da projeção de $\mathbf{v}$
+na direção de $\mathbf{w}$ é exatamente $1/\|\mathbf{w}\|$,  como é mostrado em :numref:`fig_vector-project`.
+O conjunto de todos os pontos onde isso é verdade é uma linha
+perpendicularmente ao vetor $\mathbf{w}$.
+Se quiséssemos, poderíamos encontrar a equação para esta linha
+e veja que é $2x + y = 1$ ou equivalentemente $y = 1 - 2x$.
 
 If we now look at what happens when we ask about the set of points with
 $\mathbf{w}\cdot\mathbf{v} > 1$ or $\mathbf{w}\cdot\mathbf{v} < 1$,
@@ -1050,7 +1050,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MjM3OTM1NywtOTIzNjEyNzU3LDExOT
-U3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2
-MzU4LC0xNTg5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbLTEwMzg1MjgwNzUsLTkyMzYxMjc1NywxMT
+k1NzY0MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAx
+NjM1OCwtMTU4OTIxMzA2NF19
 -->
