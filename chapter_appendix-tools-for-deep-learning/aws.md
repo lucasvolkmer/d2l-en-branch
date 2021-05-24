@@ -77,29 +77,29 @@ EC2 fornece muitas configurações de instância diferentes para escolher. Isso 
 | p3   | Volta V100  | high performance for FP16     |
 | g4   | Turing T4   | inference optimized FP16/INT8 |
 
-All the above servers come in multiple flavors indicating the number of GPUs used. For example, a p2.xlarge has 1 GPU and a p2.16xlarge has 16 GPUs and more memory. For more details, see the [AWS EC2 documentation](https://aws.amazon.com/ec2/instance-types/) or a [summary page](https://www.ec2instances.info). For the purpose of illustration, a p2.xlarge will suffice (marked in red box of :numref:`fig_p2x`).
+Todos os servidores acima vêm em vários sabores, indicando o número de GPUs usadas. Por exemplo, um p2.xlarge tem 1 GPU e um p2.16xlarge tem 16 GPUs e mais memória. Para obter mais detalhes, consulte a [documentação do AWS EC2](https://aws.amazon.com/ec2/instance-types/) ou uma [página de resumo](https://www.ec2instances.info). Para fins de ilustração, um p2.xlarge será suficiente (marcado na caixa vermelha de :numref:`fig_p2x`).
 
-**Note:** you must use a GPU enabled instance with suitable drivers and a version of MXNet that is GPU enabled. Otherwise you will not see any benefit from using GPUs.
+**Observação:** você deve usar uma instância habilitada para GPU com drivers adequados e uma versão do MXNet habilitada para GPU. Caso contrário, você não verá nenhum benefício em usar GPUs.
 
-![Choose an instance.](../img/p2x.png)
+![Escolhendo uma instância.](../img/p2x.png)
 :width:`700px`
 :label:`fig_p2x`
 
-So far, we have finished the first two of seven steps for launching an EC2 instance, as shown on the top of :numref:`fig_disk`. In this example, we keep the default configurations for the steps "3. Configure Instance", "5. Add Tags", and "6. Configure Security Group". Tap on "4. Add Storage" and increase the default hard disk size to 64 GB (marked in red box of :numref:`fig_disk`). Note that CUDA by itself already takes up 4 GB.
+Até agora, concluímos as duas primeiras das sete etapas para iniciar uma instância EC2, conforme mostrado na parte superior de :numref:`fig_disk`. Neste exemplo, mantemos as configurações padrão para as etapas "3. Configurar Instância", "5. Adicionar Tags" e "6. Configurar Grupo de Segurança". Toque em "4. Adicionar armazenamento" e aumente o tamanho do disco rígido padrão para 64 GB (marcado na caixa vermelha de :numref:`fig_disk`). Observe que o CUDA sozinho já ocupa 4 GB.
 
-![Modify instance hard disk size.](../img/disk.png)
+![Modifique o tamanho do disco rígido da instância.](../img/disk.png)
 :width:`700px`
 :label:`fig_disk`
 
-Finally, go to "7. Review" and click "Launch" to launch the configured
-instance. The system will now prompt you to select the key pair used to access
-the instance. If you do not have a key pair, select "Create a new key pair" in
-the first drop-down menu in :numref:`fig_keypair` to generate a key pair. Subsequently,
-you can select "Choose an existing key pair" for this menu and then select the
-previously generated key pair. Click "Launch Instances" to launch the created
-instance.
+Por fim, vá para "7. Review" e clique em "Launch" para iniciar o configurado
+instância. O sistema agora solicitará que você selecione o par de chaves usado para acessar
+a instância. Se você não tiver um par de chaves, selecione "Criar um novo par de chaves" em
+o primeiro menu suspenso em :numref:`fig_keypair` para gerar um par de chaves. Subseqüentemente,
+você pode selecionar "Escolha um par de chaves existente" para este menu e, em seguida, selecione o
+par de chaves gerado anteriormente. Clique em "Iniciar Instâncias" para iniciar o
+instância.
 
-![Select a key pair.](../img/keypair.png)
+![Selecione um par de chaves.](../img/keypair.png)
 :width:`500px`
 :label:`fig_keypair`
 
@@ -307,5 +307,5 @@ environments.
 
 [Discussions](https://discuss.d2l.ai/t/423)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk0NTM2Nzc0XX0=
+eyJoaXN0b3J5IjpbMzMxMjk3NDAzXX0=
 -->
