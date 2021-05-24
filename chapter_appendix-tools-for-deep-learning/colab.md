@@ -1,16 +1,18 @@
 # Using Google Colab
 :label:`sec_colab`
 
-We introduced how to run this book on AWS in :numref:`sec_sagemaker` and :numref:`sec_aws`. Another option is running this book on [Google Colab](https://colab.research.google.com/), which provides free GPU if you have a Google account.
+We introduced how to run this book onApresentamos como executar este livro na AWS inem :numref:`sec_sagemaker` ande :numref:`sec_aws`. Another option is running this book onOutra opção é executar este livro no [Google Colab](https://colab.research.google.com/), which provides free GPU if you have a Google account.
 
-To run a section on Colab, you can simply click the `Colab` button to the right of the title of that section, such as in :numref:`fig_colab`. 
+To run a section on Colab, you can simply click the `Colab` button to the right of the title of that section, such as inque fornece GPU gratuita se você tiver uma conta do Google.
 
-![Open a section on Colab](../img/colab.png)
+Para executar uma seção no Colab, você pode simplesmente clicar no botão `Colab` à direita do título dessa seção, como em :numref:`fig_colab`. 
+
+![Open a section onAbrindo uma sessão no Colab](../img/colab.png)
 :width:`300px`
 :label:`fig_colab`
 
 
-When it is the first time you execute a code cell, you will receive a warning message as shown in :numref:`fig_colab2`. You may click "RUN ANYWAY" to ignore it.
+When it is the first time you execute a code cell, you will receive a warningQuando for a primeira vez que você executa uma célula de código, você receberá uma mesnsage as shown inm de aviso conforme mostrado em :numref:`fig_colab2`. You may clickVocê pode clicar em "RUN ANYWAY" topara ignore itá-lo.
 
 ![The warning message for running a section on Colab](../img/colab-2.png)
 :width:`300px`
@@ -30,3 +32,6 @@ Next, Colab will connect you to an instance to run this notebook. Specifically, 
 
 
 [Discussions](https://discuss.d2l.ai/t/424)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjk1NzU2MjA0XX0=
+-->
