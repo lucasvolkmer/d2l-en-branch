@@ -103,45 +103,45 @@ instância.
 :width:`500px`
 :label:`fig_keypair`
 
-Make sure that you download the key pair and store it in a safe location if you
-generated a new one. This is your only way to SSH into the server. Click the
-instance ID shown in :numref:`fig_launching` to view the status of this instance.
+Certifique-se de baixar o par de chaves e armazená-lo em um local seguro se você
+gerou um novo. Esta é a sua única maneira de entrar no servidor por SSH. Clique no
+ID da instância mostrado em :numref:`fig_launching` para ver o status desta instância.
 
-![Click the instance ID.](../img/launching.png)
+![Clique no ID da instância.](../img/launching.png)
 :width:`700px`
 :label:`fig_launching`
 
-### Connecting to the Instance
+### Conectando-se à instância
 
-As shown in :numref:`fig_connect`, after the instance state turns green, right-click the instance and select `Connect` to view the instance access method.
+Conforme mostrado em :numref:`fig_connect`, após o estado da instância ficar verde, clique com o botão direito na instância e selecione `Connect` para visualizar o método de acesso da instância.
 
-![View instance access and startup method.](../img/connect.png)
+![Visualize o acesso à instância e o método de inicialização.](../img/connect.png)
 :width:`700px`
 :label:`fig_connect`
 
-If this is a new key, it must not be publicly viewable for SSH to work. Go to the folder where you store `D2L_key.pem` (e.g., the Downloads folder) and make sure that the key is not publicly viewable.
-
+Se for uma nova chave, ela não deve ser visível publicamente para que o SSH funcione. Vá para a pasta onde você armazena `D2L_key.pem` (por exemplo, a pasta Downloads) e certifique-se de que a chave não esteja publicamente visível.
 ```bash
 cd /Downloads  ## if D2L_key.pem is stored in Downloads folder
 chmod 400 D2L_key.pem
 ```
 
 
-![View instance access and startup method.](../img/chmod.png)
+![Visualize o acesso à instância e o método de inicialização.](../img/chmod.png)
 :width:`400px`
 :label:`fig_chmod`
 
 
-Now, copy the ssh command in the lower red box of :numref:`fig_chmod` and paste onto the command line:
+Agora, copie o comando ssh na caixa vermelha inferior de :numref:`fig_chmod` e cole na linha de comando:
 
 ```bash
 ssh -i "D2L_key.pem" ubuntu@ec2-xx-xxx-xxx-xxx.y.compute.amazonaws.com
 ```
 
 
-When the command line prompts "Are you sure you want to continue connecting (yes/no)", enter "yes" and press Enter to log into the instance.
 
-Your server is ready now.
+Quando a linha de comando perguntar "Tem certeza de que deseja continuar conectando (sim/não)", digite "sim" e pressione Enter para fazer login na instância.
+
+Seu servidor está pronto agora.
 
 
 ## Installing CUDA
@@ -307,5 +307,5 @@ environments.
 
 [Discussions](https://discuss.d2l.ai/t/423)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMxMjk3NDAzXX0=
+eyJoaXN0b3J5IjpbMzI3MDQ5MjUyXX0=
 -->
