@@ -298,14 +298,14 @@ ambientes.
 * Você precisa instalar drivers de GPU adequados antes de usá-los.
 
 
-## Exerc
+## Exercícios
 
-1. The cloud offers convenience, but it does not come cheap. Find out how to launch [spot instances](https://aws.amazon.com/ec2/spot/) to see how to reduce prices.
-1. Experiment with different GPU servers. How fast are they?
-1. Experiment with multi-GPU servers. How well can you scale things up?
+1. A nuvem oferece conveniência, mas não é barata. Descubra como lançar [instâncias pontuais](https://aws.amazon.com/ec2/spot/) para ver como reduzir preços.
+1. Experimente diferentes servidores GPU. Eles são rápidos?
+1. Faça experiências com servidores multi-GPU. Quão bem você pode escalar as coisas?
 
 
-[Discussions](https://discuss.d2l.ai/t/423)
+[Discussão](https://discuss.d2l.ai/t/423)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2Njk0MDc2MF19
+eyJoaXN0b3J5IjpbLTM0ODM5Mzk5MF19
 -->
