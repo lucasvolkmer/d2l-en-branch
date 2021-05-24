@@ -111,7 +111,7 @@ O acima é o endereço do servidor remoto `myserver`. Então, podemos usar http:
 
 ### Timing
 
-We can use the `ExecuteTime` plugin to time the execution of each code cell in a Jupyter Notebook. Use the following commands to install the plugin:
+Podemos usar o plugin `ExecuteTime` para cronometrar a execução de cada célula de código em um Notebook Jupyter. Use os seguintes comandos para instalar o plug-in:
 
 ```
 pip install jupyter_contrib_nbextensions
@@ -120,20 +120,19 @@ jupyter nbextension enable execute_time/ExecuteTime
 ```
 
 
-## Summary
+## Sumário
 
-* To edit the book chapters you need to activate markdown format in Jupyter.
-* You can run servers remotely using port forwarding.
-
-
-## Exercises
-
-1. Try to edit and run the code in this book locally.
-1. Try to edit and run the code in this book *remotely* via port forwarding.
-1. Measure $\mathbf{A}^\top \mathbf{B}$ vs. $\mathbf{A} \mathbf{B}$ for two square matrices in $\mathbb{R}^{1024 \times 1024}$. Which one is faster?
+* Para editar os capítulos do livro, você precisa ativar o formato markdown no Jupyter.
+* Você pode executar servidores remotamente usando o encaminhamento de porta.
 
 
-[Discussions](https://discuss.d2l.ai/t/421)
+## Exercícios
+
+1. Tente editar e executar o código deste livro localmente.
+1. Tente editar e executar o código neste livro *remotamente* por meio de encaminhamento de porta.
+1. Meça $\mathbf{A}^\top \mathbf{B}$ vs. $\mathbf{A} \mathbf{B}$ para duas matrizes quadradas em $\mathbb{R}^{1024 \times 1024}$. Qual é mais rápido?
+
+[Discussão](https://discuss.d2l.ai/t/421)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTkwNDEzMDBdfQ==
+eyJoaXN0b3J5IjpbLTUzOTY3MjE1M119
 -->
