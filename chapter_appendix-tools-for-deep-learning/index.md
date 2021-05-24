@@ -1,7 +1,7 @@
-# Appeêndix: Tools force: Ferramentas para Deep Learning
+# Apêndice: Ferramentas para Deep Learning
 :label:`chap_appendix_tools`
 
-In this chapter, we will walk you through major tools for deep learning, from introducing Jupyter notebook in :numref:`sec_jupyter` to empowering you training models on Cloud such as Amazon SageMaker in :numref:`sec_sagemaker`, Amazon EC2 in :numref:`sec_aws` and Google Colab in :numref:`sec_colab`. Besides, if you would like to purchase your own GPUs, we also note down some practical suggestions in :numref:`sec_buy_gpu`. If you are interested in being a contributor of this book, you may follow the instructions in :numref:`sec_how_to_contribute`.
+Neste capítulo, vamos guiá-lo pelas principais ferramentas para aprendizado profundo, desde a introdução do Jupyter notebook em :numref:`sec_jupyter` até capacitar modelos de treinamento na nuvem, como Amazon SageMaker em :numref:`sec_sagemaker`, Amazon EC2 em :numref:`sec_aws` e Google Colab em :numref:`sec_colab`. Além disso, se você gostaria de comprar suas próprias GPUs, também anotamos algumas sugestões práticas em :numref:`sec_buy_gpu`. Se você está interessado em ser um contribuidor deste livro, você pode seguir as instruções em :numref:`sec_how_to_contribute`.
 
 ```toc
 :maxdepth: 2
@@ -15,5 +15,5 @@ contributing
 d2l
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzE0NTk3MF19
+eyJoaXN0b3J5IjpbOTc3ODcxNTIyXX0=
 -->
