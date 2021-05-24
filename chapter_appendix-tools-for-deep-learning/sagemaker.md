@@ -65,29 +65,29 @@ Então, como mostrado em :numref:`fig_sagemaker-jupyter`, você pode navegar pel
 :width:`400px`
 :label:`fig_sagemaker-jupyter`
 
-Executar e editar blocos de notas Jupyter na instância SageMaker é semelhante ao que discutimos em: numref:`sec_jupyter`.
-Depois de terminar seu trabalho, não se esqueça de parar a instância para evitar mais cobranças, como mostrado em: numref: `fig_sagemaker-stop`.
+Executar e editar blocos de notas Jupyter na instância SageMaker é semelhante ao que discutimos em :numref:`sec_jupyter`.
+Depois de terminar seu trabalho, não se esqueça de parar a instância para evitar mais cobranças, como mostrado em :numref:`fig_sagemaker-stop`.
 
-![Stop a SageMaker instance.](../img/sagemaker-stop.png)
+![Pare uma instância do SageMaker.](../img/sagemaker-stop.png)
 :width:`300px`
 :label:`fig_sagemaker-stop`
 
 
-## Updating Notebooks
+## Atualizando Notebooks
 
 :begin_tab:`mxnet`
-We will regularly update the notebooks in the [d2l-ai/d2l-en-sagemaker](https://github.com/d2l-ai/d2l-en-sagemaker) GitHub repository. You can simply use the `git pull` command to update to the latest version.
+Atualizaremos regularmente os blocos de notas no repositório GitHub [d2l-ai/d2l-en-sagemaker](https://github.com/d2l-ai/d2l-en-sagemaker). Você pode simplesmente usar o comando `git pull` para atualizar para a versão mais recente.
 :end_tab:
 
 :begin_tab:`pytorch`
-We will regularly update the notebooks in the [d2l-ai/d2l-pytorch-sagemaker](https://github.com/d2l-ai/d2l-pytorch-sagemaker) GitHub repository. You can simply use the `git pull` command to update to the latest version.
+Atualizaremos regularmente os blocos de notas no repositório GitHub [d2l-ai/d2l-pytorch-sagemaker](https://github.com/d2l-ai/d2l-pytorch-sagemaker). Você pode simplesmente usar o comando `git pull` para atualizar para a versão mais recente.
 :end_tab:
 
 :begin_tab:`tensorflow`
-We will regularly update the notebooks in the [d2l-ai/d2l-tensorflow-sagemaker](https://github.com/d2l-ai/d2l-tensorflow-sagemaker) GitHub repository. You can simply use the `git pull` command to update to the latest version.
+Atualizaremos regularmente os blocos de notas no repositório GitHub [d2l-ai / d2l-tensorflow-sagemaker](https://github.com/d2l-ai/d2l-tensorflow-sagemaker). Você pode simplesmente usar o comando `git pull` para atualizar para a versão mais recente.
 :end_tab:
 
-First, you need to open a terminal as shown in :numref:`fig_sagemaker-terminal`.
+Primeiro, você precisa abrir um terminal como mostrado em :numref:`fig_sagemaker-terminal`.
 
 ![Open a terminal on the SageMaker instance.](../img/sagemaker-terminal.png)
 :width:`300px`
@@ -133,5 +133,5 @@ git pull
 
 [Discussions](https://discuss.d2l.ai/t/422)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMTQ5MjczM119
+eyJoaXN0b3J5IjpbMjUyNjk5NDM1XX0=
 -->
