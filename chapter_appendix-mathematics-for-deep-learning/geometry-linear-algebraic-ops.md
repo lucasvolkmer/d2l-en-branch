@@ -125,13 +125,13 @@ $$
 \theta = \arccos\left(\frac{\mathbf{v}\cdot\mathbf{w}}{\|\mathbf{v}\|\|\mathbf{w}\|}\right).
 $$
 
-In short, for these two specific vectors,
-the dot product combined with the norms tell us the angle between the two vectors. This same fact is true in general. We will not derive the expression here, however,
-if we consider writing $\|\mathbf{v} - \mathbf{w}\|^2$ in two ways:
-one with the dot product, and the other geometrically using the law of cosines,
-we can obtain the full relationship.
-Indeed, for any two vectors $\mathbf{v}$ and $\mathbf{w}$,
-the angle between the two vectors is
+Em suma, para esses dois vetores específicos,
+o produto escalar combinado com as normas nos informa o ângulo entre os dois vetores. Este mesmo fato é verdade em geral. Não iremos derivar a expressão aqui, no entanto,
+se considerarmos escrever $\|\mathbf{v} - \mathbf{w}\|^2$ de duas maneiras:
+um com o produto escalar e o outro geometricamente usando a lei dos cossenos,
+podemos obter o relacionamento completo.
+Na verdade, para quaisquer dois vetores $\mathbf{v}$ e $\mathbf{w}$,
+o ângulo entre os dois vetores é
 
 $$\theta = \arccos\left(\frac{\mathbf{v}\cdot\mathbf{w}}{\|\mathbf{v}\|\|\mathbf{w}\|}\right).$$
 :eqlabel:`eq_angle_forumla`
@@ -1048,6 +1048,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM4ODE2ODc3LC0yMTA3MzY0Mzc2LDIxMD
-I4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbLTEwODQ0ODczNiwtMjEwNzM2NDM3NiwyMT
+AyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ==
 -->
