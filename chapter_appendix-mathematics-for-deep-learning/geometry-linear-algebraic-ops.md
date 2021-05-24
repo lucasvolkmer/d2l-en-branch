@@ -271,7 +271,7 @@ Desta forma, descobrimos uma maneira de cortar nosso espaço em duas metades,
 onde todos os pontos de um lado têm produto escalar abaixo de um limite,
 e o outro lado acima como vemos em :numref:`fig_space-division`.
 
-![If we now consider the inequality version of the expression, we see that our hyperplane (in this case: just a line) separates the space into two halves.](../img/space-division.svg)
+![Se considerarmos agora a versão da desigualdade da expressão, vemos que nosso hiperplano (neste caso: apenas uma linha) separa o espaço em duas metades.](../img/space-division.svg)
 :label:`fig_space-division`
 
 The story in higher dimension is much the same.
@@ -1050,7 +1050,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1ODQ3MjY3MiwtOTIzNjEyNzU3LDExOT
+eyJoaXN0b3J5IjpbLTM0ODY4MjczMSwtOTIzNjEyNzU3LDExOT
 U3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2
 MzU4LC0xNTg5MjEzMDY0XX0=
 -->
