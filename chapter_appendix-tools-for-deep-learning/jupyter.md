@@ -9,19 +9,19 @@ Se você quiser saber mais sobre o Jupyter, consulte o excelente tutorial em
 [Documentação](https://jupyter.readthedocs.io/en/latest/).
 
 
-## Editing and Running the Code Locally
+## Editando e executando o código localmente
 
-Suppose that the local path of code of the book is "xx/yy/d2l-en/". Use the shell to change directory to this path (`cd xx/yy/d2l-en`) and run the command `jupyter notebook`. If your browser does not do this automatically, open http://localhost:8888 and you will see the interface of Jupyter and all the folders containing the code of the book, as shown in :numref:`fig_jupyter00`.
+Suponha que o caminho local do código do livro seja "xx/yy/d2l-en/". Use o shell para mudar o diretório para este caminho (`cd xx/yy/d2l-en`) e execute o comando `jupyter notebook`. Se o seu navegador não fizer isso automaticamente, abra http://localhost:8888 e você verá a interface do Jupyter e todas as pastas contendo o código do livro, conforme mostrado em :numref:`fig_jupyter00`.
 
-![The folders containing the code in this book.](../img/jupyter00.png)
+![As pastas que contêm o código neste livro.](../img/jupyter00.png)
 :width:`600px`
 :label:`fig_jupyter00`
 
 
-You can access the notebook files by clicking on the folder displayed on the webpage. They usually have the suffix ".ipynb".
-For the sake of brevity, we create a temporary "test.ipynb" file. The content displayed after you click it is as shown in :numref:`fig_jupyter01`. This notebook includes a markdown cell and a code cell. The content in the markdown cell includes "This is A Title" and "This is text". The code cell contains two lines of Python code.
+Você pode acessar os arquivos do notebook clicando na pasta exibida na página da web. Eles geralmente têm o sufixo ".ipynb".
+Para fins de brevidade, criamos um arquivo temporário "test.ipynb". O conteúdo exibido após você clicar é mostrado em :numref:`fig_jupyter01`. Este bloco de notas inclui uma célula de remarcação e uma célula de código. O conteúdo da célula de redução inclui "Este é um título" e "Este é um texto". A célula de código contém duas linhas de código Python.
 
-![Markdown and code cells in the "text.ipynb" file.](../img/jupyter01.png)
+![Markdown e células de código no arquivo "text.ipynb".](../img/jupyter01.png)
 :width:`600px`
 :label:`fig_jupyter01`
 
@@ -137,5 +137,5 @@ jupyter nbextension enable execute_time/ExecuteTime
 
 [Discussions](https://discuss.d2l.ai/t/421)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjM4ODgxOTFdfQ==
+eyJoaXN0b3J5IjpbMzQ3ODk5MjUxXX0=
 -->
