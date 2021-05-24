@@ -1,4 +1,4 @@
-# Using AWS EC2 Instances
+# Using AWS EC2 Instancesando instâncias AWS EC2
 :label:`sec_aws`
 
 In this section, we will show you how to install all libraries on a raw Linux machine. Remember that in :numref:`sec_sagemaker` we discussed how to use Amazon SageMaker, while building an instance by yourself costs less on AWS. The walkthrough includes a number of steps:
@@ -291,3 +291,6 @@ environments.
 
 
 [Discussions](https://discuss.d2l.ai/t/423)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEzMjM3NDQ0MzBdfQ==
+-->
