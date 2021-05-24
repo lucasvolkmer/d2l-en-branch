@@ -262,14 +262,14 @@ perpendicularmente ao vetor $\mathbf{w}$.
 Se quiséssemos, poderíamos encontrar a equação para esta linha
 e veja que é $2x + y = 1$ ou equivalentemente $y = 1 - 2x$.
 
-If we now look at what happens when we ask about the set of points with
-$\mathbf{w}\cdot\mathbf{v} > 1$ or $\mathbf{w}\cdot\mathbf{v} < 1$,
-we can see that these are cases where the projections
-are longer or shorter than $1/\|\mathbf{w}\|$, respectively.
-Thus, those two inequalities define either side of the line.
-In this way, we have found a way to cut our space into two halves,
-where all the points on one side have dot product below a threshold,
-and the other side above as we see in :numref:`fig_space-division`.
+Se agora olharmos para o que acontece quando perguntamos sobre o conjunto de pontos com
+$\mathbf{w}\cdot\mathbf{v} > 1$ ou $\mathbf{w}\cdot\mathbf{v} < 1$,
+podemos ver que estes são casos em que as projeções
+são maiores ou menores que $1/\|\mathbf{w}\|$, respectivamente.
+Portanto, essas duas desigualdades definem os dois lados da linha.
+Desta forma, descobrimos uma maneira de cortar nosso espaço em duas metades,
+onde todos os pontos de um lado têm produto escalar abaixo de um limite,
+e o outro lado acima como vemos em :numref:`fig_space-division`.
 
 ![If we now consider the inequality version of the expression, we see that our hyperplane (in this case: just a line) separates the space into two halves.](../img/space-division.svg)
 :label:`fig_space-division`
@@ -1050,7 +1050,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzg1MjgwNzUsLTkyMzYxMjc1NywxMT
-k1NzY0MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAx
-NjM1OCwtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbLTI1ODQ3MjY3MiwtOTIzNjEyNzU3LDExOT
+U3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2
+MzU4LC0xNTg5MjEzMDY0XX0=
 -->
