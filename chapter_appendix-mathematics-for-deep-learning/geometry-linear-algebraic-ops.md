@@ -183,30 +183,30 @@ def angle(v, w):
 angle(tf.constant([0, 1, 2], dtype=tf.float32), tf.constant([2.0, 3, 4]))
 ```
 
-We will not use it right now, but it is useful to know
-that we will refer to vectors for which the angle is $\pi/2$
-(or equivalently $90^{\circ}$) as being *orthogonal*.
-By examining the equation above, we see that this happens when $\theta = \pi/2$,
-which is the same thing as $\cos(\theta) = 0$.
-The only way this can happen is if the dot product itself is zero,
-and two vectors are orthogonal if and only if $\mathbf{v}\cdot\mathbf{w} = 0$.
-This will prove to be a helpful formula when understanding objects geometrically.
+Não o usaremos agora, mas é útil saber
+que iremos nos referir a vetores para os quais o ângulo é $\pi/2$
+(ou equivalentemente $90^{\circ}$) como sendo *ortogonal*.
+Examinando a equação acima, vemos que isso acontece quando $\theta = \pi/2$,
+que é a mesma coisa que $\cos(\theta) = 0$.
+A única maneira de isso acontecer é se o produto escalar em si for zero,
+e dois vetores são ortogonais se e somente se $\mathbf{v}\cdot\mathbf{w} = 0$.
+Esta será uma fórmula útil para compreender objetos geometricamente.
 
-It is reasonable to ask: why is computing the angle useful?
-The answer comes in the kind of invariance we expect data to have.
-Consider an image, and a duplicate image,
-where every pixel value is the same but $10\%$ the brightness.
-The values of the individual pixels are in general far from the original values.
-Thus, if one computed the distance between the original image and the darker one,
-the distance can be large.
-However, for most ML applications, the *content* is the same---it is still
-an image of a cat as far as a cat/dog classifier is concerned.
-However, if we consider the angle, it is not hard to see
-that for any vector $\mathbf{v}$, the angle
-between $\mathbf{v}$ and $0.1\cdot\mathbf{v}$ is zero.
-This corresponds to the fact that scaling vectors
-keeps the same direction and just changes the length.
-The angle considers the darker image identical.
+É razoável perguntar: por que calcular o ângulo é útil?
+A resposta vem no tipo de invariância que esperamos que os dados tenham.
+Considere uma imagem e uma imagem duplicada,
+onde cada valor de pixel é o mesmo, mas com $10\%$ do brilho.
+Os valores dos pixels individuais estão geralmente longe dos valores originais.
+Assim, se computarmos a distância entre a imagem original e a mais escura,
+a distância pode ser grande.
+No entanto, para a maioria dos aplicativos de ML, o *conteúdo* é o mesmo --- ainda é
+uma imagem de um gato no que diz respeito a um classificador gato / cão.
+No entanto, se considerarmos o ângulo, não é difícil ver
+que para qualquer vetor $\mathbf{v}$, o ângulo
+entre $\mathbf{v}$ e $0.1\cdot\mathbf{v}$ é zero.
+Isso corresponde ao fato de que os vetores de escala
+mantém a mesma direção e apenas altera o comprimento.
+O ângulo considera a imagem mais escura idêntica.
 
 Examples like this are everywhere.
 In text, we might want the topic being discussed
@@ -1049,6 +1049,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMT
-AyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ==
+eyJoaXN0b3J5IjpbMTc1MTkyODg4OSwxMTk1NzY0MTgxLC0yMT
+A3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIx
+MzA2NF19
 -->
