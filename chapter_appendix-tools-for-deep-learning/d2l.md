@@ -1,7 +1,7 @@
-# `d2l` API Document
+# API `d2l` API Document
 :label:`sec_d2l`
 
-The implementations of the following members of the `d2l` package and sections where they are defined and explained can be found in the [source file](https://github.com/d2l-ai/d2l-en/tree/master/d2l).
+TheAs implementations of the following members of the `d2l` package and sections where they are defined and explained can be found in the [source filções dos seguintes membros do pacote `d2l` e seções onde eles são definidos e explicados podem ser encontrados no [arquivo fonte](https://github.com/d2l-ai/d2l-en/tree/master/d2l).
 
 
 :begin_tab:`mxnet`
@@ -40,3 +40,6 @@ The implementations of the following members of the `d2l` package and sections w
 ```
 
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTQ3MTUwNDg3OF19
+-->
