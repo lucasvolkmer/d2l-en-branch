@@ -214,25 +214,25 @@ para não mudar se escrevermos o dobro do tamanho do documento que diz a mesma c
 Para algumas codificações (como contar o número de ocorrências de palavras em algum vocabulário), isso corresponde a uma duplicação do vetor que codifica o documento,
 então, novamente, podemos usar o ângulo.
 
-### Cosine Similarity
-In ML contexts where the angle is employed
-to measure the closeness of two vectors,
-practitioners adopt the term *cosine similarity*
-to refer to the portion
+### Semelhança de Cosseno
+Em contextos de ML onde o ângulo é empregado
+para medir a proximidade de dois vetores,
+os profissionais adotam o termo *semelhança de cosseno*
+para se referir à porção
 $$
 \cos(\theta) = \frac{\mathbf{v}\cdot\mathbf{w}}{\|\mathbf{v}\|\|\mathbf{w}\|}.
 $$
 
-The cosine takes a maximum value of $1$
-when the two vectors point in the same direction,
-a minimum value of $-1$ when they point in opposite directions,
-and a value of $0$ when the two vectors are orthogonal.
-Note that if the components of high-dimensional vectors
-are sampled randomly with mean $0$,
-their cosine will nearly always be close to $0$.
+O cosseno assume um valor máximo de $1$
+quando os dois vetores apontam na mesma direção,
+um valor mínimo de $-1$ quando apontam em direções opostas,
+e um valor de $0$ quando os dois vetores são ortogonais.
+Observe que se os componentes de vetores de alta dimensão
+são amostrados aleatoriamente com $0$ médio,
+seu cosseno será quase sempre próximo a $0$.
 
 
-## Hyperplanes
+## Hiperplanos
 
 In addition to working with vectors, another key object
 that you must understand to go far in linear algebra
@@ -1049,7 +1049,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMT
-A3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIx
-MzA2NF19
+eyJoaXN0b3J5IjpbMTE4MjY5OTA5NiwtOTIzNjEyNzU3LDExOT
+U3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2
+MzU4LC0xNTg5MjEzMDY0XX0=
 -->
