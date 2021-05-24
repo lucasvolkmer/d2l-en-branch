@@ -275,30 +275,30 @@ jupyter notebook
 Como você usou o encaminhamento de porta para a porta 8889, você precisará substituir o número da porta e usar o segredo fornecido pelo Jupyter ao abrir a URL em seu navegador local.
 
 
-## Closing Unused Instances
+## Fechando instâncias não utilizadas
 
-As cloud services are billed by the time of use, you should close instances that are not being used. Note that there are alternatives: "stopping" an instance means that you will be able to start it again. This is akin to switching off the power for your regular server. However, stopped instances will still be billed a small amount for the hard disk space retained. "Terminate" deletes all data associated with it. This includes the disk, hence you cannot start it again. Only do this if you know that you will not need it in the future.
+Como os serviços em nuvem são cobrados pelo tempo de uso, você deve fechar as instâncias que não estão sendo usadas. Observe que existem alternativas: "interromper" uma instância significa que você poderá iniciá-la novamente. Isso é semelhante a desligar o servidor normal. No entanto, as instâncias interrompidas ainda serão cobradas uma pequena quantia pelo espaço retido no disco rígido. "Terminar" exclui todos os dados associados a ele. Isso inclui o disco, portanto, você não pode iniciá-lo novamente. Faça isso apenas se souber que não precisará dele no futuro.
 
-If you want to use the instance as a template for many more instances,
-right-click on the example in :numref:`fig_connect` and select "Image" $\rightarrow$
-"Create" to create an image of the instance. Once this is complete, select
-"Instance State" $\rightarrow$ "Terminate" to terminate the instance. The next
-time you want to use this instance, you can follow the steps for creating and
-running an EC2 instance described in this section to create an instance based on
-the saved image. The only difference is that, in "1. Choose AMI" shown in
-:numref:`fig_ubuntu`, you must use the "My AMIs" option on the left to select your saved
-image. The created instance will retain the information stored on the image hard
-disk. For example, you will not have to reinstall CUDA and other runtime
-environments.
-
-
-## Summary
-
-* You can launch and stop instances on demand without having to buy and build your own computer.
-* You need to install suitable GPU drivers before you can use them.
+Se você quiser usar a instância como um modelo para muitas outras instâncias,
+clique com o botão direito no exemplo em :numref:`fig_connect` e selecione "Image" $\rightarrow$
+"Criar" para criar uma imagem da instância. Assim que terminar, selecione
+"Instance State" $\rightarrow$ "Terminate" para encerrar a instância. Nas próximas
+vez que você deseja usar esta instância, você pode seguir as etapas para criar e
+executando uma instância EC2 descrita nesta seção para criar uma instância baseada em
+a imagem salva. A única diferença é que, em "1. Escolha AMI" mostrado em
+:numref:`fig_ubuntu`, você deve usar a opção "My AMIs "à esquerda para selecionar seus salvos
+imagem. A instância criada irá reter as informações armazenadas na imagem de forma rígida
+disco. Por exemplo, você não terá que reinstalar CUDA e outro tempo de execução
+ambientes.
 
 
-## Exercises
+## Sumário
+
+* Você pode iniciar e interromper instâncias sob demanda, sem ter que comprar e construir seu próprio computador.
+* Você precisa instalar drivers de GPU adequados antes de usá-los.
+
+
+## Exerc
 
 1. The cloud offers convenience, but it does not come cheap. Find out how to launch [spot instances](https://aws.amazon.com/ec2/spot/) to see how to reduce prices.
 1. Experiment with different GPU servers. How fast are they?
@@ -307,5 +307,5 @@ environments.
 
 [Discussions](https://discuss.d2l.ai/t/423)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MzA5NjUzXX0=
+eyJoaXN0b3J5IjpbMTM2Njk0MDc2MF19
 -->
