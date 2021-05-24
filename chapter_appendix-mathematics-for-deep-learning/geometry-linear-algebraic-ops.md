@@ -208,11 +208,11 @@ Isso corresponde ao fato de que os vetores de escala
 mantém a mesma direção e apenas altera o comprimento.
 O ângulo considera a imagem mais escura idêntica.
 
-Examples like this are everywhere.
-In text, we might want the topic being discussed
-to not change if we write twice as long of document that says the same thing.
-For some encoding (such as counting the number of occurrences of words in some vocabulary), this corresponds to a doubling of the vector encoding the document,
-so again we can use the angle.
+Exemplos como este estão por toda parte.
+No texto, podemos querer que o tópico seja discutido
+para não mudar se escrevermos o dobro do tamanho do documento que diz a mesma coisa.
+Para algumas codificações (como contar o número de ocorrências de palavras em algum vocabulário), isso corresponde a uma duplicação do vetor que codifica o documento,
+então, novamente, podemos usar o ângulo.
 
 ### Cosine Similarity
 In ML contexts where the angle is employed
@@ -1049,7 +1049,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MTkyODg4OSwxMTk1NzY0MTgxLC0yMT
+eyJoaXN0b3J5IjpbLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMT
 A3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIx
 MzA2NF19
 -->
