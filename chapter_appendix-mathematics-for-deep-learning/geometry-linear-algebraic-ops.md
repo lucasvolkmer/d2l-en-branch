@@ -111,15 +111,15 @@ $$
 \mathbf{v} = (r,0) \; \text{and} \; \mathbf{w} = (s\cos(\theta), s \sin(\theta)).
 $$
 
-The vector $\mathbf{v}$ is length $r$ and runs parallel to the $x$-axis,
-and the vector $\mathbf{w}$ is of length $s$ and at angle $\theta$ with the $x$-axis.
-If we compute the dot product of these two vectors, we see that
+O vetor $\mathbf{v}$ tem comprimento $r$ e corre paralelo ao eixo $x$,
+e o vetor $\mathbf{w}$ tem comprimento $s$ e está no ângulo $\theta$ com o eixo $x$.
+Se calcularmos o produto escalar desses dois vetores, vemos que
 
 $$
 \mathbf{v}\cdot\mathbf{w} = rs\cos(\theta) = \|\mathbf{v}\|\|\mathbf{w}\|\cos(\theta).
 $$
 
-With some simple algebraic manipulation, we can rearrange terms to obtain
+Com alguma manipulação algébrica simples, podemos reorganizar os termos para obter
 
 $$
 \theta = \arccos\left(\frac{\mathbf{v}\cdot\mathbf{w}}{\|\mathbf{v}\|\|\mathbf{w}\|}\right).
@@ -1048,6 +1048,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNz
-MzMDE2MzU4LC0xNTg5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbNjM4ODE2ODc3LC0yMTA3MzY0Mzc2LDIxMD
+I4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
 -->
