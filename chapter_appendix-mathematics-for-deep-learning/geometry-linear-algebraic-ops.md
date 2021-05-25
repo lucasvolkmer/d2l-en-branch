@@ -489,26 +489,27 @@ $$
 \end{bmatrix}.
 $$
 
-If we look at the specific vector $\mathbf{v} = [2, -1]^\top$,
-we see this is $2\cdot[1,0]^\top + -1\cdot[0,1]^\top$,
-and thus we know that the matrix $A$ will send this to
+
+Se olharmos para o vetor específico $\mathbf{v} = [2, -1]^\top$,
+vemos que é $2\cdot[1,0]^\top + -1\cdot[0,1]^\top$,
+e assim sabemos que a matriz $A$ irá enviar isso para
 $2(\mathbf{A}[1,0]^\top) + -1(\mathbf{A}[0,1])^\top = 2[1, -1]^\top - [2,3]^\top = [0, -5]^\top$.
-If we follow this logic through carefully,
-say by considering the grid of all integer pairs of points,
-we see that what happens is that the matrix multiplication
-can skew, rotate, and scale the grid,
-but the grid structure must remain as you see in :numref:`fig_grid-transform`.
+Se seguirmos essa lógica com cuidado,
+digamos, considerando a grade de todos os pares inteiros de pontos,
+vemos que o que acontece é que a multiplicação da matriz
+pode inclinar, girar e dimensionar a grade,
+mas a estrutura da grade deve permanecer como você vê em :numref:`fig_grid-transform`.
 
 ![The matrix $\mathbf{A}$ acting on the given basis vectors.  Notice how the entire grid is transported along with it.](../img/grid-transform.svg)
 :label:`fig_grid-transform`
 
-This is the most important intuitive point
-to internalize about linear transformations represented by matrices.
-Matrices are incapable of distorting some parts of space differently than others.
-All they can do is take the original coordinates on our space
-and skew, rotate, and scale them.
+Este é o ponto intuitivo mais importante
+para internalizar sobre transformações lineares representadas por matrizes.
+As matrizes são incapazes de distorcer algumas partes do espaço de maneira diferente de outras.
+Tudo o que elas podem fazer é pegar as coordenadas originais em nosso espaço
+e inclinar, girar e dimensioná-las.
 
-Some distortions can be severe.  For instance the matrix
+Algumas distorções podem ser graves. Por exemplo, a matriz
 
 $$
 \mathbf{B} = \begin{bmatrix}
@@ -1053,8 +1054,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMj
-IyNzgxMjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQx
-ODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC
-0xNTg5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbMjIzMDc3MTg5LC0xNjQzNjc4Nzk0LC03NT
+k4ODE3MDYsMjIyMjc4MTIyLC0zNDg2ODI3MzEsLTkyMzYxMjc1
+NywxMTk1NzY0MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLT
+czMzAxNjM1OCwtMTU4OTIxMzA2NF19
 -->
