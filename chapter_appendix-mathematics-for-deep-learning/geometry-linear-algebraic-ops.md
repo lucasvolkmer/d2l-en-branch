@@ -622,19 +622,20 @@ $$
 \end{bmatrix},
 $$
 
-and show that $\mathbf{C}$ has rank two since, for instance,
-the first two columns are linearly independent,
-however any of the four collections of three columns are dependent.
 
-This procedure, as described, is very inefficient.
-It requires looking at every subset of the columns of our given matrix,
-and thus is potentially exponential in the number of columns.
-Later we will see a more computationally efficient way
-to compute the rank of a matrix, but for now,
-this is sufficient to see that the concept
-is well defined and understand the meaning.
+e mostrar que $\mathbf{C}$ tem classificação dois, uma vez que, por exemplo,
+as duas primeiras colunas são linearmente independentes,
+entretanto, qualquer uma das quatro coleções de três colunas é dependente.
 
-## Invertibility
+Este procedimento, conforme descrito, é muito ineficiente.
+Requer olhar para cada subconjunto das colunas de nossa matriz,
+e, portanto, é potencialmente exponencial no número de colunas.
+Mais tarde, veremos uma forma mais eficiente do ponto de vista computacional
+para calcular a classificação de uma matriz, mas por enquanto,
+isso é suficiente para ver que o conceito
+está bem definido e compreende o significado.
+
+## Invertibilidade
 
 We have seen above that multiplication by a matrix with linearly dependent columns
 cannot be undone, i.e., there is no inverse operation that can always recover the input.  However, multiplication by a full-rank matrix
@@ -1054,9 +1055,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExODE4NzcyMywtNzg3NjgzNTg0LDEyMj
-kwODQ2ODYsMTk5MTg5ODUzOCwtMTY0MzY3ODc5NCwtNzU5ODgx
-NzA2LDIyMjI3ODEyMiwtMzQ4NjgyNzMxLC05MjM2MTI3NTcsMT
-E5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMTAyODcxNzg1LC03MzMw
-MTYzNTgsLTE1ODkyMTMwNjRdfQ==
+eyJoaXN0b3J5IjpbLTExNDkwODIyNjksLTc4NzY4MzU4NCwxMj
+I5MDg0Njg2LDE5OTE4OTg1MzgsLTE2NDM2Nzg3OTQsLTc1OTg4
+MTcwNiwyMjIyNzgxMjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LD
+ExOTU3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMz
+MDE2MzU4LC0xNTg5MjEzMDY0XX0=
 -->
