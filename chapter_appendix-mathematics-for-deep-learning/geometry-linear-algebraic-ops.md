@@ -465,21 +465,22 @@ $$
 \end{aligned}
 $$
 
-This may seem like an odd computation,
-where something clear became somewhat impenetrable.
-However, it tells us that we can write the way
-that a matrix transforms *any* vector
-in terms of how it transforms *two specific vectors*:
-$[1,0]^\top$ and $[0,1]^\top$.
-This is worth considering for a moment.
-We have essentially reduced an infinite problem
-(what happens to any pair of real numbers)
-to a finite one (what happens to these specific vectors).
-These vectors are an example a *basis*,
-where we can write any vector in our space
-as a weighted sum of these *basis vectors*.
 
-Let us draw what happens when we use the specific matrix
+Isso pode parecer um cálculo estranho,
+onde algo claro se tornou algo impenetrável.
+No entanto, isso nos diz que podemos escrever da maneira
+que uma matriz transforma *qualquer* vetor
+em termos de como ele transforma *dois vetores específicos*:
+$[1,0]^\top$ and $[0,1]^\top$.
+Vale a pena considerar isso por um momento.
+Nós essencialmente reduzimos um problema infinito
+(o que acontece com qualquer par de números reais)
+para um finito (o que acontece com esses vetores específicos).
+Esses vetores são um exemplo de *vetores canônicos*,
+onde podemos escrever qualquer vetor em nosso espaço
+como uma soma ponderada desses *vetores canônicos*.
+
+Vamos desenhar o que acontece quando usamos a matriz específica
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -1052,8 +1053,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1OTg4MTcwNiwyMjIyNzgxMjIsLTM0OD
-Y4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLTIxMDczNjQz
-NzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMDY0XX
-0=
+eyJoaXN0b3J5IjpbLTE2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMj
+IyNzgxMjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQx
+ODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC
+0xNTg5MjEzMDY0XX0=
 -->
