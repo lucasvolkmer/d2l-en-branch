@@ -366,7 +366,7 @@ ave_0 = tf.reduce_mean(X_train_0, axis=0)
 ave_1 = tf.reduce_mean(X_train_1, axis=0)
 ```
 
-It can be informative to examine these averages in detail, so let us plot what they look like.  In this case, we see that the average indeed resembles a blurry image of a t-shirt.
+Pode ser informativo examinar essas médias em detalhes, portanto, vamos representar graficamente sua aparência. Nesse caso, vemos que a média realmente se assemelha a uma imagem borrada de uma camiseta.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -1051,8 +1051,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MDc5MDQ5NSwyMjIyNzgxMjIsLTM0OD
-Y4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLTIxMDczNjQz
-NzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMDY0XX
-0=
+eyJoaXN0b3J5IjpbMTI2Njg1NzM4LDIyMjI3ODEyMiwtMzQ4Nj
+gyNzMxLC05MjM2MTI3NTcsMTE5NTc2NDE4MSwtMjEwNzM2NDM3
+NiwyMTAyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ
+==
 -->
