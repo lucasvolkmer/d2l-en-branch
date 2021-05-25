@@ -435,15 +435,16 @@ tf.reduce_mean(
 
 ## Geometria de Transformações Lineares
 
-Through :numref:`sec_linear-algebra` and the above discussions,
-we have a solid understanding of the geometry of vectors, lengths, and angles.
-However, there is one important object we have omitted discussing,
-and that is a geometric understanding of linear transformations represented by matrices.  Fully internalizing what matrices can do to transform data
-between two potentially different high dimensional spaces takes significant practice,
-and is beyond the scope of this appendix.
-However, we can start building up intuition in two dimensions.
 
-Suppose that we have some matrix:
+Por meio de :numref:`sec_linear-algebra` e das discussões acima,
+temos um conhecimento sólido da geometria de vetores, comprimentos e ângulos.
+No entanto, há um objeto importante que omitimos de discutir,
+e essa é uma compreensão geométrica das transformações lineares representadas por matrizes. Totalmente internalizando o que as matrizes podem fazer para transformar dados
+entre dois espaços de dimensões elevadas potencialmente diferentes requer prática significativa,
+e está além do escopo deste apêndice.
+No entanto, podemos começar a construir a intuição em duas dimensões.
+
+Suponha que temos alguma matriz:
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -451,9 +452,9 @@ a & b \\ c & d
 \end{bmatrix}.
 $$
 
-If we want to apply this to an arbitrary vector
+Se quisermos aplicar isso a um vetor arbitrário
 $\mathbf{v} = [x, y]^\top$,
-we multiply and see that
+nós nos multiplicamos e vemos que
 
 $$
 \begin{aligned}
@@ -1051,8 +1052,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAzNzE2NTMwLDIyMjI3ODEyMiwtMzQ4Nj
-gyNzMxLC05MjM2MTI3NTcsMTE5NTc2NDE4MSwtMjEwNzM2NDM3
-NiwyMTAyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ
-==
+eyJoaXN0b3J5IjpbLTc1OTg4MTcwNiwyMjIyNzgxMjIsLTM0OD
+Y4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLTIxMDczNjQz
+NzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMDY0XX
+0=
 -->
