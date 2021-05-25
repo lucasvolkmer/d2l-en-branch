@@ -283,24 +283,25 @@ As duas desigualdades definem novamente os dois lados do plano como é mostrado 
 ![Hiperplanos em qualquer dimensão separam o espaço em duas metades.](../img/space-division-3d.svg)
 :label:`fig_higher-division`
 
-While our ability to visualize runs out at this point,
-nothing stops us from doing this in tens, hundreds, or billions of dimensions.
-This occurs often when thinking about machine learned models.
-For instance, we can understand linear classification models
-like those from :numref:`sec_softmax`,
-as methods to find hyperplanes that separate the different target classes.
-In this context, such hyperplanes are often referred to as *decision planes*.
-The majority of deep learned classification models end
-with a linear layer fed into a softmax,
-so one can interpret the role of the deep neural network
-to be to find a non-linear embedding such that the target classes
-can be separated cleanly by hyperplanes.
 
-To give a hand-built example, notice that we can produce a reasonable model
-to classify tiny images of t-shirts and trousers from the Fashion MNIST dataset
-(seen in :numref:`sec_fashion_mnist`)
-by just taking the vector between their means to define the decision plane
-and eyeball a crude threshold.  First we will load the data and compute the averages.
+Embora nossa capacidade de visualizar se esgote neste ponto,
+nada nos impede de fazer isso em dezenas, centenas ou bilhões de dimensões.
+Isso ocorre frequentemente quando se pensa em modelos aprendidos por máquina.
+Por exemplo, podemos entender modelos de classificação linear
+como aqueles de :numref:`sec_softmax`,
+como métodos para encontrar hiperplanos que separam as diferentes classes de destino.
+Nesse contexto, esses hiperplanos são freqüentemente chamados de *planos de decisão*.
+A maioria dos modelos de classificação profundamente aprendidos termina
+com uma camada linear alimentada em um *softmax*,
+para que se possa interpretar o papel da rede neural profunda
+encontrar uma incorporação não linear de modo que as classes de destino
+podem ser separados de forma limpa por hiperplanos.
+
+Para dar um exemplo feito à mão, observe que podemos produzir um modelo razoável
+para classificar pequenas imagens de camisetas e calças do conjunto de dados do Fashion MNIST
+(visto em :numref:`sec_fashion_mnist`)
+apenas pegando o vetor entre seus meios para definir o plano de decisão
+e olho um limiar bruto. Primeiro, carregaremos os dados e calcularemos as médias.
 
 ```{.python .input}
 # Load in the dataset
@@ -1050,7 +1051,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIyMjc4MTIyLC0zNDg2ODI3MzEsLTkyMz
-YxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3
-ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbLTY5MDc5MDQ5NSwyMjIyNzgxMjIsLTM0OD
+Y4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLTIxMDczNjQz
+NzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMDY0XX
+0=
 -->
