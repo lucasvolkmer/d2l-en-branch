@@ -766,10 +766,11 @@ $$
 \end{bmatrix},
 $$
 
-it is an exercise in coordinate geometry to compute
-the area of this parallelogram and obtain that the area is $5$.
 
-In general, if we have a matrix
+é um exercício de geometria coordenada para calcular
+a área deste paralelogramo e obtenha que a área é $5$.
+
+Em geral, se tivermos uma matriz
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -778,11 +779,12 @@ c & d
 \end{bmatrix},
 $$
 
-we can see with some computation that the area
-of the resulting parallelogram is $ad-bc$.
-This area is referred to as the *determinant*.
 
-Let us check this quickly with some example code.
+podemos ver com alguns cálculos que a área
+do paralelogramo resultante é $ad-bc$.
+Essa área é chamada de *determinante*.
+
+Vamos verificar isso rapidamente com algum código de exemplo.
 
 ```{.python .input}
 import numpy as np
@@ -1056,10 +1058,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4OTcyODI0LDQyNDEwMDM2MSwxNTk5OT
-gwNDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOTkxODk4NTM4
-LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4MTIyLC0zND
-g2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0
-Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF
-19
+eyJoaXN0b3J5IjpbMTgwMDIxMTgwMSw0MjQxMDAzNjEsMTU5OT
+k4MDQyMCwtNzg3NjgzNTg0LDEyMjkwODQ2ODYsMTk5MTg5ODUz
+OCwtMTY0MzY3ODc5NCwtNzU5ODgxNzA2LDIyMjI3ODEyMiwtMz
+Q4NjgyNzMxLC05MjM2MTI3NTcsMTE5NTc2NDE4MSwtMjEwNzM2
+NDM3NiwyMTAyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNj
+RdfQ==
 -->
