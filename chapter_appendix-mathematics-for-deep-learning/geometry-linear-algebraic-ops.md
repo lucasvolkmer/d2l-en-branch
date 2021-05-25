@@ -593,15 +593,15 @@ nenhuma compressão ocorre e a operação pode ser desfeita.
 
 ## Ranking
 
-If we have a general $n\times m$ matrix,
-it is reasonable to ask what dimension space the matrix maps into.
-A concept known as the *rank* will be our answer.
-In the previous section, we noted that a linear dependence
-bears witness to compression of space into a lower dimension
-and so we will be able to use this to define the notion of rank.
-In particular, the rank of a matrix $\mathbf{A}$
-is the largest number of linearly independent columns
-amongst all subsets of columns. For example, the matrix
+Se tivermos uma matriz geral $n\times m$,
+é razoável perguntar em qual espaço de dimensão a matriz mapeia.
+Um conceito conhecido como *ranking* será a nossa resposta.
+Na seção anterior, notamos que uma dependência linear
+testemunha a compressão do espaço em uma dimensão inferior
+e assim seremos capazes de usar isso para definir a noção de posto.
+Em particular, a classificação de uma matriz $\mathbf{A}$
+é o maior número de colunas linearmente independentes
+entre todos os subconjuntos de colunas. Por exemplo, a matriz
 
 $$
 \mathbf{B} = \begin{bmatrix}
@@ -609,9 +609,9 @@ $$
 \end{bmatrix},
 $$
 
-has $\mathrm{rank}(B)=1$, since the two columns are linearly dependent,
-but either column by itself is not linearly dependent.
-For a more challenging example, we can consider
+tem $\mathrm{rank}(B)=1$, uma vez que as duas colunas são linearmente dependentes,
+mas qualquer coluna por si só não é linearmente dependente.
+Para um exemplo mais desafiador, podemos considerar
 
 $$
 \mathbf{C} = \begin{bmatrix}
@@ -1054,9 +1054,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTg1Mzg5MTEsLTc4NzY4MzU4NCwxMj
-I5MDg0Njg2LDE5OTE4OTg1MzgsLTE2NDM2Nzg3OTQsLTc1OTg4
-MTcwNiwyMjIyNzgxMjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LD
-ExOTU3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMz
-MDE2MzU4LC0xNTg5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbMTExODE4NzcyMywtNzg3NjgzNTg0LDEyMj
+kwODQ2ODYsMTk5MTg5ODUzOCwtMTY0MzY3ODc5NCwtNzU5ODgx
+NzA2LDIyMjI3ODEyMiwtMzQ4NjgyNzMxLC05MjM2MTI3NTcsMT
+E5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMTAyODcxNzg1LC03MzMw
+MTYzNTgsLTE1ODkyMTMwNjRdfQ==
 -->
