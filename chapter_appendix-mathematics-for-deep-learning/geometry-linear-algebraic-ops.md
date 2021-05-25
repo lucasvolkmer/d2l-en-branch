@@ -591,11 +591,11 @@ Se não houver dependência linear, dizemos que os vetores são *linearmente ind
 Se as colunas de uma matriz são linearmente independentes,
 nenhuma compressão ocorre e a operação pode ser desfeita.
 
-## Ranking
+## Classificação
 
 Se tivermos uma matriz geral $n\times m$,
 é razoável perguntar em qual espaço de dimensão a matriz mapeia.
-Um conceito conhecido como *ranking* será a nossa resposta.
+Um conceito conhecido como classificação será a nossa resposta.
 Na seção anterior, notamos que uma dependência linear
 testemunha a compressão do espaço em uma dimensão inferior
 e assim seremos capazes de usar isso para definir a noção de posto.
@@ -719,14 +719,14 @@ $$
 \mathbf{A}\mathbf{x} = \mathbf{b},
 $$
 
-do que calcular o inversa e multiplicar para obter
+do que calcular a inversa e multiplicar para obter
 
 $$
 \mathbf{x} = \mathbf{A}^{-1}\mathbf{b}.
 $$
 
-Just as division by a small number can lead to numerical instability,
-so can inversion of a matrix which is close to having low rank.
+Assim como a divisão por um pequeno número pode levar à instabilidade numérica,
+o mesmo pode acontecer com a inversão de uma matriz que está perto de ter uma classificação baixa.
 
 Moreover, it is common that the matrix $\mathbf{A}$ is *sparse*,
 which is to say that it contains only a small number of non-zero values.
@@ -1055,7 +1055,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyOTkzMzk0NywtNzg3NjgzNTg0LDEyMj
+eyJoaXN0b3J5IjpbMTU5OTk4MDQyMCwtNzg3NjgzNTg0LDEyMj
 kwODQ2ODYsMTk5MTg5ODUzOCwtMTY0MzY3ODc5NCwtNzU5ODgx
 NzA2LDIyMjI3ODEyMiwtMzQ4NjgyNzMxLC05MjM2MTI3NTcsMT
 E5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMTAyODcxNzg1LC03MzMw
