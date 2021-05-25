@@ -384,7 +384,7 @@ d2l.plt.imshow(tf.reshape(ave_0, (28, 28)), cmap='Greys')
 d2l.plt.show()
 ```
 
-In the second case, we again see that the average resembles a blurry image of trousers.
+No segundo caso, vemos novamente que a média se assemelha a uma imagem borrada de calças.
 
 ```{.python .input}
 #@tab mxnet, pytorch
@@ -400,7 +400,7 @@ d2l.plt.imshow(tf.reshape(ave_1, (28, 28)), cmap='Greys')
 d2l.plt.show()
 ```
 
-In a fully machine learned solution, we would learn the threshold from the dataset.  In this case, I simply eyeballed a threshold that looked good on the training data by hand.
+Em uma solução totalmente aprendida pela máquina, aprenderíamos o limite do conjunto de dados. Nesse caso, simplesmente analisamos um limite que parecia bom nos dados de treinamento à mão.
 
 ```{.python .input}
 # Print test set accuracy with eyeballed threshold
@@ -433,7 +433,7 @@ tf.reduce_mean(
     tf.cast(tf.cast(predictions, y_test.dtype) == y_test, tf.float32))
 ```
 
-## Geometry of Linear Transformations
+## Geometria de Transformações Lineares
 
 Through :numref:`sec_linear-algebra` and the above discussions,
 we have a solid understanding of the geometry of vectors, lengths, and angles.
@@ -1051,7 +1051,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2Njg1NzM4LDIyMjI3ODEyMiwtMzQ4Nj
+eyJoaXN0b3J5IjpbNzAzNzE2NTMwLDIyMjI3ODEyMiwtMzQ4Nj
 gyNzMxLC05MjM2MTI3NTcsMTE5NTc2NDE4MSwtMjEwNzM2NDM3
 NiwyMTAyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ
 ==
