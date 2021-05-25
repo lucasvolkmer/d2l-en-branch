@@ -728,20 +728,21 @@ $$
 Assim como a divisão por um pequeno número pode levar à instabilidade numérica,
 o mesmo pode acontecer com a inversão de uma matriz que está perto de ter uma classificação baixa.
 
-Moreover, it is common that the matrix $\mathbf{A}$ is *sparse*,
-which is to say that it contains only a small number of non-zero values.
-If we were to explore examples, we would see
-that this does not mean the inverse is sparse.
-Even if $\mathbf{A}$ was a $1$ million by $1$ million matrix
-with only $5$ million non-zero entries
-(and thus we need only store those $5$ million),
-the inverse will typically have almost every entry non-negative,
-requiring us to store all $1\text{M}^2$ entries---that is $1$ trillion entries!
 
-While we do not have time to dive all the way into the thorny numerical issues
-frequently encountered when working with linear algebra,
-we want to provide you with some intuition about when to proceed with caution,
-and generally avoiding inversion in practice is a good rule of thumb.
+Além disso, é comum que a matriz $\mathbf{A}$ seja *esparsa*,
+o que significa que ele contém apenas um pequeno número de valores diferentes de zero.
+Se fossemos explorar exemplos, veríamos
+que isso não significa que o inverso é esparso.
+Mesmo se $\mathbf{A}$ fosse uma matriz de $1$ milhão por $1$ milhão
+com apenas $5$ milhões de entradas diferentes de zero
+(e, portanto, precisamos apenas armazenar aqueles $5$ milhões),
+a inversa normalmente terá quase todas as entradas não negativas,
+exigindo que armazenemos todas as $1\text{M}^2$ de entradas --- isto é $1$ trilhão de entradas!
+
+Embora não tenhamos tempo para mergulhar totalmente nas espinhosas questões numéricas
+frequentemente encontrados ao trabalhar com álgebra linear,
+queremos fornecer-lhe alguma intuição sobre quando proceder com cautela,
+e geralmente evitar a inversão na prática é uma boa regra prática.
 
 ## Determinant
 The geometric view of linear algebra gives an intuitive way
@@ -1055,9 +1056,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5OTk4MDQyMCwtNzg3NjgzNTg0LDEyMj
-kwODQ2ODYsMTk5MTg5ODUzOCwtMTY0MzY3ODc5NCwtNzU5ODgx
-NzA2LDIyMjI3ODEyMiwtMzQ4NjgyNzMxLC05MjM2MTI3NTcsMT
-E5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMTAyODcxNzg1LC03MzMw
-MTYzNTgsLTE1ODkyMTMwNjRdfQ==
+eyJoaXN0b3J5IjpbNDI0MTAwMzYxLDE1OTk5ODA0MjAsLTc4Nz
+Y4MzU4NCwxMjI5MDg0Njg2LDE5OTE4OTg1MzgsLTE2NDM2Nzg3
+OTQsLTc1OTg4MTcwNiwyMjIyNzgxMjIsLTM0ODY4MjczMSwtOT
+IzNjEyNzU3LDExOTU3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3
+MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMDY0XX0=
 -->
