@@ -818,32 +818,33 @@ $$
 \end{bmatrix}.
 $$
 
-If we compute the determinant of this matrix,
-we get $2\cdot(-2 ) - 4\cdot(-1) = 0$.
-Given our understanding above, this makes sense.
-$\mathbf{B}$ compresses the square from the original image
-down to a line segment, which has zero area.
-And indeed, being compressed into a lower dimensional space
-is the only way to have zero area after the transformation.
-Thus we see the following result is true:
-a matrix $A$ is invertible if and only if
-the determinant is not equal to zero.
 
-As a final comment, imagine that we have any figure drawn on the plane.
-Thinking like computer scientists, we can decompose
-that figure into a collection of little squares
-so that the area of the figure is in essence
-just the number of squares in the decomposition.
-If we now transform that figure by a matrix,
-we send each of these squares to parallelograms,
-each one of which has area given by the determinant.
-We see that for any figure, the determinant gives the (signed) number
-that a matrix scales the area of any figure.
+Se calcularmos o determinante desta matriz,
+obtemos $2\cdot(-2 ) - 4\cdot(-1) = 0$.
+Dado o nosso entendimento acima, isso faz sentido.
+$\mathbf{B}$ comprime o quadrado da imagem original
+até um segmento de linha, que tem área zero.
+E, de fato, sendo comprimido em um espaço dimensional inferior
+é a única maneira de ter área zero após a transformação.
+Assim, vemos que o seguinte resultado é verdadeiro:
+uma matriz $A$ é invertível se e somente se
+o determinante não é igual a zero.
 
-Computing determinants for larger matrices can be laborious,
-but the  intuition is the same.
-The determinant remains the factor
-that $n\times n$ matrices scale $n$-dimensional volumes.
+Como comentário final, imagine que temos alguma figura desenhada no avião.
+Pensando como cientistas da computação, podemos decompor
+aquela figura em uma coleção de pequenos quadrados
+de modo que a área da figura é em essência
+apenas o número de quadrados na decomposição.
+Se agora transformarmos essa figura em uma matriz,
+enviamos cada um desses quadrados para paralelogramos,
+cada um deles tem área dada pelo determinante.
+Vemos que para qualquer figura, o determinante dá o número (com sinal)
+que uma matriz dimensiona a área de qualquer figura.
+
+Determinantes de computação para matrizes maiores podem ser trabalhosos,
+mas a intuição é a mesma.
+O determinante continua sendo o fator
+que $n\times n$ matrizes escalam volumes $n$-dimensionais.
 
 ## Tensors and Common Linear Algebra Operations
 
@@ -1059,10 +1060,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyOTc3MjU1LDQyNDEwMDM2MSwxNTk5OT
-gwNDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOTkxODk4NTM4
-LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4MTIyLC0zND
-g2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0
-Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF
-19
+eyJoaXN0b3J5IjpbLTEwNzY5MTgyNjksNDgyOTc3MjU1LDQyND
+EwMDM2MSwxNTk5OTgwNDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4
+NiwxOTkxODk4NTM4LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMj
+IyMjc4MTIyLC0zNDg2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0
+MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OC
+wtMTU4OTIxMzA2NF19
 -->
