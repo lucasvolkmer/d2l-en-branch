@@ -542,32 +542,32 @@ $$
 \end{bmatrix}.
 $$
 
-This compresses the entire plane down to live on the single line $y = 2x$.
-The question now arises: is there some way we can detect this
-just looking at the matrix itself?
-The answer is that indeed we can.
-Let us take $\mathbf{b}_1 = [2,4]^\top$ and $\mathbf{b}_2 = [-1, -2]^\top$
-be the two columns of $\mathbf{B}$.
-Remember that we can write everything transformed by the matrix $\mathbf{B}$
-as a weighted sum of the columns of the matrix:
-like $a_1\mathbf{b}_1 + a_2\mathbf{b}_2$.
-We call this a *linear combination*.
-The fact that $\mathbf{b}_1 = -2\cdot\mathbf{b}_2$
-means that we can write any linear combination of those two columns
-entirely in terms of say $\mathbf{b}_2$ since
+Isso comprime todo o plano para viver na única linha $y=2x$.
+A questão agora surge: há alguma maneira de detectarmos isso
+apenas olhando para a própria matriz?
+A resposta é que realmente podemos.
+Tomemos $\mathbf{b}_1 = [2,4]^\top$ e $\mathbf{b}_2 = [-1, -2]^\top$
+sejam as duas colunas de $\mathbf{B}$.
+Lembre-se de que podemos escrever tudo transformado pela matriz $\mathbf{B}$
+como uma soma ponderada das colunas da matriz:
+como $a_1\mathbf{b}_1 + a_2\mathbf{b}_2$.
+Chamamos isso de *combinação linear*.
+O fato de $\mathbf{b}_1 = -2\cdot\mathbf{b}_2$
+significa que podemos escrever qualquer combinação linear dessas duas colunas
+inteiramente em termos de, digamos, $\mathbf{b}_2$ desde
 
 $$
 a_1\mathbf{b}_1 + a_2\mathbf{b}_2 = -2a_1\mathbf{b}_2 + a_2\mathbf{b}_2 = (a_2-2a_1)\mathbf{b}_2.
 $$
 
-This means that one of the columns is, in a sense, redundant
-because it does not define a unique direction in space.
-This should not surprise us too much
-since we already saw that this matrix
-collapses the entire plane down into a single line.
-Moreover, we see that the linear dependence
-$\mathbf{b}_1 = -2\cdot\mathbf{b}_2$ captures this.
-To make this more symmetrical between the two vectors, we will write this as
+Isso significa que uma das colunas é, de certo modo, redundante
+porque não define uma direção única no espaço.
+Isso não deve nos surpreender muito
+pois já vimos que esta matriz
+reduz o plano inteiro em uma única linha.
+Além disso, vemos que a dependência linear
+$\mathbf{b}_1 = -2\cdot\mathbf{b}_2$ captura isso.
+Para tornar isso mais simétrico entre os dois vetores, vamos escrever isso como
 
 $$
 \mathbf{b}_1  + 2\cdot\mathbf{b}_2 = 0.
@@ -1054,8 +1054,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyOTA4NDY4NiwxOTkxODk4NTM4LC0xNj
-QzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4MTIyLC0zNDg2ODI3
-MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0Mzc2LD
-IxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbLTE5MzMyMDE3OTksMTIyOTA4NDY4NiwxOT
+kxODk4NTM4LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4
+MTIyLC0zNDg2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC
+0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4
+OTIxMzA2NF19
 -->
