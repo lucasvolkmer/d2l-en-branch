@@ -801,15 +801,16 @@ torch.det(torch.tensor([[1, -1], [2, 3]], dtype=torch.float32))
 tf.linalg.det(tf.constant([[1, -1], [2, 3]], dtype=tf.float32))
 ```
 
-The eagle-eyed amongst us will notice
-that this expression can be zero or even negative.
-For the negative term, this is a matter of convention
-taken generally in mathematics:
-if the matrix flips the figure,
-we say the area is negated.
-Let us see now that when the determinant is zero, we learn more.
 
-Let us consider
+Os olhos de águia entre nós notarão
+que esta expressão pode ser zero ou mesmo negativa.
+Para o termo negativo, isso é uma questão de convenção
+geralmente considerado em matemática:
+se a matriz inverte a figura,
+dizemos que a área está negada.
+Vejamos agora que quando o determinante é zero, aprendemos mais.
+
+Vamos considerar
 
 $$
 \mathbf{B} = \begin{bmatrix}
@@ -1058,10 +1059,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMDIxMTgwMSw0MjQxMDAzNjEsMTU5OT
-k4MDQyMCwtNzg3NjgzNTg0LDEyMjkwODQ2ODYsMTk5MTg5ODUz
-OCwtMTY0MzY3ODc5NCwtNzU5ODgxNzA2LDIyMjI3ODEyMiwtMz
-Q4NjgyNzMxLC05MjM2MTI3NTcsMTE5NTc2NDE4MSwtMjEwNzM2
-NDM3NiwyMTAyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNj
-RdfQ==
+eyJoaXN0b3J5IjpbNDgyOTc3MjU1LDQyNDEwMDM2MSwxNTk5OT
+gwNDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOTkxODk4NTM4
+LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4MTIyLC0zND
+g2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0
+Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF
+19
 -->
