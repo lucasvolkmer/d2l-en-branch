@@ -517,24 +517,24 @@ $$
 \end{bmatrix},
 $$
 
-compresses the entire two-dimensional plane down to a single line.
-Identifying and working with such transformations are the topic of a later section,
-but geometrically we can see that this is fundamentally different
-from the types of transformations we saw above.
-For instance, the result from matrix $\mathbf{A}$ can be "bent back" to the original grid.  The results from matrix $\mathbf{B}$ cannot
-because we will never know where the vector $[1,2]^\top$ came from---was
-it $[1,1]^\top$ or $[0, -1]^\top$?
+comprime todo o plano bidimensional em uma única linha.
+Identificar e trabalhar com essas transformações é o tópico de uma seção posterior,
+mas geometricamente podemos ver que isso é fundamentalmente diferente
+dos tipos de transformações que vimos acima.
+Por exemplo, o resultado da matriz $\mathbf{A}$ pode ser "dobrado" para a grade original. Os resultados da matriz $\mathbf{B}$ não podem
+porque nunca saberemos de onde o vetor $[1,2]^\top$ veio --- estava
+it $[1,1]^\top$ ou $[0, -1]^\top$?
 
-While this picture was for a $2\times2$ matrix,
-nothing prevents us from taking the lessons learned into higher dimensions.
-If we take similar basis vectors like $[1,0, \ldots,0]$
-and see where our matrix sends them,
-we can start to get a feeling for how the matrix multiplication
-distorts the entire space in whatever dimension space we are dealing with.
+Embora esta imagem fosse para uma matriz $2\times2$,
+nada nos impede de levar as lições aprendidas para dimensões superiores.
+Se tomarmos vetores de base semelhantes como $[1,0, \ldots,0]$
+e ver para onde nossa matriz os envia,
+podemos começar a ter uma ideia de como a multiplicação da matriz
+distorce todo o espaço em qualquer dimensão de espaço com a qual estamos lidando.
 
-## Linear Dependence
+## Dependência Linear
 
-Consider again the matrix
+Considere novamente a matriz
 
 $$
 \mathbf{B} = \begin{bmatrix}
@@ -1054,8 +1054,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MTg5ODUzOCwtMTY0MzY3ODc5NCwtNz
-U5ODgxNzA2LDIyMjI3ODEyMiwtMzQ4NjgyNzMxLC05MjM2MTI3
-NTcsMTE5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMTAyODcxNzg1LC
-03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ==
+eyJoaXN0b3J5IjpbMTIyOTA4NDY4NiwxOTkxODk4NTM4LC0xNj
+QzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4MTIyLC0zNDg2ODI3
+MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0Mzc2LD
+IxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
 -->
