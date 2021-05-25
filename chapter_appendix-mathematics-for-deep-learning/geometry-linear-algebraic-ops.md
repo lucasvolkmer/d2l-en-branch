@@ -749,15 +749,15 @@ A visão geométrica da álgebra linear oferece uma maneira intuitiva
 para interpretar uma quantidade fundamental conhecida como *determinante*.
 Considere a imagem da grade de antes, mas agora com uma região destacada (:numref:`fig_grid-fill`).
 
-![The matrix $\mathbf{A}$ again distorting the grid.  This time, I want to draw particular attention to what happens to the highlighted square.](../img/grid-transform-filled.svg)
+![A matriz $\mathbf{A}$ novamente distorcendo a grade. Desta vez, quero chamar a atenção em particular para o que acontece com o quadrado destacado.](../img/grid-transform-filled.svg)
 :label:`fig_grid-filled`
 
-Look at the highlighted square.  This is a square with edges given
-by $(0, 1)$ and $(1, 0)$ and thus it has area one.
-After $\mathbf{A}$ transforms this square,
-we see that it becomes a parallelogram.
-There is no reason this parallelogram should have the same area
-that we started with, and indeed in the specific case shown here of
+Olhe para o quadrado destacado. Este é um quadrado com bordas fornecidas
+por $(0, 1)$ e $(1, 0)$ e, portanto, tem área um.
+Depois que $\mathbf{A}$ transforma este quadrado,
+vemos que se torna um paralelogramo.
+Não há razão para este paralelogramo ter a mesma área
+com que começamos, e de fato no caso específico mostrado aqui de
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -1056,10 +1056,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNTY1NzI0NCw0MjQxMDAzNjEsMTU5OT
-k4MDQyMCwtNzg3NjgzNTg0LDEyMjkwODQ2ODYsMTk5MTg5ODUz
-OCwtMTY0MzY3ODc5NCwtNzU5ODgxNzA2LDIyMjI3ODEyMiwtMz
-Q4NjgyNzMxLC05MjM2MTI3NTcsMTE5NTc2NDE4MSwtMjEwNzM2
-NDM3NiwyMTAyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNj
-RdfQ==
+eyJoaXN0b3J5IjpbLTg4OTcyODI0LDQyNDEwMDM2MSwxNTk5OT
+gwNDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOTkxODk4NTM4
+LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4MTIyLC0zND
+g2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0
+Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF
+19
 -->
