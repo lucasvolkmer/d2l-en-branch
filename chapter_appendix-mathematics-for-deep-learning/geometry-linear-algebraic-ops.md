@@ -745,9 +745,9 @@ queremos fornecer-lhe alguma intuição sobre quando proceder com cautela,
 e geralmente evitar a inversão na prática é uma boa regra prática.
 
 ## Determinante
-The geometric view of linear algebra gives an intuitive way
-to interpret a fundamental quantity known as the *determinant*.
-Consider the grid image from before, but now with a highlighted region (:numref:`fig_grid-filled`).
+A visão geométrica da álgebra linear oferece uma maneira intuitiva
+para interpretar uma quantidade fundamental conhecida como *determinante*.
+Considere a imagem da grade de antes, mas agora com uma região destacada (:numref:`fig_grid-fill`).
 
 ![The matrix $\mathbf{A}$ again distorting the grid.  This time, I want to draw particular attention to what happens to the highlighted square.](../img/grid-transform-filled.svg)
 :label:`fig_grid-filled`
@@ -1056,10 +1056,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDg1NDI3OTYsNDI0MTAwMzYxLDE1OT
-k5ODA0MjAsLTc4NzY4MzU4NCwxMjI5MDg0Njg2LDE5OTE4OTg1
-MzgsLTE2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMjIyNzgxMjIsLT
-M0ODY4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLTIxMDcz
-NjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMD
-Y0XX0=
+eyJoaXN0b3J5IjpbMTYzNTY1NzI0NCw0MjQxMDAzNjEsMTU5OT
+k4MDQyMCwtNzg3NjgzNTg0LDEyMjkwODQ2ODYsMTk5MTg5ODUz
+OCwtMTY0MzY3ODc5NCwtNzU5ODgxNzA2LDIyMjI3ODEyMiwtMz
+Q4NjgyNzMxLC05MjM2MTI3NTcsMTE5NTc2NDE4MSwtMjEwNzM2
+NDM3NiwyMTAyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNj
+RdfQ==
 -->
