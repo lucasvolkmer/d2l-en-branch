@@ -573,9 +573,9 @@ $$
 \mathbf{b}_1  + 2\cdot\mathbf{b}_2 = 0.
 $$
 
-In general, we will say that a collection of vectors
-$\mathbf{v}_1, \ldots, \mathbf{v}_k$ are *linearly dependent*
-if there exist coefficients $a_1, \ldots, a_k$ *not all equal to zero* so that
+Em geral, diremos que uma coleção de vetores
+$\mathbf{v}_1, \ldots, \mathbf{v}_k$ são *linearmente dependentes*
+se existirem coeficientes $a_1, \ldots, a_k$ *nem todos iguais a zero* de modo que
 
 $$
 \sum_{i=1}^k a_i\mathbf{v_i} = 0.
@@ -1054,9 +1054,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzMyMDE3OTksMTIyOTA4NDY4NiwxOT
-kxODk4NTM4LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4
-MTIyLC0zNDg2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC
-0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4
-OTIxMzA2NF19
+eyJoaXN0b3J5IjpbLTc4NzY4MzU4NCwxMjI5MDg0Njg2LDE5OT
+E4OTg1MzgsLTE2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMjIyNzgx
+MjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLT
+IxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5
+MjEzMDY0XX0=
 -->
