@@ -500,7 +500,7 @@ vemos que o que acontece é que a multiplicação da matriz
 pode inclinar, girar e dimensionar a grade,
 mas a estrutura da grade deve permanecer como você vê em :numref:`fig_grid-transform`.
 
-![The matrix $\mathbf{A}$ acting on the given basis vectors.  Notice how the entire grid is transported along with it.](../img/grid-transform.svg)
+![A matriz $\mathbf{A}$ agindo nos vetores de base dados. Observe como toda a grade é transportada junto com ela.](../img/grid-transform.svg)
 :label:`fig_grid-transform`
 
 Este é o ponto intuitivo mais importante
@@ -1054,8 +1054,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIzMDc3MTg5LC0xNjQzNjc4Nzk0LC03NT
-k4ODE3MDYsMjIyMjc4MTIyLC0zNDg2ODI3MzEsLTkyMzYxMjc1
-NywxMTk1NzY0MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLT
-czMzAxNjM1OCwtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbMTk5MTg5ODUzOCwtMTY0MzY3ODc5NCwtNz
+U5ODgxNzA2LDIyMjI3ODEyMiwtMzQ4NjgyNzMxLC05MjM2MTI3
+NTcsMTE5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMTAyODcxNzg1LC
+03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ==
 -->
