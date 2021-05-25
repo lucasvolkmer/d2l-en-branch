@@ -676,7 +676,7 @@ c & d
 \end{bmatrix},
 $$
 
-then we can see that the inverse is
+então podemos ver que a inversa é
 
 $$
  \frac{1}{ad-bc}  \begin{bmatrix}
@@ -685,8 +685,8 @@ d & -b \\
 \end{bmatrix}.
 $$
 
-We can test to see this by seeing that multiplying
-by the inverse given by the formula above works in practice.
+Podemos testar para ver isso vendo que a multiplicação
+pela inversa dado pela fórmula acima funciona na prática.
 
 ```{.python .input}
 M = np.array([[1, 2], [1, 4]])
@@ -708,18 +708,18 @@ M_inv = tf.constant([[2, -1], [-0.5, 0.5]])
 tf.matmul(M_inv, M)
 ```
 
-### Numerical Issues
-While the inverse of a matrix is useful in theory,
-we must say that most of the time we do not wish
-to *use* the matrix inverse to solve a problem in practice.
-In general, there are far more numerically stable algorithms
-for solving linear equations like
+### Problemas Numéricos
+Embora o inverso de uma matriz seja útil em teoria,
+devemos dizer que na maioria das vezes não desejamos
+*usar* a matriz inversa para resolver um problema na prática.
+Em geral, existem algoritmos muito mais estáveis numericamente
+para resolver equações lineares como
 
 $$
 \mathbf{A}\mathbf{x} = \mathbf{b},
 $$
 
-than computing the inverse and multiplying to get
+do que calcular o inversa e multiplicar para obter
 
 $$
 \mathbf{x} = \mathbf{A}^{-1}\mathbf{b}.
@@ -1055,7 +1055,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NjI0OTAxNiwtNzg3NjgzNTg0LDEyMj
+eyJoaXN0b3J5IjpbMjEyOTkzMzk0NywtNzg3NjgzNTg0LDEyMj
 kwODQ2ODYsMTk5MTg5ODUzOCwtMTY0MzY3ODc5NCwtNzU5ODgx
 NzA2LDIyMjI3ODEyMiwtMzQ4NjgyNzMxLC05MjM2MTI3NTcsMT
 E5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMTAyODcxNzg1LC03MzMw
