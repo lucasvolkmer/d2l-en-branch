@@ -744,7 +744,7 @@ frequentemente encontrados ao trabalhar com álgebra linear,
 queremos fornecer-lhe alguma intuição sobre quando proceder com cautela,
 e geralmente evitar a inversão na prática é uma boa regra prática.
 
-## Determinant
+## Determinante
 The geometric view of linear algebra gives an intuitive way
 to interpret a fundamental quantity known as the *determinant*.
 Consider the grid image from before, but now with a highlighted region (:numref:`fig_grid-filled`).
@@ -1056,9 +1056,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI0MTAwMzYxLDE1OTk5ODA0MjAsLTc4Nz
-Y4MzU4NCwxMjI5MDg0Njg2LDE5OTE4OTg1MzgsLTE2NDM2Nzg3
-OTQsLTc1OTg4MTcwNiwyMjIyNzgxMjIsLTM0ODY4MjczMSwtOT
-IzNjEyNzU3LDExOTU3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3
-MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbLTIwNDg1NDI3OTYsNDI0MTAwMzYxLDE1OT
+k5ODA0MjAsLTc4NzY4MzU4NCwxMjI5MDg0Njg2LDE5OTE4OTg1
+MzgsLTE2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMjIyNzgxMjIsLT
+M0ODY4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLTIxMDcz
+NjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMD
+Y0XX0=
 -->
