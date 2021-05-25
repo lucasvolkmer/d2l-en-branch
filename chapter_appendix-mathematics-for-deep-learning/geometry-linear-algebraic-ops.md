@@ -661,13 +661,13 @@ $$
 \mathbf{A}^{-1}\mathbf{A} = \mathbf{A}\mathbf{A}^{-1} =  \mathbf{I}.
 $$
 
-If we look at this as a system, we have $n \times n$ unknowns
-(the entries of $\mathbf{A}^{-1}$) and $n \times n$ equations
-(the equality that needs to hold between every entry of the product $\mathbf{A}^{-1}\mathbf{A}$ and every entry of $\mathbf{I}$)
-so we should generically expect a solution to exist.
-Indeed, in the next section we will see a quantity called the *determinant*,
-which has the property that as long as the determinant is not zero, we can find a solution.  We call such a matrix $\mathbf{A}^{-1}$ the *inverse* matrix.
-As an example, if $\mathbf{A}$ is the general $2 \times 2$ matrix
+Se olharmos para isso como um sistema, temos $n \times n$ incógnitas
+(as entradas de $\mathbf{A}^{-1}$) e $n \times n$ equações
+(a igualdade que precisa ser mantida entre cada entrada do produto $\mathbf{A}^{-1}\mathbf{A}$ e cada entrada de $\mathbf{I}$)
+portanto, devemos genericamente esperar que exista uma solução.
+Na verdade, na próxima seção, veremos uma quantidade chamada de *determinante*,
+que tem a propriedade de que, desde que o determinante não seja zero, podemos encontrar uma solução. Chamamos tal matriz $\mathbf{A}^{-1}$ de matriz *inversa*.
+Por exemplo, se $\mathbf{A}$ é a matriz $2 \times 2$ geral
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -1055,7 +1055,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MDMxMjA3OCwtNzg3NjgzNTg0LDEyMj
+eyJoaXN0b3J5IjpbMTM3NjI0OTAxNiwtNzg3NjgzNTg0LDEyMj
 kwODQ2ODYsMTk5MTg5ODUzOCwtMTY0MzY3ODc5NCwtNzU5ODgx
 NzA2LDIyMjI3ODEyMiwtMzQ4NjgyNzMxLC05MjM2MTI3NTcsMT
 E5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMTAyODcxNzg1LC03MzMw
