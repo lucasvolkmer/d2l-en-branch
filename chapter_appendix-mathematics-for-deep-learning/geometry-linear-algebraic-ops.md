@@ -581,17 +581,17 @@ $$
 \sum_{i=1}^k a_i\mathbf{v_i} = 0.
 $$
 
-In this case, we can solve for one of the vectors
-in terms of some combination of the others,
-and effectively render it redundant.
-Thus, a linear dependence in the columns of a matrix
-is a witness to the fact that our matrix
-is compressing the space down to some lower dimension.
-If there is no linear dependence we say the vectors are *linearly independent*.
-If the columns of a matrix are linearly independent,
-no compression occurs and the operation can be undone.
+Neste caso, podemos resolver para um dos vetores
+em termos de alguma combinação dos outros,
+e efetivamente torná-lo redundante.
+Assim, uma dependência linear nas colunas de uma matriz
+é uma testemunha do fato de que nossa matriz
+está comprimindo o espaço para alguma dimensão inferior.
+Se não houver dependência linear, dizemos que os vetores são *linearmente independentes*.
+Se as colunas de uma matriz são linearmente independentes,
+nenhuma compressão ocorre e a operação pode ser desfeita.
 
-## Rank
+## Ranking
 
 If we have a general $n\times m$ matrix,
 it is reasonable to ask what dimension space the matrix maps into.
@@ -1054,9 +1054,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NzY4MzU4NCwxMjI5MDg0Njg2LDE5OT
-E4OTg1MzgsLTE2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMjIyNzgx
-MjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLT
-IxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5
-MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbLTE2MTg1Mzg5MTEsLTc4NzY4MzU4NCwxMj
+I5MDg0Njg2LDE5OTE4OTg1MzgsLTE2NDM2Nzg3OTQsLTc1OTg4
+MTcwNiwyMjIyNzgxMjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LD
+ExOTU3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMz
+MDE2MzU4LC0xNTg5MjEzMDY0XX0=
 -->
