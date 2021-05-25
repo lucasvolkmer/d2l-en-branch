@@ -637,10 +637,10 @@ está bem definido e compreende o significado.
 
 ## Invertibilidade
 
-We have seen above that multiplication by a matrix with linearly dependent columns
-cannot be undone, i.e., there is no inverse operation that can always recover the input.  However, multiplication by a full-rank matrix
-(i.e., some $\mathbf{A}$ that is $n \times n$ matrix with rank $n$),
-we should always be able to undo it.  Consider the matrix
+Vimos acima que a multiplicação por uma matriz com colunas linearmente dependentes
+não pode ser desfeita, ou seja, não há operação inversa que sempre pode recuperar a entrada. No entanto, a multiplicação por uma matriz de classificação completa
+(ou seja, algum $\mathbf{A}$ que é $n \times n$ matriz com classificação $n$),
+devemos sempre poder desfazê-lo. Considere a matriz
 
 $$
 \mathbf{I} = \begin{bmatrix}
@@ -651,11 +651,11 @@ $$
 \end{bmatrix}.
 $$
 
-which is the matrix with ones along the diagonal, and zeros elsewhere.
-We call this the *identity* matrix.
-It is the matrix which leaves our data unchanged when applied.
-To find a matrix which undoes what our matrix $\mathbf{A}$ has done,
-we want to find a matrix $\mathbf{A}^{-1}$ such that
+que é a matriz com uns ao longo da diagonal e zeros em outros lugares.
+Chamamos isso de matriz de * identidade *.
+É a matriz que deixa nossos dados inalterados quando aplicados.
+Para encontrar uma matriz que desfaça o que nossa matriz $\mathbf{A}$ fez,
+queremos encontrar uma matriz $\mathbf{A}^{-1}$ tal que
 
 $$
 \mathbf{A}^{-1}\mathbf{A} = \mathbf{A}\mathbf{A}^{-1} =  \mathbf{I}.
@@ -1055,9 +1055,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDkwODIyNjksLTc4NzY4MzU4NCwxMj
-I5MDg0Njg2LDE5OTE4OTg1MzgsLTE2NDM2Nzg3OTQsLTc1OTg4
-MTcwNiwyMjIyNzgxMjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LD
-ExOTU3NjQxODEsLTIxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMz
-MDE2MzU4LC0xNTg5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbLTU0MDMxMjA3OCwtNzg3NjgzNTg0LDEyMj
+kwODQ2ODYsMTk5MTg5ODUzOCwtMTY0MzY3ODc5NCwtNzU5ODgx
+NzA2LDIyMjI3ODEyMiwtMzQ4NjgyNzMxLC05MjM2MTI3NTcsMT
+E5NTc2NDE4MSwtMjEwNzM2NDM3NiwyMTAyODcxNzg1LC03MzMw
+MTYzNTgsLTE1ODkyMTMwNjRdfQ==
 -->
