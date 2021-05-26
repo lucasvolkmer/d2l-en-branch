@@ -60,7 +60,7 @@ $\mathbf{A}\mathbf{v} = \lambda \mathbf{v}$
 para encontrar os *autovetores* associados.
 
 ### Um Exemplo
-Let us see this with a more challenging matrix
+Vamos ver isso com uma matriz mais desafiadora
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -69,11 +69,11 @@ $$
 \end{bmatrix}.
 $$
 
-If we consider $\det(\mathbf{A}-\lambda \mathbf{I}) = 0$, 
-we see this is equivalent to the polynomial equation
+Se considerarmos $\det(\mathbf{A}-\lambda \mathbf{I}) = 0$, 
+vemos que isso é equivalente à equação polinomial
 $0 = (2-\lambda)(3-\lambda)-2 = (4-\lambda)(1-\lambda)$.
-Thus, two eigenvalues are $4$ and $1$.
-To find the associated vectors, we then need to solve
+Assim, dois valores próprios são $4$ e $1$.
+Para encontrar os vetores associados, precisamos resolver
 
 $$
 \begin{bmatrix}
@@ -689,6 +689,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYyNDI2MzcwLDI2MDYyMTg1NywtMTYwNj
+eyJoaXN0b3J5IjpbNDgzODExMzA2LDI2MDYyMTg1NywtMTYwNj
 Q5MTM4OCwtMTcyOTAxNDg2NF19
 -->
