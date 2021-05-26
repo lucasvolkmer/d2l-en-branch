@@ -904,12 +904,12 @@ que vimos antes pode ser expresso nesta notação de tensor compactado:
 * $(\mathbf{A}\mathbf{B})_{ik} = \sum_j a_{ij}b_{jk}$
 * $\mathrm{tr}(\mathbf{A}) = \sum_i a_{ii}$
 
-In this way, we can replace a myriad of specialized notations with short tensor expressions.
+Dessa forma, podemos substituir uma miríade de notações especializadas por expressões tensoriais curtas.
 
-### Expressing in Code
-Tensors may flexibly be operated on in code as well.
-As seen in :numref:`sec_linear-algebra`,
-we can create tensors as is shown below.
+### Expressando em Código
+Os tensores também podem ser operados com flexibilidade no código.
+Conforme visto em :numref:`sec_linear-algebra`,
+podemos criar tensores como mostrado abaixo.
 
 ```{.python .input}
 # Define tensors
@@ -943,13 +943,13 @@ v = tf.constant([1, 2])
 A.shape, B.shape, v.shape
 ```
 
-Einstein summation has been implemented directly.
-The indices that occurs in the Einstein summation can be passed as a string,
-followed by the tensors that are being acted upon.
-For instance, to implement matrix multiplication,
-we can consider the Einstein summation seen above
+O somatório de Einstein foi implementado diretamente.
+Os índices que ocorrem na soma de Einstein podem ser passados como uma *string*,
+seguido pelos tensores que estão sofrendo ação.
+Por exemplo, para implementar a multiplicação de matrizes,
+podemos considerar o somatório de Einstein visto acima
 ($\mathbf{A}\mathbf{v} = a_{ij}v_j$)
-and strip out the indices themselves to get the implementation:
+e retirar os próprios índices para obter a implementação:
 
 ```{.python .input}
 # Reimplement matrix multiplication
@@ -1062,7 +1062,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTkwNjE0OTAsLTE3ODU3ODgwMzAsLT
+eyJoaXN0b3J5IjpbLTE0NTU1MzkyMzcsLTE3ODU3ODgwMzAsLT
 EwNzY5MTgyNjksNDgyOTc3MjU1LDQyNDEwMDM2MSwxNTk5OTgw
 NDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOTkxODk4NTM4LC
 0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4MTIyLC0zNDg2
