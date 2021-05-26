@@ -895,8 +895,8 @@ $$
 
 ### Exemplos Comuns de Álgebra Linear
 
-Let us see how many of the linear algebraic definitions
-we have seen before can be expressed in this compressed tensor notation:
+Vamos ver quantas das definições algébricas lineares
+que vimos antes pode ser expresso nesta notação de tensor compactado:
 
 * $\mathbf{v} \cdot \mathbf{w} = \sum_i v_iw_i$
 * $\|\mathbf{v}\|_2^{2} = \sum_i v_iv_i$
@@ -1062,11 +1062,11 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NTQ4NzQ1OCwtMTc4NTc4ODAzMCwtMT
-A3NjkxODI2OSw0ODI5NzcyNTUsNDI0MTAwMzYxLDE1OTk5ODA0
-MjAsLTc4NzY4MzU4NCwxMjI5MDg0Njg2LDE5OTE4OTg1MzgsLT
-E2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMjIyNzgxMjIsLTM0ODY4
-MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLTIxMDczNjQzNz
-YsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbLTE0NTkwNjE0OTAsLTE3ODU3ODgwMzAsLT
+EwNzY5MTgyNjksNDgyOTc3MjU1LDQyNDEwMDM2MSwxNTk5OTgw
+NDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOTkxODk4NTM4LC
+0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4MTIyLC0zNDg2
+ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0Mz
+c2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
 
 -->
