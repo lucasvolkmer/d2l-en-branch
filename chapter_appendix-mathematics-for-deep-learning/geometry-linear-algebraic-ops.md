@@ -1046,9 +1046,9 @@ $$
  * $\left\{\begin{pmatrix}1\\0\\-1\end{pmatrix}, \begin{pmatrix}2\\1\\-1\end{pmatrix}, \begin{pmatrix}3\\1\\1\end{pmatrix}\right\}$
  * $\left\{\begin{pmatrix}3\\1\\1\end{pmatrix}, \begin{pmatrix}1\\1\\1\end{pmatrix}, \begin{pmatrix}0\\0\\0\end{pmatrix}\right\}$
  * $\left\{\begin{pmatrix}1\\1\\0\end{pmatrix}, \begin{pmatrix}0\\1\\-1\end{pmatrix}, \begin{pmatrix}1\\0\\1\end{pmatrix}\right\}$
-5. Suppose that you have a matrix written as $A = \begin{bmatrix}c\\d\end{bmatrix}\cdot\begin{bmatrix}a & b\end{bmatrix}$ for some choice of values $a, b, c$, and $d$.  True or false: the determinant of such a matrix is always $0$?
-6. The vectors $e_1 = \begin{bmatrix}1\\0\end{bmatrix}$ and $e_2 = \begin{bmatrix}0\\1\end{bmatrix}$ are orthogonal.  What is the condition on a matrix $A$ so that $Ae_1$ and $Ae_2$ are orthogonal?
-7. How can you write $\mathrm{tr}(\mathbf{A}^4)$ in Einstein notation for an arbitrary matrix $A$?
+5. Suponha que você tenha uma matriz escrita como $A = \begin{bmatrix}c\\d\end{bmatrix}\cdot\begin{bmatrix}a & b\end{bmatrix}$ para alguma escolha de valores $a, b, c$,e $d$.  Verdadeiro ou falso: o determinante dessa matriz é sempre $0$?
+6. Os vetores $e_1 = \begin{bmatrix}1\\0\end{bmatrix}$ e $e_2 = \begin{bmatrix}0\\1\end{bmatrix}$ são ortogonais. Qual é a condição em uma matriz $A$ para que $Ae_1$ e $Ae_2$ sejam ortogonais?
+7. Como você pode escrever $\mathrm{tr}(\mathbf{A}^4)$ na notação de Einstein para uma matriz arbitrária $A$?
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/410)
@@ -1062,7 +1062,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE4NDk2MDUyLDExODc0MDMwNCwtMTc4NT
+eyJoaXN0b3J5IjpbODUwMDU4NDU3LDExODc0MDMwNCwtMTc4NT
 c4ODAzMCwtMTA3NjkxODI2OSw0ODI5NzcyNTUsNDI0MTAwMzYx
 LDE1OTk5ODA0MjAsLTc4NzY4MzU4NCwxMjI5MDg0Njg2LDE5OT
 E4OTg1MzgsLTE2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMjIyNzgx
