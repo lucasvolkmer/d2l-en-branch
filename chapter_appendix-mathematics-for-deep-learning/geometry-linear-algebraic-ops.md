@@ -1016,17 +1016,17 @@ np.einsum(B, [0, 1, 2], A, [0, 3], v, [1], [2, 3])
 Qualquer uma das notações permite uma representação concisa e eficiente das contrações do tensor no código.
 
 ## Resumo
-* Vectors can be interpreted geometrically as either points or directions in space.
-* Dot products define the notion of angle to arbitrarily high-dimensional spaces.
-* Hyperplanes are high-dimensional generalizations of lines and planes.  They can be used to define decision planes that are often used as the last step in a classification task.
-* Matrix multiplication can be geometrically interpreted as uniform distortions of the underlying coordinates. They represent a very restricted, but mathematically clean, way to transform vectors.
-* Linear dependence is a way to tell when a collection of vectors are in a lower dimensional space than we would expect (say you have $3$ vectors living in a $2$-dimensional space). The rank of a matrix is the size of the largest subset of its columns that are linearly independent.
-* When a matrix's inverse is defined, matrix inversion allows us to find another matrix that undoes the action of the first. Matrix inversion is useful in theory, but requires care in practice owing to numerical instability.
-* Determinants allow us to measure how much a matrix expands or contracts a space. A nonzero determinant implies an invertible (non-singular) matrix and a zero-valued determinant means that the matrix is non-invertible (singular).
-* Tensor contractions and Einstein summation provide for a neat and clean notation for expressing many of the computations that are seen in machine learning.
+* Os vetores podem ser interpretados geometricamente como pontos ou direções no espaço.
+* Os produtos escalares definem a noção de ângulo para espaços de dimensões arbitrariamente altas.
+* Hiperplanos são generalizações dimensionais de linhas e planos. Eles podem ser usados ​​para definir planos de decisão que geralmente são usados ​​como a última etapa em uma tarefa de classificação.
+* A multiplicação de matrizes pode ser interpretada geometricamente como distorções uniformes das coordenadas subjacentes. Eles representam uma maneira muito restrita, mas matematicamente limpa, de transformar vetores.
+* Dependência linear é uma forma de saber quando uma coleção de vetores está em um espaço dimensional inferior do que esperaríamos (digamos que você tenha $3$ vetores vivendo em um espaço $2$-dimensional). A classificação de uma matriz é o tamanho do maior subconjunto de suas colunas que são linearmente independentes.
+* Quando a inversa de uma matriz é definida, a inversão da matriz nos permite encontrar outra matriz que desfaça a ação da primeira. A inversão da matriz é útil na teoria, mas requer cuidado na prática devido à instabilidade numérica.
+* Os determinantes nos permitem medir o quanto uma matriz se expande ou contrai em um espaço. Um determinante diferente de zero implica uma matriz invertível (não singular) e um determinante de valor zero significa que a matriz é não invertível (singular).
+* As contrações do tensor e a soma de Einstein fornecem uma notação limpa e organizada para expressar muitos dos cálculos que são vistos no aprendizado de máquina.
 
-## Exercises
-1. What is the angle between
+## Exercícios
+1. Qual é o ângulo entre
 $$
 \vec v_1 = \begin{bmatrix}
 1 \\ 0 \\ -1 \\ 2
@@ -1034,7 +1034,7 @@ $$
 3 \\ 1 \\ 0 \\ 1
 \end{bmatrix}?
 $$
-2. True or false: $\begin{bmatrix}1 & 2\\0&1\end{bmatrix}$ and $\begin{bmatrix}1 & -2\\0&1\end{bmatrix}$ are inverses of one another?
+2. Verdadeiro ou falso: $\begin{bmatrix}1 & 2\\0&1\end{bmatrix}$ e $\begin{bmatrix}1 & -2\\0&1\end{bmatrix}$ are inverses of one another?
 3. Suppose that we draw a shape in the plane with area $100\mathrm{m}^2$.  What is the area after transforming the figure by the matrix
 $$
 \begin{bmatrix}
@@ -1062,11 +1062,11 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NzQwMzA0LC0xNzg1Nzg4MDMwLC0xMD
-c2OTE4MjY5LDQ4Mjk3NzI1NSw0MjQxMDAzNjEsMTU5OTk4MDQy
-MCwtNzg3NjgzNTg0LDEyMjkwODQ2ODYsMTk5MTg5ODUzOCwtMT
-Y0MzY3ODc5NCwtNzU5ODgxNzA2LDIyMjI3ODEyMiwtMzQ4Njgy
-NzMxLC05MjM2MTI3NTcsMTE5NTc2NDE4MSwtMjEwNzM2NDM3Ni
-wyMTAyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ==
-
+eyJoaXN0b3J5IjpbLTc2OTY3NzIwMywxMTg3NDAzMDQsLTE3OD
+U3ODgwMzAsLTEwNzY5MTgyNjksNDgyOTc3MjU1LDQyNDEwMDM2
+MSwxNTk5OTgwNDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOT
+kxODk4NTM4LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4
+MTIyLC0zNDg2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC
+0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4
+OTIxMzA2NF19
 -->
