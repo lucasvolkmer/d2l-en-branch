@@ -159,10 +159,10 @@ nós vemos que podemos escrever
 $$\mathbf{A} = \mathbf{W} \boldsymbol{\Sigma} \mathbf{W}^{-1}.$$
 :eqlabel:`eq_eig_decomp`
 
-In the next section we will see some nice consequences of this,
-but for now we need only know that such a decomposition 
-will exist as long as we can find a full collection 
-of linearly independent eigenvectors (so that $W$ is invertible).
+Na próxima seção, veremos algumas consequências interessantes disso,
+mas por agora só precisamos saber que tal decomposição
+existirá enquanto pudermos encontrar uma coleção completa
+de autovetores linearmente independentes (de forma que $W$ seja invertível).
 
 ## Operations on Eigendecompositions
 One nice thing about eigendecompositions :eqref:`eq_eig_decomp` is that 
@@ -690,6 +690,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NTA5MTU0OCw0ODM4MTEzMDYsMjYwNj
-IxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX0=
+eyJoaXN0b3J5IjpbNjkxMTk4NTY5LDQ4MzgxMTMwNiwyNjA2Mj
+E4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ==
 -->
