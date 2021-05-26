@@ -1,4 +1,4 @@
-# Eigendecompositions
+# Autovalores e Autovetores
 :label:`sec_eigendecompositions`
 
 Eigenvalues are often one of the most useful notions 
@@ -687,5 +687,5 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjkwMTQ4NjRdfQ==
+eyJoaXN0b3J5IjpbLTE5OTQ1NjUyMSwtMTcyOTAxNDg2NF19
 -->
