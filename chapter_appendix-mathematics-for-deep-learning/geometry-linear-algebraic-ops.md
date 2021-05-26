@@ -1051,22 +1051,22 @@ $$
 7. Como você pode escrever $\mathrm{tr}(\mathbf{A}^4)$ na notação de Einstein para uma matriz arbitrária $A$?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/410)
+[Discussões](https://discuss.d2l.ai/t/410)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1084)
+[Discussões](https://discuss.d2l.ai/t/1084)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1085)
+[Discussões](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwMDU4NDU3LDExODc0MDMwNCwtMTc4NT
-c4ODAzMCwtMTA3NjkxODI2OSw0ODI5NzcyNTUsNDI0MTAwMzYx
-LDE1OTk5ODA0MjAsLTc4NzY4MzU4NCwxMjI5MDg0Njg2LDE5OT
-E4OTg1MzgsLTE2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMjIyNzgx
-MjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLT
-IxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5
-MjEzMDY0XX0=
+eyJoaXN0b3J5IjpbMTAxMzE4MDU4NywxMTg3NDAzMDQsLTE3OD
+U3ODgwMzAsLTEwNzY5MTgyNjksNDgyOTc3MjU1LDQyNDEwMDM2
+MSwxNTk5OTgwNDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOT
+kxODk4NTM4LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4
+MTIyLC0zNDg2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC
+0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4
+OTIxMzA2NF19
 -->
