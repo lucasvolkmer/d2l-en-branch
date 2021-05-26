@@ -968,15 +968,15 @@ torch.einsum("ij, j -> i", A, v), A@v
 tf.einsum("ij, j -> i", A, v), tf.matmul(A, tf.reshape(v, (2, 1)))
 ```
 
-This is a highly flexible notation.
-For instance if we want to compute
-what would be traditionally written as
+Esta é uma notação altamente flexível.
+Por exemplo, se quisermos calcular
+o que seria tradicionalmente escrito como
 
 $$
 c_{kl} = \sum_{ij} \mathbf{b}_{ijk}\mathbf{a}_{il}v_j.
 $$
 
-it can be implemented via Einstein summation as:
+pode ser implementado via somatório de Einstein como:
 
 ```{.python .input}
 np.einsum("ijk, il, j -> kl", B, A, v)
@@ -992,12 +992,12 @@ torch.einsum("ijk, il, j -> kl", B, A, v)
 tf.einsum("ijk, il, j -> kl", B, A, v)
 ```
 
-This notation is readable and efficient for humans,
-however bulky if for whatever reason
-we need to generate a tensor contraction programmatically.
-For this reason, `einsum` provides an alternative notation
-by providing integer indices for each tensor.
-For example, the same tensor contraction can also be written as:
+Esta notação é legível e eficiente para humanos,
+por mais volumoso que seja por algum motivo
+precisamos gerar uma contração de tensor programaticamente.
+Por este motivo, `einsum` fornece uma notação alternativa
+fornecendo índices inteiros para cada tensor.
+Por exemplo, a mesma contração tensorial também pode ser escrita como:
 
 ```{.python .input}
 np.einsum(B, [0, 1, 2], A, [0, 3], v, [1], [2, 3])
@@ -1013,9 +1013,9 @@ np.einsum(B, [0, 1, 2], A, [0, 3], v, [1], [2, 3])
 # TensorFlow doesn't support this type of notation.
 ```
 
-Either notation allows for concise and efficient representation of tensor contractions in code.
+Qualquer uma das notações permite uma representação concisa e eficiente das contrações do tensor no código.
 
-## Summary
+## Resumo
 * Vectors can be interpreted geometrically as either points or directions in space.
 * Dot products define the notion of angle to arbitrarily high-dimensional spaces.
 * Hyperplanes are high-dimensional generalizations of lines and planes.  They can be used to define decision planes that are often used as the last step in a classification task.
@@ -1062,11 +1062,11 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTU1MzkyMzcsLTE3ODU3ODgwMzAsLT
-EwNzY5MTgyNjksNDgyOTc3MjU1LDQyNDEwMDM2MSwxNTk5OTgw
-NDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOTkxODk4NTM4LC
-0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4MTIyLC0zNDg2
-ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0Mz
-c2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbMTE4NzQwMzA0LC0xNzg1Nzg4MDMwLC0xMD
+c2OTE4MjY5LDQ4Mjk3NzI1NSw0MjQxMDAzNjEsMTU5OTk4MDQy
+MCwtNzg3NjgzNTg0LDEyMjkwODQ2ODYsMTk5MTg5ODUzOCwtMT
+Y0MzY3ODc5NCwtNzU5ODgxNzA2LDIyMjI3ODEyMiwtMzQ4Njgy
+NzMxLC05MjM2MTI3NTcsMTE5NTc2NDE4MSwtMjEwNzM2NDM3Ni
+wyMTAyODcxNzg1LC03MzMwMTYzNTgsLTE1ODkyMTMwNjRdfQ==
 
 -->
