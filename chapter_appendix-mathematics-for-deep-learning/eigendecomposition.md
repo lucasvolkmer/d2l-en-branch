@@ -128,7 +128,7 @@ No entanto, os vetores calculados são paralelos
 aos que encontramos à mão com os mesmos autovalores.
 
 ## Matrizes de Decomposição
-Let us continue the previous example one step further.  Let
+Vamos continuar o exemplo anterior um passo adiante. Deixe
 
 $$
 \mathbf{W} = \begin{bmatrix}
@@ -137,7 +137,7 @@ $$
 \end{bmatrix},
 $$
 
-be the matrix where the columns are the eigenvectors of the matrix $\mathbf{A}$. Let
+ser a matriz onde as colunas são os autovetores da matriz $\mathbf{A}$. Deixe
 
 $$
 \boldsymbol{\Sigma} = \begin{bmatrix}
@@ -146,15 +146,15 @@ $$
 \end{bmatrix},
 $$
 
-be the matrix with the associated eigenvalues on the diagonal.
-Then the definition of eigenvalues and eigenvectors tells us that
+ser a matriz com os autovalores associados na diagonal.
+Então, a definição de autovalores e autovetores nos diz que
 
 $$
 \mathbf{A}\mathbf{W} =\mathbf{W} \boldsymbol{\Sigma} .
 $$
 
-The matrix $W$ is invertible, so we may multiply both sides by $W^{-1}$ on the right,
-we see that we may write
+A matriz $W$ é invertível, então podemos multiplicar ambos os lados por $W^{-1}$ à direita,
+nós vemos que podemos escrever
 
 $$\mathbf{A} = \mathbf{W} \boldsymbol{\Sigma} \mathbf{W}^{-1}.$$
 :eqlabel:`eq_eig_decomp`
@@ -690,6 +690,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ2MDAwNjU2LDQ4MzgxMTMwNiwyNjA2Mj
-E4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ==
+eyJoaXN0b3J5IjpbMTU3NTA5MTU0OCw0ODM4MTEzMDYsMjYwNj
+IxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX0=
 -->
