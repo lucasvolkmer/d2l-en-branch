@@ -1,13 +1,14 @@
 # Autovalores e Autovetores
 :label:`sec_eigendecompositions`
 
-Eigenvalues are often one of the most useful notions 
-we will encounter when studying linear algebra, 
-however, as a beginner, it is easy to overlook their importance.
-Below, we introduce eigendecomposition and 
-try to convey some sense of just why it is so important. 
 
-Suppose that we have a matrix $A$ with the following entries:
+Os autovalores são frequentemente uma das noções mais úteis
+encontraremos ao estudar álgebra linear,
+entretanto, como um iniciante, é fácil ignorar sua importância.
+Abaixo, apresentamos a decomposção e cálculo destes, e
+tentamos transmitir algum sentido de por que é tão importante.
+
+Suponha que tenhamos uma matriz $A$ com as seguintes entradas:
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -687,5 +688,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTQ1NjUyMSwtMTcyOTAxNDg2NF19
+eyJoaXN0b3J5IjpbLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ
+==
 -->
