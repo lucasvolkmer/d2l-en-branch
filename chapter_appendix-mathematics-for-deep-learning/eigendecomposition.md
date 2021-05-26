@@ -17,31 +17,32 @@ $$
 \end{bmatrix}.
 $$
 
-If we apply $A$ to any vector $\mathbf{v} = [x, y]^\top$, 
-we obtain a vector $\mathbf{A}\mathbf{v} = [2x, -y]^\top$.
-This has an intuitive interpretation:
-stretch the vector to be twice as wide in the $x$-direction,
-and then flip it in the $y$-direction.
 
-However, there are *some* vectors for which something remains unchanged.
-Namely $[1, 0]^\top$ gets sent to $[2, 0]^\top$
-and $[0, 1]^\top$ gets sent to $[0, -1]^\top$.
-These vectors are still in the same line,
-and the only modification is that the matrix stretches them
-by a factor of $2$ and $-1$ respectively.
-We call such vectors *eigenvectors*
-and the factor they are stretched by *eigenvalues*.
+Se aplicarmos $A$ a qualquer vetor $\mathbf{v} = [x, y]^\top$, 
+obtemos um vetor $\mathbf{A}\mathbf{v} = [2x, -y]^\top$.
+Isso tem uma interpretação intuitiva:
+estique o vetor para ser duas vezes mais largo na direção $x$,
+e, em seguida, inverta-o na direção $y$-direcionamento.
 
-In general, if we can find a number $\lambda$ 
-and a vector $\mathbf{v}$ such that 
+No entanto, existem *alguns* vetores para os quais algo permanece inalterado.
+A saber, $[1, 0]^\top$ é enviado para $[2, 0]^\top$
+e $[0, 1]^\top$ é enviado para $[0, -1]^\top$.
+Esses vetores ainda estão na mesma linha,
+e a única modificação é que a matriz os estica
+por um fator de $2$ e $-1$ respectivamente.
+Chamamos esses vetores de *autovetores*
+e o fator eles são estendidos por *autovalores*.
+
+Em geral, se pudermos encontrar um número $\lambda$ 
+e um vetor $\mathbf{v}$ tal que
 
 $$
 \mathbf{A}\mathbf{v} = \lambda \mathbf{v}.
 $$
 
-We say that $\mathbf{v}$ is an eigenvector for $A$ and $\lambda$ is an eigenvalue.
+Dizemos que $\mathbf{v}$ é um autovetor para $A$ e $\lambda$ é um autovalor.
 
-## Finding Eigenvalues
+## Encontrando Autovalores
 Let us figure out how to find them. By subtracting off the $\lambda \mathbf{v}$ from both sides,
 and then factoring out the vector,
 we see the above is equivalent to:
@@ -688,6 +689,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ
-==
+eyJoaXN0b3J5IjpbMjYwNjIxODU3LC0xNjA2NDkxMzg4LC0xNz
+I5MDE0ODY0XX0=
 -->
