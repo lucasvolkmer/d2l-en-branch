@@ -867,32 +867,33 @@ ou equivalente
 
 $$ c_{i, j} = \sum_{k} a_{i, k}b_{k, j}.$$
 
-This pattern is one we can repeat for tensors.
-For tensors, there is no one case of what
-to sum over that can be universally chosen,
-so we need specify exactly which indices we want to sum over.
-For instance we could consider
+Esse padrão pode ser repetido para tensores.
+Para tensores, não há um caso de qual
+para somar isso pode ser universalmente escolhido,
+portanto, precisamos especificar exatamente quais índices queremos somar.
+Por exemplo, podemos considerar
 
 $$
 y_{il} = \sum_{jk} x_{ijkl}a_{jk}.
 $$
 
-Such a transformation is called a *tensor contraction*.
-It can represent a far more flexible family of transformations
-that matrix multiplication alone.
 
-As a often-used notational simplification,
-we can notice that the sum is over exactly those indices
-that occur more than once in the expression,
-thus people often work with *Einstein notation*,
-where the summation is implicitly taken over all repeated indices.
-This gives the compact expression:
+Essa transformação é chamada de *contração tensorial*.
+Pode representar uma família de transformações muito mais flexível
+que a multiplicação de matriz sozinha.
+
+Como uma simplificação de notação frequentemente usada,
+podemos notar que a soma está exatamente acima desses índices
+que ocorrem mais de uma vez na expressão,
+assim, as pessoas costumam trabalhar com *notação de Einstein*,
+onde o somatório é implicitamente assumido sobre todos os índices repetidos.
+Isso dá a expressão compacta:
 
 $$
 y_{il} = x_{ijkl}a_{jk}.
 $$
 
-### Common Examples from Linear Algebra
+### Exemplos Comuns de Álgebra Linear
 
 Let us see how many of the linear algebraic definitions
 we have seen before can be expressed in this compressed tensor notation:
@@ -1061,10 +1062,11 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODU3ODgwMzAsLTEwNzY5MTgyNjksND
-gyOTc3MjU1LDQyNDEwMDM2MSwxNTk5OTgwNDIwLC03ODc2ODM1
-ODQsMTIyOTA4NDY4NiwxOTkxODk4NTM4LC0xNjQzNjc4Nzk0LC
-03NTk4ODE3MDYsMjIyMjc4MTIyLC0zNDg2ODI3MzEsLTkyMzYx
-Mjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3OD
-UsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbLTI3NTQ4NzQ1OCwtMTc4NTc4ODAzMCwtMT
+A3NjkxODI2OSw0ODI5NzcyNTUsNDI0MTAwMzYxLDE1OTk5ODA0
+MjAsLTc4NzY4MzU4NCwxMjI5MDg0Njg2LDE5OTE4OTg1MzgsLT
+E2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMjIyNzgxMjIsLTM0ODY4
+MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLTIxMDczNjQzNz
+YsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5MjEzMDY0XX0=
+
 -->
