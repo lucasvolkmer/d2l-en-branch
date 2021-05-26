@@ -846,23 +846,24 @@ mas a intuição é a mesma.
 O determinante continua sendo o fator
 que $n\times n$ matrizes escalam volumes $n$-dimensionais.
 
-## Tensors and Common Linear Algebra Operations
+## Tensores e Operações de Álgebra Linear Comum
 
-In :numref:`sec_linear-algebra` the concept of tensors was introduced.
-In this section, we will dive more deeply into tensor contractions
-(the tensor equivalent of matrix multiplication),
-and see how it can provide a unified view
-on a number of matrix and vector operations.
 
-With matrices and vectors we knew how to multiply them to transform data.
-We need to have a similar definition for tensors if they are to be useful to us.
-Think about matrix multiplication:
+Em :numref:`sec_linear-algebra` o conceito de tensores foi introduzido.
+Nesta seção, vamos mergulhar mais profundamente nas contrações tensoras
+(o tensor equivalente à multiplicação da matriz),
+e ver como pode fornecer uma visão unificada
+em uma série de operações de matriz e vetor.
+
+Com matrizes e vetores, sabíamos como multiplicá-los para transformar os dados.
+Precisamos ter uma definição semelhante para tensores se eles forem úteis para nós.
+Pense na multiplicação de matrizes:
 
 $$
 \mathbf{C} = \mathbf{A}\mathbf{B},
 $$
 
-or equivalently
+ou equivalente
 
 $$ c_{i, j} = \sum_{k} a_{i, k}b_{k, j}.$$
 
@@ -1060,10 +1061,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzY5MTgyNjksNDgyOTc3MjU1LDQyND
-EwMDM2MSwxNTk5OTgwNDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4
-NiwxOTkxODk4NTM4LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMj
-IyMjc4MTIyLC0zNDg2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0
-MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OC
-wtMTU4OTIxMzA2NF19
+eyJoaXN0b3J5IjpbLTE3ODU3ODgwMzAsLTEwNzY5MTgyNjksND
+gyOTc3MjU1LDQyNDEwMDM2MSwxNTk5OTgwNDIwLC03ODc2ODM1
+ODQsMTIyOTA4NDY4NiwxOTkxODk4NTM4LC0xNjQzNjc4Nzk0LC
+03NTk4ODE3MDYsMjIyMjc4MTIyLC0zNDg2ODI3MzEsLTkyMzYx
+Mjc1NywxMTk1NzY0MTgxLC0yMTA3MzY0Mzc2LDIxMDI4NzE3OD
+UsLTczMzAxNjM1OCwtMTU4OTIxMzA2NF19
 -->
