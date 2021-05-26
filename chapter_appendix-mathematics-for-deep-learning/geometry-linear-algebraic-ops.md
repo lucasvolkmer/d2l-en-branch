@@ -1034,15 +1034,15 @@ $$
 3 \\ 1 \\ 0 \\ 1
 \end{bmatrix}?
 $$
-2. Verdadeiro ou falso: $\begin{bmatrix}1 & 2\\0&1\end{bmatrix}$ e $\begin{bmatrix}1 & -2\\0&1\end{bmatrix}$ are inverses of one another?
-3. Suppose that we draw a shape in the plane with area $100\mathrm{m}^2$.  What is the area after transforming the figure by the matrix
+2. Verdadeiro ou falso: $\begin{bmatrix}1 & 2\\0&1\end{bmatrix}$ e $\begin{bmatrix}1 & -2\\0&1\end{bmatrix}$ são inversas uma da outra?
+3. Suponha que desenhemos uma forma no plano com área $100\mathrm{m}^2$. Qual é a área depois de transformar a figura pela matriz
 $$
 \begin{bmatrix}
 2 & 3\\
 1 & 2
 \end{bmatrix}.
 $$
-4. Which of the following sets of vectors are linearly independent?
+4. Qual dos seguintes conjuntos de vetores são linearmente independentes?
  * $\left\{\begin{pmatrix}1\\0\\-1\end{pmatrix}, \begin{pmatrix}2\\1\\-1\end{pmatrix}, \begin{pmatrix}3\\1\\1\end{pmatrix}\right\}$
  * $\left\{\begin{pmatrix}3\\1\\1\end{pmatrix}, \begin{pmatrix}1\\1\\1\end{pmatrix}, \begin{pmatrix}0\\0\\0\end{pmatrix}\right\}$
  * $\left\{\begin{pmatrix}1\\1\\0\end{pmatrix}, \begin{pmatrix}0\\1\\-1\end{pmatrix}, \begin{pmatrix}1\\0\\1\end{pmatrix}\right\}$
@@ -1062,11 +1062,11 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1085)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2OTY3NzIwMywxMTg3NDAzMDQsLTE3OD
-U3ODgwMzAsLTEwNzY5MTgyNjksNDgyOTc3MjU1LDQyNDEwMDM2
-MSwxNTk5OTgwNDIwLC03ODc2ODM1ODQsMTIyOTA4NDY4NiwxOT
-kxODk4NTM4LC0xNjQzNjc4Nzk0LC03NTk4ODE3MDYsMjIyMjc4
-MTIyLC0zNDg2ODI3MzEsLTkyMzYxMjc1NywxMTk1NzY0MTgxLC
-0yMTA3MzY0Mzc2LDIxMDI4NzE3ODUsLTczMzAxNjM1OCwtMTU4
-OTIxMzA2NF19
+eyJoaXN0b3J5IjpbMjE4NDk2MDUyLDExODc0MDMwNCwtMTc4NT
+c4ODAzMCwtMTA3NjkxODI2OSw0ODI5NzcyNTUsNDI0MTAwMzYx
+LDE1OTk5ODA0MjAsLTc4NzY4MzU4NCwxMjI5MDg0Njg2LDE5OT
+E4OTg1MzgsLTE2NDM2Nzg3OTQsLTc1OTg4MTcwNiwyMjIyNzgx
+MjIsLTM0ODY4MjczMSwtOTIzNjEyNzU3LDExOTU3NjQxODEsLT
+IxMDczNjQzNzYsMjEwMjg3MTc4NSwtNzMzMDE2MzU4LC0xNTg5
+MjEzMDY0XX0=
 -->
