@@ -43,23 +43,23 @@ $$
 Dizemos que $\mathbf{v}$ é um autovetor para $A$ e $\lambda$ é um autovalor.
 
 ## Encontrando Autovalores
-Let us figure out how to find them. By subtracting off the $\lambda \mathbf{v}$ from both sides,
-and then factoring out the vector,
-we see the above is equivalent to:
+Vamos descobrir como encontrá-los. Subtraindo $\lambda \mathbf{v}$ de ambos os lados,
+e então fatorar o vetor,
+vemos que o acima é equivalente a:
 
 $$(\mathbf{A} - \lambda \mathbf{I})\mathbf{v} = 0.$$
 :eqlabel:`eq_eigvalue_der`
 
-For :eqref:`eq_eigvalue_der` to happen, we see that $(\mathbf{A} - \lambda \mathbf{I})$ 
-must compress some direction down to zero, 
-hence it is not invertible, and thus the determinant is zero.
-Thus, we can find the *eigenvalues* 
-by finding for what $\lambda$ is $\det(\mathbf{A}-\lambda \mathbf{I}) = 0$.
-Once we find the eigenvalues, we can solve 
+Para :eqref:`eq_eigvalue_der` acontecer, vemos que $(\mathbf{A} - \lambda \mathbf{I})$ 
+deve comprimir alguma direção até zero,
+portanto, não é invertível e, portanto, o determinante é zero.
+Assim, podemos encontrar os *valores próprios*
+descobrindo quanto $\lambda$ is $\det(\mathbf{A}-\lambda \mathbf{I}) = 0$.
+Depois de encontrar os valores próprios, podemos resolver
 $\mathbf{A}\mathbf{v} = \lambda \mathbf{v}$ 
-to find the associated *eigenvector(s)*.
+para encontrar os *autovetores* associados.
 
-### An Example
+### Um Exemplo
 Let us see this with a more challenging matrix
 
 $$
@@ -689,6 +689,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYwNjIxODU3LC0xNjA2NDkxMzg4LC0xNz
-I5MDE0ODY0XX0=
+eyJoaXN0b3J5IjpbNjYyNDI2MzcwLDI2MDYyMTg1NywtMTYwNj
+Q5MTM4OCwtMTcyOTAxNDg2NF19
 -->
