@@ -86,9 +86,10 @@ $$
 \end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}  = \begin{bmatrix}4x \\ 4y\end{bmatrix} .
 $$
 
-We can solve this with the vectors $[1, -1]^\top$ and $[1, 2]^\top$ respectively.
 
-We can check this in code using the built-in `numpy.linalg.eig` routine.
+Podemos resolver isso com os vetores $[1, -1]^\top$ and $[1, 2]^\top$ respectivamente.
+
+Podemos verificar isso no código usando a rotina incorporada `numpy.linalg.eig`.
 
 ```{.python .input}
 %matplotlib inline
@@ -120,13 +121,13 @@ import tensorflow as tf
 tf.linalg.eig(tf.constant([[2, 1], [2, 3]], dtype=tf.float64))
 ```
 
-Note that `numpy` normalizes the eigenvectors to be of length one,
-whereas we took ours to be of arbitrary length.
-Additionally, the choice of sign is arbitrary.
-However, the vectors computed are parallel 
-to the ones we found by hand with the same eigenvalues.
+Observe que `numpy` normaliza os vetores próprios para ter comprimento um,
+ao passo que consideramos o nosso comprimento arbitrário.
+Além disso, a escolha do sinal é arbitrária.
+No entanto, os vetores calculados são paralelos
+aos que encontramos à mão com os mesmos autovalores.
 
-## Decomposing Matrices
+## Matrizes de Decomposição
 Let us continue the previous example one step further.  Let
 
 $$
@@ -689,6 +690,6 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgzODExMzA2LDI2MDYyMTg1NywtMTYwNj
-Q5MTM4OCwtMTcyOTAxNDg2NF19
+eyJoaXN0b3J5IjpbODQ2MDAwNjU2LDQ4MzgxMTMwNiwyNjA2Mj
+E4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ==
 -->
