@@ -328,11 +328,11 @@ e um tópico sutil como; decomposição automática,
 
 ## Uma Aplicação Útil: o Crescimento de Mapas Iterados
 
-Now that we understand what eigenvectors are in principle,
-let us see how they can be used to provide a deep understanding 
-of a problem central to neural network behavior: proper weight initialization. 
+Agora que entendemos o que são autovetores, em princípio,
+vamos ver como eles podem ser usados para fornecer um entendimento profundo
+de um problema central para o comportamento da rede neural: inicialização de peso adequada.
 
-### Eigenvectors as Long Term Behavior
+### Autovetores como Comportamento de Longo Prazo
 
 The full mathematical investigation of the initialization 
 of deep neural networks is beyond the scope of the text, 
@@ -696,8 +696,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMzg3NzQwMCwtMTI2OTkyMDAxNywxNT
-Y4MzQwMTg0LC0xMTQ4NTM5Mzk5LDE0MzQ1NjAxNjQsNjkxMTk4
-NTY5LDQ4MzgxMTMwNiwyNjA2MjE4NTcsLTE2MDY0OTEzODgsLT
-E3MjkwMTQ4NjRdfQ==
+eyJoaXN0b3J5IjpbLTEyNTYxNjc1ODQsLTMxMzg3NzQwMCwtMT
+I2OTkyMDAxNywxNTY4MzQwMTg0LC0xMTQ4NTM5Mzk5LDE0MzQ1
+NjAxNjQsNjkxMTk4NTY5LDQ4MzgxMTMwNiwyNjA2MjE4NTcsLT
+E2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ==
 -->
