@@ -19,7 +19,7 @@ Se você planeja atualizar uma grande parte do texto ou código, precisa saber u
 
 Se você deseja alterar o código, recomendamos que você use o Jupyter para abrir esses arquivos Markdown conforme descrito em :numref:`sec_jupyter`. Para que você possa executar e testar suas alterações. Lembre-se de limpar todas as saídas antes de enviar suas alterações, nosso sistema de CI executará as seções que você atualizou para gerar saídas.
 
-Algumas seções podem suportar múltiplas implementações de framework, você pode usar `d2lbook` para ativar um framework particular, então outras implementações de framework tornam-se blocos de código Markdown e não serão executados quando você" Executar Tudo "no Jupyter. Em outras palavras, primeiro instale `d2lbook` executando
+Algumas seções podem suportar múltiplas implementações de framework, você pode usar `d2lbook` para ativar um framework particular, então outras implementações de framework tornam-se blocos de código Markdown e não serão executados quando você "Executar Tudo "no Jupyter. Em outras palavras, primeiro instale `d2lbook` executando
 
 ```bash
 pip install git+https://github.com/d2l-ai/d2l-book
@@ -157,6 +157,6 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk1MjE5NzAzLDIxNzg0OTM2NiwxMzY2MD
-U3MjQzXX0=
+eyJoaXN0b3J5IjpbLTE4MDIzODE5MDksMjk1MjE5NzAzLDIxNz
+g0OTM2NiwxMzY2MDU3MjQzXX0=
 -->
