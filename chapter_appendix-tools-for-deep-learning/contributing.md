@@ -71,13 +71,14 @@ Digite o [endereço](https://github.com/d2l-ai/d2l-en/) do repositório de códi
 
 
 Agora, o repositório de código deste livro será bifurcado (ou seja, copiado) para seu nome de usuário, como `astonzhang/ d2l-en` mostrado no canto superior esquerdo da imagem :numref:`fig_git_forked`.
-![Fork the code repository.](../img/git-forked.png)
+
+![Bifurque o repositório de código.](../img/git-forked.png)
 :width:`700px`
 :label:`fig_git_forked`
 
-### Cloning the Repository
+### Clonando o repositório
 
-To clone the repository (i.e., to make a local copy) we need to get its repository address. The green button in :numref:`fig_git_clone` displays this. Make sure that your local copy is up to date with the main repository if you decide to keep this fork around for longer. For now simply follow the instructions in :ref:`chap_installation` to get started. The main difference is that you are now downloading *your own fork* of the repository.
+Para clonar o repositório (ou seja, para fazer uma cópia local), precisamos obter o endereço do repositório. O botão verde em :numref:`fig_git_clone` exibe isso. Certifique-se de que sua cópia local esteja atualizada com o repositório principal se você decidir manter esta bifurcação por mais tempo. Por enquanto, basta seguir as instruções em:ref:`chap_installation` para começar. A principal diferença é que agora você está baixando *seu próprio fork* do repositório.
 
 ![Git clone.](../img/git-clone.png)
 :width:`700px`
@@ -156,6 +157,6 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNjEzNzQxNiwyOTUyMTk3MDMsMjE3OD
+eyJoaXN0b3J5IjpbLTM5NjE0OTIzNCwyOTUyMTk3MDMsMjE3OD
 Q5MzY2LDEzNjYwNTcyNDNdfQ==
 -->
