@@ -241,7 +241,7 @@ $$
 \mathbf{A} = \mathbf{W}\boldsymbol{\Sigma}\mathbf{W}^\top .
 $$
 
-## Gershgorin Circle Theorem
+## Teorema do Círculo de Gershgorin
 Eigenvalues are often difficult to reason with intuitively.
 If presented an arbitrary matrix, there is little that can be said
 about what the eigenvalues are without computing them.
@@ -694,7 +694,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2ODM0MDE4NCwtMTE0ODUzOTM5OSwxND
-M0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEzMDYsMjYwNjIxODU3
-LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX0=
+eyJoaXN0b3J5IjpbLTE1ODgwMjExNTAsMTU2ODM0MDE4NCwtMT
+E0ODUzOTM5OSwxNDM0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEz
+MDYsMjYwNjIxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX
+0=
 -->
