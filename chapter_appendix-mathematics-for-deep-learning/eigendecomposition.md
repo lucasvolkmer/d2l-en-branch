@@ -242,20 +242,21 @@ $$
 $$
 
 ## Teorema do Círculo de Gershgorin
-Eigenvalues are often difficult to reason with intuitively.
-If presented an arbitrary matrix, there is little that can be said
-about what the eigenvalues are without computing them.
-There is, however, one theorem that can make it easy to approximate well 
-if the largest values are on the diagonal.
 
-Let $\mathbf{A} = (a_{ij})$ be any square matrix ($n\times n$).
-We will define $r_i = \sum_{j \neq i} |a_{ij}|$.
-Let $\mathcal{D}_i$ represent the disc in the complex plane 
-with center $a_{ii}$ radius $r_i$.
-Then, every eigenvalue of $\mathbf{A}$ is contained in one of the $\mathcal{D}_i$.
+Os valores próprios costumam ser difíceis de raciocinar intuitivamente.
+Se for apresentada uma matriz arbitrária, pouco pode ser dito
+sobre quais são os valores próprios sem computá-los.
+Há, no entanto, um teorema que pode facilitar uma boa aproximação
+se os maiores valores estiverem na diagonal.
 
-This can be a bit to unpack, so let us look at an example.  
-Consider the matrix:
+Seja $\mathbf{A} = (a_{ij})$ qualquer matriz quadrada($n\times n$).
+Definiremos $r_i = \sum_{j \neq i} |a_{ij}|$.
+Deixe $\mathcal{D}_i$ representar o disco no plano complexo
+com centro $a_{ii}$ radius $r_i$.
+Então, cada autovalor de $\mathbf{A}$ está contido em um dos $\mathcal{D}_i$.
+
+Isso pode ser um pouco difícil de descompactar, então vejamos um exemplo.
+Considere a matriz:
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -694,8 +695,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODgwMjExNTAsMTU2ODM0MDE4NCwtMT
-E0ODUzOTM5OSwxNDM0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEz
-MDYsMjYwNjIxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX
-0=
+eyJoaXN0b3J5IjpbMTUwODczMjc1MCwxNTY4MzQwMTg0LC0xMT
+Q4NTM5Mzk5LDE0MzQ1NjAxNjQsNjkxMTk4NTY5LDQ4MzgxMTMw
+NiwyNjA2MjE4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ
+==
 -->
