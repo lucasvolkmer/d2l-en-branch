@@ -1,11 +1,11 @@
 # Contribuindo para este livro
 :label:`sec_how_to_contribute`
 
-Contributions by [readers](https://github.com/d2l-ai/d2l-en/graphs/contributors) help us improve this book. If you find a typo, an outdated link, something where you think we missed a citation, where the code does not look elegant or where an explanation is unclear, please contribute back and help us help our readers. While in regular books the delay between print runs (and thus between typo corrections) can be measured in years, it typically takes hours to days to incorporate an improvement in this book. This is all possible due to version control and continuous integration testing. To do so you need to submit a [pull request](https://github.com/d2l-ai/d2l-en/pulls) to the GitHub repository. When your pull request is merged into the code repository by the author, you will become a contributor.
+Contribuições de [leitores](https://github.com/d2l-ai/d2l-en/graphs/contributors) nos ajudam a melhorar este livro. Se você encontrar um erro de digitação, um link desatualizado, algo onde você acha que perdemos uma citação, onde o código não parece elegante ou onde uma explicação não é clara, contribua de volta e ajude-nos a ajudar nossos leitores. Embora em livros normais o atraso entre as tiragens (e, portanto, entre as correções de digitação) possa ser medido em anos, normalmente leva horas ou dias para incorporar uma melhoria neste livro. Tudo isso é possível devido ao controle de versão e teste de integração contínua. Para fazer isso, você precisa enviar uma [solicitação de pull](https://github.com/d2l-ai/d2l-en/pulls) para o repositório GitHub. Quando sua solicitação pull for mesclada ao repositório de código pelo autor, você se tornará um contribuidor.
 
-## Minor Text Changes
+## Pequenas alterações de texto
 
-The most common contributions are editing one sentence or fixing typos. We recommend you to find the source file in the [github repo](https://github.com/d2l-ai/d2l-en) and edit the file directly. For example, you can search the file through the [Find file](https://github.com/d2l-ai/d2l-en/find/master) button (:numref:`fig_edit_file`) to locate the source file, which is a markdown file. Then you click the "Edit this file" button on the top-right corner to make your changes in the markdown file.
+As contribuições mais comuns são editar uma frase ou corrigir erros de digitação. Recomendamos que você encontre o arquivo de origem no [github repo](https://github.com/d2l-ai/d2l-en) e edite o arquivo diretamente. Por exemplo, você pode pesquisar o arquivo através do botão [Find file](https://github.com/d2l-ai/d2l-en/find/master) (:numref:`fig_edit_file`) para localizar o arquivo de origem, que é um arquivo de redução. Em seguida, você clica no botão "Editar este arquivo" no canto superior direito para fazer as alterações no arquivo de redução.
 
 ![Edit the file on Github.](../img/edit-file.png)
 :width:`300px`
@@ -157,5 +157,6 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE3ODQ5MzY2LDEzNjYwNTcyNDNdfQ==
+eyJoaXN0b3J5IjpbOTQzNDI1MzEzLDIxNzg0OTM2NiwxMzY2MD
+U3MjQzXX0=
 -->
