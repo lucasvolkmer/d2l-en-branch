@@ -267,9 +267,9 @@ $$
 \end{bmatrix}.
 $$
 
-We have $r_1 = 0.3$, $r_2 = 0.6$, $r_3 = 0.8$ and $r_4 = 0.9$.
-The matrix is symmetric, so all eigenvalues are real.
-This means that all of our eigenvalues will be in one of the ranges of 
+Temos $r_1 = 0.3$, $r_2 = 0.6$, $r_3 = 0.8$ e $r_4 = 0.9$.
+A matriz é simétrica, portanto, todos os autovalores são reais.
+Isso significa que todos os nossos valores próprios estarão em um dos intervalos de
 
 $$[a_{11}-r_1, a_{11}+r_1] = [0.7, 1.3], $$
 
@@ -695,8 +695,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwODczMjc1MCwxNTY4MzQwMTg0LC0xMT
-Q4NTM5Mzk5LDE0MzQ1NjAxNjQsNjkxMTk4NTY5LDQ4MzgxMTMw
-NiwyNjA2MjE4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ
-==
+eyJoaXN0b3J5IjpbLTE4NzA4NDg1NzUsMTU2ODM0MDE4NCwtMT
+E0ODUzOTM5OSwxNDM0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEz
+MDYsMjYwNjIxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX
+0=
 -->
