@@ -19,14 +19,14 @@ Se você planeja atualizar uma grande parte do texto ou código, precisa saber u
 
 Se você deseja alterar o código, recomendamos que você use o Jupyter para abrir esses arquivos Markdown conforme descrito em :numref:`sec_jupyter`. Para que você possa executar e testar suas alterações. Lembre-se de limpar todas as saídas antes de enviar suas alterações, nosso sistema de CI executará as seções que você atualizou para gerar saídas.
 
-Algumas seções podem suportar múltiplas implementações de framework, você pode usar `d2lbook` para ativar um framework particular, então outras implementações de framework tornam-se blocos de código Markdown e não serão executados quando você "Executar Tudo "no Jupyter. Em outras palavras, primeiro instale `d2lbook` executando
+Algumas seções podem suportar múltiplas implementações de framework, você pode usar `d2lbook` para ativar um framework particular, então outras implementações de framework tornam-se blocos de código Markdown e não serão executados quando você "Executar Tudo" no Jupyter. Em outras palavras, primeiro instale `d2lbook` executando
 
 ```bash
 pip install git+https://github.com/d2l-ai/d2l-book
 ```
 
 
-Then in the root directory of `d2l-en`, you can activate a particular implementation by running one of the following commands:
+Então, no diretório raiz de `d2l-en`, você pode ativar uma implementação particular executando um dos seguintes comandos:
 
 ```bash
 d2lbook activate mxnet chapter_multilayer-perceptrons/mlp-scratch.md
@@ -35,13 +35,13 @@ d2lbook activate tensorflow chapter_multilayer-perceptrons/mlp-scratch.md
 ```
 
 
-Before submitting your changes, please clear all code block outputs and activate all by
+Antes de enviar suas alterações, limpe todas as saídas do bloco de código e ative todas por
 
 ```bash
 d2lbook activate all chapter_multilayer-perceptrons/mlp-scratch.md
 ```
 
-If you add a new code block not for the default implementation, which is MXNet, please use `#@tab` to mark this block on the beginning line. For example, `#@tab pytorch` for a PyTorch code block, `#@tab tensorflow` for a TensorFlow code block, or `#@tab all` a shared code block for all implementations. You may refer to [d2lbook](http://book.d2l.ai/user/code_tabs.html) for more information.
+Se você adicionar um novo bloco de código não para a implementação padrão, que é MXNet, use `#@tab` para marcar este bloco na linha inicial. Por exemplo, `#@tab pytorch` para um bloco de código PyTorch, `#@tab tensorflow` para um bloco de código TensorFlow ou `#@tab all` um bloco de código compartilhado para todas as implementações. Você pode consultar [d2lbook](http://book.d2l.ai/user/code_tabs.html) para obter mais informações.
 
 
 ## Adding a New Section or a New Framework Implementation
@@ -157,6 +157,6 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDIzODE5MDksMjk1MjE5NzAzLDIxNz
-g0OTM2NiwxMzY2MDU3MjQzXX0=
+eyJoaXN0b3J5IjpbMjA4MzU3NzgwOCwyOTUyMTk3MDMsMjE3OD
+Q5MzY2LDEzNjYwNTcyNDNdfQ==
 -->
