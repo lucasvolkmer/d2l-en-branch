@@ -223,17 +223,19 @@ $$
 \end{bmatrix},
 $$
 
-has only a single eigenvector, namely $(1, 0)^\top$. 
-To handle such matrices, we require more advanced techniques 
-than we can cover (such as the Jordan Normal Form, or Singular Value Decomposition).
-We will often need to restrict our attention to those matrices 
-where we can guarantee the existence of a full set of eigenvectors.
 
-The most commonly encountered family are the *symmetric matrices*,
-which are those matrices where $\mathbf{A} = \mathbf{A}^\top$. 
-In this case, we may take $W$ to be an *orthogonal matrix*—a matrix whose columns are all length one vectors that are at right angles to one another, where 
-$\mathbf{W}^\top = \mathbf{W}^{-1}$—and all the eigenvalues will be real.  
-Thus, in this special case, we can write :eqref:`eq_eig_decomp` as
+tem apenas um único autovetor, a saber $(1, 0)^\top$. 
+Para lidar com essas matrizes, exigimos técnicas mais avançadas
+do que podemos cobrir (como a Forma Normal de Jordan ou Decomposição de Valor Singular).
+Frequentemente precisaremos restringir nossa atenção a essas matrizes
+onde podemos garantir a existência de um conjunto completo de autovetores.
+
+A família mais comumente encontrada são as *matrizes simétricas*,
+que são aquelas matrizes onde $\mathbf{A} = \mathbf{A}^\top$. 
+
+Neste caso, podemos tomar $W$ como uma *matriz ortogonal* - uma matriz cujas colunas são todas vetores de comprimento unitário que estão em ângulos retos entre si, onde
+$\mathbf{W}^\top = \mathbf{W}^{-1}$ -- e todos os autovalores serão reais.
+Assim, neste caso especial, podemos escrever :eqref:`eq_eig_decomp` como
 
 $$
 \mathbf{A} = \mathbf{W}\boldsymbol{\Sigma}\mathbf{W}^\top .
@@ -692,7 +694,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDg1MzkzOTksMTQzNDU2MDE2NCw2OT
-ExOTg1NjksNDgzODExMzA2LDI2MDYyMTg1NywtMTYwNjQ5MTM4
-OCwtMTcyOTAxNDg2NF19
+eyJoaXN0b3J5IjpbMTU2ODM0MDE4NCwtMTE0ODUzOTM5OSwxND
+M0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEzMDYsMjYwNjIxODU3
+LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX0=
 -->
