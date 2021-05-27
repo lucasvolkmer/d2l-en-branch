@@ -1,4 +1,4 @@
-# Contributing to This Book
+# Contribuindo para este livro
 :label:`sec_how_to_contribute`
 
 Contributions by [readers](https://github.com/d2l-ai/d2l-en/graphs/contributors) help us improve this book. If you find a typo, an outdated link, something where you think we missed a citation, where the code does not look elegant or where an explanation is unclear, please contribute back and help us help our readers. While in regular books the delay between print runs (and thus between typo corrections) can be measured in years, it typically takes hours to days to incorporate an improvement in this book. This is all possible due to version control and continuous integration testing. To do so you need to submit a [pull request](https://github.com/d2l-ai/d2l-en/pulls) to the GitHub repository. When your pull request is merged into the code repository by the author, you will become a contributor.
@@ -157,5 +157,5 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NjA1NzI0M119
+eyJoaXN0b3J5IjpbMjE3ODQ5MzY2LDEzNjYwNTcyNDNdfQ==
 -->
