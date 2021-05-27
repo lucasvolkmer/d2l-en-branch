@@ -280,9 +280,9 @@ $$[a_{33}-r_3, a_{33}+r_3] = [4.2, 5.8], $$
 $$[a_{44}-r_4, a_{44}+r_4] = [8.1, 9.9]. $$
 
 
-Performing the numerical computation shows 
-that the eigenvalues are approximately $0.99$, $2.97$, $4.95$, $9.08$,
-all comfortably inside the ranges provided.
+Realizar o cálculo numérico mostra
+que os valores próprios são aproximadamente $0.99$, $2.97$, $4.95$, $9.08$,
+tudo confortavelmente dentro das faixas fornecidas.
 
 ```{.python .input}
 A = np.array([[1.0, 0.1, 0.1, 0.1],
@@ -695,8 +695,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzA4NDg1NzUsMTU2ODM0MDE4NCwtMT
-E0ODUzOTM5OSwxNDM0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEz
-MDYsMjYwNjIxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX
-0=
+eyJoaXN0b3J5IjpbNDk3MDIwNDc3LDE1NjgzNDAxODQsLTExND
+g1MzkzOTksMTQzNDU2MDE2NCw2OTExOTg1NjksNDgzODExMzA2
+LDI2MDYyMTg1NywtMTYwNjQ5MTM4OCwtMTcyOTAxNDg2NF19
 -->
