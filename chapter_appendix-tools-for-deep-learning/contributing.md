@@ -44,22 +44,22 @@ d2lbook activate all chapter_multilayer-perceptrons/mlp-scratch.md
 Se você adicionar um novo bloco de código não para a implementação padrão, que é MXNet, use `#@tab` para marcar este bloco na linha inicial. Por exemplo, `#@tab pytorch` para um bloco de código PyTorch, `#@tab tensorflow` para um bloco de código TensorFlow ou `#@tab all` um bloco de código compartilhado para todas as implementações. Você pode consultar [d2lbook](http://book.d2l.ai/user/code_tabs.html) para obter mais informações.
 
 
-## Adding a New Section or a New Framework Implementation
+## Adicionando uma nova seção ou uma nova implementação de estrutura
 
-If you want to create a new chapter, e.g. reinforcement learning, or add implementations of new frameworks, such as TensorFlow, please contact the authors first, either by emailing or using [github issues](https://github.com/d2l-ai/d2l-en/issues).
+Se você deseja criar um novo capítulo, por ex. aprendizado de reforço ou adicionar implementações de novas estruturas, como TensorFlow, entre em contato com os autores primeiro, por e-mail ou usando [questões do github](https://github.com/d2l-ai/d2l-en/issues).
 
-## Submitting a Major Change
+## Enviando uma Mudança Principal
 
-We suggest you to use the standard `git` process to submit a major change. In a nutshell the process works as described in :numref:`fig_contribute`.
+Sugerimos que você use o processo `git` padrão para enviar uma grande mudança. Em poucas palavras, o processo funciona conforme descrito em :numref:`fig_contribute`.
 
-![Contributing to the book.](../img/contribute.svg)
+![Contribuindo para o livro.](../img/contribute.svg)
 :label:`fig_contribute`
 
-We will walk you through the steps in detail. If you are already familiar with Git you can skip this section. For concreteness we assume that the contributor's user name is "astonzhang".
+Iremos acompanhá-lo detalhadamente nas etapas. Se você já estiver familiarizado com o Git, pode pular esta seção. Para concretizar, assumimos que o nome de usuário do contribuidor é "astonzhang".
 
-### Installing Git
+### Instalando Git
 
-The Git open source book describes [how to install Git](https://git-scm.com/book/en/v2). This typically works via `apt install git` on Ubuntu Linux, by installing the Xcode developer tools on macOS, or by using GitHub's [desktop client](https://desktop.github.com). If you do not have a GitHub account, you need to sign up for one.
+O livro de código aberto Git descreve [como instalar o Git](https://git-scm.com/book/en/v2). Isso normalmente funciona via `apt install git` no Ubuntu Linux, instalando as ferramentas de desenvolvedor Xcode no macOS ou usando o [cliente de desktop] do GitHub (https://desktop.github.com). Se você não tem uma conta GitHub, você precisa se inscrever para uma.
 
 ### Logging in to GitHub
 
@@ -157,6 +157,6 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MzU3NzgwOCwyOTUyMTk3MDMsMjE3OD
-Q5MzY2LDEzNjYwNTcyNDNdfQ==
+eyJoaXN0b3J5IjpbLTUwNDQ1MTI2LDI5NTIxOTcwMywyMTc4ND
+kzNjYsMTM2NjA1NzI0M119
 -->
