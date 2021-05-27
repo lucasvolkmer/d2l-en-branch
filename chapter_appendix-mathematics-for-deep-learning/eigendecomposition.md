@@ -212,9 +212,9 @@ A autodecomposição pode simplificar muitos cálculos algébricos lineares
 e é uma operação fundamental subjacente a muitos algoritmos numéricos
 e muitas das análises que fazemos em álgebra linear.
 
-## Eigendecompositions of Symmetric Matrices
-It is not always possible to find enough linearly independent eigenvectors 
-for the above process to work. For instance the matrix
+## Composições Originais de Matrizes Simétricas
+Nem sempre é possível encontrar autovetores independentes linearmente suficientes
+para que o processo acima funcione. Por exemplo, a matriz
 
 $$
 \mathbf{A} = \begin{bmatrix}
@@ -692,7 +692,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNDU2MDE2NCw2OTExOTg1NjksNDgzOD
-ExMzA2LDI2MDYyMTg1NywtMTYwNjQ5MTM4OCwtMTcyOTAxNDg2
-NF19
+eyJoaXN0b3J5IjpbLTExNDg1MzkzOTksMTQzNDU2MDE2NCw2OT
+ExOTg1NjksNDgzODExMzA2LDI2MDYyMTg1NywtMTYwNjQ5MTM4
+OCwtMTcyOTAxNDg2NF19
 -->
