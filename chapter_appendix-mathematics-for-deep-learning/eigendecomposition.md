@@ -326,7 +326,7 @@ significativamente maior do que todos os outros elementos.
 e um tópico sutil como; decomposição automática,
 é bom obter qualquer compreensão intuitiva possível.
 
-## A Useful Application: The Growth of Iterated Maps
+## Uma Aplicação Útil: o Crescimento de Mapas Iterados
 
 Now that we understand what eigenvectors are in principle,
 let us see how they can be used to provide a deep understanding 
@@ -696,8 +696,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjk5MjAwMTcsMTU2ODM0MDE4NCwtMT
-E0ODUzOTM5OSwxNDM0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEz
-MDYsMjYwNjIxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX
-0=
+eyJoaXN0b3J5IjpbLTMxMzg3NzQwMCwtMTI2OTkyMDAxNywxNT
+Y4MzQwMTg0LC0xMTQ4NTM5Mzk5LDE0MzQ1NjAxNjQsNjkxMTk4
+NTY5LDQ4MzgxMTMwNiwyNjA2MjE4NTcsLTE2MDY0OTEzODgsLT
+E3MjkwMTQ4NjRdfQ==
 -->
