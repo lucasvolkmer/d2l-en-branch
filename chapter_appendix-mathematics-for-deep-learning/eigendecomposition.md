@@ -194,22 +194,23 @@ $$
 \det(\mathbf{A}) = \lambda_1 \cdots \lambda_n,
 $$
 
-or the product of all the eigenvalues.
-This makes sense intuitively because whatever stretching $\mathbf{W}$ does, 
-$W^{-1}$ undoes it, so in the end the only stretching that happens is 
-by multiplication by the diagonal matrix $\boldsymbol{\Sigma}$, 
-which stretches volumes by the product of the diagonal elements.
 
-Finally, recall that the rank was the maximum number 
-of linearly independent columns of your matrix.
-By examining the eigendecomposition closely,
-we can see that the rank is the same 
-as the number of non-zero eigenvalues of $\mathbf{A}$.
+ou o produto de todos os autovalores.
+Isso faz sentido intuitivamente porque qualquer coisa que esticar $\mathbf{W}$ faz,
+$W^{-1}$ desfaz, então, no final, o único alongamento que acontece é
+por multiplicação pela matriz diagonal $\boldsymbol{\Sigma}$, 
+que estica os volumes pelo produto dos elementos diagonais.
 
-The examples could continue, but hopefully the point is clear:
-eigendecomposition can simplify many linear-algebraic computations
-and is a fundamental operation underlying many numerical algorithms
-and much of the analysis that we do in linear algebra. 
+Por fim, lembre-se de que a classificação era o número máximo
+de colunas linearmente independentes de sua matriz.
+Examinando a decomposição de perto,
+podemos ver que a classificação é a mesma
+que o número de autovalores diferentes de zero de $\mathbf{A}$.
+
+Os exemplos podem continuar, mas espero que o ponto esteja claro:
+A autodecomposição pode simplificar muitos cálculos algébricos lineares
+e é uma operação fundamental subjacente a muitos algoritmos numéricos
+e muitas das análises que fazemos em álgebra linear.
 
 ## Eigendecompositions of Symmetric Matrices
 It is not always possible to find enough linearly independent eigenvectors 
@@ -691,7 +692,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTYxMjg5NTIsNjkxMTk4NTY5LDQ4Mz
-gxMTMwNiwyNjA2MjE4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4
-NjRdfQ==
+eyJoaXN0b3J5IjpbMTQzNDU2MDE2NCw2OTExOTg1NjksNDgzOD
+ExMzA2LDI2MDYyMTg1NywtMTYwNjQ5MTM4OCwtMTcyOTAxNDg2
+NF19
 -->
