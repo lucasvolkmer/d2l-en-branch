@@ -164,30 +164,31 @@ mas por agora só precisamos saber que tal decomposição
 existirá enquanto pudermos encontrar uma coleção completa
 de autovetores linearmente independentes (de forma que $W$ seja invertível).
 
-## Operations on Eigendecompositions
-One nice thing about eigendecompositions :eqref:`eq_eig_decomp` is that 
-we can write many operations we usually encounter cleanly 
-in terms of the eigendecomposition. As a first example, consider:
+## Operações em Autovalores e Autovetores
+Uma coisa boa sobre autovalores e autovetores :eqref:`eq_eig_decomp` é que
+podemos escrever muitas operações que geralmente encontramos de forma limpa
+em termos da decomposição automática. Como primeiro exemplo, considere:
 
 $$
 \mathbf{A}^n = \overbrace{\mathbf{A}\cdots \mathbf{A}}^{\text{$n$ times}} = \overbrace{(\mathbf{W}\boldsymbol{\Sigma} \mathbf{W}^{-1})\cdots(\mathbf{W}\boldsymbol{\Sigma} \mathbf{W}^{-1})}^{\text{$n$ times}} =  \mathbf{W}\overbrace{\boldsymbol{\Sigma}\cdots\boldsymbol{\Sigma}}^{\text{$n$ times}}\mathbf{W}^{-1} = \mathbf{W}\boldsymbol{\Sigma}^n \mathbf{W}^{-1}.
 $$
 
-This tells us that for any positive power of a matrix,
-the eigendecomposition is obtained by just raising the eigenvalues to the same power.
-The same can be shown for negative powers,
-so if we want to invert a matrix we need only consider
+Isso nos diz que para qualquer poder positivo de uma matriz,
+a autodecomposição é obtida apenas elevando os autovalores à mesma potência.
+O mesmo pode ser mostrado para potências negativas,
+então, se quisermos inverter uma matriz, precisamos apenas considerar
 
 $$
 \mathbf{A}^{-1} = \mathbf{W}\boldsymbol{\Sigma}^{-1} \mathbf{W}^{-1},
 $$
 
-or in other words, just invert each eigenvalue.
-This will work as long as each eigenvalue is non-zero,
-so we see that invertible is the same as having no zero eigenvalues.  
 
-Indeed, additional work can show that if $\lambda_1, \ldots, \lambda_n$ 
-are the eigenvalues of a matrix, then the determinant of that matrix is
+ou em outras palavras, apenas inverta cada autovalor.
+Isso funcionará, desde que cada autovalor seja diferente de zero,
+portanto, vemos que invertível é o mesmo que não ter autovalores zero.
+
+De fato, um trabalho adicional pode mostrar que se $\lambda_1, \ldots, \lambda_n$ 
+são os autovalores de uma matriz, então o determinante dessa matriz é
 
 $$
 \det(\mathbf{A}) = \lambda_1 \cdots \lambda_n,
@@ -690,6 +691,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkxMTk4NTY5LDQ4MzgxMTMwNiwyNjA2Mj
-E4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ==
+eyJoaXN0b3J5IjpbLTEzOTYxMjg5NTIsNjkxMTk4NTY5LDQ4Mz
+gxMTMwNiwyNjA2MjE4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4
+NjRdfQ==
 -->
