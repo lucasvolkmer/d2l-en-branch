@@ -316,14 +316,15 @@ v, _ = tf.linalg.eigh(A)
 v
 ```
 
-In this way, eigenvalues can be approximated, 
-and the approximations will be fairly accurate 
-in the case that the diagonal is 
-significantly larger than all the other elements.  
 
-It is a small thing, but with a complex 
-and subtle topic like eigendecomposition, 
-it is good to get any intuitive grasp we can.
+Desta forma, os autovalores podem ser aproximados,
+e as aproximações serão bastante precisas
+no caso em que a diagonal é
+significativamente maior do que todos os outros elementos.
+
+É uma coisa pequena, mas com um complexo
+e um tópico sutil como; decomposição automática,
+é bom obter qualquer compreensão intuitiva possível.
 
 ## A Useful Application: The Growth of Iterated Maps
 
@@ -695,7 +696,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3MDIwNDc3LDE1NjgzNDAxODQsLTExND
-g1MzkzOTksMTQzNDU2MDE2NCw2OTExOTg1NjksNDgzODExMzA2
-LDI2MDYyMTg1NywtMTYwNjQ5MTM4OCwtMTcyOTAxNDg2NF19
+eyJoaXN0b3J5IjpbLTEyNjk5MjAwMTcsMTU2ODM0MDE4NCwtMT
+E0ODUzOTM5OSwxNDM0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEz
+MDYsMjYwNjIxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX
+0=
 -->
