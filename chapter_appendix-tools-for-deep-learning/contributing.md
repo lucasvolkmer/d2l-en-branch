@@ -59,19 +59,18 @@ Iremos acompanhá-lo detalhadamente nas etapas. Se você já estiver familiariza
 
 ### Instalando Git
 
-O livro de código aberto Git descreve [como instalar o Git](https://git-scm.com/book/en/v2). Isso normalmente funciona via `apt install git` no Ubuntu Linux, instalando as ferramentas de desenvolvedor Xcode no macOS ou usando o [cliente de desktop] do GitHub (https://desktop.github.com). Se você não tem uma conta GitHub, você precisa se inscrever para uma.
+O livro de código aberto Git descreve [como instalar o Git](https://git-scm.com/book/en/v2). Isso normalmente funciona via `apt install git` no Ubuntu Linux, instalando as ferramentas de desenvolvedor Xcode no macOS ou usando o [cliente de desktop do GitHub ](https://desktop.github.com). Se você não tem uma conta GitHub, você precisa se inscrever para uma.
 
-### Logging in to GitHub
+### Login no GitHub
 
-Enter the [address](https://github.com/d2l-ai/d2l-en/) of the book's code repository in your browser. Click on the `Fork` button in the red box at the top-right of :numref:`fig_git_fork`, to make a copy of the repository of this book. This is now *your copy* and you can change it any way you want.
+Digite o [endereço](https://github.com/d2l-ai/d2l-en/) do repositório de código do livro em seu navegador. Clique no botão `Fork` na caixa vermelha no canto superior direito de :numref:`fig_git_fork`, para fazer uma cópia do repositório deste livro. Esta agora é *sua cópia* e você pode alterá-la da maneira que desejar.
 
-![The code repository page.](../img/git-fork.png)
+![A página do repositório de código.](../img/git-fork.png)
 :width:`700px`
 :label:`fig_git_fork`
 
 
-Now, the code repository of this book will be forked (i.e., copied) to your username, such as `astonzhang/d2l-en` shown at the top-left of the screenshot :numref:`fig_git_forked`.
-
+Agora, o repositório de código deste livro será bifurcado (ou seja, copiado) para seu nome de usuário, como `astonzhang/ d2l-en` mostrado no canto superior esquerdo da imagem :numref:`fig_git_forked`.
 ![Fork the code repository.](../img/git-forked.png)
 :width:`700px`
 :label:`fig_git_forked`
@@ -157,6 +156,6 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNDQ1MTI2LDI5NTIxOTcwMywyMTc4ND
-kzNjYsMTM2NjA1NzI0M119
+eyJoaXN0b3J5IjpbMTQyNjEzNzQxNiwyOTUyMTk3MDMsMjE3OD
+Q5MzY2LDEzNjYwNTcyNDNdfQ==
 -->
