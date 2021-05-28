@@ -477,18 +477,18 @@ vemos que o vetor aleatório é alongado por um fator de `1.974459321485[...]`,
 onde a parte no final muda um pouco,
 mas o fator de alongamento é estável.
 
-### Relating Back to Eigenvectors
+### Relacionando-se com os Autovetores
 
-We have seen that eigenvectors and eigenvalues correspond 
-to the amount something is stretched, 
-but that was for specific vectors, and specific stretches.
-Let us take a look at what they are for $\mathbf{A}$.
-A bit of a caveat here: it turns out that to see them all,
-we will need to go to complex numbers.
-You can think of these as stretches and rotations.
-By taking the norm of the complex number
-(square root of the sums of squares of real and imaginary parts)
-we can measure that stretching factor. Let us also sort them.
+Vimos que autovetores e autovalores correspondem
+na medida em que algo é esticado,
+mas isso era para vetores específicos e trechos específicos.
+Vamos dar uma olhada no que eles são para $\mathbf{A}$.
+Uma pequena advertência aqui: acontece que, para ver todos eles,
+precisaremos ir para os números complexos.
+Você pode pensar nisso como alongamentos e rotações.
+Pegando a norma do número complexo
+(raiz quadrada das somas dos quadrados das partes reais e imaginárias)
+podemos medir esse fator de alongamento. Deixe-nos também classificá-los.
 
 ```{.python .input}
 # Compute the eigenvalues
@@ -697,9 +697,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODk4NTkzNTAsLTE3MDQ5MzE4MjksLT
-EyNTYxNjc1ODQsLTMxMzg3NzQwMCwtMTI2OTkyMDAxNywxNTY4
-MzQwMTg0LC0xMTQ4NTM5Mzk5LDE0MzQ1NjAxNjQsNjkxMTk4NT
-Y5LDQ4MzgxMTMwNiwyNjA2MjE4NTcsLTE2MDY0OTEzODgsLTE3
-MjkwMTQ4NjRdfQ==
+eyJoaXN0b3J5IjpbLTI1MzYzNTk0MCwtMTY4OTg1OTM1MCwtMT
+cwNDkzMTgyOSwtMTI1NjE2NzU4NCwtMzEzODc3NDAwLC0xMjY5
+OTIwMDE3LDE1NjgzNDAxODQsLTExNDg1MzkzOTksMTQzNDU2MD
+E2NCw2OTExOTg1NjksNDgzODExMzA2LDI2MDYyMTg1NywtMTYw
+NjQ5MTM4OCwtMTcyOTAxNDg2NF19
 -->
