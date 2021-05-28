@@ -334,15 +334,15 @@ de um problema central para o comportamento da rede neural: inicialização de p
 
 ### Autovetores como Comportamento de Longo Prazo
 
-The full mathematical investigation of the initialization 
-of deep neural networks is beyond the scope of the text, 
-but we can see a toy version here to understand
-how eigenvalues can help us see how these models work.
-As we know, neural networks operate by interspersing layers 
-of linear transformations with non-linear operations.
-For simplicity here, we will assume that there is no non-linearity,
-and that the transformation is a single repeated matrix operation $A$,
-so that the output of our model is
+A investigação matemática completa da inicialização
+de redes neurais profundas está além do escopo do texto,
+mas podemos ver uma versão de brinquedo aqui para entender
+como os autovalores podem nos ajudar a ver como esses modelos funcionam.
+Como sabemos, as redes neurais operam por camadas intercaladas
+de transformações lineares com operações não lineares.
+Para simplificar aqui, vamos supor que não há não linearidade,
+e que a transformação é uma única operação de matriz repetida $A$,
+para que a saída do nosso modelo seja
 
 $$
 \mathbf{v}_{out} = \mathbf{A}\cdot \mathbf{A}\cdots \mathbf{A} \mathbf{v}_{in} = \mathbf{A}^N \mathbf{v}_{in}.
@@ -696,8 +696,8 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTYxNjc1ODQsLTMxMzg3NzQwMCwtMT
-I2OTkyMDAxNywxNTY4MzQwMTg0LC0xMTQ4NTM5Mzk5LDE0MzQ1
-NjAxNjQsNjkxMTk4NTY5LDQ4MzgxMTMwNiwyNjA2MjE4NTcsLT
-E2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ==
+eyJoaXN0b3J5IjpbLTY1NDc4Njk4NSwtMTI1NjE2NzU4NCwtMz
+EzODc3NDAwLC0xMjY5OTIwMDE3LDE1NjgzNDAxODQsLTExNDg1
+MzkzOTksMTQzNDU2MDE2NCw2OTExOTg1NjksNDgzODExMzA2LD
+I2MDYyMTg1NywtMTYwNjQ5MTM4OCwtMTcyOTAxNDg2NF19
 -->
