@@ -123,9 +123,9 @@ O código alterado estará então em sua bifurcação pessoal do repositório. P
 
 ### Solicitação de pull
 
-As shown in :numref:`fig_git_newpr`, go to your fork of the repository on GitHub and select "New pull request". This will open up a screen that shows you the changes between your edits and what is current in the main repository of the book.
+Conforme mostrado em :numref:`fig_git_newpr`, vá para o fork do repositório no GitHub e selecione "New pull request". Isso abrirá uma tela que mostra as mudanças entre suas edições e o que está em vigor no repositório principal do livro.
 
-![Pull Request.](../img/git-newpr.png)
+![Solicitação de Pull.](../img/git-newpr.png)
 :width:`700px`
 :label:`fig_git_newpr`
 
@@ -157,6 +157,6 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQzNzE0OTUzLDI5NTIxOTcwMywyMTc4ND
-kzNjYsMTM2NjA1NzI0M119
+eyJoaXN0b3J5IjpbLTE0NjkzNTkzMjYsMjk1MjE5NzAzLDIxNz
+g0OTM2NiwxMzY2MDU3MjQzXX0=
 -->
