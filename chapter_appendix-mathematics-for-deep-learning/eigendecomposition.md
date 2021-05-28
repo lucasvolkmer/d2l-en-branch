@@ -516,7 +516,7 @@ norm_eigs.sort()
 print(f'norms of eigenvalues: {norm_eigs}')
 ```
 
-### An Observation
+### Um Observação
 
 We see something a bit unexpected happening here: 
 that number we identified before for the 
@@ -697,9 +697,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MzYzNTk0MCwtMTY4OTg1OTM1MCwtMT
-cwNDkzMTgyOSwtMTI1NjE2NzU4NCwtMzEzODc3NDAwLC0xMjY5
-OTIwMDE3LDE1NjgzNDAxODQsLTExNDg1MzkzOTksMTQzNDU2MD
-E2NCw2OTExOTg1NjksNDgzODExMzA2LDI2MDYyMTg1NywtMTYw
-NjQ5MTM4OCwtMTcyOTAxNDg2NF19
+eyJoaXN0b3J5IjpbMTk4MzUwNjY1OCwtMjUzNjM1OTQwLC0xNj
+g5ODU5MzUwLC0xNzA0OTMxODI5LC0xMjU2MTY3NTg0LC0zMTM4
+Nzc0MDAsLTEyNjk5MjAwMTcsMTU2ODM0MDE4NCwtMTE0ODUzOT
+M5OSwxNDM0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEzMDYsMjYw
+NjIxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX0=
 -->
