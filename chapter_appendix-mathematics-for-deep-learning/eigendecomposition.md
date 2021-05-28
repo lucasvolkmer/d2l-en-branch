@@ -348,9 +348,9 @@ $$
 \mathbf{v}_{out} = \mathbf{A}\cdot \mathbf{A}\cdots \mathbf{A} \mathbf{v}_{in} = \mathbf{A}^N \mathbf{v}_{in}.
 $$
 
-When these models are initialized, $A$ is taken to be 
-a random matrix with Gaussian entries, so let us make one of those. 
-To be concrete, we start with a mean zero, variance one Gaussian distributed $5 \times 5$ matrix.
+Quando esses modelos são inicializados, $A$ é considerado
+uma matriz aleatória com entradas gaussianas, então vamos fazer uma delas.
+Para ser concreto, começamos com uma média zero, variância um Gaussiana distribuída $5 \times 5$ matriz.
 
 ```{.python .input}
 np.random.seed(8675309)
@@ -377,19 +377,19 @@ A
 ```
 
 ### Behavior on Random Data
-For simplicity in our toy model, 
-we will assume that the data vector we feed in $\mathbf{v}_{in}$ 
-is a random five dimensional Gaussian vector.
-Let us think about what we want to have happen.
-For context, lets think of a generic ML problem,
-where we are trying to turn input data, like an image, into a prediction, 
-like the probability the image is a picture of a cat.
-If repeated application of $\mathbf{A}$ 
-stretches a random vector out to be very long, 
-then small changes in input will be amplified 
-into large changes in output---tiny modifications of the input image
-would lead to vastly different predictions.
-This does not seem right!
+Para simplificar nosso modelo de brinquedo,
+vamos assumir que o vetor de dados que alimentamos em $\mathbf{v}_{in}$ 
+é um vetor gaussiano aleatório de cinco dimensões.
+Vamos pensar sobre o que queremos que aconteça.
+Para contextualizar, vamos pensar em um problema genérico de ML,
+onde estamos tentando transformar dados de entrada, como uma imagem, em uma previsão,
+como a probabilidade de a imagem ser a foto de um gato.
+Se a aplicação repetida de $\mathbf{A}$ 
+estende um vetor aleatório para ser muito longo,
+então, pequenas mudanças na entrada serão amplificadas
+em grandes mudanças na saída --- pequenas modificações da imagem de entrada
+levaria a previsões muito diferentes.
+Isso não parece certo!
 
 On the flip side, if $\mathbf{A}$ shrinks random vectors to be shorter,
 then after running through many layers, the vector will essentially shrink to nothing, 
@@ -696,7 +696,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NDc4Njk4NSwtMTI1NjE2NzU4NCwtMz
+eyJoaXN0b3J5IjpbMTQ3NDIxMTE1MSwtMTI1NjE2NzU4NCwtMz
 EzODc3NDAwLC0xMjY5OTIwMDE3LDE1NjgzNDAxODQsLTExNDg1
 MzkzOTksMTQzNDU2MDE2NCw2OTExOTg1NjksNDgzODExMzA2LD
 I2MDYyMTg1NywtMTYwNjQ5MTM4OCwtMTcyOTAxNDg2NF19
