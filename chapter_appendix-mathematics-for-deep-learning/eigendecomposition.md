@@ -391,15 +391,16 @@ em grandes mudanças na saída --- pequenas modificações da imagem de entrada
 levaria a previsões muito diferentes.
 Isso não parece certo!
 
-On the flip side, if $\mathbf{A}$ shrinks random vectors to be shorter,
-then after running through many layers, the vector will essentially shrink to nothing, 
-and the output will not depend on the input. This is also clearly not right either!
 
-We need to walk the narrow line between growth and decay 
-to make sure that our output changes depending on our input, but not much!
+Por outro lado, se $\mathbf{A}$ encolhe vetores aleatórios para serem mais curtos,
+então, depois de passar por muitas camadas, o vetor irá essencialmente encolher a nada,
+e a saída não dependerá da entrada. Isso também claramente não está certo!
 
-Let us see what happens when we repeatedly multiply our matrix $\mathbf{A}$ 
-against a random input vector, and keep track of the norm.
+Precisamos andar na linha estreita entre o crescimento e a decadência
+para ter certeza de que nossa saída muda dependendo de nossa entrada, mas não muito!
+
+Vamos ver o que acontece quando multiplicamos repetidamente nossa matriz $\mathbf{A}$ 
+contra um vetor de entrada aleatório e acompanhe a norma.
 
 ```{.python .input}
 # Calculate the sequence of norms after repeatedly applying `A`
@@ -696,8 +697,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDIxMTE1MSwtMTI1NjE2NzU4NCwtMz
-EzODc3NDAwLC0xMjY5OTIwMDE3LDE1NjgzNDAxODQsLTExNDg1
-MzkzOTksMTQzNDU2MDE2NCw2OTExOTg1NjksNDgzODExMzA2LD
-I2MDYyMTg1NywtMTYwNjQ5MTM4OCwtMTcyOTAxNDg2NF19
+eyJoaXN0b3J5IjpbLTE3MDQ5MzE4MjksLTEyNTYxNjc1ODQsLT
+MxMzg3NzQwMCwtMTI2OTkyMDAxNywxNTY4MzQwMTg0LC0xMTQ4
+NTM5Mzk5LDE0MzQ1NjAxNjQsNjkxMTk4NTY5LDQ4MzgxMTMwNi
+wyNjA2MjE4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ==
+
 -->
