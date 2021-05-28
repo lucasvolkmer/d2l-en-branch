@@ -130,17 +130,17 @@ Conforme mostrado em :numref:`fig_git_newpr`, vá para o fork do repositório no
 :label:`fig_git_newpr`
 
 
-### Submitting Pull Request
+### Enviando solicitação pull
 
-Finally, submit a pull request by clicking the button as shown in :numref:`fig_git_createpr`. Make sure to describe the changes you have made in the pull request. This will make it easier for the authors to review it and to merge it with the book. Depending on the changes, this might get accepted right away, rejected, or more likely, you will get some feedback on the changes. Once you have incorporated them, you are good to go.
+Finalmente, envie uma solicitação de pull clicando no botão conforme mostrado em :numref:`fig_git_createpr`. Certifique-se de descrever as alterações feitas na solicitação pull. Isso tornará mais fácil para os autores revisá-lo e mesclá-lo com o livro. Dependendo das mudanças, isso pode ser aceito imediatamente, rejeitado ou, mais provavelmente, você receberá algum feedback sobre as mudanças. Depois de incorporá-los, você está pronto para prosseguir.
 
-![Create Pull Request.](../img/git-createpr.png)
+![Criar solicitação de pull.](../img/git-createpr.png)
 :width:`700px`
 :label:`fig_git_createpr`
 
-Your pull request will appear among the list of requests in the main repository. We will make every effort to process it quickly.
+Sua solicitação pull aparecerá na lista de solicitações no repositório principal. Faremos todos os esforços para processá-lo rapidamente.
 
-## Summary
+## Sumário
 
 * You can use GitHub to contribute to this book.
 * You can edit the file on GitHub directly for minor changes.
@@ -148,7 +148,7 @@ Your pull request will appear among the list of requests in the main repository.
 * Pull requests are how contributions are being bundled up. Try not to submit huge pull requests since this makes them hard to understand and incorporate. Better send several smaller ones.
 
 
-## Exercises
+## Exercícios
 
 1. Star and fork the `d2l-en` repository.
 1. Find some code that needs improvement and submit a pull request.
@@ -157,6 +157,6 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjkzNTkzMjYsMjk1MjE5NzAzLDIxNz
+eyJoaXN0b3J5IjpbLTE3MzM3MTk5NjAsMjk1MjE5NzAzLDIxNz
 g0OTM2NiwxMzY2MDU3MjQzXX0=
 -->
