@@ -142,21 +142,21 @@ Sua solicitação pull aparecerá na lista de solicitações no repositório pri
 
 ## Sumário
 
-* You can use GitHub to contribute to this book.
-* You can edit the file on GitHub directly for minor changes.
-* For a major change, please fork the repository, edit things locally and only contribute back once you are ready.
-* Pull requests are how contributions are being bundled up. Try not to submit huge pull requests since this makes them hard to understand and incorporate. Better send several smaller ones.
+* Você pode usar o GitHub para contribuir com este livro.
+* Você pode editar o arquivo no GitHub diretamente para pequenas alterações.
+* Para uma grande mudança, bifurque o repositório, edite as coisas localmente e só contribua quando estiver pronto.
+* Solicitações pull são como as contribuições estão sendo agrupadas. Tente não enviar grandes solicitações de pull, pois isso as torna difíceis de entender e incorporar. É melhor enviar vários menores.
 
 
 ## Exercícios
 
-1. Star and fork the `d2l-en` repository.
-1. Find some code that needs improvement and submit a pull request.
-1. Find a reference that we missed and submit a pull request.
-1. It is usually a better practice to create a pull request using a new branch. Learn how to do it with [Git branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell).
+1. Marque com estrela e bifurque o repositório `d2l-en`.
+1. Encontre algum código que precise de melhorias e envie uma solicitação pull.
+1. Encontre uma referência que perdemos e envie uma solicitação pull.
+1. Normalmente, é uma prática melhor criar uma solicitação pull usando um novo branch. Aprenda como fazer isso com [ramificação Git](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell).
 
-[Discussions](https://discuss.d2l.ai/t/426)
+[Discussão](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzM3MTk5NjAsMjk1MjE5NzAzLDIxNz
-g0OTM2NiwxMzY2MDU3MjQzXX0=
+eyJoaXN0b3J5IjpbMjA0MTc2MjM1MiwyOTUyMTk3MDMsMjE3OD
+Q5MzY2LDEzNjYwNTcyNDNdfQ==
 -->
