@@ -516,15 +516,15 @@ norm_eigs.sort()
 print(f'norms of eigenvalues: {norm_eigs}')
 ```
 
-### Um Observação
+### Uma Observação
 
-We see something a bit unexpected happening here: 
-that number we identified before for the 
-long term stretching of our matrix $\mathbf{A}$ 
-applied to a random vector is *exactly* 
-(accurate to thirteen decimal places!) 
-the largest eigenvalue of $\mathbf{A}$.
-This is clearly not a coincidence!
+Vemos algo um pouco inesperado acontecendo aqui:
+aquele número que identificamos antes para o
+alongamento de longo prazo de nossa matriz $\mathbf{A}$ 
+aplicado a um vetor aleatório é  *exatamente*
+(com precisão de treze casas decimais!)
+o maior autovalor de $\mathbf{A}$.
+Isso claramente não é uma coincidência!
 
 But, if we now think about what is happening geometrically,
 this starts to make sense. Consider a random vector. 
@@ -697,7 +697,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MzUwNjY1OCwtMjUzNjM1OTQwLC0xNj
+eyJoaXN0b3J5IjpbLTc1MzA0NTUzMCwtMjUzNjM1OTQwLC0xNj
 g5ODU5MzUwLC0xNzA0OTMxODI5LC0xMjU2MTY3NTg0LC0zMTM4
 Nzc0MDAsLTEyNjk5MjAwMTcsMTU2ODM0MDE4NCwtMTE0ODUzOT
 M5OSwxNDM0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEzMDYsMjYw
