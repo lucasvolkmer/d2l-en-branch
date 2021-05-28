@@ -78,9 +78,9 @@ Agora, o repositório de código deste livro será bifurcado (ou seja, copiado) 
 
 ### Clonando o repositório
 
-Para clonar o repositório (ou seja, para fazer uma cópia local), precisamos obter o endereço do repositório. O botão verde em :numref:`fig_git_clone` exibe isso. Certifique-se de que sua cópia local esteja atualizada com o repositório principal se você decidir manter esta bifurcação por mais tempo. Por enquanto, basta seguir as instruções em:ref:`chap_installation` para começar. A principal diferença é que agora você está baixando *seu próprio fork* do repositório.
+Para clonar o repositório (ou seja, para fazer uma cópia local), precisamos obter o endereço do repositório. O botão verde em :numref:`fig_git_clone` exibe isso. Certifique-se de que sua cópia local esteja atualizada com o repositório principal se você decidir manter esta bifurcação por mais tempo. Por enquanto, basta seguir as instruções em :ref:`chap_installation` para começar. A principal diferença é que agora você está baixando *seu próprio fork* do repositório.
 
-![Git clone.](../img/git-clone.png)
+![Clonando Git.](../img/git-clone.png)
 :width:`700px`
 :label:`fig_git_clone`
 
@@ -90,12 +90,12 @@ git clone https://github.com/your_github_username/d2l-en.git
 ```
 
 
-### Editing the Book and Push
+### Editando o livro e empurrando
 
-Now it is time to edit the book. It is best to edit the notebooks in Jupyter following instructions in :numref:`sec_jupyter`. Make the changes and check that they are OK. Assume we have modified a typo in the file `~/d2l-en/chapter_appendix_tools/how-to-contribute.md`.
-You can then check which files you have changed:
+Agora é hora de editar o livro. É melhor editar os blocos de notas no Jupyter seguindo as instruções em :numref:`sec_jupyter`. Faça as alterações e verifique se estão corretas. Suponha que modificamos um erro de digitação no arquivo `~/d2l-en/chapter_appendix_tools/how-to-contribute.md`.
+Você pode então verificar quais arquivos você alterou:
 
-At this point Git will prompt that the `chapter_appendix_tools/how-to-contribute.md` file has been modified.
+Neste ponto, o Git irá avisar que o arquivo `chapter_appendix_tools/how-to-contribute.md` foi modificado.
 
 ```
 mylaptop:d2l-en me$ git status
@@ -110,7 +110,7 @@ Changes not staged for commit:
 ```
 
 
-After confirming that this is what you want, execute the following command:
+Depois de confirmar que é isso que você deseja, execute o seguinte comando:
 
 ```
 git add chapter_appendix_tools/how-to-contribute.md
@@ -119,9 +119,9 @@ git push
 ```
 
 
-The changed code will then be in your personal fork of the repository. To request the addition of your change, you have to create a pull request for the official repository of the book.
+O código alterado estará então em sua bifurcação pessoal do repositório. Para solicitar a adição de sua alteração, você deve criar uma solicitação pull para o repositório oficial do livro.
 
-### Pull Request
+### Solicitação de pull
 
 As shown in :numref:`fig_git_newpr`, go to your fork of the repository on GitHub and select "New pull request". This will open up a screen that shows you the changes between your edits and what is current in the main repository of the book.
 
@@ -157,6 +157,6 @@ Your pull request will appear among the list of requests in the main repository.
 
 [Discussions](https://discuss.d2l.ai/t/426)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NjE0OTIzNCwyOTUyMTk3MDMsMjE3OD
-Q5MzY2LDEzNjYwNTcyNDNdfQ==
+eyJoaXN0b3J5IjpbNzQzNzE0OTUzLDI5NTIxOTcwMywyMTc4ND
+kzNjYsMTM2NjA1NzI0M119
 -->
