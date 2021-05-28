@@ -472,10 +472,10 @@ for i in range(1, 100):
 d2l.plot(tf.range(1, 100), norm_ratio_list, 'Iteration', 'Ratio')
 ```
 
-If we look at the last portion of the above computation, 
-we see that the random vector is stretched by a factor of `1.974459321485[...]`,
-where the portion at the end shifts a little, 
-but the stretching factor is stable.  
+Se olharmos para a última parte do cálculo acima,
+vemos que o vetor aleatório é alongado por um fator de `1.974459321485[...]`,
+onde a parte no final muda um pouco,
+mas o fator de alongamento é estável.
 
 ### Relating Back to Eigenvectors
 
@@ -697,9 +697,9 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDQ5MzE4MjksLTEyNTYxNjc1ODQsLT
-MxMzg3NzQwMCwtMTI2OTkyMDAxNywxNTY4MzQwMTg0LC0xMTQ4
-NTM5Mzk5LDE0MzQ1NjAxNjQsNjkxMTk4NTY5LDQ4MzgxMTMwNi
-wyNjA2MjE4NTcsLTE2MDY0OTEzODgsLTE3MjkwMTQ4NjRdfQ==
-
+eyJoaXN0b3J5IjpbLTE2ODk4NTkzNTAsLTE3MDQ5MzE4MjksLT
+EyNTYxNjc1ODQsLTMxMzg3NzQwMCwtMTI2OTkyMDAxNywxNTY4
+MzQwMTg0LC0xMTQ4NTM5Mzk5LDE0MzQ1NjAxNjQsNjkxMTk4NT
+Y5LDQ4MzgxMTMwNiwyNjA2MjE4NTcsLTE2MDY0OTEzODgsLTE3
+MjkwMTQ4NjRdfQ==
 -->
