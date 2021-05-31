@@ -606,7 +606,7 @@ for i in range(1, 100):
 d2l.plot(tf.range(0, 100), norm_list, 'Iteration', 'Value')
 ```
 
-We can also plot the ratio between consecutive norms as before and see that indeed it stabilizes.
+Também podemos traçar a proporção entre as normas consecutivas como antes e ver que de fato ela se estabiliza.
 
 ```{.python .input}
 # Also plot the ratio
@@ -637,7 +637,7 @@ for i in range(1, 100):
 d2l.plot(tf.range(1, 100), norm_ratio_list, 'Iteration', 'Ratio')
 ```
 
-## Conclusions
+## Conclusões
 
 We now see exactly what we hoped for!
 After normalizing the matrices by the principle eigenvalue,
@@ -697,10 +697,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ4NzcyMjg4LC03NTMwNDU1MzAsLTI1Mz
-YzNTk0MCwtMTY4OTg1OTM1MCwtMTcwNDkzMTgyOSwtMTI1NjE2
-NzU4NCwtMzEzODc3NDAwLC0xMjY5OTIwMDE3LDE1NjgzNDAxOD
-QsLTExNDg1MzkzOTksMTQzNDU2MDE2NCw2OTExOTg1NjksNDgz
-ODExMzA2LDI2MDYyMTg1NywtMTYwNjQ5MTM4OCwtMTcyOTAxND
-g2NF19
+eyJoaXN0b3J5IjpbMTQzNzk4ODI3Myw5NDg3NzIyODgsLTc1Mz
+A0NTUzMCwtMjUzNjM1OTQwLC0xNjg5ODU5MzUwLC0xNzA0OTMx
+ODI5LC0xMjU2MTY3NTg0LC0zMTM4Nzc0MDAsLTEyNjk5MjAwMT
+csMTU2ODM0MDE4NCwtMTE0ODUzOTM5OSwxNDM0NTYwMTY0LDY5
+MTE5ODU2OSw0ODM4MTEzMDYsMjYwNjIxODU3LC0xNjA2NDkxMz
+g4LC0xNzI5MDE0ODY0XX0=
 -->
