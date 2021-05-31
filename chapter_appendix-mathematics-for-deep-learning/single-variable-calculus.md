@@ -1,4 +1,4 @@
-# Single Variable Calculus
+# Single Variable CalculusCálculo de Variável Única
 :label:`sec_single_variable_calculus`
 
 In :numref:`sec_calculus`, we saw the basic elements of differential calculus.  This section takes a deeper dive into the fundamentals of calculus and how we can understand and apply it in the context of machine learning.
@@ -522,3 +522,6 @@ Taylor series have two primary applications:
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTY1NTg2MTgzNF19
+-->
