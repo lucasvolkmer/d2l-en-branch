@@ -639,18 +639,16 @@ d2l.plot(tf.range(1, 100), norm_ratio_list, 'Iteration', 'Ratio')
 
 ## Conclusões
 
-We now see exactly what we hoped for!
-After normalizing the matrices by the principle eigenvalue,
-we see that the random data does not explode as before,
-but rather eventually equilibrates to a specific value.
-It would be nice to be able to do these things from first principles,
-and it turns out that if we look deeply at the mathematics of it,
-we can see that the largest eigenvalue 
-of a large random matrix with independent mean zero,
-variance one Gaussian entries is on average about $\sqrt{n}$,
-or in our case $\sqrt{5} \approx 2.2$,
-due to a fascinating fact known as the *circular law* :cite:`Ginibre.1965`.
-The relationship between the eigenvalues (and a related object called singular values) of random matrices has been shown to have deep connections to proper initialization of neural networks as was discussed in :cite:`Pennington.Schoenholz.Ganguli.2017` and subsequent works.
+Agora vemos exatamente o que esperávamos!
+Depois de normalizar as matrizes pelo autovalor principal,
+vemos que os dados aleatórios não explodem como antes,
+mas, em vez disso, eventualmente se equilibram com um valor específico.
+Seria bom ser capaz de fazer essas coisas desde os primeiros princípios,
+e acontece que se olharmos profundamente para a matemática disso,
+podemos ver que o maior autovalor de uma grande matriz aleatória com média independente de zero, variância de uma entrada gaussiana é em média cerca de $\sqrt{n}$,
+ou no nosso caso $\sqrt{5} \approx 2.2$,
+devido a um fato fascinante conhecido como a *lei circular* :cite:`Ginibre.1965`.
+A relação entre os valores próprios (e um objeto relacionado chamado valores singulares) de matrizes aleatórias demonstrou ter conexões profundas para a inicialização adequada de redes neurais, como foi discutido em :cite:`Pennington.Schoenholz.Ganguli.2017` e trabalhos subsequentes.
 
 ## Summary
 * Eigenvectors are vectors which are stretched by a matrix without changing direction.
@@ -697,7 +695,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNzk4ODI3Myw5NDg3NzIyODgsLTc1Mz
+eyJoaXN0b3J5IjpbMTEzNTc1MTQyOSw5NDg3NzIyODgsLTc1Mz
 A0NTUzMCwtMjUzNjM1OTQwLC0xNjg5ODU5MzUwLC0xNzA0OTMx
 ODI5LC0xMjU2MTY3NTg0LC0zMTM4Nzc0MDAsLTEyNjk5MjAwMT
 csMTU2ODM0MDE4NCwtMTE0ODUzOTM5OSwxNDM0NTYwMTY0LDY5
