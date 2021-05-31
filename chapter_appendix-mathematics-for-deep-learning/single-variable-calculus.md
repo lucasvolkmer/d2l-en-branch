@@ -107,9 +107,10 @@ ys = tf.sin(x_small**x_small)
 d2l.plot(x_small, ys, 'x', 'f(x)')
 ```
 
-This is the key observation of single variable calculus: the behavior of familiar functions can be modeled by a line in a small enough range.  This means that for most functions, it is reasonable to expect that as we shift the $x$ value of the function by a little bit, the output $f(x)$ will also be shifted by a little bit.  The only question we need to answer is, "How large is the change in the output compared to the change in the input?  Is it half as large?  Twice as large?"
 
-Thus, we can consider the ratio of the change in the output of a function for a small change in the input of the function.  We can write this formally as
+Esta é a observação chave do cálculo de variável única: o comportamento de funções familiares pode ser modelado por uma linha em um intervalo pequeno o suficiente. Isso significa que, para a maioria das funções, é razoável esperar que, à medida que deslocamos um pouco o valor $x$ da função, a saída $f(x)$ também seja deslocada um pouco. A única pergunta que precisamos responder é: "Qual é o tamanho da mudança na produção em comparação com a mudança na entrada? É a metade? Duas vezes maior?"
+
+Assim, podemos considerar a razão da mudança na saída de uma função para uma pequena mudança na entrada da função. Podemos escrever isso formalmente como
 
 $$
 \frac{L(x+\epsilon) - L(x)}{(x+\epsilon) - x} = \frac{L(x+\epsilon) - L(x)}{\epsilon}.
@@ -525,6 +526,6 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjkyNTE2NDYsLTEyOTA2MjI5NzIsLT
-ExMzM5Mjg4MzJdfQ==
+eyJoaXN0b3J5IjpbMjExNjU2MjI1MiwtMTAyOTI1MTY0NiwtMT
+I5MDYyMjk3MiwtMTEzMzkyODgzMl19
 -->
