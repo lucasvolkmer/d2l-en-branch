@@ -82,7 +82,7 @@ ys = tf.sin(x_med**x_med)
 d2l.plot(x_med, ys, 'x', 'f(x)')
 ```
 
-Taking this to an extreme, if we zoom into a tiny segment, the behavior becomes far simpler: it is just a straight line.
+Levando isso ao extremo, se ampliarmos em um segmento minúsculo, o comportamento se torna muito mais simples: é apenas uma linha reta.
 
 ```{.python .input}
 # Plot a the same function in a tiny range
@@ -525,6 +525,6 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDEwMjM3OTIsLTEyOTA2MjI5NzIsLT
+eyJoaXN0b3J5IjpbLTEwMjkyNTE2NDYsLTEyOTA2MjI5NzIsLT
 ExMzM5Mjg4MzJdfQ==
 -->
