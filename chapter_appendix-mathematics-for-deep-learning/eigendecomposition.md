@@ -650,7 +650,7 @@ ou no nosso caso $\sqrt{5} \approx 2.2$,
 devido a um fato fascinante conhecido como a *lei circular* :cite:`Ginibre.1965`.
 A relação entre os valores próprios (e um objeto relacionado chamado valores singulares) de matrizes aleatórias demonstrou ter conexões profundas para a inicialização adequada de redes neurais, como foi discutido em :cite:`Pennington.Schoenholz.Ganguli.2017` e trabalhos subsequentes.
 
-## Summary
+## Resumo
 * Eigenvectors are vectors which are stretched by a matrix without changing direction.
 * Eigenvalues are the amount that the eigenvectors are stretched by the application of the matrix.
 * The eigendecomposition of a matrix can allow for many operations to be reduced to operations on the eigenvalues.
@@ -695,7 +695,7 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNTc1MTQyOSw5NDg3NzIyODgsLTc1Mz
+eyJoaXN0b3J5IjpbMTQ1NzkxNzI1NCw5NDg3NzIyODgsLTc1Mz
 A0NTUzMCwtMjUzNjM1OTQwLC0xNjg5ODU5MzUwLC0xNzA0OTMx
 ODI5LC0xMjU2MTY3NTg0LC0zMTM4Nzc0MDAsLTEyNjk5MjAwMT
 csMTU2ODM0MDE4NCwtMTE0ODUzOTM5OSwxNDM0NTYwMTY0LDY5
