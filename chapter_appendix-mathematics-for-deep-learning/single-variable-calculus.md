@@ -116,7 +116,7 @@ $$
 \frac{L(x+\epsilon) - L(x)}{(x+\epsilon) - x} = \frac{L(x+\epsilon) - L(x)}{\epsilon}.
 $$
 
-This is already enough to start to play around with in code.  For instance, suppose that we know that $L(x) = x^{2} + 1701(x-4)^3$, then we can see how large this value is at the point $x = 4$ as follows.
+Isso já é o suficiente para começar a brincar com o código. Por exemplo, suponha que saibamos que $L(x) = x^{2} + 1701(x-4)^3$, então podemos ver o quão grande é esse valor no ponto $x = 4$ como segue.
 
 ```{.python .input}
 #@tab all
@@ -526,6 +526,6 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNjU2MjI1MiwtMTAyOTI1MTY0NiwtMT
-I5MDYyMjk3MiwtMTEzMzkyODgzMl19
+eyJoaXN0b3J5IjpbMTY2NjYzOTAzNCwyMTE2NTYyMjUyLC0xMD
+I5MjUxNjQ2LC0xMjkwNjIyOTcyLC0xMTMzOTI4ODMyXX0=
 -->
