@@ -651,28 +651,28 @@ devido a um fato fascinante conhecido como a *lei circular* :cite:`Ginibre.1965`
 A relação entre os valores próprios (e um objeto relacionado chamado valores singulares) de matrizes aleatórias demonstrou ter conexões profundas para a inicialização adequada de redes neurais, como foi discutido em :cite:`Pennington.Schoenholz.Ganguli.2017` e trabalhos subsequentes.
 
 ## Resumo
-* Eigenvectors are vectors which are stretched by a matrix without changing direction.
-* Eigenvalues are the amount that the eigenvectors are stretched by the application of the matrix.
-* The eigendecomposition of a matrix can allow for many operations to be reduced to operations on the eigenvalues.
-* The Gershgorin Circle Theorem can provide approximate values for the eigenvalues of a matrix.
-* The behavior of iterated matrix powers depends primarily on the size of the largest eigenvalue.  This understanding has many applications in the theory of neural network initialization.
+* Autovetores são vetores que são alongados por uma matriz sem mudar de direção.
+* Os autovalores são a quantidade em que os autovetores são alongados pela aplicação da matriz.
+* A autodecomposição em autovalores e autovetores de uma matriz pode permitir que muitas operações sejam reduzidas a operações nos autovalores.
+* O Teorema do Círculo de Gershgorin pode fornecer valores aproximados para os autovalores de uma matriz.
+* O comportamento das potências da matriz iterada depende principalmente do tamanho do maior autovalor. Esse entendimento tem muitas aplicações na teoria de inicialização de redes neurais.
 
-## Exercises
-1. What are the eigenvalues and eigenvectors of
+## Exercícios
+1. Quais são os autovalores e autovetores de
 $$
 \mathbf{A} = \begin{bmatrix}
 2 & 1 \\
 1 & 2
 \end{bmatrix}?
 $$
-1.  What are the eigenvalues and eigenvectors of the following matrix, and what is strange about this example compared to the previous one?
+1. Quais são os autovalores e autovetores da matriz a seguir, e o que há de estranho neste exemplo em comparação com o anterior?
 $$
 \mathbf{A} = \begin{bmatrix}
 2 & 1 \\
 0 & 2
 \end{bmatrix}.
 $$
-1. Without computing the eigenvalues, is it possible that the smallest eigenvalue of the following matrix is less that $0.5$? *Note*: this problem can be done in your head.
+1. Sem calcular os autovalores, é possível que o menor autovalor da matriz a seguir seja menor que $0,5$? *Nota*: este problema pode ser feito na sua cabeça.
 $$
 \mathbf{A} = \begin{bmatrix}
 3.0 & 0.1 & 0.3 & 1.0 \\
@@ -695,10 +695,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NzkxNzI1NCw5NDg3NzIyODgsLTc1Mz
-A0NTUzMCwtMjUzNjM1OTQwLC0xNjg5ODU5MzUwLC0xNzA0OTMx
-ODI5LC0xMjU2MTY3NTg0LC0zMTM4Nzc0MDAsLTEyNjk5MjAwMT
-csMTU2ODM0MDE4NCwtMTE0ODUzOTM5OSwxNDM0NTYwMTY0LDY5
-MTE5ODU2OSw0ODM4MTEzMDYsMjYwNjIxODU3LC0xNjA2NDkxMz
-g4LC0xNzI5MDE0ODY0XX0=
+eyJoaXN0b3J5IjpbLTY0Mzk2Nzc3LDk0ODc3MjI4OCwtNzUzMD
+Q1NTMwLC0yNTM2MzU5NDAsLTE2ODk4NTkzNTAsLTE3MDQ5MzE4
+MjksLTEyNTYxNjc1ODQsLTMxMzg3NzQwMCwtMTI2OTkyMDAxNy
+wxNTY4MzQwMTg0LC0xMTQ4NTM5Mzk5LDE0MzQ1NjAxNjQsNjkx
+MTk4NTY5LDQ4MzgxMTMwNiwyNjA2MjE4NTcsLTE2MDY0OTEzOD
+gsLTE3MjkwMTQ4NjRdfQ==
 -->
