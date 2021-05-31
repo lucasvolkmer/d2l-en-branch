@@ -129,7 +129,7 @@ for epsilon in [0.1, 0.001, 0.0001, 0.00001]:
     print(f'epsilon = {epsilon:.5f} -> {(L(4+epsilon) - L(4)) / epsilon:.5f}')
 ```
 
-Now, if we are observant, we will notice that the output of this number is suspiciously close to $8$.  Indeed, if we decrease $\epsilon$, we will see value becomes progressively closer to $8$.  Thus we may conclude, correctly, that the value we seek (the degree a change in the input changes the output) should be $8$ at the point $x=4$.  The way that a mathematician encodes this fact is
+Agora, se formos observadores, notaremos que a saída desse número é suspeitamente próxima de $8$. De fato, se diminuirmos $\epsilon$, veremos que o valor se torna progressivamente mais próximo de $8$. Assim, podemos concluir, corretamente, que o valor que buscamos (o grau em que uma mudança na entrada muda a saída) deve ser $8$ no ponto $x=4$. A forma como um matemático codifica este fato é
 
 $$
 \lim_{\epsilon \rightarrow 0}\frac{L(4+\epsilon) - L(4)}{\epsilon} = 8.
@@ -526,6 +526,6 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NjYzOTAzNCwyMTE2NTYyMjUyLC0xMD
+eyJoaXN0b3J5IjpbLTUyNjE0MzY2MywyMTE2NTYyMjUyLC0xMD
 I5MjUxNjQ2LC0xMjkwNjIyOTcyLC0xMTMzOTI4ODMyXX0=
 -->
