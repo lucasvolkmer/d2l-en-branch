@@ -57,7 +57,7 @@ ys = tf.sin(x_big**x_big)
 d2l.plot(x_big, ys, 'x', 'f(x)')
 ```
 
-At this large scale, the function's behavior is not simple. However, if we reduce our range to something smaller like $[1.75,2.25]$, we see that the graph becomes much simpler.
+Em grande escala, o comportamento da função não é simples. No entanto, se reduzirmos nosso intervalo para algo menor como $[1.75,2.25]$, vemos que o gráfico se torna muito mais simples.
 
 ```{.python .input}
 # Plot a the same function in a tiny range
@@ -525,6 +525,6 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTA2MjI5NzIsLTExMzM5Mjg4MzJdfQ
-==
+eyJoaXN0b3J5IjpbLTExNDEwMjM3OTIsLTEyOTA2MjI5NzIsLT
+ExMzM5Mjg4MzJdfQ==
 -->
