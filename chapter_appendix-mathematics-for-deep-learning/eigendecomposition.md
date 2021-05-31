@@ -526,38 +526,38 @@ aplicado a um vetor aleatório é  *exatamente*
 o maior autovalor de $\mathbf{A}$.
 Isso claramente não é uma coincidência!
 
-But, if we now think about what is happening geometrically,
-this starts to make sense. Consider a random vector. 
-This random vector points a little in every direction, 
-so in particular, it points at least a little bit 
-in the same direction as the eigenvector of $\mathbf{A}$
-associated with the largest eigenvalue.
-This is so important that it is called 
-the *principle eigenvalue* and *principle eigenvector*.
-After applying $\mathbf{A}$, our random vector 
-gets stretched in every possible direction,
-as is associated with every possible eigenvector,
-but it is stretched most of all in the direction 
-associated with this principle eigenvector.
-What this means is that after apply in $A$, 
-our random vector is longer, and points in a direction 
-closer to being aligned with the principle eigenvector.
-After applying the matrix many times, 
-the alignment with the principle eigenvector becomes closer and closer until, 
-for all practical purposes, our random vector has been transformed 
-into the principle eigenvector!
-Indeed this algorithm is the basis 
-for what is known as the *power iteration*
-for finding the largest eigenvalue and eigenvector of a matrix. For details see, for example, :cite:`Van-Loan.Golub.1983`.
+Mas, se agora pensarmos sobre o que está acontecendo geometricamente,
+isso começa a fazer sentido. Considere um vetor aleatório.
+Este vetor aleatório aponta um pouco em todas as direções,
+então, em particular, ele aponta pelo menos um pouco
+na mesma direção do vetor próprio de $\mathbf{A}$
+associado ao maior autovalor.
+Isso é tão importante que se chama
+o *autovalor principal* e o *autovetor principal*.
+Depois de aplicar $\mathbf{A}$, nosso vetor aleatório
+é esticado em todas as direções possíveis,
+como está associado a cada autovetor possível,
+mas é esticado principalmente na direção
+associado a este autovetor principal.
+O que isso significa é que depois de aplicar em $A$,
+nosso vetor aleatório é mais longo e aponta em uma direção
+mais perto de estar alinhado com o autovetor principal.
+Depois de aplicar a matriz várias vezes,
+o alinhamento com o autovetor principal torna-se cada vez mais próximo até que,
+para todos os efeitos práticos, nosso vetor aleatório foi transformado
+no autovetor principal!
+Na verdade, este algoritmo é a base
+para o que é conhecido como *iteração de energia*
+para encontrar o maior autovalor e autovetor de uma matriz. Para obter detalhes, consulte, por exemplo :cite:`Van-Loan.Golub.1983`.
 
-### Fixing the Normalization
+### Corrigindo a Normalização
 
-Now, from above discussions, we concluded 
-that we do not want a random vector to be stretched or squished at all,
-we would like random vectors to stay about the same size throughout the entire process.
-To do so, we now rescale our matrix by this principle eigenvalue 
-so that the largest eigenvalue is instead now just one.
-Let us see what happens in this case.
+Agora, das discussões acima, concluímos
+que não queremos que um vetor aleatório seja esticado ou esmagado,
+gostaríamos que os vetores aleatórios permanecessem do mesmo tamanho durante todo o processo.
+Para fazer isso, agora redimensionamos nossa matriz por este autovalor principal
+de modo que o maior autovalor é agora apenas um.
+Vamos ver o que acontece neste caso.
 
 ```{.python .input}
 # Rescale the matrix `A`
@@ -697,9 +697,10 @@ $$
 [Discussions](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MzA0NTUzMCwtMjUzNjM1OTQwLC0xNj
-g5ODU5MzUwLC0xNzA0OTMxODI5LC0xMjU2MTY3NTg0LC0zMTM4
-Nzc0MDAsLTEyNjk5MjAwMTcsMTU2ODM0MDE4NCwtMTE0ODUzOT
-M5OSwxNDM0NTYwMTY0LDY5MTE5ODU2OSw0ODM4MTEzMDYsMjYw
-NjIxODU3LC0xNjA2NDkxMzg4LC0xNzI5MDE0ODY0XX0=
+eyJoaXN0b3J5IjpbOTQ4NzcyMjg4LC03NTMwNDU1MzAsLTI1Mz
+YzNTk0MCwtMTY4OTg1OTM1MCwtMTcwNDkzMTgyOSwtMTI1NjE2
+NzU4NCwtMzEzODc3NDAwLC0xMjY5OTIwMDE3LDE1NjgzNDAxOD
+QsLTExNDg1MzkzOTksMTQzNDU2MDE2NCw2OTExOTg1NjksNDgz
+ODExMzA2LDI2MDYyMTg1NywtMTYwNjQ5MTM4OCwtMTcyOTAxND
+g2NF19
 -->
