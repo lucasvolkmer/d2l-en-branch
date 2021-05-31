@@ -683,22 +683,22 @@ $$
 $$
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/411)
+[Discussões](https://discuss.d2l.ai/t/411)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1086)
+[Discussões](https://discuss.d2l.ai/t/1086)
 :end_tab:
 
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1087)
+[Discussões](https://discuss.d2l.ai/t/1087)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0Mzk2Nzc3LDk0ODc3MjI4OCwtNzUzMD
-Q1NTMwLC0yNTM2MzU5NDAsLTE2ODk4NTkzNTAsLTE3MDQ5MzE4
-MjksLTEyNTYxNjc1ODQsLTMxMzg3NzQwMCwtMTI2OTkyMDAxNy
-wxNTY4MzQwMTg0LC0xMTQ4NTM5Mzk5LDE0MzQ1NjAxNjQsNjkx
-MTk4NTY5LDQ4MzgxMTMwNiwyNjA2MjE4NTcsLTE2MDY0OTEzOD
-gsLTE3MjkwMTQ4NjRdfQ==
+eyJoaXN0b3J5IjpbMjA2OTgwNTU3OSw5NDg3NzIyODgsLTc1Mz
+A0NTUzMCwtMjUzNjM1OTQwLC0xNjg5ODU5MzUwLC0xNzA0OTMx
+ODI5LC0xMjU2MTY3NTg0LC0zMTM4Nzc0MDAsLTEyNjk5MjAwMT
+csMTU2ODM0MDE4NCwtMTE0ODUzOTM5OSwxNDM0NTYwMTY0LDY5
+MTE5ODU2OSw0ODM4MTEzMDYsMjYwNjIxODU3LC0xNjA2NDkxMz
+g4LC0xNzI5MDE0ODY0XX0=
 -->
