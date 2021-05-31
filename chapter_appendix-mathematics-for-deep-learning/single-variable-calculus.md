@@ -1,9 +1,9 @@
 # Cálculo de Variável Única
 :label:`sec_single_variable_calculus`
 
-In :numref:`sec_calculus`, we saw the basic elements of differential calculus.  This section takes a deeper dive into the fundamentals of calculus and how we can understand and apply it in the context of machine learning.
+Em :numref:`sec_calculus`, vimos os elementos básicos do cálculo diferencial. Esta seção dá um mergulho mais profundo nos fundamentos do cálculo e como podemos entendê-lo e aplicá-lo no contexto do aprendizado de máquina.
 
-## Differential Calculus
+## Cálculo diferencial
 Differential calculus is fundamentally the study of how functions behave under small changes.  To see why this is so core to deep learning, let us consider an example.
 
 Suppose that we have a deep neural network where the weights are, for convenience, concatenated into a single vector $\mathbf{w} = (w_1, \ldots, w_n)$.  Given a training dataset, we consider the loss of our neural network on this dataset, which we will write as $\mathcal{L}(\mathbf{w})$.  
@@ -523,5 +523,5 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzM5Mjg4MzJdfQ==
+eyJoaXN0b3J5IjpbMzY5ODAwMjQ1LC0xMTMzOTI4ODMyXX0=
 -->
