@@ -245,23 +245,24 @@ $$
 \end{aligned}
 $$
 
-Where each line has used the following rules:
 
-1. The chain rule and derivative of logarithm.
-2. The sum rule.
-3. The derivative of constants, chain rule, and power rule.
-4. The sum rule, derivative of linear functions, derivative of constants.
+Onde cada linha usou as seguintes regras:
 
-Two things should be clear after doing this example:
+1. A regra da cadeia e derivada do logaritmo.
+2. A regra da soma.
+3. A derivada de constantes, regra da cadeia e regra de potência.
+4. A regra da soma, derivada de funções lineares, derivada de constantes.
 
-1. Any function we can write down using sums, products, constants, powers, exponentials, and logarithms can have its derivate computed mechanically by following these rules.
-2. Having a human follow these rules can be tedious and error prone!
+Duas coisas devem ficar claras depois de fazer este exemplo:
 
-Thankfully, these two facts together hint towards a way forward: this is a perfect candidate for mechanization!  Indeed backpropagation, which we will revisit later in this section, is exactly that.
 
-### Linear Approximation
-When working with derivatives, it is often useful to geometrically interpret the approximation used above.  In particular, note that the equation 
+1. Qualquer função que possamos escrever usando somas, produtos, constantes, potências, exponenciais e logaritmos pode ter sua derivada calculada mecanicamente seguindo essas regras.
+2. Fazer com que um humano siga essas regras pode ser entediante e sujeito a erros!
 
+Felizmente, esses dois fatos juntos apontam para um caminho a seguir: este é um candidato perfeito para a mecanização! Na verdade, a retropropagação, que revisitaremos mais tarde nesta seção, é exatamente isso.
+
+### Aproximação Linear
+Ao trabalhar com derivadas, geralmente é útil interpretar geometricamente a aproximação usada acima. Em particular, observe que a equação
 $$
 f(x+\epsilon) \approx f(x) + \epsilon \frac{df}{dx}(x),
 $$
@@ -529,7 +530,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMjc3ODYyNCwtNDkzOTE5ODA2LC01Mj
-YxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYy
-Mjk3MiwtMTEzMzkyODgzMl19
+eyJoaXN0b3J5IjpbNjIwMTM2MTQ5LC00OTM5MTk4MDYsLTUyNj
+E0MzY2MywyMTE2NTYyMjUyLC0xMDI5MjUxNjQ2LC0xMjkwNjIy
+OTcyLC0xMTMzOTI4ODMyXX0=
 -->
