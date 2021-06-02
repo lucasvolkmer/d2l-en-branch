@@ -211,15 +211,15 @@ f(x+\epsilon) & = g(x+\epsilon)\cdot h(x+\epsilon) \\
 $$
 
 
-This resembles the computation done above, and indeed we see our answer ($\frac{df}{dx}(x) = g(x)\frac{dh}{dx}(x) + \frac{dg}{dx}(x)h(x)$) sitting next to $\epsilon$, but there is the issue of that term of size $\epsilon^{2}$.  We will refer to this as a *higher-order term*, since the power of $\epsilon^2$ is higher than the power of $\epsilon^1$.  We will see in a later section that we will sometimes want to keep track of these, however for now observe that if $\epsilon = 0.0000001$, then $\epsilon^{2}= 0.0000000000001$, which is vastly smaller.  As we send $\epsilon \rightarrow 0$, we may safely ignore the higher order terms.  As a general convention in this appendix, we will use "$\approx$" to denote that the two terms are equal up to higher order terms.  However, if we wish to be more formal we may examine the difference quotient
-
+Isso se assemelha ao cálculo feito acima, e de fato vemos nossa resposta ($\frac{df}{dx}(x) = g(x)\frac{dh}{dx}(x) + \frac{dg}{dx}(x)h(x)$) sentado ao lado de $\epsilon$, mas há a questão desse termo de tamanho $\epsilon^{2}$. Iremos nos referir a isso como um *termo de ordem superior*, uma vez que a potência de $\epsilon^2$ é maior do que a potência de $\epsilon^1$. Veremos em uma seção posterior que às vezes desejaremos mantê-los sob controle; no entanto, por enquanto, observe que se $\epsilon = 0.0000001$, então $\epsilon^{2}= 0.0000000000001$, que é muito menor. Conforme enviamos $\epsilon \rightarrow 0$, podemos ignorar com segurança os termos de pedido superior. Como uma convenção geral neste apêndice, usaremos "$\approx$" para denotar que os dois termos são iguais até os termos de ordem superior. No entanto, se quisermos ser mais formais, podemos examinar o quociente de diferença
 $$
 \frac{f(x+\epsilon) - f(x)}{\epsilon} = g(x)\frac{dh}{dx}(x) + \frac{dg}{dx}(x)h(x) + \epsilon \frac{dg}{dx}(x)\frac{dh}{dx}(x),
 $$
 
-and see that as we send $\epsilon \rightarrow 0$, the right hand term goes to zero as well.
 
-Finally, with the chain rule, we can again progress as before using :eqref:`eq_small_change` and see that
+e veja que conforme enviamos $\epsilon \rightarrow 0$, o termo do lado direito vai para zero também.
+
+Finalmente, com a regra da cadeia, podemos novamente progredir como antes usando :eqref:`eq_small_change` e ver que
 
 $$
 \begin{aligned}
@@ -230,9 +230,10 @@ f(x+\epsilon) & = g(h(x+\epsilon)) \\
 \end{aligned}
 $$
 
-where in the second line we view the function $g$ as having its input ($h(x)$) shifted by the tiny quantity $\epsilon \frac{dh}{dx}(x)$.
 
-These rule provide us with a flexible set of tools to compute essentially any expression desired.  For instance,
+onde na segunda linha vemos a função $g$ como tendo sua entrada ($h(x)$) deslocada pela pequena quantidade $\epsilon \frac{dh}{dx}(x)$.
+
+Essa regra nos fornece um conjunto flexível de ferramentas para calcular essencialmente qualquer expressão desejada. Por exemplo,
 
 $$
 \begin{aligned}
@@ -528,7 +529,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MzkxOTgwNiwtNTI2MTQzNjYzLDIxMT
-Y1NjIyNTIsLTEwMjkyNTE2NDYsLTEyOTA2MjI5NzIsLTExMzM5
-Mjg4MzJdfQ==
+eyJoaXN0b3J5IjpbLTQzMjc3ODYyNCwtNDkzOTE5ODA2LC01Mj
+YxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYy
+Mjk3MiwtMTEzMzkyODgzMl19
 -->
