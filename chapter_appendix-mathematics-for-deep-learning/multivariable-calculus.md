@@ -168,7 +168,7 @@ Isso nos leva a um dos conceitos matemáticos mais importantes no aprendizado de
 4. Repita.
 
 
-This basic algorithm has been modified and adapted many ways by many researchers, but the core concept remains the same in all of them.  Use the gradient to find the direction that decreases the loss as rapidly as possible, and update the parameters to take a step in that direction.
+Este algoritmo básico foi modificado e adaptado de várias maneiras por muitos pesquisadores, mas o conceito central permanece o mesmo em todos eles. Usar o gradiente para encontrar a direção que diminui a perda o mais rápido possível e atualizar os parâmetros para dar um passo nessa direção.
 
 ## A Note on Mathematical Optimization
 Throughout this book, we focus squarely on numerical optimization techniques for the practical reason that all functions we encounter in the deep learning setting are too complex to minimize explicitly.
@@ -860,7 +860,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2OTkzNDkyNiwtNzM5MTYwMDc0LC0xND
-UxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4
-N119
+eyJoaXN0b3J5IjpbLTEyMDg3MzEyODcsLTczOTE2MDA3NCwtMT
+Q1MTI5ODI4Niw3MjMwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5
+ODddfQ==
 -->
