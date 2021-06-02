@@ -857,3 +857,6 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTM2NDcwMjk4N119
+-->
