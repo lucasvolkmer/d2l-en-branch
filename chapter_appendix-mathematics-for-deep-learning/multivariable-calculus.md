@@ -1,9 +1,9 @@
 # Cálculo Multivariável
 :label:`sec_multivariable_calculus`
 
-Now that we have a fairly strong understanding of derivatives of a function of a single variable, let us return to our original question where we were considering a loss function of potentially billions of weights.
+Agora que temos um entendimento bastante forte das derivadas de uma função de uma única variável, vamos voltar à nossa questão original, onde estávamos considerando uma função de perda de potencialmente bilhões de pesos.
 
-## Higher-Dimensional Differentiation
+## Diferenciação de Dimensões Superiores
 What :numref:`sec_single_variable_calculus` tells us is that if we change a single one of these billions of weights leaving every other one fixed, we know what will happen!  This is nothing more than a function of a single variable, so we can write
 
 $$L(w_1+\epsilon_1, w_2, \ldots, w_N) \approx L(w_1, w_2, \ldots, w_N) + \epsilon_1 \frac{d}{dw_1} L(w_1, w_2, \ldots, w_N).$$
@@ -858,5 +858,6 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
+eyJoaXN0b3J5IjpbLTM2ODYzMjg5MywtNDcxNDk0OTgwLDEzNj
+Q3MDI5ODddfQ==
 -->
