@@ -410,33 +410,36 @@ $$
 f(x) \approx \frac{1}{2}\frac{d^2f}{dx^2}(x_0)(x-x_0)^{2}+ \frac{df}{dx}(x_0)(x-x_0) + f(x_0).
 $$
 
-As we can see above, the denominator of $2$ is there to cancel out the $2$ we get when we take two derivatives of $x^2$, while the other terms are all zero.  Same logic applies for the first derivative and the value itself.
 
-If we push the logic further to $n=3$, we will conclude that
+Como podemos ver acima, o denominador de $2$ está aí para cancelar os $2$ que obtemos quando tomamos duas derivadas de $x^2$, enquanto os outros termos são todos zero. A mesma lógica se aplica à primeira derivada e ao próprio valor.
+
+Se empurrarmos a lógica ainda mais para $n=3$, concluiremos que
 
 $$
 f(x) \approx \frac{\frac{d^3f}{dx^3}(x_0)}{6}(x-x_0)^3 + \frac{\frac{d^2f}{dx^2}(x_0)}{2}(x-x_0)^{2}+ \frac{df}{dx}(x_0)(x-x_0) + f(x_0).
 $$
 
-where the $6 = 3 \times 2 = 3!$ comes from the constant we get in front if we take three derivatives of $x^3$.
+
+onde $6 = 3 \times 2 = 3!$ vem da constante que obtemos na frente se tomarmos três derivadas de $x^3$.
 
 
-Furthermore, we can get a degree $n$ polynomial by 
+Além disso, podemos obter um polinômio de grau $n$ por
 
 $$
 P_n(x) = \sum_{i = 0}^{n} \frac{f^{(i)}(x_0)}{i!}(x-x_0)^{i}.
 $$
 
-where the notation 
+onde a notação
 
 $$
 f^{(n)}(x) = \frac{d^{n}f}{dx^{n}} = \left(\frac{d}{dx}\right)^{n} f.
 $$
 
 
-Indeed, $P_n(x)$ can be viewed as the best $n$-th degree polynomial approximation to our function $f(x)$.
 
-While we are not going to dive all the way into the error of the above approximations, it is worth mentioning the infinite limit. In this case, for well behaved functions (known as real analytic functions) like $\cos(x)$ or $e^{x}$, we can write out the infinite number of terms and approximate the exactly same function
+De fato, $P_n(x)$ pode ser visto como a melhor aproximação polinomial de $n$-ésimo grau para nossa função $f(x)$.
+
+Embora não vamos mergulhar totalmente no erro das aproximações acima, vale a pena mencionar o limite infinito. Neste caso, para funções bem comportadas (conhecidas como funções analíticas reais) como $\cos(x)$ or $e^{x}$, podemos escrever o número infinito de termos e aproximar exatamente a mesma função
 
 $$
 f(x) = \sum_{n = 0}^\infty \frac{f^{(n)}(x_0)}{n!}(x-x_0)^{n}.
@@ -533,7 +536,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0Nzg5MjY2LDEwNTczNTg3OCwtNDkzOT
-E5ODA2LC01MjYxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0
-NiwtMTI5MDYyMjk3MiwtMTEzMzkyODgzMl19
+eyJoaXN0b3J5IjpbMTg5MDA1NDk0MywxMDU3MzU4NzgsLTQ5Mz
+kxOTgwNiwtNTI2MTQzNjYzLDIxMTY1NjIyNTIsLTEwMjkyNTE2
+NDYsLTEyOTA2MjI5NzIsLTExMzM5Mjg4MzJdfQ==
 -->
