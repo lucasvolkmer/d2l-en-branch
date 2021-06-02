@@ -158,14 +158,14 @@ $$
 L(\mathbf{w} + \mathbf{v}) \approx L(\mathbf{w}) + \mathbf{v}\cdot \nabla_{\mathbf{w}} L(\mathbf{w}) = L(\mathbf{w}) + \|\nabla_{\mathbf{w}} L(\mathbf{w})\|\cos(\theta).
 $$
 
-Note that we have taken our direction to have length one for convenience, and used $\theta$ for the angle between $\mathbf{v}$ and $\nabla_{\mathbf{w}} L(\mathbf{w})$.  If we want to find the direction that decreases $L$ as rapidly as possible, we want to make this expression as negative as possible.  The only way the direction we pick enters into this equation is through $\cos(\theta)$, and thus we wish to make this cosine as negative as possible.  Now, recalling the shape of cosine, we can make this as negative as possible by making $\cos(\theta) = -1$ or equivalently making the angle between the gradient and our chosen direction to be $\pi$ radians, or equivalently $180$ degrees.  The only way to achieve this is to head in the exact opposite direction:  pick $\mathbf{v}$ to point in the exact opposite direction to $\nabla_{\mathbf{w}} L(\mathbf{w})$!
+Observe que seguimos nossa orientação para ter comprimento um por conveniência, e usamos $\theta$ para o ângulo entre $\mathbf{v}$ e $\nabla_{\mathbf{w}} L(\mathbf{w})$ Se quisermos encontrar a direção que diminui $L$ o mais rápido possível, queremos tornar essa expressão o mais negativa possível. A única maneira pela qual a direção que escolhemos entra nesta equação é através de $\cos(\theta)$ e, portanto, desejamos tornar esse cosseno o mais negativo possível. Agora, relembrando a forma do cosseno, podemos torná-lo o mais negativo possível, tornando $\cos(\theta) = -1$ ou equivalentemente tornando o ângulo entre o gradiente e nossa direção escolhida em $\pi$ radianos, ou equivalentemente $180$ graus. A única maneira de conseguir isso é seguir na direção oposta exata: escolha $\mathbf{v}$ para apontar na direção oposta exata para $\nabla_{\mathbf{w}} L(\mathbf{w})$!
 
-This brings us to one of the most important mathematical concepts in machine learning: the direction of steepest decent points in the direction of $-\nabla_{\mathbf{w}}L(\mathbf{w})$.  Thus our informal algorithm can be rewritten as follows.
+Isso nos leva a um dos conceitos matemáticos mais importantes no aprendizado de máquina: a direção dos pontos decentes mais íngremes na direção de $-\nabla_{\mathbf{w}}L(\mathbf{w})$.  Assim, nosso algoritmo informal pode ser reescrito da seguinte maneira.
 
-1. Start with a random choice for the initial parameters $\mathbf{w}$.
-2. Compute $\nabla_{\mathbf{w}} L(\mathbf{w})$.
-3. Take a small step in the opposite of that direction: $\mathbf{w} \rightarrow \mathbf{w} - \epsilon\nabla_{\mathbf{w}} L(\mathbf{w})$.
-4. Repeat.
+1. Comece com uma escolha aleatória para os parâmetros iniciais $\mathbf{w}$.
+2. Calcule $\nabla_{\mathbf{w}} L(\mathbf{w})$.
+3. Dê um pequeno passo na direção oposta: $\mathbf{w} \rightarrow \mathbf{w} - \epsilon\nabla_{\mathbf{w}} L(\mathbf{w})$.
+4. Repita.
 
 
 This basic algorithm has been modified and adapted many ways by many researchers, but the core concept remains the same in all of them.  Use the gradient to find the direction that decreases the loss as rapidly as possible, and update the parameters to take a step in that direction.
@@ -860,7 +860,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjgwMTQyNTUzLC03MzkxNjAwNzQsLTE0NT
-EyOTgyODYsNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3
-XX0=
+eyJoaXN0b3J5IjpbLTM2OTkzNDkyNiwtNzM5MTYwMDc0LC0xND
+UxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4
+N119
 -->
