@@ -500,22 +500,23 @@ d2l.plot(xs, [ys, P1, P2, P5], 'x', 'f(x)', legend=[
     "Degree 5 Taylor Series"])
 ```
 
-Taylor series have two primary applications:
 
-1. *Theoretical applications*: Often when we try to understand a too complex function, using Taylor series enables us to turn it into a polynomial that we can work with directly.
+A série Taylor tem duas aplicações principais:
 
-2. *Numerical applications*: Some functions like $e^{x}$ or $\cos(x)$ are  difficult for machines to compute.  They can store tables of values at a fixed precision (and this is often done), but it still leaves open questions like "What is the 1000-th digit of $\cos(1)$?"  Taylor series are often helpful to answer such questions.  
+1. *Aplicações teóricas*: Freqüentemente, quando tentamos entender uma função muito complexa, usar a série de Taylor nos permite transformá-la em um polinômio com o qual podemos trabalhar diretamente.
 
-
-## Summary
-
-* Derivatives can be used to express how functions change when we change the input by a small amount.
-* Elementary derivatives can be combined using derivative rules to create arbitrarily complex derivatives.
-* Derivatives can be iterated to get second or higher order derivatives.  Each increase in order provides more fine grained information on the behavior of the function.
-* Using information in the derivatives of a single data example, we can approximate well behaved functions by polynomials obtained from the Taylor series.
+2. *Aplicações numéricas*: Algumas funções como $e^{x}$ ou $\cos(x)$ são difíceis de serem computadas pelas máquinas. Eles podem armazenar tabelas de valores com uma precisão fixa (e isso geralmente é feito), mas ainda deixa questões em aberto como "Qual é o milésimo dígito de $\cos(1)$?" As séries de Taylor costumam ser úteis para responder a essas perguntas.
 
 
-## Exercises
+## Resumo
+
+* As derivadas podem ser usadas para expressar como as funções mudam quando alteramos a entrada em um pequeno valor.
+* Derivadas elementares podem ser combinadas usando regras de derivadas para criar derivadas arbitrariamente complexas.
+* As derivadas podem ser iteradas para obter derivadas de segunda ordem ou de ordem superior. Cada aumento na ordem fornece informações mais refinadas sobre o comportamento da função.
+* Usando informações nas derivadas de um único exemplo de dados, podemos aproximar funções bem comportadas por polinômios obtidos da série de Taylor.
+
+
+## Exercícios
 
 1. What is the derivative of $x^3-4x+1$?
 2. What is the derivative of $\log(\frac{1}{x})$?
@@ -536,7 +537,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NTcyNDUwLDEwNTczNTg3OCwtNDkzOT
-E5ODA2LC01MjYxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0
-NiwtMTI5MDYyMjk3MiwtMTEzMzkyODgzMl19
+eyJoaXN0b3J5IjpbLTMxODcwMTUwOCwxMDU3MzU4NzgsLTQ5Mz
+kxOTgwNiwtNTI2MTQzNjYzLDIxMTY1NjIyNTIsLTEwMjkyNTE2
+NDYsLTEyOTA2MjI5NzIsLTExMzM5Mjg4MzJdfQ==
 -->
