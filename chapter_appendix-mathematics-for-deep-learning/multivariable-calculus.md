@@ -27,20 +27,20 @@ L(w_1+\epsilon_1, w_2+\epsilon_2, \ldots, w_N) & \approx L(w_1, w_2+\epsilon_2, 
 \end{aligned}
 $$
 
-We have again used the idea that $\epsilon_1\epsilon_2$ is a higher order term that we can discard in the same way we could discard $\epsilon^{2}$ in the previous section, along with what we saw in :eqref:`eq_part_der`.  By continuing in this manner, we may write that
+Usamos novamente a ideia de que $\epsilon_1\epsilon_2$ é um termo de ordem superior que podemos descartar da mesma forma que descartamos $\epsilon^{2}$ na seção anterior, junto com o que vimos em :eqref:`eq_part_der`. Continuando dessa maneira, podemos escrever que
 
 $$
 L(w_1+\epsilon_1, w_2+\epsilon_2, \ldots, w_N+\epsilon_N) \approx L(w_1, w_2, \ldots, w_N) + \sum_i \epsilon_i \frac{\partial}{\partial w_i} L(w_1, w_2, \ldots, w_N).
 $$
 
-This may look like a mess, but we can make this more familiar by noting that the sum on the right looks exactly like a dot product, so if we let
+Isso pode parecer uma bagunça, mas podemos tornar isso mais familiar observando que a soma à direita parece exatamente com um produto escalar, então, se deixarmos
 
 $$
 \boldsymbol{\epsilon} = [\epsilon_1, \ldots, \epsilon_N]^\top \; \text{and} \;
 \nabla_{\mathbf{x}} L = \left[\frac{\partial L}{\partial x_1}, \ldots, \frac{\partial L}{\partial x_N}\right]^\top,
 $$
 
-then
+então
 
 $$L(\mathbf{w} + \boldsymbol{\epsilon}) \approx L(\mathbf{w}) + \boldsymbol{\epsilon}\cdot \nabla_{\mathbf{w}} L(\mathbf{w}).$$
 :eqlabel:`eq_nabla_use`
@@ -859,6 +859,6 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Njc0MDUwMzgsLTQ3MTQ5NDk4MCwxMz
-Y0NzAyOTg3XX0=
+eyJoaXN0b3J5IjpbNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0Nz
+AyOTg3XX0=
 -->
