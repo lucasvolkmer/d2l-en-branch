@@ -518,26 +518,26 @@ A série Taylor tem duas aplicações principais:
 
 ## Exercícios
 
-1. What is the derivative of $x^3-4x+1$?
-2. What is the derivative of $\log(\frac{1}{x})$?
-3. True or False: If $f'(x) = 0$ then $f$ has a maximum or minimum at $x$?
-4. Where is the minimum of $f(x) = x\log(x)$ for $x\ge0$ (where we assume that $f$ takes the limiting value of $0$ at $f(0)$)?
+1. Qual é a derivada de $x^3-4x+1$?
+2. Qual é a derivada de $\log(\frac{1}{x})$?
+3. Verdadeiro ou falso: Se $f'(x) = 0$ então $f$ tem um máximo ou mínimo de $x$?
+4. Onde está o mínimo de $f(x) = x\log(x)$ para $x\ge0$ (onde assumimos que $f$ assume o valor limite de $0$ em $f(0)$)?
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/412)
+[Discussões](https://discuss.d2l.ai/t/412)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1088)
+[Discussões](https://discuss.d2l.ai/t/1088)
 :end_tab:
 
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1089)
+[Discussões](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODcwMTUwOCwxMDU3MzU4NzgsLTQ5Mz
+eyJoaXN0b3J5IjpbLTgzMjAwOTY2MCwxMDU3MzU4NzgsLTQ5Mz
 kxOTgwNiwtNTI2MTQzNjYzLDIxMTY1NjIyNTIsLTEwMjkyNTE2
 NDYsLTEyOTA2MjI5NzIsLTExMzM5Mjg4MzJdfQ==
 -->
