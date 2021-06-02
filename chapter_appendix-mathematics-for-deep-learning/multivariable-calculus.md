@@ -45,17 +45,18 @@ então
 $$L(\mathbf{w} + \boldsymbol{\epsilon}) \approx L(\mathbf{w}) + \boldsymbol{\epsilon}\cdot \nabla_{\mathbf{w}} L(\mathbf{w}).$$
 :eqlabel:`eq_nabla_use`
 
-We will call the vector $\nabla_{\mathbf{w}} L$ the *gradient* of $L$.
 
-Equation :eqref:`eq_nabla_use` is worth pondering for a moment.  It has exactly the format that we encountered in one dimension, just we have converted everything to vectors and dot products.  It allows us to tell approximately how the function $L$ will change given any perturbation to the input.  As we will see in the next section, this will provide us with an important tool in understanding geometrically how we can learn using information contained in the gradient.
+Chamaremos o vetor $\nabla_{\mathbf{w}} L$ de *gradiente* de $L$.
 
-But first, let us see this approximation at work with an example.  Suppose that we are working with the function
+Equação :eqref:`eq_nabla_use` vale a pena ponderar por um momento. Tem exatamente o formato que encontramos em uma dimensão, apenas convertemos tudo para vetores e produtos escalares. Isso nos permite dizer aproximadamente como a função $L$ mudará dada qualquer perturbação na entrada. Como veremos na próxima seção, isso nos fornecerá uma ferramenta importante para compreender geometricamente como podemos aprender usando as informações contidas no gradiente.
+
+Mas, primeiro, vejamos essa aproximação em funcionamento com um exemplo. Suponha que estejamos trabalhando com a função
 
 $$
 f(x, y) = \log(e^x + e^y) \text{ with gradient } \nabla f (x, y) = \left[\frac{e^x}{e^x+e^y}, \frac{e^y}{e^x+e^y}\right].
 $$
 
-If we look at a point like $(0, \log(2))$, we see that
+Se olharmos para um ponto como $(0, \log(2))$, vemos que
 
 $$
 f(x, y) = \log(3) \text{ with gradient } \nabla f (x, y) = \left[\frac{1}{3}, \frac{2}{3}\right].
@@ -859,6 +860,6 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0Nz
-AyOTg3XX0=
+eyJoaXN0b3J5IjpbLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3MT
+Q5NDk4MCwxMzY0NzAyOTg3XX0=
 -->
