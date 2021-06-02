@@ -152,7 +152,7 @@ Suponhamos que eu queira usar isso para ajudar a minimizar nossa perda $L$. Vamo
 3. Dê um pequeno passo nessa direção: $\mathbf{w} \rightarrow \mathbf{w} + \epsilon\mathbf{v}$.
 4. Repita.
 
-The only thing we do not know exactly how to do is to compute the vector $\mathbf{v}$ in the second step.  We will call such a direction the *direction of steepest descent*.  Using the geometric understanding of dot products from :numref:`sec_geometry-linear-algebraic-ops`, we see that we can rewrite :eqref:`eq_nabla_use` as
+A única coisa que não sabemos exatamente como fazer é calcular o vetor $\mathbf{v}$ no segundo passo. Chamaremos tal direção de *direção da descida mais íngreme*. Usando o entendimento geométrico de produtos escalares de :numref:`sec_geometry-linear-algebraic-ops`, vemos que podemos reescrever :eqref:`eq_nabla_use` como
 
 $$
 L(\mathbf{w} + \mathbf{v}) \approx L(\mathbf{w}) + \mathbf{v}\cdot \nabla_{\mathbf{w}} L(\mathbf{w}) = L(\mathbf{w}) + \|\nabla_{\mathbf{w}} L(\mathbf{w})\|\cos(\theta).
@@ -860,7 +860,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzY2MjQyMTAsLTczOTE2MDA3NCwtMT
-Q1MTI5ODI4Niw3MjMwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5
-ODddfQ==
+eyJoaXN0b3J5IjpbMjgwMTQyNTUzLC03MzkxNjAwNzQsLTE0NT
+EyOTgyODYsNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3
+XX0=
 -->
