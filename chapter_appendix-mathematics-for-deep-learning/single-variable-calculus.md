@@ -396,7 +396,7 @@ for x0 in [-1.5, 0.0, 2.0]:
 d2l.plot(xs, plots, 'x', 'f(x)', ylim=[-1.5, 1.5])
 ```
 
-We will extend this idea to the idea of a *Taylor series* in the next section. 
+Vamos estender essa ideia para a ideia de uma *série de Taylor* na próxima seção.
 
 ### Taylor Series
 
@@ -532,7 +532,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTkxMzM5OTIsLTQ5MzkxOTgwNiwtNT
+eyJoaXN0b3J5IjpbLTIxMTA2ODQyNTMsLTQ5MzkxOTgwNiwtNT
 I2MTQzNjYzLDIxMTY1NjIyNTIsLTEwMjkyNTE2NDYsLTEyOTA2
 MjI5NzIsLTExMzM5Mjg4MzJdfQ==
 -->
