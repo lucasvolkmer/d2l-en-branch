@@ -170,14 +170,15 @@ Isso nos leva a um dos conceitos matemáticos mais importantes no aprendizado de
 
 Este algoritmo básico foi modificado e adaptado de várias maneiras por muitos pesquisadores, mas o conceito central permanece o mesmo em todos eles. Usar o gradiente para encontrar a direção que diminui a perda o mais rápido possível e atualizar os parâmetros para dar um passo nessa direção.
 
-## A Note on Mathematical Optimization
-Throughout this book, we focus squarely on numerical optimization techniques for the practical reason that all functions we encounter in the deep learning setting are too complex to minimize explicitly.
+## Uma Nota Sobre Otimização Matemática
 
-However, it is a useful exercise to consider what the geometric understanding we obtained above tells us about optimizing functions directly.
+Ao longo deste livro, enfocamos diretamente as técnicas de otimização numérica pela razão prática de que todas as funções que encontramos no ambiente de aprendizado profundo são muito complexas para serem minimizadas explicitamente.
 
-Suppose that we wish to find the value of $\mathbf{x}_0$ which minimizes some function $L(\mathbf{x})$.  Let us suppose that moreover someone gives us a value and tells us that it is the value that minimizes $L$.  Is there anything we can check to see if their answer is even plausible?
+No entanto, é um exercício útil considerar o que a compreensão geométrica que obtivemos acima nos diz sobre como otimizar funções diretamente.
 
-Again consider :eqref:`eq_nabla_use`:
+Suponha que desejamos encontrar o valor de $\mathbf{x}_0$ que minimiza alguma função $L(\mathbf{x})$. Suponhamos que, além disso, alguém nos dê um valor e nos diga que é o valor que minimiza $L$. Existe algo que possamos verificar para ver se a resposta deles é plausível?
+
+Considere novamente :eqref:`eq_nabla_use`:
 $$
 L(\mathbf{x}_0 + \boldsymbol{\epsilon}) \approx L(\mathbf{x}_0) + \boldsymbol{\epsilon}\cdot \nabla_{\mathbf{x}} L(\mathbf{x}_0).
 $$
@@ -860,7 +861,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDg3MzEyODcsLTczOTE2MDA3NCwtMT
-Q1MTI5ODI4Niw3MjMwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5
-ODddfQ==
+eyJoaXN0b3J5IjpbMjEwNDcyMzcwNywtMTIwODczMTI4NywtNz
+M5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5
+ODAsMTM2NDcwMjk4N119
 -->
