@@ -401,9 +401,10 @@ Vamos estender essa ideia para a ideia de uma *série de Taylor* na próxima se�
 ### Séries de Taylor
 
 
-The *Taylor series* provides a method to approximate the function $f(x)$ if we are given values for the first $n$ derivatives at a point $x_0$, i.e., $\left\{ f(x_0), f^{(1)}(x_0), f^{(2)}(x_0), \ldots, f^{(n)}(x_0) \right\}$. The idea will be to find a degree $n$ polynomial that matches all the given derivatives at $x_0$.
 
-We saw the case of $n=2$ in the previous section and a little algebra shows this is
+A *série de Taylor* fornece um método para aproximar a função $f(x)$ se recebermos valores para as primeiros $n$ derivadas em um ponto $x_0$, i.e., $\left\{ f(x_0), f^{(1)}(x_0), f^{(2)}(x_0), \ldots, f^{(n)}(x_0) \right\}$. A ideia será encontrar um polinômio de grau $n$ que corresponda a todas as derivadas fornecidas em $x_0$.
+
+Vimos o caso de $n=2$ na seção anterior e um pouco de álgebra mostra que isso é
 
 $$
 f(x) \approx \frac{1}{2}\frac{d^2f}{dx^2}(x_0)(x-x_0)^{2}+ \frac{df}{dx}(x_0)(x-x_0) + f(x_0).
@@ -532,7 +533,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NzM1ODc4LC00OTM5MTk4MDYsLTUyNj
-E0MzY2MywyMTE2NTYyMjUyLC0xMDI5MjUxNjQ2LC0xMjkwNjIy
-OTcyLC0xMTMzOTI4ODMyXX0=
+eyJoaXN0b3J5IjpbLTk0Nzg5MjY2LDEwNTczNTg3OCwtNDkzOT
+E5ODA2LC01MjYxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0
+NiwtMTI5MDYyMjk3MiwtMTEzMzkyODgzMl19
 -->
