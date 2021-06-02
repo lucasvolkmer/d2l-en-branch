@@ -62,7 +62,7 @@ $$
 f(x, y) = \log(3) \text{ with gradient } \nabla f (x, y) = \left[\frac{1}{3}, \frac{2}{3}\right].
 $$
 
-Thus, if we want to approximate $f$ at $(\epsilon_1, \log(2) + \epsilon_2)$,  we see that we should have the specific instance of :eqref:`eq_nabla_use`:
+Assim, se quisermos aproximar $f$ em $(\epsilon_1, \log(2) + \epsilon_2)$, vemos que devemos ter a instância específica de :eqref:`eq_nabla_use`:
 
 $$
 f(\epsilon_1, \log(2) + \epsilon_2) \approx \log(3) + \frac{1}{3}\epsilon_1 + \frac{2}{3}\epsilon_2.
@@ -860,6 +860,6 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3MT
-Q5NDk4MCwxMzY0NzAyOTg3XX0=
+eyJoaXN0b3J5IjpbNjg0NjU5MjI1LC0xNDUxMjk4Mjg2LDcyMz
+A1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
 -->
