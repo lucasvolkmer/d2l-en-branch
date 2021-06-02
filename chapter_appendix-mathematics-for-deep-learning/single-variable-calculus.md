@@ -324,19 +324,19 @@ Vamos tentar entender *por que* essa noção é útil. Abaixo, visualizamos $f^{
 
 Primeiro, considere o caso em que a segunda derivada $f^{(2)}(x)$ é uma constante positiva. Isso significa que a inclinação da primeira derivada é positiva. Como resultado, a primeira derivada $f^{(1)}(x)$  pode começar negativa, tornar-se zero em um ponto e então se tornar positiva no final. Isso nos diz a inclinação de nossa função original $f$ e, portanto, a própria função $f$ diminui, nivela e, em seguida, aumenta. Em outras palavras, a função $f$ se curva para cima e tem um único mínimo como é mostrado em :numref:`fig_positive-second`.
 
-![If we assume the second derivative is a positive constant, then the fist derivative in increasing, which implies the function itself has a minimum.](../img/posSecDer.svg)
+![Se assumirmos que a segunda derivada é uma constante positiva, então a primeira derivada está aumentando, o que implica que a própria função tem um mínimo.](../img/posSecDer.svg)
 :label:`fig_positive-second`
 
 
-Second, if the second derivative is a negative constant, that means that the first derivative is decreasing.  This implies the first derivative may start out positive, becomes zero at a point, and then becomes negative. Hence, the function $f$ itself increases, flattens out, then decreases.  In other words, the function $f$ curves down, and has a single maximum as is shown in :numref:`fig_negative-second`.
+Em segundo lugar, se a segunda derivada é uma constante negativa, isso significa que a primeira derivada está diminuindo. Isso implica que a primeira derivada pode começar positiva, tornar-se zero em um ponto e, em seguida, tornar-se negativa. Conseqüentemente, a própria função $f$ aumenta, nivela e depois diminui. Em outras palavras, a função $f$ se curva para baixo e tem um único máximo, conforme mostrado em :numref:`fig_negative-second`.
 
-![If we assume the second derivative is a negative constant, then the fist derivative in decreasing, which implies the function itself has a maximum.](../img/negSecDer.svg)
+![Se assumirmos que a segunda derivada é uma constante negativa, então a primeira derivada decrescente, o que implica que a própria função tem um máximo.](../img/negSecDer.svg)
 :label:`fig_negative-second`
 
 
-Third, if the second derivative is a always zero, then the first derivative will never change---it is constant!  This means that $f$ increases (or decreases) at a fixed rate, and $f$ is itself a straight line  as is shown in :numref:`fig_zero-second`.
+Terceiro, se a segunda derivada é sempre zero, então a primeira derivada nunca mudará - ela é constante! Isso significa que $f$ aumenta (ou diminui) a uma taxa fixa, e $f$ é em si uma linha reta como mostrado em :numref:`fig_zero-second`.
 
-![If we assume the second derivative is zero, then the fist derivative is constant, which implies the function itself is a straight line.](../img/zeroSecDer.svg)
+![Se assumirmos que a segunda derivada é zero, a primeira derivada é constante, o que implica que a própria função é uma linha reta.](../img/zeroSecDer.svg)
 :label:`fig_zero-second`
 
 To summarize, the second derivative can be interpreted as describing the way that the function $f$ curves.  A positive second derivative leads to a upwards curve, while a negative second derivative means that $f$ curves downwards, and a zero second derivative means that $f$ does not curve at all.
@@ -531,7 +531,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMjIxMjQ4MiwtNDkzOTE5ODA2LC01Mj
+eyJoaXN0b3J5IjpbMTE0NDExMDE5MSwtNDkzOTE5ODA2LC01Mj
 YxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYy
 Mjk3MiwtMTEzMzkyODgzMl19
 -->
