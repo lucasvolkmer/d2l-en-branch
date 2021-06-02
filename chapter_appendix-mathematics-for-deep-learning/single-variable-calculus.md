@@ -267,7 +267,7 @@ $$
 f(x+\epsilon) \approx f(x) + \epsilon \frac{df}{dx}(x),
 $$
 
-approximates the value of $f$ by a line which passes through the point $(x, f(x))$ and has slope $\frac{df}{dx}(x)$.  In this way we say that the derivative gives a linear approximation to the function $f$, as illustrated below:
+aproxima o valor de $f$ por uma linha que passa pelo ponto $(x, f(x))$ e tem inclinação $\frac{df}{dx}(x)$. Desta forma, dizemos que a derivada dá uma aproximação linear para a função $f$, conforme ilustrado abaixo:
 
 ```{.python .input}
 # Compute sin
@@ -530,7 +530,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIwMTM2MTQ5LC00OTM5MTk4MDYsLTUyNj
-E0MzY2MywyMTE2NTYyMjUyLC0xMDI5MjUxNjQ2LC0xMjkwNjIy
-OTcyLC0xMTMzOTI4ODMyXX0=
+eyJoaXN0b3J5IjpbLTE0NjUwODg3MjUsLTQ5MzkxOTgwNiwtNT
+I2MTQzNjYzLDIxMTY1NjIyNTIsLTEwMjkyNTE2NDYsLTEyOTA2
+MjI5NzIsLTExMzM5Mjg4MzJdfQ==
 -->
