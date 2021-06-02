@@ -166,10 +166,10 @@ Desta forma, podemos entender a derivada como o fator de escala que nos diz quã
 ## Regras de Cálculo
 :label:`sec_derivative_table`
 
-We now turn to the task of understanding how to compute the derivative of an explicit function.  A full formal treatment of calculus would derive everything from first principles.  We will not indulge in this temptation here, but rather provide an understanding of the common rules encountered.
+Agora nos voltamos para a tarefa de entender como calcular a derivada de uma função explícita. Um tratamento formal completo do cálculo derivaria tudo dos primeiros princípios. Não vamos ceder a esta tentação aqui, mas sim fornecer uma compreensão das regras comuns encontradas.
 
-### Common Derivatives
-As was seen in :numref:`sec_calculus`, when computing derivatives one can oftentimes use a series of rules to reduce the computation to a few core functions.  We repeat them here for ease of reference.
+### Derivadas Comuns
+Como foi visto em :numref:`sec_calculus`, ao calcular derivadas, muitas vezes pode-se usar uma série de regras para reduzir o cálculo a algumas funções básicas. Nós os repetimos aqui para facilitar a referência.
 
 * **Derivative of constants.** $\frac{d}{dx}c = 0$.
 * **Derivative of linear functions.** $\frac{d}{dx}(ax) = a$.
@@ -527,7 +527,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY5OTk4MTEyLC01MjYxNDM2NjMsMjExNj
-U2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYyMjk3MiwtMTEzMzky
-ODgzMl19
+eyJoaXN0b3J5IjpbLTE1ODI4NDc4NTgsLTUyNjE0MzY2MywyMT
+E2NTYyMjUyLC0xMDI5MjUxNjQ2LC0xMjkwNjIyOTcyLC0xMTMz
+OTI4ODMyXX0=
 -->
