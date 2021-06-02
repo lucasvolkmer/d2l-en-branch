@@ -195,10 +195,11 @@ f(x+\epsilon) & = g(x+\epsilon) + h(x+\epsilon) \\
 \end{aligned}
 $$
 
-By comparing this result with the fact that $f(x+\epsilon) \approx f(x) + \epsilon \frac{df}{dx}(x)$, we see that $\frac{df}{dx}(x) = \frac{dg}{dx}(x) + \frac{dh}{dx}(x)$ as desired.  The intuition here is: when we change the input $x$, $g$ and $h$ jointly contribute to the change of the output by $\frac{dg}{dx}(x)$ and $\frac{dh}{dx}(x)$.
+
+Comparando este resultado com o fato de que  $f(x+\epsilon) \approx f(x) + \epsilon \frac{df}{dx}(x)$ vemos que $\frac{df}{dx}(x) = \frac{dg}{dx}(x) + \frac{dh}{dx}(x)$ conforme desejado. A intuição aqui é: quando mudamos a entrada $x$, $g$ e $h$ contribuem conjuntamente para a mudança da saída $\frac{dg}{dx}(x)$ e $\frac{dh}{dx}(x)$.
 
 
-The product is more subtle, and will require a new observation about how to work with these expressions.  We will begin as before using :eqref:`eq_small_change`:
+O produto é mais sutil e exigirá uma nova observação sobre como trabalhar com essas expressões. Começaremos como antes usando :eqref:`eq_small_change`:
 
 $$
 \begin{aligned}
@@ -527,7 +528,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUwMTMwMTE4LC01MjYxNDM2NjMsMjExNj
-U2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYyMjk3MiwtMTEzMzky
-ODgzMl19
+eyJoaXN0b3J5IjpbLTQ5MzkxOTgwNiwtNTI2MTQzNjYzLDIxMT
+Y1NjIyNTIsLTEwMjkyNTE2NDYsLTEyOTA2MjI5NzIsLTExMzM5
+Mjg4MzJdfQ==
 -->
