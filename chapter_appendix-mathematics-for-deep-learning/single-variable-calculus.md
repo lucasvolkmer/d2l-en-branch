@@ -309,7 +309,7 @@ for x0 in [-1.5, 0.0, 2.0]:
 d2l.plot(xs, plots, 'x', 'f(x)', ylim=[-1.5, 1.5])
 ```
 
-### Higher Order Derivatives
+### Derivadas de Ordem Superior
 
 Let us now do something that may on the surface seem strange.  Take a function $f$ and compute the derivative $\frac{df}{dx}$.  This gives us the rate of change of $f$ at any point.
 
@@ -530,7 +530,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjUwODg3MjUsLTQ5MzkxOTgwNiwtNT
-I2MTQzNjYzLDIxMTY1NjIyNTIsLTEwMjkyNTE2NDYsLTEyOTA2
-MjI5NzIsLTExMzM5Mjg4MzJdfQ==
+eyJoaXN0b3J5IjpbMTA4NDM0MjA1NCwtNDkzOTE5ODA2LC01Mj
+YxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYy
+Mjk3MiwtMTEzMzkyODgzMl19
 -->
