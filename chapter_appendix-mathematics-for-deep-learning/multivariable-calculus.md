@@ -68,7 +68,7 @@ $$
 f(\epsilon_1, \log(2) + \epsilon_2) \approx \log(3) + \frac{1}{3}\epsilon_1 + \frac{2}{3}\epsilon_2.
 $$
 
-We can test this in code to see how good the approximation is.
+Podemos testar isso no código para ver o quão boa é a aproximação.
 
 ```{.python .input}
 %matplotlib inline
@@ -860,6 +860,6 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg0NjU5MjI1LC0xNDUxMjk4Mjg2LDcyMz
-A1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3Mj
+MwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
 -->
