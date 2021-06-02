@@ -4,14 +4,15 @@
 Agora que temos um entendimento bastante forte das derivadas de uma função de uma única variável, vamos voltar à nossa questão original, onde estávamos considerando uma função de perda de potencialmente bilhões de pesos.
 
 ## Diferenciação de Dimensões Superiores
-What :numref:`sec_single_variable_calculus` tells us is that if we change a single one of these billions of weights leaving every other one fixed, we know what will happen!  This is nothing more than a function of a single variable, so we can write
+O que :numref:`sec_single_variable_calculus` nos diz é que se mudarmos um desses bilhões de pesos deixando todos os outros fixos, sabemos o que vai acontecer! Isso nada mais é do que uma função de uma única variável, então podemos escrever
 
 $$L(w_1+\epsilon_1, w_2, \ldots, w_N) \approx L(w_1, w_2, \ldots, w_N) + \epsilon_1 \frac{d}{dw_1} L(w_1, w_2, \ldots, w_N).$$
 :eqlabel:`eq_part_der`
 
-We will call the derivative in one variable while fixing the other the *partial derivative*, and we will use the notation $\frac{\partial}{\partial w_1}$ for the derivative in :eqref:`eq_part_der`.
 
-Now, let us take this and change $w_2$ a little bit to $w_2 + \epsilon_2$:
+Chamaremos a derivada em uma variável enquanto fixamos a outra *derivada parcial*, e usaremos a notação $\frac{\partial}{\partial w_1}$ para a derivada em :eqref:`eq_part_der`.
+
+Agora, vamos pegar isso e mudar $ w_2 $ um pouco para $w_2 + \epsilon_2$:
 
 $$
 \begin{aligned}
@@ -858,6 +859,6 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2ODYzMjg5MywtNDcxNDk0OTgwLDEzNj
-Q3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbLTE0Njc0MDUwMzgsLTQ3MTQ5NDk4MCwxMz
+Y0NzAyOTg3XX0=
 -->
