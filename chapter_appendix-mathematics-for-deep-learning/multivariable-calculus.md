@@ -138,14 +138,14 @@ true_value = f(tf.constant([0.]) + epsilon[0], tf.math.log(
 f'approximation: {grad_approx}, true Value: {true_value}'
 ```
 
-## Geometry of Gradients and Gradient Descent
-Consider the again :eqref:`eq_nabla_use`:
+## Geometria de Gradientes e Gradiente Descendente
+Considere novamente :eqref:`eq_nabla_use`:
 
 $$
 L(\mathbf{w} + \boldsymbol{\epsilon}) \approx L(\mathbf{w}) + \boldsymbol{\epsilon}\cdot \nabla_{\mathbf{w}} L(\mathbf{w}).
 $$
 
-Let us suppose that I want to use this to help minimize our loss $L$.  Let us understand geometrically the algorithm of gradient descent first described in  :numref:`sec_autograd`. What we will do is the following:
+Suponhamos que eu queira usar isso para ajudar a minimizar nossa perda $L$. Vamos entender geometricamente o algoritmo de gradiente descendente descrito pela primeira vez em :numref:`sec_autograd`. O que faremos é o seguinte:
 
 1. Start with a random choice for the initial parameters $\mathbf{w}$.
 2. Find the direction $\mathbf{v}$ that makes $L$ decrease the most rapidly at $\mathbf{w}$.
@@ -860,6 +860,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3Mj
-MwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbODAwNjkyODI4LC03MzkxNjAwNzQsLTE0NT
+EyOTgyODYsNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3
+XX0=
 -->
