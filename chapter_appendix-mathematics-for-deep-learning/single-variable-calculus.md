@@ -178,13 +178,13 @@ Como foi visto em :numref:`sec_calculus`, ao calcular derivadas, muitas vezes po
 * **Derivada do logaritmo.** $\frac{d}{dx}\log(x) = \frac{1}{x}$.
 
 ### Regras de Derivadas
-If every derivative needed to be separately computed and stored in a table, differential calculus would be near impossible.  It is a gift of mathematics that we can generalize the above derivatives and compute more complex derivatives like finding the derivative of $f(x) = \log\left(1+(x-1)^{10}\right)$.  As was mentioned in :numref:`sec_calculus`, the key to doing so is to codify what happens when we take functions and combine them in various ways, most importantly: sums, products, and compositions.
+Se cada derivada precisasse ser calculada separadamente e armazenada em uma tabela, o cálculo diferencial seria quase impossível. É um presente da matemática que podemos generalizar as derivadas acima e calcular derivadas mais complexas, como encontrar a derivada de $f(x) = \log\left(1+(x-1)^{10}\right)$. Como foi mencionado em :numref:`sec_calculus`, a chave para fazer isso é codificar o que acontece quando pegamos funções e as combinamos de várias maneiras, o mais importante: somas, produtos e composições.
 
-* **Sum rule.** $\frac{d}{dx}\left(g(x) + h(x)\right) = \frac{dg}{dx}(x) + \frac{dh}{dx}(x)$.
-* **Product rule.** $\frac{d}{dx}\left(g(x)\cdot h(x)\right) = g(x)\frac{dh}{dx}(x) + \frac{dg}{dx}(x)h(x)$.
-* **Chain rule.** $\frac{d}{dx}g(h(x)) = \frac{dg}{dh}(h(x))\cdot \frac{dh}{dx}(x)$.
+* **Regra da soma.** $\frac{d}{dx}\left(g(x) + h(x)\right) = \frac{dg}{dx}(x) + \frac{dh}{dx}(x)$.
+* **Regra do produto.** $\frac{d}{dx}\left(g(x)\cdot h(x)\right) = g(x)\frac{dh}{dx}(x) + \frac{dg}{dx}(x)h(x)$.
+* **Regra da cadeia.** $\frac{d}{dx}g(h(x)) = \frac{dg}{dh}(h(x))\cdot \frac{dh}{dx}(x)$.
 
-Let us see how we may use :eqref:`eq_small_change` to understand these rules.  For the sum rule, consider following chain of reasoning:
+Vamos ver como podemos usar :eqref:`eq_small_change` para entender essas regras. Para a regra da soma, considere a seguinte cadeia de raciocínio:
 
 $$
 \begin{aligned}
@@ -527,7 +527,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkxMjUwMzg2LC01MjYxNDM2NjMsMjExNj
+eyJoaXN0b3J5IjpbMjUwMTMwMTE4LC01MjYxNDM2NjMsMjExNj
 U2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYyMjk3MiwtMTEzMzky
 ODgzMl19
 -->
