@@ -153,16 +153,17 @@ $$
 \frac{d}{dx}\left[x^4+\cos\left(\frac{x^2+1}{2x-1}\right)\right].
 $$
 
-Oftentimes, it is intuitively useful to unravel the definition of derivative :eqref:`eq_der_def` again to see how a function changes when we make a small change of $x$:
+Muitas vezes, é intuitivamente útil desvendar a definição de derivada :eqref:`eq_der_def` novamente para ver como uma função muda quando fazemos uma pequena mudança de $x$:
 
 $$\begin{aligned} \frac{df}{dx}(x) = \lim_{\epsilon \rightarrow 0}\frac{f(x+\epsilon) - f(x)}{\epsilon} & \implies \frac{df}{dx}(x) \approx \frac{f(x+\epsilon) - f(x)}{\epsilon} \\ & \implies \epsilon \frac{df}{dx}(x) \approx f(x+\epsilon) - f(x) \\ & \implies f(x+\epsilon) \approx f(x) + \epsilon \frac{df}{dx}(x). \end{aligned}$$
 :eqlabel:`eq_small_change`
 
-The last equation is worth explicitly calling out.  It tells us that if you take any function and change the input by a small amount, the output would change by that small amount scaled by the derivative.
 
-In this way, we can understand the derivative as the scaling factor that tells us how large of change we get in the output from a change in the input.
+Vale a pena mencionar explicitamente a última equação. Isso nos diz que se você pegar qualquer função e alterar a entrada em um pequeno valor, a saída mudará nesse pequeno valor escalonado pela derivada.
 
-## Rules of Calculus
+Desta forma, podemos entender a derivada como o fator de escala que nos diz quão grande é a mudança que obtemos na saída de uma mudança na entrada.
+
+## Regras de Cálculo
 :label:`sec_derivative_table`
 
 We now turn to the task of understanding how to compute the derivative of an explicit function.  A full formal treatment of calculus would derive everything from first principles.  We will not indulge in this temptation here, but rather provide an understanding of the common rules encountered.
@@ -526,7 +527,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNTAyNzgzMSwtNTI2MTQzNjYzLDIxMT
-Y1NjIyNTIsLTEwMjkyNTE2NDYsLTEyOTA2MjI5NzIsLTExMzM5
-Mjg4MzJdfQ==
+eyJoaXN0b3J5IjpbMjY5OTk4MTEyLC01MjYxNDM2NjMsMjExNj
+U2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYyMjk3MiwtMTEzMzky
+ODgzMl19
 -->
