@@ -171,13 +171,13 @@ Agora nos voltamos para a tarefa de entender como calcular a derivada de uma fun
 ### Derivadas Comuns
 Como foi visto em :numref:`sec_calculus`, ao calcular derivadas, muitas vezes pode-se usar uma série de regras para reduzir o cálculo a algumas funções básicas. Nós os repetimos aqui para facilitar a referência.
 
-* **Derivative of constants.** $\frac{d}{dx}c = 0$.
-* **Derivative of linear functions.** $\frac{d}{dx}(ax) = a$.
-* **Power rule.** $\frac{d}{dx}x^n = nx^{n-1}$.
-* **Derivative of exponentials.** $\frac{d}{dx}e^x = e^x$.
-* **Derivative of the logarithm.** $\frac{d}{dx}\log(x) = \frac{1}{x}$.
+* **Derivada de constantes.** $\frac{d}{dx}c = 0$.
+* **Derivada de funções lineares.** $\frac{d}{dx}(ax) = a$.
+* **Regra de potência.** $\frac{d}{dx}x^n = nx^{n-1}$.
+* **Derivada de exponenciais.** $\frac{d}{dx}e^x = e^x$.
+* **Derivada do logaritmo.** $\frac{d}{dx}\log(x) = \frac{1}{x}$.
 
-### Derivative Rules
+### Regras de Derivadas
 If every derivative needed to be separately computed and stored in a table, differential calculus would be near impossible.  It is a gift of mathematics that we can generalize the above derivatives and compute more complex derivatives like finding the derivative of $f(x) = \log\left(1+(x-1)^{10}\right)$.  As was mentioned in :numref:`sec_calculus`, the key to doing so is to codify what happens when we take functions and combine them in various ways, most importantly: sums, products, and compositions.
 
 * **Sum rule.** $\frac{d}{dx}\left(g(x) + h(x)\right) = \frac{dg}{dx}(x) + \frac{dh}{dx}(x)$.
@@ -527,7 +527,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODI4NDc4NTgsLTUyNjE0MzY2MywyMT
-E2NTYyMjUyLC0xMDI5MjUxNjQ2LC0xMjkwNjIyOTcyLC0xMTMz
-OTI4ODMyXX0=
+eyJoaXN0b3J5IjpbNjkxMjUwMzg2LC01MjYxNDM2NjMsMjExNj
+U2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYyMjk3MiwtMTEzMzky
+ODgzMl19
 -->
