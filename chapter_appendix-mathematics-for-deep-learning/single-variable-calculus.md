@@ -311,17 +311,18 @@ d2l.plot(xs, plots, 'x', 'f(x)', ylim=[-1.5, 1.5])
 
 ### Derivadas de Ordem Superior
 
-Let us now do something that may on the surface seem strange.  Take a function $f$ and compute the derivative $\frac{df}{dx}$.  This gives us the rate of change of $f$ at any point.
 
-However, the derivative, $\frac{df}{dx}$, can be viewed as a function itself, so nothing stops us from computing the derivative of $\frac{df}{dx}$ to get $\frac{d^2f}{dx^2} = \frac{df}{dx}\left(\frac{df}{dx}\right)$.  We will call this the second derivative of $f$.  This function is the rate of change of the rate of change of $f$, or in other words, how the rate of change is changing. We may apply the derivative any number of times to obtain what is called the $n$-th derivative. To keep the notation clean, we will denote the $n$-th derivative as 
+Vamos agora fazer algo que pode parecer estranho superficialmente. Pegue uma função $f$ e calcule a derivada $\frac{df}{dx}$. Isso nos dá a taxa de variação de $f$ em qualquer ponto.
+
+No entanto, a derivada, $\frac{df}{dx}$, pode ser vista como uma função em si, então nada nos impede de calcular a derivada de $\frac{df}{dx}$ para obter $\frac{d^2f}{dx^2} = \frac{df}{dx}\left(\frac{df}{dx}\right)$.. Chamaremos isso de segunda derivada de $f$. Esta função é a taxa de variação da taxa de variação de $f$, ou em outras palavras, como a taxa de variação está mudando. Podemos aplicar a derivada qualquer número de vezes para obter o que é chamado de $n$-ésima derivada. Para manter a notação limpa, denotaremos a derivada $n$-ésima
 
 $$
 f^{(n)}(x) = \frac{d^{n}f}{dx^{n}} = \left(\frac{d}{dx}\right)^{n} f.
 $$
 
-Let us try to understand *why* this is a useful notion.  Below, we visualize $f^{(2)}(x)$, $f^{(1)}(x)$, and $f(x)$.  
+Vamos tentar entender *por que* essa noção é útil. Abaixo, visualizamos $f^{(2)}(x)$, $f^{(1)}(x)$, and $f(x)$.  
 
-First, consider the case that the second derivative $f^{(2)}(x)$ is a positive constant.  This means that the slope of the first derivative is positive.  As a result, the first derivative $f^{(1)}(x)$ may start out negative, becomes zero at a point, and then becomes positive in the end. This tells us the slope of our original function $f$ and therefore, the function $f$ itself decreases, flattens out, then increases.  In other words, the function $f$ curves up, and has a single minimum as is shown in :numref:`fig_positive-second`.
+Primeiro, considere o caso em que a segunda derivada $f^{(2)}(x)$ é uma constante positiva. Isso significa que a inclinação da primeira derivada é positiva. Como resultado, a primeira derivada $f^{(1)}(x)$  pode começar negativa, tornar-se zero em um ponto e então se tornar positiva no final. Isso nos diz a inclinação de nossa função original $f$ e, portanto, a própria função $f$ diminui, nivela e, em seguida, aumenta. Em outras palavras, a função $f$ se curva para cima e tem um único mínimo como é mostrado em :numref:`fig_positive-second`.
 
 ![If we assume the second derivative is a positive constant, then the fist derivative in increasing, which implies the function itself has a minimum.](../img/posSecDer.svg)
 :label:`fig_positive-second`
@@ -530,7 +531,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NDM0MjA1NCwtNDkzOTE5ODA2LC01Mj
+eyJoaXN0b3J5IjpbLTUzMjIxMjQ4MiwtNDkzOTE5ODA2LC01Mj
 YxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYy
 Mjk3MiwtMTEzMzkyODgzMl19
 -->
