@@ -147,10 +147,10 @@ $$
 
 Suponhamos que eu queira usar isso para ajudar a minimizar nossa perda $L$. Vamos entender geometricamente o algoritmo de gradiente descendente descrito pela primeira vez em :numref:`sec_autograd`. O que faremos é o seguinte:
 
-1. Start with a random choice for the initial parameters $\mathbf{w}$.
-2. Find the direction $\mathbf{v}$ that makes $L$ decrease the most rapidly at $\mathbf{w}$.
-3. Take a small step in that direction: $\mathbf{w} \rightarrow \mathbf{w} + \epsilon\mathbf{v}$.
-4. Repeat.
+1. Comece com uma escolha aleatória para os parâmetros iniciais $\mathbf{w}$.
+2. Encontre a direção $\mathbf{v}$ que faz $L$ diminuir mais rapidamente em $\mathbf{w}$.
+3. Dê um pequeno passo nessa direção: $\mathbf{w} \rightarrow \mathbf{w} + \epsilon\mathbf{v}$.
+4. Repita.
 
 The only thing we do not know exactly how to do is to compute the vector $\mathbf{v}$ in the second step.  We will call such a direction the *direction of steepest descent*.  Using the geometric understanding of dot products from :numref:`sec_geometry-linear-algebraic-ops`, we see that we can rewrite :eqref:`eq_nabla_use` as
 
@@ -860,7 +860,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAwNjkyODI4LC03MzkxNjAwNzQsLTE0NT
-EyOTgyODYsNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3
-XX0=
+eyJoaXN0b3J5IjpbLTE3NzY2MjQyMTAsLTczOTE2MDA3NCwtMT
+Q1MTI5ODI4Niw3MjMwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5
+ODddfQ==
 -->
