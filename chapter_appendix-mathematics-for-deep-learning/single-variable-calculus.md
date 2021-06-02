@@ -339,9 +339,10 @@ Terceiro, se a segunda derivada é sempre zero, então a primeira derivada nunca
 ![Se assumirmos que a segunda derivada é zero, a primeira derivada é constante, o que implica que a própria função é uma linha reta.](../img/zeroSecDer.svg)
 :label:`fig_zero-second`
 
-To summarize, the second derivative can be interpreted as describing the way that the function $f$ curves.  A positive second derivative leads to a upwards curve, while a negative second derivative means that $f$ curves downwards, and a zero second derivative means that $f$ does not curve at all.
 
-Let us take this one step further. Consider the function $g(x) = ax^{2}+ bx + c$.  We can then compute that
+Para resumir, a segunda derivada pode ser interpretada como descrevendo a forma como a função $f$ curva. Uma segunda derivada positiva leva a uma curva para cima, enquanto uma segunda derivada negativa significa que $f$ se curva para baixo, e uma segunda derivada zero significa que $f$ não faz nenhuma curva.
+
+Vamos dar um passo adiante. Considere a função $g(x) = ax^{2}+ bx + c$. Podemos então calcular que
 
 $$
 \begin{aligned}
@@ -350,7 +351,7 @@ $$
 \end{aligned}
 $$
 
-If we have some original function $f(x)$ in mind, we may compute the first two derivatives and find the values for $a, b$, and $c$ that make them match this computation.  Similarly to the previous section where we saw that the first derivative gave the best approximation with a straight line, this construction provides the best approximation by a quadratic.  Let us visualize this for $f(x) = \sin(x)$.
+Se tivermos alguma função original $f(x)$ em mente, podemos calcular as duas primeiras derivadas e encontrar os valores para $a, b$, e $c$ que os fazem corresponder a este cálculo. Similarmente à seção anterior, onde vimos que a primeira derivada deu a melhor aproximação com uma linha reta, esta construção fornece a melhor aproximação por uma quadrática. Vamos visualizar isso para $f(x) = \sin(x)$.
 
 ```{.python .input}
 # Compute sin
@@ -531,7 +532,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NDExMDE5MSwtNDkzOTE5ODA2LC01Mj
-YxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0NiwtMTI5MDYy
-Mjk3MiwtMTEzMzkyODgzMl19
+eyJoaXN0b3J5IjpbLTIxMTkxMzM5OTIsLTQ5MzkxOTgwNiwtNT
+I2MTQzNjYzLDIxMTY1NjIyNTIsLTEwMjkyNTE2NDYsLTEyOTA2
+MjI5NzIsLTExMzM5Mjg4MzJdfQ==
 -->
