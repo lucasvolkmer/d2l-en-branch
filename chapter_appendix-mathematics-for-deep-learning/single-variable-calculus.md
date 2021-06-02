@@ -445,13 +445,13 @@ $$
 f(x) = \sum_{n = 0}^\infty \frac{f^{(n)}(x_0)}{n!}(x-x_0)^{n}.
 $$
 
-Take $f(x) = e^{x}$ as am example. Since $e^{x}$ is its own derivative, we know that $f^{(n)}(x) = e^{x}$. Therefore, $e^{x}$ can be reconstructed by taking the Taylor series at $x_0 = 0$, i.e.,
+Tome $f(x) = e^{x}$ como um exemplo. Como $e^{x}$ é sua própria derivada, sabemos que $f^{(n)}(x) = e^{x}$. Portanto, $e^{x}$ pode ser reconstruído tomando a série de Taylor em $x_0 = 0$, ou seja,
 
 $$
 e^{x} = \sum_{n = 0}^\infty \frac{x^{n}}{n!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \cdots.
 $$
 
-Let us see how this works in code and observe how increasing the degree of the Taylor approximation brings us closer to the desired function $e^x$.
+Vamos ver como isso funciona no código e observar como o aumento do grau da aproximação de Taylor nos aproxima da função desejada $e^x$.
 
 ```{.python .input}
 # Compute the exponential function
@@ -536,7 +536,7 @@ Taylor series have two primary applications:
 [Discussions](https://discuss.d2l.ai/t/1089)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MDA1NDk0MywxMDU3MzU4NzgsLTQ5Mz
-kxOTgwNiwtNTI2MTQzNjYzLDIxMTY1NjIyNTIsLTEwMjkyNTE2
-NDYsLTEyOTA2MjI5NzIsLTExMzM5Mjg4MzJdfQ==
+eyJoaXN0b3J5IjpbLTI5NTcyNDUwLDEwNTczNTg3OCwtNDkzOT
+E5ODA2LC01MjYxNDM2NjMsMjExNjU2MjI1MiwtMTAyOTI1MTY0
+NiwtMTI5MDYyMjk3MiwtMTEzMzkyODgzMl19
 -->
