@@ -308,7 +308,7 @@ $$
 \end{aligned}
 $$
 
-Let us try using this decomposition to compute $\frac{\partial f}{\partial w}$.  Notice that all we need here are the various single step partials:
+Vamos tentar usar esta decomposição para calcular $\frac{\partial f}{\partial w}$. Observe que tudo o que precisamos aqui são as várias parciais de etapa única:
 
 $$
 \begin{aligned}
@@ -862,7 +862,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDAyMjU2NSwtNTk4MDkzNzE0LC0xNz
+eyJoaXN0b3J5IjpbMTc4NjQ1MDQyMCwtNTk4MDkzNzE0LC0xNz
 U2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyODcsLTczOTE2
 MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOSwtNDcxNDk0OTgwLD
 EzNjQ3MDI5ODddfQ==
