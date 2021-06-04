@@ -231,7 +231,7 @@ Vamos supor que temos uma função de quatro variáveis ($w, x, y$, e $z$) que p
 $$\begin{aligned}f(u, v) & = (u+v)^{2} \\u(a, b) & = (a+b)^{2}, \qquad v(a, b) = (a-b)^{2}, \\a(w, x, y, z) & = (w+x+y+z)^{2}, \qquad b(w, x, y, z) = (w+x-y-z)^2.\end{aligned}$$
 :eqlabel:`eq_multi_func_def`
 
-Such chains of equations are common when working with neural networks, so trying to understand how to compute gradients of such functions is key.  We can start to see visual hints of this connection in :numref:`fig_chain-1` if we take a look at what variables directly relate to one another.
+Essas cadeias de equações são comuns ao trabalhar com redes neurais, portanto, tentar entender como calcular gradientes de tais funções é fundamental. Podemos começar a ver dicas visuais dessa conexão em :numref:`fig_chain-1` se dermos uma olhada em quais variáveis se relacionam diretamente entre si.
 
 ![The function relations above where nodes represent values and edges show functional dependence.](../img/chain-net1.svg)
 :label:`fig_chain-1`
@@ -862,7 +862,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg2MjM4ODI1LDIxMDQ3MjM3MDcsLTEyMD
-g3MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMz
-OSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbMTM1OTMyNjE2NCwyMTA0NzIzNzA3LC0xMj
+A4NzMxMjg3LC03MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUz
+MzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
 -->
