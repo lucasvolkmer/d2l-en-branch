@@ -286,9 +286,9 @@ $$
 
 Entender a regra da cadeia desta forma renderá grandes dividendos ao tentar entender como os gradientes fluem através das redes, e por que várias escolhas arquitetônicas como aquelas em LSTMs (:numref:`sec_lstm`) ou camadas residuais (:numref:`sec_resnet`) podem ajudam a moldar o processo de aprendizagem, controlando o fluxo gradiente.
 
-## The Backpropagation Algorithm
+## O Algoritmo de Retropropagação
 
-Let us return to the example of :eqref:`eq_multi_func_def` the previous section where
+Vamos retornar ao exemplo de :eqref:`eq_multi_func_def` a seção anterior onde
 
 $$
 \begin{aligned}
@@ -298,7 +298,7 @@ a(w, x, y, z) & = (w+x+y+z)^{2}, \qquad b(w, x, y, z) = (w+x-y-z)^2.
 \end{aligned}
 $$
 
-If we want to compute say $\frac{\partial f}{\partial w}$ we may apply the multi-variate chain rule to see:
+Se quisermos calcular, digamos $\frac{\partial f}{\partial w}$, podemos aplicar a regra da cadeia multivariada para ver:
 
 $$
 \begin{aligned}
@@ -862,8 +862,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5ODA5MzcxNCwtMTc1NjU2MjYwNCwyMT
-A0NzIzNzA3LC0xMjA4NzMxMjg3LC03MzkxNjAwNzQsLTE0NTEy
-OTgyODYsNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3XX
-0=
+eyJoaXN0b3J5IjpbLTE4NDAyMjU2NSwtNTk4MDkzNzE0LC0xNz
+U2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyODcsLTczOTE2
+MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOSwtNDcxNDk0OTgwLD
+EzNjQ3MDI5ODddfQ==
 -->
