@@ -319,7 +319,7 @@ $$
 \end{aligned}
 $$
 
-If we write this out into code this becomes a fairly manageable expression.
+Se escrevermos isso no código, isso se tornará uma expressão bastante gerenciável.
 
 ```{.python .input}
 #@tab all
@@ -862,8 +862,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NjQ1MDQyMCwtNTk4MDkzNzE0LC0xNz
-U2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyODcsLTczOTE2
-MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOSwtNDcxNDk0OTgwLD
-EzNjQ3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbLTE1NjA3MjY1OTEsLTU5ODA5MzcxNCwtMT
+c1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMjg3LC03Mzkx
+NjAwNzQsLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3MTQ5NDk4MC
+wxMzY0NzAyOTg3XX0=
 -->
