@@ -193,12 +193,12 @@ $$
 f(x) = 3x^4 - 4x^3 -12x^2.
 $$
 
-This function has derivative
+Esta função tem derivada
 $$
 \frac{df}{dx} = 12x^3 - 12x^2 -24x = 12x(x-2)(x+1).
 $$
 
-The only possible location of minima are at $x = -1, 0, 2$, where the function takes the values $-5,0, -32$ respectively, and thus we can conclude that we minimize our function when $x = 2$.  A quick plot confirms this.
+A única localização possível dos mínimos está em $x = -1, 0, 2$, onde a função assume os valores $-5,0, -32$ respectivamente, e assim podemos concluir que minimizamos nossa função quando $x = 2$. Um gráfico rápido confirma isso.
 
 ```{.python .input}
 x = np.arange(-2, 3, 0.01)
@@ -862,7 +862,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk5OTc4MTAyLDIxMDQ3MjM3MDcsLTEyMD
-g3MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMz
-OSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbLTEzNTI2NzkyMzgsMjEwNDcyMzcwNywtMT
+IwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1
+MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
 -->
