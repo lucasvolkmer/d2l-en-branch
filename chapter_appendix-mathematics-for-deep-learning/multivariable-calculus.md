@@ -275,16 +275,16 @@ $$
 
 Imagine que temos uma rede diferente de funções onde as funções à direita dependem daquelas que estão conectadas à esquerda, como mostrado em :numref:`fig_chain-2`.
 
-![Another more subtle example of the chain rule.](../img/chain-net2.svg)
+![Outro exemplo mais sutil da regra da cadeia.](../img/chain-net2.svg)
 :label:`fig_chain-2`
 
-To compute something like $\frac{\partial f}{\partial y}$, we need to sum over all (in this case $3$) paths from $y$ to $f$ giving
+Para calcular algo como $\frac{\partial f}{\partial y}$, precisamos somar todos (neste caso $3$) caminhos de $y$ a $f$ dando
 
 $$
 \frac{\partial f}{\partial y} = \frac{\partial f}{\partial a} \frac{\partial a}{\partial u} \frac{\partial u}{\partial y} + \frac{\partial f}{\partial u} \frac{\partial u}{\partial y} + \frac{\partial f}{\partial b} \frac{\partial b}{\partial v} \frac{\partial v}{\partial y}.
 $$
 
-Understanding the chain rule in this way will pay great dividends when trying to understand how gradients flow through networks, and why various architectural choices like those in LSTMs (:numref:`sec_lstm`) or residual layers (:numref:`sec_resnet`) can help shape the learning process by controlling gradient flow.
+Entender a regra da cadeia desta forma renderá grandes dividendos ao tentar entender como os gradientes fluem através das redes, e por que várias escolhas arquitetônicas como aquelas em LSTMs (:numref:`sec_lstm`) ou camadas residuais (:numref:`sec_resnet`) podem ajudam a moldar o processo de aprendizagem, controlando o fluxo gradiente.
 
 ## The Backpropagation Algorithm
 
@@ -862,8 +862,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIwMzc0NzA0LC0xNzU2NTYyNjA0LDIxMD
-Q3MjM3MDcsLTEyMDg3MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5
-ODI4Niw3MjMwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ
-==
+eyJoaXN0b3J5IjpbLTU5ODA5MzcxNCwtMTc1NjU2MjYwNCwyMT
+A0NzIzNzA3LC0xMjA4NzMxMjg3LC03MzkxNjAwNzQsLTE0NTEy
+OTgyODYsNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3XX
+0=
 -->
