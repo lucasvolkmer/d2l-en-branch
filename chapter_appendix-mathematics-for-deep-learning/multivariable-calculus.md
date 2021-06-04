@@ -265,7 +265,7 @@ $$
 \end{aligned}
 $$
 
-The first line follows from the definition of partial derivative, and the second follows from the definition of gradient.  It is notationally burdensome to track exactly where we evaluate every derivative, as in the expression $\frac{\partial f}{\partial u}(u(a, b), v(a, b))$, so we often abbreviate this to the much more memorable
+A primeira linha segue da definição de derivada parcial e a segunda segue da definição de gradiente. É notacionalmente pesado rastrear exatamente onde avaliamos cada derivada, como na expressão $\frac{\partial f}{\partial u}(u(a, b), v(a, b))$, então frequentemente abreviamos para muito mais memorável
 
 $$
 \frac{\partial f}{\partial a} = \frac{\partial f}{\partial u}\frac{\partial u}{\partial a}+\frac{\partial f}{\partial v}\frac{\partial v}{\partial a}.
@@ -862,7 +862,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzUwNjUyNTcsLTE3NTY1NjI2MDQsMj
+eyJoaXN0b3J5IjpbLTE2MjczNTEzOTUsLTE3NTY1NjI2MDQsMj
 EwNDcyMzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUx
 Mjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N1
 19
