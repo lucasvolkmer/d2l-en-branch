@@ -223,10 +223,10 @@ f = (3 * x**4) - (4 * x**3) - (12 * x**2)
 d2l.plot(x, f, 'x', 'f(x)')
 ```
 
-This highlights an important fact to know when working either theoretically or numerically: the only possible points where we can minimize (or maximize) a function will have gradient equal to zero, however, not every point with gradient zero is the true *global* minimum (or maximum).
+Isso destaca um fato importante a saber ao trabalhar teoricamente ou numericamente: os únicos pontos possíveis onde podemos minimizar (ou maximizar) uma função terão gradiente igual a zero, no entanto, nem todo ponto com gradiente zero é o verdadeiro *global* mínimo (ou máximo).
 
-## Multivariate Chain Rule
-Let us suppose that we have a function of four variables ($w, x, y$, and $z$) which we can make by composing many terms:
+## Regra da Cadeia Multivariada
+Vamos supor que temos uma função de quatro variáveis ($w, x, y$, e $z$) que podemos fazer compondo muitos termos:
 
 $$\begin{aligned}f(u, v) & = (u+v)^{2} \\u(a, b) & = (a+b)^{2}, \qquad v(a, b) = (a-b)^{2}, \\a(w, x, y, z) & = (w+x+y+z)^{2}, \qquad b(w, x, y, z) = (w+x-y-z)^2.\end{aligned}$$
 :eqlabel:`eq_multi_func_def`
@@ -862,7 +862,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTI2NzkyMzgsMjEwNDcyMzcwNywtMT
-IwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1
-MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbODg2MjM4ODI1LDIxMDQ3MjM3MDcsLTEyMD
+g3MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMz
+OSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
 -->
