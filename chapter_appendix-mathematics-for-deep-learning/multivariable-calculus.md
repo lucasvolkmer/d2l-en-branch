@@ -233,16 +233,16 @@ $$\begin{aligned}f(u, v) & = (u+v)^{2} \\u(a, b) & = (a+b)^{2}, \qquad v(a, b) =
 
 Essas cadeias de equações são comuns ao trabalhar com redes neurais, portanto, tentar entender como calcular gradientes de tais funções é fundamental. Podemos começar a ver dicas visuais dessa conexão em :numref:`fig_chain-1` se dermos uma olhada em quais variáveis se relacionam diretamente entre si.
 
-![The function relations above where nodes represent values and edges show functional dependence.](../img/chain-net1.svg)
+![As relações de função acima, onde os nós representam valores e as arestas mostram dependência funcional.](../img/chain-net1.svg)
 :label:`fig_chain-1`
 
-Nothing stops us from just composing everything from :eqref:`eq_multi_func_def` and writing out that
+Nada nos impede de apenas compor tudo de :eqref:`eq_multi_func_def` e escrever isso
 
 $$
 f(w, x, y, z) = \left(\left((w+x+y+z)^2+(w+x-y-z)^2\right)^2+\left((w+x+y+z)^2-(w+x-y-z)^2\right)^2\right)^2.
 $$
 
-We may then take the derivative by just using single variable derivatives, but if we did that we would quickly find ourself swamped with terms, many of which are repeats!  Indeed, one can see that, for instance:
+Podemos então tirar a derivada usando apenas derivadas de variável única, mas se fizéssemos isso, rapidamente nos veríamos inundados com termos, muitos dos quais são repetições! Na verdade, pode-se ver que, por exemplo:
 
 $$
 \begin{aligned}
@@ -862,7 +862,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1OTMyNjE2NCwyMTA0NzIzNzA3LC0xMj
+eyJoaXN0b3J5IjpbMTkzMTczNzIxNSwyMTA0NzIzNzA3LC0xMj
 A4NzMxMjg3LC03MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUz
 MzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
 -->
