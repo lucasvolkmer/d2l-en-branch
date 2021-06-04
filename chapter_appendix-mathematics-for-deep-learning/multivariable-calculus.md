@@ -252,7 +252,7 @@ $$
 \end{aligned}
 $$
 
-If we then also wanted to compute $\frac{\partial f}{\partial x}$, we would end up with a similar equation again with many repeated terms, and many *shared* repeated terms between the two derivatives.  This represents a massive quantity of wasted work, and if we needed to compute derivatives this way, the whole deep learning revolution would have stalled out before it began!
+Se também quiséssemos calcular $\frac{\partial f}{\partial x}$, acabaríamos com uma equação semelhante novamente com muitos termos repetidos e muitos termos repetidos *compartilhados* entre as duas derivadas. Isso representa uma enorme quantidade de trabalho desperdiçado e, se precisássemos calcular as derivadas dessa forma, toda a revolução do aprendizado profundo teria estagnado antes de começar!
 
 
 Let us break up the problem.  We will start by trying to understand how $f$ changes when we change $a$, essentially assuming that $w, x, y$, and $z$ all do not exist.  We will reason as we did back when we worked with the gradient for the first time.  Let us take $a$ and add a small amount $\epsilon$ to it.
@@ -862,7 +862,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMTczNzIxNSwyMTA0NzIzNzA3LC0xMj
-A4NzMxMjg3LC03MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUz
-MzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
+eyJoaXN0b3J5IjpbLTE3NTY1NjI2MDQsMjEwNDcyMzcwNywtMT
+IwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1
+MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
 -->
