@@ -271,9 +271,9 @@ $$
 \frac{\partial f}{\partial a} = \frac{\partial f}{\partial u}\frac{\partial u}{\partial a}+\frac{\partial f}{\partial v}\frac{\partial v}{\partial a}.
 $$
 
-It is useful to think about the meaning of the process. We are trying to understand how a function of the form $f(u(a, b), v(a, b))$ changes its value with a change in $a$.  There are two pathways this can occur: there is the pathway where $a \rightarrow u \rightarrow f$ and where $a \rightarrow v \rightarrow f$.  We can compute both of these contributions via the chain rule: $\frac{\partial w}{\partial u} \cdot \frac{\partial u}{\partial x}$ and $\frac{\partial w}{\partial v} \cdot \frac{\partial v}{\partial x}$ respectively, and added up.
+É útil pensar sobre o significado do processo. Estamos tentando entender como uma função da forma $f(u(a, b), v(a, b))$ muda seu valor com uma mudança em $a$. Isso pode ocorrer de duas maneiras: há o caminho onde $a \rightarrow u \rightarrow f$ e onde $a \rightarrow v \rightarrow f$. Podemos calcular ambas as contribuições por meio da regra da cadeia: $\frac{\partial w}{\partial u} \cdot \frac{\partial u}{\partial x}$ e $\frac{\partial w}{\partial v} \cdot \frac{\partial v}{\partial x}$ respectivamente, e somados.
 
-Imagine we have a different network of functions where the functions on the right depend on those that are connected to on the left as is shown in :numref:`fig_chain-2`.
+Imagine que temos uma rede diferente de funções onde as funções à direita dependem daquelas que estão conectadas à esquerda, como mostrado em :numref:`fig_chain-2`.
 
 ![Another more subtle example of the chain rule.](../img/chain-net2.svg)
 :label:`fig_chain-2`
@@ -862,8 +862,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjczNTEzOTUsLTE3NTY1NjI2MDQsMj
-EwNDcyMzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUx
-Mjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N1
-19
+eyJoaXN0b3J5IjpbNzIwMzc0NzA0LC0xNzU2NTYyNjA0LDIxMD
+Q3MjM3MDcsLTEyMDg3MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5
+ODI4Niw3MjMwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ
+==
 -->
