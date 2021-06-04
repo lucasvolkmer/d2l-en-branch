@@ -183,11 +183,12 @@ $$
 L(\mathbf{x}_0 + \boldsymbol{\epsilon}) \approx L(\mathbf{x}_0) + \boldsymbol{\epsilon}\cdot \nabla_{\mathbf{x}} L(\mathbf{x}_0).
 $$
 
-If the gradient is not zero, we know that we can take a step in the direction $-\epsilon \nabla_{\mathbf{x}} L(\mathbf{x}_0)$ to find a value of $L$ that is smaller.  Thus, if we truly are at a minimum, this cannot be the case!  We can conclude that if $\mathbf{x}_0$ is a minimum, then $\nabla_{\mathbf{x}} L(\mathbf{x}_0) = 0$.  We call points with $\nabla_{\mathbf{x}} L(\mathbf{x}_0) = 0$ *critical points*.
 
-This is nice, because in some rare settings, we *can* explicitly find all the points where the gradient is zero, and find the one with the smallest value.
+Se o gradiente não for zero, sabemos que podemos dar um passo na direção $-\epsilon \nabla_{\mathbf{x}} L(\mathbf{x}_0)$ para encontrar um valor de $L$ que é menor. Portanto, se realmente estamos no mínimo, não pode ser esse o caso! Podemos concluir que se $\mathbf{x}_0$ é um mínimo, então $\nabla_{\mathbf{x}} L(\mathbf{x}_0) = 0$. Chamamos pontos com $\nabla_{\mathbf{x}} L(\mathbf{x}_0) = 0$ *pontos críticos*.
 
-For a concrete example, consider the function
+Isso é bom, porque em algumas configurações raras, nós *podemos* encontrar explicitamente todos os pontos onde o gradiente é zero e encontrar aquele com o menor valor.
+
+Para um exemplo concreto, considere a função
 $$
 f(x) = 3x^4 - 4x^3 -12x^2.
 $$
@@ -861,7 +862,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNDcyMzcwNywtMTIwODczMTI4NywtNz
-M5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5
-ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbODk5OTc4MTAyLDIxMDQ3MjM3MDcsLTEyMD
+g3MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMz
+OSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
 -->
