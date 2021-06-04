@@ -255,7 +255,7 @@ $$
 Se também quiséssemos calcular $\frac{\partial f}{\partial x}$, acabaríamos com uma equação semelhante novamente com muitos termos repetidos e muitos termos repetidos *compartilhados* entre as duas derivadas. Isso representa uma enorme quantidade de trabalho desperdiçado e, se precisássemos calcular as derivadas dessa forma, toda a revolução do aprendizado profundo teria estagnado antes de começar!
 
 
-Let us break up the problem.  We will start by trying to understand how $f$ changes when we change $a$, essentially assuming that $w, x, y$, and $z$ all do not exist.  We will reason as we did back when we worked with the gradient for the first time.  Let us take $a$ and add a small amount $\epsilon$ to it.
+Vamos resolver o problema. Começaremos tentando entender como $f$ muda quando mudamos $a$, essencialmente supondo que $w, x, y$, e $z$ não existem. Vamos raciocinar como fazíamos quando trabalhamos com gradiente pela primeira vez. Vamos pegar $a$ e adicionar uma pequena quantia $\epsilon$ a ele.
 
 $$
 \begin{aligned}
@@ -862,7 +862,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTY1NjI2MDQsMjEwNDcyMzcwNywtMT
-IwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1
-MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbLTE1NzUwNjUyNTcsLTE3NTY1NjI2MDQsMj
+EwNDcyMzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUx
+Mjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N1
+19
 -->
