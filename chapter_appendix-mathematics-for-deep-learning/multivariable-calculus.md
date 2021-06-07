@@ -395,13 +395,14 @@ print(f'df/dy at {w}, {x}, {y}, {z} is {df_dy}')
 print(f'df/dz at {w}, {x}, {y}, {z} is {df_dz}')
 ```
 
-The fact that we compute derivatives from $f$ back towards the inputs rather than from the inputs forward to the outputs (as we did in the first code snippet above) is what gives this algorithm its name: *backpropagation*.  Note that there are two steps:
-1. Compute the value of the function, and the single step partials from front to back.  While not done above, this can be combined into a single *forward pass*.
-2. Compute the gradient of $f$ from back to front.  We call this the *backwards pass*.
 
-This is precisely what every deep learning algorithm implements to allow the computation of the gradient of the loss with respect to every weight in the network at one pass.  It is an astonishing fact that we have such a decomposition.
+O fato de calcularmos derivadas de $f$ de volta para as entradas em vez de das entradas para as saídas (como fizemos no primeiro trecho de código acima) é o que dá a esse algoritmo seu nome: *retropropagação*. Observe que existem duas etapas:
+1. Calcular o valor da função e as parciais de etapa única da frente para trás. Embora não feito acima, isso pode ser combinado em um único *passe para frente*.
+2. Calcule o gradiente de $f$ de trás para frente. Chamamos isso de *passe para trás*.
 
-To see how to encapsulated this, let us take a quick look at this example.
+Isso é precisamente o que todo algoritmo de aprendizado profundo implementa para permitir o cálculo do gradiente da perda em relação a cada peso na rede em uma passagem. É um fato surpreendente que tenhamos tal decomposição.
+
+Para ver como encapsular isso, vamos dar uma olhada rápida neste exemplo.
 
 ```{.python .input}
 # Initialize as ndarrays, then attach gradients
@@ -863,8 +864,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Njk5NTA1MDgsOTk4NDIxMjAyLC0xNT
-YwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcy
-MzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mj
-g2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbMTQ1NjA4NDk4OSw5OTg0MjEyMDIsLTE1Nj
+A3MjY1OTEsLTU5ODA5MzcxNCwtMTc1NjU2MjYwNCwyMTA0NzIz
+NzA3LC0xMjA4NzMxMjg3LC03MzkxNjAwNzQsLTE0NTEyOTgyOD
+YsNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
 -->
