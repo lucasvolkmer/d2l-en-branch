@@ -719,19 +719,19 @@ $$
 \frac{d}{dx_k}x_ia_{ij}x_j = a_{ki}x_i + x_ia_{ik} = (a_{ki} + a_{ik})x_i.
 $$
 
-Now, here is where we start to need some practice to go further.  Let us try and identify this outcome in terms of matrix operations.  $a_{ki} + a_{ik}$ is the $k, i$-th component of $\mathbf{A} + \mathbf{A}^\top$.  This gives
+Agora, é aqui que precisamos de um pouco de prática para ir mais longe. Vamos tentar identificar esse resultado em termos de operações de matriz. $a_{ki} + a_{ik}$ é o $k, i$-ésimo componente de $\mathbf{A} + \mathbf{A}^\top$. Isto dá
 
 $$
 \frac{d}{dx_k}x_ia_{ij}x_j = [\mathbf{A} + \mathbf{A}^\top]_{ki}x_i.
 $$
 
-Similarly, this term is now the product of the matrix $\mathbf{A} + \mathbf{A}^\top$ by the vector $\mathbf{x}$, so we see that
+Da mesma forma, este termo é agora o produto da matriz $\mathbf{A} + \mathbf{A}^\top$ pelo vetor $\mathbf{x}$, então vemos que
 
 $$
 \left[\frac{d}{d\mathbf{x}}(\mathbf{x}^\top A \mathbf{x})\right]_k = \frac{d}{dx_k}x_ia_{ij}x_j = [(\mathbf{A} + \mathbf{A}^\top)\mathbf{x}]_k.
 $$
 
-Thus, we see that the $k$-th entry of the desired derivative from :eqref:`eq_mat_goal_1` is just the $k$-th entry of the vector on the right, and thus the two are the same.  Thus yields
+Assim, vemos que a $k$ -ésima entrada da derivada desejada de :eqref:`eq_mat_goal_1` é apenas a $k$-ésima entrada do vetor à direita e, portanto, os dois são iguais. Assim
 
 $$
 \frac{d}{d\mathbf{x}}(\mathbf{x}^\top A \mathbf{x}) = (\mathbf{A} + \mathbf{A}^\top)\mathbf{x}.
@@ -869,7 +869,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5OTYyMzMyNiw4MDQwNTY3ODMsLTEyOT
+eyJoaXN0b3J5IjpbLTg2Njk1ODQ0Miw4MDQwNTY3ODMsLTEyOT
 Q5NTk3NTYsLTExMzEyOTg5NjQsOTk4NDIxMjAyLC0xNTYwNzI2
 NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNy
 wtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcy
