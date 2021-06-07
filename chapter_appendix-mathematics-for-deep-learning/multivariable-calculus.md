@@ -743,9 +743,10 @@ $$
 \frac{d}{dx}(xax) = \frac{dx}{dx}ax + xa\frac{dx}{dx} = (a+a)x.
 $$
 
-Equivalently $\frac{d}{dx}(ax^2) = 2ax = (a+a)x$.  Again, we get a result that looks rather like the single variable result but with a transpose tossed in.
 
-At this point, the pattern should be looking rather suspicious, so let us try to figure out why.  When we take matrix derivatives like this, let us first assume that the expression we get will be another matrix expression: an expression we can write it in terms of products and sums of matrices and their transposes.  If such an expression exists, it will need to be true for all matrices.  In particular, it will need to be true of $1 \times 1$ matrices, in which case the matrix product is just the product of the numbers, the matrix sum is just the sum, and the transpose does nothing at all!  In other words, whatever expression we get *must* match the single variable expression.  This means that, with some practice, one can often guess matrix derivatives just by knowing what the associated single variable expression must look like!
+Equivalentemente $\frac{d}{dx}(ax^2) = 2ax = (a+a)x$. Novamente, obtemos um resultado que se parece bastante com o resultado de uma única variável, mas com uma transposição inserida.
+
+Neste ponto, o padrão deve parecer bastante suspeito, então vamos tentar descobrir o porquê. Quando tomamos derivadas de matriz como esta, vamos primeiro supor que a expressão que obtemos será outra expressão de matriz: uma expressão que podemos escrevê-la em termos de produtos e somas de matrizes e suas transposições. Se tal expressão existir, ela precisará ser verdadeira para todas as matrizes. Em particular, ele precisará ser verdadeiro para matrizes $1 \times 1$, caso em que o produto da matriz é apenas o produto dos números, a soma da matriz é apenas a soma e a transposta não faz nada! Em outras palavras, qualquer expressão que obtivermos *deve* corresponder à expressão de variável única. Isso significa que, com alguma prática, muitas vezes pode-se adivinhar as derivadas de matriz apenas por saber como a expressão da única variável associada deve se parecer!
 
 Let us try this out.  Suppose that $\mathbf{X}$ is a $n \times m$ matrix, $\mathbf{U}$ is an $n \times r$ and $\mathbf{V}$ is an $r \times m$.  Let us try to compute
 
@@ -869,9 +870,9 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxODQxMTgzMCw4MDQwNTY3ODMsLTEyOT
-Q5NTk3NTYsLTExMzEyOTg5NjQsOTk4NDIxMjAyLC0xNTYwNzI2
-NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNy
-wtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcy
-MzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbLTIwMzIzODEzMjksODA0MDU2NzgzLC0xMj
+k0OTU5NzU2LC0xMTMxMjk4OTY0LDk5ODQyMTIwMiwtMTU2MDcy
+NjU5MSwtNTk4MDkzNzE0LC0xNzU2NTYyNjA0LDIxMDQ3MjM3MD
+csLTEyMDg3MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3
+MjMwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
 -->
