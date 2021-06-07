@@ -489,18 +489,18 @@ Tudo o que fizemos acima pode ser feito automaticamente chamando `f.backwards ()
 
 Como no cálculo de variável única, é útil considerar derivadas de ordem superior para entender como podemos obter uma melhor aproximação de uma função do que usar apenas o gradiente.
 
-Há um problema imediato que se encontra ao trabalhar com derivadas de funções de várias variáveis de ordem superior, que é o grande número delas. Se temos uma função $f(x_1, \ldots, x_n)$ de $n$ variáveis, então podemos tomar $n^{2}$ muitas derivadas secundas, nomeadamente para qualquer escolha de $i$ e $j$:
+Há um problema imediato que se encontra ao trabalhar com derivadas de funções de várias variáveis de ordem superior, que é o grande número delas. Se temos uma função $f(x_1, \ldots, x_n)$ de $n$ variáveis, então podemos tomar $n^{2}$ derivadas secundas, nomeadamente para qualquer escolha de $i$ e $j$:
 
 $$
 \frac{d^2f}{dx_idx_j} = \frac{d}{dx_i}\left(\frac{d}{dx_j}f\right).
 $$
 
-This is traditionally assembled into a matrix called the *Hessian*:
+Isso é tradicionalmente montado em uma matriz chamada *Hessian*:
 
 $$\mathbf{H}_f = \begin{bmatrix} \frac{d^2f}{dx_1dx_1} & \cdots & \frac{d^2f}{dx_1dx_n} \\ \vdots & \ddots & \vdots \\ \frac{d^2f}{dx_ndx_1} & \cdots & \frac{d^2f}{dx_ndx_n} \\ \end{bmatrix}.$$
 :eqlabel:`eq_hess_def`
 
-Not every entry of this matrix is independent.  Indeed, we can show that as long as both *mixed partials* (partial derivatives with respect to more than one variable) exist and are continuous, we can say that for any $i$, and $j$,
+Nem todas as entradas desta matriz são independentes. Na verdade, podemos mostrar que, enquanto ambas * parciais mistas * (derivadas parciais em relação a mais de uma variável) existem e são contínuos, podemos dizer que para qualquer $i$ e $j$,
 
 $$
 \frac{d^2f}{dx_idx_j} = \frac{d^2f}{dx_jdx_i}.
@@ -865,7 +865,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjA3NTg2NTEsOTk4NDIxMjAyLC0xNT
+eyJoaXN0b3J5IjpbLTExMzEyOTg5NjQsOTk4NDIxMjAyLC0xNT
 YwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcy
 MzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mj
 g2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
