@@ -482,13 +482,14 @@ print(f'df/dz at {w.numpy()}, {x.numpy()}, {y.numpy()}, '
       f'{z.numpy()} is {z_grad}')
 ```
 
-All of what we did above can be done automatically by calling `f.backwards()`.
+Tudo o que fizemos acima pode ser feito automaticamente chamando `f.backwards ()`.
 
 
 ## Hessians
-As with single variable calculus, it is useful to consider higher-order derivatives in order to get a handle on how we can obtain a better approximation to a function than using the gradient alone.
 
-There is one immediate problem one encounters when working with higher order derivatives of functions of several variables, and that is there are a large number of them.  If we have a function $f(x_1, \ldots, x_n)$ of $n$ variables, then we can take $n^{2}$ many second derivatives, namely for any choice of $i$ and $j$:
+Como no cálculo de variável única, é útil considerar derivadas de ordem superior para entender como podemos obter uma melhor aproximação de uma função do que usar apenas o gradiente.
+
+Há um problema imediato que se encontra ao trabalhar com derivadas de funções de várias variáveis de ordem superior, que é o grande número delas. Se temos uma função $f(x_1, \ldots, x_n)$ de $n$ variáveis, então podemos tomar $n^{2}$ muitas derivadas secundas, nomeadamente para qualquer escolha de $i$ e $j$:
 
 $$
 \frac{d^2f}{dx_idx_j} = \frac{d}{dx_i}\left(\frac{d}{dx_j}f\right).
@@ -864,8 +865,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NjA4NDk4OSw5OTg0MjEyMDIsLTE1Nj
-A3MjY1OTEsLTU5ODA5MzcxNCwtMTc1NjU2MjYwNCwyMTA0NzIz
-NzA3LC0xMjA4NzMxMjg3LC03MzkxNjAwNzQsLTE0NTEyOTgyOD
-YsNzIzMDUzMzksLTQ3MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
+eyJoaXN0b3J5IjpbLTIwNjA3NTg2NTEsOTk4NDIxMjAyLC0xNT
+YwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcy
+MzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mj
+g2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
 -->
