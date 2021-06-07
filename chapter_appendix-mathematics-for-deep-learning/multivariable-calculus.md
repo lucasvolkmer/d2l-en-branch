@@ -624,9 +624,9 @@ ax.set_zlim(-1, 1)
 ax.dist = 12
 ```
 
-This forms the basis for Newton's Algorithm discussed in :numref:`sec_gd`, where we perform numerical optimization iteratively finding the best fitting quadratic, and then exactly minimizing that quadratic.
+Isso forma a base para o Algoritmo de Newton discutido em :numref:`sec_gd`, onde realizamos a otimização numérica encontrando iterativamente a quadrática de melhor ajuste e, em seguida, minimizando exatamente essa quadrática.
 
-## A Little Matrix Calculus
+## Um Pouco de Cálculo Matricial
 Derivatives of functions involving matrices turn out to be particularly nice.  This section can become notationally heavy, so may be skipped in a first reading, but it is useful to know how derivatives of functions involving common matrix operations are often much cleaner than one might initially anticipate, particularly given how central matrix operations are to deep learning applications.
 
 Let us begin with an example.  Suppose that we have some fixed column vector $\boldsymbol{\beta}$, and we want to take the product function $f(\mathbf{x}) = \boldsymbol{\beta}^\top\mathbf{x}$, and understand how the dot product changes when we change $\mathbf{x}$.
@@ -866,9 +866,9 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NjM1ODkwOCwtMTI5NDk1OTc1NiwtMT
-EzMTI5ODk2NCw5OTg0MjEyMDIsLTE1NjA3MjY1OTEsLTU5ODA5
-MzcxNCwtMTc1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMj
-g3LC03MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3
-MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
+eyJoaXN0b3J5IjpbLTE2NzQyNTc3MTcsLTEyOTQ5NTk3NTYsLT
+ExMzEyOTg5NjQsOTk4NDIxMjAyLC0xNTYwNzI2NTkxLC01OTgw
+OTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNywtMTIwODczMT
+I4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC00
+NzE0OTQ5ODAsMTM2NDcwMjk4N119
 -->
