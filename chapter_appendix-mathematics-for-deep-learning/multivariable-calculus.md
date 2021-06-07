@@ -627,7 +627,7 @@ ax.dist = 12
 Isso forma a base para o Algoritmo de Newton discutido em :numref:`sec_gd`, onde realizamos a otimização numérica encontrando iterativamente a quadrática de melhor ajuste e, em seguida, minimizando exatamente essa quadrática.
 
 ## Um Pouco de Cálculo Matricial
-Derivatives of functions involving matrices turn out to be particularly nice.  This section can become notationally heavy, so may be skipped in a first reading, but it is useful to know how derivatives of functions involving common matrix operations are often much cleaner than one might initially anticipate, particularly given how central matrix operations are to deep learning applications.
+Derivadas de funções envolvendo matrizes revelaram-se particularmente interessantes. Esta seção pode se tornar notacionalmente pesada, portanto, pode ser ignorada em uma primeira leitura, mas é útil saber como as derivadas de funções que envolvem operações de matriz comum são muitas vezes muito mais limpas do que se poderia prever inicialmente, especialmente considerando como as operações de matriz centrais são para o aprendizado profundo aplicações.
 
 Let us begin with an example.  Suppose that we have some fixed column vector $\boldsymbol{\beta}$, and we want to take the product function $f(\mathbf{x}) = \boldsymbol{\beta}^\top\mathbf{x}$, and understand how the dot product changes when we change $\mathbf{x}$.
 
@@ -866,9 +866,9 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzQyNTc3MTcsLTEyOTQ5NTk3NTYsLT
-ExMzEyOTg5NjQsOTk4NDIxMjAyLC0xNTYwNzI2NTkxLC01OTgw
-OTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNywtMTIwODczMT
-I4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC00
-NzE0OTQ5ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbNjQ4MTM1MzU5LC0xMjk0OTU5NzU2LC0xMT
+MxMjk4OTY0LDk5ODQyMTIwMiwtMTU2MDcyNjU5MSwtNTk4MDkz
+NzE0LC0xNzU2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyOD
+csLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOSwtNDcx
+NDk0OTgwLDEzNjQ3MDI5ODddfQ==
 -->
