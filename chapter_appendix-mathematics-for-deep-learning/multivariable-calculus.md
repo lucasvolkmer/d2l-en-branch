@@ -707,13 +707,13 @@ $$
 \frac{d}{dx_k}x_ia_{ij}x_j = \frac{dx_i}{dx_k}a_{ij}x_j + x_ia_{ij}\frac{dx_j}{dx_k}.
 $$
 
-For a term like $\frac{dx_i}{dx_k}$, it is not hard to see that this is one when $i=k$ and zero otherwise.  This means that every term where $i$ and $k$ are different vanish from this sum, so the only terms that remain in that first sum are the ones where $i=k$.  The same reasoning holds for the second term where we need $j=k$.  This gives
+Para um termo como $\frac{dx_i}{dx_k}$, não é difícil ver que este é um quando $i=k$ e zero caso contrário. Isso significa que todos os termos em que $i$ e $k$ são diferentes desaparecem dessa soma, de modo que os únicos termos que permanecem nessa primeira soma são aqueles em que $i=k$. O mesmo raciocínio vale para o segundo termo em que precisamos de $j=k$. Isto dá
 
 $$
 \frac{d}{dx_k}x_ia_{ij}x_j = a_{kj}x_j + x_ia_{ik}.
 $$
 
-Now, the names of the indices in Einstein notation are arbitrary---the fact that $i$ and $j$ are different is immaterial to this computation at this point, so we can re-index so that they both use $i$ to see that
+Agora, os nomes dos índices na notação de Einstein são arbitrários --- o fato de que $i$ e $j$ são diferentes é irrelevante para este cálculo neste ponto, então podemos reindexar para que ambos usem $i$ para ver isso
 
 $$
 \frac{d}{dx_k}x_ia_{ij}x_j = a_{ki}x_i + x_ia_{ik} = (a_{ki} + a_{ik})x_i.
@@ -869,7 +869,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NzM3Nzg5OSw4MDQwNTY3ODMsLTEyOT
+eyJoaXN0b3J5IjpbMTc5OTYyMzMyNiw4MDQwNTY3ODMsLTEyOT
 Q5NTk3NTYsLTExMzEyOTg5NjQsOTk4NDIxMjAyLC0xNTYwNzI2
 NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNy
 wtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcy
