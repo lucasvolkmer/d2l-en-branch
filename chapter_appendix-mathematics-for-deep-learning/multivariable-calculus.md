@@ -657,13 +657,13 @@ $$
 \frac{df}{dx_1} = \beta_1,
 $$
 
-or more generally that
+ou mais geralmente isso
 
 $$
 \frac{df}{dx_i} = \beta_i.
 $$
 
-We can now reassemble this into a matrix to see
+Agora podemos remontar isso em uma matriz para ver
 
 $$
 \frac{df}{d\mathbf{x}} = \begin{bmatrix}
@@ -868,9 +868,9 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNDI2MDY5MCwtMTI5NDk1OTc1NiwtMT
-EzMTI5ODk2NCw5OTg0MjEyMDIsLTE1NjA3MjY1OTEsLTU5ODA5
-MzcxNCwtMTc1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMj
-g3LC03MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3
-MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
+eyJoaXN0b3J5IjpbODA0MDU2NzgzLC0xMjk0OTU5NzU2LC0xMT
+MxMjk4OTY0LDk5ODQyMTIwMiwtMTU2MDcyNjU5MSwtNTk4MDkz
+NzE0LC0xNzU2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyOD
+csLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOSwtNDcx
+NDk0OTgwLDEzNjQ3MDI5ODddfQ==
 -->
