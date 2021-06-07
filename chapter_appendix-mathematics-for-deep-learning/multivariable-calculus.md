@@ -521,7 +521,7 @@ f(0,0) & = a, \\
 \end{aligned}
 $$
 
-we can get our original polynomial back by saying
+podemos obter nosso polinômio original de volta, dizendo
 
 $$
 f(\mathbf{x}) = f(0) + \nabla f (0) \cdot \mathbf{x} + \frac{1}{2}\mathbf{x}^\top \mathbf{H} f (0) \mathbf{x}.
@@ -533,18 +533,18 @@ $$
 f(\mathbf{x}) = f(\mathbf{x}_0) + \nabla f (\mathbf{x}_0) \cdot (\mathbf{x}-\mathbf{x}_0) + \frac{1}{2}(\mathbf{x}-\mathbf{x}_0)^\top \mathbf{H} f (\mathbf{x}_0) (\mathbf{x}-\mathbf{x}_0).
 $$
 
-This works for any dimensional input, and provides the best approximating quadratic to any function at a point.  To give an example, let us plot the function
+Isso funciona para entradas de qualquer dimensão e fornece a melhor aproximação quadrática para qualquer função em um ponto. Para dar um exemplo, vamos representar graficamente a função
 
 $$
 f(x, y) = xe^{-x^2-y^2}.
 $$
 
-One can compute that the gradient and Hessian are
+Pode-se calcular que o gradiente e Hessian são
 $$
 \nabla f(x, y) = e^{-x^2-y^2}\begin{pmatrix}1-2x^2 \\ -2xy\end{pmatrix} \; \text{and} \; \mathbf{H}f(x, y) = e^{-x^2-y^2}\begin{pmatrix} 4x^3 - 6x & 4x^2y - 2y \\ 4x^2y-2y &4xy^2-2x\end{pmatrix}.
 $$
 
-And thus, with a little algebra, see that the approximating quadratic at $[-1,0]^\top$ is
+E assim, com um pouco de álgebra, veja que a aproximação quadrática em $[-1,0]^\top$ é
 
 $$
 f(x, y) \approx e^{-1}\left(-1 - (x+1) +(x+1)^2+y^2\right).
@@ -866,9 +866,9 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTQ5NTk3NTYsLTExMzEyOTg5NjQsOT
-k4NDIxMjAyLC0xNTYwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1
-NjI2MDQsMjEwNDcyMzcwNywtMTIwODczMTI4NywtNzM5MTYwMD
-c0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2
-NDcwMjk4N119
+eyJoaXN0b3J5IjpbMTU2NjM1ODkwOCwtMTI5NDk1OTc1NiwtMT
+EzMTI5ODk2NCw5OTg0MjEyMDIsLTE1NjA3MjY1OTEsLTU5ODA5
+MzcxNCwtMTc1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMj
+g3LC03MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3
+MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
 -->
