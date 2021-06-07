@@ -354,7 +354,7 @@ $$
 \end{aligned}
 $$
 
-Note that this application of the chain rule has us explicitly compute $\frac{\partial f}{\partial u}, \frac{\partial f}{\partial v}, \frac{\partial f}{\partial a}, \frac{\partial f}{\partial b}, \; \text{and} \; \frac{\partial f}{\partial w}$.  Nothing stops us from also including the equations:
+Observe que esta aplicação da regra da cadeia nos faz computar explicitamente $\frac{\partial f}{\partial u}, \frac{\partial f}{\partial v}, \frac{\partial f}{\partial a}, \frac{\partial f}{\partial b}, \; \text{e} \; \frac{\partial f}{\partial w}$. Nada nos impede de incluir também as equações:
 
 $$
 \begin{aligned}
@@ -364,7 +364,7 @@ $$
 \end{aligned}
 $$
 
-and then keeping track of how $f$ changes when we change *any* node in the entire network.  Let us implement it.
+e acompanhar como $f$ muda quando mudamos *qualquer* nó em toda a rede. Vamos implementá-lo.
 
 ```{.python .input}
 #@tab all
@@ -863,8 +863,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMTg0MzI4MCwtMTU2MDcyNjU5MSwtNT
-k4MDkzNzE0LC0xNzU2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3
-MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOS
-wtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbOTk4NDIxMjAyLC0xNTYwNzI2NTkxLC01OT
+gwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNywtMTIwODcz
+MTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC
+00NzE0OTQ5ODAsMTM2NDcwMjk4N119
 -->
