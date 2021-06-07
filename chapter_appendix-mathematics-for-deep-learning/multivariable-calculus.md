@@ -629,9 +629,10 @@ Isso forma a base para o Algoritmo de Newton discutido em :numref:`sec_gd`, onde
 ## Um Pouco de Cálculo Matricial
 Derivadas de funções envolvendo matrizes revelaram-se particularmente interessantes. Esta seção pode se tornar notacionalmente pesada, portanto, pode ser ignorada em uma primeira leitura, mas é útil saber como as derivadas de funções que envolvem operações de matriz comum são muitas vezes muito mais limpas do que se poderia prever inicialmente, especialmente considerando como as operações de matriz centrais são para o aprendizado profundo aplicações.
 
-Let us begin with an example.  Suppose that we have some fixed column vector $\boldsymbol{\beta}$, and we want to take the product function $f(\mathbf{x}) = \boldsymbol{\beta}^\top\mathbf{x}$, and understand how the dot product changes when we change $\mathbf{x}$.
 
-A bit of notation that will be useful when working with matrix derivatives in ML is called the *denominator layout matrix derivative* where we assemble our partial derivatives into the shape of whatever vector, matrix, or tensor is in the denominator of the differential.  In this case, we will write
+Vamos começar com um exemplo. Suponha que temos algum vetor de coluna fixo $\boldsymbol{\beta}$, e queremos obter a função de produto $f(\mathbf{x}) = \boldsymbol{\beta}^\top\mathbf{x}$, e entender como o produto escalar muda quando mudamos $\mathbf{x}$.
+
+Um pouco de notação que será útil ao trabalhar com derivadas de matriz em ML é chamado de *derivada de matriz de layout de denominador*, onde montamos nossas derivadas parciais na forma de qualquer vetor, matriz ou tensor que esteja no denominador do diferencial. Neste caso, vamos escrever
 
 $$
 \frac{df}{d\mathbf{x}} = \begin{bmatrix}
@@ -641,15 +642,16 @@ $$
 \end{bmatrix},
 $$
 
-where we matched the shape of the column vector $\mathbf{x}$.
 
-If we write out our function into components this is
+onde combinamos a forma do vetor coluna $\mathbf{x}$.
+
+Se escrevermos nossa função em componentes, isso é
 
 $$
 f(\mathbf{x}) = \sum_{i = 1}^{n} \beta_ix_i = \beta_1x_1 + \cdots + \beta_nx_n.
 $$
 
-If we now take the partial derivative with respect to say $\beta_1$, note that everything is zero but the first term, which is just $x_1$ multiplied by $\beta_1$, so the we obtain that
+Se agora tomarmos a derivada parcial em relação a $\beta_1$, note que tudo é zero, exceto o primeiro termo, que é apenas $x_1$  multiplicado por $\beta_1$,, então obtemos isso
 
 $$
 \frac{df}{dx_1} = \beta_1,
@@ -866,9 +868,9 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ4MTM1MzU5LC0xMjk0OTU5NzU2LC0xMT
-MxMjk4OTY0LDk5ODQyMTIwMiwtMTU2MDcyNjU5MSwtNTk4MDkz
-NzE0LC0xNzU2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyOD
-csLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOSwtNDcx
-NDk0OTgwLDEzNjQ3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbLTkxNDI2MDY5MCwtMTI5NDk1OTc1NiwtMT
+EzMTI5ODk2NCw5OTg0MjEyMDIsLTE1NjA3MjY1OTEsLTU5ODA5
+MzcxNCwtMTc1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMj
+g3LC03MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3
+MTQ5NDk4MCwxMzY0NzAyOTg3XX0=
 -->
