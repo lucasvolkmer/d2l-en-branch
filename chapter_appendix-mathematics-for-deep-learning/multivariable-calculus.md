@@ -341,9 +341,10 @@ df_dw = df_du*du_dw + df_dv*dv_dw
 print(f'df/dw at {w}, {x}, {y}, {z} is {df_dw}')
 ```
 
-However, note that this still does not make it easy to compute something like $\frac{\partial f}{\partial x}$.  The reason for that is the *way* we chose to apply the chain rule.  If we look at what we did above, we always kept $\partial w$ in the denominator when we could.  In this way, we chose to apply the chain rule seeing how $w$ changed every other variable.  If that is what we wanted, this would be a good idea.  However, think back to our motivation from deep learning: we want to see how every parameter changes the *loss*.  In essence, we want to apply the chain rule keeping $\partial f$ in the numerator whenever we can!
 
-To be more explicit, note that we can write
+No entanto, observe que isso ainda não facilita o cálculo de algo como $\frac{\partial f}{\partial x}$. A razão para isso é a *forma* que escolhemos para aplicar a regra da cadeia. Se observarmos o que fizemos acima, sempre mantivemos $\partial w$ no denominador quando podíamos. Desta forma, optamos por aplicar a regra da cadeia vendo como $w$ mudou todas as outras variáveis. Se é isso que queríamos, seria uma boa ideia. No entanto, pense em nossa motivação com o aprendizado profundo: queremos ver como cada parâmetro altera a *perda*. Em essência, queremos aplicar a regra da cadeia mantendo $\partial f$ no numerador sempre que pudermos!
+
+Para ser mais explícito, observe que podemos escrever
 
 $$
 \begin{aligned}
@@ -862,8 +863,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjA3MjY1OTEsLTU5ODA5MzcxNCwtMT
-c1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMjg3LC03Mzkx
-NjAwNzQsLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3MTQ5NDk4MC
-wxMzY0NzAyOTg3XX0=
+eyJoaXN0b3J5IjpbMTAxMTg0MzI4MCwtMTU2MDcyNjU5MSwtNT
+k4MDkzNzE0LC0xNzU2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3
+MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOS
+wtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
 -->
