@@ -506,11 +506,12 @@ $$
 \frac{d^2f}{dx_idx_j} = \frac{d^2f}{dx_jdx_i}.
 $$
 
-This follows by considering first perturbing a function in the direction of $x_i$, and then perturbing it in $x_j$ and then comparing the result of that with what happens if we perturb first $x_j$ and then $x_i$, with the knowledge that both of these orders lead to the same final change in the output of $f$.
 
-As with single variables, we can use these derivatives to get a far better idea of how the function behaves near a point.  In particular, we can use it to find the best fitting quadratic near a point $\mathbf{x}_0$, as we saw in a single variable.
+Isto segue considerando primeiro perturbar uma função na direção de $x_i$, e então perturbá-la em $x_j$ e então comparar o resultado disso com o que acontece se perturbarmos primeiro $x_j$ e então $x_i$, com o conhecimento que ambos os pedidos levam à mesma mudança final na produção de $f$.
 
-Let us see an example.  Suppose that $f(x_1, x_2) = a + b_1x_1 + b_2x_2 + c_{11}x_1^{2} + c_{12}x_1x_2 + c_{22}x_2^{2}$.  This is the general form for a quadratic in two variables.  If we look at the value of the function, its gradient, and its Hessian :eqref:`eq_hess_def`, all at the point zero:
+Assim como acontece com variáveis únicas, podemos usar essas derivadas para ter uma ideia muito melhor de como a função se comporta perto de um ponto. Em particular, podemos usar isso para encontrar a quadrática de melhor ajuste próximo a um ponto $\mathbf{x}_0$, como vimos em uma única variável.
+
+Vejamos um exemplo. Suponha que $f(x_1, x_2) = a + b_1x_1 + b_2x_2 + c_{11}x_1^{2} + c_{12}x_1x_2 + c_{22}x_2^{2}$. Esta é a forma geral de uma quadrática em duas variáveis. Se olharmos para o valor da função, seu gradiente e seu Hessian :eqref:`eq_hess_def`, tudo no ponto zero:
 
 $$
 \begin{aligned}
@@ -865,8 +866,9 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzEyOTg5NjQsOTk4NDIxMjAyLC0xNT
-YwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcy
-MzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mj
-g2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbLTEyOTQ5NTk3NTYsLTExMzEyOTg5NjQsOT
+k4NDIxMjAyLC0xNTYwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1
+NjI2MDQsMjEwNDcyMzcwNywtMTIwODczMTI4NywtNzM5MTYwMD
+c0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2
+NDcwMjk4N119
 -->
