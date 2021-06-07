@@ -364,7 +364,7 @@ $$
 \end{aligned}
 $$
 
-e acompanhar como $f$ muda quando mudamos *qualquer* nó em toda a rede. Vamos implementá-lo.
+e acompanhar como $f$ muda quando mudamos *qualquer* nó em toda a rede. Vamos implementar.
 
 ```{.python .input}
 #@tab all
@@ -863,8 +863,8 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk4NDIxMjAyLC0xNTYwNzI2NTkxLC01OT
-gwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNywtMTIwODcz
-MTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC
-00NzE0OTQ5ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbLTE4Njk5NTA1MDgsOTk4NDIxMjAyLC0xNT
+YwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcy
+MzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mj
+g2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
 -->
