@@ -737,7 +737,7 @@ $$
 \frac{d}{d\mathbf{x}}(\mathbf{x}^\top A \mathbf{x}) = (\mathbf{A} + \mathbf{A}^\top)\mathbf{x}.
 $$
 
-This required significantly more work than our last one, but the final result is small.  More than that, consider the following computation for traditional single variable derivatives:
+Isso exigiu muito mais trabalho do que o anterior, mas o resultado final é pequeno. Mais do que isso, considere o seguinte cálculo para derivadas de variável única tradicionais:
 
 $$
 \frac{d}{dx}(xax) = \frac{dx}{dx}ax + xa\frac{dx}{dx} = (a+a)x.
@@ -869,7 +869,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2Njk1ODQ0Miw4MDQwNTY3ODMsLTEyOT
+eyJoaXN0b3J5IjpbMTQxODQxMTgzMCw4MDQwNTY3ODMsLTEyOT
 Q5NTk3NTYsLTExMzEyOTg5NjQsOTk4NDIxMjAyLC0xNTYwNzI2
 NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNy
 wtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcy
