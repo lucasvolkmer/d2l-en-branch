@@ -677,30 +677,31 @@ $$
 \end{bmatrix} = \boldsymbol{\beta}.
 $$
 
-This illustrates a few factors about matrix calculus that we will often counter throughout this section:
 
-* First, The computations will get rather involved.
-* Second, The final results are much cleaner than the intermediate process, and will always look similar to the single variable case.  In this case, note that $\frac{d}{dx}(bx) = b$ and $\frac{d}{d\mathbf{x}} (\boldsymbol{\beta}^\top\mathbf{x}) = \boldsymbol{\beta}$ are both similar.
-* Third, transposes can often appear seemingly from nowhere.  The core reason for this is the convention that we match the shape of the denominator, thus when we multiply matrices, we will need to take transposes to match back to the shape of the original term.
+Isso ilustra alguns fatores sobre o cálculo de matriz que muitas vezes iremos contrariar ao longo desta seção:
 
-To keep building intuition, let us try a computation that is a little harder.  Suppose that we have a column vector $\mathbf{x}$, and a square matrix $A$ and we want to compute
+* Primeiro, os cálculos ficarão bastante complicados.
+* Em segundo lugar, os resultados finais são muito mais limpos do que o processo intermediário e sempre serão semelhantes ao caso de uma única variável. Neste caso, observe que $\frac{d}{dx}(bx) = b$ and $\frac{d}{d\mathbf{x}} (\boldsymbol{\beta}^\top\mathbf{x}) = \boldsymbol{\beta}$ são ambos semelhantes.
+* Terceiro, as transpostas muitas vezes podem aparecer aparentemente do nada. A principal razão para isso é a convenção de que combinamos a forma do denominador, portanto, quando multiplicamos as matrizes, precisaremos fazer transposições para corresponder à forma do termo original.
+
+Para continuar construindo a intuição, vamos tentar um cálculo um pouco mais difícil. Suponha que temos um vetor coluna $\mathbf{x}$ e uma matriz quadrada $A$ e queremos calcular
 
 $$\frac{d}{d\mathbf{x}}(\mathbf{x}^\top A \mathbf{x}).$$
 :eqlabel:`eq_mat_goal_1`
 
-To drive towards easier to manipulate notation, let us consider this problem using Einstein notation.  In this case we can write the function as
+Para direcionar para uma notação mais fácil de manipular, vamos considerar este problema usando a notação de Einstein. Neste caso, podemos escrever a função como
 
 $$
 \mathbf{x}^\top A \mathbf{x} = x_ia_{ij}x_j.
 $$
 
-To compute our derivative, we need to understand for every $k$, what the value of
+Para calcular nossa derivada, precisamos entender para cada $k$, qual é o valor de
 
 $$
 \frac{d}{dx_k}(\mathbf{x}^\top A \mathbf{x}) = \frac{d}{dx_k}x_ia_{ij}x_j.
 $$
 
-By the product rule, this is
+Pela regra do produto, isso é
 
 $$
 \frac{d}{dx_k}x_ia_{ij}x_j = \frac{dx_i}{dx_k}a_{ij}x_j + x_ia_{ij}\frac{dx_j}{dx_k}.
@@ -868,9 +869,9 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA0MDU2NzgzLC0xMjk0OTU5NzU2LC0xMT
-MxMjk4OTY0LDk5ODQyMTIwMiwtMTU2MDcyNjU5MSwtNTk4MDkz
-NzE0LC0xNzU2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyOD
-csLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOSwtNDcx
-NDk0OTgwLDEzNjQ3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbLTI1NzM3Nzg5OSw4MDQwNTY3ODMsLTEyOT
+Q5NTk3NTYsLTExMzEyOTg5NjQsOTk4NDIxMjAyLC0xNTYwNzI2
+NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNy
+wtMTIwODczMTI4NywtNzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcy
+MzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMjk4N119
 -->
