@@ -1,4 +1,4 @@
-# Cálculo Integral Calculus
+# Cálculo Integral
 :label:`sec_integral_calculus`
 
 Differentiation only makes up half of the content of a traditional calculus education.  The other pillar, integration, starts out seeming a rather disjoint question, "What is the area underneath this curve?"  While seemingly unrelated, integration is tightly intertwined with the differentiation via what is known as the *fundamental theorem of calculus*.
@@ -546,5 +546,5 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5ODczMzc5Ml19
+eyJoaXN0b3J5IjpbLTQ3MDg2NzQyMl19
 -->
