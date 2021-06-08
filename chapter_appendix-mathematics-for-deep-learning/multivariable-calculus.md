@@ -838,17 +838,18 @@ $$
 \frac{d}{d\mathbf{V}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2\mathbf{U}^\top(\mathbf{X} - \mathbf{U}\mathbf{V}).
 $$
 
-This matches the solution we guessed above!
 
-It is reasonable to ask at this point, "Why can I not just write down matrix versions of all the calculus rules I have learned?  It is clear this is still mechanical.  Why do we not just get it over with!"  And indeed there are such rules and :cite:`Petersen.Pedersen.ea.2008` provides an excellent summary.  However, due to the plethora of ways matrix operations can be combined compared to single values, there are many more matrix derivative rules than single variable ones.  It is often the case that it is best to work with the indices, or leave it up to automatic differentiation when appropriate.
+Isso corresponde à solução que adivinhamos acima!
 
-## Summary
+É razoável perguntar neste ponto: "Por que não posso simplesmente escrever versões de matriz de todas as regras de cálculo que aprendi? Está claro que isso ainda é mecânico. Por que não simplesmente acabamos com isso!" E de fato existem tais regras e :cite:`Petersen.Pedersen.ea.2008` fornece um excelente resumo. No entanto, devido à infinidade de maneiras pelas quais as operações de matriz podem ser combinadas em comparação com valores únicos, há muito mais regras de derivadas de matriz do que regras de variável única. Geralmente, é melhor trabalhar com os índices ou deixar para a diferenciação automática, quando apropriado.
 
-* In higher dimensions, we can define gradients which serve the same purpose as derivatives in one dimension.  These allow us to see how a multi-variable function changes when we make an arbitrary small change to the inputs.
-* The backpropagation algorithm can be seen to be a method of organizing the multi-variable chain rule to allow for the efficient computation of many partial derivatives.
-* Matrix calculus allows us to write the derivatives of matrix expressions in concise ways.
+## Resumo
 
-## Exercises
+* Em dimensões superiores, podemos definir gradientes que têm o mesmo propósito que os derivadas em uma dimensão. Isso nos permite ver como uma função multivariável muda quando fazemos uma pequena mudança arbitrária nas entradas.
+* O algoritmo de retropropagação pode ser visto como um método de organizar a regra da cadeia multivariável para permitir o cálculo eficiente de muitas derivadas parciais.
+* O cálculo matricial nos permite escrever as derivadas das expressões matriciais de maneiras concisas.
+
+## Exercícios
 1. Given a column vector $\boldsymbol{\beta}$, compute the derivatives of both $f(\mathbf{x}) = \boldsymbol{\beta}^\top\mathbf{x}$ and $g(\mathbf{x}) = \mathbf{x}^\top\boldsymbol{\beta}$.  Why do you get the same answer?
 2. Let $\mathbf{v}$ be an $n$ dimension vector. What is $\frac{\partial}{\partial\mathbf{v}}\|\mathbf{v}\|_2$?
 3. Let $L(x, y) = \log(e^x + e^y)$.  Compute the gradient.  What is the sum of the components of the gradient?
@@ -869,10 +870,10 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDQ4NTUxMzUsLTgwMTEzMjgzMywtMT
-YyMDIwNTcxOCw4MDQwNTY3ODMsLTEyOTQ5NTk3NTYsLTExMzEy
-OTg5NjQsOTk4NDIxMjAyLC0xNTYwNzI2NTkxLC01OTgwOTM3MT
-QsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNywtMTIwODczMTI4Nywt
-NzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OT
-Q5ODAsMTM2NDcwMjk4N119
+eyJoaXN0b3J5IjpbLTYyNTkyNzEwOSwtODAxMTMyODMzLC0xNj
+IwMjA1NzE4LDgwNDA1Njc4MywtMTI5NDk1OTc1NiwtMTEzMTI5
+ODk2NCw5OTg0MjEyMDIsLTE1NjA3MjY1OTEsLTU5ODA5MzcxNC
+wtMTc1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMjg3LC03
+MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3MTQ5ND
+k4MCwxMzY0NzAyOTg3XX0=
 -->
