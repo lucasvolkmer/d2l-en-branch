@@ -850,27 +850,27 @@ Isso corresponde à solução que adivinhamos acima!
 * O cálculo matricial nos permite escrever as derivadas das expressões matriciais de maneiras concisas.
 
 ## Exercícios
-1. Given a column vector $\boldsymbol{\beta}$, compute the derivatives of both $f(\mathbf{x}) = \boldsymbol{\beta}^\top\mathbf{x}$ and $g(\mathbf{x}) = \mathbf{x}^\top\boldsymbol{\beta}$.  Why do you get the same answer?
-2. Let $\mathbf{v}$ be an $n$ dimension vector. What is $\frac{\partial}{\partial\mathbf{v}}\|\mathbf{v}\|_2$?
-3. Let $L(x, y) = \log(e^x + e^y)$.  Compute the gradient.  What is the sum of the components of the gradient?
-4. Let $f(x, y) = x^2y + xy^2$. Show that the only critical point is $(0,0)$. By considering $f(x, x)$, determine if $(0,0)$ is a maximum, minimum, or neither.
-5. Suppose that we are minimizing a function $f(\mathbf{x}) = g(\mathbf{x}) + h(\mathbf{x})$.  How can we geometrically interpret the condition of $\nabla f = 0$ in terms of $g$ and $h$?
+1. Dado um vetor de coluna $\boldsymbol{\beta}$, calcule as derivadas de $f(\mathbf{x}) = \boldsymbol{\beta}^\top\mathbf{x}$ e $g(\mathbf{x}) = \mathbf{x}^\top\boldsymbol{\beta}$. Por que você obtém a mesma resposta?
+2. Seja $\mathbf{v}$ um vetor de dimensão $n$. O que é $\frac{\partial}{\partial\mathbf{v}}\|\mathbf{v}\|_2$?
+3. Seja $L(x, y) = \log(e^x + e^y)$. Calcule o gradiente. Qual é a soma dos componentes do gradiente?
+4. Seja $f(x, y) = x^2y + xy^2$. Mostre que o único ponto crítico é $(0,0)$. Considerando $ f(x, x)$, determine se $(0,0)$ é máximo, mínimo ou nenhum.
+5. Suponha que estejamos minimizando uma função $f(\mathbf{x}) = g(\mathbf{x}) + h(\mathbf{x})$. Como podemos interpretar geometricamente a condição de $\nabla f = 0$ em termos de $g$ e $h$?
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/413)
+[Discussões](https://discuss.d2l.ai/t/413)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1090)
+[Discussões](https://discuss.d2l.ai/t/1090)
 :end_tab:
 
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1091)
+[Discussões](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNTkyNzEwOSwtODAxMTMyODMzLC0xNj
+eyJoaXN0b3J5IjpbMjA5MTAzMTkxNCwtODAxMTMyODMzLC0xNj
 IwMjA1NzE4LDgwNDA1Njc4MywtMTI5NDk1OTc1NiwtMTEzMTI5
 ODk2NCw5OTg0MjEyMDIsLTE1NjA3MjY1OTEsLTU5ODA5MzcxNC
 wtMTc1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMjg3LC03
