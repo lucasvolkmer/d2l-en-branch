@@ -1,11 +1,12 @@
 # Cálculo Integral
 :label:`sec_integral_calculus`
 
-Differentiation only makes up half of the content of a traditional calculus education.  The other pillar, integration, starts out seeming a rather disjoint question, "What is the area underneath this curve?"  While seemingly unrelated, integration is tightly intertwined with the differentiation via what is known as the *fundamental theorem of calculus*.
 
-At the level of machine learning we discuss in this book, we will not need a deep understanding of integration. However, we will provide a brief introduction to lay the groundwork for any further applications we will encounter later on.
+A diferenciação representa apenas metade do conteúdo de uma educação tradicional de cálculo. O outro pilar, integração, começa parecendo uma pergunta um tanto desconexa: "Qual é a área abaixo desta curva?" Embora aparentemente não relacionada, a integração está intimamente ligada à diferenciação por meio do que é conhecido como *teorema fundamental do cálculo*.
 
-## Geometric Interpretation
+No nível de *machine learning* que discutimos neste livro, não precisaremos ter um conhecimento profundo de integração. No entanto, forneceremos uma breve introdução para estabelecer as bases para quaisquer outras aplicações que encontraremos mais tarde.
+
+## Interpretação Geométrica
 Suppose that we have a function $f(x)$.  For simplicity, let us assume that $f(x)$ is non-negative (never takes a value less than zero).  What we want to try and understand is: what is the area contained between $f(x)$ and the $x$-axis?
 
 ```{.python .input}
@@ -546,5 +547,5 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MDg2NzQyMl19
+eyJoaXN0b3J5IjpbMTYwOTg5ODM5NV19
 -->
