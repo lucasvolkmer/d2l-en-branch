@@ -792,8 +792,7 @@ $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= \sum_{i, j}2\left(x_{ij} - \sum_k u_{ik}v_{kj}\right)\left(-\sum_k u_{ik}\frac{dv_{kj}}{dv_{ab}} \right).
 $$
 
-As in the previous derivation, we may note that $\frac{dv_{kj}}{dv_{ab}}$ is only non-zero if the $k=a$ and $j=b$.  If either of those conditions do not hold, the term in the sum is zero, and we may freely discard it.  We see that
-
+Como na derivação anterior, podemos notar que $\frac{dv_{kj}}{dv_{ab}}$ só é diferente de zero se $k=a$ and $j=b$. Se qualquer uma dessas condições não for válida, o termo na soma é zero e podemos descartá-lo livremente. Nós vemos que
 $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2\sum_{i}\left(x_{ib} - \sum_k u_{ik}v_{kb}\right)u_{ia}.
 $$
@@ -871,10 +870,10 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NTExNTU5NywtODAxMTMyODMzLC0xNj
-IwMjA1NzE4LDgwNDA1Njc4MywtMTI5NDk1OTc1NiwtMTEzMTI5
-ODk2NCw5OTg0MjEyMDIsLTE1NjA3MjY1OTEsLTU5ODA5MzcxNC
-wtMTc1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMjg3LC03
-MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3MTQ5ND
-k4MCwxMzY0NzAyOTg3XX0=
+eyJoaXN0b3J5IjpbNzkwNDUwNzgzLC04MDExMzI4MzMsLTE2Mj
+AyMDU3MTgsODA0MDU2NzgzLC0xMjk0OTU5NzU2LC0xMTMxMjk4
+OTY0LDk5ODQyMTIwMiwtMTU2MDcyNjU5MSwtNTk4MDkzNzE0LC
+0xNzU2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyODcsLTcz
+OTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOSwtNDcxNDk0OT
+gwLDEzNjQ3MDI5ODddfQ==
 -->
