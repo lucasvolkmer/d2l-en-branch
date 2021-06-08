@@ -786,7 +786,7 @@ $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= \frac{d}{dv_{ab}} \sum_{i, j}\left(x_{ij} - \sum_k u_{ik}v_{kj}\right)^2.
 $$
 
-Recalling that all entries of $\mathbf{X}$ and $\mathbf{U}$ are constants as far as $\frac{d}{dv_{ab}}$ is concerned, we may push the derivative inside the sum, and apply the chain rule to the square to get
+Lembrando que todas as entradas de $\mathbf{X}$ e $\mathbf{U}$ são constantes no que diz respeito a $\frac{d}{dv_{ab}}$, podemos colocar a derivada dentro da soma, e aplicar a regra da cadeia ao quadrado para obter
 
 $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= \sum_{i, j}2\left(x_{ij} - \sum_k u_{ik}v_{kj}\right)\left(-\sum_k u_{ik}\frac{dv_{kj}}{dv_{ab}} \right).
@@ -871,10 +871,10 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMTEzMjgzMywtMTYyMDIwNTcxOCw4MD
-QwNTY3ODMsLTEyOTQ5NTk3NTYsLTExMzEyOTg5NjQsOTk4NDIx
-MjAyLC0xNTYwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MD
-QsMjEwNDcyMzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0x
-NDUxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMj
-k4N119
+eyJoaXN0b3J5IjpbMTE5NTExNTU5NywtODAxMTMyODMzLC0xNj
+IwMjA1NzE4LDgwNDA1Njc4MywtMTI5NDk1OTc1NiwtMTEzMTI5
+ODk2NCw5OTg0MjEyMDIsLTE1NjA3MjY1OTEsLTU5ODA5MzcxNC
+wtMTc1NjU2MjYwNCwyMTA0NzIzNzA3LC0xMjA4NzMxMjg3LC03
+MzkxNjAwNzQsLTE0NTEyOTgyODYsNzIzMDUzMzksLTQ3MTQ5ND
+k4MCwxMzY0NzAyOTg3XX0=
 -->
