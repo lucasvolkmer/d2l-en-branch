@@ -7,7 +7,7 @@ A diferenciação representa apenas metade do conteúdo de uma educação tradic
 No nível de *machine learning* que discutimos neste livro, não precisaremos ter um conhecimento profundo de integração. No entanto, forneceremos uma breve introdução para estabelecer as bases para quaisquer outras aplicações que encontraremos mais tarde.
 
 ## Interpretação Geométrica
-Suppose that we have a function $f(x)$.  For simplicity, let us assume that $f(x)$ is non-negative (never takes a value less than zero).  What we want to try and understand is: what is the area contained between $f(x)$ and the $x$-axis?
+Suponha que tenhamos uma função $f(x)$. Para simplificar, vamos supor que $f(x)$ não seja negativa (nunca assume um valor menor que zero). O que queremos tentar entender é: qual é a área contida entre $f(x)$ e o eixo $x$?
 
 ```{.python .input}
 %matplotlib inline
@@ -547,5 +547,5 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwOTg5ODM5NV19
+eyJoaXN0b3J5IjpbLTE0OTY4MDc4MzJdfQ==
 -->
