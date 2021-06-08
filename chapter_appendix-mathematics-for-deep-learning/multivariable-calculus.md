@@ -774,13 +774,13 @@ $$
 \frac{d}{d\mathbf{V}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2\mathbf{U}^\top(\mathbf{X} - \mathbf{U}\mathbf{V}).
 $$
 
-To show that this works, we would be remiss to not provide a detailed computation.  If we already believe that this rule-of-thumb works, feel free to skip past this derivation.  To compute
+Para mostrar que isso funciona, seríamos negligentes em não fornecer um cálculo detalhado. Se já acreditamos que essa regra prática funciona, fique à vontade para pular esta derivação. Para calcular
 
 $$
 \frac{d}{d\mathbf{V}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^2,
 $$
 
-we must find for every $a$, and $b$
+devemos encontrar para cada $a$ e $b$
 
 $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= \frac{d}{dv_{ab}} \sum_{i, j}\left(x_{ij} - \sum_k u_{ik}v_{kj}\right)^2.
@@ -871,7 +871,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMDU4NzI0MCwtMTYyMDIwNTcxOCw4MD
+eyJoaXN0b3J5IjpbLTgwMTEzMjgzMywtMTYyMDIwNTcxOCw4MD
 QwNTY3ODMsLTEyOTQ5NTk3NTYsLTExMzEyOTg5NjQsOTk4NDIx
 MjAyLC0xNTYwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MD
 QsMjEwNDcyMzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0x
