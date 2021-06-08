@@ -826,13 +826,13 @@ $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2\sum_{i} [\mathbf{U}^\top]_{ai}[\mathbf{X}-\mathbf{U}\mathbf{V}]_{ib}.
 $$
 
-This is a matrix product, and thus we can conclude that
+Este é um produto de matriz e, portanto, podemos concluir que
 
 $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2[\mathbf{U}^\top(\mathbf{X}-\mathbf{U}\mathbf{V})]_{ab}.
 $$
 
-and thus we may write the solution to :eqref:`eq_mat_goal_2`
+e assim podemos escrever a solução para :eqref:`eq_mat_goal_2`
 
 $$
 \frac{d}{d\mathbf{V}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2\mathbf{U}^\top(\mathbf{X} - \mathbf{U}\mathbf{V}).
@@ -869,10 +869,10 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI4Mjg0NDcwLC04MDExMzI4MzMsLTE2Mj
-AyMDU3MTgsODA0MDU2NzgzLC0xMjk0OTU5NzU2LC0xMTMxMjk4
-OTY0LDk5ODQyMTIwMiwtMTU2MDcyNjU5MSwtNTk4MDkzNzE0LC
-0xNzU2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyODcsLTcz
-OTE2MDA3NCwtMTQ1MTI5ODI4Niw3MjMwNTMzOSwtNDcxNDk0OT
-gwLDEzNjQ3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbLTExMDQ4NTUxMzUsLTgwMTEzMjgzMywtMT
+YyMDIwNTcxOCw4MDQwNTY3ODMsLTEyOTQ5NTk3NTYsLTExMzEy
+OTg5NjQsOTk4NDIxMjAyLC0xNTYwNzI2NTkxLC01OTgwOTM3MT
+QsLTE3NTY1NjI2MDQsMjEwNDcyMzcwNywtMTIwODczMTI4Nywt
+NzM5MTYwMDc0LC0xNDUxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OT
+Q5ODAsMTM2NDcwMjk4N119
 -->
