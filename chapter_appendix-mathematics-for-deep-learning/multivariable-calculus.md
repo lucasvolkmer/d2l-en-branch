@@ -765,9 +765,10 @@ $$
 \frac{d}{d\mathbf{V}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2(\mathbf{X} - \mathbf{U}\mathbf{V})\mathbf{U}.
 $$
 
-However, if we look at this it does not quite work.  Recall that $\mathbf{X}$ is $n \times m$, as is $\mathbf{U}\mathbf{V}$, so the matrix $2(\mathbf{X} - \mathbf{U}\mathbf{V})$ is $n \times m$.  On the other hand $\mathbf{U}$ is $n \times r$, and we cannot multiply a $n \times m$ and a $n \times r$ matrix since the dimensions do not match!
 
-We want to get $\frac{d}{d\mathbf{V}}$, which is the same shape of $\mathbf{V}$, which is $r \times m$.  So somehow we need to take a $n \times m$ matrix and a $n \times r$ matrix, multiply them together (perhaps with some transposes) to get a $r \times m$. We can do this by multiplying $U^\top$ by $(\mathbf{X} - \mathbf{U}\mathbf{V})$.  Thus, we can guess the solution to :eqref:`eq_mat_goal_2` is
+No entanto, se olharmos para isso, não funciona bem. Lembre-se de que $\mathbf{X}$ é $n \times m$, assim como $\mathbf{U}\mathbf{V}$, então a matriz $2(\mathbf{X} - \mathbf{U}\mathbf{V})$ é $n \times m$. Por outro lado $\mathbf{U}$ é $n \times r$, e não podemos multiplicar uma matriz $n \times m$ e uma $n \times r$ porque as dimensões não combinam!
+
+Queremos obter $\frac{d}{d\mathbf{V}}$, que tem a mesma forma de $\mathbf{V}$, que é $r \times m$. Então, de alguma forma, precisamos pegar uma matriz $n \times m$ e uma matriz $n \times r$, multiplicá-las juntas (talvez com algumas transposições) para obter uma $r \times m$. Podemos fazer isso multiplicando $U^\top$ por $(\mathbf{X} - \mathbf{U}\mathbf{V})$.. Assim, podemos adivinhar a solução para :eqref:`eq_mat_goal_2` é
 
 $$
 \frac{d}{d\mathbf{V}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2\mathbf{U}^\top(\mathbf{X} - \mathbf{U}\mathbf{V}).
@@ -870,9 +871,10 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjAyMDU3MTgsODA0MDU2NzgzLC0xMj
-k0OTU5NzU2LC0xMTMxMjk4OTY0LDk5ODQyMTIwMiwtMTU2MDcy
-NjU5MSwtNTk4MDkzNzE0LC0xNzU2NTYyNjA0LDIxMDQ3MjM3MD
-csLTEyMDg3MzEyODcsLTczOTE2MDA3NCwtMTQ1MTI5ODI4Niw3
-MjMwNTMzOSwtNDcxNDk0OTgwLDEzNjQ3MDI5ODddfQ==
+eyJoaXN0b3J5IjpbMTIyMDU4NzI0MCwtMTYyMDIwNTcxOCw4MD
+QwNTY3ODMsLTEyOTQ5NTk3NTYsLTExMzEyOTg5NjQsOTk4NDIx
+MjAyLC0xNTYwNzI2NTkxLC01OTgwOTM3MTQsLTE3NTY1NjI2MD
+QsMjEwNDcyMzcwNywtMTIwODczMTI4NywtNzM5MTYwMDc0LC0x
+NDUxMjk4Mjg2LDcyMzA1MzM5LC00NzE0OTQ5ODAsMTM2NDcwMj
+k4N119
 -->
