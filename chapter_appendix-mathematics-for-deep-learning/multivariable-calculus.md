@@ -797,31 +797,30 @@ $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2\sum_{i}\left(x_{ib} - \sum_k u_{ik}v_{kb}\right)u_{ia}.
 $$
 
-An important subtlety here is that the requirement that $k=a$ does not occur inside the inner sum since that $k$ is a dummy variable which we are summing over inside the inner term.  For a notationally cleaner example, consider why
-
+Uma sutileza importante aqui é que o requisito de que $k=a$ não ocorre dentro da soma interna, uma vez que $k$ é uma variável que estamos somando dentro do termo interno. Para um exemplo notacionalmente mais limpo, considere por que
 $$
 \frac{d}{dx_1} \left(\sum_i x_i \right)^{2}= 2\left(\sum_i x_i \right).
 $$
 
-From this point, we may start identifying components of the sum.  First,
+A partir deste ponto, podemos começar a identificar os componentes da soma. Primeiro,
 
 $$
 \sum_k u_{ik}v_{kb} = [\mathbf{U}\mathbf{V}]_{ib}.
 $$
 
-So the entire expression in the inside of the sum is
+Portanto, toda a expressão no interior da soma é
 
 $$
 x_{ib} - \sum_k u_{ik}v_{kb} = [\mathbf{X}-\mathbf{U}\mathbf{V}]_{ib}.
 $$
 
-This means we may now write our derivative as
+Isso significa que agora podemos escrever nossa derivada como
 
 $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2\sum_{i}[\mathbf{X}-\mathbf{U}\mathbf{V}]_{ib}u_{ia}.
 $$
 
-We want this to look like the $a, b$ element of a matrix so we can use the technique as in the previous example to arrive at a matrix expression, which means that we need to exchange the order of the indices on $u_{ia}$.  If we notice that $u_{ia} = [\mathbf{U}^\top]_{ai}$, we can then write
+Queremos que se pareça com o elemento $a, b$ de uma matriz, para que possamos usar a técnica como no exemplo anterior para chegar a uma expressão de matriz, o que significa que precisamos trocar a ordem dos índices em $u_{ia}$. Se notarmos que $u_{ia} = [\mathbf{U}^\top]_{ai}$, podemos escrever
 
 $$
 \frac{d}{dv_{ab}} \|\mathbf{X} - \mathbf{U}\mathbf{V}\|_2^{2}= -2\sum_{i} [\mathbf{U}^\top]_{ai}[\mathbf{X}-\mathbf{U}\mathbf{V}]_{ib}.
@@ -870,7 +869,7 @@ It is reasonable to ask at this point, "Why can I not just write down matrix ver
 [Discussions](https://discuss.d2l.ai/t/1091)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkwNDUwNzgzLC04MDExMzI4MzMsLTE2Mj
+eyJoaXN0b3J5IjpbODI4Mjg0NDcwLC04MDExMzI4MzMsLTE2Mj
 AyMDU3MTgsODA0MDU2NzgzLC0xMjk0OTU5NzU2LC0xMTMxMjk4
 OTY0LDk5ODQyMTIwMiwtMTU2MDcyNjU5MSwtNTk4MDkzNzE0LC
 0xNzU2NTYyNjA0LDIxMDQ3MjM3MDcsLTEyMDg3MzEyODcsLTcz
