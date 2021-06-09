@@ -473,7 +473,7 @@ $$
 \int _ U f(\mathbf{x})\;d\mathbf{x}.
 $$
 
-## Change of Variables in Multiple Integrals
+## Mudança de Variáveis em Integrais Múltiplas
 As with single variables in :eqref:`eq_change_var`, the ability to change variables inside a higher dimensional integral is a key tool.  Let us summarize the result without derivation.
 
 We need a function that reparameterizes our domain of integration.  We can take this to be $\phi : \mathbb{R}^n \rightarrow \mathbb{R}^n$, that is any function which takes in $n$ real variables and returns another $n$.  To keep the expressions clean, we will assume that $\phi$ is *injective* which is to say it never folds over itself ($\phi(\mathbf{x}) = \phi(\mathbf{y}) \implies \mathbf{x} = \mathbf{y}$).
@@ -554,7 +554,7 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjY0MDQ3OTgsMTc5MzU0NTY1NSwtMj
-EzNTIyNzQ1MiwxNDUxOTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1
-NDM4MCwtMTQ5NjgwNzgzMl19
+eyJoaXN0b3J5IjpbMTQxMjM0NjYwOCwxNzkzNTQ1NjU1LC0yMT
+M1MjI3NDUyLDE0NTE5NjQ0NjEsLTY2NjAwOTQ4OCwtMzMwNDU0
+MzgwLC0xNDk2ODA3ODMyXX0=
 -->
