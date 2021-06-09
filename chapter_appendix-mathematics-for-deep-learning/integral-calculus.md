@@ -495,7 +495,7 @@ D\boldsymbol{\phi} = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
-Looking closely, we see that this is similar to the single variable chain rule :eqref:`eq_change_var`, except we have replaced the term $\frac{du}{dx}(x)$ with $\left|\det(D\phi(\mathbf{x}))\right|$.  Let us see how we can to interpret this term.  Recall that the $\frac{du}{dx}(x)$ term existed to say how much we stretched our $x$-axis by applying $u$.  The same process in higher dimensions is to determine how much we stretch the area (or volume, or hyper-volume) of a little square (or little *hyper-cube*) by applying $\boldsymbol{\phi}$.  If $\boldsymbol{\phi}$ was the multiplication by a matrix, then we know how the determinant already gives the answer.
+Olhando de perto, vemos que isso é semelhante à regra de cadeia de única variável :eqref:`eq_change_var`, exceto que substituímos o termo $\frac{du}{dx}(x)$ por $\left|\det(D\phi(\mathbf{x}))\right|$. Vamos ver como podemos interpretar este termo. Lembre-se de que o termo $\frac{du}{dx}(x)$ existia para dizer o quanto esticamos nosso eixo $x$ aplicando $u$. O mesmo processo em dimensões superiores é determinar quanto esticamos a área (ou volume, ou hipervolume) de um pequeno quadrado (ou pequeno *hipercubo*) aplicando $\boldsymbol{\phi}$. Se $\boldsymbol{\phi}$ era a multiplicação por uma matriz, então sabemos como o determinante já dá a resposta.
 
 With some work, one can show that the *Jacobian* provides the best approximation to a multivariable function $\boldsymbol{\phi}$ at a point by a matrix in the same way we could approximate by lines or planes with derivatives and gradients. Thus the determinant of the Jacobian exactly mirrors the scaling factor we identified in one dimension.
 
@@ -555,7 +555,7 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTIxNTg2NDAsMTc5MzU0NTY1NSwtMj
-EzNTIyNzQ1MiwxNDUxOTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1
-NDM4MCwtMTQ5NjgwNzgzMl19
+eyJoaXN0b3J5IjpbLTEzMTE4NTM0MDYsLTE5OTIxNTg2NDAsMT
+c5MzU0NTY1NSwtMjEzNTIyNzQ1MiwxNDUxOTY0NDYxLC02NjYw
+MDk0ODgsLTMzMDQ1NDM4MCwtMTQ5NjgwNzgzMl19
 -->
