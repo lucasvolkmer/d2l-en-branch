@@ -541,8 +541,8 @@ Encontraremos essa integral novamente quando estudarmos variáveis aleatórias c
 ## Exercícios
 1. Quanto é $\int_1^2 \frac{1}{x} \;dx$?
 2. Use a fórmula de mudança de variáveis para integrar $\int_0^{\sqrt{\pi}}x\sin(x^2)\;dx$.
-3. Quant $\int_{[0,1]^2} xy \;dx\;dy$?
-4. Use the change of variables formula to compute $\int_0^2\int_0^1xy(x^2-y^2)/(x^2+y^2)^3\;dy\;dx$ and $\int_0^1\int_0^2f(x, y) = xy(x^2-y^2)/(x^2+y^2)^3\;dx\;dy$ to see they are different.
+3. Quanto é $\int_{[0,1]^2} xy \;dx\;dy$?
+4.Use a fórmula de mudança de variáveis para calcular $\int_0^2\int_0^1xy(x^2-y^2)/(x^2+y^2)^3\;dy\;dx$ e $\int_0^1\int_0^2f(x, y) = xy(x^2-y^2)/(x^2+y^2)^3\;dx\;dy$ para ver que elas são diferentes.
 
 :begin_tab:`mxnet`
 [Discussions](https://discuss.d2l.ai/t/414)
@@ -557,8 +557,8 @@ Encontraremos essa integral novamente quando estudarmos variáveis aleatórias c
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MTAwMTk0NCwtMTMxMTg1MzQwNiwtMT
-k5MjE1ODY0MCwxNzkzNTQ1NjU1LC0yMTM1MjI3NDUyLDE0NTE5
-NjQ0NjEsLTY2NjAwOTQ4OCwtMzMwNDU0MzgwLC0xNDk2ODA3OD
-MyXX0=
+eyJoaXN0b3J5IjpbLTEyOTY5MjA5NTYsLTEzMTE4NTM0MDYsLT
+E5OTIxNTg2NDAsMTc5MzU0NTY1NSwtMjEzNTIyNzQ1MiwxNDUx
+OTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1NDM4MCwtMTQ5NjgwNz
+gzMl19
 -->
