@@ -512,7 +512,7 @@ $$
 \int _ 0^\infty \int_0 ^ {2\pi} e^{-r^{2}} \left|\det(D\mathbf{\phi}(\mathbf{x}))\right|\;d\theta\;dr,
 $$
 
-where
+onde
 
 $$
 \left|\det(D\mathbf{\phi}(\mathbf{x}))\right| = \left|\det\begin{bmatrix}
@@ -521,26 +521,27 @@ $$
 \end{bmatrix}\right| = r(\cos^{2}(\theta) + \sin^{2}(\theta)) = r.
 $$
 
-Thus, the integral is
+Assim, a integral é
 
 $$
 \int _ 0^\infty \int _ 0 ^ {2\pi} re^{-r^{2}} \;d\theta\;dr = 2\pi\int _ 0^\infty re^{-r^{2}} \;dr = \pi,
 $$
 
-where the final equality follows by the same computation that we used in section :numref:`integral_example`.
 
-We will meet this integral again when we study continuous random variables in :numref:`sec_random_variables`.
+onde a igualdade final segue pelo mesmo cálculo que usamos na seção :numref:`integral_example`.
 
-## Summary
+Encontraremos essa integral novamente quando estudarmos variáveis aleatórias contínuas em :numref:`sec_random_variables`.
 
-* The theory of integration allows us to answer questions about areas or volumes.
-* The fundamental theorem of calculus allows us to leverage knowledge about derivatives to compute areas via the observation that the derivative of the area up to some point is given by the value of the function being integrated.
-* Integrals in higher dimensions can be computed by iterating single variable integrals.
+## Resumo
 
-## Exercises
-1. What is $\int_1^2 \frac{1}{x} \;dx$?
-2. Use the change of variables formula to integrate $\int_0^{\sqrt{\pi}}x\sin(x^2)\;dx$.
-3. What is $\int_{[0,1]^2} xy \;dx\;dy$?
+* A teoria da integração nos permite responder a perguntas sobre áreas ou volumes.
+* O teorema fundamental do cálculo nos permite alavancar o conhecimento sobre derivadas para calcular áreas através da observação de que a derivada da área até certo ponto é dada pelo valor da função que está sendo integrada.
+* Integrais em dimensões superiores podem ser calculados iterando integrais de variável única.
+
+## Exercícios
+1. Quanto é $\int_1^2 \frac{1}{x} \;dx$?
+2. Use a fórmula de mudança de variáveis para integrar $\int_0^{\sqrt{\pi}}x\sin(x^2)\;dx$.
+3. Quant $\int_{[0,1]^2} xy \;dx\;dy$?
 4. Use the change of variables formula to compute $\int_0^2\int_0^1xy(x^2-y^2)/(x^2+y^2)^3\;dy\;dx$ and $\int_0^1\int_0^2f(x, y) = xy(x^2-y^2)/(x^2+y^2)^3\;dx\;dy$ to see they are different.
 
 :begin_tab:`mxnet`
@@ -556,7 +557,7 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNTM4MTQ1MCwtMTMxMTg1MzQwNiwtMT
+eyJoaXN0b3J5IjpbMTY5MTAwMTk0NCwtMTMxMTg1MzQwNiwtMT
 k5MjE1ODY0MCwxNzkzNTQ1NjU1LC0yMTM1MjI3NDUyLDE0NTE5
 NjQ0NjEsLTY2NjAwOTQ4OCwtMzMwNDU0MzgwLC0xNDk2ODA3OD
 MyXX0=
