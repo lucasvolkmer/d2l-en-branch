@@ -60,7 +60,7 @@ d2l.plt.fill_between(x.numpy(), f.numpy())
 d2l.plt.show()
 ```
 
-In most cases, this area will be infinite or undefined (consider the area under $f(x) = x^{2}$), so people will often talk about the area between a pair of ends, say $a$ and $b$.
+Na maioria dos casos, esta área será infinita ou indefinida (considere a área sob $f(x) = x^{2}$), então as pessoas frequentemente falarão sobre a área entre um par de pontas, digamos $a$ e $b$.
 
 ```{.python .input}
 x = np.arange(-2, 2, 0.01)
@@ -547,5 +547,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTY4MDc4MzJdfQ==
+eyJoaXN0b3J5IjpbLTIwMzgwMjkyNTksLTE0OTY4MDc4MzJdfQ
+==
 -->
