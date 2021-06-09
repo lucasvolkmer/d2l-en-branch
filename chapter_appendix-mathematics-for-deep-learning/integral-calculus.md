@@ -497,9 +497,10 @@ $$
 
 Olhando de perto, vemos que isso é semelhante à regra de cadeia de única variável :eqref:`eq_change_var`, exceto que substituímos o termo $\frac{du}{dx}(x)$ por $\left|\det(D\phi(\mathbf{x}))\right|$. Vamos ver como podemos interpretar este termo. Lembre-se de que o termo $\frac{du}{dx}(x)$ existia para dizer o quanto esticamos nosso eixo $x$ aplicando $u$. O mesmo processo em dimensões superiores é determinar quanto esticamos a área (ou volume, ou hipervolume) de um pequeno quadrado (ou pequeno *hipercubo*) aplicando $\boldsymbol{\phi}$. Se $\boldsymbol{\phi}$ era a multiplicação por uma matriz, então sabemos como o determinante já dá a resposta.
 
-With some work, one can show that the *Jacobian* provides the best approximation to a multivariable function $\boldsymbol{\phi}$ at a point by a matrix in the same way we could approximate by lines or planes with derivatives and gradients. Thus the determinant of the Jacobian exactly mirrors the scaling factor we identified in one dimension.
 
-It takes some work to fill in the details to this, so do not worry if they are not clear now.  Let us see at least one example we will make use of later on.  Consider the integral
+Com algum trabalho, pode-se mostrar que o *Jacobiano* fornece a melhor aproximação para uma função multivariável $\boldsymbol{\phi}$ em um ponto por uma matriz da mesma forma que poderíamos aproximar por retas ou planos com derivados e gradientes. Assim, o determinante do Jacobiano reflete exatamente o fator de escala que identificamos em uma dimensão.
+
+É preciso algum trabalho para preencher os detalhes, então não se preocupe se eles não estiverem claros agora. Vejamos pelo menos um exemplo que usaremos mais tarde. Considere a integral
 
 $$
 \int _ {-\infty}^{\infty} \int _ {-\infty}^{\infty} e^{-x^{2}-y^{2}} \;dx\;dy.
@@ -555,7 +556,8 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTE4NTM0MDYsLTE5OTIxNTg2NDAsMT
-c5MzU0NTY1NSwtMjEzNTIyNzQ1MiwxNDUxOTY0NDYxLC02NjYw
-MDk0ODgsLTMzMDQ1NDM4MCwtMTQ5NjgwNzgzMl19
+eyJoaXN0b3J5IjpbLTE3MjA1ODMzNzMsLTEzMTE4NTM0MDYsLT
+E5OTIxNTg2NDAsMTc5MzU0NTY1NSwtMjEzNTIyNzQ1MiwxNDUx
+OTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1NDM4MCwtMTQ5NjgwNz
+gzMl19
 -->
