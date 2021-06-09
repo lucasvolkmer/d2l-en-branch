@@ -106,7 +106,7 @@ $$
 \int_a^b f(x) \;dx = \int_a^b f(z) \;dz.
 $$
 
-There is a traditional way to try and understand how we might try to approximate such integrals: we can imagine taking the region in-between $a$ and $b$ and chopping it into $N$ vertical slices.  If $N$ is large, we can approximate the area of each slice by a rectangle, and then add up the areas to get the total area under the curve.  Let us take a look at an example doing this in code.  We will see how to get the true value in a later section.
+Há uma maneira tradicional de tentar entender como podemos tentar aproximar essas integrais: podemos imaginar pegar a região entre $a$ e $b$ e dividi-la em fatias verticais de $N$. Se $N$ for grande, podemos aproximar a área de cada fatia por um retângulo e, em seguida, somar as áreas para obter a área total sob a curva. Vamos dar uma olhada em um exemplo fazendo isso no código. Veremos como obter o valor verdadeiro em uma seção posterior.
 
 ```{.python .input}
 epsilon = 0.05
@@ -170,25 +170,26 @@ d2l.plt.show()
 f'approximation: {approx}, truth: {true}'
 ```
 
-The issue is that while it can be done numerically, we can do this approach analytically for only the simplest functions like
+O problema é que, embora possa ser feito numericamente, podemos fazer essa abordagem analiticamente apenas para as funções mais simples, como
 
 $$
 \int_a^b x \;dx.
 $$
 
-Anything somewhat more complex like our example from the code above
+Qualquer coisa um pouco mais complexa como nosso exemplo do código acima
 
 $$
 \int_a^b \frac{x}{1+x^{2}} \;dx.
 $$
 
-is beyond what we can solve with such a direct method.
 
-We will instead take a different approach.  We will work intuitively with the notion of the area, and learn the main computational tool used to find integrals: the *fundamental theorem of calculus*.   This will be the basis for our study of integration.
+está além do que podemos resolver com um método tão direto.
 
-## The Fundamental Theorem of Calculus
+Em vez disso, faremos uma abordagem diferente. Trabalharemos intuitivamente com a noção da área, e aprenderemos a principal ferramenta computacional usada para encontrar integrais: o *teorema fundamental do cálculo*. Esta será a base para nosso estudo de integração.
 
-To dive deeper into the theory of integration, let us introduce a function
+## O Teorema Fundamental do Cálculo
+
+Para mergulhar mais fundo na teoria da integração, vamos apresentar uma função
 
 $$
 F(x) = \int_0^x f(y) dy.
@@ -547,5 +548,5 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NjYwNTI4MCwtMTQ5NjgwNzgzMl19
+eyJoaXN0b3J5IjpbLTMzMDQ1NDM4MCwtMTQ5NjgwNzgzMl19
 -->
