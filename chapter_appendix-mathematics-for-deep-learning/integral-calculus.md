@@ -240,19 +240,19 @@ $$
 \int_a^b f(x) \; dx = (F(b) + C) - (F(a) + C) = F(b) - F(a).
 $$
 
-This may seem like abstract non-sense, but let us take a moment to appreciate that it has given us a whole new perspective on computing integrals.  Our goal is no-longer to do some sort of chop-and-sum process to try and recover the area, rather we need only find a function whose derivative is the function we have!  This is incredible since we can now list many rather difficult integrals by just reversing the table from :numref:`sec_derivative_table`.  For instance, we know that the derivative of $x^{n}$ is $nx^{n-1}$.  Thus, we can say using the fundamental theorem :eqref:`eq_ftc` that
+Isso pode parecer sem sentido abstrato, mas vamos parar um momento para apreciar que isso nos deu uma perspectiva totalmente nova sobre as integrais computacionais. Nosso objetivo não é mais fazer algum tipo de processo de corte e soma para tentar recuperar a área, ao invés disso, precisamos apenas encontrar uma função cuja derivada é a função que temos! Isso é incrível, pois agora podemos listar muitas integrais bastante difíceis apenas revertendo a tabela de :numref:`sec_derivative_table`. Por exemplo, sabemos que a derivada de $x^{n}$ is $nx^{n-1}$. Assim, podemos dizer usando o teorema fundamental :eqref:`eq_ftc` que
 
 $$
 \int_0^{x} ny^{n-1} \; dy = x^n - 0^n = x^n.
 $$
 
-Similarly, we know that the derivative of $e^{x}$ is itself, so that means
+Da mesma forma, sabemos que a derivada de $e^{x}$ é ela mesma, o que significa
 
 $$
 \int_0^{x} e^{x} \; dx = e^{x} - e^{0} = e^x - 1.
 $$
 
-In this way, we can develop the entire theory of integration leveraging ideas from differential calculus freely.  Every integration rule derives from this one fact.
+Desta forma, podemos desenvolver toda a teoria da integração aproveitando as idéias do cálculo diferencial livremente. Toda regra de integração deriva desse único fato.
 
 ## Change of Variables
 :label:`integral_example`
@@ -550,6 +550,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3ODY4OTAyNiwtNjY2MDA5NDg4LC0zMz
+eyJoaXN0b3J5IjpbMTUxMzI3NjA5OSwtNjY2MDA5NDg4LC0zMz
 A0NTQzODAsLTE0OTY4MDc4MzJdfQ==
 -->
