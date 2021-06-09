@@ -195,15 +195,15 @@ $$
 F(x) = \int_0^x f(y) dy.
 $$
 
-This function measures the area between $0$ and $x$ depending on how we change $x$.  Notice that this is everything we need since
+Esta função mede a área entre $0$ e $x$ dependendo de como alteramos $x$. Observe que isso é tudo de que precisamos, já que
 
 $$
 \int_a^b f(x) \;dx = F(b) - F(a).
 $$
 
-This is a mathematical encoding of the fact that we can measure the area out to the far end-point and then subtract off the area to the near end point as indicated in :numref:`fig_area-subtract`.
+Esta é uma codificação matemática do fato de que podemos medir a área até o ponto final distante e então subtrair a área até o ponto final próximo, conforme indicado em :numref:`fig_area-subtract`.
 
-![Visualizing why we may reduce the problem of computing the area under a curve between two points to computing the area to the left of a point.](../img/sub-area.svg)
+![Visualizando porque podemos reduzir o problema de calcular a área sob uma curva entre dois pontos para calcular a área à esquerda de um ponto.](../img/sub-area.svg)
 :label:`fig_area-subtract`
 
 Thus, we can figure out what the integral over any interval is by figuring out what $F(x)$ is.
@@ -548,5 +548,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMDQ1NDM4MCwtMTQ5NjgwNzgzMl19
+eyJoaXN0b3J5IjpbLTY2NjAwOTQ4OCwtMzMwNDU0MzgwLC0xND
+k2ODA3ODMyXX0=
 -->
