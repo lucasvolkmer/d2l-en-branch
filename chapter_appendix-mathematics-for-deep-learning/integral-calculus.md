@@ -290,12 +290,12 @@ $$\int_{u(0)}^{u(x)} f(y) \; dy = \int_0^x f(u(y))\cdot \frac{du}{dy} \;dy.$$
 
 Esta é a fórmula de *mudança de variáveis*.
 
-For a more intuitive derivation, consider what happens when we take an integral of $f(u(x))$ between $x$ and $x+\epsilon$. For a small $\epsilon$, this integral is approximately $\epsilon f(u(x))$, the area of the associated rectangle.  Now, let us compare this with the integral of $f(y)$ from $u(x)$ to $u(x+\epsilon)$.  We know that $u(x+\epsilon) \approx u(x) + \epsilon \frac{du}{dx}(x)$, so the area of this rectangle is approximately $\epsilon \frac{du}{dx}(x)f(u(x))$.  Thus, to make the area of these two rectangles to agree, we need to multiply the first one by $\frac{du}{dx}(x)$ as is illustrated in :numref:`fig_rect-transform`.
+Para uma derivação mais intuitiva, considere o que acontece quando tomamos uma integral de $f(u(x))$ entre $x$ e $x+\epsilon$. Para um pequeno $\epsilon$, esta integral é aproximadamente $\epsilon f(u(x))$, a área do retângulo associado. Agora, vamos comparar isso com a integral de $f(y)$ de $u(x)$ a $u(x+\epsilon)$. Sabemos que $u(x+\epsilon) \approx u(x) + \epsilon \frac{du}{dx}(x)$, então a área deste retângulo é aproximadamente $\epsilon \frac{du}{dx}(x)f(u(x))$. Assim, para fazer a área desses dois retângulos serem iguais, precisamos multiplicar o primeiro por $\frac{du}{dx}(x)$ como está ilustrado em :numref:`fig_rect-transform`.
 
-![Visualizing the transformation of a single thin rectangle under the change of variables.](../img/rect-trans.svg)
+![Visualizando a transformação de um único retângulo fino sob a mudança de variáveis.](../img/rect-trans.svg)
 :label:`fig_rect-transform`
 
-This tells us that
+Isso nos diz que
 
 $$
 \int_x^{x+\epsilon} f(u(y))\frac{du}{dy}(y)\;dy = \int_{u(x)}^{u(x+\epsilon)} f(y) \; dy.
@@ -550,6 +550,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMjYzMjI2MCwtNjY2MDA5NDg4LC0zMz
+eyJoaXN0b3J5IjpbMTQ1MTk2NDQ2MSwtNjY2MDA5NDg4LC0zMz
 A0NTQzODAsLTE0OTY4MDc4MzJdfQ==
 -->
