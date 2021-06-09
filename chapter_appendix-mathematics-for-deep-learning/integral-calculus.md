@@ -458,15 +458,16 @@ $$
 \int _ {[a, b]\times[c, d]} f(x, y)\;dx\;dy = \int _ c^{d} \left(\int _ a^{b} f(x, y) \;dx\right) \; dy.
 $$
 
-Notice that, once discretized, all we did was rearrange the order in which we added a list of numbers.  This may make it seem like it is nothing, however this result (called *Fubini's Theorem*) is not always true!  For the type of mathematics encountered when doing machine learning (continuous functions), there is no concern, however it is possible to create examples where it fails (for example the function $f(x, y) = xy(x^2-y^2)/(x^2+y^2)^3$ over the rectangle $[0,2]\times[0,1]$).
 
-Note that the choice to do the integral in $x$ first, and then the integral in $y$ was arbitrary.  We could have equally well chosen to do $y$ first and then $x$ to see
+Observe que, uma vez discretizado, tudo o que fizemos foi reorganizar a ordem em que adicionamos uma lista de números. Isso pode fazer parecer que não é nada, mas esse resultado (chamado *Teorema de Fubini*) nem sempre é verdadeiro! Para o tipo de matemática encontrada ao fazer o aprendizado de máquina (funções contínuas), não há preocupação, no entanto, é possível criar exemplos onde ela falha (por exemplo, a função $f(x, y) = xy(x^2-y^2)/(x^2+y^2)^3$ sobre o retângulo $[0,2]\times[0,1]$).
+
+Observe que a escolha de fazer a integral em $x$ primeiro e, em seguida, a integral em $y$ foi arbitrária. Poderíamos ter igualmente escolhido fazer $y$ primeiro e, em seguida, $x$ para ver
 
 $$
 \int _ {[a, b]\times[c, d]} f(x, y)\;dx\;dy = \int _ a^{b} \left(\int _ c^{d} f(x, y) \;dy\right) \; dx.
 $$
 
-Often times, we will condense down to vector notation, and say that for $U = [a, b]\times [c, d]$ this is
+Muitas vezes, vamos condensar em notação vetorial e dizer que para $U = [a, b]\times [c, d]$, isso é
 
 $$
 \int _ U f(\mathbf{x})\;d\mathbf{x}.
@@ -553,7 +554,7 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MzU0NTY1NSwtMjEzNTIyNzQ1MiwxND
-UxOTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1NDM4MCwtMTQ5Njgw
-NzgzMl19
+eyJoaXN0b3J5IjpbLTEzNjY0MDQ3OTgsMTc5MzU0NTY1NSwtMj
+EzNTIyNzQ1MiwxNDUxOTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1
+NDM4MCwtMTQ5NjgwNzgzMl19
 -->
