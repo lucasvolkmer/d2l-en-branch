@@ -545,20 +545,20 @@ Encontraremos essa integral novamente quando estudarmos variáveis aleatórias c
 4.Use a fórmula de mudança de variáveis para calcular $\int_0^2\int_0^1xy(x^2-y^2)/(x^2+y^2)^3\;dy\;dx$ e $\int_0^1\int_0^2f(x, y) = xy(x^2-y^2)/(x^2+y^2)^3\;dx\;dy$ para ver que elas são diferentes.
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/414)
+[Discussões](https://discuss.d2l.ai/t/414)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1092)
+[Discussioões](https://discuss.d2l.ai/t/1092)
 :end_tab:
 
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1093)
+[Discussões](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTY5MjA5NTYsLTEzMTE4NTM0MDYsLT
-E5OTIxNTg2NDAsMTc5MzU0NTY1NSwtMjEzNTIyNzQ1MiwxNDUx
-OTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1NDM4MCwtMTQ5NjgwNz
-gzMl19
+eyJoaXN0b3J5IjpbMzk1Mjk4OTMyLC0xMzExODUzNDA2LC0xOT
+kyMTU4NjQwLDE3OTM1NDU2NTUsLTIxMzUyMjc0NTIsMTQ1MTk2
+NDQ2MSwtNjY2MDA5NDg4LC0zMzA0NTQzODAsLTE0OTY4MDc4Mz
+JdfQ==
 -->
