@@ -549,7 +549,7 @@ Encontraremos essa integral novamente quando estudarmos variáveis aleatórias c
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussioões](https://discuss.d2l.ai/t/1092)
+[Discussões](https://discuss.d2l.ai/t/1092)
 :end_tab:
 
 
@@ -557,8 +557,8 @@ Encontraremos essa integral novamente quando estudarmos variáveis aleatórias c
 [Discussões](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk1Mjk4OTMyLC0xMzExODUzNDA2LC0xOT
-kyMTU4NjQwLDE3OTM1NDU2NTUsLTIxMzUyMjc0NTIsMTQ1MTk2
-NDQ2MSwtNjY2MDA5NDg4LC0zMzA0NTQzODAsLTE0OTY4MDc4Mz
-JdfQ==
+eyJoaXN0b3J5IjpbLTE5MDk2NTE3MCwtMTMxMTg1MzQwNiwtMT
+k5MjE1ODY0MCwxNzkzNTQ1NjU1LC0yMTM1MjI3NDUyLDE0NTE5
+NjQ0NjEsLTY2NjAwOTQ4OCwtMzMwNDU0MzgwLC0xNDk2ODA3OD
+MyXX0=
 -->
