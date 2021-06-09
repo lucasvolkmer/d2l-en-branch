@@ -215,21 +215,22 @@ $$
 F(x+\epsilon) - F(x) = \int_x^{x+\epsilon} f(y) \; dy.
 $$
 
-This tells us that the function changes by the area under a tiny sliver of a function.
 
-This is the point at which we make an approximation.  If we look at a tiny sliver of area like this, it looks like this area is close to the rectangular area with height the value of $f(x)$ and the base width $\epsilon$.  Indeed, one can show that as $\epsilon \rightarrow 0$ this approximation becomes better and better.  Thus we can conclude:
+Isso nos diz que a função muda de acordo com a área sob uma pequena porção de uma função.
+
+Este é o ponto em que fazemos uma aproximação. Se olharmos para uma pequena porção de área como esta, parece que esta área está próxima da área retangular com a altura o valor de $f(x)$ e a largura da base $\epsilon$ De fato, pode-se mostrar que à medida que $\epsilon \rightarrow 0$ essa aproximação se torna cada vez melhor. Assim podemos concluir:
 
 $$
 F(x+\epsilon) - F(x) \approx \epsilon f(x).
 $$
 
-However, we can now notice: this is exactly the pattern we expect if we were computing the derivative of $F$!  Thus we see the following rather surprising fact:
+Porém, agora podemos notar: este é exatamente o padrão que esperamos se estivéssemos calculando a derivada de $F$! Assim, vemos o seguinte fato bastante surpreendente:
 
 $$
 \frac{dF}{dx}(x) = f(x).
 $$
 
-This is the *fundamental theorem of calculus*.  We may write it in expanded form as
+Este é o *teorema fundamental do cálculo*. Podemos escrever em forma expandida como
 $$\frac{d}{dx}\int_{-\infty}^x f(y) \; dy = f(x).$$
 :eqlabel:`eq_ftc`
 
@@ -549,6 +550,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTE0NDg5ODgsLTY2NjAwOTQ4OCwtMz
-MwNDU0MzgwLC0xNDk2ODA3ODMyXX0=
+eyJoaXN0b3J5IjpbNzkxNDI0OTEwLC02NjYwMDk0ODgsLTMzMD
+Q1NDM4MCwtMTQ5NjgwNzgzMl19
 -->
