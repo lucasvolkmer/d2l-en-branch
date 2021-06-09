@@ -422,36 +422,37 @@ $$
 \int_{[a, b]\times[c, d]} f(x, y)\;dx\;dy = \int_c^{d} \left(\int_a^{b} f(x, y) \;dx\right) \; dy.
 $$
 
-Let us see why this is.
 
-Consider the figure above where we have split the function into $\epsilon \times \epsilon$ squares which we will index with integer coordinates $i, j$.  In this case, our integral is approximately
+Vamos ver por que isso acontece.
+
+Considere a figura acima, onde dividimos a função em $\epsilon \times \epsilon$ quadrados que indexaremos com coordenadas inteiras $i, j$. Neste caso, nossa integral é aproximadamente
 
 $$
 \sum_{i, j} \epsilon^{2} f(\epsilon i, \epsilon j).
 $$
 
-Once we discretize the problem, we may add up the values on these squares in whatever order we like, and not worry about changing the values.  This is illustrated in :numref:`fig_sum-order`.  In particular, we can say that
+Depois de discretizar o problema, podemos somar os valores nesses quadrados na ordem que quisermos e não nos preocupar em alterar os valores. Isso é ilustrado em :numref:`fig_sum-order`. Em particular, podemos dizer que
 
 $$
  \sum _ {j} \epsilon \left(\sum_{i} \epsilon f(\epsilon i, \epsilon j)\right).
 $$
 
-![Illustrating how to decompose a sum over many squares as a sum over first the columns (1), then adding the column sums together (2).](../img/sum-order.svg)
+![Ilustrando como decompor uma soma em muitos quadrados como uma soma nas primeiras colunas (1), depois somando as somas das colunas (2).](../img/sum-order.svg)
 :label:`fig_sum-order`
 
-The sum on the inside is precisely the discretization of the integral
+A soma do interior é precisamente a discretização da integral
 
 $$
 G(\epsilon j) = \int _a^{b} f(x, \epsilon j) \; dx.
 $$
 
-Finally, notice that if we combine these two expressions we get
+Finalmente, observe que se combinarmos essas duas expressões, obteremos
 
 $$
 \sum _ {j} \epsilon G(\epsilon j) \approx \int _ {c}^{d} G(y) \; dy = \int _ {[a, b]\times[c, d]} f(x, y)\;dx\;dy.
 $$
 
-Thus putting it all together, we have that
+Assim, juntando tudo, temos que
 
 $$
 \int _ {[a, b]\times[c, d]} f(x, y)\;dx\;dy = \int _ c^{d} \left(\int _ a^{b} f(x, y) \;dx\right) \; dy.
@@ -552,7 +553,7 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NDcyMDY0MiwtMjEzNTIyNzQ1MiwxND
+eyJoaXN0b3J5IjpbMTc5MzU0NTY1NSwtMjEzNTIyNzQ1MiwxND
 UxOTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1NDM4MCwtMTQ5Njgw
 NzgzMl19
 -->
