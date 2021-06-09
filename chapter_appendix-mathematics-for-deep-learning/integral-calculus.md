@@ -288,7 +288,7 @@ Da mesma forma, lembrar que $F$ é uma integral nos permite reconhecer que $\fra
 $$\int_{u(0)}^{u(x)} f(y) \; dy = \int_0^x f(u(y))\cdot \frac{du}{dy} \;dy.$$
 :eqlabel:`eq_change_var`
 
-This is the *change of variables* formula.
+Esta é a fórmula de *mudança de variáveis*.
 
 For a more intuitive derivation, consider what happens when we take an integral of $f(u(x))$ between $x$ and $x+\epsilon$. For a small $\epsilon$, this integral is approximately $\epsilon f(u(x))$, the area of the associated rectangle.  Now, let us compare this with the integral of $f(y)$ from $u(x)$ to $u(x+\epsilon)$.  We know that $u(x+\epsilon) \approx u(x) + \epsilon \frac{du}{dx}(x)$, so the area of this rectangle is approximately $\epsilon \frac{du}{dx}(x)f(u(x))$.  Thus, to make the area of these two rectangles to agree, we need to multiply the first one by $\frac{du}{dx}(x)$ as is illustrated in :numref:`fig_rect-transform`.
 
@@ -550,6 +550,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDYzODgyMSwtNjY2MDA5NDg4LC0zMz
+eyJoaXN0b3J5IjpbMTUwMjYzMjI2MCwtNjY2MDA5NDg4LC0zMz
 A0NTQzODAsLTE0OTY4MDc4MzJdfQ==
 -->
