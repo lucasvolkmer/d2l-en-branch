@@ -410,13 +410,13 @@ ax.set_zlim(0, 1)
 ax.dist = 12
 ```
 
-We write this as
+Nós escrevemos isso como
 
 $$
 \int_{[a, b]\times[c, d]} f(x, y)\;dx\;dy.
 $$
 
-Suppose that we wish to compute this integral.  My claim is that we can do this by iteratively computing first the integral in $x$ and then shifting to the integral in $y$, that is to say
+Suponha que desejamos calcular essa integral. Minha alegação é que podemos fazer isso calculando iterativamente primeiro a integral em $x$ e, em seguida, mudando para a integral em $y$, ou seja,
 
 $$
 \int_{[a, b]\times[c, d]} f(x, y)\;dx\;dy = \int_c^{d} \left(\int_a^{b} f(x, y) \;dx\right) \; dy.
@@ -552,7 +552,7 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODEyNjMyLC0yMTM1MjI3NDUyLDE0NT
-E5NjQ0NjEsLTY2NjAwOTQ4OCwtMzMwNDU0MzgwLC0xNDk2ODA3
-ODMyXX0=
+eyJoaXN0b3J5IjpbMTQ1NDcyMDY0MiwtMjEzNTIyNzQ1MiwxND
+UxOTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1NDM4MCwtMTQ5Njgw
+NzgzMl19
 -->
