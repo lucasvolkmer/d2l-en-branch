@@ -474,17 +474,18 @@ $$
 $$
 
 ## Mudança de Variáveis em Integrais Múltiplas
-As with single variables in :eqref:`eq_change_var`, the ability to change variables inside a higher dimensional integral is a key tool.  Let us summarize the result without derivation.
 
-We need a function that reparameterizes our domain of integration.  We can take this to be $\phi : \mathbb{R}^n \rightarrow \mathbb{R}^n$, that is any function which takes in $n$ real variables and returns another $n$.  To keep the expressions clean, we will assume that $\phi$ is *injective* which is to say it never folds over itself ($\phi(\mathbf{x}) = \phi(\mathbf{y}) \implies \mathbf{x} = \mathbf{y}$).
+Tal como acontece com variáveis únicas em :eqref:`eq_change_var`, a capacidade de alterar variáveis dentro de uma integral de dimensão superior é uma ferramenta chave. Vamos resumir o resultado sem derivação.
 
-In this case, we can say that
+Precisamos de uma função que reparameterize nosso domínio de integração. Podemos considerar isso como $\phi : \mathbb{R}^n \rightarrow \mathbb{R}^n$, ou seja, qualquer função que recebe $n$ variáveis reais e retorna outro $n$. Para manter as expressões limpas, assumiremos que $\phi$ é *injetotora*, o que quer dizer que nunca se dobra ($\phi(\mathbf{x}) = \phi(\mathbf{y}) \implies \mathbf{x} = \mathbf{y}$).
+
+Neste caso, podemos dizer que
 
 $$
 \int _ {\phi(U)} f(\mathbf{x})\;d\mathbf{x} = \int _ {U} f(\phi(\mathbf{x})) \left|\det(D\phi(\mathbf{x}))\right|\;d\mathbf{x}.
 $$
 
-where $D\phi$ is the *Jacobian* of $\phi$, which is the matrix of partial derivatives of $\boldsymbol{\phi} = (\phi_1(x_1, \ldots, x_n), \ldots, \phi_n(x_1, \ldots, x_n))$,
+onde $D\phi$ é o *Jacobiano* de $\phi$, que é a matriz das derivadas parciais de $\boldsymbol{\phi} = (\phi_1(x_1, \ldots, x_n), \ldots, \phi_n(x_1, \ldots, x_n))$,
 
 $$
 D\boldsymbol{\phi} = \begin{bmatrix}
@@ -554,7 +555,7 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMjM0NjYwOCwxNzkzNTQ1NjU1LC0yMT
-M1MjI3NDUyLDE0NTE5NjQ0NjEsLTY2NjAwOTQ4OCwtMzMwNDU0
-MzgwLC0xNDk2ODA3ODMyXX0=
+eyJoaXN0b3J5IjpbLTE5OTIxNTg2NDAsMTc5MzU0NTY1NSwtMj
+EzNTIyNzQ1MiwxNDUxOTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1
+NDM4MCwtMTQ5NjgwNzgzMl19
 -->
