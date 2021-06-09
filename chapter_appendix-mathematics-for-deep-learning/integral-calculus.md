@@ -254,12 +254,13 @@ $$
 
 Desta forma, podemos desenvolver toda a teoria da integração aproveitando as idéias do cálculo diferencial livremente. Toda regra de integração deriva desse único fato.
 
-## Change of Variables
+## Mudança de Variável
 :label:`integral_example`
 
-Just as with differentiation, there are a number of rules which make the computation of integrals more tractable.  In fact, every rule of differential calculus (like the product rule, sum rule, and chain rule) has a corresponding rule for integral calculus (integration by parts, linearity of integration, and the change of variables formula respectively).  In this section, we will dive into what is arguably the most important from the list: the change of variables formula.
 
-First, suppose that we have a function which is itself an integral:
+Assim como com a diferenciação, há várias regras que tornam o cálculo de integrais mais tratáveis. Na verdade, cada regra de cálculo diferencial (como a regra do produto, regra da soma e regra da cadeia) tem uma regra correspondente para o cálculo integral (integração por partes, linearidade de integração e fórmula de mudança de variáveis, respectivamente). Nesta seção, vamos mergulhar no que é indiscutivelmente o mais importante da lista: a fórmula de mudança de variáveis.
+
+Primeiro, suponha que temos uma função que é ela mesma uma integral:
 
 $$
 F(x) = \int_0^x f(y) \; dy.
@@ -550,6 +551,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzI3NjA5OSwtNjY2MDA5NDg4LC0zMz
-A0NTQzODAsLTE0OTY4MDc4MzJdfQ==
+eyJoaXN0b3J5IjpbLTE1MzI3MDkwNzksLTY2NjAwOTQ4OCwtMz
+MwNDU0MzgwLC0xNDk2ODA3ODMyXX0=
 -->
