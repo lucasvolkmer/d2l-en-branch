@@ -506,7 +506,7 @@ $$
 \int _ {-\infty}^{\infty} \int _ {-\infty}^{\infty} e^{-x^{2}-y^{2}} \;dx\;dy.
 $$
 
-Playing with this integral directly will get us no-where, but if we change variables, we can make significant progress.  If we let $\boldsymbol{\phi}(r, \theta) = (r \cos(\theta),  r\sin(\theta))$ (which is to say that $x = r \cos(\theta)$, $y = r \sin(\theta)$), then we can apply the change of variable formula to see that this is the same thing as
+Brincar com essa integral diretamente não nos levará a lugar nenhum, mas se mudarmos as variáveis, podemos fazer um progresso significativo. $\boldsymbol{\phi}(r, \theta) = (r \cos(\theta),  r\sin(\theta))$ (o que significa que $x = r \cos(\theta)$, $y = r \sin(\theta)$), então podemos aplicar a fórmula de mudança da variável para ver que isso é a mesma coisa que
 
 $$
 \int _ 0^\infty \int_0 ^ {2\pi} e^{-r^{2}} \left|\det(D\mathbf{\phi}(\mathbf{x}))\right|\;d\theta\;dr,
@@ -556,8 +556,8 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjA1ODMzNzMsLTEzMTE4NTM0MDYsLT
-E5OTIxNTg2NDAsMTc5MzU0NTY1NSwtMjEzNTIyNzQ1MiwxNDUx
-OTY0NDYxLC02NjYwMDk0ODgsLTMzMDQ1NDM4MCwtMTQ5NjgwNz
-gzMl19
+eyJoaXN0b3J5IjpbMTYyNTM4MTQ1MCwtMTMxMTg1MzQwNiwtMT
+k5MjE1ODY0MCwxNzkzNTQ1NjU1LC0yMTM1MjI3NDUyLDE0NTE5
+NjQ0NjEsLTY2NjAwOTQ4OCwtMzMwNDU0MzgwLC0xNDk2ODA3OD
+MyXX0=
 -->
