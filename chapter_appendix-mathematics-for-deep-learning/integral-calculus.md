@@ -301,15 +301,16 @@ $$
 \int_x^{x+\epsilon} f(u(y))\frac{du}{dy}(y)\;dy = \int_{u(x)}^{u(x+\epsilon)} f(y) \; dy.
 $$
 
-This is the change of variables formula expressed for a single small rectangle.
 
-If $u(x)$ and $f(x)$ are properly chosen, this can allow for the computation of incredibly complex integrals.  For instance, if we even chose $f(y) = 1$ and $u(x) = e^{-x^{2}}$ (which means $\frac{du}{dx}(x) = -2xe^{-x^{2}}$), this can show for instance that
+Esta é a fórmula de mudança de variáveis expressa para um único retângulo pequeno.
+
+Se $u(x)$ e $f(x)$ forem escolhidos corretamente, isso pode permitir o cálculo de integrais incrivelmente complexas. Por exemplo, se escolhermos $f(y) = 1$ e $u(x) = e^{-x^{2}}$ (o que significa $\frac{du}{dx}(x) = -2xe^{-x^{2}}$), isso pode mostrar, por exemplo, que
 
 $$
 e^{-1} - 1 = \int_{e^{-0}}^{e^{-1}} 1 \; dy = -2\int_0^{1} ye^{-y^2}\;dy,
 $$
 
-and thus by rearranging that
+e, assim, reorganizando isso
 
 $$
 \int_0^{1} ye^{-y^2}\; dy = \frac{1-e^{-1}}{2}.
@@ -550,6 +551,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MTk2NDQ2MSwtNjY2MDA5NDg4LC0zMz
-A0NTQzODAsLTE0OTY4MDc4MzJdfQ==
+eyJoaXN0b3J5IjpbLTIxMzUyMjc0NTIsMTQ1MTk2NDQ2MSwtNj
+Y2MDA5NDg4LC0zMzA0NTQzODAsLTE0OTY4MDc4MzJdfQ==
 -->
