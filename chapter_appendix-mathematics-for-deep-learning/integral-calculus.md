@@ -234,7 +234,7 @@ Este é o *teorema fundamental do cálculo*. Podemos escrever em forma expandida
 $$\frac{d}{dx}\int_{-\infty}^x f(y) \; dy = f(x).$$
 :eqlabel:`eq_ftc`
 
-It takes the concept of finding areas (*a priori* rather hard), and reduces it to a statement derivatives (something much more completely understood).  One last comment that we must make is that this does not tell us exactly what $F(x)$ is.  Indeed $F(x) + C$ for any $C$ has the same derivative.  This is a fact-of-life in the theory of integration.  Thankfully, notice that when working with definite integrals, the constants drop out, and thus are irrelevant to the outcome.
+Ele pega o conceito de localização de áreas (*a priori* bastante difícil) e o reduz a derivadas de uma instrução (algo muito mais completamente compreendido). Um último comentário que devemos fazer é que isso não nos diz exatamente o que $F(x)$ é. Na verdade, $F(x) + C$ para qualquer $C$ tem a mesma derivada. Este é um fato da vida na teoria da integração. Felizmente, observe que, ao trabalhar com integrais definidas, as constantes desaparecem e, portanto, são irrelevantes para o resultado.
 
 $$
 \int_a^b f(x) \; dx = (F(b) + C) - (F(a) + C) = F(b) - F(a).
@@ -550,6 +550,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkxNDI0OTEwLC02NjYwMDk0ODgsLTMzMD
-Q1NDM4MCwtMTQ5NjgwNzgzMl19
+eyJoaXN0b3J5IjpbLTc3ODY4OTAyNiwtNjY2MDA5NDg4LC0zMz
+A0NTQzODAsLTE0OTY4MDc4MzJdfQ==
 -->
