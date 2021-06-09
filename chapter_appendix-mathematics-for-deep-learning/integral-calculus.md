@@ -94,13 +94,13 @@ d2l.plt.fill_between(x.numpy()[50:250], f.numpy()[50:250])
 d2l.plt.show()
 ```
 
-We will denote this area by the integral symbol below:
+Iremos denotar esta área pelo símbolo integral abaixo:
 
 $$
 \mathrm{Area}(\mathcal{A}) = \int_a^b f(x) \;dx.
 $$
 
-The inner variable is a dummy variable, much like the index of a sum in a $\sum$, and so this can be equivalently written with any inner value we like:
+A variável interna é uma variável fictícia, muito parecida com o índice de uma soma em $\sum$ e, portanto, pode ser escrita de forma equivalente com qualquer valor interno que desejarmos:
 
 $$
 \int_a^b f(x) \;dx = \int_a^b f(z) \;dz.
@@ -547,6 +547,5 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzgwMjkyNTksLTE0OTY4MDc4MzJdfQ
-==
+eyJoaXN0b3J5IjpbMjA4NjYwNTI4MCwtMTQ5NjgwNzgzMl19
 -->
