@@ -345,10 +345,10 @@ $$
 \int_0^{-1} (-1)\;dx =  1.
 $$
 
-If this discussion sounds familiar, it is!  In :numref:`sec_geometry-linear-algebraic-ops` we discussed how the determinant represented the signed area in much the same way.
+Se essa discussão parece familiar, é! Em :numref:`sec_geometry-linear-algebraic-ops` discutimos como o determinante representava a área sinalizada da mesma maneira.
 
-## Multiple Integrals
-In some cases, we will need to work in higher dimensions.  For instance, suppose that we have a function of two variables, like $f(x, y)$ and we want to know the volume under $f$ when $x$ ranges over $[a, b]$ and $y$ ranges over $[c, d]$.
+## Integrais Múltiplas
+Em alguns casos, precisaremos trabalhar em dimensões superiores. Por exemplo, suponha que temos uma função de duas variáveis, como $f(x, y)$ e queremos saber o volume sob $f$ quando $x$ varia entre $[a, b]$ e $y$ varia acima de $[c, d]$.
 
 ```{.python .input}
 # Construct grid and compute function
@@ -552,7 +552,7 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA5OTMyMTUwLC0yMTM1MjI3NDUyLDE0NT
+eyJoaXN0b3J5IjpbMTc5ODEyNjMyLC0yMTM1MjI3NDUyLDE0NT
 E5NjQ0NjEsLTY2NjAwOTQ4OCwtMzMwNDU0MzgwLC0xNDk2ODA3
 ODMyXX0=
 -->
