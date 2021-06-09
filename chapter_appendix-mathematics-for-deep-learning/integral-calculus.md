@@ -316,29 +316,30 @@ $$
 \int_0^{1} ye^{-y^2}\; dy = \frac{1-e^{-1}}{2}.
 $$
 
-## A Comment on Sign Conventions
+## Um Comentário Sobre as Convenções de Sinais
 
-Keen-eyed readers will observe something strange about the computations above.  Namely, computations like
+Os leitores mais atentos irão observar algo estranho nos cálculos acima. Ou seja, cálculos como
 
 $$
 \int_{e^{-0}}^{e^{-1}} 1 \; dy = e^{-1} -1 < 0,
 $$
 
-can produce negative numbers.  When thinking about areas, it can be strange to see a negative value, and so it is worth digging into what the convention is.
 
-Mathematicians take the notion of signed areas.  This manifests itself in two ways.  First, if we consider a function $f(x)$ which is sometimes less than zero, then the area will also be negative.  So for instance
+pode produzir números negativos. Ao pensar sobre áreas, pode ser estranho ver um valor negativo, por isso vale a pena aprofundar no que é a convenção.
+
+Os matemáticos assumem a noção de áreas sinalizadas. Isso se manifesta de duas maneiras. Primeiro, se considerarmos uma função $f(x)$ que às vezes é menor que zero, então a área também será negativa. Então por exemplo
 
 $$
 \int_0^{1} (-1)\;dx = -1.
 $$
 
-Similarly, integrals which progress from right to left, rather than left to right are also taken to be negative areas
+Da mesma forma, integrais que progridem da direita para a esquerda, ao invés da esquerda para a direita também são consideradas áreas negativas
 
 $$
 \int_0^{-1} 1\; dx = -1.
 $$
 
-The standard area (from left to right of a positive function) is always positive.  Anything obtained by flipping it (say flipping over the $x$-axis to get the integral of a negative number, or flipping over the $y$-axis to get an integral in the wrong order) will produce a negative area.  And indeed, flipping twice will give a pair of negative signs that cancel out to have positive area
+A área padrão (da esquerda para a direita de uma função positiva) é sempre positiva. Qualquer coisa obtida ao invertê-lo (digamos, inverter o eixo $x$ para obter a integral de um número negativo ou inverter o eixo $y$ para obter uma integral na ordem errada) produzirá uma área negativa. E, de fato, girar duas vezes dará um par de sinais negativos que se cancelam para ter área positiva
 
 $$
 \int_0^{-1} (-1)\;dx =  1.
@@ -551,6 +552,7 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzUyMjc0NTIsMTQ1MTk2NDQ2MSwtNj
-Y2MDA5NDg4LC0zMzA0NTQzODAsLTE0OTY4MDc4MzJdfQ==
+eyJoaXN0b3J5IjpbNjA5OTMyMTUwLC0yMTM1MjI3NDUyLDE0NT
+E5NjQ0NjEsLTY2NjAwOTQ4OCwtMzMwNDU0MzgwLC0xNDk2ODA3
+ODMyXX0=
 -->
