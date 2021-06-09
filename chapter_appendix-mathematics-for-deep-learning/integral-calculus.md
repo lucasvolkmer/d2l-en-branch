@@ -266,26 +266,25 @@ $$
 F(x) = \int_0^x f(y) \; dy.
 $$
 
-Let us suppose that we want to know how this function looks when we compose it with another to obtain $F(u(x))$.  By the chain rule, we know
+Vamos supor que queremos saber como essa função se parece quando a compomos com outra para obter $F(u(x))$. Pela regra da cadeia, sabemos
 
 $$
 \frac{d}{dx}F(u(x)) = \frac{dF}{du}(u(x))\cdot \frac{du}{dx}.
 $$
 
-We can turn this into a statement about integration by using the fundamental theorem :eqref:`eq_ftc` as above.  This gives
+Podemos transformar isso em uma declaração sobre integração usando o teorema fundamental :eqref:`eq_ftc` como acima. Isto dá
 
 $$
 F(u(x)) - F(u(0)) = \int_0^x \frac{dF}{du}(u(y))\cdot \frac{du}{dy} \;dy.
 $$
 
-Recalling that $F$ is itself an integral gives that the left hand side may be rewritten to be
+Lembrando que $F$ é em si uma integral dá que o lado esquerdo pode ser reescrito para ser
 
 $$
 \int_{u(0)}^{u(x)} f(y) \; dy = \int_0^x \frac{dF}{du}(u(y))\cdot \frac{du}{dy} \;dy.
 $$
 
-Similarly, recalling that $F$ is an integral allows us to recognize that $\frac{dF}{dx} = f$ using the fundamental theorem :eqref:`eq_ftc`, and thus we may conclude
-
+Da mesma forma, lembrar que $F$ é uma integral nos permite reconhecer que $\frac{dF}{dx} = f$ usando o teorema fundamental :eqref:`eq_ftc`, e assim podemos concluir
 $$\int_{u(0)}^{u(x)} f(y) \; dy = \int_0^x f(u(y))\cdot \frac{du}{dy} \;dy.$$
 :eqlabel:`eq_change_var`
 
@@ -551,6 +550,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzI3MDkwNzksLTY2NjAwOTQ4OCwtMz
-MwNDU0MzgwLC0xNDk2ODA3ODMyXX0=
+eyJoaXN0b3J5IjpbMTM0MDYzODgyMSwtNjY2MDA5NDg4LC0zMz
+A0NTQzODAsLTE0OTY4MDc4MzJdfQ==
 -->
