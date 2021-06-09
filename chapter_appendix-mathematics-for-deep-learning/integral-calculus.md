@@ -206,9 +206,10 @@ Esta é uma codificação matemática do fato de que podemos medir a área até 
 ![Visualizando porque podemos reduzir o problema de calcular a área sob uma curva entre dois pontos para calcular a área à esquerda de um ponto.](../img/sub-area.svg)
 :label:`fig_area-subtract`
 
-Thus, we can figure out what the integral over any interval is by figuring out what $F(x)$ is.
 
-To do so, let us consider an experiment.  As we often do in calculus, let us imagine what happens when we shift the value by a tiny bit.  From the comment above, we know that
+Assim, podemos descobrir qual é a integral em qualquer intervalo, descobrindo o que é $F(x)$.
+
+Para fazer isso, consideremos um experimento. Como costumamos fazer em cálculo, vamos imaginar o que acontece quando mudamos o valor um pouquinho. Pelo comentário acima, sabemos que
 
 $$
 F(x+\epsilon) - F(x) = \int_x^{x+\epsilon} f(y) \; dy.
@@ -548,6 +549,6 @@ We will meet this integral again when we study continuous random variables in :n
 [Discussions](https://discuss.d2l.ai/t/1093)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NjAwOTQ4OCwtMzMwNDU0MzgwLC0xND
-k2ODA3ODMyXX0=
+eyJoaXN0b3J5IjpbLTEwNTE0NDg5ODgsLTY2NjAwOTQ4OCwtMz
+MwNDU0MzgwLC0xNDk2ODA3ODMyXX0=
 -->
