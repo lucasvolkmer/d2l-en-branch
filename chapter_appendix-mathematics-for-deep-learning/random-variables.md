@@ -36,12 +36,12 @@ $$
 P(\text{distance is in an}\; \epsilon\text{-sized interval around}\; 2 ) \approx \epsilon \cdot p.
 $$
 
-Let us take this one final step further.  We have been thinking about the point $2$ the entire time, but never thinking about other points.  Nothing is different there fundamentally, but it is the case that the value $p$ will likely be different.  We would at least hope that a dart thrower was more likely to hit a point near the center, like $2\text{cm}$ rather than $20\text{cm}$.  Thus, the value $p$ is not fixed, but rather should depend on the point $x$.  This tells us that we should expect
+Vamos dar mais um passo final. Temos pensado nesse ponto $2$ o tempo todo, mas nunca pensando em outros pontos. Nada é fundamentalmente diferente aqui, mas é o caso que o valor $p$ provavelmente será diferente. Esperaríamos pelo menos que um arremessador de dardo tivesse mais probabilidade de acertar um ponto próximo ao centro, como $2\text{cm}$. em vez de $20\text{cm}$. Assim, o valor $p$ não é fixo, mas deve depender do ponto $x$. Isso nos diz que devemos esperar
 
 $$P(\text{distance is in an}\; \epsilon \text{-sized interval around}\; x ) \approx \epsilon \cdot p(x).$$
 :eqlabel:`eq_pdf_deriv`
 
-Indeed, :eqref:`eq_pdf_deriv` precisely defines the *probability density function*.  It is a function $p(x)$ which encodes the relative probability of hitting near one point vs. another.  Let us visualize what such a function might look like.
+Na verdade, :eqref:`eq_pdf_deriv` define com precisão a *função de densidade de probabilidade*. É uma função $p(x)$ que codifica a probabilidade relativa de acertar perto de um ponto em relação a outro. Vamos visualizar a aparência de tal função.
 
 ```{.python .input}
 %matplotlib inline
@@ -870,6 +870,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NT
-A1ODI5Nl19
+eyJoaXN0b3J5IjpbLTg5MTI1MjQ3NCw2NzAzNjA0MDQsMjEyND
+Y0NTk1OSwtNDQ1MDU4Mjk2XX0=
 -->
