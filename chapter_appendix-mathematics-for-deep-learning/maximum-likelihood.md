@@ -290,3 +290,6 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIwMTAyNjg4MDhdfQ==
+-->
