@@ -183,7 +183,7 @@ d2l.plt.show()
 f'approximate Probability: {tf.reduce_sum(epsilon*p[300:800])}'
 ```
 
-Acontece que essas duas propriedades descrevem exatamente o espaço das funções de densidade de probabilidade possíveis (ou *p.d.f.* 'S para a abreviação comumente encontrada). Eles são funções não negativas $p(x) \ge 0$ tais que
+Acontece que essas duas propriedades descrevem exatamente o espaço das funções de densidade de probabilidade possíveis (ou *f.d.f.* 'S para a abreviação comumente encontrada). Eles são funções não negativas $p(x) \ge 0$ tais que
 
 $$\int_{-\infty}^{\infty} p(x) \; dx = 1.$$
 :eqlabel:`eq_pdf_int_one`
@@ -198,9 +198,9 @@ Em :numref:`sec_distributions` veremos uma série de distribuições comuns, mas
 ### Cumulative Distribution Functions
 
 
-Na seção anterior, vimos a noção de p.d.f. Na prática, esse é um método comumente encontrado para discutir variáveis aleatórias contínuas, mas tem uma armadilha significativa: os valores de p.d.f. não são em si probabilidades, mas sim uma função que devemos integrar para produzir probabilidades. Não há nada de errado em uma densidade ser maior que $10$, desde que não seja maior que $10$ por mais de um intervalo de comprimento $1/10$. Isso pode ser contra-intuitivo, então as pessoas muitas vezes também pensam em termos da *função de distribuição cumulativa*, ou c.d.f., que *é* uma probabilidade.
+Na seção anterior, vimos a noção de f.d.p. Na prática, esse é um método comumente encontrado para discutir variáveis aleatórias contínuas, mas tem uma armadilha significativa: os valores de f.d.p. não são em si probabilidades, mas sim uma função que devemos integrar para produzir probabilidades. Não há nada de errado em uma densidade ser maior que $10$, desde que não seja maior que $10$ por mais de um intervalo de comprimento $1/10$. Isso pode ser contra-intuitivo, então as pessoas muitas vezes também pensam em termos da *função de distribuição cumulativa*, ou f.d.c., que *é* uma probabilidade.
 
-Em particular, usando :eqref:`eq_pdf_int_int`, definimos o c.d.f. para uma variável aleatória $X$ com densidade $p(x)$ por
+Em particular, usando :eqref:`eq_pdf_int_int`, definimos o f.d.c. para uma variável aleatória $X$ com densidade $p(x)$ por
 
 $$
 F(x) = \int _ {-\infty}^{x} p(x) \; dx = P(X \le x).
@@ -872,7 +872,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxOTY4MTM5OSwxNjQ3NTE2NjIxLDQzNz
-g1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2
-XX0=
+eyJoaXN0b3J5IjpbLTE4OTY4MTc2ODMsMTY0NzUxNjYyMSw0Mz
+c4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5
+Nl19
 -->
