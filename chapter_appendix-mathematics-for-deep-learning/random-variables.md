@@ -90,7 +90,7 @@ p = 0.2*tf.exp(-(x - 3)**2 / 2)/tf.sqrt(2 * tf.constant(tf.pi)) + \
 d2l.plot(x, p, 'x', 'Density')
 ```
 
-The locations where the function value is large indicates regions where we are more likely to find the random value.  The low portions are areas where we are unlikely to find the random value.
+Os locais onde o valor da função é grande indicam regiões onde é mais provável encontrar o valor aleatório. As porções baixas são áreas onde é improvável que encontremos o valor aleatório.
 
 ### Probability Density Functions
 
@@ -870,6 +870,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MTI1MjQ3NCw2NzAzNjA0MDQsMjEyND
-Y0NTk1OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0Nj
+Q1OTU5LC00NDUwNTgyOTZdfQ==
 -->
