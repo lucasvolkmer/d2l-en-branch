@@ -197,9 +197,10 @@ Em :numref:`sec_distributions` veremos uma série de distribuições comuns, mas
 
 ### Cumulative Distribution Functions
 
-In the previous section, we saw the notion of the p.d.f.  In practice, this is a commonly encountered method to discuss continuous random variables, but it has one significant pitfall: that the values of the p.d.f. are not themselves probabilities, but rather a function that we must integrate to yield probabilities.  There is nothing wrong with a density being larger than $10$, as long as it is not larger than $10$ for more than an interval of length $1/10$.  This can be counter-intuitive, so people often also think in terms of the *cumulative distribution function*, or c.d.f., which *is* a probability.
 
-In particular, by using :eqref:`eq_pdf_int_int`, we define the c.d.f. for a random variable $X$ with density $p(x)$ by
+Na seção anterior, vimos a noção de p.d.f. Na prática, esse é um método comumente encontrado para discutir variáveis aleatórias contínuas, mas tem uma armadilha significativa: os valores de p.d.f. não são em si probabilidades, mas sim uma função que devemos integrar para produzir probabilidades. Não há nada de errado em uma densidade ser maior que $10$, desde que não seja maior que $10$ por mais de um intervalo de comprimento $1/10$. Isso pode ser contra-intuitivo, então as pessoas muitas vezes também pensam em termos da *função de distribuição cumulativa*, ou c.d.f., que *é* uma probabilidade.
+
+Em particular, usando :eqref:`eq_pdf_int_int`, definimos o c.d.f. para uma variável aleatória $X$ com densidade $p(x)$ por
 
 $$
 F(x) = \int _ {-\infty}^{x} p(x) \; dx = P(X \le x).
@@ -871,6 +872,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1OTYyNDk2MCw0Mzc4NTY1MzEsNjcwMz
-YwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbLTIwMzAwMzYwNDksNDM3ODU2NTMxLDY3MD
+M2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
