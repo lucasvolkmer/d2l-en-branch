@@ -21,15 +21,16 @@ Sem desanimar, continuamos adiante. Medimos ainda mais precisamente, digamos $1.
 
 Porém, isso não resolve nada! Apenas resolvemos o problema um dígito mais. Vamos abstrair um pouco. Imagine que sabemos a probabilidade de que os primeiros $k$ dígitos correspondam a $2.00000\ldots$ e queremos saber a probabilidade de que correspondam aos primeiros $k+1$ dígitos. É bastante razoável supor que o dígito ${k+1}^{\mathrm{th}}$ é essencialmente uma escolha aleatória do conjunto $\{0, 1, 2, \ldots, 9\}$. Pelo menos, não podemos conceber um processo fisicamente significativo que forçaria o número de micrômetros a se afastar do centro a preferir terminar em $7$ vs $3$.
 
-What this means is that in essence each additional digit of accuracy we require should decrease probability of matching by a factor of $10$.  Or put another way, we would expect that
+O que isso significa é que, em essência, cada dígito adicional de precisão que exigimos deve diminuir a probabilidade de correspondência por um fator de $10$. Ou dito de outra forma, poderíamos esperar que
 
 $$
 P(\text{distance is}\; 2.00\ldots, \;\text{to}\; k \;\text{digits} ) \approx p\cdot10^{-k}.
 $$
 
-The value $p$ essentially encodes what happens with the first few digits, and the $10^{-k}$ handles the rest.
 
-Notice that if we know the position accurate to $k=4$ digits after the decimal. that means we know the value falls within the interval say $[(1.99995,2.00005]$ which is an interval of length $2.00005-1.99995 = 10^{-4}$.  Thus, if we call the length of this interval $\epsilon$, we can say
+O valor $p$ essencialmente codifica o que acontece com os primeiros dígitos, e $10^{-k}$ trata do resto.
+
+Observe que, se conhecermos a posição com precisão de $k=4$ dígitos após o decimal. isso significa que sabemos que o valor está dentro do intervalo, digamos $[(1.99995,2.00005]$, que é um intervalo de comprimento $2.00005-1.99995 = 10^{-4}$. Portanto, se chamarmos o comprimento deste intervalo de $\epsilon$, podemos dizer
 
 $$
 P(\text{distance is in an}\; \epsilon\text{-sized interval around}\; 2 ) \approx \epsilon \cdot p.
@@ -869,6 +870,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NDQ2NDE3MiwyMTI0NjQ1OTU5LC00ND
-UwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NT
+A1ODI5Nl19
 -->
