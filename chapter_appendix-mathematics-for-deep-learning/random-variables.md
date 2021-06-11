@@ -223,7 +223,7 @@ F(x) = \begin{cases}
 \end{cases}
 $$
 
-In this example, we see one of the benefits of working with the c.d.f., the ability to deal with continuous or discrete random variables in the same framework, or indeed mixtures of the two (flip a coin: if heads return the roll of a die, if tails return the distance of a dart throw from the center of a dart board).
+Neste exemplo, vemos um dos benefícios de trabalhar com o cdf, a capacidade de lidar com variáveis aleatórias contínuas ou discretas na mesma estrutura, ou mesmo misturas das duas (lance uma moeda: se cara retornar o lançamento de um dado , se a cauda retornar a distância de um lançamento de dardo do centro de um alvo de dardo).
 
 ### Means
 
@@ -872,6 +872,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NzUxNjYyMSw0Mzc4NTY1MzEsNjcwMz
-YwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbMTMxOTY4MTM5OSwxNjQ3NTE2NjIxLDQzNz
+g1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2
+XX0=
 -->
