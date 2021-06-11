@@ -183,17 +183,17 @@ d2l.plt.show()
 f'approximate Probability: {tf.reduce_sum(epsilon*p[300:800])}'
 ```
 
-It turns out that these two properties describe exactly the space of possible probability density functions (or *p.d.f.*'s for the commonly encountered abbreviation).  They are non-negative functions $p(x) \ge 0$ such that
+Acontece que essas duas propriedades descrevem exatamente o espaço das funções de densidade de probabilidade possíveis (ou *p.d.f.* 'S para a abreviação comumente encontrada). Eles são funções não negativas $p(x) \ge 0$ tais que
 
 $$\int_{-\infty}^{\infty} p(x) \; dx = 1.$$
 :eqlabel:`eq_pdf_int_one`
 
-We interpret this function by using integration to obtain the probability our random variable is in a specific interval:
+Interpretamos essa função usando integração para obter a probabilidade de nossa variável aleatória estar em um intervalo específico:
 
 $$P(X\in(a, b]) = \int _ {a}^{b} p(x) \; dx.$$
 :eqlabel:`eq_pdf_int_int`
 
-In :numref:`sec_distributions` we will see a number of common distributions, but let us continue working in the abstract.
+Em :numref:`sec_distributions` veremos uma série de distribuições comuns, mas vamos continuar trabalhando de forma abstrata.
 
 ### Cumulative Distribution Functions
 
@@ -871,6 +871,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjM1MzcyNTEsNDM3ODU2NTMxLDY3MD
-M2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbMTg1OTYyNDk2MCw0Mzc4NTY1MzEsNjcwMz
+YwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
 -->
