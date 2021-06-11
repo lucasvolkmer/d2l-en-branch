@@ -195,7 +195,7 @@ $$P(X\in(a, b]) = \int _ {a}^{b} p(x) \; dx.$$
 
 Em :numref:`sec_distributions` veremos uma série de distribuições comuns, mas vamos continuar trabalhando de forma abstrata.
 
-### Cumulative Distribution Functions
+### CFunções de Distribuição Cumulativas
 
 
 Na seção anterior, vimos a noção de f.d.p. Na prática, esse é um método comumente encontrado para discutir variáveis aleatórias contínuas, mas tem uma armadilha significativa: os valores de f.d.p. não são em si probabilidades, mas sim uma função que devemos integrar para produzir probabilidades. Não há nada de errado em uma densidade ser maior que $10$, desde que não seja maior que $10$ por mais de um intervalo de comprimento $1/10$. Isso pode ser contra-intuitivo, então as pessoas muitas vezes também pensam em termos da *função de distribuição cumulativa*, ou f.d.c., que *é* uma probabilidade.
@@ -872,7 +872,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTY4MTc2ODMsMTY0NzUxNjYyMSw0Mz
-c4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5
-Nl19
+eyJoaXN0b3J5IjpbMTcyOTg3ODg0LDE2NDc1MTY2MjEsNDM3OD
+U2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZd
+fQ==
 -->
