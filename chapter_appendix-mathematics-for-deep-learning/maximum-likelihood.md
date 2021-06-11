@@ -1,4 +1,4 @@
-# Maximum Likelihood
+# Máxima verossimilhança
 :label:`sec_maximum_likelihood`
 
 One of the most commonly encountered way of thinking in machine learning is the maximum likelihood point of view.  This is the concept that when working with a probabilistic model with unknown parameters, the parameters which make the data have the highest probability are the most likely ones.
@@ -291,5 +291,5 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTAyNjg4MDhdfQ==
+eyJoaXN0b3J5IjpbMTg5MDkwNzg2OV19
 -->
