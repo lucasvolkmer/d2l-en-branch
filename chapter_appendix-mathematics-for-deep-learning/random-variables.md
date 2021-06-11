@@ -99,17 +99,18 @@ Vamos agora investigar isso mais detalhadamente. Já vimos o que é uma função
 $$P(X \; \text{is in an}\; \epsilon \text{-sized interval around}\; x ) \approx \epsilon \cdot p(x).$$
 :eqlabel:`eq_pdf_def`
 
-But what does this imply for the properties of $p(x)$?
 
-First, probabilities are never negative, thus we should expect that $p(x) \ge 0$ as well.
+Mas o que isso implica para as propriedades de $p(x)$?
 
-Second, let us imagine that we slice up the $\mathbb{R}$ into an infinite number of slices which are $\epsilon$ wide, say with slices $(\epsilon\cdot i, \epsilon \cdot (i+1)]$.  For each of these, we know from :eqref:`eq_pdf_def` the probability is approximately
+Primeiro, as probabilidades nunca são negativas, portanto, devemos esperar que $p(x) \ge 0$  também.
+
+Em segundo lugar, vamos imaginar que dividimos $\mathbb{R}$ em um número infinito de fatias de $\epsilon$ de largura, digamos com fatias $(\epsilon\cdot i, \epsilon \cdot (i+1)]$. Para cada um deles, sabemos de :eqref:`eq_pdf_def` que a probabilidade é de aproximadamente
 
 $$
 P(X \; \text{is in an}\; \epsilon\text{-sized interval around}\; x ) \approx \epsilon \cdot p(\epsilon \cdot i),
 $$
 
-so summed over all of them it should be
+então, resumido sobre todos eles, deveria ser
 
 $$
 P(X\in\mathbb{R}) \approx \sum_i \epsilon \cdot p(\epsilon\cdot i).
@@ -870,6 +871,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjgzOTMzMDEsNDM3ODU2NTMxLDY3MD
+eyJoaXN0b3J5IjpbLTEyNDMyMzA3NjUsNDM3ODU2NTMxLDY3MD
 M2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
