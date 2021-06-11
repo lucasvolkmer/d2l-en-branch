@@ -16,9 +16,10 @@ Para começar, imaginamos medir um único dígito de precisão, ou seja, com val
 
 No entanto, quando olhamos mais de perto, isso não corresponde à nossa pergunta! Queríamos igualdade exata, ao passo que essas caixas mantêm tudo o que está entre, digamos, $1.5\text{cm}$ e $2.5\text{cm}$.
 
-Undeterred, we continue further.  We measure even more precisely, say $1.9\text{cm}$, $2.0\text{cm}$, $2.1\text{cm}$, and now see that perhaps $3$ of the $100$ darts hit the board in the $2.0\text{cm}$ bucket.  Thus we conclude the probability is $3\%$.
 
-However, this does not solve anything!  We have just pushed the issue down one digit further.  Let us abstract a bit. Imagine we know the probability that the first $k$ digits match with $2.00000\ldots$ and we want to know the probability it matches for the first $k+1$ digits. It is fairly reasonable to assume that the ${k+1}^{\mathrm{th}}$ digit is essentially a random choice from the set $\{0, 1, 2, \ldots, 9\}$.  At least, we cannot conceive of a physically meaningful process which would force the number of micrometers away form the center to prefer to end in a $7$ vs a $3$.
+Sem desanimar, continuamos adiante. Medimos ainda mais precisamente, digamos $1.9\text{cm}$, $2.0\text{cm}$, $2.1\text{cm}$, e agora vemos que talvez $3$ dos $100$ dardos atingiram o tabuleiro no $2.0\text{cm}$ balde. Assim, concluímos que a probabilidade é $3\%$.
+
+Porém, isso não resolve nada! Apenas resolvemos o problema um dígito mais. Vamos abstrair um pouco. Imagine que sabemos a probabilidade de que os primeiros $k$ dígitos correspondam a $2.00000\ldots$ e queremos saber a probabilidade de que correspondam aos primeiros $k+1$ dígitos. É bastante razoável supor que o dígito ${k+1}^{\mathrm{th}}$ é essencialmente uma escolha aleatória do conjunto $\{0, 1, 2, \ldots, 9\}$. Pelo menos, não podemos conceber um processo fisicamente significativo que forçaria o número de micrômetros a se afastar do centro a preferir terminar em $7$ vs $3$.
 
 What this means is that in essence each additional digit of accuracy we require should decrease probability of matching by a factor of $10$.  Or put another way, we would expect that
 
@@ -868,5 +869,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbMjA4NDQ2NDE3MiwyMTI0NjQ1OTU5LC00ND
+UwNTgyOTZdfQ==
 -->
