@@ -9,7 +9,7 @@ Variáveis aleatórias contínuas são um tópico significativamente mais sutil 
 
 ### Do Discreto ao Contínuo
 
-To understand the additional technical challenges encountered when working with continuous random variables, let us perform a thought experiment.  Suppose that we are throwing a dart at the dart board, and we want to know the probability that it hits exactly $2 \text{cm}$ from the center of the board.
+Para entender os desafios técnicos adicionais encontrados ao trabalhar com variáveis aleatórias contínuas, vamos realizar um experimento de pensamento. Suponha que estejamos jogando um dardo no alvo e queremos saber a probabilidade de que ele atinja exatamente $2 \text{cm}$  do centro do alvo.
 
 To start with, we imagine measuring a single digit of accuracy, that is to say with bins for $0 \text{cm}$, $1 \text{cm}$, $2 \text{cm}$, and so on.  We throw say $100$ darts at the dart board, and if $20$ of them fall into the bin for $2\text{cm}$ we conclude that $20\%$ of the darts we throw hit the board $2 \text{cm}$ away from the center.
 
@@ -867,5 +867,5 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNDA0MDkzN119
+eyJoaXN0b3J5IjpbLTQ0NTA1ODI5Nl19
 -->
