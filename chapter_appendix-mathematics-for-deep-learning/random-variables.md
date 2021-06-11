@@ -11,9 +11,10 @@ Variáveis aleatórias contínuas são um tópico significativamente mais sutil 
 
 Para entender os desafios técnicos adicionais encontrados ao trabalhar com variáveis aleatórias contínuas, vamos realizar um experimento de pensamento. Suponha que estejamos jogando um dardo no alvo e queremos saber a probabilidade de que ele atinja exatamente $2 \text{cm}$  do centro do alvo.
 
-To start with, we imagine measuring a single digit of accuracy, that is to say with bins for $0 \text{cm}$, $1 \text{cm}$, $2 \text{cm}$, and so on.  We throw say $100$ darts at the dart board, and if $20$ of them fall into the bin for $2\text{cm}$ we conclude that $20\%$ of the darts we throw hit the board $2 \text{cm}$ away from the center.
 
-However, when we look closer, this does not match our question!  We wanted exact equality, whereas these bins hold all that fell between say $1.5\text{cm}$ and $2.5\text{cm}$.
+Para começar, imaginamos medir um único dígito de precisão, ou seja, com valores para $0 \text{cm}$, $1 \text{cm}$, $2 \text{cm}$ e assim por diante. Jogamos, digamos, $100$ dardos no alvo de dardos, e se $20$ deles caem no valor de $2\text{cm}$, concluímos que $20\%$ dos dardos que jogamos atingem o tabuleiro $2 \text{cm}$ longe do centro.
+
+No entanto, quando olhamos mais de perto, isso não corresponde à nossa pergunta! Queríamos igualdade exata, ao passo que essas caixas mantêm tudo o que está entre, digamos, $1.5\text{cm}$ e $2.5\text{cm}$.
 
 Undeterred, we continue further.  We measure even more precisely, say $1.9\text{cm}$, $2.0\text{cm}$, $2.1\text{cm}$, and now see that perhaps $3$ of the $100$ darts hit the board in the $2.0\text{cm}$ bucket.  Thus we conclude the probability is $3\%$.
 
@@ -867,5 +868,5 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
 -->
