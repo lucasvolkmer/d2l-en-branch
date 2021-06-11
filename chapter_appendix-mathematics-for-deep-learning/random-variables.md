@@ -1,4 +1,4 @@
-# Random VariableVariáveis Aleatórias
+# Variáveis Aleatórias
 :label:`sec_random_variables`
 
 In :numref:`sec_prob` we saw the basics of how to work with discrete random variables, which in our case refer to those random variables which take either a finite set of possible values, or the integers.  In this section, we develop the theory of *continuous random variables*, which are random variables which  can take on any real value.
@@ -867,5 +867,5 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTE2NDA4NDldfQ==
+eyJoaXN0b3J5IjpbLTg5NzcxOTE4Ml19
 -->
