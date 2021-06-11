@@ -206,14 +206,14 @@ $$
 F(x) = \int _ {-\infty}^{x} p(x) \; dx = P(X \le x).
 $$
 
-Let us observe a few properties.
+Vamos observar algumas propriedades.
 
 * $F(x) \rightarrow 0$ as $x\rightarrow -\infty$.
 * $F(x) \rightarrow 1$ as $x\rightarrow \infty$.
 * $F(x)$ is non-decreasing ($y > x \implies F(y) \ge F(x)$).
 * $F(x)$ is continuous (has no jumps) if $X$ is a continuous random variable.
 
-With the fourth bullet point, note that this would not be true if $X$ were discrete, say taking the values $0$ and $1$ both with probability $1/2$.  In that case
+Com o quarto marcador, observe que isso não seria verdade se $X$ fosse discreto, digamos, tomando os valores $0$ e $1$ ambos com probabilidade $1/2$. Nesse caso
 
 $$
 F(x) = \begin{cases}
@@ -872,6 +872,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzAwMzYwNDksNDM3ODU2NTMxLDY3MD
-M2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbMTY0NzUxNjYyMSw0Mzc4NTY1MzEsNjcwMz
+YwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
 -->
