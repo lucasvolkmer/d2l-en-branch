@@ -92,9 +92,9 @@ d2l.plot(x, p, 'x', 'Density')
 
 Os locais onde o valor da função é grande indicam regiões onde é mais provável encontrar o valor aleatório. As porções baixas são áreas onde é improvável que encontremos o valor aleatório.
 
-### Probability Density Functions
+### Funções de Densidade de Probabilidade
 
-Let us now investigate this further.  We have already seen what a probability density function is intuitively for a random variable $X$, namely the density function is a function $p(x)$ so that
+Vamos agora investigar isso mais detalhadamente. Já vimos o que é uma função de densidade de probabilidade intuitivamente para uma variável aleatória $X$, ou seja, a função de densidade é uma função $p(x)$ de modo que
 
 $$P(X \; \text{is in an}\; \epsilon \text{-sized interval around}\; x ) \approx \epsilon \cdot p(x).$$
 :eqlabel:`eq_pdf_def`
@@ -870,6 +870,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0Nj
-Q1OTU5LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbLTE4MjgzOTMzMDEsNDM3ODU2NTMxLDY3MD
+M2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
