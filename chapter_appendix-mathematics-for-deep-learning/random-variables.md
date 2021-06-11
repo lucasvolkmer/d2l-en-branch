@@ -116,25 +116,25 @@ $$
 P(X\in\mathbb{R}) \approx \sum_i \epsilon \cdot p(\epsilon\cdot i).
 $$
 
-This is nothing more than the approximation of an integral discussed in :numref:`sec_integral_calculus`, thus we can say that
+Isso nada mais é do que a aproximação de uma integral discutida em :numref:`sec_integral_calculus`, portanto, podemos dizer que
 
 $$
 P(X\in\mathbb{R}) = \int_{-\infty}^{\infty} p(x) \; dx.
 $$
 
-We know that $P(X\in\mathbb{R}) = 1$, since the random variable must take on *some* number, we can conclude that for any density
+Sabemos que $P(X\in\mathbb{R}) = 1$, uma vez que a variável aleatória deve assumir *algum* número, podemos concluir que para qualquer densidade
 
 $$
 \int_{-\infty}^{\infty} p(x) \; dx = 1.
 $$
 
-Indeed, digging into this further shows that for any $a$, and $b$, we see that
+Na verdade, aprofundarmos mais nisso mostra que para qualquer $a$ e $b$, vemos que
 
 $$
 P(X\in(a, b]) = \int _ {a}^{b} p(x) \; dx.
 $$
 
-We may approximate this in code by using the same discrete approximation methods as before.  In this case we can approximate the probability of falling in the blue region.
+Podemos aproximar isso no código usando os mesmos métodos de aproximação discretos de antes. Nesse caso, podemos aproximar a probabilidade de cair na região azul.
 
 ```{.python .input}
 # Approximate probability using numerical integration
@@ -871,6 +871,6 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDMyMzA3NjUsNDM3ODU2NTMxLDY3MD
+eyJoaXN0b3J5IjpbLTEzNjM1MzcyNTEsNDM3ODU2NTMxLDY3MD
 M2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
