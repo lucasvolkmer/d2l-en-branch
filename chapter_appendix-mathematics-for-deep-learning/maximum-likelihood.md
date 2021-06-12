@@ -40,10 +40,6 @@ $$
 P(X \mid \theta) = \theta^9(1-\theta)^4.
 $$
 
-One nice thing about this example will be that we know the answer going in.  Indeed, if we said verbally, "I flipped 13 coins, and 9 came up heads, what is our best guess for the probability that the coin comes us heads?, " everyone would correctly guess $9/13$.  What this maximum likelihood method will give us is a way to get that number from first principals in a way that will generalize to vastly more complex situations.
-
-For our example, the plot of $P(X \mid \theta)$ is as follows:
-
 Uma coisa boa sobre esse exemplo é que sabemos qual será a resposta. Na verdade, se disséssemos verbalmente: "Joguei 13 moedas e deram cara com 9, qual é nossa melhor estimativa para a probabilidade de que a moeda nos dê cara? , "todos acertariam $9/13$. O que este método de máxima verossimilhança nos dará é uma maneira de obter esse número dos primeiros principais de uma forma que irá generalizar para situações muito mais complexas.
 
 Para nosso exemplo, o gráfico de $P(X \mid \theta)$ é o seguinte:
@@ -295,6 +291,6 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDAxODkyMzYsLTM3OTQ5OTE0NiwxOD
-kwOTA3ODY5XX0=
+eyJoaXN0b3J5IjpbMTA5ODQxNTM1NSwtMzc5NDk5MTQ2LDE4OT
+A5MDc4NjldfQ==
 -->
