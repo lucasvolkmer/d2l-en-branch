@@ -239,17 +239,11 @@ $$
 -\log\left(p(X\mid\boldsymbol{\theta})\right) = -\log(p(x_1\mid\boldsymbol{\theta})) - \log(p(x_2\mid\boldsymbol{\theta})) \cdots - \log(p(x_n\mid\boldsymbol{\theta})) = -\sum_i \log(p(x_i \mid \theta)).
 $$
 
-The question becomes, "Why is this OK?"  After all, the reason we introduced densities was because probabilities of getting specific outcomes themselves was zero, and thus is not the probability of generating our data for any set of parameters zero?
-
-Indeed, this is the case, and understanding why we can shift to densities is an exercise in tracing what happens to the epsilons.
-
-Let us first re-define our goal.  Suppose that for continuous random variables we no longer want to compute the probability of getting exactly the right value, but instead matching to within some range $\epsilon$.  For simplicity, we assume our data is repeated observations $x_1, \ldots, x_N$ of identically distributed random variables $X_1, \ldots, X_N$.  As we have seen previously, this can be written as
-
 A questão passa a ser: "Por que está tudo bem?" Afinal, a razão pela qual introduzimos densidades foi porque as probabilidades de obter resultados específicos eram zero e, portanto, a probabilidade de gerar nossos dados para qualquer conjunto de parâmetros não é zero?
 
 Na verdade, esse é o caso, e entender por que podemos mudar para densidades é um exercício de rastrear o que acontece com os ípsilons.
 
-Vamos primeiro redefinir nosso objetivo. Suponha que, para variáveis aleatórias contínuas, não desejemos mais calcular a probabilidade de obter exatamente o valor correto, mas, em vez disso, fazer a correspondência dentro de algum intervalo $\epsilon$. Para simplificar, assumimos que nossos dados são observações repetidas $x_1, \ldots, x_N$ de variáveis aleatórias distribuídas de forma idêntica $ X_1, \ ldots, X_N $. Como vimos anteriormente, isso pode ser escrito como
+Vamos primeiro redefinir nosso objetivo. Suponha que, para variáveis aleatórias contínuas, não desejemos mais calcular a probabilidade de obter exatamente o valor correto, mas, em vez disso, fazer a correspondência dentro de algum intervalo $\epsilon$. Para simplificar, assumimos que nossos dados são observações repetidas $x_1, \ldots, x_N$ de variáveis aleatórias distribuídas de forma idêntica $X_1, \ldots, X_N$. Como vimos anteriormente, isso pode ser escrito como
 
 $$
 \begin{aligned}
@@ -258,7 +252,7 @@ $$
 \end{aligned}
 $$
 
-Thus, if we take negative logarithms of this we obtain
+Assim, se tomarmos logaritmos negativos disso, obtemos
 
 $$
 \begin{aligned}
@@ -267,22 +261,27 @@ $$
 \end{aligned}
 $$
 
-If we examine this expression, the only place that the $\epsilon$ occurs is in the additive constant $-N\log(\epsilon)$.  This does not depend on the parameters $\boldsymbol{\theta}$ at all, so the optimal choice of $\boldsymbol{\theta}$ does not depend on our choice of $\epsilon$!  If we demand four digits or four-hundred, the best choice of $\boldsymbol{\theta}$ remains the same, thus we may freely drop the epsilon to see that what we want to optimize is
+Se examinarmos esta expressão, o único lugar onde o $\epsilon$ ocorre é na constante aditiva $ -N \ log (\ epsilon) $. Isso não depende dos parâmetros $\boldsymbol{\theta}$ de forma alguma, então a escolha ótima de $\boldsymbol{\theta}$ não depende de nossa escolha de $\epsilon$! Se exigirmos quatro dígitos ou quatrocentos, a melhor escolha de $\boldsymbol{\theta}$ permanece a mesma, portanto, podemos descartar livremente o ípsilon para ver que o que queremos otimizar é
 
 $$
 - \sum_{i} \log(p(x_i\mid\boldsymbol{\theta})).
 $$
 
-Thus, we see that the maximum likelihood point of view can operate with continuous random variables as easily as with discrete ones by replacing the probabilities with probability densities.
 
-## Summary
-* The maximum likelihood principle tells us that the best fit model for a given dataset is the one that generates the data with the highest probability.
-* Often people work with the negative log-likelihood instead for a variety of reasons: numerical stability, conversion of products to sums (and the resulting simplification of gradient computations), and theoretical ties to information theory.
-* While simplest to motivate in the discrete setting, it may be freely generalized to the continuous setting as well by maximizing the probability density assigned to the datapoints.
+Assim, vemos que o ponto de vista de máxima verossimilhança pode operar com variáveis aleatórias contínuas tão facilmente quanto com variáveis discretas, substituindo as probabilidades por densidades de probabilidade.
+
+## Resumo
+* O princípio de máxima verossimilhança nos diz que o modelo de melhor ajuste para um determinado conjunto de dados é aquele que gera os dados com a maior probabilidade.
+* Freqüentemente, as pessoas trabalham com a probabilidade logarítmica negativa por uma variedade de razões: estabilidade numérica, conversão de produtos em somas (e a simplificação resultante dos cálculos de gradiente) e vínculos teóricos com a teoria da informação.
+* Embora seja mais simples de motivar na configuração discreta, pode ser generalizado livremente para a configuração contínua, bem como maximizando a densidade de probabilidade atribuída aos pontos de dados.
 
 ## Exercises
 1. Suppose that you know that a random variable has density $\frac{1}{\alpha}e^{-\alpha x}$ for some value $\alpha$.  You obtain a single observation from the random variable which is the number $3$.  What is the maximum likelihood estimate for $\alpha$?
 2. Suppose that you have a dataset of samples $\{x_i\}_{i=1}^N$ drawn from a Gaussian with unknown mean, but variance $1$.  What is the maximum likelihood estimate for the mean?
+3.
+## Exercícios
+1. Suponha que você saiba que uma variável aleatória tem densidade $ \ frac {1} {\ alpha} e ^ {- \ alpha x} $ para algum valor $ \ alpha $. Você obtém uma única observação da variável aleatória que é o número $ 3 $. Qual é a estimativa de máxima verossimilhança para $ \ alpha $?
+2. Suponha que você tenha um conjunto de dados de amostras $ \ {x_i \} _ {i = 1} ^ N $ extraído de um Gaussiano com média desconhecida, mas variância $ 1 $. Qual é a estimativa de máxima verossimilhança para a média?
 
 
 :begin_tab:`mxnet`
@@ -297,6 +296,6 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNTMyNzk1NSwxMDk4NDE1MzU1LC0zNz
-k0OTkxNDYsMTg5MDkwNzg2OV19
+eyJoaXN0b3J5IjpbODU1NTM2ODk2LDEwOTg0MTUzNTUsLTM3OT
+Q5OTE0NiwxODkwOTA3ODY5XX0=
 -->
