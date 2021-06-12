@@ -80,7 +80,7 @@ p = theta**9 * (1 - theta)**4.
 d2l.plot(theta, p, 'theta', 'likelihood')
 ```
 
-This has its maximum value somewhere near our expected $9/13 \approx 0.7\ldots$.  To see if it is exactly there, we can turn to calculus.  Notice that at the maximum, the function is flat.  Thus, we could find the maximum likelihood estimate :eqref:`eq_max_like` by finding the values of $\theta$ where the derivative is zero, and finding the one that gives the highest probability.  We compute:
+Isso tem seu valor máximo em algum lugar perto de nossos $9/13 \approx 0.7\ldots$. Para ver se está exatamente lá, podemos recorrer ao cálculo. Observe que, no máximo, a função é plana. Assim, poderíamos encontrar a estimativa de máxima verossimilhança :eqref:`eq_max_like` encontrando os valores de $\theta$ onde a derivada é zero, e encontrando aquele que dá a maior probabilidade. Calculamos:
 
 $$
 \begin{aligned}
@@ -91,9 +91,9 @@ $$
 \end{aligned}
 $$
 
-This has three solutions: $0$, $1$ and $9/13$.  The first two are clearly minima, not maxima as they assign probability $0$ to our sequence.  The final value does *not* assign zero probability to our sequence, and thus must be the maximum likelihood estimate $\hat \theta = 9/13$.
+Isso tem três soluções: $0$, $1$ e $9/13$. Os dois primeiros são claramente mínimos, não máximos, pois atribuem probabilidade $0$ à nossa sequência. O valor final *não* atribui probabilidade zero à nossa sequência e, portanto, deve ser a estimativa de máxima verossimilhança $\hat \theta = 9/13$.
 
-## Numerical Optimization and the Negative Log-Likelihood
+## Otimização Numérica e o Log-Probabilidade Negativo
 
 The previous example is nice, but what if we have billions of parameters and data examples.
 
@@ -291,6 +291,6 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5ODQxNTM1NSwtMzc5NDk5MTQ2LDE4OT
-A5MDc4NjldfQ==
+eyJoaXN0b3J5IjpbMTY0OTc2MDY2LDEwOTg0MTUzNTUsLTM3OT
+Q5OTE0NiwxODkwOTA3ODY5XX0=
 -->
