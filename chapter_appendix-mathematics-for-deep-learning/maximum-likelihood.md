@@ -275,27 +275,24 @@ Assim, vemos que o ponto de vista de máxima verossimilhança pode operar com va
 * Freqüentemente, as pessoas trabalham com a probabilidade logarítmica negativa por uma variedade de razões: estabilidade numérica, conversão de produtos em somas (e a simplificação resultante dos cálculos de gradiente) e vínculos teóricos com a teoria da informação.
 * Embora seja mais simples de motivar na configuração discreta, pode ser generalizado livremente para a configuração contínua, bem como maximizando a densidade de probabilidade atribuída aos pontos de dados.
 
-## Exercises
-1. Suppose that you know that a random variable has density $\frac{1}{\alpha}e^{-\alpha x}$ for some value $\alpha$.  You obtain a single observation from the random variable which is the number $3$.  What is the maximum likelihood estimate for $\alpha$?
-2. Suppose that you have a dataset of samples $\{x_i\}_{i=1}^N$ drawn from a Gaussian with unknown mean, but variance $1$.  What is the maximum likelihood estimate for the mean?
-3.
 ## Exercícios
-1. Suponha que você saiba que uma variável aleatória tem densidade $ \ frac {1} {\ alpha} e ^ {- \ alpha x} $ para algum valor $ \ alpha $. Você obtém uma única observação da variável aleatória que é o número $ 3 $. Qual é a estimativa de máxima verossimilhança para $ \ alpha $?
-2. Suponha que você tenha um conjunto de dados de amostras $ \ {x_i \} _ {i = 1} ^ N $ extraído de um Gaussiano com média desconhecida, mas variância $ 1 $. Qual é a estimativa de máxima verossimilhança para a média?
+
+1. Suponha que você saiba que uma variável aleatória tem densidade $\frac{1}{\alpha}e^{-\alpha x}$ para algum valor $\alpha$. Você obtém uma única observação da variável aleatória que é o número $3$. Qual é a estimativa de máxima verossimilhança para $\alpha$?
+2. Suponha que você tenha um conjunto de dados de amostras $\{x_i\}_{i=1}^N$ extraído de um Gaussiano com média desconhecida, mas variância $1$. Qual é a estimativa de máxima verossimilhança para a média?
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/416)
+[Discussão](https://discuss.d2l.ai/t/416)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1096)
+[Discussão](https://discuss.d2l.ai/t/1096)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1097)
+[Discussão](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU1NTM2ODk2LDEwOTg0MTUzNTUsLTM3OT
-Q5OTE0NiwxODkwOTA3ODY5XX0=
+eyJoaXN0b3J5IjpbLTE4MDkxMTg4NywxMDk4NDE1MzU1LC0zNz
+k0OTkxNDYsMTg5MDkwNzg2OV19
 -->
