@@ -93,19 +93,19 @@ $$
 
 Isso tem três soluções: $0$, $1$ e $9/13$. Os dois primeiros são claramente mínimos, não máximos, pois atribuem probabilidade $0$ à nossa sequência. O valor final *não* atribui probabilidade zero à nossa sequência e, portanto, deve ser a estimativa de máxima verossimilhança $\hat \theta = 9/13$.
 
-## Otimização Numérica e o Log-Probabilidade Negativo
+## Otimização Numérica e o Log-Probabilidade Negativa
 
-The previous example is nice, but what if we have billions of parameters and data examples.
+O exemplo anterior é bom, mas e se tivermos bilhões de parâmetros e exemplos de dados.
 
-First notice that, if we make the assumption that all the data examples are independent, we can no longer practically consider the likelihood itself as it is a product of many probabilities.  Indeed, each probability is in $[0,1]$, say typically of value about $1/2$, and the product of $(1/2)^{1000000000}$ is far below machine precision.  We cannot work with that directly.  
+Primeiro observe que, se fizermos a suposição de que todos os exemplos de dados são independentes, não podemos mais considerar a probabilidade em si na prática, pois ela é um produto de muitas probabilidades. Na verdade, cada probabilidade está em $[0,1]$, digamos tipicamente com um valor de cerca de $1/2$, e o produto de $(1/2)^{1000000000}$ está muito abaixo da precisão da máquina. Não podemos trabalhar com isso diretamente.
 
-However, recall that the logarithm turns products to sums, in which case 
+No entanto, lembre-se que o logaritmo transforma produtos em somas, caso em que
 
 $$
 \log((1/2)^{1000000000}) = 1000000000\cdot\log(1/2) \approx -301029995.6\ldots
 $$
 
-This number fits perfectly within even a single precision $32$-bit float.  Thus, we should consider the *log-likelihood*, which is
+Esse número se encaixa perfeitamente até mesmo em um único float de $32$ bits de precisão. Assim, devemos considerar o *log-verossimilhança*, que é
 
 $$
 \log(P(X \mid \boldsymbol{\theta})).
@@ -116,6 +116,12 @@ Since the function $x \mapsto \log(x)$ is increasing, maximizing the likelihood 
 We often work with loss functions, where we wish to minimize the loss.  We may turn maximum likelihood into the minimization of a loss by taking $-\log(P(X \mid \boldsymbol{\theta}))$, which is the *negative log-likelihood*.
 
 To illustrate this, consider the coin flipping problem from before, and pretend that we do not know the closed form solution.  We may compute that
+
+Como a função $x \mapsto \log(x)$ está aumentando, maximizar a verossimilhança é o mesmo que maximizar o log-verossimilhança. De fato, em: numref: `sec_naive_bayes` veremos esse raciocínio aplicado ao trabalhar com o exemplo específico do classificador Bayes ingênuo.
+
+Freqüentemente trabalhamos com funções de perda, onde desejamos minimizar a perda. Podemos transformar a probabilidade máxima na minimização de uma perda tomando $ - \ log (P (X \ mid \ boldsymbol {\ theta})) $, que é o * log-verossimilhança negativo *.
+
+Para ilustrar isso, considere o problema anterior de jogar a moeda e finja que não conhecemos a solução da forma fechada. Podemos calcular que
 
 $$
 -\log(P(X \mid \boldsymbol{\theta})) = -\log(\theta^{n_H}(1-\theta)^{n_T}) = -(n_H\log(\theta) + n_T\log(1-\theta)).
@@ -291,6 +297,6 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0OTc2MDY2LDEwOTg0MTUzNTUsLTM3OT
+eyJoaXN0b3J5IjpbNjY4MjYyMTkwLDEwOTg0MTUzNTUsLTM3OT
 Q5OTE0NiwxODkwOTA3ODY5XX0=
 -->
