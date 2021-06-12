@@ -18,17 +18,15 @@ $$
 \mathop{\mathrm{argmax}} \frac{P(X \mid \boldsymbol{\theta})P(\boldsymbol{\theta})}{P(X)}.
 $$
 
-The expression $P(X)$, a parameter agnostic probability of generating the data, does not depend on $\boldsymbol{\theta}$ at all, and so can be dropped without changing the best choice of $\boldsymbol{\theta}$.  Similarly, we may now posit that we have no prior assumption on which set of parameters are better than any others, so we may declare that $P(\boldsymbol{\theta})$ does not depend on theta either!  This, for instance, makes sense in our coin flipping example where the probability it comes up heads could be any value in $[0,1]$ without any prior belief it is fair or not (often referred to as an *uninformative prior*).  Thus we see that our application of Bayes' rule shows that our best choice of $\boldsymbol{\theta}$ is the maximum likelihood estimate for $\boldsymbol{\theta}$:
-
-A expressão $ P (X)$, um parâmetro de probabilidade agnóstica de gerar os dados, não depende de $ \ boldsymbol {\ theta} $ e, portanto, pode ser descartada sem alterar a melhor escolha de $ \ boldsymbol {\ theta } $. Da mesma forma, podemos agora postular que não temos nenhuma suposição anterior sobre qual conjunto de parâmetros é melhor do que qualquer outro, então podemos declarar que $ P (\ boldsymbol {\ theta}) $ também não depende de teta! Isso, por exemplo, faz sentido em nosso exemplo de cara ou coroa, onde a probabilidade de dar cara pode ser qualquer valor em $ [0,1] $ sem qualquer crença prévia de que seja justo ou não (muitas vezes referido como um * prévio não informativo * ) Assim, vemos que nossa aplicação da regra de Bayes mostra que nossa melhor escolha de $ \ boldsymbol {\ theta} $ é a estimativa de máxima verossimilhança para $ \ boldsymbol {\ theta} $:
+A expressão $P(X)$, um parâmetro de probabilidade agnóstica de gerar os dados, não depende de $\boldsymbol{\theta}$ e, portanto, pode ser descartada sem alterar a melhor escolha de $\boldsymbol{\theta}$. Da mesma forma, podemos agora postular que não temos nenhuma suposição anterior sobre qual conjunto de parâmetros é melhor do que qualquer outro, então podemos declarar que $P(\boldsymbol{\theta})$ também não depende de teta! Isso, por exemplo, faz sentido em nosso exemplo de cara ou coroa, onde a probabilidade de dar cara pode ser qualquer valor em $ [0,1] $ sem qualquer crença prévia de que seja justo ou não (muitas vezes referido como um *prévio não informativo*) Assim, vemos que nossa aplicação da regra de Bayes mostra que nossa melhor escolha de $\boldsymbol{\theta}$ é a estimativa de máxima verossimilhança para $\boldsymbol{\theta}$:
 
 $$
 \hat{\boldsymbol{\theta}} = \mathop{\mathrm{argmax}} _ {\boldsymbol{\theta}} P(X \mid \boldsymbol{\theta}).
 $$
 
-As a matter of common terminology, the probability of the data given the parameters ($P(X \mid \boldsymbol{\theta})$) is referred to as the *likelihood*.
+Como uma terminologia comum, a probabilidade dos dados dados os parâmetros ($P(X \mid \boldsymbol{\theta})$) é conhecida como *probabilidade*.
 
-### A Concrete Example
+### Um exemplo concreto
 
 Let us see how this works in a concrete example.  Suppose that we have a single parameter $\theta$ representing the probability that a coin flip is heads.  Then the probability of getting a tails is $1-\theta$, and so if our observed data $X$ is a sequence with $n_H$ heads and $n_T$ tails, we can use the fact that independent probabilities multiply to see that 
 
@@ -293,5 +291,5 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTkxMDAwMjYsMTg5MDkwNzg2OV19
+eyJoaXN0b3J5IjpbLTQ1NjA2NjI1NywxODkwOTA3ODY5XX0=
 -->
