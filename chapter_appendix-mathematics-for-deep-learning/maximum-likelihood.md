@@ -30,6 +30,8 @@ Como uma terminologia comum, a probabilidade dos dados dados os parâmetros ($P(
 
 Let us see how this works in a concrete example.  Suppose that we have a single parameter $\theta$ representing the probability that a coin flip is heads.  Then the probability of getting a tails is $1-\theta$, and so if our observed data $X$ is a sequence with $n_H$ heads and $n_T$ tails, we can use the fact that independent probabilities multiply to see that 
 
+Vamos ver como isso funciona em um exemplo concreto. Suponha que tenhamos um único parâmetro $ \ theta $ representando a probabilidade de cara ao cara. Então a probabilidade de obter uma coroa é $ 1- \ theta $, e se nossos dados observados $ X $ são uma sequência com $ n_H $ cara e $ n_T $ coroa, podemos usar o fato de que as probabilidades independentes se multiplicam para ver que
+
 $$
 P(X \mid \theta) = \theta^{n_H}(1-\theta)^{n_T}.
 $$
@@ -291,5 +293,5 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NjA2NjI1NywxODkwOTA3ODY5XX0=
+eyJoaXN0b3J5IjpbLTM3OTQ5OTE0NiwxODkwOTA3ODY5XX0=
 -->
