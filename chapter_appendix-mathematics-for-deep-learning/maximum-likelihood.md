@@ -207,35 +207,33 @@ $$
 \end{aligned}
 $$
 
-This requires $n(n-1)$ multiplications, along with $(n-1)$ additions, so it is total of quadratic time in the inputs!  Sufficient cleverness in grouping terms will reduce this to linear time, but it requires some thought.  For the negative log-likelihood we have instead
-
-Isso requer $n(n-1)$ multiplicações, junto com $ (n-1) $ adições, então é o total do tempo quadrático nas entradas! Inteligência suficiente em termos de agrupamento reduzirá isso ao tempo linear, mas requer alguma reflexão. Para a probabilidade de log negativo, temos, em vez disso,
+Isso requer $n(n-1)$ multiplicações, junto com $(n-1)$ adições, então é o total do tempo quadrático nas entradas! Inteligência suficiente em termos de agrupamento reduzirá isso ao tempo linear, mas requer alguma reflexão. Para a probabilidade de log negativo, temos, em vez disso,
 
 $$
 -\log\left(P(X\mid\boldsymbol{\theta})\right) = -\log(P(x_1\mid\boldsymbol{\theta})) - \log(P(x_2\mid\boldsymbol{\theta})) \cdots - \log(P(x_n\mid\boldsymbol{\theta})),
 $$
 
-which then gives
+que então dá
 
 $$
 - \frac{\partial}{\partial \boldsymbol{\theta}} \log\left(P(X\mid\boldsymbol{\theta})\right) = \frac{1}{P(x_1\mid\boldsymbol{\theta})}\left(\frac{\partial}{\partial \boldsymbol{\theta}}P(x_1\mid\boldsymbol{\theta})\right) + \cdots + \frac{1}{P(x_n\mid\boldsymbol{\theta})}\left(\frac{\partial}{\partial \boldsymbol{\theta}}P(x_n\mid\boldsymbol{\theta})\right).
 $$
 
-This requires only $n$ divides and $n-1$ sums, and thus is linear time in the inputs.
+Isso requer apenas $n$ divisões e $n-1$ somas e, portanto, é o tempo linear nas entradas.
 
-The third and final reason to consider the negative log-likelihood is the relationship to information theory, which we will discuss in detail in :numref:`sec_information_theory`.  This is a rigorous mathematical theory which gives a way to measure the degree of information or randomness in a random variable.  The key object of study in that field is the entropy which is 
+A terceira e última razão para considerar o log-verossimilhança negativo é a relação com a teoria da informação, que discutiremos em detalhes em :numref:`sec_information_theory`. Esta é uma teoria matemática rigorosa que fornece uma maneira de medir o grau de informação ou aleatoriedade em uma variável aleatória. O principal objeto de estudo nesse campo é a entropia, que é
 
 $$
 H(p) = -\sum_{i} p_i \log_2(p_i),
 $$
 
-which measures the randomness of a source. Notice that this is nothing more than the average $-\log$ probability, and thus if we take our negative log-likelihood and divide by the number of data examples, we get a relative of entropy known as cross-entropy.  This theoretical interpretation alone would be sufficiently compelling to motivate reporting the average negative log-likelihood over the dataset as a way of measuring model performance.
+que mede a aleatoriedade de uma fonte. Observe que isso nada mais é do que a probabilidade média de $-\log$ e, portanto, se tomarmos nosso log de verossimilhança negativo e dividirmos pelo número de exemplos de dados, obteremos um relativo de entropia conhecido como entropia cruzada. Essa interpretação teórica por si só seria suficientemente atraente para motivar o relato da probabilidade logarítmica negativa média sobre o conjunto de dados como uma forma de medir o desempenho do modelo.
 
-## Maximum Likelihood for Continuous Variables
+## Máxima probabilidade para variáveis contínuas
 
-Everything that we have done so far assumes we are working with discrete random variables, but what if we want to work with continuous ones?
+Tudo o que fizemos até agora assume que estamos trabalhando com variáveis aleatórias discretas, mas e se quisermos trabalhar com variáveis contínuas?
 
-The short summary is that nothing at all changes, except we replace all the instances of the probability with the probability density.  Recalling that we write densities with lower case $p$, this means that for example we now say
+O breve resumo é que nada muda, exceto que substituímos todas as instâncias da probabilidade pela densidade de probabilidade. Lembrando que escrevemos densidades com $p$ minúsculo, isso significa que, por exemplo, agora dizemos
 
 $$
 -\log\left(p(X\mid\boldsymbol{\theta})\right) = -\log(p(x_1\mid\boldsymbol{\theta})) - \log(p(x_2\mid\boldsymbol{\theta})) \cdots - \log(p(x_n\mid\boldsymbol{\theta})) = -\sum_i \log(p(x_i \mid \theta)).
@@ -246,6 +244,12 @@ The question becomes, "Why is this OK?"  After all, the reason we introduced den
 Indeed, this is the case, and understanding why we can shift to densities is an exercise in tracing what happens to the epsilons.
 
 Let us first re-define our goal.  Suppose that for continuous random variables we no longer want to compute the probability of getting exactly the right value, but instead matching to within some range $\epsilon$.  For simplicity, we assume our data is repeated observations $x_1, \ldots, x_N$ of identically distributed random variables $X_1, \ldots, X_N$.  As we have seen previously, this can be written as
+
+A questão passa a ser: "Por que está tudo bem?" Afinal, a razão pela qual introduzimos densidades foi porque as probabilidades de obter resultados específicos eram zero e, portanto, a probabilidade de gerar nossos dados para qualquer conjunto de parâmetros não é zero?
+
+Na verdade, esse é o caso, e entender por que podemos mudar para densidades é um exercício de rastrear o que acontece com os ípsilons.
+
+Vamos primeiro redefinir nosso objetivo. Suponha que, para variáveis aleatórias contínuas, não desejemos mais calcular a probabilidade de obter exatamente o valor correto, mas, em vez disso, fazer a correspondência dentro de algum intervalo $\epsilon$. Para simplificar, assumimos que nossos dados são observações repetidas $x_1, \ldots, x_N$ de variáveis aleatórias distribuídas de forma idêntica $ X_1, \ ldots, X_N $. Como vimos anteriormente, isso pode ser escrito como
 
 $$
 \begin{aligned}
@@ -293,6 +297,6 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3OTczOTI1OSwxMDk4NDE1MzU1LC0zNz
+eyJoaXN0b3J5IjpbLTkyNTMyNzk1NSwxMDk4NDE1MzU1LC0zNz
 k0OTkxNDYsMTg5MDkwNzg2OV19
 -->
