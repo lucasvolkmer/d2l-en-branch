@@ -111,15 +111,9 @@ $$
 \log(P(X \mid \boldsymbol{\theta})).
 $$
 
-Since the function $x \mapsto \log(x)$ is increasing, maximizing the likelihood is the same thing as maximizing the log-likelihood.  Indeed in :numref:`sec_naive_bayes` we will see this reasoning applied when working with the specific example of the naive Bayes classifier.
+Como a função $x \mapsto \log(x)$ está aumentando, maximizar a verossimilhança é o mesmo que maximizar o log-verossimilhança. De fato, em :numref:`sec_naive_bayes` veremos esse raciocínio aplicado ao trabalhar com o exemplo específico do classificador Bayes ingênuo.
 
-We often work with loss functions, where we wish to minimize the loss.  We may turn maximum likelihood into the minimization of a loss by taking $-\log(P(X \mid \boldsymbol{\theta}))$, which is the *negative log-likelihood*.
-
-To illustrate this, consider the coin flipping problem from before, and pretend that we do not know the closed form solution.  We may compute that
-
-Como a função $x \mapsto \log(x)$ está aumentando, maximizar a verossimilhança é o mesmo que maximizar o log-verossimilhança. De fato, em: numref: `sec_naive_bayes` veremos esse raciocínio aplicado ao trabalhar com o exemplo específico do classificador Bayes ingênuo.
-
-Freqüentemente trabalhamos com funções de perda, onde desejamos minimizar a perda. Podemos transformar a probabilidade máxima na minimização de uma perda tomando $ - \ log (P (X \ mid \ boldsymbol {\ theta})) $, que é o * log-verossimilhança negativo *.
+Frequentemente trabalhamos com funções de perda, onde desejamos minimizar a perda. Podemos transformar a probabilidade máxima na minimização de uma perda tomando $-\log(P(X \mid \boldsymbol{\theta}))$, que é o *log-verossimilhança negativo*.
 
 Para ilustrar isso, considere o problema anterior de jogar a moeda e finja que não conhecemos a solução da forma fechada. Podemos calcular que
 
@@ -127,7 +121,7 @@ $$
 -\log(P(X \mid \boldsymbol{\theta})) = -\log(\theta^{n_H}(1-\theta)^{n_T}) = -(n_H\log(\theta) + n_T\log(1-\theta)).
 $$
 
-This can be written into code, and freely optimized even for billions of coin flips.
+Isso pode ser escrito em código e otimizado gratuitamente até mesmo para bilhões de cara ou coroa.
 
 ```{.python .input}
 # Set up our data
@@ -192,17 +186,17 @@ for iter in range(10):
 theta, n_H / (n_H + n_T)
 ```
 
-Numerical convenience is only one reason people like to use negative log-likelihoods.  Indeed, there are a several reasons that it can be preferable.
+A conveniência numérica é apenas uma das razões pelas quais as pessoas gostam de usar probabilidades de log negativo. Na verdade, há várias razões pelas quais pode ser preferível.
 
 
 
-The second reason we consider the log-likelihood is the simplified application of calculus rules.  As discussed above, due to independence assumptions, most probabilities we encounter in machine learning are products of individual probabilities.
+A segunda razão pela qual consideramos a log-verossimilhança é a aplicação simplificada das regras de cálculo. Conforme discutido acima, devido às suposições de independência, a maioria das probabilidades que encontramos no aprendizado de máquina são produtos de probabilidades individuais.
 
 $$
 P(X\mid\boldsymbol{\theta}) = p(x_1\mid\boldsymbol{\theta})\cdot p(x_2\mid\boldsymbol{\theta})\cdots p(x_n\mid\boldsymbol{\theta}).
 $$
 
-This means that if we directly apply the product rule to compute a derivative we get
+Isso significa que se aplicarmos diretamente a regra do produto para calcular uma derivada, obtemos
 
 $$
 \begin{aligned}
@@ -214,6 +208,8 @@ $$
 $$
 
 This requires $n(n-1)$ multiplications, along with $(n-1)$ additions, so it is total of quadratic time in the inputs!  Sufficient cleverness in grouping terms will reduce this to linear time, but it requires some thought.  For the negative log-likelihood we have instead
+
+Isso requer $n(n-1)$ multiplicações, junto com $ (n-1) $ adições, então é o total do tempo quadrático nas entradas! Inteligência suficiente em termos de agrupamento reduzirá isso ao tempo linear, mas requer alguma reflexão. Para a probabilidade de log negativo, temos, em vez disso,
 
 $$
 -\log\left(P(X\mid\boldsymbol{\theta})\right) = -\log(P(x_1\mid\boldsymbol{\theta})) - \log(P(x_2\mid\boldsymbol{\theta})) \cdots - \log(P(x_n\mid\boldsymbol{\theta})),
@@ -297,6 +293,6 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY4MjYyMTkwLDEwOTg0MTUzNTUsLTM3OT
-Q5OTE0NiwxODkwOTA3ODY5XX0=
+eyJoaXN0b3J5IjpbMTM3OTczOTI1OSwxMDk4NDE1MzU1LC0zNz
+k0OTkxNDYsMTg5MDkwNzg2OV19
 -->
