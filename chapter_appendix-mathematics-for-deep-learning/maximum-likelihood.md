@@ -28,15 +28,13 @@ Como uma terminologia comum, a probabilidade dos dados dados os parâmetros ($P(
 
 ### Um exemplo concreto
 
-Let us see how this works in a concrete example.  Suppose that we have a single parameter $\theta$ representing the probability that a coin flip is heads.  Then the probability of getting a tails is $1-\theta$, and so if our observed data $X$ is a sequence with $n_H$ heads and $n_T$ tails, we can use the fact that independent probabilities multiply to see that 
-
-Vamos ver como isso funciona em um exemplo concreto. Suponha que tenhamos um único parâmetro $ \ theta $ representando a probabilidade de cara ao cara. Então a probabilidade de obter uma coroa é $ 1- \ theta $, e se nossos dados observados $ X $ são uma sequência com $ n_H $ cara e $ n_T $ coroa, podemos usar o fato de que as probabilidades independentes se multiplicam para ver que
+Vamos ver como isso funciona em um exemplo concreto. Suponha que tenhamos um único parâmetro $\theta$ representando a probabilidade de cara ao cara. Então a probabilidade de obter uma coroa é $1-\theta$, e se nossos dados observados $X$ são uma sequência com $n_H$ cara e $n_T$ coroa, podemos usar o fato de que as probabilidades independentes se multiplicam para ver que
 
 $$
 P(X \mid \theta) = \theta^{n_H}(1-\theta)^{n_T}.
 $$
 
-If we flip $13$ coins and get the sequence "HHHTHTTHHHHHT", which has $n_H = 9$ and $n_T = 4$, we see that this is
+Se lançarmos $13$ em moedas e obtivermos a sequência "HHHTHTTHHHHHT", que tem $n_H = 9$ e $n_T = 4$, vemos que isso é
 
 $$
 P(X \mid \theta) = \theta^9(1-\theta)^4.
@@ -45,6 +43,10 @@ $$
 One nice thing about this example will be that we know the answer going in.  Indeed, if we said verbally, "I flipped 13 coins, and 9 came up heads, what is our best guess for the probability that the coin comes us heads?, " everyone would correctly guess $9/13$.  What this maximum likelihood method will give us is a way to get that number from first principals in a way that will generalize to vastly more complex situations.
 
 For our example, the plot of $P(X \mid \theta)$ is as follows:
+
+Uma coisa boa sobre esse exemplo é que sabemos qual será a resposta. Na verdade, se disséssemos verbalmente: "Joguei 13 moedas e deram cara com 9, qual é nossa melhor estimativa para a probabilidade de que a moeda nos dê cara? , "todos acertariam $9/13$. O que este método de máxima verossimilhança nos dará é uma maneira de obter esse número dos primeiros principais de uma forma que irá generalizar para situações muito mais complexas.
+
+Para nosso exemplo, o gráfico de $P(X \mid \theta)$ é o seguinte:
 
 ```{.python .input}
 %matplotlib inline
@@ -293,5 +295,6 @@ Thus, we see that the maximum likelihood point of view can operate with continuo
 [Discussions](https://discuss.d2l.ai/t/1097)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3OTQ5OTE0NiwxODkwOTA3ODY5XX0=
+eyJoaXN0b3J5IjpbLTEyMDAxODkyMzYsLTM3OTQ5OTE0NiwxOD
+kwOTA3ODY5XX0=
 -->
