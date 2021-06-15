@@ -431,7 +431,7 @@ plot_chebyshev(0.0, tf.constant(0.05))
 
 ### Médias e Variância no Tempo Contínuo
 
-This has all been in terms of discrete random variables, but the case of continuous random variables is similar.  To intuitively understand how this works, imagine that we split the real number line into intervals of length $\epsilon$ given by $(\epsilon i, \epsilon (i+1)]$.  Once we do this, our continuous random variable has been made discrete and we can use :eqref:`eq_exp_def` say that
+Tudo isso em termos de variáveis aleatórias discretas, mas o caso das variáveis aleatórias contínuas é semelhante. Para entender intuitivamente como isso funciona, imagine que dividimos a reta do número real em intervalos de comprimento $\epsilon$ dados por $(\epsilon i, \epsilon (i+1)]$. Depois de fazermos isso, nossa variável aleatória contínua foi discretizada e podemos usar :eqref:`eq_exp_def` dizer que
 
 $$
 \begin{aligned}
@@ -879,9 +879,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDIxODE0NDEsMTc4NjgxOTAyNCw1NT
-U5MDQwNiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1
-NzEsLTUxNjc5MzI3OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mz
-c4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5
-Nl19
+eyJoaXN0b3J5IjpbLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NT
+kwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3
+MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLDQzNz
+g1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2
+XX0=
 -->
