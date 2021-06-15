@@ -235,9 +235,10 @@ A *média* codifica o valor médio de uma variável aleatória. Se tivermos uma 
 $$\mu_X = E[X] = \sum_i x_i p_i.$$
 :eqlabel:`eq_exp_def`
 
-The way we should interpret the mean (albeit with caution) is that it tells us essentially where the random variable tends to be located.
 
-As a minimalistic example that we will examine throughout this section, let us take $X$ to be the random variable which takes the value $a-2$ with probability $p$, $a+2$ with probability $p$ and $a$ with probability $1-2p$.  We can compute using :eqref:`eq_exp_def` that, for any possible choice of $a$ and $p$, the mean is
+A maneira como devemos interpretar a média (embora com cautela) é que ela nos diz essencialmente onde a variável aleatória tende a estar localizada.
+
+Como um exemplo minimalista que examinaremos ao longo desta seção, tomemos $X$ como a variável aleatória que assume o valor $a-2$ com probabilidade $p$, $a+2$ com probabilidade $p$ e $a$ com probabilidade $1-2p$. Podemos calcular usando :eqref:`eq_exp_def` que, para qualquer escolha possível de $a$ e $p$, a média é
 
 $$
 \mu_X = E[X] = \sum_i x_i p_i = (a-2)p + a(1-2p) + (a+2)p = a.
@@ -873,7 +874,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMTg0NTI1LC01MTY3OTMyNzksMTcyOT
-g3ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwy
-MTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbMTk3NzI3MDkzOCwtNTE2NzkzMjc5LDE3Mj
+k4Nzg4NCwxNjQ3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQs
+MjEyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
 -->
