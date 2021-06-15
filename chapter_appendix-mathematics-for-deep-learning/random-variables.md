@@ -588,21 +588,21 @@ Dessa forma, podemos lidar com múltiplas variáveis aleatórias potencialmente 
 ### Distribuições Marginais
 Ao lidar com várias variáveis, muitas vezes queremos ser capazes de ignorar os relacionamentos e perguntar: "como essa variável é distribuída?" Essa distribuição é chamada de *distribuição marginal*.
 
-To be concrete, let us suppose that we have two random variables $X, Y$ with joint density given by $p _ {X, Y}(x, y)$.  We will be using the subscript to indicate what random variables the density is for.  The question of finding the marginal distribution is taking this function, and using it to find $p _ X(x)$.
+Para ser concreto, vamos supor que temos duas variáveis aleatórias $X, Y$ com densidade conjunta dada por $p _ {X, Y}(x, y)$. Estaremos usando o subscrito para indicar para quais variáveis aleatórias se destina a densidade. A questão de encontrar a distribuição marginal é pegar essa função e usá-la para encontrar $p_X(x)$.
 
-As with most things, it is best to return to the intuitive picture to figure out what should be true.  Recall that the density is the function $p _ X$ so that
+Como acontece com a maioria das coisas, é melhor retornar ao quadro intuitivo para descobrir o que deve ser verdade. Lembre-se de que a densidade é a função $p _ X$ para que
 
 $$
 P(X \in [x, x+\epsilon]) \approx \epsilon \cdot p _ X(x).
 $$
 
-There is no mention of $Y$, but if all we are given is $p _{X, Y}$, we need to include $Y$ somehow. We can first observe that this is the same as
+Não há menção de $Y$, mas se tudo o que recebemos é $p _{X, Y}$, precisamos incluir $Y$ de alguma forma. Podemos primeiro observar que isso é o mesmo que
 
 $$
 P(X \in [x, x+\epsilon] \text{, and } Y \in \mathbb{R}) \approx \epsilon \cdot p _ X(x).
 $$
 
-Our density does not directly tell us about what happens in this case, we need to split into small intervals in $y$ as well, so we can write this as
+Nossa densidade não nos diz diretamente sobre o que acontece neste caso, precisamos dividir em pequenos intervalos em $y$ também, para que possamos escrever isso como
 
 $$
 \begin{aligned}
@@ -881,10 +881,10 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxODgxOTU2MywtMTI3NjQxNzU0MSwtMz
-M4ODI0OTQsLTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5
-MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMT
-Y4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2
-NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtND
-Q1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbLTE5MDYxODYzODEsLTEyNzY0MTc1NDEsLT
+MzODgyNDk0LC0xNTI1MTIxODYwLC04MzYxMjA4MjEsMTc4Njgx
+OTAyNCw1NTU5MDQwNiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQsLT
+E2ODc1OTU1NzEsLTUxNjc5MzI3OSwxNzI5ODc4ODQsMTY0NzUx
+NjYyMSw0Mzc4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLT
+Q0NTA1ODI5Nl19
 -->
