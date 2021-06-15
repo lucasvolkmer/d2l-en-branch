@@ -289,11 +289,11 @@ Listaremos algumas propriedades de variação abaixo:
 * Para qualquer variável aleatória $X$ e números $a$ e $b$, temos que $\mathrm{Var}(aX+b) = a^2\mathrm{Var}(X)$.
 * Se temos duas variáveis aleatórias *independentes* $X$ e $Y$, temos $\mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y)$.
 
-When interpreting these values, there can be a bit of a hiccup.  In particular, let us try imagining what happens if we keep track of units through this computation.  Suppose that we are working with the star rating assigned to a product on the web page.  Then $a$, $a-2$, and $a+2$ are all measured in units of stars.  Similarly, the mean $\mu_X$ is then also measured in stars (being a weighted average).  However, if we get to the variance, we immediately encounter an issue, which is we want to look at $(X-\mu_X)^2$, which is in units of *squared stars*.  This means that the variance itself is not comparable to the original measurements.  To make it interpretable, we will need to return to our original units.
+Ao interpretar esses valores, pode haver um pequeno soluço. Em particular, vamos tentar imaginar o que acontece se rastrearmos as unidades por meio desse cálculo. Suponha que estejamos trabalhando com a classificação por estrelas atribuída a um produto na página da web. Então $a$, $a-2$ e $a+2$ são medidos em unidades de estrelas. Da mesma forma, a média $\mu_X$ também é medida em estrelas (sendo uma média ponderada). No entanto, se chegarmos à variância, imediatamente encontramos um problema, que é queremos olhar para $(X-\mu_X)^2$, que está em unidades de *estrelas ao quadrado*. Isso significa que a própria variação não é comparável às medições originais. Para torná-lo interpretável, precisaremos retornar às nossas unidades originais.
 
-### Standard Deviations
+### Desvio Padrão
 
-This summary statistics can always be deduced from the variance by taking the square root!  Thus we define the *standard deviation* to be
+Essas estatísticas resumidas sempre podem ser deduzidas da variância calculando a raiz quadrada! Assim, definimos o *desvio padrão* como sendo
 
 $$
 \sigma_X = \sqrt{\mathrm{Var}(X)}.
@@ -877,8 +877,8 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzA0MDY2MjEsMzk0MDI0MTc0LC0xNj
-g3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2
-MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00ND
-UwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbNjMwMjc1MTg4LC0xOTMwNDA2NjIxLDM5ND
+AyNDE3NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4
+NCwxNjQ3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyND
+Y0NTk1OSwtNDQ1MDU4Mjk2XX0=
 -->
