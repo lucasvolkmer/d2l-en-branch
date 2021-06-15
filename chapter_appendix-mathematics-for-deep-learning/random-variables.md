@@ -585,8 +585,8 @@ para alguma função $p(x, y)$. Isso é conhecido como densidade conjunta de $X$
 
 Dessa forma, podemos lidar com múltiplas variáveis aleatórias potencialmente correlacionadas. Se quisermos trabalhar com mais de duas variáveis aleatórias, podemos estender a densidade multivariada para tantas coordenadas quantas desejar, considerando $p(\mathbf{x}) = p(x_1, \ldots, x_n)$. As mesmas propriedades de ser não negativo e ter integral total de um ainda são válidas.
 
-### Marginal Distributions
-When dealing with multiple variables, we oftentimes want to be able to ignore the relationships and ask, "how is this one variable distributed?"  Such a distribution is called a *marginal distribution*.
+### Distribuições Marginais
+Ao lidar com várias variáveis, muitas vezes queremos ser capazes de ignorar os relacionamentos e perguntar: "como essa variável é distribuída?" Essa distribuição é chamada de *distribuição marginal*.
 
 To be concrete, let us suppose that we have two random variables $X, Y$ with joint density given by $p _ {X, Y}(x, y)$.  We will be using the subscript to indicate what random variables the density is for.  The question of finding the marginal distribution is taking this function, and using it to find $p _ X(x)$.
 
@@ -881,9 +881,10 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzY0MTc1NDEsLTMzODgyNDk0LC0xNT
-I1MTIxODYwLC04MzYxMjA4MjEsMTc4NjgxOTAyNCw1NTU5MDQw
-NiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1NzEsLT
-UxNjc5MzI3OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1
-MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbMTUxODgxOTU2MywtMTI3NjQxNzU0MSwtMz
+M4ODI0OTQsLTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5
+MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMT
+Y4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2
+NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtND
+Q1MDU4Mjk2XX0=
 -->
