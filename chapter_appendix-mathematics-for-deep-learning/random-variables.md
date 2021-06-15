@@ -635,12 +635,12 @@ Isso nos diz que, para obter uma distribuição marginal, integramos as variáve
 
 Ao lidar com várias variáveis aleatórias, há uma estatística de resumo adicional que é útil saber: a *covariância*. Isso mede o grau em que duas variáveis aleatórias flutuam juntas.
 
-Suppose that we have two random variables $X$ and $Y$, to begin with, let us suppose they are discrete, taking on values $(x_i, y_j)$ with probability $p_{ij}$.  In this case, the covariance is defined as
+Suponha que temos duas variáveis aleatórias $X$ e $Y$, para começar, suponhamos que sejam discretas, assumindo os valores $(x_i, y_j)$ com probabilidade $p_ {ij}$. Neste caso, a covariância é definida como
 
 $$\sigma_{XY} = \mathrm{Cov}(X, Y) = \sum_{i, j} (x_i - \mu_X) (y_j-\mu_Y) p_{ij}. = E[XY] - E[X]E[Y].$$
 :eqlabel:`eq_cov_def`
 
-To think about this intuitively: consider the following pair of random variables.  Suppose that $X$ takes the values $1$ and $3$, and $Y$ takes the values $-1$ and $3$.  Suppose that we have the following probabilities
+Para pensar sobre isso intuitivamente: considere o seguinte par de variáveis aleatórias. Suponha que $X$ assume os valores $1$ e $3$, e $Y$ assume os valores $-1$ e $3$. Suponha que temos as seguintes probabilidades
 
 $$
 \begin{aligned}
@@ -881,10 +881,10 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NjkzMDE5MCwtMzI0MTg5NDg0LC0xMj
-c2NDE3NTQxLC0zMzg4MjQ5NCwtMTUyNTEyMTg2MCwtODM2MTIw
-ODIxLDE3ODY4MTkwMjQsNTU1OTA0MDYsLTE5MzA0MDY2MjEsMz
-k0MDI0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3
-ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMT
-I0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMTc4NDM5NTUsLTMyNDE4OTQ4NCwtMT
+I3NjQxNzU0MSwtMzM4ODI0OTQsLTE1MjUxMjE4NjAsLTgzNjEy
+MDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLD
+M5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4
+Nzg4NCwxNjQ3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMj
+EyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
 -->
