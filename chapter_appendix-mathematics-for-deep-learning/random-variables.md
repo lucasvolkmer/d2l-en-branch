@@ -561,7 +561,7 @@ A integral interna é a definição do logaritmo, então isso é em essência $\
 
 Os cientistas do aprendizado de máquina definem seus modelos de modo que, na maioria das vezes, não precisemos lidar com essas questões e, na grande maioria dos casos, lidaremos com variáveis aleatórias com médias e variações bem definidas. No entanto, de vez em quando variáveis aleatórias com *caudas pesadas* (ou seja, aquelas variáveis aleatórias onde as probabilidades de obter grandes valores são grandes o suficiente para tornar coisas como a média ou variância indefinidas) são úteis na modelagem de sistemas físicos, portanto, vale a pena saber que elas existem.
 
-### Joint Density Functions
+### Funções de Densidade Conjunta
 
 The above work all assumes we are working with a single real valued random variable.  But what if we are dealing with two or more potentially highly correlated random variables?  This circumstance is the norm in machine learning: imagine random variables like $R_{i, j}$ which encode the red value of the pixel at the $(i, j)$ coordinate in an image, or $P_t$ which is a random variable given by a stock price at time $t$.  Nearby pixels tend to have similar color, and nearby times tend to have similar prices.  We cannot treat them as separate random variables, and expect to create a successful model (we will see in :numref:`sec_naive_bayes` a model that under-performs due to such an assumption).  We need to develop the mathematical language to handle these correlated continuous random variables.
 
@@ -881,9 +881,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNz
-g2ODE5MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3
-NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNj
-Q3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1
-OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbLTMzODgyNDk0LC0xNTI1MTIxODYwLC04Mz
+YxMjA4MjEsMTc4NjgxOTAyNCw1NTU5MDQwNiwtMTkzMDQwNjYy
+MSwzOTQwMjQxNzQsLTE2ODc1OTU1NzEsLTUxNjc5MzI3OSwxNz
+I5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1MzEsNjcwMzYwNDA0
+LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
 -->
