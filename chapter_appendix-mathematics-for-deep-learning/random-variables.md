@@ -651,7 +651,7 @@ P(X = 3 \; \text{and} \; Y = 3) & = \frac{p}{2},
 \end{aligned}
 $$
 
-where $p$ is a parameter in $[0,1]$ we get to pick.  Notice that if $p=1$ then they are both always their minimum or maximum values simultaneously, and if $p=0$ they are guaranteed to take their flipped values simultaneously (one is large when the other is small and vice versa).  If $p=1/2$, then the four possibilities are all equally likely, and neither should be related.  Let us compute the covariance.  First, note $\mu_X = 2$ and $\mu_Y = 1$, so we may compute using :eqref:`eq_cov_def`:
+onde $p$ é um parâmetro em $[0,1]$ que escolhemos. Observe que se $p=1$ então eles são sempre seus valores mínimo ou máximo simultaneamente, e se $p=0$ eles têm a garantia de obter seus valores invertidos simultaneamente (um é grande quando o outro é pequeno e vice-versa). Se $p=1/2$, então as quatro possibilidades são todas igualmente prováveis e nenhuma deve estar relacionada. Vamos calcular a covariância. Primeiro, observe $\mu_X = 2$ e $\mu_Y = 1$, então podemos calcular usando :eqref:`eq_cov_def`:
 
 $$
 \begin{aligned}
@@ -881,7 +881,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTc4NDM5NTUsLTMyNDE4OTQ4NCwtMT
+eyJoaXN0b3J5IjpbLTE0NTM1NjMzMDUsLTMyNDE4OTQ4NCwtMT
 I3NjQxNzU0MSwtMzM4ODI0OTQsLTE1MjUxMjE4NjAsLTgzNjEy
 MDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLD
 M5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4
