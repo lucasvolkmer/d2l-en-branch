@@ -583,7 +583,7 @@ para alguma função $p(x, y)$. Isso é conhecido como densidade conjunta de $X$
 * $\int _ {\mathbb{R}^2} p(x, y) \;dx \;dy = 1$;
 * $P((X, Y) \in \mathcal{D}) = \int _ {\mathcal{D}} p(x, y) \;dx \;dy$.
 
-In this way, we can deal with multiple, potentially correlated random variables.  If we wish to work with more than two random variables, we can extend the multivariate density to as many coordinates as desired by considering $p(\mathbf{x}) = p(x_1, \ldots, x_n)$.  The same properties of being non-negative, and having total integral of one still hold.
+Dessa forma, podemos lidar com múltiplas variáveis aleatórias potencialmente correlacionadas. Se quisermos trabalhar com mais de duas variáveis aleatórias, podemos estender a densidade multivariada para tantas coordenadas quantas desejar, considerando $p(\mathbf{x}) = p(x_1, \ldots, x_n)$. As mesmas propriedades de ser não negativo e ter integral total de um ainda são válidas.
 
 ### Marginal Distributions
 When dealing with multiple variables, we oftentimes want to be able to ignore the relationships and ask, "how is this one variable distributed?"  Such a distribution is called a *marginal distribution*.
@@ -881,9 +881,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MjQ0NTcxMSwtMzM4ODI0OTQsLTE1Mj
-UxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2
-LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNT
-E2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLDQzNzg1NjUz
-MSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbLTEyNzY0MTc1NDEsLTMzODgyNDk0LC0xNT
+I1MTIxODYwLC04MzYxMjA4MjEsMTc4NjgxOTAyNCw1NTU5MDQw
+NiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1NzEsLT
+UxNjc5MzI3OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1
+MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
 -->
