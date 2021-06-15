@@ -308,7 +308,7 @@ As propriedades que tínhamos para a variância podem ser reapresentadas para o 
 * Para qualquer variável aleatória $X$ e números $a$ e $b$, temos que $\sigma_{aX+b} = |a|\sigma_{X}$
 * Se temos duas variáveis aleatórias *independentes* $X$ e $Y$, temos $\sigma_{X+Y} = \sqrt{\sigma_{X}^2 + \sigma_{Y}^2}$.
 
-It is natural at this moment to ask, "If the standard deviation is in the units of our original random variable, does it represent something we can draw with regards to that random variable?"  The answer is a resounding yes!  Indeed much like the mean told we the typical location of our random variable, the standard deviation gives the typical range of variation of that random variable.  We can make this rigorous with what is known as Chebyshev's inequality:
+É natural, neste momento, perguntar: "Se o desvio padrão está nas unidades de nossa variável aleatória original, ele representa algo que podemos desenhar em relação a essa variável aleatória?" A resposta é um sim retumbante! Na verdade, muito parecido com a média informada sobre a localização típica de nossa variável aleatória, o desvio padrão fornece a faixa típica de variação dessa variável aleatória. Podemos tornar isso rigoroso com o que é conhecido como desigualdade de Chebyshev:
 
 $$P\left(X \not\in [\mu_X - \alpha\sigma_X, \mu_X + \alpha\sigma_X]\right) \le \frac{1}{\alpha^2}.$$
 :eqlabel:`eq_chebyshev`
@@ -878,8 +878,8 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNTM5Mjc4LC0xOTMwNDA2NjIxLDM5ND
-AyNDE3NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4
-NCwxNjQ3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyND
-Y0NTk1OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbMTI1Mjc0ODQsLTE5MzA0MDY2MjEsMzk0MD
+I0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0
+LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0Nj
+Q1OTU5LC00NDUwNTgyOTZdfQ==
 -->
