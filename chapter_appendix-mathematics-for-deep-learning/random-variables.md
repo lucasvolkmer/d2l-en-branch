@@ -266,16 +266,16 @@ Em particular, eles olham para $(X-\mu_X)^2.$. Se olharmos para o tamanho típic
 $$\sigma_X^2 = \mathrm{Var}(X) = E\left[(X-\mu_X)^2\right] = E[X^2] - \mu_X^2.$$
 :eqlabel:`eq_var_def`
 
-The last equality in :eqref:`eq_var_def` holds by expanding out the definition in the middle, and applying the properties of expectation.
 
-Let us look at our example where $X$ is the random variable which takes the value $a-2$ with probability $p$, $a+2$ with probability $p$ and $a$ with probability $1-2p$.  In this case $\mu_X = a$, so all we need to compute is $E\left[X^2\right]$.  This can readily be done:
+A última igualdade em :eqref:`eq_var_def` se mantém expandindo a definição no meio e aplicando as propriedades de expectativa.
+
+Vejamos nosso exemplo onde $X$ é a variável aleatória que assume o valor $a-2$ com probabilidade $p$, $a+2$ com probabilidade $p$ e $a$ com probabilidade $1-2p$. Neste caso $\mu_X = a$, então tudo que precisamos calcular é $E\left[X^2\right]$. Isso pode ser feito prontamente:
 
 $$
 E\left[X^2\right] = (a-2)^2p + a^2(1-2p) + (a+2)^2p = a^2 + 8p.
 $$
 
-Thus, we see that by :eqref:`eq_var_def` our variance is
-
+Assim, vemos que por :eqref:`eq_var_def` nossa variância é
 $$
 \sigma_X^2 = \mathrm{Var}(X) = E[X^2] - \mu_X^2 = a^2 + 8p - a^2 = 8p.
 $$
@@ -876,7 +876,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA2MTk1NDc5LC0xNjg3NTk1NTcxLC01MT
+eyJoaXN0b3J5IjpbMjM5OTI5MjkxLC0xNjg3NTk1NTcxLC01MT
 Y3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMx
 LDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
