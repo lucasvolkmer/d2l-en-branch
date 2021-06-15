@@ -473,7 +473,7 @@ $$
 \sigma_X^2 = \int_{-\infty}^\infty x^2p(x) \; dx - \left(\frac{1}{2}\right)^2 = \frac{1}{3} - \frac{1}{4} = \frac{1}{12}.
 $$
 
-As a warning, let us examine one more example, known as the *Cauchy distribution*.  This is the distribution with p.d.f. given by
+Como um aviso, vamos examinar mais um exemplo, conhecido como a *Distribuição Cauchy*. Esta é a distribuição com f.d.p. dada por
 
 $$
 p(x) = \frac{1}{1+x^2}.
@@ -879,7 +879,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNDM2NTM1NywtODM2MTIwODIxLDE3OD
+eyJoaXN0b3J5IjpbLTEyMzY1NTE3NywtODM2MTIwODIxLDE3OD
 Y4MTkwMjQsNTU1OTA0MDYsLTE5MzA0MDY2MjEsMzk0MDI0MTc0
 LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0LDE2ND
 c1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5
