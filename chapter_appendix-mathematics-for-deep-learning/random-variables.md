@@ -256,11 +256,12 @@ As médias são úteis para entender o comportamento médio de uma variável ale
 
 ### Variâncias
 
-This leads us to consider the *variance* of a random variable.  This is a quantitative measure of how far a random variable deviates from the mean.  Consider the expression $X - \mu_X$.  This is the deviation of the random variable from its mean.  This value can be positive or negative, so we need to do something to make it positive so that we are measuring the magnitude of the deviation.
 
-A reasonable thing to try is to look at $\left|X-\mu_X\right|$, and indeed this leads to a useful quantity called the *mean absolute deviation*, however due to connections with other areas of mathematics and statistics, people often use a different solution.
+Isso nos leva a considerar a *variância* de uma variável aleatória. Esta é uma medida quantitativa de quão longe uma variável aleatória se desvia da média. Considere a expressão $X - \mu_X$. Este é o desvio da variável aleatória de sua média. Esse valor pode ser positivo ou negativo, portanto, precisamos fazer algo para torná-lo positivo para que possamos medir a magnitude do desvio.
 
-In particular, they look at $(X-\mu_X)^2.$  If we look at the typical size of this quantity by taking the mean, we arrive at the variance
+Uma coisa razoável a tentar é olhar para $\left|X-\mu_X\right|$, e de fato isso leva a uma quantidade útil chamada *desvio médio absoluto*, no entanto, devido a conexões com outras áreas da matemática e estatística, as pessoas costumam usar uma solução diferente.
+
+Em particular, eles olham para $(X-\mu_X)^2.$. Se olharmos para o tamanho típico desta quantidade tomando a média, chegamos à variância
 
 $$\sigma_X^2 = \mathrm{Var}(X) = E\left[(X-\mu_X)^2\right] = E[X^2] - \mu_X^2.$$
 :eqlabel:`eq_var_def`
@@ -875,7 +876,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODc1OTU1NzEsLTUxNjc5MzI3OSwxNz
-I5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1MzEsNjcwMzYwNDA0
-LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbNjA2MTk1NDc5LC0xNjg3NTk1NTcxLC01MT
+Y3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMx
+LDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
