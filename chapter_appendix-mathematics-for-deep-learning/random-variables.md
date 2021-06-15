@@ -410,7 +410,7 @@ plot_chebyshev(0.0, torch.tensor(0.125))
 plot_chebyshev(0.0, tf.constant(0.125))
 ```
 
-The third shows that for $p < 1/8$ the interval only contains the center.  This does not invalidate the inequality since we only needed to ensure that no more than $1/4$ of the probability falls outside the interval, which means that once $p < 1/8$, the two points at $a-2$ and $a+2$ can be discarded.
+O terceiro mostra que para $p < 1/8$ o intervalo contém apenas o centro. Isso não invalida a desigualdade, pois só precisamos garantir que não mais do que $1/4$ da probabilidade caia fora do intervalo, o que significa que uma vez $p<1/8$, os dois pontos em $a-2$ e $a+2$ podem ser descartados.
 
 ```{.python .input}
 # Plot interval when p < 1/8
@@ -879,8 +879,8 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjU2MzgxNTMsNTU1OTA0MDYsLTE5Mz
-A0MDY2MjEsMzk0MDI0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMy
-NzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MD
-M2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbMTc4NjgxOTAyNCw1NTU5MDQwNiwtMTkzMD
+QwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1NzEsLTUxNjc5MzI3
+OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1MzEsNjcwMz
+YwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
 -->
