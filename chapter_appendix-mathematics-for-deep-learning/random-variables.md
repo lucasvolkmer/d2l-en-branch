@@ -557,7 +557,7 @@ $$
 \mu_X = \int_{-\infty}^{\infty} \frac{x}{1+x^2} \; dx = \frac{1}{2}\int_1^\infty \frac{1}{u} \; du.
 $$
 
-The integral inside is the definition of the logarithm, so this is in essence $\log(\infty) = \infty$, so there is no well-defined average value either!
+A integral interna é a definição do logaritmo, então isso é em essência $\log(\infty) = \infty$, então também não há um valor médio bem definido!
 
 Machine learning scientists define their models so that we most often do not need to deal with these issues, and will in the vast majority of cases deal with random variables with well-defined means and variances.  However, every so often random variables with *heavy tails* (that is those random variables where the probabilities of getting large values are large enough to make things like the mean or variance undefined) are helpful in modeling physical systems, thus it is worth knowing that they exist.
 
@@ -881,9 +881,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTg0NDY5MDgsLTgzNjEyMDgyMSwxNz
-g2ODE5MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3
-NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNj
-Q3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1
-OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbOTI1NDkwMDU0LC04MzYxMjA4MjEsMTc4Nj
+gxOTAyNCw1NTU5MDQwNiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQs
+LTE2ODc1OTU1NzEsLTUxNjc5MzI3OSwxNzI5ODc4ODQsMTY0Nz
+UxNjYyMSw0Mzc4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTks
+LTQ0NTA1ODI5Nl19
 -->
