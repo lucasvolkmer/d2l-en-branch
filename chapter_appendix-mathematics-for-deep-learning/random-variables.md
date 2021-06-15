@@ -225,11 +225,12 @@ $$
 
 Neste exemplo, vemos um dos benefícios de trabalhar com o cdf, a capacidade de lidar com variáveis aleatórias contínuas ou discretas na mesma estrutura, ou mesmo misturas das duas (lance uma moeda: se cara retornar o lançamento de um dado , se a cauda retornar a distância de um lançamento de dardo do centro de um alvo de dardo).
 
-### Means
+### Médias
 
-Suppose that we are dealing with a random variables $X$.  The distribution itself can be hard to interpret.  It is often useful to be able to summarize the behavior of a random variable concisely.  Numbers that help us capture the behavior of a random variable are called *summary statistics*.  The most commonly encountered ones are the *mean*, the *variance*, and the *standard deviation*.
 
-The *mean* encodes the average value of a random variable.  If we have a discrete random variable $X$, which takes the values $x_i$ with probabilities $p_i$, then the mean is given by the weighted average: sum the values times the probability that the random variable takes on that value:
+Suponha que estamos lidando com variáveis aleatórias $X$. A distribuição em si pode ser difícil de interpretar. Muitas vezes é útil ser capaz de resumir o comportamento de uma variável aleatória de forma concisa. Os números que nos ajudam a capturar o comportamento de uma variável aleatória são chamados de *estatísticas resumidas*. Os mais comumente encontrados são a *média*, a *variância* e o *desvio padrão*.
+
+A *média* codifica o valor médio de uma variável aleatória. Se tivermos uma variável aleatória discreta $X$, que assume os valores $x_i$ com probabilidades $p_i$, então a média é dada pela média ponderada: some os valores vezes a probabilidade de que a variável aleatória assuma esse valor:
 
 $$\mu_X = E[X] = \sum_i x_i p_i.$$
 :eqlabel:`eq_exp_def`
@@ -872,7 +873,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNjc5MzI3OSwxNzI5ODc4ODQsMTY0Nz
-UxNjYyMSw0Mzc4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTks
-LTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbMjAyMTg0NTI1LC01MTY3OTMyNzksMTcyOT
+g3ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwy
+MTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
