@@ -577,7 +577,7 @@ $$
 P(X \;\text{is in an}\; \epsilon \text{-sized interval around}\; x \; \text{and} \;Y \;\text{is in an}\; \epsilon \text{-sized interval around}\; y ) \approx \epsilon^{2}p(x, y),
 $$
 
-for some function $p(x, y)$.  This is referred to as the joint density of $X$ and $Y$.  Similar properties are true for this as we saw in the single variable case. Namely:
+para alguma função $p(x, y)$. Isso é conhecido como densidade conjunta de $X$ e $Y$. Propriedades semelhantes são verdadeiras para isso, como vimos no caso de variável única. Nomeadamente:
 
 * $p(x, y) \ge 0$;
 * $\int _ {\mathbb{R}^2} p(x, y) \;dx \;dy = 1$;
@@ -881,7 +881,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5ODEwODc2MSwtMzM4ODI0OTQsLTE1Mj
+eyJoaXN0b3J5IjpbMTg4MjQ0NTcxMSwtMzM4ODI0OTQsLTE1Mj
 UxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2
 LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNT
 E2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLDQzNzg1NjUz
