@@ -244,16 +244,17 @@ $$
 \mu_X = E[X] = \sum_i x_i p_i = (a-2)p + a(1-2p) + (a+2)p = a.
 $$
 
-Thus we see that the mean is $a$.  This matches the intuition since $a$ is the location around which we centered our random variable.
 
-Because they are helpful, let us summarize a few properties.
+Assim, vemos que a média é $a$. Isso corresponde à intuição, já que $a$ é o local em torno do qual centralizamos nossa variável aleatória.
 
-* For any random variable $X$ and numbers $a$ and $b$, we have that $\mu_{aX+b} = a\mu_X + b$.
-* If we have two random variables $X$ and $Y$, we have $\mu_{X+Y} = \mu_X+\mu_Y$.
+Por serem úteis, vamos resumir algumas propriedades.
 
-Means are useful for understanding the average behavior of a random variable, however the mean is not sufficient to even have a full intuitive understanding.  Making a profit of $\$10 \pm \$1$ per sale is very different from making $\$10 \pm \$15$ per sale despite having the same average value.  The second one has a much larger degree of fluctuation, and thus represents a much larger risk.  Thus, to understand the behavior of a random variable, we will need at minimum one more measure: some measure of how widely a random variable fluctuates.
+* Para qualquer variável aleatória $X$ e números $a$ e $b$, temos que $\mu_{aX+b} = a\mu_X + b$.
+* Se temos duas variáveis aleatórias $X$ e $Y$, temos $\mu_{X+Y} = \mu_X+\mu_Y$.
 
-### Variances
+As médias são úteis para entender o comportamento médio de uma variável aleatória, porém a média não é suficiente para ter um entendimento intuitivo completo. Ter um lucro de $\$10 \pm \$1$ por venda é muito diferente de ganhar $\$10 \pm \$15$ por venda, apesar de ter o mesmo valor médio. O segundo tem um grau de flutuação muito maior e, portanto, representa um risco muito maior. Assim, para entender o comportamento de uma variável aleatória, precisaremos, no mínimo, de mais uma medida: alguma medida de quão amplamente uma variável aleatória flutua.
+
+### Variâncias
 
 This leads us to consider the *variance* of a random variable.  This is a quantitative measure of how far a random variable deviates from the mean.  Consider the expression $X - \mu_X$.  This is the deviation of the random variable from its mean.  This value can be positive or negative, so we need to do something to make it positive so that we are measuring the magnitude of the deviation.
 
@@ -874,7 +875,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NzI3MDkzOCwtNTE2NzkzMjc5LDE3Mj
-k4Nzg4NCwxNjQ3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQs
-MjEyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbLTE2ODc1OTU1NzEsLTUxNjc5MzI3OSwxNz
+I5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1MzEsNjcwMzYwNDA0
+LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
 -->
