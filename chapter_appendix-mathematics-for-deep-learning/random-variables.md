@@ -313,9 +313,10 @@ As propriedades que tínhamos para a variância podem ser reapresentadas para o 
 $$P\left(X \not\in [\mu_X - \alpha\sigma_X, \mu_X + \alpha\sigma_X]\right) \le \frac{1}{\alpha^2}.$$
 :eqlabel:`eq_chebyshev`
 
-Or to state it verbally in the case of $\alpha=10$, $99\%$ of the samples from any random variable fall within $10$ standard deviations of the mean.  This gives an immediate interpretation to our standard summary statistics.
 
-To see how this statement is rather subtle, let us take a look at our running example again where  $X$ is the random variable which takes the value $a-2$ with probability $p$, $a+2$ with probability $p$ and $a$ with probability $1-2p$.  We saw that the mean was $a$ and the standard deviation was $2\sqrt{2p}$.  This means, if we take Chebyshev's inequality :eqref:`eq_chebyshev` with $\alpha = 2$, we see that the expression is
+Ou, para declará-lo verbalmente no caso de $\alpha=10$, $99\%$ das amostras de qualquer variável aleatória se enquadram nos desvios padrão de $10$ da média. Isso dá uma interpretação imediata de nossas estatísticas de resumo padrão.
+
+Para ver como essa afirmação é bastante sutil, vamos dar uma olhada em nosso exemplo em execução novamente, onde $X$ é a variável aleatória que assume o valor $a-2$ com probabilidade $p$, $a+2$ com probabilidade $p$ e $a$ com probabilidade $1-2p$. Vimos que a média era $a$ e o desvio padrão era $2\sqrt{2p}$. Isso significa que, se tomarmos a desigualdade de Chebyshev :eqref:`eq_chebyshev` com $\alpha = 2$, vemos que a expressão é
 
 $$
 P\left(X \not\in [a - 4\sqrt{2p}, a + 4\sqrt{2p}]\right) \le \frac{1}{4}.
@@ -878,7 +879,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1Mjc0ODQsLTE5MzA0MDY2MjEsMzk0MD
+eyJoaXN0b3J5IjpbNTU1OTA0MDYsLTE5MzA0MDY2MjEsMzk0MD
 I0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0
 LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0Nj
 Q1OTU5LC00NDUwNTgyOTZdfQ==
