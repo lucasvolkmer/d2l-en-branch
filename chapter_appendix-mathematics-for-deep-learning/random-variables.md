@@ -280,9 +280,10 @@ $$
 \sigma_X^2 = \mathrm{Var}(X) = E[X^2] - \mu_X^2 = a^2 + 8p - a^2 = 8p.
 $$
 
-This result again makes sense.  The largest $p$ can be is $1/2$ which corresponds to picking $a-2$ or $a+2$ with a coin flip.  The variance of this being $4$ corresponds to the fact that both $a-2$ and $a+2$ are $2$ units away from the mean, and $2^2 = 4$.  On the other end of the spectrum, if $p=0$, this random variable always takes the value $0$ and so it has no variance at all.
 
-We will list a few properties of variance below:
+Este resultado novamente faz sentido. O maior $p$ pode ser $1/2$ que corresponde a escolher $a-2$ ou $a+2$ com um cara ou coroa. A variação de ser $4$ corresponde ao fato de que $a-2$ e $a+2$ estão $2$ unidades de distância da média e $2^2 = 4$. Na outra extremidade do espectro, se $p=0$, essa variável aleatória sempre assume o valor $0$ e, portanto, não tem nenhuma variação.
+
+Listaremos algumas propriedades de variação abaixo:
 
 * For any random variable $X$, $\mathrm{Var}(X) \ge 0$, with $\mathrm{Var}(X) = 0$ if and only if $X$ is a constant.
 * For any random variable $X$ and numbers $a$ and $b$, we have that $\mathrm{Var}(aX+b) = a^2\mathrm{Var}(X)$.
@@ -876,7 +877,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM5OTI5MjkxLC0xNjg3NTk1NTcxLC01MT
+eyJoaXN0b3J5IjpbMzk0MDI0MTc0LC0xNjg3NTk1NTcxLC01MT
 Y3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMx
 LDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
