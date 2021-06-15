@@ -629,11 +629,11 @@ $$
 p _ X(x) = \int_{-\infty}^\infty p_{X, Y}(x, y) \; dy.
 $$
 
-This tells us that to get a marginal distribution, we integrate over the variables we do not care about.  This process is often referred to as *integrating out* or *marginalized out* the unneeded variables.
+Isso nos diz que, para obter uma distribuição marginal, integramos as variáveis com as quais não nos importamos. Este processo é frequentemente referido como *integração* ou *marginalização* das variáveis desnecessárias.
 
-### Covariance
+### Covariância
 
-When dealing with multiple random variables, there is one additional summary statistic which is helpful to know: the *covariance*.  This measures the degree that two random variable fluctuate together.
+Ao lidar com várias variáveis aleatórias, há uma estatística de resumo adicional que é útil saber: a *covariância*. Isso mede o grau em que duas variáveis aleatórias flutuam juntas.
 
 Suppose that we have two random variables $X$ and $Y$, to begin with, let us suppose they are discrete, taking on values $(x_i, y_j)$ with probability $p_{ij}$.  In this case, the covariance is defined as
 
@@ -881,10 +881,10 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNDE4OTQ4NCwtMTI3NjQxNzU0MSwtMz
-M4ODI0OTQsLTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5
-MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMT
-Y4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2
-NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtND
-Q1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbMTI0NjkzMDE5MCwtMzI0MTg5NDg0LC0xMj
+c2NDE3NTQxLC0zMzg4MjQ5NCwtMTUyNTEyMTg2MCwtODM2MTIw
+ODIxLDE3ODY4MTkwMjQsNTU1OTA0MDYsLTE5MzA0MDY2MjEsMz
+k0MDI0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3
+ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMT
+I0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
