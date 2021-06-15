@@ -571,7 +571,7 @@ $$
 P(X \;\text{is in an}\; \epsilon \text{-sized interval around}\; x \; \text{and} \;Y \;\text{is in an}\; \epsilon \text{-sized interval around}\; y ).
 $$
 
-Similar reasoning to the single variable case shows that this should be approximately
+Raciocínio semelhante ao caso de variável única mostra que isso deve ser aproximadamente
 
 $$
 P(X \;\text{is in an}\; \epsilon \text{-sized interval around}\; x \; \text{and} \;Y \;\text{is in an}\; \epsilon \text{-sized interval around}\; y ) \approx \epsilon^{2}p(x, y),
@@ -881,9 +881,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwMTcxNDAsLTMzODgyNDk0LC0xNTI1MT
-IxODYwLC04MzYxMjA4MjEsMTc4NjgxOTAyNCw1NTU5MDQwNiwt
-MTkzMDQwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1NzEsLTUxNj
-c5MzI3OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1MzEs
-NjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbLTM5ODEwODc2MSwtMzM4ODI0OTQsLTE1Mj
+UxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2
+LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNT
+E2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLDQzNzg1NjUz
+MSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
 -->
