@@ -322,9 +322,9 @@ $$
 P\left(X \not\in [a - 4\sqrt{2p}, a + 4\sqrt{2p}]\right) \le \frac{1}{4}.
 $$
 
-This means that $75\%$ of the time, this random variable will fall within this interval for any value of $p$.  Now, notice that as $p \rightarrow 0$, this interval also converges to the single point $a$.  But we know that our random variable takes the values $a-2, a$, and $a+2$ only so eventually we can be certain $a-2$ and $a+2$ will fall outside the interval!  The question is, at what $p$ does that happen.  So we want to solve: for what $p$ does $a+4\sqrt{2p} = a+2$, which is solved when $p=1/8$, which is *exactly* the first $p$ where it could possibly happen without violating our claim that no more than $1/4$ of samples from the distribution would fall outside the interval ($1/8$ to the left, and $1/8$ to the right).
+Isso significa que $75\%$ do tempo, essa variável aleatória ficará dentro desse intervalo para qualquer valor de $p$. Agora, observe que como $p \rightarrow 0$, este intervalo também converge para o único ponto $a$. Mas sabemos que nossa variável aleatória assume os valores $a-2, a$ e $a+2$ apenas então, eventualmente, podemos ter certeza de que $a-2$ e $a+2$ ficarão fora do intervalo! A questão é: em que $p$ isso acontece. Então, queremos resolver: para que $p$ $a+4\sqrt{2p} = a+2$, que é resolvido quando $p=1/8$, que é *exatamente* o primeiro $p$ onde isso poderia acontecer sem violar nossa alegação de que não mais do que $1/4$  de amostras da distribuição ficariam fora do intervalo ($1/8$ à esquerda e $1/8$ à direita).
 
-Let us visualize this.  We will show the probability of getting the three values as three vertical bars with height proportional to the probability.  The interval will be drawn as a horizontal line in the middle.  The first plot shows what happens for $p > 1/8$ where the interval safely contains all points.
+Vamos visualizar isso. Mostraremos a probabilidade de obter os três valores como três barras verticais com altura proporcional à probabilidade. O intervalo será desenhado como uma linha horizontal no meio. O primeiro gráfico mostra o que acontece para $p>1/8$ onde o intervalo contém com segurança todos os pontos.
 
 ```{.python .input}
 # Define a helper to plot these figures
@@ -391,7 +391,7 @@ def plot_chebyshev(a, p):
 plot_chebyshev(0.0, tf.constant(0.2))
 ```
 
-The second shows that at $p = 1/8$, the interval exactly touches the two points.  This shows that the inequality is *sharp*, since no smaller interval could be taken while keeping the inequality true.
+O segundo mostra que em $p = 1/8$, o intervalo toca exatamente os dois pontos. Isso mostra que a desigualdade é *nítida*, uma vez que nenhum intervalo menor pode ser obtido mantendo a desigualdade verdadeira.
 
 ```{.python .input}
 # Plot interval when p = 1/8
@@ -879,8 +879,8 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1OTA0MDYsLTE5MzA0MDY2MjEsMzk0MD
-I0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0
-LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0Nj
-Q1OTU5LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbLTE0NjU2MzgxNTMsNTU1OTA0MDYsLTE5Mz
+A0MDY2MjEsMzk0MDI0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMy
+NzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MD
+M2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
