@@ -505,15 +505,16 @@ p = 1 / (1 + x**2)
 d2l.plot(x, p, 'x', 'p.d.f.')
 ```
 
-This function looks innocent, and indeed consulting a table of integrals will show it has area one under it, and thus it defines a continuous random variable.
 
-To see what goes astray, let us try to compute the variance of this.  This would involve using :eqref:`eq_var_def` computing
+Esta função parece inocente e, de fato, consultar uma tabela de integrais mostrará que ela tem a área um abaixo dela e, portanto, define uma variável aleatória contínua.
+
+Para ver o que está errado, vamos tentar calcular a variância disso. Isso envolveria o uso de computação :eqref:`eq_var_def`
 
 $$
 \int_{-\infty}^\infty \frac{x^2}{1+x^2}\; dx.
 $$
 
-The function on the inside looks like this:
+A função interna é semelhante a esta:
 
 ```{.python .input}
 # Plot the integrand needed to compute the variance
@@ -541,15 +542,16 @@ p = x**2 / (1 + x**2)
 d2l.plot(x, p, 'x', 'integrand')
 ```
 
-This function clearly has infinite area under it since it is essentially the constant one with a small dip near zero, and indeed we could show that
+Esta função tem claramente uma área infinita sob ela, uma vez que é essencialmente a constante com um pequeno mergulho próximo a zero, e de fato podemos mostrar que
 
 $$
 \int_{-\infty}^\infty \frac{x^2}{1+x^2}\; dx = \infty.
 $$
 
-This means it does not have a well-defined finite variance.
 
-However, looking deeper shows an even more disturbing result.  Let us try to compute the mean using :eqref:`eq_exp_def`.  Using the change of variables formula, we see
+Isso significa que não tem uma variância finita bem definida.
+
+No entanto, olhar mais a fundo mostra um resultado ainda mais perturbador. Vamos tentar calcular a média usando :eqref:`eq_exp_def`. Usando a fórmula de mudança de variáveis, vemos
 
 $$
 \mu_X = \int_{-\infty}^{\infty} \frac{x}{1+x^2} \; dx = \frac{1}{2}\int_1^\infty \frac{1}{u} \; du.
@@ -879,9 +881,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzY1NTE3NywtODM2MTIwODIxLDE3OD
-Y4MTkwMjQsNTU1OTA0MDYsLTE5MzA0MDY2MjEsMzk0MDI0MTc0
-LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0LDE2ND
-c1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5
-LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMTg0NDY5MDgsLTgzNjEyMDgyMSwxNz
+g2ODE5MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3
+NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNj
+Q3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1
+OSwtNDQ1MDU4Mjk2XX0=
 -->
