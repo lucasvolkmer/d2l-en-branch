@@ -559,7 +559,7 @@ $$
 
 A integral interna é a definição do logaritmo, então isso é em essência $\log(\infty) = \infty$, então também não há um valor médio bem definido!
 
-Machine learning scientists define their models so that we most often do not need to deal with these issues, and will in the vast majority of cases deal with random variables with well-defined means and variances.  However, every so often random variables with *heavy tails* (that is those random variables where the probabilities of getting large values are large enough to make things like the mean or variance undefined) are helpful in modeling physical systems, thus it is worth knowing that they exist.
+Os cientistas do aprendizado de máquina definem seus modelos de modo que, na maioria das vezes, não precisemos lidar com essas questões e, na grande maioria dos casos, lidaremos com variáveis aleatórias com médias e variações bem definidas. No entanto, de vez em quando variáveis aleatórias com *caudas pesadas* (ou seja, aquelas variáveis aleatórias onde as probabilidades de obter grandes valores são grandes o suficiente para tornar coisas como a média ou variância indefinidas) são úteis na modelagem de sistemas físicos, portanto, vale a pena saber que elas existem.
 
 ### Joint Density Functions
 
@@ -881,9 +881,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI1NDkwMDU0LC04MzYxMjA4MjEsMTc4Nj
-gxOTAyNCw1NTU5MDQwNiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQs
-LTE2ODc1OTU1NzEsLTUxNjc5MzI3OSwxNzI5ODc4ODQsMTY0Nz
-UxNjYyMSw0Mzc4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTks
-LTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbLTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNz
+g2ODE5MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3
+NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNj
+Q3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1
+OSwtNDQ1MDU4Mjk2XX0=
 -->
