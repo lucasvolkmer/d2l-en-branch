@@ -429,7 +429,7 @@ plot_chebyshev(0.0, torch.tensor(0.05))
 plot_chebyshev(0.0, tf.constant(0.05))
 ```
 
-### Means and Variances in the Continuum
+### Médias e Variância no Tempo Contínuo
 
 This has all been in terms of discrete random variables, but the case of continuous random variables is similar.  To intuitively understand how this works, imagine that we split the real number line into intervals of length $\epsilon$ given by $(\epsilon i, \epsilon (i+1)]$.  Once we do this, our continuous random variable has been made discrete and we can use :eqref:`eq_exp_def` say that
 
@@ -879,8 +879,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NjgxOTAyNCw1NTU5MDQwNiwtMTkzMD
-QwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1NzEsLTUxNjc5MzI3
-OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1MzEsNjcwMz
-YwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbLTEzMDIxODE0NDEsMTc4NjgxOTAyNCw1NT
+U5MDQwNiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1
+NzEsLTUxNjc5MzI3OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mz
+c4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5
+Nl19
 -->
