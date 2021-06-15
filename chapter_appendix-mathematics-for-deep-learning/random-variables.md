@@ -563,9 +563,9 @@ Os cientistas do aprendizado de máquina definem seus modelos de modo que, na ma
 
 ### Funções de Densidade Conjunta
 
-The above work all assumes we are working with a single real valued random variable.  But what if we are dealing with two or more potentially highly correlated random variables?  This circumstance is the norm in machine learning: imagine random variables like $R_{i, j}$ which encode the red value of the pixel at the $(i, j)$ coordinate in an image, or $P_t$ which is a random variable given by a stock price at time $t$.  Nearby pixels tend to have similar color, and nearby times tend to have similar prices.  We cannot treat them as separate random variables, and expect to create a successful model (we will see in :numref:`sec_naive_bayes` a model that under-performs due to such an assumption).  We need to develop the mathematical language to handle these correlated continuous random variables.
+Todo o trabalho acima assume que estamos trabalhando com uma única variável aleatória de valor real. Mas e se estivermos lidando com duas ou mais variáveis aleatórias potencialmente altamente correlacionadas? Esta circunstância é a norma no *machine learning*: imagine variáveis aleatórias como $R_{i, j}$ que codificam o valor vermelho do pixel na coordenada $(i, j)$ em uma imagem, ou $P_t$ que é um variável aleatória dada por um preço de ação no momento $t$. Pixels próximos tendem a ter cores semelhantes e tempos próximos tendem a ter preços semelhantes. Não podemos tratá-los como variáveis aleatórias separadas e esperar criar um modelo de sucesso (veremos em :numref:`sec_naive_bayes` um modelo com desempenho inferior devido a tal suposição). Precisamos desenvolver a linguagem matemática para lidar com essas variáveis aleatórias contínuas correlacionadas.
 
-Thankfully, with the multiple integrals in :numref:`sec_integral_calculus` we can develop such a language.  Suppose that we have, for simplicity, two random variables $X, Y$ which can be correlated.  Then, similar to the case of a single variable, we can ask the question:
+Felizmente, com as integrais múltiplas em :numref:`sec_integral_calculus` podemos desenvolver tal linguagem. Suponha que temos, para simplificar, duas variáveis aleatórias $X, Y$ que podem ser correlacionadas. Então, semelhante ao caso de uma única variável, podemos fazer a pergunta:
 
 $$
 P(X \;\text{is in an}\; \epsilon \text{-sized interval around}\; x \; \text{and} \;Y \;\text{is in an}\; \epsilon \text{-sized interval around}\; y ).
@@ -881,9 +881,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzODgyNDk0LC0xNTI1MTIxODYwLC04Mz
-YxMjA4MjEsMTc4NjgxOTAyNCw1NTU5MDQwNiwtMTkzMDQwNjYy
-MSwzOTQwMjQxNzQsLTE2ODc1OTU1NzEsLTUxNjc5MzI3OSwxNz
-I5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1MzEsNjcwMzYwNDA0
-LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbODUwMTcxNDAsLTMzODgyNDk0LC0xNTI1MT
+IxODYwLC04MzYxMjA4MjEsMTc4NjgxOTAyNCw1NTU5MDQwNiwt
+MTkzMDQwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1NzEsLTUxNj
+c5MzI3OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mzc4NTY1MzEs
+NjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5Nl19
 -->
