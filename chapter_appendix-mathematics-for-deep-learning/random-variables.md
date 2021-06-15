@@ -299,9 +299,10 @@ $$
 \sigma_X = \sqrt{\mathrm{Var}(X)}.
 $$
 
-In our example, this means we now have the standard deviation is $\sigma_X = 2\sqrt{2p}$.  If we are dealing with units of stars for our review example, $\sigma_X$ is again in units of stars.
 
-The properties we had for the variance can be restated for the standard deviation.
+Em nosso exemplo, isso significa que agora temos o desvio padrão $\sigma_X = 2\sqrt{2p}$. Se estamos lidando com unidades de estrelas para nosso exemplo de revisão, $\sigma_X$ está novamente em unidades de estrelas.
+
+As propriedades que tínhamos para a variância podem ser reapresentadas para o desvio padrão.
 
 * For any random variable $X$, $\sigma_{X} \ge 0$.
 * For any random variable $X$ and numbers $a$ and $b$, we have that $\sigma_{aX+b} = |a|\sigma_{X}$
@@ -877,8 +878,8 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMwMjc1MTg4LC0xOTMwNDA2NjIxLDM5ND
-AyNDE3NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4
-NCwxNjQ3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyND
-Y0NTk1OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbLTIxMDA3MjgwNTMsLTE5MzA0MDY2MjEsMz
+k0MDI0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3
+ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMT
+I0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
