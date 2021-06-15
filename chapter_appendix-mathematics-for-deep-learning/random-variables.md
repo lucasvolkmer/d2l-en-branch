@@ -285,9 +285,9 @@ Este resultado novamente faz sentido. O maior $p$ pode ser $1/2$ que corresponde
 
 Listaremos algumas propriedades de variação abaixo:
 
-* For any random variable $X$, $\mathrm{Var}(X) \ge 0$, with $\mathrm{Var}(X) = 0$ if and only if $X$ is a constant.
-* For any random variable $X$ and numbers $a$ and $b$, we have that $\mathrm{Var}(aX+b) = a^2\mathrm{Var}(X)$.
-* If we have two *independent* random variables $X$ and $Y$, we have $\mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y)$.
+* Para qualquer variável aleatória $X$, $\mathrm{Var}(X) \ge 0$, com $\mathrm{Var}(X) = 0$ se e somente se $X$ for uma constante.
+* Para qualquer variável aleatória $X$ e números $a$ e $b$, temos que $\mathrm{Var}(aX+b) = a^2\mathrm{Var}(X)$.
+* Se temos duas variáveis aleatórias *independentes* $X$ e $Y$, temos $\mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y)$.
 
 When interpreting these values, there can be a bit of a hiccup.  In particular, let us try imagining what happens if we keep track of units through this computation.  Suppose that we are working with the star rating assigned to a product on the web page.  Then $a$, $a-2$, and $a+2$ are all measured in units of stars.  Similarly, the mean $\mu_X$ is then also measured in stars (being a weighted average).  However, if we get to the variance, we immediately encounter an issue, which is we want to look at $(X-\mu_X)^2$, which is in units of *squared stars*.  This means that the variance itself is not comparable to the original measurements.  To make it interpretable, we will need to return to our original units.
 
@@ -877,7 +877,8 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk0MDI0MTc0LC0xNjg3NTk1NTcxLC01MT
-Y3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMx
-LDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbLTE5MzA0MDY2MjEsMzk0MDI0MTc0LC0xNj
+g3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2
+MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00ND
+UwNTgyOTZdfQ==
 -->
