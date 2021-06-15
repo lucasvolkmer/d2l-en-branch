@@ -611,10 +611,10 @@ $$
 \end{aligned}
 $$
 
-![By summing along the columns of our array of probabilities, we are able to obtain the marginal distribution for just the random variable represented along the $x$-axis.](../img/marginal.svg)
+![Somando ao longo das colunas de nosso conjunto de probabilidades, podemos obter a distribuição marginal apenas para a variável aleatória representada ao longo do eixo $x$.](../img/marginal.svg)
 :label:`fig_marginal`
 
-This tells us to add up the value of the density along a series of squares in a line as is shown in :numref:`fig_marginal`.  Indeed, after canceling one factor of epsilon from both sides, and recognizing the sum on the right is the integral over $y$, we can conclude that
+Isso nos diz para somar o valor da densidade ao longo de uma série de quadrados em uma linha, como é mostrado em :numref:`fig_marginal`. De fato, depois de cancelar um fator de épsilon de ambos os lados, e reconhecer que a soma à direita é a integral sobre $y$, podemos concluir que
 
 $$
 \begin{aligned}
@@ -623,7 +623,7 @@ $$
 \end{aligned}
 $$
 
-Thus we see
+Assim vemos
 
 $$
 p _ X(x) = \int_{-\infty}^\infty p_{X, Y}(x, y) \; dy.
@@ -881,10 +881,10 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDYxODYzODEsLTEyNzY0MTc1NDEsLT
-MzODgyNDk0LC0xNTI1MTIxODYwLC04MzYxMjA4MjEsMTc4Njgx
-OTAyNCw1NTU5MDQwNiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQsLT
-E2ODc1OTU1NzEsLTUxNjc5MzI3OSwxNzI5ODc4ODQsMTY0NzUx
-NjYyMSw0Mzc4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLT
-Q0NTA1ODI5Nl19
+eyJoaXN0b3J5IjpbLTMyNDE4OTQ4NCwtMTI3NjQxNzU0MSwtMz
+M4ODI0OTQsLTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5
+MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMT
+Y4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2
+NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtND
+Q1MDU4Mjk2XX0=
 -->
