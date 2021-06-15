@@ -665,13 +665,13 @@ Quando $p=1$ (o caso em que ambos são maximamente positivos ou negativos ao mes
 
 Uma nota rápida sobre a covariância é que ela mede apenas essas relações lineares. Relacionamentos mais complexos, como $X = Y^2$, em que $Y$ é escolhido aleatoriamente de $\{-2, -1, 0, 1, 2\}$ com igual probabilidade, podem ser perdidos. De fato, um cálculo rápido mostra que essas variáveis aleatórias têm covariância zero, apesar de uma ser uma função determinística da outra.
 
-For continuous random variables, much the same story holds.  At this point, we are pretty comfortable with doing the transition between discrete and continuous, so we will provide the continuous analogue of :eqref:`eq_cov_def` without any derivation.
+Para variáveis aleatórias contínuas, a mesma história se aplica. Neste ponto, estamos bastante confortáveis em fazer a transição entre discreto e contínuo, então forneceremos o análogo contínuo de :eqref:`eq_cov_def` sem qualquer derivação.
 
 $$
 \sigma_{XY} = \int_{\mathbb{R}^2} (x-\mu_X)(y-\mu_Y)p(x, y) \;dx \;dy.
 $$
 
-For visualization, let us take a look at a collection of random variables with tunable covariance.
+Para visualização, vamos dar uma olhada em uma coleção de variáveis aleatórias com covariância ajustável.
 
 ```{.python .input}
 # Plot a few random variables adjustable covariance
@@ -881,10 +881,10 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjYzMTMzMzIsLTMyNDE4OTQ4NCwtMT
-I3NjQxNzU0MSwtMzM4ODI0OTQsLTE1MjUxMjE4NjAsLTgzNjEy
-MDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLD
-M5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4
-Nzg4NCwxNjQ3NTE2NjIxLDQzNzg1NjUzMSw2NzAzNjA0MDQsMj
-EyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbLTkyNjEyMDQwNSwtMzI0MTg5NDg0LC0xMj
+c2NDE3NTQxLC0zMzg4MjQ5NCwtMTUyNTEyMTg2MCwtODM2MTIw
+ODIxLDE3ODY4MTkwMjQsNTU1OTA0MDYsLTE5MzA0MDY2MjEsMz
+k0MDI0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3
+ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMT
+I0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
 -->
