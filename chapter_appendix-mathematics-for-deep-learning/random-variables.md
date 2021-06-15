@@ -440,19 +440,19 @@ $$
 \end{aligned}
 $$
 
-where $p_X$ is the density of $X$.  This is an approximation to the integral of $xp_X(x)$, so we can conclude that
+onde $p_X$ é a densidade de $X$. Esta é uma aproximação da integral de $xp_X(x)$, então podemos concluir que
 
 $$
 \mu_X = \int_{-\infty}^\infty xp_X(x) \; dx.
 $$
 
-Similarly, using :eqref:`eq_var_def` the variance can be written as
+Da mesma forma, usando :eqref:`eq_var_def` a variância pode ser escrita como
 
 $$
 \sigma^2_X = E[X^2] - \mu_X^2 = \int_{-\infty}^\infty x^2p_X(x) \; dx - \left(\int_{-\infty}^\infty xp_X(x) \; dx\right)^2.
 $$
 
-Everything stated above about the mean, the variance, and the standard deviation still applies in this case.  For instance, if we consider the random variable with density
+Tudo o que foi dito acima sobre a média, a variância e o desvio padrão ainda se aplica neste caso. Por exemplo, se considerarmos a variável aleatória com densidade
 
 $$
 p(x) = \begin{cases}
@@ -461,13 +461,13 @@ p(x) = \begin{cases}
 \end{cases}
 $$
 
-we can compute
+nós podemos computar
 
 $$
 \mu_X = \int_{-\infty}^\infty xp(x) \; dx = \int_0^1 x \; dx = \frac{1}{2}.
 $$
 
-and
+e
 
 $$
 \sigma_X^2 = \int_{-\infty}^\infty x^2p(x) \; dx - \left(\frac{1}{2}\right)^2 = \frac{1}{3} - \frac{1}{4} = \frac{1}{12}.
@@ -879,9 +879,9 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NT
-kwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3
-MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLDQzNz
-g1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2
-XX0=
+eyJoaXN0b3J5IjpbMTkwNDM2NTM1NywtODM2MTIwODIxLDE3OD
+Y4MTkwMjQsNTU1OTA0MDYsLTE5MzA0MDY2MjEsMzk0MDI0MTc0
+LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0LDE2ND
+c1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5
+LC00NDUwNTgyOTZdfQ==
 -->
