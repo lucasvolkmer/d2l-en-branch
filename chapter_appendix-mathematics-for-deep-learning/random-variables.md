@@ -661,9 +661,9 @@ $$
 \end{aligned}
 $$
 
-When $p=1$ (the case where they are both maximally positive or negative at the same time) has a covariance of $2$. When $p=0$ (the case where they are flipped) the covariance is $-2$.  Finally, when $p=1/2$ (the case where they are unrelated), the covariance is $0$.  Thus we see that the covariance measures how these two random variables are related.
+Quando $p=1$ (o caso em que ambos são maximamente positivos ou negativos ao mesmo tempo) tem uma covariância de $2$. Quando $p=0$ (o caso em que eles são invertidos) a covariância é $-2$. Finalmente, quando $p=1/2$ (o caso em que não estão relacionados), a covariância é $0$. Assim, vemos que a covariância mede como essas duas variáveis aleatórias estão relacionadas.
 
-A quick note on the covariance is that it only measures these linear relationships.  More complex relationships like $X = Y^2$ where $Y$ is randomly chosen from $\{-2, -1, 0, 1, 2\}$ with equal probability can be missed.  Indeed a quick computation shows that these random variables have covariance zero, despite one being a deterministic function of the other.
+Uma nota rápida sobre a covariância é que ela mede apenas essas relações lineares. Relacionamentos mais complexos, como $X = Y^2$, em que $Y$ é escolhido aleatoriamente de $\{-2, -1, 0, 1, 2\}$ com igual probabilidade, podem ser perdidos. De fato, um cálculo rápido mostra que essas variáveis aleatórias têm covariância zero, apesar de uma ser uma função determinística da outra.
 
 For continuous random variables, much the same story holds.  At this point, we are pretty comfortable with doing the transition between discrete and continuous, so we will provide the continuous analogue of :eqref:`eq_cov_def` without any derivation.
 
@@ -881,7 +881,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTM1NjMzMDUsLTMyNDE4OTQ4NCwtMT
+eyJoaXN0b3J5IjpbLTEwMjYzMTMzMzIsLTMyNDE4OTQ4NCwtMT
 I3NjQxNzU0MSwtMzM4ODI0OTQsLTE1MjUxMjE4NjAsLTgzNjEy
 MDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2LC0xOTMwNDA2NjIxLD
 M5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNTE2NzkzMjc5LDE3Mjk4
