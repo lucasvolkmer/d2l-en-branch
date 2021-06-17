@@ -756,17 +756,16 @@ modificando com nosso peso exponencial.
 
 Em segundo lugar, temos o vetor $\boldsymbol{\eta} = (\eta_1, \eta_2, ..., \eta_l) \in\mathbb{R}^l$ chamado de *parâmetros naturais* ou *parâmetros canônicos*. Eles definem como a medida base será modificada. Os parâmetros naturais entram na nova medida tomando o produto escalar desses parâmetros em relação a alguma função $T(\cdot)$ de \mathbf{x}= (x_1, x_2, ..., x_n) \in\mathbb{R}^n$ e exponenciado. O vetor $T(\mathbf{x})= (T_1(\mathbf{x}), T_2(\mathbf{x}), ..., T_l(\mathbf{x}))$ é chamado de *estatísticas suficientes* para $\boldsymbol{\eta}$. Este nome é usado uma vez que a informação representada por $T(\mathbf{x})$ é suficiente para calcular a
 densidade de probabilidade e nenhuma outra informação da amostra $\mathbf{x}$
-é requerido.
+é requerida.
 
-Third, we have $A(\boldsymbol{\eta})$, which is referred to as the *cumulant 
-function*, which ensures that the above distribution :eqref:`eq_exp_pdf` 
-integrates to one, i.e.,
+Terceiro, temos $A(\boldsymbol{\eta})$, que é referido como a *função cumulativa*, que garante que a distribuição acima :eqref:`eq_exp_pdf`
+integra-se a um, ou seja,
 
 $$A(\boldsymbol{\eta})  = \log \left[\int h(\mathbf{x}) \cdot \mathrm{exp}
 \left(\boldsymbol{\eta}^{\top} \cdot T(\mathbf{x}) \right) d\mathbf{x} \right].$$
 
-To be concrete, let us consider the Gaussian. Assuming that $\mathbf{x}$ is 
-an univariate variable, we saw that it had a density of
+Para sermos concretos, consideremos o gaussiano. Supondo que $\mathbf{x}$ seja
+uma variável univariada, vimos que ela tinha uma densidade de
 
 $$
 \begin{aligned}
@@ -826,7 +825,7 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTUwNTQyMjksLTIwNTgzOTg4MDcsLT
-IxMzIzOTg2NjAsNDQxNzc2OTU0LDE2OTkzNjk2NzQsLTkxNjA2
-NDgxMCwxMjgxNDI0NTk4LC0zODc1ODU0MzBdfQ==
+eyJoaXN0b3J5IjpbMTIxMjI1OTI1MSwtMjA1ODM5ODgwNywtMj
+EzMjM5ODY2MCw0NDE3NzY5NTQsMTY5OTM2OTY3NCwtOTE2MDY0
+ODEwLDEyODE0MjQ1OTgsLTM4NzU4NTQzMF19
 -->
