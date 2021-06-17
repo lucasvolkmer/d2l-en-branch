@@ -299,12 +299,12 @@ $$
 X \sim \mathrm{Binomial}(n, p).
 $$
 
-To get the cumulative distribution function, we need to notice that getting exactly $k$ successes can occur in $\binom{n}{k} = \frac{n!}{k!(n-k)!}$ ways each of which has a probability of $p^k(1-p)^{n-k}$ of occurring.  Thus the cumulative distribution function is
+Para obter a função de distribuição cumulativa, precisamos observar que obter exatamente $k$ sucessos podem ocorrer em $\binom{n}{k} = \frac{n!}{k!(n-k)!}$ maneiras, cada uma das quais tem uma probabilidade de $p^k(1-p)^{n-k}$ de ocorrer. Assim, a função de distribuição cumulativa é
 
 $$F(x) = \begin{cases} 0 & x < 0, \\ \sum_{m \le k} \binom{n}{m} p^m(1-p)^{n-m}  & k \le x < k+1 \text{ with } 0 \le k < n, \\ 1 & x >= n . \end{cases}$$
 :eqlabel:`eq_binomial_cdf`
 
-Let us first plot the probability mass function.
+Deixe-nos primeiro representar graficamente a função de massa de probabilidade.
 
 ```{.python .input}
 n, p = 10, 0.2
@@ -396,12 +396,12 @@ def F(x):
 d2l.plot(x, [F(y) for y in x.numpy().tolist()], 'x', 'c.d.f.')
 ```
 
-If $X \sim \mathrm{Binomial}(n, p)$, then:
+Se $X \sim \mathrm{Binomial}(n, p)$, então:
 
 * $\mu_X = np$,
 * $\sigma_X^2 = np(1-p)$.
 
-This follows from the linearity of expected value over the sum of $n$ Bernoulli random variables, and the fact that the variance of the sum of independent random variables is the sum of the variances. This can be sampled as follows.
+Isso decorre da linearidade do valor esperado sobre a soma das $n$ variáveis aleatórias de Bernoulli e do fato de que a variância da soma das variáveis aleatórias independentes é a soma das variâncias. Isso pode ser amostrado da seguinte maneira.
 
 ```{.python .input}
 np.random.binomial(n, p, size=(10, 10))
@@ -824,6 +824,6 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NzIzODY4OCwxMjgxNDI0NTk4LC0zOD
+eyJoaXN0b3J5IjpbMjA3MDI1NTQxNSwxMjgxNDI0NTk4LC0zOD
 c1ODU0MzBdfQ==
 -->
