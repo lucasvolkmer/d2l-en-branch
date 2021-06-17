@@ -620,9 +620,10 @@ for i in range(4):
 d2l.plt.show()
 ```
 
-One thing to note: compared to the Poisson case, we are now dividing by the standard deviation which means that we are squeezing the possible outcomes into smaller and smaller areas.  This is an indication that our limit will no longer be discrete, but rather continuous.
 
-A derivation of what occurs is beyond the scope of this document, but the *central limit theorem* states that as $n \rightarrow \infty$, this will yield the Gaussian Distribution (or sometimes normal distribution).  More explicitly, for any $a, b$:
+Uma coisa a observar: em comparação com o caso de Poisson, agora estamos dividindo pelo desvio padrão, o que significa que estamos comprimindo os resultados possíveis em áreas cada vez menores. Isso é uma indicação de que nosso limite não será mais discreto, mas sim contínuo.
+
+Uma derivação do que ocorre está além do escopo deste documento, mas o *teorema do limite central* afirma que, como $n \rightarrow \infty$, isso resultará na Distribuição Gaussiana (ou as vezes na distribuição normal). Mais explicitamente, para qualquer $a, b$:
 
 $$
 \lim_{n \rightarrow \infty} P(Y^{(n)} \in [a, b]) = P(\mathcal{N}(0,1) \in [a, b]),
@@ -829,6 +830,6 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5OTM2OTY3NCwtOTE2MDY0ODEwLDEyOD
-E0MjQ1OTgsLTM4NzU4NTQzMF19
+eyJoaXN0b3J5IjpbNDQxNzc2OTU0LDE2OTkzNjk2NzQsLTkxNj
+A2NDgxMCwxMjgxNDI0NTk4LC0zODc1ODU0MzBdfQ==
 -->
