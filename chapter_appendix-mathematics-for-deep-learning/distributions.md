@@ -692,9 +692,10 @@ def phi(x):
 d2l.plot(x, [phi(y) for y in x.numpy().tolist()], 'x', 'c.d.f.')
 ```
 
-Keen-eyed readers will recognize some of these terms.  Indeed, we encountered this integral in :numref:`sec_integral_calculus`.  Indeed we need exactly that computation to see that this $p_X(x)$ has total area one and is thus a valid density.
 
-Our choice of working with coin flips made computations shorter, but nothing about that choice was fundamental.  Indeed, if we take any collection of independent identically distributed random variables $X_i$, and form
+Os leitores mais atentos reconhecerão alguns desses termos. Na verdade, encontramos essa integral em :numref:`sec_integral_calculus`. Na verdade, precisamos exatamente desse cálculo para ver que esse $p_X (x)$ tem área total um e, portanto, é uma densidade válida.
+
+Nossa escolha de trabalhar com cara ou coroa tornou os cálculos mais curtos, mas nada nessa escolha foi fundamental. De fato, se tomarmos qualquer coleção de variáveis aleatórias independentes distribuídas de forma idêntica $X_i$, e formar
 
 $$
 X^{(N)} = \sum_{i=1}^N X_i.
@@ -830,7 +831,7 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMzgyMTAwLDQ0MTc3Njk1NCwxNjk5Mz
-Y5Njc0LC05MTYwNjQ4MTAsMTI4MTQyNDU5OCwtMzg3NTg1NDMw
-XX0=
+eyJoaXN0b3J5IjpbMTQwNjcyNDg0Miw0NDE3NzY5NTQsMTY5OT
+M2OTY3NCwtOTE2MDY0ODEwLDEyODE0MjQ1OTgsLTM4NzU4NTQz
+MF19
 -->
