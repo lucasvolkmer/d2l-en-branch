@@ -853,17 +853,17 @@ $$
 Na verdade, se pensarmos nas normas como sendo relacionadas a desvios-padrão e correlações como cossenos de ângulos, muito da intuição que temos da geometria pode ser aplicada ao pensamento sobre variáveis aleatórias.
 
 ## Resumo
-* Continuous random variables are random variables that can take on a continuum of values.  They have some technical difficulties that make them more challenging to work with compared to discrete random variables.
-* The probability density function allows us to work with continuous random variables by giving a function where the area under the curve on some interval gives the probability of finding a sample point in that interval.
-* The cumulative distribution function is the probability of observing the random variable to be less than a given threshold.  It can provide a useful alternate viewpoint which unifies discrete and continuous variables.
-* The mean is the average value of a random variable.
-* The variance is the expected square of the difference between the random variable and its mean.
-* The standard deviation is the square root of the variance.  It can be thought of as measuring the range of values the random variable may take.
-* Chebyshev's inequality allows us to make this intuition rigorous by giving an explicit interval that contains the random variable most of the time.
-* Joint densities allow us to work with correlated random variables.  We may marginalize joint densities by integrating over unwanted random variables to get the distribution of the desired random variable.
-* The covariance and correlation coefficient provide a way to measure any linear relationship between two correlated random variables.
+* Variáveis ​​aleatórias contínuas são variáveis ​​aleatórias que podem assumir uma sequência contínua de valores. Eles têm algumas dificuldades técnicas que os tornam mais desafiadores de trabalhar em comparação com variáveis ​​aleatórias discretas.
+* A função de densidade de probabilidade nos permite trabalhar com variáveis ​​aleatórias contínuas, fornecendo uma função em que a área sob a curva em algum intervalo fornece a probabilidade de encontrar um ponto de amostra nesse intervalo.
+* A função de distribuição cumulativa é a probabilidade de observar que a variável aleatória é menor que um determinado limite. Ele pode fornecer um ponto de vista alternativo útil que unifica variáveis ​​discretas e contínuas.
+* A média é o valor médio de uma variável aleatória.
+* A variância é o quadrado esperado da diferença entre a variável aleatória e sua média.
+* O desvio padrão é a raiz quadrada da variância. Pode ser pensado como medir a faixa de valores que a variável aleatória pode assumir.
+* A desigualdade de Chebyshev nos permite tornar essa intuição rigorosa, fornecendo um intervalo explícito que contém a variável aleatória na maior parte do tempo.
+* As densidades conjuntas nos permitem trabalhar com variáveis ​​aleatórias correlacionadas. Podemos marginalizar as densidades conjuntas integrando variáveis ​​aleatórias indesejadas para obter a distribuição da variável aleatória desejada.
+* A covariância e o coeficiente de correlação fornecem uma maneira de medir qualquer relação linear entre duas variáveis ​​aleatórias correlacionadas.
 
-## Exercises
+## Exercícios
 1. Suppose that we have the random variable with density given by $p(x) = \frac{1}{x^2}$ for $x \ge 1$ and $p(x) = 0$ otherwise.  What is $P(X > 2)$?
 2. The Laplace distribution is a random variable whose density is given by $p(x = \frac{1}{2}e^{-|x|}$.  What is the mean and the standard deviation of this function?  As a hint, $\int_0^\infty xe^{-x} \; dx = 1$ and $\int_0^\infty x^2e^{-x} \; dx = 2$.
 3. I walk up to you on the street and say "I have a random variable with mean $1$, standard deviation $2$, and I observed $25\%$ of my samples taking a value larger than $9$."  Do you believe me?  Why or why not?
@@ -883,7 +883,7 @@ Na verdade, se pensarmos nas normas como sendo relacionadas a desvios-padrão e 
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTM2ODI0MjksMTE0NTYxOTM3LC05Mj
+eyJoaXN0b3J5IjpbLTEzMTU1NTg0NDgsMTE0NTYxOTM3LC05Mj
 YxMjA0MDUsLTMyNDE4OTQ4NCwtMTI3NjQxNzU0MSwtMzM4ODI0
 OTQsLTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LD
 U1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5
