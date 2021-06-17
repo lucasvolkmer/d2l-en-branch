@@ -864,30 +864,30 @@ Na verdade, se pensarmos nas normas como sendo relacionadas a desvios-padrão e 
 * A covariância e o coeficiente de correlação fornecem uma maneira de medir qualquer relação linear entre duas variáveis ​​aleatórias correlacionadas.
 
 ## Exercícios
-1. Suppose that we have the random variable with density given by $p(x) = \frac{1}{x^2}$ for $x \ge 1$ and $p(x) = 0$ otherwise.  What is $P(X > 2)$?
-2. The Laplace distribution is a random variable whose density is given by $p(x = \frac{1}{2}e^{-|x|}$.  What is the mean and the standard deviation of this function?  As a hint, $\int_0^\infty xe^{-x} \; dx = 1$ and $\int_0^\infty x^2e^{-x} \; dx = 2$.
-3. I walk up to you on the street and say "I have a random variable with mean $1$, standard deviation $2$, and I observed $25\%$ of my samples taking a value larger than $9$."  Do you believe me?  Why or why not?
-4. Suppose that you have two random variables $X, Y$, with joint density given by $p_{XY}(x, y) = 4xy$ for $x, y \in [0,1]$ and $p_{XY}(x, y) = 0$ otherwise.  What is the covariance of $X$ and $Y$?
+1. Suponha que temos a variável aleatória com densidade dada por $p(x) = \frac{1}{x^2}$ para $x \ge 1$ e $p(x) = 0$ caso contrário. Quanto é $P(X > 2)$?
+2. A distribuição de Laplace é uma variável aleatória cuja densidade é dada por $p(x = \frac{1}{2}e^{-|x|}$. Qual é a média e o desvio padrão desta função? uma dica, $\int_0^\infty xe^{-x} \; dx = 1$ e $\int_0^\infty x^2e^{-x} \; dx = 2$.
+3. Eu ando até você na rua e digo "Eu tenho uma variável aleatória com média $1$, desvio padrão $2$, e observei $25\%$ de minhas amostras tendo um valor maior que $9$." Você acredita em mim? Por que ou por que não?
+4. Suponha que você tenha duas variáveis aleatórias $X, Y$, com densidade conjunta dada por $p_{XY}(x, y) = 4xy$ para $x, y \in [0,1]$ e $p_{XY}(x, y) = 0$ caso contrário. Qual é a covariância de $X$ e $Y$?
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/415)
+[Discussões](https://discuss.d2l.ai/t/415)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1094)
+[Discussões](https://discuss.d2l.ai/t/1094)
 :end_tab:
 
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1095)
+[Discussões](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTU1NTg0NDgsMTE0NTYxOTM3LC05Mj
-YxMjA0MDUsLTMyNDE4OTQ4NCwtMTI3NjQxNzU0MSwtMzM4ODI0
-OTQsLTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LD
-U1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5
-NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLD
-QzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4
-Mjk2XX0=
+eyJoaXN0b3J5IjpbLTkzODk5MTMyNiwxMTQ1NjE5MzcsLTkyNj
+EyMDQwNSwtMzI0MTg5NDg0LC0xMjc2NDE3NTQxLC0zMzg4MjQ5
+NCwtMTUyNTEyMTg2MCwtODM2MTIwODIxLDE3ODY4MTkwMjQsNT
+U1OTA0MDYsLTE5MzA0MDY2MjEsMzk0MDI0MTc0LC0xNjg3NTk1
+NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsND
+M3ODU2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgy
+OTZdfQ==
 -->
