@@ -438,21 +438,23 @@ $$X^{(n)} \sim \mathrm{Binomial}(n, p/n).$$
 
 Considere essas variáveis aleatórias. Pela seção anterior, sabemos que :eqref:`eq_eq_poisson_approx` tem média $\mu_{X^{(n)}} = n(p/n) = p$, e variância $\sigma_{X^{(n)}}^2 = n(p/n)(1-(p/n)) = p(1-p/n)$. Se tomarmos $n \rightarrow \infty$, podemos ver que esses números se estabilizam em $\mu_{X^{(\infty)}} = p$, e variância $\sigma_{X^{(\infty)}}^2 = p$. Isso indica que *pode haver* alguma variável aleatória que podemos definir neste limite de subdivisão infinito.
 
-This should not come as too much of a surprise, since in the real world we can just count the number of bus arrivals, however it is nice to see that our mathematical model is well defined.  This discussion can be made formal as the *law of rare events*.
 
-Following through this reasoning carefully, we can arrive at the following model.  We will say that $X \sim \mathrm{Poisson}(\lambda)$ if it is a random variable which takes the values $\{0,1,2, \ldots\}$ with probability
+Isso não deve ser uma surpresa, já que no mundo real podemos apenas contar o número de chegadas de ônibus, no entanto, é bom ver que nosso modelo matemático está bem definido. Essa discussão pode ser formalizada como a *lei dos eventos raros*.
+
+Seguindo esse raciocínio com cuidado, podemos chegar ao seguinte modelo. Diremos que $X \sim \mathrm{Poisson}(\lambda)$ se for uma variável aleatória que assume os valores $\{0,1,2, \ldots\}$ com probabilidade
 
 $$p_k = \frac{\lambda^ke^{-\lambda}}{k!}.$$
 :eqlabel:`eq_poisson_mass`
 
-The value $\lambda > 0$ is known as the *rate* (or the *shape* parameter), and denotes the average number of arrivals we expect in one unit of time.  
 
-We may sum this probability mass function to get the cumulative distribution function.
+O valor $\lambda > 0$ é conhecido como *taxa* (ou o parâmetro *forma*) e denota o número médio de chegadas que esperamos em uma unidade de tempo.
+
+Podemos somar essa função de massa de probabilidade para obter a função de distribuição cumulativa.
 
 $$F(x) = \begin{cases} 0 & x < 0, \\ e^{-\lambda}\sum_{m = 0}^k \frac{\lambda^m}{m!} & k \le x < k+1 \text{ with } 0 \le k. \end{cases}$$
 :eqlabel:`eq_poisson_cdf`
 
-Let us first plot the probability mass function :eqref:`eq_poisson_mass`.
+Vamos primeiro representar graficamente a função de massa de probabilidade :eqref:`eq_poisson_mass`.
 
 ```{.python .input}
 lam = 5.0
@@ -494,7 +496,7 @@ d2l.plt.ylabel('p.m.f.')
 d2l.plt.show()
 ```
 
-Now, let us plot the cumulative distribution function :eqref:`eq_poisson_cdf`.
+Vamos primeiro representar graficamente a função de massa de probabilidade :eqref:`eq_poisson_mass`.
 
 ```{.python .input}
 x = np.arange(-1, 21, 0.01)
@@ -825,6 +827,6 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODcwODI5MjUsMTI4MTQyNDU5OCwtMz
-g3NTg1NDMwXX0=
+eyJoaXN0b3J5IjpbLTI4OTc0OTQ3MCwxMjgxNDI0NTk4LC0zOD
+c1ODU0MzBdfQ==
 -->
