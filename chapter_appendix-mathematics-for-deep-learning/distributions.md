@@ -629,12 +629,12 @@ $$
 \lim_{n \rightarrow \infty} P(Y^{(n)} \in [a, b]) = P(\mathcal{N}(0,1) \in [a, b]),
 $$
 
-where we say a random variable is normally distributed with given mean $\mu$ and variance $\sigma^2$, written $X \sim \mathcal{N}(\mu, \sigma^2)$ if $X$ has density
+onde dizemos que uma variável aleatória é normalmente distribuída com dada média $\mu$ e variância $\sigma^2$, escrita $X \sim \mathcal{N}(\mu, \sigma^2)$ se $X$ tem densidade
 
 $$p_X(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}.$$
 :eqlabel:`eq_gaussian_pdf`
 
-Let us first plot the probability density function :eqref:`eq_gaussian_pdf`.
+Vamos primeiro representar graficamente a função de densidade de probabilidade :eqref:`eq_gaussian_pdf`.
 
 ```{.python .input}
 mu, sigma = 0, 1
@@ -667,7 +667,7 @@ p = 1 / tf.sqrt(2 * tf.pi * sigma**2) * tf.exp(
 d2l.plot(x, p, 'x', 'p.d.f.')
 ```
 
-Now, let us plot the cumulative distribution function.  It is beyond the scope of this appendix, but the Gaussian c.d.f. does not have a closed-form formula in terms of more elementary functions.  We will use `erf` which provides a way to compute this integral numerically.
+Agora, vamos representar graficamente a função de distribuição cumulativa. Está além do escopo deste apêndice, mas a f.d.c. Gaussiana não tem uma fórmula de forma fechada em termos de funções mais elementares. Usaremos `erf`, que fornece uma maneira de calcular essa integral numericamente.
 
 ```{.python .input}
 def phi(x):
@@ -830,6 +830,7 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQxNzc2OTU0LDE2OTkzNjk2NzQsLTkxNj
-A2NDgxMCwxMjgxNDI0NTk4LC0zODc1ODU0MzBdfQ==
+eyJoaXN0b3J5IjpbMTIxMzgyMTAwLDQ0MTc3Njk1NCwxNjk5Mz
+Y5Njc0LC05MTYwNjQ4MTAsMTI4MTQyNDU5OCwtMzg3NTg1NDMw
+XX0=
 -->
