@@ -753,15 +753,15 @@ Para ver o que faz sentido, vamos realizar um experimento mental. Suponha que co
 $$\rho(X, Y) = \frac{\mathrm{Cov}(X, Y)}{\sigma_{X}\sigma_{Y}},$$
 :eqlabel:`eq_cor_def`
 
-we see that this is a unit-less value.  A little mathematics can show that this number is between $-1$ and $1$ with $1$ meaning maximally positively correlated, whereas $-1$ means maximally negatively correlated.
+vemos que este é um valor sem unidade. Um pouco de matemática pode mostrar que este número está entre $-1$ e $1$ com $1$ significando correlacionado positivamente ao máximo, enquanto $-1$ significa correlacionado negativamente ao máximo.
 
-Returning to our explicit discrete example above, we can see that $\sigma_X = 1$ and $\sigma_Y = 2$, so we can compute the correlation between the two random variables using :eqref:`eq_cor_def` to see that
+Voltando ao nosso exemplo discreto explícito acima, podemos ver que $\sigma_X = 1$ and $\sigma_Y = 2$, então podemos calcular a correlação entre as duas variáveis aleatórias usando :eqref:`eq_cor_def` para ver que
 
 $$
 \rho(X, Y) = \frac{4p-2}{1\cdot 2} = 2p-1.
 $$
 
-This now ranges between $-1$ and $1$ with the expected behavior of $1$ meaning most correlated, and $-1$ meaning minimally correlated.
+Isso agora varia entre $-1$ e $1$ com o comportamento esperado de $1$ significando mais correlacionado e $-1$ significando minimamente correlacionado.
 
 As another example, consider $X$ as any random variable, and $Y=aX+b$ as any linear deterministic function of $X$.  Then, one can compute that
 
@@ -882,11 +882,11 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2ODA5ODg4MSwxMTQ1NjE5MzcsLTkyNj
-EyMDQwNSwtMzI0MTg5NDg0LC0xMjc2NDE3NTQxLC0zMzg4MjQ5
-NCwtMTUyNTEyMTg2MCwtODM2MTIwODIxLDE3ODY4MTkwMjQsNT
-U1OTA0MDYsLTE5MzA0MDY2MjEsMzk0MDI0MTc0LC0xNjg3NTk1
-NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsND
-M3ODU2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgy
-OTZdfQ==
+eyJoaXN0b3J5IjpbMzUyOTEyNDY2LDExNDU2MTkzNywtOTI2MT
+IwNDA1LC0zMjQxODk0ODQsLTEyNzY0MTc1NDEsLTMzODgyNDk0
+LC0xNTI1MTIxODYwLC04MzYxMjA4MjEsMTc4NjgxOTAyNCw1NT
+U5MDQwNiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1
+NzEsLTUxNjc5MzI3OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mz
+c4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5
+Nl19
 -->
