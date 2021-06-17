@@ -746,9 +746,9 @@ Isso nos permite generalizar a regra de soma de variância para variáveis aleat
 
 ### Correlation
 
-As we did in the case of means and variances, let us now consider units.  If $X$ is measured in one unit (say inches), and $Y$ is measured in another (say dollars), the covariance is measured in the product of these two units $\text{inches} \times \text{dollars}$.  These units can be hard to interpret.  What we will often want in this case is a unit-less measurement of relatedness.  Indeed, often we do not care about exact quantitative correlation, but rather ask if the correlation is in the same direction, and how strong the relationship is.
+Como fizemos no caso das médias e variações, consideremos agora as unidades. Se $X$ é medido em uma unidade (digamos polegadas) e $Y$ é medido em outra (digamos dólares), a covariância é medida no produto dessas duas unidades $\text{inches} \times \text{dollars}$.  Essas unidades podem ser difíceis de interpretar. O que muitas vezes queremos neste caso é uma medida de parentesco sem unidade. Na verdade, muitas vezes não nos importamos com a correlação quantitativa exata, mas, em vez disso, perguntamos se a correlação está na mesma direção e quão forte é a relação.
 
-To see what makes sense, let us perform a thought experiment.  Suppose that we convert our random variables in inches and dollars to be in inches and cents.  In this case the random variable $Y$ is multiplied by $100$.  If we work through the definition, this means that $\mathrm{Cov}(X, Y)$ will be multiplied by $100$.  Thus we see that in this case a change of units change the covariance by a factor of $100$.  Thus, to find our unit-invariant measure of correlation, we will need to divide by something else that also gets scaled by $100$.  Indeed we have a clear candidate, the standard deviation!  Indeed if we define the *correlation coefficient* to be
+Para ver o que faz sentido, vamos realizar um experimento mental. Suponha que convertamos nossas variáveis aleatórias em polegadas e dólares em polegadas e centavos. Nesse caso, a variável aleatória $Y$ é multiplicada por $100$. Se trabalharmos com a definição, isso significa que $\mathrm{Cov}(X, Y)$ será multiplicado por $100$. Assim, vemos que, neste caso, uma mudança de unidades altera a covariância por um fator de $100$. Assim, para encontrar nossa medida de correlação invariante à unidade, precisaremos dividir por algo mais que também é escalado por $100$. Na verdade, temos um candidato claro, o desvio padrão! Na verdade, se definirmos o *coeficiente de correlação* como sendo
 
 $$\rho(X, Y) = \frac{\mathrm{Cov}(X, Y)}{\sigma_{X}\sigma_{Y}},$$
 :eqlabel:`eq_cor_def`
@@ -882,10 +882,11 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NTYxOTM3LC05MjYxMjA0MDUsLTMyND
-E4OTQ4NCwtMTI3NjQxNzU0MSwtMzM4ODI0OTQsLTE1MjUxMjE4
-NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2LC0xOT
-MwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNTE2Nzkz
-Mjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLDQzNzg1NjUzMSw2Nz
-AzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
+eyJoaXN0b3J5IjpbMTU2ODA5ODg4MSwxMTQ1NjE5MzcsLTkyNj
+EyMDQwNSwtMzI0MTg5NDg0LC0xMjc2NDE3NTQxLC0zMzg4MjQ5
+NCwtMTUyNTEyMTg2MCwtODM2MTIwODIxLDE3ODY4MTkwMjQsNT
+U1OTA0MDYsLTE5MzA0MDY2MjEsMzk0MDI0MTc0LC0xNjg3NTk1
+NTcxLC01MTY3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsND
+M3ODU2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgy
+OTZdfQ==
 -->
