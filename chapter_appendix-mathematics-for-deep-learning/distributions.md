@@ -795,16 +795,16 @@ Como aludimos em :numref:`subsec_softmax_and_derivatives`, uma técnica amplamen
 distribuição da família exponencial. A família exponencial é uma comum e poderosa família de distribuições encontradas com frequência no *machine learning*.
 
 
-## Summary
-* Bernoulli random variables can be used to model events with a yes/no outcome.
-* Discrete uniform distributions model selects from a finite set of possibilities.
-* Continuous uniform distributions select from an interval.
-* Binomial distributions model a series of Bernoulli random variables, and count the number of successes.
-* Poisson random variables model the arrival of rare events.
-* Gaussian random variables model the result of adding a large number of independent random variables together.
-* All the above distributions belong to exponential family.
+## Resumo
+* Variáveis aleatórias de Bernoulli podem ser usadas para modelar eventos com um resultado sim/não.
+* O modelo de distribuições uniformes discretas seleciona a partir de um conjunto finito de possibilidades.
+* Distribuições uniformes contínuas selecionam a partir de um intervalo.
+* As distribuições binomiais modelam uma série de variáveis aleatórias de Bernoulli e contam o número de sucessos.
+* Variáveis aleatórias de Poisson modelam a chegada de eventos raros.
+* Variáveis aleatórias gaussianas modelam o resultado da adição de um grande número de variáveis aleatórias independentes.
+* Todas as distribuições acima pertencem à família exponencial.
 
-## Exercises
+## Exercícios
 
 1. What is the standard deviation of a random variable that is the difference $X-Y$ of two independent binomial random variables $X, Y \sim \mathrm{Binomial}(16, 1/2)$.
 2. If we take a Poisson random variable $X \sim \mathrm{Poisson}(\lambda)$ and consider $(X - \lambda)/\sqrt{\lambda}$ as $\lambda \rightarrow \infty$, we can show that this becomes approximately Gaussian.  Why does this make sense?
@@ -823,7 +823,8 @@ distribuição da família exponencial. A família exponencial é uma comum e po
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MDg3ODI2LC0yMDU4Mzk4ODA3LC0yMT
-MyMzk4NjYwLDQ0MTc3Njk1NCwxNjk5MzY5Njc0LC05MTYwNjQ4
-MTAsMTI4MTQyNDU5OCwtMzg3NTg1NDMwXX0=
+eyJoaXN0b3J5IjpbLTY2NTA5Mjk4OCwxMDYwODc4MjYsLTIwNT
+gzOTg4MDcsLTIxMzIzOTg2NjAsNDQxNzc2OTU0LDE2OTkzNjk2
+NzQsLTkxNjA2NDgxMCwxMjgxNDI0NTk4LC0zODc1ODU0MzBdfQ
+==
 -->
