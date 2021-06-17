@@ -207,7 +207,7 @@ A função de distribuição cumulativa é
 $$F(x) = \begin{cases} 0 & x < a, \\ \frac{x-a}{b-a} & x \in [a, b], \\ 1 & x >= b . \end{cases}$$
 :eqlabel:`eq_cont_uniform_cdf`
 
-Let us first plot the probability density function :eqref:`eq_cont_uniform_pdf`.
+Vamos primeiro representar graficamente a função de densidade de probabilidade :eqref:`eq_cont_uniform_pdf`.
 
 ```{.python .input}
 a, b = 1, 3
@@ -236,7 +236,7 @@ p = tf.cast(x > a, tf.float32) * tf.cast(x < b, tf.float32) / (b - a)
 d2l.plot(x, p, 'x', 'p.d.f.')
 ```
 
-Now, let us plot the cumulative distribution function :eqref:`eq_cont_uniform_cdf`.
+Agora, vamos representar graficamente a função de distribuição cumulativa :eqref:`eq_cont_uniform_cdf`.
 
 ```{.python .input}
 def F(x):
@@ -261,12 +261,12 @@ def F(x):
 d2l.plot(x, [F(y) for y in x], 'x', 'c.d.f.')
 ```
 
-If $X \sim U(a, b)$, then:
+Se $X \sim U(a, b)$, então:
 
 * $\mu_X = \frac{a+b}{2}$,
 * $\sigma_X^2 = \frac{(b-a)^2}{12}$.
 
-We can sample an array of arbitrary shape from a uniform random variable as follows.  Note that it by default samples from a $U(0,1)$, so if we want a different range we need to scale it.
+Podemos amostrar uma matriz de forma arbitrária a partir de uma variável aleatória uniforme da seguinte maneira. Observe que, por padrão, é uma amostra de $U(0,1)$, portanto, se quisermos um intervalo diferente, precisamos escaloná-lo.
 
 ```{.python .input}
 (b - a) * np.random.rand(10, 10) + a
@@ -823,5 +823,5 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1OTAzNzAzOCwtMzg3NTg1NDMwXX0=
+eyJoaXN0b3J5IjpbMTI4MTQyNDU5OCwtMzg3NTg1NDMwXX0=
 -->
