@@ -36,18 +36,18 @@ tf.pi = tf.acos(tf.zeros(1)) * 2  # Define pi in TensorFlow
 
 ## Bernoulli
 
-This is the simplest random variable usually encountered.  This random variable encodes a coin flip which comes up $1$ with probability $p$ and $0$ with probability $1-p$.  If we have a random variable $X$ with this distribution, we will write
+Esta é a variável aleatória mais simples normalmente encontrada. Esta variável aleatória codifica um lançamento de moeda que dá $1$ com probabilidade $p$ e $0$ com probabilidade $1-p$. Se tivermos uma variável aleatória $X$ com esta distribuição, vamos escrever
 
 $$
 X \sim \mathrm{Bernoulli}(p).
 $$
 
-The cumulative distribution function is 
+A função de distribuição cumulativa é
 
 $$F(x) = \begin{cases} 0 & x < 0, \\ 1-p & 0 \le x < 1, \\ 1 & x >= 1 . \end{cases}$$
 :eqlabel:`eq_bernoulli_cdf`
 
-The probability mass function is plotted below.
+A função de massa de probabilidade está representada abaixo.
 
 ```{.python .input}
 #@tab all
@@ -60,7 +60,7 @@ d2l.plt.ylabel('p.m.f.')
 d2l.plt.show()
 ```
 
-Now, let us plot the cumulative distribution function :eqref:`eq_bernoulli_cdf`.
+Agora, vamos representar graficamente a função de distribuição cumulativa :eqref:`eq_bernoulli_cdf`.
 
 ```{.python .input}
 x = np.arange(-1, 2, 0.01)
@@ -823,5 +823,5 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NzU4NTQzMF19
+eyJoaXN0b3J5IjpbLTE0NDc0MTc1MDQsLTM4NzU4NTQzMF19
 -->
