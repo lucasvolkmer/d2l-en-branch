@@ -791,10 +791,8 @@ Isso corresponde à definição da família exponencial com:
 arbitrária. Na verdade, a característica importante é que a distribuição pode ser
 expressa nesta forma, não na forma exata em si.
 
-As we allude to in :numref:`subsec_softmax_and_derivatives`, a widely used 
-technique is to assume that the  final output $\mathbf{y}$ follows an 
-exponential family distribution. The exponential family is a common and 
-powerful family of distributions encountered frequently in machine learning.
+Como aludimos em :numref:`subsec_softmax_and_derivatives`, uma técnica amplamente utilizada é assumir que a saída final $\mathbf{y}$ segue uma
+distribuição da família exponencial. A família exponencial é uma comum e poderosa família de distribuições encontradas com frequência no *machine learning*.
 
 
 ## Summary
@@ -825,7 +823,7 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NDk4MDQ2LC0yMDU4Mzk4ODA3LC0yMT
+eyJoaXN0b3J5IjpbMTA2MDg3ODI2LC0yMDU4Mzk4ODA3LC0yMT
 MyMzk4NjYwLDQ0MTc3Njk1NCwxNjk5MzY5Njc0LC05MTYwNjQ4
 MTAsMTI4MTQyNDU5OCwtMzg3NTg1NDMwXX0=
 -->
