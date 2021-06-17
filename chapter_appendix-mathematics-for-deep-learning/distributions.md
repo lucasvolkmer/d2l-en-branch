@@ -420,15 +420,16 @@ m.sample(sample_shape=(10, 10))
 ```
 
 ## Poisson
-Let us now perform a thought experiment.  We are standing at a bus stop and we want to know how many buses will arrive in the next minute.  Let us start by considering $X^{(1)} \sim \mathrm{Bernoulli}(p)$ which is simply the probability that a bus arrives in the one minute window.  For bus stops far from an urban center, this might be a pretty good approximation.  We may never see more than one bus in a minute.
 
-However, if we are in a busy area, it is possible or even likely that two buses will arrive.  We can model this by splitting our random variable into two parts for the first 30 seconds, or the second 30 seconds.  In this case we can write
+Vamos agora realizar um experimento mental. Estamos parados em um ponto de ônibus e queremos saber quantos ônibus chegarão no próximo minuto. Vamos começar considerando $X^{(1)} \sim \mathrm{Bernoulli}(p)$ que é simplesmente a probabilidade de que um ônibus chegue na janela de um minuto. Para paradas de ônibus longe de um centro urbano, essa pode ser uma boa aproximação. Podemos nunca ver mais de um ônibus por minuto.
+
+Porém, se estivermos em uma área movimentada, é possível ou mesmo provável que cheguem dois ônibus. Podemos modelar isso dividindo nossa variável aleatória em duas partes nos primeiros 30 segundos ou nos segundos 30 segundos. Neste caso, podemos escrever
 
 $$
 X^{(2)} \sim X^{(2)}_1 + X^{(2)}_2,
 $$
 
-where $X^{(2)}$ is the total sum, and $X^{(2)}_i \sim \mathrm{Bernoulli}(p/2)$.  The total distribution is then $X^{(2)} \sim \mathrm{Binomial}(2, p/2)$.
+onde $X^{(2)}$ é a soma total, e $X^{(2)}_i \sim \mathrm{Bernoulli}(p/2)$. A distribuição total é então $X^{(2)} \sim \mathrm{Binomial}(2, p/2)$.
 
 Why stop here?  Let us continue to split that minute into $n$ parts.  By the same reasoning as above, we see that
 
@@ -824,6 +825,6 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MDI1NTQxNSwxMjgxNDI0NTk4LC0zOD
+eyJoaXN0b3J5IjpbLTg1OTEwMTU2NiwxMjgxNDI0NTk4LC0zOD
 c1ODU0MzBdfQ==
 -->
