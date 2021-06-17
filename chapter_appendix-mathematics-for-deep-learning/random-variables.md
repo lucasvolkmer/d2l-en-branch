@@ -844,15 +844,15 @@ $$
 \rho(X, Y) = \frac{\sum_{i, j} x_iy_ip_{ij}}{\sqrt{\sum_{i, j}x_i^2 p_{ij}}\sqrt{\sum_{i, j}y_j^2 p_{ij}}}.
 $$
 
-This looks like a sum of a product of terms divided by the square root of sums of terms.  This is exactly the formula for the cosine of the angle between two vectors $\mathbf{v}, \mathbf{w}$ with the different coordinates weighted by $p_{ij}$:
+Isso se parece com a soma de um produto dos termos dividido pela raiz quadrada das somas dos termos. Esta é exatamente a fórmula para o cosseno do ângulo entre dois vetores $\mathbf{v}, \mathbf{w}$ com as diferentes coordenadas ponderadas por $p_{ij}$:
 
 $$
 \cos(\theta) = \frac{\mathbf{v}\cdot \mathbf{w}}{\|\mathbf{v}\|\|\mathbf{w}\|} = \frac{\sum_{i} v_iw_i}{\sqrt{\sum_{i}v_i^2}\sqrt{\sum_{i}w_i^2}}.
 $$
 
-Indeed if we think of norms as being related to standard deviations, and correlations as being cosines of angles, much of the intuition we have from geometry can be applied to thinking about random variables.
+Na verdade, se pensarmos nas normas como sendo relacionadas a desvios-padrão e correlações como cossenos de ângulos, muito da intuição que temos da geometria pode ser aplicada ao pensamento sobre variáveis aleatórias.
 
-## Summary
+## Resumo
 * Continuous random variables are random variables that can take on a continuum of values.  They have some technical difficulties that make them more challenging to work with compared to discrete random variables.
 * The probability density function allows us to work with continuous random variables by giving a function where the area under the curve on some interval gives the probability of finding a sample point in that interval.
 * The cumulative distribution function is the probability of observing the random variable to be less than a given threshold.  It can provide a useful alternate viewpoint which unifies discrete and continuous variables.
@@ -883,11 +883,11 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQxNTE0MjgsMTE0NTYxOTM3LC05MjYxMj
-A0MDUsLTMyNDE4OTQ4NCwtMTI3NjQxNzU0MSwtMzM4ODI0OTQs
-LTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NT
-kwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3
-MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLDQzNz
-g1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2
-XX0=
+eyJoaXN0b3J5IjpbLTE4MTM2ODI0MjksMTE0NTYxOTM3LC05Mj
+YxMjA0MDUsLTMyNDE4OTQ4NCwtMTI3NjQxNzU0MSwtMzM4ODI0
+OTQsLTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LD
+U1NTkwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5
+NTU3MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLD
+QzNzg1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4
+Mjk2XX0=
 -->
