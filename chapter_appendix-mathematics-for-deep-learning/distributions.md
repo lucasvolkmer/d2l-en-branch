@@ -777,19 +777,19 @@ p(x | \mu, \sigma) &= \frac{1}{\sqrt{2 \pi \sigma^2}} \cdot \mathrm{exp}
 \end{aligned}
 $$
 
-This matches the definition of the exponential family with:
+Isso corresponde à definição da família exponencial com:
 
-* *underlying measure*: $h(x) = \frac{1}{\sqrt{2 \pi}}$,
-* *natural parameters*: $\boldsymbol{\eta} = \begin{bmatrix} \eta_1 \\ \eta_2
+* *medida subjacente*: $h(x) = \frac{1}{\sqrt{2 \pi}}$,
+* *parâmetros naturais*: $\boldsymbol{\eta} = \begin{bmatrix} \eta_1 \\ \eta_2
 \end{bmatrix} = \begin{bmatrix} \frac{\mu}{\sigma^2} \\
 \frac{1}{2 \sigma^2} \end{bmatrix}$,
-* *sufficient statistics*: $T(x) = \begin{bmatrix}x\\-x^2\end{bmatrix}$, and
-* *cumulant function*: $A({\boldsymbol\eta}) = \frac{1}{2 \sigma^2} \mu^2 + \log(\sigma)
+* *estatísticas suficientes*: $T(x) = \begin{bmatrix}x\\-x^2\end{bmatrix}$, and
+* *função cumulativa*: $A({\boldsymbol\eta}) = \frac{1}{2 \sigma^2} \mu^2 + \log(\sigma)
 = \frac{\eta_1^2}{4 \eta_2} - \frac{1}{2}\log(2 \eta_2)$.
 
-It is worth noting that the exact choice of each of above terms is somewhat 
-arbitrary.  Indeed, the important feature is that the distribution can be 
-expressed in this form, not the exact form itself.
+É importante notar que a escolha exata de cada um dos termos acima é um pouco
+arbitrária. Na verdade, a característica importante é que a distribuição pode ser
+expressa nesta forma, não na forma exata em si.
 
 As we allude to in :numref:`subsec_softmax_and_derivatives`, a widely used 
 technique is to assume that the  final output $\mathbf{y}$ follows an 
@@ -825,7 +825,7 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMjI1OTI1MSwtMjA1ODM5ODgwNywtMj
-EzMjM5ODY2MCw0NDE3NzY5NTQsMTY5OTM2OTY3NCwtOTE2MDY0
-ODEwLDEyODE0MjQ1OTgsLTM4NzU4NTQzMF19
+eyJoaXN0b3J5IjpbMTE4NDk4MDQ2LC0yMDU4Mzk4ODA3LC0yMT
+MyMzk4NjYwLDQ0MTc3Njk1NCwxNjk5MzY5Njc0LC05MTYwNjQ4
+MTAsMTI4MTQyNDU5OCwtMzg3NTg1NDMwXX0=
 -->
