@@ -496,7 +496,7 @@ d2l.plt.ylabel('p.m.f.')
 d2l.plt.show()
 ```
 
-Vamos primeiro representar graficamente a função de massa de probabilidade :eqref:`eq_poisson_mass`.
+Agora, vamos representar graficamente a função de distribuição cumulativa :eqref:`eq_poisson_cdf`.
 
 ```{.python .input}
 x = np.arange(-1, 21, 0.01)
@@ -527,12 +527,12 @@ def F(x):
 d2l.plot(x, [F(y) for y in x.numpy().tolist()], 'x', 'c.d.f.')
 ```
 
-As we saw above, the means and variances are particularly concise.  If $X \sim \mathrm{Poisson}(\lambda)$, then:
+Como vimos acima, as médias e variações são particularmente concisas. Se $X \sim \mathrm{Poisson}(\lambda)$, então:
 
 * $\mu_X = \lambda$,
 * $\sigma_X^2 = \lambda$.
 
-This can be sampled as follows.
+Isso pode ser amostrado da seguinte maneira.
 
 ```{.python .input}
 np.random.poisson(lam, size=(10, 10))
@@ -550,7 +550,8 @@ m = tfp.distributions.Poisson(lam)
 m.sample((10, 10))
 ```
 
-## Gaussian
+## Gaussiana
+
 Now Let us try a different, but related experiment.  Let us say we again are performing $n$ independent $\mathrm{Bernoulli}(p)$ measurements $X_i$.  The distribution of the sum of these is $X^{(n)} \sim \mathrm{Binomial}(n, p)$.  Rather than taking a limit as $n$ increases and $p$ decreases, Let us fix $p$, and then send $n \rightarrow \infty$.  In this case $\mu_{X^{(n)}} = np \rightarrow \infty$ and $\sigma_{X^{(n)}}^2 = np(1-p) \rightarrow \infty$, so there is no reason to think this limit should be well defined.
 
 However, not all hope is lost!  Let us just make the mean and variance be well behaved by defining
@@ -827,6 +828,6 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4OTc0OTQ3MCwxMjgxNDI0NTk4LC0zOD
+eyJoaXN0b3J5IjpbLTkxNjA2NDgxMCwxMjgxNDI0NTk4LC0zOD
 c1ODU0MzBdfQ==
 -->
