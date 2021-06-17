@@ -822,3 +822,6 @@ powerful family of distributions encountered frequently in machine learning.
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIwOTE1NTY5NDBdfQ==
+-->
