@@ -91,12 +91,12 @@ def F(x):
 d2l.plot(x, tf.constant([F(y) for y in x]), 'x', 'c.d.f.')
 ```
 
-If $X \sim \mathrm{Bernoulli}(p)$, then:
+Se $X \sim \mathrm{Bernoulli}(p)$, então:
 
 * $\mu_X = p$,
 * $\sigma_X^2 = p(1-p)$.
 
-We can sample an array of arbitrary shape from a Bernoulli random variable as follows.
+Podemos amostrar uma matriz de forma arbitrária de uma variável aleatória de Bernoulli como segue.
 
 ```{.python .input}
 1*(np.random.rand(10, 10) < p)
@@ -112,7 +112,7 @@ We can sample an array of arbitrary shape from a Bernoulli random variable as fo
 tf.cast(tf.random.uniform((10, 10)) < p, dtype=tf.float32)
 ```
 
-## Discrete Uniform
+## Uniforme e Discreta
 
 The next commonly encountered random variable is a discrete uniform.  For our discussion here, we will assume that it is supported on the integers $\{1, 2, \ldots, n\}$, however any other set of values can be freely chosen.  The meaning of the word *uniform* in this context is that every possible value is equally likely.  The probability for each value $i \in \{1, 2, 3, \ldots, n\}$ is $p_i = \frac{1}{n}$.  We will denote a random variable $X$ with this distribution as
 
@@ -823,5 +823,5 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDc0MTc1MDQsLTM4NzU4NTQzMF19
+eyJoaXN0b3J5IjpbLTE3MDE4MDcwMjYsLTM4NzU4NTQzMF19
 -->
