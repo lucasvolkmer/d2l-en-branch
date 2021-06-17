@@ -284,15 +284,16 @@ Podemos amostrar uma matriz de forma arbitrária a partir de uma variável aleat
 
 ## Binomial
 
-Let us make things a little more complex and examine the *binomial* random variable.  This random variable originates from performing a sequence of $n$ independent experiments, each of which has probability $p$ of succeeding, and asking how many successes we expect to see.
 
-Let us express this mathematically.  Each experiment is an independent random variable $X_i$ where we will use $1$ to encode success, and $0$ to encode failure.  Since each is an independent coin flip which is successful with probability $p$, we can say that $X_i \sim \mathrm{Bernoulli}(p)$.  Then, the binomial random variable is
+Deixe-nos tornar as coisas um pouco mais complexas e examinar a variável aleatória *binomial*. Essa variável aleatória se origina da execução de uma sequência de $n$ experimentos independentes, cada um dos quais tem probabilidade $p$ de sucesso, e perguntando quantos sucessos esperamos ver.
+
+Vamos expressar isso matematicamente. Cada experimento é uma variável aleatória independente $X_i$, onde usaremos $1$ para codificar o sucesso e $0$ para codificar a falha. Como cada um é um lançamento de moeda independente que é bem-sucedido com a probabilidade $p$, podemos dizer que $X_i \sim \mathrm{Bernoulli}(p)$. Então, a variável aleatória binomial é
 
 $$
 X = \sum_{i=1}^n X_i.
 $$
 
-In this case, we will write
+Neste caso, vamos escrever
 
 $$
 X \sim \mathrm{Binomial}(n, p).
@@ -823,5 +824,6 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MTQyNDU5OCwtMzg3NTg1NDMwXX0=
+eyJoaXN0b3J5IjpbMTY0NzIzODY4OCwxMjgxNDI0NTk4LC0zOD
+c1ODU0MzBdfQ==
 -->
