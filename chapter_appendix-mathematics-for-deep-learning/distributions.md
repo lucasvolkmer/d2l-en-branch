@@ -436,7 +436,7 @@ Why stop here?  Let us continue to split that minute into $n$ parts.  By the sam
 $$X^{(n)} \sim \mathrm{Binomial}(n, p/n).$$
 :eqlabel:`eq_eq_poisson_approx`
 
-Consider these random variables.  By the previous section, we know that :eqref:`eq_eq_poisson_approx` has mean $\mu_{X^{(n)}} = n(p/n) = p$, and variance $\sigma_{X^{(n)}}^2 = n(p/n)(1-(p/n)) = p(1-p/n)$.  If we take $n \rightarrow \infty$, we can see that these numbers stabilize to $\mu_{X^{(\infty)}} = p$, and variance $\sigma_{X^{(\infty)}}^2 = p$.  This indicates that there *could be* some random variable we can define in this infinite subdivision limit.  
+Considere essas variáveis aleatórias. Pela seção anterior, sabemos que :eqref:`eq_eq_poisson_approx` tem média $\mu_{X^{(n)}} = n(p/n) = p$, e variância $\sigma_{X^{(n)}}^2 = n(p/n)(1-(p/n)) = p(1-p/n)$. Se tomarmos $n \rightarrow \infty$, podemos ver que esses números se estabilizam em $\mu_{X^{(\infty)}} = p$, e variância $\sigma_{X^{(\infty)}}^2 = p$. Isso indica que *pode haver* alguma variável aleatória que podemos definir neste limite de subdivisão infinito.
 
 This should not come as too much of a surprise, since in the real world we can just count the number of bus arrivals, however it is nice to see that our mathematical model is well defined.  This discussion can be made formal as the *law of rare events*.
 
@@ -825,6 +825,6 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1OTEwMTU2NiwxMjgxNDI0NTk4LC0zOD
-c1ODU0MzBdfQ==
+eyJoaXN0b3J5IjpbLTEzODcwODI5MjUsMTI4MTQyNDU5OCwtMz
+g3NTg1NDMwXX0=
 -->
