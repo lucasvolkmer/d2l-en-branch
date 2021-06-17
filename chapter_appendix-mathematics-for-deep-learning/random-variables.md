@@ -723,19 +723,20 @@ for i in range(3):
 d2l.plt.show()
 ```
 
-Let us see some properties of covariances:
 
-* For any random variable $X$, $\mathrm{Cov}(X, X) = \mathrm{Var}(X)$.
-* For any random variables $X, Y$ and numbers $a$ and $b$, $\mathrm{Cov}(aX+b, Y) = \mathrm{Cov}(X, aY+b) = a\mathrm{Cov}(X, Y)$.
-* If $X$ and $Y$ are independent then $\mathrm{Cov}(X, Y) = 0$.
+Vejamos algumas propriedades das covariâncias:
 
-In addition, we can use the covariance to expand a relationship we saw before.  Recall that is $X$ and $Y$ are two independent random variables then
+* Para qualquer variável aleatória $X$, $\mathrm{Cov}(X, X) = \mathrm{Var}(X)$.
+* Para quaisquer variáveis aleatórias $X, Y$ e números $a$ e $b$, $\mathrm{Cov}(aX+b, Y) = \mathrm{Cov}(X, aY+b) = a\mathrm{Cov}(X, Y)$.
+* Se $X$ e $Y$ são independentes, então $\mathrm{Cov}(X, Y) = 0$.
+
+Além disso, podemos usar a covariância para expandir um relacionamento que vimos antes. Lembre-se de que $X$ e $Y$ são duas variáveis aleatórias independentes, então
 
 $$
 \mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y).
 $$
 
-With knowledge of covariances, we can expand this relationship.  Indeed, some algebra can show that in general,
+Com o conhecimento das covariâncias, podemos expandir essa relação. Na verdade, alguma álgebra pode mostrar que, em geral,
 
 $$
 \mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y) + 2\mathrm{Cov}(X, Y).
@@ -881,10 +882,10 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNjEyMDQwNSwtMzI0MTg5NDg0LC0xMj
-c2NDE3NTQxLC0zMzg4MjQ5NCwtMTUyNTEyMTg2MCwtODM2MTIw
-ODIxLDE3ODY4MTkwMjQsNTU1OTA0MDYsLTE5MzA0MDY2MjEsMz
-k0MDI0MTc0LC0xNjg3NTk1NTcxLC01MTY3OTMyNzksMTcyOTg3
-ODg0LDE2NDc1MTY2MjEsNDM3ODU2NTMxLDY3MDM2MDQwNCwyMT
-I0NjQ1OTU5LC00NDUwNTgyOTZdfQ==
+eyJoaXN0b3J5IjpbNDcyMDE1NDI1LC05MjYxMjA0MDUsLTMyND
+E4OTQ4NCwtMTI3NjQxNzU0MSwtMzM4ODI0OTQsLTE1MjUxMjE4
+NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2LC0xOT
+MwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNTE2Nzkz
+Mjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLDQzNzg1NjUzMSw2Nz
+AzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2XX0=
 -->
