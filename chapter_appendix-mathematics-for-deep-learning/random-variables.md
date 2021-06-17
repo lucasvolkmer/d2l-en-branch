@@ -763,21 +763,22 @@ $$
 
 Isso agora varia entre $-1$ e $1$ com o comportamento esperado de $1$ significando mais correlacionado e $-1$ significando minimamente correlacionado.
 
-As another example, consider $X$ as any random variable, and $Y=aX+b$ as any linear deterministic function of $X$.  Then, one can compute that
+Como outro exemplo, considere $X$ como qualquer variável aleatória e $Y=aX+b$ como qualquer função determinística linear de $X$. Então, pode-se calcular que
 
 $$\sigma_{Y} = \sigma_{aX+b} = |a|\sigma_{X},$$
 
 $$\mathrm{Cov}(X, Y) = \mathrm{Cov}(X, aX+b) = a\mathrm{Cov}(X, X) = a\mathrm{Var}(X),$$
 
-and thus by :eqref:`eq_cor_def` that
+e assim por :eqref:`eq_cor_def` que
 
 $$
 \rho(X, Y) = \frac{a\mathrm{Var}(X)}{|a|\sigma_{X}^2} = \frac{a}{|a|} = \mathrm{sign}(a).
 $$
 
-Thus we see that the correlation is $+1$ for any $a > 0$, and $-1$ for any $a < 0$ illustrating that correlation measures the degree and directionality the two random variables are related, not the scale that the variation takes.
 
-Let us again plot a collection of random variables with tunable correlation.
+Assim, vemos que a correlação é $+1$ para qualquer $a > 0$, e $-1$ para qualquer $a <0$, ilustrando que a correlação mede o grau e a direcionalidade em que as duas variáveis aleatórias estão relacionadas, não a escala que a variação leva.
+
+Deixe-nos mais uma vez plotar uma coleção de variáveis aleatórias com correlação ajustável.
 
 ```{.python .input}
 # Plot a few random variables adjustable correlations
@@ -882,11 +883,11 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyOTEyNDY2LDExNDU2MTkzNywtOTI2MT
-IwNDA1LC0zMjQxODk0ODQsLTEyNzY0MTc1NDEsLTMzODgyNDk0
-LC0xNTI1MTIxODYwLC04MzYxMjA4MjEsMTc4NjgxOTAyNCw1NT
-U5MDQwNiwtMTkzMDQwNjYyMSwzOTQwMjQxNzQsLTE2ODc1OTU1
-NzEsLTUxNjc5MzI3OSwxNzI5ODc4ODQsMTY0NzUxNjYyMSw0Mz
-c4NTY1MzEsNjcwMzYwNDA0LDIxMjQ2NDU5NTksLTQ0NTA1ODI5
-Nl19
+eyJoaXN0b3J5IjpbLTEyNjcyMiwxMTQ1NjE5MzcsLTkyNjEyMD
+QwNSwtMzI0MTg5NDg0LC0xMjc2NDE3NTQxLC0zMzg4MjQ5NCwt
+MTUyNTEyMTg2MCwtODM2MTIwODIxLDE3ODY4MTkwMjQsNTU1OT
+A0MDYsLTE5MzA0MDY2MjEsMzk0MDI0MTc0LC0xNjg3NTk1NTcx
+LC01MTY3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsNDM3OD
+U2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZd
+fQ==
 -->
