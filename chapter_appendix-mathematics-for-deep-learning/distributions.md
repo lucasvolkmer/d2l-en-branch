@@ -189,20 +189,20 @@ torch.randint(1, n, size=(10, 10))
 tf.random.uniform((10, 10), 1, n, dtype=tf.int32)
 ```
 
-## Continuous Uniform
+## Uniforme e Contínua
 
-Next, let us discuss the continuous uniform distribution. The idea behind this random variable is that if we increase the $n$ in the discrete uniform distribution, and then scale it to fit within the interval $[a, b]$, we will approach a continuous random variable that just picks an arbitrary value in $[a, b]$ all with equal probability.  We will denote this distribution as
+A seguir, vamos discutir a distribuição uniforme contínua. A ideia por trás dessa variável aleatória é que, se aumentarmos $n$ na distribuição uniforme discreta e, em seguida, escaloná-la para caber no intervalo $[a, b]$, abordaremos uma variável aleatória contínua que apenas escolhe um valor arbitrário em $[a, b]$ todos com probabilidade igual. Vamos denotar esta distribuição como
 
 $$
 X \sim U(a, b).
 $$
 
-The probability density function is 
+A função de densidade de probabilidade é
 
 $$p(x) = \begin{cases} \frac{1}{b-a} & x \in [a, b], \\ 0 & x \not\in [a, b].\end{cases}$$
 :eqlabel:`eq_cont_uniform_pdf`
 
-The cumulative distribution function is 
+A função de distribuição cumulativa é
 
 $$F(x) = \begin{cases} 0 & x < a, \\ \frac{x-a}{b-a} & x \in [a, b], \\ 1 & x >= b . \end{cases}$$
 :eqlabel:`eq_cont_uniform_cdf`
@@ -823,5 +823,5 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNzQ2NzQ4OCwtMzg3NTg1NDMwXX0=
+eyJoaXN0b3J5IjpbMTY1OTAzNzAzOCwtMzg3NTg1NDMwXX0=
 -->
