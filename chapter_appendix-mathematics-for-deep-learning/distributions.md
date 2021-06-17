@@ -552,15 +552,16 @@ m.sample((10, 10))
 
 ## Gaussiana
 
-Now Let us try a different, but related experiment.  Let us say we again are performing $n$ independent $\mathrm{Bernoulli}(p)$ measurements $X_i$.  The distribution of the sum of these is $X^{(n)} \sim \mathrm{Binomial}(n, p)$.  Rather than taking a limit as $n$ increases and $p$ decreases, Let us fix $p$, and then send $n \rightarrow \infty$.  In this case $\mu_{X^{(n)}} = np \rightarrow \infty$ and $\sigma_{X^{(n)}}^2 = np(1-p) \rightarrow \infty$, so there is no reason to think this limit should be well defined.
 
-However, not all hope is lost!  Let us just make the mean and variance be well behaved by defining
+Agora, vamos tentar um experimento diferente, mas relacionado. Digamos que estamos novamente realizando $n$ medidas independentes de $\mathrm{Bernoulli}(p)$ $X_i$. A distribuição da soma delas é $X^{(n)} \sim \mathrm{Binomial}(n, p)$. Em vez de considerar um limite à medida que $n$ aumenta e $p$ diminui, vamos corrigir $p$ e enviar $n \rightarrow \infty$. Neste caso $\mu_{X^{(n)}} = np \rightarrow \infty$ e $\sigma_{X^{(n)}}^2 = np(1-p) \rightarrow \infty$, portanto, não há razão para pensar que esse limite deva ser bem definido.
+
+No entanto, nem toda esperança está perdida! Vamos apenas fazer com que a média e a variância sejam bem comportadas, definindo
 
 $$
 Y^{(n)} = \frac{X^{(n)} - \mu_{X^{(n)}}}{\sigma_{X^{(n)}}}.
 $$
 
-This can be seen to have mean zero and variance one, and so it is plausible to believe that it will converge to some limiting distribution.  If we plot what these distributions look like, we will become even more convinced that it will work.
+Pode-se ver que isso tem média zero e variância um e, portanto, é plausível acreditar que convergirá para alguma distribuição limitante. Se traçarmos a aparência dessas distribuições, ficaremos ainda mais convencidos de que funcionará.
 
 ```{.python .input}
 p = 0.2
@@ -828,6 +829,6 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNjA2NDgxMCwxMjgxNDI0NTk4LC0zOD
-c1ODU0MzBdfQ==
+eyJoaXN0b3J5IjpbMTY5OTM2OTY3NCwtOTE2MDY0ODEwLDEyOD
+E0MjQ1OTgsLTM4NzU4NTQzMF19
 -->
