@@ -806,24 +806,24 @@ distribuição da família exponencial. A família exponencial é uma comum e po
 
 ## Exercícios
 
-1. What is the standard deviation of a random variable that is the difference $X-Y$ of two independent binomial random variables $X, Y \sim \mathrm{Binomial}(16, 1/2)$.
-2. If we take a Poisson random variable $X \sim \mathrm{Poisson}(\lambda)$ and consider $(X - \lambda)/\sqrt{\lambda}$ as $\lambda \rightarrow \infty$, we can show that this becomes approximately Gaussian.  Why does this make sense?
-3. What is the probability mass function for a sum of two discrete uniform random variables on $n$ elements?
+1. Qual é o desvio padrão de uma variável aleatória que é a diferença $X-Y$ de duas variáveis aleatórias binomiais independentes $X, Y \sim \mathrm{Binomial}(16, 1/2)$.
+2. Se tomarmos uma variável aleatória de Poisson$X \sim \mathrm{Poisson}(\lambda)$ e considerar $(X - \lambda)/\sqrt{\lambda}$ como $\lambda \rightarrow \infty$, podemos mostrar que isso se torna aproximadamente gaussiano. Por que isso faz sentido?
+3. Qual é a função de massa de probabilidade para uma soma de duas variáveis aleatórias uniformes discretas em $n$ elementos?
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/417)
+[Discussões](https://discuss.d2l.ai/t/417)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1098)
+[Discussões](https://discuss.d2l.ai/t/1098)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1099)
+[Discussões](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTA5Mjk4OCwxMDYwODc4MjYsLTIwNT
+eyJoaXN0b3J5IjpbLTMxNTMzNzkyOCwxMDYwODc4MjYsLTIwNT
 gzOTg4MDcsLTIxMzIzOTg2NjAsNDQxNzc2OTU0LDE2OTkzNjk2
 NzQsLTkxNjA2NDgxMCwxMjgxNDI0NTk4LC0zODc1ODU0MzBdfQ
 ==
