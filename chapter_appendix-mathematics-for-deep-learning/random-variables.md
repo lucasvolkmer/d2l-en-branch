@@ -832,13 +832,13 @@ for i in range(3):
 d2l.plt.show()
 ```
 
-Let us list a few properties of the correlation below.
+Vamos listar algumas propriedades da correlação abaixo.
 
-* For any random variable $X$, $\rho(X, X) = 1$.
-* For any random variables $X, Y$ and numbers $a$ and $b$, $\rho(aX+b, Y) = \rho(X, aY+b) = \rho(X, Y)$.
-* If $X$ and $Y$ are independent with non-zero variance then $\rho(X, Y) = 0$.
+* Para qualquer variável aleatória $X$, $\rho(X, X) = 1$.
+* Para quaisquer variáveis aleatórias $X, Y$  e números $a$ e $b$, $\rho(aX+b, Y) = \rho(X, aY+b) = \rho(X, Y)$.
+* Se $X$ e $Y$ são independentes com variância diferente de zero então $\rho(X, Y) = 0$.
 
-As a final note, you may feel like some of these formulae are familiar.  Indeed, if we expand everything out assuming that $\mu_X = \mu_Y = 0$, we see that this is
+Como nota final, você pode achar que algumas dessas fórmulas são familiares. Na verdade, se expandirmos tudo assumindo que $\mu_X = \mu_Y = 0$, vemos que isso é
 
 $$
 \rho(X, Y) = \frac{\sum_{i, j} x_iy_ip_{ij}}{\sqrt{\sum_{i, j}x_i^2 p_{ij}}\sqrt{\sum_{i, j}y_j^2 p_{ij}}}.
@@ -883,11 +883,11 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjcyMiwxMTQ1NjE5MzcsLTkyNjEyMD
-QwNSwtMzI0MTg5NDg0LC0xMjc2NDE3NTQxLC0zMzg4MjQ5NCwt
-MTUyNTEyMTg2MCwtODM2MTIwODIxLDE3ODY4MTkwMjQsNTU1OT
-A0MDYsLTE5MzA0MDY2MjEsMzk0MDI0MTc0LC0xNjg3NTk1NTcx
-LC01MTY3OTMyNzksMTcyOTg3ODg0LDE2NDc1MTY2MjEsNDM3OD
-U2NTMxLDY3MDM2MDQwNCwyMTI0NjQ1OTU5LC00NDUwNTgyOTZd
-fQ==
+eyJoaXN0b3J5IjpbNjQxNTE0MjgsMTE0NTYxOTM3LC05MjYxMj
+A0MDUsLTMyNDE4OTQ4NCwtMTI3NjQxNzU0MSwtMzM4ODI0OTQs
+LTE1MjUxMjE4NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NT
+kwNDA2LC0xOTMwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3
+MSwtNTE2NzkzMjc5LDE3Mjk4Nzg4NCwxNjQ3NTE2NjIxLDQzNz
+g1NjUzMSw2NzAzNjA0MDQsMjEyNDY0NTk1OSwtNDQ1MDU4Mjk2
+XX0=
 -->
