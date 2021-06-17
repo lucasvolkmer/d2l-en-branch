@@ -114,18 +114,18 @@ tf.cast(tf.random.uniform((10, 10)) < p, dtype=tf.float32)
 
 ## Uniforme e Discreta
 
-The next commonly encountered random variable is a discrete uniform.  For our discussion here, we will assume that it is supported on the integers $\{1, 2, \ldots, n\}$, however any other set of values can be freely chosen.  The meaning of the word *uniform* in this context is that every possible value is equally likely.  The probability for each value $i \in \{1, 2, 3, \ldots, n\}$ is $p_i = \frac{1}{n}$.  We will denote a random variable $X$ with this distribution as
+A próxima variável aleatória comumente encontrada é uma uniforme discreta. Para nossa discussão aqui, assumiremos que é suportada nos inteiros $\{1, 2, \ldots, n\}$, entretanto qualquer outro conjunto de valores pode ser escolhido livremente. O significado da palavra *uniforme* neste contexto é que todos os valores possíveis são igualmente prováveis. A probabilidade para cada valor $i \in \{1, 2, 3, \ldots, n\}$ é $p_i = \frac{1}{n}$. Vamos denotar uma variável aleatória $X$ com esta distribuição como
 
 $$
 X \sim U(n).
 $$
 
-The cumulative distribution function is 
+A função de distribuição cumulativa é
 
 $$F(x) = \begin{cases} 0 & x < 1, \\ \frac{k}{n} & k \le x < k+1 \text{ with } 1 \le k < n, \\ 1 & x >= n . \end{cases}$$
 :eqlabel:`eq_discrete_uniform_cdf`
 
-Let us first plot the probability mass function.
+Deixe-nos primeiro representar graficamente a função de massa de probabilidade.
 
 ```{.python .input}
 #@tab all
@@ -137,7 +137,7 @@ d2l.plt.ylabel('p.m.f.')
 d2l.plt.show()
 ```
 
-Now, let us plot the cumulative distribution function :eqref:`eq_discrete_uniform_cdf`.
+Agora, vamos representar graficamente a função de distribuição cumulativa: eqref:`eq_discrete_uniform_cdf`.
 
 ```{.python .input}
 x = np.arange(-1, 6, 0.01)
@@ -173,7 +173,7 @@ If $X \sim U(n)$, then:
 * $\mu_X = \frac{1+n}{2}$,
 * $\sigma_X^2 = \frac{n^2-1}{12}$.
 
-We can sample an array of arbitrary shape from a discrete uniform random variable as follows.
+Podemos amostrar uma matriz de forma arbitrária a partir de uma variável aleatória uniforme discreta como segue.
 
 ```{.python .input}
 np.random.randint(1, n, size=(10, 10))
@@ -823,5 +823,5 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDE4MDcwMjYsLTM4NzU4NTQzMF19
+eyJoaXN0b3J5IjpbLTYzNzQ2NzQ4OCwtMzg3NTg1NDMwXX0=
 -->
