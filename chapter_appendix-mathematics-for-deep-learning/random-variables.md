@@ -742,7 +742,7 @@ $$
 \mathrm{Var}(X+Y) = \mathrm{Var}(X) + \mathrm{Var}(Y) + 2\mathrm{Cov}(X, Y).
 $$
 
-This allows us to generalize the variance summation rule for correlated random variables.
+Isso nos permite generalizar a regra de soma de variância para variáveis aleatórias correlacionadas.
 
 ### Correlation
 
@@ -882,7 +882,7 @@ Indeed if we think of norms as being related to standard deviations, and correla
 [Discussions](https://discuss.d2l.ai/t/1095)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcyMDE1NDI1LC05MjYxMjA0MDUsLTMyND
+eyJoaXN0b3J5IjpbMTE0NTYxOTM3LC05MjYxMjA0MDUsLTMyND
 E4OTQ4NCwtMTI3NjQxNzU0MSwtMzM4ODI0OTQsLTE1MjUxMjE4
 NjAsLTgzNjEyMDgyMSwxNzg2ODE5MDI0LDU1NTkwNDA2LC0xOT
 MwNDA2NjIxLDM5NDAyNDE3NCwtMTY4NzU5NTU3MSwtNTE2Nzkz
