@@ -1,7 +1,7 @@
-# Distributions
+# Distribuições
 :label:`sec_distributions`
 
-Now that we have learned how to work with probability in both the discrete and the continuous setting, let us get to know some of the common distributions encountered.  Depending on the area of machine learning, we may need to be familiar with vastly more of these, or for some areas of deep learning potentially none at all.  This is, however, a good basic list to be familiar with.  Let us first import some common libraries.
+Agora que aprendemos como trabalhar com probabilidade tanto na configuração discreta quanto na contínua, vamos conhecer algumas das distribuições comuns encontradas. Dependendo da área de *machine learning*, podemos precisar estar familiarizados com muito mais delas ou, para algumas áreas de *deep learning*, possivelmente nenhuma. Esta é, no entanto, uma boa lista básica para se familiarizar. Vamos primeiro importar algumas bibliotecas comuns.
 
 ```{.python .input}
 %matplotlib inline
@@ -823,5 +823,5 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTE1NTY5NDBdfQ==
+eyJoaXN0b3J5IjpbLTM4NzU4NTQzMF19
 -->
