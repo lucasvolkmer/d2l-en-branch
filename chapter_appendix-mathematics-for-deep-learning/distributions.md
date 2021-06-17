@@ -739,19 +739,20 @@ tf.random.normal((10, 10), mu, sigma)
 ## Família Exponencial
 :label:`subsec_exponential_family`
 
-One shared property for all the distributions listed above is that they all 
-belong to which is known as the *exponential family*. The exponential family 
-is a set of distributions whose density can be expressed in the following 
-form:
+Uma propriedade compartilhada para todas as distribuições listadas acima é que todas
+pertencem à conhecida como *família exponencial*. A família exponencial
+é um conjunto de distribuições cuja densidade pode ser expressa no seguinte
+Formato:
 
 $$p(\mathbf{x} | \boldsymbol{\eta}) = h(\mathbf{x}) \cdot \mathrm{exp} \left( \boldsymbol{\eta}^{\top} \cdot T(\mathbf{x}) - A(\boldsymbol{\eta}) \right)$$
 :eqlabel:`eq_exp_pdf`
 
-As this definition can be a little subtle, let us examine it closely.  
 
-First, $h(\mathbf{x})$ is known as the *underlying measure* or the 
-*base measure*.  This can be viewed as an original choice of measure we are 
-modifying with our exponential weight.  
+Como essa definição pode ser um pouco sutil, vamos examiná-la de perto.
+
+Primeiro, $h(\mathbf{x})$ é conhecido como a *medida subjacente* ou a
+*medida de base*. Isso pode ser visto como uma escolha original da medida que estamos
+modificando com nosso peso exponencial.
 
 Second, we have the vector $\boldsymbol{\eta} = (\eta_1, \eta_2, ..., \eta_l) \in
 \mathbb{R}^l$ called the *natural parameters* or *canonical parameters*.  These
@@ -833,7 +834,7 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzIzOTg2NjAsNDQxNzc2OTU0LDE2OT
-kzNjk2NzQsLTkxNjA2NDgxMCwxMjgxNDI0NTk4LC0zODc1ODU0
-MzBdfQ==
+eyJoaXN0b3J5IjpbLTIwNTgzOTg4MDcsLTIxMzIzOTg2NjAsND
+QxNzc2OTU0LDE2OTkzNjk2NzQsLTkxNjA2NDgxMCwxMjgxNDI0
+NTk4LC0zODc1ODU0MzBdfQ==
 -->
