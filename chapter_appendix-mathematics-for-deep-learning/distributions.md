@@ -707,9 +707,10 @@ $$
 \frac{X^{(N)} - \mu_{X^{(N)}}}{\sigma_{X^{(N)}}}
 $$
 
-will be approximately Gaussian.  There are additional requirements needed to make it work, most commonly $E[X^4] < \infty$, but the philosophy is clear.
 
-The central limit theorem is the reason that the Gaussian is fundamental to probability, statistics, and machine learning.  Whenever we can say that something we measured is a sum of many small independent contributions, we can assume that the thing being measured will be close to Gaussian.  
+será aproximadamente gaussiana. Existem requisitos adicionais necessários para fazê-la funcionar, mais comumente $E[X^4] < \infty$, mas a filosofia é clara.
+
+O teorema do limite central é a razão pela qual o Gaussiano é fundamental para probabilidade, estatística e aprendizado de máquina. Sempre que podemos dizer que algo que medimos é a soma de muitas pequenas contribuições independentes, podemos supor que o que está sendo medido será próximo de gaussiano.
 
 There are many more fascinating properties of Gaussians, and we would like to discuss one more here.  The Gaussian is what is known as a *maximum entropy distribution*.  We will get into entropy more deeply in :numref:`sec_information_theory`, however all we need to know at this point is that it is a measure of randomness.  In a rigorous mathematical sense, we can think of the Gaussian as the *most* random choice of random variable with fixed mean and variance.  Thus, if we know that our random variable has some mean and variance, the Gaussian is in a sense the most conservative choice of distribution we can make.
 
@@ -831,7 +832,7 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNjcyNDg0Miw0NDE3NzY5NTQsMTY5OT
+eyJoaXN0b3J5IjpbMTU4MDM2MDkzNCw0NDE3NzY5NTQsMTY5OT
 M2OTY3NCwtOTE2MDY0ODEwLDEyODE0MjQ1OTgsLTM4NzU4NTQz
 MF19
 -->
