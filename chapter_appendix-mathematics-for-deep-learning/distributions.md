@@ -754,17 +754,9 @@ Primeiro, $h(\mathbf{x})$ é conhecido como a *medida subjacente* ou a
 *medida de base*. Isso pode ser visto como uma escolha original da medida que estamos
 modificando com nosso peso exponencial.
 
-Second, we have the vector $\boldsymbol{\eta} = (\eta_1, \eta_2, ..., \eta_l) \in
-\mathbb{R}^l$ called the *natural parameters* or *canonical parameters*.  These
-define how the base measure will be modified.  The natural parameters enter 
-into the new measure by taking the dot product of these parameters against 
-some function $T(\cdot)$ of $\mathbf{x}= (x_1, x_2, ..., x_n) \in
-\mathbb{R}^n$ and exponentiated. The vector $T(\mathbf{x})= (T_1(\mathbf{x}),
-T_2(\mathbf{x}), ..., T_l(\mathbf{x}))$ 
-is called the *sufficient statistics* for $\boldsymbol{\eta}$. This name is used since the 
-information represented by $T(\mathbf{x})$ is sufficient to calculate the 
-probability density and no other information from the sample $\mathbf{x}$'s 
-are required.
+Em segundo lugar, temos o vetor $\boldsymbol{\eta} = (\eta_1, \eta_2, ..., \eta_l) \in\mathbb{R}^l$ chamado de *parâmetros naturais* ou *parâmetros canônicos*. Eles definem como a medida base será modificada. Os parâmetros naturais entram na nova medida tomando o produto escalar desses parâmetros em relação a alguma função $T(\cdot)$ de \mathbf{x}= (x_1, x_2, ..., x_n) \in\mathbb{R}^n$ e exponenciado. O vetor $T(\mathbf{x})= (T_1(\mathbf{x}), T_2(\mathbf{x}), ..., T_l(\mathbf{x}))$ é chamado de *estatísticas suficientes* para $\boldsymbol{\eta}$. Este nome é usado uma vez que a informação representada por $T(\mathbf{x})$ é suficiente para calcular a
+densidade de probabilidade e nenhuma outra informação da amostra $\mathbf{x}$
+é requerido.
 
 Third, we have $A(\boldsymbol{\eta})$, which is referred to as the *cumulant 
 function*, which ensures that the above distribution :eqref:`eq_exp_pdf` 
@@ -834,7 +826,7 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTgzOTg4MDcsLTIxMzIzOTg2NjAsND
-QxNzc2OTU0LDE2OTkzNjk2NzQsLTkxNjA2NDgxMCwxMjgxNDI0
-NTk4LC0zODc1ODU0MzBdfQ==
+eyJoaXN0b3J5IjpbLTE3NTUwNTQyMjksLTIwNTgzOTg4MDcsLT
+IxMzIzOTg2NjAsNDQxNzc2OTU0LDE2OTkzNjk2NzQsLTkxNjA2
+NDgxMCwxMjgxNDI0NTk4LC0zODc1ODU0MzBdfQ==
 -->
