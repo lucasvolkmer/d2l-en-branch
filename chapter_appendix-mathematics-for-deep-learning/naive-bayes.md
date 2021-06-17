@@ -1,9 +1,10 @@
 # Naive Bayes
 :label:`sec_naive_bayes`
 
-Throughout the previous sections, we learned about the theory of probability and random variables.  To put this theory to work, let us introduce the *naive Bayes* classifier.  This uses nothing but probabilistic fundamentals to allow us to perform classification of digits.
 
-Learning is all about making assumptions. If we want to classify a new data example that we have never seen before we have to make some assumptions about which data examples are similar to each other. The naive Bayes classifier, a popular and remarkably clear algorithm, assumes all features are independent from each other to simplify the computation. In this section, we will apply this model to recognize characters in images.
+Ao longo das seções anteriores, aprendemos sobre a teoria da probabilidade e variáveis aleatórias. Para colocar essa teoria em prática, vamos apresentar o classificador *Naive Bayes*. Isso usa apenas fundamentos probabilísticos para nos permitir realizar a classificação dos dígitos.
+
+Aprender é fazer suposições. Se quisermos classificar um novo exemplo de dados que nunca vimos antes, temos que fazer algumas suposições sobre quais exemplos de dados são semelhantes entre si. O classificador *Naive Bayes*, um algoritmo popular e notavelmente claro, assume que todos os recursos são independentes uns dos outros para simplificar o cálculo. Nesta seção, vamos aplicar este modelo para reconhecer personagens em imagens.
 
 ```{.python .input}
 %matplotlib inline
@@ -483,5 +484,5 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1ODczODQyNl19
+eyJoaXN0b3J5IjpbMTEzNDQwMTkyOF19
 -->
