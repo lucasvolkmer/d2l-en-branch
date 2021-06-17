@@ -482,3 +482,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTU1ODczODQyNl19
+-->
