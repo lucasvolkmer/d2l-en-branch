@@ -712,14 +712,15 @@ será aproximadamente gaussiana. Existem requisitos adicionais necessários para
 
 O teorema do limite central é a razão pela qual o Gaussiano é fundamental para probabilidade, estatística e aprendizado de máquina. Sempre que podemos dizer que algo que medimos é a soma de muitas pequenas contribuições independentes, podemos supor que o que está sendo medido será próximo de gaussiano.
 
-There are many more fascinating properties of Gaussians, and we would like to discuss one more here.  The Gaussian is what is known as a *maximum entropy distribution*.  We will get into entropy more deeply in :numref:`sec_information_theory`, however all we need to know at this point is that it is a measure of randomness.  In a rigorous mathematical sense, we can think of the Gaussian as the *most* random choice of random variable with fixed mean and variance.  Thus, if we know that our random variable has some mean and variance, the Gaussian is in a sense the most conservative choice of distribution we can make.
 
-To close the section, Let us recall that if $X \sim \mathcal{N}(\mu, \sigma^2)$, then:
+Existem muitas outras propriedades fascinantes das gaussianas, e gostaríamos de discutir mais uma aqui. A Gaussiana é conhecida como *distribuição de entropia máxima*. Entraremos em entropia mais profundamente em :numref:`sec_information_theory`, no entanto, tudo o que precisamos saber neste ponto é que é uma medida de aleatoriedade. Em um sentido matemático rigoroso, podemos pensar no gaussiano como a escolha *mais* aleatória de variável aleatória com média e variância fixas. Portanto, se sabemos que nossa variável aleatória tem alguma média e variância, a Gaussiana é, de certo modo, a escolha de distribuição mais conservadora que podemos fazer.
+
+Para fechar a seção, vamos lembrar que se $X \sim \mathcal{N}(\mu, \sigma^2)$, então:
 
 * $\mu_X = \mu$,
 * $\sigma_X^2 = \sigma^2$.
 
-We can sample from the Gaussian (or standard normal) distribution as shown below.
+Podemos obter uma amostra da distribuição gaussiana (ou normal padrão), conforme mostrado abaixo.
 
 ```{.python .input}
 np.random.normal(mu, sigma, size=(10, 10))
@@ -735,7 +736,7 @@ torch.normal(mu, sigma, size=(10, 10))
 tf.random.normal((10, 10), mu, sigma)
 ```
 
-## Exponential Family
+## Família Exponencial
 :label:`subsec_exponential_family`
 
 One shared property for all the distributions listed above is that they all 
@@ -832,7 +833,7 @@ powerful family of distributions encountered frequently in machine learning.
 [Discussions](https://discuss.d2l.ai/t/1099)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MDM2MDkzNCw0NDE3NzY5NTQsMTY5OT
-M2OTY3NCwtOTE2MDY0ODEwLDEyODE0MjQ1OTgsLTM4NzU4NTQz
-MF19
+eyJoaXN0b3J5IjpbLTIxMzIzOTg2NjAsNDQxNzc2OTU0LDE2OT
+kzNjk2NzQsLTkxNjA2NDgxMCwxMjgxNDI0NTk4LC0zODc1ODU0
+MzBdfQ==
 -->
