@@ -397,8 +397,7 @@ py.argmax(dim=0) == label
 tf.argmax(py, axis=0) == label
 ```
 
-If we now predict a few validation examples, we can see the Bayes
-classifier works pretty well.
+Se agora prevermos alguns exemplos de validação, podemos ver o classificador Bayes funciona muito bem.
 
 ```{.python .input}
 def predict(X):
@@ -435,7 +434,7 @@ preds = predict(X)
 d2l.show_images(X, 2, 9, titles=[str(d) for d in preds]);
 ```
 
-Finally, let us compute the overall accuracy of the classifier.
+Finalmente, vamos calcular a precisão geral do classificador.
 
 ```{.python .input}
 X, y = mnist_test[:]
@@ -462,14 +461,14 @@ preds = tf.constant(predict(X), dtype=tf.int32)
 tf.reduce_sum(tf.cast(preds == y, tf.float32)) / len(y)  # Validation accuracy
 ```
 
-Modern deep networks achieve error rates of less than $0.01$. The relatively poor performance is due to the incorrect statistical assumptions that we made in our model: we assumed that each and every pixel are *independently* generated, depending only on the label. This is clearly not how humans write digits, and this wrong assumption led to the downfall of our overly naive (Bayes) classifier.
+Redes profundas modernas alcançam taxas de erro de menos de $0,01$. O desempenho relativamente baixo é devido às suposições estatísticas incorretas que fizemos em nosso modelo: presumimos que cada pixel é gerado *independentemente*, dependendo apenas do rótulo. Claramente, não é assim que os humanos escrevem dígitos, e essa suposição errada levou à queda de nosso classificador excessivamente ingênuo (Bayes).
 
-## Summary
-* Using Bayes' rule, a classifier can be made by assuming all observed features are independent.  
-* This classifier can be trained on a dataset by counting the number of occurrences of combinations of labels and pixel values.
-* This classifier was the gold standard for decades for tasks such as spam detection.
+## Resumo
+* Usando a regra de Bayes, um classificador pode ser feito assumindo que todas as características observadas são independentes.
+* Este classificador pode ser treinado em um conjunto de dados contando o número de ocorrências de combinações de rótulos e valores de pixel.
+* Esse classificador foi o padrão ouro por décadas para tarefas como detecção de spam.
 
-## Exercises
+## Exercícios
 1. Consider the dataset $[[0,0], [0,1], [1,0], [1,1]]$ with labels given by the XOR of the two elements $[0,1,1,0]$.  What are the probabilities for a Naive Bayes classifier built on this dataset.  Does it successfully classify our points?  If not, what assumptions are violated?
 1. Suppose that we did not use Laplace smoothing when estimating probabilities and a data example arrived at testing time which contained a value never observed in training.  What would the model output?
 1. The naive Bayes classifier is a specific example of a Bayesian network, where the dependence of random variables are encoded with a graph structure.  While the full theory is beyond the scope of this section (see :cite:`Koller.Friedman.2009` for full details), explain why allowing explicit dependence between the two input variables in the XOR model allows for the creation of a successful classifier.
@@ -487,7 +486,7 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIwNDc1ODk0LC05MDY4MjA2NzksLTMzOD
-MzNTk2OSwtMjEwNTUxMjczMywxMzIzOTM5OTEwLDcwNTc3MzYw
-MCwxMTM0NDAxOTI4XX0=
+eyJoaXN0b3J5IjpbMTEzNzEzODUyNCwtOTA2ODIwNjc5LC0zMz
+gzMzU5NjksLTIxMDU1MTI3MzMsMTMyMzkzOTkxMCw3MDU3NzM2
+MDAsMTEzNDQwMTkyOF19
 -->
