@@ -259,9 +259,10 @@ P_xy = (n_x + 1) / tf.reshape((n_y + 1), (10, 1, 1))
 d2l.show_images(P_xy, 2, 5);
 ```
 
-By visualizing these $10\times 28\times 28$ probabilities (for each pixel for each class) we could get some mean looking digits.
 
-Now we can use :eqref:`eq_naive_bayes_estimation` to predict a new image. Given $\mathbf x$, the following functions computes $p(\mathbf x \mid y)p(y)$ for every $y$.
+Visualizando essas probabilidades de $10\times 28\times 28$ (para cada pixel de cada classe), poderíamos obter alguns dígitos de aparência média.
+
+Agora podemos usar :eqref:`eq_naive_bayes_estimation` para prever uma nova imagem. Dado $\mathbf x$, as seguintes funções calculam $p(\mathbf x \mid y)p(y)$ para cada $y$.
 
 ```{.python .input}
 def bayes_pred(x):
@@ -485,7 +486,7 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzAzNzU3NzksLTMzODMzNTk2OSwtMj
-EwNTUxMjczMywxMzIzOTM5OTEwLDcwNTc3MzYwMCwxMTM0NDAx
-OTI4XX0=
+eyJoaXN0b3J5IjpbLTkwNjgyMDY3OSwtMzM4MzM1OTY5LC0yMT
+A1NTEyNzMzLDEzMjM5Mzk5MTAsNzA1NzczNjAwLDExMzQ0MDE5
+MjhdfQ==
 -->
