@@ -141,7 +141,7 @@ Vamos visualizar esses exemplos.
 d2l.show_images(images, 2, 9);
 ```
 
-## The Probabilistic Model for Classification
+## O Modelo Probabilístico para Classificação
 
 In a classification task, we map an example into a category. Here an example is a grayscale $28\times 28$ image, and a category is a digit. (Refer to :numref:`sec_softmax` for a more detailed explanation.)
 One natural way to express the classification task is via the probabilistic question: what is the most likely label given the features (i.e., image pixels)? Denote by $\mathbf x\in\mathbb R^d$ the features of the example and $y\in\mathbb R$ the label. Here features are image pixels, where we can reshape a $2$-dimensional image to a vector so that $d=28^2=784$, and labels are digits.
@@ -484,6 +484,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MDMwNjQwMyw3MDU3NzM2MDAsMTEzND
+eyJoaXN0b3J5IjpbMTg5MTk2OTU3MSw3MDU3NzM2MDAsMTEzND
 QwMTkyOF19
 -->
