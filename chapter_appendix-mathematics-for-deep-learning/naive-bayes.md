@@ -180,12 +180,12 @@ p(x_i = t_i \mid y) =
 \end{cases}
 $$
 
-In addition, we estimate $p(y)$ for every $y$ and save it in $P_y[y]$, with $P_y$ a $n$-length vector. Then, for any new example $\mathbf t = (t_1, t_2, \ldots, t_d)$, we could compute
+Além disso, estimamos $p(y)$ para cada $y$ e o salvamos em $P_y[y]$, com $P_y$ um vetor de comprimento $n$. Então, para qualquer novo exemplo $\mathbf t = (t_1, t_2, \ldots, t_d)$, poderíamos calcular
 
 $$\begin{aligned}\hat{y} &= \mathrm{argmax}_ y \ p(y)\prod_{i=1}^d   p(x_t = t_i \mid y) \\ &= \mathrm{argmax}_y \ P_y[y]\prod_{i=1}^d \ P_{xy}[i, y]^{t_i}\, \left(1 - P_{xy}[i, y]\right)^{1-t_i}\end{aligned}$$
 :eqlabel:`eq_naive_bayes_estimation`
 
-for any $y$. So our assumption of conditional independence has taken the complexity of our model from an exponential dependence on the number of features $\mathcal{O}(2^dn)$ to a linear dependence, which is $\mathcal{O}(dn)$.
+para qualquer $y$. Portanto, nossa suposição de independência condicional levou a complexidade do nosso modelo de uma dependência exponencial no número de características $\mathcal{O}(2^dn)$ para uma dependência linear, que é $\mathcal{O}(dn)$.
 
 
 ## Training
@@ -485,6 +485,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNTQ1ODc4MiwxMzIzOTM5OTEwLDcwNT
-c3MzYwMCwxMTM0NDAxOTI4XX0=
+eyJoaXN0b3J5IjpbLTIxMDU1MTI3MzMsMTMyMzkzOTkxMCw3MD
+U3NzM2MDAsMTEzNDQwMTkyOF19
 -->
