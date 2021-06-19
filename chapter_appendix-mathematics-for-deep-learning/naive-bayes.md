@@ -38,12 +38,12 @@ d2l.use_svg_display()
 
 MNIST :cite:`LeCun.Bottou.Bengio.ea.1998` é um dos conjuntos de dados amplamente usados. Ele contém 60.000 imagens para treinamento e 10.000 imagens para validação. Cada imagem contém um dígito escrito à mão de 0 a 9. A tarefa é classificar cada imagem no dígito correspondente.
 
-Gluon provides a `MNIST` class in the `data.vision` module to
-automatically retrieve the dataset from the Internet.
-Subsequently, Gluon will use the already-downloaded local copy.
-We specify whether we are requesting the training set or the test set
-by setting the value of the parameter `train` to `True` or `False`, respectively.
-Each image is a grayscale image with both width and height of $28$ with shape ($28$,$28$,$1$). We use a customized transformation to remove the last channel dimension. In addition, the dataset represents each pixel by an unsigned $8$-bit integer.  We quantize them into binary features to simplify the problem.
+Gluon fornece uma classe `MNIST` no módulo `data.vision` para
+recupera automaticamente o conjunto de dados da Internet.
+Posteriormente, o Gluon usará a cópia local já baixada.
+Especificamos se estamos solicitando o conjunto de treinamento ou o conjunto de teste
+definindo o valor do parâmetro `train` para `True` ou `False`, respectivamente.
+Cada imagem é uma imagem em tons de cinza com largura e altura de $28$ com forma ($28$,$28$,$1$). Usamos uma transformação personalizada para remover a última dimensão do canal. Além disso, o conjunto de dados representa cada pixel por um inteiro não assinado de $8$ bits. Nós os quantificamos em recursos binários para simplificar o problema.
 
 ```{.python .input}
 def transform(data, label):
@@ -70,7 +70,7 @@ mnist_test = torchvision.datasets.MNIST(
     test_images, test_labels)) = tf.keras.datasets.mnist.load_data()
 ```
 
-We can access a particular example, which contains the image and the corresponding label.
+Podemos acessar um exemplo particular, que contém a imagem e o rótulo correspondente.
 
 ```{.python .input}
 image, label = mnist_train[2]
@@ -89,14 +89,14 @@ image, label = train_images[2], train_labels[2]
 image.shape, label
 ```
 
-Our example, stored here in the variable `image`, corresponds to an image with a height and width of $28$ pixels.
+Nosso exemplo, armazenado aqui na variável `imagem`, corresponde a uma imagem com altura e largura de $28$ pixels.
 
 ```{.python .input}
 #@tab all
 image.shape, image.dtype
 ```
 
-Our code stores the label of each image as a scalar. Its type is a $32$-bit integer.
+Nosso código armazena o rótulo de cada imagem como um escalar. Seu tipo é um número inteiro de $32$ bits.
 
 ```{.python .input}
 label, type(label), label.dtype
@@ -112,7 +112,7 @@ label, type(label)
 label, type(label)
 ```
 
-We can also access multiple examples at the same time.
+Também podemos acessar vários exemplos ao mesmo tempo.
 
 ```{.python .input}
 images, labels = mnist_train[10:38]
@@ -134,7 +134,7 @@ labels = tf.constant([train_labels[i] for i in range(10, 38)])
 images.shape, labels.shape
 ```
 
-Let us visualize these examples.
+Vamos visualizar esses exemplos.
 
 ```{.python .input}
 #@tab all
@@ -484,5 +484,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA1NzczNjAwLDExMzQ0MDE5MjhdfQ==
+eyJoaXN0b3J5IjpbMTU3MDMwNjQwMyw3MDU3NzM2MDAsMTEzND
+QwMTkyOF19
 -->
