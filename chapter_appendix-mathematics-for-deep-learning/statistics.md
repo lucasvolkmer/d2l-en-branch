@@ -1,4 +1,4 @@
-# Statistics
+# Estatísticas
 :label:`sec_statistics`
 
 Undoubtedly, to be a top deep learning practitioner, the ability to train the state-of-the-art and high accurate models is crucial.  However, it is often unclear when improvements are significant, or only the result of random fluctuations in the training process.  To be able to discuss uncertainty in estimated values, we must learn some statistics.
@@ -500,5 +500,5 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY1MzI2Nzg5XX0=
+eyJoaXN0b3J5IjpbMTk0OTU0NjcyN119
 -->
