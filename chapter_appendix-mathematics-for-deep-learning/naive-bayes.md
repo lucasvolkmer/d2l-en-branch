@@ -188,9 +188,9 @@ $$\begin{aligned}\hat{y} &= \mathrm{argmax}_ y \ p(y)\prod_{i=1}^d   p(x_t = t_i
 para qualquer $y$. Portanto, nossa suposição de independência condicional levou a complexidade do nosso modelo de uma dependência exponencial no número de características $\mathcal{O}(2^dn)$ para uma dependência linear, que é $\mathcal{O}(dn)$.
 
 
-## Training
+## Trainamento
 
-The problem now is that we do not know $P_{xy}$ and $P_y$. So we need to estimate their values given some training data first. This is *training* the model. Estimating $P_y$ is not too hard. Since we are only dealing with $10$ classes, we may count the number of occurrences $n_y$ for each of the digits and divide it by the total amount of data $n$. For instance, if digit 8 occurs $n_8 = 5,800$ times and we have a total of $n = 60,000$ images, the probability estimate is $p(y=8) = 0.0967$.
+O problema agora é que não conhecemos $P_{xy}$ e $P_y$. Portanto, precisamos primeiro estimar seus valores dados alguns dados de treinamento. Isso é *treinar* o modelo. Estimar $P_y$ não é muito difícil. Como estamos lidando apenas com classes de $10$, podemos contar o número de ocorrências $n_y$ para cada um dos dígitos e dividi-lo pela quantidade total de dados $n$. Por exemplo, se o dígito 8 ocorre $n_8 = 5,800$ vezes e temos um total de $n = 60,000$ imagens, a estimativa de probabilidade é $p(y=8) = 0.0967$.
 
 ```{.python .input}
 X, Y = mnist_train[:]  # All training examples
@@ -485,6 +485,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDU1MTI3MzMsMTMyMzkzOTkxMCw3MD
-U3NzM2MDAsMTEzNDQwMTkyOF19
+eyJoaXN0b3J5IjpbLTMzODMzNTk2OSwtMjEwNTUxMjczMywxMz
+IzOTM5OTEwLDcwNTc3MzYwMCwxMTM0NDAxOTI4XX0=
 -->
