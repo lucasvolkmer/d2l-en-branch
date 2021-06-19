@@ -154,13 +154,13 @@ Infelizmente, isso requer que estimemos $p(y  \mid  \mathbf{x})$ para cada valor
 
 Além disso, onde está o aprendizado? Se precisarmos ver todos os exemplos possíveis para prever o rótulo correspondente, não estaremos realmente aprendendo um padrão, mas apenas memorizando o conjunto de dados.
 
-## O classificador Naive Bayes
+## O Classificador Naive Bayes
 
-Fortunately, by making some assumptions about conditional independence, we can introduce some inductive bias and build a model capable of generalizing from a comparatively modest selection of training examples. To begin, let us use Bayes theorem, to express the classifier as
+Felizmente, ao fazer algumas suposições sobre a independência condicional, podemos introduzir algum viés indutivo e construir um modelo capaz de generalizar a partir de uma seleção comparativamente modesta de exemplos de treinamento. Para começar, vamos usar o teorema de Bayes, para expressar o classificador como
 
 $$\hat{y} = \mathrm{argmax}_y \> p(y  \mid  \mathbf{x}) = \mathrm{argmax}_y \> \frac{p( \mathbf{x}  \mid  y) p(y)}{p(\mathbf{x})}.$$
 
-Note that the denominator is the normalizing term $p(\mathbf{x})$ which does not depend on the value of the label $y$. As a result, we only need to worry about comparing the numerator across different values of $y$. Even if calculating the denominator turned out to be intractable, we could get away with ignoring it, so long as we could evaluate the numerator. Fortunately, even if we wanted to recover the normalizing constant, we could.  We can always recover the normalization term since $\sum_y p(y  \mid  \mathbf{x}) = 1$.
+Observe que o denominador é o termo de normalização $p(\mathbf{x})$ que não depende do valor do rótulo $y$. Como resultado, só precisamos nos preocupar em comparar o numerador em diferentes valores de $y$. Mesmo que o cálculo do denominador fosse intratável, poderíamos escapar ignorando-o, desde que pudéssemos avaliar o numerador. Felizmente, mesmo se quiséssemos recuperar a constante de normalização, poderíamos. Sempre podemos recuperar o termo de normalização, pois $\sum_y p(y  \mid  \mathbf{x}) = 1$.
 
 Now, let us focus on $p( \mathbf{x}  \mid  y)$. Using the chain rule of probability, we can express the term $p( \mathbf{x}  \mid  y)$ as
 
@@ -485,6 +485,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMzkzOTkxMCw3MDU3NzM2MDAsMTEzND
-QwMTkyOF19
+eyJoaXN0b3J5IjpbLTExMzM4NTY1MjIsMTMyMzkzOTkxMCw3MD
+U3NzM2MDAsMTEzNDQwMTkyOF19
 -->
