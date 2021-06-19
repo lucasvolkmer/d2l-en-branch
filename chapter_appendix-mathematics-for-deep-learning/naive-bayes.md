@@ -34,9 +34,9 @@ import tensorflow as tf
 d2l.use_svg_display()
 ```
 
-## Optical Character Recognition
+## Reconhecimento Ótico de Caracteres
 
-MNIST :cite:`LeCun.Bottou.Bengio.ea.1998` is one of widely used datasets. It contains 60,000 images for training and 10,000 images for validation. Each image contains a handwritten digit from 0 to 9. The task is classifying each image into the corresponding digit.
+MNIST :cite:`LeCun.Bottou.Bengio.ea.1998` é um dos conjuntos de dados amplamente usados. Ele contém 60.000 imagens para treinamento e 10.000 imagens para validação. Cada imagem contém um dígito escrito à mão de 0 a 9. A tarefa é classificar cada imagem no dígito correspondente.
 
 Gluon provides a `MNIST` class in the `data.vision` module to
 automatically retrieve the dataset from the Internet.
@@ -484,5 +484,5 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNDQwMTkyOF19
+eyJoaXN0b3J5IjpbNzA1NzczNjAwLDExMzQ0MDE5MjhdfQ==
 -->
