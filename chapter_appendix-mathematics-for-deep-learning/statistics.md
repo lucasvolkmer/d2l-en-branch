@@ -499,3 +499,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 :begin_tab:`tensorflow`
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbOTY1MzI2Nzg5XX0=
+-->
