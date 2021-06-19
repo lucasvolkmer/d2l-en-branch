@@ -149,11 +149,12 @@ A probabilidade do rótulo dado as características é $p(y  \mid  \mathbf{x})$.
 
 $$\hat{y} = \mathrm{argmax} \> p(y  \mid  \mathbf{x}).$$
 
-Unfortunately, this requires that we estimate $p(y  \mid  \mathbf{x})$ for every value of $\mathbf{x} = x_1, ..., x_d$. Imagine that each feature could take one of $2$ values. For example, the feature $x_1 = 1$ might signify that the word apple appears in a given document and $x_1 = 0$ would signify that it does not. If we had $30$ such binary features, that would mean that we need to be prepared to classify any of $2^{30}$ (over 1 billion!) possible values of the input vector $\mathbf{x}$.
 
-Moreover, where is the learning? If we need to see every single possible example in order to predict the corresponding label then we are not really learning a pattern but just memorizing the dataset.
+Infelizmente, isso requer que estimemos $p(y  \mid  \mathbf{x})$ para cada valor de $\mathbf{x} = x_1, ..., x_d$. Imagine que cada recurso pudesse assumir um dos $2$ valores. Por exemplo, o recurso $x_1 = 1$ pode significar que a palavra maçã aparece em um determinado documento e $x_1 = 0$ pode significar que não. Se tivéssemos $30$ de tais características binárias, isso significaria que precisamos estar preparados para classificar qualquer um dos $2^{30}$ (mais de 1 bilhão!) de valores possíveis do vetor de entrada $\mathbf{x}$.
 
-## The Naive Bayes Classifier
+Além disso, onde está o aprendizado? Se precisarmos ver todos os exemplos possíveis para prever o rótulo correspondente, não estaremos realmente aprendendo um padrão, mas apenas memorizando o conjunto de dados.
+
+## O classificador Naive Bayes
 
 Fortunately, by making some assumptions about conditional independence, we can introduce some inductive bias and build a model capable of generalizing from a comparatively modest selection of training examples. To begin, let us use Bayes theorem, to express the classifier as
 
@@ -484,6 +485,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzA4NDUwNDQsNzA1NzczNjAwLDExMz
-Q0MDE5MjhdfQ==
+eyJoaXN0b3J5IjpbMTMyMzkzOTkxMCw3MDU3NzM2MDAsMTEzND
+QwMTkyOF19
 -->
