@@ -299,10 +299,11 @@ image, label = tf.cast(train_images[0], tf.float32), train_labels[0]
 bayes_pred(image)
 ```
 
-This went horribly wrong! To find out why, let us look at the per pixel probabilities. They are typically numbers between $0.001$ and $1$. We are multiplying $784$ of them. At this point it is worth mentioning that we are calculating these numbers on a computer, hence with a fixed range for the exponent. What happens is that we experience *numerical underflow*, i.e., multiplying all the small numbers leads to something even smaller until it is rounded down to zero.  We discussed this as a theoretical issue in :numref:`sec_maximum_likelihood`, but we see the phenomena clearly here in practice.
 
-As discussed in that section, we fix this by use the fact that $\log a b = \log a + \log b$, i.e., we switch to summing logarithms.
-Even if both $a$ and $b$ are small numbers, the logarithm values should be in a proper range.
+Isso deu terrivelmente errado! Para descobrir o porquê, vejamos as probabilidades por pixel. Normalmente são números entre $0,001$ e $1$. Estamos multiplicando $784$ deles. Neste ponto, vale a pena mencionar que estamos calculando esses números em um computador, portanto, com um intervalo fixo para o expoente. O que acontece é que experimentamos *underflow numérico*, ou seja, a multiplicação de todos os números pequenos leva a algo ainda menor até que seja arredondado para zero. Discutimos isso como uma questão teórica em :numref:`sec_maximum_likelihood`, mas vemos o fenômeno claramente aqui na prática.
+
+Conforme discutido nessa seção, corrigimos isso usando o fato de que $\log a b = \log a + \log b$, ou seja, mudamos para logaritmos de soma.
+Mesmo se $a$ e $b$ forem números pequenos, os valores de logaritmo devem estar em uma faixa adequada.
 
 ```{.python .input}
 a = 0.1
@@ -324,11 +325,11 @@ print('underflow:', a**784)
 print('logarithm is normal:', 784*tf.math.log(a).numpy())
 ```
 
-Since the logarithm is an increasing function, we can rewrite :eqref:`eq_naive_bayes_estimation` as
+Como o logaritmo é uma função crescente, podemos reescrever :eqref:`eq_naive_bayes_estimation` como
 
 $$ \hat{y} = \mathrm{argmax}_y \ \log P_y[y] + \sum_{i=1}^d \Big[t_i\log P_{xy}[x_i, y] + (1-t_i) \log (1 - P_{xy}[x_i, y]) \Big].$$
 
-We can implement the following stable version:
+Podemos implementar a seguinte versão estável:
 
 ```{.python .input}
 log_P_xy = np.log(P_xy)
@@ -378,7 +379,7 @@ py = bayes_pred_stable(image)
 py
 ```
 
-We may now check if the prediction is correct.
+Podemos agora verificar se a previsão está correta.
 
 ```{.python .input}
 # Convert label which is a scalar tensor of int32 dtype
@@ -486,7 +487,7 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNjgyMDY3OSwtMzM4MzM1OTY5LC0yMT
-A1NTEyNzMzLDEzMjM5Mzk5MTAsNzA1NzczNjAwLDExMzQ0MDE5
-MjhdfQ==
+eyJoaXN0b3J5IjpbNjIwNDc1ODk0LC05MDY4MjA2NzksLTMzOD
+MzNTk2OSwtMjEwNTUxMjczMywxMzIzOTM5OTEwLDcwNTc3MzYw
+MCwxMTM0NDAxOTI4XX0=
 -->
