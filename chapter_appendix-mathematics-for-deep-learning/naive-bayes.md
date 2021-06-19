@@ -227,7 +227,7 @@ P_y = n_y / tf.reduce_sum(n_y)
 P_y
 ```
 
-Now on to slightly more difficult things $P_{xy}$. Since we picked black and white images, $p(x_i  \mid  y)$ denotes the probability that pixel $i$ is switched on for class $y$. Just like before we can go and count the number of times $n_{iy}$ such that an event occurs and divide it by the total number of occurrences of $y$, i.e., $n_y$. But there is something slightly troubling: certain pixels may never be black (e.g., for well cropped images the corner pixels might always be white). A convenient way for statisticians to deal with this problem is to add pseudo counts to all occurrences. Hence, rather than $n_{iy}$ we use $n_{iy}+1$ and instead of $n_y$ we use $n_{y} + 1$. This is also called *Laplace Smoothing*.  It may seem ad-hoc, however it may be well motivated from a Bayesian point-of-view.
+Agora vamos para coisas um pouco mais difíceis $P_{xy}$. Como escolhemos imagens em preto e branco, $p(x_i  \mid  y)$ denota a probabilidade de que o pixel $i$ seja ativado para a classe $y$. Assim como antes, podemos ir e contar o número de vezes $n_{iy}$ para que um evento ocorra e dividi-lo pelo número total de ocorrências de $y$, ou seja, $n_y$. Mas há algo um pouco preocupante: certos pixels podem nunca ser pretos (por exemplo, para imagens bem cortadas, os pixels dos cantos podem sempre ser brancos). Uma maneira conveniente para os estatísticos lidarem com esse problema é adicionar pseudo contagens a todas as ocorrências. Portanto, em vez de $n_{iy}$, usamos $n_{y} + 1$ e em vez de $n_y$ usamos $n_{iy}+1$. Isso também é chamado de *Suavização de Laplace*. Pode parecer ad-hoc, mas pode ser bem motivado do ponto de vista bayesiano.
 
 ```{.python .input}
 n_x = np.zeros((10, 28, 28))
@@ -485,6 +485,7 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzODMzNTk2OSwtMjEwNTUxMjczMywxMz
-IzOTM5OTEwLDcwNTc3MzYwMCwxMTM0NDAxOTI4XX0=
+eyJoaXN0b3J5IjpbLTEzMzAzNzU3NzksLTMzODMzNTk2OSwtMj
+EwNTUxMjczMywxMzIzOTM5OTEwLDcwNTc3MzYwMCwxMTM0NDAx
+OTI4XX0=
 -->
