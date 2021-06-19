@@ -170,7 +170,7 @@ Por si só, essa expressão não nos leva mais longe. Ainda devemos estimar cerc
 
 $$\hat{y} = \mathrm{argmax}_y \> \prod_{i=1}^d p(x_i  \mid  y) p(y).$$
 
-If we can estimate $p(x_i=1  \mid  y)$ for every $i$ and $y$, and save its value in $P_{xy}[i, y]$, here $P_{xy}$ is a $d\times n$ matrix with $n$ being the number of classes and $y\in\{1, \ldots, n\}$, then we can also use this to estimate $p(x_i = 0 \mid y)$, i.e.,
+Se pudermos estimar $p(x_i=1  \mid  y)$ para cada $i$ e $y$, e salvar seu valor em $P_{xy}[i, y]$, aqui $P_{xy}$ é uma matriz $d\times n$ com $n$ sendo o número de classes e $y\in\{1, \ldots, n\}$, então também podemos usar isso para estimar $p(x_i = 0 \mid y)$, ou seja,
 
 $$ 
 p(x_i = t_i \mid y) = 
@@ -485,6 +485,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODExMjAxODgsMTMyMzkzOTkxMCw3MD
-U3NzM2MDAsMTEzNDQwMTkyOF19
+eyJoaXN0b3J5IjpbLTMxNTQ1ODc4MiwxMzIzOTM5OTEwLDcwNT
+c3MzYwMCwxMTM0NDAxOTI4XX0=
 -->
