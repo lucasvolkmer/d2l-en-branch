@@ -143,9 +143,9 @@ d2l.show_images(images, 2, 9);
 
 ## O Modelo Probabilístico para Classificação
 
-In a classification task, we map an example into a category. Here an example is a grayscale $28\times 28$ image, and a category is a digit. (Refer to :numref:`sec_softmax` for a more detailed explanation.)
-One natural way to express the classification task is via the probabilistic question: what is the most likely label given the features (i.e., image pixels)? Denote by $\mathbf x\in\mathbb R^d$ the features of the example and $y\in\mathbb R$ the label. Here features are image pixels, where we can reshape a $2$-dimensional image to a vector so that $d=28^2=784$, and labels are digits.
-The probability of the label given the features is $p(y  \mid  \mathbf{x})$. If we are able to compute these probabilities, which are $p(y  \mid  \mathbf{x})$ for $y=0, \ldots,9$ in our example, then the classifier will output the prediction $\hat{y}$ given by the expression:
+Em uma tarefa de classificação, mapeamos um exemplo em uma categoria. Aqui, um exemplo é uma imagem em tons de cinza $28\times 28$, e uma categoria é um dígito. (Consulte :numref:`sec_softmax` para uma explicação mais detalhada.)
+Uma maneira natural de expressar a tarefa de classificação é por meio da questão probabilística: qual é o rótulo mais provável dado os recursos (ou seja, pixels de imagem)? Denote por $\mathbf x\in\mathbb R^d$ as características do exemplo e $y\in\mathbb R$ o rótulo. Aqui, os recursos são pixels de imagem, onde podemos remodelar uma imagem $2$-dimensional para um vetor de modo que $d=28^2=784$, e os rótulos são dígitos.
+A probabilidade do rótulo dado as características é $p(y  \mid  \mathbf{x})$. Se pudermos calcular essas probabilidades, que são $p(y  \mid  \mathbf{x})$ para $y=0, \ldots,9$ em nosso exemplo, então o classificador produzirá a previsão $\hat{y}$ dado pela expressão:
 
 $$\hat{y} = \mathrm{argmax} \> p(y  \mid  \mathbf{x}).$$
 
@@ -484,6 +484,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTk2OTU3MSw3MDU3NzM2MDAsMTEzND
-QwMTkyOF19
+eyJoaXN0b3J5IjpbLTE2NzA4NDUwNDQsNzA1NzczNjAwLDExMz
+Q0MDE5MjhdfQ==
 -->
