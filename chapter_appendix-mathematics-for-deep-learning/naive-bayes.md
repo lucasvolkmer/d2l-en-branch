@@ -469,24 +469,24 @@ Redes profundas modernas alcançam taxas de erro de menos de $0,01$. O desempenh
 * Esse classificador foi o padrão ouro por décadas para tarefas como detecção de spam.
 
 ## Exercícios
-1. Consider the dataset $[[0,0], [0,1], [1,0], [1,1]]$ with labels given by the XOR of the two elements $[0,1,1,0]$.  What are the probabilities for a Naive Bayes classifier built on this dataset.  Does it successfully classify our points?  If not, what assumptions are violated?
-1. Suppose that we did not use Laplace smoothing when estimating probabilities and a data example arrived at testing time which contained a value never observed in training.  What would the model output?
-1. The naive Bayes classifier is a specific example of a Bayesian network, where the dependence of random variables are encoded with a graph structure.  While the full theory is beyond the scope of this section (see :cite:`Koller.Friedman.2009` for full details), explain why allowing explicit dependence between the two input variables in the XOR model allows for the creation of a successful classifier.
+1. Considere o conjunto de dados $[[0,0], [0,1], [1,0], [1,1]]$ com rótulos dados pelo XOR dos dois elementos $[0,1,1,0]$. Quais são as probabilidades de um classificador Naive Bayes construído neste conjunto de dados. Classifica com sucesso nossos pontos? Se não, quais premissas são violadas?
+1. Suponha que não usamos a suavização de Laplace ao estimar as probabilidades e um exemplo de dados chegou no momento do teste que continha um valor nunca observado no treinamento. Qual seria a saída do modelo?
+1. O classificador Naive Bayes é um exemplo específico de uma rede Bayesiana, onde a dependência de variáveis aleatórias é codificada com uma estrutura de grafo. Embora a teoria completa esteja além do escopo desta seção (consulte :cite:`Koller.Friedman.2009` para detalhes completos), explique por que permitir a dependência explícita entre as duas variáveis de entrada no modelo XOR permite a criação de um classificador de sucesso .
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/418)
+[Discussões](https://discuss.d2l.ai/t/418)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1100)
+[Discussões](https://discuss.d2l.ai/t/1100)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1101)
+[Discussões](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNzEzODUyNCwtOTA2ODIwNjc5LC0zMz
+eyJoaXN0b3J5IjpbLTQxMjQ5NTM2NCwtOTA2ODIwNjc5LC0zMz
 gzMzU5NjksLTIxMDU1MTI3MzMsMTMyMzkzOTkxMCw3MDU3NzM2
 MDAsMTEzNDQwMTkyOF19
 -->
