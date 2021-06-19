@@ -162,11 +162,11 @@ $$\hat{y} = \mathrm{argmax}_y \> p(y  \mid  \mathbf{x}) = \mathrm{argmax}_y \> \
 
 Observe que o denominador é o termo de normalização $p(\mathbf{x})$ que não depende do valor do rótulo $y$. Como resultado, só precisamos nos preocupar em comparar o numerador em diferentes valores de $y$. Mesmo que o cálculo do denominador fosse intratável, poderíamos escapar ignorando-o, desde que pudéssemos avaliar o numerador. Felizmente, mesmo se quiséssemos recuperar a constante de normalização, poderíamos. Sempre podemos recuperar o termo de normalização, pois $\sum_y p(y  \mid  \mathbf{x}) = 1$.
 
-Now, let us focus on $p( \mathbf{x}  \mid  y)$. Using the chain rule of probability, we can express the term $p( \mathbf{x}  \mid  y)$ as
+Agora, vamos nos concentrar em $p( \mathbf{x}  \mid  y)$. Usando a regra da cadeia de probabilidade, podemos expressar o termo $p( \mathbf{x}  \mid  y)$ como
 
 $$p(x_1  \mid y) \cdot p(x_2  \mid  x_1, y) \cdot ... \cdot p( x_d  \mid  x_1, ..., x_{d-1}, y).$$
 
-By itself, this expression does not get us any further. We still must estimate roughly $2^d$ parameters. However, if we assume that *the features are conditionally independent of each other, given the label*, then suddenly we are in much better shape, as this term simplifies to $\prod_i p(x_i  \mid  y)$, giving us the predictor
+Por si só, essa expressão não nos leva mais longe. Ainda devemos estimar cerca de $2^d$ parâmetros. No entanto, se assumirmos que *as características são condicionalmente independentes umas das outras, dado o rótulo*, então de repente estamos em uma forma muito melhor, pois este termo simplifica para $\prod_i p(x_i  \mid  y)$, dando-nos o preditor
 
 $$\hat{y} = \mathrm{argmax}_y \> \prod_{i=1}^d p(x_i  \mid  y) p(y).$$
 
@@ -485,6 +485,6 @@ Modern deep networks achieve error rates of less than $0.01$. The relatively poo
 [Discussions](https://discuss.d2l.ai/t/1101)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzM4NTY1MjIsMTMyMzkzOTkxMCw3MD
+eyJoaXN0b3J5IjpbLTE2ODExMjAxODgsMTMyMzkzOTkxMCw3MD
 U3NzM2MDAsMTEzNDQwMTkyOF19
 -->
