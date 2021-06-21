@@ -113,7 +113,7 @@ d2l.plt.title(f'sample mean: {float(tf.reduce_mean(xs).numpy()):.2f}')
 d2l.plt.show()
 ```
 
-There can be many ways to compute an estimator of a parameter $\hat{\theta}_n$.  In this section, we introduce three common methods to evaluate and compare estimators: the mean squared error, the standard deviation, and statistical bias.
+Pode haver muitas maneiras de calcular um estimador de um parâmetro $\hat{\theta}_n$. Nesta seção, apresentamos três métodos comuns para avaliar e comparar estimadores: o erro quadrático médio, o desvio padrão e o *bias* estatístico.
 
 ### Mean Squared Error
 
@@ -501,5 +501,5 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU1OTA0ODksMTk0OTU0NjcyN119
+eyJoaXN0b3J5IjpbLTM5Njg4NjQwMSwxOTQ5NTQ2NzI3XX0=
 -->
