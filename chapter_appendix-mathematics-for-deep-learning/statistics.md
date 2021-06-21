@@ -7,13 +7,13 @@ Sem dúvida, para ser um profissional de alto nível de *deep learning*, a capac
 
 A referência mais antiga de *estatísticas* pode ser rastreada até um estudioso árabe Al-Kindi no século $9^{\mathrm{th}}$ que deu uma descrição detalhada de como usar estatísticas e análise de frequência para decifrar mensagens criptografadas . Após 800 anos, as estatísticas modernas surgiram na Alemanha em 1700, quando os pesquisadores se concentraram na coleta e análise de dados demográficos e econômicos. Hoje, estatística é o assunto da ciência que diz respeito à coleta, processamento, análise, interpretação e visualização de dados. Além disso, a teoria básica da estatística tem sido amplamente usada na pesquisa na academia, na indústria e no governo.
 
-More specifically, statistics can be divided to *descriptive statistics* and *statistical inference*. The former focus on summarizing and illustrating the features of a collection of observed data, which is referred to as a *sample*. The sample is drawn from a *population*, denotes the total set of similar individuals, items, or events of our experiment interests. Contrary to descriptive statistics, *statistical inference* further deduces the characteristics of a population from the given *samples*, based on the assumptions that the sample distribution can replicate the population distribution at some degree.
+
+Mais especificamente, as estatísticas podem ser divididas em *estatísticas descritivas* e *inferência estatística*. O primeiro concentra-se em resumir e ilustrar as características de uma coleção de dados observados, que é chamada de *amostra*. A amostra é retirada de uma *população*, denota o conjunto total de indivíduos, itens ou eventos semelhantes de interesse do nosso experimento. Ao contrário da estatística descritiva, *inferência estatística* deduz ainda mais as características de uma população das *amostras* fornecidas, com base nas suposições de que a distribuição da amostra pode replicar a distribuição da população em algum grau.
 
 
-You may wonder: “What is the essential difference between machine learning and statistics?” Fundamentally speaking, statistics focuses on the inference problem. This type of problems includes modeling the relationship between the variables, such as causal inference, and testing the statistically significance of model parameters, such as A/B testing. In contrast, machine learning emphasizes on making accurate predictions, without explicitly programming and understanding each parameter's functionality.
+Você pode se perguntar: “Qual é a diferença essencial entre *machine learning* e estatística?” Falando fundamentalmente, a estatística enfoca o problema de inferência. Esse tipo de problema inclui a modelagem da relação entre as variáveis, como inferência causal, e o teste da significância estatística dos parâmetros do modelo, como o teste A/B. Em contraste, o aprendizado de máquina enfatiza a realização de previsões precisas, sem programar e compreender explicitamente a funcionalidade de cada parâmetro.
 
-
-In this section, we will introduce three types of statistics inference methods: evaluating and comparing estimators, conducting hypothesis tests, and constructing confidence intervals. These methods can help us infer the characteristics of a given population, i.e., the true parameter $\theta$. For brevity, we assume that the true parameter $\theta$ of a given population is a scalar value. It is straightforward to extend to the case where $\theta$ is a vector or a tensor, thus we omit it in our discussion.
+Nesta seção, apresentaremos três tipos de métodos de inferência estatística: avaliação e comparação de estimadores, realização de testes de hipótese e construção de intervalos de confiança. Esses métodos podem nos ajudar a inferir as características de uma determinada população, ou seja, o verdadeiro parâmetro $\theta$. Para resumir, assumimos que o verdadeiro parâmetro $\theta$ de uma dada população é um valor escalar. É direto estender para o caso em que $\theta$ é um vetor ou tensor, portanto, o omitimos em nossa discussão.
 
 
 
@@ -500,5 +500,5 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI2NDExMzEyLDE5NDk1NDY3MjddfQ==
+eyJoaXN0b3J5IjpbMTMxMTc5OTMzOSwxOTQ5NTQ2NzI3XX0=
 -->
