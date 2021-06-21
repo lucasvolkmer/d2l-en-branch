@@ -17,9 +17,9 @@ Nesta seção, apresentaremos três tipos de métodos de inferência estatístic
 
 
 
-## Evaluating and Comparing Estimators
+## Avaliando e comparando estimadores
 
-In statistics, an *estimator* is a function of given samples used to estimate the true parameter $\theta$. We will write $\hat{\theta}_n = \hat{f}(x_1, \ldots, x_n)$ for the estimate of $\theta$ after observing the samples {$x_1, x_2, \ldots, x_n$}.
+Em estatística, um *estimador* é uma função de determinadas amostras usadas para estimar o parâmetro verdadeiro $\theta$. Vamos escrever $\hat{\theta}_n = \hat{f}(x_1, \ldots, x_n)$ para a estimativa de $$\theta$ após observar as amostras {$x_1, x_2, \ldots, x_n$}.
 
 We have seen simple examples of estimators before in section :numref:`sec_maximum_likelihood`.  If you have a number of samples from a Bernoulli random variable, then the maximum likelihood estimate for the probability the random variable is one can be obtained by counting the number of ones observed and dividing by the total number of samples.  Similarly, an exercise asked you to show that the maximum likelihood estimate of the mean of a Gaussian given a number of samples is given by the average value of all the samples.  These estimators will almost never give the true value of the parameter, but ideally for a large number of samples the estimate will be close.
 
@@ -500,5 +500,5 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMTc5OTMzOSwxOTQ5NTQ2NzI3XX0=
+eyJoaXN0b3J5IjpbODU4Mjg5NjY0LDE5NDk1NDY3MjddfQ==
 -->
