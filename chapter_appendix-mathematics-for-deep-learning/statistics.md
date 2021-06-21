@@ -21,9 +21,10 @@ Nesta seção, apresentaremos três tipos de métodos de inferência estatístic
 
 Em estatística, um *estimador* é uma função de determinadas amostras usadas para estimar o parâmetro verdadeiro $\theta$. Vamos escrever $\hat{\theta}_n = \hat{f}(x_1, \ldots, x_n)$ para a estimativa de $$\theta$ após observar as amostras {$x_1, x_2, \ldots, x_n$}.
 
-We have seen simple examples of estimators before in section :numref:`sec_maximum_likelihood`.  If you have a number of samples from a Bernoulli random variable, then the maximum likelihood estimate for the probability the random variable is one can be obtained by counting the number of ones observed and dividing by the total number of samples.  Similarly, an exercise asked you to show that the maximum likelihood estimate of the mean of a Gaussian given a number of samples is given by the average value of all the samples.  These estimators will almost never give the true value of the parameter, but ideally for a large number of samples the estimate will be close.
 
-As an example, we show below the true density of a Gaussian random variable with mean zero and variance one, along with a collection samples from that Gaussian.  We constructed the $y$ coordinate so every point is visible and the relationship to the original density is clearer.
+Já vimos exemplos simples de estimadores na seção :numref:`sec_maximum_likelihood`. Se você tiver várias amostras de uma variável aleatória de Bernoulli, então a estimativa de máxima verossimilhança para a probabilidade da variável aleatória ser um pode ser obtida contando o número de unidades observadas e dividindo pelo número total de amostras. Da mesma forma, um exercício pediu que você mostrasse que a estimativa de máxima verossimilhança da média de uma gaussiana dado um número de amostras é dada pelo valor médio de todas as amostras. Esses estimadores quase nunca fornecerão o valor verdadeiro do parâmetro, mas idealmente para um grande número de amostras a estimativa será próxima.
+
+Como exemplo, mostramos abaixo a densidade real de uma variável aleatória gaussiana com média zero e variância um, junto com uma coleção de amostras dessa gaussiana. Construímos a coordenada $y$ de forma que cada ponto fique visível e a relação com a densidade original seja mais clara.
 
 ```{.python .input}
 from d2l import mxnet as d2l
@@ -500,5 +501,5 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU4Mjg5NjY0LDE5NDk1NDY3MjddfQ==
+eyJoaXN0b3J5IjpbOTU1OTA0ODksMTk0OTU0NjcyN119
 -->
