@@ -115,7 +115,7 @@ d2l.plt.show()
 
 Pode haver muitas maneiras de calcular um estimador de um parâmetro $\hat{\theta}_n$. Nesta seção, apresentamos três métodos comuns para avaliar e comparar estimadores: o erro quadrático médio, o desvio padrão e o *bias* estatístico.
 
-### Mean Squared Error
+### Erro Quadrático Médio
 
 Perhaps the simplest metric used to evaluate estimators is the *mean squared error (MSE)* (or $l_2$ loss) of an estimator can be defined as
 
@@ -501,5 +501,5 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5Njg4NjQwMSwxOTQ5NTQ2NzI3XX0=
+eyJoaXN0b3J5IjpbMTQxNDkyMzAxNiwxOTQ5NTQ2NzI3XX0=
 -->
