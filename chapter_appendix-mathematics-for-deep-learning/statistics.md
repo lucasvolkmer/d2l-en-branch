@@ -125,7 +125,7 @@ $$\mathrm{MSE} (\hat{\theta}_n, \theta) = E[(\hat{\theta}_n - \theta)^2].$$
 Isso nos permite quantificar o desvio médio quadrático do valor verdadeiro. MSE é sempre não negativo. Se você leu :numref:`sec_linear_regression`, você aoreconhecerá como a função de perda de regressão mais comumente usada. Como medida para avaliar um estimador, quanto mais próximo seu valor de zero, mais próximo o estimador está do verdadeiro parâmetro $\theta$.
 
 
-### *Bias
+### *Bias* Estatístico.
 
 The MSE provides a natural metric, but we can easily imagine multiple different phenomena that might make it large.  Two fundamentally important are fluctuation in the estimator due to randomness in the dataset, and systematic error in the estimator due to the estimation procedure.
 
@@ -501,6 +501,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NTUxMTY5OCwxNDE0OTIzMDE2LDE5ND
-k1NDY3MjddfQ==
+eyJoaXN0b3J5IjpbNDU4OTY3NDY2LDE0MTQ5MjMwMTYsMTk0OT
+U0NjcyN119
 -->
