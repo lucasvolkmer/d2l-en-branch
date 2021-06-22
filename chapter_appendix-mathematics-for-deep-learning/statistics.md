@@ -237,7 +237,7 @@ theta_est = tf.reduce_mean(samples)
 theta_est
 ```
 
-Let us validate the trade-off equation by calculating the summation of the squared bias and the variance of our estimator. First, calculate the MSE of our estimator.
+Vamos validar a equação de trade-off calculando a soma da polarização quadrada e a variância de nosso estimador. Primeiro, calculamos o EQM de nosso estimador.
 
 ```{.python .input}
 #@tab all
@@ -502,6 +502,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MjY1MzgyMiwxNDE0OTIzMDE2LDE5ND
+eyJoaXN0b3J5IjpbLTIxNTY2MjU3NSwxNDE0OTIzMDE2LDE5ND
 k1NDY3MjddfQ==
 -->
