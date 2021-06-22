@@ -206,7 +206,7 @@ def mse(data, true_theta):
     return(tf.reduce_mean(tf.square(data - true_theta)))
 ```
 
-To illustrate the equation of the bias-variance trade-off, let us simulate of normal distribution $\mathcal{N}(\theta, \sigma^2)$ with $10,000$ samples. Here, we use a $\theta = 1$ and $\sigma = 4$. As the estimator is a function of the given samples, here we use the mean of the samples as an estimator for true $\theta$ in this normal distribution $\mathcal{N}(\theta, \sigma^2)$ .
+Para ilustrar a equação do trade-off *bias*-variância, vamos simular a distribuição normal $\mathcal{N}(\theta, \sigma^2)$ com $10.000$ amostras. Aqui, usamos a $$\theta = 1$ e $\sigma = 4$. Como o estimador é uma função das amostras fornecidas, aqui usamos a média das amostras como um estimador para $\theta$ verdadeiros nesta distribuição normal $\mathcal{N}(\theta, \sigma^2)$ .
 
 ```{.python .input}
 theta_true = 1
@@ -502,6 +502,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNDU3ODY0NywxNDE0OTIzMDE2LDE5ND
+eyJoaXN0b3J5IjpbMTA0MjY1MzgyMiwxNDE0OTIzMDE2LDE5ND
 k1NDY3MjddfQ==
 -->
