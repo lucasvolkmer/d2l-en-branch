@@ -117,15 +117,15 @@ Pode haver muitas maneiras de calcular um estimador de um parâmetro $\hat{\thet
 
 ### Erro Quadrático Médio
 
-Perhaps the simplest metric used to evaluate estimators is the *mean squared error (MSE)* (or $l_2$ loss) of an estimator can be defined as
+Talvez a métrica mais simples usada para avaliar estimadores seja o *erro quadrático médio (EQM)* (ou perda $l_2$) de um estimador pode ser definido como
 
 $$\mathrm{MSE} (\hat{\theta}_n, \theta) = E[(\hat{\theta}_n - \theta)^2].$$
 :eqlabel:`eq_mse_est`
 
-This allows us to quantify the average squared deviation from the true value.  MSE is always non-negative. If you have read :numref:`sec_linear_regression`, you will recognize it as the most commonly used regression loss function. As a measure to evaluate an estimator, the closer its value to zero, the closer the estimator is close to the true parameter $\theta$.
+Isso nos permite quantificar o desvio médio quadrático do valor verdadeiro. MSE é sempre não negativo. Se você leu :numref:`sec_linear_regression`, você aoreconhecerá como a função de perda de regressão mais comumente usada. Como medida para avaliar um estimador, quanto mais próximo seu valor de zero, mais próximo o estimador está do verdadeiro parâmetro $\theta$.
 
 
-### Statistical Bias
+### *Bias
 
 The MSE provides a natural metric, but we can easily imagine multiple different phenomena that might make it large.  Two fundamentally important are fluctuation in the estimator due to randomness in the dataset, and systematic error in the estimator due to the estimation procedure.
 
@@ -501,5 +501,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNDkyMzAxNiwxOTQ5NTQ2NzI3XX0=
+eyJoaXN0b3J5IjpbLTQ4NTUxMTY5OCwxNDE0OTIzMDE2LDE5ND
+k1NDY3MjddfQ==
 -->
