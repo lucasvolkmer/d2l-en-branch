@@ -135,10 +135,11 @@ Primeiro, vamos medir o erro sistemático. Para um estimador $\hat{\theta}_n$, a
 $$\mathrm{bias}(\hat{\theta}_n) = E(\hat{\theta}_n - \theta) = E(\hat{\theta}_n) - \theta.$$
 :eqlabel:`eq_bias`
 
-Note that when $\mathrm{bias}(\hat{\theta}_n) = 0$, the expectation of the estimator $\hat{\theta}_n$ is equal to the true value of parameter.  In this case, we say $\hat{\theta}_n$ is an unbiased estimator.  In general, an unbiased estimator is better than a biased estimator since its expectation is the same as the true parameter.
+
+Observe que quando $\mathrm{bias}(\hat{\theta}_n) = 0$, a expectativa do estimador \hat{\theta}_n$ é igual ao valor verdadeiro do parâmetro. Nesse caso, dizemos que $\hat{\theta}_n$ é um estimador imparcial. Em geral, um estimador não enviesado é melhor do que um estimador enviesado, pois sua expectativa é igual ao parâmetro verdadeiro.
 
 
-It is worth being aware, however, that biased estimators are frequently used in practice.  There are cases where unbiased estimators do not exist without further assumptions, or are intractable to compute.  This may seem like a significant flaw in an estimator, however the majority of estimators encountered in practice are at least asymptotically unbiased in the sense that the bias tends to zero as the number of available samples tends to infinity: $\lim_{n \rightarrow \infty} \mathrm{bias}(\hat{\theta}_n) = 0$.
+É importante estar ciente, entretanto, que estimadores enviesados são frequentemente usados na prática. Há casos em que estimadores imparciais não existem sem suposições adicionais ou são intratáveis para calcular. Isso pode parecer uma falha significativa em um estimador, no entanto, a maioria dos estimadores encontrados na prática são pelo menos assintoticamente imparciais, no sentido de que o *bias* tende a zero enquanto o número de amostras disponíveis tende ao infinito: $\lim_{n \rightarrow \infty} \mathrm{bias}(\hat{\theta}_n) = 0$.
 
 
 ### Variance and Standard Deviation
@@ -501,6 +502,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MzE0NDcyNSwxNDE0OTIzMDE2LDE5ND
-k1NDY3MjddfQ==
+eyJoaXN0b3J5IjpbNjM0NDU2NTEyLDE0MTQ5MjMwMTYsMTk0OT
+U0NjcyN119
 -->
