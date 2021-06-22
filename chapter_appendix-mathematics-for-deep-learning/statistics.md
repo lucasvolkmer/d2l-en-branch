@@ -127,10 +127,10 @@ Isso nos permite quantificar o desvio médio quadrático do valor verdadeiro. MS
 
 ### *Bias* Estatístico.
 
-The MSE provides a natural metric, but we can easily imagine multiple different phenomena that might make it large.  Two fundamentally important are fluctuation in the estimator due to randomness in the dataset, and systematic error in the estimator due to the estimation procedure.
+O EQM fornece uma métrica natural, mas podemos facilmente imaginar vários fenômenos diferentes que podem torná-lo grande. Dois fundamentalmente importantes são a flutuação no estimador devido à aleatoriedade no conjunto de dados e o erro sistemático no estimador devido ao procedimento de estimativa.
 
 
-First, let us measure the systematic error. For an estimator $\hat{\theta}_n$, the mathematical illustration of *statistical bias* can be defined as
+Primeiro, vamos medir o erro sistemático. Para um estimador $\hat{\theta}_n$, a ilustração matemática de *tendência estatística* pode ser definida como
 
 $$\mathrm{bias}(\hat{\theta}_n) = E(\hat{\theta}_n - \theta) = E(\hat{\theta}_n) - \theta.$$
 :eqlabel:`eq_bias`
@@ -501,6 +501,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU4OTY3NDY2LDE0MTQ5MjMwMTYsMTk0OT
-U0NjcyN119
+eyJoaXN0b3J5IjpbMTM1MzE0NDcyNSwxNDE0OTIzMDE2LDE5ND
+k1NDY3MjddfQ==
 -->
