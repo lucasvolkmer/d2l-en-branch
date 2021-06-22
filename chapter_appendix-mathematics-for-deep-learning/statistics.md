@@ -284,9 +284,9 @@ Desta forma, o teste de hipótese fornece uma estrutura para o projeto experimen
 Para completar a história de como trabalhar com testes de hipóteses, precisamos agora introduzir alguma terminologia adicional e tornar alguns de nossos conceitos formais.
 
 
-### Statistical Significance
+### Significância Estatística
 
-The *statistical significance* measures the probability of erroneously rejecting the null hypothesis, $H_0$, when it should not be rejected, i.e.,
+A *significância estatística* mede a probabilidade de rejeitar erroneamente a hipótese nula, $H_0$, quando ela não deveria ser rejeitada, ou seja,
 
 $$ \text{statistical significance }= 1 - \alpha = 1 - P(\text{reject } H_0 \mid H_0 \text{ is true} ).$$
 
@@ -503,6 +503,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MDc4MjIyOCwtMTIyNTc0NzE2MSwxND
-E0OTIzMDE2LDE5NDk1NDY3MjddfQ==
+eyJoaXN0b3J5IjpbNzE5NDk2NzQ0LDE4NTA3ODIyMjgsLTEyMj
+U3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2NzI3XX0=
 -->
