@@ -244,7 +244,7 @@ Vamos validar a equação de trade-off calculando a soma da polarização quadra
 mse(samples, theta_true)
 ```
 
-Next, we calculate $\mathrm{Var} (\hat{\theta}_n) + [\mathrm{bias} (\hat{\theta}_n)]^2$ as below. As you can see, the two values agree to numerical precision.
+Em seguida, calculamos \mathrm{Var} (\hat{\theta}_n) + [\mathrm{bias} (\hat{\theta}_n)]^2$ como abaixo. Como você pode ver, os dois valores concordam com a precisão numérica.
 
 ```{.python .input}
 bias = stat_bias(theta_true, theta_est)
@@ -502,6 +502,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNTY2MjU3NSwxNDE0OTIzMDE2LDE5ND
-k1NDY3MjddfQ==
+eyJoaXN0b3J5IjpbLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOT
+Q5NTQ2NzI3XX0=
 -->
