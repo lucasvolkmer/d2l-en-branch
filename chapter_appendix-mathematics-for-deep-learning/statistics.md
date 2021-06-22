@@ -170,9 +170,9 @@ $$
 Nós nos referimos à fórmula acima como *compensação de variação de polarização*. O erro quadrático médio pode ser dividido em três fontes de erro: o erro de alta polarização, o erro de alta variância e o erro irredutível. O erro de polarização é comumente visto em um modelo simples (como um modelo de regressão linear), que não pode extrair relações dimensionais altas entre os recursos e as saídas. Se um modelo sofre de erro de alta polarização, costumamos dizer que ele está *subaproveitado* ou falta de *flexibilidade* conforme apresentado em (:numref:`sec_model_selection`). A alta variação geralmente resulta de um modelo muito complexo, que supera os dados de treinamento. Como resultado, um modelo *overfitting* é sensível a pequenas flutuações nos dados. Se um modelo sofre de alta variância, costumamos dizer que está *sobreajuste* e falta de *generalização* conforme apresentado em (:numref:`sec_model_selection`). O erro irredutível é o resultado do ruído no próprio $\theta$.
 
 
-### Evaluating Estimators in Code
+### Avaliando estimadores em código
 
-Since the standard deviation of an estimator has been implementing by simply calling `a.std()` for a tensor `a`, we will skip it but implement the statistical bias and the mean squared error.
+Uma vez que o desvio padrão de um estimador foi implementado simplesmente chamando `a.std ()` para um tensor `a`, vamos ignorá-lo, mas implementar o *bias* estatístico e o erro quadrático médio.
 
 ```{.python .input}
 # Statistical bias
@@ -502,6 +502,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTEyODUzNTgsMTQxNDkyMzAxNiwxOT
-Q5NTQ2NzI3XX0=
+eyJoaXN0b3J5IjpbLTUxNDU3ODY0NywxNDE0OTIzMDE2LDE5ND
+k1NDY3MjddfQ==
 -->
