@@ -266,21 +266,22 @@ tf.square(tf.math.reduce_std(samples)) + tf.square(bias)
 ## Conducting Hypothesis Tests
 
 
-The most commonly encountered topic in statistical inference is hypothesis testing. While hypothesis testing was popularized in the early 20th century, the first use can be traced back to John Arbuthnot in the 1700s. John tracked 80-year birth records in London and concluded that more men were born than women each year. Following that, the modern significance testing is the intelligence heritage by Karl Pearson who invented $p$-value and Pearson's chi-squared test, William Gosset who is the father of Student's t-distribution, and Ronald Fisher who initialed the null hypothesis and the significance test.
 
-A *hypothesis test* is a way of evaluating some evidence against the default statement about a population. We refer the default statement as the *null hypothesis* $H_0$, which we try to reject using the observed data. Here, we use $H_0$ as a starting point for the statistical significance testing. The *alternative hypothesis* $H_A$ (or $H_1$) is a statement that is contrary to the null hypothesis. A null hypothesis is often stated in a declarative form which posits a relationship between variables. It should reflect the brief as explicit as possible, and be testable by statistics theory.
+O tópico mais comumente encontrado na inferência estatística é o teste de hipóteses. Embora o teste de hipóteses tenha sido popularizado no início do século 20, o primeiro uso pode ser rastreado até John Arbuthnot no século XVIII. John rastreou registros de nascimento de 80 anos em Londres e concluiu que mais homens nasciam do que mulheres a cada ano. Em seguida, o teste de significância moderno é a herança de inteligência de Karl Pearson que inventou o valor $p$ e o teste qui-quadrado de Pearson, William Gosset que é o pai da distribuição t de Student e Ronald Fisher que inicializou a hipótese nula e a teste de significância.
 
-Imagine you are a chemist. After spending thousands of hours in the lab, you develop a new medicine which can dramatically improve one's ability to understand math. To show its magic power, you need to test it. Naturally, you may need some volunteers to take the medicine and see whether it can help them learn math better. How do you get started?
+Um *teste de hipótese* é uma forma de avaliar algumas evidências contra a declaração padrão sobre uma população. Referimo-nos à declaração padrão como a *hipótese nula* $H_0$, que tentamos rejeitar usando os dados observados. Aqui, usamos $H_0$ como ponto de partida para o teste de significância estatística. A *hipótese alternativa* $H_A$ (ou $H_1$) é uma afirmação que é contrária à hipótese nula. Uma hipótese nula é freqüentemente afirmada em uma forma declarativa que postula uma relação entre variáveis. Deve refletir o resumo o mais explícito possível e ser testável pela teoria estatística.
 
-First, you will need carefully random selected two groups of volunteers, so that there is no difference between their math understanding ability measured by some metrics. The two groups are commonly referred to as the test group and the control group. The *test group* (or *treatment group*) is a group of individuals who will experience the medicine, while the *control group* represents the group of users who are set aside as a benchmark, i.e., identical environment setups except taking this medicine. In this way, the influence of all the variables are minimized, except the impact of the independent variable in the treatment.
+Imagine que você é um químico. Depois de passar milhares de horas no laboratório, você desenvolve um novo medicamento que pode melhorar drasticamente a habilidade de entender matemática. Para mostrar seu poder mágico, você precisa testá-lo. Naturalmente, você pode precisar de alguns voluntários para tomar o remédio e ver se ele pode ajudá-los a aprender melhor a matemática. Como você começou?
 
-Second, after a period of taking the medicine, you will need to measure the two groups' math understanding by the same metrics, such as letting the volunteers do the same tests after learning a new math formula. Then, you can collect their performance and compare the results.  In this case, our null hypothesis will be that there is no difference between the two groups, and our alternate will be that there is.
+Primeiro, você precisará de dois grupos de voluntários cuidadosamente selecionados aleatoriamente, para que não haja diferença entre sua capacidade de compreensão matemática medida por algumas métricas. Os dois grupos são comumente chamados de grupo de teste e grupo de controle. O *grupo de teste* (ou *grupo de tratamento*) é um grupo de indivíduos que experimentarão o medicamento, enquanto o *grupo de controle* representa o grupo de usuários que são separados como referência, ou seja, configurações de ambiente idênticas, exceto por tomar o medicamento. Desta forma, a influência de todas as variáveis ​​são minimizadas, exceto o impacto da variável independente no tratamento.
 
-This is still not fully formal.  There are many details you have to think of carefully. For example, what is the suitable metrics to test their math understanding ability? How many volunteers for your test so you can be confident to claim the effectiveness of your medicine? How long should you run the test? How do you decide if there is a difference between the two groups?  Do you care about the average performance only, or also the range of variation of the scores? And so on.
+Em segundo lugar, após um período de tomar o medicamento, você precisará medir a compreensão matemática dos dois grupos pelas mesmas métricas, como permitir que os voluntários façam os mesmos testes depois de aprender uma nova fórmula matemática. Em seguida, você pode coletar seu desempenho e comparar os resultados. Nesse caso, nossa hipótese nula será que não há diferença entre os dois grupos, e nossa alternativa será que sim.
 
-In this way, hypothesis testing provides a framework for experimental design and reasoning about certainty in observed results.  If we can now show that the null hypothesis is very unlikely to be true, we may reject it with confidence.
+Isso ainda não é totalmente formal. Existem muitos detalhes nos quais você deve pensar cuidadosamente. Por exemplo, quais são as métricas adequadas para testar sua habilidade de compreensão matemática? Quantos voluntários para o seu teste, para que possa ter a certeza de afirmar a eficácia do seu medicamento? Por quanto tempo você deve executar o teste? Como você decide se há uma diferença entre os dois grupos? Você se preocupa apenas com o desempenho médio ou também com a faixa de variação das pontuações? E assim por diante.
 
-To complete the story of how to work with hypothesis testing, we need to now introduce some additional terminology and make some of our concepts above formal.
+Desta forma, o teste de hipótese fornece uma estrutura para o projeto experimental e raciocínio sobre a certeza nos resultados observados. Se pudermos agora mostrar que a hipótese nula é muito improvável de ser verdadeira, podemos rejeitá-la com confiança.
+
+Para completar a história de como trabalhar com testes de hipóteses, precisamos agora introduzir alguma terminologia adicional e tornar alguns de nossos conceitos formais.
 
 
 ### Statistical Significance
@@ -502,6 +503,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOT
-Q5NTQ2NzI3XX0=
+eyJoaXN0b3J5IjpbMTg1MDc4MjIyOCwtMTIyNTc0NzE2MSwxND
+E0OTIzMDE2LDE5NDk1NDY3MjddfQ==
 -->
