@@ -142,14 +142,14 @@ Observe que quando $\mathrm{bias}(\hat{\theta}_n) = 0$, a expectativa do estimad
 É importante estar ciente, entretanto, que estimadores enviesados são frequentemente usados na prática. Há casos em que estimadores imparciais não existem sem suposições adicionais ou são intratáveis para calcular. Isso pode parecer uma falha significativa em um estimador, no entanto, a maioria dos estimadores encontrados na prática são pelo menos assintoticamente imparciais, no sentido de que o *bias* tende a zero enquanto o número de amostras disponíveis tende ao infinito: $\lim_{n \rightarrow \infty} \mathrm{bias}(\hat{\theta}_n) = 0$.
 
 
-### Variance and Standard Deviation
+### Variância e Desvio Padrão
 
-Second, let us measure the randomness in the estimator.  Recall from :numref:`sec_random_variables`, the *standard deviation* (or *standard error*) is defined as the squared root of the variance.  We may measure the degree of fluctuation of an estimator by measuring the standard deviation or variance of that estimator.
+Em segundo lugar, vamos medir a aleatoriedade no estimador. Lembre-se de :numref:`sec_random_variables`, o *desvio padrão* (ou *erro padrão*) é definido como a raiz quadrada da variância. Podemos medir o grau de flutuação de um estimador medindo o desvio padrão ou a variância desse estimador.
 
 $$\sigma_{\hat{\theta}_n} = \sqrt{\mathrm{Var} (\hat{\theta}_n )} = \sqrt{E[(\hat{\theta}_n - E(\hat{\theta}_n))^2]}.$$
 :eqlabel:`eq_var_est`
 
-It is important to compare :eqref:`eq_var_est` to :eqref:`eq_mse_est`.  In this equation we do not compare to the true population value $\theta$, but instead to $E(\hat{\theta}_n)$, the expected sample mean.  Thus we are not measuring how far the estimator tends to be from the true value, but instead we measuring the fluctuation of the estimator itself.
+É importante comparar :eqref:`eq_var_est` com :eqref: eq_mse_est`. Nesta equação, não comparamos com o valor real da população $\theta$ mas em vez disso com $E(\hat{\theta}_n)$, a média amostral esperada. Portanto, não estamos medindo o quão longe o estimador tende a estar do valor verdadeiro, mas sim medindo a flutuação do próprio estimador.
 
 
 ### The Bias-Variance Trade-off
@@ -502,6 +502,6 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM0NDU2NTEyLDE0MTQ5MjMwMTYsMTk0OT
-U0NjcyN119
+eyJoaXN0b3J5IjpbLTE4NDc3MzgzMjcsMTQxNDkyMzAxNiwxOT
+Q5NTQ2NzI3XX0=
 -->
