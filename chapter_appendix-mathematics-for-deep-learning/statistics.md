@@ -301,11 +301,11 @@ Também é conhecido como *erro tipo I* ou *falso positivo*. O $\alpha$ é chama
 
 ### Potência Estatística
 
-The *statistical power* (or *sensitivity*) measures the probability of reject the null hypothesis, $H_0$, when it should be rejected, i.e.,
+A *potência estatística* (ou *sensibilidade*) mede a probabilidade de rejeitar a hipótese nula, $H_0$, quando deveria ser rejeitada, ou seja,
 
 $$ \text{statistical power }= 1 - \beta = 1 - P(\text{ fail to reject } H_0  \mid H_0 \text{ is false} ).$$
 
-Recall that a *type I error* is error caused by rejecting the null hypothesis when it is true, whereas a *type II error* is resulted from failing to reject the null hypothesis when it is false. A type II error is usually denoted as $\beta$, and hence the corresponding statistical power is $1-\beta$.
+Lembre-se de que um *erro tipo I* é causado pela rejeição da hipótese nula quando ela é verdadeira, enquanto um *erro tipo II* é resultado da falha em rejeitar a hipótese nula quando ela é falsa. Um erro do tipo II geralmente é denotado como $\beta e, portanto, o poder estatístico correspondente é $1-\beta$.
 
 
 Intuitively, statistical power can be interpreted as how likely our test will detect a real discrepancy of some minimum magnitude at a desired statistical significance level. $80\%$ is a commonly used statistical power threshold. The higher the statistical power, the more likely we are to detect true differences.
@@ -504,7 +504,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzUzNTQ3OTYsNzE5NDk2NzQ0LDE4NT
-A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
-NzI3XX0=
+eyJoaXN0b3J5IjpbMTAyOTk4NTAxNyw3MTk0OTY3NDQsMTg1MD
+c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
+MjddfQ==
 -->
