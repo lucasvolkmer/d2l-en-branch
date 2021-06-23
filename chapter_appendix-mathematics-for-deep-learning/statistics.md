@@ -412,17 +412,17 @@ $$
 P\left(\frac{\hat\mu_n - \mu}{\hat\sigma_n/\sqrt{n}} \in [-1.96, 1.96]\right) \ge 0.95.
 $$
 
-Rearranging this by multiplying both sides by $\hat\sigma_n/\sqrt{n}$ and then adding $\hat\mu_n$, we obtain
+Reorganizando isso multiplicando ambos os lados por $\hat\sigma_n/\sqrt{n}$ e, em seguida, adicionando $\hat\mu_n$, obtemos
 
 $$
 P\left(\mu \in \left[\hat\mu_n - 1.96\frac{\hat\sigma_n}{\sqrt{n}}, \hat\mu_n + 1.96\frac{\hat\sigma_n}{\sqrt{n}}\right]\right) \ge 0.95.
 $$
 
-Thus we know that we have found our $95\%$ confidence interval:
+Assim, sabemos que encontramos nosso intervalo de confiança de $ 95 \% $:
 $$\left[\hat\mu_n - 1.96\frac{\hat\sigma_n}{\sqrt{n}}, \hat\mu_n + 1.96\frac{\hat\sigma_n}{\sqrt{n}}\right].$$
 :eqlabel:`eq_gauss_confidence`
 
-It is safe to say that :eqref:`eq_gauss_confidence` is one of the most used formula in statistics.  Let us close our discussion of statistics by implementing it.  For simplicity, we assume we are in the asymptotic regime.  Small values of $N$ should include the correct value of `t_star` obtained either programmatically or from a $t$-table.
+É seguro dizer que :eqref:`eq_gauss_confidence` é uma das fórmulas mais usadas em estatística. Vamos encerrar nossa discussão sobre estatística implementando-a. Para simplificar, presumimos que estamos no regime assintótico. Valores pequenos de $N$ devem incluir o valor correto de `t_star` obtido tanto programaticamente quanto de uma tabela $t$.
 
 ```{.python .input}
 # Number of samples
@@ -480,7 +480,7 @@ sigma_hat = tf.math.reduce_std(samples)
  mu_hat + t_star*sigma_hat/tf.sqrt(tf.constant(N, dtype=tf.float32)))
 ```
 
-## Summary
+## Resumo
 
 * Statistics focuses on inference problems, whereas deep learning emphasizes on making accurate predictions without explicitly programming and understanding.
 * There are three common statistics inference methods: evaluating and comparing estimators, conducting hypothesis tests, and constructing confidence intervals.
@@ -512,7 +512,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzU2NDgzMyw3MTk0OTY3NDQsMTg1MD
+eyJoaXN0b3J5IjpbMTIxMjE2NDcyOSw3MTk0OTY3NDQsMTg1MD
 c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
 MjddfQ==
 -->
