@@ -338,19 +338,20 @@ Se o valor de $p$ for menor ou igual a um nível de significância estatística 
 Normalmente existem dois tipos de teste de significância: o teste unilateral e o teste bilateral. O *teste unilateral* é aplicável quando a hipótese nula e a hipótese alternativa têm apenas uma direção. Por exemplo, a hipótese nula pode afirmar que o parâmetro verdadeiro $\theta$ é menor ou igual a um valor $c$. A hipótese alternativa seria que $\theta$ é maior que $c$. Ou seja, a região de rejeição está em apenas um lado da distribuição da amostra. Ao contrário do teste unilateral, o *teste bilateral* é aplicável quando a região de rejeição está em ambos os lados da distribuição de amostragem. Um exemplo neste caso pode ter um estado de hipótese nula de que o parâmetro verdadeiro $\theta$ é igual a um valor $c$. A hipótese alternativa seria que $\theta$ não é igual a $ c $.
 
 
-### General Steps of Hypothesis Testing
+### Etapas Gerais de Teste de Hipóteses
 
-After getting familiar with the above concepts, let us go through the general steps of hypothesis testing.
+Depois de se familiarizar com os conceitos acima, vamos passar pelas etapas gerais do teste de hipóteses.
 
-1. State the question and establish a null hypotheses $H_0$.
-2. Set the statistical significance level $\alpha$ and a statistical power ($1 - \beta$).
-3. Obtain samples through experiments.  The number of samples needed will depend on the statistical power, and the expected effect size.
-4. Calculate the test statistic and the $p$-value.
-5. Make the decision to keep or reject the null hypothesis based on the $p$-value and the statistical significance level $\alpha$.
+1. Enuncie a questão e estabeleça uma hipótese nula $H_0$.
+2. Defina o nível de significância estatística $\alpha$ e um poder estatístico ($1 - \beta$).
+3. Obtenha amostras por meio de experimentos. O número de amostras necessárias dependerá do poder estatístico e do tamanho do efeito esperado.
+4. Calcule a estatística de teste e o valor $p$.
+5. Tome a decisão de manter ou rejeitar a hipótese nula com base no valor $p$ e no nível de significância estatística $\alpha$.
 
-To conduct a hypothesis test, we start by defining a null hypothesis and a level of risk that we are willing to take. Then we calculate the test statistic of the sample, taking an extreme value of the test statistic as evidence against the null hypothesis. If the test statistic falls within the reject region, we may reject the null hypothesis in favor of the alternative.
 
-Hypothesis testing is applicable in a variety of scenarios such as the clinical trails and A/B testing.
+Para realizar um teste de hipótese, começamos definindo uma hipótese nula e um nível de risco que estamos dispostos a correr. Em seguida, calculamos a estatística de teste da amostra, tomando um valor extremo da estatística de teste como evidência contra a hipótese nula. Se a estatística de teste cair dentro da região de rejeição, podemos rejeitar a hipótese nula em favor da alternativa.
+
+O teste de hipóteses é aplicável em uma variedade de cenários, como testes clínicos e testes A/B.
 
 
 ## Constructing Confidence Intervals
@@ -506,7 +507,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NTg5ODEzOSw3MTk0OTY3NDQsMTg1MD
-c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
-MjddfQ==
+eyJoaXN0b3J5IjpbLTEzMzQ1NDQ4OTQsNzE5NDk2NzQ0LDE4NT
+A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
+NzI3XX0=
 -->
