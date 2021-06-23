@@ -316,7 +316,7 @@ Um dos usos mais comuns do poder estatístico é determinar o número de amostra
 Podemos imaginar o poder como um filtro de água. Nesta analogia, um teste de hipótese de alta potência é como um sistema de filtragem de água de alta qualidade que reduzirá as substâncias nocivas na água tanto quanto possível. Por outro lado, uma discrepância menor é como um filtro de água de baixa qualidade, onde algumas substâncias relativamente pequenas podem escapar facilmente das lacunas. Da mesma forma, se o poder estatístico não for suficientemente alto, o teste pode não detectar a discrepância menor.
 
 
-### Test Statistic
+### Estatística de Teste
 
 A *test statistic* $T(x)$ is a scalar which summarizes some characteristic of the sample data.  The goal of defining such a statistic is that it should allow us to distinguish between different distributions and conduct our hypothesis test.  Thinking back to our chemist example, if we wish to show that one population performs better than the other, it could be reasonable to take the mean as the test statistic.  Different choices of test statistic can lead to statistical test with drastically different statistical power.
 
@@ -505,7 +505,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTExOTE4OTQsNzE5NDk2NzQ0LDE4NT
+eyJoaXN0b3J5IjpbLTIwNjQ4NTc1MjYsNzE5NDk2NzQ0LDE4NT
 A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
 NzI3XX0=
 -->
