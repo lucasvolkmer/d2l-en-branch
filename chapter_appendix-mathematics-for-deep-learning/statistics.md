@@ -354,17 +354,18 @@ Para realizar um teste de hipótese, começamos definindo uma hipótese nula e u
 O teste de hipóteses é aplicável em uma variedade de cenários, como testes clínicos e testes A/B.
 
 
-## Constructing Confidence Intervals
+## Construindo Intervalos de Confiança
 
 
-When estimating the value of a parameter $\theta$, point estimators like $\hat \theta$ are of limited utility since they contain no notion of uncertainty. Rather, it would be far better if we could produce an interval that would contain the true parameter $\theta$ with high probability.  If you were interested in such ideas a century ago, then you would have been excited to read "Outline of a Theory of Statistical Estimation Based on the Classical Theory of Probability" by Jerzy Neyman :cite:`Neyman.1937`, who first introduced the concept of confidence interval in 1937.
 
-To be useful, a confidence interval should be as small as possible for a given degree of certainty. Let us see how to derive it.
+Ao estimar o valor de um parâmetro $\theta$, estimadores pontuais como $\hat \theta$ são de utilidade limitada, pois não contêm nenhuma noção de incerteza. Em vez disso, seria muito melhor se pudéssemos produzir um intervalo que contivesse o parâmetro verdadeiro $\theta$ com alta probabilidade. Se você estivesse interessado em tais ideias um século atrás, então você teria ficado animado ao ler "Esboço de uma teoria de estimativa estatística baseada na teoria clássica da probabilidade" por Jerzy Neyman :cite:`Neyman.1937`, que apresentou pela primeira vez o conceito de intervalo de confiança em 1937.
+
+Para ser útil, um intervalo de confiança deve ser o menor possível para um determinado grau de certeza. Vamos ver como derivá-lo.
 
 
-### Definition
+### Definição
 
-Mathematically, a *confidence interval* for the true parameter $\theta$ is an interval $C_n$ that computed from the sample data such that
+Matematicamente, um *intervalo de confiança* para o parâmetro verdadeiro $\theta$ é um intervalo $C_n$ calculado a partir dos dados de amostra de modo que
 
 $$P_{\theta} (C_n \ni \theta) \geq 1 - \alpha, \forall \theta.$$
 :eqlabel:`eq_confidence`
@@ -507,7 +508,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzQ1NDQ4OTQsNzE5NDk2NzQ0LDE4NT
+eyJoaXN0b3J5IjpbLTEyMjM1ODQ2MzgsNzE5NDk2NzQ0LDE4NT
 A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
 NzI3XX0=
 -->
