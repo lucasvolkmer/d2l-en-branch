@@ -318,21 +318,22 @@ Podemos imaginar o poder como um filtro de água. Nesta analogia, um teste de hi
 
 ### Estatística de Teste
 
-A *test statistic* $T(x)$ is a scalar which summarizes some characteristic of the sample data.  The goal of defining such a statistic is that it should allow us to distinguish between different distributions and conduct our hypothesis test.  Thinking back to our chemist example, if we wish to show that one population performs better than the other, it could be reasonable to take the mean as the test statistic.  Different choices of test statistic can lead to statistical test with drastically different statistical power.
 
-Often, $T(X)$ (the distribution of the test statistic under our null hypothesis) will follow, at least approximately, a common probability distribution such as a normal distribution when considered under the null hypothesis. If we can derive explicitly such a distribution, and then measure our test statistic on our dataset, we can safely reject the null hypothesis if our statistic is far outside the range that we would expect.  Making this quantitative leads us to the notion of $p$-values.
+Uma *estatística de teste* $T(x)$ é um escalar que resume algumas características dos dados de amostra. O objetivo de definir tal estatística é que ela deve nos permitir distinguir entre diferentes distribuições e conduzir nosso teste de hipótese. Voltando ao nosso exemplo químico, se quisermos mostrar que uma população tem um desempenho melhor do que a outra, pode ser razoável tomar a média como estatística de teste. Diferentes escolhas de estatísticas de teste podem levar a testes estatísticos com poder estatístico drasticamente diferente.
+
+Frequentemente, $T(X)$ (a distribuição da estatística de teste sob nossa hipótese nula) seguirá, pelo menos aproximadamente, uma distribuição de probabilidade comum, como uma distribuição normal quando considerada sob a hipótese nula. Se pudermos derivar explicitamente essa distribuição e, em seguida, medir nossa estatística de teste em nosso conjunto de dados, podemos rejeitar com segurança a hipótese nula se nossa estatística estiver muito fora do intervalo que esperaríamos. Fazer esse quantitativo nos leva à noção de valores $p$.
 
 
-### $p$-value
+### Valor $p$
 
-The $p$-value (or the *probability value*) is the probability that $T(X)$ is at least as extreme as the observed test statistic $T(x)$ assuming that the null hypothesis is *true*, i.e.,
+O valor $p$ (ou o *valor de probabilidade*) é a probabilidade de que $T(X)$ seja pelo menos tão extremo quanto a estatística de teste observada $T(x)$ assumindo que a hipótese nula é *verdadeira*, ou seja,
 
 $$ p\text{-value} = P_{H_0}(T(X) \geq T(x)).$$
 
-If the $p$-value is smaller than or equal to a predefined and fixed statistical significance level $\alpha$, we may reject the null hypothesis. Otherwise, we will conclude that we are lack of evidence to reject the null hypothesis. For a given population distribution, the *region of rejection* will be the interval contained of all the points which has a $p$-value smaller than the statistical significance level $\alpha$.
+Se o valor de $p$ for menor ou igual a um nível de significância estatística predefinido e fixo $\alpha$, podemos rejeitar a hipótese nula. Caso contrário, concluiremos que faltam evidências para rejeitar a hipótese nula. Para uma dada distribuição populacional, a *região de rejeição* será o intervalo contido de todos os pontos que possuem um valor $p$ menor que o nível de significância estatística $\alpha$.
 
 
-### One-side Test and Two-sided Test
+### Teste unilateral e teste bilateral
 
 Normally there are two kinds of significance test: the one-sided test and the two-sided test. The *one-sided test* (or *one-tailed test*) is applicable when the null hypothesis and the alternative hypothesis only have one direction. For example, the null hypothesis may state that the true parameter $\theta$ is less than or equal to a value $c$. The alternative hypothesis would be that $\theta$ is greater than $c$. That is, the region of rejection is on only one side of the sampling distribution.  Contrary to the one-sided test, the *two-sided test* (or *two-tailed test*) is applicable when the region of rejection is on both sides of the sampling distribution. An example in this case may have a null hypothesis state that the true parameter $\theta$ is equal to a value $c$. The alternative hypothesis would be that $\theta$ is not equal to $c$.
 
@@ -505,7 +506,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjQ4NTc1MjYsNzE5NDk2NzQ0LDE4NT
-A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
-NzI3XX0=
+eyJoaXN0b3J5IjpbMjUyODQ4Mjc2LDcxOTQ5Njc0NCwxODUwNz
+gyMjI4LC0xMjI1NzQ3MTYxLDE0MTQ5MjMwMTYsMTk0OTU0Njcy
+N119
 -->
