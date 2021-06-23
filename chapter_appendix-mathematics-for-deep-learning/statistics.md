@@ -401,11 +401,12 @@ $$
 T = \frac{\hat\mu_n - \mu}{\hat\sigma_n/\sqrt{n}},
 $$
 
-we obtain a random variable following a well-known distribution called the *Student's t-distribution on* $n-1$ *degrees of freedom*.
 
-This distribution is very well studied, and it is known, for instance, that as $n\rightarrow \infty$, it is approximately a standard Gaussian, and thus by looking up values of the Gaussian c.d.f. in a table, we may conclude that the value of $T$ is in the interval $[-1.96, 1.96]$ at least $95\%$ of the time.  For finite values of $n$, the interval needs to be somewhat larger, but are well known and precomputed in tables.
+obtemos uma variável aleatória seguindo uma distribuição bem *conhecida chamada *distribuição t de Student em* $n-1$ *graus de liberdade*.
 
-Thus, we may conclude that for large $n$,
+Esta distribuição é muito bem estudada, e sabe-se, por exemplo, que como $n\rightarrow \infty$, é aproximadamente uma Gaussiana padrão e, portanto, observando os valores da Gaussiana f.d.c. em uma tabela, podemos concluir que o valor de $T$ está no intervalo $[-1.96, 1.96]$ pelo menos $95\%$ do tempo. Para valores finitos de $n$, o intervalo precisa ser um pouco maior, mas são bem conhecidos e pré-computados em tabelas.
+
+Assim, podemos concluir que, para grandes $n$,
 
 $$
 P\left(\frac{\hat\mu_n - \mu}{\hat\sigma_n/\sqrt{n}} \in [-1.96, 1.96]\right) \ge 0.95.
@@ -511,7 +512,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4ODQ1MTYwMiw3MTk0OTY3NDQsMTg1MD
+eyJoaXN0b3J5IjpbLTE1NzU2NDgzMyw3MTk0OTY3NDQsMTg1MD
 c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
 MjddfQ==
 -->
