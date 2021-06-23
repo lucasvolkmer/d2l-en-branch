@@ -335,7 +335,7 @@ Se o valor de $p$ for menor ou igual a um nível de significância estatística 
 
 ### Teste unilateral e teste bilateral
 
-Normally there are two kinds of significance test: the one-sided test and the two-sided test. The *one-sided test* (or *one-tailed test*) is applicable when the null hypothesis and the alternative hypothesis only have one direction. For example, the null hypothesis may state that the true parameter $\theta$ is less than or equal to a value $c$. The alternative hypothesis would be that $\theta$ is greater than $c$. That is, the region of rejection is on only one side of the sampling distribution.  Contrary to the one-sided test, the *two-sided test* (or *two-tailed test*) is applicable when the region of rejection is on both sides of the sampling distribution. An example in this case may have a null hypothesis state that the true parameter $\theta$ is equal to a value $c$. The alternative hypothesis would be that $\theta$ is not equal to $c$.
+Normalmente existem dois tipos de teste de significância: o teste unilateral e o teste bilateral. O *teste unilateral* é aplicável quando a hipótese nula e a hipótese alternativa têm apenas uma direção. Por exemplo, a hipótese nula pode afirmar que o parâmetro verdadeiro $\theta$ é menor ou igual a um valor $c$. A hipótese alternativa seria que $\theta$ é maior que $c$. Ou seja, a região de rejeição está em apenas um lado da distribuição da amostra. Ao contrário do teste unilateral, o *teste bilateral* é aplicável quando a região de rejeição está em ambos os lados da distribuição de amostragem. Um exemplo neste caso pode ter um estado de hipótese nula de que o parâmetro verdadeiro $\theta$ é igual a um valor $c$. A hipótese alternativa seria que $\theta$ não é igual a $ c $.
 
 
 ### General Steps of Hypothesis Testing
@@ -506,7 +506,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUyODQ4Mjc2LDcxOTQ5Njc0NCwxODUwNz
-gyMjI4LC0xMjI1NzQ3MTYxLDE0MTQ5MjMwMTYsMTk0OTU0Njcy
-N119
+eyJoaXN0b3J5IjpbMTU2NTg5ODEzOSw3MTk0OTY3NDQsMTg1MD
+c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
+MjddfQ==
 -->
