@@ -505,14 +505,14 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1102)
+[Discussões](https://discuss.d2l.ai/t/1102)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1103)
+[Discussões](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4ODc1MDY0OCw3MTk0OTY3NDQsMTg1MD
-c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
-MjddfQ==
+eyJoaXN0b3J5IjpbLTEzNjY4NTM2ODgsNzE5NDk2NzQ0LDE4NT
+A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
+NzI3XX0=
 -->
