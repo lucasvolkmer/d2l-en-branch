@@ -382,19 +382,20 @@ Observe que :eqref:`eq_confidence` é sobre a variável $C_n$, não sobre o $\th
 
 Isso pode parecer pedante, mas pode ter implicações reais para a interpretação dos resultados. Em particular, podemos satisfazer :eqref:`eq_confidence` construindo intervalos que estamos *quase certos* de que não contêm o valor verdadeiro, contanto que raramente o façamos o suficiente. Encerramos esta seção fornecendo três declarações tentadoras, mas falsas. Uma discussão aprofundada desses pontos pode ser encontrada em:cite:`Morey.Hoekstra.Rouder.ea.2016`.
 
-* **Fallacy 1**. Narrow confidence intervals mean we can estimate the parameter precisely.
-* **Fallacy 2**. The values inside the confidence interval are more likely to be the true value than those outside the interval.
-* **Fallacy 3**. The probability that a particular observed $95\%$ confidence interval contains the true value is $95\%$.
 
-Sufficed to say, confidence intervals are subtle objects.  However, if you keep the interpretation clear, they can be powerful tools.
+* ** Falácia 1 **. Intervalos de confiança estreitos significam que podemos estimar o parâmetro com precisão.
+* ** Falácia 2 **. Os valores dentro do intervalo de confiança têm mais probabilidade de ser o valor verdadeiro do que aqueles fora do intervalo.
+* ** Falácia 3 **. A probabilidade de que um determinado intervalo de confiança de $95\%$ contenha o valor verdadeiro é de $95\%$.
 
-### A Gaussian Example
+Basta dizer que os intervalos de confiança são objetos sutis. No entanto, se você mantiver a interpretação clara, eles podem ser ferramentas poderosas.
 
-Let us discuss the most classical example, the confidence interval for the mean of a Gaussian of unknown mean and variance.  Suppose we collect $n$ samples $\{x_i\}_{i=1}^n$ from our Gaussian $\mathcal{N}(\mu, \sigma^2)$.  We can compute estimators for the mean and standard deviation by taking
+### Um Exemplo Gaussiano
+
+Vamos discutir o exemplo mais clássico, o intervalo de confiança para a média de uma Gaussiana de média e variância desconhecidas. Suponha que coletamos $n$ amostras $\{x_i\}_{i=1}^n$ de nossa gaussiana $\mathcal{N}(\mu, \sigma^2)$ Podemos calcular estimadores para a média e o desvio padrão tomando
 
 $$\hat\mu_n = \frac{1}{n}\sum_{i=1}^n x_i \;\text{and}\; \hat\sigma^2_n = \frac{1}{n-1}\sum_{i=1}^n (x_i - \hat\mu)^2.$$
 
-If we now consider the random variable
+Se agora considerarmos a variável aleatória
 
 $$
 T = \frac{\hat\mu_n - \mu}{\hat\sigma_n/\sqrt{n}},
@@ -510,7 +511,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTY1MTAwNDQsNzE5NDk2NzQ0LDE4NT
-A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
-NzI3XX0=
+eyJoaXN0b3J5IjpbLTg4ODQ1MTYwMiw3MTk0OTY3NDQsMTg1MD
+c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
+MjddfQ==
 -->
