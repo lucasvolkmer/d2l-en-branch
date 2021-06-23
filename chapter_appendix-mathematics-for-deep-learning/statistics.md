@@ -308,11 +308,12 @@ $$ \text{statistical power }= 1 - \beta = 1 - P(\text{ fail to reject } H_0  \mi
 Lembre-se de que um *erro tipo I* é causado pela rejeição da hipótese nula quando ela é verdadeira, enquanto um *erro tipo II* é resultado da falha em rejeitar a hipótese nula quando ela é falsa. Um erro do tipo II geralmente é denotado como $\beta e, portanto, o poder estatístico correspondente é $1-\beta$.
 
 
-Intuitively, statistical power can be interpreted as how likely our test will detect a real discrepancy of some minimum magnitude at a desired statistical significance level. $80\%$ is a commonly used statistical power threshold. The higher the statistical power, the more likely we are to detect true differences.
 
-One of the most common uses of statistical power is in determining the number of samples needed.  The probability you reject the null hypothesis when it is false depends on the degree to which it is false (known as the *effect size*) and the number of samples you have.  As you might expect, small effect sizes will require a very large number of samples to be detectable with high probability.  While beyond the scope of this brief appendix to derive in detail, as an example, want to be able to reject a null hypothesis that our sample came from a mean zero variance one Gaussian, and we believe that our sample's mean is actually close to one, we can do so with acceptable error rates with a sample size of only $8$.  However, if we think our sample population true mean is close to $0.01$, then we'd need a sample size of nearly $80000$ to detect the difference.
+Intuitivamente, a potência estatística pode ser interpretada como a probabilidade de nosso teste detectar uma discrepância real de alguma magnitude mínima em um nível de significância estatística desejado. $80\%$ é um limite de poder estatístico comumente usado. Quanto maior o poder estatístico, maior será a probabilidade de detectarmos diferenças verdadeiras.
 
-We can imagine the power as a water filter. In this analogy, a high power hypothesis test is like a high quality water filtration system that will reduce harmful substances in the water as much as possible. On the other hand, a smaller discrepancy is like a low quality water filter, where some relative small substances may easily escape from the gaps. Similarly, if the statistical power is not of enough high power, then the test may not catch the smaller discrepancy.
+Um dos usos mais comuns do poder estatístico é determinar o número de amostras necessárias. A probabilidade de você rejeitar a hipótese nula quando ela é falsa depende do grau em que é falsa (conhecido como *tamanho do efeito*) e do número de amostras que você tem. Como você pode esperar, tamanhos de efeito pequenos exigirão um número muito grande de amostras para serem detectados com alta probabilidade. Embora além do escopo deste breve apêndice para derivar em detalhes, como um exemplo, queremos ser capazes de rejeitar uma hipótese nula de que nossa amostra veio de uma variância zero média gaussiana, e acreditamos que a média de nossa amostra está realmente perto de um , podemos fazer isso com taxas de erro aceitáveis ​​com um tamanho de amostra de apenas $8$. No entanto, se pensarmos que a média verdadeira de nossa amostra populacional está próxima de $0.01$, então precisaríamos de um tamanho de amostra de quase $80000$ para detectar a diferença.
+
+Podemos imaginar o poder como um filtro de água. Nesta analogia, um teste de hipótese de alta potência é como um sistema de filtragem de água de alta qualidade que reduzirá as substâncias nocivas na água tanto quanto possível. Por outro lado, uma discrepância menor é como um filtro de água de baixa qualidade, onde algumas substâncias relativamente pequenas podem escapar facilmente das lacunas. Da mesma forma, se o poder estatístico não for suficientemente alto, o teste pode não detectar a discrepância menor.
 
 
 ### Test Statistic
@@ -504,7 +505,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyOTk4NTAxNyw3MTk0OTY3NDQsMTg1MD
-c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
-MjddfQ==
+eyJoaXN0b3J5IjpbLTE0MTExOTE4OTQsNzE5NDk2NzQ0LDE4NT
+A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
+NzI3XX0=
 -->
