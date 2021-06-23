@@ -491,17 +491,17 @@ sigma_hat = tf.math.reduce_std(samples)
 
 ## Exercícios
 
-1. Let $X_1, X_2, \ldots, X_n \overset{\text{iid}}{\sim} \mathrm{Unif}(0, \theta)$, where "iid" stands for *independent and identically distributed*. Consider the following estimators of $\theta$:
+1. Seja $X_1, X_2, \ldots, X_n \overset{\text{idfi}}{\sim} \mathrm{Unif}(0, \theta)$, onde "idfi" significa *independente e distribuído de forma idêntica* . Considere os seguintes estimadores de $\theta$:
 $$\hat{\theta} = \max \{X_1, X_2, \ldots, X_n \};$$
 $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
-    * Find the statistical bias, standard deviation, and mean square error of $\hat{\theta}.$
-    * Find the statistical bias, standard deviation, and mean square error of $\tilde{\theta}.$
-    * Which estimator is better?
-1. For our chemist example in introduction, can you derive the 5 steps to conduct a two-sided hypothesis testing? Given the statistical significance level $\alpha = 0.05$ and the statistical power $1 - \beta = 0.8$.
-1. Run the confidence interval code with $N=2$ and $\alpha = 0.5$ for $100$ independently generated dataset, and plot the resulting intervals (in this case `t_star = 1.0`).  You will see several very short intervals which are very far from containing the true mean $0$.  Does this contradict the interpretation of the confidence interval?  Do you feel comfortable using short intervals to indicate high precision estimates?
+    * Encontre a tendência estatística, o desvio padrão e o erro quadrático médio de $\hat{\theta}.$
+    * Encontre o viés estatístico, o desvio padrão e o erro quadrático médio de $\tilde{\theta}.$
+    * Qual estimador é melhor?
+1. Para nosso exemplo de químico na introdução, você pode derivar as 5 etapas para conduzir um teste de hipótese bilateral? Dado o nível de significância estatística $\alpha = 0.05$ e a potência estatística $1 - \beta = 0.8$.
+1. Execute o código do intervalo de confiança com $N=2$ e $\alpha = 0.5$ para $100$ conjunto de dados gerado independentemente e plote os intervalos resultantes (neste caso `t_star = 1.0`). Você verá vários intervalos muito curtos que estão longe de conter a verdadeira média $0$. Isso contradiz a interpretação do intervalo de confiança? Você se sente confortável usando intervalos curtos para indicar estimativas de alta precisão?
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/419)
+[Discussões](https://discuss.d2l.ai/t/419)
 :end_tab:
 
 :begin_tab:`pytorch`
@@ -512,7 +512,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDE4MDE4OCw3MTk0OTY3NDQsMTg1MD
+eyJoaXN0b3J5IjpbMTc4ODc1MDY0OCw3MTk0OTY3NDQsMTg1MD
 c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
 MjddfQ==
 -->
