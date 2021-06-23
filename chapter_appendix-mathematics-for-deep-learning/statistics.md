@@ -377,9 +377,10 @@ Observe que :eqref:`eq_confidence` é sobre a variável $C_n$, não sobre o $\th
 
 ### Interpretação
 
-It is very tempting to interpret a $95\%$ confidence interval as an interval where you can be $95\%$ sure the true parameter lies, however this is sadly not true.  The true parameter is fixed, and it is the interval that is random.  Thus a better interpretation would be to say that if you generated a large number of confidence intervals by this procedure, $95\%$ of the generated intervals would contain the true parameter.
 
-This may seem pedantic, but it can have real implications for the interpretation of the results.  In particular, we may satisfy :eqref:`eq_confidence` by constructing intervals that we are *almost certain* do not contain the true value, as long as we only do so rarely enough.  We close this section by providing three tempting but false statements.  An in-depth discussion of these points can be found in :cite:`Morey.Hoekstra.Rouder.ea.2016`.
+É muito tentador interpretar um intervalo de confiança de $95\%$ como um intervalo em que você pode ter $95\%$ de certeza de que o parâmetro verdadeiro está, mas infelizmente isso não é verdade. O verdadeiro parâmetro é fixo e é o intervalo que é aleatório. Assim, uma interpretação melhor seria dizer que se você gerasse um grande número de intervalos de confiança por esse procedimento, $95\%$ dos intervalos gerados conteriam o parâmetro verdadeiro.
+
+Isso pode parecer pedante, mas pode ter implicações reais para a interpretação dos resultados. Em particular, podemos satisfazer :eqref:`eq_confidence` construindo intervalos que estamos *quase certos* de que não contêm o valor verdadeiro, contanto que raramente o façamos o suficiente. Encerramos esta seção fornecendo três declarações tentadoras, mas falsas. Uma discussão aprofundada desses pontos pode ser encontrada em:cite:`Morey.Hoekstra.Rouder.ea.2016`.
 
 * **Fallacy 1**. Narrow confidence intervals mean we can estimate the parameter precisely.
 * **Fallacy 2**. The values inside the confidence interval are more likely to be the true value than those outside the interval.
@@ -509,7 +510,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NTQ0MTc4LDcxOTQ5Njc0NCwxODUwNz
-gyMjI4LC0xMjI1NzQ3MTYxLDE0MTQ5MjMwMTYsMTk0OTU0Njcy
-N119
+eyJoaXN0b3J5IjpbLTE1NTY1MTAwNDQsNzE5NDk2NzQ0LDE4NT
+A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
+NzI3XX0=
 -->
