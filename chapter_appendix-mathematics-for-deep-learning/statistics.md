@@ -370,11 +370,12 @@ Matematicamente, um *intervalo de confiança* para o parâmetro verdadeiro $\the
 $$P_{\theta} (C_n \ni \theta) \geq 1 - \alpha, \forall \theta.$$
 :eqlabel:`eq_confidence`
 
-Here $\alpha \in (0, 1)$, and $1 - \alpha$ is called the *confidence level* or *coverage* of the interval. This is the same $\alpha$ as the significance level as we discussed about above.
 
-Note that :eqref:`eq_confidence` is about variable $C_n$, not about the fixed $\theta$. To emphasize this, we write $P_{\theta} (C_n \ni \theta)$ rather than $P_{\theta} (\theta \in C_n)$.
+Aqui, $\alpha \in (0, 1)$, e $1 - \alpha$ é chamado de *nível de confiança* ou *cobertura* do intervalo. Este é o mesmo $\alpha$ que o nível de significância discutido acima.
 
-### Interpretation
+Observe que :eqref:`eq_confidence` é sobre a variável $C_n$, não sobre o $\theta$ fixo. Para enfatizar isso, escrevemos $P_{\theta} (C_n \ni \theta)$ em vez de $P_{\theta} (\theta \in C_n)$.
+
+### Interpretação
 
 It is very tempting to interpret a $95\%$ confidence interval as an interval where you can be $95\%$ sure the true parameter lies, however this is sadly not true.  The true parameter is fixed, and it is the interval that is random.  Thus a better interpretation would be to say that if you generated a large number of confidence intervals by this procedure, $95\%$ of the generated intervals would contain the true parameter.
 
@@ -508,7 +509,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjM1ODQ2MzgsNzE5NDk2NzQ0LDE4NT
-A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
-NzI3XX0=
+eyJoaXN0b3J5IjpbLTg4NTQ0MTc4LDcxOTQ5Njc0NCwxODUwNz
+gyMjI4LC0xMjI1NzQ3MTYxLDE0MTQ5MjMwMTYsMTk0OTU0Njcy
+N119
 -->
