@@ -482,14 +482,14 @@ sigma_hat = tf.math.reduce_std(samples)
 
 ## Resumo
 
-* Statistics focuses on inference problems, whereas deep learning emphasizes on making accurate predictions without explicitly programming and understanding.
-* There are three common statistics inference methods: evaluating and comparing estimators, conducting hypothesis tests, and constructing confidence intervals.
-* There are three most common estimators: statistical bias, standard deviation, and mean square error.
-* A confidence interval is an estimated range of a true population parameter that we can construct by given the samples.
-* Hypothesis testing is a way of evaluating some evidence against the default statement about a population.
+* Estatísticas se concentram em problemas de inferência, enquanto o *deep learning* enfatiza em fazer previsões precisas sem programação e compreensão explícitas.
+* Existem três métodos comuns de inferência estatística: avaliação e comparação de estimadores, realização de testes de hipótese e construção de intervalos de confiança.
+* Existem três estimadores mais comuns: tendência estatística, desvio padrão e erro quadrático médio.
+* Um intervalo de confiança é um intervalo estimado de um parâmetro populacional verdadeiro que podemos construir com base nas amostras.
+* O teste de hipóteses é uma forma de avaliar algumas evidências contra a declaração padrão sobre uma população.
 
 
-## Exercises
+## Exercícios
 
 1. Let $X_1, X_2, \ldots, X_n \overset{\text{iid}}{\sim} \mathrm{Unif}(0, \theta)$, where "iid" stands for *independent and identically distributed*. Consider the following estimators of $\theta$:
 $$\hat{\theta} = \max \{X_1, X_2, \ldots, X_n \};$$
@@ -512,7 +512,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMjE2NDcyOSw3MTk0OTY3NDQsMTg1MD
+eyJoaXN0b3J5IjpbLTE1NDE4MDE4OCw3MTk0OTY3NDQsMTg1MD
 c4MjIyOCwtMTIyNTc0NzE2MSwxNDE0OTIzMDE2LDE5NDk1NDY3
 MjddfQ==
 -->
