@@ -290,15 +290,16 @@ A *significância estatística* mede a probabilidade de rejeitar erroneamente a 
 
 $$ \text{statistical significance }= 1 - \alpha = 1 - P(\text{reject } H_0 \mid H_0 \text{ is true} ).$$
 
-It is also referred to as the *type I error* or *false positive*. The $\alpha$, is called as the *significance level* and its commonly used value is $5\%$, i.e., $1-\alpha = 95\%$. The significance level can be explained as the level of risk that we are willing to take, when we reject a true null hypothesis.
 
-:numref:`fig_statistical_significance` shows the observations' values and probability of a given normal distribution in a two-sample hypothesis test. If the observation data example is located outsides the $95\%$ threshold, it will be a very unlikely observation under the null hypothesis assumption. Hence, there might be something wrong with the null hypothesis and we will reject it.
+Também é conhecido como *erro tipo I* ou *falso positivo*. O $\alpha$ é chamado de *nível de significância* e seu valor comumente usado é $5\%$, i.e., $1-\alpha = 95\%$. O nível de significância pode ser explicado como o nível de risco que estamos dispostos a correr, quando rejeitamos uma hipótese nula verdadeira.
 
-![Statistical significance.](../img/statistical-significance.svg)
+:numref:`fig_statistically_significance` mostra os valores das observações e a probabilidade de uma dada distribuição normal em um teste de hipótese de duas amostras. Se o exemplo de dados de observação estiver localizado fora do limite de $95\%$, será uma observação muito improvável sob a hipótese de hipótese nula. Portanto, pode haver algo errado com a hipótese nula e nós a rejeitaremos.
+
+![Significância Estatística.](../img/statistical-significance.svg)
 :label:`fig_statistical_significance`
 
 
-### Statistical Power
+### Potência Estatística
 
 The *statistical power* (or *sensitivity*) measures the probability of reject the null hypothesis, $H_0$, when it should be rejected, i.e.,
 
@@ -503,6 +504,7 @@ $$\tilde{\theta} = 2 \bar{X_n} = \frac{2}{n} \sum_{i=1}^n X_i.$$
 [Discussions](https://discuss.d2l.ai/t/1103)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE5NDk2NzQ0LDE4NTA3ODIyMjgsLTEyMj
-U3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2NzI3XX0=
+eyJoaXN0b3J5IjpbLTE3MzUzNTQ3OTYsNzE5NDk2NzQ0LDE4NT
+A3ODIyMjgsLTEyMjU3NDcxNjEsMTQxNDkyMzAxNiwxOTQ5NTQ2
+NzI3XX0=
 -->
