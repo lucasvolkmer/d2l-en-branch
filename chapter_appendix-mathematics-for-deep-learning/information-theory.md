@@ -177,7 +177,7 @@ Pelos exemplos e interpretações acima, podemos derivar as seguintes propriedad
 * Se $X \sim P$, então $x$ transporta a quantidade máxima de informações se espalhar uniformemente entre todos os resultados possíveis. Especificamente, se a distribuição de probabilidade $P$ é discreta com $k$-classe $\{p_1, \ldots, p_k \}$, então $H(X) \leq \log(k), \text{ com igualdade se e somente se  } p_i = \frac{1}{k}, \forall i.$$ Se $P$ é uma variável aleatória contínua, então a história se torna muito mais complicada. No entanto, se impormos adicionalmente que $P$ é suportado em um intervalo finito (com todos os valores entre $0$ e $1$), então $ P $ tem a entropia mais alta se for a distribuição uniforme nesse intervalo.
 
 
-## Mutual Information
+## Informcação Mútua
 
 Previously we defined entropy of a single random variable $X$, how about the entropy of a pair random variables $(X, Y)$?  We can think of these techniques as trying to answer the following type of question, "What information is contained in $X$ and $Y$ together compared to each separately?  Is there redundant information, or is it all unique?"
 
@@ -713,7 +713,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NTE0NzUzMCw0MDk1MTAyODEsMjE0NT
+eyJoaXN0b3J5IjpbMTc4MTEyNjI3OSw0MDk1MTAyODEsMjE0NT
 k4MDkzMiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1ODU4
 XX0=
 -->
