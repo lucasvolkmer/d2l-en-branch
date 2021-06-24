@@ -152,19 +152,20 @@ entropy(tf.constant([0.1, 0.5, 0.1, 0.3]))
 
 ### Interpretações
 
-You may be curious: in the entropy definition :eqref:`eq_ent_def`, why do we use an expectation of a negative logarithm? Here are some intuitions.
 
-First, why do we use a *logarithm* function $\log$? Suppose that $p(x) = f_1(x) f_2(x) \ldots, f_n(x)$, where each component function $f_i(x)$ is independent from each other. This means that each $f_i(x)$ contributes independently to the total information obtained from $p(x)$. As discussed above, we want the entropy formula to be additive over independent random variables. Luckily, $\log$ can naturally turn a product of probability distributions to a summation of the individual terms.
+Você pode estar curioso: na definição de entropia :eqref:`eq_ent_def`, por que usamos uma expectativa de um logaritmo negativo? Aqui estão algumas intuições.
 
-Next, why do we use a *negative* $\log$? Intuitively, more frequent events should contain less information than less common events, since we often gain more information from an unusual case than from an ordinary one. However, $\log$ is monotonically increasing with the probabilities, and indeed negative for all values in $[0, 1]$.  We need to construct a monotonically decreasing relationship between the probability of events and their entropy, which will ideally be always positive (for nothing we observe should force us to forget what we have known). Hence, we add a negative sign in front of $\log$ function.
+Primeiro, por que usamos uma função *logaritmo* $\log$? Suponha que $p(x) = f_1(x) f_2(x) \ldots, f_n(x)$, onde cada função componente $f_i(x)$ é independente uma da outra. Isso significa que cada $f_i(x)$ contribui de forma independente para a informação total obtida de $p(x)$. Conforme discutido acima, queremos que a fórmula da entropia seja aditiva sobre as variáveis ​​aleatórias independentes. Felizmente, $\log$ pode naturalmente transformar um produto de distribuições de probabilidade em uma soma dos termos individuais.
 
-Last, where does the *expectation* function come from? Consider a random variable $X$. We can interpret the self-information ($-\log(p)$) as the amount of *surprise* we have at seeing a particular outcome.  Indeed, as the probability approaches zero, the surprise becomes infinite.  Similarly, we can interpret the entropy as the average amount of surprise from observing $X$. For example, imagine that a slot machine system emits statistical independently symbols ${s_1, \ldots, s_k}$ with probabilities ${p_1, \ldots, p_k}$ respectively. Then the entropy of this system equals to the average self-information from observing each output, i.e.,
+Em seguida, por que usamos um $\log$ *negativo*? Intuitivamente, eventos mais frequentes devem conter menos informações do que eventos menos comuns, uma vez que geralmente obtemos mais informações de um caso incomum do que de um caso comum. No entanto, $\log$ está aumentando monotonicamente com as probabilidades e, de fato, negativo para todos os valores em $[0, 1]$. Precisamos construir uma relação monotonicamente decrescente entre a probabilidade dos eventos e sua entropia, que idealmente será sempre positiva (pois nada do que observarmos deve nos forçar a esquecer o que conhecemos). Portanto, adicionamos um sinal negativo na frente da função $\log$.
+
+Por último, de onde vem a função *expectation*? Considere uma variável aleatória $X$. Podemos interpretar a autoinformação ($-\log(p)$) como a quantidade de *surpresa* que temos ao ver um determinado resultado. Na verdade, à medida que a probabilidade se aproxima de zero, a surpresa torna-se infinita. Da mesma forma, podemos interpretar a entropia como a quantidade média de surpresa ao observar $X$. Por exemplo, imagine que um sistema de caça-níqueis emita símbolos estatísticos independentemente ${s_1, \ldots, s_k}$ com probabilidades ${p_1, \ldots, p_k}$ respectivamente. Então, a entropia deste sistema é igual à auto-informação média da observação de cada saída, ou seja,
 
 $$H(S) = \sum_i {p_i \cdot I(s_i)} = - \sum_i {p_i \cdot \log p_i}.$$
 
 
 
-### Properties of Entropy
+### Propriedades da Entropia
 
 By the above examples and interpretations, we can derive the following properties of entropy :eqref:`eq_ent_def`. Here, we refer to $X$ as an event and $P$ as the probability distribution of $X$.
 
@@ -711,6 +712,6 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NTk4MDkzMiwyNzUyMzAwNiwtMTIwNT
-U1NTM0MiwxNTg4Mzg1ODU4XX0=
+eyJoaXN0b3J5IjpbNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1Mj
+MwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
 -->
