@@ -96,15 +96,16 @@ Como a autoinformação mede apenas a informação de um único evento discreto,
 
 ### Motivação para Entropia
 
-Let us try to get specific about what we want.  This will be an informal statement of what are known as the *axioms of Shannon entropy*.  It will turn out that the following collection of common-sense statements force us to a unique definition of information.  A formal version of these axioms, along with several others may be found in :cite:`Csiszar.2008`.
 
-1.  The information we gain by observing a random variable does not depend on what we call the elements, or the presence of additional elements which have probability zero.
-2.  The information we gain by observing two random variables is no more than the sum of the information we gain by observing them separately.  If they are independent, then it is exactly the sum.
-3.  The information gained when observing (nearly) certain events is (nearly) zero.
+Vamos tentar ser específicos sobre o que queremos. Esta será uma declaração informal do que é conhecido como *axiomas da entropia de Shannon*. Acontece que a seguinte coleção de afirmações de senso comum nos força a uma definição única de informação. Uma versão formal desses axiomas, junto com vários outros, pode ser encontrada em :cite:`Csiszar.2008`.
 
-While proving this fact is beyond the scope of our text, it is important to know that this uniquely determines the form that entropy must take.  The only ambiguity that these allow is in the choice of fundamental units, which is most often normalized by making the choice we saw before that the information provided by a single fair coin flip is one bit.
+1. A informação que ganhamos ao observar uma variável aleatória não depende do que chamamos de elementos, ou da presença de elementos adicionais que têm probabilidade zero.
+2. A informação que ganhamos ao observar duas variáveis ​​aleatórias não é mais do que a soma das informações que ganhamos ao observá-las separadamente. Se eles forem independentes, então é exatamente a soma.
+3. A informação obtida ao observar (quase) certos eventos é (quase) zero.
 
-### Definition
+Embora provar esse fato esteja além do escopo de nosso texto, é importante saber que isso determina de maneira única a forma que a entropia deve assumir. A única ambiguidade que eles permitem está na escolha das unidades fundamentais, que na maioria das vezes é normalizada fazendo a escolha que vimos antes de que a informação fornecida por um único cara ou coroa é um bit.
+
+### Definição
 
 For any random variable $X$ that follows a probability distribution $P$ with a probability density function (p.d.f.) or a probability mass function (p.m.f.) $p(x)$, we measure the expected amount of information through *entropy* (or *Shannon entropy*)
 
@@ -709,6 +710,6 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODczMDcxMjYsMjc1MjMwMDYsLTEyMD
+eyJoaXN0b3J5IjpbLTE1MDgxOTI3OTcsMjc1MjMwMDYsLTEyMD
 U1NTUzNDIsMTU4ODM4NTg1OF19
 -->
