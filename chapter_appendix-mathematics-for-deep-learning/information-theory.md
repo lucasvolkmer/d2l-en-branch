@@ -107,18 +107,19 @@ Embora provar esse fato esteja além do escopo de nosso texto, é importante sab
 
 ### Definição
 
-For any random variable $X$ that follows a probability distribution $P$ with a probability density function (p.d.f.) or a probability mass function (p.m.f.) $p(x)$, we measure the expected amount of information through *entropy* (or *Shannon entropy*)
+Para qualquer variável aleatória $X$ que segue uma distribuição de probabilidade $P$ com uma função de densidade de probabilidade (pdf) ou uma função de massa de probabilidade (pmf) $p(x)$, medimos a quantidade esperada de informação por meio de *entropia* ( ou *entropia de Shannon*)
 
 $$H(X) = - E_{x \sim P} [\log p(x)].$$
 :eqlabel:`eq_ent_def`
 
-To be specific, if $X$ is discrete, $$H(X) = - \sum_i p_i \log p_i \text{, where } p_i = P(X_i).$$
 
-Otherwise, if $X$ is continuous, we also refer entropy as *differential entropy*
+Para ser específico, se $X$ é discreto, $H(X) = - \sum_i p_i \log p_i \text{, where } p_i = P(X_i).$$
+
+Caso contrário, se $X$ for contínuo, também nos referimos à entropia como *entropia diferencial*
 
 $$H(X) = - \int_x p(x) \log p(x) \; dx.$$
 
-We can define entropy as below.
+Podemos definir entropia como a seguir.
 
 ```{.python .input}
 def entropy(p):
@@ -149,7 +150,7 @@ def entropy(p):
 entropy(tf.constant([0.1, 0.5, 0.1, 0.3]))
 ```
 
-### Interpretations
+### Interpretações
 
 You may be curious: in the entropy definition :eqref:`eq_ent_def`, why do we use an expectation of a negative logarithm? Here are some intuitions.
 
@@ -710,6 +711,6 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDgxOTI3OTcsMjc1MjMwMDYsLTEyMD
-U1NTUzNDIsMTU4ODM4NTg1OF19
+eyJoaXN0b3J5IjpbMjE0NTk4MDkzMiwyNzUyMzAwNiwtMTIwNT
+U1NTM0MiwxNTg4Mzg1ODU4XX0=
 -->
