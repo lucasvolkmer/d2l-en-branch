@@ -1,4 +1,4 @@
-# Teoria da Inform
+# Teoria da Informac
 :label:`sec_information_theory`
 
 The universe is overflowing with information. Information provides a common language across disciplinary rifts: from Shakespeare's Sonnet to researchers' paper on Cornell ArXiv, from Van Gogh's printing Starry Night to Beethoven's music Symphony No.  5, from the first programming language Plankalkül to the state-of-the-art machine learning algorithms. Everything must follow the rules of information theory, no matter the format. With information theory, we can measure and compare how much information is present in different signals. In this section, we will investigate the fundamental concepts of information theory and applications of information theory in machine learning.
@@ -705,5 +705,5 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA3NjUyODAsMTU4ODM4NTg1OF19
+eyJoaXN0b3J5IjpbMjgzMTc4MzA2LDE1ODgzODU4NThdfQ==
 -->
