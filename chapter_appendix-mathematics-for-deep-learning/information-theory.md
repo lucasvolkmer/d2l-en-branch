@@ -39,11 +39,11 @@ Agora, suponha que para qualquer série de códigos, cada $0$ ou $1$ ocorra com 
 
 $$I(X) = - \log_2 (p),$$
 
-as the *bits* of information we have received for this event $X$. Note that we will always use base-2 logarithms in this section. For the sake of simplicity, the rest of this section will omit the subscript 2 in the logarithm notation, i.e., $\log(.)$ always refers to $\log_2(.)$. For example, the code "0010" has a self-information
+como os *bits* de informação que recebemos para este evento $X$. Observe que sempre usaremos logaritmos de base 2 nesta seção. Para simplificar, o restante desta seção omitirá o subscrito 2 na notação logarítmica, ou seja, $\log(.)$ Sempre se refere a $\log_2(.)$. Por exemplo, o código "0010" tem uma autoinformação
 
 $$I(\text{"0010"}) = - \log (p(\text{"0010"})) = - \log \left( \frac{1}{2^4} \right) = 4 \text{ bits}.$$
 
-We can calculate self information as shown below. Before that, let us first import all the necessary packages in this section.
+Podemos calcular a autoinformação conforme mostrado abaixo. Antes disso, vamos primeiro importar todos os pacotes necessários nesta seção.
 
 ```{.python .input}
 from mxnet import np
@@ -89,12 +89,12 @@ def self_information(p):
 self_information(1 / 64)
 ```
 
-## Entropy
+## Entropia
 
-As self-information only measures the information of a single discrete event, we need a more generalized measure for any random variable of either discrete or continuous distribution.
+Como a autoinformação mede apenas a informação de um único evento discreto, precisamos de uma medida mais generalizada para qualquer variável aleatória de distribuição discreta ou contínua.
 
 
-### Motivating Entropy
+### Motivação para Entropia
 
 Let us try to get specific about what we want.  This will be an informal statement of what are known as the *axioms of Shannon entropy*.  It will turn out that the following collection of common-sense statements force us to a unique definition of information.  A formal version of these axioms, along with several others may be found in :cite:`Csiszar.2008`.
 
@@ -709,6 +709,6 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjQ5ODA0NjQsMjc1MjMwMDYsLTEyMD
+eyJoaXN0b3J5IjpbLTEzODczMDcxMjYsMjc1MjMwMDYsLTEyMD
 U1NTUzNDIsMTU4ODM4NTg1OF19
 -->
