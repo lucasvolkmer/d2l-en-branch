@@ -1,12 +1,13 @@
 # Teoria da Informação
 :label:`sec_information_theory`
 
-The universe is overflowing with information. Information provides a common language across disciplinary rifts: from Shakespeare's Sonnet to researchers' paper on Cornell ArXiv, from Van Gogh's printing Starry Night to Beethoven's music Symphony No.  5, from the first programming language Plankalkül to the state-of-the-art machine learning algorithms. Everything must follow the rules of information theory, no matter the format. With information theory, we can measure and compare how much information is present in different signals. In this section, we will investigate the fundamental concepts of information theory and applications of information theory in machine learning.
 
-Before we get started, let us outline the relationship between machine learning and information theory. Machine learning aims to extract interesting signals from data and make critical predictions.  On the other hand, information theory studies encoding, decoding, transmitting, and manipulating information. As a result, information theory provides fundamental language for discussing the information processing in machine learned systems. For example, many machine learning applications use the cross entropy loss as described in :numref:`sec_softmax`.  This loss can be directly derived from information theoretic considerations.
+O universo está transbordando de informações. A informação fornece uma linguagem comum entre fendas disciplinares: do Soneto de Shakespeare ao artigo de pesquisadores sobre Cornell ArXiv, da impressão de Noite Estrelada de Van Gogh à Sinfonia nº 5 da música de Beethoven, da primeira linguagem de programação Plankalkül à máquina de última geração algoritmos de aprendizagem. Tudo deve seguir as regras da teoria da informação, não importa o formato. Com a teoria da informação, podemos medir e comparar quanta informação está presente em diferentes sinais. Nesta seção, investigaremos os conceitos fundamentais da teoria da informação e as aplicações da teoria da informação no *machine learning*.
+
+Antes de começar, vamos descrever a relação entre o *machine learning* e a teoria da informação. O *machine learning* tem como objetivo extrair sinais interessantes de dados e fazer previsões críticas. Por outro lado, a teoria da informação estuda a codificação, decodificação, transmissão e manipulação de informações. Como resultado, a teoria da informação fornece uma linguagem fundamental para discutir o processamento da informação em sistemas aprendidos por máquina. Por exemplo, muitos aplicativos de *machine learning* usam a perda de entropia cruzada conforme descrito em :numref:`sec_softmax`. Essa perda pode ser derivada diretamente de considerações teóricas da informação.
 
 
-## Information
+## Informação
 
 Let us start with the "soul" of information theory: information. *Information* can be encoded in anything with a particular sequence of one or more encoding formats. Suppose that we task ourselves with trying to define a notion of information.  What could be our starting point?
 
@@ -705,5 +706,6 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
+eyJoaXN0b3J5IjpbLTM1MDE3MzQ4NCwtMTIwNTU1NTM0MiwxNT
+g4Mzg1ODU4XX0=
 -->
