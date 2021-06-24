@@ -167,13 +167,14 @@ $$H(S) = \sum_i {p_i \cdot I(s_i)} = - \sum_i {p_i \cdot \log p_i}.$$
 
 ### Propriedades da Entropia
 
-By the above examples and interpretations, we can derive the following properties of entropy :eqref:`eq_ent_def`. Here, we refer to $X$ as an event and $P$ as the probability distribution of $X$.
 
-* Entropy is non-negative, i.e., $H(X) \geq 0, \forall X$.
+Pelos exemplos e interpretações acima, podemos derivar as seguintes propriedades de entropia :eqref:`eq_ent_def`. Aqui, nos referimos a $X$ como um evento e $P$ como a distribuição de probabilidade de $X$.
 
-* If $X \sim P$ with a p.d.f. or a p.m.f. $p(x)$, and we try to estimate $P$ by a new probability distribution $Q$ with a p.d.f. or a p.m.f. $q(x)$, then $$H(X) = - E_{x \sim P} [\log p(x)] \leq  - E_{x \sim P} [\log q(x)], \text{ with equality if and only if } P = Q.$$  Alternatively, $H(X)$ gives a lower bound of the average number of bits needed to encode symbols drawn from $P$.
+* A entropia não é negativa, ou seja, $H(X) \geq 0, \forall X$.
 
-* If $X \sim P$, then $x$ conveys the maximum amount of information if it spreads evenly among all possible outcomes. Specifically, if the probability distribution $P$ is discrete with $k$-class $\{p_1, \ldots, p_k \}$, then $$H(X) \leq \log(k), \text{ with equality if and only if } p_i = \frac{1}{k}, \forall i.$$ If $P$ is a continuous random variable, then the story becomes much more complicated.  However, if we additionally impose that $P$ is supported on a finite interval (with all values between $0$ and $1$), then $P$ has the highest entropy if it is the uniform distribution on that interval.
+* Se $X \sim P$ com uma f.d.p. ou um f.m.p. $p(x)$, e tentamos estimar $P$ por uma nova distribuição de probabilidade $Q$ com uma f.d.p. ou um f.m.p. $q(x)$, então $$H(X) = - E_{x \sim P} [\log p(x)] \leq  - E_{x \sim P} [\log q(x)], \text{ com igualdade se e somente se } P = Q.$$ Alternativamente, $H(X)$ fornece um limite inferior do número médio de bits necessários para codificar símbolos extraídos de $P$.
+
+* Se $X \sim P$, então $x$ transporta a quantidade máxima de informações se espalhar uniformemente entre todos os resultados possíveis. Especificamente, se a distribuição de probabilidade $P$ é discreta com $k$-classe $\{p_1, \ldots, p_k \}$, então $H(X) \leq \log(k), \text{ com igualdade se e somente se  } p_i = \frac{1}{k}, \forall i.$$ Se $P$ é uma variável aleatória contínua, então a história se torna muito mais complicada. No entanto, se impormos adicionalmente que $P$ é suportado em um intervalo finito (com todos os valores entre $0$ e $1$), então $ P $ tem a entropia mais alta se for a distribuição uniforme nesse intervalo.
 
 
 ## Mutual Information
@@ -712,6 +713,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1Mj
-MwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
+eyJoaXN0b3J5IjpbMTg1NTE0NzUzMCw0MDk1MTAyODEsMjE0NT
+k4MDkzMiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1ODU4
+XX0=
 -->
