@@ -30,11 +30,12 @@ Se lermos esses experimentos mentais, veremos uma ideia natural. Como ponto de p
 Em 1948, Claude E. Shannon publicou *A Mathematical Theory of Communication* :cite:`Shannon.1948` que estabelece a teoria da informação. Em seu artigo, Shannon introduziu o conceito de entropia de informação pela primeira vez. Começaremos nossa jornada aqui.
 
 
-### Auto-information
+### Autoinformação
 
-Since information embodies the abstract possibility of an event, how do we map the possibility to the number of bits? Shannon introduced the terminology *bit* as the unit of information, which was originally created by John Tukey. So what is a "bit" and why do we use it to measure information? Historically, an antique transmitter can only send or receive two types of code: $0$ and $1$.  Indeed, binary encoding is still in common use on all modern digital computers. In this way, any information is encoded by a series of $0$ and $1$. And hence, a series of binary digits of length $n$ contains $n$ bits of information.
 
-Now, suppose that for any series of codes, each $0$ or $1$ occurs with a probability of $\frac{1}{2}$. Hence, an event $X$ with a series of codes of length $n$, occurs with a probability of $\frac{1}{2^n}$. At the same time, as we mentioned before, this series contains $n$ bits of information. So, can we generalize to a math function which can transfer the probability $p$ to the number of bits? Shannon gave the answer by defining *self-information*
+Visto que a informação incorpora a possibilidade abstrata de um evento, como mapeamos a possibilidade para o número de bits? Shannon introduziu a terminologia *bit* como a unidade de informação, que foi originalmente criada por John Tukey. Então, o que é um "bit" e por que o usamos para medir as informações? Historicamente, um transmissor antigo só pode enviar ou receber dois tipos de código: $0$ e $1$. Na verdade, a codificação binária ainda é de uso comum em todos os computadores digitais modernos. Desta forma, qualquer informação é codificada por uma série de $0$ e $1$. E, portanto, uma série de dígitos binários de comprimento $n$ contém $n$ bits de informação.
+
+Agora, suponha que para qualquer série de códigos, cada $0$ ou $1$ ocorra com uma probabilidade de $\frac{1}{2}$. Portanto, um evento $X$ com uma série de códigos de comprimento $n$, ocorre com uma probabilidade de $$\frac{1}{2^n}$. Ao mesmo tempo, como mencionamos antes, essa série contém $n$ bits de informação. Então, podemos generalizar para uma função matemática que pode transferir a probabilidade $p$ para o número de bits? Shannon deu a resposta definindo *autoinformação*
 
 $$I(X) = - \log_2 (p),$$
 
@@ -708,6 +709,6 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc1MjMwMDYsLTEyMDU1NTUzNDIsMTU4OD
-M4NTg1OF19
+eyJoaXN0b3J5IjpbLTIwNjQ5ODA0NjQsMjc1MjMwMDYsLTEyMD
+U1NTUzNDIsMTU4ODM4NTg1OF19
 -->
