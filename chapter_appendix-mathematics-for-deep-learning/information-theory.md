@@ -185,18 +185,18 @@ Anteriormente, definimos entropia de uma única variável aleatória $X$, e a en
 Para a discussão a seguir, sempre usamos $(X, Y)$ como um par de variáveis aleatórias que segue uma distribuição de probabilidade conjunta $P$ com uma f.d.p. ou uma f.m.p. $p_{X, Y}(x, y)$, enquanto $X$ e $Y$ seguem a distribuição de probabilidade  $p_X(x)$ e $p_Y(y)$, respectivamente.
 
 
-### Joint Entropy
+### Entropia Conjunta
 
-Similar to entropy of a single random variable :eqref:`eq_ent_def`, we define the *joint entropy* $H(X, Y)$ of a pair random variables $(X, Y)$ as
+Semelhante à entropia de uma única variável aleatória :eqref:`eq_ent_def`, definimos a *entropia conjunta* $H(X, Y)$ de um par de variáveis aleatórias $(X, Y)$ como
 
 $$H(X, Y) = −E_{(x, y) \sim P} [\log p_{X, Y}(x, y)]. $$
 :eqlabel:`eq_joint_ent_def`
 
-Precisely, on the one hand, if $(X, Y)$ is a pair of discrete random variables, then
+Precisamente, por um lado, se $(X, Y)$ é um par de variáveis aleatórias discretas, então
 
 $$H(X, Y) = - \sum_{x} \sum_{y} p_{X, Y}(x, y) \log p_{X, Y}(x, y).$$
 
-On the other hand, if $(X, Y)$ is a pair of continuous random variables, then we define the *differential joint entropy* as
+Por outro lado, se $(X, Y)$ é um par de variáveis aleatórias contínuas, então definimos a *entropia conjunta diferencial* como
 
 $$H(X, Y) = - \int_{x, y} p_{X, Y}(x, y) \ \log p_{X, Y}(x, y) \;dx \;dy.$$
 
@@ -714,7 +714,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNjA2OTgzNCwxNzgxMTI2Mjc5LDQwOT
+eyJoaXN0b3J5IjpbMTQ0MDQ5MzczOCwxNzgxMTI2Mjc5LDQwOT
 UxMDI4MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQy
 LDE1ODgzODU4NThdfQ==
 -->
