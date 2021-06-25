@@ -179,9 +179,10 @@ Pelos exemplos e interpretações acima, podemos derivar as seguintes propriedad
 
 ## Informcação Mútua
 
-Previously we defined entropy of a single random variable $X$, how about the entropy of a pair random variables $(X, Y)$?  We can think of these techniques as trying to answer the following type of question, "What information is contained in $X$ and $Y$ together compared to each separately?  Is there redundant information, or is it all unique?"
 
-For the following discussion, we always use $(X, Y)$ as a pair of random variables that follows a joint probability distribution $P$ with a p.d.f. or a p.m.f. $p_{X, Y}(x, y)$, while $X$ and $Y$ follow probability distribution $p_X(x)$ and $p_Y(y)$, respectively.
+Anteriormente, definimos entropia de uma única variável aleatória $X$, e a entropia de um par de variáveis aleatórias $(X, Y)$? Podemos pensar nessas técnicas como uma tentativa de responder ao seguinte tipo de pergunta: "Quais informações estão contidas em $X$ e $Y$ juntos, comparados a cada um separadamente? Existem informações redundantes ou todas são exclusivas?"
+
+Para a discussão a seguir, sempre usamos $(X, Y)$ como um par de variáveis aleatórias que segue uma distribuição de probabilidade conjunta $P$ com uma f.d.p. ou uma f.m.p. $p_{X, Y}(x, y)$, enquanto $X$ e $Y$ seguem a distribuição de probabilidade  $p_X(x)$ e $p_Y(y)$, respectivamente.
 
 
 ### Joint Entropy
@@ -713,7 +714,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTEyNjI3OSw0MDk1MTAyODEsMjE0NT
-k4MDkzMiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1ODU4
-XX0=
+eyJoaXN0b3J5IjpbLTkxNjA2OTgzNCwxNzgxMTI2Mjc5LDQwOT
+UxMDI4MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQy
+LDE1ODgzODU4NThdfQ==
 -->
