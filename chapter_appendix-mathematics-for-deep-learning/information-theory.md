@@ -310,33 +310,35 @@ conditional_entropy(tf.constant([[0.1, 0.5], [0.2, 0.3]]),
 
 ### Informação mútua
 
-Given the previous setting of random variables $(X, Y)$, you may wonder: "Now that we know how much information is contained in $Y$ but not in $X$, can we similarly ask how much information is shared between $X$ and $Y$?" The answer will be the *mutual information* of $(X, Y)$, which we will write as $I(X, Y)$.
 
-Rather than diving straight into the formal definition, let us practice our intuition by first trying to derive an expression for the mutual information entirely based on terms we have constructed before.  We wish to find the information shared between two random variables.  One way we could try to do this is to start with all the information contained in both $X$ and $Y$ together, and then we take off the parts that are not shared.  The information contained in both $X$ and $Y$ together is written as $H(X, Y)$.  We want to subtract from this the information contained in $X$ but not in $Y$, and the information contained in $Y$ but not in $X$.  As we saw in the previous section, this is given by $H(X \mid Y)$ and $H(Y \mid X)$ respectively.  Thus, we have that the mutual information should be
+Dada a configuração anterior de variáveis ​​aleatórias $(X, Y)$, você pode se perguntar: "Agora que sabemos quanta informação está contida em $Y$, mas não em $X$, podemos igualmente perguntar quanta informação é compartilhada entre $X$ e $Y$? " A resposta será a * informação mútua * de $(X, Y)$, que escreveremos como $I(X, Y)$.
+
+Em vez de mergulhar direto na definição formal, vamos praticar nossa intuição tentando primeiro derivar uma expressão para a informação mútua inteiramente baseada em termos que construímos antes. Queremos encontrar a informação compartilhada entre duas variáveis ​​aleatórias. Uma maneira de tentar fazer isso é começar com todas as informações contidas em $X$ e $Y$ juntas e, em seguida, retirar as partes que não são compartilhadas. As informações contidas em $X$ e $Y$ juntas são escritas como $H(X, Y)$. Queremos subtrair disso as informações contidas em $X$, mas não em $Y$, e as informações contidas em $Y$, mas não em $X$. Como vimos na seção anterior, isso é dado por $H(X \mid Y)$ e $H(Y \mid X)$ respectivamente. Assim, temos que a informação mútua deve ser
 
 $$
 I(X, Y) = H(X, Y) - H(Y \mid X) − H(X \mid Y).
 $$
 
-Indeed, this is a valid definition for the mutual information.  If we expand out the definitions of these terms and combine them, a little algebra shows that this is the same as
+Na verdade, esta é uma definição válida para a informação mútua. Se expandirmos as definições desses termos e combiná-los, um pouco de álgebra mostra que isso é o mesmo que
 
 $$I(X, Y) = E_{x} E_{y} \left\{ p_{X, Y}(x, y) \log\frac{p_{X, Y}(x, y)}{p_X(x) p_Y(y)} \right\}. $$
 :eqlabel:`eq_mut_ent_def`
 
 
-We can summarize all of these relationships in image :numref:`fig_mutual_information`.  It is an excellent test of intuition to see why the following statements are all also equivalent to $I(X, Y)$.
+Podemos resumir todas essas relações na imagem :numref:`fig_mutual_information`. É um excelente teste de intuição ver por que as seguintes afirmações também são equivalentes a $I(X, Y)$.
 
 * $H(X) − H(X \mid Y)$
 * $H(Y) − H(Y \mid X)$
 * $H(X) + H(Y) − H(X, Y)$
 
-![Mutual information's relationship with joint entropy and conditional entropy.](../img/mutual-information.svg)
+![Relação da informação mútua com entropia conjunta e entropia condicional.](../img/mutual-information.svg)
 :label:`fig_mutual_information`
 
 
-In many ways we can think of the mutual information :eqref:`eq_mut_ent_def` as principled extension of correlation coefficient we saw in :numref:`sec_random_variables`.  This allows us to ask not only for linear relationships between variables, but for the maximum information shared between the two random variables of any kind.
 
-Now, let us implement mutual information from scratch.
+De muitas maneiras, podemos pensar na informação mútua :eqref:`eq_mut_ent_def` como uma extensão de princípio do coeficiente de correlação que vimos em :numref:`sec_random_variables`. Isso nos permite pedir não apenas relações lineares entre variáveis, mas também o máximo de informações compartilhadas entre as duas variáveis aleatórias de qualquer tipo.
+
+Agora, vamos implementar informações mútuas do zero.
 
 ```{.python .input}
 def mutual_information(p_xy, p_x, p_y):
@@ -716,7 +718,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTM2NDc0NzIsLTQ0MzQ3Nzk0MCwxNz
-gxMTI2Mjc5LDQwOTUxMDI4MSwyMTQ1OTgwOTMyLDI3NTIzMDA2
-LC0xMjA1NTU1MzQyLDE1ODgzODU4NThdfQ==
+eyJoaXN0b3J5IjpbMTc2NDcwNTM0MSwtMTA5MzY0NzQ3MiwtND
+QzNDc3OTQwLDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5
+MzIsMjc1MjMwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
 -->
