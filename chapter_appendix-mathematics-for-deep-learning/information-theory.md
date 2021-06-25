@@ -200,13 +200,13 @@ Por outro lado, se $(X, Y)$ é um par de variáveis aleatórias contínuas, ent�
 
 $$H(X, Y) = - \int_{x, y} p_{X, Y}(x, y) \ \log p_{X, Y}(x, y) \;dx \;dy.$$
 
-We can think of :eqref:`eq_joint_ent_def` as telling us the total randomness in the pair of random variables.  As a pair of extremes, if $X = Y$ are two identical random variables, then the information in the pair is exactly the information in one and we have $H(X, Y) = H(X) = H(Y)$.  On the other extreme, if $X$ and $Y$ are independent then $H(X, Y) = H(X) + H(Y)$.  Indeed we will always have that the information contained in a pair of random variables is no smaller than the entropy of either random variable and no more than the sum of both.
+Podemos pensar em :eqref:`eq_joint_ent_def` como nos dizendo a aleatoriedade total no par de variáveis aleatórias. Como um par de extremos, se $X = Y$ são duas variáveis aleatórias idênticas, então as informações do par são exatamente as informações de uma e temos $H(X, Y) = H(X) = H(Y)$. No outro extremo, se $X$ e $Y$ são independentes, então $H(X, Y) = H(X) + H(Y)$. Na verdade, sempre teremos que a informação contida em um par de variáveis aleatórias não é menor que a entropia de qualquer uma das variáveis aleatórias e não mais que a soma de ambas.
 
 $$
 H(X), H(Y) \le H(X, Y) \le H(X) + H(Y).
 $$
 
-Let us implement joint entropy from scratch.
+Vamos implementar a entropia conjunta do zero.
 
 ```{.python .input}
 def joint_entropy(p_xy):
@@ -240,10 +240,10 @@ def joint_entropy(p_xy):
 joint_entropy(tf.constant([[0.1, 0.5], [0.1, 0.3]]))
 ```
 
-Notice that this is the same *code* as before, but now we interpret it differently as working on the joint distribution of the two random variables.
+Observe que este é o mesmo *código* de antes, mas agora o interpretamos de maneira diferente, como trabalhando na distribuição conjunta das duas variáveis aleatórias.
 
 
-### Conditional Entropy
+### Entropia Condicional
 
 The joint entropy defined above the amount of information contained in a pair of random variables.  This is useful, but oftentimes it is not what we care about.  Consider the setting of machine learning.  Let us take $X$ to be the random variable (or vector of random variables) that describes the pixel values of an image, and $Y$ to be the random variable which is the class label.  $X$ should contain substantial information---a natural image is a complex thing.  However, the information contained in $Y$ once the image has been show should be low.  Indeed, the image of a digit should already contain the information about what digit it is unless the digit is illegible.  Thus, to continue to extend our vocabulary of information theory, we need to be able to reason about the information content in a random variable conditional on another.
 
@@ -714,7 +714,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MDQ5MzczOCwxNzgxMTI2Mjc5LDQwOT
+eyJoaXN0b3J5IjpbMTU1MDg1MDQ1NiwxNzgxMTI2Mjc5LDQwOT
 UxMDI4MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQy
 LDE1ODgzODU4NThdfQ==
 -->
