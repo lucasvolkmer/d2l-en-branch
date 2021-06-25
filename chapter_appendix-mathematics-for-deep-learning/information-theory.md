@@ -388,16 +388,17 @@ Em vez de memorizar a definição de informação mútua :eqref:`eq_mut_ent_def`
 * $I(X, Y) = 0$ se e somente se $X$ e $Y$ são independentes. Por exemplo, se $X$ e $Y$ são independentes, saber $Y$ não fornece nenhuma informação sobre $X$ e vice-versa, portanto, suas informações mútuas são zero.
 * Alternativamente, se $X$ é uma função invertível de $Y$, então $Y$ e $X$ compartilham todas as informações e $$I(X, Y) = H(Y) = H(X).$$
 
-### Informações mútuas pontuais
+### Informações Mútuas Pontuais
 
-When we worked with entropy at the beginning of this chapter, we were able to provide an interpretation of $-\log(p_X(x))$ as how *surprised* we were with the particular outcome.  We may give a similar interpretation to the logarithmic term in the mutual information, which is often referred to as the *pointwise mutual information*:
+Quando trabalhamos com entropia no início deste capítulo, fomos capazes de fornecer uma interpretação de $-\log(p_X(x))$ como *surpresos* com o resultado particular. Podemos dar uma interpretação semelhante ao termo logarítmico nas informações mútuas, que muitas vezes é referido como as *informações mútuas pontuais*:
 
 $$\mathrm{pmi}(x, y) = \log\frac{p_{X, Y}(x, y)}{p_X(x) p_Y(y)}.$$
 :eqlabel:`eq_pmi_def`
 
-We can think of :eqref:`eq_pmi_def` as measuring how much more or less likely the specific combination of outcomes $x$ and $y$ are compared to what we would expect for independent random outcomes.  If it is large and positive, then these two specific outcomes occur much more frequently than they would compared to random chance (*note*: the denominator is $p_X(x) p_Y(y)$ which is the probability of the two outcomes were independent), whereas if it is large and negative it represents the two outcomes happening far less than we would expect by random chance.
 
-This allows us to interpret the mutual information :eqref:`eq_mut_ent_def` as the average amount that we were surprised to see two outcomes occurring together compared to what we would expect if they were independent.
+Podemos pensar em :eqref:`eq_pmi_def` medindo o quanto mais ou menos provável a combinação específica de resultados $x$ e $y$ são comparados com o que esperaríamos para resultados aleatórios independentes. Se for grande e positivo, esses dois resultados específicos ocorrem com muito mais frequência do que em comparação com o acaso (*nota*: o denominador é $p_X(x) p_Y(y)$ que é a probabilidade de os dois resultados serem independente), ao passo que, se for grande e negativo, representa os dois resultados que acontecem muito menos do que esperaríamos ao acaso.
+
+Isso nos permite interpretar as informações mútuas :eqref:`eq_mut_ent_def` como a quantidade média que ficamos surpresos ao ver dois resultados ocorrendo juntos em comparação com o que esperaríamos se fossem independentes.
 
 ### Applications of Mutual Information
 
@@ -719,7 +720,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MDM3MTg2OCwtMTA5MzY0NzQ3MiwtND
+eyJoaXN0b3J5IjpbLTkzODQzMTEwOCwtMTA5MzY0NzQ3MiwtND
 QzNDc3OTQwLDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5
 MzIsMjc1MjMwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
 -->
