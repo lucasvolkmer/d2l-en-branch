@@ -266,9 +266,10 @@ Agora é natural perguntar, como a *entropia condicional* $H(Y \mid X)$ se relac
 
 $$H(Y \mid X) = H(X, Y) - H(X).$$
 
-This has an intuitive interpretation: the information in $Y$ given $X$ ($H(Y \mid X)$) is the same as the information in both $X$ and $Y$ together ($H(X, Y)$) minus the information already contained in $X$.  This gives us the information in $Y$ which is not also represented in $X$.
 
-Now, let us implement conditional entropy :eqref:`eq_cond_ent_def` from scratch.
+Isso tem uma interpretação intuitiva: a informação em $Y$ dada $X$ ($H(Y \mid X)$) é a mesma que a informação em $X$ e $Y$ juntos ($H(X, Y)$) menos as informações já contidas em $X$. Isso nos dá as informações em $Y$, que também não são representadas em $X$.
+
+Agora, vamos implementar a entropia condicional :eqref:`eq_cond_ent_def` do zero.
 
 ```{.python .input}
 def conditional_entropy(p_xy, p_x):
@@ -307,7 +308,7 @@ conditional_entropy(tf.constant([[0.1, 0.5], [0.2, 0.3]]),
                     tf.constant([0.2, 0.8]))
 ```
 
-### Mutual Information
+### Informação mútua
 
 Given the previous setting of random variables $(X, Y)$, you may wonder: "Now that we know how much information is contained in $Y$ but not in $X$, can we similarly ask how much information is shared between $X$ and $Y$?" The answer will be the *mutual information* of $(X, Y)$, which we will write as $I(X, Y)$.
 
@@ -715,7 +716,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2ODUzMjA5OSwtNDQzNDc3OTQwLDE3OD
-ExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1MjMwMDYs
-LTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
+eyJoaXN0b3J5IjpbLTEwOTM2NDc0NzIsLTQ0MzQ3Nzk0MCwxNz
+gxMTI2Mjc5LDQwOTUxMDI4MSwyMTQ1OTgwOTMyLDI3NTIzMDA2
+LC0xMjA1NTU1MzQyLDE1ODgzODU4NThdfQ==
 -->
