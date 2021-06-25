@@ -402,9 +402,10 @@ Isso nos permite interpretar as informações mútuas :eqref:`eq_mut_ent_def` co
 
 ### Applications of Mutual Information
 
-Mutual information may be a little abstract in it pure definition, so how does it related to machine learning? In natural language processing, one of the most difficult problems is the *ambiguity resolution*, or the issue of the meaning of a word being unclear from context. For example, recently a headline in the news reported that "Amazon is on fire". You may wonder whether the company Amazon has a building on fire, or the Amazon rain forest is on fire.
 
-In this case, mutual information can help us resolve this ambiguity. We first find the group of words that each has a relatively large mutual information with the company Amazon, such as e-commerce, technology, and online. Second, we find another group of words that each has a relatively large mutual information with the Amazon rain forest, such as rain, forest, and tropical. When we need to disambiguate "Amazon", we can compare which group has more occurrence in the context of the word Amazon.  In this case the article would go on to describe the forest, and make the context clear.
+As informações mútuas podem ser um pouco abstratas em sua definição pura. Como isso se relaciona ao *machine learning*? No processamento de linguagem natural, um dos problemas mais difíceis é a *resolução da ambigüidade*, ou a questão do significado de uma palavra não ser claro no contexto. Por exemplo, recentemente uma manchete no noticiário relatou que "Amazon está pegando fogo". Você pode se perguntar se a empresa Amazon tem um prédio em chamas ou se a floresta amazônica está em chamas.
+
+Nesse caso, informações mútuas podem nos ajudar a resolver essa ambiguidade. Primeiro encontramos o grupo de palavras em que cada uma tem uma informação mútua relativamente grande com a empresa Amazon, como e-commerce, tecnologia e online. Em segundo lugar, encontramos outro grupo de palavras em que cada uma tem uma informação mútua relativamente grande com a floresta amazônica, como chuva, floresta e tropical. Quando precisamos desambiguar "Amazon", podemos comparar qual grupo tem mais ocorrência no contexto da palavra Amazon. Nesse caso, o artigo descreveria a floresta e deixaria o contexto claro.
 
 
 ## Kullback–Leibler Divergence
@@ -720,7 +721,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzODQzMTEwOCwtMTA5MzY0NzQ3MiwtND
-QzNDc3OTQwLDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5
-MzIsMjc1MjMwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
+eyJoaXN0b3J5IjpbNzg3MzQxNzc4LC0xMDkzNjQ3NDcyLC00ND
+M0Nzc5NDAsMTc4MTEyNjI3OSw0MDk1MTAyODEsMjE0NTk4MDkz
+MiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1ODU4XX0=
 -->
