@@ -245,9 +245,10 @@ Observe que este é o mesmo *código* de antes, mas agora o interpretamos de man
 
 ### Entropia Condicional
 
-The joint entropy defined above the amount of information contained in a pair of random variables.  This is useful, but oftentimes it is not what we care about.  Consider the setting of machine learning.  Let us take $X$ to be the random variable (or vector of random variables) that describes the pixel values of an image, and $Y$ to be the random variable which is the class label.  $X$ should contain substantial information---a natural image is a complex thing.  However, the information contained in $Y$ once the image has been show should be low.  Indeed, the image of a digit should already contain the information about what digit it is unless the digit is illegible.  Thus, to continue to extend our vocabulary of information theory, we need to be able to reason about the information content in a random variable conditional on another.
 
-In the probability theory, we saw the definition of the *conditional probability* to measure the relationship between variables. We now want to analogously define the *conditional entropy* $H(Y \mid X)$.  We can write this as
+A entropia conjunta definida acima da quantidade de informações contidas em um par de variáveis ​​aleatórias. Isso é útil, mas muitas vezes não é o que nos preocupa. Considere a configuração de aprendizado de máquina. Tomemos $X$ como a variável aleatória (ou vetor de variáveis ​​aleatórias) que descreve os valores de pixel de uma imagem e $Y$ como a variável aleatória que é o rótulo da classe. $X$ deve conter informações substanciais - uma imagem natural é algo complexo. No entanto, as informações contidas em $Y$ uma vez que a imagem foi exibida devem ser baixas. Na verdade, a imagem de um dígito já deve conter as informações sobre qual dígito ele é, a menos que seja ilegível. Assim, para continuar a estender nosso vocabulário da teoria da informação, precisamos ser capazes de raciocinar sobre o conteúdo da informação em uma variável aleatória condicional a outra.
+
+Na teoria da probabilidade, vimos a definição da *probabilidade condicional* para medir a relação entre as variáveis. Agora queremos definir analogamente a *entropia condicional* $H(Y \mid X)$.  Podemos escrever isso como
 
 $$ H(Y \mid X) = - E_{(x, y) \sim P} [\log p(y \mid x)],$$
 :eqlabel:`eq_cond_ent_def`
@@ -714,7 +715,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MDg1MDQ1NiwxNzgxMTI2Mjc5LDQwOT
+eyJoaXN0b3J5IjpbLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOT
 UxMDI4MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQy
 LDE1ODgzODU4NThdfQ==
 -->
