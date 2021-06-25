@@ -378,16 +378,17 @@ mutual_information(tf.constant([[0.1, 0.5], [0.1, 0.3]]),
                    tf.constant([0.2, 0.8]), tf.constant([[0.75, 0.25]]))
 ```
 
-### Properties of Mutual Information
+### Propriedades da Informação Mútua
 
-Rather than memorizing the definition of mutual information :eqref:`eq_mut_ent_def`, you only need to keep in mind its notable properties:
 
-* Mutual information is symmetric, i.e., $I(X, Y) = I(Y, X)$.
-* Mutual information is non-negative, i.e., $I(X, Y) \geq 0$.
-* $I(X, Y) = 0$ if and only if $X$ and $Y$ are independent. For example, if $X$ and $Y$ are independent, then knowing $Y$ does not give any information about $X$ and vice versa, so their mutual information is zero.
-* Alternatively, if $X$ is an invertible function of $Y$, then $Y$ and $X$ share all information and $$I(X, Y) = H(Y) = H(X).$$
+Em vez de memorizar a definição de informação mútua :eqref:`eq_mut_ent_def`, você só precisa ter em mente suas propriedades notáveis:
 
-### Pointwise Mutual Information
+* A informação mútua é simétrica, ou seja, $I(X, Y) = I(Y, X)$.
+* As informações mútuas não são negativas, ou seja, $I(X, Y) \geq 0$.
+* $I(X, Y) = 0$ se e somente se $X$ e $Y$ são independentes. Por exemplo, se $X$ e $Y$ são independentes, saber $Y$ não fornece nenhuma informação sobre $X$ e vice-versa, portanto, suas informações mútuas são zero.
+* Alternativamente, se $X$ é uma função invertível de $Y$, então $Y$ e $X$ compartilham todas as informações e $$I(X, Y) = H(Y) = H(X).$$
+
+### Informações mútuas pontuais
 
 When we worked with entropy at the beginning of this chapter, we were able to provide an interpretation of $-\log(p_X(x))$ as how *surprised* we were with the particular outcome.  We may give a similar interpretation to the logarithmic term in the mutual information, which is often referred to as the *pointwise mutual information*:
 
@@ -718,7 +719,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NDcwNTM0MSwtMTA5MzY0NzQ3MiwtND
+eyJoaXN0b3J5IjpbMTk0MDM3MTg2OCwtMTA5MzY0NzQ3MiwtND
 QzNDc3OTQwLDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5
 MzIsMjc1MjMwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
 -->
