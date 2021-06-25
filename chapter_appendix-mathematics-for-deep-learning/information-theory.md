@@ -253,16 +253,16 @@ Na teoria da probabilidade, vimos a definição da *probabilidade condicional* p
 $$ H(Y \mid X) = - E_{(x, y) \sim P} [\log p(y \mid x)],$$
 :eqlabel:`eq_cond_ent_def`
 
-where $p(y \mid x) = \frac{p_{X, Y}(x, y)}{p_X(x)}$ is the conditional probability. Specifically, if $(X, Y)$ is a pair of discrete random variables, then
+onde $p(y \mid x) = \frac{p_{X, Y}(x, y)}{p_X(x)}$ é a probabilidade condicional. Especificamente, se $(X, Y)$ é um par de variáveis aleatórias discretas, então
 
 $$H(Y \mid X) = - \sum_{x} \sum_{y} p(x, y) \log p(y \mid x).$$
 
-If $(X, Y)$ is a pair of continuous random variables, then the *differential conditional entropy* is similarly defined as
+Se $ (X, Y) $ é um par de variáveis aleatórias contínuas, então a *entropia condicional diferencial* é similarmente definida como
 
 $$H(Y \mid X) = - \int_x \int_y p(x, y) \ \log p(y \mid x) \;dx \;dy.$$
 
 
-It is now natural to ask, how does the *conditional entropy* $H(Y \mid X)$ relate to the entropy $H(X)$ and the joint entropy $H(X, Y)$?  Using the definitions above, we can express this cleanly:
+Agora é natural perguntar, como a *entropia condicional* $H(Y \mid X)$ se relaciona com a entropia $H(X)$ e a entropia conjunta $H(X, Y)$? Usando as definições acima, podemos expressar isso de forma clara:
 
 $$H(Y \mid X) = H(X, Y) - H(X).$$
 
@@ -715,7 +715,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOT
-UxMDI4MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQy
-LDE1ODgzODU4NThdfQ==
+eyJoaXN0b3J5IjpbMTI2ODUzMjA5OSwtNDQzNDc3OTQwLDE3OD
+ExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1MjMwMDYs
+LTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
 -->
