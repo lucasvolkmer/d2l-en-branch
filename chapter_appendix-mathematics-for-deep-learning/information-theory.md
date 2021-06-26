@@ -548,24 +548,25 @@ l(\theta) &= \log L(\theta) \\
 \end{aligned}
 $$
 
-Maximizing the log-likelihood function $l(\theta)$ is identical to minimizing $- l(\theta)$, and hence we can find the best $\theta$ from here. To generalize the above loss to any distributions, we also called $-l(\theta)$ the *cross entropy loss* $\mathrm{CE}(y, \hat{y})$, where $y$ follows the true distribution $P$ and $\hat{y}$ follows the estimated distribution $Q$.
 
-This was all derived by working from the maximum likelihood point of view.  However, if we look closely we can see that terms like $\log(\pi_i)$ have entered into our computation which is a solid indication that we can understand the expression from an information theoretic point of view.
+Maximizar a função log-*likelihood* $l(\theta)$é idêntico a minimizar $- l(\theta)$ e, portanto, podemos encontrar o melhor $\theta$  aqui. Para generalizar a perda acima para quaisquer distribuições, também chamamos $- l(\theta)$ a *perda de entropia cruzada*$\mathrm{CE}(y, \hat{y})$,  onde $y$ segue a verdadeira distribuição $P$ e $\hat{y}$  segue a distribuição estimada $Q$.
+
+Tudo isso foi derivado trabalhando do ponto de vista de máxima verossimilhança. No entanto, se olharmos com atenção, podemos ver que termos como $\log(\pi_i)$ entraram em nosso cálculo, o que é uma indicação sólida de que podemos entender a expressão de um ponto de vista teórico da informação.
 
 
-### Formal Definition
+### Definição formal
 
-Like KL divergence, for a random variable $X$, we can also measure the divergence between the estimating distribution $Q$ and the true distribution $P$ via *cross entropy*,
+Como a divergência KL, para uma variável aleatória $X$, também podemos medir a divergência entre a distribuição de estimativa $Q$ e a distribuição verdadeira $P$ via *entropia cruzada*,
 
 $$\mathrm{CE}(P, Q) = - E_{x \sim P} [\log(q(x))].$$
 :eqlabel:`eq_ce_def`
 
-By using properties of entropy discussed above, we can also interpret it as the summation of the entropy $H(P)$ and the KL divergence between $P$ and $Q$, i.e.,
+Ao usar as propriedades da entropia discutidas acima, também podemos interpretá-la como a soma da entropia $H(P)$ e a divergência KL entre $P$ e $Q$, ou seja,
 
 $$\mathrm{CE} (P, Q) = H(P) + D_{\mathrm{KL}}(P\|Q).$$
 
 
-We can implement the cross entropy loss as below.
+Podemos implementar a perda de entropia cruzada conforme abaixo.
 
 ```{.python .input}
 def cross_entropy(y_hat, y):
@@ -727,8 +728,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg0ODU0MTc5LDEwNjg0NjQ0NzgsNzg3Mz
-QxNzc4LC0xMDkzNjQ3NDcyLC00NDM0Nzc5NDAsMTc4MTEyNjI3
-OSw0MDk1MTAyODEsMjE0NTk4MDkzMiwyNzUyMzAwNiwtMTIwNT
-U1NTM0MiwxNTg4Mzg1ODU4XX0=
+eyJoaXN0b3J5IjpbNDM4MzY4Mjg3LDM4NDg1NDE3OSwxMDY4ND
+Y0NDc4LDc4NzM0MTc3OCwtMTA5MzY0NzQ3MiwtNDQzNDc3OTQw
+LDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1Mj
+MwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
 -->
