@@ -626,7 +626,7 @@ Como mencionado no início desta seção, entropia cruzada :eqref:`eq_ce_def` po
 A definição de entropia cruzada prova indiretamente a relação equivalente entre o objetivo 2 e o objetivo 3, desde que a entropia dos dados verdadeiros $H(P)$ seja constante.
 
 
-### Cross Entropy as An Objective Function of Multi-class Classification
+### Entropia Cruzada como Função Objetiva da Classificação Multiclasse
 
 If we dive deep into the classification objective function with cross entropy loss $\mathrm{CE}$, we will find minimizing $\mathrm{CE}$ is equivalent to maximizing the log-likelihood function $L$.
 
@@ -729,8 +729,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NDU4MzA1NiwzODQ4NTQxNzksMTA2OD
-Q2NDQ3OCw3ODczNDE3NzgsLTEwOTM2NDc0NzIsLTQ0MzQ3Nzk0
-MCwxNzgxMTI2Mjc5LDQwOTUxMDI4MSwyMTQ1OTgwOTMyLDI3NT
-IzMDA2LC0xMjA1NTU1MzQyLDE1ODgzODU4NThdfQ==
+eyJoaXN0b3J5IjpbODcwNzMyMjY0LDM4NDg1NDE3OSwxMDY4ND
+Y0NDc4LDc4NzM0MTc3OCwtMTA5MzY0NzQ3MiwtNDQzNDc3OTQw
+LDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1Mj
+MwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
 -->
