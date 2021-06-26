@@ -512,7 +512,7 @@ q1 = tf.sort(q1)
 q2 = tf.sort(q2)
 ```
 
-Since $q_1$ and $q_2$ are symmetric with respect to the y-axis (i.e., $x=0$), we expect a similar value of KL divergence between $D_{\mathrm{KL}}(p\|q_1)$ and $D_{\mathrm{KL}}(p\|q_2)$. As you can see below, there is only a less than 3% off between $D_{\mathrm{KL}}(p\|q_1)$ and $D_{\mathrm{KL}}(p\|q_2)$.
+Como $q_1$ e $q_2$ são simétricos em relação ao eixo y (ou seja, $x=0$), esperamos um valor semelhante de divergência KL entre $D_{\mathrm{KL}}(p\|q_1)$ e $D_{\mathrm{KL}}(p\|q_2)$. Como você pode ver abaixo, há apenas menos de 3% de desconto entre $D_{\mathrm{KL}}(p\|q_1)$ e $D_{\mathrm{KL}}(p\|q_2)$.
 
 ```{.python .input}
 #@tab all
@@ -726,8 +726,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzY0NTQzNSw3ODczNDE3NzgsLTEwOT
-M2NDc0NzIsLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOTUxMDI4
-MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQyLDE1OD
-gzODU4NThdfQ==
+eyJoaXN0b3J5IjpbLTE3MDgyMTE1MTMsNzg3MzQxNzc4LC0xMD
+kzNjQ3NDcyLC00NDM0Nzc5NDAsMTc4MTEyNjI3OSw0MDk1MTAy
+ODEsMjE0NTk4MDkzMiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNT
+g4Mzg1ODU4XX0=
 -->
