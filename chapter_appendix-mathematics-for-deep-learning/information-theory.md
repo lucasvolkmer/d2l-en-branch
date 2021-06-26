@@ -535,9 +535,10 @@ kl_q2p, differ_percentage
 
 ## Entropia Cruzada
 
-If you are curious about applications of information theory in deep learning, here is a quick example. We define the true distribution $P$ with probability distribution $p(x)$, and the estimated distribution $Q$ with probability distribution $q(x)$, and we will use them in the rest of this section.
 
-Say we need to solve a binary classification problem based on given $n$ data examples {$x_1, \ldots, x_n$}. Assume that we encode $1$ and $0$ as the positive and negative class label $y_i$ respectively, and our neural network is parameterized by $\theta$. If we aim to find a best $\theta$ so that $\hat{y}_i= p_{\theta}(y_i \mid x_i)$, it is natural to apply the maximum log-likelihood approach as was seen in :numref:`sec_maximum_likelihood`. To be specific, for true labels $y_i$ and predictions $\hat{y}_i= p_{\theta}(y_i \mid x_i)$, the probability to be classified as positive is $\pi_i= p_{\theta}(y_i = 1 \mid x_i)$. Hence, the log-likelihood function would be
+Se você está curioso sobre as aplicações da teoria da informação no aprendizado profundo, aqui está um exemplo rápido. Definimos a distribuição verdadeira $P$ com distribuição de probabilidade $p(x)$, e a distribuição estimada $Q$ com distribuição de probabilidade $q(x)$, e as usaremos no restante desta seção.
+
+Digamos que precisamos resolver um problema de classificação binária com base em $n$ exemplos de dados dados {$x_1, \ldots, x_n$}. Suponha que codifiquemos $1$ e $0$ como o rótulo de classe positivo e negativo $y_i$ respectivamente, e nossa rede neural seja parametrizada por $\theta$. Se quisermos encontrar o melhor $\theta$ de forma que $\hat{y}_i= p_{\theta}(y_i \mid x_i)$, é natural aplicar a abordagem de log-*likelihood* máxima como foi visto em :numref:`sec_maximum_likelihood`. Para ser específico, para rótulos verdadeiros $y_i$ e previsões $\hat{y}_i= p_{\theta}(y_i \mid x_i)$, a probabilidade de ser classificado como positivo é $\pi_i= p_{\theta}(y_i = 1 \mid x_i)$. Portanto, a função de log-*likelihood* seria
 
 $$
 \begin{aligned}
@@ -726,8 +727,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2ODQ2NDQ3OCw3ODczNDE3NzgsLTEwOT
-M2NDc0NzIsLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOTUxMDI4
-MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQyLDE1OD
-gzODU4NThdfQ==
+eyJoaXN0b3J5IjpbMzg0ODU0MTc5LDEwNjg0NjQ0NzgsNzg3Mz
+QxNzc4LC0xMDkzNjQ3NDcyLC00NDM0Nzc5NDAsMTc4MTEyNjI3
+OSw0MDk1MTAyODEsMjE0NTk4MDkzMiwyNzUyMzAwNiwtMTIwNT
+U1NTM0MiwxNTg4Mzg1ODU4XX0=
 -->
