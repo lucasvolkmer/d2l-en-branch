@@ -648,7 +648,7 @@ $$
  = - \sum_{i=1}^n \sum_{j=1}^k y_{ij} \log{p_{\theta} (y_{ij}  \mid  \mathbf{x}_i)}.\\
 $$
 
-On the other side, we can also approach the problem through maximum likelihood estimation. To begin with, let us quickly introduce a $k$-class multinoulli distribution. It is an extension of the Bernoulli distribution from binary class to multi-class. If a random variable $\mathbf{z} = (z_{1}, \ldots, z_{k})$ follows a $k$-class *multinoulli distribution* with probabilities $\mathbf{p} =$ ($p_{1}, \ldots, p_{k}$), i.e., $$p(\mathbf{z}) = p(z_1, \ldots, z_k) = \mathrm{Multi} (p_1, \ldots, p_k), \text{ where } \sum_{i=1}^k p_i = 1,$$ then the joint probability mass function(p.m.f.) of $\mathbf{z}$ is
+Por outro lado, também podemos abordar o problema por meio da estimativa de máxima verossimilhança. Para começar, vamos apresentar rapidamente uma distribuição multinoulli de classe $k$. É uma extensão da distribuição Bernoulli de classe binária para multiclasse. Se uma variável aleatória $\mathbf{z} = (z_{1}, \ldots, z_{k})$ segue uma distribuição $k$-class *multinoulli* com probabilidades $\mathbf{p} =$ ($p_{1}, \ldots, p_{k}$), ou seja, $$p(\mathbf{z}) = p(z_1, \ldots, z_k) = \mathrm{Multi} (p_1, \ldots, p_k), \text{ onde } \sum_{i=1}^k p_i = 1,$$ então a função de massa de probabilidade conjunta (f.m.p.) de $\mathbf{z}$  é
 $$\mathbf{p}^\mathbf{z} = \prod_{j=1}^k p_{j}^{z_{j}}.$$
 
 
@@ -731,8 +731,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgyODcyOTc4LDM4NDg1NDE3OSwxMDY4ND
-Y0NDc4LDc4NzM0MTc3OCwtMTA5MzY0NzQ3MiwtNDQzNDc3OTQw
-LDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1Mj
-MwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
+eyJoaXN0b3J5IjpbLTE4MzkzMDM4MiwzODQ4NTQxNzksMTA2OD
+Q2NDQ3OCw3ODczNDE3NzgsLTEwOTM2NDc0NzIsLTQ0MzQ3Nzk0
+MCwxNzgxMTI2Mjc5LDQwOTUxMDI4MSwyMTQ1OTgwOTMyLDI3NT
+IzMDA2LC0xMjA1NTU1MzQyLDE1ODgzODU4NThdfQ==
 -->
