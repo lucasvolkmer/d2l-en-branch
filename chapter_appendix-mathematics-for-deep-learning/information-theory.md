@@ -628,13 +628,14 @@ A definição de entropia cruzada prova indiretamente a relação equivalente en
 
 ### Entropia Cruzada como Função Objetiva da Classificação Multiclasse
 
-If we dive deep into the classification objective function with cross entropy loss $\mathrm{CE}$, we will find minimizing $\mathrm{CE}$ is equivalent to maximizing the log-likelihood function $L$.
 
-To begin with, suppose that we are given a dataset with $n$ examples, and it can be classified into $k$-classes. For each data example $i$, we represent any $k$-class label $\mathbf{y}_i = (y_{i1}, \ldots, y_{ik})$ by *one-hot encoding*. To be specific, if the  example $i$ belongs to class $j$, then we set the $j$-th entry to $1$, and all other components to $0$, i.e.,
+Se mergulharmos profundamente na função objetivo de classificação com perda de entropia cruzada $\mathrm{CE}$, descobriremos que minimizar $\mathrm{CE}$ é equivalente a maximizar a função log-*likelihood* $L$.
+
+Para começar, suponha que recebamos um conjunto de dados com $n$ exemplos e ele possa ser classificado em $k$-classes. Para cada exemplo de dados $i$, representamos qualquer rótulo $k$-class $\mathbf{y}_i = (y_{i1}, \ldots, y_{ik})$ por *codificação one-hot*. Para ser mais específico, se o exemplo $i$ pertence à classe $j$, definimos a $j$-ésima entrada como $1$ e todos os outros componentes como $0$, ou seja,
 
 $$ y_{ij} = \begin{cases}1 & j \in J; \\ 0 &\text{otherwise.}\end{cases}$$
 
-For instance, if a multi-class classification problem contains three classes $A$, $B$, and $C$, then the labels $\mathbf{y}_i$ can be encoded in {$A: (1, 0, 0); B: (0, 1, 0); C: (0, 0, 1)$}.
+Por exemplo, se um problema de classificação multiclasse contém três classes $A$, $B$ e $C$, os rótulos $\mathbf{y}_i$ podem ser codificados em {$A: (1, 0, 0); B: (0, 1, 0); C: (0, 0, 1)$}.
 
 
 Assume that our neural network is parameterized by $\theta$. For true label vectors $\mathbf{y}_i$ and predictions $$\hat{\mathbf{y}}_i= p_{\theta}(\mathbf{y}_i \mid \mathbf{x}_i) = \sum_{j=1}^k y_{ij} p_{\theta} (y_{ij}  \mid  \mathbf{x}_i).$$
@@ -729,8 +730,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcwNzMyMjY0LDM4NDg1NDE3OSwxMDY4ND
-Y0NDc4LDc4NzM0MTc3OCwtMTA5MzY0NzQ3MiwtNDQzNDc3OTQw
-LDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1Mj
-MwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
+eyJoaXN0b3J5IjpbLTE3NjQwMDMwMjQsMzg0ODU0MTc5LDEwNj
+g0NjQ0NzgsNzg3MzQxNzc4LC0xMDkzNjQ3NDcyLC00NDM0Nzc5
+NDAsMTc4MTEyNjI3OSw0MDk1MTAyODEsMjE0NTk4MDkzMiwyNz
+UyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1ODU4XX0=
 -->
