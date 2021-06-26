@@ -422,9 +422,10 @@ Dada uma variável aleatória $X$ que segue a distribuição de probabilidade $P
 $$D_{\mathrm{KL}}(P\|Q) = E_{x \sim P} \left[ \log \frac{p(x)}{q(x)} \right].$$
 :eqlabel:`eq_kl_def`
 
-As with the pointwise mutual information :eqref:`eq_pmi_def`, we can again provide an interpretation of the logarithmic term:  $-\log \frac{q(x)}{p(x)} = -\log(q(x)) - (-\log(p(x)))$ will be large and positive if we see $x$ far more often under $P$ than we would expect for $Q$, and large and negative if we see the outcome far less than expected.  In this way, we can interpret it as our *relative* surprise at observing the outcome compared to how surprised we would be observing it from our reference distribution.
 
-Let us implement the KL divergence from Scratch.
+Tal como acontece com a informação mútua pontua l:eqref:`eq_pmi_def`, podemos fornecer novamente uma interpretação do termo logarítmico: $-\log \frac{q(x)}{p(x)} = -\log(q(x)) - (-\log(p(x)))$ será grande e positivo se virmos $x$ com muito mais frequência abaixo de $P$ do que esperaríamos para $Q$, e grande e negativo se virmos o resultado muito menor do que o esperado. Dessa forma, podemos interpretá-lo como nossa surpresa *relativa* ao observar o resultado, em comparação com o quão surpresos ficaríamos observando-o a partir de nossa distribuição de referência.
+
+Vamos implementar a divergência KL do zero.
 
 ```{.python .input}
 def kl_divergence(p, q):
@@ -723,8 +724,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgyNTkxNDUzLDc4NzM0MTc3OCwtMTA5Mz
-Y0NzQ3MiwtNDQzNDc3OTQwLDE3ODExMjYyNzksNDA5NTEwMjgx
-LDIxNDU5ODA5MzIsMjc1MjMwMDYsLTEyMDU1NTUzNDIsMTU4OD
-M4NTg1OF19
+eyJoaXN0b3J5IjpbMTE1OTk2NzIzNiw3ODczNDE3NzgsLTEwOT
+M2NDc0NzIsLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOTUxMDI4
+MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQyLDE1OD
+gzODU4NThdfQ==
 -->
