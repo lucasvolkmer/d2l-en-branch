@@ -450,7 +450,7 @@ def kl_divergence(p, q):
     return tf.abs(out).numpy()
 ```
 
-### KL Divergence Properties
+### Propriedades da Divergência de KL
 
 Let us take a look at some properties of the KL divergence :eqref:`eq_kl_def`.
 
@@ -724,7 +724,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1OTk2NzIzNiw3ODczNDE3NzgsLTEwOT
+eyJoaXN0b3J5IjpbLTgyODExMDM1OSw3ODczNDE3NzgsLTEwOT
 M2NDc0NzIsLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOTUxMDI4
 MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQyLDE1OD
 gzODU4NThdfQ==
