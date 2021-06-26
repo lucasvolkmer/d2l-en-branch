@@ -452,12 +452,13 @@ def kl_divergence(p, q):
 
 ### Propriedades da Divergência de KL
 
-Let us take a look at some properties of the KL divergence :eqref:`eq_kl_def`.
 
-* KL divergence is non-symmetric, i.e., there are $P,Q$ such that $$D_{\mathrm{KL}}(P\|Q) \neq D_{\mathrm{KL}}(Q\|P).$$
-* KL divergence is non-negative, i.e., $$D_{\mathrm{KL}}(P\|Q) \geq 0.$$ Note that the equality holds only when $P = Q$.
-* If there exists an $x$ such that $p(x) > 0$ and $q(x) = 0$, then $D_{\mathrm{KL}}(P\|Q) = \infty$.
-* There is a close relationship between KL divergence and mutual information. Besides the relationship shown in :numref:`fig_mutual_information`, $I(X, Y)$ is also numerically equivalent with the following terms:
+Vamos dar uma olhada em algumas propriedades da divergência KL :eqref:`eq_kl_def`.
+
+* A divergência KL é não simétrica, ou seja, existem $P, Q$ tais que $$D_{\mathrm{KL}}(P\|Q) \neq D_{\mathrm{KL}}(Q\|P).$$
+* A divergência KL não é negativa, ou seja,$$D_{\mathrm{KL}}(P\|Q) \geq 0.$$ Observe que a igualdade é válida apenas quando $P = Q$.
+* Se existe um $x$ tal que $p(x) > 0$ e $q(x) = 0$, então $D_{\mathrm{KL}}(P\|Q) = \infty$.
+* Existe uma relação estreita entre divergência KL e informação mútua. Além da relação mostrada em :numref:`fig_mutual_information`, $I(X, Y)$ também é numericamente equivalente com os seguintes termos:
     1. $D_{\mathrm{KL}}(P(X, Y)  \ \| \ P(X)P(Y))$;
     1. $E_Y \{ D_{\mathrm{KL}}(P(X \mid Y) \ \| \ P(X)) \}$;
     1. $E_X \{ D_{\mathrm{KL}}(P(Y \mid X) \ \| \ P(Y)) \}$.
@@ -724,7 +725,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyODExMDM1OSw3ODczNDE3NzgsLTEwOT
+eyJoaXN0b3J5IjpbLTkyMTk1Njc4MCw3ODczNDE3NzgsLTEwOT
 M2NDc0NzIsLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOTUxMDI4
 MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQyLDE1OD
 gzODU4NThdfQ==
