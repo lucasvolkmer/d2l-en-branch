@@ -463,14 +463,15 @@ Vamos dar uma olhada em algumas propriedades da divergência KL :eqref:`eq_kl_de
     1. $E_Y \{ D_{\mathrm{KL}}(P(X \mid Y) \ \| \ P(X)) \}$;
     1. $E_X \{ D_{\mathrm{KL}}(P(Y \mid X) \ \| \ P(Y)) \}$.
 
-  For the first term, we interpret mutual information as the KL divergence between $P(X, Y)$ and the product of $P(X)$ and $P(Y)$, and thus is a measure of how different the joint distribution is from the distribution if they were independent. For the second term, mutual information tells us the average reduction in uncertainty about $Y$ that results from learning the value of the $X$'s distribution. Similarly to the third term.
+Para o primeiro termo, interpretamos a informação mútua como a divergência KL entre $P(X, Y)$ e o produto de $P(X)$ e $P(Y)$ e, portanto, é uma medida de quão diferente é a junta distribuição é da distribuição se eles fossem independentes. Para o segundo termo, a informação mútua nos diz a redução média na incerteza sobre $Y$ que resulta do aprendizado do valor da distribuição de $X$. Semelhante ao terceiro mandato.
 
 
-### Example
+### Exemplo
 
-Let us go through a toy example to see the non-symmetry explicitly.
 
-First, let us generate and sort three tensors of length $10,000$: an objective tensor $p$ which follows a normal distribution $N(0, 1)$, and two candidate tensors $q_1$ and $q_2$ which follow normal distributions $N(-1, 1)$ and $N(1, 1)$ respectively.
+Vejamos um exemplo de brinquedo para ver a não simetria explicitamente.
+
+Primeiro, vamos gerar e classificar três tensores de comprimento $10.000$: um tensor objetivo $p$ que segue uma distribuição normal $N(0, 1)$,  e dois tensores candidatos $q_1$ e $q_2$ que seguem distribuições normais $N(-1, 1)$ e $N(1, 1)$ respectivamente.
 
 ```{.python .input}
 random.seed(1)
@@ -725,7 +726,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMTk1Njc4MCw3ODczNDE3NzgsLTEwOT
+eyJoaXN0b3J5IjpbMTYzNzY0NTQzNSw3ODczNDE3NzgsLTEwOT
 M2NDc0NzIsLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOTUxMDI4
 MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQyLDE1OD
 gzODU4NThdfQ==
