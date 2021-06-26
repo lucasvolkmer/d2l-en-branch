@@ -400,7 +400,7 @@ Podemos pensar em :eqref:`eq_pmi_def` medindo o quanto mais ou menos provável a
 
 Isso nos permite interpretar as informações mútuas :eqref:`eq_mut_ent_def` como a quantidade média que ficamos surpresos ao ver dois resultados ocorrendo juntos em comparação com o que esperaríamos se fossem independentes.
 
-### Applications of Mutual Information
+### Aplicações de Informação Mútua
 
 
 As informações mútuas podem ser um pouco abstratas em sua definição pura. Como isso se relaciona ao *machine learning*? No processamento de linguagem natural, um dos problemas mais difíceis é a *resolução da ambigüidade*, ou a questão do significado de uma palavra não ser claro no contexto. Por exemplo, recentemente uma manchete no noticiário relatou que "Amazon está pegando fogo". Você pode se perguntar se a empresa Amazon tem um prédio em chamas ou se a floresta amazônica está em chamas.
@@ -731,9 +731,9 @@ loss
 [Discussões](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTEyMDgzNTksLTIwNzU3NjM2MzQsMz
-g0ODU0MTc5LDEwNjg0NjQ0NzgsNzg3MzQxNzc4LC0xMDkzNjQ3
-NDcyLC00NDM0Nzc5NDAsMTc4MTEyNjI3OSw0MDk1MTAyODEsMj
-E0NTk4MDkzMiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1
-ODU4XX0=
+eyJoaXN0b3J5IjpbLTczMDIyMTcxMCwtMjA3NTc2MzYzNCwzOD
+Q4NTQxNzksMTA2ODQ2NDQ3OCw3ODczNDE3NzgsLTEwOTM2NDc0
+NzIsLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOTUxMDI4MSwyMT
+Q1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQyLDE1ODgzODU4
+NThdfQ==
 -->
