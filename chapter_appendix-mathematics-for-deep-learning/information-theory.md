@@ -638,9 +638,10 @@ $$ y_{ij} = \begin{cases}1 & j \in J; \\ 0 &\text{otherwise.}\end{cases}$$
 Por exemplo, se um problema de classificação multiclasse contém três classes $A$, $B$ e $C$, os rótulos $\mathbf{y}_i$ podem ser codificados em {$A: (1, 0, 0); B: (0, 1, 0); C: (0, 0, 1)$}.
 
 
-Assume that our neural network is parameterized by $\theta$. For true label vectors $\mathbf{y}_i$ and predictions $$\hat{\mathbf{y}}_i= p_{\theta}(\mathbf{y}_i \mid \mathbf{x}_i) = \sum_{j=1}^k y_{ij} p_{\theta} (y_{ij}  \mid  \mathbf{x}_i).$$
 
-Hence, the *cross entropy loss* would be
+Suponha que nossa rede neural seja parametrizada por $\theta$. Para vetores de rótulos verdadeiros $\mathbf{y}_i$ e previsões $$\hat{\mathbf{y}}_i= p_{\theta}(\mathbf{y}_i \mid \mathbf{x}_i) = \sum_{j=1}^k y_{ij} p_{\theta} (y_{ij}  \mid  \mathbf{x}_i).$$ 
+
+Portanto, a *perda de entropia cruzada* seria
 
 $$
 \mathrm{CE}(\mathbf{y}, \hat{\mathbf{y}}) = - \sum_{i=1}^n \mathbf{y}_i \log \hat{\mathbf{y}}_i
@@ -730,8 +731,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjQwMDMwMjQsMzg0ODU0MTc5LDEwNj
-g0NjQ0NzgsNzg3MzQxNzc4LC0xMDkzNjQ3NDcyLC00NDM0Nzc5
-NDAsMTc4MTEyNjI3OSw0MDk1MTAyODEsMjE0NTk4MDkzMiwyNz
-UyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1ODU4XX0=
+eyJoaXN0b3J5IjpbNTgyODcyOTc4LDM4NDg1NDE3OSwxMDY4ND
+Y0NDc4LDc4NzM0MTc3OCwtMTA5MzY0NzQ3MiwtNDQzNDc3OTQw
+LDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1Mj
+MwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
 -->
