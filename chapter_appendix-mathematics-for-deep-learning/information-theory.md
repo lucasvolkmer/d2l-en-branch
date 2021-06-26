@@ -715,24 +715,24 @@ loss
 1. Vamos calcular a entropia de algumas fontes de dados:
      * Suponha que você esteja observando a saída gerada por um macaco em uma máquina de escrever. O macaco pressiona qualquer uma das $44$ teclas da máquina de escrever aleatoriamente (você pode assumir que ele ainda não descobriu nenhuma tecla especial ou a tecla shift). Quantos bits de aleatoriedade por personagem você observa?
      * Por estar infeliz com o macaco, você o substituiu por um compositor bêbado. É capaz de gerar palavras, embora não de forma coerente. Em vez disso, ele escolhe uma palavra aleatória de um vocabulário de $2.000$ palavras. Vamos supor que o comprimento médio de uma palavra seja de $4,5$ letras em inglês. Quantos bits de aleatoriedade por personagem você observa agora?
-    * Still being unhappy with the result, you replace the typesetter by a high quality language model. The language model can currently obtain a perplexity as low as $15$ points per word. The character *perplexity* of a language model is defined as the inverse of the geometric mean of a set of probabilities, each probability is corresponding to a character in the word. To be specific, if the length of a given word is $l$, then  $\mathrm{PPL}(\text{word}) = \left[\prod_i p(\text{character}_i)\right]^{ -\frac{1}{l}} = \exp \left[ - \frac{1}{l} \sum_i{\log p(\text{character}_i)} \right].$  Assume that the test word has 4.5 letters, how many bits of randomness per character do you observe now?
-1. Explain intuitively why $I(X, Y) = H(X) - H(X|Y)$.  Then, show this is true by expressing both sides as an expectation with respect to the joint distribution.
-1. What is the KL Divergence between the two Gaussian distributions $\mathcal{N}(\mu_1, \sigma_1^2)$ and $\mathcal{N}(\mu_2, \sigma_2^2)$?
+   * Ainda insatisfeito com o resultado, você substitui o compositor por um modelo de linguagem de alta qualidade. O modelo de linguagem pode atualmente obter uma perplexidade tão baixa quanto $15$ pontos por palavra. O caractere *perplexidade* de um modelo de linguagem é definido como o inverso da média geométrica de um conjunto de probabilidades, cada probabilidade corresponde a um caractere da palavra. Para ser específico, se o comprimento de uma determinada palavra é $l$, então $\mathrm{PPL}(\text{word}) = \left[\prod_i p(\text{character}_i)\right]^{ -\frac{1}{l}} = \exp \left[ - \frac{1}{l} \sum_i{\log p(\text{character}_i)} \right].$ Suponha que a palavra de teste tem 4,5 letras, quantos bits de aleatoriedade por caractere você observa agora?
+1. Explique intuitivamente porque $I(X, Y) = H(X) - H(X|Y)$. Então, mostre que isso é verdade expressando ambos os lados como uma expectativa com relação à distribuição conjunta.
+1. Qual é a Divergência KL entre as duas distribuições Gaussianas $\mathcal{N}(\mu_1, \sigma_1^2)$ e $\mathcal{N}(\mu_2, \sigma_2^2)$?
 
 
 :begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/420)
+[Discussões](https://discuss.d2l.ai/t/420)
 :end_tab:
 
 :begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/1104)
+[Discussões](https://discuss.d2l.ai/t/1104)
 :end_tab:
 
 :begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/1105)
+[Discussões](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjc1Mzc1NzgsMzg0ODU0MTc5LDEwNj
+eyJoaXN0b3J5IjpbLTIwNzU3NjM2MzQsMzg0ODU0MTc5LDEwNj
 g0NjQ0NzgsNzg3MzQxNzc4LC0xMDkzNjQ3NDcyLC00NDM0Nzc5
 NDAsMTc4MTEyNjI3OSw0MDk1MTAyODEsMjE0NTk4MDkzMiwyNz
 UyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1ODU4XX0=
