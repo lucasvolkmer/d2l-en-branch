@@ -408,12 +408,14 @@ As informações mútuas podem ser um pouco abstratas em sua definição pura. C
 Nesse caso, informações mútuas podem nos ajudar a resolver essa ambiguidade. Primeiro encontramos o grupo de palavras em que cada uma tem uma informação mútua relativamente grande com a empresa Amazon, como e-commerce, tecnologia e online. Em segundo lugar, encontramos outro grupo de palavras em que cada uma tem uma informação mútua relativamente grande com a floresta amazônica, como chuva, floresta e tropical. Quando precisamos desambiguar "Amazon", podemos comparar qual grupo tem mais ocorrência no contexto da palavra Amazon. Nesse caso, o artigo descreveria a floresta e deixaria o contexto claro.
 
 
-## Kullback–Leibler Divergence
+## Divergência de Kullback–Leibler Divergence
 
-As what we have discussed in :numref:`sec_linear-algebra`, we can use norms to measure distance between two points in space of any dimensionality.  We would like to be able to do a similar task with probability distributions.  There are many ways to go about this, but information theory provides one of the nicest.  We now explore the *Kullback–Leibler (KL) divergence*, which provides a way to measure if two distributions are close together or not.
+As what we have discussed in
+
+Como discutimos em :numref:`sec_linear-algebra`, we canpodemos usear normas to measurepara medir a distaânce between twoia entre dois pointos in space of any dimensionality.  We would like to be able to do a similar task with probability distributions.  There are many ways to go about this, but information theory provides one of the nicno espaço de qualquer dimensionalidade. Gostaríamos de poder fazer uma tarefa semelhante com distribuições de probabilidade. Há muitas maneiras de fazer isso, mas a teoria da informação oferece uma das melhorest.  We now explore thAgora exploramos a *divergência de *Kullback– – Leibler (KL) divergence*, which provides a way to measure if two distributions are close together*, que fornece uma maneira de medir se duas distribuições estão próximas oru nãot.
 
 
-### Definition
+### Definitionção
 
 Given a random variable $X$ that follows the probability distribution $P$ with a p.d.f. or a p.m.f. $p(x)$, and we estimate $P$ by another probability distribution $Q$ with a p.d.f. or a p.m.f. $q(x)$. Then the *Kullback–Leibler (KL) divergence* (or *relative entropy*) between $P$ and $Q$ is
 
@@ -721,7 +723,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg3MzQxNzc4LC0xMDkzNjQ3NDcyLC00ND
-M0Nzc5NDAsMTc4MTEyNjI3OSw0MDk1MTAyODEsMjE0NTk4MDkz
-MiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1ODU4XX0=
+eyJoaXN0b3J5IjpbMTg3MDMwNDEzLDc4NzM0MTc3OCwtMTA5Mz
+Y0NzQ3MiwtNDQzNDc3OTQwLDE3ODExMjYyNzksNDA5NTEwMjgx
+LDIxNDU5ODA5MzIsMjc1MjMwMDYsLTEyMDU1NTUzNDIsMTU4OD
+M4NTg1OF19
 -->
