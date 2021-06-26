@@ -410,9 +410,8 @@ Nesse caso, informações mútuas podem nos ajudar a resolver essa ambiguidade. 
 
 ## Divergência de Kullback–Leibler Divergence
 
-As what we have discussed in
-
 Como discutimos em :numref:`sec_linear-algebra`, we canpodemos usear normas to measurepara medir a distaânce between twoia entre dois pointos in space of any dimensionality.  We would like to be able to do a similar task with probability distributions.  There are many ways to go about this, but information theory provides one of the nicno espaço de qualquer dimensionalidade. Gostaríamos de poder fazer uma tarefa semelhante com distribuições de probabilidade. Há muitas maneiras de fazer isso, mas a teoria da informação oferece uma das melhorest.  We now explore thAgora exploramos a *divergência de *Kullback– – Leibler (KL) divergence*, which provides a way to measure if two distributions are close together*, que fornece uma maneira de medir se duas distribuições estão próximas oru nãot.
+Conforme discutimos em :numref:`sec_linear-algebra`, podemos usar normas para medir a distância entre dois pontos no espaço de qualquer dimensionalidade. Gostaríamos de poder fazer uma tarefa semelhante com distribuições de probabilidade. Há muitas maneiras de fazer isso, mas a teoria da informação oferece uma das melhores. Agora exploramos a divergência de Kullback-Leibler (KL), que fornece uma maneira de medir se duas distribuições estão próximas ou não.
 
 
 ### Definitionção
@@ -732,8 +731,9 @@ loss
 [Discussões](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzU3NjM2MzQsMzg0ODU0MTc5LDEwNj
-g0NjQ0NzgsNzg3MzQxNzc4LC0xMDkzNjQ3NDcyLC00NDM0Nzc5
-NDAsMTc4MTEyNjI3OSw0MDk1MTAyODEsMjE0NTk4MDkzMiwyNz
-UyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1ODU4XX0=
+eyJoaXN0b3J5IjpbLTE2MzA5NTI4MzgsLTIwNzU3NjM2MzQsMz
+g0ODU0MTc5LDEwNjg0NjQ0NzgsNzg3MzQxNzc4LC0xMDkzNjQ3
+NDcyLC00NDM0Nzc5NDAsMTc4MTEyNjI3OSw0MDk1MTAyODEsMj
+E0NTk4MDkzMiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1
+ODU4XX0=
 -->
