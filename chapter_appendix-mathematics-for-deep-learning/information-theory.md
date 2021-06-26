@@ -588,7 +588,7 @@ def cross_entropy(y_hat, y):
     return tf.reduce_mean(ce)
 ```
 
-Now define two tensors for the labels and predictions, and calculate the cross entropy loss of them.
+Agora defina dois tensores para os rótulos e previsões e calcule a perda de entropia cruzada deles.
 
 ```{.python .input}
 labels = np.array([0, 2])
@@ -613,16 +613,17 @@ preds = tf.constant([[0.3, 0.6, 0.1], [0.2, 0.3, 0.5]])
 cross_entropy(preds, labels)
 ```
 
-### Properties
+### Propriedades
 
-As alluded in the beginning of this section, cross entropy :eqref:`eq_ce_def` can be used to define a loss function in the optimization problem. It turns out that the following are equivalent:
 
-1. Maximizing predictive probability of $Q$ for distribution $P$, (i.e., $E_{x
+Como mencionado no início desta seção, entropia cruzada :eqref:`eq_ce_def` pode ser usada para definir uma função de perda no problema de otimização. Acontece que os seguintes são equivalentes:
+
+1. Maximizar a probabilidade preditiva de $Q$ para a distribuição $P$, (ou seja, $E_{x
 \sim P} [\log (q(x))]$);
-1. Minimizing cross entropy $\mathrm{CE} (P, Q)$;
-1. Minimizing the KL divergence $D_{\mathrm{KL}}(P\|Q)$.
+1. Minimizar a entropia cruzada $\mathrm{CE} (P, Q)$;
+1. Minimizar a divergência KL $D_{\mathrm{KL}}(P\|Q)$.
 
-The definition of cross entropy indirectly proves the equivalent relationship between objective 2 and objective 3, as long as the entropy of true data $H(P)$ is constant.
+A definição de entropia cruzada prova indiretamente a relação equivalente entre o objetivo 2 e o objetivo 3, desde que a entropia dos dados verdadeiros $H(P)$ seja constante.
 
 
 ### Cross Entropy as An Objective Function of Multi-class Classification
@@ -728,8 +729,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM4MzY4Mjg3LDM4NDg1NDE3OSwxMDY4ND
-Y0NDc4LDc4NzM0MTc3OCwtMTA5MzY0NzQ3MiwtNDQzNDc3OTQw
-LDE3ODExMjYyNzksNDA5NTEwMjgxLDIxNDU5ODA5MzIsMjc1Mj
-MwMDYsLTEyMDU1NTUzNDIsMTU4ODM4NTg1OF19
+eyJoaXN0b3J5IjpbMTA1NDU4MzA1NiwzODQ4NTQxNzksMTA2OD
+Q2NDQ3OCw3ODczNDE3NzgsLTEwOTM2NDc0NzIsLTQ0MzQ3Nzk0
+MCwxNzgxMTI2Mjc5LDQwOTUxMDI4MSwyMTQ1OTgwOTMyLDI3NT
+IzMDA2LC0xMjA1NTU1MzQyLDE1ODgzODU4NThdfQ==
 -->
