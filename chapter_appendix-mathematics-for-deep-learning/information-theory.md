@@ -408,13 +408,13 @@ As informações mútuas podem ser um pouco abstratas em sua definição pura. C
 Nesse caso, informações mútuas podem nos ajudar a resolver essa ambiguidade. Primeiro encontramos o grupo de palavras em que cada uma tem uma informação mútua relativamente grande com a empresa Amazon, como e-commerce, tecnologia e online. Em segundo lugar, encontramos outro grupo de palavras em que cada uma tem uma informação mútua relativamente grande com a floresta amazônica, como chuva, floresta e tropical. Quando precisamos desambiguar "Amazon", podemos comparar qual grupo tem mais ocorrência no contexto da palavra Amazon. Nesse caso, o artigo descreveria a floresta e deixaria o contexto claro.
 
 
-## Divergência de Kullback–Leibler Divergence
-
-Como discutimos em :numref:`sec_linear-algebra`, we canpodemos usear normas to measurepara medir a distaânce between twoia entre dois pointos in space of any dimensionality.  We would like to be able to do a similar task with probability distributions.  There are many ways to go about this, but information theory provides one of the nicno espaço de qualquer dimensionalidade. Gostaríamos de poder fazer uma tarefa semelhante com distribuições de probabilidade. Há muitas maneiras de fazer isso, mas a teoria da informação oferece uma das melhorest.  We now explore thAgora exploramos a *divergência de *Kullback– – Leibler (KL) divergence*, which provides a way to measure if two distributions are close together*, que fornece uma maneira de medir se duas distribuições estão próximas oru nãot.
-Conforme discutimos em :numref:`sec_linear-algebra`, podemos usar normas para medir a distância entre dois pontos no espaço de qualquer dimensionalidade. Gostaríamos de poder fazer uma tarefa semelhante com distribuições de probabilidade. Há muitas maneiras de fazer isso, mas a teoria da informação oferece uma das melhores. Agora exploramos a divergência de Kullback-Leibler (KL), que fornece uma maneira de medir se duas distribuições estão próximas ou não.
+## Divergência de Kullback–Leibler
 
 
-### Definitionção
+Conforme discutimos em :numref:`sec_linear-algebra`, podemos usar normas para medir a distância entre dois pontos no espaço de qualquer dimensionalidade. Gostaríamos de poder fazer uma tarefa semelhante com distribuições de probabilidade. Há muitas maneiras de fazer isso, mas a teoria da informação oferece uma das melhores. Agora exploramos a *divergência de Kullback-Leibler (KL)*, que fornece uma maneira de medir se duas distribuições estão próximas ou não.
+
+
+### Definição
 
 Dada uma variável aleatória $X$ que segue a distribuição de probabilidade $P$ com uma f.d.p. ou um f.m.p. $p(x)$, e estimamos $P$ por outra distribuição de probabilidade $Q$ com uma f.d.p. ou uma f.m.o. $q(x)$. Então a divergência *Kullback-Leibler(KL)* (ou *entropia relativa*) entre $P$ e $Q$ é
 
@@ -731,7 +731,7 @@ loss
 [Discussões](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzA5NTI4MzgsLTIwNzU3NjM2MzQsMz
+eyJoaXN0b3J5IjpbLTIwOTEyMDgzNTksLTIwNzU3NjM2MzQsMz
 g0ODU0MTc5LDEwNjg0NjQ0NzgsNzg3MzQxNzc4LC0xMDkzNjQ3
 NDcyLC00NDM0Nzc5NDAsMTc4MTEyNjI3OSw0MDk1MTAyODEsMj
 E0NTk4MDkzMiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNTg4Mzg1
