@@ -523,7 +523,7 @@ similar_percentage = abs(kl_pq1 - kl_pq2) / ((kl_pq1 + kl_pq2) / 2) * 100
 kl_pq1, kl_pq2, similar_percentage
 ```
 
-In contrast, you may find that $D_{\mathrm{KL}}(q_2 \|p)$ and $D_{\mathrm{KL}}(p \| q_2)$ are off a lot, with around 40% off as shown below.
+Em contraste, você pode descobrir que $D_{\mathrm{KL}}(q_2 \|p)$ e $D_{\mathrm{KL}}(p \| q_2)$ estão muito desviados, com cerca de 40% de desconto como mostrado abaixo.
 
 ```{.python .input}
 #@tab all
@@ -533,7 +533,7 @@ differ_percentage = abs(kl_q2p - kl_pq2) / ((kl_q2p + kl_pq2) / 2) * 100
 kl_q2p, differ_percentage
 ```
 
-## Cross Entropy
+## Entropia Cruzada
 
 If you are curious about applications of information theory in deep learning, here is a quick example. We define the true distribution $P$ with probability distribution $p(x)$, and the estimated distribution $Q$ with probability distribution $q(x)$, and we will use them in the rest of this section.
 
@@ -726,8 +726,8 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDgyMTE1MTMsNzg3MzQxNzc4LC0xMD
-kzNjQ3NDcyLC00NDM0Nzc5NDAsMTc4MTEyNjI3OSw0MDk1MTAy
-ODEsMjE0NTk4MDkzMiwyNzUyMzAwNiwtMTIwNTU1NTM0MiwxNT
-g4Mzg1ODU4XX0=
+eyJoaXN0b3J5IjpbMTA2ODQ2NDQ3OCw3ODczNDE3NzgsLTEwOT
+M2NDc0NzIsLTQ0MzQ3Nzk0MCwxNzgxMTI2Mjc5LDQwOTUxMDI4
+MSwyMTQ1OTgwOTMyLDI3NTIzMDA2LC0xMjA1NTU1MzQyLDE1OD
+gzODU4NThdfQ==
 -->
