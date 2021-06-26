@@ -665,10 +665,11 @@ l(\theta)
 \end{aligned}
 $$
 
-Since in maximum likelihood estimation, we maximizing the objective function $l(\theta)$ by having $\pi_{j} = p_{\theta} (y_{ij}  \mid  \mathbf{x}_i)$. Therefore, for any multi-class classification, maximizing the above log-likelihood function $l(\theta)$ is equivalent to minimizing the CE loss $\mathrm{CE}(y, \hat{y})$.
+
+Já que na estimativa de máxima verossimilhança, maximizamos a função objetivo $l(\theta)$ tendo $\pi_{j} = p_{\theta} (y_{ij}  \mid  \mathbf{x}_i)$. Portanto, para qualquer classificação multiclasse, maximizar a função log-verossimilhança $l(\theta)$ acima é equivalente a minimizar a perda de CE $\mathrm{CE}(y, \hat{y})$.
 
 
-To test the above proof, let us apply the built-in measure `NegativeLogLikelihood`. Using the same `labels` and `preds` as in the earlier example, we will get the same numerical loss as the previous example up to the 5 decimal place.
+Para testar a prova acima, vamos aplicar a medida integrada `NegativeLogLikelihood`. Usando os mesmos `rótulos` e` preds` do exemplo anterior, obteremos a mesma perda numérica do exemplo anterior até a casa decimal 5.
 
 ```{.python .input}
 nll_loss = NegativeLogLikelihood()
@@ -699,15 +700,15 @@ loss = nll_loss(tf.math.log(preds), labels)
 loss
 ```
 
-## Summary
+## Resumo
 
-* Information theory is a field of study about encoding, decoding, transmitting, and manipulating information.
-* Entropy is the unit to measure how much information is presented in different signals.
-* KL divergence can also measure the divergence between two distributions.
-* Cross Entropy can be viewed as an objective function of multi-class classification. Minimizing cross entropy loss is equivalent to maximizing the log-likelihood function.
+* A teoria da informação é um campo de estudo sobre codificação, decodificação, transmissão e manipulação de informações.
+* Entropia é a unidade para medir quanta informação é apresentada em diferentes sinais.
+* A divergência KL também pode medir a divergência entre duas distribuições.
+* A entropia cruzada pode ser vista como uma função objetivo da classificação multiclasse. Minimizar a perda de entropia cruzada é equivalente a maximizar a função de log-*likelihood*.
 
 
-## Exercises
+## Exercícios
 
 1. Verify that the card examples from the first section indeed have the claimed entropy.
 1. Show that the KL divergence $D(p\|q)$ is nonnegative for all distributions $p$ and $q$. Hint: use Jensen's inequality, i.e., use the fact that $-\log x$ is a convex function.
@@ -731,7 +732,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNzkwMTk5MywzODQ4NTQxNzksMTA2OD
+eyJoaXN0b3J5IjpbMTI5NDUzNzEwNSwzODQ4NTQxNzksMTA2OD
 Q2NDQ3OCw3ODczNDE3NzgsLTEwOTM2NDc0NzIsLTQ0MzQ3Nzk0
 MCwxNzgxMTI2Mjc5LDQwOTUxMDI4MSwyMTQ1OTgwOTMyLDI3NT
 IzMDA2LC0xMjA1NTU1MzQyLDE1ODgzODU4NThdfQ==
