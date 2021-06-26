@@ -652,8 +652,8 @@ Por outro lado, também podemos abordar o problema por meio da estimativa de má
 $$\mathbf{p}^\mathbf{z} = \prod_{j=1}^k p_{j}^{z_{j}}.$$
 
 
-It can be seen that the label of each data example, $\mathbf{y}_i$, is following a $k$-class multinoulli distribution with probabilities $\boldsymbol{\pi} =$ ($\pi_{1}, \ldots, \pi_{k}$). Therefore, the joint p.m.f. of each data example $\mathbf{y}_i$ is  $\mathbf{\pi}^{\mathbf{y}_i} = \prod_{j=1}^k \pi_{j}^{y_{ij}}.$
-Hence, the log-likelihood function would be
+Pode-se ver que o rótulo de cada exemplo de dados, $\mathbf{y}_i$, segue uma distribuição multinoulli de $k$-classes com probabilidades $\boldsymbol{\pi} =$ ($\pi_{1}, \ldots, \pi_{k}$). Portanto, a junta f.m.p. de cada exemplo de dados $\mathbf{y}_i$ é $\mathbf{\pi}^{\mathbf{y}_i} = \prod_{j=1}^k \pi_{j}^{y_{ij}}.$
+Portanto, a função de log-*likelihood* seria
 
 $$
 \begin{aligned}
@@ -731,7 +731,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzkzMDM4MiwzODQ4NTQxNzksMTA2OD
+eyJoaXN0b3J5IjpbMTQwNzkwMTk5MywzODQ4NTQxNzksMTA2OD
 Q2NDQ3OCw3ODczNDE3NzgsLTEwOTM2NDc0NzIsLTQ0MzQ3Nzk0
 MCwxNzgxMTI2Mjc5LDQwOTUxMDI4MSwyMTQ1OTgwOTMyLDI3NT
 IzMDA2LC0xMjA1NTU1MzQyLDE1ODgzODU4NThdfQ==
