@@ -417,7 +417,7 @@ Como discutimos em :numref:`sec_linear-algebra`, we canpodemos usear normas to m
 
 ### Definitionção
 
-Given a random variable $X$ that follows the probability distribution $P$ with a p.d.f. or a p.m.f. $p(x)$, and we estimate $P$ by another probability distribution $Q$ with a p.d.f. or a p.m.f. $q(x)$. Then the *Kullback–Leibler (KL) divergence* (or *relative entropy*) between $P$ and $Q$ is
+Dada uma variável aleatória $X$ que segue a distribuição de probabilidade $P$ com uma f.d.p. ou um f.m.p. $p(x)$, e estimamos $P$ por outra distribuição de probabilidade $Q$ com uma f.d.p. ou uma f.m.o. $q(x)$. Então a divergência *Kullback-Leibler(KL)* (ou *entropia relativa*) entre $P$ e $Q$ é
 
 $$D_{\mathrm{KL}}(P\|Q) = E_{x \sim P} \left[ \log \frac{p(x)}{q(x)} \right].$$
 :eqlabel:`eq_kl_def`
@@ -723,7 +723,7 @@ loss
 [Discussions](https://discuss.d2l.ai/t/1105)
 :end_tab:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MDMwNDEzLDc4NzM0MTc3OCwtMTA5Mz
+eyJoaXN0b3J5IjpbNzgyNTkxNDUzLDc4NzM0MTc3OCwtMTA5Mz
 Y0NzQ3MiwtNDQzNDc3OTQwLDE3ODExMjYyNzksNDA5NTEwMjgx
 LDIxNDU5ODA5MzIsMjc1MjMwMDYsLTEyMDU1NTUzNDIsMTU4OD
 M4NTg1OF19
